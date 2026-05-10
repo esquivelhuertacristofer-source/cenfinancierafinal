@@ -477,13 +477,34 @@ export async function markActivityComplete(userId: string, activityId: string) {
 /**
  * Cola de Sincronización Local (Offline Resilience)
  */
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 function getSyncQueue(): { userId: string, activityId: string, attempts?: number }[] {
   if (typeof window === 'undefined') return [];
   const saved = localStorage.getItem('cen_sync_queue');
-  return saved ? JSON.parse(saved) : [];
+  if (!saved) return [];
+  try {
+    const queue = JSON.parse(saved);
+    if (!Array.isArray(queue)) {
+      localStorage.removeItem('cen_sync_queue');
+      return [];
+    }
+    const valid = queue.filter((item: any) =>
+      item && typeof item === 'object' &&
+      item.userId && UUID_REGEX.test(item.userId) &&
+      item.activityId && typeof item.activityId === 'string'
+    );
+    if (valid.length !== queue.length) {
+      console.warn(`[SyncEngine] Limpiados ${queue.length - valid.length} items inválidos al cargar`);
+      localStorage.setItem('cen_sync_queue', JSON.stringify(valid));
+    }
+    return valid;
+  } catch {
+    console.error('[SyncEngine] cen_sync_queue corrupto, limpiando');
+    localStorage.removeItem('cen_sync_queue');
+    return [];
+  }
 }
-
-const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
   if (typeof window === 'undefined') return;

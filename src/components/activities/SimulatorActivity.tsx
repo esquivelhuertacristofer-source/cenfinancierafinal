@@ -149,7 +149,7 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
                     </div>
                  </div>
 
-                 <div className="flex-1 w-full min-h-[300px]">
+                 <div className="w-full" style={{ height: '300px' }}>
                     <ResponsiveContainer width="100%" height="100%">
                        <AreaChart data={chartData}>
                           <defs>

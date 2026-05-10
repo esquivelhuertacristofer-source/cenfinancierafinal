@@ -167,11 +167,23 @@ export interface BuilderStep {
   campos: BuilderField[];
   visualizacion?: 'tabla' | 'grafica' | 'tarjeta' | 'none';
 }
+export interface CalcAutomatico {
+  id: string;
+  label: string;
+  formula: string;
+  prefix?: string;
+  suffix?: string;
+  alerta_si?: string;
+  alerta_mensaje?: string;
+  ayuda?: string;
+}
+
 export interface BuilderActivityData extends BaseActivity {
   tipo: 'CONSTRUCTOR';
-  output_type: 'tabla' | 'canvas' | 'plan' | 'grafica' | 'documento';
+  output_type: string;
   pasos: BuilderStep[];
   exportable: boolean;
+  calculos_automaticos?: CalcAutomatico[];
 }
 
 // ─── MEMORIA (MATCHING) ──────────────────────────────────────────────────────

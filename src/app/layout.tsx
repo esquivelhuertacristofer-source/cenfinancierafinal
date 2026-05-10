@@ -2,7 +2,25 @@ import "./globals.css";
 
 export const metadata = {
   title: "CEN | Plataforma de Educación Financiera",
-  description: "La plataforma educativa líder en inteligencia financiera para niños y jóvenes.",
+  description: "Plataforma educativa líder en inteligencia financiera para niños y jóvenes de 6 a 15 años. Misiones, simuladores y actividades diseñadas por edades.",
+  keywords: ["educación financiera", "finanzas para niños", "finanzas para jóvenes", "CEN", "educación primaria", "educación secundaria", "México"],
+  openGraph: {
+    title: "CEN | Plataforma de Educación Financiera",
+    description: "Educación financiera práctica para escuelas de México. Misiones, simuladores y actividades para primaria y secundaria.",
+    url: "https://www.cenplataformaeducacionfinanciera.com.mx",
+    siteName: "CEN Plataforma",
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CEN | Plataforma de Educación Financiera",
+    description: "Educación financiera para niños y jóvenes de México.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport = {

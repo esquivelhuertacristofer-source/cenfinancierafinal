@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { BuilderActivityData, BuilderField } from '../../types/activities';
+import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
 import { ArrowLeft, ChevronRight, ChevronLeft, CheckCircle2, Calculator, Sparkles, Zap, FileText } from 'lucide-react';
 
 interface Props {
@@ -32,6 +32,29 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
   const handleBack = () => {
     if (currentStepIdx > 0) setCurrentStepIdx(prev => prev - 1);
   };
+
+  const liveCalcs = useMemo(() => {
+    if (!data.calculos_automaticos?.length) return [];
+    const keys = Object.keys(formData);
+    const vals = Object.values(formData);
+    return data.calculos_automaticos.map((calc: CalcAutomatico) => {
+      try {
+        const fn = new Function(...keys, `return ${calc.formula}`);
+        const result = fn(...vals);
+        const computed = typeof result === 'number' && isFinite(result) ? result : null;
+        let alertActive = false;
+        if (calc.alerta_si && computed !== null) {
+          try {
+            const alertFn = new Function(...keys, `return ${calc.alerta_si}`);
+            alertActive = !!alertFn(...vals);
+          } catch { /* condición no evaluable aún */ }
+        }
+        return { ...calc, computed, alertActive };
+      } catch {
+        return { ...calc, computed: null as number | null, alertActive: false };
+      }
+    });
+  }, [formData, data.calculos_automaticos]);
 
   const getFieldValue = (field: BuilderField) => {
     if (field.type === 'calculated' && field.formula) {
@@ -186,8 +209,35 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
                ))}
             </div>
 
+            {liveCalcs.length > 0 && (
+              <div className="bg-white/[0.03] border border-white/10 rounded-[50px] p-10 space-y-6">
+                <div className="flex items-center gap-3">
+                  <Sparkles size={16} className="text-emerald-400" />
+                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Calculadora en Vivo</span>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {liveCalcs.map(calc => (
+                    <div key={calc.id} className={`p-6 rounded-[30px] border transition-colors ${calc.alertActive ? 'border-orange-500/40 bg-orange-500/10' : 'border-white/10 bg-white/5'}`}>
+                      <span className="text-[9px] font-black uppercase tracking-widest text-white/30 block mb-2">{calc.label}</span>
+                      <span className={`text-2xl font-black tracking-tighter ${calc.alertActive ? 'text-orange-400' : 'text-white'}`}>
+                        {calc.computed === null
+                          ? '—'
+                          : `${calc.prefix || ''}${calc.computed.toLocaleString('es-MX', { maximumFractionDigits: 2 })}${calc.suffix || ''}`}
+                      </span>
+                      {calc.alertActive && calc.alerta_mensaje && (
+                        <p className="text-[9px] text-orange-400/80 mt-2 leading-tight">{calc.alerta_mensaje}</p>
+                      )}
+                      {!calc.alertActive && calc.ayuda && (
+                        <p className="text-[9px] text-white/20 mt-2 leading-tight">{calc.ayuda}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="flex justify-between items-center pt-16">
-               <button 
+               <button
                   onClick={handleBack}
                   disabled={currentStepIdx === 0}
                   className={`flex items-center gap-4 font-black text-[10px] uppercase tracking-[0.4em] transition-all ${currentStepIdx === 0 ? 'opacity-0 pointer-events-none' : 'text-white/40 hover:text-white'}`}
