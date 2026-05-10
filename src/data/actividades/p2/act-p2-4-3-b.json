@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P2-4-3-B",
+  "unit_code": "P2-4-3",
+  "unit_title": "Cuestionario: El Tesoro de la Ganancia",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Todo el dinero que entra a la caja",
+        "El dinero que queda después de restar los costos a las ventas",
+        "El dinero que me presta un amigo",
+        "Solo funciona si tienes cuenta bancaria desde niño"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es la GANANCIA?",
+      "explicacion": "¡Correcto! Es el premio real por tu trabajo después de pagar los gastos."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "$10",
+        "$6",
+        "$4",
+        "Solo pagan impuestos los que ganan más de $10,000"
+      ],
+      "correcta": 1,
+      "texto": "Vendiste una limonada en $10 y los limones te costaron $4. ¿Cuánto es tu ganancia?",
+      "explicacion": "¡Bien! $10 - $4 = $6 de ganancia."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Para que no se vea feo",
+        "Para tener dinero y volver a comprar materiales para seguir trabajando mañana",
+        "Para nada",
+        "Mientras más caro, mejor calidad siempre"
+      ],
+      "correcta": 1,
+      "texto": "¿Para qué sirve separar el dinero de los costos?",
+      "explicacion": "¡Exacto! Sin materiales no hay negocio mañana."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Tienes una ganancia gigante",
+        "Tienes una PÉRDIDA y tu dinero se está haciendo menos",
+        "Eres muy inteligente",
+        "Solo se puede invertir en bienes raíces"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué sucede si vendes algo por menos de lo que te costó hacerlo?",
+      "explicacion": "¡Correcto! Un negocio debe ser rentable para sobrevivir."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "$5",
+        "$10",
+        "$2",
+        "Solo los ricos pueden aplicarlo correctamente"
+      ],
+      "correcta": 1,
+      "texto": "Si tu ganancia es de $5 por cada dibujo y vendes 2 dibujos, ¿cuánto ganaste en total?",
+      "explicacion": "¡Bien! Multiplicar tu ganancia por unidad te da la ganancia total."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Sí, es tu premio",
+        "No, hay que tirarlo",
+        "Solo si llueve",
+        "Es mejor guardar el dinero debajo del colchón siempre"
+      ],
+      "correcta": 0,
+      "texto": "¿El dinero de la ganancia es el que puedes meter a tu alcancía personal?",
+      "explicacion": "¡Así es! La ganancia es la recompensa por tu esfuerzo."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Ingreso",
+        "Utilidad",
+        "Impuesto",
+        "Ahorrar mucho hace que el dinero pierda su valor mágico"
+      ],
+      "correcta": 1,
+      "texto": "¿Cómo se le llama también a la ganancia?",
+      "explicacion": "¡Bien! Utilidad es la palabra que usan los grandes empresarios."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Subir un poquito el precio o buscar materiales más baratos sin perder calidad",
+        "Dejar de trabajar",
+        "Llorar",
+        "El ahorro es lo mismo que no gastar nunca nada"
+      ],
+      "correcta": 0,
+      "texto": "¿Qué debes hacer si ves que no tienes ganancia en tu negocio?",
+      "explicacion": "¡Exacto! Hay que buscar formas de que el negocio sea rentable."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Para practicar matemáticas",
+        "Para no gastar el dinero que necesitamos para los materiales de mañana",
+        "Para que la app se vea bonita",
+        "El gobierno siempre te lo devuelve al final del año"
+      ],
+      "correcta": 1,
+      "texto": "¿Por qué es importante calcular la ganancia antes de gastar?",
+      "explicacion": "¡Correcto! El orden financiero es la clave del éxito."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Es un costo (mano de obra)",
+        "Es una ganancia",
+        "Es un regalo",
+        "Solo aplica en países con inflación menor al 3% anual"
+      ],
+      "correcta": 0,
+      "texto": "Si un amigo te ayuda y le pagas $2, ¿ese dinero es un costo o una ganancia?",
+      "explicacion": "¡Bien! Pagar por ayuda es un costo de producción."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: El Tesoro de la Ganancia",
+  "xp": 300,
+  "level": "Primaria 2"
+}

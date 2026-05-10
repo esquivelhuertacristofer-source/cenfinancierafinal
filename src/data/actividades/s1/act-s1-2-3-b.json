@@ -1,0 +1,118 @@
+{
+  "code": "ACT-S1-2-3-B",
+  "unit_code": "S1-2-3",
+  "unit_title": "Crédito hipotecario: cómo funciona INFONAVIT",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Navegando la Recesión",
+  "descripcion": "La economía del país está en recesión. Las ventas de tu cadena de pizzerías están bajando. ¿Qué harás para que tu sueño no desaparezca?",
+  "objetivo": "Evaluar la toma de decisiones estratégicas durante las fases negativas del ciclo económico",
+  "xp": 500,
+  "personaje_principal": "Mateo",
+  "contexto_inicial": "Mateo tiene 5 pizzerías. El PIB del país ha caído por 6 meses. La gente tiene menos dinero y está dejando de comer fuera. Tienes $50,000 en reserva.",
+  "nodo_inicial": "crisis_recesion",
+  "nodos": {
+    "crisis_recesion": {
+      "id": "crisis_recesion",
+      "texto": "Las ventas bajaron 20%. Necesitas actuar rápido.",
+      "opciones": [
+        {
+          "id": "recortar_todo",
+          "texto": "Despedir al 30% del personal y usar ingredientes más baratos",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "Ahorraste dinero, pero la calidad de tu pizza bajó y tus empleados están tristes y asustados.",
+          "xp_bonus": 100,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "innovar_eficiencia",
+          "texto": "Invertir en una app de entregas propia y crear combos económicos (Eficiencia)",
+          "siguiente_nodo": "recuperacion_ciclo",
+          "consecuencia": "Gastaste tus reservas, pero ahora llegas a las casas de la gente y vendes más volumen a menor precio.",
+          "xp_bonus": 400,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "recuperacion_ciclo": {
+      "id": "recuperacion_ciclo",
+      "texto": "¡La economía empieza a crecer de nuevo (Expansión)! Tus competidores cerraron porque no se adaptaron.",
+      "opciones": [
+        {
+          "id": "expandir_negocio",
+          "texto": "Aprovechar que eres el líder para abrir 3 sucursales más",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Tu marca es ahora la más famosa de la ciudad. Arriesgar en la crisis valió la pena.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_supervivencia_gris": {
+      "id": "final_supervivencia_gris",
+      "texto": "Tu negocio sobrevivió, pero ahora es una pizzería común con mala fama. Perdiste la oportunidad de brillar.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "En las crisis, el que solo recorta se encoge. El que innova, crece."
+    },
+    "final_exito_total": {
+      "id": "final_exito_total",
+      "texto": "¡Eres un maestro de los ciclos! Entendiste que la recesión es el momento de sembrar para cosechar en la expansión.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Los grandes empresarios no siguen la corriente; la crean."
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

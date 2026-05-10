@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-1-5-B",
+  "unit_code": "P4-1-5",
+  "unit_title": "CONDUSEF: el árbitro del sistema financiero mexicano",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Árbitro Financiero",
+  "descripcion": "¿Sabes quién te protege si tienes problemas con tu banco? ¡Descubre el poder de la CONDUSEF!",
+  "objetivo": "Comprender la misión, facultades y servicios de la CONDUSEF en favor de los usuarios financieros",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué significan las siglas CONDUSEF?",
+      "opciones": [
+        "Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros",
+        "Consejo de Dinero Seguro y Finanzas",
+        "Club de Operaciones Bancarias y Seguros",
+        "Comunidad de Niños Dinámicos y Felices"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el nombre oficial de la institución que te defiende ante los bancos."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuánto cuesta recibir ayuda de la CONDUSEF?",
+      "opciones": [
+        "Es muy caro",
+        "Cuesta la mitad de lo que reclames",
+        "Es totalmente gratuito",
+        "Solo se paga si ganas"
+      ],
+      "correcta": 2,
+      "explicacion": "La CONDUSEF es una institución del gobierno y sus servicios no tienen costo para ti."
+    },
+    {
+      "id": "q3",
+      "texto": "¿En qué casos puede ayudarte la CONDUSEF?",
+      "opciones": [
+        "Si el banco te cobra de más",
+        "Si te hicieron un fraude en tu tarjeta",
+        "Si tienes una duda sobre un seguro",
+        "Todas las anteriores"
+      ],
+      "correcta": 3,
+      "explicacion": "Te defienden y te asesoran en cualquier problema con instituciones financieras."
+    },
+    {
+      "id": "q4",
+      "texto": "Además de defenderte, ¿qué otra cosa importante hace la CONDUSEF?",
+      "opciones": [
+        "Vender seguros",
+        "Promover la educación financiera (enseñar a la gente sobre dinero)",
+        "Regalar tarjetas de crédito",
+        "Abrir sus propios bancos"
+      ],
+      "correcta": 1,
+      "explicacion": "Tienen muchos cursos y guías para que aprendas a manejar mejor tu dinero."
+    },
+    {
+      "id": "q5",
+      "texto": "Si tienes un problema con el banco, ¿cuál es el orden correcto para actuar?",
+      "opciones": [
+        "Ir primero a la CONDUSEF",
+        "Ir primero al banco y si no resuelven, ir a CONDUSEF",
+        "No decirle a nadie",
+        "Publicarlo en Facebook y ya"
+      ],
+      "correcta": 1,
+      "explicacion": "Primero debes dar oportunidad al banco de corregir el error."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cómo puedes contactar a la CONDUSEF?",
+      "opciones": [
+        "Por teléfono",
+        "Por su portal de internet",
+        "Yendo a sus oficinas",
+        "Todas las anteriores"
+      ],
+      "correcta": 3,
+      "explicacion": "Tienen muchas formas de atención para estar siempre cerca de ti."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

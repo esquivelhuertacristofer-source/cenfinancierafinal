@@ -1,0 +1,58 @@
+{
+  "code": "ACT-P3-3-4-B",
+  "unit_code": "P3-3-4",
+  "unit_title": "Préstamos para el estudio (Créditos educativos)",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "SIMPLE",
+  "titulo": "Mi Título, Mi Tesoro",
+  "descripcion": "¿Por qué la gente pide prestado para estudiar? Descubre por qué tu cerebro es la mejor alcancía que puedes tener.",
+  "objetivo": "Diferenciar el crédito de consumo del crédito para inversión educativa",
+  "xp": 250,
+  "texto": "Pedir un crédito para estudiar es una excelente __BLANK_1__. Aunque después debas __BLANK_2__ el dinero al banco, valdrá la pena porque habrás aprendido muchas cosas. Una persona con carrera suele tener un __BLANK_3__ más alto que alguien que no estudió. Por eso, el crédito educativo te ayuda a construir un mejor __BLANK_4__ y a cumplir tus sueños de ser lo que tú quieras.",
+  "blanks": [
+    {
+      "id": "blank_1",
+      "respuesta": "inversión",
+      "opciones": [
+        "inversión",
+        "pérdida",
+        "tarea",
+        "fiesta"
+      ]
+    },
+    {
+      "id": "blank_2",
+      "respuesta": "devolver",
+      "opciones": [
+        "regalar",
+        "devolver",
+        "perder",
+        "esconder"
+      ]
+    },
+    {
+      "id": "blank_3",
+      "respuesta": "sueldo",
+      "opciones": [
+        "sueldo",
+        "zapato",
+        "juguete",
+        "carro"
+      ]
+    },
+    {
+      "id": "blank_4",
+      "respuesta": "futuro",
+      "opciones": [
+        "futuro",
+        "pasado",
+        "dibujo",
+        "almuerzo"
+      ]
+    }
+  ],
+  "contexto": "Imagina que eres un consejero escolar motivando a los alumnos a pensar en sus metas profesionales.",
+  "versión": "2026.Diamond.V2"
+}

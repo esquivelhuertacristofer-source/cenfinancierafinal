@@ -1,0 +1,160 @@
+{
+  "code": "ACT-P3-3-2-A",
+  "unit_code": "P3-3-2",
+  "unit_title": "Las tarjetas de crédito: No son dinero gratis",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Trampa del Pago Mínimo",
+  "descripcion": "Las tarjetas de crédito en México cobran hasta 60-80% de interés anual — de las más altas del mundo. Si solo pagas el 'mínimo', la deuda puede crecer más rápido de lo que la pagas. Esta simulación te muestra la trampa en números reales.",
+  "objetivo": "Visualizar el costo real del crédito revolvente y el efecto devastador del pago mínimo en la deuda a largo plazo",
+  "xp": 400,
+  "descripcion_formula": "Deuda siguiente mes = (Deuda_actual × (1 + tasa_mensual)) − Pago_mensual. Si pago < interés generado, la deuda CRECE aunque estés pagando.",
+  "tasa_referencia": "Las principales tarjetas de crédito en México cobran entre 40% y 80% anual (3.3% - 6.7% mensual). Las de tiendas departamentales llegan a 80% anual.",
+  "inputs": [
+    {
+      "id": "deuda_inicial",
+      "label": "Deuda actual en la tarjeta",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_mensual",
+      "label": "Tasa de interés mensual de la tarjeta",
+      "type": "slider",
+      "min": 2,
+      "max": 8,
+      "step": 0.5,
+      "default": 5,
+      "unit": "%",
+      "referencia": "2% = tarjeta premium (24% anual) | 5% = tarjeta común (60% anual) | 7% = tienda departamental (84% anual)"
+    },
+    {
+      "id": "pago_mensual_fijo",
+      "label": "Pago fijo que harás cada mes",
+      "type": "slider",
+      "min": 200,
+      "max": 5000,
+      "step": 100,
+      "default": 600,
+      "unit": "$",
+      "ayuda": "El pago mínimo típico en México es ~1.5% del saldo (para una deuda de $10,000 = $150/mes)"
+    },
+    {
+      "id": "meses_sim",
+      "label": "Cuántos meses simular",
+      "type": "slider",
+      "min": 6,
+      "max": 60,
+      "step": 6,
+      "default": 24,
+      "unit": "meses"
+    }
+  ],
+  "formula": "Math.max(0, deuda_inicial * Math.pow(1 + tasa_mensual/100, meses_sim) - pago_mensual_fijo * ((Math.pow(1 + tasa_mensual/100, meses_sim) - 1) / (tasa_mensual/100)))",
+  "outputs_multiples": [
+    {
+      "id": "deuda_restante",
+      "label": "Tu deuda después de los meses simulados",
+      "formula": "Math.max(0, deuda_inicial * Math.pow(1 + tasa_mensual/100, meses_sim) - pago_mensual_fijo * ((Math.pow(1 + tasa_mensual/100, meses_sim) - 1) / (tasa_mensual/100)))",
+      "prefix": "$",
+      "descripcion": "Lo que aún debes después de todos tus pagos."
+    },
+    {
+      "id": "total_pagado",
+      "label": "Total que habrás pagado",
+      "formula": "pago_mensual_fijo * meses_sim",
+      "prefix": "$",
+      "descripcion": "Todo el dinero que salió de tu bolsillo."
+    },
+    {
+      "id": "interes_pagado",
+      "label": "De eso, cuánto fue solo en intereses (dinero regalado al banco)",
+      "formula": "Math.max(0, pago_mensual_fijo * meses_sim - (deuda_inicial - Math.max(0, deuda_inicial * Math.pow(1 + tasa_mensual/100, meses_sim) - pago_mensual_fijo * ((Math.pow(1 + tasa_mensual/100, meses_sim) - 1) / (tasa_mensual/100)))))",
+      "prefix": "$",
+      "descripcion": "Este dinero NO redujo tu deuda — solo le pagaste al banco por prestarte."
+    },
+    {
+      "id": "interes_mensual_generado",
+      "label": "Interés que genera tu deuda CADA MES",
+      "formula": "deuda_inicial * tasa_mensual / 100",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Si tu pago mensual es menor a esto, tu deuda está CRECIENDO aunque pagues."
+    }
+  ],
+  "output_label": "Tu deuda restante",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "deuda_con_pagos",
+      "label": "Tu deuda mes a mes",
+      "color": "#ef4444"
+    },
+    {
+      "id": "total_pagado_acumulado",
+      "label": "Total que has pagado (acumulado)",
+      "color": "#6b7280"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "pago_mensual_fijo <= deuda_inicial * tasa_mensual / 100",
+      "mensaje": "🚨 ¡TRAMPA ACTIVA! Tu pago mensual es MENOR que los intereses que genera la deuda. Estás pagando pero la deuda CRECE. Aumenta tu pago mensual para que supere el interés mensual generado.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "pago_mensual_fijo >= deuda_inicial",
+      "mensaje": "✅ ¡Liquidarás en el primer mes! Esta es la estrategia correcta — pagar todo de una vez elimina los intereses completamente.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pago_mensual_fijo > deuda_inicial * tasa_mensual / 100 && pago_mensual_fijo < deuda_inicial * 0.15",
+      "mensaje": "⚠️ Tu deuda está bajando, pero muy lento. Tardarás muchos meses en liquidarla y pagarás mucho en intereses. Aumenta tu pago mensual.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "tasa_mensual >= 6",
+      "mensaje": "💡 Esta tasa de 72% anual es real en México. Banorte, BBVA, Santander cobran entre 3.5-5.5% mensual en tarjetas básicas. Las tiendas como Liverpool cobran hasta 7% mensual.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "pago_mensual_fijo >= deuda_inicial * 0.15",
+      "mensaje": "👍 ¡Buen ritmo de pago! Pagas significativamente más del mínimo y la deuda bajará en pocos meses.",
+      "tipo": "success"
+    }
+  ],
+  "comparativa_pago_minimo": {
+    "titulo": "¿Qué pasa si solo pagas el mínimo?",
+    "descripcion": "En México, el pago mínimo es ~1.5% del saldo. Para $10,000 de deuda con 5% mensual de interés:",
+    "ejemplo": "Pago mínimo ($150/mes) → tu deuda CRECE aunque pagues cada mes. La deuda nunca termina."
+  },
+  "pregunta_reflexion": "Si compras algo de $5,000 en una tarjeta con 5% mensual de interés y solo pagas $200/mes, ¿cuánto le habrás regalado al banco en intereses antes de terminarlo? ¿Valió la pena la compra?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "¡Alerta activa! Ahora ves el peligro real de las tarjetas."
+    },
+    {
+      "valor": 50,
+      "mensaje": "Entiendes los intereses — ya no te pueden engañar con el pago mínimo."
+    },
+    {
+      "valor": 75,
+      "mensaje": "¡Estratega! Sabes calcular el costo real de cualquier deuda."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Maestro anti-deuda! Las tarjetas son herramientas, no trampas — cuando las entiendes."
+    }
+  ],
+  "comparativa_espera": "El CAT promedio de las tarjetas de crédito en México es 74.4% anual. Una deuda de $10,000 pagando solo el mínimo puede tardar 8-15 años en liquidarse completamente y costar más de $25,000 en intereses."
+}

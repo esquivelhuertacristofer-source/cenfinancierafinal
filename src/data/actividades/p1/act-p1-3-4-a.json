@@ -1,0 +1,57 @@
+{
+  "code": "ACT-P1-3-4-A",
+  "unit_code": "P1-3-4",
+  "unit_title": "Ahorro para una meta mayor: sueños que tardan un poquito",
+  "level": "Primaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIA",
+  "titulo": "El Simulador de Paciencia",
+  "descripcion": "Ahorrar para algo grande toma tiempo, pero cada moneda cuenta. ¡Mira qué pasa si evitas los antojos!",
+  "objetivo": "Entender visualmente cómo los pequeños gastos retrasan las grandes metas",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "ahorro_semanal",
+      "label": "Mi Ahorro Semanal ($)",
+      "type": "slider",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "default": 50,
+      "unit": "$"
+    },
+    {
+      "id": "gastos_antojos",
+      "label": "Gastos en Antojos ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 10,
+      "unit": "$"
+    }
+  ],
+  "formula": "Math.ceil(1000 / Math.max(1, ahorro_semanal - gastos_antojos))",
+  "output_label": "Semanas para mi Gran Meta ($1,000)",
+  "output_prefix": "",
+  "output_suffix": " semanas",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "gastos_antojos === 0",
+      "mensaje": "🌟 ¡Paciencia Nivel Diamante! Sin antojos, llegarás a tu meta en tiempo récord.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 40",
+      "mensaje": "⚠️ ¡Cuidado! Estás gastando mucho en antojos y tu meta se aleja casi un año.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "Cada peso que NO gastas en dulces es un paso más cerca de tu sueño.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

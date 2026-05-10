@@ -1,0 +1,145 @@
+{
+  "code": "ACT-S1-1-4-A",
+  "unit_code": "S1-1-4",
+  "unit_title": "Impuestos y gasto público: cómo se usa mi dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Bola de Nieve",
+  "descripcion": "No necesitas ser millonario para empezar, pero necesitas empezar para ser millonario. ¡Simula cómo el tiempo trabaja para ti!",
+  "objetivo": "Visualizar el crecimiento exponencial del capital a través del tiempo y aportaciones constantes",
+  "xp": 600,
+  "descripcion_formula": "Calculamos el Valor Futuro (VF) con aportaciones mensuales. VF = P * (1+r)^t + PMT * [((1+r)^t - 1) / r].",
+  "inputs": [
+    {
+      "id": "capital_inicial_s1",
+      "label": "Inversión Inicial ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 50000,
+      "step": 5000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Ahorro Mensual ($)",
+      "type": "slider",
+      "min": 100,
+      "max": 5000,
+      "step": 100,
+      "default": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_anual",
+      "label": "Rendimiento Anual Esperado (%)",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "step": 0.5,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "años_inversion",
+      "label": "Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    }
+  ],
+  "formula": "capital_inicial_s1 * Math.pow(1 + (tasa_anual / 100), años_inversion) + (aportacion_mensual * 12) * ((Math.pow(1 + (tasa_anual / 100), años_inversion) - 1) / (tasa_anual / 100))",
+  "output_label": "Tu Capital Final Proyectado",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "area",
+  "escenarios": [
+    {
+      "condicion": "años_inversion > 30",
+      "mensaje": "❄️ ¡La Bola de Nieve es imparable! En las últimas décadas, el interés gana mucho más que tus ahorros.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_anual < 5",
+      "mensaje": "⚠️ Rendimiento bajo. Tu dinero crece, pero la inflación podría comerse parte de tus ganancias. Busca mejores activos.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El interés compuesto es la fuerza más poderosa del universo financiero. Úsala a tu favor empezando joven.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si el gobierno recauda $100 de impuestos, ¿cómo los distribuirías tú entre educación, salud, seguridad e infraestructura? ¿Qué servicio público usas tú que pagaron los impuestos de todos?",
+  "comparativa_espera": "En México los rendimientos de inversión (CETES, bolsa, fondos) están sujetos a ISR. Conocer la carga fiscal real de cada instrumento es parte esencial de la comparación entre alternativas de inversión.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "tasa_real",
+      "label": "Tasa Real (vs Inflación)",
+      "formula": "Math.round((resultado_principal / resultado_principal - 1 + 0.08 - 0.045) * 100 * 10) / 10",
+      "prefix": "",
+      "suffix": "% real",
+      "descripcion": "El rendimiento real después de restar inflación"
+    },
+    {
+      "id": "en_horizonte",
+      "label": "En tu Horizonte de Inversión",
+      "formula": "Math.round(resultado_principal * Math.pow(1.08, 10))",
+      "prefix": "$",
+      "suffix": " a 10 años",
+      "descripcion": "El resultado proyectado a largo plazo"
+    },
+    {
+      "id": "impuesto_estimado",
+      "label": "Impuesto Estimado (ISR)",
+      "formula": "Math.round(resultado_principal * 0.1)",
+      "prefix": "$",
+      "suffix": " de ISR sobre rendimientos",
+      "descripcion": "Aproximación del ISR sobre ganancias de inversión"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "tasa_real",
+      "label": "Tasa Real (vs Inflación)",
+      "color": "#22c55e"
+    }
+  ]
+}

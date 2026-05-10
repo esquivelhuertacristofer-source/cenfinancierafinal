@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P4-1-2-B",
+  "unit_code": "P4-1-2",
+  "unit_title": "Cuestionario: Mi Cuenta de Ahorro",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Un lugar donde te regalan dinero gratis",
+        "Un contrato con el banco para guardar tu dinero de forma segura y controlada",
+        "Una tarjeta para comprar lo que sea sin pagar",
+        "Es mejor gastarlo todo antes de que se acabe"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es una cuenta de ahorro bancaria?",
+      "explicacion": "¡Correcto! Es una herramienta financiera para proteger y administrar tu dinero."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Que el banco tiene colores bonitos",
+        "La seguridad y que el dinero no se pierde ni se quema",
+        "Que puedes ir al banco a platicar",
+        "El IVA solo aplica en productos de lujo"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es la principal ventaja de guardar el dinero en el banco vs. bajo el colchón?",
+      "explicacion": "¡Exacto! La seguridad es la razón número uno para usar un banco."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Un tipo de impuesto que tú pagas",
+        "Un pequeño premio en dinero que el banco te da por dejar tus ahorros con ellos",
+        "El nombre de la cuenta",
+        "Solo se puede invertir en bienes raíces"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué son los 'Intereses' en una cuenta de ahorro?",
+      "explicacion": "¡Bien! Los intereses hacen que tu ahorro crezca un poquito solo por estar ahí."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Una tarjeta para pedir dinero prestado",
+        "Una herramienta para usar el dinero que YA tienes en tu cuenta bancaria",
+        "Una tarjeta de juegos",
+        "Toda inversión garantiza ganancias del 100%"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es una tarjeta de débito?",
+      "explicacion": "¡Correcto! El débito es tu propio dinero en formato digital."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Un juego de carreras",
+        "Una aplicación para ver tu saldo y hacer movimientos desde tu celular",
+        "Una red social",
+        "La globalización eliminó su utilidad práctica"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es la Banca Móvil o App bancaria?",
+      "explicacion": "¡Exacto! La tecnología nos permite manejar el dinero sin ir a la sucursal."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Para ver si el banco se equivocó o si hay gastos que no reconoces",
+        "Para ver los dibujos",
+        "No es importante",
+        "Solo pagan impuestos los que ganan más de $10,000"
+      ],
+      "correcta": 0,
+      "texto": "¿Por qué es importante revisar tu 'Estado de Cuenta'?",
+      "explicacion": "¡Correcto! El control de tus movimientos es tu responsabilidad como usuario."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Llorar mucho",
+        "Avisar de inmediato al banco para que la bloqueen y nadie use tu dinero",
+        "Esperar a que alguien la encuentre y te la regrese",
+        "Solo lo puede hacer el director de la escuela"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué debes hacer si pierdes tu tarjeta de débito?",
+      "explicacion": "¡Bien! La rapidez en el reporte es clave para proteger tus ahorros."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si hay guardias",
+        "Los bancos centrales prohíben su uso en México"
+      ],
+      "correcta": 0,
+      "texto": "Verdadero o Falso: El banco es un lugar donde el dinero está más seguro que en una alcancía de plástico.",
+      "explicacion": "¡Exacto! El banco cuenta con bóvedas y seguros para proteger tu patrimonio."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Que se puede derramar",
+        "Que puedes sacar tu dinero en cualquier momento que lo necesites",
+        "Que es una inversión en agua",
+        "Solo aplica en economías de mercado emergente tipo B"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué significa que una cuenta sea 'Líquida'?",
+      "explicacion": "¡Bien! La liquidez es la facilidad de convertir tu ahorro en efectivo."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Solo cuando seas abuelo",
+        "Desde ahora, para estar listo y ser un Ciudadano CEN responsable",
+        "A los 40 años",
+        "Los impuestos son voluntarios en México"
+      ],
+      "correcta": 1,
+      "texto": "¿A qué edad puedes empezar a aprender sobre cuentas bancarias?",
+      "explicacion": "¡Excelente! La educación financiera empieza hoy mismo."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: Mi Cuenta de Ahorro",
+  "xp": 300,
+  "level": "Primaria 4"
+}

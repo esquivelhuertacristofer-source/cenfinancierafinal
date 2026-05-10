@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P4-2-2-A",
+  "unit_code": "P4-2-2",
+  "unit_title": "Compras en línea: cómo saber si un sitio es seguro",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "¿Sitio Seguro o Trampa?",
+  "descripcion": "Analiza las señales. No todo lo que brilla en internet es oro. ¡Haz clic solo en los sitios y señales seguras!",
+  "objetivo": "Identificar elementos de seguridad técnica y lógica en portales de comercio electrónico",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 45,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Haz clic rápido en los elementos SEGUROS (✅) y evita los FRAUDULENTOS (🚫).",
+  "items": [
+    {
+      "id": "s1",
+      "label": "https:// (con S de Seguridad)",
+      "emoji": "🔒",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f1",
+      "label": "http:// (Sin seguridad)",
+      "emoji": "🔓",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "s2",
+      "label": "Candado cerrado en la barra",
+      "emoji": "🔐",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f2",
+      "label": "Piden mi NIP para pagar",
+      "emoji": "⌨️",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s3",
+      "label": "Sello de Confianza Oficial",
+      "emoji": "🏅",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f3",
+      "label": "Precio 90% más barato",
+      "emoji": "🏷️",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "s4",
+      "label": "Aviso de Privacidad visible",
+      "emoji": "📄",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f4",
+      "label": "URL: www.amozon-oferta.com",
+      "emoji": "🔗",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s5",
+      "label": "Logos de Visa/Mastercard",
+      "emoji": "💳",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f5",
+      "label": "Solo aceptan pagos en OXXO a persona física",
+      "emoji": "💵",
+      "tipo": "incorrecto",
+      "puntos": -50
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

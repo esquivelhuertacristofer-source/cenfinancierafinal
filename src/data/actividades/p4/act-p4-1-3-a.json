@@ -1,0 +1,140 @@
+{
+  "code": "ACT-P4-1-3-A",
+  "unit_code": "P4-1-3",
+  "unit_title": "La inflación: por qué las cosas cuestan más cada año",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Carrito del Tiempo",
+  "descripcion": "En 2020, la leche costaba $20, el huevo $35 y el pan $8. Hoy en 2024, la leche cuesta $28, el huevo $52 y el pan $14. ¡Ve cómo afecta esto a tu bolsillo!",
+  "objetivo": "Comprender visualmente el concepto de inflación y la pérdida de poder adquisitivo del dinero",
+  "xp": 400,
+  "descripcion_formula": "Calculamos el costo total con precios actuales de 2024. La inflación acumulada ha sido de aproximadamente el 40% en estos productos básicos.",
+  "inputs": [
+    {
+      "id": "litros_leche",
+      "label": "Litros de Leche",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "l"
+    },
+    {
+      "id": "kilos_huevo",
+      "label": "Kilos de Huevo",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2,
+      "unit": "kg"
+    },
+    {
+      "id": "pan_dulce",
+      "label": "Piezas de Pan",
+      "type": "slider",
+      "min": 2,
+      "max": 20,
+      "step": 2,
+      "default": 10,
+      "unit": "pz"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(litros_leche * 28) + (kilos_huevo * 52) + (pan_dulce * 14)",
+  "output_label": "Costo de este carrito hoy (2024)",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado > 450",
+      "mensaje": "🚨 ¡Tu billete de $500 casi no alcanza! En 2020 te sobraban más de $150 con esta misma compra.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "resultado <= 450",
+      "mensaje": "📊 Nota cómo los precios han subido. Lo que antes era barato, hoy requiere más de tu esfuerzo y ahorro.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si la inflación es 6% y tu ahorro gana 3% en el banco, ¿estás ganando o perdiendo poder adquisitivo? ¿Qué necesitas para que tu dinero no pierda valor en términos reales?",
+  "comparativa_espera": "En 2014, un kilo de tortillas costaba $11. En 2024, cuesta $24 — un aumento del 118% en 10 años. La inflación es silenciosa pero implacable: reduce el poder de compra de quienes no invierten su dinero.",
+  "outputs_multiples": [
+    {
+      "id": "costo_hoy",
+      "label": "Costo del Carrito Hoy (2024)",
+      "formula": "Math.round((litros_leche * 28) + (kilos_huevo * 52) + (pan_dulce * 14))",
+      "prefix": "$",
+      "suffix": " pesos",
+      "descripcion": "Lo que cuesta tu canasta básica a precios actuales"
+    },
+    {
+      "id": "costo_hace_10_anios",
+      "label": "Lo que Costaba Hace 10 Años",
+      "formula": "Math.round(((litros_leche * 28) + (kilos_huevo * 52) + (pan_dulce * 14)) / Math.pow(1.055, 10))",
+      "prefix": "$",
+      "suffix": " pesos (2014)",
+      "descripcion": "Con inflación promedio del 5.5% anual, hace 10 años costaba esto"
+    },
+    {
+      "id": "costo_en_10_anios",
+      "label": "Lo que Costará en 10 Años",
+      "formula": "Math.round(((litros_leche * 28) + (kilos_huevo * 52) + (pan_dulce * 14)) * Math.pow(1.055, 10))",
+      "prefix": "$",
+      "suffix": " pesos (2034)",
+      "descripcion": "Si la inflación continúa al 5.5% anual"
+    },
+    {
+      "id": "inflacion_acumulada",
+      "label": "Inflación Acumulada en 10 Años",
+      "formula": "Math.round((Math.pow(1.055, 10) - 1) * 100)",
+      "prefix": "",
+      "suffix": "% de aumento",
+      "descripcion": "El precio total que sube la canasta en una década"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "costo_hoy",
+      "label": "Costo del Carrito Hoy (2024)",
+      "color": "#6366f1"
+    },
+    {
+      "id": "costo_hace_10_anios",
+      "label": "Lo que Costaba Hace 10 Años",
+      "color": "#22c55e"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "code": "ACT-P6-2-5-B",
+  "unit_code": "P6-2-5",
+  "unit_title": "Comparte lo que aprendiste: educación financiera para mi familia",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Decálogo de Tecnología Ética",
+  "descripcion": "Vas a fundar la empresa tecnológica más grande del mundo. ¿Cuáles serán las reglas que aseguren que tu éxito ayude a todos?",
+  "objetivo": "Diseñar un marco de principios éticos para la creación y gestión de productos tecnológicos",
+  "xp": 350,
+  "output_type": "Código de Honor Tecnológico",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "reglas_privacidad",
+      "titulo": "🔒 Privacidad y Datos",
+      "descripcion": "¿Cómo cuidarás la información de tus usuarios?",
+      "campos": [
+        {
+          "id": "uso_datos",
+          "label": "Prometo que los datos de mis usuarios nunca serán...",
+          "type": "select",
+          "opciones": [
+            "Vendidos a extraños",
+            "Usados para engañarlos",
+            "Borrados sin permiso"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "transparencia_datos",
+          "label": "¿Cómo les explicarás qué haces con sus datos?",
+          "type": "textarea",
+          "placeholder": "Ej: Usaré un lenguaje simple que hasta un niño entienda...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "inclusion_digital",
+      "titulo": "🌍 Inclusión y Justicia",
+      "descripcion": "¿Cómo harás que tu tecnología llegue a todos, no solo a los que tienen dinero?",
+      "campos": [
+        {
+          "id": "ayuda_comunidad",
+          "label": "¿Qué harás por las personas que no tienen internet?",
+          "type": "text",
+          "placeholder": "Ej: Crearé centros comunitarios o apps que funcionen sin datos...",
+          "requerido": true
+        },
+        {
+          "id": "evitar_sesgo",
+          "label": "¿Cómo asegurarás que tu IA sea justa con todos?",
+          "type": "textarea",
+          "placeholder": "Ej: Contrataré a personas de todo el mundo para revisar que la IA no tenga prejuicios...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "humanidad_tecnica",
+      "titulo": "🧠 Humano sobre Máquina",
+      "descripcion": "Define el límite de la inteligencia artificial en tu empresa.",
+      "campos": [
+        {
+          "id": "decision_final",
+          "label": "Cuando haya una decisión difícil, ¿quién decide?",
+          "type": "select",
+          "opciones": [
+            "Un equipo de humanos expertos",
+            "La computadora más rápida",
+            "El dueño de la empresa"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "proposito_empresa",
+          "label": "¿Cuál es el propósito final de tu tecnología?",
+          "type": "text",
+          "placeholder": "Ej: Hacer que la vida de las personas sea más fácil y feliz...",
+          "requerido": true
+        },
+        {
+          "id": "usuarios_producto",
+          "label": "Usuarios de Tu Producto/Servicio",
+          "type": "slider",
+          "min": 1000,
+          "max": 1000000,
+          "step": 1000,
+          "default": 50000,
+          "requerido": false
+        },
+        {
+          "id": "valor_datos_protegidos",
+          "label": "Valor de los Datos que Proteges",
+          "type": "calculated",
+          "formula": "Math.round(usuarios_producto * 0.5)",
+          "unit": " USD en datos",
+          "ayuda": "Los datos personales de un usuario valen ~$0.50 USD en el mercado de datos"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,135 @@
+{
+  "code": "P2-3-3-B",
+  "unit_code": "P2-3-3",
+  "unit_title": "Mi primera alcancía digital: apps de ahorro para niños",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Ciber-Genio del Ahorro",
+  "descripcion": "El dinero del futuro vive en la nube. ¿Sabes cómo ser un usuario seguro y responsable?",
+  "objetivo": "Validar el conocimiento sobre ciberseguridad básica y el funcionamiento del dinero digital",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es el 'Dinero Digital'?",
+      "opciones": [
+        "Dinero de mentiras",
+        "Dinero real que vive en computadoras y celulares y no se puede tocar físicamente",
+        "Dibujos de monedas",
+        "Dinero que no vale nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero digital es real y se usa para comprar cosas, ¡pero viaja por internet!"
+    },
+    {
+      "id": "q2",
+      "texto": "¿Para qué sirve una 'App de Ahorro' para niños?",
+      "opciones": [
+        "Para jugar videojuegos todo el día",
+        "Para ver cómo crecen nuestros ahorros y saber cuánto nos falta para una meta",
+        "Para que el celular pese más",
+        "Para gastar el dinero de los papás"
+      ],
+      "correcta": 1,
+      "explicacion": "Estas apps son como alcancías inteligentes que te muestran tu progreso con dibujos y gráficas."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué debes hacer con tu contraseña o 'Código Secreto'?",
+      "opciones": [
+        "Gritarla en el recreo",
+        "Guardarla en secreto y solo compartirla con tus padres",
+        "Escribirla en el pizarrón",
+        "Dársela al que me la pida"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu contraseña es el candado de tu tesoro. ¡Protégela con tu vida!"
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuál es una ventaja de ahorrar en una app en lugar de un cochinito de barro?",
+      "opciones": [
+        "Que no se rompe y puedes ver exactamente cuánto tienes en cualquier momento",
+        "Que las monedas hacen más ruido",
+        "Que el cochinito es más bonito",
+        "Ninguna"
+      ],
+      "correcta": 0,
+      "explicacion": "La tecnología te permite llevar un control perfecto y ver cómo te acercas a tu meta."
+    },
+    {
+      "id": "q5",
+      "texto": "Si un extraño en un juego te dice: 'Dame tu clave y te regalo un millón de monedas', ¿qué haces?",
+      "opciones": [
+        "Se la doy rápido",
+        "Le digo que no y aviso de inmediato a un adulto de confianza",
+        "Le pregunto su nombre",
+        "Me quedo callado y se la doy"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Cuidado! Eso es una estampa o trampa digital. Nunca des tus datos a extraños."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: El dinero digital se puede usar para comprar cosas físicas (como unos tenis) en las tiendas reales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! Hoy en día muchas tiendas aceptan pagos desde el celular o con tarjeta."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cómo se llama el lugar virtual donde se guarda y se consulta el dinero digital?",
+      "opciones": [
+        "Caja de zapatos",
+        "Cuenta bancaria o Cartera digital",
+        "Bote de basura",
+        "Nido de pájaros"
+      ],
+      "correcta": 1,
+      "explicacion": "Es tu espacio personal en el banco donde vive tu dinero seguro."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Por qué es importante revisar tu app de ahorro frecuentemente?",
+      "opciones": [
+        "Para gastar la batería",
+        "Para saber si tus metas van bien y revisar que nadie use tu dinero sin permiso",
+        "Para ver los colores",
+        "Para que no se apague"
+      ],
+      "correcta": 1,
+      "explicacion": "Estar atento te hace un administrador responsable y seguro."
+    },
+    {
+      "id": "q9",
+      "texto": "Si ves que tu saldo (dinero) bajó y tú no compraste nada, ¿qué debes hacer?",
+      "opciones": [
+        "Llorar",
+        "Avisar a tus papás de inmediato para que revisen con el banco",
+        "No decir nada",
+        "Borrar la app"
+      ],
+      "correcta": 1,
+      "explicacion": "Los adultos pueden ayudarte a resolver problemas técnicos o de seguridad."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Qué debes hacer antes de descargar cualquier aplicación nueva de dinero?",
+      "opciones": [
+        "Descargarla sin avisar",
+        "Pedir permiso a tus padres para que ellos revisen si la app es de confianza",
+        "Nada",
+        "Poner tu nombre real"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Equipo siempre con tus papás! Ellos son tus mejores guías en el mundo digital."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S2-3-2-B",
+  "unit_code": "S2-3-2",
+  "unit_title": "Análisis fundamental: evaluar el valor de una empresa",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cuidado con la Palanca",
+  "descripcion": "El apalancamiento puede construir puentes o derribar edificios. ¡Aprende a identificar sus riesgos!",
+  "objetivo": "Clasificar las situaciones de riesgo asociadas al uso excesivo de deuda y apalancamiento",
+  "xp": 400,
+  "instruccion": "Arrastra cada situación a la categoría que mejor describa su impacto financiero.",
+  "items": [
+    {
+      "id": "apa1",
+      "label": "Crédito para comprar equipo de producción",
+      "emoji": "🏗️",
+      "categoria_correcta": "pro",
+      "feedback": "Excelente. Usas dinero ajeno para ganar más dinero."
+    },
+    {
+      "id": "apa2",
+      "label": "Tu deuda mensual es el 50% de lo que ganas",
+      "emoji": "🛑",
+      "categoria_correcta": "alarmas",
+      "feedback": "¡Zona Roja! Estás al borde del colapso financiero."
+    },
+    {
+      "id": "apa3",
+      "label": "El banco te obliga a vender activos (Margin Call)",
+      "emoji": "📞",
+      "categoria_correcta": "alarmas",
+      "feedback": "El riesgo del apalancamiento se hizo real. El banco protege su dinero, no el tuyo."
+    },
+    {
+      "id": "apa4",
+      "label": "Debes más de lo que valen tus cosas",
+      "emoji": "📉",
+      "categoria_correcta": "impacto",
+      "feedback": "Esto se llama Insolvencia. Tu riqueza es negativa."
+    },
+    {
+      "id": "apa5",
+      "label": "Pedir prestado para comprar ropa de marca",
+      "emoji": "👗",
+      "categoria_correcta": "trampas",
+      "feedback": "Deuda destructiva. Pagas intereses por algo que pierde valor rápido."
+    },
+    {
+      "id": "apa6",
+      "label": "Vivir solo para pagar intereses",
+      "emoji": "⛓️",
+      "categoria_correcta": "impacto",
+      "feedback": "Esclavitud financiera. Ya no trabajas para ti, trabajas para el banco."
+    },
+    {
+      "id": "apa7",
+      "label": "Usar un crédito hipotecario para inversión",
+      "emoji": "🏠",
+      "categoria_correcta": "pro",
+      "feedback": "El inmueble se paga solo con la renta. Es el uso clásico del apalancamiento pro."
+    },
+    {
+      "id": "apa8",
+      "label": "Pagar el mínimo de la tarjeta por 10 años",
+      "emoji": "♾️",
+      "categoria_correcta": "trampas",
+      "feedback": "La trampa de la deuda eterna. El interés compuesto juega en tu contra."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "pro",
+      "label": "USO ESTRATÉGICO (PRO)",
+      "emoji": "🚀",
+      "color": "#166534"
+    },
+    {
+      "id": "trampas",
+      "label": "TRAMPAS DE CONSUMO",
+      "emoji": "🪤",
+      "color": "#991b1b"
+    },
+    {
+      "id": "alarmas",
+      "label": "ALARMAS DEL BANCO",
+      "emoji": "🚨",
+      "color": "#b45309"
+    },
+    {
+      "id": "impacto",
+      "label": "IMPACTO EN TU VIDA",
+      "emoji": "🥀",
+      "color": "#6b21a8"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

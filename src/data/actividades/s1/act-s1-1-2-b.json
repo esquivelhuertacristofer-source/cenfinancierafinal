@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S1-1-2-B",
+  "unit_code": "S1-1-2",
+  "unit_title": "La deuda pública: ¿de dónde sale el dinero del gobierno?",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Detective de Negocios",
+  "descripcion": "¿Sabes distinguir entre una buena empresa y una mala inversión? ¡Pon a prueba tu ojo clínico!",
+  "objetivo": "Profundizar en los conceptos de rentabilidad, ventaja competitiva y reportes financieros corporativos",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "det1",
+      "pregunta": "¿Qué es el 'Revenue' (Ingresos)?",
+      "respuesta_correcta": "Todo el dinero que entra a la empresa por vender sus productos, antes de pagar gastos",
+      "incorrectas": [
+        "La ganancia final",
+        "El dinero que deben",
+        "El sueldo del dueño"
+      ],
+      "dato_extra": "Los ingresos son la base, pero lo importante es cuánto de eso se convierte en ganancia."
+    },
+    {
+      "id": "det2",
+      "pregunta": "¿Qué es el 'Profit' (Utilidad Neta)?",
+      "respuesta_correcta": "El dinero que queda después de restarle TODOS los gastos y costos a los ingresos",
+      "incorrectas": [
+        "El dinero total en ventas",
+        "Los impuestos",
+        "El precio de la acción"
+      ],
+      "dato_extra": "El Profit es lo que realmente le pertenece a los accionistas."
+    },
+    {
+      "id": "det3",
+      "pregunta": "¿Qué es un 'Moat' (Ventaja Competitiva)?",
+      "respuesta_correcta": "Algo que hace que una empresa sea muy difícil de copiar o vencer (como una marca famosa o patentes)",
+      "incorrectas": [
+        "Una oficina grande",
+        "El nombre de la empresa",
+        "Tener muchos empleados"
+      ],
+      "dato_extra": "Moat significa 'foso de castillo'. Protege a la empresa de los ataques de la competencia."
+    },
+    {
+      "id": "det4",
+      "pregunta": "¿Qué es un 'Earnings Report'?",
+      "respuesta_correcta": "Un documento que las empresas públicas publican cada 3 meses para mostrar sus resultados financieros",
+      "incorrectas": [
+        "Una noticia en el periódico",
+        "Un mensaje de WhatsApp",
+        "Un comercial de tele"
+      ],
+      "dato_extra": "Los inversionistas esperan estos reportes para decidir si compran o venden sus acciones."
+    },
+    {
+      "id": "det5",
+      "pregunta": "¿Qué pasa si una empresa reporta menos ganancias de las que el mercado esperaba?",
+      "respuesta_correcta": "El precio de la acción suele bajar porque los inversionistas se decepcionan",
+      "incorrectas": [
+        "El precio sube",
+        "La empresa cierra",
+        "No pasa nada"
+      ],
+      "dato_extra": "Las expectativas son clave en el mercado de valores."
+    },
+    {
+      "id": "det6",
+      "pregunta": "¿Qué es el Ratio P/E (Precio/Ganancia)?",
+      "respuesta_correcta": "Una medida que indica cuánto están pagando los inversionistas por cada dólar que gana la empresa",
+      "incorrectas": [
+        "El precio de los productos",
+        "El número de acciones",
+        "La deuda de la empresa"
+      ],
+      "dato_extra": "Un P/E muy alto puede significar que la acción está 'cara'."
+    },
+    {
+      "id": "det7",
+      "pregunta": "¿Qué es el 'Insider Trading'?",
+      "respuesta_correcta": "Usar información secreta de la empresa para comprar o vender acciones antes que los demás (es ilegal)",
+      "incorrectas": [
+        "Vender acciones en la calle",
+        "Ser dueño de muchas acciones",
+        "Trabajar en la bolsa"
+      ],
+      "dato_extra": "Todos deben tener la misma información al mismo tiempo para que el mercado sea justo."
+    },
+    {
+      "id": "det8",
+      "pregunta": "¿Cuál es la función del CEO de una empresa pública?",
+      "respuesta_correcta": "Tomar las decisiones estratégicas y ser responsable de los resultados ante los accionistas",
+      "incorrectas": [
+        "Hacer todos los productos",
+        "Guardar el dinero en su casa",
+        "Vender acciones todos los días"
+      ],
+      "dato_extra": "Un buen CEO puede hacer que el valor de una empresa suba muchísimo."
+    },
+    {
+      "id": "det9",
+      "pregunta": "¿Qué significa 'Diversificar' en tu portafolio de acciones?",
+      "respuesta_correcta": "Comprar acciones de diferentes empresas e industrias para reducir el riesgo",
+      "incorrectas": [
+        "Comprar solo una empresa",
+        "Gastar todo el dinero rápido",
+        "Vender todo cada lunes"
+      ],
+      "dato_extra": "No pongas todos los huevos en la misma canasta bursátil."
+    },
+    {
+      "id": "det10",
+      "pregunta": "¿Cuál es la meta final de un inversionista que hace análisis fundamental?",
+      "respuesta_correcta": "Comprar empresas excelentes a un precio justo y mantenerlas por mucho tiempo",
+      "incorrectas": [
+        "Hacerse rico en un día",
+        "Adivinar el futuro",
+        "Seguir lo que dicen en TikTok"
+      ],
+      "dato_extra": "¡Felicidades! Tienes la mentalidad de los grandes inversionistas como Warren Buffett."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

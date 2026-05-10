@@ -1,0 +1,84 @@
+{
+  "code": "ACT-P3-2-3-A",
+  "unit_code": "P3-2-3",
+  "unit_title": "La seguridad en el uso de tarjetas y NIP",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Ciber-Guardián Jr.",
+  "descripcion": "¡Alerta! Hay piratas digitales intentando robar información. Haz clic en todas las situaciones de RIESGO que veas para bloquearlas y ganar puntos de seguridad.",
+  "objetivo": "Identificar hábitos inseguros en el manejo de tarjetas y claves bancarias",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 60,
+  "instruccion": "Detecta y haz clic en las situaciones que son PELIGROSAS para tu dinero.",
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "items": [
+    {
+      "id": "r1",
+      "label": "Escribir el NIP en un post-it",
+      "emoji": "📝",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "r2",
+      "label": "Decirle tu clave a un amigo",
+      "emoji": "🗣️",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "r3",
+      "label": "Prestar tu tarjeta a un extraño",
+      "emoji": "🤝",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "r4",
+      "label": "Mandar foto de tu tarjeta por chat",
+      "emoji": "📸",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "r5",
+      "label": "Usar un cajero muy solo y oscuro",
+      "emoji": "🌑",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "s1",
+      "label": "Tapar el teclado al poner el NIP",
+      "emoji": "✋",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "s2",
+      "label": "Revisar tu saldo en la app",
+      "emoji": "📱",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "s3",
+      "label": "Guardar la tarjeta en un lugar seguro",
+      "emoji": "👛",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "s4",
+      "label": "Romper los tickets viejos",
+      "emoji": "🗑️",
+      "tipo": "incorrecto",
+      "puntos": -50
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

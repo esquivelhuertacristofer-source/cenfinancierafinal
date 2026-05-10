@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P3-3-3-A",
+  "unit_code": "P3-3-3",
+  "unit_title": "Préstamos para el hogar (Hipotecas)",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Casa de los Sueños",
+  "descripcion": "Comprar una casa es el crédito más grande que harás en tu vida. Descubre cómo un buen ahorro inicial (enganche) te ayuda a pagar menos cada mes.",
+  "objetivo": "Entender el funcionamiento básico de un crédito hipotecario y la importancia del enganche",
+  "xp": 400,
+  "descripcion_formula": "Calculamos la mensualidad estimando que los intereses sumarán un 50% al costo del préstamo a 15 años. Mensualidad = (Monto Préstamo × 1.5) / 180 meses.",
+  "inputs": [
+    {
+      "id": "precio_casa",
+      "label": "Precio de la casa",
+      "type": "slider",
+      "min": 500000,
+      "max": 5000000,
+      "step": 100000,
+      "default": 1000000,
+      "unit": "$"
+    },
+    {
+      "id": "enganche",
+      "label": "Ahorro para el enganche",
+      "type": "slider",
+      "min": 50000,
+      "max": 1000000,
+      "step": 50000,
+      "default": 200000,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "((precio_casa - enganche) * 1.5) / 180",
+  "output_label": "Tu Mensualidad por 15 años",
+  "output_prefix": "$",
+  "output_suffix": " al mes",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "enganche >= precio_casa * 0.3",
+      "mensaje": "🏠 ¡Enganche de Oro! Al ahorrar mucho antes de comprar, tu mensualidad es muy cómoda.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "enganche < precio_casa * 0.1",
+      "mensaje": "⚠️ ¡Enganche Pequeño! Tu mensualidad será muy alta. Intenta ahorrar un poco más antes de comprar.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado < 5000",
+      "mensaje": "✨ ¡Plan Perfecto! Esta casa es muy accesible para tu presupuesto.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si una casa cuesta $1,500,000 y el banco presta el 90%, ¿cuánto necesitas ahorrar para el enganche? ¿Por qué se recomienda que la mensualidad hipotecaria no supere el 30% de tu ingreso?",
+  "outputs_multiples": [
+    {
+      "id": "mensualidad",
+      "label": "Tu Mensualidad por 15 Años",
+      "formula": "Math.round(((precio_casa - enganche) * 1.5) / 180)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Pago mensual estimado de hipoteca (15 años, tasa aprox)"
+    },
+    {
+      "id": "total_pagado",
+      "label": "Total que Pagarás",
+      "formula": "Math.round(((precio_casa - enganche) * 1.5 / 180) * 180 + enganche)",
+      "prefix": "$",
+      "suffix": " en total",
+      "descripcion": "Enganche más todas las cuotas en 15 años"
+    },
+    {
+      "id": "intereses_hipoteca",
+      "label": "Intereses que Pagarás al Banco",
+      "formula": "Math.round((precio_casa - enganche) * 0.5)",
+      "prefix": "$",
+      "suffix": " extra",
+      "descripcion": "El costo de pedir prestado — el 50% extra que pagas sobre la deuda"
+    },
+    {
+      "id": "pct_enganche",
+      "label": "Porcentaje de Enganche",
+      "formula": "Math.round(enganche / precio_casa * 100)",
+      "prefix": "",
+      "suffix": "% del precio",
+      "descripcion": "Mayor enganche = menor deuda = menor mensualidad"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "mensualidad",
+      "label": "Tu Mensualidad por 15 Años",
+      "color": "#6366f1"
+    },
+    {
+      "id": "total_pagado",
+      "label": "Total que Pagarás",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "En México, una hipoteca a 20 años al 11% hace que pagues casi el doble del precio original de la casa. Dar el mayor enganche posible y pagar más del mínimo mensual puede ahorrarte cientos de miles de pesos."
+}

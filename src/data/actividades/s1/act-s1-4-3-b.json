@@ -1,0 +1,102 @@
+{
+  "code": "ACT-S1-4-3-B",
+  "unit_code": "S1-4-3",
+  "unit_title": "Estrategia de precios: cómo definir el precio ideal",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Primera Declaración",
+  "descripcion": "Llegó abril y debes rendir cuentas. Si pediste facturas por tus gastos de salud y educación, ¡el SAT podría devolverte dinero!",
+  "objetivo": "Comprender el concepto de deducción personal y cómo impacta en el cálculo del impuesto anual",
+  "xp": 450,
+  "output_type": "Resumen de Declaración Anual",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "ingresos_anuales_s1",
+      "titulo": "💰 Tus Ingresos",
+      "descripcion": "¿Cuánto ganaste en el año por tu trabajo?",
+      "campos": [
+        {
+          "id": "sueldo_anual",
+          "label": "Sueldo Anual Bruto ($)",
+          "type": "slider",
+          "min": 100000,
+          "max": 1000000,
+          "step": 50000,
+          "default": 250000,
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "deducciones_personales",
+      "titulo": "🧾 Tus Deducciones",
+      "descripcion": "Selecciona los gastos por los que pediste factura oficial.",
+      "campos": [
+        {
+          "id": "gasto_medico",
+          "label": "Gastos Médicos y Dentales ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 20000,
+          "step": 1000,
+          "default": 5000,
+          "unit": "$"
+        },
+        {
+          "id": "colegiaturas",
+          "label": "Colegiaturas de Escuela ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 15000,
+          "step": 1000,
+          "default": 0,
+          "unit": "$"
+        },
+        {
+          "id": "lentes",
+          "label": "Lentes Graduados ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 2500,
+          "step": 500,
+          "default": 2500,
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "resultado_sat",
+      "titulo": "📊 Resultado Final",
+      "descripcion": "Mira cómo tus deducciones bajaron el impuesto que debes pagar.",
+      "campos": [
+        {
+          "id": "mensaje_sat",
+          "label": "¿Qué harás con tu Saldo a Favor?",
+          "type": "textarea",
+          "placeholder": "Ej: Lo voy a invertir en mi fondo de retiro para que crezca más...",
+          "requerido": true
+        },
+        {
+          "id": "base_gravable_est",
+          "label": "Base Gravable Estimada",
+          "type": "calculated",
+          "formula": "Math.max(0, sueldo_anual - gasto_medico - colegiaturas - lentes)",
+          "unit": "$",
+          "ayuda": "Tu ingreso anual menos las deducciones personales comprobadas"
+        },
+        {
+          "id": "isr_estimado",
+          "label": "ISR Estimado a Pagar",
+          "type": "calculated",
+          "formula": "Math.round(Math.max(0, sueldo_anual - gasto_medico - colegiaturas - lentes) * 0.20)",
+          "unit": "$",
+          "ayuda": "Aproximación con tasa efectiva del 20% — la real depende de tu tabla ISR"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

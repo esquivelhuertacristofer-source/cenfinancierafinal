@@ -1,0 +1,136 @@
+{
+  "code": "P2-1-2-A",
+  "unit_code": "P2-1-2",
+  "unit_title": "Billetes y monedas: aprende a identificar todos",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "Detective de Billetes",
+  "descripcion": "Los billetes de México tienen secretos para que nadie los pueda copiar. ¿Sabes distinguir el arte de la seguridad?",
+  "objetivo": "Identificar elementos de seguridad y diseño en la familia de billetes mexicanos",
+  "xp": 250,
+  "instruccion": "Arrastra cada elemento al grupo correcto. ¿Es una MARCA DE SEGURIDAD o un DIBUJO DE DISEÑO?",
+  "items": [
+    {
+      "id": "s1",
+      "label": "Relieve al tocar",
+      "emoji": "🖐️",
+      "categoria_correcta": "seguridad",
+      "feedback": "¡Cierto! Si pasas tu dedo por las letras, se siente rugoso."
+    },
+    {
+      "id": "d1",
+      "label": "Ajolote Sonriente",
+      "emoji": "🦎",
+      "categoria_correcta": "diseño",
+      "feedback": "¡Es hermoso! Representa la naturaleza de Xochimilco en el billete de $50."
+    },
+    {
+      "id": "s2",
+      "label": "Ventana Transparente",
+      "emoji": "🪟",
+      "categoria_correcta": "seguridad",
+      "feedback": "Es muy difícil de copiar porque es plástico transparente."
+    },
+    {
+      "id": "d2",
+      "label": "Sor Juana Inés",
+      "emoji": "✍️",
+      "categoria_correcta": "diseño",
+      "feedback": "Es la gran poeta en nuestro billete rojo de $100."
+    },
+    {
+      "id": "s3",
+      "label": "Colores que cambian",
+      "emoji": "🌈",
+      "categoria_correcta": "seguridad",
+      "feedback": "Al mover el billete, los números cambian de verde a azul."
+    },
+    {
+      "id": "d3",
+      "label": "Ballena Gris",
+      "emoji": "🐋",
+      "categoria_correcta": "diseño",
+      "feedback": "Aparece en el reverso del billete de $500."
+    },
+    {
+      "id": "s4",
+      "label": "Hilo Dinámico",
+      "emoji": "🧵",
+      "categoria_correcta": "seguridad",
+      "feedback": "Es un hilo que parece moverse cuando inclinas el billete."
+    },
+    {
+      "id": "d4",
+      "label": "Benito Juárez",
+      "emoji": "🎩",
+      "categoria_correcta": "diseño",
+      "feedback": "Aparece en los billetes de $20 y $500."
+    },
+    {
+      "id": "s5",
+      "label": "Marca de Agua",
+      "emoji": "💧",
+      "categoria_correcta": "seguridad",
+      "feedback": "Se ve un retrato 'fantasma' cuando pones el billete frente a la luz."
+    },
+    {
+      "id": "d5",
+      "label": "Ecosistema de Manglares",
+      "emoji": "🌳",
+      "categoria_correcta": "diseño",
+      "feedback": "El arte de nuestros billetes celebra la biodiversidad de México."
+    },
+    {
+      "id": "s6",
+      "label": "Microtextos",
+      "emoji": "🔎",
+      "categoria_correcta": "seguridad",
+      "feedback": "Son letras tan pequeñitas que solo se ven con lupa."
+    },
+    {
+      "id": "d6",
+      "label": "Hidalgo y Morelos",
+      "emoji": "⚔️",
+      "categoria_correcta": "diseño",
+      "feedback": "Los héroes de la Independencia en el billete de $200."
+    },
+    {
+      "id": "s7",
+      "label": "Fluorescencia",
+      "emoji": "🔦",
+      "categoria_correcta": "seguridad",
+      "feedback": "¡Brilla bajo luz negra! Es como magia de seguridad."
+    },
+    {
+      "id": "d7",
+      "label": "Palacio de Bellas Artes",
+      "emoji": "🏛️",
+      "categoria_correcta": "diseño",
+      "feedback": "Un edificio icónico en el reverso del billete de $100."
+    },
+    {
+      "id": "s8",
+      "label": "Folio creciente",
+      "emoji": "🔢",
+      "categoria_correcta": "seguridad",
+      "feedback": "Los números van creciendo de tamaño y son únicos para cada billete."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "seguridad",
+      "label": "SEGURIDAD (Secretos)",
+      "emoji": "🛡️",
+      "color": "#dc2626"
+    },
+    {
+      "id": "diseño",
+      "label": "DISEÑO (Arte)",
+      "emoji": "🎨",
+      "color": "#2563eb"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

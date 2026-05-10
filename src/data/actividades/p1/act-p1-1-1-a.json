@@ -1,0 +1,115 @@
+{
+  "code": "ACT-P1-1-1-A",
+  "unit_code": "P1-1-1",
+  "unit_title": "¿Qué es el dinero? Monedas y billetes de México",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Gran Viaje: Del Trueque al Billetazo",
+  "descripcion": "Hace mucho tiempo no existían las monedas. ¿Podrás ayudar a los antiguos comerciantes a organizar sus intercambios?",
+  "objetivo": "Diferenciar objetos de trueque histórico vs. formas de dinero moderno",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto a su época correcta. ¿Es algo que se intercambiaba antes o es dinero de hoy?",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Bolsa de Cacao",
+      "emoji": "🫘",
+      "categoria_correcta": "trueque",
+      "feedback": "¡Correcto! En el México antiguo, el cacao era el 'dinero' más delicioso."
+    },
+    {
+      "id": "i2",
+      "label": "Billete de $20",
+      "emoji": "💵",
+      "categoria_correcta": "moderno",
+      "feedback": "¡Exacto! El billete de Benito Juárez es dinero moderno."
+    },
+    {
+      "id": "i3",
+      "label": "Hacha de Cobre",
+      "emoji": "🪓",
+      "categoria_correcta": "trueque",
+      "feedback": "¡Increíble! Las hachas pequeñas se usaban para comprar cosas grandes."
+    },
+    {
+      "id": "i4",
+      "label": "Moneda de $10",
+      "emoji": "🪙",
+      "categoria_correcta": "moderno",
+      "feedback": "¡Muy bien! Las monedas redondas son parte de nuestra vida hoy."
+    },
+    {
+      "id": "i5",
+      "label": "Plumas de Quetzal",
+      "emoji": "🪶",
+      "categoria_correcta": "trueque",
+      "feedback": "¡Cierto! Eran tan bellas que valían mucho en los mercados antiguos."
+    },
+    {
+      "id": "i6",
+      "label": "Tarjeta de Débito",
+      "emoji": "💳",
+      "categoria_correcta": "moderno",
+      "feedback": "¡Eso es! El dinero digital también es dinero moderno."
+    },
+    {
+      "id": "i7",
+      "label": "Manta de Algodón",
+      "emoji": "🧵",
+      "categoria_correcta": "trueque",
+      "feedback": "La ropa también se usaba para cambiar por comida hace siglos."
+    },
+    {
+      "id": "i8",
+      "label": "Billete de $50 (Ajolote)",
+      "emoji": "🦎",
+      "categoria_correcta": "moderno",
+      "feedback": "¡El billete favorito de todos! Es dinero muy actual."
+    },
+    {
+      "id": "i9",
+      "label": "Sal de Mar",
+      "emoji": "🧂",
+      "categoria_correcta": "trueque",
+      "feedback": "¡Fascinante! De la palabra 'Sal' viene la palabra 'Salario'."
+    },
+    {
+      "id": "i10",
+      "label": "Reloj de Oro",
+      "emoji": "⌚",
+      "categoria_correcta": "moderno",
+      "feedback": "Aunque es valioso, hoy usamos billetes para comprar relojes."
+    },
+    {
+      "id": "i11",
+      "label": "Concha de Mar",
+      "emoji": "🐚",
+      "categoria_correcta": "trueque",
+      "feedback": "En muchas islas, las conchas eran las monedas de los pescadores."
+    },
+    {
+      "id": "i12",
+      "label": "Pago con el Celular",
+      "emoji": "📱",
+      "categoria_correcta": "moderno",
+      "feedback": "¡El futuro está aquí! Pagar con el celular es dinero moderno."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "trueque",
+      "label": "TRUEQUE (Antiguo)",
+      "emoji": "🏛️",
+      "color": "#92400e"
+    },
+    {
+      "id": "moderno",
+      "label": "DINERO (Moderno)",
+      "emoji": "✨",
+      "color": "#065f46"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

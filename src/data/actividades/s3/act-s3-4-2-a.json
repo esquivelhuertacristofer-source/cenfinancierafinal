@@ -1,0 +1,107 @@
+{
+  "code": "ACT-S3-4-2-A",
+  "unit_code": "S3-4-2",
+  "unit_title": "Exportar desde México: el mundo es tu mercado",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Constitución Familiar",
+  "descripcion": "El dinero puede unir o destruir a una familia. Crea las reglas para que tu empresa sea un legado y no una fuente de pleitos.",
+  "objetivo": "Diseñar un protocolo familiar básico para regular la relación entre la familia, la propiedad y la gestión de la empresa",
+  "xp": 600,
+  "output_type": "Protocolo Familiar de Sucesión",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "filosofia_familia_s3",
+      "titulo": "🌟 Valores y Filosofía",
+      "descripcion": "¿Qué representa tu familia ante el mundo?",
+      "campos": [
+        {
+          "id": "mision_familiar",
+          "label": "Misión de la Familia",
+          "type": "textarea",
+          "placeholder": "Ej: Crear empleos dignos, innovar con ética y apoyar a la comunidad...",
+          "requerido": true
+        },
+        {
+          "id": "valor_principal",
+          "label": "Valor innegociable",
+          "type": "text",
+          "placeholder": "Ej: Honestidad, Excelencia, Austeridad...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "reglas_trabajo_s3",
+      "titulo": "💼 Reglas de Trabajo",
+      "descripcion": "Evita el nepotismo. ¿Quién puede entrar a trabajar?",
+      "campos": [
+        {
+          "id": "requisitos_familia",
+          "label": "Requisitos para que un familiar trabaje en la empresa",
+          "type": "textarea",
+          "placeholder": "Ej: Título universitario, hablar 2 idiomas y tener 3 años de experiencia en OTRA empresa...",
+          "requerido": true
+        },
+        {
+          "id": "politica_sueldos",
+          "label": "¿Cómo se fijan los sueldos de los parientes?",
+          "type": "select",
+          "opciones": [
+            "Sueldo de mercado (lo que ganaría alguien fuera)",
+            "Sueldo igual para todos los hermanos",
+            "Sueldo por necesidad"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "gobierno_salida_s3",
+      "titulo": "🚪 Salida y Conflictos",
+      "descripcion": "¿Qué pasa si alguien ya no quiere estar en el negocio?",
+      "campos": [
+        {
+          "id": "venta_acciones_s3",
+          "label": "Regla para vender acciones",
+          "type": "textarea",
+          "placeholder": "Ej: Primero debe ofrecerlas a los otros hermanos antes que a extraños...",
+          "requerido": true
+        },
+        {
+          "id": "resolucion_pleitos",
+          "label": "¿Cómo resolverán una pelea entre socios?",
+          "type": "select",
+          "opciones": [
+            "Mediación de un experto externo",
+            "Votación por mayoría",
+            "Decide el fundador"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "socios_familiares",
+          "label": "Número de Socios/Familiares en la Empresa",
+          "type": "slider",
+          "min": 2,
+          "max": 20,
+          "step": 1,
+          "default": 4,
+          "requerido": false
+        },
+        {
+          "id": "participacion_minima",
+          "label": "Participación Equitativa por Socio",
+          "type": "calculated",
+          "formula": "Math.round(100 / Math.max(1, socios_familiares) * 10) / 10",
+          "unit": "%",
+          "ayuda": "Si dividieran equitativamente, cada socio tendría este porcentaje"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

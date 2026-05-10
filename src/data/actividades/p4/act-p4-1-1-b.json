@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-1-1-B",
+  "unit_code": "P4-1-1",
+  "unit_title": "Los bancos: ¿qué son y para qué sirven?",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¿Para qué sirve un banco?",
+  "descripcion": "Los bancos son mucho más que cajas fuertes gigantes. ¡Descubre todos los servicios que ofrecen!",
+  "objetivo": "Identificar los principales servicios y funciones de las instituciones bancarias",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál es la función más básica de un banco?",
+      "opciones": [
+        "Regalar dinero a los transeúntes",
+        "Guardar y proteger el dinero de las personas",
+        "Vender comida y dulces",
+        "Solo prestar dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Los bancos son instituciones seguras diseñadas para custodiar el ahorro del público."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cómo se llama el dinero que el banco te paga por dejar tus ahorros con ellos?",
+      "opciones": [
+        "Impuesto",
+        "Multa",
+        "Interés",
+        "Propina"
+      ],
+      "correcta": 2,
+      "explicacion": "El interés es el 'premio' que recibes por ahorrar en una cuenta bancaria."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué puedes hacer hoy en día sin ir físicamente a una sucursal bancaria?",
+      "opciones": [
+        "Pagar servicios como el internet",
+        "Hacer transferencias de dinero",
+        "Consultar cuánto dinero tienes",
+        "Todas las anteriores"
+      ],
+      "correcta": 3,
+      "explicacion": "La banca digital nos permite hacer casi todo desde nuestro celular o computadora."
+    },
+    {
+      "id": "q4",
+      "texto": "Si necesitas mucho dinero para comprar una casa, ¿qué servicio bancario pedirías?",
+      "opciones": [
+        "Una cuenta de ahorro",
+        "Un crédito o préstamo",
+        "Una tarjeta de regalo",
+        "Un seguro de vida"
+      ],
+      "correcta": 1,
+      "explicacion": "Los bancos prestan dinero a personas y empresas para que puedan crecer."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué es más seguro guardar el dinero en un banco que bajo el colchón?",
+      "opciones": [
+        "Porque el colchón se ensucia",
+        "Porque el dinero en el banco está protegido contra robos e incendios",
+        "Porque en el banco el dinero brilla más",
+        "No es más seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "Los bancos cuentan con bóvedas de alta seguridad y seguros que protegen tu dinero."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cómo se llama el aparato donde puedes sacar dinero en efectivo a cualquier hora?",
+      "opciones": [
+        "Caja registradora",
+        "Cajero Automático (ATM)",
+        "Máquina de dulces",
+        "Teléfono público"
+      ],
+      "correcta": 1,
+      "explicacion": "Los cajeros automáticos nos dan acceso a nuestro efectivo 24/7."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

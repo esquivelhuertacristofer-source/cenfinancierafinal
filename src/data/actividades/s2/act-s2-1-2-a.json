@@ -1,0 +1,122 @@
+{
+  "code": "ACT-S2-1-2-A",
+  "unit_code": "S2-1-2",
+  "unit_title": "La política monetaria: cómo Banxico controla la inflación",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Banxico: Las Palancas del Banco Central",
+  "descripcion": "El Banco de México tiene herramientas invisibles pero poderosas que afectan el precio de TODO lo que compras. Arrastra cada acción de Banxico a su efecto real en la economía.",
+  "objetivo": "Identificar los mecanismos de transmisión de la política monetaria: cómo la tasa de interés afecta inflación, empleo, tipo de cambio y consumo",
+  "xp": 400,
+  "instruccion": "Arrastra cada ACCIÓN de Banxico o HERRAMIENTA monetaria a la categoría de EFECTO ECONÓMICO que produce.",
+  "items": [
+    {
+      "id": "bx1",
+      "label": "Banxico SUBE la tasa de interés",
+      "emoji": "📈",
+      "categoria_correcta": "enfria_economia",
+      "feedback": "Correcto. Tasa más alta = créditos más caros = familias y empresas piden menos prestado = menos consumo = inflación baja. Es el freno de mano de la economía."
+    },
+    {
+      "id": "bx2",
+      "label": "Banxico BAJA la tasa de interés",
+      "emoji": "📉",
+      "categoria_correcta": "activa_economia",
+      "feedback": "Exacto. Tasa baja = créditos baratos = más empresas invierten, más familias compran = más empleos = pero también más inflación. Es el acelerador de la economía."
+    },
+    {
+      "id": "bx3",
+      "label": "Tasa de interés alta atrae dólares extranjeros a México",
+      "emoji": "💵",
+      "categoria_correcta": "tipo_de_cambio",
+      "feedback": "Correcto. Inversores extranjeros mueven su dinero a México cuando paga más interés. Compran pesos para invertir → el peso se aprecia (se necesitan menos pesos para comprar 1 dólar)."
+    },
+    {
+      "id": "bx4",
+      "label": "Tasa baja → capital extranjero sale de México",
+      "emoji": "🚪",
+      "categoria_correcta": "tipo_de_cambio",
+      "feedback": "Correcto. Si México paga poco interés, los inversores se van a donde pagan más. Venden pesos → el peso se deprecia → importaciones se encarecen → más inflación."
+    },
+    {
+      "id": "bx5",
+      "label": "Hipotecas más caras porque subió la tasa",
+      "emoji": "🏠",
+      "categoria_correcta": "enfria_economia",
+      "feedback": "Correcto. La transmisión directa: Banxico sube → bancos suben sus tasas → hipotecas y créditos al consumo se encarecen → menos personas compran casas y autos → economía se desacelera."
+    },
+    {
+      "id": "bx6",
+      "label": "CETES pagan más rendimiento a los ahorradores",
+      "emoji": "💰",
+      "categoria_correcta": "herramientas_banxico",
+      "feedback": "Así funciona: cuando Banxico sube la tasa, los CETES (deuda del gobierno mexicano) también suben su rendimiento. Esto incentiva a la gente a ahorrar en lugar de gastar → menos consumo → inflación baja."
+    },
+    {
+      "id": "bx7",
+      "label": "Las empresas contratan menos trabajadores",
+      "emoji": "👷",
+      "categoria_correcta": "enfria_economia",
+      "feedback": "Efecto secundario real. Tasa alta → crédito caro para empresas → menos inversión → menos expansión → menos empleo. El dilema de Banxico: bajar inflación a veces cuesta empleos."
+    },
+    {
+      "id": "bx8",
+      "label": "Más personas piden crédito para poner su negocio",
+      "emoji": "🏪",
+      "categoria_correcta": "activa_economia",
+      "feedback": "Exacto. Tasa baja = crédito barato = más emprendedores se animan a pedir préstamos para abrir negocios = más empleos = crecimiento económico. Pero cuidado: también puede generar inflación."
+    },
+    {
+      "id": "bx9",
+      "label": "Inflación objetivo de Banxico: 3% anual (±1%)",
+      "emoji": "🎯",
+      "categoria_correcta": "herramientas_banxico",
+      "feedback": "El mandato constitucional de Banxico es mantener la inflación alrededor de 3%. Si sube a 6%, sube la tasa. Si baja a 1%, baja la tasa. La tasa de interés es SU única herramienta principal."
+    },
+    {
+      "id": "bx10",
+      "label": "La inflación se dispara al 9% en México",
+      "emoji": "🔥",
+      "categoria_correcta": "activa_economia",
+      "feedback": "Atención: inflación alta NO es 'economía activa' positiva — es un problema serio. Banxico responde subiendo la tasa agresivamente para frenarlo. México vivió esto en 2022 con inflación de 8.7%."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "enfria_economia",
+      "label": "ENFRÍA LA ECONOMÍA (baja inflación)",
+      "emoji": "❄️",
+      "color": "#1e40af",
+      "descripcion": "Acciones que reducen el consumo y la inflación"
+    },
+    {
+      "id": "activa_economia",
+      "label": "ACTIVA LA ECONOMÍA (sube empleo/crecimiento)",
+      "emoji": "🔥",
+      "color": "#166534",
+      "descripcion": "Acciones que estimulan el consumo y la inversión"
+    },
+    {
+      "id": "tipo_de_cambio",
+      "label": "AFECTA EL TIPO DE CAMBIO (peso vs. dólar)",
+      "emoji": "💱",
+      "color": "#6b21a8",
+      "descripcion": "Efectos sobre la fortaleza/debilidad del peso mexicano"
+    },
+    {
+      "id": "herramientas_banxico",
+      "label": "HERRAMIENTAS DIRECTAS DE BANXICO",
+      "emoji": "🔧",
+      "color": "#b45309",
+      "descripcion": "Mecanismos e instrumentos específicos que usa el banco central"
+    }
+  ],
+  "dato_real": {
+    "titulo": "México 2022-2024: Banxico en acción real",
+    "descripcion": "En 2022, la inflación en México llegó a 8.7% (más del doble del objetivo). Banxico subió la tasa 15 veces consecutivas — de 4% hasta 11.25%. Para 2024, la inflación bajó a ~4.5% y Banxico empezó a recortar. Este fue el ciclo monetario más agresivo en 20 años."
+  },
+  "pregunta_reflexion": "Si Banxico sube la tasa de interés mañana: ¿cómo afecta eso al precio de una hipoteca? ¿Al dólar? ¿A si tu papá puede pedir un préstamo para su negocio?",
+  "versión": "2026.Diamond.V2"
+}

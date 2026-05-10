@@ -1,0 +1,140 @@
+{
+  "code": "ACT-P3-1-1-A",
+  "unit_code": "P3-1-1",
+  "unit_title": "El valor del ahorro y metas financieras",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "SIMPLE",
+  "titulo": "El Llenado de Sueños",
+  "descripcion": "Ajusta cuánto dinero puedes guardar cada mes y descubre cuánto tiempo te tomaría alcanzar metas de diferentes tamaños.",
+  "objetivo": "Entender visualmente cómo el ahorro constante acumula grandes sumas a través del tiempo",
+  "xp": 200,
+  "descripcion_formula": "Calculamos el ahorro total multiplicando el monto mensual por el número de meses del plazo elegido.",
+  "inputs": [
+    {
+      "id": "monto_mensual",
+      "label": "Ahorro mensual",
+      "type": "slider",
+      "min": 50,
+      "max": 1000,
+      "step": 50,
+      "default": 200,
+      "unit": "$"
+    },
+    {
+      "id": "plazo_meses",
+      "label": "Tiempo de espera",
+      "type": "slider",
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "default": 6,
+      "unit": "meses"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación Mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    }
+  ],
+  "formula": "monto_mensual * plazo_meses",
+  "output_label": "Tu Tesoro Acumulado",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado >= 10000",
+      "mensaje": "🌟 ¡Increíble! Con esta constancia podrías comprar algo gigante como una consola o una super bici.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado >= 5000",
+      "mensaje": "💎 ¡Excelente meta! Estás construyendo un ahorro muy sólido para metas medianas.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado >= 1000",
+      "mensaje": "✨ ¡Buen avance! Ya tienes lo suficiente para un juego nuevo o un regalo especial.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado < 1000",
+      "mensaje": "🌱 Todo bosque empieza con una semilla. ¡Sigue ahorrando para llegar más lejos!",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál sería tu primera meta de ahorro? Si ahorras $20 a la semana, ¿cuántas semanas necesitarías para lograrla?",
+  "outputs_multiples": [
+    {
+      "id": "total_acumulado",
+      "label": "Tu Tesoro Acumulado",
+      "formula": "monto_mensual * plazo_meses",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "La suma de todos tus ahorros mensuales"
+    },
+    {
+      "id": "promedio_semanal",
+      "label": "Lo que Ahorras por Semana",
+      "formula": "Math.round(monto_mensual / 4.3)",
+      "prefix": "$",
+      "suffix": "/semana",
+      "descripcion": "Tu ahorro mensual dividido en semanas"
+    },
+    {
+      "id": "meta_doble_tiempo",
+      "label": "Si Ahorrás el Doble por Mes",
+      "formula": "monto_mensual * 2 * plazo_meses",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "El potencial si duplicas tu esfuerzo"
+    },
+    {
+      "id": "porcentaje_del_ano",
+      "label": "Meses que Representa",
+      "formula": "Math.round(plazo_meses / 12 * 10) / 10",
+      "prefix": "",
+      "suffix": " años de ahorro",
+      "descripcion": "Tu horizonte de ahorro en años"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "total_acumulado",
+      "label": "Tu Tesoro Acumulado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "promedio_semanal",
+      "label": "Lo que Ahorras por Semana",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "Una meta financiera escrita y con fecha concreta tiene 10 veces más probabilidad de cumplirse que una que solo existe en la cabeza. El primer paso siempre es ponerle número y fecha."
+}

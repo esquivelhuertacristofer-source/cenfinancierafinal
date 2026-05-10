@@ -1,0 +1,99 @@
+{
+  "code": "ACT-P6-4-1-B",
+  "unit_code": "P6-4-1",
+  "unit_title": "Elevator Pitch: vendiendo mi idea en 60 segundos",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Logística Global",
+  "descripcion": "Exportar tus productos requiere orden y estrategia. ¿Puedes organizar los pasos para llegar al otro lado del océano?",
+  "objetivo": "Identificar los procesos operativos, legales y culturales necesarios para el comercio internacional",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción a la fase de exportación correcta.",
+  "items": [
+    {
+      "id": "log1",
+      "label": "Registrar la marca en el país destino",
+      "emoji": "⚖️",
+      "categoria_correcta": "legal",
+      "feedback": "Protección legal antes de vender."
+    },
+    {
+      "id": "log2",
+      "label": "Obtener certificados de salud internacional",
+      "emoji": "📋",
+      "categoria_correcta": "legal",
+      "feedback": "Cumpliendo con las normas de calidad."
+    },
+    {
+      "id": "log3",
+      "label": "Contratar un Agente Aduanal",
+      "emoji": "🛂",
+      "categoria_correcta": "logistica",
+      "feedback": "El experto que ayuda a pasar la frontera."
+    },
+    {
+      "id": "log4",
+      "label": "Elegir el puerto y tipo de barco (Incoterms)",
+      "emoji": "🚢",
+      "categoria_correcta": "logistica",
+      "feedback": "Definiendo quién paga el transporte y seguro."
+    },
+    {
+      "id": "log5",
+      "label": "Traducir etiquetas al idioma local",
+      "emoji": "🗣️",
+      "categoria_correcta": "cultura",
+      "feedback": "¡Que el cliente entienda qué está comprando!"
+    },
+    {
+      "id": "log6",
+      "label": "Adaptar los sabores a los gustos locales",
+      "emoji": "🍕",
+      "categoria_correcta": "cultura",
+      "feedback": "La cultura influye en lo que la gente consume."
+    },
+    {
+      "id": "log7",
+      "label": "Contratar vendedores y distribuidores locales",
+      "emoji": "🤝",
+      "categoria_correcta": "ventas",
+      "feedback": "Necesitas gente que conozca el mercado real."
+    },
+    {
+      "id": "log8",
+      "label": "Gestionar el cobro en moneda extranjera",
+      "emoji": "💱",
+      "categoria_correcta": "ventas",
+      "feedback": "Manejando el riesgo del tipo de cambio."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "legal",
+      "label": "1. LEGAL Y CUMPLIMIENTO",
+      "emoji": "🏛️",
+      "color": "#1e3a8a"
+    },
+    {
+      "id": "logistica",
+      "label": "2. ADUANAS Y TRANSPORTE",
+      "emoji": "📦",
+      "color": "#b45309"
+    },
+    {
+      "id": "cultura",
+      "label": "3. ADAPTACIÓN CULTURAL",
+      "emoji": "🌎",
+      "color": "#047857"
+    },
+    {
+      "id": "ventas",
+      "label": "4. VENTA Y COBRO",
+      "emoji": "💰",
+      "color": "#7c3aed"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

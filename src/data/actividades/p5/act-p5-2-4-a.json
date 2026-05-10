@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P5-2-4-A",
+  "unit_code": "P5-2-4",
+  "unit_title": "Publicidad y Redes Sociales: el truco del deseo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Detective de Esquemas Ponzi",
+  "descripcion": "Te ofrecen inversiones 'mágicas'. ¿Podrás distinguir un negocio real de una pirámide fraudulenta?",
+  "objetivo": "Identificar las señales de alerta de esquemas piramidales y fraudes financieros comunes",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 50,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Marca como FRAUDE (🚫) las ofertas sospechosas y acepta las REALES (✅).",
+  "items": [
+    {
+      "id": "f1",
+      "label": "¡Gana 10% diario sin hacer nada!",
+      "emoji": "🚀",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "s1",
+      "label": "Inversión en CETES (Rendimiento anual del 11%)",
+      "emoji": "🏦",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f2",
+      "label": "Trae a 3 amigos y quédate con su dinero de inscripción",
+      "emoji": "🏘️",
+      "tipo": "incorrecto",
+      "puntos": -250
+    },
+    {
+      "id": "f3",
+      "label": "App secreta que duplica tus Bitcoins en una hora",
+      "emoji": "₿",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "s2",
+      "label": "Ahorro programado en un banco registrado por el gobierno",
+      "emoji": "🛡️",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f4",
+      "label": "Inversión 'Garantizada' sin ningún riesgo",
+      "emoji": "🤐",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "s3",
+      "label": "Invertir en una empresa que cotiza en la Bolsa de Valores",
+      "emoji": "📈",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f5",
+      "label": "Venta de 'diamantes imaginarios' solo para miembros VIP",
+      "emoji": "💎",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "f6",
+      "label": "Te piden dinero urgente para sacar a un pariente de la cárcel",
+      "emoji": "🚔",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "s4",
+      "label": "Seguro de vida de una institución financiera oficial",
+      "emoji": "👨‍👩-👧",
+      "tipo": "correcto",
+      "puntos": 100
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

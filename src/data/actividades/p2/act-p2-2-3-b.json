@@ -1,0 +1,137 @@
+{
+  "code": "P2-2-3-B",
+  "unit_code": "P2-2-3",
+  "unit_title": "El domingo: ¿gasto todo o guardo algo?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Administrador de Domingos",
+  "descripcion": "¿Sabes hacer que tus $50 pesos duren toda la semana? ¡Demuestra que eres el jefe de tu cartera!",
+  "objetivo": "Validar el conocimiento sobre presupuesto semanal, ahorro preventivo y control de impulsos",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es lo más inteligente que puedes hacer apenas recibes tu domingo o mesada?",
+      "opciones": [
+        "Correr a la tienda y gastarlo todo",
+        "Separar una parte para tu alcancía antes de empezar a gastar",
+        "Esconderlo y olvidarlo",
+        "Dárselo a un amigo"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahorrar al principio asegura que siempre tendrás dinero para tus sueños grandes."
+    },
+    {
+      "id": "q2",
+      "texto": "Si te gastas todo tu dinero el domingo, ¿qué pasa el miércoles si necesitas un lápiz nuevo?",
+      "opciones": [
+        "El dinero aparece mágicamente",
+        "No podrás comprarlo porque ya no tienes dinero",
+        "Te lo dan gratis en la tienda",
+        "No importa"
+      ],
+      "correcta": 1,
+      "explicacion": "Administrar es repartir el dinero para que alcance todos los días de la semana."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué significa que el dinero 'quema' en la bolsa?",
+      "opciones": [
+        "Que está muy caliente",
+        "Que tienes muchas ganas de gastarlo rápido en cualquier cosa",
+        "Que es dinero falso",
+        "Que la bolsa tiene un hoyo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un impulso de comprar cosas que no necesitas. ¡Un genio financiero sabe controlarlo!"
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuánto es recomendable ahorrar de tu domingo?",
+      "opciones": [
+        "Nada",
+        "Una parte constante cada semana (ejemplo: la mitad o $10)",
+        "Solo si me sobra después de comprar muchos dulces",
+        "Solo en mi cumpleaños"
+      ],
+      "correcta": 1,
+      "explicacion": "La constancia es el secreto: ahorrar un poquito cada semana se vuelve una fortuna."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál es el beneficio de ahorrar un poquito cada domingo?",
+      "opciones": [
+        "Ninguno",
+        "Que al final del mes o año tendrás una cantidad grande para algo muy importante",
+        "Que la alcancía se ve pesada",
+        "Que tus papás se enojan"
+      ],
+      "correcta": 1,
+      "explicacion": "El ahorro te da el poder de comprar cosas que cuestan mucho, como una bici o un videojuego."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: Debes esperar a ser adulto para aprender a administrar tu dinero.",
+      "opciones": [
+        "Verdadero",
+        "Falso (puedes empezar ahora con tu domingo)",
+        "Solo si trabajas en un banco",
+        "Solo si eres rico"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Cierto! Los mejores hábitos financieros se aprenden desde niño."
+    },
+    {
+      "id": "q7",
+      "texto": "Si quieres un juguete de $50 y guardas $10 cada domingo, ¿en cuántas semanas lo completarás?",
+      "opciones": [
+        "2 semanas",
+        "5 semanas",
+        "10 semanas",
+        "1 semana"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! 10 + 10 + 10 + 10 + 10 = 50. La paciencia vale la pena."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué debes hacer si una semana te gastaste todo en un minuto y luego te arrepentiste?",
+      "opciones": [
+        "Llorar para que me den más",
+        "Aprender la lección y esforzarme más el próximo domingo",
+        "No volver a recibir dinero",
+        "Enojarme con mis papás"
+      ],
+      "correcta": 1,
+      "explicacion": "Los errores son para aprender. ¡La próxima semana serás un mejor administrador!"
+    },
+    {
+      "id": "q9",
+      "texto": "¿Por qué es bueno tener una alcancía transparente?",
+      "opciones": [
+        "Para presumir",
+        "Para ver cómo va creciendo tu tesoro y motivarte a seguir guardando",
+        "Para que no se pierda",
+        "Para que sea más ligera"
+      ],
+      "correcta": 1,
+      "explicacion": "Ver tu progreso te ayuda a no rendirte y a seguir ahorrando con alegría."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Quién es el máximo responsable de que tu domingo alcance para toda la semana?",
+      "opciones": [
+        "Mis papás",
+        "Yo mismo",
+        "Mis abuelitos",
+        "El de la tienda"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Tú eres el jefe de tu dinero! Tomar buenas decisiones es tu misión."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

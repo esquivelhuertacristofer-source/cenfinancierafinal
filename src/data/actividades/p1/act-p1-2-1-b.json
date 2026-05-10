@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-2-1-B",
+  "unit_code": "P1-2-1",
+  "unit_title": "Necesito vs. quiero: la diferencia más importante",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro del Semáforo Financiero",
+  "descripcion": "¿Sabes cuándo decir 'sí' y cuándo decir 'ahora no'? ¡Usa el semáforo para decidir!",
+  "objetivo": "Aplicar criterios de prioridad en situaciones de compra cotidiana",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es lo primero que debes comprar con tu dinero?",
+      "opciones": [
+        "Lo más divertido",
+        "Tus necesidades básicas (comida, salud)",
+        "Lo más brillante",
+        "Dulces"
+      ],
+      "correcta": 1,
+      "explicacion": "Primero aseguramos lo que necesitamos para vivir bien, ¡eso es ser inteligente!"
+    },
+    {
+      "id": "q2",
+      "texto": "Si quieres un juguete pero tus zapatos tienen un hoyo, ¿qué es prioridad?",
+      "opciones": [
+        "El juguete",
+        "Los zapatos nuevos",
+        "Comprar helado",
+        "No comprar nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Tener zapatos sanos es una necesidad, el juguete es un deseo que puede esperar."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué color del semáforo significa 'ESPERA Y PIENSA'?",
+      "opciones": [
+        "Verde",
+        "Rojo",
+        "Amarillo",
+        "Azul"
+      ],
+      "correcta": 2,
+      "explicacion": "El amarillo nos invita a preguntarnos: '¿Realmente lo necesito o solo es un antojo?'."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuál de estos es un deseo que parece necesidad pero no lo es?",
+      "opciones": [
+        "El agua",
+        "Un videojuego de moda",
+        "La fruta",
+        "El jabón"
+      ],
+      "correcta": 1,
+      "explicacion": "A veces la publicidad nos hace creer que necesitamos un juego para ser felices, pero es un deseo."
+    },
+    {
+      "id": "q5",
+      "texto": "Si tienes hambre en el recreo, ¿qué es mejor comprar?",
+      "opciones": [
+        "Unas estampas",
+        "Una manzana o un sándwich",
+        "Un juguete de plástico",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Alimentarte es una necesidad verde. ¡Dale energía a tu cuerpo!"
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué pasa si gastas todo tu dinero en deseos y luego tienes una necesidad?",
+      "opciones": [
+        "No pasa nada",
+        "Te sentirás en problemas porque no tienes dinero para lo importante",
+        "Te regalan más dinero",
+        "Se arregla solo"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso siempre guardamos un poco: las necesidades no pueden esperar."
+    },
+    {
+      "id": "q7",
+      "texto": "Verdadero o Falso: Los deseos son malos y nunca debemos cumplirlos.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Falso! Los deseos son geniales, pero se cumplen DESPUÉS de las necesidades y con ahorro."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cómo se siente un 'Genio Financiero' al elegir una necesidad sobre un deseo?",
+      "opciones": [
+        "Triste",
+        "Responsable y tranquilo",
+        "Enojado",
+        "Aburrido"
+      ],
+      "correcta": 1,
+      "explicacion": "Saber que cuidaste lo importante te da una gran paz mental."
+    },
+    {
+      "id": "q9",
+      "texto": "Si ves algo que quieres mucho, ¿cuánto tiempo es bueno esperar para pensar?",
+      "opciones": [
+        "Un segundo",
+        "Dormir una noche antes de comprarlo",
+        "Nunca pensarlo",
+        "Gritar"
+      ],
+      "correcta": 1,
+      "explicacion": "Esperar una noche ayuda a que el 'calentón' del deseo pase y decidas mejor."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Qué herramienta de CEN Academy usas para decidir tus compras?",
+      "opciones": [
+        "Una moneda al aire",
+        "El Filtro de Supervivencia (Necesidad vs Deseo)",
+        "Cerrar los ojos",
+        "Comprar lo más caro"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! El filtro es tu mejor amigo para tomar decisiones de éxito."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

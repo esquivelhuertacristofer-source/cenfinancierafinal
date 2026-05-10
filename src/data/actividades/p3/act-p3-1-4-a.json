@@ -1,0 +1,105 @@
+{
+  "code": "ACT-P3-1-4-A",
+  "unit_code": "P3-1-4",
+  "unit_title": "Deseos vs. Necesidades",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "La Tienda de Todo",
+  "descripcion": "¡Rápido! El carrito de compras se mueve. Solo tienes permiso de comprar las NECESIDADES. Si compras deseos, te quedarás sin ahorros para el final del juego.",
+  "objetivo": "Identificar de forma rápida y precisa la diferencia entre necesidades básicas y deseos secundarios",
+  "xp": 350,
+  "game_type": "click",
+  "duracion": 60,
+  "instruccion": "Haz clic únicamente en los artículos que son NECESIDADES básicas para ganar puntos.",
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "items": [
+    {
+      "id": "n1",
+      "label": "Frutas y Verduras",
+      "emoji": "🍎",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "n2",
+      "label": "Agua Simple",
+      "emoji": "💧",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "n3",
+      "label": "Jabón",
+      "emoji": "🧼",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "n4",
+      "label": "Zapatos escolares",
+      "emoji": "👞",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "n5",
+      "label": "Medicinas",
+      "emoji": "💊",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "n6",
+      "label": "Cuadernos",
+      "emoji": "📓",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "d1",
+      "label": "Dulces y Paletas",
+      "emoji": "🍭",
+      "tipo": "incorrecto",
+      "puntos": -30
+    },
+    {
+      "id": "d2",
+      "label": "Juguete de Acción",
+      "emoji": "🤖",
+      "tipo": "incorrecto",
+      "puntos": -30
+    },
+    {
+      "id": "d3",
+      "label": "Videojuego nuevo",
+      "emoji": "🎮",
+      "tipo": "incorrecto",
+      "puntos": -30
+    },
+    {
+      "id": "d4",
+      "label": "Refresco",
+      "emoji": "🥤",
+      "tipo": "incorrecto",
+      "puntos": -30
+    },
+    {
+      "id": "d5",
+      "label": "Disfraz",
+      "emoji": "🦸",
+      "tipo": "incorrecto",
+      "puntos": -30
+    },
+    {
+      "id": "d6",
+      "label": "Álbum de estampas",
+      "emoji": "🃏",
+      "tipo": "incorrecto",
+      "puntos": -30
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

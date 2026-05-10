@@ -1,0 +1,77 @@
+{
+  "code": "ACT-P1-1-4-B",
+  "unit_code": "P1-1-4",
+  "unit_title": "Mi primer cochinito: ¿cómo y dónde guardo mi dinero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTA",
+  "titulo": "¡Tormenta de Monedas!",
+  "descripcion": "¡El cielo está lloviendo tesoros! Atrapa todo lo que puedas para tu alcancía, pero ¡cuidado con los objetos que te hacen gastar!",
+  "objetivo": "Desarrollar agilidad motriz y capacidad de filtrado entre ahorro y gasto",
+  "xp": 300,
+  "game_type": "catch",
+  "duracion": 45,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa monedas, billetes y diamantes. ¡Huye de los dulces y los juguetes que te restan puntos!",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Moneda de $10",
+      "emoji": "🪙",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "g2",
+      "label": "Billete de $20",
+      "emoji": "💵",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g3",
+      "label": "Diamante de Disciplina",
+      "emoji": "💎",
+      "tipo": "correcto",
+      "puntos": 500
+    },
+    {
+      "id": "g4",
+      "label": "Saco de Oro",
+      "emoji": "💰",
+      "tipo": "correcto",
+      "puntos": 1000
+    },
+    {
+      "id": "b1",
+      "label": "Paleta de Caramelo",
+      "emoji": "🍭",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "b2",
+      "label": "Carrito de Juguete",
+      "emoji": "🏎️",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "b3",
+      "label": "Gasto Hormiga",
+      "emoji": "🐜",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "b4",
+      "label": "Alcancía Rota",
+      "emoji": "💔",
+      "tipo": "incorrecto",
+      "puntos": -500
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

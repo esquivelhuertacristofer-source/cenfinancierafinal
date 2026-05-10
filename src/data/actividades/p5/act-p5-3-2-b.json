@@ -1,0 +1,107 @@
+{
+  "code": "ACT-P5-3-2-B",
+  "unit_code": "P5-3-2",
+  "unit_title": "CETES: prestándole dinero al gobierno",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Riesgo vs Rendimiento",
+  "descripcion": "No todas las inversiones son iguales. Algunas son como un barco tranquilo y otras como un cohete espacial. ¡Clasifícalas!",
+  "objetivo": "Categorizar diferentes activos financieros según su perfil de riesgo y potencial de retorno",
+  "xp": 250,
+  "instruccion": "Arrastra cada inversión a su nivel de riesgo correcto.",
+  "items": [
+    {
+      "id": "r1",
+      "label": "CETES (Certificados de la Tesorería)",
+      "emoji": "🛡️",
+      "categoria_correcta": "conservador",
+      "feedback": "Lo más seguro: le prestas dinero al gobierno de México."
+    },
+    {
+      "id": "r2",
+      "label": "Bitcoin / Criptomonedas",
+      "emoji": "₿",
+      "categoria_correcta": "arriesgado",
+      "feedback": "Mucho riesgo: puede subir 100% o bajar 90% en un mes."
+    },
+    {
+      "id": "r3",
+      "label": "Acciones de Google o Microsoft",
+      "emoji": "💻",
+      "categoria_correcta": "moderado",
+      "feedback": "Empresas sólidas pero su precio cambia todos los días."
+    },
+    {
+      "id": "r4",
+      "label": "Dinero guardado en un bote",
+      "emoji": "🏺",
+      "categoria_correcta": "conservador",
+      "feedback": "Seguro de que no se pierde, pero el riesgo es que la inflación se lo coma."
+    },
+    {
+      "id": "r5",
+      "label": "Comprar un terreno o casa",
+      "emoji": "🏠",
+      "categoria_correcta": "moderado",
+      "feedback": "Bienes raíces: suelen subir de valor pero tardas en venderlos."
+    },
+    {
+      "id": "r6",
+      "label": "Invertir en una Startup (empresa nueva)",
+      "emoji": "🚀",
+      "categoria_correcta": "arriesgado",
+      "feedback": "Muy arriesgado: la mayoría de las empresas nuevas fallan, pero las que ganan, ganan mucho."
+    },
+    {
+      "id": "r7",
+      "label": "Bono de ahorro para el retiro",
+      "emoji": "👴",
+      "categoria_correcta": "conservador",
+      "feedback": "Diseñado para durar muchos años con poco riesgo."
+    },
+    {
+      "id": "r8",
+      "label": "Oro físico",
+      "emoji": "🥇",
+      "categoria_correcta": "moderado",
+      "feedback": "Mantiene valor pero su precio internacional cambia."
+    },
+    {
+      "id": "r9",
+      "label": "Cuenta de ahorro bancaria",
+      "emoji": "🏦",
+      "categoria_correcta": "conservador",
+      "feedback": "Bajo riesgo y tu dinero siempre está a la mano."
+    },
+    {
+      "id": "r10",
+      "label": "Opciones Financieras",
+      "emoji": "🃏",
+      "categoria_correcta": "arriesgado",
+      "feedback": "Instrumentos complejos que solo los expertos deben usar."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "conservador",
+      "label": "CONSERVADOR (Poco riesgo, poco premio)",
+      "emoji": "🐢",
+      "color": "#10b981"
+    },
+    {
+      "id": "moderado",
+      "label": "MODERADO (Riesgo medio, premio medio)",
+      "emoji": "🚶",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "arriesgado",
+      "label": "ARRIESGADO (Mucho riesgo, gran premio)",
+      "emoji": "🔥",
+      "color": "#ef4444"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

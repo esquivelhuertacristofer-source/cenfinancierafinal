@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-2-1-B",
+  "unit_code": "S2-2-1",
+  "unit_title": "Gestión de deuda: CAT, tasas y el costo real del dinero",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Cripto-Mundo",
+  "descripcion": "¿Sabes qué hay detrás de las criptomonedas? ¡Demuestra que eres un experto en descentralización!",
+  "objetivo": "Evaluar el conocimiento sobre los fundamentos técnicos y económicos de los criptoactivos",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "crp1",
+      "texto": "¿Qué es la 'Descentralización' en el mundo cripto?",
+      "opciones": [
+        "Que el dinero está en el centro de la ciudad",
+        "Que no existe una autoridad central (como un banco) que controle las transacciones; la red se controla entre todos los nodos",
+        "Que el dinero se reparte a todos por igual",
+        "Que las computadoras son muy rápidas"
+      ],
+      "correcta": 1,
+      "explicacion": "Esta es la base de la libertad financiera digital."
+    },
+    {
+      "id": "crp2",
+      "texto": "¿Por qué se dice que Bitcoin es 'Oro Digital'?",
+      "opciones": [
+        "Porque brilla en la pantalla",
+        "Porque es escaso (solo existirán 21 millones) y sirve como reserva de valor a largo plazo",
+        "Porque se extrae de las minas",
+        "Porque es muy caro"
+      ],
+      "correcta": 1,
+      "explicacion": "A diferencia del dinero normal, nadie puede imprimir más Bitcoin de forma infinita."
+    },
+    {
+      "id": "crp3",
+      "texto": "¿Qué es una 'Llave Privada'?",
+      "opciones": [
+        "Una contraseña que puedes compartir con amigos",
+        "Tu firma secreta que permite mover tus fondos; si la pierdes o te la roban, pierdes tu dinero para siempre",
+        "El nombre de tu cuenta",
+        "Un archivo público en internet"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Regla de oro! Nunca compartas tu llave privada con nadie."
+    },
+    {
+      "id": "crp4",
+      "texto": "¿Qué es una 'Stablecoin'?",
+      "opciones": [
+        "Una moneda que siempre sube",
+        "Un criptoactivo cuyo valor está vinculado (pegged) al de una moneda tradicional como el dólar",
+        "Una moneda muy rápida",
+        "Un tipo de billetera segura"
+      ],
+      "correcta": 1,
+      "explicacion": "Sirven para protegerse de la volatilidad sin salir del mundo cripto."
+    },
+    {
+      "id": "crp5",
+      "texto": "¿Qué es un 'Contrato Inteligente' (Smart Contract)?",
+      "opciones": [
+        "Un contrato que sabe leer",
+        "Programas que se ejecutan automáticamente en la blockchain cuando se cumplen ciertas condiciones",
+        "Un papel firmado por un abogado digital",
+        "Un sistema de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "Ethereum es la red más famosa para crear estos contratos."
+    },
+    {
+      "id": "crp6",
+      "texto": "¿Qué significa 'HODL' en la jerga cripto?",
+      "opciones": [
+        "Vender todo rápido",
+        "Mantener una inversión a largo plazo sin importar si el precio baja hoy",
+        "Comprar solo monedas nuevas",
+        "Un tipo de billetera fría"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una estrategia de paciencia extrema."
+    },
+    {
+      "id": "crp7",
+      "texto": "¿Qué es una 'Cold Wallet' (Billetera Fría)?",
+      "opciones": [
+        "Una billetera que se guarda en el refrigerador",
+        "Un dispositivo físico que no está conectado a internet para guardar criptos de forma ultra segura",
+        "Una app de celular",
+        "Un banco digital"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la forma más segura de guardar grandes cantidades de criptoactivos."
+    },
+    {
+      "id": "crp8",
+      "texto": "¿Qué es el 'Halving' de Bitcoin?",
+      "opciones": [
+        "Cuando el precio baja a la mitad",
+        "Un evento que ocurre cada 4 años donde la recompensa por minar Bitcoin se reduce a la mitad, haciéndolo más escaso",
+        "Cuando el banco cierra las cuentas",
+        "Un tipo de hackeo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora entiendes los pilares de la nueva economía digital."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

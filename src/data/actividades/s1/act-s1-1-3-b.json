@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-1-3-B",
+  "unit_code": "S1-1-3",
+  "unit_title": "El mercado laboral: contratos, salarios y prestaciones",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El S&P 500 y los ETFs",
+  "descripcion": "¿Sabías que puedes ser dueño de las 500 empresas más grandes de EE.UU. con un solo clic? ¡Descubre el poder de los índices!",
+  "objetivo": "Identificar el funcionamiento de los índices bursátiles y los beneficios de los fondos cotizados (ETFs)",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ind1",
+      "texto": "¿Qué es un 'Índice Bursátil'?",
+      "opciones": [
+        "Una lista de precios de comida",
+        "Un promedio que mide el rendimiento de un grupo de empresas (ej: las 500 más grandes)",
+        "Un tipo de impuesto",
+        "Una oficina de gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Un índice sirve como termómetro para saber cómo le va a la economía en general."
+    },
+    {
+      "id": "ind2",
+      "texto": "¿Qué es el S&P 500?",
+      "opciones": [
+        "Un carro de carreras",
+        "Un índice que agrupa a las 500 empresas más importantes de la bolsa de EE.UU.",
+        "El precio del dólar",
+        "Una marca de ropa"
+      ],
+      "correcta": 1,
+      "explicacion": "Es considerado el indicador más confiable de la salud económica mundial."
+    },
+    {
+      "id": "ind3",
+      "texto": "¿Qué significa 'ETF' (Exchange Traded Fund)?",
+      "opciones": [
+        "Empresa de Tecnología Famosa",
+        "Fondo Cotizado en Bolsa (una canasta de acciones que se compra como si fuera una sola acción)",
+        "Estrategia de Trabajo Fuerte",
+        "Efectivo Total y Fácil"
+      ],
+      "correcta": 1,
+      "explicacion": "Los ETFs permiten diversificar tu dinero de forma barata y rápida."
+    },
+    {
+      "id": "ind4",
+      "texto": "¿Cuál es la ventaja de la 'Gestión Pasiva'?",
+      "opciones": [
+        "Que ganas más dinero siempre",
+        "Que las comisiones son muy bajas porque solo sigues al índice automáticamente",
+        "Que no pagas nada",
+        "Que es más arriesgada"
+      ],
+      "correcta": 1,
+      "explicacion": "Al no necesitar un equipo de analistas eligiendo acciones, los costos para ti son mínimos."
+    },
+    {
+      "id": "ind5",
+      "texto": "¿Qué es el NASDAQ?",
+      "opciones": [
+        "Un tipo de cohete",
+        "La bolsa de valores especializada en empresas de tecnología",
+        "Un canal de noticias",
+        "El banco central de Japón"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahí es donde cotizan Apple, Google y Microsoft."
+    },
+    {
+      "id": "ind6",
+      "texto": "¿Qué pasa si una empresa del S&P 500 quiebra o se vuelve muy pequeña?",
+      "opciones": [
+        "El índice desaparece",
+        "Es expulsada del índice y reemplazada por una nueva empresa exitosa",
+        "El gobierno la rescata",
+        "No pasa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Los índices se 'limpian' solos, manteniendo siempre a las mejores empresas."
+    },
+    {
+      "id": "ind7",
+      "texto": "¿Por qué es mejor un ETF que comprar solo una acción?",
+      "opciones": [
+        "Porque siempre sube",
+        "Porque si a una empresa le va mal, las otras 499 pueden compensar la pérdida (Menos Riesgo)",
+        "Porque es más caro",
+        "Porque te dan regalos"
+      ],
+      "correcta": 1,
+      "explicacion": "La diversificación es la única forma 'gratis' de reducir el riesgo."
+    },
+    {
+      "id": "ind8",
+      "texto": "¿Cuál es el consejo de Warren Buffett para la mayoría de las personas?",
+      "opciones": [
+        "Comprar boletos de lotería",
+        "Invertir en un fondo indexado barato (ETF) del S&P 500 y dejarlo crecer por décadas",
+        "Vender todo cada vez que hay miedo",
+        "No invertir nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora conoces la estrategia de los maestros de las finanzas."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

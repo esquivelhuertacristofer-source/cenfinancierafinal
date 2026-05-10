@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S2-3-3-A",
+  "unit_code": "S2-3-3",
+  "unit_title": "Construir mi portafolio de inversión: paso a paso",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Buró de Crédito",
+  "descripcion": "Tu reputación financiera es como un motor: si la cuidas, te llevará lejos; si la descuidas, te dejará varado.",
+  "objetivo": "Experimentar el impacto de la puntualidad y monto de los pagos en el puntaje crediticio personal",
+  "xp": 500,
+  "mecanica": "Toma decisiones de pago cada mes y observa tu PUNTAJE (300 a 850 puntos).",
+  "escenarios": [
+    {
+      "id": "bur1",
+      "texto": "Mes 1: Llega tu cuenta del celular ($500). Tienes el dinero completo.",
+      "imagen": "📱",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Bien! Pagar el total a tiempo es la mejor forma de subir puntos. Tu Score sube +20.",
+      "feedback_error": "❌ Mal inicio. Retrasarte en servicios básicos daña tu reputación de inmediato. Score -50.",
+      "tipo_ataque": "Pago de Servicios"
+    },
+    {
+      "id": "bur2",
+      "texto": "Mes 2: Gastaste de más en la tarjeta. El pago total es de $5,000, pero el banco te deja pagar solo $500 (mínimo).",
+      "imagen": "💳",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! Al pagar el mínimo solo mantienes el score, pero tu deuda crece. Es mejor pagar siempre el total.",
+      "feedback_error": "❌ Cuidado. Pagar el mínimo te mantiene 'vivo', pero indica al banco que tienes problemas de liquidez. Score estable pero deuda peligrosa.",
+      "tipo_ataque": "Pago de Tarjeta"
+    },
+    {
+      "id": "bur3",
+      "texto": "Mes 3: Tienes una emergencia y decides NO pagar la tarjeta este mes para ahorrar ese dinero.",
+      "imagen": "🆘",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Exacto! No pagar es la peor decisión. Siempre es mejor negociar con el banco o pagar aunque sea un poco.",
+      "feedback_error": "❌ ¡Desastre! Un mes sin pago es una mancha roja que tarda años en borrarse. Score -100.",
+      "tipo_ataque": "Impago"
+    },
+    {
+      "id": "bur4",
+      "texto": "Mes 4: Te ofrecen una nueva tarjeta de crédito 'oro' con límite muy alto. Ya tienes 3 tarjetas.",
+      "imagen": "✨",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Muy sabio! Pedir muchos créditos en poco tiempo hace que el banco piense que estás desesperado por dinero. Score -10 por la consulta.",
+      "feedback_error": "❌ ¡Error! Demasiadas consultas a tu buró en poco tiempo bajan tu puntaje. Se ve como comportamiento riesgoso.",
+      "tipo_ataque": "Consultas Excesivas"
+    },
+    {
+      "id": "bur5",
+      "texto": "Mes 5: Quieres comprar tu primera casa. El banco revisa tu Score de 5 meses.",
+      "imagen": "🏠",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades! Si mantuviste un score alto (>700), el banco te ofrece una tasa de interés baja. ¡Ahorrarás miles de dólares!",
+      "feedback_error": "❌ Rechazado. Con un score bajo, el banco no confía en ti. Tendrás que rentar por más años.",
+      "tipo_ataque": "Solicitud Hipotecaria"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Toma decisiones de pago cada mes. Elige PAGAR o NO PAGAR y observa tu puntaje de buró.",
+  "duracion": 120,
+  "opciones_clasificacion": [
+    "PAGAR A TIEMPO",
+    "NO PAGAR / MÍNIMO"
+  ],
+  "items": [
+    {
+      "id": "bur1",
+      "label": "Mes 1: Llega tu cuenta del celular ($500). Tienes el dinero completo.",
+      "emoji": "📱",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Bien! Pagar el total a tiempo es la mejor forma de subir puntos. Tu Score sube +20.",
+      "feedback_error": "❌ Mal inicio. Retrasarte en servicios básicos daña tu reputación de inmediato. Score -50.",
+      "puntos": 100
+    },
+    {
+      "id": "bur2",
+      "label": "Mes 2: Gastaste de más en la tarjeta. El pago total es de $5,000, pero el banco te deja pagar solo $...",
+      "emoji": "💳",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! Al pagar el mínimo solo mantienes el score, pero tu deuda crece. Es mejor pagar siempre el total.",
+      "feedback_error": "❌ Cuidado. Pagar el mínimo te mantiene 'vivo', pero indica al banco que tienes problemas de liquidez. Score estable pero deuda peligrosa.",
+      "puntos": 100
+    },
+    {
+      "id": "bur3",
+      "label": "Mes 3: Tienes una emergencia y decides NO pagar la tarjeta este mes para ahorrar ese dinero.",
+      "emoji": "🆘",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Exacto! No pagar es la peor decisión. Siempre es mejor negociar con el banco o pagar aunque sea un poco.",
+      "feedback_error": "❌ ¡Desastre! Un mes sin pago es una mancha roja que tarda años en borrarse. Score -100.",
+      "puntos": 100
+    },
+    {
+      "id": "bur4",
+      "label": "Mes 4: Te ofrecen una nueva tarjeta de crédito 'oro' con límite muy alto. Ya tienes 3 tarjetas.",
+      "emoji": "✨",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Muy sabio! Pedir muchos créditos en poco tiempo hace que el banco piense que estás desesperado por dinero. Score -10 por la consulta.",
+      "feedback_error": "❌ ¡Error! Demasiadas consultas a tu buró en poco tiempo bajan tu puntaje. Se ve como comportamiento riesgoso.",
+      "puntos": 100
+    },
+    {
+      "id": "bur5",
+      "label": "Mes 5: Quieres comprar tu primera casa. El banco revisa tu Score de 5 meses.",
+      "emoji": "🏠",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades! Si mantuviste un score alto (>700), el banco te ofrece una tasa de interés baja. ¡Ahorrarás miles de dólares!",
+      "feedback_error": "❌ Rechazado. Con un score bajo, el banco no confía en ti. Tendrás que rentar por más años.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 500
+  }
+}

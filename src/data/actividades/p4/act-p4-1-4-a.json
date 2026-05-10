@@ -1,0 +1,121 @@
+{
+  "code": "ACT-P4-1-4-A",
+  "unit_code": "P4-1-4",
+  "unit_title": "Dinero formal vs. informal: la economía de México",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mapa de la Economía",
+  "descripcion": "En México existen diferentes formas de ganar dinero. Algunas ayudan al país a crecer y otras pueden ser peligrosas.",
+  "objetivo": "Diferenciar entre economía formal, informal e ilegal y sus impactos en la sociedad",
+  "xp": 250,
+  "instruccion": "Arrastra cada actividad a la categoría que le corresponde según su relación con la ley y los impuestos.",
+  "items": [
+    {
+      "id": "f1",
+      "label": "Empleado de un banco",
+      "emoji": "🏦",
+      "categoria_correcta": "formal",
+      "feedback": "¡Correcto! Tiene contrato, seguro médico y paga impuestos."
+    },
+    {
+      "id": "i1",
+      "label": "Vendedor de dulces en el semáforo",
+      "emoji": "🍭",
+      "categoria_correcta": "informal",
+      "feedback": "Es informal. No tiene prestaciones de ley ni paga impuestos por sus ventas."
+    },
+    {
+      "id": "f2",
+      "label": "Dueño de una papelería registrada",
+      "emoji": "✂️",
+      "categoria_correcta": "formal",
+      "feedback": "¡Bien! Al estar registrado, puede pedir créditos para crecer."
+    },
+    {
+      "id": "i2",
+      "label": "Tianguista que no está registrado",
+      "emoji": "🎪",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Es un trabajo honesto, pero fuera del sistema de seguridad social."
+    },
+    {
+      "id": "f3",
+      "label": "Doctor en un hospital público",
+      "emoji": "👨‍⚕️",
+      "categoria_correcta": "formal",
+      "feedback": "¡Correcto! Contribuye al sistema de salud con su trabajo e impuestos."
+    },
+    {
+      "id": "il1",
+      "label": "Venta de productos robados",
+      "emoji": "🕵️",
+      "categoria_correcta": "ilegal",
+      "feedback": "¡Ilegal! Es un delito que daña a la sociedad y se castiga con cárcel."
+    },
+    {
+      "id": "i3",
+      "label": "Plomero que no da factura",
+      "emoji": "🔧",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Al no dar factura, no contribuye al gasto público del país."
+    },
+    {
+      "id": "f4",
+      "label": "Maestra de escuela",
+      "emoji": "👩‍🏫",
+      "categoria_correcta": "formal",
+      "feedback": "¡Formal! Su trabajo está respaldado por una institución oficial."
+    },
+    {
+      "id": "il2",
+      "label": "Venta de piratería (discos o ropa falsa)",
+      "emoji": "💿",
+      "categoria_correcta": "ilegal",
+      "feedback": "Ilegal. Roba el trabajo creativo de otros y no paga impuestos."
+    },
+    {
+      "id": "i4",
+      "label": "Limpiaparabrisas",
+      "emoji": "🧼",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Es una actividad de supervivencia sin protección legal."
+    },
+    {
+      "id": "il3",
+      "label": "Robar cables de luz",
+      "emoji": "🔌",
+      "categoria_correcta": "ilegal",
+      "feedback": "Ilegal. Es un robo que afecta el servicio de todos y es un delito."
+    },
+    {
+      "id": "f5",
+      "label": "Ingeniero en una fábrica",
+      "emoji": "🏗️",
+      "categoria_correcta": "formal",
+      "feedback": "¡Formal! Ayuda a la industria y tiene todos sus derechos laborales."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "formal",
+      "label": "ECONOMÍA FORMAL (Legal y Seguro)",
+      "emoji": "✅",
+      "color": "#16a34a"
+    },
+    {
+      "id": "informal",
+      "label": "ECONOMÍA INFORMAL (Honesto pero sin protección)",
+      "emoji": "⚠️",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "ilegal",
+      "label": "ACTIVIDAD ILEGAL (Delito)",
+      "emoji": "🚫",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

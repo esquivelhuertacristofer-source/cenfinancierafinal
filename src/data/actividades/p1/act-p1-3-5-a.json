@@ -1,0 +1,74 @@
+{
+  "code": "ACT-P1-3-5-A",
+  "unit_code": "P1-3-5",
+  "unit_title": "¡Lo lograste! Celebra tu meta",
+  "level": "Primaria 1",
+  "tipo": "DECIDE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "La Graduación de Ceny",
+  "descripcion": "¡Es el gran día! Hoy Ceny recibe su medalla. Pero el camino de un Genio nunca termina. ¿Qué harás con lo que aprendiste?",
+  "objetivo": "Sintetizar los valores de ahorro, honestidad y generosidad al final del curso",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El salón está decorado. Todos los niños tienen sus alcancías listas. El profesor dice: '¡Felicidades! Han demostrado ser expertos en cuidar su tesoro'.",
+  "nodo_inicial": "momento_medalla",
+  "nodos": {
+    "momento_medalla": {
+      "id": "momento_medalla",
+      "texto": "Es tu turno de subir al estrado. El profesor te pregunta: '¿Cuál fue tu secreto para ahorrar tanto este año?'",
+      "opciones": [
+        {
+          "id": "paciencia_secreto",
+          "texto": "Tener mucha paciencia y no gastar en antojos",
+          "siguiente_nodo": "la_nueva_meta",
+          "consecuencia": "¡Todos aplauden! La paciencia es el valor más importante del ahorro.",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "suerte_secreto",
+          "texto": "Tuve mucha suerte",
+          "siguiente_nodo": "la_nueva_meta",
+          "consecuencia": "El profesor sonríe: 'La suerte ayuda, ¡pero tu disciplina ayudó más!'",
+          "xp_bonus": 50
+        }
+      ]
+    },
+    "la_nueva_meta": {
+      "id": "la_nueva_meta",
+      "texto": "Ahora que tienes tu medalla, ¿qué planeas para el próximo año en 2do grado?",
+      "opciones": [
+        {
+          "id": "meta_mas_grande",
+          "texto": "Ahorrar para algo todavía más grande y difícil",
+          "siguiente_nodo": "final_graduado",
+          "consecuencia": "¡Esa es la actitud de un verdadero Ciudadano Diamond!",
+          "xp_bonus": 300,
+          "es_optima": true
+        },
+        {
+          "id": "gastar_todo",
+          "texto": "Gastar todo mi ahorro hoy mismo para celebrar",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "Celebrar es bueno, ¡pero recuerda que un genio siempre deja una semilla para el futuro!",
+          "xp_bonus": 20
+        }
+      ]
+    },
+    "final_graduado": {
+      "id": "final_graduado",
+      "texto": "¡Felicidades! Eres oficialmente un Genio Financiero de 1er Grado. ¡Nos vemos en el próximo nivel con misiones más emocionantes!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito no es llegar a la meta, es el hábito de seguir creciendo siempre."
+    },
+    "final_leccion": {
+      "id": "final_leccion",
+      "texto": "Te gradúas con éxito, pero recuerda: ¡el ahorro es una carrera de largo plazo! ¡Sigue practicando!",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Un gran ahorro requiere una gran responsabilidad."
+    }
+  },
+  "versión": "2026.Diamond.V2"
+}

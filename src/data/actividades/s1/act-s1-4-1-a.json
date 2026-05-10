@@ -1,0 +1,138 @@
+{
+  "code": "ACT-S1-4-1-A",
+  "unit_code": "S1-4-1",
+  "unit_title": "Lean Startup: validar antes de invertir tiempo y dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "MVP vs. Producto Perfecto",
+  "descripcion": "Tienes una idea de negocio. Opción A: pasar 6 meses construyendo el producto perfecto y gastar $200,000. Opción B: hacer un prototipo básico en 3 semanas, mostrarlo a 10 personas reales y pivotar si es necesario. Simula qué pasa con cada estrategia según la probabilidad de que el mercado quiera tu producto.",
+  "objetivo": "Comparar el costo y riesgo de lanzar con MVP vs. desarrollo completo, y entender el ciclo Construir-Medir-Aprender del método Lean Startup",
+  "xp": 500,
+  "descripcion_formula": "Costo MVP = semanas_mvp × costo_semana_dev. Probabilidad de éxito sin validación ≈ 10-30%. Con validación MVP ≈ 60-80%. Costo de pivotar = costo_dev_full × 0.4 si el mercado rechaza.",
+  "inputs": [
+    {
+      "id": "costo_desarrollo_full",
+      "label": "Costo del Desarrollo Completo ($)",
+      "type": "slider",
+      "min": 20000,
+      "max": 500000,
+      "step": 10000,
+      "default": 150000,
+      "unit": "$"
+    },
+    {
+      "id": "semanas_mvp",
+      "label": "Semanas para hacer el MVP",
+      "type": "slider",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "unit": "semanas"
+    },
+    {
+      "id": "clientes_entrevistados",
+      "label": "Clientes Reales que Entrevistarás",
+      "type": "slider",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "personas"
+    },
+    {
+      "id": "tipo_idea",
+      "label": "Tipo de Idea de Negocio",
+      "type": "select",
+      "options": [
+        { "label": "App/Software (puede escalar rápido)", "value": "software" },
+        { "label": "Producto físico (inventario necesario)", "value": "fisico" },
+        { "label": "Servicio (bajo costo de entrada)", "value": "servicio" },
+        { "label": "Marketplace (conecta oferta y demanda)", "value": "marketplace" }
+      ],
+      "default": "software"
+    }
+  ],
+  "formula": "Math.round(costo_desarrollo_full * 0.05 * semanas_mvp)",
+  "output_label": "Costo del MVP ($)",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "costo_mvp",
+      "label": "Costo del MVP",
+      "formula": "Math.round(costo_desarrollo_full * 0.05 * semanas_mvp)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Lo que cuesta hacer el prototipo mínimo viable para probar la idea"
+    },
+    {
+      "id": "dinero_en_riesgo_sin_mvp",
+      "label": "Dinero en Riesgo Sin MVP",
+      "formula": "Math.round(costo_desarrollo_full * 0.7)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "El 70% del desarrollo se pierde si el mercado rechaza el producto completo"
+    },
+    {
+      "id": "probabilidad_exito_con_mvp",
+      "label": "Probabilidad de Éxito Con MVP",
+      "formula": "Math.min(85, 40 + Math.floor(clientes_entrevistados / 5) * 3)",
+      "prefix": "",
+      "suffix": "%",
+      "descripcion": "Más entrevistas = más aprendizaje = mayor probabilidad de hacer algo que el mercado quiere"
+    },
+    {
+      "id": "ahorro_si_pivota",
+      "label": "Lo que Ahorras si Pivotás Con MVP",
+      "formula": "Math.round(costo_desarrollo_full * 0.7 - costo_desarrollo_full * 0.05 * semanas_mvp)",
+      "prefix": "$",
+      "suffix": " ahorrados",
+      "descripcion": "La diferencia entre perder el MVP vs. perder el desarrollo completo cuando el mercado dice no"
+    }
+  ],
+  "ciclo_lean": {
+    "titulo": "El ciclo Construir-Medir-Aprender",
+    "pasos": [
+      { "paso": "1. CONSTRUIR", "descripcion": "Crea el MVP más pequeño posible que pruebe tu hipótesis principal", "tiempo": "1-4 semanas" },
+      { "paso": "2. MEDIR", "descripcion": "Muéstralo a 10-20 clientes reales. ¿Pagarían? ¿Cuánto? ¿Qué cambiarían?", "tiempo": "1-2 semanas" },
+      { "paso": "3. APRENDER", "descripcion": "Analiza datos. ¿Pivotar (cambiar dirección) o perseverar?", "tiempo": "3-5 días" },
+      { "paso": "4. REPETIR", "descripcion": "Vuelve al paso 1 con lo aprendido. Cada ciclo acerca más al product-market fit.", "tiempo": "→ Ciclo continuo" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "costo_mvp",
+      "label": "Costo MVP ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "dinero_en_riesgo_sin_mvp",
+      "label": "Riesgo Sin MVP ($)",
+      "color": "#ef4444"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "costo_mvp < costo_desarrollo_full * 0.1",
+      "mensaje": "🏆 MVP eficiente. Tu prototipo cuesta menos del 10% del desarrollo completo pero te da el 80% del aprendizaje. Esta es la esencia del Lean Startup.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "clientes_entrevistados < 10",
+      "mensaje": "⚠️ Muestra pequeña. Con menos de 10 entrevistas, el riesgo de sesgo de confirmación es alto — tiendes a hablar con quienes ya te apoyan. Intenta llegar a mínimo 20 extraños.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "semanas_mvp > 8",
+      "mensaje": "🐢 MVP muy largo. Si tu MVP tarda más de 8 semanas, quizás no es mínimo. Pregúntate: ¿qué es lo único que NECESITAS probar? Elimina todo lo demás.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Cuál es la diferencia entre validar una idea con 10 clientes reales vs pasar 6 meses construyendo el producto perfecto? ¿Cuál de los dos enfoques tiene menor riesgo y menor costo?",
+  "comparativa_espera": "Dropbox, Airbnb y Uber probaron su idea con un MVP mínimo antes de invertir millones en desarrollo. El método Lean Startup ahorra meses de trabajo en proyectos que el mercado no quería."
+}

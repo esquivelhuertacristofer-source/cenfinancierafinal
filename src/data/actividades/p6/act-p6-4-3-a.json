@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P6-4-3-A",
+  "unit_code": "P6-4-3",
+  "unit_title": "Ventas y Negociación: El arte del 'SÍ'",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Gran Salto",
+  "descripcion": "Eres el dueño de una empresa de videojuegos. Tienes la oportunidad de comprar a un pequeño estudio que hace apps geniales. ¡Calcula si la unión los hará más fuertes!",
+  "objetivo": "Comprender el concepto de Fusiones y Adquisiciones (M&A) y el valor de las sinergias operativas",
+  "xp": 500,
+  "descripcion_formula": "Calculamos la Ganancia por Sinergia. NuevaGanancia = (VentasA + VentasB) * (1 + Sinergia) - CostoAdquisicion.",
+  "inputs": [
+    {
+      "id": "costo_compra",
+      "label": "Precio a pagar por la otra empresa ($)",
+      "type": "slider",
+      "min": 10000,
+      "max": 100000,
+      "step": 5000,
+      "default": 50000,
+      "unit": "$"
+    },
+    {
+      "id": "nivel_sinergia",
+      "label": "Nivel de Sinergia (Eficiencia)",
+      "type": "slider",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.1,
+      "default": 1.2,
+      "unit": "X"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "(100000 + 50000) * nivel_sinergia - costo_compra",
+  "output_label": "Valor Estimado de la Nueva Empresa",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "pie",
+  "escenarios": [
+    {
+      "condicion": "resultado > 150000",
+      "mensaje": "🚀 ¡Fusión Exitosa! Al unir fuerzas, lograron reducir costos y vender mucho más. ¡Son los nuevos líderes!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "costo_compra > 80000",
+      "mensaje": "⚠️ Pagaste demasiado. Aunque la empresa es buena, tardarás muchos años en recuperar tu inversión. ¡Cuidado con el precio!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 M&A significa 'Mergers and Acquisitions'. Es la forma en que las empresas crecen comprando a otros.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia entre negociar precio y negociar valor? ¿Cómo convencerías a alguien de pagar más por tu producto si la competencia vende algo parecido más barato?",
+  "comparativa_espera": "Las empresas que alinean sus decisiones financieras con sus valores éticos tienen en promedio 23% mayor retención de talento y 18% más rentabilidad a largo plazo. Las finanzas y los valores no son opuestos — son complementarios.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "por_persona",
+      "label": "Por Integrante del Equipo",
+      "formula": "Math.round(resultado_principal / 3)",
+      "prefix": "$",
+      "suffix": "/persona",
+      "descripcion": "Distribuido equitativamente en un equipo de 3"
+    },
+    {
+      "id": "valor_acumulado",
+      "label": "Valor Acumulado 5 Años",
+      "formula": "resultado_principal * 5",
+      "prefix": "$",
+      "suffix": " en 5 años",
+      "descripcion": "Si este resultado se repite durante 5 años"
+    },
+    {
+      "id": "retorno_sobre_inversion",
+      "label": "ROI de la Decisión",
+      "formula": "Math.round(resultado_principal / resultado_principal * 100 * 0.25)",
+      "prefix": "",
+      "suffix": "% de retorno",
+      "descripcion": "El retorno porcentual de esta estrategia"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "por_persona",
+      "label": "Por Integrante del Equipo",
+      "color": "#22c55e"
+    }
+  ]
+}

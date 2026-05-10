@@ -1,0 +1,117 @@
+{
+  "code": "ACT-P5-1-2-B",
+  "unit_code": "P5-1-2",
+  "unit_title": "Las AFOREs: sembrando mi futuro",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Analista de Empresas",
+  "descripcion": "Antes de comprar una acción, debes conocer la empresa. ¡Conviértete en un detective financiero e investiga tu marca favorita!",
+  "objetivo": "Desarrollar habilidades de análisis empresarial básico para la toma de decisiones de inversión",
+  "xp": 400,
+  "output_type": "Reporte de Analista Bursátil",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "seleccion_empresa",
+      "titulo": "🏢 Mi Empresa",
+      "descripcion": "¿En qué empresa te gustaría ser dueño?",
+      "campos": [
+        {
+          "id": "nombre_empresa_p5",
+          "label": "Nombre de la Empresa",
+          "type": "text",
+          "placeholder": "Ej: Nintendo, Amazon, Tesla...",
+          "requerido": true
+        },
+        {
+          "id": "sector_empresa",
+          "label": "¿A qué industria pertenece?",
+          "type": "select",
+          "opciones": [
+            "Tecnología",
+            "Salud",
+            "Energía",
+            "Entretenimiento",
+            "Moda",
+            "Alimentos"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "analisis_valor",
+      "titulo": "🔍 El Análisis",
+      "descripcion": "¿Por qué la gente le compra a esta empresa?",
+      "campos": [
+        {
+          "id": "producto_estrella",
+          "label": "¿Cuál es su producto o servicio más famoso?",
+          "type": "text",
+          "placeholder": "Ej: El iPhone, su servicio de streaming...",
+          "requerido": true
+        },
+        {
+          "id": "competencia_p5",
+          "label": "¿Quién es su principal competencia?",
+          "type": "text",
+          "placeholder": "Ej: Si elegiste Apple, su competencia es Samsung...",
+          "requerido": true
+        },
+        {
+          "id": "ventaja_competitiva",
+          "label": "¿Qué hace que esta empresa sea mejor que las demás?",
+          "type": "textarea",
+          "placeholder": "Ej: Sus diseños son mejores, es más barata, todos la conocen...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "veredicto_final",
+      "titulo": "⚖️ La Decisión",
+      "descripcion": "Después de investigar, ¿invertirías tu dinero aquí?",
+      "campos": [
+        {
+          "id": "decision_inversion",
+          "label": "¿Comprarías acciones de esta empresa?",
+          "type": "select",
+          "opciones": [
+            "¡Sí, definitivamente!",
+            "Tal vez en el futuro",
+            "No, me parece muy arriesgado"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "justificacion_analista",
+          "label": "¿Por qué?",
+          "type": "textarea",
+          "placeholder": "Justifica tu respuesta como un profesional...",
+          "requerido": true
+        },
+        {
+          "id": "puntuacion_empresa",
+          "label": "Puntuación de la Empresa (1-10)",
+          "type": "slider",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 5,
+          "requerido": false
+        },
+        {
+          "id": "potencial_inversion",
+          "label": "Potencial de Inversión",
+          "type": "calculated",
+          "formula": "puntuacion_empresa * 10",
+          "unit": "/100 — tu calificación de analista",
+          "ayuda": "Tu evaluación profesional sobre 100 puntos"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

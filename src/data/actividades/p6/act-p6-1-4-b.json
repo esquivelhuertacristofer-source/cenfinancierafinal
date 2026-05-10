@@ -1,0 +1,127 @@
+{
+  "code": "ACT-P6-1-4-B",
+  "unit_code": "P6-1-4",
+  "unit_title": "Tecnología financiera: fintech en México",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Lecciones del Pasado",
+  "descripcion": "¿Sabías que incluso genios como Isaac Newton perdieron dinero en burbujas? ¡Aprende a detectar los incendios financieros antes de que empiecen!",
+  "objetivo": "Comprender los mecanismos psicológicos y económicos que generan las burbujas y crisis financieras",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "cri1",
+      "pregunta": "¿Qué es una 'Burbuja Financiera'?",
+      "respuesta_correcta": "Cuando el precio de algo sube muchísimo por encima de su valor real solo porque todos quieren comprarlo",
+      "incorrectas": [
+        "Un tipo de jabón para bancos",
+        "Cuando los bancos regalan dinero",
+        "Un juguete de plástico"
+      ],
+      "dato_extra": "Las burbujas siempre terminan explotando cuando la gente intenta vender al mismo tiempo."
+    },
+    {
+      "id": "cri2",
+      "pregunta": "¿Qué sentimiento suele causar el inicio de una burbuja?",
+      "respuesta_correcta": "La Codicia (querer ganar mucho dinero rápido)",
+      "incorrectas": [
+        "La Tristeza",
+        "La Generosidad",
+        "El Sueño"
+      ],
+      "dato_extra": "La codicia hace que ignoremos los riesgos evidentes."
+    },
+    {
+      "id": "cri3",
+      "pregunta": "¿Qué sentimiento suele causar el final (estallido) de una burbuja?",
+      "respuesta_correcta": "El Pánico (todos quieren vender por miedo a perderlo todo)",
+      "incorrectas": [
+        "La Risa",
+        "La Calma",
+        "El Hambre"
+      ],
+      "dato_extra": "En el pánico, los precios bajan mucho más rápido de lo que subieron."
+    },
+    {
+      "id": "cri4",
+      "pregunta": "¿Por qué la crisis de 2008 afectó a todo el mundo si empezó en EE.UU.?",
+      "respuesta_correcta": "Porque hoy todos los países y bancos están conectados financieramente",
+      "incorrectas": [
+        "Porque EE.UU. es el único país",
+        "Por un virus",
+        "Porque se acabó el papel"
+      ],
+      "dato_extra": "A esto se le llama 'Contagio Financiero'."
+    },
+    {
+      "id": "cri5",
+      "pregunta": "¿Qué hacen los gobiernos después de una gran crisis?",
+      "respuesta_correcta": "Crean nuevas leyes y reglas (Regulación) para evitar que los bancos cometan los mismos errores",
+      "incorrectas": [
+        "Cierran todos los bancos para siempre",
+        "No hacen nada",
+        "Regalan dinero a todos"
+      ],
+      "dato_extra": "La regulación busca proteger el dinero de los ahorradores."
+    },
+    {
+      "id": "cri6",
+      "pregunta": "¿Cuál es la mejor defensa personal contra una crisis financiera?",
+      "respuesta_correcta": "Tener tus ahorros diversificados y no invertir en cosas que no entiendes",
+      "incorrectas": [
+        "Esconder el dinero bajo el colchón",
+        "No tener dinero",
+        "Gastar todo hoy mismo"
+      ],
+      "dato_extra": "La educación financiera es tu mejor escudo."
+    },
+    {
+      "id": "cri7",
+      "pregunta": "¿Qué significa que un mercado sea 'Volátil'?",
+      "pregunta_extra": "Que los precios cambian mucho y muy rápido",
+      "respuesta_correcta": "Que los precios cambian mucho y muy rápido",
+      "incorrectas": [
+        "Que los precios nunca cambian",
+        "Que el mercado es aburrido",
+        "Que solo sube"
+      ],
+      "dato_extra": "La volatilidad asusta a los novatos pero es oportunidad para los expertos."
+    },
+    {
+      "id": "cri8",
+      "pregunta": "¿Qué frase famosa se dice siempre antes de que una burbuja explote?",
+      "respuesta_correcta": "'Esta vez es diferente'",
+      "incorrectas": [
+        "'Tengo miedo'",
+        "'Mañana va a llover'",
+        "'El dinero es malo'"
+      ],
+      "dato_extra": "Casi nunca es diferente; las reglas de la economía siempre se cumplen."
+    },
+    {
+      "id": "cri9",
+      "pregunta": "¿Qué es la CNBV en México?",
+      "respuesta_correcta": "La Comisión Nacional Bancaria y de Valores (los que vigilan a los bancos)",
+      "incorrectas": [
+        "Un equipo de fútbol",
+        "Una marca de coches",
+        "Un tipo de comida"
+      ],
+      "dato_extra": "Asegúrate de que tus apps de inversión estén reguladas por ellos."
+    },
+    {
+      "id": "cri10",
+      "pregunta": "¿Para qué sirve estudiar la historia de las crisis?",
+      "respuesta_correcta": "Para reconocer las señales de peligro antes de que sea tarde",
+      "incorrectas": [
+        "Para aburrirse",
+        "Para saber fechas",
+        "No sirve para nada"
+      ],
+      "dato_extra": "¡Felicidades! Ahora tienes ojos de detective financiero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

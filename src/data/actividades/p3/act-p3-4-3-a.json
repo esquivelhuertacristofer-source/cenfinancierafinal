@@ -1,0 +1,95 @@
+{
+  "code": "ACT-P3-4-3-A",
+  "unit_code": "P3-4-3",
+  "unit_title": "Marketing y Publicidad Creativa",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Cartel Diamante",
+  "descripcion": "Un buen anuncio hace que la gente quiera conocer tu producto. ¡Es momento de diseñar tu propia campaña!",
+  "objetivo": "Aprender los elementos básicos de un anuncio publicitario y su impacto en las ventas",
+  "xp": 350,
+  "output_type": "Cartel Publicitario",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "el_gancho",
+      "titulo": "📣 El Gancho",
+      "descripcion": "Escribe una frase corta que nadie pueda olvidar.",
+      "campos": [
+        {
+          "id": "nombre_producto",
+          "label": "¿Cómo se llama tu producto?",
+          "type": "text",
+          "placeholder": "Ej: Super Jugo de Ceny",
+          "requerido": true
+        },
+        {
+          "id": "slogan",
+          "label": "Tu Slogan (Frase pegajosa)",
+          "type": "text",
+          "placeholder": "Ej: ¡La energía que necesitas!",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "lo_visual",
+      "titulo": "🎨 Estilo Visual",
+      "descripcion": "Los colores y las imágenes dicen mucho de tu marca.",
+      "campos": [
+        {
+          "id": "color_marca",
+          "label": "Color principal de tu marca",
+          "type": "select",
+          "opciones": [
+            "Rojo Energía",
+            "Azul Confianza",
+            "Verde Natural",
+            "Amarillo Alegría",
+            "Morado Creativo"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "imagen_estilo",
+          "label": "¿Qué imagen usarías?",
+          "type": "text",
+          "placeholder": "Ej: Un rayo, una sonrisa, una fruta fresca...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "accion",
+      "titulo": "🛒 Llamado a la Acción",
+      "descripcion": "Diles cuánto cuesta y dónde comprarlo.",
+      "campos": [
+        {
+          "id": "precio_anuncio",
+          "label": "Precio al público",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "donde_comprar",
+          "label": "¿Dónde lo encuentran?",
+          "type": "text",
+          "placeholder": "Ej: En la cooperativa, por WhatsApp...",
+          "requerido": true
+        },
+        {
+          "id": "costo_semanal_publicidad",
+          "label": "Costo Semanal de Publicidad",
+          "type": "calculated",
+          "formula": "precio_anuncio * 5",
+          "unit": "$",
+          "ayuda": "Si anuncias todos los días de la semana laboral"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

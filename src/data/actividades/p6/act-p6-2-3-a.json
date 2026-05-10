@@ -1,0 +1,99 @@
+{
+  "code": "ACT-P6-2-3-A",
+  "unit_code": "P6-2-3",
+  "unit_title": "Independencia financiera: el concepto y el camino",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "La Evolución del Dinero",
+  "descripcion": "El dinero ha cambiado mucho en 5,000 años. ¿Puedes ordenar los métodos de pago y descubrir cómo se protegían?",
+  "objetivo": "Comprender la evolución histórica de los medios de pago y sus mecanismos de seguridad asociados",
+  "xp": 250,
+  "instruccion": "Arrastra cada medio de pago a su época y tecnología de seguridad correcta.",
+  "items": [
+    {
+      "id": "ev1",
+      "label": "Trueque (Sal y Cacao)",
+      "emoji": "🍫",
+      "categoria_correcta": "antigüedad",
+      "feedback": "Lo más antiguo: se confiaba en el peso y sabor del producto."
+    },
+    {
+      "id": "ev2",
+      "label": "Monedas de Oro y Plata",
+      "emoji": "🪙",
+      "categoria_correcta": "antigüedad",
+      "feedback": "Seguridad: se mordían o pesaban para ver si eran de metal real."
+    },
+    {
+      "id": "ev3",
+      "label": "Billetes de Papel",
+      "emoji": "💵",
+      "categoria_correcta": "moderna",
+      "feedback": "Seguridad: marcas de agua e hilos de colores difíciles de copiar."
+    },
+    {
+      "id": "ev4",
+      "label": "Tarjetas con Banda Magnética",
+      "emoji": "💳",
+      "categoria_correcta": "digital_1",
+      "feedback": "Seguridad: tu firma en un papel comparada con la de la tarjeta."
+    },
+    {
+      "id": "ev5",
+      "label": "Pagos con Reloj / Celular (NFC)",
+      "emoji": "⌚",
+      "categoria_correcta": "digital_2",
+      "feedback": "Seguridad: Tokenización (tu número real de tarjeta nunca se envía)."
+    },
+    {
+      "id": "ev6",
+      "label": "Criptomonedas y Blockchain",
+      "emoji": "🔗",
+      "categoria_correcta": "digital_2",
+      "feedback": "Seguridad: Criptografía y una red de miles de computadoras vigilando."
+    },
+    {
+      "id": "ev7",
+      "label": "Reconocimiento Facial / Huella",
+      "emoji": "🆔",
+      "categoria_correcta": "digital_2",
+      "feedback": "Seguridad: Biometría (tu cuerpo es tu propia contraseña)."
+    },
+    {
+      "id": "ev8",
+      "label": "Tarjetas con Chip y PIN",
+      "emoji": "📟",
+      "categoria_correcta": "digital_1",
+      "feedback": "Seguridad: Una pequeña computadora en la tarjeta valida tu clave."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "antigüedad",
+      "label": "HISTORIA ANTIGUA",
+      "emoji": "🏺",
+      "color": "#92400e"
+    },
+    {
+      "id": "moderna",
+      "label": "SIGLO XX (PAPEL)",
+      "emoji": "📰",
+      "color": "#166534"
+    },
+    {
+      "id": "digital_1",
+      "label": "ERA DIGITAL INICIAL",
+      "emoji": "💾",
+      "color": "#1e40af"
+    },
+    {
+      "id": "digital_2",
+      "label": "TECNOLOGÍA DE VANGUARDIA",
+      "emoji": "🚀",
+      "color": "#6b21a8"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

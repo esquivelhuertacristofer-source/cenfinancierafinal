@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P3-1-5-A",
+  "unit_code": "P3-1-5",
+  "unit_title": "Ahorro para emergencias",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Colchón de Seguridad",
+  "descripcion": "Los expertos recomiendan tener guardado dinero para cubrir de 3 a 6 meses de tus gastos por si algo falla. ¡Calcula cuánto necesitas para estar tranquilo!",
+  "objetivo": "Aprender a calcular y dimensionar un fondo de reserva para contingencias",
+  "xp": 350,
+  "descripcion_formula": "Meta del Fondo = Gasto Mensual × Meses de Cobertura. Tiempo para lograrlo = Meta / Ahorro Mensual.",
+  "inputs": [
+    {
+      "id": "gasto_mensual",
+      "label": "Gasto total de la familia (mes)",
+      "type": "slider",
+      "min": 5000,
+      "max": 20000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "meses_cobertura",
+      "label": "Meses que quieres estar protegido",
+      "type": "slider",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 6,
+      "unit": "meses"
+    },
+    {
+      "id": "ahorro_mensual",
+      "label": "Cuánto puedes ahorrar al mes",
+      "type": "slider",
+      "min": 100,
+      "max": 2000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(gasto_mensual * meses_cobertura) / ahorro_mensual",
+  "output_label": "Meses para completar tu Fondo",
+  "output_prefix": "",
+  "output_suffix": " meses de esfuerzo",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado <= 12",
+      "mensaje": "🦁 ¡León Precavido! En menos de un año tendrás un escudo total contra cualquier problema.",
+      "tipo: ": "success"
+    },
+    {
+      "condicion": "resultado > 12 && resultado <= 24",
+      "mensaje": "🐢 ¡Paso Firme! Te tomará un par de años, pero valdrá la pena la tranquilidad.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado > 24",
+      "mensaje": "⚠️ ¡Meta Lejana! Intenta aumentar tu ahorro mensual o reducir gastos para protegerte más rápido.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué emergencias podría enfrentar tu familia que requieran dinero inmediato? ¿Cuántos meses de gastos necesitarías guardados para sentirte seguro?",
+  "outputs_multiples": [
+    {
+      "id": "meses_para_fondo",
+      "label": "Meses para Completar el Fondo",
+      "formula": "Math.ceil((gasto_mensual * meses_cobertura) / ahorro_mensual)",
+      "prefix": "",
+      "suffix": " meses",
+      "descripcion": "Cuánto tiempo tardarás en tener el colchón completo"
+    },
+    {
+      "id": "monto_total_fondo",
+      "label": "Tamaño de tu Fondo de Emergencia",
+      "formula": "gasto_mensual * meses_cobertura",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "El monto exacto que necesitas ahorrar"
+    },
+    {
+      "id": "porcentaje_avance_mensual",
+      "label": "Porcentaje que Avanzas Cada Mes",
+      "formula": "Math.round(ahorro_mensual / (gasto_mensual * meses_cobertura) * 100 * 10) / 10",
+      "prefix": "",
+      "suffix": "% del objetivo",
+      "descripcion": "Cada mes avanzas este porcentaje hacia tu meta"
+    },
+    {
+      "id": "dia_de_libertad",
+      "label": "Ahorro Diario Necesario",
+      "formula": "Math.round(ahorro_mensual / 30)",
+      "prefix": "$",
+      "suffix": "/día",
+      "descripcion": "Lo que necesitas guardar cada día para cumplir el plan"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "meses_para_fondo",
+      "label": "Meses para Completar el Fondo",
+      "color": "#6366f1"
+    },
+    {
+      "id": "monto_total_fondo",
+      "label": "Tamaño de tu Fondo de Emergencia",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "El 67% de los mexicanos no podría cubrir un gasto imprevisto de $5,000 pesos sin pedir prestado. Un fondo de emergencia de 3 meses de gastos es el seguro más barato que existe."
+}

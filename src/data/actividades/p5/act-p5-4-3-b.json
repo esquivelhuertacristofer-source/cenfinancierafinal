@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P5-4-3-B",
+  "unit_code": "P5-4-3",
+  "unit_title": "El Punto de Equilibrio: ¿cuánto debo vender para no perder?",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Grandes Marcas de la Historia",
+  "descripcion": "¿Por qué elegimos una marca sobre otra? ¡Descubre el poder del branding y los secretos de las marcas famosas!",
+  "objetivo": "Identificar las estrategias de diferenciación y el concepto de lealtad de marca",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "br1",
+      "pregunta": "¿Qué es el 'Branding'?",
+      "respuesta_correcta": "El proceso de construir una personalidad y una imagen para una marca",
+      "incorrectas": [
+        "Ponerle un precio a algo",
+        "Vender productos en la calle",
+        "Hacer dibujos en la pared"
+      ],
+      "dato_extra": "El branding es el 'alma' de la empresa."
+    },
+    {
+      "id": "br2",
+      "pregunta": "¿Por qué Apple puede vender sus productos más caros que otras marcas?",
+      "respuesta_correcta": "Por su valor de marca basado en diseño, estatus y facilidad de uso",
+      "incorrectas": [
+        "Porque son los únicos que existen",
+        "Porque los regalan",
+        "Porque son de fruta"
+      ],
+      "dato_extra": "La gente paga por la experiencia y la confianza en la marca."
+    },
+    {
+      "id": "br3",
+      "pregunta": "¿Cuál es el famoso eslogan de Nike que motiva a las personas a esforzarse?",
+      "respuesta_correcta": "Just Do It (Solo hazlo)",
+      "incorrectas": [
+        "I'm lovin' it",
+        "Think Different",
+        "Always Coca-Cola"
+      ],
+      "dato_extra": "Un buen eslogan resume el propósito de la marca en pocas palabras."
+    },
+    {
+      "id": "br4",
+      "pregunta": "¿Qué marca de videojuegos se asocia con 'diversión para toda la familia' y nostalgia?",
+      "respuesta_correcta": "Nintendo",
+      "incorrectas": [
+        "Ferrari",
+        "Netflix",
+        "Adidas"
+      ],
+      "dato_extra": "Nintendo cuida su marca para que siempre se sienta amigable y segura para niños."
+    },
+    {
+      "id": "br5",
+      "pregunta": "¿Qué es un 'Logotipo'?",
+      "respuesta_correcta": "El símbolo visual que representa a una marca",
+      "incorrectas": [
+        "Un tipo de papel",
+        "El nombre del dueño",
+        "Un tipo de contrato"
+      ],
+      "dato_extra": "Los mejores logos son tan famosos que los reconoces sin leer el nombre."
+    },
+    {
+      "id": "br6",
+      "pregunta": "¿Por qué es importante la 'Consistencia' en una marca?",
+      "respuesta_correcta": "Para que el cliente siempre reciba la misma calidad y no se confunda",
+      "incorrectas": [
+        "Para cambiar de logo cada semana",
+        "Para tener muchos colores",
+        "No es importante"
+      ],
+      "dato_extra": "Si compras una Coca-Cola en China o en México, debe saber exactamente igual."
+    },
+    {
+      "id": "br7",
+      "pregunta": "¿Qué significa que una marca sea 'Socialmente Responsable'?",
+      "respuesta_correcta": "Que además de vender, ayuda a la comunidad o cuida el planeta",
+      "incorrectas": [
+        "Que tiene muchas redes sociales",
+        "Que hace muchas fiestas",
+        "Que es muy famosa"
+      ],
+      "dato_extra": "Las marcas que ayudan son más queridas por los clientes modernos."
+    },
+    {
+      "id": "br8",
+      "pregunta": "¿Qué es el 'Marketing de Boca en Boca'?",
+      "respuesta_correcta": "Cuando los clientes recomiendan tu marca a sus amigos porque les encantó",
+      "incorrectas": [
+        "Hablar muy fuerte en la calle",
+        "Poner anuncios en la radio",
+        "Gritar los precios"
+      ],
+      "dato_extra": "¡Es la publicidad más valiosa y es gratis!"
+    },
+    {
+      "id": "br9",
+      "pregunta": "¿Cómo ayuda el marketing a una empresa nueva?",
+      "respuesta_correcta": "Haciendo que la gente sepa que existe y qué problema resuelve",
+      "incorrectas": [
+        "Haciendo que el producto sea gratis",
+        "Cerrando a la competencia",
+        "No ayuda"
+      ],
+      "dato_extra": "Sin marketing, nadie sabría que tienes un gran producto."
+    },
+    {
+      "id": "br10",
+      "pregunta": "¿Cuál es el activo más valioso de una marca?",
+      "respuesta_correcta": "La confianza de sus clientes",
+      "incorrectas": [
+        "Sus edificios",
+        "Sus camiones",
+        "Sus computadoras"
+      ],
+      "dato_extra": "¡Felicidades! Ahora entiendes que una marca se construye con el corazón."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

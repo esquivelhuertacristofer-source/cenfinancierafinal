@@ -1,0 +1,138 @@
+{
+  "code": "ACT-S1-2-4-A",
+  "unit_code": "S1-2-4",
+  "unit_title": "Herramientas digitales para las finanzas personales",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La App que Te Hace Rico",
+  "descripcion": "Los jóvenes que usan apps de finanzas personales ahorran 18% más. Pero no es magia — es visibilidad. Simula cómo cambiaría tu situación financiera al usar presupuestos digitales, alertas de gasto y automatización de ahorro.",
+  "objetivo": "Comparar el impacto de usar herramientas digitales de finanzas personales (apps de presupuesto, pagos automáticos, banca digital) versus manejar el dinero sin ellas",
+  "xp": 500,
+  "descripcion_formula": "Ahorro sin app = ingreso × (1 - gasto_pct/100) × 0.6 (solo 60% de lo que crees ahorrar realmente se ahorra por gastos hormiga no controlados). Ahorro con app = ingreso × pct_ahorro_meta / 100 × 0.9 (90% de la meta se cumple con automatización).",
+  "inputs": [
+    {
+      "id": "ingreso_mensual_app",
+      "label": "Ingreso Mensual ($)",
+      "type": "slider",
+      "min": 3000,
+      "max": 60000,
+      "step": 1000,
+      "default": 15000,
+      "unit": "$"
+    },
+    {
+      "id": "pct_ahorro_meta",
+      "label": "Meta de Ahorro Mensual (%)",
+      "type": "slider",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "default": 20,
+      "unit": "%"
+    },
+    {
+      "id": "gastos_hormiga_estimados",
+      "label": "Gastos Hormiga Estimados al Mes ($)",
+      "type": "slider",
+      "min": 200,
+      "max": 5000,
+      "step": 100,
+      "default": 1500,
+      "unit": "$",
+      "referencia": "Café, snacks, suscripciones olvidadas, apps, delivery — el promedio mexicano gasta $2,000/mes sin darse cuenta"
+    },
+    {
+      "id": "anos_diferencia",
+      "label": "Años de Proyección",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.5)",
+  "output_label": "Ahorro Real Sin App (mensual)",
+  "output_prefix": "$",
+  "output_suffix": "/mes",
+  "outputs_multiples": [
+    {
+      "id": "ahorro_sin_app_mensual",
+      "label": "Ahorro Real Sin Herramientas Digitales",
+      "formula": "Math.round(Math.max(0, ingreso_mensual_app * pct_ahorro_meta / 100 - gastos_hormiga_estimados * 0.7))",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Lo que realmente sobra después de gastos hormiga no controlados"
+    },
+    {
+      "id": "ahorro_con_app_mensual",
+      "label": "Ahorro Con Automatización Digital",
+      "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Ahorro automático programado — se transfiere antes de que puedas gastarlo"
+    },
+    {
+      "id": "diferencia_anual",
+      "label": "Diferencia Anual",
+      "formula": "Math.round((ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9 - Math.max(0, ingreso_mensual_app * pct_ahorro_meta / 100 - gastos_hormiga_estimados * 0.7)) * 12)",
+      "prefix": "$",
+      "suffix": "/año más",
+      "descripcion": "El dinero extra que generas por tener visibilidad y control digital de tus finanzas"
+    },
+    {
+      "id": "ahorro_acumulado_proyectado",
+      "label": "Acumulado en el Futuro (Con App)",
+      "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9 * 12 * anos_diferencia * 1.08)",
+      "prefix": "$",
+      "suffix": " acumulados",
+      "descripcion": "Lo que acumularías invirtiendo ese ahorro al 8% anual"
+    }
+  ],
+  "herramientas_recomendadas": {
+    "titulo": "Herramientas digitales de finanzas en México",
+    "apps": [
+      { "nombre": "Fintonic / Mobills", "uso": "Registro y categorización automática de gastos", "costo": "Gratis" },
+      { "nombre": "CETES Directo (banxico)", "uso": "Inversión en CETES desde $100", "costo": "Sin comisión" },
+      { "nombre": "GBM+ / Kuspit", "uso": "Inversión en bolsa y CETES", "costo": "Desde $0/mes" },
+      { "nombre": "Clip / Mercado Pago", "uso": "Cobros digitales para pequeños negocios", "costo": "Comisión por transacción" },
+      { "nombre": "Banca digital (Nu, Hey, BBVA)", "uso": "Ahorro automático, transferencias SPEI", "costo": "Sin comisión mensual" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "ahorro_sin_app_mensual",
+      "label": "Sin Herramientas ($)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "ahorro_con_app_mensual",
+      "label": "Con Automatización ($)",
+      "color": "#22c55e"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "gastos_hormiga_estimados > ingreso_mensual_app * 0.15",
+      "mensaje": "🐜 Gastos hormiga críticos. Representan más del 15% de tu ingreso. Una app de categorización automatizada puede ayudarte a identificar y cortar los que no valen la pena.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "ahorro_con_app_mensual > ahorro_sin_app_mensual * 2",
+      "mensaje": "💡 Impacto masivo. La diferencia entre ahorrar con y sin herramientas digitales en tu caso es más del doble. La visibilidad cambia el comportamiento.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pct_ahorro_meta >= 20",
+      "mensaje": "🏆 Meta de ahorro ambiciosa. El 20%+ es la recomendación de los planificadores financieros. Automatízalo: transfiere ese porcentaje el mismo día que recibes tu sueldo.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Qué app financiera usarías para controlar tus gastos? ¿Cuál es el riesgo de concentrar todas tus finanzas en una sola app o banco digital?",
+  "comparativa_espera": "Los jóvenes que usan apps de finanzas personales ahorran en promedio 18% más que quienes no las usan. La visibilidad automática del gasto cambia el comportamiento sin necesitar más disciplina consciente."
+}

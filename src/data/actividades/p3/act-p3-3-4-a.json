@@ -1,0 +1,98 @@
+{
+  "code": "ACT-P3-3-4-A",
+  "unit_code": "P3-3-4",
+  "unit_title": "Préstamos para el estudio (Créditos educativos)",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "¿Cómo pago la universidad?",
+  "descripcion": "Faltan muchos años, pero los grandes sueños se planean hoy. ¿Qué camino elegirás para convertirte en el profesional que deseas?",
+  "objetivo": "Comprender el concepto de crédito educativo como una inversión en capital humano",
+  "xp": 450,
+  "personaje_principal": "Futuro Profesional",
+  "contexto_inicial": "Quieres ser un gran ingeniero o doctor, pero la carrera es costosa. Tus padres y tú están analizando tres formas de pagarla.",
+  "nodo_inicial": "plan_estudios",
+  "nodos": {
+    "plan_estudios": {
+      "id": "plan_estudios",
+      "texto": "¡Es momento de elegir! ¿Cómo vamos a financiar tu carrera?",
+      "opciones": [
+        {
+          "id": "ahorro_desde_hoy",
+          "texto": "Empezar un fondo de ahorro hoy mismo (un poquito cada mes)",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "¡Excelente! Al llegar a la universidad, tendrás el dinero listo y no deberás nada.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "credito_educativo",
+          "texto": "Pedir un crédito educativo cuando entres a la universidad",
+          "siguiente_nodo": "resultado_credito",
+          "consecuencia": "Es una buena opción. Estudiarás hoy y pagarás cuando ya estés trabajando.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "no_estudiar",
+          "texto": "No estudiar porque es muy caro",
+          "siguiente_nodo": "final_triste",
+          "consecuencia": "¡Oh no! Sin estudios, será mucho más difícil alcanzar tus sueños y ganar buen dinero.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "resultado_ahorro": {
+      "id": "resultado_ahorro",
+      "texto": "¡Te graduaste sin deudas! Todo lo que ganes en tu primer trabajo será para ti y tu familia.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El ahorro preventivo es la forma más barata y tranquila de pagar grandes metas."
+    },
+    "resultado_credito": {
+      "id": "resultado_credito",
+      "texto": "¡Ya eres profesional! Ahora que trabajas, una parte de tu sueldo se usa para pagar el crédito que te ayudó a estudiar.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El crédito educativo es una 'Deuda Buena' porque te ayuda a crecer y ganar más."
+    },
+    "final_triste": {
+      "id": "final_triste",
+      "texto": "Recuerda: El dinero nunca debe ser un obstáculo para tus sueños. Existen herramientas para ayudarte.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Invertir en tu educación es la mejor inversión que puedes hacer en la vida."
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "resultado_ahorro",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "resultado_ahorro",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

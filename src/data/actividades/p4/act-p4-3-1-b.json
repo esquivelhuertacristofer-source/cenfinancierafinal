@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P4-3-1-B",
+  "unit_code": "P4-3-1",
+  "unit_title": "La regla 50/30/20: el presupuesto que sí funciona",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "SIMPLE",
+  "titulo": "Calculadora 50/30/20",
+  "descripcion": "Ingresa cuánto dinero recibes y descubre cuánto deberías estar ahorrando para cumplir tus sueños.",
+  "objetivo": "Visualizar la distribución porcentual de los ingresos y proyectar el ahorro anual",
+  "xp": 300,
+  "descripcion_formula": "Calculamos tu ahorro anual basado en el 20% de tu ingreso mensual: (Ingreso * 0.20) * 12 meses.",
+  "inputs": [
+    {
+      "id": "ingreso_mensual",
+      "label": "Tu ingreso mensual total",
+      "type": "slider",
+      "min": 200,
+      "max": 5000,
+      "step": 100,
+      "default": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    },
+    {
+      "id": "tasa_crecimiento",
+      "label": "Tasa de Crecimiento Sugerida (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "%"
+    }
+  ],
+  "formula": "ingreso_mensual * 0.20 * 12",
+  "output_label": "Tu Ahorro al Final del Año",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "pie",
+  "escenarios": [
+    {
+      "condicion": "resultado >= 2400",
+      "mensaje": "📈 ¡Impresionante! Con este ritmo de ahorro, podrás comprar algo grande muy pronto.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 2400 && resultado >= 500",
+      "mensaje": "👍 Es un buen comienzo. Recuerda: lo importante no es cuánto ganas, sino cuánto guardas.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado < 500",
+      "mensaje": "🌱 ¡Empieza poco a poco! Incluso una pequeña cantidad ahorrada cada mes hace la diferencia.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Con $5,000 de ingreso mensual usando la regla 50/30/20, ¿cuánto va a gastos fijos, cuánto a gustos y cuánto a ahorro? ¿Qué pasaría si cambiaras los porcentajes a 50/20/30?",
+  "comparativa_espera": "Si desde los 14 años ahorras el 20% de $3,000 al mes con 8% de rendimiento anual, a los 30 tendrías más de $900,000. La regla 50/30/20 es el sistema de presupuesto más fácil de mantener consistentemente.",
+  "outputs_multiples": [
+    {
+      "id": "necesidades_50",
+      "label": "Necesidades (50%)",
+      "formula": "Math.round(ingreso_mensual * 0.50)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Renta, comida, transporte y servicios básicos"
+    },
+    {
+      "id": "deseos_30",
+      "label": "Deseos y Diversión (30%)",
+      "formula": "Math.round(ingreso_mensual * 0.30)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Entretenimiento, ropa y gustos personales"
+    },
+    {
+      "id": "ahorro_20",
+      "label": "Ahorro e Inversión (20%)",
+      "formula": "Math.round(ingreso_mensual * 0.20)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Tu fondo de retiro, metas y emergencias"
+    },
+    {
+      "id": "patrimonio_en_n_anos",
+      "label": "Patrimonio Proyectado",
+      "formula": "Math.round(ingreso_mensual * 0.20 * 12 * anios_sim * (1 + tasa_crecimiento/100))",
+      "prefix": "$",
+      "suffix": " en total",
+      "descripcion": "Lo que acumulas invirtiendo el 20% durante el período"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "necesidades_50",
+      "label": "Necesidades (50%)",
+      "color": "#6366f1"
+    },
+    {
+      "id": "deseos_30",
+      "label": "Deseos y Diversión (30%)",
+      "color": "#22c55e"
+    }
+  ]
+}

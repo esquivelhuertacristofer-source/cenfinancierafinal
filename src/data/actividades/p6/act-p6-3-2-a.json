@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P6-3-2-A",
+  "unit_code": "P6-3-2",
+  "unit_title": "El fondo de retiro: ¿por qué pensar en ello hoy?",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Mapa de las Deducciones",
+  "descripcion": "¿Sabías que si cuidas tu salud o ahorras para tu futuro, el SAT puede devolverte dinero? ¡Aprende a usar las deducciones legales!",
+  "objetivo": "Identificar los gastos deducibles personales y comprender el concepto de saldo a favor en la declaración anual",
+  "xp": 450,
+  "output_type": "Estrategia Fiscal Personal",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "tus_gastos_anuales",
+      "titulo": "💳 Mis Gastos del Año",
+      "descripcion": "Imagina que eres un profesional que gana $400,000 al año. ¿En qué gastaste?",
+      "campos": [
+        {
+          "id": "gasto_medico",
+          "label": "Gastos médicos y dentales ($)",
+          "type": "text",
+          "placeholder": "Ej: 15000",
+          "requerido": true
+        },
+        {
+          "id": "gasto_educacion",
+          "label": "Colegiaturas de tus hijos ($)",
+          "type": "text",
+          "placeholder": "Ej: 12000",
+          "requerido": true
+        },
+        {
+          "id": "gasto_retiro",
+          "label": "Ahorro extra para tu retiro ($)",
+          "type": "text",
+          "placeholder": "Ej: 20000",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "seleccion_deducciones",
+      "titulo": "⚖️ Clasificando Deducciones",
+      "descripcion": "No todo es deducible. Elige cuáles de estos sí acepta el SAT para devolverte dinero.",
+      "campos": [
+        {
+          "id": "check_lentes",
+          "label": "¿Compraste lentes graduados con receta?",
+          "type": "select",
+          "opciones": [
+            "Sí (Deducible)",
+            "No"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "check_despensa",
+          "label": "¿Gastos de despensa en el súper?",
+          "type": "select",
+          "opciones": [
+            "No (No deducible personal)",
+            "Sí"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "check_donativo",
+          "label": "¿Donativo a una fundación autorizada?",
+          "type": "select",
+          "opciones": [
+            "Sí (Deducible)",
+            "No"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "resultado_fiscal",
+      "titulo": "💰 Tu Recompensa Fiscal",
+      "descripcion": "Si pediste factura de todo lo deducible, ahora calcularemos tu beneficio.",
+      "campos": [
+        {
+          "id": "metodo_pago",
+          "label": "¿Cómo pagaste tus gastos deducibles?",
+          "type": "select",
+          "opciones": [
+            "Tarjeta/Transferencia (Correcto)",
+            "Efectivo (No deducible)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "compromiso_fiscal",
+          "label": "Mi compromiso con mis impuestos es...",
+          "type": "textarea",
+          "placeholder": "Ej: Pediré factura siempre para recuperar mis impuestos y usarlos para mi ahorro...",
+          "requerido": true
+        },
+        {
+          "id": "ingresos_anuales_ref",
+          "label": "Ingresos Anuales de Referencia ($)",
+          "type": "slider",
+          "min": 50000,
+          "max": 2000000,
+          "step": 10000,
+          "default": 300000,
+          "requerido": false
+        },
+        {
+          "id": "deduccion_estimada",
+          "label": "Deducción Total Estimada",
+          "type": "calculated",
+          "formula": "Math.round(ingresos_anuales_ref * 0.15)",
+          "unit": "$",
+          "ayuda": "En promedio, los contribuyentes pueden deducir ~15% de sus ingresos"
+        },
+        {
+          "id": "devolucion_potencial",
+          "label": "Devolución Potencial del SAT",
+          "type": "calculated",
+          "formula": "Math.round(ingresos_anuales_ref * 0.15 * 0.25)",
+          "unit": "$",
+          "ayuda": "El SAT puede devolverte hasta el 25% de tus deducciones comprobadas"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

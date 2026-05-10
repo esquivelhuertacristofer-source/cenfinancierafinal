@@ -1,0 +1,137 @@
+{
+  "code": "ACT-P4-4-5-B",
+  "unit_code": "P4-4-5",
+  "unit_title": "Mi primera feria de emprendimiento: ¡A vender!",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Graduación de Inteligencia Financiera",
+  "descripcion": "¡Felicidades por llegar hasta aquí! Es momento de demostrar que eres un maestro de tus finanzas.",
+  "objetivo": "Evaluar la integración de conocimientos de los 4 bloques del nivel P4",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "final1",
+      "texto": "¿Cuál es la mejor forma de proteger tus ahorros contra la inflación?",
+      "opciones": [
+        "Guardarlos en una caja fuerte",
+        "Invertirlos para que crezcan más que los precios",
+        "Gastarlos todos hoy",
+        "Esconderlos bajo el colchón"
+      ],
+      "correcta": 1,
+      "explicacion": "La inversión es la única forma de mantener o subir el valor real de tu dinero."
+    },
+    {
+      "id": "final2",
+      "texto": "¿Qué es el interés compuesto?",
+      "opciones": [
+        "Pagar intereses al banco",
+        "Cuando las ganancias de tu inversión generan nuevas ganancias",
+        "Un interés que es muy difícil de calcular",
+        "Un regalo del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "El interés compuesto multiplica tu dinero de forma exponencial con el tiempo."
+    },
+    {
+      "id": "final3",
+      "texto": "Si recibes un correo sospechoso pidiendo tu contraseña, ¿cómo se llama ese fraude?",
+      "opciones": [
+        "Ciber-robo",
+        "Phishing",
+        "Spam",
+        "Hackeo de pantalla"
+      ],
+      "correcta": 1,
+      "explicacion": "El phishing busca engañarte para que tú mismo entregues tus claves."
+    },
+    {
+      "id": "final4",
+      "texto": "¿Qué institución te defiende si tienes un problema con tu banco?",
+      "opciones": [
+        "SEP",
+        "CONDUSEF",
+        "Policía",
+        "Banxico"
+      ],
+      "correcta": 1,
+      "explicacion": "CONDUSEF es el árbitro que protege a los usuarios de servicios financieros."
+    },
+    {
+      "id": "final5",
+      "texto": "¿Cuál es la regla 50/30/20 para un presupuesto?",
+      "opciones": [
+        "50% diversión, 30% comida, 20% ropa",
+        "50% necesidades, 30% deseos, 20% ahorro/inversión",
+        "50% ahorro, 30% gastos, 20% regalos",
+        "No es una regla real"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la base para un equilibrio financiero sano."
+    },
+    {
+      "id": "final6",
+      "texto": "¿Qué es la 'Economía Formal'?",
+      "opciones": [
+        "Vender cosas en la calle",
+        "Negocios registrados que pagan impuestos y dan seguro a sus empleados",
+        "Trabajar sin cobrar",
+        "Vender solo cosas caras"
+      ],
+      "correcta": 1,
+      "explicacion": "La formalidad da acceso a derechos y herramientas como el crédito bancario."
+    },
+    {
+      "id": "final7",
+      "texto": "¿Qué debes hacer si un cliente te reclama porque tu producto falló?",
+      "opciones": [
+        "Ignorarlo",
+        "Escuchar, disculparte y ofrecer una solución justa",
+        "Decirle que es su culpa",
+        "Cerrar el negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "La buena atención al cliente convierte problemas en oportunidades."
+    },
+    {
+      "id": "final8",
+      "texto": "¿Por qué es importante considerar el costo de tu TIEMPO al poner precio a un producto?",
+      "opciones": [
+        "Para trabajar menos",
+        "Porque tu esfuerzo tiene un valor y debe ser pagado",
+        "Para que el producto sea más caro",
+        "No es importante"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu tiempo es el recurso más valioso. Si no lo cobras, estás perdiendo dinero."
+    },
+    {
+      "id": "final9",
+      "texto": "¿Para qué sirve diversificar tus inversiones?",
+      "opciones": [
+        "Para tener muchos papeles",
+        "Para reducir el riesgo de perder todo si una inversión falla",
+        "Para ganar menos dinero",
+        "Para confundir al banco"
+      ],
+      "correcta": 1,
+      "explicacion": "'No pongas todos tus huevos en la misma canasta' es la clave de la seguridad."
+    },
+    {
+      "id": "final10",
+      "texto": "¿Cuál es el primer paso para iniciar un negocio exitoso?",
+      "opciones": [
+        "Comprar un coche de lujo",
+        "Identificar una necesidad o problema que puedas resolver",
+        "Tener millones de pesos",
+        "Saber gritar fuerte"
+      ],
+      "correcta": 1,
+      "explicacion": "El éxito viene de crear valor para los demás."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

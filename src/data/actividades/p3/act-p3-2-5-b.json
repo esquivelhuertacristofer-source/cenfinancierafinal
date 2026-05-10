@@ -1,0 +1,80 @@
+{
+  "code": "ACT-P3-2-5-B",
+  "unit_code": "P3-2-5",
+  "unit_title": "Interés simple: Cómo crece tu dinero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "SIMPLE",
+  "titulo": "Calculadora de Frutos Financieros",
+  "descripcion": "Vamos a aplicar la fórmula maestra: Interés = Capital x Tasa x Tiempo. Sigue los pasos para ver cuánto dinero extra puedes ganar.",
+  "objetivo": "Aprender a desglosar y resolver la fórmula de interés simple",
+  "xp": 350,
+  "output_type": "Cálculo de Interés",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "capital_step",
+      "titulo": "1. El Capital (C)",
+      "descripcion": "¿Cuánto dinero vas a invertir o prestar?",
+      "campos": [
+        {
+          "id": "val_capital",
+          "label": "Monto inicial",
+          "type": "number",
+          "placeholder": "Ej: 5000",
+          "requerido": true,
+          "ayuda": "Es la base de tu inversión."
+        }
+      ]
+    },
+    {
+      "id": "tasa_step",
+      "titulo": "2. La Tasa (r)",
+      "descripcion": "¿Qué porcentaje te pagará el banco cada año?",
+      "campos": [
+        {
+          "id": "val_tasa",
+          "label": "Tasa anual (%)",
+          "type": "number",
+          "placeholder": "Ej: 10",
+          "requerido": true,
+          "ayuda": "A mayor tasa, más dinero ganas."
+        }
+      ]
+    },
+    {
+      "id": "tiempo_step",
+      "titulo": "3. El Tiempo (t)",
+      "descripcion": "¿Cuántos años dejarás el dinero guardado?",
+      "campos": [
+        {
+          "id": "val_tiempo",
+          "label": "Número de años",
+          "type": "number",
+          "placeholder": "Ej: 3",
+          "requerido": true
+        },
+        {
+          "id": "res_interes",
+          "label": "Interés ganado (Ganancia)",
+          "type": "calculated",
+          "formula": "val_capital * (val_tasa / 100) * val_tiempo",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Este es el dinero 'nuevo' que creaste."
+        },
+        {
+          "id": "res_total",
+          "label": "Saldo Total Final",
+          "type": "calculated",
+          "formula": "val_capital + (val_capital * (val_tasa / 100) * val_tiempo)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Tu capital original + tus ganancias."
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

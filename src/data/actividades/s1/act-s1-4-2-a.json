@@ -1,0 +1,169 @@
+{
+  "code": "ACT-S1-4-2-A",
+  "unit_code": "S1-4-2",
+  "unit_title": "Investigación de mercado: cómo conocer a mi cliente real",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Conoce a Tu Cliente Antes de Gastar",
+  "descripcion": "El 42% de las startups fracasan porque no había demanda real. ¿La razón? Nunca hablaron con sus clientes antes de construir el producto. Simula el ROI de invertir tiempo en investigación de mercado antes de lanzar tu negocio.",
+  "objetivo": "Calcular el retorno sobre inversión (ROI) de hacer investigación de mercado, comparar lanzar con vs. sin investigación, y diseñar un plan de validación con clientes reales",
+  "xp": 600,
+  "descripcion_formula": "Ingresos con investigación = tamano_mercado × conversion_con_inv × precio_producto × 12. ROI = (ingresos_extra - costo_investigacion) / costo_investigacion × 100.",
+  "inputs": [
+    {
+      "id": "presupuesto_negocio",
+      "label": "Presupuesto Total del Negocio ($)",
+      "type": "slider",
+      "min": 10000,
+      "max": 500000,
+      "step": 10000,
+      "default": 80000,
+      "unit": "$"
+    },
+    {
+      "id": "pct_investigacion",
+      "label": "% del Presupuesto en Investigación",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 8,
+      "unit": "%",
+      "referencia": "Recomendado: 5-10% del presupuesto en investigación de mercado"
+    },
+    {
+      "id": "tamano_mercado_objetivo",
+      "label": "Clientes Potenciales en Tu Zona",
+      "type": "slider",
+      "min": 100,
+      "max": 50000,
+      "step": 100,
+      "default": 5000,
+      "unit": "personas"
+    },
+    {
+      "id": "precio_producto_inv",
+      "label": "Precio Mensual del Producto/Servicio ($)",
+      "type": "slider",
+      "min": 50,
+      "max": 5000,
+      "step": 50,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "tipo_metodo_investigacion",
+      "label": "Método de Investigación Principal",
+      "type": "select",
+      "options": [
+        { "label": "Entrevistas cara a cara (10-20 personas)", "value": "entrevistas" },
+        { "label": "Encuesta digital (Google Forms / Typeform)", "value": "encuesta" },
+        { "label": "Prototipo en papel o landing page", "value": "prototipo" },
+        { "label": "Observación en campo (customer safari)", "value": "observacion" }
+      ],
+      "default": "entrevistas"
+    }
+  ],
+  "formula": "Math.round(presupuesto_negocio * pct_investigacion / 100)",
+  "output_label": "Costo de la Investigación ($)",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "costo_investigacion",
+      "label": "Inversión en Investigación",
+      "formula": "Math.round(presupuesto_negocio * pct_investigacion / 100)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Lo que dedicas a conocer a tu cliente antes de construir"
+    },
+    {
+      "id": "ingresos_con_investigacion",
+      "label": "Ingresos Anuales Con Investigación",
+      "formula": "Math.round(tamano_mercado_objetivo * (tipo_metodo_investigacion === 'entrevistas' ? 0.035 : tipo_metodo_investigacion === 'prototipo' ? 0.04 : tipo_metodo_investigacion === 'observacion' ? 0.025 : 0.02) * precio_producto_inv * 12)",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "Ingresos anuales estimados cuando conoces bien a tu cliente y ajustas el producto"
+    },
+    {
+      "id": "ingresos_sin_investigacion",
+      "label": "Ingresos Anuales Sin Investigación",
+      "formula": "Math.round(tamano_mercado_objetivo * 0.008 * precio_producto_inv * 12)",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "Ingresos anuales cuando lanzas sin validar — conversión típica de productos no validados"
+    },
+    {
+      "id": "roi_investigacion",
+      "label": "ROI de la Investigación",
+      "formula": "Math.round((Math.round(tamano_mercado_objetivo * (tipo_metodo_investigacion === 'entrevistas' ? 0.035 : tipo_metodo_investigacion === 'prototipo' ? 0.04 : tipo_metodo_investigacion === 'observacion' ? 0.025 : 0.02) * precio_producto_inv * 12) - Math.round(tamano_mercado_objetivo * 0.008 * precio_producto_inv * 12) - Math.round(presupuesto_negocio * pct_investigacion / 100)) / Math.round(presupuesto_negocio * pct_investigacion / 100) * 100)",
+      "prefix": "",
+      "suffix": "% de retorno",
+      "descripcion": "Por cada peso que inviertes en conocer a tu cliente, ¿cuántos pesos extras ganas?"
+    }
+  ],
+  "metodos_investigacion": {
+    "titulo": "Métodos de investigación y cuándo usarlos",
+    "metodos": [
+      {
+        "nombre": "Entrevistas 1:1 (Jobs to Be Done)",
+        "cuando": "Inicio — para descubrir problemas profundos que el cliente no puede expresar en una encuesta",
+        "cuantas": "10-20 entrevistas",
+        "costo": "Tiempo + café"
+      },
+      {
+        "nombre": "Encuesta digital",
+        "cuando": "Validación cuantitativa — confirmar patrones que ya viste en entrevistas",
+        "cuantas": "50-200 respuestas",
+        "costo": "$0 con Google Forms"
+      },
+      {
+        "nombre": "Landing page con 'comprar ahora'",
+        "cuando": "Prueba real de disposición a pagar — el botón de compra que no lleva a ningún lado",
+        "cuantas": "1 página, 2-4 semanas",
+        "costo": "$0-$500 en publicidad"
+      },
+      {
+        "nombre": "Customer Safari (observación)",
+        "cuando": "Negocios de consumo — observar a tu cliente en su contexto natural sin interrumpirlo",
+        "cuantas": "3-5 sesiones de observación",
+        "costo": "Solo tiempo"
+      }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "ingresos_sin_investigacion",
+      "label": "Ingresos Sin Investigar ($)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "ingresos_con_investigacion",
+      "label": "Ingresos Con Investigación ($)",
+      "color": "#22c55e"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "roi_investigacion > 500",
+      "mensaje": "🏆 ROI extraordinario. Por cada peso invertido en investigación, ganas más de 5 pesos extra. La investigación de mercado es la inversión con mayor retorno en cualquier negocio.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pct_investigacion < 3",
+      "mensaje": "⚠️ Inversión insuficiente. Con menos del 3% del presupuesto en investigación, el riesgo de construir algo que nadie quiere es muy alto. Ahorra en desarrollo, no en conocimiento del cliente.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "tipo_metodo_investigacion === 'entrevistas'",
+      "mensaje": "🎯 Mejor método para etapa temprana. Las entrevistas cara a cara revelan insights que ninguna encuesta puede capturar. Una buena entrevista puede ahorrarte meses de desarrollo en la dirección equivocada.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Cómo investigarías si hay demanda real para tu producto antes de invertir un solo peso? ¿Qué 5 preguntas específicas le harías a tus primeros 10 clientes potenciales?",
+  "comparativa_espera": "El 42% de las startups fracasan porque no había demanda real del mercado. Investigar el mercado cuesta tiempo, no dinero — y puede ahorrarte años de trabajo en un producto que nadie necesita."
+}

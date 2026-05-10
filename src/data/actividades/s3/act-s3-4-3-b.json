@@ -1,0 +1,88 @@
+{
+  "code": "ACT-S3-4-3-B",
+  "unit_code": "S3-4-3",
+  "unit_title": "Propiedad intelectual: protege tus ideas y marcas",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTO",
+  "titulo": "El Arbitraje Global",
+  "descripcion": "Tienes 1 millón de dólares. En Japón el dinero es 'gratis' (tasa 0%) y en México pagan mucho (tasa 11%). ¿Podrás ganar dinero moviéndolo de un país a otro?",
+  "objetivo": "Comprender el concepto de diferencial de tasas de interés y el riesgo cambiario en inversiones internacionales",
+  "xp": 500,
+  "mecanica": "Toma decisiones de inversión global y enfrenta la volatilidad de las divisas.",
+  "escenarios": [
+    {
+      "id": "glob_game1",
+      "texto": "Pides un préstamo en Yenes Japoneses a una tasa de casi 0%. Cambias esos Yenes a Pesos Mexicanos para invertirlos al 11%. ¿Cómo se llama esta estrategia?",
+      "imagen": "💴",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Correcto! Se llama CARRY TRADE. Estás aprovechando la diferencia de tasas entre dos países.",
+      "feedback_error": "❌ Se llama Carry Trade. Es una de las formas más comunes en que los bancos mueven dinero por el mundo.",
+      "tipo_ataque": "Concepto Carry Trade"
+    },
+    {
+      "id": "glob_game2",
+      "texto": "Llevas 6 meses ganando el 11% anual. Todo va bien. Pero de repente, hay una crisis política en México y el Peso empieza a perder valor frente al Yen.",
+      "imagen": "📉",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Decisión de experto! Decides cerrar tu posición y devolver el préstamo en Yenes antes de que el tipo de cambio se dispare. Salvaste tus ganancias.",
+      "feedback_error": "❌ Te quedaste paralizado. El Peso se devaluó un 20%. Aunque ganaste 11% de interés, ahora debes un 20% más en Yenes. ¡Has perdido dinero!",
+      "tipo_ataque": "Riesgo Cambiario"
+    },
+    {
+      "id": "glob_game3",
+      "texto": "Has aprendido que en las finanzas globales, no solo importa cuánto interés te pagan, sino qué tan estable es la moneda en la que estás invirtiendo.",
+      "imagen": "🌍",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades, Arbitrajista Global! Estás listo para entender los flujos de capital del mundo real.",
+      "feedback_error": "Nunca ignores el tipo de cambio; es el factor que más influye en el éxito de una inversión internacional.",
+      "tipo_ataque": "Lección de Divisas"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Toma decisiones de inversión global. ¿Esta estrategia MAXIMIZA o EXPONE a riesgo?",
+  "duracion": 150,
+  "opciones_clasificacion": [
+    "MAXIMIZA RETORNO",
+    "EXPONE A RIESGO"
+  ],
+  "items": [
+    {
+      "id": "glob_game1",
+      "label": "Pides un préstamo en Yenes Japoneses a una tasa de casi 0%. Cambias esos Yenes a Pesos Mexicanos par...",
+      "emoji": "💴",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Correcto! Se llama CARRY TRADE. Estás aprovechando la diferencia de tasas entre dos países.",
+      "feedback_error": "❌ Se llama Carry Trade. Es una de las formas más comunes en que los bancos mueven dinero por el mundo.",
+      "puntos": 100
+    },
+    {
+      "id": "glob_game2",
+      "label": "Llevas 6 meses ganando el 11% anual. Todo va bien. Pero de repente, hay una crisis política en Méxic...",
+      "emoji": "📉",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Decisión de experto! Decides cerrar tu posición y devolver el préstamo en Yenes antes de que el tipo de cambio se dispare. Salvaste tus ganancias.",
+      "feedback_error": "❌ Te quedaste paralizado. El Peso se devaluó un 20%. Aunque ganaste 11% de interés, ahora debes un 20% más en Yenes. ¡Has perdido dinero!",
+      "puntos": 100
+    },
+    {
+      "id": "glob_game3",
+      "label": "Has aprendido que en las finanzas globales, no solo importa cuánto interés te pagan, sino qué tan es...",
+      "emoji": "🌍",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades, Arbitrajista Global! Estás listo para entender los flujos de capital del mundo real.",
+      "feedback_error": "Nunca ignores el tipo de cambio; es el factor que más influye en el éxito de una inversión internacional.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 300
+  }
+}

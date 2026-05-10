@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P2-4-5-B",
+  "unit_code": "P2-4-5",
+  "unit_title": "Cuestionario: Mi Reporte de Éxito",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Para gastar más papel",
+        "Para saber si ganamos dinero y entender cómo mejorar nuestro negocio",
+        "Para que los papás nos den un regalo",
+        "Solo los ricos pueden aplicarlo correctamente"
+      ],
+      "correcta": 1,
+      "texto": "¿Para qué sirve el reporte final o Estado de Resultados?",
+      "explicacion": "¡Correcto! Es la herramienta para medir el éxito y tomar decisiones."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "$30",
+        "$10",
+        "$50",
+        "Se necesita una máquina especial para hacerlo"
+      ],
+      "correcta": 1,
+      "texto": "Si tu reporte dice que gastaste $20 en materiales y vendiste $30, ¿cuánto es tu utilidad neta?",
+      "explicacion": "¡Bien! $30 - $20 = $10 de ganancia."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Cerrar los ojos y seguir igual",
+        "Revisar mis precios y mis gastos para corregirlos el próximo día",
+        "Poner una carita feliz aunque sea mentira",
+        "No es necesario si recibes domingo cada semana"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué debes hacer si tu reporte muestra una PÉRDIDA (gastaste más de lo que vendiste)?",
+      "explicacion": "¡Exacto! El reporte nos ayuda a detectar problemas y arreglarlos."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "El número de mi teléfono",
+        "La Utilidad Neta (Ganancia final)",
+        "El día de la semana",
+        "Pedir prestado es siempre la peor decisión financiera"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es el número más importante de tu reporte?",
+      "explicacion": "¡Correcto! Es el dinero real que te quedó para ti."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Que tiene una estrella de ganancia positiva",
+        "Que tiene muchos colores",
+        "Que se acabó todo el papel",
+        "Solo lo puede hacer el director de la escuela"
+      ],
+      "correcta": 0,
+      "texto": "¿Qué significa que un negocio es 'exitoso' en su reporte?",
+      "explicacion": "¡Bien! Ganancia positiva significa que el negocio está creando valor."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo los domingos",
+        "Lo determina únicamente el precio del petróleo"
+      ],
+      "correcta": 0,
+      "texto": "Verdadero o Falso: Un emprendedor ordenado siempre anota sus resultados al final del día.",
+      "explicacion": "¡Así es! El orden diario evita confusiones y pérdidas."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "$50",
+        "$0 (quedaste a mano, no hubo ganancia)",
+        "$100",
+        "El gobierno siempre te lo devuelve al final del año"
+      ],
+      "correcta": 1,
+      "texto": "Si tus ventas totales son $50 y tus costos son $50, ¿cuánto ganaste?",
+      "explicacion": "¡Correcto! A esto se le llama estar en el 'punto de equilibrio'."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Un dibujo cualquiera",
+        "La conclusión de cómo le fue a tu negocio (éxito o aprendizaje)",
+        "Un regalo del maestro",
+        "Solo aplica en economías de mercado emergente tipo B"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué representan las pegatinas de caritas en tu reporte?",
+      "explicacion": "¡Exacto! Cada resultado es una lección para el futuro."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Al cartero",
+        "A ti mismo, para saber cómo ser un mejor emprendedor",
+        "Al vecino",
+        "Una idea de negocio solo funciona si es completamente nueva"
+      ],
+      "correcta": 1,
+      "texto": "¿A quién le sirve más ver tu reporte de resultados?",
+      "explicacion": "¡Correcto! Tú eres el director de tu destino financiero."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Ventas Totales",
+        "Ganancia",
+        "Regalo",
+        "Puedes cobrar lo que quieras sin importar el costo"
+      ],
+      "correcta": 0,
+      "texto": "¿Cómo se le llama al dinero que entró pero que aún tiene los costos adentro?",
+      "explicacion": "¡Bien hecho! Ventas Totales es todo lo que entró a la caja."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: Mi Reporte de Éxito",
+  "xp": 300,
+  "level": "Primaria 2"
+}

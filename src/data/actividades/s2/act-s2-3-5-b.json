@@ -1,0 +1,129 @@
+{
+  "code": "ACT-S2-3-5-B",
+  "unit_code": "S2-3-5",
+  "unit_title": "Inversión sostenible: ISR y finanzas con impacto social",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Plan de Desendeudamiento",
+  "descripcion": "La deuda es una cadena pesada. ¡Crea el mapa para liberarte de ella hoy mismo!",
+  "objetivo": "Diseñar una estrategia personalizada para la liquidación de deudas basada en priorización y control de gastos",
+  "xp": 600,
+  "output_type": "Plan Maestro de Libertad Financiera",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "inventario_deudas_s2",
+      "titulo": "📝 Inventario de Deudas",
+      "descripcion": "No puedes pelear contra un enemigo que no conoces. Ponle nombre y monto a tus deudas.",
+      "campos": [
+        {
+          "id": "deuda_mayor_interes",
+          "label": "Deuda con mayor interés (ej: Tarjeta)",
+          "type": "text",
+          "placeholder": "Nombre de la deuda y tasa %",
+          "requerido": true
+        },
+        {
+          "id": "deuda_menor_monto",
+          "label": "Deuda más pequeña (ej: Pago a amigo)",
+          "type": "text",
+          "placeholder": "Nombre y monto total",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "seleccion_metodo_s2",
+      "titulo": "🎯 Tu Estrategia",
+      "descripcion": "¿Qué priorizarás para no rendirte?",
+      "campos": [
+        {
+          "id": "metodo_elegido",
+          "label": "Método de Pago",
+          "type": "select",
+          "opciones": [
+            "Bola de Nieve (Pagos pequeños primero)",
+            "Avalancha (Intereses altos primero)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "ahorro_emergencia_s2",
+          "label": "¿Tienes un fondo de emergencia pequeño para no volver a endeudarte?",
+          "type": "select",
+          "opciones": [
+            "Sí, ya lo tengo",
+            "Lo construiré primero",
+            "No lo necesito (Error)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "recortes_sacrificios",
+      "titulo": "✂️ Recortes de Emergencia",
+      "descripcion": "¿De dónde saldrá el dinero extra?",
+      "campos": [
+        {
+          "id": "gastos_a_eliminar",
+          "label": "Gastos que suspenderé hoy",
+          "type": "textarea",
+          "placeholder": "Ej: Suscripciones que no uso, comer fuera los fines de semana, compras por impulso...",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_extra_s2",
+          "label": "Idea para ganar dinero extra",
+          "type": "text",
+          "placeholder": "Ej: Vender cosas que no uso, dar clases, etc.",
+          "requerido": true
+        },
+        {
+          "id": "pago_extra_mensual",
+          "label": "Pago Extra Mensual para Deudas ($)",
+          "type": "slider",
+          "min": 200,
+          "max": 20000,
+          "step": 200,
+          "default": 2000,
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "meses_para_libertad",
+          "label": "Meses Estimados para Quedar Libre",
+          "type": "calculated",
+          "formula": "Math.ceil(50000 / Math.max(1, pago_extra_mensual))",
+          "unit": " meses estimados",
+          "ayuda": "Asumiendo deuda total de $50,000 — ajusta según tu situación real"
+        },
+        {
+          "id": "intereses_ahorrados_est",
+          "label": "Intereses que Te Ahorras (CAT 80%)",
+          "type": "calculated",
+          "formula": "Math.round(50000 * 0.80 * (50000 / Math.max(1, pago_extra_mensual)) / 12)",
+          "unit": "$",
+          "ayuda": "Cada mes que aceleras el pago eliminas intereses a tasa alta"
+        }
+      ]
+    },
+    {
+      "id": "compromiso_libertad",
+      "titulo": "🕊️ El Compromiso",
+      "descripcion": "Firma tu pacto con el futuro.",
+      "campos": [
+        {
+          "id": "promesa_no_deuda",
+          "label": "Mi promesa de libertad",
+          "type": "textarea",
+          "placeholder": "Prometo no volver a usar tarjetas de consumo hasta que este plan termine...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-2-4-B",
+  "unit_code": "S1-2-4",
+  "unit_title": "Herramientas digitales para las finanzas personales",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Mundo Interconectado",
+  "descripcion": "¿Sabes por qué sube el dólar? ¡Pon a prueba tu visión global sobre el dinero y el comercio!",
+  "objetivo": "Identificar los conceptos clave del mercado cambiario y la balanza comercial entre países",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "for1",
+      "texto": "¿Qué es el mercado FOREX?",
+      "opciones": [
+        "Una tienda de ropa",
+        "El mercado donde se intercambian todas las monedas del mundo (Foreign Exchange)",
+        "Un banco central europeo",
+        "Una app de juegos"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el mercado más grande y líquido del planeta."
+    },
+    {
+      "id": "for2",
+      "texto": "¿Por qué el dólar suele subir cuando hay miedo en el mundo?",
+      "opciones": [
+        "Porque es más bonito",
+        "Porque es considerado una 'moneda refugio' segura para los inversionistas",
+        "Porque se imprime más",
+        "Porque no hay otra moneda"
+      ],
+      "correcta": 1,
+      "explicacion": "Ante la duda, el mundo confía en la estabilidad de la economía de EE.UU."
+    },
+    {
+      "id": "for3",
+      "texto": "¿Qué es un 'Superávit Comercial'?",
+      "opciones": [
+        "Cuando un país vende (exporta) más de lo que compra (importa)",
+        "Cuando el gobierno gasta mucho",
+        "Cuando el dólar baja",
+        "Cuando no hay comercio"
+      ],
+      "correcta": 1,
+      "explicacion": "Indica que está entrando más dinero al país del que está saliendo."
+    },
+    {
+      "id": "for4",
+      "texto": "¿Qué es el 'Déficit Comercial'?",
+      "opciones": [
+        "Cuando un país compra más de lo que vende",
+        "Cuando hay mucha inflación",
+        "Cuando el banco no tiene dinero",
+        "Un tipo de impuesto"
+      ],
+      "correcta": 1,
+      "explicacion": "Significa que el país depende mucho de los productos extranjeros."
+    },
+    {
+      "id": "for5",
+      "texto": "¿Cómo beneficia un peso FUERTE a un turista mexicano que va a Disney?",
+      "opciones": [
+        "Le cobran menos impuestos",
+        "Necesita menos pesos para comprar los mismos dólares (su viaje es más barato)",
+        "Le regalan las entradas",
+        "No le beneficia"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu poder de compra internacional sube cuando tu moneda local es fuerte."
+    },
+    {
+      "id": "for6",
+      "texto": "¿Qué es el 'Tipo de Cambio Flotante'?",
+      "opciones": [
+        "Un precio que decide el presidente",
+        "Un precio que se decide por la oferta y la demanda del mercado cada segundo",
+        "Un precio que no cambia nunca",
+        "Un precio que depende del oro"
+      ],
+      "correcta": 1,
+      "explicacion": "En México, el mercado decide cuánto vale el peso frente al dólar."
+    },
+    {
+      "id": "for7",
+      "texto": "¿Qué es una 'Remesa'?",
+      "opciones": [
+        "Un tipo de préstamo",
+        "Dinero que mandan los trabajadores en el extranjero a sus familias en su país de origen",
+        "Una cuenta de ahorros",
+        "Un pago de aduana"
+      ],
+      "correcta": 1,
+      "explicacion": "Son una fuente muy importante de ingresos para millones de familias."
+    },
+    {
+      "id": "for8",
+      "texto": "¿Cuál es la principal moneda de reserva en el mundo?",
+      "opciones": [
+        "El Euro",
+        "El Dólar estadounidense",
+        "El Bitcoin",
+        "El Oro"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora entiendes cómo se conecta tu país con el resto del mundo."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

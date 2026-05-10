@@ -1,0 +1,137 @@
+{
+  "code": "ACT-P1-1-1-B",
+  "unit_code": "P1-1-1",
+  "unit_title": "¿Qué es el dinero? Monedas y billetes de México",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Súper Detective de Billetes",
+  "descripcion": "¡Ponte tu lupa! Banxico ha escondido secretos en nuestro dinero que solo un genio puede encontrar.",
+  "objetivo": "Identificar denominaciones, medidas de seguridad y personajes del efectivo mexicano",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál es el billete más pequeño en valor de nuestra familia actual?",
+      "opciones": [
+        "El de $50",
+        "El de $20",
+        "El de $100",
+        "El de $500"
+      ],
+      "correcta": 1,
+      "explicacion": "El billete de $20 es el de menor valor, ¡pero es muy importante para nuestras compras diarias!"
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué animalito rosado vive en el billete de $50 pesos?",
+      "opciones": [
+        "Un cerdito",
+        "Un ajolote",
+        "Un flamenco",
+        "Un pez globo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡El Ajolote! Es un animal mágico de Xochimilco y ahora vive en el billete rosa."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cómo se llama el lugar donde se fabrica TODO el dinero de México?",
+      "opciones": [
+        "La Fábrica de Juguetes",
+        "Banxico (Banco de México)",
+        "El Palacio de Gobierno",
+        "La Tienda Gigante"
+      ],
+      "correcta": 1,
+      "explicacion": "Banxico es el único autorizado para imprimir billetes y acuñar monedas en nuestro país."
+    },
+    {
+      "id": "q4",
+      "texto": "Si tocas un billete nuevo, ¿qué sientes en las letras de 'Banco de México'?",
+      "opciones": [
+        "Está liso",
+        "Sientes unos bordes con relieve (rayitas)",
+        "Sientes que está mojado",
+        "Sientes burbujas"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Ese es el relieve! Sirve para que las personas que no ven bien puedan identificar el billete tocándolo."
+    },
+    {
+      "id": "q5",
+      "texto": "¿De qué color es el billete de $100 que tiene a Sor Juana Inés de la Cruz?",
+      "opciones": [
+        "Verde",
+        "Azul",
+        "Rojo",
+        "Amarillo"
+      ],
+      "correcta": 2,
+      "explicacion": "El billete de $100 es rojo y es famoso en todo el mundo por ser muy bonito."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué material se usa para hacer los billetes de $20 y $50?",
+      "opciones": [
+        "Papel de cuaderno",
+        "Polímero (un tipo de plástico especial)",
+        "Tela de ropa",
+        "Cartón"
+      ],
+      "correcta": 1,
+      "explicacion": "Se usa plástico (polímero) para que aguanten más, no se rompan fácil y se puedan lavar si se mojan."
+    },
+    {
+      "id": "q7",
+      "texto": "Si pones un billete frente a una luz, aparece un dibujo 'fantasma'. ¿Cómo se llama?",
+      "opciones": [
+        "Dibujo invisible",
+        "Marca de Agua",
+        "Sombra de dinero",
+        "Foto secreta"
+      ],
+      "correcta": 1,
+      "explicacion": "La Marca de Agua es una medida de seguridad para saber que el billete es real y no de juguete."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué moneda tiene el número 10 en el centro y es de color dorado con plateado?",
+      "opciones": [
+        "La de $1",
+        "La de $5",
+        "La de $10",
+        "La de $2"
+      ],
+      "correcta": 2,
+      "explicacion": "La moneda de $10 es la más grande de las comunes y tiene el círculo dorado en el centro."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Quién aparece en el billete azul de $500 pesos junto a las ballenas?",
+      "opciones": [
+        "Benito Juárez",
+        "Miguel Hidalgo",
+        "Ceny",
+        "Un astronauta"
+      ],
+      "correcta": 0,
+      "explicacion": "Benito Juárez aparece en el de $20 y también en el de $500. ¡Era un personaje muy importante!"
+    },
+    {
+      "id": "q10",
+      "texto": "¿Qué debes hacer si un billete está rayado o un poco roto?",
+      "opciones": [
+        "Tirarlo a la basura",
+        "Sigue valiendo, pero dile a un adulto para cambiarlo en el banco",
+        "Pegarlo con chicle",
+        "Regalarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Los billetes maltratados siguen teniendo valor. El Banco de México los cambia por unos nuevos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,77 @@
+{
+  "code": "ACT-P2-1-2-B",
+  "unit_code": "P2-1-2",
+  "unit_title": "Billetes y monedas: aprende a identificar todos",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Banco de Preguntas sobre Billetes",
+  "descripcion": "Demuestra cuánto sabes sobre los billetes y monedas que usamos en México todos los días. ¡Atención a los detalles!",
+  "objetivo": "Identificar características de seguridad y personajes en el efectivo mexicano",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Quién aparece en el billete de $50 pesos actual (el del ajolote)?",
+      "opciones": [
+        "Miguel Hidalgo",
+        "El Ajolote y maíz",
+        "Benito Juárez",
+        "Frida Kahlo"
+      ],
+      "correcta": 1,
+      "explicacion": "El billete de $50 pesos celebra la biodiversidad de México con el ajolote y el ecosistema de ríos y lagos de Xochimilco."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuál es el billete de mayor denominación que circula en México?",
+      "opciones": [
+        "$200 pesos",
+        "$500 pesos",
+        "$1,000 pesos",
+        "$2,000 pesos"
+      ],
+      "correcta": 2,
+      "explicacion": "El billete de $1,000 pesos es actualmente el de mayor valor, y muestra a Francisco I. Madero, Hermila Galindo y Carmen Serdán."
+    },
+    {
+      "id": "q3",
+      "texto": "Si un billete se rompe y lo pegas con cinta transparente, ¿pierde su valor?",
+      "opciones": [
+        "Sí, ya no sirve",
+        "No, sigue valiendo lo mismo",
+        "Depende si es de $20",
+        "Solo si es nuevo"
+      ],
+      "correcta": 1,
+      "explicacion": "Los billetes rotos reparados con cinta transparente conservan su valor. ¡Pero cuidado! Si usas cinta de color o pegas dos billetes distintos, podrías perderlo."
+    },
+    {
+      "id": "q4",
+      "texto": "¿De qué material están hechos los billetes de $20 y $50 pesos?",
+      "opciones": [
+        "Papel de algodón",
+        "Plástico (polímero)",
+        "Cartón especial",
+        "Tela fina"
+      ],
+      "correcta": 1,
+      "explicacion": "Se fabrican en polímero para que duren más tiempo y sean más difíciles de falsificar."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué institución se encarga de fabricar los billetes en México?",
+      "opciones": [
+        "El SAT",
+        "La Secretaría de Hacienda",
+        "El Banco de México (Banxico)",
+        "El Presidente"
+      ],
+      "correcta": 2,
+      "explicacion": "Banxico es la única institución autorizada para emitir y fabricar el dinero que usamos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

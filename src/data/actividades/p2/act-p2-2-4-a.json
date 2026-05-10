@@ -1,0 +1,136 @@
+{
+  "code": "P2-2-4-A",
+  "unit_code": "P2-2-4",
+  "unit_title": "Los descuentos: ¿siempre convienen?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "¿Oferta o Trampa de Gasto?",
+  "descripcion": "Las tiendas usan carteles brillantes para atraerte. ¿Sabes distinguir un ahorro real de un gasto innecesario?",
+  "objetivo": "Identificar cuándo un descuento representa un ahorro real basado en la necesidad del producto",
+  "xp": 250,
+  "instruccion": "Arrastra cada cartel al grupo correcto: ¿Es una OFERTA REAL (Ahorro) o una TRAMPA DE GASTO?",
+  "items": [
+    {
+      "id": "o1",
+      "label": "Arroz al 2x1 (comida diaria)",
+      "emoji": "🍚",
+      "categoria_correcta": "oferta",
+      "feedback": "¡Oferta Real! Es algo que la familia necesita siempre."
+    },
+    {
+      "id": "t1",
+      "label": "Juguete al 50% que no querías",
+      "emoji": "🧸",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. Si no lo necesitabas, comprarlo es gastar, no ahorrar."
+    },
+    {
+      "id": "o2",
+      "label": "Leche con descuento",
+      "emoji": "🥛",
+      "categoria_correcta": "oferta",
+      "feedback": "¡Muy bien! Las necesidades con descuento ayudan al presupuesto familiar."
+    },
+    {
+      "id": "t2",
+      "label": "Caramelo gigante junto a la caja",
+      "emoji": "🍭",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. Es un gasto impulsivo que ponen ahí para tentarte."
+    },
+    {
+      "id": "o3",
+      "label": "Zapatos escolares rebajados",
+      "emoji": "👟",
+      "categoria_correcta": "oferta",
+      "feedback": "Oferta Real. Es una necesidad que ahora cuesta menos."
+    },
+    {
+      "id": "t3",
+      "label": "Peluche 'Solo por hoy' caro",
+      "emoji": "🐨",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. La urgencia falsa es para que compres sin pensar."
+    },
+    {
+      "id": "o4",
+      "label": "Detergente en oferta",
+      "emoji": "🧼",
+      "categoria_correcta": "oferta",
+      "feedback": "Ahorro real. La limpieza de casa es un gasto fijo necesario."
+    },
+    {
+      "id": "t4",
+      "label": "Paquete de 20 gomas de borrar",
+      "emoji": "🩹",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. No necesitas 20 gomas; comprar de más es desperdiciar."
+    },
+    {
+      "id": "o5",
+      "label": "Fruta de temporada barata",
+      "emoji": "🍉",
+      "categoria_correcta": "oferta",
+      "feedback": "¡Excelente! Comer sano y barato es de genios financieros."
+    },
+    {
+      "id": "t5",
+      "label": "Videojuego viejo que ya tienes",
+      "emoji": "🎮",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. Por más barato que sea, si ya lo tienes es un gasto doble."
+    },
+    {
+      "id": "o6",
+      "label": "Cuadernos con 30% de ahorro",
+      "emoji": "📒",
+      "categoria_correcta": "oferta",
+      "feedback": "Oferta Real. Útiles escolares que sirven para tu educación."
+    },
+    {
+      "id": "t6",
+      "label": "Gaseosa gigante al 3x2",
+      "emoji": "🥤",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. Te hacen comprar más azúcar de la que deberías."
+    },
+    {
+      "id": "o7",
+      "label": "Internet con descuento",
+      "emoji": "🌐",
+      "categoria_correcta": "oferta",
+      "feedback": "¡Genial! Pagar menos por un servicio necesario es ahorro puro."
+    },
+    {
+      "id": "t7",
+      "label": "Disfraz de moda carísimo",
+      "emoji": "🎭",
+      "categoria_correcta": "trampa",
+      "feedback": "Trampa. Es un deseo que pasará rápido de moda."
+    },
+    {
+      "id": "o8",
+      "label": "Pagar a tiempo y tener descuento",
+      "emoji": "📅",
+      "categoria_correcta": "oferta",
+      "feedback": "¡Súper Oferta! Ser responsable a veces te premia con rebajas."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "oferta",
+      "label": "OFERTA REAL (Ahorro)",
+      "emoji": "✅",
+      "color": "#16a34a"
+    },
+    {
+      "id": "trampa",
+      "label": "TRAMPA DE GASTO",
+      "emoji": "❌",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

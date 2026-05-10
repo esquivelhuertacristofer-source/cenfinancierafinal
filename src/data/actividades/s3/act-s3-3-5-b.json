@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-3-5-B",
+  "unit_code": "S3-3-5",
+  "unit_title": "Blindaje financiero: seguros y protección de riqueza",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Seguridad en la Era Digital",
+  "descripcion": "¿Eres un blanco fácil para los ciberdelincuentes o eres una fortaleza digital? ¡Descúbrelo!",
+  "objetivo": "Conocer los protocolos de seguridad digital y los mecanismos de protección contra fraudes tecnológicos",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "sec1",
+      "pregunta": "¿Qué es el '2FA' (Segundo Factor de Autenticación)?",
+      "respuesta_correcta": "Un nivel extra de seguridad que pide un código enviado a tu celular o App después de poner tu contraseña",
+      "incorrectas": [
+        "Una contraseña muy larga",
+        "Tener dos cuentas de banco",
+        "Un virus"
+      ],
+      "dato_extra": "Activar el 2FA detiene el 99% de los intentos de hackeo de cuentas."
+    },
+    {
+      "id": "sec2",
+      "pregunta": "¿Qué es la 'Ingeniería Social'?",
+      "respuesta_correcta": "Manipular psicológicamente a las personas para que revelen información confidencial o cometan errores de seguridad",
+      "incorrectas": [
+        "Construir puentes digitales",
+        "Estudiar sociología",
+        "Hacer amigos en el banco"
+      ],
+      "dato_extra": "Los hackers prefieren engañarte a ti que intentar hackear un sistema de seguridad complejo."
+    },
+    {
+      "id": "sec3",
+      "pregunta": "¿Qué es una 'Cold Wallet' (Billetera Fría) en criptomonedas?",
+      "respuesta_correcta": "Un dispositivo físico (como una USB especial) que guarda tus llaves privadas fuera de internet",
+      "incorrectas": [
+        "Una billetera que se guarda en el refrigerador",
+        "Una cuenta de banco sin dinero",
+        "Una App gratuita"
+      ],
+      "dato_extra": "Es la forma más segura de guardar grandes cantidades de criptomonedas a largo plazo."
+    },
+    {
+      "id": "sec4",
+      "pregunta": "¿Qué es la 'Frase Semilla' (Seed Phrase)?",
+      "respuesta_correcta": "Una serie de 12 o 24 palabras que es la LLAVE MAESTRA de tu billetera digital; si la pierdes o te la roban, pierdes todo",
+      "incorrectas": [
+        "Tu nombre de usuario",
+        "Una contraseña para el WiFi",
+        "Una técnica de ahorro"
+      ],
+      "dato_extra": "NUNCA la compartas con nadie, ni la guardes en una foto en tu celular."
+    },
+    {
+      "id": "sec5",
+      "pregunta": "¿Cómo funciona un 'Esquema Ponzi'?",
+      "respuesta_correcta": "Se paga a los inversionistas viejos con el dinero de los inversionistas nuevos, hasta que el sistema colapsa",
+      "incorrectas": [
+        "Es una estrategia de venta legal",
+        "Es una forma de inversión en oro",
+        "Es un tipo de banco internacional"
+      ],
+      "dato_extra": "Si te ofrecen rendimientos garantizados muy altos, huye. Es un Ponzi."
+    },
+    {
+      "id": "sec6",
+      "pregunta": "¿Qué es el 'Ransomware'?",
+      "respuesta_correcta": "Un virus que secuestra (encripta) todos los archivos de tu empresa y pide dinero a cambio de devolverlos",
+      "incorrectas": [
+        "Un software de contabilidad",
+        "Un tipo de seguro",
+        "Una red social"
+      ],
+      "dato_extra": "Tener respaldos (backups) frecuentes y fuera de línea es la única defensa real."
+    },
+    {
+      "id": "sec7",
+      "pregunta": "¿Qué es el 'Vishing'?",
+      "respuesta_correcta": "Fraude realizado a través de llamadas telefónicas donde el estafador finge ser una autoridad o el banco",
+      "incorrectas": [
+        "Pescar en el mar",
+        "Ver videos en internet",
+        "Visitar el banco"
+      ],
+      "dato_extra": "Hoy usan IA para clonar voces de familiares o jefes. ¡Sé precavido!"
+    },
+    {
+      "id": "sec8",
+      "pregunta": "¿Qué significa que un sitio web use 'HTTPS' y tenga un candado verde?",
+      "respuesta_correcta": "Que la información enviada entre tu computadora y el sitio está encriptada y es privada",
+      "incorrectas": [
+        "Que el sitio es 100% legal",
+        "Que no tiene virus",
+        "Que el dueño es rico"
+      ],
+      "dato_extra": "Ayuda a proteger tus datos, pero recuerda: un sitio de estafas también puede tener candado."
+    },
+    {
+      "id": "sec9",
+      "pregunta": "¿Cuál es la mejor práctica al usar aplicaciones financieras?",
+      "respuesta_correcta": "Usar contraseñas únicas, biométricos (huella/cara) y nunca compartir códigos de acceso",
+      "incorrectas": [
+        "Anotar la contraseña detrás del celular",
+        "Usar la misma clave para todo",
+        "No ponerles clave"
+      ],
+      "dato_extra": "Tu seguridad financiera digital es tu responsabilidad primaria."
+    },
+    {
+      "id": "sec10",
+      "pregunta": "¿Qué debes hacer si sospechas que fuiste víctima de un hackeo?",
+      "respuesta_correcta": "Bloquear cuentas de inmediato, cambiar todas las contraseñas y avisar a las autoridades financieras",
+      "incorrectas": [
+        "Esperar a ver qué pasa",
+        "No decirle a nadie por vergüenza",
+        "Borrar el historial"
+      ],
+      "dato_extra": "¡Felicidades! Estás blindado para navegar las finanzas digitales con seguridad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

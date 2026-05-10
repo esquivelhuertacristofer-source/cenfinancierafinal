@@ -1,0 +1,128 @@
+{
+  "code": "ACT-P5-3-4-B",
+  "unit_code": "P5-3-4",
+  "unit_title": "La Bolsa de Valores: ser dueño de las grandes empresas",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Eres dueño de la BMV?",
+  "descripcion": "La Bolsa Mexicana de Valores existe desde 1894. Cada día millones de pesos cambian de dueño. ¿Sabes cómo funciona? Demuestra que entiendes cómo ser dueño de las empresas más grandes de México.",
+  "objetivo": "Identificar conceptos clave del mercado de valores: acción, dividendo, IPC, BMV, inversionista y rendimiento",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "bmv1",
+      "pregunta": "¿Qué es una 'acción' de una empresa?",
+      "respuesta_correcta": "Una parte pequeña de propiedad de la empresa — si la empresa gana, tú ganas",
+      "incorrectas": [
+        "Un préstamo que le haces a la empresa",
+        "Un cupón de descuento para comprar sus productos",
+        "Una promesa de que la empresa no quebrará"
+      ],
+      "dato_extra": "Cuando compras 1 acción de Walmart México, eres co-dueño de sus más de 3,800 tiendas — aunque sea una parte muy pequeña."
+    },
+    {
+      "id": "bmv2",
+      "pregunta": "¿Qué significa que la Bolsa 'sube' un día?",
+      "respuesta_correcta": "El valor total de las empresas que cotizan en bolsa aumentó ese día",
+      "incorrectas": [
+        "El edificio de la bolsa se construyó más alto",
+        "Subieron los precios de los productos en las tiendas",
+        "El gobierno ganó más dinero"
+      ],
+      "dato_extra": "El IPC (Índice de Precios y Cotizaciones) mide las 35 empresas más grandes de México. Si el IPC sube 2%, en promedio esas empresas valen 2% más."
+    },
+    {
+      "id": "bmv3",
+      "pregunta": "¿Qué es un 'dividendo'?",
+      "respuesta_correcta": "Una parte de las ganancias que la empresa reparte a sus accionistas (dueños)",
+      "incorrectas": [
+        "El precio al que se vende una acción",
+        "Una multa que paga la empresa si no crece",
+        "El sueldo del director general"
+      ],
+      "dato_extra": "FEMSA, Walmex y otras empresas pagan dividendos cada año. Te pagan solo por ser dueño — sin hacer ningún trabajo extra."
+    },
+    {
+      "id": "bmv4",
+      "pregunta": "¿Qué son las siglas 'BMV'?",
+      "respuesta_correcta": "Bolsa Mexicana de Valores",
+      "incorrectas": [
+        "Banco Mexicano de Ventas",
+        "Base Monetaria del Valor",
+        "Boleta de Medición de Valor"
+      ],
+      "dato_extra": "La BMV fue fundada en 1894. Hoy cotiza más de 130 empresas y mueve millones de pesos cada día hábil."
+    },
+    {
+      "id": "bmv5",
+      "pregunta": "¿Qué pasa si una empresa en la que invertiste quiebra?",
+      "respuesta_correcta": "Puedes perder parte o todo el dinero que invertiste en sus acciones",
+      "incorrectas": [
+        "El gobierno te devuelve tu dinero automáticamente",
+        "La empresa te compra las acciones al precio que pagaste",
+        "Nada — las acciones siempre mantienen su valor"
+      ],
+      "dato_extra": "Por eso la diversificación es clave: no pongas todos tus ahorros en una sola empresa. Si inviertes en 20 empresas y una quiebra, solo pierdes el 5% de tu portafolio."
+    },
+    {
+      "id": "bmv6",
+      "pregunta": "¿Qué es un 'portafolio de inversión'?",
+      "respuesta_correcta": "El conjunto de todas tus inversiones: acciones, bonos, CETES y otros activos",
+      "incorrectas": [
+        "Una carpeta donde guardas tus estados de cuenta",
+        "Un tipo de tarjeta de crédito especial para inversionistas",
+        "El contrato que firmas con un banco"
+      ],
+      "dato_extra": "Un buen portafolio está diversificado entre diferentes tipos de activos, sectores y países. Así si un sector cae, los otros te protegen."
+    },
+    {
+      "id": "bmv7",
+      "pregunta": "¿Por qué los precios de las acciones suben y bajan todos los días?",
+      "respuesta_correcta": "Porque compradores y vendedores cambian de opinión sobre cuánto vale la empresa según noticias y resultados",
+      "incorrectas": [
+        "El gobierno decide el precio cada mañana",
+        "Las empresas establecen su propio precio diariamente",
+        "Los precios solo suben, nunca bajan"
+      ],
+      "dato_extra": "El precio de una acción refleja lo que millones de personas creen que vale la empresa. Si hay buenas noticias, más quieren comprar → el precio sube."
+    },
+    {
+      "id": "bmv8",
+      "pregunta": "¿Cuál es la ventaja principal de invertir a largo plazo (10-20 años) en la bolsa?",
+      "respuesta_correcta": "Las caídas temporales se recuperan y el rendimiento promedio histórico supera la inflación",
+      "incorrectas": [
+        "Puedes retirar tu dinero en cualquier momento sin ninguna pérdida",
+        "Está garantizado ganar dinero cada año sin excepción",
+        "No pagas impuestos sobre las ganancias"
+      ],
+      "dato_extra": "El IPC ha generado en promedio 12-14% anual en pesos durante los últimos 20 años. Quien invirtió en el pico de la crisis de 2008 recuperó todo para 2011 y hoy tiene mucho más."
+    },
+    {
+      "id": "bmv9",
+      "pregunta": "¿Qué empresa mexicana es dueña de más de 21,000 tiendas OXXO?",
+      "respuesta_correcta": "FEMSA (Fomento Económico Mexicano)",
+      "incorrectas": [
+        "CEMEX",
+        "América Móvil",
+        "Grupo Bimbo"
+      ],
+      "dato_extra": "FEMSA cotiza en la BMV y en la Bolsa de Nueva York (NYSE). Al comprar sus acciones, eres co-dueño de OXXO, Coca-Cola FEMSA y muchos otros negocios."
+    },
+    {
+      "id": "bmv10",
+      "pregunta": "¿Cuál es la diferencia entre 'ahorrar' e 'invertir'?",
+      "respuesta_correcta": "Ahorrar es guardar dinero sin riesgo con poco rendimiento; invertir es poner el dinero a trabajar con mayor rendimiento pero también mayor riesgo",
+      "incorrectas": [
+        "Son exactamente lo mismo, solo se llaman diferente",
+        "Invertir es solo para ricos, ahorrar es para todos",
+        "Ahorrar es mejor siempre porque no hay riesgo"
+      ],
+      "dato_extra": "Con inflación del 5%, $10,000 guardados bajo el colchón pierden poder adquisitivo cada año. Invertidos en la bolsa a 12% promedio, en 10 años se convierten en $31,000."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Si hoy tuvieras $1,000 para invertir en la bolsa, ¿en qué empresa mexicana lo pondrías y por qué? ¿Qué información buscarías antes de decidir?",
+  "comparativa_espera": "Un joven que invierte $500/mes en un ETF del IPC desde los 15 años puede acumular más de $3,000,000 al llegar a los 45. La bolsa no es solo para adultos ricos — es para cualquiera que empiece temprano."
+}

@@ -1,0 +1,77 @@
+{
+  "code": "ACT-P1-2-5-B",
+  "unit_code": "P1-2-5",
+  "unit_title": "El presupuesto de casa: ¿cómo ayudan los niños?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTA",
+  "titulo": "¡Pánico en la Factura!",
+  "descripcion": "Los vampiros de energía están robando el dinero de la alcancía familiar. ¡Apágalos antes de que el recibo suba demasiado!",
+  "objetivo": "Identificar y eliminar hábitos de consumo eléctrico innecesario de forma lúdica",
+  "xp": 350,
+  "game_type": "catch",
+  "duracion": 50,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa los interruptores y focos LED. ¡Huye de los vampiros que dejan la tele encendida o la puerta del refri abierta!",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Apagador",
+      "emoji": "🔘",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "g2",
+      "label": "Foco LED",
+      "emoji": "💡",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g3",
+      "label": "Panel Solar",
+      "emoji": "☀️",
+      "tipo": "correcto",
+      "puntos": 600
+    },
+    {
+      "id": "g4",
+      "label": "Llave Cerrada",
+      "emoji": "🚰",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "b1",
+      "label": "Tele Encendida",
+      "emoji": "📺",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "b2",
+      "label": "Refri Abierto",
+      "emoji": "❄️",
+      "tipo": "incorrecto",
+      "puntos": -400
+    },
+    {
+      "id": "b3",
+      "label": "Foco Viejo",
+      "emoji": "🕯️",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "b4",
+      "label": "Cargador Solo",
+      "emoji": "🔌",
+      "tipo": "incorrecto",
+      "puntos": -300
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

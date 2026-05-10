@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-3-5-A",
+  "unit_code": "S3-3-5",
+  "unit_title": "Blindaje financiero: seguros y protección de riqueza",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTO",
+  "titulo": "Hacker vs Tesorero",
+  "descripcion": "Tienes el control de las cuentas de tu empresa. Los hackers están intentando entrar. ¿Podrás detectar sus trampas antes de que sea tarde?",
+  "objetivo": "Identificar y prevenir las técnicas modernas de fraude financiero, ciberataques e ingeniería social",
+  "xp": 500,
+  "mecanica": "Toma decisiones rápidas ante posibles amenazas de seguridad digital.",
+  "escenarios": [
+    {
+      "id": "cyber1",
+      "texto": "Recibes un correo de 'Soporte del Banco' diciendo que tu cuenta será bloqueada si no entras a ESTE LINK ahora mismo.",
+      "imagen": "📧",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Bien hecho! Es un ataque de PHISHING. El banco nunca te pedirá entrar a un link para desbloquear cuentas.",
+      "feedback_error": "❌ ¡Caíste! Entraste a un sitio falso y les diste tu contraseña. Han vaciado tu cuenta. Salud Digital -50.",
+      "tipo_ataque": "Phishing"
+    },
+    {
+      "id": "cyber2",
+      "texto": "Recibes una llamada. Una voz que suena EXACTAMENTE como tu socio te pide que hagas una transferencia urgente a una cuenta nueva.",
+      "imagen": "📞",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! Podría ser un Deepfake de voz. Cuelgas y marcas tú mismo a su número conocido para verificar. Era una estafa.",
+      "feedback_error": "❌ Transferencia enviada. Era un hacker usando Inteligencia Artificial para clonar la voz de tu socio. Perdiste $500,000.",
+      "tipo_ataque": "Vishing / Deepfake"
+    },
+    {
+      "id": "cyber3",
+      "texto": "Ves un anuncio en Instagram: 'Gana 5% DIARIO garantizado invirtiendo en nuestra nueva tecnología de trading con IA'.",
+      "imagen": "🚀",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Criterio sólido! Nadie puede garantizar rendimientos tan altos. Es un Esquema Ponzi. Te ahorraste tu dinero.",
+      "feedback_error": "❌ Caíste en la trampa de la avaricia. El sistema funcionó 1 mes y luego desaparecieron con todo tu dinero.",
+      "tipo_ataque": "Esquema Ponzi"
+    },
+    {
+      "id": "cyber4",
+      "texto": "Necesitas entrar a tu cuenta bancaria y estás en una red WiFi pública del aeropuerto. ¿Es seguro?",
+      "imagen": "📶",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Seguridad primero! Usas tus propios datos o una VPN. Las redes públicas son perfectas para que los hackers vean lo que escribes.",
+      "feedback_error": "❌ Un hacker en la misma red capturó tus datos de inicio de sesión. Tienes que cancelar todas tus tarjetas.",
+      "tipo_ataque": "Seguridad de Red"
+    },
+    {
+      "id": "cyber5",
+      "texto": "Tu empresa tiene $1M en Bitcoin. ¿Dónde es más seguro guardarlo?",
+      "imagen": "₿",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Correcto! Usas una 'Cold Wallet' (Billetera Fría) fuera de internet. Si no son tus llaves, no son tus criptos.",
+      "feedback_error": "❌ Los dejaste en un Exchange (casa de cambio) y este fue hackeado. Perdiste todo por no tener el control físico de tus llaves.",
+      "tipo_ataque": "Custodia Cripto"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Detecta amenazas de seguridad digital. ¿Es AMENAZA o es SEGURO?",
+  "duracion": 120,
+  "opciones_clasificacion": [
+    "AMENAZA",
+    "SEGURO"
+  ],
+  "items": [
+    {
+      "id": "cyber1",
+      "label": "Recibes un correo de 'Soporte del Banco' diciendo que tu cuenta será bloqueada si no entras a ESTE L...",
+      "emoji": "📧",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Bien hecho! Es un ataque de PHISHING. El banco nunca te pedirá entrar a un link para desbloquear cuentas.",
+      "feedback_error": "❌ ¡Caíste! Entraste a un sitio falso y les diste tu contraseña. Han vaciado tu cuenta. Salud Digital -50.",
+      "puntos": 100
+    },
+    {
+      "id": "cyber2",
+      "label": "Recibes una llamada. Una voz que suena EXACTAMENTE como tu socio te pide que hagas una transferencia...",
+      "emoji": "📞",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! Podría ser un Deepfake de voz. Cuelgas y marcas tú mismo a su número conocido para verificar. Era una estafa.",
+      "feedback_error": "❌ Transferencia enviada. Era un hacker usando Inteligencia Artificial para clonar la voz de tu socio. Perdiste $500,000.",
+      "puntos": 100
+    },
+    {
+      "id": "cyber3",
+      "label": "Ves un anuncio en Instagram: 'Gana 5% DIARIO garantizado invirtiendo en nuestra nueva tecnología de ...",
+      "emoji": "🚀",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Criterio sólido! Nadie puede garantizar rendimientos tan altos. Es un Esquema Ponzi. Te ahorraste tu dinero.",
+      "feedback_error": "❌ Caíste en la trampa de la avaricia. El sistema funcionó 1 mes y luego desaparecieron con todo tu dinero.",
+      "puntos": 100
+    },
+    {
+      "id": "cyber4",
+      "label": "Necesitas entrar a tu cuenta bancaria y estás en una red WiFi pública del aeropuerto. ¿Es seguro?",
+      "emoji": "📶",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Seguridad primero! Usas tus propios datos o una VPN. Las redes públicas son perfectas para que los hackers vean lo que escribes.",
+      "feedback_error": "❌ Un hacker en la misma red capturó tus datos de inicio de sesión. Tienes que cancelar todas tus tarjetas.",
+      "puntos": 100
+    },
+    {
+      "id": "cyber5",
+      "label": "Tu empresa tiene $1M en Bitcoin. ¿Dónde es más seguro guardarlo?",
+      "emoji": "₿",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Correcto! Usas una 'Cold Wallet' (Billetera Fría) fuera de internet. Si no son tus llaves, no son tus criptos.",
+      "feedback_error": "❌ Los dejaste en un Exchange (casa de cambio) y este fue hackeado. Perdiste todo por no tener el control físico de tus llaves.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 500
+  }
+}

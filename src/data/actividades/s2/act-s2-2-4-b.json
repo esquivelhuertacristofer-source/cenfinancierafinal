@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-2-4-B",
+  "unit_code": "S2-2-4",
+  "unit_title": "Planificación ante imprevistos: escenarios y soluciones",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Invertir en lo Tangible",
+  "descripcion": "¿Sabes qué hace que un objeto se convierta en una fortuna? ¡Descubre el valor de lo real!",
+  "objetivo": "Evaluar la comprensión de los costos, beneficios y riesgos de invertir en activos físicos",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "tan1",
+      "texto": "¿Por qué el oro se considera un activo de 'Refugio'?",
+      "opciones": [
+        "Porque es muy brillante",
+        "Porque no puede ser impreso por los gobiernos y mantiene su valor cuando el dinero normal pierde poder de compra",
+        "Porque es fácil de encontrar",
+        "Porque lo regalan en el banco"
+      ],
+      "correcta": 1,
+      "explicacion": "El oro ha sido dinero por más de 5,000 años. Su escasez es natural."
+    },
+    {
+      "id": "tan2",
+      "texto": "¿Cuál es uno de los mayores costos de invertir en Arte?",
+      "opciones": [
+        "El precio de la pintura",
+        "El costo de almacenamiento seguro, seguros contra robo e incendios, y la verificación de autenticidad",
+        "Que se ensucie",
+        "Que el pintor sea famoso"
+      ],
+      "correcta": 1,
+      "explicacion": "Mantener una obra de arte en perfecto estado es muy costoso y requiere expertos."
+    },
+    {
+      "id": "tan3",
+      "texto": "¿Qué significa que un activo tenga 'Baja Correlación' con la bolsa?",
+      "opciones": [
+        "Que siempre suben juntos",
+        "Que su precio se mueve de forma independiente a las acciones; si la bolsa cae, este activo puede subir o mantenerse",
+        "Que nadie lo quiere comprar",
+        "Que es una inversión barata"
+      ],
+      "correcta": 1,
+      "explicacion": "Tener activos de baja correlación protege tu portafolio en las crisis."
+    },
+    {
+      "id": "tan4",
+      "texto": "¿Qué es la 'Procedencia' en el mercado del arte?",
+      "opciones": [
+        "De qué país viene el cuadro",
+        "La historia documentada de todos los dueños anteriores de la obra para probar que es real",
+        "El nombre del museo",
+        "El precio original"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin una procedencia clara, una obra de arte pierde casi todo su valor porque podría ser falsa."
+    },
+    {
+      "id": "tan5",
+      "texto": "¿Por qué los relojes de lujo pueden ser una buena inversión?",
+      "opciones": [
+        "Porque dan la hora exacta",
+        "Porque algunas marcas producen muy pocas unidades y la demanda es mucho mayor, subiendo su valor",
+        "Porque son de oro",
+        "Porque son muy grandes"
+      ],
+      "correcta": 1,
+      "explicacion": "La escasez controlada por la marca es la clave del valor."
+    },
+    {
+      "id": "tan6",
+      "texto": "¿Cuál es la principal desventaja del oro físico comparado con una acción?",
+      "opciones": [
+        "Es feo",
+        "No paga dividendos ni intereses; solo ganas si el precio sube",
+        "Es ilegal",
+        "No se puede vender"
+      ],
+      "correcta": 1,
+      "explicacion": "El oro es una reserva de valor, no un negocio que genere utilidades."
+    },
+    {
+      "id": "tan7",
+      "texto": "¿Qué son los 'Activos Duros'?",
+      "opciones": [
+        "Activos que son difíciles de entender",
+        "Activos físicos y tangibles (oro, tierra, metales) que tienen valor por sí mismos",
+        "Empresas de construcción",
+        "Dinero en monedas de metal"
+      ],
+      "correcta": 1,
+      "explicacion": "Son lo opuesto a los 'Activos de Papel' como las acciones o los bonos."
+    },
+    {
+      "id": "tan8",
+      "texto": "¿En qué momento suele subir más el precio del oro?",
+      "opciones": [
+        "Cuando hay mucha paz y estabilidad",
+        "Cuando hay alta inflación, guerras o crisis financieras globales",
+        "En navidad",
+        "Cuando los bancos están felices"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora entiendes por qué los tesoros siguen siendo parte fundamental de la riqueza."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

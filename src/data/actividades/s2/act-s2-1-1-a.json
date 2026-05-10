@@ -1,0 +1,163 @@
+{
+  "code": "ACT-S2-1-1-A",
+  "unit_code": "S2-1-1",
+  "unit_title": "Macroeconomía para jóvenes: PIB, inflación, desempleo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Eres el Secretario de Hacienda",
+  "descripcion": "El PIB cayó, la inflación sube y el desempleo aprieta. Como Secretario de Hacienda de México, tienes que interpretar los indicadores macroeconómicos y ver cómo impactan en tu vida real: lo que cuesta la despensa, si puedes conseguir trabajo y cuánto vale tu sueldo.",
+  "objetivo": "Interpretar indicadores macroeconómicos (PIB, inflación, desempleo, tasa Banxico) y conectarlos con el impacto en las finanzas personales cotidianas",
+  "xp": 500,
+  "descripcion_formula": "Índice de Bienestar = (crecimiento_pib × 2) - (tasa_inflacion × 1.5) - (tasa_desempleo × 1) + (tasa_real × 0.5). Tasa real = Banxico - Inflación.",
+  "inputs": [
+    {
+      "id": "crecimiento_pib",
+      "label": "Crecimiento del PIB (%)",
+      "type": "slider",
+      "min": -5,
+      "max": 8,
+      "step": 0.5,
+      "default": 1.5,
+      "unit": "%",
+      "referencia": "México 2023: +3.2%, 2020 (COVID): -8.5%"
+    },
+    {
+      "id": "tasa_inflacion",
+      "label": "Inflación Anual (%)",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "step": 0.5,
+      "default": 4.5,
+      "unit": "%",
+      "referencia": "Objetivo Banxico: 3% ± 1%. Pico 2022: 8.7%"
+    },
+    {
+      "id": "tasa_desempleo",
+      "label": "Tasa de Desempleo (%)",
+      "type": "slider",
+      "min": 2,
+      "max": 12,
+      "step": 0.5,
+      "default": 3.8,
+      "unit": "%",
+      "referencia": "México 2024: ~2.8% (tasa abierta INEGI)"
+    },
+    {
+      "id": "tasa_banxico",
+      "label": "Tasa de Interés Banxico (%)",
+      "type": "slider",
+      "min": 3,
+      "max": 15,
+      "step": 0.25,
+      "default": 10.5,
+      "unit": "%",
+      "referencia": "Máximo histórico reciente: 11.25% (2023)"
+    },
+    {
+      "id": "anos_proyeccion",
+      "label": "Años de Proyección",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.round((crecimiento_pib * 2 - tasa_inflacion * 1.5 - tasa_desempleo + (tasa_banxico - tasa_inflacion) * 0.5) * 10) / 10",
+  "output_label": "Índice de Bienestar Económico",
+  "output_prefix": "",
+  "output_suffix": " puntos",
+  "outputs_multiples": [
+    {
+      "id": "indice_bienestar",
+      "label": "Índice de Bienestar Económico",
+      "formula": "Math.round((crecimiento_pib * 2 - tasa_inflacion * 1.5 - tasa_desempleo + (tasa_banxico - tasa_inflacion) * 0.5) * 10) / 10",
+      "prefix": "",
+      "suffix": " puntos",
+      "descripcion": "Indicador compuesto que resume la salud de la economía. Positivo = favorable, negativo = difícil."
+    },
+    {
+      "id": "tasa_interes_real",
+      "label": "Tasa de Interés Real",
+      "formula": "Math.round((tasa_banxico - tasa_inflacion) * 10) / 10",
+      "prefix": "",
+      "suffix": "% real",
+      "descripcion": "El rendimiento verdadero del dinero descontando la inflación. Negativa = el dinero pierde valor aunque gane intereses."
+    },
+    {
+      "id": "poder_adquisitivo_en_n_anos",
+      "label": "Poder Adquisitivo en el Futuro",
+      "formula": "Math.round(100 * Math.pow(1 - tasa_inflacion/100, anos_proyeccion))",
+      "prefix": "",
+      "suffix": "% de lo actual",
+      "descripcion": "Si hoy puedes comprar $100 de cosas, ¿cuánto podrás comprar con esos mismos pesos en el futuro?"
+    },
+    {
+      "id": "costo_hipoteca_referencia",
+      "label": "Tasa Hipotecaria de Referencia",
+      "formula": "Math.round((tasa_banxico + 5.5) * 10) / 10",
+      "prefix": "",
+      "suffix": "% anual aprox.",
+      "descripcion": "Las hipotecas en México suelen ser Banxico + 5 a 6 puntos. Esta es la tasa que pagarías hoy por comprar casa."
+    }
+  ],
+  "datos_reales_mexico": {
+    "titulo": "Datos reales de México (INEGI / Banxico)",
+    "tabla": [
+      { "año": "2020", "pib": "-8.5%", "inflacion": "3.2%", "desempleo": "4.6%", "banxico": "4.25%" },
+      { "año": "2021", "pib": "+4.7%", "inflacion": "7.4%", "desempleo": "3.8%", "banxico": "5.50%" },
+      { "año": "2022", "pib": "+3.0%", "inflacion": "8.7%", "desempleo": "3.3%", "banxico": "10.50%" },
+      { "año": "2023", "pib": "+3.2%", "inflacion": "4.7%", "desempleo": "2.9%", "banxico": "11.25%" },
+      { "año": "2024", "pib": "+1.5%", "inflacion": "4.5%", "desempleo": "2.8%", "banxico": "10.00%" }
+    ]
+  },
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "tasa_inflacion",
+      "label": "Inflación (%)",
+      "color": "#ef4444",
+      "zona_objetivo_min": 2,
+      "zona_objetivo_max": 4
+    },
+    {
+      "id": "crecimiento_pib",
+      "label": "Crecimiento PIB (%)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "tasa_interes_real",
+      "label": "Tasa Real (%)",
+      "color": "#f59e0b"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "tasa_inflacion > 7 && crecimiento_pib < 1",
+      "mensaje": "🔥 Estanflación: lo peor de ambos mundos. Alta inflación + bajo crecimiento + desempleo en alza. Los salarios reales caen y el banco central tiene pocas opciones.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "tasa_inflacion < 4 && crecimiento_pib > 3 && tasa_desempleo < 4",
+      "mensaje": "🏆 Economía Goldilocks: ni muy caliente ni muy fría. Inflación controlada, crecimiento sólido y empleo pleno. Las mejores condiciones para el ahorro e inversión.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_banxico - tasa_inflacion < 0",
+      "mensaje": "⚠️ Tasa real negativa. El banco central está por detrás de la inflación. Tu dinero en el banco pierde poder adquisitivo aunque genere intereses.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 La macroeconomía no es abstracta — se siente en cada precio del supermercado, en cada oferta de trabajo y en la tasa de tu hipoteca.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Si el PIB de México cae 2% y el desempleo sube a 8%, ¿qué decisiones financieras personales cambiarías? ¿Cómo te afecta la macroeconomía en tu vida cotidiana?",
+  "comparativa_espera": "El PIB de México cayó 8.5% en 2020 por el COVID — la peor caída desde la Gran Depresión de los 1930s. Quienes tenían fondo de emergencia y diversificación de ingresos fueron los menos afectados."
+}

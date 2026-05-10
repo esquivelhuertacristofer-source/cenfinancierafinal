@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P4-3-3-B",
+  "unit_code": "P4-3-3",
+  "unit_title": "El interés compuesto: la magia de hacer crecer tu dinero",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Meta de Inversión",
+  "descripcion": "No solo sueñes, ¡planea! Usa el interés compuesto para saber cuánto necesitas ahorrar para lograr tu meta más grande.",
+  "objetivo": "Diseñar una estrategia de inversión personal orientada a una meta específica de largo plazo",
+  "xp": 400,
+  "output_type": "Hoja de Meta Financiera",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "el_sueno",
+      "titulo": "🎯 Mi Gran Sueño",
+      "descripcion": "¿Para qué quieres invertir tu dinero a largo plazo?",
+      "campos": [
+        {
+          "id": "meta_nombre",
+          "label": "¿Cuál es tu meta?",
+          "type": "select",
+          "opciones": [
+            "Mi Universidad",
+            "Mi primer casa",
+            "Un viaje por el mundo",
+            "Mi propio gran negocio",
+            "Un fondo para mi retiro"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "por_que_meta",
+          "label": "¿Por qué es importante para ti?",
+          "type": "textarea",
+          "placeholder": "Ej: Porque quiero ser doctor y estudiar en la mejor escuela...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "los_numeros",
+      "titulo": "💰 El Costo",
+      "descripcion": "Investiga o estima cuánto dinero necesitas para lograrlo.",
+      "campos": [
+        {
+          "id": "monto_meta",
+          "label": "¿Cuánto dinero necesitas en total?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "tiempo_meta",
+          "label": "¿En cuántos años quieres lograrlo?",
+          "type": "slider",
+          "min": 5,
+          "max": 30,
+          "default": 10,
+          "unit": "años",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "el_plan",
+      "titulo": "📅 El Plan de Acción",
+      "descripcion": "¿Cómo vas a empezar hoy?",
+      "campos": [
+        {
+          "id": "ahorro_inicial",
+          "label": "¿Con cuánto dinero puedes empezar hoy?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_mensual_meta",
+          "label": "¿Cuánto invertirás cada mes?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "donde_invertir",
+          "label": "¿Dónde pondrás tu dinero?",
+          "type": "text",
+          "placeholder": "Ej: En CETES, en una cuenta de inversión...",
+          "requerido": true
+        },
+        {
+          "id": "meta_alcanzable",
+          "label": "Total que Acumularás al Plazo",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_inicial + ahorro_mensual_meta * 12 * tiempo_meta)",
+          "unit": "$",
+          "ayuda": "Tu capital inicial más todas tus aportaciones"
+        },
+        {
+          "id": "brecha_faltante",
+          "label": "Diferencia con Tu Meta",
+          "type": "calculated",
+          "formula": "Math.max(0, monto_meta - (ahorro_inicial + ahorro_mensual_meta * 12 * tiempo_meta))",
+          "unit": "$",
+          "ayuda": "Si es 0, ¡tu plan cumple la meta! Si es positivo, debes ahorrar más"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

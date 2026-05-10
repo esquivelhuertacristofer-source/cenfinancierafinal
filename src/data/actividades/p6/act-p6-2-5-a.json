@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-2-5-A",
+  "unit_code": "P6-2-5",
+  "unit_title": "Comparte lo que aprendiste: educación financiera para mi familia",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Algoritmos Justos vs Injustos",
+  "descripcion": "¿Puede una máquina ser injusta? ¡Descubre los dilemas éticos que enfrentan los creadores de tecnología hoy!",
+  "objetivo": "Identificar y reflexionar sobre los sesgos algoritmos y la responsabilidad ética en el desarrollo de Fintech e IA",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "et1",
+      "texto": "¿Qué es un 'Sesgo Algorítmico'?",
+      "opciones": [
+        "Un error en el color de la pantalla",
+        "Cuando una IA toma decisiones injustas porque fue entrenada con datos que tienen prejuicios humanos",
+        "Un tipo de cable",
+        "Una IA muy rápida"
+      ],
+      "correcta": 1,
+      "explicacion": "Si los datos del pasado son injustos, la IA repetirá esa injusticia si no la corregimos."
+    },
+    {
+      "id": "et2",
+      "texto": "¿Por qué es importante la 'Privacidad de Datos' en las finanzas?",
+      "opciones": [
+        "Para que nadie sepa mi nombre",
+        "Para evitar que empresas o hackers usen mi información financiera para manipularme o robarme",
+        "Para que el banco no me hable",
+        "No es importante"
+      ],
+      "correcta": 1,
+      "explicacion": "Tus datos financieros son una parte íntima de tu vida y deben estar protegidos."
+    },
+    {
+      "id": "et3",
+      "texto": "¿Qué significa que una IA sea 'Transparente'?",
+      "opciones": [
+        "Que está hecha de vidrio",
+        "Que los humanos podemos entender y explicar por qué la IA tomó una decisión específica",
+        "Que no se puede ver",
+        "Que es gratis"
+      ],
+      "correcta": 1,
+      "explicacion": "No debemos confiar en 'cajas negras' que toman decisiones sin darnos una explicación clara."
+    },
+    {
+      "id": "et4",
+      "texto": "¿Cuál es la responsabilidad de un programador de Fintech?",
+      "opciones": [
+        "Solo que el código funcione",
+        "Asegurarse de que el sistema sea seguro, justo y no excluya a nadie por su origen o dinero",
+        "Ganar mucho dinero rápido",
+        "Hacer que la app sea bonita"
+      ],
+      "correcta": 1,
+      "explicacion": "La ética es tan importante como la técnica."
+    },
+    {
+      "id": "et5",
+      "texto": "¿Qué es la 'Inclusión Financiera Digital'?",
+      "opciones": [
+        "Hacer que todos tengan un celular caro",
+        "Usar la tecnología para que personas que no tienen banco puedan ahorrar y pagar de forma segura",
+        "Que todos usen la misma red social",
+        "Regalar tablets"
+      ],
+      "correcta": 1,
+      "explicacion": "La tecnología debe servir para cerrar la brecha entre ricos y pobres, no para abrirla más."
+    },
+    {
+      "id": "et6",
+      "texto": "¿Qué debe hacer una empresa si descubre que su IA está discriminando a un grupo de personas?",
+      "opciones": [
+        "Ignorarlo si sigue dando ganancias",
+        "Detener el algoritmo, corregir los datos y pedir disculpas",
+        "Echarle la culpa a la computadora",
+        "Borrar las pruebas"
+      ],
+      "correcta": 1,
+      "explicacion": "La integridad empresarial se demuestra cuando corregimos errores incluso si cuestan dinero."
+    },
+    {
+      "id": "et7",
+      "texto": "¿Por qué el 'Derecho al Olvido' es importante en internet?",
+      "opciones": [
+        "Para que no tengamos que estudiar",
+        "Para que podamos borrar información vieja o falsa que nos afecte financieramente",
+        "Para que no nos cobren deudas",
+        "Para cambiar de nombre"
+      ],
+      "correcta": 1,
+      "explicacion": "Las personas tienen derecho a que su pasado digital no las persiga injustamente para siempre."
+    },
+    {
+      "id": "et8",
+      "texto": "¿Quién debe tener la última palabra en una decisión financiera importante?",
+      "opciones": [
+        "Siempre la IA porque no se cansa",
+        "Siempre un ser humano responsable que supervise a la IA",
+        "La persona que más grite",
+        "Nadie"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! El juicio humano y la responsabilidad moral nunca deben ser reemplazados."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

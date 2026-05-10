@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P3-4-5-B",
+  "unit_code": "P3-4-5",
+  "unit_title": "Feria de emprendedores en la escuela",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RULETA",
+  "complejidad": "MEDIO",
+  "titulo": "La Ruleta del Emprendedor",
+  "descripcion": "¡La feria está a tope! Gira la ruleta y descubre qué situación te toca resolver hoy en tu negocio.",
+  "objetivo": "Entrenar la toma de decisiones ágil y la resolución de problemas en un entorno comercial",
+  "xp": 400,
+  "giros": 5,
+  "escenarios": [
+    {
+      "id": "desc_1",
+      "situacion": "Un cliente te dice que tu producto es genial, pero que solo tiene la mitad del dinero. ¿Qué haces?",
+      "opciones": [
+        "Se lo das a mitad de precio",
+        "Le ofreces un tamaño más pequeño que sí le alcance",
+        "Le dices que no se lo puedes vender"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Adaptar tu oferta a la capacidad del cliente sin perder dinero es una gran estrategia.",
+      "categoria": "Ventas"
+    },
+    {
+      "id": "desc_2",
+      "situacion": "¡Se te acabó el cambio! Un cliente quiere pagar con un billete grande.",
+      "opciones": [
+        "Perder la venta",
+        "Correr a pedirle cambio a un compañero",
+        "Pedirle que espere mientras buscas una solución"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Un emprendedor busca soluciones rápidas para no perder oportunidades.",
+      "categoria": "Operaciones"
+    },
+    {
+      "id": "desc_3",
+      "situacion": "Un compañero puso un puesto igual al tuyo y bajó sus precios. ¿Cómo reaccionas?",
+      "opciones": [
+        "Bajas tus precios también aunque pierdas dinero",
+        "Destacas qué hace a tu producto especial (calidad/sabor)",
+        "Te enojas con tu compañero"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "La competencia se vence con valor y calidad, no solo con precios bajos.",
+      "categoria": "Competencia"
+    },
+    {
+      "id": "desc_4",
+      "situacion": "Un cliente muy importante quiere comprarte todo lo que te queda. ¡Wow!",
+      "opciones": [
+        "Dudar y no saber qué hacer",
+        "Hacerle un pequeño descuento por mayoreo y cerrar la venta",
+        "Subirle el precio"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Las ventas por mayoreo son excelentes para terminar el día con éxito.",
+      "categoria": "Ventas"
+    },
+    {
+      "id": "desc_5",
+      "situacion": "Alguien te dice que tu producto no le gustó. ¿Qué le dices?",
+      "opciones": [
+        "Lo ignoras",
+        "Le pides retroalimentación para mejorar y le ofreces una disculpa",
+        "Le dices que él está equivocado"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Las quejas son oportunidades disfrazadas para mejorar tu negocio.",
+      "categoria": "Servicio"
+    },
+    {
+      "id": "desc_6",
+      "situacion": "¡Felicidades! Un profesor quiere que seas el proveedor oficial para el próximo evento escolar.",
+      "opciones": [
+        "Decir que no porque es mucho trabajo",
+        "Aceptar y empezar a planear cómo producir más",
+        "Pedir permiso a tus papás y maestros para crecer"
+      ],
+      "mejor_opcion": 2,
+      "explicacion": "Escalar un negocio requiere orden, permisos y una buena estructura.",
+      "categoria": "Crecimiento"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

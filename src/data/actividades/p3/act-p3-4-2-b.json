@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P3-4-2-B",
+  "unit_code": "P3-4-2",
+  "unit_title": "¿Quién es mi cliente? El mercado objetivo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿A quién le vendo esto?",
+  "descripcion": "Un buen vendedor sabe exactamente qué producto ofrecer a cada persona. ¡Pon a prueba tu instinto!",
+  "objetivo": "Identificar segmentos de mercado específicos para diferentes tipos de productos",
+  "xp": 250,
+  "instruccion": "Arrastra cada producto a la categoría de cliente que más lo necesita.",
+  "items": [
+    {
+      "id": "p1",
+      "label": "Pañales etapa 3",
+      "emoji": "👶",
+      "categoria_correcta": "bebes",
+      "feedback": "¡Correcto! Los bebés son los únicos que usan pañales."
+    },
+    {
+      "id": "p2",
+      "label": "Consola de Videojuegos",
+      "emoji": "🎮",
+      "categoria_correcta": "jovenes",
+      "feedback": "¡Bien! Los niños y jóvenes son el mercado principal de los juegos."
+    },
+    {
+      "id": "p3",
+      "label": "Croquetas Premium",
+      "emoji": "🐕",
+      "categoria_correcta": "mascotas",
+      "feedback": "¡Exacto! Los dueños de perritos buscan la mejor comida."
+    },
+    {
+      "id": "p4",
+      "label": "Raqueta de Tenis",
+      "emoji": "🎾",
+      "categoria_correcta": "deportistas",
+      "feedback": "¡Muy bien! Un deportista siempre busca buen equipo."
+    },
+    {
+      "id": "p5",
+      "label": "Leche en fórmula",
+      "emoji": "🍼",
+      "categoria_correcta": "bebes",
+      "feedback": "Correcto, es alimento para los más pequeñitos."
+    },
+    {
+      "id": "p6",
+      "label": "Tenis para correr",
+      "emoji": "👟",
+      "categoria_correcta": "deportistas",
+      "feedback": "¡Sí! Los corredores necesitan calzado especial."
+    },
+    {
+      "id": "p7",
+      "label": "Mochila escolar",
+      "emoji": "🎒",
+      "categoria_correcta": "jovenes",
+      "feedback": "¡Correcto! Es el producto estrella del regreso a clases."
+    },
+    {
+      "id": "p8",
+      "label": "Juguete para morder",
+      "emoji": "🦴",
+      "categoria_correcta": "mascotas",
+      "feedback": "¡Bien! Para que los perritos se diviertan."
+    },
+    {
+      "id": "p9",
+      "label": "Chupón ergonómico",
+      "emoji": "👶",
+      "categoria_correcta": "bebes",
+      "feedback": "¡Exacto! Otro producto para el cuidado del bebé."
+    },
+    {
+      "id": "p10",
+      "label": "Balón de fútbol",
+      "emoji": "⚽",
+      "categoria_correcta": "deportistas",
+      "feedback": "¡Perfecto! Un básico para cualquier atleta."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "bebes",
+      "label": "Papás de Bebés",
+      "emoji": "🍼",
+      "color": "#f472b6"
+    },
+    {
+      "id": "jovenes",
+      "label": "Niños y Jóvenes",
+      "emoji": "🛹",
+      "color": "#60a5fa"
+    },
+    {
+      "id": "mascotas",
+      "label": "Dueños de Mascotas",
+      "emoji": "🐾",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "deportistas",
+      "label": "Deportistas",
+      "emoji": "🏆",
+      "color": "#34d399"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

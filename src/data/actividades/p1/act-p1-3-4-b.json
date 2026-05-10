@@ -1,0 +1,77 @@
+{
+  "code": "ACT-P1-3-4-B",
+  "unit_code": "P1-3-4",
+  "unit_title": "Ahorro para una meta mayor: sueños que tardan un poquito",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTA",
+  "titulo": "¡Superviviencia Financiera!",
+  "descripcion": "El camino a tu bicicleta está lleno de trampas. ¡Mantén el enfoque y no dejes que los antojos te detengan!",
+  "objetivo": "Entrenar la toma de decisiones rápida y la resistencia a la gratificación inmediata",
+  "xp": 400,
+  "game_type": "catch",
+  "duracion": 60,
+  "velocidad_inicial": "rapida",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa monedas y billetes. Usa el Escudo de Paciencia para ser invulnerable a los dulces por 5 segundos.",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Moneda Oro",
+      "emoji": "🪙",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "g2",
+      "label": "Billete Azul",
+      "emoji": "🟦",
+      "tipo": "correcto",
+      "puntos": 250
+    },
+    {
+      "id": "g3",
+      "label": "Bolsa Tesoro",
+      "emoji": "💰",
+      "tipo": "correcto",
+      "puntos": 500
+    },
+    {
+      "id": "g4",
+      "label": "Escudo Paciencia",
+      "emoji": "🛡️",
+      "tipo": "correcto",
+      "puntos": 0
+    },
+    {
+      "id": "b1",
+      "label": "Dulce Antojo",
+      "emoji": "🍭",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "b2",
+      "label": "Juguete Distracción",
+      "emoji": "🧸",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "b3",
+      "label": "Huevo de Gasto",
+      "emoji": "🥚",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "b4",
+      "label": "Tornado de Gasto",
+      "emoji": "🌪️",
+      "tipo": "incorrecto",
+      "puntos": -500
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

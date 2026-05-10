@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P4-4-2-A",
+  "unit_code": "P4-4-2",
+  "unit_title": "El costo de mi idea: materia prima y mano de obra",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Fábrica de Galletas",
+  "descripcion": "Para ganar dinero, primero debes saber cuánto gastas. ¡No olvides contar tu tiempo y el empaque!",
+  "objetivo": "Calcular el costo unitario de producción integrando insumos y mano de obra",
+  "xp": 400,
+  "descripcion_formula": "Costo Unitario = (Costo Ingredientes / Cantidad de Galletas) + Costo Empaque + (Horas de Trabajo * Pago por Hora / Cantidad de Galletas).",
+  "inputs": [
+    {
+      "id": "costo_ingredientes",
+      "label": "Costo de todos los ingredientes",
+      "type": "slider",
+      "min": 100,
+      "max": 500,
+      "step": 10,
+      "default": 200,
+      "unit": "$"
+    },
+    {
+      "id": "total_galletas",
+      "label": "Galletas que salen de la mezcla",
+      "type": "slider",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "unit": "pz"
+    },
+    {
+      "id": "horas_trabajo",
+      "label": "Horas que tardaste cocinando",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2,
+      "unit": "h"
+    },
+    {
+      "id": "costo_empaque",
+      "label": "Costo de cada bolsita",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(costo_ingredientes / total_galletas) + costo_empaque + (horas_trabajo * 20 / total_galletas)",
+  "output_label": "Tu Costo Real por Galleta",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado < 15",
+      "mensaje": "✅ ¡Muy eficiente! Tienes un costo bajo y podrás vender a buen precio.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado >= 15 && resultado < 25",
+      "mensaje": "⚠️ Tu costo es un poco alto. Si vendes a $30 estarás bien, pero revisa si puedes comprar ingredientes más baratos.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado >= 25",
+      "mensaje": "🚨 ¡Cuidado! Tu galleta es muy cara de producir. Casi nadie querrá pagar más de $40 por una galleta. ¡Revisa tu proceso!",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia entre un costo fijo (que pagas siempre) y un costo variable (que cambia según lo que produces)? ¿Qué costos tendría un puesto de limonada en el recreo?",
+  "comparativa_espera": "Los emprendedores exitosos revisan sus métricas financieras clave cada semana. Proyectar a 3 y 12 meses ayuda a anticipar problemas antes de que ocurran.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado Principal",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "proyeccion_3m",
+      "label": "Proyección 3 Meses",
+      "formula": "resultado_principal * 3",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Si mantienes este ritmo 3 meses"
+    },
+    {
+      "id": "proyeccion_12m",
+      "label": "Proyección 12 Meses",
+      "formula": "resultado_principal * 12",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "El impacto en un año completo"
+    },
+    {
+      "id": "ahorro_potencial",
+      "label": "Potencial de Optimización",
+      "formula": "Math.round(resultado_principal * 0.15)",
+      "prefix": "$",
+      "suffix": " de margen",
+      "descripcion": "Lo que podrías mejorar optimizando un 15%"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado Principal",
+      "color": "#6366f1"
+    },
+    {
+      "id": "proyeccion_3m",
+      "label": "Proyección 3 Meses",
+      "color": "#22c55e"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-1-5-B",
+  "unit_code": "P6-1-5",
+  "unit_title": "Criptomonedas: qué son y qué riesgos reales tienen",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Cerebro del Dinero",
+  "descripcion": "¿Sabes quién decide cuánto vale tu billete de $20? ¡Pon a prueba tu conocimiento sobre el Banco de México!",
+  "objetivo": "Conocer la misión institucional, autonomía y funciones del Banco de México",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ban1",
+      "texto": "¿Cuál es la misión principal del Banco de México (Banxico)?",
+      "opciones": [
+        "Hacer que el gobierno sea rico",
+        "Mantener la estabilidad del poder adquisitivo del peso (controlar la inflación)",
+        "Prestar dinero a todas las personas",
+        "Vender seguros"
+      ],
+      "correcta": 1,
+      "explicacion": "Su trabajo es que con tus $100 de hoy puedas comprar casi lo mismo mañana."
+    },
+    {
+      "id": "ban2",
+      "texto": "¿Qué significa que Banxico sea 'Autónomo'?",
+      "opciones": [
+        "Que no tiene jefes",
+        "Que toma sus propias decisiones sin que el gobierno le ordene qué hacer",
+        "Que es una empresa privada",
+        "Que solo usa robots"
+      ],
+      "correcta": 1,
+      "explicacion": "La autonomía evita que los políticos gasten de más o impriman dinero sin control."
+    },
+    {
+      "id": "ban3",
+      "texto": "¿Por qué Banxico no imprime billetes infinitos para que todos seamos ricos?",
+      "opciones": [
+        "Porque se acabaría el papel",
+        "Porque si hay demasiado dinero y pocas cosas que comprar, los precios suben muchísimo (Inflación)",
+        "Porque es muy cansado",
+        "Porque no tienen permiso"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero debe tener un respaldo en la producción del país; si no, solo es papel sin valor."
+    },
+    {
+      "id": "ban4",
+      "texto": "¿Qué es la 'Tasa de Referencia' que decide Banxico?",
+      "opciones": [
+        "El precio de la gasolina",
+        "El precio al que le presta dinero a los otros bancos (e influye en todos los préstamos)",
+        "Una calificación escolar",
+        "El precio del dólar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el 'volante' con el que Banxico acelera o frena la economía."
+    },
+    {
+      "id": "ban5",
+      "texto": "¿Qué son las 'Reservas Internacionales'?",
+      "opciones": [
+        "Boletos de avión",
+        "Activos (como dólares y oro) que Banxico guarda para dar confianza y usar en emergencias",
+        "Dinero que se le debe a otros países",
+        "Una colección de monedas antiguas"
+      ],
+      "correcta": 1,
+      "explicacion": "Son los ahorros de emergencia del país."
+    },
+    {
+      "id": "ban6",
+      "texto": "¿Quién fabrica los billetes y monedas que usas en México?",
+      "opciones": [
+        "Cada banco hace los suyos",
+        "Solo el Banco de México (en su propia fábrica)",
+        "Se compran en otros países",
+        "Los imprimen en las escuelas"
+      ],
+      "correcta": 1,
+      "explicacion": "Banxico tiene una de las fábricas de billetes más seguras y modernas del mundo."
+    },
+    {
+      "id": "ban7",
+      "texto": "Si la inflación es muy alta, ¿qué es lo más probable que haga Banxico?",
+      "opciones": [
+        "Bajar la tasa de interés",
+        "Subir la tasa de interés para que sea más caro pedir prestado y se gaste menos",
+        "No hacer nada",
+        "Cerrar los bancos"
+      ],
+      "correcta": 1,
+      "explicacion": "Subir la tasa es como ponerle un freno a los precios."
+    },
+    {
+      "id": "ban8",
+      "texto": "¿Cuál es la moneda oficial de México cuya estabilidad cuida Banxico?",
+      "opciones": [
+        "El Dólar",
+        "El Euro",
+        "El Peso Mexicano",
+        "El Real"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Exacto! El Peso es nuestra moneda y Banxico es su guardián."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

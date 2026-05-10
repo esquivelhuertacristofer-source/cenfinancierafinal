@@ -1,0 +1,158 @@
+{
+  "code": "ACT-S2-4-4-A",
+  "unit_code": "S2-4-4",
+  "unit_title": "Liderazgo en startups: cultura y equipos de alto impacto",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Costo de mi Carrera",
+  "descripcion": "¿Sabes cuánto vale tu tiempo y tu educación? Calcula el Retorno de Inversión de tu futuro profesional.",
+  "objetivo": "Evaluar la viabilidad financiera de diferentes trayectorias educativas considerando costos y salarios futuros",
+  "xp": 500,
+  "descripcion_formula": "Punto de Equilibrio = CostoUniversidad / (SalarioMensual - GastosBasicos).",
+  "inputs": [
+    {
+      "id": "carrera_elegida_s2",
+      "label": "Carrera Profesional",
+      "type": "select",
+      "default": "Programación / IA",
+      "opciones": [
+        "Médico Especialista",
+        "Programación / IA",
+        "Administración / Finanzas",
+        "Artes / Diseño",
+        "Chef Profesional"
+      ]
+    },
+    {
+      "id": "costo_mensual_uni",
+      "label": "Costo Mensual Universidad ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 20000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "años_estudio_s2",
+      "label": "Años de Estudio",
+      "type": "slider",
+      "min": 3,
+      "max": 7,
+      "step": 1,
+      "default": 4,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "(costo_mensual_uni * 12 * años_estudio_s2) / ((carrera_elegida_s2 === 'Programación / IA' ? 40000 : carrera_elegida_s2 === 'Médico Especialista' ? 50000 : carrera_elegida_s2 === 'Administración / Finanzas' ? 25000 : 15000) * 0.5)",
+  "output_label": "Años para recuperar tu inversión (ROI)",
+  "output_prefix": "",
+  "output_suffix": " años",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado < 3",
+      "mensaje": "🚀 ¡ROI Increíble! Has elegido una carrera de alta demanda y bajo costo de estudio. Recuperarás tu inversión muy rápido y empezarás a construir riqueza pronto.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 10",
+      "mensaje": "⚠️ ¡Cuidado Financiero! Tardarás más de una década en recuperar lo que pagaste por tu universidad. Asegúrate de que tu pasión compense este costo o busca becas.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 La educación es una inversión. No solo cuenta el título, sino los contactos y las habilidades prácticas que adquieras en el camino.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia entre un jefe que da órdenes y un líder que inspira? ¿Qué cambiaría en un equipo donde el líder confía en sus colaboradores vs uno donde microgestiona todo?",
+  "comparativa_espera": "Las empresas que miden su flujo de caja libre (FCL) mensualmente tienen 60% menos riesgo de insolvencia que las que no lo hacen. El FCL, no las utilidades contables, es el indicador más honesto de la salud financiera de un negocio.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "flujo_libre",
+      "label": "Flujo Libre de Caja",
+      "formula": "Math.round(resultado_principal * 0.85)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "El flujo disponible para reinversión o distribución"
+    },
+    {
+      "id": "margen_neto",
+      "label": "Margen Neto Estimado",
+      "formula": "Math.round(resultado_principal / resultado_principal * 100 * 0.15)",
+      "prefix": "",
+      "suffix": "% de margen",
+      "descripcion": "El porcentaje del ingreso que se convierte en ganancia real"
+    },
+    {
+      "id": "multiplicador_valor",
+      "label": "Valor del Negocio (×8)",
+      "formula": "resultado_principal * 8",
+      "prefix": "$",
+      "suffix": " de valuación",
+      "descripcion": "Valuación usando el múltiplo típico de negocios medianos"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "flujo_libre",
+      "label": "Flujo Libre de Caja",
+      "color": "#22c55e"
+    }
+  ]
+}

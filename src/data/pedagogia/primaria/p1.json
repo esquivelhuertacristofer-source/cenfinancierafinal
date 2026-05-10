@@ -1,0 +1,3388 @@
+{
+  "P1-1-1": {
+    "code": "P1-1-1",
+    "title": "¿Qué es el dinero? Monedas y billetes de México",
+    "level": "Primaria 1",
+    "duration": "60 min (Sesión Extendida)",
+    "difficulty": "Básico / Fundamental",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Identificar físicamente las monedas y billetes mexicanos actuales, comprendiendo su origen histórico y su función como herramienta de intercambio universal en la sociedad moderna.",
+      "competencies": [
+        "Reconocimiento de Valor",
+        "Pensamiento Lógico-Matemático",
+        "Identificación de Símbolos Patrios",
+        "Cultura Financiera Básica"
+      ],
+      "materials": [
+        "Video Maestro 'Ceny y el Misterio del Papel'",
+        "Set de monedas didácticas (1, 2, 5, 10 pesos)",
+        "Billetes de alta resolución (20, 50, 100 pesos)",
+        "Lupa de explorador",
+        "Cuento: 'El tesoro de Ceny y el Cacao'",
+        "Hojas de calca para monedas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Origen",
+          "duration": "15 min",
+          "label": "Viaje en el Tiempo"
+        },
+        {
+          "phase": "Desarrollo: Anatomía",
+          "duration": "30 min",
+          "label": "Exploradores de Billete"
+        },
+        {
+          "phase": "Cierre: El Valor",
+          "duration": "15 min",
+          "label": "Tienda del Saber"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL MISTERIO DEL CACAO (APERTURA)",
+          "duration": "15 min",
+          "description": "Inicie la clase con un puñado de semillas de cacao o frijoles. Narre cómo hace cientos de años, en México, no había papel moneda. Ceny viaja al pasado y descubre que para comprar un conejo, necesitaba muchas semillas. Pregunte: '¿Qué pasaría si hoy quisiéramos comprar una bicicleta cargando sacos de frijoles?'. Guíe la reflexión hacia la necesidad de un objeto ligero y resistente.",
+          "activity": "Dinámica 'El Trueque Difícil': Pida a los alumnos que intenten intercambiar un zapato por un lápiz. Analicen por qué es difícil ponerse de acuerdo en el valor sin dinero."
+        },
+        {
+          "title": "FASE II: EXPLORADORES DEL BANCO DE MÉXICO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Utilice lupas reales o imaginarias. Muestre el billete de $20 (Benito Juárez / Ecosistema de manglar) y el de $50 (El Ajolote). Explique que el Banco de México (Banxico) es como la 'Fábrica Mágica' que pone candados secretos (marcas de agua e hilos) para que nadie pueda copiar el dinero. Los niños deben identificar texturas, colores y los personajes que aparecen.",
+          "activity": "Dinámica 'Caza de Texturas': Los alumnos pasan el dedo por el billete didáctico buscando las partes que se sienten 'rasposas' (relieve). Luego, calcan una moneda de $10 en su cuaderno para observar el escudo nacional."
+        },
+        {
+          "title": "FASE III: EL MERCADO DE CENY (CIERRE)",
+          "duration": "15 min",
+          "description": "Instale una estación de 'Mercado'. Asigne roles: Cajeros y Compradores. El objetivo es que los niños usen las monedas adecuadas para pagar objetos de precio exacto. Refuerce la honestidad al entregar y recibir el cambio.",
+          "activity": "Reto 'El Precio Justo': El maestro muestra una manzana. Los niños deben levantar la moneda correcta ($5 o $10) según la estimación del valor."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El dinero no es un objeto mágico, es una herramienta de confianza creada por el ser humano para facilitar la vida y el intercambio de bienes y servicios. Imagina que quieres un chocolate y la señora de la tienda quiere un par de zapatos — sin dinero, ¿cómo le pagarías? El dinero resuelve ese problema de forma sencilla y justa, porque todo el mundo lo acepta y sabe cuánto vale.",
+      "sections": [
+        {
+          "subtitle": "De la Naturaleza al Papel",
+          "content": "Hace muchísimos años, en México, nuestros antepasados mayas y aztecas usaban semillas de cacao para comprar cosas. ¡Una jícara de chocolate podía costar 10 semillas! Con el tiempo, las personas se dieron cuenta de que cargar sacos de semillas era muy pesado e incómodo, así que inventaron las monedas de metal. Las monedas eran prácticas, pero también pesadas, así que después llegaron los billetes de papel. Hoy, los billetes mexicanos de $20 y $50 están hechos de polímero, un plástico especial que no se rompe ni se moja, perfecto para durar muchos años en nuestras manos."
+        },
+        {
+          "subtitle": "La Fábrica de Dinero (Banxico)",
+          "content": "En México existe un lugar muy especial llamado Banco de México, o Banxico, que es la única institución con permiso para fabricar los billetes y monedas del país. Si alguien más intentara hacer dinero falso, cometería un delito muy grave. Cada billete mexicano es como una pequeña obra de arte: el de $50 tiene un ajolote, ese animalito que solo existe en México; el de $100 muestra a Nezahualcóyotl, un gran poeta y rey de Texcoco. Banxico pone estas imágenes para recordarnos lo maravilloso y único que es nuestro país."
+        },
+        {
+          "subtitle": "Seguridad: ¿Cómo saber si es real?",
+          "content": "Los billetes mexicanos tienen secretos escondidos para que nadie pueda copiarlos, como un superhéroe con armadura invisible. Si miras el billete de $100 a contraluz, verás una imagen que aparece como por arte de magia — eso se llama marca de agua. Si inclinas el billete, hay tiras y números que cambian de color entre dorado y verde. Además, si pasas el dedo por ciertos lugares, sentirás que la tinta tiene relieve, como pequeñas montañitas. Aprender a reconocer el dinero real nos ayuda a cuidar el patrimonio de nuestra familia y de todo México."
+        },
+        {
+          "subtitle": "El Valor Numérico",
+          "content": "Una cosa muy importante que hay que saber: el tamaño del billete no decide cuánto vale. Lo que importa es el número que tiene escrito. Un billete de $500 puede ser del mismo tamaño que uno de $20, pero el de $500 vale 25 veces más. Lo mismo pasa con las monedas: la moneda de $10 es más pequeña que la de $5, ¡pero vale el doble! Por eso, cuando recibas dinero, siempre revisa bien el número antes de guardarlo o gastarlo. Conocer el valor de cada denominación es tu primer superpoder financiero."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cómo se llama el banco encargado de hacer el dinero en México?",
+          "options": [
+            "Banco de la Felicidad",
+            "Banco de México (Banxico)",
+            "Tienda Ceny"
+          ],
+          "correct": "Banco de México (Banxico)"
+        },
+        {
+          "question": "¿Qué usaban nuestros antepasados en México antes de tener billetes?",
+          "options": ["Semillas de Cacao", "Dulces", "Piedras de colores"],
+          "correct": "Semillas de Cacao"
+        },
+        {
+          "question": "¿De qué color es el billete que tiene un Ajolote?",
+          "options": ["Rojo", "Rosa/Morado", "Azul"],
+          "correct": "Rosa/Morado"
+        },
+        {
+          "question": "¿Para qué sirven las marcas de agua y los relieves en los billetes?",
+          "options": [
+            "Para que se vean bonitos",
+            "Para que sea difícil falsificarlos (copiarlos)",
+            "Para que pesen más"
+          ],
+          "correct": "Para que sea difícil falsificarlos (copiarlos)"
+        },
+        {
+          "question": "Si tienes una moneda de $10 y una de $1, ¿cuál vale más?",
+          "options": ["La de $10", "La de $1", "Valen lo mismo"],
+          "correct": "La de $10"
+        },
+        {
+          "question": "¿De qué material están hechos los billetes modernos de $20 y $50?",
+          "options": [
+            "Papel de cuaderno",
+            "Plástico especial (Polímero)",
+            "Tela de algodón"
+          ],
+          "correct": "Plástico especial (Polímero)"
+        },
+        {
+          "question": "¿Qué personaje aparece en el billete azul de $20?",
+          "options": ["Benito Juárez", "Ceny", "Un superhéroe"],
+          "correct": "Benito Juárez"
+        },
+        {
+          "question": "¿Por qué es mejor usar dinero que hacer trueque (cambio de cosas)?",
+          "options": [
+            "Porque el dinero brilla",
+            "Porque es más fácil de cargar y todos sabemos cuánto vale",
+            "Porque el trueque está prohibido"
+          ],
+          "correct": "Porque es más fácil de cargar y todos sabemos cuánto vale"
+        },
+        {
+          "question": "¿Qué debemos hacer si encontramos un billete en el suelo?",
+          "options": [
+            "Gastarlo en dulces",
+            "Avisar a un adulto para buscar al dueño",
+            "Esconderlo"
+          ],
+          "correct": "Avisar a un adulto para buscar al dueño"
+        },
+        {
+          "question": "¿Cuál es la moneda de mayor valor que usamos en México?",
+          "options": ["La de $5", "La de $10", "La de $1"],
+          "correct": "La de $10"
+        }
+      ],
+      "rubric": "El alumno identifica al menos 5 elementos de seguridad y 4 denominaciones de moneda nacional con precisión del 100%."
+    },
+    "teacher_tips": [
+      "Utilice la aplicación 'BilletesMX' de Banxico para mostrar los billetes en Realidad Aumentada; esto genera un impacto visual inolvidable.",
+      "Enfatice que el dinero no es sucio, pero debe manejarse con respeto y lavarse las manos después de usarlo.",
+      "Cree un 'Museo del Dinero' en una esquina del salón con imágenes de billetes antiguos."
+    ]
+  },
+  "P1-1-2": {
+    "code": "P1-1-2",
+    "title": "Para qué sirve el dinero: comprar, ahorrar y dar",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Integral",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender las tres funciones fundamentales del dinero (consumo, ahorro y filantropía), desarrollando una brújula ética para la toma de decisiones financieras.",
+      "competencies": [
+        "Clasificación de Acciones",
+        "Empatía Social",
+        "Visión Prospectiva",
+        "Autocontrol"
+      ],
+      "materials": [
+        "Simulador Interactivo 'La Aldea de Ceny'",
+        "Tres frascos de cristal (o plástico transparente)",
+        "Etiquetas: HOY, MAÑANA, SIEMPRE",
+        "Fichas de colores que representen monedas",
+        "Tarjetas de situaciones de vida"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Trilema",
+          "duration": "15 min",
+          "label": "La Decisión de Ceny"
+        },
+        {
+          "phase": "Desarrollo: Los 3 Frascos",
+          "duration": "30 min",
+          "label": "Equilibrio Vital"
+        },
+        {
+          "phase": "Cierre: Mi Compromiso",
+          "duration": "15 min",
+          "label": "Círculo de Virtudes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL GRAN DILEMA DE CENY (APERTURA)",
+          "duration": "15 min",
+          "description": "Ceny recibe una moneda de oro por ayudar en el jardín. Tiene tres opciones: 1. Comprar un helado que se derrite en 5 minutos. 2. Guardar la moneda para comprar una capa de superhéroe el próximo mes. 3. Donar una parte para comprar semillas para el parque que no tiene flores. Pregunte a la clase: 'Si tú fueras Ceny, ¿qué sentirías en cada opción?'. Explore las emociones de la gratificación inmediata vs. la satisfacción a largo plazo.",
+          "activity": "Dinámica 'El Semáforo de Decisiones': Los niños se mueven a una esquina del salón según su elección (Verde-Gastar, Amarillo-Ahorrar, Azul-Dar)."
+        },
+        {
+          "title": "FASE II: EL MÉTODO DE LOS TRES FRASCOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el dinero es como el agua: si lo dejas en un solo lugar, se puede estancar o acabar. Debemos repartirlo. Presente el frasco de 'HOY' (Gastos), 'MAÑANA' (Ahorro) y 'PARA OTROS' (Generosidad). Utilice el simulador digital para que vean cómo los frascos se llenan de forma equilibrada.",
+          "activity": "Dinámica 'Repartiendo el Tesoro': Entregue 10 fichas a cada alumno. Presente un escenario: 'Es tu cumpleaños y recibes dinero'. Deben decidir cuántas fichas van a cada frasco y explicar por qué decidieron esa cantidad para 'Dar'."
+        },
+        {
+          "title": "FASE III: EL CÍRCULO DE LA GENEROSIDAD (CIERRE)",
+          "duration": "15 min",
+          "description": "Cierre la clase enfocándose en el frasco de 'PARA OTROS'. Explique que el dinero también sirve para arreglar el mundo. No se trata solo de tener, sino de impactar. Invite a los alumnos a proponer una causa pequeña (comprar una planta para el salón, ayudar a un compañero sin útiles).",
+          "activity": "Reto 'La Promesa de Ceny': Los alumnos dibujan sus propios tres frascos y escriben una palabra que describa cómo se sienten al ayudar a otros."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El dinero tiene tres caminos posibles, y ninguno es malo si lo usamos con inteligencia: gastar, ahorrar y dar. Saber cuándo usar cada uno es lo que define a un verdadero Ciudadano CEN Academy. Imagina que tienes tres frascos de cristal — uno para hoy, uno para mañana y uno para ayudar a los demás. ¡Eso es exactamente lo que hacemos con nuestro dinero!",
+      "sections": [
+        {
+          "subtitle": "Gastar: La Energía del Presente",
+          "content": "Gastar es usar nuestro dinero para comprar cosas que necesitamos o queremos en este momento. Cuando compramos comida, ropa o útiles escolares, estamos gastando en cosas necesarias, y eso está perfecto. También podemos gastar en cosas que nos dan alegría, como una película o un helado, y eso también está bien si no exageramos. El problema llega cuando gastamos TODO nuestro dinero en el instante en que lo recibimos, porque entonces no queda nada para el futuro ni para ayudar a otros. La clave es gastar con propósito: preguntar primero '¿lo necesito de verdad?' antes de sacar la moneda."
+        },
+        {
+          "subtitle": "Ahorrar: El Superpoder de la Paciencia",
+          "content": "Ahorrar es guardar una parte de tu dinero ahora para usarlo después, cuando lo necesites o cuando quieras cumplir un sueño grande. Es como 'mandarte un regalo al futuro'. Imagina que cada peso que guardas hoy es un ladrillo, y poco a poco estás construyendo una casa increíble. Lo más importante del ahorro es la constancia: no tienes que guardar mucho de una vez, basta con guardar algo cada vez que recibes dinero. Los científicos han descubierto que las personas que aprenden a ahorrar desde niños son más felices y tienen menos preocupaciones cuando crecen."
+        },
+        {
+          "subtitle": "Dar: El Corazón de las Finanzas",
+          "content": "Dar es usar una parte de nuestro dinero para ayudar a los demás, ya sea a nuestra familia, amigos, o personas que lo necesitan más que nosotros. Puede parecer que dar nos hace más pobres, pero en realidad nos hace más ricos por dentro — nos enseña gratitud y nos conecta con los demás de una manera especial. En muchas culturas del mundo, las personas más exitosas y felices son las que más comparten. No tiene que ser mucho: una moneda de $1 en una alcancía de donaciones ya es un acto de generosidad poderoso. Dar también puede ser tiempo, un abrazo o ayuda — no solo dinero."
+        },
+        {
+          "subtitle": "El Equilibrio Perfecto",
+          "content": "La magia está en repartir bien. Una guía sencilla que usan muchos ahorradores es: de cada $10 que recibes, guarda $2, da $1 y usa $7 para tus gastos. Esto no es una regla rígida — puede cambiar según tus circunstancias — pero te da una idea de que ningún frasco debe estar siempre vacío ni siempre desbordado. Cuando practicas el equilibrio desde pequeño, creces siendo una persona que sabe cuidar su dinero, cumplir sus sueños y hacer el bien al mismo tiempo. ¡Esas tres cosas juntas son la verdadera riqueza!"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuáles son las tres funciones básicas del dinero?",
+          "options": [
+            "Comprar, Ahorrar y Dar",
+            "Gastar, Perder y Esconder",
+            "Comprar, Jugar y Dormir"
+          ],
+          "correct": "Comprar, Ahorrar y Dar"
+        },
+        {
+          "question": "¿Qué significa ahorrar?",
+          "options": [
+            "Gastar todo en dulces",
+            "Guardar una parte del dinero para el futuro",
+            "Regalar todo el dinero"
+          ],
+          "correct": "Guardar una parte del dinero para el futuro"
+        },
+        {
+          "question": "Si Ceny usa su dinero para comprar una medicina que necesita, ¿qué está haciendo?",
+          "options": ["Ahorrando", "Comprando una necesidad", "Dando"],
+          "correct": "Comprando una necesidad"
+        },
+        {
+          "question": "Si decides no comprar un juguete hoy para comprar una bicicleta después, ¿qué estás practicando?",
+          "options": ["Paciencia y Ahorro", "Enojo", "Olvido"],
+          "correct": "Paciencia y Ahorro"
+        },
+        {
+          "question": "¿Por qué es importante 'Dar' o ser generoso con una parte de nuestro dinero?",
+          "options": [
+            "Para que nos den premios",
+            "Para ayudar a que nuestra comunidad y amigos estén mejor",
+            "Porque el dinero nos estorba"
+          ],
+          "correct": "Para ayudar a que nuestra comunidad y amigos estén mejor"
+        },
+        {
+          "question": "¿Cuál de estos frascos nos ayuda a cumplir sueños grandes a largo plazo?",
+          "options": [
+            "El de Gastar (Hoy)",
+            "El de Ahorrar (Mañana)",
+            "El de Dar (Otros)"
+          ],
+          "correct": "El de Ahorrar (Mañana)"
+        },
+        {
+          "question": "Si te gastas TODO tu dinero hoy, ¿qué pasará mañana si tienes una emergencia?",
+          "options": [
+            "No tendré dinero para resolverla",
+            "Aparecerá dinero mágicamente",
+            "No pasa nada"
+          ],
+          "correct": "No tendré dinero para resolverla"
+        },
+        {
+          "question": "¿Qué frasco representa la gratitud y la ayuda a los demás?",
+          "options": ["El de Ahorrar", "El de Dar", "El de Gastar"],
+          "correct": "El de Dar"
+        },
+        {
+          "question": "Verdadero o Falso: Es inteligente repartir nuestro dinero en los tres frascos.",
+          "options": ["Verdadero", "Falso", "Solo si eres adulto"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué sentimiento solemos tener cuando logramos una meta de ahorro?",
+          "options": ["Tristeza", "Orgullo y Satisfacción", "Miedo"],
+          "correct": "Orgullo y Satisfacción"
+        }
+      ],
+      "rubric": "El alumno clasifica correctamente 10 situaciones de la vida diaria en las categorías de comprar, ahorrar o dar con un margen de error de cero."
+    },
+    "teacher_tips": [
+      "No juzgue las decisiones de gasto de los niños; ayúdelos a ver las consecuencias de cada camino.",
+      "Cuente una anécdota personal sobre algo que usted ahorró por mucho tiempo; los niños aman las historias reales de sus maestros.",
+      "Relacione el frasco de 'Dar' con acciones no monetarias también (dar tiempo, dar un abrazo) para reforzar el valor de la generosidad."
+    ]
+  },
+  "P1-1-3": {
+    "code": "P1-1-3",
+    "title": "El trabajo y el dinero: de dónde vienen los pesos",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Social",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender la relación directa entre el esfuerzo personal, el uso del tiempo y la generación de ingresos, valorando la diversidad de profesiones y oficios en la sociedad.",
+      "competencies": [
+        "Relación Causa-Efecto",
+        "Valoración del Trabajo",
+        "Conciencia Ciudadana",
+        "Pensamiento Crítico"
+      ],
+      "materials": [
+        "Video: 'Ceny visita a los trabajadores del barrio'",
+        "Tarjetas de profesiones (Médico, Albañil, Programador, Chef)",
+        "Herramientas de juguete (estetoscopio, espátula, etc.)",
+        "Ficha de trabajo: 'El Mapa de los Talentos'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Origen",
+          "duration": "15 min",
+          "label": "El Árbol del Dinero"
+        },
+        {
+          "phase": "Desarrollo: Los Talentos",
+          "duration": "30 min",
+          "label": "Feria de Oficios"
+        },
+        {
+          "phase": "Cierre: Mi Vocación",
+          "duration": "15 min",
+          "label": "El Futuro Emprendedor"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿EL DINERO CRECE EN LOS ÁRBOLES? (APERTURA)",
+          "duration": "15 min",
+          "description": "Inicie con una pregunta provocativa: '¿Qué pasaría si hoy todos decidiéramos no trabajar?'. Dibuje un árbol con billetes y pregunte si alguien lo ha visto en el parque. Guíe la conversación hacia la realidad: el dinero es la recompensa que recibimos cuando usamos nuestras manos o nuestra mente para ayudar a otros. Explore qué hacen sus familiares para ganar dinero.",
+          "activity": "Dinámica 'El Detective del Barrio': Los niños deben mencionar un negocio que vieron de camino a la escuela y adivinar qué trabajo hace la persona que está ahí."
+        },
+        {
+          "title": "FASE II: LA FERIA DE LOS TALENTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que todos tenemos un 'Talento' (algo que hacemos muy bien). Cuando usamos ese talento para resolver un problema de alguien más, eso se llama TRABAJO. Un doctor usa su talento para curar; un arquitecto para diseñar casas. Presente diferentes herramientas y pida a los niños que identifiquen a qué profesional pertenecen.",
+          "activity": "Juego 'Mímica de Oficios': Un alumno actúa un trabajo sin hablar. Los demás adivinan. Al final, el 'trabajador' recibe una moneda didáctica de salario por su esfuerzo bien hecho."
+        },
+        {
+          "title": "FASE III: CUANDO SEA GRANDE... (CIERRE)",
+          "duration": "15 min",
+          "description": "Cierre vinculando el trabajo con el ahorro. 'Trabajamos para ganar dinero, pero lo cuidamos porque nos costó tiempo y esfuerzo conseguirlo'. Pida a los niños que piensen en qué les gustaría trabajar y cómo ayudarían a México con ese empleo.",
+          "activity": "Reto 'El Dibujo de mi Futuro': Los alumnos dibujan su yo del futuro trabajando y mencionan qué herramienta usarán."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El dinero no es un regalo del azar; es la representación del esfuerzo, el conocimiento y el tiempo que dedicamos a servir a los demás.",
+      "sections": [
+        {
+          "subtitle": "¿Qué es el Trabajo?",
+          "content": "Trabajar es hacer algo útil que otras personas necesitan. Puede ser producir algo que se pueda tocar, como un pan o una silla (eso se llama producto), o ayudar a alguien con algo que necesita, como curar una enfermedad o enseñar a leer (eso se llama servicio). Todos los trabajos son valiosos: el señor que recoge la basura hace un trabajo tan importante como el médico que nos sana, porque sin los dos, la ciudad no podría funcionar. Aprender a respetar todos los trabajos desde pequeño es una de las lecciones más importantes que te enseña CEN Academy."
+        },
+        {
+          "subtitle": "El Salario: El Pago por tu Tiempo",
+          "content": "Cuando una persona trabaja para otra persona o para una empresa, recibe un pago que se llama salario o sueldo. Este pago puede llegar cada semana, cada quincena (cada dos semanas) o cada mes, dependiendo del acuerdo. El monto del salario depende de qué tan difícil es el trabajo, cuántos años de estudio o práctica requirió y cuántas horas se trabajan. Entender esto es muy importante: el dinero que tiene tu familia no es infinito — es exactamente lo que ganaron con su tiempo y esfuerzo. Por eso, cuando pedimos cosas o desperdiciamos recursos como la luz o el agua, también estamos 'gastando' el tiempo de alguien que queremos mucho."
+        },
+        {
+          "subtitle": "Oficios vs. Profesiones",
+          "content": "Hay dos grandes caminos para aprender a trabajar. El primero son los oficios: se aprenden practicando junto a alguien con experiencia. Un panadero, un carpintero, un electricista o una costurera aprenden su arte haciendo miles de panes, muebles, instalaciones o prendas. El segundo camino son las profesiones: requieren estudiar varios años en una universidad o escuela técnica, como un médico, un maestro o un ingeniero que estudian entre 4 y 8 años. Ningún camino es mejor que el otro — ambos son igualmente respetables y necesarios para que la sociedad funcione. ¡En México, los mejores artesanos del mundo tienen oficios que se heredan de generación en generación!"
+        },
+        {
+          "subtitle": "Trabajar en lo que Amas",
+          "content": "Una de las preguntas más importantes de la vida es: '¿En qué trabajo te gustaría pasar tus días de adulto?' No hay prisa en responderla, pero sí es bueno empezar a pensar desde ahora en las cosas que te gustan y en las que eres bueno. Un cocinero que ama cocinar, un maestro que ama enseñar o un mecánico que ama los motores — todos ellos van al trabajo con emoción porque hacen lo que disfrutan. En CEN Academy te animamos a explorar tus talentos y pasiones, porque de ahí puede nacer no solo tu trabajo, ¡sino también tu propio negocio en el futuro!"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿De dónde viene el dinero que ganan los adultos?",
+          "options": [
+            "De los árboles",
+            "Del esfuerzo y el trabajo",
+            "De los regalos"
+          ],
+          "correct": "Del esfuerzo y el trabajo"
+        },
+        {
+          "question": "¿Qué es un 'talento'?",
+          "options": [
+            "Algo que haces muy bien",
+            "Un tipo de dulce",
+            "Una moneda antigua"
+          ],
+          "correct": "Algo que haces muy bien"
+        },
+        {
+          "question": "¿Cómo se llama el dinero que recibes por trabajar?",
+          "options": ["Premio", "Salario o Sueldo", "Multa"],
+          "correct": "Salario o Sueldo"
+        },
+        {
+          "question": "Si un doctor cura a un niño enfermo, ¿qué está haciendo?",
+          "options": [
+            "Dando un servicio (trabajando)",
+            "Jugando",
+            "Descansando"
+          ],
+          "correct": "Dando un servicio (trabajando)"
+        },
+        {
+          "question": "¿Por qué debemos respetar todos los trabajos?",
+          "options": [
+            "Porque todos ayudan a que la ciudad funcione bien",
+            "Porque sí",
+            "Para que nos den dinero"
+          ],
+          "correct": "Porque todos ayudan a que la ciudad funcione bien"
+        },
+        {
+          "question": "Un panadero hace pan. ¿Qué usa para su trabajo?",
+          "options": [
+            "Su tiempo, sus manos y su conocimiento",
+            "Solo magia",
+            "Suerte"
+          ],
+          "correct": "Su tiempo, sus manos y su conocimiento"
+        },
+        {
+          "question": "¿Qué pasa si nadie trabajara en la recolección de basura?",
+          "options": [
+            "La ciudad estaría muy sucia",
+            "No pasaría nada",
+            "Habría más dulces"
+          ],
+          "correct": "La ciudad estaría muy sucia"
+        },
+        {
+          "question": "¿Por qué decimos que el dinero es como 'tiempo guardado'?",
+          "options": [
+            "Porque te costó horas de trabajo ganarlo",
+            "Porque el dinero tiene reloj",
+            "Porque el dinero brilla"
+          ],
+          "correct": "Porque te costó horas de trabajo ganarlo"
+        },
+        {
+          "question": "¿Qué debes hacer para ser un buen trabajador en el futuro?",
+          "options": [
+            "Estudiar y practicar tus talentos",
+            "No hacer nada",
+            "Dormir mucho"
+          ],
+          "correct": "Estudiar y practicar tus talentos"
+        },
+        {
+          "question": "Verdadero o Falso: Los niños 'trabajan' estudiando para prepararse para el futuro.",
+          "options": ["Verdadero", "Falso", "Solo en vacaciones"],
+          "correct": "Verdadero"
+        }
+      ],
+      "rubric": "El alumno relaciona correctamente 5 herramientas de trabajo con su respectivo oficio y explica el concepto de salario con sus propias palabras."
+    },
+    "teacher_tips": [
+      "Invite a un padre de familia a hablar sobre su trabajo; las experiencias de primera mano son muy poderosas.",
+      "Use el juego de roles constantemente. Permita que los niños 'cobren' por tareas sencillas en el salón para que vivan el ciclo.",
+      "Hable sobre el trabajo no remunerado (como lo que hacen mamá o papá en casa) y su inmenso valor para la familia."
+    ]
+  },
+  "P1-1-4": {
+    "code": "P1-1-4",
+    "title": "Mi primer cochinito: ¿cómo y dónde guardo mi dinero?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Hábito",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Establecer la alcancía como la primera herramienta de gestión financiera personal, fomentando la disciplina del ahorro físico y la seguridad del dinero.",
+      "competencies": [
+        "Hábitos de Orden",
+        "Paciencia",
+        "Responsabilidad de Custodia",
+        "Autocontrol"
+      ],
+      "materials": [
+        "Alcancías (cochinitos) didácticas para decorar",
+        "Pegatinas y marcadores",
+        "Cuento: 'El cochinito que aprendió a esperar'",
+        "Cinta adhesiva de seguridad"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Peligro",
+          "duration": "15 min",
+          "label": "El Dinero Perdido"
+        },
+        {
+          "phase": "Desarrollo: Mi Guardián",
+          "duration": "30 min",
+          "label": "Taller de Alcancías"
+        },
+        {
+          "phase": "Cierre: El Ritual",
+          "duration": "15 min",
+          "label": "La Primera Moneda"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿DÓNDE ESTÁ MI MONEDA? (APERTURA)",
+          "duration": "15 min",
+          "description": "Narre una situación: 'Ceny dejó su moneda favorita sobre la mesa y se fue a jugar. Al regresar, un viento fuerte la tiró y ahora no la encuentra'. Pregunte a los niños: '¿Cuál es el peor lugar para guardar dinero?'. Recopile respuestas divertidas (en el zapato, bajo la almohada, en el jardín). Concluya que el dinero necesita un hogar seguro.",
+          "activity": "Juego 'Busca el Tesoro': Esconda monedas didácticas en lugares inseguros y pida que los niños las encuentren para llevarlas a un lugar seguro."
+        },
+        {
+          "title": "FASE II: EL GUARDIÁN DE TUS SUEÑOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente la alcancía. Explique que es un 'Guardián' que tiene una boca pequeña por donde entra el dinero pero por donde es difícil que salga. Esto nos protege de nuestra propia tentación de gastar en cosas pequeñas. Entregue materiales para que cada niño personalice su alcancía.",
+          "activity": "Dinámica 'El Bautizo de mi Guardián': Cada niño le pone un nombre a su alcancía y le susurra una promesa de ahorro secreto."
+        },
+        {
+          "title": "FASE III: EL SONIDO DEL ÉXITO (CIERRE)",
+          "duration": "15 min",
+          "description": "Realice el ritual de la primera moneda. Explique que hoy la alcancía suena 'ligera' (tintineo), pero que con constancia sonará 'pesada' (golpe seco). Enseñe a los niños que una alcancía no se rompe hasta que está llena o se cumple un tiempo especial.",
+          "activity": "Reto 'La Prueba del Silencio': Agite una alcancía vacía y una llena (preparada por el maestro). Que los niños adivinen cuál tiene el tesoro solo por el oído."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Una alcancía no es solo un juguete; es tu primera bóveda de seguridad donde guardas tu libertad futura.",
+      "sections": [
+        {
+          "subtitle": "¿Por qué un Cochinito?",
+          "content": "La historia del cochinito como alcancía es muy curiosa. En Europa, hace cientos de años, existía un tipo de barro naranja llamado 'pygg' que era barato y fácil de moldear. Las familias usaban jarros de ese barro para guardar sus monedas. Con el tiempo, la palabra 'pygg' sonaba igual que 'pig' (cerdo en inglés), y cuando la gente pedía sus 'pygg jars' (jarros de barro), los artesanos comenzaron a hacerlos con forma de cerdito. ¡Así nació por accidente la tradición del cochinito que hoy usamos en todo el mundo! En México la adoptamos con muchísimo cariño."
+        },
+        {
+          "subtitle": "Seguridad y Orden",
+          "content": "Tener un lugar fijo para el dinero es más importante de lo que parece. Si guardas tus monedas en el bolsillo, en la mochila, sobre la mesa o debajo de la almohada, tarde o temprano alguna se pierde o se cae. La alcancía es como una pequeña bóveda personal: todo el dinero está en un solo lugar, sabes exactamente cuánto tienes y puedes revisarlo cuando quieras. Además, el sonido de las monedas al caer dentro — ¡clin, clin! — te da una pequeña dosis de alegría y motivación para seguir ahorrando más."
+        },
+        {
+          "subtitle": "La Barrera de la Tentación",
+          "content": "El diseño de la alcancía tiene un secreto muy inteligente: la ranura para meter el dinero es grande, pero sacar el dinero es difícil — hay que romperla o darle vuelta. Esto no es un accidente, ¡es un superpoder! Cuando sientes el antojo de comprar un dulce o una figurita, primero tienes que conseguir abrir la alcancía, y ese pequeño obstáculo te da tiempo de preguntarte: '¿Realmente vale la pena gastar mi ahorro en esto?' Muchas veces, la respuesta es que prefières seguir ahorrando para tu meta grande. La alcancía te ayuda a ser más paciente que tu propio cerebro."
+        },
+        {
+          "subtitle": "El Ahorro Formal vs. Informal",
+          "content": "Guardar monedas en una alcancía es lo que llamamos ahorro informal — está en tu casa, bajo tu cuidado directo. Es perfecto para empezar. Pero cuando seas más grande, conocerás el ahorro formal: las cuentas de banco. Los bancos son como alcancías gigantes y superpotentes donde el gobierno garantiza que tu dinero está seguro, incluso si el banco tiene problemas. La gran diferencia es que los bancos incluso te dan un pequeño regalo por guardar tu dinero con ellos — ¡eso se llama interés! Tu cochinito de hoy es el primer peldaño de la escalera hacia el banco de mañana."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la función principal de una alcancía?",
+          "options": [
+            "Guardar el dinero de forma segura y evitar gastarlo rápido",
+            "Hacer que el dinero brille",
+            "Para jugar a las canicas"
+          ],
+          "correct": "Guardar el dinero de forma segura y evitar gastarlo rápido"
+        },
+        {
+          "question": "¿Por qué es malo guardar el dinero en el bolsillo del pantalón?",
+          "options": [
+            "Se puede caer o perderse en la lavadora",
+            "Se vuelve más pesado",
+            "Se convierte en papel"
+          ],
+          "correct": "Se puede caer o perderse en la lavadora"
+        },
+        {
+          "question": "¿Qué significa que la alcancía sea un 'Guardián'?",
+          "options": [
+            "Que nos ayuda a proteger nuestro dinero de nosotros mismos",
+            "Que muerde si lo tocas",
+            "Que habla"
+          ],
+          "correct": "Que nos ayuda a proteger nuestro dinero de nosotros mismos"
+        },
+        {
+          "question": "¿Qué debes hacer cuando recibes una moneda de regalo?",
+          "options": [
+            "Poner una parte en la alcancía antes de gastar",
+            "Gastar todo y luego buscar la alcancía",
+            "Esconderla bajo la cama"
+          ],
+          "correct": "Poner una parte en la alcancía antes de gastar"
+        },
+        {
+          "question": "¿Cuándo es el mejor momento para abrir una alcancía?",
+          "options": [
+            "Cuando esté llena o hayas cumplido tu meta",
+            "Todos los días",
+            "Cuando estés aburrido"
+          ],
+          "correct": "Cuando esté llena o hayas cumplido tu meta"
+        },
+        {
+          "question": "¿Por qué las alcancías suelen tener forma de cochinito?",
+          "options": [
+            "Por una confusión con el nombre de un barro antiguo (Pygg)",
+            "Porque los cerdos son millonarios",
+            "Porque corren rápido"
+          ],
+          "correct": "Por una confusión con el nombre de un barro antiguo (Pygg)"
+        },
+        {
+          "question": "Si tu alcancía suena mucho al agitarla, ¿qué significa?",
+          "options": [
+            "Que tiene monedas que chocan (está en proceso)",
+            "Que está vacía",
+            "Que tiene billetes"
+          ],
+          "correct": "Que tiene monedas que chocan (está en proceso)"
+        },
+        {
+          "question": "¿Cuál es un lugar seguro para poner tu alcancía en casa?",
+          "options": [
+            "En un estante alto o un cajón especial",
+            "En la banqueta de la calle",
+            "En la tina del baño"
+          ],
+          "correct": "En un estante alto o un cajón especial"
+        },
+        {
+          "question": "¿Qué aprendes al usar una alcancía?",
+          "options": [
+            "Disciplina y Paciencia",
+            "A correr rápido",
+            "A dibujar cochinitos"
+          ],
+          "correct": "Disciplina y Paciencia"
+        },
+        {
+          "question": "Verdadero o Falso: Una caja de cartón bien cerrada también puede ser una alcancía.",
+          "options": ["Verdadero", "Falso", "Solo si es roja"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué debemos hacer cuando la alcancía está llena?",
+          "options": [
+            "Avisar a mamá o papá para contar el dinero juntos",
+            "Esconderla para siempre",
+            "Tirarla a la basura"
+          ],
+          "correct": "Avisar a mamá o papá para contar el dinero juntos"
+        }
+      ],
+      "rubric": "El alumno identifica el propósito de una alcancía y explica por qué es más segura que guardar dinero suelto en 3 escenarios distintos."
+    },
+    "teacher_tips": [
+      "No juzgue las decisiones de gasto de los niños; ayúdelos a ver las consecuencias de cada camino.",
+      "Cuente una anécdota personal sobre algo que usted ahorró por mucho tiempo; los niños aman las historias reales de sus maestros.",
+      "Relacione el frasco de 'Dar' con acciones no monetarias también (dar tiempo, dar un abrazo) para reforzar el valor de la generosidad."
+    ]
+  },
+  "P1-1-5": {
+    "code": "P1-1-5",
+    "title": "Mi meta de ahorro: quiero comprar...",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Motivación",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Aprender a definir, visualizar y planificar un objetivo de ahorro concreto, transformando la privación momentánea en una motivación tangible a largo plazo.",
+      "competencies": [
+        "Visualización",
+        "Planificación Estratégica",
+        "Postergación de la Gratificación",
+        "Toma de Decisiones"
+      ],
+      "materials": [
+        "Catálogos de juguetes y libros",
+        "Revistas para recortar",
+        "Plantilla 'Mi Camino al Tesoro'",
+        "Pegamento y purpurina",
+        "Video: 'Ceny cumple su sueño'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Sueño",
+          "duration": "15 min",
+          "label": "Imagina tu Recompensa"
+        },
+        {
+          "phase": "Desarrollo: El Mapa",
+          "duration": "30 min",
+          "label": "Taller de Visualización"
+        },
+        {
+          "phase": "Cierre: El Contrato",
+          "duration": "15 min",
+          "label": "Mi Primera Promesa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA FÁBRICA DE SUEÑOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre a Ceny imaginando un objeto muy especial. Explique que ahorrar sin una meta es como caminar sin saber a dónde ir. Cuando tienes una META, cada moneda que guardas se convierte en un pedacito de ese sueño. Pregunte: 'Si tuvieras un superpoder para comprar una sola cosa en un mes, ¿qué elegirías?'.",
+          "activity": "Dinámica 'Cierra los Ojos': Los niños deben imaginar que ya tienen su meta en las manos. ¿A qué huele? ¿De qué color es? ¿Cómo se siente tocarla?"
+        },
+        {
+          "title": "FASE II: EL MAPA DEL TESORO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Entregue la plantilla 'Mi Camino al Tesoro'. Los niños deben buscar en revistas una imagen que represente su meta. Si no la encuentran, deben dibujarla con mucho detalle. Explique que ver la imagen todos los días cerca de su alcancía les dará 'fuerza de voluntad' para no gastar su dinero en dulces.",
+          "activity": "Taller de Collage: Crear el 'Tablero de mi Meta'. Deben decorar el borde con estrellas que representen los días de ahorro necesarios."
+        },
+        {
+          "title": "FASE III: EL PACTO DEL AHORRADOR (CIERRE)",
+          "duration": "15 min",
+          "description": "Cierre la clase con una ceremonia de compromiso. Cada niño presenta su meta al grupo (si desea) y explica por qué es importante para él. Refuerce que las metas pueden ser pequeñas (un chocolate grande) o medianas (un set de legos). No hay metas malas, solo metas que requieren distintos tiempos.",
+          "activity": "Reto 'La Promesa Visual': Pegar su mapa de meta en el lugar donde guardarán su alcancía en casa."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Una meta es el 'combustible' del ahorro. Sin una meta clara, es muy fácil rendirse ante el primer antojo.",
+      "sections": [
+        {
+          "subtitle": "¿Qué es una Meta SMART para niños?",
+          "content": "Una meta de ahorro no es solo decir 'quiero algo' — necesita tener ciertas características para funcionar de verdad. En CEN Academy usamos tres preguntas mágicas: ¿Es CLARA (sabes exactamente qué quieres y cuánto cuesta)? ¿Es REALISTA (puedes lograrlo ahorrando tu domingo o mesada en un tiempo razonable)? ¿Es EMOCIONANTE (de verdad te hace muy feliz la idea de tenerlo)? Si las tres respuestas son 'sí', tienes una meta perfecta. Por ejemplo: 'Quiero comprar el set de Lego del espacio que cuesta $120, ahorrando $15 por semana.' Eso es claro, realista y emocionante."
+        },
+        {
+          "subtitle": "La Visualización: Ver para Lograr",
+          "content": "Los científicos que estudian el cerebro han descubierto algo increíble: cuando vemos una imagen clara de lo que queremos lograr, nuestro cerebro activa zonas de motivación y enfoque que nos ayudan a no rendirnos. ¡Es como darle a tu cerebro un mapa de hacia dónde ir! Por eso, los grandes deportistas imaginan su victoria antes del partido, y los ahorradores exitosos tienen una foto de su meta pegada donde la ven todos los días. Si tu meta es un libro, una bicicleta o un juguete especial, busca una imagen, recórtala, dibújala o imprímela y pégala en tu alcancía o en tu cuarto."
+        },
+        {
+          "subtitle": "Priorizar: Una a la Vez",
+          "content": "El problema de querer todo al mismo tiempo es que el dinero se divide entre tantas metas que nunca se llega a ninguna. Imagina que tienes un vaso de agua y quieres llenar 10 vasos a la vez — terminas con todos medio vacíos. En cambio, si te concentras en uno solo, lo llenas completamente y luego pasas al siguiente. Así es el ahorro: elige UNA meta, trabaja en ella con toda tu energía hasta lograrla, celébrala bien y luego pasa a la siguiente. Cada victoria te da confianza y energía para la siguiente, y así vas creciendo poco a poco."
+        },
+        {
+          "subtitle": "El Camino del Ahorro",
+          "content": "Imagina que tu meta es llegar a una montaña preciosa que está a lo lejos. Cada moneda que metes en tu alcancía es un paso hacia adelante en el camino. Si un día no metes ninguna moneda, simplemente te quedas parado — no avanzas, pero tampoco retrocedes. Pero si sacas monedas para gastar en cosas pequeñas, ¡estás caminando hacia atrás! Lo más importante es la constancia: no tienes que dar pasos gigantes — muchos pasos pequeños llegan igual al destino. Cuando finalmente llegues a tu meta, te darás cuenta de que cada pequeño esfuerzo valió completamente la pena."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una meta de ahorro?",
+          "options": [
+            "Un objetivo claro de algo que queremos comprar en el futuro",
+            "Una carrera de atletismo",
+            "Un tipo de moneda"
+          ],
+          "correct": "Un objetivo claro de algo que queremos comprar en el futuro"
+        },
+        {
+          "question": "¿Para qué sirve tener un dibujo de tu meta cerca de tu alcancía?",
+          "options": [
+            "Para recordarte por qué ahorras y no gastar en antojos",
+            "Para que la alcancía no tenga frío",
+            "Para que el dinero se multiplique solo"
+          ],
+          "correct": "Para recordarte por qué ahorras y no gastar en antojos"
+        },
+        {
+          "question": "Si quieres un balón de $100 y tienes $10, ¿cuál es tu meta?",
+          "options": [
+            "Juntar los $90 que faltan",
+            "Comprar dulces con los $10",
+            "Olvidar el balón"
+          ],
+          "correct": "Juntar los $90 que faltan"
+        },
+        {
+          "question": "¿Por qué es mejor ahorrar para una sola cosa a la vez?",
+          "options": [
+            "Porque así logras tu meta más rápido y no te desesperas",
+            "Porque es prohibido querer dos cosas",
+            "Porque no caben dos dibujos en la alcancía"
+          ],
+          "correct": "Porque así logras tu meta más rápido y no te desesperas"
+        },
+        {
+          "question": "¿Qué debes hacer si ves un dulce que se te antoja mucho pero estás ahorrando para tu meta?",
+          "options": [
+            "Recordar tu meta y guardar tu dinero",
+            "Gastar el dinero y empezar de nuevo mañana",
+            "Enojarte"
+          ],
+          "correct": "Recordar tu meta y guardar tu dinero"
+        },
+        {
+          "question": "Si tu meta es un helado que cuesta $15, ¿es una meta de corto o largo plazo?",
+          "options": [
+            "Corto plazo (se logra rápido)",
+            "Largo plazo (tarda años)",
+            "No es una meta"
+          ],
+          "correct": "Corto plazo (se logra rápido)"
+        },
+        {
+          "question": "¿Qué significa que una meta sea 'Realista'?",
+          "options": [
+            "Que es algo que sí puedes lograr con tu esfuerzo y ahorro",
+            "Que es algo que solo existe en sueños",
+            "Que es muy, muy caro"
+          ],
+          "correct": "Que es algo que sí puedes lograr con tu esfuerzo y ahorro"
+        },
+        {
+          "question": "¿Qué parte del ciclo de ahorro es la más divertida?",
+          "options": [
+            "¡Lograr la meta y celebrarlo!",
+            "Esperar",
+            "Perder dinero"
+          ],
+          "correct": "¡Lograr la meta y celebrarlo!"
+        },
+        {
+          "question": "¿Qué pasa si cambias de meta a la mitad del camino?",
+          "options": [
+            "Está bien, pero podrías tardar más en lograr algo",
+            "Se borra todo tu dinero",
+            "Es imposible"
+          ],
+          "correct": "Está bien, pero podrías tardar más en lograr algo"
+        },
+        {
+          "question": "Verdadero o Falso: Una meta puede ser también ahorrar para regalarle algo a otra persona.",
+          "options": ["Verdadero", "Falso", "Solo para mamá"],
+          "correct": "Verdadero"
+        }
+      ],
+      "rubric": "El alumno define una meta clara, estima el costo (con ayuda) y crea un mapa de visualización decorado."
+    },
+    "teacher_tips": [
+      "Ayude a los niños a calcular cuántos 'domingos' o 'semanas' les tomaría su meta para que el tiempo sea tangible.",
+      "Si una meta es demasiado cara (ej. un PlayStation), sugiera una meta intermedia (un control o un juego).",
+      "Hable sobre la importancia de no romper la alcancía hasta que esté llena o se cumpla el plazo."
+    ]
+  },
+  "P1-2-1": {
+    "code": "P1-2-1",
+    "title": "Necesito vs. quiero: la diferencia más importante",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Analítico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Distinguir de manera crítica entre necesidades vitales y deseos personales, entendiendo que los recursos familiares son finitos y requieren una priorización inteligente.",
+      "competencies": [
+        "Priorización Estratégica",
+        "Análisis de Consumo",
+        "Toma de Decisiones",
+        "Inteligencia Emocional"
+      ],
+      "materials": [
+        "Video: 'Ceny en la Isla de las Decisiones'",
+        "Tarjetas de imágenes: Agua, Casa, Juguete, Medicina, Videojuego",
+        "Dos aros grandes (Rojo y Azul)",
+        "Ficha de trabajo: 'Mi Mochila de Supervivencia'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Súper",
+          "duration": "15 min",
+          "label": "El Dilema de la Carretilla"
+        },
+        {
+          "phase": "Desarrollo: Filtro Vital",
+          "duration": "30 min",
+          "label": "La Isla Desierta"
+        },
+        {
+          "phase": "Cierre: La Regla de Oro",
+          "duration": "15 min",
+          "label": "Prioridades CEN"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA CARRETILLA DE CENY (APERTURA)",
+          "duration": "15 min",
+          "description": "Ceny va al súper con su mamá. Quiere comprar: manzanas, leche, un huevo kínder, una revista de superhéroes y papel de baño. Pero el dinero solo alcanza para 3 cosas. Pregunte: '¿Qué pasaría si compra solo el chocolate y la revista y olvida la leche y el papel?'. Explore las consecuencias reales de elegir deseos sobre necesidades.",
+          "activity": "Dinámica 'Grito de Prioridad': El maestro muestra una imagen. Si es NECESIDAD, los niños aplauden una vez. Si es DESEO, los niños dicen '¡Ojalá!' en voz baja."
+        },
+        {
+          "title": "FASE II: EL NÁUFRAGO INTELIGENTE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Imagine que el salón es un barco que va a una isla desierta. Cada niño solo puede llevar 5 cosas en su 'Mochila de Supervivencia'. Presente 20 opciones. Observe cómo los niños empiezan eligiendo juguetes y luego, tras la reflexión guiada ('¿Qué beberás?', '¿Dónde dormirás?'), cambian por agua y herramientas.",
+          "activity": "Juego 'Los Aros de Clasificación': En el aro azul ponemos lo que nos mantiene VIVOS (Necesidades). En el rojo, lo que nos hace SONREÍR (Deseos). Los niños deben correr y colocar sus tarjetas en el aro correcto."
+        },
+        {
+          "title": "FASE III: LA LISTA DE CASA (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que los adultos hacen este ejercicio todos los meses para pagar la renta, la luz y la comida. Un niño inteligente ayuda a sus papás no pidiendo 'deseos' cuando sabe que hay 'necesidades' pendientes. Pida que dibujen la necesidad más importante de su casa hoy.",
+          "activity": "Reto 'El Semáforo del Gasto': Colorear de verde las necesidades y de amarillo los deseos en una lista de compras."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Aprender a diferenciar entre lo que necesitamos para vivir y lo que deseamos para disfrutar es el primer paso para ser un genio financiero.",
+      "sections": [
+        {
+          "subtitle": "Necesidades: Lo Vital",
+          "content": "Las necesidades son las cosas que realmente necesitamos para vivir sanos, seguros y bien. Hay cinco necesidades básicas que todos los seres humanos compartimos: alimento nutritivo (no dulces, sino comida de verdad), agua limpia para beber y bañarse, un techo o vivienda donde protegernos, ropa adecuada para el clima y atención médica cuando estamos enfermos. Sin estas cinco cosas, nuestra vida y salud estarían en riesgo. Cuando la familia tiene dinero, lo primero que debe cubrirse siempre son las necesidades de todos, antes de cualquier otra cosa."
+        },
+        {
+          "subtitle": "Deseos: Los Gustos",
+          "content": "Los deseos son las cosas que queremos tener porque nos gustan, nos divierten o nos hacen felices, pero sin las cuales podríamos vivir perfectamente bien. Un videojuego, una bolsa de dulces, ir al cine, una figura de colección o una nueva mochila de moda son ejemplos de deseos. No hay nada malo en tenerlos — la vida sería muy aburrida sin ellos — pero son opcionales. Esto significa que primero se cubren las necesidades, y con lo que sobra o con el ahorro especial, se puede disfrutar de los deseos. Un Ciudadano CEN Academy sabe distinguir entre estos dos grupos antes de pedir o gastar."
+        },
+        {
+          "subtitle": "El Conflicto Emocional",
+          "content": "Aquí viene el truco más difícil: a veces nuestro cerebro nos engaña haciéndonos sentir que un juguete o un dulce es tan urgente como el agua o la comida. Esa sensación de '¡lo necesito YA!' se llama impulso, y es completamente normal. La clave está en parar, respirar tres veces y preguntarse: '¿Si no lo compro hoy, me va a pasar algo malo?' Si la respuesta es no, entonces es un deseo, no una necesidad. Practicar esta pausa de 3 respiraciones antes de cada compra es uno de los ejercicios más poderosos que enseña CEN Academy para tomar decisiones inteligentes."
+        },
+        {
+          "subtitle": "La Escasez",
+          "content": "Escasez significa que los recursos (como el dinero) son limitados, pero nuestros deseos son infinitos. Siempre habrá algo más que queremos, pero no siempre habrá dinero suficiente para todo. Por eso, saber cuáles son necesidades y cuáles son deseos nos ayuda a priorizar: cuando el dinero es poco, sabemos exactamente qué comprar primero. Esta habilidad — llamada 'toma de decisiones bajo escasez' — es una de las más importantes en toda la educación financiera, y tú ya la estás aprendiendo a los 6 años. ¡Eso es ser un verdadero genio CEN!"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la diferencia principal entre una necesidad y un deseo?",
+          "options": [
+            "La necesidad es vital para vivir y el deseo es por gusto",
+            "El deseo es más caro siempre",
+            "No hay diferencia"
+          ],
+          "correct": "La necesidad es vital para vivir y el deseo es por gusto"
+        },
+        {
+          "question": "Si tienes sed, ¿qué es una NECESIDAD?",
+          "options": [
+            "Un refresco con gas",
+            "Agua natural limpia",
+            "Un helado de fresa"
+          ],
+          "correct": "Agua natural limpia"
+        },
+        {
+          "question": "¿Cuál de estos es un DESEO?",
+          "options": [
+            "Una casa donde dormir",
+            "Un videojuego nuevo",
+            "Frutas y verduras"
+          ],
+          "correct": "Un videojuego nuevo"
+        },
+        {
+          "question": "Si el dinero de la familia es poco este mes, ¿qué debe pagarse primero?",
+          "options": [
+            "El internet para jugar",
+            "La renta de la casa y la comida",
+            "Un pastel gigante"
+          ],
+          "correct": "La renta de la casa y la comida"
+        },
+        {
+          "question": "¿Por qué no podemos comprar todos nuestros deseos al mismo tiempo?",
+          "options": [
+            "Porque el dinero es limitado",
+            "Porque las tiendas cierran",
+            "Porque los deseos son malos"
+          ],
+          "correct": "Porque el dinero es limitado"
+        },
+        {
+          "question": "Si Ceny tiene zapatos rotos y quiere un balón, ¿qué debe comprar primero?",
+          "options": ["El balón", "Unos zapatos nuevos (necesidad)", "Dulces"],
+          "correct": "Unos zapatos nuevos (necesidad)"
+        },
+        {
+          "question": "Verdadero o Falso: Los deseos son malos y nunca debemos cumplirlos.",
+          "options": ["Verdadero", "Falso", "Solo si eres rico"],
+          "correct": "Falso"
+        },
+        {
+          "question": "¿Cómo se siente una persona que sabe priorizar sus necesidades?",
+          "options": ["Tranquila y segura", "Enojada todo el tiempo", "Triste"],
+          "correct": "Tranquila y segura"
+        },
+        {
+          "question": "¿Qué puedes hacer si quieres un deseo pero tus papás dicen que ahora no se puede?",
+          "options": [
+            "Llorar en el suelo",
+            "Ahorrar tú mismo para comprarlo después",
+            "Enojarte con ellos"
+          ],
+          "correct": "Ahorrar tú mismo para comprarlo después"
+        },
+        {
+          "question": "Identifica la necesidad en este grupo: Peluche, Manzana, Patines.",
+          "options": ["Peluche", "Manzana", "Patines"],
+          "correct": "Manzana"
+        }
+      ],
+      "rubric": "El alumno clasifica correctamente una lista de 10 objetos y justifica por qué el agua es una necesidad y no un deseo."
+    },
+    "teacher_tips": [
+      "Evite decir que los deseos son 'pecados'; son motivadores, pero deben estar en el lugar correcto de la fila.",
+      "Use ejemplos reales de la escuela: '¿Es necesidad tener un lápiz o un lápiz con brillantes?'",
+      "Valide las emociones: 'Sé que quieres mucho ese juguete, pero hoy necesitamos comprar la cena'."
+    ]
+  },
+  "P1-2-2": {
+    "code": "P1-2-2",
+    "title": "Cuando no alcanza: elegir entre dos cosas",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Emocional",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Introducir el concepto económico de 'Costo de Oportunidad' de forma lúdica, enseñando a los niños a manejar la renuncia y a tomar decisiones basadas en el valor.",
+      "competencies": [
+        "Juicio Crítico",
+        "Manejo de la Frustración",
+        "Elección Racional",
+        "Resiliencia"
+      ],
+      "materials": [
+        "Monedas didácticas de $5 y $10",
+        "Dos cajas misteriosas con juguetes diferentes",
+        "Cuento: 'El dilema de la feria de Ceny'",
+        "Fichas 'Mi gran elección'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Dilema",
+          "duration": "15 min",
+          "label": "El Camino A o B"
+        },
+        {
+          "phase": "Desarrollo: La Elección",
+          "duration": "30 min",
+          "label": "La Balanza de Deseos"
+        },
+        {
+          "phase": "Cierre: Sin Arrepentirse",
+          "duration": "15 min",
+          "label": "Felicidad Decidida"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA ENTRADA A LA FERIA (APERTURA)",
+          "duration": "15 min",
+          "description": "Imagine que Ceny llega a la feria. Solo tiene dinero para UN ticket. Puede elegir la Rueda de la Fortuna (vista hermosa) o los Carritos Chocones (diversión rápida). No puede hacer ambos. Pregunte: '¿Qué siente Ceny al ver que el otro juego se aleja?'. Hable sobre la importancia de disfrutar lo que elegimos en lugar de sufrir por lo que dejamos.",
+          "activity": "Dinámica 'Estatua de Elección': El maestro pone dos canciones. Los niños deben bailar hacia el lado del salón de la canción que más les guste. Cuando la música para, deben explicar por qué renunciaron a la otra canción."
+        },
+        {
+          "title": "FASE II: LA BALANZA DEL VALOR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente dos opciones de compra similares en precio pero diferentes en función. Ej: 'Un libro de cuentos o una caja de colores'. Entregue dinero ficticio exacto para solo uno. Los niños deben debatir en parejas cuál les daría más tiempo de felicidad.",
+          "activity": "Juego '¿Qué prefieres?': El maestro lanza situaciones: '¿Prefieres un helado hoy o esperar 3 días por una entrada al cine?'. Los niños justifican su elección basándose en el tiempo y el gusto."
+        },
+        {
+          "title": "FASE III: MI ELECCIÓN FELIZ (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que elegir es un 'Superpoder'. Cada vez que eliges bien, te vuelves más fuerte y maduro. Pida a los niños que dibujen la cosa que eligieron hoy en clase y le pongan una carita feliz. Enseñe que 'Costo de Oportunidad' es el nombre elegante de lo que dejamos pasar.",
+          "activity": "Reto 'La Promesa del No-Berrinche': Practicar cómo decir 'Elegí esto y estoy feliz' cuando no podemos tenerlo todo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "En la vida, elegir es renunciar. Cada vez que dices 'sí' a algo, le estás diciendo 'hoy no' a otra cosa.",
+      "sections": [
+        {
+          "subtitle": "El Dinero tiene Límite",
+          "content": "A diferencia de nuestra imaginación que puede soñar sin límites, el dinero sí se acaba. Si tienes $20 pesos y compras algo de $20, tu cartera queda en cero. No puedes comprar nada más hasta que ganes o recibas más dinero. Esto se llama restricción presupuestaria, y existe para todas las personas del mundo — desde los niños hasta los presidentes de los países. Entender este límite desde pequeño te enseña a valorar lo que tienes, a planificar antes de gastar y a tomar decisiones con mayor cuidado."
+        },
+        {
+          "subtitle": "¿Qué es el Costo de Oportunidad?",
+          "content": "El costo de oportunidad es lo que renuncias cuando eliges algo. Imagina que tienes $10 y puedes comprar un helado o guardar esa moneda en tu alcancía. Si compras el helado, el costo de oportunidad es ese paso hacia tu meta de ahorro que no diste. Si guardas la moneda, el costo de oportunidad es el helado que no comiste hoy. Ninguna opción es 'mala' — solo son diferentes. Lo importante es que al elegir, sepas exactamente a qué estás renunciando, para poder decidir si vale la pena. Esta reflexión convierte a un niño en un tomador de decisiones muy inteligente."
+        },
+        {
+          "subtitle": "Aprender a Decidir",
+          "content": "Tomar buenas decisiones financieras no es cuestión de suerte — es una habilidad que se aprende y practica. Antes de gastar, hazte tres preguntas: ¿Lo necesito o solo lo quiero? ¿Cuánto tiempo tardé en ganar ese dinero? ¿Hay algo más importante en lo que podría usar este dinero? Si después de estas tres preguntas todavía quieres comprarlo, adelante — fue una decisión consciente. Si te das cuenta de que no es tan importante, ¡lograste tu primera victoria sobre el impulso! Cada buena decisión es como un músculo: mientras más la practicas, más fuerte se vuelve."
+        },
+        {
+          "subtitle": "Manejar la Frustración",
+          "content": "Cuando elegimos una cosa y dejamos otra, a veces sentimos un poquito de tristeza o envidia. Eso es completamente normal y les pasa a todos, incluyendo a los adultos. La clave está en tres pasos: primero, reconocer el sentimiento ('sí, me da un poco de envidia'); segundo, recordar por qué elegiste lo que elegiste ('porque estoy ahorrando para algo mejor'); y tercero, enfocarte en disfrutar lo que sí tienes. Un Ciudadano CEN Academy aprende que la gratitud — agradecer lo que tiene — es el antídoto más poderoso contra la frustración. Las personas más felices no son las que tienen más, sino las que disfrutan más lo que tienen."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Si tienes dinero para un solo juguete y hay dos que te gustan, ¿qué debes hacer?",
+          "options": [
+            "Llorar hasta que te den los dos",
+            "Elegir el que más te gusta y disfrutarlo",
+            "No comprar nada"
+          ],
+          "correct": "Elegir el que más te gusta y disfrutarlo"
+        },
+        {
+          "question": "¿Qué significa 'renunciar' al elegir?",
+          "options": [
+            "Que dejas pasar una opción para tomar otra",
+            "Que pierdes dinero",
+            "Que te regalan algo"
+          ],
+          "correct": "Que dejas pasar una opción para tomar otra"
+        },
+        {
+          "question": "Si eliges comprar un chocolate hoy, ¿cuál es tu 'costo de oportunidad'?",
+          "options": [
+            "El sabor del chocolate",
+            "El dinero que ya no podrás ahorrar para tu meta",
+            "El papel del chocolate"
+          ],
+          "correct": "El dinero que ya no podrás ahorrar para tu meta"
+        },
+        {
+          "question": "¿Por qué es importante pensar antes de comprar?",
+          "options": [
+            "Para no arrepentirnos después de gastar el dinero",
+            "Para que la tienda no cierre",
+            "Para que el dinero brille"
+          ],
+          "correct": "Para no arrepentirnos después de gastar el dinero"
+        },
+        {
+          "question": "Si tienes $5 y una paleta cuesta $5 y un chicle $2, ¿puedes comprar los dos?",
+          "options": [
+            "Sí, me sobra dinero",
+            "No, me falta dinero para los dos ($7)",
+            "Tal vez"
+          ],
+          "correct": "No, me falta dinero para los dos ($7)"
+        },
+        {
+          "question": "¿Cómo se siente un niño que sabe elegir bien?",
+          "options": ["Seguro de sí mismo", "Confundido", "Triste"],
+          "correct": "Seguro de sí mismo"
+        },
+        {
+          "question": "¿Qué pregunta debes hacerte antes de elegir entre dos cosas?",
+          "options": [
+            "¿Cuál me dará más felicidad o utilidad por más tiempo?",
+            "¿Cuál es el más grande?",
+            "¿Cuál tiene más colores?"
+          ],
+          "correct": "¿Cuál me dará más felicidad o utilidad por más tiempo?"
+        },
+        {
+          "question": "Verdadero o Falso: Es imposible tener todo lo que queremos al mismo tiempo.",
+          "options": ["Verdadero", "Falso", "Solo si eres niño"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "Si elegiste ver una película, ¿cuál fue tu costo de oportunidad?",
+          "options": [
+            "El tiempo que pudiste usar para jugar en el parque",
+            "El precio de la palomitas",
+            "La oscuridad del cine"
+          ],
+          "correct": "El tiempo que pudiste usar para jugar en el parque"
+        },
+        {
+          "question": "¿Qué debes hacer después de tomar una decisión?",
+          "options": [
+            "Disfrutar tu elección sin pensar en lo que dejaste",
+            "Seguir pidiendo lo otro",
+            "Enojarte"
+          ],
+          "correct": "Disfrutar tu elección sin pensar en lo que dejaste"
+        }
+      ],
+      "rubric": "El alumno demuestra capacidad de elección entre dos objetos y explica qué fue lo que 'dejó pasar' (costo de oportunidad)."
+    },
+    "teacher_tips": [
+      "Use el término 'Elegir es de Valientes' para empoderar a los niños.",
+      "No fuerce la elección; deje que ellos vivan el pequeño conflicto mental de decidir.",
+      "Celebre las decisiones basadas en el ahorro: '¡Wow, elegiste no comprar nada para acercarte a tu meta!'"
+    ]
+  },
+  "P1-2-3": {
+    "code": "P1-2-3",
+    "title": "El precio de las cosas: ¿caro o barato?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Matemático",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender que los objetos tienen valores monetarios distintos y desarrollar la habilidad de comparar precios para maximizar el rendimiento del dinero ahorrado.",
+      "competencies": [
+        "Comparación Numérica",
+        "Observación Detallada",
+        "Valor del Intercambio",
+        "Consumo Inteligente"
+      ],
+      "materials": [
+        "Folletos de ofertas de supermercados",
+        "Lupas de cartón",
+        "Etiquetas de precios de diferentes tamaños",
+        "Simulador 'El Súper de Ceny'",
+        "Báscula de juguete"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Misterio",
+          "duration": "15 min",
+          "label": "Etiquetas Gigantes"
+        },
+        {
+          "phase": "Desarrollo: Detective",
+          "duration": "30 min",
+          "label": "Comparando Ofertas"
+        },
+        {
+          "phase": "Cierre: El Valor Justo",
+          "duration": "15 min",
+          "label": "Compra Maestra"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL ENIGMA DEL PRECIO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre dos objetos: un borrador simple y una mochila brillante. Pregunte: '¿Por qué uno cuesta $5 y el otro $200?'. Guíe la conversación hacia el tamaño, los materiales y el trabajo que costó hacerlos. Introduzca las palabras CARO y BARATO. Explique que el precio es el 'nombre' que le ponemos al valor de algo en monedas.",
+          "activity": "Dinámica 'El Precio Loco': El maestro dice un objeto (ej: un avión real) y los niños deben gritar si creen que es 'Caro' o 'Barato' comparado con un chicle."
+        },
+        {
+          "title": "FASE II: DETECTIVES DE ETIQUETAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Reparta folletos de supermercado. Pida que busquen dos manzanas que se vean iguales pero tengan precios distintos. Explique que a veces las tiendas ponen precios diferentes por la misma cosa. Aprender a buscar el precio más bajo por la misma calidad se llama 'Consumo Inteligente'.",
+          "activity": "Juego 'El Súper de Ceny': Ponga una tienda con 3 estaciones. En cada una hay el mismo producto pero con distinto precio. Los niños deben recorrer las estaciones con su alcancía didáctica y elegir dónde comprar para que les sobre más dinero."
+        },
+        {
+          "title": "FASE III: LA ETIQUETA DORADA (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: El precio no es lo único importante, pero compararlo nos ayuda a que nuestro ahorro rinda más. Pida a los niños que dibujen una etiqueta de precio para su juguete favorito.",
+          "activity": "Reto 'El Comparador Amistoso': En parejas, comparar los precios de sus dibujos y decidir cuál es la mejor oferta del salón."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cada objeto en el mundo tiene un número asignado que nos dice cuánto debemos pagar por él. Ese número es el precio.",
+      "sections": [
+        {
+          "subtitle": "¿De dónde sale el precio?",
+          "content": "Cuando ves una etiqueta de precio en una tienda, ese número no es inventado al azar — es el resultado de sumar muchas cosas. Primero están los materiales: la madera, el plástico, la tela o los ingredientes que se usaron para hacer el producto. Después está el trabajo de las personas que lo fabricaron, empacaron y transportaron. También se incluye el dinero que gasta la tienda en luz, renta y empleados. Finalmente, el dueño agrega una pequeña ganancia para poder seguir abriendo su negocio. Todo eso junto forma el precio final que tú ves en la etiqueta."
+        },
+        {
+          "subtitle": "Caro vs. Barato",
+          "content": "Las palabras 'caro' y 'barato' son relativas — dependen de con qué las comparas y de cuánto dinero tienes. Un refresco de $20 es barato comparado con un televisor de $8,000, pero es caro si solo tienes $15 en tu bolsillo. Lo importante es comparar los precios del mismo producto en diferentes lugares: a veces la misma mochila cuesta $150 en una tienda y $120 en otra. Un comprador inteligente siempre compara antes de comprar. En México, los mercados y tianguis muchas veces ofrecen los mismos productos a precios más bajos que los centros comerciales."
+        },
+        {
+          "subtitle": "La Calidad importa",
+          "content": "Comprar lo más barato siempre puede parecer la mejor idea, pero a veces lo barato sale caro. Imagina que compras unos tenis de $80 que se rompen después de un mes, y luego tienes que comprar otros. En total gastaste $160. Pero si hubieras comprado unos de $130 que duran un año, habrías ahorrado $30. Antes de comprar algo, pregúntate: ¿De qué material está hecho? ¿Cuánto tiempo debería durar? ¿Qué dicen otras personas que lo compraron? Estas preguntas te ayudan a elegir calidad por encima de solo precio, y eso es lo que hace un comprador experto."
+        },
+        {
+          "subtitle": "Las Ofertas",
+          "content": "Las tiendas ponen precios de oferta porque quieren vender más rápido o porque tienen demasiado producto en su almacén. Cuando ves un letrero que dice '50% de descuento' o 'Lleva 3 paga 2', es porque la tienda necesita que ese producto salga pronto. Aprovechar las ofertas en productos que realmente necesitas es una excelente forma de cuidar el dinero familiar. Pero cuidado con la trampa: no compres algo en oferta solo porque está barato si no lo necesitas. Comprar algo que no necesitas, aunque esté muy barato, sigue siendo gastar dinero innecesariamente."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el precio de un objeto?",
+          "options": [
+            "El nombre del objeto",
+            "La cantidad de dinero que debemos pagar por él",
+            "El color del objeto"
+          ],
+          "correct": "La cantidad de dinero que debemos pagar por él"
+        },
+        {
+          "question": "Si una leche cuesta $20 en la tienda A y $18 en la tienda B, ¿dónde es más BARATO?",
+          "options": ["En la tienda A", "En la tienda B", "Cuestan lo mismo"],
+          "correct": "En la tienda B"
+        },
+        {
+          "question": "¿Para qué sirven las etiquetas de precio?",
+          "options": [
+            "Para saber cuánto dinero necesitamos antes de llegar a la caja",
+            "Para que no se vea vacío el estante",
+            "Para decorar"
+          ],
+          "correct": "Para saber cuánto dinero necesitamos antes de llegar a la caja"
+        },
+        {
+          "question": "¿Por qué un diamante es más caro que una piedra común?",
+          "options": [
+            "Porque hay muy pocos y son difíciles de encontrar",
+            "Porque es más pesado",
+            "Porque brilla más fuerte"
+          ],
+          "correct": "Porque hay muy pocos y son difíciles de encontrar"
+        },
+        {
+          "question": "¿Qué significa hacer una 'Compra Inteligente'?",
+          "options": [
+            "Comprar lo primero que veas",
+            "Comparar precios y calidad para elegir lo mejor",
+            "Gastar todo el dinero rápido"
+          ],
+          "correct": "Comparar precios y calidad para elegir lo mejor"
+        },
+        {
+          "question": "Si compras algo muy barato pero se rompe el mismo día, ¿fue una buena compra?",
+          "options": [
+            "Sí, porque gasté poco",
+            "No, porque ahora tengo que comprar otro y gastaré más",
+            "No sé"
+          ],
+          "correct": "No, porque ahora tengo que comprar otro y gastaré más"
+        },
+        {
+          "question": "¿Cuál es el símbolo que usamos en México antes del precio?",
+          "options": [
+            "El signo de interrogación ?",
+            "El signo de pesos $",
+            "Una carita feliz"
+          ],
+          "correct": "El signo de pesos $"
+        },
+        {
+          "question": "Si un juguete cuesta $50 y tú tienes $40, ¿qué puedes hacer?",
+          "options": [
+            "Enojarte",
+            "Ahorrar $10 más para que te alcance",
+            "Quitárselo a otro niño"
+          ],
+          "correct": "Ahorrar $10 más para que te alcance"
+        },
+        {
+          "question": "¿Qué es una 'Oferta'?",
+          "options": [
+            "Cuando el precio es más bajo de lo normal por un tiempo",
+            "Cuando el precio sube mucho",
+            "Cuando te regalan la tienda"
+          ],
+          "correct": "Cuando el precio es más bajo de lo normal por un tiempo"
+        },
+        {
+          "question": "Verdadero o Falso: Los precios de la misma cosa pueden ser diferentes en distintas tiendas.",
+          "options": ["Verdadero", "Falso", "Solo en navidad"],
+          "correct": "Verdadero"
+        }
+      ],
+      "rubric": "El alumno identifica el precio menor en un grupo de 3 etiquetas y explica por qué es importante comparar antes de pagar."
+    },
+    "teacher_tips": [
+      "Use monedas de verdad (si es posible) para que sientan el peso del dinero.",
+      "Lleve folletos reales del súper de la semana para que vean que los precios cambian.",
+      "Hable sobre el valor sentimental: a veces algo barato es muy valioso porque nos lo dio alguien especial."
+    ]
+  },
+  "P1-2-4": {
+    "code": "P1-2-4",
+    "title": "Pedir prestado: sí o no, ¿y por qué?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Ético",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Introducir los fundamentos de la deuda responsable y la importancia de la palabra dada, comprendiendo que el dinero prestado no es propio y genera una obligación de devolución.",
+      "competencies": [
+        "Responsabilidad Civil",
+        "Integridad Personal",
+        "Análisis de Consecuencias",
+        "Empatía"
+      ],
+      "materials": [
+        "Cuento: 'Ceny y el color rojo prestado'",
+        "Gafetes de 'Banco de la Confianza'",
+        "Fichas de 'Pagado'",
+        "Espejo de la Honestidad"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Trato",
+          "duration": "15 min",
+          "label": "La Palabra de Honor"
+        },
+        {
+          "phase": "Desarrollo: La Deuda",
+          "duration": "30 min",
+          "label": "El Calendario de Regreso"
+        },
+        {
+          "phase": "Cierre: La Confianza",
+          "duration": "15 min",
+          "label": "Amistad y Dinero"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL COLOR DE LA CONFIANZA (APERTURA)",
+          "duration": "15 min",
+          "description": "Narre cómo Ceny necesita terminar un dibujo pero no tiene el color rojo. Su amigo se lo presta con la condición de regresarlo al final del recreo. Ceny se olvida y se lo lleva a su casa. Pregunte: '¿Cómo se siente el amigo al día siguiente cuando quiere usar su color?'. Explore el concepto de CONFIANZA.",
+          "activity": "Dinámica 'El Espejo de la Honestidad': Los niños se miran al espejo y dicen: 'Mi palabra vale oro, si pido algo, lo devuelvo'."
+        },
+        {
+          "title": "FASE II: EL BANCO DE LOS AMIGOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Simule un 'Banco' en el salón. Un niño pide prestado 3 fichas para comprar un dulce didáctico. El 'banquero' le pide que firme un papelito que diga CUÁNDO las va a devolver. Explique que pedir prestado es usar el tiempo de ahorro de otra persona. Si no devuelves, le estás robando tiempo a tu amigo.",
+          "activity": "Juego 'La Cadena de Devolución': Los niños se pasan un objeto. Cada vez que alguien lo recibe, debe decir una frase de compromiso: 'Gracias por prestarme, te lo devuelvo mañana sin falta'."
+        },
+        {
+          "title": "FASE III: CERO DEUDAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Es mejor ahorrar que pedir prestado. Si ahorras, el dinero es tuyo. Si pides prestado, el dinero es un problema pendiente. Pida que dibujen a Ceny devolviendo una moneda con una gran sonrisa.",
+          "activity": "Reto 'La Promesa CEN': 'No pediré prestado lo que no pueda devolver'."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Pedir prestado es un compromiso serio que pone a prueba nuestra honestidad y nuestra palabra.",
+      "sections": [
+        {
+          "subtitle": "Lo que no es mío",
+          "content": "Cuando alguien te presta dinero, ese dinero no es tuyo — es solo un préstamo temporal. Puedes tenerlo en la mano, pero en tu corazón debes saber que le pertenece a la otra persona y que debes devolvérselo. Por eso hay que cuidarlo incluso más que el propio. Imagina que tu amigo te presta su juguete favorito: lo cuidas con mucho más cuidado que el tuyo porque sabes que tienes que regresarlo en buen estado. Con el dinero prestado funciona exactamente igual — no es para gastarlo en lo que quieras, sino para usarlo con responsabilidad y devolvérlo en el tiempo acordado."
+        },
+        {
+          "subtitle": "La Palabra de Honor",
+          "content": "Cuando alguien te presta dinero y tú dices 'te lo pago el viernes', estás haciendo una promesa. Y las promesas son muy serias, especialmente las de dinero. Si cumples tu palabra, la persona sabrá que eres confiable y que puedes pedir ayuda cuando de verdad la necesites. Si no cumples, esa persona dudará de ti para siempre. En finanzas esto se llama 'reputación crediticia', y es como una calificación de confianza que te acompaña toda la vida. Desde ahora, practica cumplir tus promesas de dinero — aunque sean pequeñas, como devolver los $5 que te prestaron para el recreo."
+        },
+        {
+          "subtitle": "¿Por qué evitar las deudas?",
+          "content": "Una deuda es dinero que debes a alguien. Tener deudas no es necesariamente malo — a veces son necesarias — pero vivir con muchas deudas es vivir con una preocupación constante. Es como cargar una mochila muy pesada todo el tiempo. Además, cuando los adultos piden prestado a los bancos, el banco cobra un costo extra llamado interés, que puede hacer que al final pagues mucho más de lo que recibiste. La regla de oro de CEN Academy es: si puedes esperar y ahorrar para comprarlo, siempre es mejor que pedir prestado. Así, cuando lo compras, lo disfrutas completamente libre de preocupaciones."
+        },
+        {
+          "subtitle": "Pedir Ayuda vs. Pedir Dinero",
+          "content": "Hay una diferencia importante entre pedir ayuda y pedir dinero prestado. Pedir ayuda (como que alguien te explique una tarea, te ayude a cargar algo o te acompañe) es completamente normal y no genera deudas. Pedir dinero prestado sí crea una deuda que hay que pagar. Existen situaciones donde pedir dinero prestado es completamente válido: una emergencia médica, una necesidad urgente que no podía esperar. Pero pedir prestado para comprar dulces, juguetes o caprichos es una señal de que necesitas mejorar tu plan de ahorro. Un Ciudadano CEN Academy trabaja para que sus ahorros cubran sus deseos sin necesitar préstamos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué significa pedir prestado?",
+          "options": [
+            "Que el dinero ahora es mío para siempre",
+            "Usar algo de otra persona con la promesa de devolverlo pronto",
+            "Encontrar dinero en la calle"
+          ],
+          "correct": "Usar algo de otra persona con la promesa de devolverlo pronto"
+        },
+        {
+          "question": "¿Por qué es importante devolver lo que nos prestan a tiempo?",
+          "options": [
+            "Para que la otra persona siga confiando en nosotros",
+            "Para que nos den un premio",
+            "Para que no nos regañen"
+          ],
+          "correct": "Para que la otra persona siga confiando en nosotros"
+        },
+        {
+          "question": "Si pides prestada una moneda para un dulce, ¿cuándo debes regresarla?",
+          "options": [
+            "Nunca",
+            "En cuanto tengas dinero de nuevo o en la fecha acordada",
+            "En un año"
+          ],
+          "correct": "En cuanto tengas dinero de nuevo o en la fecha acordada"
+        },
+        {
+          "question": "¿Cómo se siente una persona que presta algo y no se lo devuelven?",
+          "options": ["Feliz", "Triste y decepcionada", "Emocionada"],
+          "correct": "Triste y decepcionada"
+        },
+        {
+          "question": "¿Qué es más inteligente: ahorrar para comprar algo o pedir prestado?",
+          "options": [
+            "Ahorrar, porque así el objeto es totalmente tuyo",
+            "Pedir prestado siempre",
+            "No comprar nada"
+          ],
+          "correct": "Ahorrar, porque así el objeto es totalmente tuyo"
+        },
+        {
+          "question": "¿Qué debes hacer si no puedes devolver lo prestado en la fecha que dijiste?",
+          "options": [
+            "Esconderte",
+            "Hablar con la persona, pedir una disculpa y explicar cuándo sí podrás",
+            "Decir que nunca te prestaron nada"
+          ],
+          "correct": "Hablar con la persona, pedir una disculpa y explicar cuándo sí podrás"
+        },
+        {
+          "question": "Si alguien te presta algo, ¿cómo debes cuidarlo?",
+          "options": [
+            "Igual o mejor que si fuera tuyo",
+            "No importa si se rompe",
+            "Dárselo a otro amigo"
+          ],
+          "correct": "Igual o mejor que si fuera tuyo"
+        },
+        {
+          "question": "¿Cuál es la 'moneda' más valiosa de una persona?",
+          "options": [
+            "Su palabra y su honestidad",
+            "Su billete de $500",
+            "Su casa"
+          ],
+          "correct": "Su palabra y su honestidad"
+        },
+        {
+          "question": "Verdadero o Falso: Si pides prestado, el dinero que recibes es una 'deuda' hasta que lo devuelves.",
+          "options": ["Verdadero", "Falso", "Solo si es mucho dinero"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué pasa con tu fama de buen pagador si siempre devuelves lo prestado?",
+          "options": [
+            "Nadie te conoce",
+            "Todos saben que eres honesto y confían en ti",
+            "Te cobran más"
+          ],
+          "correct": "Todos saben que eres honesto y confían en ti"
+        }
+      ],
+      "rubric": "El alumno explica el concepto de deuda y simula una conversación honesta para devolver un objeto prestado."
+    },
+    "teacher_tips": [
+      "Enfatice que la honestidad es un valor de vida, no solo de dinero.",
+      "Si un niño pierde algo prestado en el salón, úselo como momento de aprendizaje: '¿Cómo podemos reparar el daño?'",
+      "Hable sobre los bancos de adultos de forma sencilla: 'Son lugares que prestan dinero a quienes demuestran ser responsables'."
+    ]
+  },
+  "P1-2-5": {
+    "code": "P1-2-5",
+    "title": "El presupuesto de casa: ¿cómo ayudan los niños?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Colaborativo",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar que los servicios del hogar (luz, agua, internet) tienen un costo y que el ahorro de recursos naturales es una forma directa de ayudar a la economía familiar.",
+      "competencies": [
+        "Conciencia Ecológica-Financiera",
+        "Responsabilidad Compartida",
+        "Observación de Gastos Invisibles"
+      ],
+      "materials": [
+        "Recibos de luz o agua (reales o simulados)",
+        "Pegatinas de carita feliz y triste",
+        "Video: 'Ceny el Guardián de la Energía'",
+        "Linterna pequeña"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Misterio",
+          "duration": "15 min",
+          "label": "Los Gastos Invisibles"
+        },
+        {
+          "phase": "Desarrollo: Guardianes",
+          "duration": "30 min",
+          "label": "Cacería de Fugas"
+        },
+        {
+          "phase": "Cierre: El Equipo",
+          "duration": "15 min",
+          "label": "Mi Compromiso de Ahorro"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿QUIÉN PAGA LA LUZ? (APERTURA)",
+          "duration": "15 min",
+          "description": "Apague las luces del salón un momento. Pregunte: '¿La luz es gratis?'. Explique que cada vez que prendemos un foco o usamos el agua, hay una maquinita contando monedas que mamá y papá deben pagar al final del mes. Estos se llaman GASTOS INVISIBLES porque no entregamos monedas al momento de usarlos.",
+          "activity": "Dinámica 'El Contador Mágico': Cada vez que el maestro toca un 'interruptor' imaginario, los niños deben hacer sonido de monedas cayendo: '¡Clink, clink!'."
+        },
+        {
+          "title": "FASE II: GUARDIANES DE LA ENERGÍA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Muestre un recibo de luz. Explique que si la barra es alta, hay menos dinero para juguetes o paseos. Si la barra es baja, ¡hay más dinero para la familia! Los niños se convierten en 'Guardianes CEN'. Deben identificar acciones que ahorran dinero: apagar la tele si no la ven, cerrar la llave al lavarse los dientes, no dejar el refri abierto.",
+          "activity": "Juego 'Cacería de Fugas': Los niños recorren el salón (o imaginan su casa) buscando 'monedas que se escapan' (luces prendidas, goteos). Pegan una carita feliz donde hay ahorro y una triste donde hay desperdicio."
+        },
+        {
+          "title": "FASE III: EL EQUIPO DE CASA (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Ahorrar luz y agua es como poner dinero en la alcancía de toda la familia. Pida que dibujen una acción que harán hoy al llegar a casa para ayudar a sus papás.",
+          "activity": "Reto 'El Diploma de Guardián': Entrega de un distintivo a quienes prometan cuidar los recursos invisibles."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ayudar en casa no solo es limpiar; también es cuidar los recursos que cuestan dinero a la familia.",
+      "sections": [
+        {
+          "subtitle": "Gastos Invisibles",
+          "content": "En tu casa hay gastos que no ves directamente pero que cuestan mucho dinero cada mes. La electricidad, el agua, el gas, el internet y el teléfono son servicios que usamos todo el tiempo, pero que se pagan al final del mes con un recibo. Si usamos más de lo necesario — dejamos luces prendidas, tardamos mucho en la ducha o dejamos la televisión encendida sin ver — el recibo sube y la familia tiene menos dinero disponible para otras cosas importantes. Estos se llaman gastos invisibles porque no los pagamos en el momento de usarlos, pero son muy reales."
+        },
+        {
+          "subtitle": "El Agua es Dinero",
+          "content": "El agua limpia que sale de tu llave no es gratuita. Primero hay que recogerla de ríos, lagos o pozos; luego hay que limpiarla en plantas de tratamiento para que sea segura de beber; después se bombea por tuberías por toda la ciudad hasta llegar a tu casa. Todo ese proceso cuesta mucho trabajo y dinero. En México, muchas familias pagan entre $100 y $300 pesos al mes solo de agua. Cerrar la llave mientras te enjabonas las manos, no dejar el agua corriendo mientras te cepillas los dientes y reportar fugas puede reducir ese gasto significativamente — ¡y también ayuda al planeta!"
+        },
+        {
+          "subtitle": "La Energía Eléctrica",
+          "content": "¿Sabías que algunos aparatos consumen electricidad aunque estén 'apagados' pero conectados? Se les llama vampiros de energía o consumo en standby. El televisor, el microondas, el cargador del celular y hasta el internet consumen pequeñas cantidades de luz todo el tiempo. Juntos, pueden representar hasta el 10% del recibo de luz de tu casa. Desconectar los aparatos que no se usan, apagar las luces al salir de un cuarto y preferir la luz natural del sol durante el día son hábitos pequeños que hacen una diferencia grande en el presupuesto familiar a fin de mes."
+        },
+        {
+          "subtitle": "Trabajo en Equipo",
+          "content": "Cuando todos los miembros de la familia practican hábitos de ahorro de energía y agua, el efecto se multiplica. Imagina que cada persona en tu casa ahorra $20 pesos al mes en electricidad y agua: si son 4 personas, son $80 pesos ahorrados juntos. En un año, eso son $960 pesos — casi mil pesos que podrían usarse para una salida familiar especial o para mejorar algo en la casa. El ahorro en casa es una misión de equipo, y tú como niño CEN Academy puedes ser el líder que recuerda a toda tu familia estos buenos hábitos todos los días."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué son los gastos invisibles?",
+          "options": [
+            "Cosas que no cuestan nada",
+            "Servicios como luz y agua que se pagan después de usarlos",
+            "Dinero que se volvió transparente"
+          ],
+          "correct": "Servicios como luz y agua que se pagan después de usarlos"
+        },
+        {
+          "question": "¿Qué pasa si dejas la luz prendida toda la noche sin necesidad?",
+          "options": [
+            "Tus papás tendrán que pagar un recibo más caro",
+            "La luz se vuelve más brillante",
+            "No pasa nada"
+          ],
+          "correct": "Tus papás tendrán que pagar un recibo más caro"
+        },
+        {
+          "question": "¿Cuál es una forma de ayudar al presupuesto de tu casa?",
+          "options": [
+            "Dejar la llave del agua abierta",
+            "Apagar la tele cuando nadie la está viendo",
+            "Prender todas las luces"
+          ],
+          "correct": "Apagar la tele cuando nadie la está viendo"
+        },
+        {
+          "question": "¿Por qué el internet cuesta dinero?",
+          "options": [
+            "Porque es una herramienta mágica",
+            "Porque hay personas y máquinas trabajando para que llegue a tu casa",
+            "Porque sí"
+          ],
+          "correct": "Porque hay personas y máquinas trabajando para que llegue a tu casa"
+        },
+        {
+          "question": "Si ahorras agua y luz en casa, ¿qué puede pasar con el dinero de la familia?",
+          "options": [
+            "Habrá más dinero disponible para metas familiares o ahorros",
+            "Se acabará más rápido",
+            "Se volverá invisible"
+          ],
+          "correct": "Habrá más dinero disponible para metas familiares o ahorros"
+        },
+        {
+          "question": "¿Cómo se llaman los aparatos que gastan luz aunque estén apagados pero conectados?",
+          "options": [
+            "Aparatos mágicos",
+            "Vampiros de energía",
+            "Fantasmas de luz"
+          ],
+          "correct": "Vampiros de energía"
+        },
+        {
+          "question": "¿Qué debes hacer al lavarte los dientes para ahorrar?",
+          "options": [
+            "Cerrar la llave mientras te cepillas",
+            "Dejar que el agua corra para escuchar el sonido",
+            "Lavar los dientes con jugo"
+          ],
+          "correct": "Cerrar la llave mientras te cepillas"
+        },
+        {
+          "question": "¿Quién es responsable de ahorrar en casa?",
+          "options": [
+            "Solo los papás",
+            "Solo los abuelos",
+            "Toda la familia, incluyendo los niños"
+          ],
+          "correct": "Toda la familia, incluyendo los niños"
+        },
+        {
+          "question": "Verdadero o Falso: Ahorrar recursos naturales también ayuda al planeta Tierra.",
+          "options": ["Verdadero", "Falso", "Solo en el futuro"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué sientes al saber que ayudaste a tus papás a ahorrar dinero?",
+          "options": [
+            "Orgulloso de ser parte del equipo familiar",
+            "Aburrido",
+            "Enojado"
+          ],
+          "correct": "Orgulloso de ser parte del equipo familiar"
+        }
+      ],
+      "rubric": "El alumno identifica 3 acciones de desperdicio en una imagen y propone 3 acciones de ahorro para su hogar."
+    },
+    "teacher_tips": [
+      "No asuste a los niños con las deudas de los padres; enfóquese en el EMPODERAMIENTO: 'Tú puedes ayudar'."
+    ]
+  },
+  "P1-3-1": {
+    "code": "P1-3-1",
+    "title": "¿Cuánto tengo? Aprender a contar mi dinero",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Matemático",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Desarrollar habilidades de conteo ágil y agrupación de valores monetarios, permitiendo que el alumno determine su capital total de forma autónoma y precisa.",
+      "competencies": [
+        "Razonamiento Lógico-Matemático",
+        "Agrupación Decimal",
+        "Estimación de Cantidades",
+        "Orden"
+      ],
+      "materials": [
+        "Sets de monedas didácticas (pesos y centavos)",
+        "Platos de plástico para agrupación",
+        "Tablero de 100 con signos de $",
+        "Simulador digital: 'La Bóveda de Ceny'",
+        "Ábaco de colores"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Desorden",
+          "duration": "15 min",
+          "label": "El Tesoro Mezclado"
+        },
+        {
+          "phase": "Desarrollo: Los Montones",
+          "duration": "30 min",
+          "label": "La Magia del 10"
+        },
+        {
+          "phase": "Cierre: El Total",
+          "duration": "15 min",
+          "label": "Contador Experto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL TESORO DE LA ALCANCÍA (APERTURA)",
+          "duration": "15 min",
+          "description": "Ceny vacía su alcancía y hay una montaña de monedas de todos tamaños. Pregunte: '¿Cómo podemos saber si nos alcanza para un balón sin perdernos al contar?'. Introduzca el concepto de ORDEN. Explique que contar dinero no es solo decir números, es organizar valores.",
+          "activity": "Dinámica 'Separa y Vencerás': Los niños deben separar un puño de monedas en grupos por su denominación ($1, $2, $5, $10) lo más rápido posible."
+        },
+        {
+          "title": "FASE II: LA ESCALERA DEL VALOR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe la técnica de 'Agrupación por Dieces'. Es más fácil contar diez monedas de $1 y cambiarlas mentalmente por una de $10. Use el ábaco para visualizar cómo se suma el valor. Practiquen el conteo saltado: 10, 20, 30... y 5, 10, 15...",
+          "activity": "Juego 'La Bóveda de Ceny': Los alumnos arrastran monedas en el simulador para formar cantidades exactas solicitadas (ej: 'Ceny necesita $17 pesos, ¿qué monedas usas?')."
+        },
+        {
+          "title": "FASE III: CAJERO POR UN DÍA (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Saber cuánto tienes te da seguridad. Nadie te puede engañar si sabes contar tu propio tesoro. Pida que calculen el total de una imagen con monedas mezcladas.",
+          "activity": "Reto 'El Conteo Veloz': El maestro muestra una mano con monedas por 3 segundos y los niños deben anotar el total estimado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Contar dinero es la herramienta más poderosa de un ahorrador. Si sabes cuánto tienes, sabes cuánto te falta para tu meta.",
+      "sections": [
+        {
+          "subtitle": "Agrupar para no equivocarse",
+          "content": "Cuando tienes muchas monedas mezcladas, contarlas de una en una puede ser lento y confuso. El truco profesional es separar primero las monedas por valor: todas las de $10 juntas, todas las de $5 juntas, todas las de $2 juntas y todas las de $1 juntas. Luego, cuenta los grupos. Si tienes 3 monedas de $10, sabes que son $30 sin necesidad de sumar una a una. Si tienes 4 monedas de $5, son $20. Sumar los totales de cada grupo es mucho más rápido y preciso. Este método lo usan los cajeros de tiendas y bancos todos los días."
+        },
+        {
+          "subtitle": "El Valor no es el Tamaño",
+          "content": "Una de las cosas más sorprendentes del dinero mexicano es que el tamaño físico de la moneda no tiene relación con su valor. La moneda de $10 es más pequeña que la de $5, ¡pero vale el doble! Y la moneda de $1 es más pequeña que la de $0.50, pero vale el doble también. Por eso, nunca debes juzgar una moneda por su tamaño — siempre lee el número que está grabado en ella. Cuando recibas cambio en una tienda, revisa cada moneda individualmente para asegurarte de que el vendedor te dio el monto correcto."
+        },
+        {
+          "subtitle": "La Suma de Valores",
+          "content": "Sumar cantidades de dinero es exactamente igual que las sumas de matemáticas, pero aplicado a la vida real. Si tienes una moneda de $10, dos de $5 y tres de $1, ¿cuánto tienes en total? Es $10 + $5 + $5 + $1 + $1 + $1 = $23. Para no confundirte, puedes hacerlo por pasos: primero suma las más grandes, luego agrega las más chicas. Si practicas esta habilidad todos los días cuando cuentes tu alcancía, se volverá tan natural como respirar. ¡Los contadores y banqueros hacen esto mismo pero con cantidades mucho más grandes!"
+        },
+        {
+          "subtitle": "El Cambio o Vuelto",
+          "content": "Cuando pagas más de lo que cuesta algo, el vendedor debe devolverte la diferencia — eso se llama cambio o vuelto. Por ejemplo, si un jugo cuesta $13 y pagas con un billete de $20, el vendedor debe darte $7 de cambio. Para verificar que te den lo correcto, usa esta fórmula: Cambio = Lo que pagaste - Lo que costó. Si el cambio que recibes no coincide con tu cálculo, amablemente díselo al vendedor — quizás fue un error sin querer. Saber calcular el cambio es una habilidad que te protege de pagar de más en las tiendas."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Si tienes una moneda de $10 y dos de $1, ¿cuánto tienes?",
+          "options": ["$12", "$20", "$3"],
+          "correct": "$12"
+        },
+        {
+          "question": "¿Qué número representa el valor de una moneda de cinco pesos?",
+          "options": ["2", "5", "10"],
+          "correct": "5"
+        },
+        {
+          "question": "Si cuentas de 10 en 10, ¿qué número sigue después del 40?",
+          "options": ["41", "50", "60"],
+          "correct": "50"
+        },
+        {
+          "question": "Verdadero o Falso: Contar dinero despacio y por montones ayuda a no equivocarse.",
+          "options": ["Verdadero", "Falso", "Solo si eres rápido"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "Si tienes $8 y el vendedor te pide $10, ¿cuánto te falta?",
+          "options": ["$2", "$5", "$1"],
+          "correct": "$2"
+        },
+        {
+          "question": "¿Para qué sirve el ábaco en la clase de finanzas?",
+          "options": [
+            "Para jugar",
+            "Para visualizar cómo se suman las monedas y los valores",
+            "Para peinarse"
+          ],
+          "correct": "Para visualizar cómo se suman las monedas y los valores"
+        }
+      ],
+      "rubric": "El alumno cuenta una colección mixta de monedas de hasta $50 pesos con 100% de precisión y explica su método de agrupación."
+    },
+    "teacher_tips": [
+      "Use el ábaco para representar las monedas de $10 como cuentas completas.",
+      "Relacione el conteo con los dedos para las monedas de $1.",
+      "Realice competencias de conteo rápido para aumentar la agilidad mental de los niños."
+    ]
+  },
+  "P1-3-2": {
+    "code": "P1-3-2",
+    "title": "¿Cuánto cuesta mi meta? Calcular lo que necesito",
+    "level": "Primaria 1",
+    "duration": "45 min estimados",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Aprender a comparar lo que se tiene ahorrado con el precio de una meta, identificando cuánto falta para lograr el objetivo.",
+      "competencies": ["Resta Simple", "Análisis de Datos", "Determinación"],
+      "materials": [
+        "Etiquetas de precios",
+        "Monedas didácticas",
+        "Ficha 'Mi camino al tesoro'",
+        "Catálogo de premios"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura",
+          "duration": "10 min",
+          "label": "La meta de Ceny"
+        },
+        {
+          "phase": "Desarrollo",
+          "duration": "25 min",
+          "label": "Falta o Sobra"
+        },
+        {
+          "phase": "Cierre",
+          "duration": "10 min",
+          "label": "El plan de ataque"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: APERTURA Y ENGANCHE",
+          "duration": "10 min",
+          "description": "Ceny quiere un balón que cuesta $20. Abre su alcancía y tiene $15. ¿Ya puede ir a la tienda? No. ¿Por qué? Porque $15 es menor que $20.",
+          "activity": "Uso de recta numérica: Ubique el 15 y el 20. ¿Cuántos saltos faltan?"
+        },
+        {
+          "title": "FASE II: DESARROLLO Y EXPLORACIÓN",
+          "duration": "25 min",
+          "description": "Enseñe la pregunta clave: '¿Cuánto me falta?'. Explique que es una resta. Precio ($20) menos lo que tengo ($15) igual a lo que debo ahorrar ($5).",
+          "activity": "Juego: '¿Qué me alcanza?'. Ponga una mesa con objetos y precios. Entregue a cada niño una cantidad diferente de monedas. Deben elegir un objeto y decir si les falta o les sobra."
+        },
+        {
+          "title": "FASE III: CIERRE Y EVALUACIÓN",
+          "duration": "10 min",
+          "description": "Dibuje una escalera. En el escalón más alto está la meta. Pida que los niños marquen en qué escalón están hoy según su ahorro.",
+          "activity": "Promesa: 'Me faltan $__ y los voy a conseguir ahorrando mi domingo'."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El precio es la meta, y tu ahorro es el camino. Saber cuánto te falta es saber cuántos pasos más debes dar.",
+      "sections": [
+        {
+          "subtitle": "La comparación de valores",
+          "content": "Para saber si ya tienes suficiente dinero para tu meta, necesitas comparar dos números: el precio de lo que quieres comprar y la cantidad que ya has ahorrado. Si el precio es $150 y tienes $90, todavía te faltan $60 para llegar. Si el precio es $150 y ya tienes $160, ¡ya alcanzas y hasta te sobra! Esta comparación simple pero poderosa te dice exactamente en qué punto del camino estás. Contar tu alcancía una vez por semana y compararlo con tu meta es el ritual más importante del ahorrador exitoso."
+        },
+        {
+          "subtitle": "La Resta: Nuestra mejor amiga",
+          "content": "La resta es la herramienta matemática más útil para el ahorro. La fórmula es sencilla: Meta - Ahorros actuales = Lo que me falta. Por ejemplo, si quieres algo de $200 y tienes $75, te faltan $200 - $75 = $125. Este número ($125) es tu 'misión pendiente'. Cada vez que agregas dinero a tu alcancía, ese número se hace más chico, y verlo reducirse semana tras semana es tremendamente motivador. Algunos ahorradores escriben su meta y su avance en una hoja pegada en su cuarto, y tachan los pesos que ya ahorraron. ¡Es como un videojuego de la vida real!"
+        },
+        {
+          "subtitle": "No rendirse",
+          "content": "Cuando la meta parece muy lejana, es fácil pensar 'para qué sigo si falta mucho'. Pero ese pensamiento es el mayor enemigo del ahorrador. Recuerda: cada peso que agregas te acerca un paso más, sin importar qué tan pequeño sea ese paso. Si ahorras $10 por semana y te faltan $200, en 20 semanas llegas — ¡5 meses! Puede parecer mucho, pero esos 5 meses van a pasar de todas formas. La pregunta no es '¿cuánto tiempo va a tomar?' sino '¿quieres tener esa meta al final de ese tiempo, o no?' La respuesta casi siempre es sí."
+        },
+        {
+          "subtitle": "La Meta Volante",
+          "content": "Una meta volante es una meta pequeña dentro de tu meta grande. Divide tu objetivo en partes iguales para celebrar cada etapa. Si tu meta es $200, tus metas volantes pueden ser $50, $100 y $150 — y cuando llegues a cada una, te das un pequeño reconocimiento (no gastas dinero, pero sí te dices '¡bien hecho!'). Esta técnica, que usan los atletas olímpicos y los empresarios más exitosos del mundo, convierte un camino largo en una serie de victorias. Cada victoria te da energía y confianza para seguir. Los grandes logros siempre son la suma de muchos pequeños logros."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Si un juguete cuesta $20 y tienes $15, ¿te alcanza?",
+          "options": ["Sí", "No, te faltan $5", "Me sobra dinero"],
+          "correct": "No, te faltan $5"
+        },
+        {
+          "question": "¿Qué operación matemática usamos para saber cuánto nos falta para una meta?",
+          "options": ["Suma", "Resta", "Multiplicación"],
+          "correct": "Resta"
+        },
+        {
+          "question": "Si tu meta cuesta $50 y ya tienes $50, ¿qué significa?",
+          "options": [
+            "¡Que ya lograste tu meta!",
+            "Que te falta mucho",
+            "Que perdiste dinero"
+          ],
+          "correct": "¡Que ya lograste tu meta!"
+        },
+        {
+          "question": "¿Para qué sirve saber cuánto te falta para tu meta?",
+          "options": [
+            "Para presumir",
+            "Para saber cuántos días más debes ahorrar",
+            "Para nada"
+          ],
+          "correct": "Para saber cuántos días más debes ahorrar"
+        },
+        {
+          "question": "Si tienes $10 y quieres algo de $12, ¿cuánto debes ahorrar adicionalmente?",
+          "options": ["$2", "$10", "$5"],
+          "correct": "$2"
+        },
+        {
+          "question": "¿Qué pasa si el precio de tu meta sube?",
+          "options": [
+            "Te falta más dinero ahora",
+            "Te falta menos",
+            "El precio no importa"
+          ],
+          "correct": "Te falta más dinero ahora"
+        },
+        {
+          "question": "Si tienes $100 y tu meta cuesta $80, ¿qué pasa?",
+          "options": ["Te faltan $20", "Te sobran $20", "No te alcanza"],
+          "correct": "Te sobran $20"
+        },
+        {
+          "question": "¿Cómo se llama el objetivo por el que estás ahorrando?",
+          "options": ["Problema", "Meta", "Gasto"],
+          "correct": "Meta"
+        },
+        {
+          "question": "Verdadero o Falso: Es bueno revisar cuánto nos falta para nuestra meta cada semana.",
+          "options": ["Verdadero", "Falso", "Solo en cumpleaños"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué sientes cuando ves que 'lo que te falta' es cada vez menos?",
+          "options": ["Tristeza", "Emoción y motivación", "Miedo"],
+          "correct": "Emoción and motivación"
+        }
+      ],
+      "rubric": "El alumno realiza 3 ejercicios de resta de metas con precisión y propone una acción para conseguir el dinero faltante."
+    },
+    "teacher_tips": [
+      "Use billetes gigantes en el pizarrón para hacer las restas visibles.",
+      "Si un niño descubre que le falta poco, anímelo frente al grupo para celebrar su progreso.",
+      "Explique que 'sobrar' dinero es una oportunidad para empezar una meta nueva o ayudar a otros."
+    ]
+  },
+  "P1-3-3": {
+    "code": "P1-3-3",
+    "title": "El cajero automático: ¿de dónde sale el dinero?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Tecnológico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Desmitificar el funcionamiento del cajero automático, entendiendo que es una interfaz de retiro de dinero previamente ganado y no una fuente inagotable de efectivo.",
+      "competencies": [
+        "Comprensión Tecnológica",
+        "Relación Trabajo-Retiro",
+        "Seguridad de Datos (PIN)",
+        "Lógica de Sistemas"
+      ],
+      "materials": [
+        "Cajero automático de cartón didáctico",
+        "Tarjetas bancarias de juguete",
+        "Teclado numérico impreso",
+        "Video: 'Ceny visita el cajero'",
+        "Billetes didácticos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Misterio",
+          "duration": "15 min",
+          "label": "La Caja Mágica"
+        },
+        {
+          "phase": "Desarrollo: El Túnel",
+          "duration": "30 min",
+          "label": "De la Oficina al Cajero"
+        },
+        {
+          "phase": "Cierre: El Secreto",
+          "duration": "15 min",
+          "label": "Mi NIP de Seguridad"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿LA CAJA TIENE DINERO INFINITO? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte a los niños: '¿Qué pasa si meto mi dedo al cajero? ¿Me da dinero?'. Explique que mucha gente cree que el cajero 'regala' dinero, pero en realidad es solo una puerta. Si no pusiste dinero antes, la puerta no se abre. Introduzca el concepto de CUENTA BANCARIA.",
+          "activity": "Dinámica 'El Túnel de Monedas': Un niño hace de 'Trabajador', entrega una ficha a la 'Caja del Banco'. Luego el 'Papá' mete su tarjeta y recibe la misma ficha. El dinero hizo un viaje."
+        },
+        {
+          "title": "FASE II: LA TARJETA Y EL NIP (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Muestre una tarjeta de juguete. Explique que la tarjeta es como una llave. Pero es una llave con un secreto: el NIP (Número de Identificación Personal). El NIP es una contraseña de 4 números que solo tú debes saber. Si alguien te ve ponerlo, puede robar tu tesoro.",
+          "activity": "Juego 'El Código Secreto': Los niños inventan un NIP de 4 números y lo practican en un teclado de papel, tapando su mano con la otra para que nadie vea. Es el 'Gesto de Seguridad CEN'."
+        },
+        {
+          "title": "FASE III: OPERACIÓN RETIRO (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: El cajero es una herramienta que nos ayuda a no cargar todo nuestro dinero en la bolsa. Es más seguro tenerlo en el banco y sacar solo lo que necesitamos para el día. Pida que dibujen a Ceny tapando su NIP en el cajero.",
+          "activity": "Reto 'La Alerta del Cajero': ¿Qué debemos hacer si vemos a alguien extraño muy cerca en el cajero? (Cuidar nuestra privacidad)."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El cajero automático es una ventana que nos permite sacar el dinero que ganamos con nuestro trabajo y que el banco nos está guardando.",
+      "sections": [
+        {
+          "subtitle": "No es una fuente mágica",
+          "content": "Muchos niños (¡y algunos adultos!) piensan que el cajero automático es una máquina mágica que da dinero gratis. Pero la verdad es muy diferente: el cajero solo te da el dinero que TÚ le depositaste previamente a través del banco. Es como una alcancía electrónica gigante — solo puedes sacar lo que metiste antes. Si tu saldo es $500, el cajero puede darte máximo $500. Si intentas sacar más, simplemente te dirá que no tienes suficiente dinero. Entender esto evita muchas sorpresas desagradables cuando uno crece y tiene su propia tarjeta bancaria."
+        },
+        {
+          "subtitle": "La Tarjeta de Débito",
+          "content": "Una tarjeta de débito es una pequeña ficha de plástico con un chip electrónico y una banda magnética que contiene información cifrada sobre tu cuenta bancaria. Cuando la insertas en el cajero, el chip le dice a la máquina quién eres y cuánto dinero tienes disponible. Las tarjetas de débito se llaman así porque cada vez que las usas, el dinero se 'debita' (se descuenta) directamente de tu cuenta en ese mismo momento. Por eso es muy importante cuidarla: no prestarla, no mojarla, no doblarla y guardarla en un lugar seguro donde no se raye."
+        },
+        {
+          "subtitle": "El NIP: Tu llave secreta",
+          "content": "NIP son las iniciales de Número de Identificación Personal. Son cuatro dígitos que solo tú conoces y que funcionan como la llave de tu cuenta bancaria. Sin el NIP, nadie puede sacar tu dinero aunque tenga tu tarjeta en la mano. Por eso es el secreto más importante que debes guardar — no se lo digas a nadie, ni a tus mejores amigos, ni a tus maestros, y en situaciones de emergencia, solo a tus papás. Tampoco escribas tu NIP en ningún papel ni en tu teléfono. Los ladrones conocen ese truco. Memoriza tu NIP como si fuera el código secreto de tu súper poderes."
+        },
+        {
+          "subtitle": "El Ticket de Operación",
+          "content": "Al terminar cada operación en el cajero, la máquina ofrece imprimir un ticket o comprobante. Este pequeño papel es muy valioso porque registra: la fecha y hora de la operación, cuánto dinero retiraste o depositaste, y cuánto dinero queda disponible en tu cuenta (esto se llama saldo). Guardar los tickets te permite llevar un registro de todos tus movimientos de dinero, igual que un libro de contabilidad. Si algún día hay un error en tu cuenta, el ticket es la prueba de lo que realmente pasó. Los adultos organizan sus tickets en sobres o los fotografían para no perderlos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿De dónde saca el dinero el cajero automático?",
+          "options": [
+            "Lo fabrica por arte de magia",
+            "Es el dinero que el dueño de la tarjeta ganó trabajando",
+            "Lo recoge del suelo"
+          ],
+          "correct": "Es el dinero que el dueño de la tarjeta ganó trabajando"
+        },
+        {
+          "question": "¿Qué necesitas para sacar dinero del cajero?",
+          "options": [
+            "Un martillo",
+            "Una tarjeta bancaria y tu NIP (contraseña)",
+            "Pedirlo por favor"
+          ],
+          "correct": "Una tarjeta bancaria y tu NIP (contraseña)"
+        },
+        {
+          "question": "¿Qué significa NIP?",
+          "options": [
+            "Número de Identificación Personal",
+            "No Importa el Precio",
+            "Niño Inteligente y Precavido"
+          ],
+          "correct": "Número de Identificación Personal"
+        },
+        {
+          "question": "¿Cuántos números tiene normalmente un NIP?",
+          "options": ["10", "4", "100"],
+          "correct": "4"
+        },
+        {
+          "question": "¿Qué debes hacer al poner tu NIP en el cajero?",
+          "options": [
+            "Decirlo en voz alta",
+            "Tapar el teclado con tu otra mano para que nadie lo vea",
+            "Cerrar los ojos"
+          ],
+          "correct": "Tapar el teclado con tu otra mano para que nadie lo vea"
+        },
+        {
+          "question": "Si tienes $50 en tu tarjeta, ¿puedes sacar $100 del cajero?",
+          "options": [
+            "Sí, el cajero es generoso",
+            "No, solo puedes sacar lo que tienes guardado",
+            "Tal vez mañana"
+          ],
+          "correct": "No, solo puedes sacar lo que tienes guardado"
+        },
+        {
+          "question": "¿Por qué es útil el cajero automático?",
+          "options": [
+            "Para no tener que ir hasta el banco a cada rato",
+            "Para jugar videojuegos",
+            "Para ver fotos"
+          ],
+          "correct": "Para no tener que ir hasta el banco a cada rato"
+        },
+        {
+          "question": "¿Qué te entrega el cajero además del dinero?",
+          "options": [
+            "Un dulce",
+            "Un ticket con la información de tu dinero",
+            "Una medalla"
+          ],
+          "correct": "Un ticket con la información de tu dinero"
+        },
+        {
+          "question": "Verdadero o Falso: Los niños deben usar el cajero siempre acompañados de un adulto de confianza.",
+          "options": ["Verdadero", "Falso", "Solo si hay mucha gente"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué pasa si olvidas tu NIP?",
+          "options": [
+            "Pierdes todo tu dinero",
+            "Debes ir al banco a pedir ayuda",
+            "El cajero se queda con tu tarjeta"
+          ],
+          "correct": "Debes ir al banco a pedir ayuda"
+        }
+      ],
+      "rubric": "El alumno explica el proceso de retiro de dinero y demuestra la técnica de seguridad para cubrir el teclado al ingresar el NIP."
+    },
+    "teacher_tips": [
+      "Use un tono de 'Misión Secreta' para enseñar la seguridad del NIP; a los niños les encanta ser guardianes de secretos.",
+      "Explique que el cajero también sirve para pagar servicios como la luz o el teléfono."
+    ]
+  },
+  "P1-3-4": {
+    "code": "P1-3-4",
+    "title": "Ahorro para una meta mayor: sueños que tardan un poquito",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Perseverancia",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Fortalecer la capacidad de postergación de la gratificación, entendiendo que las metas más valiosas suelen requerir un tiempo de ahorro más prolongado y constante.",
+      "competencies": [
+        "Perseverancia",
+        "Visión a Largo Plazo",
+        "Autocontrol",
+        "Motivación Intrínseca"
+      ],
+      "materials": [
+        "El 'Termómetro del Éxito' (póster gigante)",
+        "Pegatinas de avance",
+        "Cuento: 'La montaña que Ceny escaló moneda a moneda'",
+        "Dibujo de la Gran Meta"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Reto",
+          "duration": "15 min",
+          "label": "El Dulce vs. El Regalo"
+        },
+        {
+          "phase": "Desarrollo: La Escala",
+          "duration": "30 min",
+          "label": "Subiendo la Montaña"
+        },
+        {
+          "phase": "Cierre: La Fiesta",
+          "duration": "15 min",
+          "label": "Imaginando el Logro"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL EXPERIMENTO DEL MALVAVISCO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un dulce pequeño. 'Pueden comerlo ahora, O pueden esperar a que termine la clase y les daré dos dulces mucho más grandes'. Dialogue sobre lo difícil que es esperar cuando el deseo es inmediato. Explique que las metas mayores son como esos dos dulces grandes: valen la pena la espera.",
+          "activity": "Debate: ¿Qué es más emocionante, un chocolate hoy o una bicicleta en un mes?"
+        },
+        {
+          "title": "FASE II: EL TERMÓMETRO DEL AHORRO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el 'Termómetro'. Divida la meta grande en 10 partes pequeñas. Explique que no llegamos al final de un salto, sino subiendo escalón por escalón. Cada moneda que ahorramos sube la temperatura del termómetro. Enseñe que cuando estamos a la mitad, es el momento donde más ganas de rendirnos nos dan, ¡pero es cuando más fuertes debemos ser!",
+          "activity": "Taller 'Mi Escalera al Cielo': Los niños dibujan una escalera de 10 peldaños. En el 10 está su sueño (ej: un viaje, un juguete caro). Deben marcar con color en qué peldaño creen que estarían si ahorran su domingo por 3 semanas."
+        },
+        {
+          "title": "FASE III: CARTA A MI YO DEL FUTURO (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: La paciencia es un músculo que se entrena. Pida a los niños que dibujen a su 'Yo del Futuro' feliz con su meta lograda. Dígales que esa felicidad durará mucho más que el gusto de un dulce de un minuto.",
+          "activity": "Reto 'El Grito de Guerra': '¡Poquito a poquito, lleno mi cochinito!'."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Las metas grandes no se compran con dinero, se compran con paciencia y constancia.",
+      "sections": [
+        {
+          "subtitle": "Metas de Corto vs. Largo Plazo",
+          "content": "Las metas de ahorro se dividen en dos grandes grupos según el tiempo que tardan en lograrse. Las metas de corto plazo se logran en pocos días o semanas — como ahorrar para comprar un libro, un set de estampas o una sorpresa especial. Las metas de largo plazo tardan meses — como una bicicleta, una consola de videojuegos o un viaje con la familia. Las metas largas son más difíciles porque requieren más paciencia y constancia, pero la alegría de lograrlas es mucho más grande. En CEN Academy recomendamos tener siempre al menos una meta corta y una larga al mismo tiempo para mantenerte motivado."
+        },
+        {
+          "subtitle": "La Trampa del Antojo",
+          "content": "En el camino hacia una meta mayor, tu camino estará lleno de tentaciones — dulces, juguetes pequeños, aplicaciones, coleccionables — que pueden parecer inofensivos uno a uno, pero que juntos son destructores de metas. Si gastas $10 en un antojo cada semana, en 10 semanas habrás gastado $100 que podría haber sido tu meta grande. A esto se le llama la trampa del antojo: cada gasto pequeño parece no importar, pero se suman en silencio hasta vaciar tu alcancía. La frase que debes repetirte es: 'Prefiero lo que seré capaz de comprar con paciencia, que lo que pierdo por un momento de antojo.'"
+        },
+        {
+          "subtitle": "Visualizar el Final",
+          "content": "Los atletas olímpicos tienen una técnica especial que se llama visualización: antes de su competencia, cierran los ojos e imaginan con todo detalle que ya ganaron la medalla — el peso en su cuello, la música, el abrazo de su familia. Esto programa al cerebro para buscar ese resultado con más energía. Tú puedes hacer lo mismo con tu meta de ahorro. Cuando sientas ganas de rendirte o de gastar en un antojo, cierra los ojos por 30 segundos e imagínate con tu meta ya en las manos. Siente la alegría, el orgullo, la satisfacción. Ese sentimiento te dará la fuerza para poner una moneda más en tu alcancía."
+        },
+        {
+          "subtitle": "El Ahorro se Suma",
+          "content": "Existe una frase matemática muy poderosa: 'Los grandes números son la suma de pequeños números'. Un peso solo parece muy poco, pero con paciencia y constancia: 1 peso al día = $365 al año. $5 al día = $1,825 al año. ¡Con eso podrías comprarte algo muy especial o iniciar tu primer negocio! La magia no está en ahorrar mucho de una vez, sino en no parar nunca. Cada moneda que metes en tu alcancía, por pequeña que sea, es un ladrillo más en el edificio de tu meta. Y los edificios más grandes del mundo se construyeron exactamente así: ladrillo por ladrillo, día tras día."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una meta a largo plazo?",
+          "options": [
+            "Algo que logras hoy mismo",
+            "Algo que requiere ahorrar por mucho tiempo (semanas o meses)",
+            "Algo que no quieres realmente"
+          ],
+          "correct": "Algo que requiere ahorrar por mucho tiempo (semanas o meses)"
+        },
+        {
+          "question": "¿Por qué las metas grandes son más difíciles?",
+          "options": [
+            "Porque son feas",
+            "Porque requieren que tengamos paciencia y no gastemos en antojos",
+            "Porque el dinero desaparece"
+          ],
+          "correct": "Porque requieren que tengamos paciencia y no gastemos en antojos"
+        },
+        {
+          "question": "¿Qué debes hacer si a mitad de tu ahorro se te antoja un dulce?",
+          "options": [
+            "Gastar todo el dinero",
+            "Recordar tu meta mayor y ser fuerte para no gastar",
+            "Enojarte con la alcancía"
+          ],
+          "correct": "Recordar tu meta mayor y ser fuerte para no gastar"
+        },
+        {
+          "question": "¿Cómo ayuda un 'Termómetro de Ahorro'?",
+          "options": [
+            "Para ver si tienes fiebre",
+            "Para ver cuánto te falta y motivarte al ver tu progreso",
+            "Para decorar el cuarto"
+          ],
+          "correct": "Para ver cuánto te falta y motivarte al ver tu progreso"
+        },
+        {
+          "question": "Si ahorras $5 cada semana por 4 semanas, ¿cuánto tendrás?",
+          "options": ["$5", "$20", "$10"],
+          "correct": "$20"
+        },
+        {
+          "question": "¿Qué significa ser 'perseverante'?",
+          "options": [
+            "Rendirse rápido",
+            "Seguir intentando y ahorrando aunque tome tiempo",
+            "Dormir mucho"
+          ],
+          "correct": "Seguir intentando y ahorrando aunque tome tiempo"
+        },
+        {
+          "question": "Verdadero o Falso: Es mejor tener una meta grande que nos haga muy felices que muchos dulces que se acaban rápido.",
+          "options": ["Verdadero", "Falso", "Depende del dulce"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué sientes cuando finalmente logras una meta que te tomó mucho tiempo?",
+          "options": ["Mucho orgullo y satisfacción", "Tristeza", "Hambre"],
+          "correct": "Mucho orgullo y satisfacción"
+        },
+        {
+          "question": "¿Cómo puedes hacer que el tiempo pase más rápido mientras ahorras?",
+          "options": [
+            "Llorando",
+            "Enfocándote en tus estudios y juegos, confiando en tu plan",
+            "Abriendo la alcancía cada hora"
+          ],
+          "correct": "Enfocándote en tus estudios y juegos, confiando en tu plan"
+        },
+        {
+          "question": "¿Qué es el 'combustible' de tu ahorro?",
+          "options": [
+            "La gasolina",
+            "Tu deseo de lograr tu gran meta",
+            "El papel moneda"
+          ],
+          "correct": "Tu deseo de lograr tu gran meta"
+        }
+      ],
+      "rubric": "El alumno identifica la diferencia entre una meta inmediata y una mayor, y propone una estrategia para no gastar ante un antojo."
+    },
+    "teacher_tips": [
+      "No subestime la capacidad de espera de los niños; si la meta es EMOCIONANTE, ellos serán muy pacientes.",
+      "Celebre los peldaños intermedios. '¡Ya llegaste a la mitad del termómetro!' es un gran motivador."
+    ]
+  },
+  "P1-3-5": {
+    "code": "P1-3-5",
+    "title": "¡Lo lograste! Celebra tu meta",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Emocional",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Experimentar la satisfacción de alcanzar un objetivo financiero, reforzando positivamente el hábito del ahorro y visualizando el inicio de un nuevo ciclo de metas.",
+      "competencies": [
+        "Gratitud",
+        "Autoeficacia",
+        "Refuerzo de Hábitos",
+        "Celebración del Logro"
+      ],
+      "materials": [
+        "Diplomas de 'Gran Ahorrador CEN'",
+        "Confeti de papel",
+        "Música festiva",
+        "Cuento: 'El gran día de Ceny'",
+        "Nuevas alcancías para decorar"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Día D",
+          "duration": "15 min",
+          "label": "El Momento Esperado"
+        },
+        {
+          "phase": "Desarrollo: La Compra",
+          "duration": "30 min",
+          "label": "La Tienda de los Logros"
+        },
+        {
+          "phase": "Cierre: Nuevo Sueño",
+          "duration": "15 min",
+          "label": "El Ciclo Continúa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¡LO TENGO! (APERTURA)",
+          "duration": "15 min",
+          "description": "Imagine que hoy es el día de abrir la alcancía. Ceny siente mariposas en el estómago. Pregunte: '¿Qué se siente saber que tú mismo lo lograste sin pedir prestado?'. Hable sobre la AUTOESTIMA que da el ahorro.",
+          "activity": "Dinámica 'El Baile del Ahorrador': Los niños bailan una canción festiva celebrando el éxito de Ceny y el propio."
+        },
+        {
+          "title": "FASE II: LA CEREMONIA DEL LOGRO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Simule la entrega de los 'títulos de propiedad' de los sueños de los niños. Si alguien ahorraba para un balón, hoy recibe un diploma que dice 'Dueño por Esfuerzo Propio'. Explique que lo que compramos con ahorro es más valioso que lo que nos regalan.",
+          "activity": "Taller 'Mi Medalla de Oro': Los niños diseñan una medalla de cartón que diga 'Yo sí ahorro'. Se la ponen y comparten su experiencia de éxito con el grupo."
+        },
+        {
+          "title": "FASE III: ¿Y AHORA QUÉ? (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: El ahorro no termina cuando compramos algo. Es un hábito para toda la vida. Pida que dibujen su SIGUIENTE meta, ahora que ya saben que son capaces de lograrlo.",
+          "activity": "Reto 'La Primera Moneda': Poner la primera moneda en la nueva alcancía imaginaria (o real)."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Alcanzar una meta es la prueba de que tu disciplina y paciencia son superpoderes reales.",
+      "sections": [
+        {
+          "subtitle": "La Satisfacción del Deber Cumplido",
+          "content": "Hay un tipo de felicidad que solo se siente cuando logras algo con tu propio esfuerzo — no cuando alguien te lo regala, sino cuando TÚ lo conseguiste. Esa sensación se llama orgullo sano, y es una de las emociones más poderosas y saludables que existen. Cuando compras algo con dinero que ahorraste semana a semana, cada vez que lo uses o lo veas, recordarás el camino que recorriste para tenerlo. Ese recuerdo te hace valorarlo mucho más, cuidarlo mejor y tener ganas de repetir el proceso con una meta más grande."
+        },
+        {
+          "subtitle": "Cuidar lo que ganaste",
+          "content": "Cuando algo lo compras con tu propio dinero, automáticamente lo cuidas diferente. Sabes exactamente cuántas semanas de ahorro representó, cuántos antojos resististe para tenerlo. Eso le da un valor especial que ningún regalo puede igualar. Esta es una lección que los economistas llaman 'valoración por esfuerzo': las personas valoran más las cosas que les costaron trabajo. Por eso en CEN Academy creemos que los niños que aprenden a ahorrar y comprar sus propias cosas se convierten en adultos que cuidan sus pertenencias, sus relaciones y sus recursos de manera más responsable."
+        },
+        {
+          "subtitle": "El Ciclo del Éxito",
+          "content": "Lograr una meta financiera no es el final del camino — es el comienzo de otro. En CEN Academy llamamos a esto el Ciclo del Éxito, y funciona así: primero SUEÑAS algo que quieres lograr; luego PLANEAS calculando cuánto necesitas y cuándo lo lograrás; después AHORRAS con constancia semana a semana; finalmente LOGRAS tu meta y la celebras; y entonces el ciclo comienza de nuevo con una meta más grande. Cada vez que completas el ciclo, tus habilidades financieras crecen, tu confianza aumenta y tus sueños se vuelven más ambiciosos. La primera meta es siempre la más difícil — las siguientes cada vez se sienten más naturales."
+        },
+        {
+          "subtitle": "Agradecer el Apoyo",
+          "content": "Aunque el esfuerzo de ahorrar fue tuyo, nunca llegaste completamente solo a tu meta. Alguien te dio el dinero inicial (tu mesada o regalo), alguien te prestó un lugar seguro para guardar tu alcancía, alguien te enseñó a contar el dinero y alguien te animó cuando querías rendirte. Reconocer y agradecer ese apoyo no resta mérito a tu logro — al contrario, lo hace más bonito. Dar gracias a tu familia y maestros es parte del perfil de un verdadero Ciudadano CEN Academy: alguien que es exitoso y también generoso, humilde y consciente de que los grandes logros siempre son una obra de equipo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué se siente lograr una meta con tu propio esfuerzo?",
+          "options": ["Aburrimiento", "Orgullo y mucha felicidad", "Miedo"],
+          "correct": "Orgullo y mucha felicidad"
+        },
+        {
+          "question": "Después de lograr una meta, ¿qué es lo más inteligente que puedes hacer?",
+          "options": [
+            "Dejar de ahorrar para siempre",
+            "Empezar una nueva meta con lo que aprendiste",
+            "Gastar todo lo que te sobró en basura"
+          ],
+          "correct": "Empezar una nueva meta con lo que aprendiste"
+        },
+        {
+          "question": "¿Por qué cuidamos más las cosas que compramos con ahorro?",
+          "options": [
+            "Porque sabemos el esfuerzo que nos costó conseguirlas",
+            "Porque son mágicas",
+            "Porque brillan más"
+          ],
+          "correct": "Porque sabemos el esfuerzo que nos costó conseguirlas"
+        },
+        {
+          "question": "¿Qué es el 'Ciclo del Éxito'?",
+          "options": [
+            "Un tipo de bicicleta",
+            "Los pasos de Soñar, Planear, Ahorrar y Lograr",
+            "Una marca de dulces"
+          ],
+          "correct": "Los pasos de Soñar, Planear, Ahorrar y Lograr"
+        },
+        {
+          "question": "Verdadero o Falso: Lograr una meta te hace sentir más seguro de ti mismo.",
+          "options": ["Verdadero", "Falso", "Solo si eres adulto"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿A quién debes agradecer cuando logras una meta?",
+          "options": [
+            "A nadie",
+            "A ti mismo por tu esfuerzo y a quienes te apoyaron",
+            "Al cajero automático"
+          ],
+          "correct": "A ti mismo por tu esfuerzo y a quienes te apoyaron"
+        },
+        {
+          "question": "¿Qué debes hacer con tu alcancía cuando se vacía tras lograr una meta?",
+          "options": [
+            "Tirarla",
+            "Limpiarla y prepararla para el siguiente sueño",
+            "Romperla"
+          ],
+          "correct": "Limpiarla y prepararla para el siguiente sueño"
+        },
+        {
+          "question": "Si tu meta era de $100 y al final te sobran $5, ¿qué haces?",
+          "options": [
+            "Los tiras",
+            "Son la base para tu siguiente meta de ahorro",
+            "Los regalas a un extraño"
+          ],
+          "correct": "Son la base para tu siguiente meta de ahorro"
+        },
+        {
+          "question": "¿Cómo se llama el hábito de seguir ahorrando toda la vida?",
+          "options": ["Disciplina Financiera", "Suerte", "Magia"],
+          "correct": "Disciplina Financiera"
+        },
+        {
+          "question": "¿Cuál es el mejor premio de ahorrar?",
+          "options": [
+            "Solo el objeto que compraste",
+            "El objeto Y el saber que tú puedes cumplir tus promesas",
+            "El dinero de papel"
+          ],
+          "correct": "El objeto Y el saber que tú puedes cumplir tus promesas"
+        }
+      ],
+      "rubric": "El alumno describe los sentimientos asociados al logro y propone una nueva meta basada en su experiencia previa."
+    },
+    "teacher_tips": [
+      "Haga que la celebración sea ruidosa y alegre; el refuerzo positivo es clave para que el niño quiera repetir el hábito.",
+      "Invite a los niños a contar su historia de éxito al resto del grupo."
+    ]
+  },
+  "P1-4-1": {
+    "code": "P1-4-1",
+    "title": "¿Qué es un negocio? La panadería de la esquina",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Emprendedor",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Introducir el concepto de negocio como una organización que transforma recursos y trabajo en productos o servicios valiosos para la comunidad.",
+      "competencies": [
+        "Identificación de Valor",
+        "Observación del Entorno",
+        "Pensamiento Sistémico",
+        "Creatividad"
+      ],
+      "materials": [
+        "Ingredientes de juguete (harina, sal, agua)",
+        "Delantales de papel",
+        "Fotos de negocios locales (tiendita, farmacia, panadería)",
+        "Gorro de panadero"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Aroma",
+          "duration": "15 min",
+          "label": "El Viaje del Pan"
+        },
+        {
+          "phase": "Desarrollo: La Fábrica",
+          "duration": "30 min",
+          "label": "Transformando Valor"
+        },
+        {
+          "phase": "Cierre: El Dueño",
+          "duration": "15 min",
+          "label": "Mi Negocio Favorito"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿DE DÓNDE VIENE EL DONA? (APERTURA)",
+          "duration": "15 min",
+          "description": "Lleve una dona o un bolillo real. Pregunte: '¿Creció en un árbol? ¿Apareció solo?'. Explique que una PANADERÍA es un negocio donde personas trabajan con harina para crear algo rico que todos queremos comprar. Introduzca el concepto de NEGOCIO.",
+          "activity": "Dinámica 'El Mapa del Barrio': Los niños identifican en un dibujo gigante qué negocios conocen cerca de su casa y qué venden."
+        },
+        {
+          "title": "FASE II: INGREDIENTES + TRABAJO = PRODUCTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la fórmula mágica: Insumos (materiales) + Trabajo (esfuerzo humano) = Producto (lo que vendemos). Si solo tengo harina, no tengo pan. Si solo tengo trabajo pero no harina, tampoco. Necesitamos ambos. Un negocio junta estas cosas para ayudar a los demás.",
+          "activity": "Juego 'La Fábrica de Masa': Los niños se dividen en equipos. Unos son 'compradores de harina', otros 'amasadores' y otros 'vendedores'. Deben coordinarse para 'vender' sus panes de plastilina."
+        },
+        {
+          "title": "FASE III: AYUDAR Y GANAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Un negocio no solo es para ganar dinero; es para ayudar a los vecinos dándoles lo que necesitan (pan, medicina, útiles). Pida que dibujen el negocio que ellos pondrían si fueran adultos.",
+          "activity": "Reto 'El Nombre de mi Empresa': Cada niño inventa un nombre creativo para su futuro negocio."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un negocio es una forma de usar nuestras habilidades y materiales para crear cosas que hagan felices a los demás y nos permitan ganar dinero.",
+      "sections": [
+        {
+          "subtitle": "Producto vs. Servicio",
+          "content": "En el mundo de los negocios existen dos grandes tipos. Un PRODUCTO es algo físico que puedes fabricar, empacar y vender: un pan, una figura de barro, limonadas, calcomanías decoradas. Un SERVICIO es una habilidad o actividad que ofreces para ayudar a alguien: lavar coches, dar clases de matemáticas, regar plantas, pasear perros. La ventaja de los productos es que los puedes fabricar con anticipación. La ventaja de los servicios es que no necesitas materiales costosos — solo tu tiempo y habilidad. Muchos negocios exitosos combinan los dos, como una panadería que vende panes (producto) y también hace pasteles por encargo (servicio)."
+        },
+        {
+          "subtitle": "La Inversión Inicial",
+          "content": "Antes de poder ganar dinero con tu negocio, necesitas gastar un poco para tener los materiales o herramientas necesarias. Ese primer dinero que pones se llama inversión inicial. Un vendedor de limonadas necesita invertir en limones, azúcar, vasos y una jarra. Un vendedor de lápices decorados necesita lápices, pintura, listones y pegamento. Por eso es tan importante haber ahorrado antes de emprender. Esta es una de las razones más poderosas por las que CEN Academy te enseña a ahorrar desde pequeño: para que cuando tengas una gran idea de negocio, ya tengas el dinero para arrancarla."
+        },
+        {
+          "subtitle": "El Cliente",
+          "content": "Un cliente es cualquier persona que paga por lo que tú vendes. Pero para que alguien se convierta en tu cliente, primero debe tener tres cosas: una necesidad o deseo que tu producto o servicio pueda satisfacer, el dinero suficiente para pagarlo y la confianza de que tú vas a cumplir tu promesa. Tu trabajo como emprendedor es conocer muy bien a tus clientes — saber qué les gusta, qué necesitan y cómo prefieren recibir lo que vendes. Un cliente feliz no solo vuelve a comprarte, sino que también le dice a sus amigos y familia que te busquen. ¡Los mejores anuncios del mundo son los clientes satisfechos!"
+        },
+        {
+          "subtitle": "¿Por qué hay negocios?",
+          "content": "Los negocios existen porque ninguna persona puede hacer todo por sí misma. Tú no puedes construir tu propia casa, fabricar tu ropa, cultivar toda tu comida y a la vez ir a la escuela. Entonces, cada persona se especializa en lo que sabe hacer bien, y ofrece eso a cambio de dinero. El panadero sabe hacer pan y te lo vende; el médico sabe curar enfermedades y te cobra por consultarte; el maestro sabe enseñar y recibe un sueldo. Esta red de personas que se ayudan mutuamente a través del intercambio de productos y servicios es lo que llamamos economía. Cada negocio, por pequeño que sea, es una pieza importante de ese rompecabezas gigante."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un negocio?",
+          "options": [
+            "Un lugar donde se regalan cosas",
+            "Un lugar donde se intercambian productos o servicios por dinero",
+            "Un parque para dormir"
+          ],
+          "correct": "Un lugar donde se intercambian productos o servicios por dinero"
+        },
+        {
+          "question": "¿Qué necesita un panadero para que su negocio funcione?",
+          "options": [
+            "Harina y mucho trabajo",
+            "Dormir todo el día",
+            "Solo una televisión"
+          ],
+          "correct": "Harina y mucho trabajo"
+        },
+        {
+          "question": "¿Cuál de estos es un PRODUCTO?",
+          "options": [
+            "Un corte de cabello",
+            "Un pastel",
+            "Que te enseñen a bailar"
+          ],
+          "correct": "Un pastel"
+        },
+        {
+          "question": "¿Cuál de estos es un SERVICIO?",
+          "options": ["Una manzana", "Un juguete", "Lavar un coche"],
+          "correct": "Lavar un coche"
+        },
+        {
+          "question": "¿Por qué son importantes los negocios en una ciudad?",
+          "options": [
+            "Porque nos dan las cosas que necesitamos y no podemos hacer solos",
+            "Para que haya muchas luces",
+            "No son importantes"
+          ],
+          "correct": "Porque nos dan las cosas que necesitamos y no podemos hacer solos"
+        },
+        {
+          "question": "¿A quién ayuda una zapatería?",
+          "options": [
+            "A quien necesita zapatos nuevos para caminar",
+            "A los que quieren comer pizza",
+            "A los perros"
+          ],
+          "correct": "A quien necesita zapatos nuevos para caminar"
+        },
+        {
+          "question": "Verdadero o Falso: Un buen negocio debe tratar bien a sus clientes para que regresen.",
+          "options": ["Verdadero", "Falso", "Solo si es lunes"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Cómo se llama la persona que compra en un negocio?",
+          "options": ["Banquero", "Cliente", "Maestro"],
+          "correct": "Cliente"
+        },
+        {
+          "question": "¿Qué debe hacer un dueño de negocio si se le acaba la harina?",
+          "options": [
+            "Cerrar y llorar",
+            "Usar sus ahorros para comprar más materiales",
+            "Regalar la tienda"
+          ],
+          "correct": "Usar sus ahorros para comprar más materiales"
+        },
+        {
+          "question": "¿Qué sientes al ver que tu trabajo ayuda a otros?",
+          "options": ["Mucha satisfacción", "Tristeza", "Enojo"],
+          "correct": "Mucha satisfacción"
+        }
+      ],
+      "rubric": "El alumno identifica 3 negocios locales y explica qué producto o servicio ofrece cada uno."
+    },
+    "teacher_tips": [
+      "Use ejemplos de la vida real de la zona donde está la escuela.",
+      "Hable sobre la importancia de la higiene y la limpieza en los negocios de comida."
+    ]
+  },
+  "P1-4-2": {
+    "code": "P1-4-2",
+    "title": "Hacer algo para venderlo: lápices decorados",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Creativo",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Experimentar el proceso de producción artesanal, comprendiendo cómo la creatividad y el trabajo manual agregan valor a un objeto básico, transformándolo en un producto comercializable.",
+      "competencies": [
+        "Valor Agregado",
+        "Motricidad Fina",
+        "Control de Calidad",
+        "Emprendimiento"
+      ],
+      "materials": [
+        "Lápices de grafito estándar",
+        "Limpia-pipas de colores",
+        "Ojos movibles de plástico",
+        "Pegamento de secado rápido",
+        "Plumas y pompones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Cambio",
+          "duration": "15 min",
+          "label": "Lápiz vs. Súper Lápiz"
+        },
+        {
+          "phase": "Desarrollo: El Taller",
+          "duration": "30 min",
+          "label": "Manos a la Obra"
+        },
+        {
+          "phase": "Cierre: La Galería",
+          "duration": "15 min",
+          "label": "Mi Obra de Arte"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL SECRETO DEL VALOR (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un lápiz amarillo normal. 'Cuesta $3 pesos'. Ahora muestre uno decorado como un marciano brillante. 'Este cuesta $10 pesos'. ¿Por qué la gente pagaría más? Introduzca el concepto de VALOR AGREGADO: es el extra que nosotros ponemos con nuestra inteligencia y manos.",
+          "activity": "Debate: ¿Qué prefieres comprar, algo aburrido o algo que tiene un detalle especial hecho con amor?"
+        },
+        {
+          "title": "FASE II: FÁBRICA DE MAGIA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Cada niño recibe sus materiales. Deben diseñar su 'Lápiz CEN'. Explique que si el ojo se cae, el cliente no lo comprará; eso se llama CONTROL DE CALIDAD. Deben trabajar con cuidado para que su producto sea perfecto para la venta.",
+          "activity": "Taller Creativo: Producción de lápices. El maestro supervisa que los acabados sean resistentes y estéticos."
+        },
+        {
+          "title": "FASE III: EXPOSICIÓN COMERCIAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Acaban de convertirse en productores. Lo que antes era solo madera y grafito, ahora es un personaje. Pida que pongan sus lápices en una mesa y que todos pasen a verlos como si fuera una tienda real.",
+          "activity": "Reto 'La Etiqueta': Cada niño escribe en un papelito el precio que le pondría a su lápiz y por qué."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Transformar las cosas es la base de todo gran negocio. Usar materiales simples para crear algo extraordinario es lo que hace un emprendedor.",
+      "sections": [
+        {
+          "subtitle": "¿Qué es la Materia Prima?",
+          "content": "La materia prima son todos los materiales básicos que necesitas para fabricar tu producto. Para hacer lápices decorados, la materia prima es: los lápices sin decorar, las cintas de colores, los pompones, el pegamento y el barniz para proteger la decoración. Para hacer limonadas, la materia prima es: los limones, el azúcar, el agua y los vasos desechables. Antes de empezar a producir y vender, un emprendedor inteligente hace una lista de toda la materia prima que necesita y calcula cuánto cuesta. Ese costo es el punto de partida para fijar el precio de venta del producto."
+        },
+        {
+          "subtitle": "El Valor del Trabajo",
+          "content": "Aquí viene un concepto muy importante que muchos emprendedores principiantes olvidan: tu tiempo también vale dinero. Cuando pasas 30 minutos decorando un lápiz, esos 30 minutos tienen un valor. Si trabajas por 2 horas y produces 10 lápices, esas 2 horas deben estar incluidas en el precio de venta, además del costo de los materiales. Si solo recuperas el costo de los materiales pero no el valor de tu tiempo, en realidad estás trabajando gratis. El precio de un producto bien calculado siempre incluye: costo de materiales + valor del trabajo + ganancia para crecer."
+        },
+        {
+          "subtitle": "Control de Calidad",
+          "content": "Control de calidad significa revisar cada producto antes de entregarlo al cliente para asegurarte de que está perfecto. Un lápiz mal pegado que se le cae la decoración al primer día, o una limonada muy amarga, hacen que el cliente se sienta decepcionado y no vuelva. La calidad no significa que sea el más caro ni el más lujoso — significa que cumple exactamente lo que prometiste. Una buena práctica es ponerte en el lugar del cliente: si fuera a comprar este producto, ¿me gustaría lo que veo? Si la respuesta es 'sí con entusiasmo', está listo para venderse."
+        },
+        {
+          "subtitle": "Diferenciación",
+          "content": "¿Por qué alguien elegiría tu lápiz decorado si hay muchos otros en la feria escolar? La respuesta está en la diferenciación: hacer que tu producto tenga algo especial y único que los demás no tengan. Puede ser el diseño (colores de los equipos de fútbol favoritos), la personalización (pones el nombre del comprador), el empaque (lo envuelves en papel brillante con un moño), o el servicio (lo entregas con una tarjetita dibujada a mano). La diferenciación no necesita ser costosa — solo necesita ser original y significativa para tu cliente. En los mercados del mundo, los productos que se diferencian son los que más se recuerdan y más se venden."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué significa agregar valor a un producto?",
+          "options": [
+            "Hacerlo más pesado",
+            "Usar creatividad y trabajo para que sea mejor y más especial",
+            "Pintarlo de negro"
+          ],
+          "correct": "Usar creatividad y trabajo para que sea mejor y más especial"
+        },
+        {
+          "question": "Si un lápiz normal cuesta $3 y tú gastas $2 en decorarlo, ¿qué precio es justo?",
+          "options": [
+            "$1 (pierdes dinero)",
+            "$8 (pagas materiales y tu trabajo)",
+            "$0 (es gratis)"
+          ],
+          "correct": "$8 (pagas materiales y tu trabajo)"
+        },
+        {
+          "question": "¿Cuál de estos es una 'Materia Prima'?",
+          "options": ["El cliente", "El pegamento", "El precio"],
+          "correct": "El pegamento"
+        },
+        {
+          "question": "¿Qué es el 'Control de Calidad'?",
+          "options": [
+            "Revisar que el producto esté bien hecho y no se rompa",
+            "Jugar con los materiales",
+            "Gritar fuerte"
+          ],
+          "correct": "Revisar que el producto esté bien hecho y no se rompa"
+        },
+        {
+          "question": "¿Por qué un producto hecho a mano puede ser más valioso?",
+          "options": [
+            "Porque es único y tiene el esfuerzo de una persona",
+            "Porque es más viejo",
+            "No es valioso"
+          ],
+          "correct": "Porque es único y tiene el esfuerzo de una persona"
+        },
+        {
+          "question": "¿Qué debes hacer si a tu lápiz se le despega un ojo?",
+          "options": [
+            "Venderlo así",
+            "Arreglarlo antes de ofrecerlo al cliente",
+            "Esconderlo"
+          ],
+          "correct": "Arreglarlo antes de ofrecerlo al cliente"
+        },
+        {
+          "question": "Verdadero o Falso: Un emprendedor debe cuidar sus materiales para no desperdiciar dinero.",
+          "options": ["Verdadero", "Falso", "Solo si es un lápiz azul"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué es la 'Creatividad' en un negocio?",
+          "options": [
+            "Dormir mucho",
+            "Tener ideas nuevas para que tu producto sea diferente y mejor",
+            "Copiar todo igual"
+          ],
+          "correct": "Tener ideas nuevas para que tu producto sea diferente y mejor"
+        },
+        {
+          "question": "Si vendes tu lápiz, ¿qué haces con el dinero?",
+          "options": [
+            "Lo tiras",
+            "Compras más materiales para hacer más lápices y ahorras el resto",
+            "Te compras un helado gigante y ya no trabajas"
+          ],
+          "correct": "Compras más materiales para hacer más lápices y ahorras el resto"
+        },
+        {
+          "question": "¿Cómo te sientes al ver tu producto terminado?",
+          "options": ["Aburrido", "Orgulloso de mi talento", "Enojado"],
+          "correct": "Orgulloso de mi talento"
+        }
+      ],
+      "rubric": "El alumno crea un lápiz decorado que cumple con los criterios de calidad (bien pegado, estético) y explica qué valor agregó."
+    },
+    "teacher_tips": [
+      "Fomente que cada niño haga un diseño diferente para que entiendan la competencia sana.",
+      "Tenga cuidado con el uso del pegamento; supervise siempre el manejo de materiales."
+    ]
+  },
+  "P1-4-3": {
+    "code": "P1-4-3",
+    "title": "El precio justo: ni muy caro ni muy barato",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Matemático",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender la lógica financiera detrás de la fijación de precios, integrando costos de materiales, tiempo de trabajo y margen de ganancia en una balanza de equilibrio comercial.",
+      "competencies": [
+        "Cálculo de Costos",
+        "Justicia Comercial",
+        "Análisis de Mercado",
+        "Equilibrio"
+      ],
+      "materials": [
+        "Balanza de madera didáctica",
+        "Monedas de diferentes colores (Costo vs. Ganancia)",
+        "Etiquetas de precios en blanco",
+        "Tarjetas de escenarios: '¿Lo comprarías?'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Dilema",
+          "duration": "15 min",
+          "label": "El Lápiz de $1,000"
+        },
+        {
+          "phase": "Desarrollo: La Balanza",
+          "duration": "30 min",
+          "label": "Costo + Ganancia"
+        },
+        {
+          "phase": "Cierre: La Etiqueta",
+          "duration": "15 min",
+          "label": "Precio Final"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL PRECIO LOCO (APERTURA)",
+          "duration": "15 min",
+          "description": "Diga: 'Voy a vender este borrador a $1,000 pesos'. Pregunte: '¿Quién me lo compra?'. Nadie. Luego diga: 'Lo vendo a 1 centavo'. Pregunte: '¿Me conviene si a mí me costó $5 hacerlo?'. Explique que los precios no son al azar; deben ser JUSTOS para el que vende y para el que compra.",
+          "activity": "Dinámica '¿Lo Compras?': El maestro muestra objetos con precios absurdos y los niños levantan una paleta verde si es justo o roja si no."
+        },
+        {
+          "title": "FASE II: LA FÓRMULA DEL ÉXITO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Use la balanza. En un plato ponga las monedas que representan el COSTO (lo que pagaste por el lápiz y los adornos). En el otro plato ponga monedas que representan tu TRABAJO y tu GANANCIA. Explique que el precio es la SUMA de ambos platos. Si quitas el plato de ganancia, trabajas gratis. Si el plato es demasiado pesado, nadie lo podrá comprar.",
+          "activity": "Juego 'Equilibrando el Negocio': Los niños reciben una tarjeta de costo (ej: $5) y deben decidir cuánta ganancia quieren tener (ej: $2) para llegar al precio final ($7)."
+        },
+        {
+          "title": "FASE III: ETIQUETADO REAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Un precio justo te permite seguir con tu negocio y hace que tus clientes estén felices de pagarte. Pida que pongan la etiqueta final a sus lápices decorados de la clase anterior.",
+          "activity": "Reto 'La Oferta': ¿Qué pasa si hoy es viernes y quieres vender todo rápido? (Podemos bajar un poquito la ganancia para que sea una oferta)."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Poner un precio es encontrar el punto exacto donde tú ganas dinero y tu cliente siente que está pagando lo correcto.",
+      "sections": [
+        {
+          "subtitle": "¿Qué es el Costo?",
+          "content": "El costo es todo el dinero que gastas para poder producir y vender tu producto o servicio, incluyendo materiales, transporte y el valor de tu tiempo. Es el dinero que 'sale' antes de que entre cualquier venta. Por ejemplo, si vendes limonadas: compraste limones ($15), azúcar ($8), vasos ($10) y hielo ($5). Tu costo total es $38. Si vendes menos de lo que gastaste, habrás perdido dinero. Por eso, el primer objetivo de cualquier precio de venta es recuperar completamente el costo. Hasta que no recuperes tu inversión, técnicamente no has ganado nada — solo has recibido de vuelta lo que pusiste."
+        },
+        {
+          "subtitle": "¿Qué es la Ganancia?",
+          "content": "La ganancia es el dinero que queda después de haber recuperado todos los costos. Es el 'fruto' de tu esfuerzo y tu creatividad como emprendedor. Si tu costo fue $38 y vendiste tu limonada en $60, tu ganancia fue $22. Esos $22 son completamente tuyos para usar como decidas. En CEN Academy recomendamos dividir la ganancia en tres partes: una parte para reinvertir en más materiales y hacer crecer el negocio, una parte para guardar como fondo de emergencia del negocio, y una parte para ti como pago por tu trabajo. Así el negocio crece de manera saludable y tú también disfrutas del resultado."
+        },
+        {
+          "subtitle": "Competencia y Precios",
+          "content": "La competencia son otros negocios que venden lo mismo que tú o algo muy parecido. Antes de fijar tu precio, investiga cuánto cobran ellos. Si cobras mucho más que la competencia sin ofrecer algo claramente mejor, los clientes elegirán la opción más barata. Si cobras mucho menos que todos, puede parecer que tu producto es de baja calidad, o simplemente perderás dinero. El precio ideal está en el rango de la competencia, pero con alguna ventaja adicional que justifique tu valor: mejor calidad, empaque más bonito, entrega a domicilio o un servicio más amable. La competencia no es tu enemiga — es información valiosa que te ayuda a posicionarte mejor."
+        },
+        {
+          "subtitle": "El Precio es un Compromiso",
+          "content": "Cuando escribes el precio en tu producto o lo anuncias a tus clientes, estás haciendo una promesa pública de que ese es el valor de tu trabajo. Cambiar los precios sin aviso, cobrar diferente según quién te compre o subir el precio después de que el cliente ya acordó comprarlo son prácticas deshonestas que destruyen la confianza. En CEN Academy practicamos la transparencia en los precios: todos los clientes merecen el mismo trato justo. Si necesitas subir tus precios porque aumentaron tus costos, comunícalo con anticipación y explica la razón. Los buenos clientes entenderán y respetarán tu honestidad."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Si hacer un dulce te cuesta $5 y lo vendes a $5, ¿cuánto dinero ganaste?",
+          "options": [
+            "Ganaste $5",
+            "No ganaste nada ($0), solo recuperaste lo que gastaste",
+            "Perdiste dinero"
+          ],
+          "correct": "No ganaste nada ($0), solo recuperaste lo que gastaste"
+        },
+        {
+          "question": "¿Qué es la 'Ganancia'?",
+          "options": [
+            "El dinero total que recibes",
+            "El dinero extra que te queda después de pagar los materiales",
+            "El nombre de una moneda"
+          ],
+          "correct": "El dinero extra que te queda después de pagar los materiales"
+        },
+        {
+          "question": "¿Qué pasa si pones un precio MUY CARO que nadie puede pagar?",
+          "options": [
+            "Te vuelves rico rápido",
+            "Nadie compra tu producto y tu negocio fracasa",
+            "El producto se vuelve mejor"
+          ],
+          "correct": "Nadie compra tu producto y tu negocio fracasa"
+        },
+        {
+          "question": "Si gastaste $10 en materiales y quieres ganar $5, ¿cuál es el precio de venta?",
+          "options": ["$5", "$10", "$15"],
+          "correct": "$15"
+        },
+        {
+          "question": "¿Por qué es importante recuperar el 'Costo'?",
+          "options": [
+            "Para poder comprar materiales y seguir trabajando mañana",
+            "Para comprar juguetes",
+            "No es importante"
+          ],
+          "correct": "Para poder comprar materiales y seguir trabajando mañana"
+        },
+        {
+          "question": "Verdadero o Falso: Un precio justo ayuda a que los clientes confíen en ti.",
+          "options": ["Verdadero", "Falso", "Solo si el cliente es tu amigo"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué puedes hacer si nadie compra tu producto porque dicen que es caro?",
+          "options": [
+            "Llorar",
+            "Revisar tus costos y ver si puedes bajar un poquito el precio o mejorar el producto",
+            "Enojarte con los clientes"
+          ],
+          "correct": "Revisar tus costos y ver si puedes bajar un poquito el precio o mejorar el producto"
+        },
+        {
+          "question": "Si vendes 2 lápices a $10 cada uno, ¿cuánto dinero entró en total a tu caja?",
+          "options": ["$10", "$20", "$5"],
+          "correct": "$20"
+        },
+        {
+          "question": "¿Cuál es el símbolo que usamos para los precios?",
+          "options": ["&", "$", "#"],
+          "correct": "$"
+        },
+        {
+          "question": "¿Cómo se siente un cliente cuando paga un precio justo por algo muy bueno?",
+          "options": ["Engañado", "Satisfecho y feliz", "Triste"],
+          "correct": "Satisfecho y feliz"
+        }
+      ],
+      "rubric": "El alumno calcula el precio de venta dado un costo y una ganancia esperada en 3 escenarios simples."
+    },
+    "teacher_tips": [
+      "Use el ejemplo de los dulces de la cooperativa; los niños conocen esos precios perfectamente.",
+      "Enfatice que el 'trabajo' también es un costo (tu tiempo vale)."
+    ]
+  },
+  "P1-4-4": {
+    "code": "P1-4-4",
+    "title": "Mis primeros clientes: familia y amigos",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Social",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Desarrollar habilidades de comunicación asertiva y ventas éticas, comprendiendo que un cliente es una persona a la que ayudamos a través de nuestro producto o servicio.",
+      "competencies": [
+        "Comunicación Persuasiva",
+        "Empatía",
+        "Ventas Éticas",
+        "Resiliencia"
+      ],
+      "materials": [
+        "Teléfonos de juguete",
+        "Espejo de la Sonrisa",
+        "Tarjetas de 'Objeciones de Clientes'",
+        "Gafetes de 'Asesor CEN'"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Saludo",
+          "duration": "15 min",
+          "label": "La Primera Impresión"
+        },
+        {
+          "phase": "Desarrollo: El Diálogo",
+          "duration": "30 min",
+          "label": "Vender es Ayudar"
+        },
+        {
+          "phase": "Cierre: El Gracias",
+          "duration": "15 min",
+          "label": "Amistad de Negocios"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿A QUIÉN LE COMPRAS? (APERTURA)",
+          "duration": "15 min",
+          "description": "Actúe dos vendedores: 1. Uno que está distraído, no saluda y tiene cara enojada. 2. Uno que sonríe, saluda por su nombre y explica por qué su lápiz es especial. Pregunte: '¿A cuál le darían sus monedas?'. Explique que la AMABILIDAD es la herramienta más importante de un negocio.",
+          "activity": "Dinámica 'El Espejo de la Sonrisa': Los niños practican su saludo de negocios frente a un compañero, cuidando el contacto visual y la sonrisa."
+        },
+        {
+          "title": "FASE II: LAS PALABRAS MÁGICAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe el 'Guion de Oro CEN': 1. Saludo Amable. 2. Presentación del Producto (¿Qué es y por qué es genial?). 3. El Precio. 4. Escuchar al cliente. Explique que si el cliente dice 'No', no pasa nada; seguimos siendo amigos. Eso se llama RESILIENCIA.",
+          "activity": "Juego de Roles 'Mi Primer Cliente': En parejas, uno hace de vendedor y otro de mamá o abuelo. Deben practicar ofrecer su lápiz decorado usando las palabras mágicas. El 'cliente' debe hacer una pregunta difícil (ej: '¿Por qué cuesta tanto?') y el vendedor debe responder con calma."
+        },
+        {
+          "title": "FASE III: LA MAGIA DEL AGRADECIMIENTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Un cliente feliz siempre regresa. Incluso si no compra hoy, si lo tratas bien, hablará bien de ti. Pida que dibujen a su cliente ideal (un familiar o amigo) recibiendo su producto con una sonrisa.",
+          "activity": "Reto 'El Gesto de Gracias': Practicar decir 'Gracias por su tiempo' aunque la venta no se haya realizado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Vender no es convencer a alguien de comprar algo que no quiere. Es mostrar con alegría algo útil que tú hiciste.",
+      "sections": [
+        {
+          "subtitle": "¿Quién es el Cliente?",
+          "content": "Un cliente es cualquier persona que podría beneficiarse de lo que vendes y tiene dinero para pagarlo. Tus primeros clientes casi siempre son las personas más cercanas: tu familia inmediata, tus abuelos, los vecinos y los amigos de tus papás. No hay nada de malo en empezar ahí — de hecho, es la estrategia que usan muchos negocios grandes cuando lanzan un producto nuevo. Llaman a este primer grupo de clientes 'early adopters' o clientes iniciales, y son preciosos porque además de comprarte, suelen darte retroalimentación honesta sobre cómo mejorar tu producto o servicio."
+        },
+        {
+          "subtitle": "La Honestidad en la Venta",
+          "content": "La honestidad es el fundamento de cualquier negocio exitoso a largo plazo. Cuando describes tu producto, di exactamente lo que es y lo que hace — ni más ni menos. Si tus lápices decorados son para uso escolar normal y no para escribir bajo el agua, dilo claramente. Un cliente que compra algo basado en información verdadera y queda satisfecho, vuelve y trae amigos. Un cliente que se siente engañado, aunque sea por exagerar pequeñas cosas, no solo no vuelve — también le cuenta a otros su mala experiencia. En el mundo actual de las redes sociales, una mala reseña puede llegar a miles de personas. La honestidad no es solo ética — es también el mejor negocio."
+        },
+        {
+          "subtitle": "Saber Escuchar",
+          "content": "Uno de los errores más comunes de los vendedores principiantes es hablar demasiado y escuchar poco. Pero la venta más efectiva no empieza con lo que tú quieres decir — empieza con entender lo que el cliente necesita. Practica hacer preguntas: '¿Para qué ocasión lo quieres?', '¿Tienes algún color favorito?', '¿Es un regalo o para ti?' Luego escucha con atención la respuesta y adapta lo que ofreces a lo que ellos dijeron. Un cliente que siente que realmente lo escuchaste y le diste exactamente lo que quería, no solo compra — se convierte en tu fan y vocero más fiel."
+        },
+        {
+          "subtitle": "Manejo del 'No'",
+          "content": "En ventas, escuchar 'no' es completamente normal y es parte del proceso. Los mejores vendedores del mundo reciben muchísimos 'noes' antes de cada 'sí'. Cuando alguien no te compra, no lo tomes como un rechazo personal — puede ser simplemente que hoy no tiene dinero, que ya compró algo parecido recientemente, o que ese momento no es el indicado. Lo importante es mantener siempre una actitud amable, agradecerles su tiempo y dejar la puerta abierta: 'Está bien, cuando quieras aquí estaré.' Un 'no' hoy puede convertirse en un 'sí' la próxima semana. La persistencia respetuosa y el buen humor son las herramientas más poderosas de cualquier emprendedor."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la herramienta más importante de un vendedor?",
+          "options": [
+            "Gritar mucho",
+            "La amabilidad y la sonrisa",
+            "Esconderse"
+          ],
+          "correct": "La amabilidad y la sonrisa"
+        },
+        {
+          "question": "¿Qué debes hacer primero al acercarte a un cliente?",
+          "options": [
+            "Pedirle dinero",
+            "Saludarlo con respeto",
+            "Empezar a correr"
+          ],
+          "correct": "Saludarlo con respeto"
+        },
+        {
+          "question": "Si un cliente te pregunta algo que no sabes, ¿qué haces?",
+          "options": [
+            "Invéntate una mentira",
+            "Dile con honestidad que no sabes pero que vas a investigar",
+            "Ignóralo"
+          ],
+          "correct": "Dile con honestidad que no sabes pero que vas a investigar"
+        },
+        {
+          "question": "¿Por qué es importante ser honesto sobre lo que vendes?",
+          "options": [
+            "Porque así los clientes confiarán en ti y volverán",
+            "Porque es una regla de la escuela",
+            "No es importante ser honesto"
+          ],
+          "correct": "Porque así los clientes confiarán en ti y volverán"
+        },
+        {
+          "question": "¿Qué haces si un amigo te dice que no quiere comprar tu lápiz hoy?",
+          "options": [
+            "Te enojas con él y ya no le hablas",
+            "Le das las gracias con una sonrisa y sigues siendo su amigo",
+            "Le tiras el lápiz"
+          ],
+          "correct": "Le das las gracias con una sonrisa y sigues siendo su amigo"
+        },
+        {
+          "question": "¿Quiénes suelen ser tus primeros clientes?",
+          "options": [
+            "Gente extraña en la calle",
+            "Tu familia y amigos cercanos",
+            "Personas de otros países"
+          ],
+          "correct": "Tu familia y amigos cercanos"
+        },
+        {
+          "question": "Verdadero o Falso: Escuchar lo que el cliente quiere es más importante que hablar mucho.",
+          "options": ["Verdadero", "Falso", "Solo si el cliente grita"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué debes decir siempre al final de una plática con un cliente, aunque no compre?",
+          "options": [
+            "'¡Qué mal!'",
+            "'Muchas gracias por su atención'",
+            "'Váyase ya'"
+          ],
+          "correct": "'Muchas gracias por su atención'"
+        },
+        {
+          "question": "¿Qué significa tener 'buena atención al cliente'?",
+          "options": [
+            "Hacer que el cliente se sienta especial, escuchado y respetado",
+            "Darle dulces gratis",
+            "No hablarle"
+          ],
+          "correct": "Hacer que el cliente se sienta especial, escuchado y respetado"
+        },
+        {
+          "question": "¿Cómo se siente Ceny cuando trata bien a sus clientes?",
+          "options": [
+            "Cansado",
+            "Feliz de representar bien a CEN Academy",
+            "Triste"
+          ],
+          "correct": "Feliz de representar bien a CEN Academy"
+        }
+      ],
+      "rubric": "El alumno realiza un simulacro de venta de 2 minutos demostrando saludo, explicación del producto y cierre amable."
+    },
+    "teacher_tips": [
+      "No obligue a los niños más tímidos a pasar al frente; deje que practiquen en sus lugares primero.",
+      "Recuerde que el objetivo es la comunicación, no la venta real de dinero en este momento."
+    ]
+  },
+  "P1-4-5": {
+    "code": "P1-4-5",
+    "title": "Gané dinero: ¿qué hago con él?",
+    "level": "Primaria 1",
+    "duration": "60 min",
+    "difficulty": "Básico / Disciplina",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Aprender a gestionar los ingresos de un negocio, introduciendo la regla de división de ganancias entre reinversión, ahorro y gasto personal, para asegurar la continuidad del emprendimiento.",
+      "competencies": [
+        "Gestión de Recursos",
+        "Visión a Largo Plazo",
+        "Disciplina Financiera",
+        "Responsabilidad"
+      ],
+      "materials": [
+        "Tres cajas de colores: 'Negocio', 'Ahorro' y 'Mío'",
+        "Monedas didácticas",
+        "Cuento: 'La tienda que nunca cerró porque Ceny fue inteligente'",
+        "Certificado de Emprendedor CEN"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Tesoro",
+          "duration": "15 min",
+          "label": "¡Tengo 10 Pesos!"
+        },
+        {
+          "phase": "Desarrollo: Las 3 Cajas",
+          "duration": "30 min",
+          "label": "Dividir para Crecer"
+        },
+        {
+          "phase": "Cierre: Mi Graduación",
+          "duration": "15 min",
+          "label": "Emprendedor Oficial"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL ERROR DE CENY (APERTURA)",
+          "duration": "15 min",
+          "description": "Narre cómo Ceny vendió sus lápices y ganó $20. Se emocionó tanto que se compró una bolsa gigante de papas y un refresco. Al día siguiente, quería hacer más lápices pero ¡ya no tenía dinero para comprar pegamento ni pompones! Pregunte: '¿Qué hizo mal Ceny?'. Introduzca el concepto de REINVERSIÓN.",
+          "activity": "Dinámica 'El Dilema de los Dulces': Los niños deben decidir si gastan sus fichas de premio ahora o las guardan para 'comprar' un juego mejor mañana."
+        },
+        {
+          "title": "FASE II: EL SECRETO DE LAS TRES CAJAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe la regla de oro: El dinero ganado se divide en 3: 1. CAJA NEGOCIO: Para comprar más materiales (es la más importante). 2. CAJA AHORRO: Para metas grandes del futuro. 3. CAJA MÍA: Para un pequeño premio hoy. Si la caja de negocio se queda vacía, ¡el negocio muere!",
+          "activity": "Taller 'Repartiendo el Éxito': Entregue 9 monedas a cada niño. Deben poner 3 en cada caja (o 4 en negocio, 3 en ahorro y 2 en mía). Discutan por qué poner más en la caja de 'Negocio' hace que el negocio crezca más rápido."
+        },
+        {
+          "title": "FASE III: GRADUACIÓN EMPRENDEDORA (CIERRE)",
+          "duration": "15 min",
+          "description": "Reflexione: Han aprendido a soñar, ahorrar, crear y vender. Ahora saben que el dinero es una herramienta para construir. Haga una ceremonia de entrega de gafetes de 'Emprendedor Diamante CEN'.",
+          "activity": "Reto 'Mi Nueva Meta': Escribir en la caja de ahorro cuál será su próximo gran sueño ahora que son expertos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El dinero que entra a tu negocio no es todo para gastar; es una semilla que debes plantar de nuevo para que crezca un árbol más grande.",
+      "sections": [
+        {
+          "subtitle": "¿Qué es la Reinversión?",
+          "content": "Reinvertir significa tomar una parte de las ganancias de tu negocio y usarlas para hacerlo crecer en lugar de gastarlas todas en ti mismo. Si vendes lápices decorados y ganas $50, podrías reinvertir $20 comprando más materiales para hacer el doble de lápices la próxima vez. Eso te permitirá vender más y ganar más dinero en la siguiente ronda. La reinversión es el secreto del crecimiento de todos los negocios del mundo, desde la panadería de la esquina hasta las empresas más grandes. Los emprendedores que reinvierten constantemente ven cómo sus negocios crecen de manera orgánica y sostenida con el tiempo."
+        },
+        {
+          "subtitle": "El Ahorro del Negocio",
+          "content": "Igual que tú guardas dinero en tu alcancía para emergencias personales, un negocio necesita su propio fondo de emergencia. Habrá días en que no vendas nada, en que se rompa una herramienta importante, en que suba el precio de tus materiales, o en que tengas que hacer un gasto inesperado. Si el negocio no tiene ahorros para esos momentos, podría cerrar. Por eso, una parte de las ganancias — quizás el 10 o el 20% — debe guardarse en una reserva que no se toca a menos que sea una verdadera necesidad del negocio. Este colchón financiero es lo que da tranquilidad y durabilidad a cualquier emprendimiento."
+        },
+        {
+          "subtitle": "Tu Sueldo o Premio",
+          "content": "Una confusión común entre los emprendedores principiantes es pensar que todas las ganancias del negocio son para gastarlas en lo que quieran. En realidad, el dueño de un negocio debe pagarse a sí mismo como si fuera un empleado — a eso se le llama sueldo del emprendedor. Esta parte es tuya para disfrutar: puede ser un helado, un pequeño juguete o guardarla en tu alcancía personal. Lo importante es que esta cantidad sea una porción definida de la ganancia, no todo. Así el negocio se mantiene fuerte y tú también disfrutas el fruto de tu esfuerzo de manera equilibrada y sostenible."
+        },
+        {
+          "subtitle": "Responsabilidad Social",
+          "content": "Los negocios más admirados del mundo no solo se preocupan por ganar dinero — también se preocupan por el impacto que tienen en su comunidad y en el planeta. Esto se llama responsabilidad social empresarial. En tu escala como emprendedor pequeño, puede ser tan sencillo como: reservar una pequeña parte de tus ganancias para donar a una causa que te importe, usar materiales reciclados o eco-amigables, dar trabajo a algún amigo o familiar que lo necesite, o donar productos a quienes no pueden pagarlos. Un negocio que hace el bien en su comunidad genera más confianza, más lealtad de sus clientes y más orgullo en su dueño — ¡eso eres tú, un Ciudadano CEN completo!"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Si ganas $10 en tu negocio de lápices, ¿qué debes hacer primero?",
+          "options": [
+            "Gastártelo todo en dulces",
+            "Separar el dinero para comprar más lápices mañana (reinversión)",
+            "Esconderlo en el jardín"
+          ],
+          "correct": "Separar el dinero para comprar más lápices mañana (reinversión)"
+        },
+        {
+          "question": "¿Para qué sirve la 'Caja de Negocio'?",
+          "options": [
+            "Para guardar juguetes",
+            "Para tener dinero listo para comprar más materiales",
+            "Para regalar a extraños"
+          ],
+          "correct": "Para tener dinero listo para comprar más materiales"
+        },
+        {
+          "question": "¿Qué pasa si te gastas TODO el dinero ganado hoy mismo?",
+          "options": [
+            "Mañana tendrás más dinero",
+            "Mañana ya no tendrás materiales para seguir trabajando y tu negocio cerrará",
+            "Te darán un premio"
+          ],
+          "correct": "Mañana ya no tendrás materiales para seguir trabajando y tu negocio cerrará"
+        },
+        {
+          "question": "¿Qué es la 'Reinversión'?",
+          "options": [
+            "Comprar más de lo que necesitas para que el negocio crezca",
+            "Ir al parque",
+            "Dormir"
+          ],
+          "correct": "Comprar más de lo que necesitas para que el negocio crezca"
+        },
+        {
+          "question": "¿Cuántas partes se recomienda dividir tu ganancia?",
+          "options": ["En 100", "En 3 (Negocio, Ahorro y Mío)", "No se divide"],
+          "correct": "En 3 (Negocio, Ahorro y Mío)"
+        },
+        {
+          "question": "Si tu negocio crece y ganas más, ¿puedes ayudar a los demás?",
+          "options": [
+            "Sí, donando una pequeña parte a una buena causa",
+            "No, el dinero es solo mío",
+            "Nunca"
+          ],
+          "correct": "Sí, donando una pequeña parte a una buena causa"
+        },
+        {
+          "question": "Verdadero o Falso: Un buen emprendedor planea el futuro de su dinero.",
+          "options": ["Verdadero", "Falso", "Solo cuando es Navidad"],
+          "correct": "Verdadero"
+        },
+        {
+          "question": "¿Qué es lo que hace que un negocio dure muchos años?",
+          "options": [
+            "La suerte",
+            "La disciplina de reinvertir y cuidar a los clientes",
+            "Gritar mucho"
+          ],
+          "correct": "La disciplina de reinvertir y cuidar a los clientes"
+        },
+        {
+          "question": "¿Cuál es el último paso del Ciclo del Éxito?",
+          "options": [
+            "Rendirse",
+            "Celebrar el logro y empezar una meta nueva",
+            "Gastar todo"
+          ],
+          "correct": "Celebrar el logro y empezar una meta nueva"
+        },
+        {
+          "question": "¿Qué aprendiste sobre el dinero en este curso?",
+          "options": [
+            "Que es difícil de conseguir",
+            "Que es una herramienta para cumplir sueños y ayudar a otros",
+            "Que no sirve para nada"
+          ],
+          "correct": "Que es una herramienta para cumplir sueños y ayudar a otros"
+        }
+      ],
+      "rubric": "El alumno demuestra cómo repartiría 10 monedas de ganancia entre las 3 cajas y justifica por qué la caja de 'Negocio' no puede estar vacía."
+    },
+    "teacher_tips": [
+      "Use el ejemplo de un granjero: 'Si se come todas las semillas, ya no tendrá cosecha el próximo año'.",
+      "Termine la clase con un aplauso grupal; ¡han completado su primer año de formación financiera!"
+    ]
+  }
+}

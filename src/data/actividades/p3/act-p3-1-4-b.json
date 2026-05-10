@@ -1,0 +1,138 @@
+{
+  "code": "ACT-P3-1-4-B",
+  "unit_code": "P3-1-4",
+  "unit_title": "Deseos vs. Necesidades",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "SIMPLE",
+  "titulo": "Rápido: ¿Deseo o Necesidad?",
+  "descripcion": "¡El reloj corre! Tienes 15 segundos para decidir qué es cada artículo. ¡Consigue la racha más larga!",
+  "objetivo": "Diferenciar bajo presión artículos esenciales de deseos personales",
+  "xp": 300,
+  "tiempo_por_pregunta": 15,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "t1",
+      "pregunta": "El agua que bebes para quitarte la sed es...",
+      "respuesta_correcta": "Necesidad",
+      "incorrectas": [
+        "Deseo",
+        "Lujo",
+        "Gasto Innecesario"
+      ],
+      "categoria": "Básicos",
+      "dato_extra": "Sin agua no podemos vivir, por eso es la necesidad #1."
+    },
+    {
+      "id": "t2",
+      "pregunta": "Unos tenis de marca con luces y resortes caros son...",
+      "respuesta_correcta": "Deseo",
+      "incorrectas": [
+        "Necesidad",
+        "Obligación",
+        "Gasto Fijo"
+      ],
+      "categoria": "Vestimenta",
+      "dato_extra": "Necesitas zapatos para caminar, pero las luces son un gusto extra."
+    },
+    {
+      "id": "t3",
+      "pregunta": "La medicina que te receta el doctor cuando te enfermas es...",
+      "respuesta_correcta": "Necesidad",
+      "incorrectas": [
+        "Deseo",
+        "Opcional",
+        "Capricho"
+      ],
+      "categoria": "Salud",
+      "dato_extra": "La salud es una prioridad absoluta en cualquier presupuesto."
+    },
+    {
+      "id": "t4",
+      "pregunta": "Ir a ver la nueva película de superhéroes al cine es...",
+      "respuesta_correcta": "Deseo",
+      "incorrectas": [
+        "Necesidad",
+        "Gasto Fijo",
+        "Inversión"
+      ],
+      "categoria": "Entretenimiento",
+      "dato_extra": "Es muy divertido, pero puedes vivir sin ir al cine una semana."
+    },
+    {
+      "id": "t5",
+      "pregunta": "Los cuadernos y lápices para tus clases son...",
+      "respuesta_correcta": "Necesidad",
+      "incorrectas": [
+        "Deseo",
+        "Lujo",
+        "Extras"
+      ],
+      "categoria": "Educación",
+      "dato_extra": "Tus herramientas para aprender son esenciales para tu futuro."
+    },
+    {
+      "id": "t6",
+      "pregunta": "Una suscripción para jugar videojuegos en línea es...",
+      "respuesta_correcta": "Deseo",
+      "incorrectas": [
+        "Necesidad",
+        "Gasto Vital",
+        "Básico"
+      ],
+      "categoria": "Tecnología",
+      "dato_extra": "Es entretenimiento digital, algo que se planea después de las necesidades."
+    },
+    {
+      "id": "t7",
+      "pregunta": "El jabón y el champú para bañarte son...",
+      "respuesta_correcta": "Necesidad",
+      "incorrectas": [
+        "Deseo",
+        "Opcional",
+        "Gasto Extra"
+      ],
+      "categoria": "Higiene",
+      "dato_extra": "Mantenerte limpio te ayuda a no enfermarte."
+    },
+    {
+      "id": "t8",
+      "pregunta": "Una paleta gigante de caramelo con chicle es...",
+      "respuesta_correcta": "Deseo",
+      "incorrectas": [
+        "Necesidad",
+        "Alimento Básico",
+        "Fijo"
+      ],
+      "categoria": "Alimentación",
+      "dato_extra": "Es un postre, no es nutrición básica."
+    },
+    {
+      "id": "t9",
+      "pregunta": "El pago de la renta de la casa donde vives es...",
+      "respuesta_correcta": "Necesidad",
+      "incorrectas": [
+        "Deseo",
+        "Gasto Variable",
+        "Capricho"
+      ],
+      "categoria": "Vivienda",
+      "dato_extra": "Tener un techo donde dormir es fundamental para la familia."
+    },
+    {
+      "id": "t10",
+      "pregunta": "Un disfraz de dinosaurio para jugar el fin de semana es...",
+      "respuesta_correcta": "Deseo",
+      "incorrectas": [
+        "Necesidad",
+        "Uniforme",
+        "Gasto Fijo"
+      ],
+      "categoria": "Juegos",
+      "dato_extra": "Es genial para jugar, pero no es una prenda básica de vestir."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

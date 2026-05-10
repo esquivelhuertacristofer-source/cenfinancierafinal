@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P2-4-4-B",
+  "unit_code": "P2-4-4",
+  "unit_title": "Cuestionario: Vender con Honestidad",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Te vuelves millonario para siempre",
+        "El cliente se enoja, no regresa y le dice a otros que no te compren",
+        "No pasa nada",
+        "Es cuando el dinero crece solo sin hacer nada"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué pasa si engañas a un cliente para venderle algo que no sirve?",
+      "explicacion": "¡Correcto! La deshonestidad destruye los negocios a largo plazo."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Cobrar lo más caro que se pueda",
+        "Cobrar un precio que respete tu trabajo y también el bolsillo del cliente",
+        "Regalar todo",
+        "Es una tarea que solo hacen los papás"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué significa cobrar un 'Precio Justo'?",
+      "explicacion": "¡Exacto! El equilibrio es la clave de un buen intercambio comercial."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Venderlo rápido antes de que se den cuenta",
+        "Arreglarlo perfectamente o no venderlo",
+        "Esconderlo y decir que se lo robaron",
+        "Los costos no importan si el producto es muy bonito"
+      ],
+      "correcta": 1,
+      "texto": "Si tu producto se rompió mientras lo hacías, ¿qué es lo honesto?",
+      "explicacion": "¡Así es! La calidad garantiza que el cliente esté satisfecho."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Gritar mucho en la calle",
+        "Que los clientes estén felices y te recomienden con sus amigos",
+        "Tener letreros de colores",
+        "Los niños nunca tendrán que pagar impuestos"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es la mejor publicidad para un negocio?",
+      "explicacion": "¡Correcto! La recomendación de boca en boca es la más poderosa."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Quedarme con el dinero extra",
+        "Devolverle el cambio correcto de inmediato y explicarle su error",
+        "Esconderme",
+        "Solo aplica a negocios con más de 10 empleados"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué harías si un cliente te paga de más por error?",
+      "explicacion": "¡Excelente! La honestidad construye confianza de por vida."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si hay cámaras",
+        "Toda inversión garantiza ganancias del 100%"
+      ],
+      "correcta": 0,
+      "texto": "Verdadero o Falso: Un buen emprendedor prefiere perder una venta que decir una mentira.",
+      "explicacion": "¡Correcto! Tu palabra vale más que cualquier ganancia rápida."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Engañado",
+        "Feliz, agradecido y con ganas de volver a comprar",
+        "Triste",
+        "Solo las empresas grandes pueden invertir"
+      ],
+      "correcta": 1,
+      "texto": "¿Cómo se siente un cliente que recibe un producto de excelente calidad?",
+      "explicacion": "¡Bien hecho! La calidad es un respeto hacia el cliente."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Vender cosas raras",
+        "Comportarse con honestidad y respeto en los negocios",
+        "Un tipo de moneda",
+        "Mientras más caro, mejor calidad siempre"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué significa 'ética comercial'?",
+      "explicacion": "¡Exacto! Son las reglas de honor en el mundo del trabajo."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Hablar mal de ellos",
+        "Esforzarme por mejorar mi propia calidad y aprender",
+        "Irme a mi casa",
+        "Los emprendedores siempre trabajan solos sin ayuda"
+      ],
+      "correcta": 1,
+      "texto": "Si ves que tu competencia vende algo mejor que tú, ¿qué debes hacer?",
+      "explicacion": "¡Correcto! La competencia nos ayuda a ser mejores cada día."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Porque los clientes confían en ti y te compran muchas veces durante mucho tiempo",
+        "Porque el dinero cae del cielo",
+        "No ayuda",
+        "La globalización eliminó su utilidad práctica"
+      ],
+      "correcta": 0,
+      "texto": "¿Por qué la honestidad te ayuda a ganar más dinero a largo plazo?",
+      "explicacion": "¡Así es! Un cliente fiel vale más que cien clientes de una sola vez."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: Vender con Honestidad",
+  "xp": 300,
+  "level": "Primaria 2"
+}

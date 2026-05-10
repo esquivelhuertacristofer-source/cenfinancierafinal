@@ -1,0 +1,317 @@
+{
+  "code": "ACT-S3-4-5-B",
+  "unit_code": "S3-4-5",
+  "unit_title": "El Emprendedor Social: Negocios con alma y propósito",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Certificación Global Secundaria 3",
+  "descripcion": "¡Has llegado a la meta final! Demuestra que tienes el conocimiento y el criterio para dominar el mundo de las finanzas profesionales.",
+  "objetivo": "Evaluar de forma integral los conocimientos adquiridos durante todo el currículo de Secundaria 3",
+  "xp": 300,
+  "aprobacion_minima": 0.85,
+  "preguntas": [
+    {
+      "id": "f1",
+      "texto": "¿Qué sucede con las tasas de interés si el Banco Central quiere frenar la inflación?",
+      "opciones": [
+        "Las baja para que la gente gaste más",
+        "Las sube para encarecer el crédito y reducir el consumo",
+        "Las elimina",
+        "No tienen relación"
+      ],
+      "correcta": 1,
+      "explicacion": "Tasas altas = menos dinero circulando = menos presión sobre los precios."
+    },
+    {
+      "id": "f2",
+      "texto": "¿Qué es el Producto Interno Bruto (PIB)?",
+      "opciones": [
+        "El dinero que el gobierno tiene ahorrado",
+        "El valor total de todos los bienes y servicios finales producidos en un país en un año",
+        "La suma de las deudas de los ciudadanos",
+        "El precio del dólar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el termómetro principal de la salud económica de una nación."
+    },
+    {
+      "id": "f3",
+      "texto": "Si una empresa tiene una Utilidad Neta de $1M y un múltiplo de industria de 15x, ¿cuál es su valuación?",
+      "opciones": [
+        "$1,000,000",
+        "$15,000,000",
+        "$150,000",
+        "$500,000"
+      ],
+      "correcta": 1,
+      "explicacion": "Utilidad x Múltiplo = Valor de mercado."
+    },
+    {
+      "id": "f4",
+      "texto": "¿Cuál es la principal ventaja de salir a bolsa (IPO)?",
+      "opciones": [
+        "Dejar de pagar impuestos",
+        "Recaudar grandes cantidades de capital para expansión vendiendo acciones al público",
+        "Que el dueño ya no tenga que trabajar",
+        "Cerrar la empresa"
+      ],
+      "correcta": 1,
+      "explicacion": "Permite financiar proyectos que antes eran imposibles."
+    },
+    {
+      "id": "f5",
+      "texto": "¿Qué es un contrato de Futuro?",
+      "opciones": [
+        "Un sueño sobre el dinero",
+        "Un acuerdo para comprar o vender un activo en una fecha futura a un precio fijado HOY",
+        "Un tipo de seguro de vida",
+        "Una cuenta de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la herramienta base para la cobertura de riesgos."
+    },
+    {
+      "id": "f6",
+      "texto": "¿Qué es una Opción 'PUT'?",
+      "opciones": [
+        "El derecho a comprar barato",
+        "El derecho a VENDER un activo a un precio fijo (funciona como protección ante caídas de precio)",
+        "Invertir en petróleo",
+        "Una deuda con el banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un 'seguro' financiero para tus activos."
+    },
+    {
+      "id": "f7",
+      "texto": "¿Qué significa 'Apalancamiento' Financiero?",
+      "opciones": [
+        "Usar una palanca para abrir una caja fuerte",
+        "Usar dinero prestado para aumentar el tamaño de una inversión (y su riesgo)",
+        "Pedir un descuento en el banco",
+        "Pagar todas tus deudas"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una espada de doble filo: multiplica ganancias y pérdidas."
+    },
+    {
+      "id": "f8",
+      "texto": "¿Qué es el 'Insider Trading'?",
+      "opciones": [
+        "Vender productos dentro de la oficina",
+        "Usar información privada y secreta de una empresa para ganar dinero en la bolsa (es ilegal)",
+        "Hablar con inversionistas",
+        "Hacer publicidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Destruye la justicia y la transparencia del mercado."
+    },
+    {
+      "id": "f9",
+      "texto": "¿Cuál es la función del 'Consejo de Administración'?",
+      "opciones": [
+        "Hacer el trabajo diario",
+        "Supervisar a los directivos y proteger los intereses de los accionistas",
+        "Cobrar las ventas",
+        "Diseñar el logo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el máximo órgano de vigilancia de una empresa."
+    },
+    {
+      "id": "f10",
+      "texto": "¿Qué miden los criterios 'ESG'?",
+      "opciones": [
+        "La velocidad del dinero",
+        "El impacto Ambiental, Social y la Ética de Gobierno de una empresa",
+        "El precio de las acciones",
+        "La cantidad de empleados"
+      ],
+      "correcta": 1,
+      "explicacion": "Son la base del capitalismo consciente moderno."
+    },
+    {
+      "id": "f11",
+      "texto": "¿Qué es un 'Fideicomiso' (Trust)?",
+      "opciones": [
+        "Tenerle confianza a alguien",
+        "Una estructura legal que protege y administra bienes para beneficiarios específicos bajo reglas claras",
+        "Un préstamo sin intereses",
+        "Una cuenta de banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Es clave para el blindaje patrimonial y la sucesión."
+    },
+    {
+      "id": "f12",
+      "texto": "¿Qué es la 'Deflación'?",
+      "opciones": [
+        "Cuando los precios suben",
+        "La caída generalizada y prolongada del nivel de precios (peligrosa para la economía)",
+        "Cuando el dólar sube",
+        "Un tipo de impuesto"
+      ],
+      "correcta": 1,
+      "explicacion": "Puede causar que la gente deje de comprar esperando que baje más, frenando el país."
+    },
+    {
+      "id": "f13",
+      "texto": "¿Qué es el 'Spread' en el tipo de cambio?",
+      "opciones": [
+        "Un tipo de pan",
+        "La diferencia entre el precio de compra y el precio de venta de una moneda",
+        "El valor total del mercado",
+        "Un impuesto al turismo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la ganancia de quien te cambia el dinero."
+    },
+    {
+      "id": "f14",
+      "texto": "¿Qué es el 'Venture Capital'?",
+      "opciones": [
+        "Dinero para comprar casas",
+        "Inversiones de alto riesgo en empresas nuevas (startups) con potencial de crecimiento masivo",
+        "Ahorro para el retiro",
+        "Préstamos del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el motor de la innovación tecnológica."
+    },
+    {
+      "id": "f15",
+      "texto": "¿Qué significa 'Estructura de Capital'?",
+      "opciones": [
+        "El diseño del edificio de la empresa",
+        "La mezcla de Deuda y Acciones (Equity) que usa una empresa para financiarse",
+        "La lista de todos los empleados",
+        "El dinero que hay en caja"
+      ],
+      "correcta": 1,
+      "explicacion": "Define quién es dueño y quién es acreedor de la compañía."
+    },
+    {
+      "id": "f16",
+      "texto": "¿Qué es el 'Deducible' en un seguro?",
+      "opciones": [
+        "Lo que te descuentan del sueldo",
+        "La parte que TÚ pagas en un siniestro antes de que el seguro cubra el resto",
+        "El premio por no chocar",
+        "Un impuesto"
+      ],
+      "correcta": 1,
+      "explicacion": "Sirve para que el asegurado también sea responsable."
+    },
+    {
+      "id": "f17",
+      "texto": "¿Qué es una 'Billetera Fría' (Cold Wallet)?",
+      "opciones": [
+        "Una cartera que se mojó",
+        "Un dispositivo físico desconectado de internet para guardar criptomonedas de forma segura",
+        "Una App gratuita",
+        "Una cuenta bancaria"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el estándar de oro en seguridad cripto."
+    },
+    {
+      "id": "f18",
+      "texto": "¿Qué es la 'Escalabilidad'?",
+      "opciones": [
+        "Subir muchas escaleras",
+        "La capacidad de un negocio de aumentar sus ingresos mucho más rápido que sus costos",
+        "Tener muchos locales",
+        "Vender productos caros"
+      ],
+      "correcta": 1,
+      "explicacion": "Es lo que hace que una empresa valga billones de dólares."
+    },
+    {
+      "id": "f19",
+      "texto": "¿Qué es el 'Carry Trade'?",
+      "opciones": [
+        "Cargar cajas de dinero",
+        "Pedir dinero en un país con tasa baja para invertirlo en uno con tasa alta (aprovechando el diferencial)",
+        "Un tipo de comercio de barcos",
+        "Vender acciones rápido"
+      ],
+      "correcta": 1,
+      "explicacion": "Una estrategia de arbitraje global con riesgo cambiario."
+    },
+    {
+      "id": "f20",
+      "texto": "¿Cuál es la función del 'FMI'?",
+      "opciones": [
+        "Hacer monedas",
+        "Asegurar la estabilidad del sistema financiero mundial y ayudar a países en crisis",
+        "Cobrar deudas personales",
+        "Invertir en la bolsa"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el guardián de la estabilidad global."
+    },
+    {
+      "id": "f21",
+      "texto": "¿Qué es un 'Activo Intangible'?",
+      "opciones": [
+        "Algo que no vale nada",
+        "Bienes que no tienen cuerpo físico pero valen mucho (marcas, patentes, software)",
+        "Un edificio",
+        "Dinero en efectivo"
+      ],
+      "correcta": 1,
+      "explicacion": "A veces valen mucho más que las máquinas o fábricas."
+    },
+    {
+      "id": "f22",
+      "texto": "¿Qué es la 'Responsabilidad Fiduciaria'?",
+      "opciones": [
+        "Tener que pagar una multa",
+        "La obligación ética y legal de actuar siempre en beneficio de otros (ej: del dueño del dinero)",
+        "Pagar impuestos a tiempo",
+        "Ser el jefe"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la base de la confianza en las finanzas."
+    },
+    {
+      "id": "f23",
+      "texto": "¿Qué es el 'Hedging' (Cobertura)?",
+      "opciones": [
+        "Apostar a que todo sube",
+        "Usar instrumentos financieros para reducir o eliminar un riesgo de pérdida",
+        "Esconder el dinero",
+        "Vender todo en crisis"
+      ],
+      "correcta": 1,
+      "explicacion": "Es comprar 'paz mental' para tu negocio."
+    },
+    {
+      "id": "f24",
+      "texto": "¿Qué es un 'Protocolo Familiar'?",
+      "opciones": [
+        "Cómo saludarse en las fiestas",
+        "Un acuerdo legal que rige la relación entre la familia y su empresa para asegurar la sucesión",
+        "Un tipo de contrato de trabajo",
+        "Una ley del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Evita que las fortunas se pierdan por pleitos entre herederos."
+    },
+    {
+      "id": "f25",
+      "texto": "¿Cuál es el factor más importante para que el Interés Compuesto funcione?",
+      "opciones": [
+        "Tener mucho dinero al principio",
+        "EL TIEMPO (empezar lo antes posible)",
+        "La suerte",
+        "Tener un buen banco"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has completado tu formación financiera. El mundo es tuyo."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

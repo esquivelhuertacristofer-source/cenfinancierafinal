@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S2-2-4-A",
+  "unit_code": "S2-2-4",
+  "unit_title": "Planificación ante imprevistos: escenarios y soluciones",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Activos de Refugio",
+  "descripcion": "Cuando el sistema financiero tiembla, los inversionistas buscan refugio en lo tangible. ¿Sabes qué elegir?",
+  "objetivo": "Identificar las características de los activos refugio y su papel en la preservación del patrimonio",
+  "xp": 400,
+  "instruccion": "Arrastra cada activo a la categoría de refugio que le corresponde.",
+  "items": [
+    {
+      "id": "ref1",
+      "label": "Lingotes de Oro",
+      "emoji": "🧱",
+      "categoria_correcta": "metales",
+      "feedback": "El refugio definitivo. No depende de ningún gobierno y mantiene su valor por milenios."
+    },
+    {
+      "id": "ref2",
+      "label": "Cuadros de Grandes Maestros",
+      "emoji": "🖼️",
+      "categoria_correcta": "arte",
+      "feedback": "Reserva de valor histórica. Su precio sube por la escasez absoluta (solo hay un original)."
+    },
+    {
+      "id": "ref3",
+      "label": "Relojes de Alta Relojería",
+      "emoji": "⌚",
+      "categoria_correcta": "lujo",
+      "feedback": "Riqueza concentrada y transportable. Algunos modelos suben de precio con los años."
+    },
+    {
+      "id": "ref4",
+      "label": "Vinos de Colección",
+      "emoji": "🍷",
+      "categoria_correcta": "lujo",
+      "feedback": "Activos que literalmente mejoran (y escasean) con el paso del tiempo."
+    },
+    {
+      "id": "ref5",
+      "label": "Monedas de Plata (Onzas)",
+      "emoji": "🪙",
+      "categoria_correcta": "metales",
+      "feedback": "Una forma accesible de ahorrar en metal precioso con valor industrial y monetario."
+    },
+    {
+      "id": "ref6",
+      "label": "Coches Clásicos",
+      "emoji": "🏎️",
+      "categoria_correcta": "coleccionables",
+      "feedback": "Combinan pasión con plusvalía. Su valor depende de su estado y rareza."
+    },
+    {
+      "id": "ref7",
+      "label": "Cartas de Pokémon Raras",
+      "emoji": "🃏",
+      "categoria_correcta": "coleccionables",
+      "feedback": "Un mercado moderno donde la nostalgia y la escasez crean valores altísimos."
+    },
+    {
+      "id": "ref8",
+      "label": "Diamantes Certificados",
+      "emoji": "💎",
+      "categoria_correcta": "lujo",
+      "feedback": "Valor máximo en el espacio más pequeño posible. Muy usados para transportar riqueza."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "metales",
+      "label": "METALES PRECIOSOS",
+      "emoji": "🟡",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "arte",
+      "label": "ARTE Y CULTURA",
+      "emoji": "🎨",
+      "color": "#db2777"
+    },
+    {
+      "id": "lujo",
+      "label": "LUJO Y TIEMPO",
+      "emoji": "👑",
+      "color": "#1e40af"
+    },
+    {
+      "id": "coleccionables",
+      "label": "COLECCIONABLES",
+      "emoji": "🧩",
+      "color": "#059669"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

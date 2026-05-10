@@ -1,0 +1,53 @@
+{
+  "code": "ACT-P1-3-5-B",
+  "unit_code": "P1-3-5",
+  "unit_title": "¡Lo lograste! Celebra tu meta",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RULETA",
+  "complejidad": "ALTA",
+  "titulo": "El Destino del Genio",
+  "descripcion": "¡Felicidades, graduado! Gira la ruleta para descubrir tu próxima misión especial antes de pasar a 2do grado.",
+  "objetivo": "Proyectar el aprendizaje a situaciones reales y celebrar la culminación del curso",
+  "xp": 500,
+  "giros": 3,
+  "escenarios": [
+    {
+      "id": "r1",
+      "situacion": "¡Has ganado una Medalla de Oro! ¿Qué significa ser un Genio Financiero de 1er Grado?",
+      "opciones": [
+        "Tener muchas monedas",
+        "Saber cuidar mi dinero y ayudar a los demás",
+        "Comprar muchos dulces"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Ser un genio es saber que el dinero es una herramienta para el bien.",
+      "categoria": "#fbbf24"
+    },
+    {
+      "id": "r2",
+      "situacion": "Te toca la Misión Vacaciones: ¿Cómo puedes ahorrar $1 peso diario?",
+      "opciones": [
+        "Pidiéndolo prestado",
+        "Dejando de comprar un chicle o pidiendo permiso para guardar una moneda",
+        "Encontrándolo en la calle"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "El ahorro diario, aunque sea pequeño, construye grandes sueños.",
+      "categoria": "#3b82f6"
+    },
+    {
+      "id": "r3",
+      "situacion": "¡Héroe del Agua! Ves que alguien dejó el grifo abierto. ¿Qué haces?",
+      "opciones": [
+        "Ignorarlo",
+        "Cerrarlo de inmediato para cuidar el planeta y el gasto de casa",
+        "Jugar con el agua"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Cuidar los recursos es una forma vital de ahorro familiar.",
+      "categoria": "#0ea5e9"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

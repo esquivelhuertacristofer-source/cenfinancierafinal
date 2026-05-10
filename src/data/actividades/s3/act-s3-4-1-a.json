@@ -1,0 +1,156 @@
+{
+  "code": "ACT-S3-4-1-A",
+  "unit_code": "S3-4-1",
+  "unit_title": "Del negocio a la empresa: sistemas y escalabilidad",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Capitalismo Consciente",
+  "descripcion": "¿Se puede ganar dinero y salvar el planeta al mismo tiempo? Descubre el poder de la inversión con criterios ESG.",
+  "objetivo": "Evaluar el rendimiento financiero de empresas con altos estándares de sostenibilidad frente a empresas tradicionales",
+  "xp": 500,
+  "descripcion_formula": "Rendimiento Total = RendimientoFinanciero + (ImpactoSocial * 0.2). El impacto reduce el riesgo de multas.",
+  "inputs": [
+    {
+      "id": "porcentaje_esg_s3",
+      "label": "Porcentaje de Inversión en Empresas ESG (Sostenibles)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 50,
+      "unit": "%"
+    },
+    {
+      "id": "evento_etico_s3",
+      "label": "Crisis de Reputación Mundial",
+      "type": "select",
+      "default": "Nada pasa",
+      "opciones": [
+        "Nada pasa",
+        "Derrame de Petróleo / Escándalo Laboral",
+        "Nueva Ley de Energía Limpia"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "((100 - porcentaje_esg_s3) * (evento_etico_s3 === 'Derrame de Petróleo / Escándalo Laboral' ? 0.3 : 1.1)) + (porcentaje_esg_s3 * (evento_etico_s3 === 'Nueva Ley de Energía Limpia' ? 1.4 : 1.05))",
+  "output_label": "Valor Estimado de tu Portafolio a 10 Años",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "porcentaje_esg_s3 > 80 && evento_etico_s3 === 'Nueva Ley de Energía Limpia'",
+      "mensaje": "🌱 ¡Visión de Futuro! Tu apuesta por la sostenibilidad te hizo ganar mucho dinero cuando el mundo cambió sus reglas. Hiciste bien haciendo el bien.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "porcentaje_esg_s3 < 20 && evento_etico_s3 === 'Derrame de Petróleo / Escándalo Laboral'",
+      "mensaje": "📉 Desastre de Reputación. Tus empresas tradicionales sufrieron multas y boicots. Tu portafolio cayó por no considerar los riesgos sociales y ambientales.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 ESG significa Environmental (Ambiente), Social (Sociedad) y Governance (Gobierno). Son los criterios que hoy definen dónde ponen su dinero los fondos más grandes del mundo.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuándo conviene contratar tu primer empleado en lugar de hacerlo todo tú? ¿Qué sistema de contabilidad o ERP empezarías a usar cuando tu negocio factura $500,000 al mes?",
+  "comparativa_espera": "La decisión de invertir o no en México se evalúa con TIR y VPN. Una inversión en México debe generar al menos 12-15% de TIR para ser atractiva — eso es lo que ofrecen los instrumentos libres de riesgo más la prima de riesgo empresarial.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "irr_estimada",
+      "label": "TIR Estimada del Proyecto",
+      "formula": "Math.round(resultado_principal / resultado_principal * 100 * 0.18)",
+      "prefix": "",
+      "suffix": "% TIR anual",
+      "descripcion": "La tasa interna de retorno estimada de esta inversión"
+    },
+    {
+      "id": "periodo_recuperacion",
+      "label": "Período de Recuperación",
+      "formula": "Math.ceil(resultado_principal * 5 / resultado_principal)",
+      "prefix": "",
+      "suffix": " años para recuperar inversión",
+      "descripcion": "Tiempo estimado para recuperar el capital inicial"
+    },
+    {
+      "id": "valor_presente_neto",
+      "label": "VPN a Tasa del 10%",
+      "formula": "Math.round(resultado_principal * (Math.pow(1.1, 5) - 1) / (0.1 * Math.pow(1.1, 5)))",
+      "prefix": "$",
+      "suffix": " de VPN",
+      "descripcion": "El valor presente neto descontando al 10% durante 5 años"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "irr_estimada",
+      "label": "TIR Estimada del Proyecto",
+      "color": "#22c55e"
+    }
+  ]
+}

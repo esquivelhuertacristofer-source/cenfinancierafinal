@@ -1,0 +1,135 @@
+{
+  "code": "P2-3-1-B",
+  "unit_code": "P2-3-1",
+  "unit_title": "El presupuesto de Ceny para la semana",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Arquitecto de Dinero",
+  "descripcion": "¿Sabes construir un plan que funcione? ¡Demuestra que eres un experto en presupuestos!",
+  "objetivo": "Validar el conocimiento sobre los componentes de un presupuesto y la toma de decisiones basada en el balance",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Para qué sirve realmente hacer un presupuesto?",
+      "opciones": [
+        "Para gastar todo rápido",
+        "Para planear en qué vamos a gastar y que el dinero alcance para toda la semana",
+        "Para que los papás nos den más dinero",
+        "Para contar billetes"
+      ],
+      "correcta": 1,
+      "explicacion": "El presupuesto es tu plan de vuelo para que no te quedes sin dinero a la mitad del camino."
+    },
+    {
+      "id": "q2",
+      "texto": "Si tienes $20 de domingo y tu presupuesto dice que vas a gastar $25, ¿qué sucede?",
+      "opciones": [
+        "Nada, el dinero aparecerá solo",
+        "Vas a gastar más de lo que tienes y eso te traerá deudas y problemas",
+        "Eres un genio",
+        "El presupuesto está bien"
+      ],
+      "correcta": 1,
+      "explicacion": "Nunca debes planear gastar más de lo que recibes. ¡Es la regla número uno!"
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cuál es la fórmula básica de un presupuesto inteligente?",
+      "opciones": [
+        "Gasto + Gasto = Diversión",
+        "Ingresos (Lo que entra) - Gastos (Lo que sale) = Dinero disponible",
+        "Regalo x Suerte = Riqueza",
+        "Ahorro - Comida = Juguete"
+      ],
+      "correcta": 1,
+      "explicacion": "Saber cuánto tienes y restarle lo que gastas te dice cuánto te sobra."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué debes hacer si a mitad de semana ves que ya no tienes dinero según tu presupuesto?",
+      "opciones": [
+        "Pedir prestado a todos",
+        "Dejar de gastar en cosas innecesarias (deseos) para poder llegar al viernes",
+        "Llorar",
+        "Dejar de ir a la escuela"
+      ],
+      "correcta": 1,
+      "explicacion": "Ajustar tus gastos es parte de ser un buen administrador."
+    },
+    {
+      "id": "q5",
+      "texto": "Si te sobran $5 al final de la semana después de comprar todo lo planeado, ¿qué lograste?",
+      "opciones": [
+        "Un ahorro real",
+        "Una pérdida",
+        "Un error de cálculo",
+        "Un regalo"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Felicidades! Ese dinero extra es para tu meta de largo plazo."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: Los niños también deben aprender a hacer presupuestos, no solo los adultos.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! Aprender ahora te hará un adulto muy exitoso y sin preocupaciones."
+    },
+    {
+      "id": "q7",
+      "texto": "¿En qué momento de la semana es mejor hacer tu presupuesto?",
+      "opciones": [
+        "Cuando ya te gastaste todo",
+        "Al inicio de la semana (domingo o lunes) antes de empezar a gastar",
+        "El sábado en la noche",
+        "Cuando quieras"
+      ],
+      "correcta": 1,
+      "explicacion": "Se planea antes de actuar. ¡Así evitas errores!"
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué es un 'Gasto Variable' o sorpresa en tu presupuesto escolar?",
+      "opciones": [
+        "La renta",
+        "Un sacapuntas nuevo porque el tuyo se rompió",
+        "El pago de la luz",
+        "Tu domingo"
+      ],
+      "correcta": 1,
+      "explicacion": "Son cosas que no planeamos pero que pueden pasar. ¡Por eso es bueno tener un ahorro!"
+    },
+    {
+      "id": "q9",
+      "texto": "¿Por qué es importante anotar hasta los gastos más pequeñitos (como un chicle)?",
+      "opciones": [
+        "Para gastar papel",
+        "Porque muchas monedas pequeñas juntas hacen un billete grande al final del mes",
+        "No es importante",
+        "Para que el cuaderno se vea lleno"
+      ],
+      "correcta": 1,
+      "explicacion": "Los 'gastos hormiga' son los que más rápido vacían tu cartera sin que te des cuenta."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cómo se llama el dinero que guardas 'por si acaso' algo sale mal en tu presupuesto?",
+      "opciones": [
+        "Dinero perdido",
+        "Fondo de Emergencia o Reserva",
+        "Premio de suerte",
+        "Gasto loco"
+      ],
+      "correcta": 1,
+      "explicacion": "Tener una reserva te da mucha paz mental si algo imprevisto sucede."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

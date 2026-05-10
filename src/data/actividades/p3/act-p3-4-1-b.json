@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P3-4-1-B",
+  "unit_code": "P3-4-1",
+  "unit_title": "¿Qué es ser emprendedor?",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Soy Emprendedor",
+  "descripcion": "¿Tienes lo que se necesita para iniciar tu propio proyecto? ¡Descubre si tienes mente de emprendedor!",
+  "objetivo": "Evaluar la comprensión de la mentalidad y el perfil emprendedor",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es lo primero que hace un emprendedor al ver un problema?",
+      "opciones": [
+        "Quejarse con sus amigos",
+        "Buscar una forma creativa de solucionarlo para ayudar a otros",
+        "Ignorarlo y seguir caminando",
+        "Esperar a que alguien más lo arregle"
+      ],
+      "correcta": 1,
+      "explicacion": "Los emprendedores son solucionadores de problemas por naturaleza."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuál de estas características es vital para un emprendedor?",
+      "opciones": [
+        "Tener mucha suerte",
+        "La iniciativa (empezar las cosas por sí mismo)",
+        "Ser el más fuerte de la clase",
+        "Tener mucho dinero guardado"
+      ],
+      "correcta": 1,
+      "explicacion": "La iniciativa es la chispa que enciende cualquier gran negocio."
+    },
+    {
+      "id": "q3",
+      "texto": "Si un emprendedor intenta vender algo y nadie lo compra, ¿qué debe hacer?",
+      "opciones": [
+        "Rendirse y no volver a intentarlo",
+        "Analizar por qué no se vendió y mejorar su producto o el precio",
+        "Enojarse con los clientes",
+        "Regalar todo su dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "El fracaso es solo una oportunidad para aprender y mejorar."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué significa tener 'visión' en el emprendimiento?",
+      "opciones": [
+        "Tener ojos muy grandes",
+        "Poder imaginar cómo un pequeño proyecto puede crecer y ayudar a mucha gente",
+        "Ver la televisión todo el día",
+        "Usar lentes"
+      ],
+      "correcta": 1,
+      "explicacion": "La visión te permite ver el futuro éxito de tu idea hoy mismo."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Un emprendedor solo trabaja por dinero?",
+      "opciones": [
+        "Sí, es lo único que importa",
+        "No, también busca servir a los demás y crear algo valioso",
+        "Solo trabaja cuando tiene ganas",
+        "No, el dinero no importa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El éxito real viene de equilibrar las ganancias con el servicio a los demás."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cómo se llama el 'coraje' para empezar un negocio sabiendo que puede fallar?",
+      "opciones": [
+        "Miedo",
+        "Tolerancia al riesgo",
+        "Hambre",
+        "Sueño"
+      ],
+      "correcta": 1,
+      "explicacion": "Los emprendedores toman riesgos calculados porque confían en su trabajo."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

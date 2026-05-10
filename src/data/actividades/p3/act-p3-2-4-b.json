@@ -1,0 +1,139 @@
+{
+  "code": "ACT-P3-2-4-B",
+  "unit_code": "P3-2-4",
+  "unit_title": "El ahorro formal vs. el ahorro informal",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿Cuál es más seguro?",
+  "descripcion": "Compara las formas de ahorrar y descubre por qué la formalidad es tu mejor amiga para cuidar tu futuro.",
+  "objetivo": "Evaluar la capacidad de identificar riesgos y beneficios en diferentes sistemas de ahorro",
+  "xp": 300,
+  "tiempo_por_pregunta": 15,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "t1",
+      "pregunta": "¿Qué pasa si guardas dinero en el banco y el banco tiene un problema?",
+      "respuesta_correcta": "Existe un seguro del gobierno que te devuelve tu dinero",
+      "incorrectas": [
+        "Pierdes todo tu dinero",
+        "El banco te regala un auto",
+        "No pasa nada, el dinero desaparece"
+      ],
+      "categoria": "Protección",
+      "dato_extra": "En México, el IPAB protege tus ahorros en el banco."
+    },
+    {
+      "id": "t2",
+      "pregunta": "¿Cuál es el riesgo de guardar dinero debajo del colchón?",
+      "incorrectas": [
+        "El dinero crece solo",
+        "El banco te cobra por tenerlo ahí",
+        "Es el lugar más seguro del mundo"
+      ],
+      "categoria": "Riesgos",
+      "dato_extra": "Los accidentes domésticos son la causa #1 de pérdida de ahorro informal.",
+      "respuesta_correcta": "Se puede quemar, mojar, perder o alguien lo puede tomar"
+    },
+    {
+      "id": "t3",
+      "pregunta": "En una 'Tanda', ¿quién garantiza que todos paguen a tiempo?",
+      "respuesta_correcta": "Nadie, solo la palabra de las personas",
+      "incorrectas": [
+        "El Banco de México",
+        "La policía de las tandas",
+        "Un seguro especial"
+      ],
+      "categoria": "Informalidad",
+      "dato_extra": "Si alguien no paga en una tanda, los demás pierden dinero."
+    },
+    {
+      "id": "t4",
+      "pregunta": "¿Qué es el 'valor del dinero en el tiempo'?",
+      "respuesta_correcta": "Que con el tiempo las cosas suben de precio y tu dinero compra menos",
+      "incorrectas": [
+        "Que el dinero brilla más con los años",
+        "Que el dinero nunca cambia",
+        "Que los billetes se hacen más grandes"
+      ],
+      "categoria": "Economía",
+      "dato_extra": "Ahorrar en el banco con intereses te ayuda a no perder valor."
+    },
+    {
+      "id": "t5",
+      "pregunta": "¿Por qué el ahorro formal te da más tranquilidad?",
+      "respuesta_correcta": "Porque hay leyes que vigilan tu dinero y reglas claras",
+      "incorrectas": [
+        "Porque los bancos son edificios bonitos",
+        "Porque no te dejan sacar tu dinero",
+        "Porque te dan tarjetas de colores"
+      ],
+      "categoria": "Protección",
+      "dato_extra": "Las leyes financieras están hechas para cuidar al ahorrador."
+    },
+    {
+      "id": "t6",
+      "pregunta": "Si ahorras en una alcancía, ¿cuánto dinero extra te da el puerquito al final del año?",
+      "respuesta_correcta": "$0 pesos",
+      "incorrectas": [
+        "El 10% de lo que guardaste",
+        "Muchos intereses",
+        "Te da dulces"
+      ],
+      "categoria": "Beneficios",
+      "dato_extra": "La alcancía solo guarda, pero el banco hace crecer tu dinero."
+    },
+    {
+      "id": "t7",
+      "pregunta": "¿Qué es la CONDUSEF?",
+      "respuesta_correcta": "La institución que te defiende si el banco comete un error",
+      "incorrectas": [
+        "Un tipo de moneda nueva",
+        "Una tienda de juguetes",
+        "Un banco para niños"
+      ],
+      "categoria": "Autoridades",
+      "dato_extra": "Si tienes una queja bancaria, ellos son tus mejores aliados."
+    },
+    {
+      "id": "t8",
+      "pregunta": "¿Cuál es un beneficio del ahorro formal para tu futuro?",
+      "respuesta_correcta": "Crear un historial para que luego te presten para una casa o coche",
+      "incorrectas": [
+        "Poder presumir a tus amigos",
+        "No tener que estudiar",
+        "Que te regalen ropa"
+      ],
+      "categoria": "Futuro",
+      "dato_extra": "Estar en el banco te abre las puertas a sueños más grandes."
+    },
+    {
+      "id": "t9",
+      "pregunta": "¿Qué significa que un banco sea 'regulado'?",
+      "respuesta_correcta": "Que el gobierno vigila que sigan las reglas de seguridad",
+      "incorrectas": [
+        "Que cierran muy temprano",
+        "Que solo aceptan monedas",
+        "Que el banco es de juguete"
+      ],
+      "categoria": "Autoridades",
+      "dato_extra": "La regulación es tu garantía de que el banco es honesto."
+    },
+    {
+      "id": "t10",
+      "pregunta": "¿Cuál es la mejor recomendación para un Ciudadano CEN?",
+      "respuesta_correcta": "Usar el ahorro formal para sus metas importantes",
+      "incorrectas": [
+        "Esconder el dinero en el patio",
+        "Gastar todo y no ahorrar",
+        "Pedir prestado siempre"
+      ],
+      "categoria": "Mentalidad",
+      "dato_extra": "Un Ciudadano CEN decide con inteligencia y busca seguridad."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "comparativa_espera": "El ahorro informal (bajo el colchón, alcancía) no genera intereses y puede perderse o robarse. El 34% de los adultos en México aún guarda dinero en casa. Las instituciones formales ofrecen seguridad y rendimiento adicional."
+}

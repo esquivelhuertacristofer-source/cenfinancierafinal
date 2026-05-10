@@ -1,0 +1,156 @@
+{
+  "code": "ACT-S3-4-4-B",
+  "unit_code": "S3-4-4",
+  "unit_title": "Exit Strategy: El gran retiro del emprendedor",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "50 años de Vida Financiera",
+  "descripcion": "Activa tu plan y observa cómo se comporta a través del tiempo. ¿Lograrás sobrevivir a las crisis y alcanzar la libertad financiera?",
+  "objetivo": "Validar la robustez de una estrategia financiera a largo plazo frente a la volatilidad del mercado y eventos de vida",
+  "xp": 800,
+  "descripcion_formula": "Riqueza Final = (AhorroMensual * 12 * 50 años) con interés compuesto + Impacto de Eventos Aleatorios.",
+  "inputs": [
+    {
+      "id": "perfil_riesgo_sim_s3",
+      "label": "Tu Perfil de Inversionista",
+      "type": "select",
+      "default": "Moderado",
+      "opciones": [
+        "Conservador (Seguro pero lento)",
+        "Moderado (Equilibrado)",
+        "Agresivo (Alto riesgo, alta ganancia)"
+      ]
+    },
+    {
+      "id": "ahorro_mensual_valor",
+      "label": "Monto de Ahorro/Inversión Mensual ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "seguro_vida_sim",
+      "label": "¿Tienes Seguros Contratados?",
+      "type": "select",
+      "default": "Sí",
+      "opciones": [
+        "Sí",
+        "No"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(ahorro_mensual_valor * 12 * 50) * (perfil_riesgo_sim_s3 === 'Agresivo' ? 15 : perfil_riesgo_sim_s3 === 'Moderado' ? 8 : 4) * (seguro_vida_sim === 'No' ? 0.7 : 1.0)",
+  "output_label": "Patrimonio Neto Estimado a los 65 años",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado > 10000000 && perfil_riesgo_sim_s3 === 'Agresivo'",
+      "mensaje": "🚀 ¡Multimillonario! Tu audacia y constancia pagaron frutos. Soportaste las crisis y ahora eres dueño de un imperio financiero. ¡Felicidades!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 3000000 && perfil_riesgo_sim_s3 === 'Moderado'",
+      "mensaje": "✅ ¡Libertad Financiera Alcanzada! Tienes suficiente para vivir cómodamente sin volver a trabajar. Tu equilibrio fue la clave del éxito.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "seguro_vida_sim === 'No'",
+      "mensaje": "⚠️ ¡Alerta! Durante el año 30 tuviste un problema de salud grave. Al no tener seguro, tuviste que vender parte de tus inversiones y tu riqueza final cayó un 30%.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado < 1000000",
+      "mensaje": "📉 Cuidado. Tu ahorro o tu perfil de riesgo son muy bajos para tus metas. Podrías llegar a la vejez con poco dinero. ¡Ajusta tu plan ahora!",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El tiempo es el ingrediente más importante del interés compuesto. Empezar joven es tu mayor ventaja competitiva.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuándo sería el momento correcto para vender tu empresa? ¿Qué múltiplo de ingresos anuales pedirías por un negocio que genera $2M al año con 20% de margen neto?",
+  "comparativa_espera": "En México, las adquisiciones de startups exitosas ocurren típicamente a 3-10x de ingresos anuales. Las empresas de tecnología con crecimiento acelerado pueden alcanzar múltiplos de 20-50x en rondas de inversión internacional.",
+  "outputs_multiples": [
+    {
+      "id": "patrimonio_retiro",
+      "label": "Patrimonio al Retiro",
+      "formula": "Math.round(ahorro_mensual_valor * 12 * anios_sim * Math.pow(1.09, anios_sim/2))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Tu patrimonio estimado al final del período de ahorro"
+    },
+    {
+      "id": "pension_mensual",
+      "label": "Pensión Mensual Estimada",
+      "formula": "Math.round(ahorro_mensual_valor * 12 * anios_sim * Math.pow(1.09, anios_sim/2) * 0.04 / 12)",
+      "prefix": "$",
+      "suffix": "/mes de pensión",
+      "descripcion": "Retiro sostenible al 4% anual del patrimonio acumulado"
+    },
+    {
+      "id": "costo_seguro_anual",
+      "label": "Costo del Seguro de Vida Anual",
+      "formula": "Math.round(ahorro_mensual_valor * 0.05 * 12)",
+      "prefix": "$",
+      "suffix": "/año en seguro",
+      "descripcion": "Aprox. 5% del ahorro mensual anualizado para protección familiar"
+    },
+    {
+      "id": "meta_fire",
+      "label": "Meta FIRE (25× Gastos Anuales)",
+      "formula": "Math.round(ahorro_mensual_valor * 12 * 25)",
+      "prefix": "$",
+      "suffix": " para independencia financiera",
+      "descripcion": "El patrimonio que necesitas para vivir de tus inversiones eternamente"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "patrimonio_retiro",
+      "label": "Patrimonio al Retiro",
+      "color": "#6366f1"
+    },
+    {
+      "id": "pension_mensual",
+      "label": "Pensión Mensual Estimada",
+      "color": "#22c55e"
+    }
+  ]
+}

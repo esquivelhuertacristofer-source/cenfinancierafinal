@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-1-4-B",
+  "unit_code": "S2-1-4",
+  "unit_title": "El sistema financiero internacional: FMI y Banco Mundial",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Sesgos Cognitivos del Inversionista",
+  "descripcion": "Tu cerebro está diseñado para sobrevivir en la selva, no para invertir en la bolsa. ¿Podrás detectar sus errores lógicos?",
+  "objetivo": "Reconocer los principales sesgos psicológicos que afectan la toma de decisiones financieras",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ses1",
+      "texto": "¿Qué es el 'FOMO' (Fear of Missing Out)?",
+      "opciones": [
+        "Una moneda nueva",
+        "El miedo a quedarse fuera de una oportunidad de inversión que parece estar haciendo ricos a otros",
+        "Un tipo de análisis técnico",
+        "El nombre de un banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Es lo que hace que la gente compre caro cuando algo está de moda."
+    },
+    {
+      "id": "ses2",
+      "texto": "¿Qué es la 'Aversión a la Pérdida'?",
+      "opciones": [
+        "Que no te guste perder el autobús",
+        "La tendencia psicológica a sentir más dolor por una pérdida que alegría por una ganancia del mismo tamaño",
+        "Vender siempre barato",
+        "No tener deudas"
+      ],
+      "correcta": 1,
+      "explicacion": "Esto hace que la gente mantenga inversiones malas esperando a que 'recuperen' en lugar de aceptar el error."
+    },
+    {
+      "id": "ses3",
+      "texto": "¿Qué es el 'Sesgo de Confirmación'?",
+      "opciones": [
+        "Confirmar tu cita en el banco",
+        "Buscar solo información que apoye lo que ya crees e ignorar las pruebas de que podrías estar equivocado",
+        "Tener muchas cuentas",
+        "Ser un experto en finanzas"
+      ],
+      "correcta": 1,
+      "explicacion": "Un buen inversor busca activamente razones por las que su idea podría fallar."
+    },
+    {
+      "id": "ses4",
+      "texto": "¿A qué se refiere la 'Mentalidad de Rebaño'?",
+      "opciones": [
+        "Invertir en ovejas",
+        "Seguir las acciones de la mayoría sin hacer un análisis propio",
+        "Trabajar en equipo",
+        "Tener un fondo de inversión"
+      ],
+      "correcta": 1,
+      "explicacion": "Hacer lo que todos hacen suele llevar a comprar en la cima y vender en el fondo."
+    },
+    {
+      "id": "ses5",
+      "texto": "¿Qué es el 'FUD' (Fear, Uncertainty, Doubt)?",
+      "opciones": [
+        "Miedo, Incertidumbre y Duda (noticias negativas que buscan asustar al mercado)",
+        "Un fondo de inversión alemán",
+        "Una técnica de ahorro",
+        "El nombre de un indicador"
+      ],
+      "correcta": 0,
+      "explicacion": "Muchos actores usan el FUD para bajar el precio de algo y comprarlo barato."
+    },
+    {
+      "id": "ses6",
+      "texto": "¿Qué es el 'Exceso de Confianza'?",
+      "opciones": [
+        "Ser muy valiente",
+        "Creer que sabemos más de lo que realmente sabemos, lo que nos lleva a tomar riesgos innecesarios",
+        "Tener mucha seguridad",
+        "Ganar siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el error más común después de ganar dinero por primera vez (suerte de principiante)."
+    },
+    {
+      "id": "ses7",
+      "texto": "¿Qué es el 'Sesgo de Recencia'?",
+      "opciones": [
+        "Comprar cosas nuevas",
+        "Creer que lo que pasó ayer volverá a pasar hoy (ej: creer que si la bolsa subió ayer, subirá hoy)",
+        "Olvidar el pasado",
+        "Ser un inversionista joven"
+      ],
+      "correcta": 1,
+      "explicacion": "Ignorar la historia larga del mercado por enfocarse solo en lo que pasó hace poco."
+    },
+    {
+      "id": "ses8",
+      "texto": "¿Cuál es la mejor medicina contra los sesgos cognitivos?",
+      "opciones": [
+        "Tener mucha suerte",
+        "Tener un sistema de reglas escrito (plan de inversión) y seguirlo sin importar la emoción",
+        "No pensar",
+        "Ver muchas noticias"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora conoces los trucos de tu mente y puedes proteger tu dinero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

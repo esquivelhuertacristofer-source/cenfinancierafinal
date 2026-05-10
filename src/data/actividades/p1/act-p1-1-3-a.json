@@ -1,0 +1,20 @@
+{
+  "code": "ACT-P1-1-3-A",
+  "unit_code": "P1-1-3",
+  "unit_title": "El trabajo y el dinero: de dónde vienen los pesos",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "BALANCE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "El Calibrador de Sueños",
+  "descripcion": "Ceny tiene un gran sueño: construir una Estación Espacial. Pero para lograrlo, no basta con estudiar mucho ni con trabajar mucho por separado. ¡Necesita ambos en perfecto equilibrio!",
+  "objetivo": "Experimentar físicamente la necesidad de equilibrar la formación personal (estudio) con la ejecución práctica (trabajo).",
+  "xp": 500,
+  "instruccion": "Mantén presionados los propulsores para cargar tu sueño. ¡Cuidado! Si una barra sube demasiado rápido y la otra se queda atrás, la balanza se desequilibrará.",
+  "metadata": {
+    "knowledge_label": "Sabiduría (Estudio)",
+    "action_label": "Ejecución (Trabajo)",
+    "target_label": "Estación Espacial"
+  },
+  "versión": "2026.Diamond.Balance"
+}

@@ -1,0 +1,160 @@
+{
+  "code": "ACT-P4-4-5-A",
+  "unit_code": "P4-4-5",
+  "unit_title": "Mi primera feria de emprendimiento: ¡A vender!",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Feria Virtual P4",
+  "descripcion": "¡Es el día del evento! Ajusta tus últimos detalles y ve cuánto dinero lograrás ganar con tu inteligencia financiera.",
+  "objetivo": "Integrar todos los conceptos de la cadena de valor: inversión, marketing, ventas y rentabilidad",
+  "xp": 600,
+  "descripcion_formula": "Utilidad Neta = (Precio de Venta * Unidades Vendidas) - (Inversión en Materiales + Gasto en Publicidad).",
+  "inputs": [
+    {
+      "id": "inversion_materiales",
+      "label": "Inversión en materiales",
+      "type": "slider",
+      "min": 500,
+      "max": 2000,
+      "step": 100,
+      "default": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "gasto_marketing",
+      "label": "Gasto en publicidad",
+      "type": "slider",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "default": 100,
+      "unit": "$"
+    },
+    {
+      "id": "precio_p4",
+      "label": "Precio de venta por unidad",
+      "type": "slider",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 50,
+      "unit": "$"
+    },
+    {
+      "id": "ventas_p4",
+      "label": "Unidades vendidas",
+      "type": "slider",
+      "min": 1,
+      "max": 80,
+      "step": 1,
+      "default": 30,
+      "unit": "pz"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(precio_p4 * ventas_p4) - (inversion_materiales + gasto_marketing)",
+  "output_label": "Tu Ganancia Neta Total",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado > 1500",
+      "mensaje": "🏆 ¡EMPRENDEDOR DIAMANTE! Tienes un negocio extremadamente rentable y una gran visión comercial.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 0 && resultado <= 1500",
+      "mensaje": "💰 ¡Buen trabajo! Tuviste ganancias. Ahora piensa cómo puedes reinvertirlas para crecer aún más.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado == 0",
+      "mensaje": "⚖️ ¡Punto de Equilibrio! Recuperaste tu dinero pero no ganaste nada extra. Revisa tus costos o sube el precio.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "🚨 ¡Pérdida Financiera! Gastaste más en materiales y anuncios de lo que vendiste. ¡Analiza qué falló!",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué aprenderías de tus clientes en una feria que no podrías aprender en el salón de clase? ¿Qué cambiarías en tu negocio después de escuchar a tus primeros 10 clientes reales?",
+  "comparativa_espera": "México tiene más de 4 millones de pequeños negocios. Los que llevan registro diario de sus finanzas tienen 3 veces más probabilidad de sobrevivir los primeros 5 años que los que no lo hacen.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado de la simulación"
+    },
+    {
+      "id": "por_dia",
+      "label": "Equivalente Diario",
+      "formula": "Math.round(resultado_principal / 30)",
+      "prefix": "$",
+      "suffix": "/día",
+      "descripcion": "Lo que representa diariamente"
+    },
+    {
+      "id": "en_un_anio",
+      "label": "Proyección a 1 Año",
+      "formula": "resultado_principal * 12",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "El resultado anualizado"
+    },
+    {
+      "id": "diferencia_vs_promedio",
+      "label": "vs Promedio Nacional",
+      "formula": "resultado_principal - resultado_principal * 0.92",
+      "prefix": "$",
+      "suffix": " diferencia",
+      "descripcion": "Comparado con el resultado promedio típico"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "por_dia",
+      "label": "Equivalente Diario",
+      "color": "#22c55e"
+    }
+  ]
+}

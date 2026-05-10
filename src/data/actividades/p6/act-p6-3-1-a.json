@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P6-3-1-A",
+  "unit_code": "P6-3-1",
+  "unit_title": "Simulador de ahorro: proyectar mi futuro financiero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Multiplicador de Riesgo",
+  "descripcion": "¿Sabías que puedes invertir con dinero prestado para ganar más? Pero cuidado: si el precio baja, podrías perderlo todo muy rápido. ¡Aprende a usar esta 'palanca' con sabiduría!",
+  "objetivo": "Comprender el concepto de apalancamiento financiero y cómo magnifica tanto las ganancias como las pérdidas",
+  "xp": 600,
+  "descripcion_formula": "Calculamos la Ganancia sobre el Capital Propio. Ganancia = ((CapitalPropio + Deuda) * Rendimiento) - (Deuda * Interes).",
+  "inputs": [
+    {
+      "id": "capital_propio",
+      "label": "Tu Dinero Real ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "nivel_apalancamiento",
+      "label": "Nivel de Apalancamiento (X)",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1,
+      "unit": "veces"
+    },
+    {
+      "id": "rendimiento_mercado",
+      "label": "Cambio en el precio de la acción (%)",
+      "type": "slider",
+      "min": -20,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "((capital_propio * nivel_apalancamiento) * (rendimiento_mercado / 100))",
+  "output_label": "Tu Ganancia/Pérdida Real",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "nivel_apalancamiento > 5 && rendimiento_mercado < -10",
+      "mensaje": "🚨 ¡MARGEN CALL! Perdiste tanto dinero que el banco te obliga a vender todo. Te quedaste en $0 por usar demasiada palanca.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "nivel_apalancamiento > 5 && rendimiento_mercado > 10",
+      "mensaje": "🚀 ¡Ganancia Explosiva! Gracias al apalancamiento, ganaste muchísimo más de lo que habrías ganado solo con tu dinero. Pero fue muy arriesgado.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El apalancamiento es como un cuchillo muy afilado: ayuda a cocinar más rápido, pero si no tienes cuidado, te puedes cortar profundamente.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué tasa de rendimiento mínima necesitas para que tus ahorros crezcan por encima de la inflación? Diseña tu plan concreto: ¿cuánto ahorras al mes y en qué instrumento específico?",
+  "comparativa_espera": "México recauda el 16.5% del PIB en impuestos, menos de la mitad del promedio de la OCDE (34%). Los ciudadanos que conocen el sistema fiscal pueden optimizar legalmente su carga impositiva y recuperar dinero que de otro modo perderían.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "costo_por_dia",
+      "label": "Costo por Día",
+      "formula": "Math.round(resultado_principal / 365)",
+      "prefix": "$",
+      "suffix": "/día",
+      "descripcion": "El costo diario de esta decisión"
+    },
+    {
+      "id": "en_5_anios",
+      "label": "En 5 Años",
+      "formula": "resultado_principal * 5",
+      "prefix": "$",
+      "suffix": " acumulados",
+      "descripcion": "El impacto de esta decisión repetida durante 5 años"
+    },
+    {
+      "id": "vs_alternativa",
+      "label": "Alternativa: Ahorro en CETES",
+      "formula": "Math.round(resultado_principal * Math.pow(1.105, 5))",
+      "prefix": "$",
+      "suffix": " en CETES (5 años)",
+      "descripcion": "Si invirtieras este mismo monto en CETES cada año"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "costo_por_dia",
+      "label": "Costo por Día",
+      "color": "#22c55e"
+    }
+  ]
+}

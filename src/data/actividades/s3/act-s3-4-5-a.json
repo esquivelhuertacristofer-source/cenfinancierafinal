@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-4-5-A",
+  "unit_code": "S3-4-5",
+  "unit_title": "El Emprendedor Social: Negocios con alma y propósito",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Simulador de Vida: El Desafío Final",
+  "descripcion": "Has llegado al final de tu formación. Es hora de demostrar que puedes manejar una fortuna real en un mundo cambiante.",
+  "objetivo": "Evaluar la capacidad del alumno para tomar decisiones financieras complejas bajo presión y escenarios de mercado realistas",
+  "xp": 1000,
+  "descripcion_formula": "Score Final = (PatrimonioNeto / 100000) + (SocialImpact * 10).",
+  "inputs": [
+    {
+      "id": "capital_inicial_s3",
+      "label": "Capital para invertir ($)",
+      "type": "slider",
+      "min": 100000,
+      "max": 1000000,
+      "step": 50000,
+      "default": 500000,
+      "unit": "$"
+    },
+    {
+      "id": "estrategia_s3",
+      "label": "Estrategia Global",
+      "type": "select",
+      "default": "Diversificada",
+      "opciones": [
+        "Agresiva (Tecnología/Cripto)",
+        "Diversificada (Acciones/Bonos)",
+        "Segura (Oro/Bienes Raíces)"
+      ]
+    },
+    {
+      "id": "crisis_mundial_s3",
+      "label": "Evento de Mercado Inesperado",
+      "type": "select",
+      "default": "Estabilidad",
+      "opciones": [
+        "Estabilidad",
+        "Crisis Inflacionaria",
+        "Burbuja Tecnológica"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "capital_inicial_s3 * (estrategia_s3 === 'Agresiva (Tecnología/Cripto)' ? (crisis_mundial_s3 === 'Burbuja Tecnológica' ? 3 : 0.4) : estrategia_s3 === 'Diversificada' ? (crisis_mundial_s3 === 'Crisis Inflacionaria' ? 0.8 : 1.5) : (crisis_mundial_s3 === 'Crisis Inflacionaria' ? 1.1 : 1.05))",
+  "output_label": "Patrimonio Final tras 10 años de simulación",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado > 1500000",
+      "mensaje": "🏆 ¡Maestro de las Finanzas! Has navegado el mercado con una precisión asombrosa. Te gradúas con honores.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 400000",
+      "mensaje": "⚠️ El mercado fue cruel. Tu estrategia no resistió la volatilidad. Recuerda que la gestión de riesgos es lo más importante.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Las finanzas no son una ciencia exacta, son el arte de gestionar la incertidumbre. ¡Felicidades por completar el ciclo!",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Puede una empresa social ser tan escalable como una empresa tradicional? ¿Qué modelo de negocio usarías para que tu impacto social crezca sin depender de donaciones externas?",
+  "comparativa_espera": "Empresas como Bimbo, FEMSA, América Móvil y CEMEX empezaron siendo pymes locales. Hoy operan en decenas de países. El crecimiento exponencial siempre empieza con una base sólida en el mercado local.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "crecimiento_compuesto",
+      "label": "Con Crecimiento Compuesto (10%)",
+      "formula": "Math.round(resultado_principal * Math.pow(1.1, 10))",
+      "prefix": "$",
+      "suffix": " en 10 años",
+      "descripcion": "El poder del crecimiento compuesto sobre 10 años"
+    },
+    {
+      "id": "impacto_ecosistema",
+      "label": "Impacto en el Ecosistema",
+      "formula": "resultado_principal * 5",
+      "prefix": "$",
+      "suffix": " de impacto indirecto",
+      "descripcion": "El efecto multiplicador en la economía local (×5 es típico)"
+    },
+    {
+      "id": "empleos_potenciales",
+      "label": "Empleos que Podría Generar",
+      "formula": "Math.round(resultado_principal / 120000)",
+      "prefix": "",
+      "suffix": " empleos formales",
+      "descripcion": "Estimado con salario promedio de $10,000/mes"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "crecimiento_compuesto",
+      "label": "Con Crecimiento Compuesto (10%)",
+      "color": "#22c55e"
+    }
+  ]
+}

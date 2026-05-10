@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S3-4-2-B",
+  "unit_code": "S3-4-2",
+  "unit_title": "Exportar desde México: el mundo es tu mercado",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Organigrama de la Fortuna",
+  "descripcion": "En una empresa familiar, cada quien debe tener un lugar claro para evitar el caos. ¿Sabes dónde va cada uno?",
+  "objetivo": "Diferenciar los roles de gestión, gobierno y propiedad dentro de una estructura corporativa familiar",
+  "xp": 400,
+  "instruccion": "Arrastra cada rol a la categoría que le corresponde según su función en el negocio.",
+  "items": [
+    {
+      "id": "rol1",
+      "label": "Director General (CEO)",
+      "emoji": "👔",
+      "categoria_correcta": "gestion",
+      "feedback": "Encargado de que la empresa gane dinero y funcione todos los días. Debe ser el más capaz, sea familiar o no."
+    },
+    {
+      "id": "rol2",
+      "label": "Consejo de Familia",
+      "emoji": "🏠",
+      "categoria_correcta": "gobierno",
+      "feedback": "Vigila la armonía familiar y que se respeten los valores del fundador."
+    },
+    {
+      "id": "rol3",
+      "label": "Accionista Pasivo",
+      "emoji": "💸",
+      "categoria_correcta": "propiedad",
+      "feedback": "Es dueño de una parte pero no trabaja ahí. Solo recibe su parte de las ganancias (dividendos)."
+    },
+    {
+      "id": "rol4",
+      "label": "Sucesor en Entrenamiento",
+      "emoji": "🎓",
+      "categoria_correcta": "sucesion",
+      "feedback": "Familiar que está rotando por todas las áreas para conocer el negocio desde abajo."
+    },
+    {
+      "id": "rol5",
+      "label": "Asamblea de Accionistas",
+      "emoji": "🤝",
+      "categoria_correcta": "propiedad",
+      "feedback": "El máximo órgano donde se toman las decisiones de cuánto vale la empresa y si se vende o no."
+    },
+    {
+      "id": "rol6",
+      "label": "Jefe de Producción",
+      "emoji": "🏭",
+      "categoria_correcta": "gestion",
+      "feedback": "Rol operativo enfocado en la eficiencia de la fábrica o el servicio."
+    },
+    {
+      "id": "rol7",
+      "label": "Fiduciario",
+      "emoji": "📑",
+      "categoria_correcta": "sucesion",
+      "feedback": "Institución o persona que protege legalmente los bienes para que lleguen a los nietos."
+    },
+    {
+      "id": "rol8",
+      "label": "Comité de Inversiones",
+      "emoji": "📈",
+      "categoria_correcta": "gobierno",
+      "feedback": "Decide qué nuevos negocios comprar para que el patrimonio siga creciendo."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "gestion",
+      "label": "GESTIÓN (Día a día)",
+      "emoji": "⚙️",
+      "color": "#1e40af"
+    },
+    {
+      "id": "gobierno",
+      "label": "GOBIERNO (Reglas)",
+      "emoji": "⚖️",
+      "color": "#6b21a8"
+    },
+    {
+      "id": "propiedad",
+      "label": "PROPIEDAD (Dueños)",
+      "emoji": "💎",
+      "color": "#166534"
+    },
+    {
+      "id": "sucesion",
+      "label": "SUCESIÓN (Futuro)",
+      "emoji": "⏳",
+      "color": "#475569"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

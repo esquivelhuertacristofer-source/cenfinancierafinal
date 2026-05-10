@@ -1,0 +1,152 @@
+{
+  "code": "ACT-S3-1-3-A",
+  "unit_code": "S3-1-3",
+  "unit_title": "Ahorro para la universidad: becas, créditos educativos, FINAE",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Viajero e Inversionista",
+  "descripcion": "¿Por qué el dólar sube y baja? Simula cómo los eventos del mundo cambian el valor de tu dinero.",
+  "objetivo": "Comprender los factores que determinan el tipo de cambio y el impacto de la fluctuación de divisas en la economía personal",
+  "xp": 500,
+  "descripcion_formula": "Nuevo Tipo de Cambio = Base * (1 + FactorEvento).",
+  "inputs": [
+    {
+      "id": "monto_pesos_s3",
+      "label": "Cantidad de Pesos ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 20000,
+      "unit": "MXN"
+    },
+    {
+      "id": "evento_forex_s3",
+      "label": "Evento Mundial",
+      "type": "select",
+      "default": "Estabilidad",
+      "opciones": [
+        "Suben tasas en EE.UU.",
+        "Sube el precio del Petróleo",
+        "Inestabilidad Política Local",
+        "Estabilidad"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación Mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    }
+  ],
+  "formula": "monto_pesos_s3 / (18 * (evento_forex_s3 === 'Suben tasas en EE.UU.' ? 1.15 : evento_forex_s3 === 'Sube el precio del Petróleo' ? 0.90 : evento_forex_s3 === 'Inestabilidad Política Local' ? 1.25 : 1))",
+  "output_label": "Valor en Dólares (USD)",
+  "output_prefix": "$",
+  "output_suffix": " USD",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "evento_forex_s3 === 'Suben tasas en EE.UU.'",
+      "mensaje": "📉 Depreciación del Peso. Cuando EE.UU. sube tasas, el dinero sale de otros países hacia allá. Ahora tus pesos compran menos dólares.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "evento_forex_s3 === 'Sube el precio del Petróleo'",
+      "mensaje": "🚀 Apreciación del Peso. Como México exporta petróleo, la entrada de dólares fortalece la moneda local. ¡Tus vacaciones en el extranjero son más baratas!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "evento_forex_s3 === 'Inestabilidad Política Local'",
+      "mensaje": "🚨 Fuga de Capitales. El miedo hace que los inversionistas vendan pesos y compren dólares. El tipo de cambio se dispara.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El tipo de cambio es el precio de una moneda expresado en términos de otra. Es el mercado más grande y líquido del mundo.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuánto costaría una universidad privada en México durante 4 años? ¿Cómo financiarías los estudios combinando FINAE, becas, ahorro propio y trabajo parcial?",
+  "comparativa_espera": "La gestión pasiva de portafolios (ETFs de índice) supera a más del 80% de los fondos activos a 15 años en México y el mundo. El inversionista promedio paga más en comisiones de fondos activos de lo que recibe en rendimientos extra.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "por_trimestre",
+      "label": "Por Trimestre",
+      "formula": "Math.round(resultado_principal / 4)",
+      "prefix": "$",
+      "suffix": "/trimestre",
+      "descripcion": "El resultado distribuido trimestralmente"
+    },
+    {
+      "id": "en_horizonte_largo",
+      "label": "A 15 Años",
+      "formula": "Math.round(resultado_principal * Math.pow(1.09, 15))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Con reinversión al 9% compuesto por 15 años"
+    },
+    {
+      "id": "impacto_inflacion",
+      "label": "Después de Inflación (4.5%)",
+      "formula": "Math.round(resultado_principal * Math.pow(1 - 0.045/1.09, 15))",
+      "prefix": "$",
+      "suffix": " valor real",
+      "descripcion": "El poder de compra real descontando inflación del 4.5%"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "por_trimestre",
+      "label": "Por Trimestre",
+      "color": "#22c55e"
+    }
+  ]
+}

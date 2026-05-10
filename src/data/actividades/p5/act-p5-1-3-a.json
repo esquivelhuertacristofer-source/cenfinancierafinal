@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P5-1-3-A",
+  "unit_code": "P5-1-3",
+  "unit_title": "Tipos de cambio: el peso y el mundo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Viajero Mundial",
+  "descripcion": "Viajar por el mundo requiere cambiar monedas. Pero ¡cuidado! Las casas de cambio cobran comisiones. ¿Cuánto dinero te quedará al final de tu viaje?",
+  "objetivo": "Entender la mecánica del intercambio de divisas y el impacto de los costos de transacción",
+  "xp": 500,
+  "descripcion_formula": "Calculamos la conversión secuencial: MXN -> USD -> EUR -> JPY -> MXN, restando un 3% de comisión en cada cambio.",
+  "inputs": [
+    {
+      "id": "pesos_iniciales",
+      "label": "Presupuesto inicial en Pesos (MXN)",
+      "type": "slider",
+      "min": 5000,
+      "max": 50000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "eficiencia_cambio",
+      "label": "Tipo de Casa de Cambio",
+      "type": "select",
+      "default": "Banco Oficial",
+      "opciones": [
+        "Banco Oficial (3% comisión)",
+        "Aeropuerto (7% comisión)",
+        "App Digital (1% comisión)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "pesos_iniciales * Math.pow(1 - (eficiencia_cambio === 'Banco Oficial' ? 0.03 : eficiencia_cambio === 'Aeropuerto' ? 0.07 : 0.01), 4)",
+  "output_label": "Pesos restantes al volver a casa",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "eficiencia_cambio === 'App Digital (1% comisión)'",
+      "mensaje": "📱 ¡Viajero Inteligente! Usar apps digitales te ahorró mucho dinero en comisiones.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "eficiencia_cambio === 'Aeropuerto'",
+      "mensaje": "💸 ¡Cuidado! Cambiar en el aeropuerto es lo más caro. Perdiste casi el 25% de tu dinero solo en comisiones.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "🌍 Nota: Cada vez que cambias de moneda, el intermediario se queda con un poco. ¡Planea bien tus cambios!",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si el dólar sube de $17 a $20 pesos, ¿qué pasa con el precio de los productos importados en México? ¿Cómo afecta esto a alguien que quiere estudiar en el extranjero?",
+  "comparativa_espera": "México importa más del 40% de su gasolina ya refinada. Cuando el peso se deprecia, el precio en gasolineras sube aunque el petróleo no haya cambiado de precio en los mercados internacionales.",
+  "outputs_multiples": [
+    {
+      "id": "dolares_recibidos",
+      "label": "Dólares Recibidos",
+      "formula": "Math.round(pesos_iniciales / 17.5)",
+      "prefix": "USD $",
+      "suffix": "",
+      "descripcion": "Aproximación al tipo de cambio de referencia $17.5/USD"
+    },
+    {
+      "id": "costo_spread",
+      "label": "Costo del Spread Cambiario",
+      "formula": "Math.round(pesos_iniciales * 0.05)",
+      "prefix": "$",
+      "suffix": " MXN perdidos",
+      "descripcion": "La diferencia entre tipo de cambio banco vs mercado (~5%)"
+    },
+    {
+      "id": "valor_en_3_anos",
+      "label": "Valor en 3 Años (Inversión)",
+      "formula": "Math.round(pesos_iniciales * Math.pow(1.08, 3))",
+      "prefix": "$",
+      "suffix": " MXN si inviertes",
+      "descripcion": "Si en lugar de cambiar, inviertes al 8% anual en México"
+    },
+    {
+      "id": "riesgo_devaluacion",
+      "label": "Impacto si el Peso Baja 10%",
+      "formula": "Math.round(pesos_iniciales * 0.10)",
+      "prefix": "$",
+      "suffix": " MXN de pérdida",
+      "descripcion": "Lo que pierdes en poder adquisitivo internacional si el peso se deprecia 10%"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "dolares_recibidos",
+      "label": "Dólares Recibidos",
+      "color": "#6366f1"
+    },
+    {
+      "id": "costo_spread",
+      "label": "Costo del Spread Cambiario",
+      "color": "#22c55e"
+    }
+  ]
+}

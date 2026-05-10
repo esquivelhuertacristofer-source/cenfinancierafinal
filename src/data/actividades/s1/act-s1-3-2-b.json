@@ -1,0 +1,127 @@
+{
+  "code": "ACT-S1-3-2-B",
+  "unit_code": "S1-3-2",
+  "unit_title": "Fondos de inversión vs. ETFs: diferencias clave",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Escudo de las Compañías",
+  "descripcion": "¿Sabes qué protege a las grandes empresas de los desastres? ¡Demuestra que puedes blindar cualquier corporación!",
+  "objetivo": "Identificar los tipos de seguros especializados y su función en la continuidad de los negocios",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "corp1",
+      "pregunta": "¿Qué es la 'Responsabilidad Civil' en una empresa?",
+      "respuesta_correcta": "La cobertura que paga si tu empresa causa daño accidental a un cliente, a su propiedad o a un vecino",
+      "incorrectas": [
+        "Pagar los sueldos",
+        "El nombre de la empresa",
+        "La deuda con el banco"
+      ],
+      "dato_extra": "Si un cliente se resbala en tu restaurante, este seguro paga sus gastos médicos."
+    },
+    {
+      "id": "corp2",
+      "pregunta": "¿Qué cubre el seguro de 'Interrupción de Negocio'?",
+      "respuesta_correcta": "Paga las ganancias que dejas de recibir si tu empresa debe cerrar temporalmente por un incendio o desastre",
+      "incorrectas": [
+        "Las vacaciones de los empleados",
+        "El internet de la oficina",
+        "Los gastos de publicidad"
+      ],
+      "dato_extra": "Ayuda a que la empresa no quiebre mientras reparan el local."
+    },
+    {
+      "id": "corp3",
+      "pregunta": "¿Qué es un seguro de 'Hombre Clave'?",
+      "respuesta_correcta": "Una protección financiera para la empresa si la persona más importante (como el CEO) falta o se incapacita",
+      "incorrectas": [
+        "Un seguro para todos los empleados",
+        "Un seguro de auto para el director",
+        "Un seguro de vida personal"
+      ],
+      "dato_extra": "El dinero sirve para contratar a un reemplazo o compensar la pérdida de clientes."
+    },
+    {
+      "id": "corp4",
+      "pregunta": "¿Qué protege el seguro de 'D&O' (Directors and Officers)?",
+      "respuesta_correcta": "Protege el patrimonio personal de los directivos ante demandas por sus decisiones en la empresa",
+      "incorrectas": [
+        "Los muebles de la oficina",
+        "La computadora del jefe",
+        "El estacionamiento"
+      ],
+      "dato_extra": "Sin este seguro, mucha gente tendría miedo de ser director de una empresa."
+    },
+    {
+      "id": "corp5",
+      "pregunta": "¿Qué es la 'Fidelidad de Empleados'?",
+      "respuesta_correcta": "Un seguro que cubre a la empresa si un empleado comete un fraude o roba dinero del negocio",
+      "incorrectas": [
+        "Un premio al mejor trabajador",
+        "Un seguro de vida",
+        "Una fiesta de aniversario"
+      ],
+      "dato_extra": "Lamentablemente, los riesgos también pueden venir desde adentro."
+    },
+    {
+      "id": "corp6",
+      "pregunta": "¿Qué es el 'Reaseguro'?",
+      "respuesta_correcta": "El seguro que compran las compañías de seguros para protegerse ellas mismas de grandes desastres",
+      "incorrectas": [
+        "Contratar dos veces el mismo seguro",
+        "Un descuento por no chocar",
+        "Un seguro para mascotas"
+      ],
+      "dato_extra": "Es el seguro de las aseguradoras. Permite que el sistema sea estable."
+    },
+    {
+      "id": "corp7",
+      "pregunta": "¿Por qué una tienda de e-commerce necesita seguro de 'Ciberriesgo'?",
+      "respuesta_correcta": "Para cubrir los costos legales y las multas si hackean los datos de las tarjetas de sus clientes",
+      "incorrectas": [
+        "Para que el internet sea más rápido",
+        "Para comprar nuevas computadoras",
+        "Para vender más"
+      ],
+      "dato_extra": "Los hackeos son hoy uno de los mayores riesgos para las empresas modernas."
+    },
+    {
+      "id": "corp8",
+      "pregunta": "¿Qué es una 'Fianza'?",
+      "respuesta_correcta": "Una garantía que asegura que un contrato se va a cumplir (si no se cumple, la fianza paga)",
+      "incorrectas": [
+        "Un préstamo bancario",
+        "Un tipo de moneda",
+        "Una multa de tránsito"
+      ],
+      "dato_extra": "Se usa mucho en la construcción para asegurar que la obra se termine."
+    },
+    {
+      "id": "corp9",
+      "pregunta": "¿Cuál es la diferencia entre un seguro de daños y uno de responsabilidad civil?",
+      "respuesta_correcta": "El de daños protege TUS cosas; el de responsabilidad civil protege EL DINERO que tendrías que pagar a otros",
+      "incorrectas": [
+        "Son lo mismo",
+        "Uno es para personas y otro para robots",
+        "Uno es gratis"
+      ],
+      "dato_extra": "Ambos son necesarios para un blindaje completo."
+    },
+    {
+      "id": "corp10",
+      "pregunta": "¿Cuál es el fin principal de la gestión de riesgos en una corporación?",
+      "respuesta_correcta": "Asegurar la continuidad de la empresa pase lo que pase",
+      "incorrectas": [
+        "Ganar mucho dinero rápido",
+        "Ser la empresa más famosa",
+        "No pagar impuestos"
+      ],
+      "dato_extra": "¡Felicidades! Tienes el criterio de un director de riesgos (CRO)."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "comparativa_espera": "En México, solo el 20% de los hogares tiene seguro de vida. Una hospitalización grave en hospital privado puede costar entre $500,000 y $2,000,000 pesos. Sin seguro, un solo evento puede destruir el ahorro de décadas."
+}

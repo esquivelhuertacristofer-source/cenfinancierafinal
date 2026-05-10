@@ -1,0 +1,257 @@
+{
+  "code": "ACT-S2-4-5-B",
+  "unit_code": "S2-4-5",
+  "unit_title": "Emprendimiento con propósito: RSE y empresas sociales",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Certificación Final Secundaria 2",
+  "descripcion": "Has recorrido un largo camino. Es momento de demostrar que dominas el lenguaje del dinero y estás listo para el mundo real.",
+  "objetivo": "Validar el dominio integral de todos los conceptos financieros, de inversión y de planificación patrimonial del nivel S2",
+  "xp": 300,
+  "aprobacion_minima": 0.85,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál es la principal diferencia entre el Análisis Técnico y el Análisis Fundamental?",
+      "opciones": [
+        "El técnico mira las noticias y el fundamental las gráficas",
+        "El técnico estudia el movimiento del precio y patrones en gráficas; el fundamental estudia la salud financiera de la empresa",
+        "No hay diferencia",
+        "Uno es para acciones y otro para cripto"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q2",
+      "texto": "Si una vela japonesa es verde y tiene una mecha larga en la parte superior, ¿qué significa?",
+      "opciones": [
+        "Que el precio bajó todo el día",
+        "Que el precio subió mucho pero los vendedores lo bajaron antes del cierre",
+        "Que hay mucha euforia",
+        "Que el mercado está cerrado"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q3",
+      "texto": "En una tendencia alcista, ¿qué patrón de picos y valles esperarías ver?",
+      "opciones": [
+        "Picos y valles cada vez más bajos",
+        "Picos y valles cada vez más altos",
+        "Línea recta horizontal",
+        "Movimientos aleatorios"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué es el 'Slippage' en un mercado con baja liquidez?",
+      "opciones": [
+        "Cuando te resbalas en el banco",
+        "La diferencia entre el precio esperado y el precio real al que se ejecuta una orden debido a la falta de compradores/vendedores",
+        "Un descuento por comprar mucho",
+        "Un tipo de moneda digital"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué sesgo cognitivo te hace comprar algo solo porque todos lo están comprando?",
+      "opciones": [
+        "Sesgo de confirmación",
+        "FOMO / Mentalidad de rebaño",
+        "Aversión a la pérdida",
+        "Exceso de confianza"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cuál es el activo más líquido del mundo?",
+      "opciones": [
+        "Oro",
+        "Efectivo (Cash)",
+        "Bitcoin",
+        "Bienes Raíces"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué es una 'Stablecoin' en el mundo de los criptoactivos?",
+      "opciones": [
+        "Una moneda que siempre sube 10% anual",
+        "Una criptomoneda vinculada al valor de una moneda fiduciaria como el dólar",
+        "Una moneda que no se puede vender",
+        "Un tipo de billetera fría"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q8",
+      "texto": "Invertir en FIBRAS (REITs) permite:",
+      "opciones": [
+        "Comprar una casa entera tú solo",
+        "Ser dueño proporcional de grandes carteras inmobiliarias desde la bolsa con montos pequeños",
+        "Vender casas sin pagar impuestos",
+        "No tener que pagar rentas"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cuál es la característica principal de un 'Unicornio' en Venture Capital?",
+      "opciones": [
+        "Que es una empresa que no existe",
+        "Una startup con una valoración de más de $1,000 millones de dólares",
+        "Una empresa que nunca gasta dinero",
+        "Una empresa dirigida por una sola persona"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Por qué el oro se considera un activo de refugio?",
+      "opciones": [
+        "Porque es bonito",
+        "Porque tiene un valor intrínseco y escasez natural que lo protege de la inflación y crisis políticas",
+        "Porque lo regala el gobierno",
+        "Porque su precio nunca cambia"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q11",
+      "texto": "Si inviertes con un apalancamiento de 10x y el precio del activo baja un 10%, ¿qué sucede?",
+      "opciones": [
+        "Pierdes el 10% de tu dinero",
+        "Pierdes el 100% de tu capital (te liquidan)",
+        "No pasa nada, esperas a que suba",
+        "Ganas el 100%"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q12",
+      "texto": "¿Qué es el 'CAT' y para qué sirve?",
+      "opciones": [
+        "Un código secreto del banco",
+        "Costo Anual Total; sirve para comparar el costo real de diferentes créditos incluyendo comisiones e intereses",
+        "Una tasa de ahorro",
+        "El nombre de la tarjeta"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q13",
+      "texto": "¿Cuál es el mejor hábito para mantener un puntaje crediticio alto?",
+      "opciones": [
+        "No tener deudas nunca",
+        "Pagar el total de tus facturas siempre antes de la fecha límite",
+        "Pedir muchos créditos a la vez",
+        "Tener mucho dinero en el colchón"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q14",
+      "texto": "¿Qué significa 'Amortizar' un crédito?",
+      "opciones": [
+        "Olvidar la deuda",
+        "Ir reduciendo la deuda original mediante pagos periódicos de capital",
+        "Pagar solo los intereses",
+        "Pedir más dinero prestado"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q15",
+      "texto": "¿Cuál es la diferencia entre el Método Bola de Nieve y el de Avalancha para pagar deudas?",
+      "opciones": [
+        "Uno es para el invierno y otro para el verano",
+        "Bola de Nieve paga la deuda más pequeña primero (emocional); Avalancha paga la de mayor interés primero (matemático)",
+        "No hay diferencia",
+        "Avalancha es ilegal"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q16",
+      "texto": "¿Cómo se calcula tu Patrimonio Neto?",
+      "opciones": [
+        "Sumando tu sueldo de todo el año",
+        "Restando tus Pasivos (deudas) de tus Activos (lo que tienes)",
+        "Contando tu dinero en efectivo",
+        "Viendo el límite de tu tarjeta"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q17",
+      "texto": "En el interés compuesto para el retiro, ¿cuál es el factor más determinante?",
+      "opciones": [
+        "La cantidad de dinero que ahorras al final",
+        "El tiempo (empezar lo más joven posible)",
+        "El banco donde guardas el dinero",
+        "La suerte"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q18",
+      "texto": "¿Qué es una Deducción Personal en los impuestos?",
+      "opciones": [
+        "Un descuento que te hace el banco",
+        "Gastos que la ley permite restar de tus ingresos para pagar menos impuestos legalmente",
+        "Dinero que te quita el gobierno",
+        "Un tipo de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q19",
+      "texto": "¿Qué mide el ROI (Retorno de Inversión) educativo?",
+      "opciones": [
+        "Qué tan difícil fue la carrera",
+        "Cuánto tiempo tardarás en recuperar el costo de tu educación basándote en tu salario futuro",
+        "El promedio de tus calificaciones",
+        "Cuántos amigos hiciste"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    },
+    {
+      "id": "q20",
+      "texto": "La regla de oro de la diversificación total es:",
+      "opciones": [
+        "Invertir todo en lo que más sube hoy",
+        "Repartir tu capital en diferentes tipos de activos (Bolsa, Inmuebles, Cripto, Oro) para reducir el riesgo",
+        "No invertir nunca",
+        "Guardar todo en efectivo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Sigue acumulando conocimiento Diamond."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

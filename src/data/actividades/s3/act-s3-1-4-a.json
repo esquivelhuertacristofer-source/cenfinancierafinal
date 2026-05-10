@@ -1,0 +1,146 @@
+{
+  "code": "ACT-S3-1-4-A",
+  "unit_code": "S3-1-4",
+  "unit_title": "La economía digital: gig economy, plataformas e ingresos alternativos",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Precio del Oro Negro",
+  "descripcion": "¿Sabías que el precio de tu pizza depende del precio del petróleo? Descubre cómo las materias primas mueven el mundo.",
+  "objetivo": "Comprender la dinámica de oferta y demanda en materias primas y su impacto en los costos de producción global",
+  "xp": 500,
+  "descripcion_formula": "Costo de Producción = Base + (PrecioPetroleo * 0.4) + (PrecioTrigo * 0.2).",
+  "inputs": [
+    {
+      "id": "precio_petroleo_s3",
+      "label": "Precio del Petróleo (Barril) ($)",
+      "type": "slider",
+      "min": 20,
+      "max": 150,
+      "step": 5,
+      "default": 75,
+      "unit": "USD"
+    },
+    {
+      "id": "clima_cosechas_s3",
+      "label": "Clima Global (Materias Agrícolas)",
+      "type": "select",
+      "default": "Normal",
+      "opciones": [
+        "Sequía Extrema",
+        "Normal",
+        "Cosecha Récord"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "inflacion_sim",
+      "label": "Tasa de Inflación Anual (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 15,
+      "step": 0.5,
+      "default": 4,
+      "unit": "%"
+    }
+  ],
+  "formula": "(precio_petroleo_s3 * 1.5) + (clima_cosechas_s3 === 'Sequía Extrema' ? 200 : clima_cosechas_s3 === 'Normal' ? 50 : 10)",
+  "output_label": "Costo de Fabricación de un Producto Básico",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "precio_petroleo_s3 > 120",
+      "mensaje": "🚨 ¡Crisis de Energía! El transporte de todos los productos es carísimo. Las empresas subirán precios y la inflación se disparará.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "clima_cosechas_s3 === 'Sequía Extrema'",
+      "mensaje": "🍞 ¡Escasez de Alimentos! El precio del trigo y maíz sube. La seguridad alimentaria está en riesgo.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Un 'Commodity' es una materia prima que es igual en todo el mundo (un barril de petróleo es un barril aquí y en China).",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué ventajas tiene tener 3 fuentes de ingreso en lugar de solo 1? ¿Cómo usarías plataformas digitales como Fiverr, Upwork o YouTube para generar ingreso sin depender de un empleador?",
+  "comparativa_espera": "La renta de departamentos en zonas premium de México genera yields del 4-6% anual más apreciación del 7-10%. El total return puede superar el 12% anual — comparable a la bolsa pero con menor volatilidad percibida.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "flujo_anual",
+      "label": "Flujo Anual",
+      "formula": "resultado_principal * 12",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "El flujo anualizado de esta inversión"
+    },
+    {
+      "id": "rendimiento_vs_cetes",
+      "label": "Prima sobre CETES",
+      "formula": "Math.round(resultado_principal * 0.02)",
+      "prefix": "+$",
+      "suffix": " vs CETES",
+      "descripcion": "El rendimiento extra vs el instrumento libre de riesgo"
+    },
+    {
+      "id": "meta_capital_fire",
+      "label": "Capital para Vivir de Esto (FIRE)",
+      "formula": "resultado_principal * 12 * 25",
+      "prefix": "$",
+      "suffix": " de capital requerido",
+      "descripcion": "Cuánto capital necesitas para que este flujo sea tu \"sueldo\""
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "flujo_anual",
+      "label": "Flujo Anual",
+      "color": "#22c55e"
+    }
+  ]
+}

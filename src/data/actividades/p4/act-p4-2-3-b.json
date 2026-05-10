@@ -1,0 +1,87 @@
+{
+  "code": "ACT-P4-2-3-B",
+  "unit_code": "P4-2-3",
+  "unit_title": "El cajero automático: pasos para usarlo con seguridad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "SIMPLE",
+  "titulo": "Ciber-Guardián en el Cajero",
+  "descripcion": "El cajero es un lugar de cuidado. ¿Sabes qué acciones te protegen y cuáles te ponen en riesgo?",
+  "objetivo": "Diferenciar conductas de seguridad de conductas de riesgo en el uso de cajeros automáticos",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción a la columna de SEGURO o PELIGROSO según corresponda.",
+  "items": [
+    {
+      "id": "s1",
+      "label": "Tapar el teclado con la mano al poner el NIP",
+      "emoji": "🖐️",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Bien! Así nadie puede ver tu clave secreta."
+    },
+    {
+      "id": "p1",
+      "label": "Aceptar ayuda de un extraño que se ve 'amable'",
+      "emoji": "👤",
+      "categoria_correcta": "peligroso",
+      "feedback": "¡Peligro! Nunca permitas que nadie se acerque mientras usas el cajero."
+    },
+    {
+      "id": "s2",
+      "label": "Revisar que la ranura de la tarjeta no esté floja",
+      "emoji": "🕵️",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Excelente! Evitas que te clonen la tarjeta con aparatos falsos."
+    },
+    {
+      "id": "p2",
+      "label": "Contar el dinero afuera del cajero, en la calle",
+      "emoji": "💵",
+      "categoria_correcta": "peligroso",
+      "feedback": "¡Peligro! Debes guardar el dinero y la tarjeta antes de salir."
+    },
+    {
+      "id": "p3",
+      "label": "Anotar tu NIP con plumón atrás de la tarjeta",
+      "emoji": "🖊️",
+      "categoria_correcta": "peligroso",
+      "feedback": "¡Noooo! Si pierdes la tarjeta, cualquiera podrá sacar tu dinero."
+    },
+    {
+      "id": "s3",
+      "label": "Guardar el recibo o destruirlo antes de tirarlo",
+      "emoji": "📄",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Bien! El recibo tiene información que es solo para ti."
+    },
+    {
+      "id": "p4",
+      "label": "Usar un cajero que esté en un lugar oscuro y solo",
+      "emoji": "🌑",
+      "categoria_correcta": "peligroso",
+      "feedback": "Peligroso. Busca siempre cajeros en lugares iluminados y concurridos."
+    },
+    {
+      "id": "s4",
+      "label": "Verificar que nadie te esté observando de cerca",
+      "emoji": "👀",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Correcto! Cuida tu espacio personal y tu privacidad."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "seguro",
+      "label": "ACCIONES SEGURAS",
+      "emoji": "✅",
+      "color": "#16a34a"
+    },
+    {
+      "id": "peligroso",
+      "label": "ACCIONES PELIGROSAS",
+      "emoji": "🚫",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

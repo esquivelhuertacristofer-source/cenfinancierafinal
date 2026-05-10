@@ -1,0 +1,104 @@
+{
+  "code": "ACT-P4-1-4-B",
+  "unit_code": "P4-1-4",
+  "unit_title": "Dinero formal vs. informal: la economía de México",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "¿Qué camino elegirás?",
+  "descripcion": "Dos amigos abren un puesto de comida. Uno decide registrarse ante la ley y el otro prefiere no hacerlo. ¿Qué pasará con ellos después de 5 años?",
+  "objetivo": "Evaluar las ventajas de la formalidad frente a los riesgos de la informalidad económica",
+  "xp": 450,
+  "personaje_principal": "Futuro Dueño",
+  "contexto_inicial": "Tienes una receta deliciosa para vender tacos. Es momento de abrir tu negocio. ¿Cómo lo harás?",
+  "nodo_inicial": "inicio_negocio",
+  "nodos": {
+    "inicio_negocio": {
+      "id": "inicio_negocio",
+      "texto": "¡Es el día 1! Tienes dos opciones para empezar:",
+      "opciones": [
+        {
+          "id": "ir_formal",
+          "texto": "Registrarte en el SAT y pagar tus impuestos",
+          "siguiente_nodo": "camino_formal",
+          "consecuencia": "¡Bien hecho! Ahora eres un contribuyente formal y tienes derechos.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "ir_informal",
+          "texto": "Vender sin registrarte para quedarte con todo el dinero",
+          "siguiente_nodo": "camino_informal",
+          "consecuencia": "Hoy ganaste un poco más de dinero, pero no tienes protección legal.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "camino_formal": {
+      "id": "camino_formal",
+      "texto": "Después de 2 años, quieres comprar una camioneta para repartir a domicilio. Como eres formal y tienes estados de cuenta...",
+      "opciones": [
+        {
+          "id": "pedir_credito",
+          "texto": "Pides un crédito al banco con tasa baja",
+          "siguiente_nodo": "exito_formal",
+          "consecuencia": "¡El banco confía en ti! Te prestaron el dinero y tu negocio creció al doble.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "camino_informal": {
+      "id": "camino_informal",
+      "texto": "Han pasado 2 años. Quieres una camioneta pero el banco no te presta porque no tienes documentos oficiales. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "prestamo_peligroso",
+          "texto": "Pides prestado a alguien que cobra intereses altísimos",
+          "siguiente_nodo": "problema_deuda",
+          "consecuencia": "¡Cuidado! Casi todo lo que ganas ahora es para pagar esos intereses.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "esperar_ahorro",
+          "texto": "Esperar otros 3 años hasta juntar el dinero",
+          "siguiente_nodo": "estancamiento",
+          "consecuencia": "Tu negocio crece muy lento mientras otros ya te ganaron los clientes.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "exito_formal": {
+      "id": "exito_formal",
+      "texto": "¡5 años después! Tienes 3 sucursales, empleados con seguro médico y eres un empresario exitoso.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La formalidad te da acceso a herramientas (como el crédito) que multiplican tu esfuerzo."
+    },
+    "problema_deuda": {
+      "id": "problema_deuda",
+      "texto": "La deuda peligrosa se volvió impagable. Tuviste que cerrar tu puesto. ¡Aprende de esto!",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Sin el respaldo de un banco formal, crecer es mucho más arriesgado y costoso."
+    },
+    "estancamiento": {
+      "id": "estancamiento",
+      "texto": "Sigues con tu mismo puesto pequeño. Ganas para el día a día, pero no has podido crecer.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La informalidad suele poner un techo muy bajo a tus sueños de crecimiento."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

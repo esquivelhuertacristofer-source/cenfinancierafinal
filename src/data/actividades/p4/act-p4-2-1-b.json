@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P4-2-1-B",
+  "unit_code": "P4-2-1",
+  "unit_title": "La tarjeta de débito: usarla bien y sin perder el control",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Débito vs. Crédito",
+  "descripcion": "¿Sabes cuál tarjeta usar en cada momento? ¡Pon a prueba tu conocimiento y no te confundas!",
+  "objetivo": "Diferenciar las características, ventajas y riesgos de las tarjetas de débito frente a las de crédito",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "dc1",
+      "pregunta": "¿De dónde viene el dinero cuando usas una tarjeta de DÉBITO?",
+      "respuesta_correcta": "Directamente de tus ahorros en el banco",
+      "incorrectas": [
+        "Es un regalo del banco",
+        "Es dinero prestado que pagarás después",
+        "Viene de la lotería"
+      ],
+      "dato_extra": "Si no tienes dinero en tu cuenta, la tarjeta de débito no pasará."
+    },
+    {
+      "id": "dc2",
+      "pregunta": "¿Qué es una tarjeta de CRÉDITO?",
+      "respuesta_correcta": "Un préstamo del banco que debes devolver en una fecha fija",
+      "incorrectas": [
+        "Una tarjeta para sacar dinero gratis",
+        "Una identificación oficial",
+        "Un cupón de descuento"
+      ],
+      "dato_extra": "El crédito es dinero que 'no es tuyo', te lo prestan por un tiempo."
+    },
+    {
+      "id": "dc3",
+      "pregunta": "¿Qué pasa si no pagas a tiempo tu tarjeta de crédito?",
+      "respuesta_correcta": "El banco te cobra intereses y tu deuda crece",
+      "incorrectas": [
+        "No pasa nada, es un regalo",
+        "Te dan un premio por esperar",
+        "El banco olvida la deuda"
+      ],
+      "dato_extra": "Los intereses pueden hacer que una deuda pequeña se vuelva gigante."
+    },
+    {
+      "id": "dc4",
+      "pregunta": "¿Cuál tarjeta es mejor para controlar tus gastos diarios sin endeudarte?",
+      "respuesta_correcta": "La tarjeta de Débito",
+      "incorrectas": [
+        "La tarjeta de Crédito",
+        "La tarjeta de puntos del cine",
+        "Cualquiera es igual"
+      ],
+      "dato_extra": "Con el débito solo gastas lo que realmente tienes."
+    },
+    {
+      "id": "dc5",
+      "pregunta": "¿Qué significa 'Pagar el mínimo' en una tarjeta de crédito?",
+      "respuesta_correcta": "Dar lo poquito que el banco te pide para no bloquear la tarjeta, pero la deuda sigue creciendo",
+      "incorrectas": [
+        "Pagar toda la deuda",
+        "No pagar nada",
+        "Que el banco te perdona el resto"
+      ],
+      "dato_extra": "Pagar el mínimo es una trampa que hace que tardes años en terminar de pagar."
+    },
+    {
+      "id": "dc6",
+      "pregunta": "¿En cuál de las dos tarjetas necesitas tener dinero guardado antes de usarla?",
+      "respuesta_correcta": "En la de Débito",
+      "incorrectas": [
+        "En la de Crédito",
+        "En ninguna",
+        "En las dos"
+      ],
+      "dato_extra": "El débito es como tu alcancía digital."
+    },
+    {
+      "id": "dc7",
+      "pregunta": "¿Qué es el NIP?",
+      "respuesta_correcta": "Tu clave secreta de 4 números para autorizar compras",
+      "incorrectas": [
+        "El nombre del banco",
+        "La fecha de vencimiento",
+        "Tu nombre de usuario"
+      ],
+      "dato_extra": "¡Nunca compartas tu NIP con nadie, ni con el banco!"
+    },
+    {
+      "id": "dc8",
+      "pregunta": "¿Cuál tarjeta te permite comprar cosas aunque no tengas dinero en ese momento?",
+      "respuesta_correcta": "La tarjeta de Crédito",
+      "incorrectas": [
+        "La tarjeta de Débito",
+        "Ninguna",
+        "La tarjeta de la biblioteca"
+      ],
+      "dato_extra": "Pero recuerda: tendrás que pagarlo muy pronto con tu sueldo o ahorros."
+    },
+    {
+      "id": "dc9",
+      "pregunta": "¿Por qué las tarjetas tienen un chip?",
+      "respuesta_correcta": "Para guardar tu información de forma segura y evitar fraudes",
+      "incorrectas": [
+        "Para que la tarjeta flote",
+        "Para que brille en la oscuridad",
+        "Para que el banco sepa dónde estás"
+      ],
+      "dato_extra": "El chip es mucho más seguro que la banda magnética vieja."
+    },
+    {
+      "id": "dc10",
+      "pregunta": "Si pierdes tu tarjeta, ¿qué es lo primero que debes hacer?",
+      "respuesta_correcta": "Bloquearla desde la app o llamar al banco de inmediato",
+      "incorrectas": [
+        "Esperar a ver si alguien la encuentra",
+        "Llorar",
+        "Comprar otra tarjeta en la tienda"
+      ],
+      "dato_extra": "Actuar rápido evita que alguien más use tu dinero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

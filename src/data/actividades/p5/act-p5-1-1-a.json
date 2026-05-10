@@ -1,0 +1,217 @@
+{
+  "code": "ACT-P5-1-1-A",
+  "unit_code": "P5-1-1",
+  "unit_title": "El Banco de México: el cerebro del dinero",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Gobernador de Banxico",
+  "descripcion": "Acabas de ser nombrado Gobernador del Banco de México. Tu única misión: mantener la inflación entre 2% y 4% durante 4 trimestres. Cada decisión sobre la tasa de interés afecta a 130 millones de mexicanos. ¿Estás listo para la presión?",
+  "objetivo": "Entender cómo la tasa de interés de Banxico controla la inflación y su impacto en empleo, crecimiento y tipo de cambio",
+  "xp": 300,
+  "formula": "tasa",
+  "modo": "multi_trimestre",
+  "trimestres_total": 4,
+  "descripcion_formula": "Modelo macroeconómico simplificado: tasa alta → crédito más caro → menos consumo → inflación baja (pero más desempleo). Tasa baja → crédito barato → más consumo → inflación sube (pero más empleo).",
+  "variables_estado_inicial": {
+    "inflacion": 5.5,
+    "desempleo": 3.8,
+    "crecimiento_pib": 1.2,
+    "tipo_cambio": 17.5,
+    "tasa_actual": 11.25
+  },
+  "inputs": [
+    {
+      "id": "tasa",
+      "label": "Tasa de interés objetivo — Junta de Gobierno Banxico",
+      "type": "slider",
+      "min": 3,
+      "max": 15,
+      "step": 0.25,
+      "default": 11.25,
+      "unit": "%",
+      "referencia": "Tasa real de Banxico en 2024: 11.00%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación Mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "efectos_por_trimestre": {
+    "inflacion": "Math.max(1.5, Math.min(12, estado.inflacion + (tasa < 8 ? 0.9 : tasa > 12 ? -0.8 : tasa > 10 ? -0.3 : 0.1)))",
+    "desempleo": "Math.max(2.0, Math.min(9, estado.desempleo + (tasa > 11 ? 0.25 : tasa < 7 ? -0.3 : 0.0)))",
+    "crecimiento_pib": "Math.max(-2, Math.min(5, estado.crecimiento_pib + (tasa < 8 ? 0.5 : tasa > 12 ? -0.6 : 0.1)))",
+    "tipo_cambio": "estado.tipo_cambio * (tasa > 10 ? 0.985 : tasa < 7 ? 1.04 : 1.01)"
+  },
+  "noticias_por_trimestre": {
+    "2": {
+      "evento": "🌎 La Reserva Federal de EE.UU. sube su tasa en 0.5%",
+      "descripcion": "Cuando EE.UU. sube su tasa, el capital extranjero sale de México buscando mejores rendimientos en dólares. Esto presiona el tipo de cambio.",
+      "impacto": {
+        "inflacion": 1.2,
+        "tipo_cambio": 2.5
+      }
+    },
+    "3": {
+      "evento": "🏭 Anuncio de inversión extranjera récord: $18,000 MDD en nearshoring",
+      "descripcion": "Las empresas que salen de China están llegando a México. Esto fortalece el peso y aumenta el empleo.",
+      "impacto": {
+        "crecimiento_pib": 0.7,
+        "desempleo": -0.4,
+        "tipo_cambio": -1.5
+      }
+    },
+    "4": {
+      "evento": "🛢️ El precio del petróleo sube 30% por conflicto en Medio Oriente",
+      "descripcion": "México exporta petróleo (bueno para ingresos) pero también importa gasolina refinada (malo, sube precios).",
+      "impacto": {
+        "inflacion": 0.9
+      }
+    }
+  },
+  "output_label": "Indicadores económicos de México",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "tasa_interes_real",
+      "label": "Tasa de Interés Real",
+      "color": "#6366f1"
+    },
+    {
+      "id": "cetes_acumulado",
+      "label": "CETES Acumulados en Período",
+      "color": "#22c55e"
+    }
+  ],
+  "vida_real_ejemplos": [
+    "Tasa alta → hipotecas más caras → menos familias pueden comprar casa",
+    "Tasa alta → créditos empresariales caros → menos empleos nuevos",
+    "Tasa alta → inversiones en pesos más atractivas → el peso se aprecia",
+    "Tasa baja → crédito barato → más consumo → más inflación"
+  ],
+  "escenarios": [
+    {
+      "condicion": "inflacion_promedio < 4 && inflacion_promedio > 2 && desempleo_promedio < 5",
+      "mensaje": "🏆 Mandato cumplido. Inflación en objetivo y empleo estable. Eres el mejor Gobernador que ha tenido Banxico.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "inflacion_promedio > 7",
+      "mensaje": "🔥 Hiperinflación. Los mexicanos no pueden pagar el carrito del súper. Debiste subir la tasa antes.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "desempleo_promedio > 7",
+      "mensaje": "📉 Millones sin trabajo. La tasa estaba demasiado alta — congelaste el crédito y la economía.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "crecimiento_pib_promedio < 0",
+      "mensaje": "⚠️ Recesión técnica. La economía se contrajo. Política monetaria demasiado restrictiva.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "inflacion_promedio < 4 && inflacion_promedio > 2",
+      "mensaje": "✅ Inflación dentro del objetivo. El poder adquisitivo de los mexicanos está protegido.",
+      "tipo": "success"
+    }
+  ],
+  "calificacion_final": {
+    "Gobernador Estelar 🏆": "inflacion_prom >= 2 && inflacion_prom <= 4",
+    "Gobernador Sólido 💪": "inflacion_prom >= 1.5 && inflacion_prom <= 5",
+    "Gobernador Regular ⚠️": "inflacion_prom >= 1 && inflacion_prom <= 7",
+    "Gobernador Reprobado 🔥": "inflacion_prom > 7 || inflacion_prom < 1"
+  },
+  "pregunta_reflexion": "¿Por qué crees que mantener la inflación entre 2-4% es tan difícil en la práctica? ¿Qué factores que Banxico NO controla afectaron tu simulación?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "comparativa_espera": "Banxico mantuvo la tasa de interés en 11.25% durante 2023 — la más alta en 15 años — para bajar la inflación de 8.7% a 4.7%. Cada decisión del banco central afecta el precio de todo lo que compras en México.",
+  "outputs_multiples": [
+    {
+      "id": "tasa_interes_real",
+      "label": "Tasa de Interés Real",
+      "formula": "Math.round((tasa - 4) * 10) / 10",
+      "prefix": "",
+      "suffix": "% real (descontando 4% inflación)",
+      "descripcion": "Lo que realmente ganas después de la inflación"
+    },
+    {
+      "id": "cetes_acumulado",
+      "label": "CETES Acumulados en Período",
+      "formula": "Math.round(aportacion_mensual * 12 * anios_sim * (1 + tasa/100/2))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Ahorrando en CETES al nivel de tasa configurado"
+    },
+    {
+      "id": "poder_adquisitivo",
+      "label": "Poder Adquisitivo Futuro",
+      "formula": "Math.round(100 * Math.pow(1 - 0.04, anios_sim))",
+      "prefix": "",
+      "suffix": " pesos de hoy valdrán $100",
+      "descripcion": "El valor real de $100 actuales en el futuro con 4% inflación"
+    },
+    {
+      "id": "costo_hipoteca_ref",
+      "label": "Costo Referencial de Hipoteca",
+      "formula": "Math.round(1000000 * (tasa/100/12) / (1 - Math.pow(1 + tasa/100/12, -240)))",
+      "prefix": "$",
+      "suffix": "/mes por $1M",
+      "descripcion": "Mensualidad de una hipoteca de $1M pesos a 20 años a esta tasa"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "code": "ACT-S1-4-4-B",
+  "unit_code": "S1-4-4",
+  "unit_title": "Contabilidad básica: balance y estado de resultados",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Dilema del Primer Empleo",
+  "descripcion": "Te acabas de graduar y tienes dos ofertas increíbles. ¿Elegirás el dinero rápido o el conocimiento que te hará rico después?",
+  "objetivo": "Diferenciar entre el valor del salario monetario y el valor del capital intelectual en las etapas iniciales de la carrera",
+  "xp": 450,
+  "personaje_principal": "Dani",
+  "contexto_inicial": "Dani es un programador recién graduado. Tiene dos ofertas en la mesa. Debe decidir qué priorizar para su futuro.",
+  "nodo_inicial": "las_ofertas",
+  "nodos": {
+    "las_ofertas": {
+      "id": "las_ofertas",
+      "texto": "¿Qué oferta aceptarás?",
+      "opciones": [
+        {
+          "id": "gran_corporativo",
+          "texto": "Oferta A: Sueldo ALTO ($40k), pero harás tareas repetitivas y nadie te enseña nada",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "Ganaste buen dinero los primeros 2 años, pero ahora tus habilidades son viejas y nadie te quiere contratar por más dinero.",
+          "xp_bonus": 100,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "startup_innovadora",
+          "texto": "Oferta B: Sueldo MEDIO ($25k), pero trabajarás con los mejores expertos y aprenderás tecnologías de vanguardia",
+          "siguiente_nodo": "crecimiento_exponencial",
+          "consecuencia": "Aprendiste tanto que ahora las empresas pelean por ti. Te ofrecen puestos de dirección.",
+          "xp_bonus": 400,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "crecimiento_exponencial": {
+      "id": "crecimiento_exponencial",
+      "texto": "3 años después. Gracias a lo que aprendiste, fundas tu propia consultora o te contratan en Silicon Valley por $150k.",
+      "opciones": [
+        {
+          "id": "final_exito_profesional",
+          "texto": "Ver que el conocimiento es el mejor activo",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Tu valor en el mercado es altísimo.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_estancado_monetario": {
+      "id": "final_estancado_monetario",
+      "texto": "Sigues ganando lo mismo que cuando empezaste. El mundo cambió y tú te quedaste atrás.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "En los primeros años de carrera, no trabajes para ganar; trabaja para aprender."
+    },
+    "final_maestro_carrera": {
+      "id": "final_maestro_carrera",
+      "texto": "¡Felicidades! Entendiste que el sueldo más alto es el que te permite crecer más como profesional.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La educación no termina en la escuela, continúa en cada decisión de tu vida laboral."
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

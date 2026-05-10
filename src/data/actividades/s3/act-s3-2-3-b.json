@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-2-3-B",
+  "unit_code": "S3-2-3",
+  "unit_title": "El primer trabajo: negociar salario, prestaciones y contrato",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mercado de Valores Corporativo",
+  "descripcion": "¿Sabes qué pasa detrás de las escenas cuando una empresa sale a bolsa? ¡Demuestra tus conocimientos!",
+  "objetivo": "Identificar los componentes técnicos y regulatorios de la salida a bolsa de una empresa",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "ipo1",
+      "pregunta": "¿Qué significa 'IPO'?",
+      "respuesta_correcta": "Initial Public Offering (Oferta Pública Inicial): la primera vez que una empresa vende acciones al público",
+      "incorrectas": [
+        "International Payment Order",
+        "Internal Profit Option",
+        "Inversión Privada Obligatoria"
+      ],
+      "dato_extra": "Es el paso definitivo de una empresa privada a una pública."
+    },
+    {
+      "id": "ipo2",
+      "pregunta": "¿Cuál es la función de un 'Underwriter' (Banco de Inversión) en una IPO?",
+      "respuesta_correcta": "Ayudar a la empresa a valuar sus acciones y encontrar inversionistas para comprarlas",
+      "incorrectas": [
+        "Escribir las noticias",
+        "Ser el dueño de la empresa",
+        "Prestar dinero al 0%"
+      ],
+      "dato_extra": "Bancos como Goldman Sachs o JP Morgan suelen hacer este trabajo."
+    },
+    {
+      "id": "ipo3",
+      "pregunta": "¿Qué es el 'Ticker' de una empresa?",
+      "respuesta_correcta": "El símbolo de 1 a 5 letras que identifica a la empresa en la bolsa (ej: AAPL para Apple)",
+      "incorrectas": [
+        "Un tipo de boleto",
+        "El nombre del dueño",
+        "Un código de barras"
+      ],
+      "dato_extra": "Es la forma rápida de buscar y comprar la acción en cualquier plataforma."
+    },
+    {
+      "id": "ipo4",
+      "pregunta": "¿Cuál es la diferencia entre el Mercado Primario y el Mercado Secundario?",
+      "respuesta_correcta": "En el Primario el dinero va a la empresa; en el Secundario el dinero va del comprador al vendedor (otros inversionistas)",
+      "incorrectas": [
+        "Uno es para comida y otro para acciones",
+        "Uno es legal y el otro no",
+        "No hay diferencia"
+      ],
+      "dato_extra": "Cuando tú compras acciones en una App, estás operando en el Mercado Secundario."
+    },
+    {
+      "id": "ipo5",
+      "pregunta": "¿Qué es el 'Prospecto de Inversión'?",
+      "respuesta_correcta": "Un documento legal que detalla todos los riesgos, finanzas y planes de la empresa para los inversionistas",
+      "incorrectas": [
+        "Un anuncio publicitario",
+        "Un catálogo de productos",
+        "Una lista de empleados"
+      ],
+      "dato_extra": "Leer el prospecto es la única forma de saber en qué estás invirtiendo realmente."
+    },
+    {
+      "id": "ipo6",
+      "pregunta": "¿Qué es el 'Roadshow'?",
+      "respuesta_correcta": "Una gira donde los directivos de la empresa presentan su negocio a grandes inversionistas para convencerlos de comprar acciones",
+      "incorrectas": [
+        "Un desfile de autos",
+        "Una película sobre finanzas",
+        "Un concierto de música"
+      ],
+      "dato_extra": "Es fundamental para generar interés antes del día de la IPO."
+    },
+    {
+      "id": "ipo7",
+      "pregunta": "¿Por qué una empresa querría salir a bolsa?",
+      "respuesta_correcta": "Para recaudar mucho capital rápidamente y financiar grandes planes de crecimiento",
+      "incorrectas": [
+        "Para pagar menos impuestos",
+        "Porque es obligatorio",
+        "Para regalar dinero"
+      ],
+      "dato_extra": "También permite que los fundadores iniciales conviertan su esfuerzo en dinero real."
+    },
+    {
+      "id": "ipo8",
+      "pregunta": "¿Quién regula que la información de una empresa pública sea verdadera?",
+      "respuesta_correcta": "La Comisión de Valores (ej: SEC en EE.UU. o CNBV en México)",
+      "incorrectas": [
+        "El director de la empresa",
+        "Un grupo de YouTubers",
+        "Nadie"
+      ],
+      "dato_extra": "Si una empresa miente en sus reportes, puede recibir multas gigantes o ser expulsada de la bolsa."
+    },
+    {
+      "id": "ipo9",
+      "pregunta": "¿Qué significa que una empresa 'reinvierte' sus utilidades en lugar de dar dividendos?",
+      "respuesta_correcta": "Que usa las ganancias para crecer más rápido, comprar otras empresas o desarrollar nueva tecnología",
+      "incorrectas": [
+        "Que se quedó sin dinero",
+        "Que los dueños se robaron el dinero",
+        "Que la empresa es mala"
+      ],
+      "dato_extra": "Empresas como Amazon o Google no dieron dividendos por muchos años para poder crecer masivamente."
+    },
+    {
+      "id": "ipo10",
+      "pregunta": "¿Qué pasa si una empresa no cumple con las reglas de la bolsa?",
+      "respuesta_correcta": "Puede ser 'Delisted' (sus acciones dejan de cotizar públicamente)",
+      "incorrectas": [
+        "Le dan un premio",
+        "Le bajan el precio a la fuerza",
+        "Cambia de nombre"
+      ],
+      "dato_extra": "¡Felicidades! Estás listo para entender las noticias financieras de alto nivel."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

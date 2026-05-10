@@ -1,0 +1,61 @@
+{
+  "code": "ACT-P2-4-5-A",
+  "unit_code": "P2-4-5",
+  "unit_title": "Mi primer 'estado de resultados' simplificado",
+  "level": "Primaria 2",
+  "tipo": "SIMULADOR",
+  "complejidad": "BAJO",
+  "titulo": "Mi Boleta de Negocio",
+  "descripcion": "Registra tus ventas y resta tus costos para ver cómo le fue a tu negocio esta semana. ¡Analiza tus números!",
+  "objetivo": "Aprender a elaborar un balance final de ingresos, egresos y utilidad neta.",
+  "xp": 700,
+  "inputs": [
+    {
+      "id": "ventas_semana",
+      "label": "Ventas de la Semana ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 1000,
+      "step": 50,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "costos_semana",
+      "label": "Costos de Materiales ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 500,
+      "step": 25,
+      "default": 100,
+      "unit": "$"
+    }
+  ],
+  "formula": "ventas_semana - costos_semana",
+  "output_label": "Utilidad Neta Final",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "escenarios": [
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "⚠️ ¡Pérdida! Has gastado más de lo que vendiste. Hay que revisar los precios o reducir los costos.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "resultado == 0",
+      "mensaje": "⚖️ Punto de Equilibrio. No ganaste ni perdiste. ¡Sigue esforzándote para lograr una ganancia!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado > 0 && resultado <= 200",
+      "mensaje": "✅ ¡Bien hecho! Tienes una pequeña ganancia. ¡Sigue así y pronto tu negocio crecerá!",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado > 200",
+      "mensaje": "🌟 ¡Éxito Total! Tienes una excelente ganancia. ¡Eres un gran administrador de tu negocio!",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-2-5-B",
+  "unit_code": "S2-2-5",
+  "unit_title": "Planeación patrimonial básica: testamento y herencia",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Portafolio de Diversificación Total",
+  "descripcion": "¿Estás listo para cualquier tormenta económica? Diseña un portafolio que proteja tu riqueza pase lo que pase en el mundo.",
+  "objetivo": "Aplicar el concepto de diversificación de activos en un portafolio que incluya inversiones tradicionales y alternativas",
+  "xp": 600,
+  "output_type": "Hoja de Ruta de Diversificación",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "asignacion_activos_s2",
+      "titulo": "🧩 El Reparto",
+      "descripcion": "Divide tu 100% entre estas categorías de activos.",
+      "campos": [
+        {
+          "id": "pct_acciones",
+          "label": "Acciones y ETFs (Empresas) (%)",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "%"
+        },
+        {
+          "id": "pct_cripto",
+          "label": "Criptoactivos (Innovación) (%)",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 10,
+          "unit": "%"
+        },
+        {
+          "id": "pct_inmuebles",
+          "label": "Bienes Raíces/FIBRAS (Rentas) (%)",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "%"
+        },
+        {
+          "id": "pct_oro",
+          "label": "Oro y Refugio (Seguridad) (%)",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "prueba_estres_s2",
+      "titulo": "🌪️ Prueba de Estrés",
+      "descripcion": "¿Cómo reaccionaría tu portafolio si ocurre una crisis mundial?",
+      "campos": [
+        {
+          "id": "escenario_crisis",
+          "label": "Elige un escenario para probar",
+          "type": "select",
+          "opciones": [
+            "Colapso de la Bolsa (-50% acciones)",
+            "Hiperinflación (Moneda pierde valor)",
+            "Auge Tecnológico (Cripto y Tech suben)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "analisis_resiliencia",
+      "titulo": "📊 Análisis de Resiliencia",
+      "descripcion": "Justifica por qué tu portafolio es seguro.",
+      "campos": [
+        {
+          "id": "justificacion_diversificacion",
+          "label": "¿Por qué elegiste esta mezcla?",
+          "type": "textarea",
+          "placeholder": "Ej: Puse 20% en oro para protegerme si la bolsa cae, y 10% en cripto por si hay un gran crecimiento tecnológico...",
+          "requerido": true
+        },
+        {
+          "id": "suma_asignacion",
+          "label": "Suma Total del Portafolio",
+          "type": "calculated",
+          "formula": "pct_acciones + pct_cripto + pct_inmuebles + pct_oro",
+          "unit": "% (meta: 100%)",
+          "ayuda": "La suma debe ser 100% para un portafolio balanceado"
+        },
+        {
+          "id": "rendimiento_esperado",
+          "label": "Rendimiento Esperado Ponderado",
+          "type": "calculated",
+          "formula": "Math.round((pct_acciones * 0.12 + pct_cripto * 0.25 + pct_inmuebles * 0.08 + pct_oro * 0.05) * 10) / 10",
+          "unit": "% anual estimado",
+          "ayuda": "Acciones 12%, cripto 25% (alto riesgo), inmuebles 8%, oro 5%"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

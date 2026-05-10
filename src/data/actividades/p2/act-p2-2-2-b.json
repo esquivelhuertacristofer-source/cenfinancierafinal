@@ -1,0 +1,137 @@
+{
+  "code": "P2-2-2-B",
+  "unit_code": "P2-2-2",
+  "unit_title": "Decidir con información: comparar precios",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Examen de Detective",
+  "descripcion": "¿Puedes encontrar el mejor trato? ¡Demuestra que nadie te engaña con los precios!",
+  "objetivo": "Validar la habilidad de búsqueda y comparación de precios y el entendimiento de las ofertas",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Si en la Tienda Azul un balón cuesta $20 y en la Tienda Roja cuesta $15, ¿dónde te conviene comprar?",
+      "opciones": [
+        "Tienda Azul",
+        "Tienda Roja",
+        "En cualquiera, es igual",
+        "En la más bonita"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahorrar $5 comprando en la Tienda Roja es una decisión inteligente."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué es 'comparar' precios?",
+      "opciones": [
+        "Comprar lo primero que veas",
+        "Revisar cuánto cuesta lo mismo en diferentes lugares para elegir lo mejor",
+        "Pedir que nos regalen las cosas",
+        "No comprar nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Comparar es buscar información para cuidar el dinero de tu familia."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por qué las frutas y verduras suelen ser más baratas en el TIANGUIS o MERCADO LOCAL?",
+      "opciones": [
+        "Porque son viejas",
+        "Porque vienen directo del productor sin tantos intermediarios",
+        "Porque no tienen luz",
+        "Porque no tienen bolsas"
+      ],
+      "correcta": 1,
+      "explicacion": "Comprar local ayuda al productor y a tu bolsillo al mismo tiempo."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué debes hacer ANTES de comprar algo caro como una bicicleta?",
+      "opciones": [
+        "Cerrar los ojos y pagar",
+        "Investigar en al menos 2 o 3 tiendas o páginas de internet",
+        "Llevarme la que brille más",
+        "Pedir un préstamo de inmediato"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre más caro sea algo, más importante es comparar en varios lugares."
+    },
+    {
+      "id": "q5",
+      "texto": "Si ahorras $10 al comparar un cuaderno, ¿qué es lo más inteligente que puedes hacer con esos $10?",
+      "opciones": [
+        "Tirarlos",
+        "Meterlos a tu alcancía o ahorro",
+        "Gastarlos en chicles de inmediato",
+        "Perderlos"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero que ahorras al comparar es 'dinero ganado' para tus metas."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Por qué comprar algo muy barato a veces puede salir caro al final?",
+      "opciones": [
+        "Porque pesa mucho",
+        "Porque si es de mala calidad y se rompe rápido, tendrás que gastar otra vez en comprar uno nuevo",
+        "Porque el color es feo",
+        "Porque no tiene caja"
+      ],
+      "correcta": 1,
+      "explicacion": "Un genio financiero también compara la CALIDAD, no solo el precio."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué significa ser un 'Consumidor Inteligente'?",
+      "opciones": [
+        "Alguien que compra todo lo que ve",
+        "Alguien que decide sus compras con información y cuidado",
+        "Alguien que no gasta nunca nada",
+        "Alguien que solo compra juguetes"
+      ],
+      "correcta": 1,
+      "explicacion": "Ser inteligente es usar tu cerebro para que tu dinero rinda más."
+    },
+    {
+      "id": "q8",
+      "texto": "Si una tienda está muy lejos pero es $2 más barata, ¿conviene ir?",
+      "opciones": [
+        "Siempre, aunque esté a 3 horas",
+        "Solo si el ahorro es mayor que lo que gastarás en transporte o tiempo para llegar",
+        "No, nunca",
+        "Sí, para pasear"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Ojo! El tiempo y el transporte también cuestan. Debes sumarlos al precio."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cuál es una forma moderna de comparar precios sin salir de casa?",
+      "opciones": [
+        "Gritando por la ventana",
+        "Usando aplicaciones o páginas de internet de las tiendas",
+        "Adivinando el precio",
+        "Preguntando al vecino"
+      ],
+      "correcta": 1,
+      "explicacion": "La tecnología nos ayuda a ser mejores detectives desde nuestro sillón."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cómo se llama el dinero que no gastaste por encontrar un mejor precio?",
+      "opciones": [
+        "Dinero perdido",
+        "Ahorro real",
+        "Sueldo",
+        "Propina"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ese ahorro es el primer paso para lograr tus sueños."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

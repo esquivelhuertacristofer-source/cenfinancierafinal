@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P6-2-1-A",
+  "unit_code": "P6-2-1",
+  "unit_title": "La trampa del crédito al consumo: cómo evitarla",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Trampa de la Tarjeta",
+  "descripcion": "Quieres comprar unos tenis de $3,500 con la tarjeta de crédito. El banco dice: 'solo $350 al mes'. Suena fácil. Pero ¿cuánto terminarás pagando en realidad? Descubre el verdadero costo del crédito al consumo antes de que te atrape.",
+  "objetivo": "Calcular el costo real de una compra a crédito, comparar pago contado vs. a plazos, y entender la diferencia entre deuda productiva y deuda consumista",
+  "xp": 500,
+  "descripcion_formula": "Cuota mínima = saldo × 10% (mínimo típico). Meses para pagar = -ln(1 - saldo×tasa_m/pago) / ln(1+tasa_m). Costo real = cuotas×meses - saldo_original.",
+  "inputs": [
+    {
+      "id": "precio_compra",
+      "label": "Precio de lo que Quieres Comprar ($)",
+      "type": "slider",
+      "min": 500,
+      "max": 30000,
+      "step": 500,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_tarjeta_anual",
+      "label": "Tasa Anual de la Tarjeta (%)",
+      "type": "slider",
+      "min": 24,
+      "max": 120,
+      "step": 2,
+      "default": 60,
+      "unit": "%",
+      "referencia": "CAT promedio tarjetas México: 74.4% (Banxico 2024)"
+    },
+    {
+      "id": "pago_mensual_electo",
+      "label": "¿Cuánto Pagarás al Mes? ($)",
+      "type": "slider",
+      "min": 100,
+      "max": 10000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "tipo_compra",
+      "label": "¿Qué tipo de compra es?",
+      "type": "select",
+      "options": [
+        { "label": "Necesidad básica (comida, medicina)", "value": "necesidad" },
+        { "label": "Inversión (herramienta de trabajo, educación)", "value": "inversion" },
+        { "label": "Capricho (ropa de lujo, electrónico nuevo)", "value": "capricho" },
+        { "label": "Emergencia sin fondo de emergencia", "value": "emergencia" }
+      ],
+      "default": "capricho"
+    }
+  ],
+  "formula": "Math.round(precio_compra * tasa_tarjeta_anual / 100 / 12)",
+  "output_label": "Interés del Primer Mes ($)",
+  "output_prefix": "$",
+  "output_suffix": " solo en intereses",
+  "outputs_multiples": [
+    {
+      "id": "interes_primer_mes",
+      "label": "Interés del Primer Mes",
+      "formula": "Math.round(precio_compra * tasa_tarjeta_anual / 100 / 12)",
+      "prefix": "$",
+      "suffix": " solo en intereses",
+      "descripcion": "Del primer pago, esto se va directo al banco sin reducir tu deuda"
+    },
+    {
+      "id": "meses_pagando",
+      "label": "Meses para Terminar de Pagar",
+      "formula": "pago_mensual_electo > precio_compra * tasa_tarjeta_anual/100/12 ? Math.ceil(-Math.log(1 - precio_compra*(tasa_tarjeta_anual/100/12)/pago_mensual_electo)/Math.log(1+tasa_tarjeta_anual/100/12)) : 999",
+      "prefix": "",
+      "suffix": " meses",
+      "descripcion": "Si tu pago no cubre los intereses, nunca terminarás (muestra 999)"
+    },
+    {
+      "id": "costo_real_total",
+      "label": "Precio Real de la Compra",
+      "formula": "pago_mensual_electo > precio_compra * tasa_tarjeta_anual/100/12 ? Math.round(pago_mensual_electo * Math.ceil(-Math.log(1 - precio_compra*(tasa_tarjeta_anual/100/12)/pago_mensual_electo)/Math.log(1+tasa_tarjeta_anual/100/12))) : precio_compra * 3",
+      "prefix": "$",
+      "suffix": " en total",
+      "descripcion": "Lo que realmente terminas pagando (cuotas × meses)"
+    },
+    {
+      "id": "sobreprecio",
+      "label": "Cuánto Pagas de Más",
+      "formula": "pago_mensual_electo > precio_compra * tasa_tarjeta_anual/100/12 ? Math.round((pago_mensual_electo * Math.ceil(-Math.log(1 - precio_compra*(tasa_tarjeta_anual/100/12)/pago_mensual_electo)/Math.log(1+tasa_tarjeta_anual/100/12)) / precio_compra - 1) * 100) : 200",
+      "prefix": "",
+      "suffix": "% más que el precio original",
+      "descripcion": "El porcentaje extra que le regalas al banco por financiar la compra"
+    }
+  ],
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "precio_compra",
+      "label": "Precio Original ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "costo_real_total",
+      "label": "Costo Real Total ($)",
+      "color": "#ef4444"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "pago_mensual_electo <= precio_compra * tasa_tarjeta_anual/100/12",
+      "mensaje": "💀 TRAMPA ACTIVA. Tu pago mensual ni siquiera cubre los intereses. La deuda crece aunque pagues. Cada mes debes más que el anterior. Necesitas pagar al menos el doble del interés mensual.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "tipo_compra === 'capricho' && meses_pagando > 12",
+      "mensaje": "🎠 La trampa del capricho. Seguirás pagando estos tenis/ropa mucho después de que estén gastados y olvidados. El placer dura días, la deuda dura años.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "tipo_compra === 'inversion'",
+      "mensaje": "🔧 Deuda productiva. Si esta compra genera ingresos o te ahorra más de lo que cuesta en intereses, puede ser justificable. Calcula si el retorno supera el costo del crédito.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "pago_mensual_electo >= precio_compra",
+      "mensaje": "🏆 Decisión óptima. Pagas de contado o en un solo mes. Costo de intereses: casi cero. Esta es siempre la mejor estrategia si tienes el efectivo.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Cuál es la diferencia entre deuda que ayuda (hipoteca para tu casa) y deuda que daña (tarjeta al 70% para vacaciones)? ¿Cómo evalúas si un crédito vale la pena tomarlo?",
+  "comparativa_espera": "La deuda productiva — que invierte en activos que valorizan o generan ingresos — crea riqueza. La deuda consumista — para cosas que se deprecian o se consumen — la destruye silenciosamente."
+}

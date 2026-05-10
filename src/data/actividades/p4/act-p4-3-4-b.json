@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P4-3-4-B",
+  "unit_code": "P4-3-4",
+  "unit_title": "Inflación: por qué los precios suben y cómo protegernos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Estrategias de Defensa",
+  "descripcion": "¿Sabes cómo ganarle al monstruo de la inflación? ¡Demuestra que eres un estratega financiero!",
+  "objetivo": "Evaluar la capacidad de seleccionar instrumentos financieros adecuados para mitigar el impacto inflacionario",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "def1",
+      "pregunta": "Si la inflación es del 6% y tu banco te paga el 4%, ¿qué está pasando?",
+      "respuesta_correcta": "Estás perdiendo un 2% de poder de compra real",
+      "incorrectas": [
+        "Estás ganando un 4%",
+        "No pasa nada",
+        "Tu dinero brilla más"
+      ],
+      "dato_extra": "Esto se llama 'Tasa Real Negativa'. Tu dinero crece más lento que los precios."
+    },
+    {
+      "id": "def2",
+      "pregunta": "¿Qué tipo de inversión suele proteger mejor contra la inflación?",
+      "respuesta_correcta": "Inversiones en bienes reales (como casas) o tasas ligadas a la inflación (como UDIs o CETES altos)",
+      "incorrectas": [
+        "Ahorrar en una caja de zapatos",
+        "Prestarle dinero a un amigo sin intereses",
+        "Comprar dulces que se echan a perder"
+      ],
+      "dato_extra": "Los bienes raíces suelen subir de valor conforme suben los precios generales."
+    },
+    {
+      "id": "def3",
+      "pregunta": "¿Qué es la 'Tasa Real' de ganancia?",
+      "respuesta_correcta": "La tasa que te paga el banco menos la tasa de inflación",
+      "incorrectas": [
+        "El total de dinero que tienes",
+        "La tasa que dice el contrato",
+        "Un impuesto nuevo"
+      ],
+      "dato_extra": "La Tasa Real es lo que verdaderamente ganaste por encima de los precios."
+    },
+    {
+      "id": "def4",
+      "pregunta": "¿Por qué el oro se considera un refugio contra la inflación?",
+      "respuesta_correcta": "Porque es escaso y ha mantenido su valor por miles de años",
+      "incorrectas": [
+        "Porque es muy pesado",
+        "Porque brilla mucho",
+        "Porque se puede comer"
+      ],
+      "dato_extra": "Históricamente, el oro protege el poder adquisitivo en tiempos de crisis."
+    },
+    {
+      "id": "def5",
+      "pregunta": "Si los precios suben, ¿qué pasa con el valor de los ahorros guardados en efectivo?",
+      "respuesta_correcta": "Su valor real baja drásticamente",
+      "incorrectas": [
+        "Su valor sube",
+        "Se mantiene igual",
+        "Se vuelven billetes nuevos"
+      ],
+      "dato_extra": "El efectivo es el más castigado por la inflación."
+    },
+    {
+      "id": "def6",
+      "pregunta": "¿Qué son las UDIs en México?",
+      "respuesta_correcta": "Unidades que cambian su valor según la inflación para proteger el dinero",
+      "incorrectas": [
+        "Un tipo de moneda extranjera",
+        "Un dulce típico",
+        "Una marca de zapatos"
+      ],
+      "dato_extra": "Ahorrar en UDIs asegura que tu dinero siempre compre lo mismo."
+    },
+    {
+      "id": "def7",
+      "pregunta": "¿Cuál es la mejor defensa de un niño contra la inflación a largo plazo?",
+      "respuesta_correcta": "Estudiar y aprender a invertir desde joven",
+      "incorrectas": [
+        "Gastar todo hoy",
+        "Pedir más domingo",
+        "No hacer nada"
+      ],
+      "dato_extra": "El conocimiento es la inversión que paga el mejor interés."
+    },
+    {
+      "id": "def8",
+      "pregunta": "En un ambiente de alta inflación, ¿qué es mejor?",
+      "respuesta_correcta": "Tener inversiones que paguen tasas altas",
+      "incorrectas": [
+        "Tener deudas con tasas variables",
+        "Guardar monedas en un frasco",
+        "Esconderse"
+      ],
+      "dato_extra": "Las deudas también pueden volverse muy caras con la inflación."
+    },
+    {
+      "id": "def9",
+      "pregunta": "¿Qué pasa si Banxico sube las tasas de interés?",
+      "respuesta_correcta": "Suele ayudar a bajar la inflación porque es más caro pedir prestado",
+      "incorrectas": [
+        "La inflación sube más",
+        "El dinero desaparece",
+        "Todos nos volvemos ricos"
+      ],
+      "dato_extra": "Subir tasas es la herramienta principal para controlar al 'monstruo'."
+    },
+    {
+      "id": "def10",
+      "pregunta": "¿Cuál es la regla de oro para vencer a la inflación?",
+      "respuesta_correcta": "Rendimiento > Inflación",
+      "incorrectas": [
+        "Rendimiento < Inflación",
+        "Rendimiento = 0",
+        "No invertir"
+      ],
+      "dato_extra": "¡Memoriza esta fórmula y serás un maestro financiero!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

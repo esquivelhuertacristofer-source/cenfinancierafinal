@@ -1,0 +1,137 @@
+{
+  "code": "P2-3-5-B",
+  "unit_code": "P2-3-5",
+  "unit_title": "¿Qué pasa si no ahorro? Las consecuencias",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¡Gran Final de 2do Grado!",
+  "descripcion": "Has recorrido un largo camino. ¿Estás listo para convertirte en un Ciudadano CEN de Excelencia?",
+  "objetivo": "Evaluar los conocimientos integrales adquiridos durante todo el ciclo escolar de 2do grado",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál de estos fue una forma de dinero en el México antiguo?",
+      "opciones": [
+        "Piedras de colores",
+        "Granos de Cacao",
+        "Hojas de árbol",
+        "Nubes"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! El cacao era tan valioso que se usaba como moneda."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cómo puedes saber si un billete de $50 o $100 es auténtico (de verdad)?",
+      "opciones": [
+        "Porque es de color bonito",
+        "Revisando la marca de agua y sintiendo los relieves con tus dedos",
+        "Porque me lo dio un amigo",
+        "Porque brilla mucho"
+      ],
+      "correcta": 1,
+      "explicacion": "La seguridad está en los detalles que puedes ver y tocar."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué es un 'Gasto Necesario'?",
+      "opciones": [
+        "Un juguete de moda",
+        "La comida y los útiles para la escuela",
+        "Un helado triple",
+        "Un disfraz"
+      ],
+      "correcta": 1,
+      "explicacion": "Son las cosas que necesitamos para vivir, estar sanos y aprender."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuál es la regla de oro para que tu dinero rinda toda la semana?",
+      "opciones": [
+        "Gastar todo el lunes",
+        "Hacer un PRESUPUESTO antes de empezar a gastar",
+        "Pedir prestado",
+        "Esconder el dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Planear es la clave del éxito financiero."
+    },
+    {
+      "id": "q5",
+      "texto": "Si ves un descuento de 2x1 en algo que NO necesitas, ¿qué es lo más inteligente?",
+      "opciones": [
+        "Comprarlo porque es una oferta",
+        "No comprarlo para no gastar dinero innecesariamente",
+        "Comprar 4",
+        "Preguntar el precio"
+      ],
+      "correcta": 1,
+      "explicacion": "Un descuento en algo innecesario sigue siendo un gasto."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Por qué es importante tener un 'Fondo de Emergencia'?",
+      "opciones": [
+        "Para comprar más dulces",
+        "Para estar protegidos si algo se rompe o hay un imprevisto",
+        "Para que la alcancía no esté vacía",
+        "Para presumir"
+      ],
+      "correcta": 1,
+      "explicacion": "El ahorro es tu escudo contra las sorpresas de la vida."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué debes hacer si alguien te presta dinero o un juguete?",
+      "opciones": [
+        "Quedármelo",
+        "Devolverlo puntualmente y en buen estado para mantener la confianza",
+        "Esconderme",
+        "Decir que se me perdió"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu palabra y tu honestidad son tus activos más valiosos."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué es el dinero digital?",
+      "opciones": [
+        "Dinero de mentira",
+        "Dinero real que se maneja a través de bancos, tarjetas y apps",
+        "Dibujos de billetes",
+        "Dinero para jugar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el dinero moderno que viaja por internet y requiere claves seguras."
+    },
+    {
+      "id": "q9",
+      "texto": "Si quieres algo muy caro (como una bici), ¿cuál es la mejor estrategia?",
+      "opciones": [
+        "Llorar mucho",
+        "Paciencia y ahorro a largo plazo, guardando un poquito cada semana",
+        "Robar",
+        "No comprarla nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "La constancia convierte pequeños ahorros en grandes sueños."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Qué significa ser un 'Ciudadano CEN'?",
+      "opciones": [
+        "Alguien que gasta mucho",
+        "Alguien que decide con inteligencia, honestidad y cuida su futuro",
+        "Alguien que solo piensa en dinero",
+        "Un experto en matemáticas"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ser un Ciudadano CEN es usar tus recursos para mejorar tu vida y la de los demás."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

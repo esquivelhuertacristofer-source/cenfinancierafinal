@@ -1,0 +1,206 @@
+{
+  "code": "ACT-P1-2-2-A",
+  "unit_code": "P1-2-2",
+  "unit_title": "Cuando no alcanza: elegir entre dos cosas",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "Ceny y el Laberinto de Elecciones",
+  "descripcion": "Elegir es un superpoder, pero cada 'Sí' tiene un 'No' escondido. Acompaña a Ceny en un día lleno de dilemas donde cada decisión cambiará su futuro.",
+  "objetivo": "Dominar el concepto de Costo de Oportunidad aplicándolo al dinero, el tiempo y los deseos personales.",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Hoy es un día especial para Ceny. Tiene tres grandes decisiones que tomar antes de que termine el día. ¡Tú eres su guía de sabiduría financiera!",
+  "nodo_inicial": "dilema_1_tiempo",
+  "nodos": {
+    "dilema_1_tiempo": {
+      "id": "dilema_1_tiempo",
+      "texto": "¡Es lunes! Ceny tiene 1 hora libre antes de cenar. Puede usarla para practicar para el concurso de matemáticas de mañana o para jugar su videojuego favorito. ¿Qué decides?",
+      "opciones": [
+        {
+          "id": "estudiar",
+          "texto": "Estudiar para el Concurso",
+          "siguiente_nodo": "consecuencia_estudio",
+          "consecuencia": "Ceny se siente cansada pero muy segura de lo que sabe.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "jugar",
+          "texto": "Jugar Videojuegos",
+          "siguiente_nodo": "consecuencia_juego",
+          "consecuencia": "Ceny llega al nivel 10, está muy feliz y relajada.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "consecuencia_estudio": {
+      "id": "consecuencia_estudio",
+      "texto": "¡Día del examen! Ceny saca 10 y gana una medalla. Pero sus amigos hablan de lo divertido que estuvo el juego ayer y ella no sabe de qué hablan. ¿Cómo se siente?",
+      "opciones": [
+        {
+          "id": "orgullo",
+          "texto": "Orgullosa de mi medalla",
+          "siguiente_nodo": "dilema_2_dinero",
+          "consecuencia": "Ceny entiende que el éxito requiere renuncia.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "tristeza_social",
+          "texto": "Un poco sola sin el juego",
+          "siguiente_nodo": "dilema_2_dinero",
+          "consecuencia": "Ceny aprende que el tiempo es un recurso que no vuelve.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "consecuencia_juego": {
+      "id": "consecuencia_juego",
+      "texto": "¡Día del examen! Ceny se bloquea en una pregunta difícil y saca 7. En el recreo, todos juegan el videojuego, pero Ceny está preocupada por su calificación. ¿Qué piensa?",
+      "opciones": [
+        {
+          "id": "disfrutar_juego",
+          "texto": "Al menos soy pro en el juego",
+          "siguiente_nodo": "dilema_2_dinero",
+          "consecuencia": "Ceny elige la diversión rápida sobre el logro a largo plazo.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "leccion_estudio",
+          "texto": "Debí estudiar un poco más",
+          "siguiente_nodo": "dilema_2_dinero",
+          "consecuencia": "Ceny descubre el costo real de su elección de ayer.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "dilema_2_dinero": {
+      "id": "dilema_2_dinero",
+      "texto": "¡Segunda prueba! Ceny recibió $100 de su abuela. En la juguetería ve un set de LEGOS increíble de $100, pero también recuerda que quería ahorrar para la bicicleta de sus sueños que cuesta $800. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "comprar_lego",
+          "texto": "Comprar el LEGO ahora",
+          "siguiente_nodo": "consecuencia_lego",
+          "consecuencia": "Ceny sale feliz con su caja de LEGOS bajo el brazo.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        },
+        {
+          "id": "ahorrar_bici",
+          "texto": "Meter los $100 a la alcancía",
+          "siguiente_nodo": "consecuencia_ahorro",
+          "consecuencia": "Ceny guarda el dinero. La bicicleta está un paso más cerca.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "consecuencia_lego": {
+      "id": "consecuencia_lego",
+      "texto": "El LEGO es genial, pero a la semana se pierde una pieza. Ceny ve un comercial de la bicicleta y se da cuenta que ahora le falta más tiempo para llegar a la meta. ¿Qué decide aprender?",
+      "opciones": [
+        {
+          "id": "paciencia_futura",
+          "texto": "La próxima vez ahorraré",
+          "siguiente_nodo": "dilema_3_final",
+          "consecuencia": "Ceny identifica su costo de oportunidad: la rapidez de la bici.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "vivir_momento",
+          "texto": "Disfruto lo que tengo hoy",
+          "siguiente_nodo": "dilema_3_final",
+          "consecuencia": "Ceny prefiere la felicidad inmediata.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "consecuencia_ahorro": {
+      "id": "consecuencia_ahorro",
+      "texto": "Ceny no tiene el LEGO, pero su alcancía pesa más. Siente una paz especial porque sabe que está siendo disciplinada. Sus amigos arman LEGOS, ella dibuja su futura bicicleta. ¿Qué piensa?",
+      "opciones": [
+        {
+          "id": "meta_clara",
+          "texto": "¡Vale la pena esperar!",
+          "siguiente_nodo": "dilema_3_final",
+          "consecuencia": "Ceny desarrolla visión de futuro.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "dilema_3_final": {
+      "id": "dilema_3_final",
+      "texto": "Último dilema: Hay un helado de edición limitada que Ceny ama. Cuesta $30. Pero Ceny prometió invitar a su mejor amigo a un jugo porque él le ayudó con la tarea. Solo tiene $30. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "comer_helado",
+          "texto": "Comer el helado solo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El helado está rico, pero su amigo se siente un poco olvidado.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "invitar_amigo",
+          "texto": "Cumplir su promesa e invitarlo",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Ceny renuncia al helado, pero fortalece su amistad.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "final_estratega": {
+      "id": "final_estratega",
+      "texto": "¡ERES UN ESTRATEGA DIAMANTE! Ceny aprendió que el Costo de Oportunidad no es perder, es elegir lo que TIENE MÁS VALOR REAL (amistad, metas, futuro).",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Has demostrado que entiendes que renunciar a algo pequeño hoy te da algo GIGANTE mañana. ¡Ceny está orgullosa de tu guía!"
+    },
+    "final_impulsivo": {
+      "id": "final_impulsivo",
+      "texto": "Has completado la misión, pero Ceny descubrió que elegir solo lo que brilla hoy puede dejarte vacío mañana. ¡Es hora de practicar más la paciencia!",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "El costo de oportunidad de tu helado fue la confianza de un amigo. ¿Valió la pena el sabor por unos minutos?"
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.Mastery",
+  "resumen_patrimonio_al_final": true
+}

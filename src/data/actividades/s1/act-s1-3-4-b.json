@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S1-3-4-B",
+  "unit_code": "S1-3-4",
+  "unit_title": "Bienes raíces como inversión: pros y contras",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Las Capas de Protección",
+  "descripcion": "Un castillo es más seguro cuando tiene murallas, fosos y torres. ¡Construye tu blindaje financiero!",
+  "objetivo": "Categorizar las herramientas de protección financiera según el tipo de riesgo que mitigan",
+  "xp": 400,
+  "instruccion": "Arrastra cada herramienta a la categoría de protección correcta.",
+  "items": [
+    {
+      "id": "bl1",
+      "label": "Testamento",
+      "emoji": "📝",
+      "categoria_correcta": "legal",
+      "feedback": "Asegura que tu riqueza pase a quien tú decidas sin peleas legales."
+    },
+    {
+      "id": "bl2",
+      "label": "Fideicomiso",
+      "emoji": "🏰",
+      "categoria_correcta": "legal",
+      "feedback": "La protección más avanzada contra demandas y embargos."
+    },
+    {
+      "id": "bl3",
+      "label": "Diversificación en ETFs",
+      "emoji": "📊",
+      "categoria_correcta": "inversion",
+      "feedback": "Protege tu dinero de la caída de una sola empresa."
+    },
+    {
+      "id": "bl4",
+      "label": "Comprar Oro u Onzas de Plata",
+      "emoji": "🪙",
+      "categoria_correcta": "crisis",
+      "feedback": "Refugio seguro si el sistema financiero o la moneda de tu país fallan."
+    },
+    {
+      "id": "bl5",
+      "label": "Seguro de Gastos Médicos",
+      "emoji": "🏥",
+      "categoria_correcta": "basico",
+      "feedback": "Evita que una enfermedad agote todos tus ahorros."
+    },
+    {
+      "id": "bl6",
+      "label": "Ahorrar en Monedas Fuertes (USD/EUR)",
+      "emoji": "💵",
+      "categoria_correcta": "crisis",
+      "feedback": "Protección contra la devaluación de tu moneda local."
+    },
+    {
+      "id": "bl7",
+      "label": "Contraseñas 2FA y Biometría",
+      "emoji": "🆔",
+      "categoria_correcta": "basico",
+      "feedback": "La primera línea de defensa contra robos digitales."
+    },
+    {
+      "id": "bl8",
+      "label": "Seguro de Responsabilidad Civil",
+      "emoji": "⚖️",
+      "categoria_correcta": "inversion",
+      "feedback": "Protege tu patrimonio si accidentalmente causas un daño a otros."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "basico",
+      "label": "PROTECCIÓN INMEDIATA",
+      "emoji": "🛡️",
+      "color": "#1e40af"
+    },
+    {
+      "id": "inversion",
+      "label": "BLINDAJE DE ACTIVOS",
+      "emoji": "📈",
+      "color": "#166534"
+    },
+    {
+      "id": "legal",
+      "label": "ESTRUCTURA LEGAL",
+      "emoji": "📜",
+      "color": "#6b21a8"
+    },
+    {
+      "id": "crisis",
+      "label": "REFUGIO ANTE CRISIS",
+      "emoji": "🌍",
+      "color": "#b45309"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

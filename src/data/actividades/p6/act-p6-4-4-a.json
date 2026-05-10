@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P6-4-4-A",
+  "unit_code": "P6-4-4",
+  "unit_title": "Financiamiento: Gasolina para tu negocio",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Mentor Sabio",
+  "descripcion": "Incluso los dueños de las empresas más grandes del mundo tienen a alguien a quien pedir consejo. ¿Sabrás cuándo pedir ayuda y cuándo darla?",
+  "objetivo": "Comprender la importancia de la mentoría en el desarrollo profesional y el valor de compartir el conocimiento",
+  "xp": 450,
+  "personaje_principal": "Líder en Ascenso",
+  "contexto_inicial": "Tu negocio internacional está creciendo, pero tienes problemas que no sabes resolver. Un empresario con 30 años de experiencia te ofrece una hora de su tiempo a la semana.",
+  "nodo_inicial": "pedir_consejo",
+  "nodos": {
+    "pedir_consejo": {
+      "id": "pedir_consejo",
+      "texto": "¿Aceptarás la ayuda del mentor o intentarás resolverlo solo para demostrar que eres capaz?",
+      "opciones": [
+        {
+          "id": "aceptar_mentor",
+          "texto": "Aceptar la mentoría (Aprender de la experiencia ajena)",
+          "siguiente_nodo": "reto_mentor",
+          "consecuencia": "¡Gran humildad! El mentor te enseñó a evitar errores que te habrían costado millones.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "solo_puedo",
+          "texto": "Resolverlo solo (Confiar solo en mi instinto)",
+          "siguiente_nodo": "final_estancado",
+          "consecuencia": "Te tomó 3 años resolver lo que el mentor te habría explicado en 5 minutos. Perdiste tiempo valioso.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "reto_mentor": {
+      "id": "reto_mentor",
+      "texto": "Ahora que eres un experto, un niño de 1er grado te pide que le expliques cómo ahorrar. Estás muy ocupado con tus negocios. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "ser_mentor",
+          "texto": "Hacer tiempo para enseñarle (Convertirte en mentor)",
+          "siguiente_nodo": "final_leyenda",
+          "consecuencia": "Al enseñar, aprendiste más tú mismo y motivaste a un futuro líder.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "ignorar_niño",
+          "texto": "Decirle que estás muy ocupado",
+          "siguiente_nodo": "final_exito_solo",
+          "consecuencia": "Tienes éxito, pero nadie te recordará como alguien que ayudó a los demás.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_estancado": {
+      "id": "final_estancado",
+      "texto": "Lograste avanzar, pero el camino fue mucho más doloroso. Recuerda que los gigantes se apoyan en hombros de otros gigantes.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "No hay premio por sufrir solo. La inteligencia también es saber a quién preguntar."
+    },
+    "final_leyenda": {
+      "id": "final_leyenda",
+      "texto": "¡Felicidades! Eres un líder completo. Sabes que el éxito no se trata de llegar primero, sino de llevar a otros contigo.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un líder crea seguidores; un gran líder crea más líderes."
+    },
+    "final_exito_solo": {
+      "id": "final_exito_solo",
+      "texto": "Tienes mucho dinero, pero te sientes solo en la cima. El éxito es más dulce cuando se comparte.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Tu legado no es tu billetera, es la diferencia que hiciste en la vida de otros."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

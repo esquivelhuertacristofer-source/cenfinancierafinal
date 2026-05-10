@@ -1,0 +1,90 @@
+{
+  "code": "ACT-P1-4-2-A",
+  "unit_code": "P1-4-2",
+  "unit_title": "Hacer algo para venderlo: lápices decorados",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿Costo o Ganancia?",
+  "descripcion": "Ana hace lápices decorados con listones y los vende en la escuela. Ayúdala a separar lo que gasta (costos) de lo que recibe (ingresos) para saber si su negocio gana dinero.",
+  "objetivo": "Distinguir entre costos (lo que se gasta para hacer el producto) e ingresos (lo que se recibe al vender)",
+  "xp": 250,
+  "instruccion": "Arrastra cada tarjeta a la caja correcta: ¿Es un COSTO (dinero que sale) o un INGRESO (dinero que entra)?",
+  "items": [
+    {
+      "id": "c1",
+      "label": "Comprar lápices sin decorar ($5 cada uno)",
+      "emoji": "✏️",
+      "categoria_correcta": "costo",
+      "feedback": "¡Correcto! El lápiz sin decorar es el material principal — es un costo."
+    },
+    {
+      "id": "c2",
+      "label": "Comprar listones de colores ($8)",
+      "emoji": "🎀",
+      "categoria_correcta": "costo",
+      "feedback": "¡Bien! Los listones son materiales que Ana compra para decorar. Es un costo."
+    },
+    {
+      "id": "c3",
+      "label": "Pegar y decorar durante 1 hora",
+      "emoji": "⏰",
+      "categoria_correcta": "costo",
+      "feedback": "¡Muy bien! El tiempo también tiene valor. Es el costo del trabajo de Ana."
+    },
+    {
+      "id": "c4",
+      "label": "Comprar pegamento especial ($3)",
+      "emoji": "🧴",
+      "categoria_correcta": "costo",
+      "feedback": "¡Exacto! El pegamento es un material necesario — es un costo."
+    },
+    {
+      "id": "i1",
+      "label": "Sofía le paga $20 por un lápiz decorado",
+      "emoji": "💵",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Correcto! Cuando alguien paga por tu producto, eso es un ingreso — dinero que entra."
+    },
+    {
+      "id": "i2",
+      "label": "Luis le compra 3 lápices para regalar ($60)",
+      "emoji": "🛍️",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Muy bien! Vender 3 lápices a la vez es un ingreso más grande. ¡El negocio crece!"
+    },
+    {
+      "id": "i3",
+      "label": "Su maestra pide 10 lápices para la clase ($200)",
+      "emoji": "🏫",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Excelente! Una orden grande es un ingreso muy bueno para el negocio de Ana."
+    },
+    {
+      "id": "i4",
+      "label": "Carla paga por adelantado 5 lápices ($100)",
+      "emoji": "🤝",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Perfecto! Cuando el cliente paga antes de recibir el producto, también es un ingreso."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "costo",
+      "label": "COSTOS 💸 (dinero que SALE)",
+      "emoji": "💸",
+      "color": "#dc2626",
+      "descripcion": "Lo que gastas para hacer tu producto"
+    },
+    {
+      "id": "ingreso",
+      "label": "INGRESOS 💰 (dinero que ENTRA)",
+      "emoji": "💰",
+      "color": "#16a34a",
+      "descripcion": "Lo que recibes al vender tu producto"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Si Ana gasta $16 en materiales y vende cada lápiz en $20, ¿cuánta ganancia tiene por cada lápiz? ¿Qué haría su negocio si costara hacer el lápiz más de $20?"
+}

@@ -1,0 +1,135 @@
+{
+  "code": "P2-1-4-B",
+  "unit_code": "P2-1-4",
+  "unit_title": "Gastos del hogar: ¿en qué se va el dinero?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Administrador del Hogar",
+  "descripcion": "Una casa es como una empresa pequeña. ¿Sabes cómo cuidar que el dinero alcance para todo lo importante?",
+  "objetivo": "Validar el conocimiento sobre gastos fijos, canasta básica y prioridad de pagos",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es un 'Gasto Fijo'?",
+      "opciones": [
+        "Dinero que se queda quieto",
+        "Un gasto que la familia debe pagar cada mes de forma obligatoria",
+        "Un regalo",
+        "Un juguete roto"
+      ],
+      "correcta": 1,
+      "explicacion": "La renta, la luz y el agua son gastos fijos porque llegan puntualmente cada mes."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuál de estos es el gasto más importante para la salud de la familia?",
+      "opciones": [
+        "La televisión por cable",
+        "La alimentación (comida sana)",
+        "Un set de pinturas",
+        "Viajes al parque"
+      ],
+      "correcta": 1,
+      "explicacion": "Comer bien es la base para que todos tengan energía y no se enfermen."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué pasa si se nos olvida pagar el recibo de la luz?",
+      "opciones": [
+        "La luz se vuelve gratis",
+        "La compañía corta el servicio y nos quedamos a oscuras",
+        "Nos dan un premio por ahorrar",
+        "No pasa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Los servicios tienen fechas límite. ¡Pagar a tiempo es una responsabilidad de adultos!"
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cómo se llama el dinero que pagamos cada mes por vivir en una casa que no es nuestra?",
+      "opciones": [
+        "Renta",
+        "Propina",
+        "Impuesto",
+        "Compra"
+      ],
+      "correcta": 0,
+      "explicacion": "La renta es el pago por el uso de una vivienda ajena."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué es la 'Canasta Básica'?",
+      "opciones": [
+        "Una canasta de mimbre",
+        "Los alimentos esenciales que una familia necesita para vivir bien",
+        "Una canasta de dulces",
+        "Un juego de básquetbol"
+      ],
+      "correcta": 1,
+      "explicacion": "Tortillas, frijoles, leche y frutas son parte de lo esencial en México."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Dónde suele ser más barato comprar las frutas y verduras?",
+      "opciones": [
+        "En el cine",
+        "En el mercado o tianguis local",
+        "En la tienda de regalos",
+        "En la farmacia"
+      ],
+      "correcta": 1,
+      "explicacion": "Los mercados suelen tener precios más bajos porque venden directo del productor."
+    },
+    {
+      "id": "q7",
+      "texto": "Si apagas la tele cuando nadie la ve, ¿qué sucede con el gasto de la casa?",
+      "opciones": [
+        "El gasto sube",
+        "El gasto baja y sobra más dinero para otras cosas",
+        "Se rompe la tele",
+        "No cambia nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahorrar energía es ahorrar dinero real para tu familia."
+    },
+    {
+      "id": "q8",
+      "texto": "Verdadero o Falso: Los gastos de diversión deben pagarse solo DESPUÉS de cubrir la comida y la renta.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! La seguridad y la salud de la familia van siempre primero."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Por qué es importante revisar el ticket de compra en el súper?",
+      "opciones": [
+        "Para ver los dibujitos",
+        "Para asegurar que nos cobraron el precio correcto",
+        "Para tirarlo",
+        "Para rayarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Revisar cuentas es una señal de un administrador inteligente."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Quién debe ayudar a cuidar los gastos de la casa?",
+      "opciones": [
+        "Solo mamá",
+        "Solo el banco",
+        "Toda la familia, incluidos los niños",
+        "Los vecinos"
+      ],
+      "correcta": 2,
+      "explicacion": "¡El ahorro es un trabajo en equipo! Todos podemos poner nuestro granito de arena."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

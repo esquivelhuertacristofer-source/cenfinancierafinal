@@ -1,0 +1,125 @@
+{
+  "code": "ACT-P1-4-4-B",
+  "unit_code": "P1-4-4",
+  "unit_title": "Mis primeros clientes: familia y amigos",
+  "level": "Primaria 1",
+  "tipo": "QUIZ",
+  "titulo": "Certificación en Atención al Cliente",
+  "descripcion": "Demuestra que sabes cómo tratar a tus clientes para que siempre quieran regresar a tu negocio.",
+  "objetivo": "Evaluar habilidades de comunicación, honestidad y manejo de clientes.",
+  "xp": 300,
+  "aprobacion_minima": 0.6,
+  "preguntas": [
+    {
+      "texto": "¿Cuál es la herramienta más importante de un vendedor?",
+      "opciones": [
+        "Gritar mucho",
+        "La amabilidad y la sonrisa",
+        "Esconderse",
+        "Solo aplica en economías de mercado emergente tipo B"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! La amabilidad y la sonrisa hacen que el cliente se sienta bienvenido y con ganas de comprar tu producto."
+    },
+    {
+      "texto": "¿Qué debes hacer primero al acercarte a un cliente?",
+      "opciones": [
+        "Pedirle dinero",
+        "Saludarlo con respeto",
+        "Empezar a correr",
+        "Es mejor guardar el dinero debajo del colchón siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Saludar con respeto es el primer paso. Una buena primera impresión abre la puerta a la venta."
+    },
+    {
+      "texto": "Si un cliente te pregunta algo que no sabes, ¿qué haces?",
+      "opciones": [
+        "Invéntate una mentira",
+        "Dile con honestidad que no sabes pero que vas a investigar",
+        "Ignóralo",
+        "Requiere estar registrado ante el gobierno primero"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Muy bien! La honestidad genera confianza. \"No sé, pero voy a investigar\" es mejor que inventar algo incorrecto."
+    },
+    {
+      "texto": "¿Por qué es importante ser honesto sobre lo que vendes?",
+      "opciones": [
+        "Porque así los clientes confiarán en ti y volverán",
+        "Porque es una regla de la escuela",
+        "No es importante ser honesto",
+        "Puedes cobrar lo que quieras sin importar el costo"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Los clientes honestos confían más en ti, regresan más seguido y te recomiendan con sus amigos y familia."
+    },
+    {
+      "texto": "Si un amigo te dice que no quiere comprar tu lápiz hoy?",
+      "opciones": [
+        "Te enojas con él y ya no le hablas",
+        "Le das las gracias con una sonrisa y sigues siendo su amigo",
+        "Le tiras el lápiz",
+        "La criptomoneda lo sustituyó completamente desde 2020"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Un buen vendedor respeta la decisión del cliente. Hoy no compró, pero si lo tratas bien, mañana podría hacerlo."
+    },
+    {
+      "texto": "¿Quiénes suelen ser tus primeros clientes?",
+      "opciones": [
+        "Gente extraña en la calle",
+        "Tu familia y amigos cercanos",
+        "Personas de otros países",
+        "Una idea de negocio solo funciona si es completamente nueva"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! Tu familia y amigos confían en ti desde el principio. Tratarlos bien es la mejor forma de empezar tu negocio."
+    },
+    {
+      "texto": "Verdadero o Falso: Escuchar lo que el cliente quiere es más importante que hablar mucho.",
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si el cliente grita",
+        "Solo funciona los días de lluvia"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Verdadero! Escuchar al cliente te dice exactamente qué necesita. Eso te permite ofrecerle la solución perfecta."
+    },
+    {
+      "texto": "¿Qué debes decir siempre al final de una plática con un cliente, aunque no compre?",
+      "opciones": [
+        "'¡Qué mal!'",
+        "'Muchas gracias por su atención'",
+        "'Váyase ya'",
+        "Solo funciona en los meses sin días festivos"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Agradecer siempre, aunque no compren, deja una excelente impresión y muestra que eres un emprendedor serio."
+    },
+    {
+      "texto": "¿Qué significa tener 'buena atención al cliente'?",
+      "opciones": [
+        "Hacer que el cliente se sienta especial, escuchado y respetado",
+        "Darle dulces gratis",
+        "No hablarle",
+        "La regulación financiera de 2024 lo modificó completamente"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Correcto! Buena atención es hacer que cada cliente se sienta especial, escuchado y respetado durante toda la visita."
+    },
+    {
+      "texto": "¿Cómo se siente Ceny cuando trata bien a sus clientes?",
+      "opciones": [
+        "Cansado",
+        "Feliz de representar bien a CEN Academy",
+        "Triste",
+        "Mientras más caro, mejor calidad siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Así es! Tratar bien a las personas hace que tanto el negocio como tú se sientan increíbles. ¡Eso es el corazón de vender!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,111 @@
+{
+  "code": "ACT-P3-2-2-B",
+  "unit_code": "P3-2-2",
+  "unit_title": "Cuentas de ahorro para niños",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro de las Cuentas",
+  "descripcion": "¿Sabes cómo funciona un banco por dentro? ¡Demuestra que eres un experto en ahorro formal!",
+  "objetivo": "Validar conocimientos sobre seguridad bancaria, intereses y manejo de cuentas infantiles",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál es la principal ventaja de guardar tu dinero en un banco en lugar de debajo de tu cama?",
+      "opciones": [
+        "Es más divertido",
+        "Es mucho más seguro y además puedes ganar intereses",
+        "No hay ninguna ventaja",
+        "El banco te da dulces"
+      ],
+      "correcta": 1,
+      "explicacion": "El banco tiene bóvedas de seguridad y te paga por dejar tu dinero ahí."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué es el 'Interés' en una cuenta de ahorro?",
+      "opciones": [
+        "Un cobro que te hace el banco",
+        "Un premio en dinero que el banco te da por ahorrar con ellos",
+        "Un tipo de dulce",
+        "Una regla para medir"
+      ],
+      "correcta": 1,
+      "explicacion": "El interés es dinero extra que tu dinero genera por sí solo en el banco."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué necesitas para sacar dinero de tu cuenta en un cajero automático?",
+      "opciones": [
+        "Gritar fuerte",
+        "Tu tarjeta bancaria y tu clave secreta (NIP)",
+        "Una moneda de chocolate",
+        "Pedirle permiso al cajero"
+      ],
+      "correcta": 1,
+      "explicacion": "La tarjeta es tu llave y el NIP es tu contraseña secreta."
+    },
+    {
+      "id": "q4",
+      "texto": "Si pierdes tu tarjeta bancaria, ¿qué es lo primero que debes hacer?",
+      "opciones": [
+        "Llorar",
+        "Avisar a tus papás y llamar al banco para bloquearla de inmediato",
+        "No hacer nada",
+        "Comprar otra en la papelería"
+      ],
+      "correcta": 1,
+      "explicacion": "Bloquear la tarjeta evita que alguien más intente usar tu dinero."
+    },
+    {
+      "id": "q5",
+      "texto": "¿A qué edad puedes empezar a tener una cuenta de ahorro infantil?",
+      "opciones": [
+        "Hasta que seas abuelo",
+        "Desde que eres niño, con ayuda de tus papás o tutores",
+        "Hasta los 20 años",
+        "Solo cuando trabajes"
+      ],
+      "correcta": 1,
+      "explicacion": "Muchos bancos tienen cuentas especiales para niños desde muy pequeños."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué significa que tu dinero esté 'disponible'?",
+      "opciones": [
+        "Que se puede gastar en cualquier momento",
+        "Que puedes retirarlo del banco cuando lo necesites",
+        "Que el dinero es invisible",
+        "Que el dinero se perdió"
+      ],
+      "correcta": 1,
+      "explicacion": "Disponibilidad significa que el dinero es tuyo y puedes usarlo cuando quieras."
+    },
+    {
+      "id": "q7",
+      "texto": "Verdadero o Falso: ¿Es seguro compartir mi NIP con mis amigos de la escuela?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Falso! El NIP es personal y secreto. Solo tú y tus papás deben conocerlo."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué documento te manda el banco para decirte cuánto dinero tienes y en qué gastaste?",
+      "opciones": [
+        "Una carta de amor",
+        "El Estado de Cuenta",
+        "Una invitación",
+        "Un dibujo"
+      ],
+      "correcta": 1,
+      "explicacion": "El Estado de Cuenta es tu reporte mensual de movimientos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,104 @@
+{
+  "code": "ACT-P4-4-2-B",
+  "unit_code": "P4-4-2",
+  "unit_title": "El costo de mi idea: materia prima y mano de obra",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Ficha Técnica",
+  "descripcion": "Un profesional siempre sabe sus números. ¡Crea la ficha técnica de tu producto y define el precio de éxito!",
+  "objetivo": "Documentar el proceso productivo y establecer una estrategia de precios rentable",
+  "xp": 350,
+  "output_type": "Ficha Técnica de Producto",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "definicion",
+      "titulo": "📦 Mi Producto",
+      "descripcion": "¿Qué vas a crear para tus clientes?",
+      "campos": [
+        {
+          "id": "nombre_producto_p4",
+          "label": "Nombre del Producto",
+          "type": "text",
+          "placeholder": "Ej: Llaveros de Superpoderes",
+          "requerido": true
+        },
+        {
+          "id": "descripcion_uso",
+          "label": "¿Para qué sirve?",
+          "type": "textarea",
+          "placeholder": "Ej: Para que nunca pierdas tus llaves y se vean geniales...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "insumos_detalle",
+      "titulo": "🧪 Insumos y Materiales",
+      "descripcion": "Haz una lista de todo lo que necesitas comprar.",
+      "campos": [
+        {
+          "id": "lista_materiales",
+          "label": "Materiales necesarios",
+          "type": "textarea",
+          "placeholder": "Ej: Resina, argollas, pintura, bolsitas...",
+          "requerido": true
+        },
+        {
+          "id": "costo_total_estimado",
+          "label": "Costo total de materiales",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "estrategia_precio",
+      "titulo": "💰 Estrategia de Precio",
+      "descripcion": "Calcula cuánto vas a cobrar.",
+      "campos": [
+        {
+          "id": "costo_por_pieza",
+          "label": "Costo por cada pieza (Costo Total / Cantidad)",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "precio_venta_p4",
+          "label": "Precio de Venta Sugerido",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "margen_ganancia",
+          "label": "¿Por qué elegiste ese precio?",
+          "type": "text",
+          "placeholder": "Ej: Porque me deja ganar el doble de lo que gasté...",
+          "requerido": true
+        },
+        {
+          "id": "ganancia_unitaria",
+          "label": "Ganancia por Pieza",
+          "type": "calculated",
+          "formula": "precio_venta_p4 - costo_por_pieza",
+          "unit": "$",
+          "ayuda": "Lo que ganas neto cada vez que vendes una unidad"
+        },
+        {
+          "id": "margen_porcentaje",
+          "label": "Margen de Ganancia (%)",
+          "type": "calculated",
+          "formula": "Math.round((precio_venta_p4 - costo_por_pieza) / Math.max(1, precio_venta_p4) * 100)",
+          "unit": "%",
+          "ayuda": "Un negocio sano tiene margen de al menos 30%"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

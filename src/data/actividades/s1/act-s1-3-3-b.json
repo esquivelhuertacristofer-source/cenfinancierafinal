@@ -1,0 +1,133 @@
+{
+  "code": "ACT-S1-3-3-B",
+  "unit_code": "S1-3-3",
+  "unit_title": "Cuestionario: El Monstruo de la Inflación",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Ganaste 5%",
+        "Perdiste un 2% de tu poder adquisitivo",
+        "Te quedaste igual",
+        "Lo determina únicamente el precio del petróleo"
+      ],
+      "correcta": 1,
+      "texto": "Si un banco te paga el 5% anual por tus ahorros y la inflación de ese año fue del 7%, ¿qué pasó con tu dinero?",
+      "explicacion": "¡Correcto! La inflación fue mayor que tu ganancia, por lo que tu dinero ahora compra menos cosas."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Que los precios bajen siempre",
+        "Mantener la inflación baja y estable (alrededor del 3%)",
+        "Imprimir todos los billetes posibles",
+        "El presupuesto no funciona para familias con hijos"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es el objetivo principal del Banco de México (Banxico) respecto a la inflación?",
+      "explicacion": "¡Exacto! La estabilidad de precios es la misión constitucional de Banxico."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Tener mucho poder en una empresa",
+        "La cantidad de bienes y servicios que puedes comprar con tu dinero",
+        "Saber cuánto cuestan las cosas",
+        "Mientras más caro, mejor calidad siempre"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es el Poder Adquisitivo?",
+      "explicacion": "¡Bien! Es el valor real de tu dinero en el mercado."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Sumando la inflación al interés",
+        "Restando la inflación del rendimiento nominal",
+        "Multiplicando por dos",
+        "El precio solo importa si vendes en otros países"
+      ],
+      "correcta": 1,
+      "texto": "¿Cómo se calcula el Rendimiento Real?",
+      "explicacion": "¡Correcto! Rendimiento Real = Rendimiento Nominal - Inflación."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Monedas de chocolate",
+        "Unidades de valor que se ajustan diariamente con la inflación para proteger el dinero",
+        "Un tipo de banco",
+        "Solo se puede invertir en bienes raíces"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué son las UDIS en México?",
+      "explicacion": "¡Exacto! Las UDIS permiten que el valor del dinero se mantenga a pesar de la inflación."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Porque la gente se enoja",
+        "Porque sube el costo de transportar casi todos los productos",
+        "Porque hay menos coches",
+        "Es lo mismo que tener un trabajo por horas"
+      ],
+      "correcta": 1,
+      "texto": "¿Por qué subir el precio de la gasolina genera inflación?",
+      "explicacion": "¡Correcto! El transporte es un costo base para casi toda la economía."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Se duplicaron",
+        "Se quedaron igual",
+        "Bajaron a la mitad",
+        "La inflación lo hace irrelevante en el contexto actual"
+      ],
+      "correcta": 0,
+      "texto": "Si la inflación es del 100% anual, significa que los precios:",
+      "explicacion": "¡Exacto! Un 100% de aumento significa que todo cuesta el doble."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "En CETES",
+        "En efectivo bajo el colchón",
+        "En un terreno",
+        "Solo funciona si tienes más de 18 años"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es la peor forma de guardar dinero a largo plazo?",
+      "explicacion": "¡Bien! El efectivo no genera intereses y pierde valor cada día por la inflación."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "SEP",
+        "INEGI",
+        "NASA",
+        "El IVA solo aplica en productos de lujo"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué institución en México mide la inflación?",
+      "explicacion": "¡Correcto! El INEGI realiza el seguimiento de precios a través del INPC."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "El precio baja",
+        "El precio sube (inflación por demanda)",
+        "El producto desaparece",
+        "Lo inventó alguien hace muchos siglos y ya no sirve"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué pasa si hay mucha demanda de un producto y hay muy pocos disponibles?",
+      "explicacion": "¡Excelente! La escasez frente a la alta demanda siempre empuja los precios hacia arriba."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: El Monstruo de la Inflación",
+  "xp": 300,
+  "level": "Secundaria 1"
+}

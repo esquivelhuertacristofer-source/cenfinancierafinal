@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S1-4-3-A",
+  "unit_code": "S1-4-3",
+  "unit_title": "Estrategia de precios: cómo definir el precio ideal",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El SAT y Yo",
+  "descripcion": "¿Sabes a dónde va el dinero de los impuestos y cómo cumplir con tus obligaciones sin miedo? ¡Ponte a prueba!",
+  "objetivo": "Identificar los conceptos básicos del sistema tributario y el impacto de los impuestos en la economía personal y nacional",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "tax1",
+      "pregunta": "¿Qué es el SAT?",
+      "incorrectas": [
+        "Un banco de ahorro",
+        "Una red social",
+        "El servicio de agua"
+      ],
+      "dato_extra": "Es el 'cobrador' oficial del gobierno.",
+      "respuesta_correcta": "Servicio de Administración Tributaria (la oficina que recauda los impuestos)"
+    },
+    {
+      "id": "tax2",
+      "pregunta": "¿Qué es el RFC?",
+      "incorrectas": [
+        "Tu número de celular",
+        "La clave de tu internet",
+        "Un código de descuento"
+      ],
+      "dato_extra": "Cualquier persona que gane dinero legalmente debe tener uno.",
+      "respuesta_correcta": "Registro Federal de Contribuyentes (tu identificación oficial ante el SAT)"
+    },
+    {
+      "id": "tax3",
+      "pregunta": "¿Qué es el IVA?",
+      "incorrectas": [
+        "Impuesto a la Vida Adulta",
+        "Ingreso por Venta Anual",
+        "Inversión Variable Acumulada"
+      ],
+      "dato_extra": "Es un impuesto 'indirecto' porque lo pagas sin darte cuenta al comprar.",
+      "respuesta_correcta": "Impuesto al Valor Agregado (se paga al comprar productos y servicios, en México es del 16%)"
+    },
+    {
+      "id": "tax4",
+      "pregunta": "¿Qué es el ISR?",
+      "incorrectas": [
+        "Impuesto Sobre la Ropa",
+        "Ingreso Sugerido Real",
+        "Inversión Sin Riesgo"
+      ],
+      "dato_extra": "Entre más ganas, un porcentaje mayor se paga de ISR.",
+      "respuesta_correcta": "Impuesto Sobre la Renta (se paga sobre el dinero que GANAS por tu trabajo o inversiones)"
+    },
+    {
+      "id": "tax5",
+      "pregunta": "¿Para qué sirve el dinero de los impuestos?",
+      "incorrectas": [
+        "Para que el banco sea rico",
+        "Para guardarlo en una caja fuerte",
+        "No sirve para nada"
+      ],
+      "dato_extra": "Es la forma en que la sociedad paga por los beneficios comunes.",
+      "respuesta_correcta": "Para financiar servicios públicos como hospitales, escuelas, policía y carreteras"
+    },
+    {
+      "id": "tax6",
+      "pregunta": "¿Qué es una 'Factura' (CFDI)?",
+      "incorrectas": [
+        "Un ticket de papel cualquiera",
+        "Un mensaje de texto",
+        "Un dibujo del producto"
+      ],
+      "dato_extra": "Sin factura oficial, no puedes deducir gastos.",
+      "respuesta_correcta": "Un comprobante digital oficial de una compra que sirve para comprobar gastos ante el SAT"
+    },
+    {
+      "id": "tax7",
+      "pregunta": "¿Qué es la 'E-firma'?",
+      "incorrectas": [
+        "Un correo electrónico",
+        "Tu nombre en Facebook",
+        "Una foto de tu INE"
+      ],
+      "dato_extra": "Es tu llave para hacer trámites en línea ante el gobierno.",
+      "respuesta_correcta": "Tu firma digital oficial que tiene el mismo valor legal que tu firma escrita"
+    },
+    {
+      "id": "tax8",
+      "pregunta": "¿Qué sucede en la 'Declaración Anual'?",
+      "incorrectas": [
+        "Te regalan una tarjeta de crédito",
+        "Te cambian el RFC",
+        "Es un día de fiesta nacional"
+      ],
+      "dato_extra": "Se hace cada abril para las personas físicas.",
+      "respuesta_correcta": "Le informas al SAT cuánto ganaste y cuánto gastaste en el año para ajustar cuentas"
+    },
+    {
+      "id": "tax9",
+      "pregunta": "¿Qué es la 'Evasión Fiscal'?",
+      "incorrectas": [
+        "Pagar menos impuestos de forma legal",
+        "Pedir facturas",
+        "Tener ahorros"
+      ],
+      "dato_extra": "La evasión trae multas graves o incluso cárcel.",
+      "respuesta_correcta": "Es no pagar los impuestos que te corresponden por ley (es un delito)"
+    },
+    {
+      "id": "tax10",
+      "pregunta": "¿Qué es un 'Paraíso Fiscal'?",
+      "incorrectas": [
+        "Una playa de vacaciones",
+        "Un banco muy grande",
+        "La oficina del SAT"
+      ],
+      "dato_extra": "¡Felicidades! Ahora entiendes cómo funciona el sistema tributario.",
+      "respuesta_correcta": "Un país donde se pagan muy pocos impuestos o ninguno, usado para ocultar dinero"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

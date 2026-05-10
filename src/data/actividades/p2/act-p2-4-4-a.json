@@ -1,0 +1,105 @@
+{
+  "code": "ACT-P2-4-4-A",
+  "unit_code": "P2-4-4",
+  "unit_title": "Vender con honestidad: calidad y precio justo",
+  "level": "Primaria 2",
+  "tipo": "DECIDE",
+  "complejidad": "BAJO",
+  "titulo": "El Sello de Confianza de Ceny",
+  "descripcion": "Ceny está preparando su negocio. ¿Será honesta con sus clientes o buscará el camino fácil?",
+  "objetivo": "Comprender la importancia de la ética, la calidad y el precio justo.",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny está preparando limonada. Se da cuenta de que se le acabó el azúcar de buena calidad, pero tiene un poco de azúcar vieja que sabe amarga. ¿Qué hará?",
+  "nodo_inicial": "la_decision_azucar",
+  "nodos": {
+    "la_decision_azucar": {
+      "id": "la_decision_azucar",
+      "texto": "El azúcar vieja es gratis, pero sabe un poco mal. Si la usas, ganarás más dinero hoy. ¿Qué prefieres?",
+      "opciones": [
+        {
+          "id": "comprar_nueva",
+          "texto": "Ir a comprar azúcar fresca aunque cueste un poco",
+          "siguiente_nodo": "ofreciendo_limonada",
+          "consecuencia": "¡Excelente! La calidad es lo primero. Tus clientes lo notarán.",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "usar_vieja",
+          "texto": "Usar el azúcar vieja para ahorrar dinero",
+          "siguiente_nodo": "cliente_enojado",
+          "consecuencia": "La limonada sabe amarga. Ceny espera que nadie se de cuenta...",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "ofreciendo_limonada": {
+      "id": "ofreciendo_limonada",
+      "texto": "Un vecino se acerca y pregunta el precio. ¿Cuánto cobrarás?",
+      "opciones": [
+        {
+          "id": "precio_justo",
+          "texto": "Cobrar $10 (Precio Justo)",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "¡Perfecto! El vecino paga con gusto y dice: '¡Qué rica está! Mañana traeré a mi hermano.'",
+          "xp_bonus": 300,
+          "es_optima": true
+        },
+        {
+          "id": "precio_caro",
+          "texto": "Cobrar $30 porque tienes sed",
+          "siguiente_nodo": "final_caro",
+          "consecuencia": "El vecino se sorprende. '¡Está carísima! Mejor compro un refresco en la tienda.'",
+          "xp_bonus": 10,
+          "es_optima": false
+        }
+      ]
+    },
+    "cliente_enojado": {
+      "id": "cliente_enojado",
+      "texto": "Un cliente prueba la limonada y hace una cara de disgusto. '¡Esto sabe horrible! Quiero mi dinero de vuelta.'",
+      "opciones": [
+        {
+          "id": "disculpa_devolucion",
+          "texto": "Pedir disculpas y devolver el dinero",
+          "siguiente_nodo": "la_decision_azucar",
+          "consecuencia": "La honestidad salva tu reputación. El cliente agradece tu sinceridad y te da otra oportunidad.",
+          "xp_bonus": 100,
+          "es_optima": true
+        },
+        {
+          "id": "negar_todo",
+          "texto": "Decir que está loca y que la limonada está perfecta",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El cliente se va muy enojado y le cuenta a todo el vecindario. Nadie más se acerca a tu puesto.",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "final_exito": {
+      "id": "final_exito",
+      "texto": "¡Felicidades! Ceny aprendió que la honestidad y la calidad traen clientes fieles. Su negocio tiene ahora una gran reputación.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La confianza es el tesoro más grande de un emprendedor. ¡Nunca la pierdas por unas monedas!"
+    },
+    "final_caro": {
+      "id": "final_caro",
+      "texto": "Ceny no vendió nada. Aprendió que un precio justo es aquel que respeta el trabajo de uno y el bolsillo del otro.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "Investiga siempre qué cobran los demás para que tu precio sea competitivo y justo."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Hoy fue un día triste. Ceny perdió sus clientes por no ser honesta. Recuerda: es más fácil mantener un cliente que conseguir uno nuevo.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Si te equivocas, admítelo. La gente perdona un error, pero no una mentira."
+    }
+  },
+  "versión": "2026.Diamond.Story"
+}

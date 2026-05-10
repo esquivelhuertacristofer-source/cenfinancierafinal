@@ -1,0 +1,138 @@
+{
+  "code": "ACT-P3-3-2-B",
+  "unit_code": "P3-3-2",
+  "unit_title": "Las tarjetas de crédito: No son dinero gratis",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Tarjetas: Aliadas o Enemigas",
+  "descripcion": "¿Sabes leer un estado de cuenta? ¿Conocas la diferencia entre débito y crédito? ¡Ponte a prueba!",
+  "objetivo": "Diferenciar entre instrumentos de crédito y débito y comprender la operativa básica de una tarjeta",
+  "xp": 350,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "t1",
+      "pregunta": "¿Qué pasa cuando usas una tarjeta de DÉBITO?",
+      "respuesta_correcta": "El dinero sale de tus propios ahorros inmediatamente",
+      "incorrectas": [
+        "El banco te presta dinero",
+        "Pagas el próximo mes",
+        "Te regalan el producto"
+      ],
+      "categoria": "Conceptos",
+      "dato_extra": "El débito es usar tu propio dinero, sin deudas."
+    },
+    {
+      "id": "t2",
+      "pregunta": "¿Qué pasa cuando usas una tarjeta de CRÉDITO?",
+      "respuesta_correcta": "El banco paga por ti y tú le debes ese dinero después",
+      "incorrectas": [
+        "Sacas dinero de tu alcancía",
+        "Es dinero gratis",
+        "El gobierno paga la cuenta"
+      ],
+      "categoria": "Conceptos",
+      "dato_extra": "El crédito es un préstamo rápido que debes devolver con responsabilidad."
+    },
+    {
+      "id": "t3",
+      "pregunta": "¿Qué es la 'Fecha de Corte'?",
+      "respuesta_correcta": "El día en que el banco suma todos tus gastos del mes para decirte cuánto debes",
+      "incorrectas": [
+        "El día que se rompe la tarjeta",
+        "El día que no puedes comprar nada",
+        "El día del cumpleaños del banco"
+      ],
+      "categoria": "Operativa",
+      "dato_extra": "Conocer tu fecha de corte te ayuda a planear tus compras."
+    },
+    {
+      "id": "t4",
+      "pregunta": "¿Qué significa ser un 'Totalero'?",
+      "respuesta_correcta": "Alguien que paga TODO lo que gastó en el mes antes de que le cobren intereses",
+      "incorrectas": [
+        "Alguien que gasta todo su dinero",
+        "Alguien que tiene muchas tarjetas",
+        "Alguien que no paga nada"
+      ],
+      "categoria": "Hábitos",
+      "dato_extra": "Ser totalero es la mejor forma de usar una tarjeta de crédito sin costo."
+    },
+    {
+      "id": "t5",
+      "pregunta": "¿Por qué las tarjetas de crédito tienen un CHIP y piden un NIP?",
+      "respuesta_correcta": "Para que nadie más pueda usar tu tarjeta si se te pierde",
+      "incorrectas": [
+        "Para que se vean modernas",
+        "Para que pesen más",
+        "Para que el banco sepa dónde estás"
+      ],
+      "categoria": "Seguridad",
+      "dato_extra": "La seguridad es tu escudo para proteger tu crédito."
+    },
+    {
+      "id": "t6",
+      "pregunta": "¿Cuál es un beneficio de usar bien la tarjeta de crédito?",
+      "respuesta_correcta": "Ganas puntos, recompensas y creas una buena fama con el banco",
+      "incorrectas": [
+        "Te regalan comida infinita",
+        "No tienes que volver a trabajar",
+        "Te dan dinero que no tienes que pagar"
+      ],
+      "categoria": "Beneficios",
+      "dato_extra": "Tener 'buena fama' (historial) te permite pedir créditos más grandes después."
+    },
+    {
+      "id": "t7",
+      "pregunta": "¿Qué es el 'Pago Mínimo'?",
+      "respuesta_correcta": "La cantidad más pequeña que puedes pagar para que el banco no te bloquee",
+      "incorrectas": [
+        "El mejor pago que puedes hacer",
+        "Un pago que te quita toda la deuda",
+        "Un regalo del banco"
+      ],
+      "categoria": "Riesgos",
+      "dato_extra": "Pagar solo el mínimo es caer en una trampa de intereses caros."
+    },
+    {
+      "id": "t8",
+      "pregunta": "¿Qué debes hacer si ves un gasto que no reconoces en tu estado de cuenta?",
+      "respuesta_correcta": "Llamar de inmediato al banco para reportarlo",
+      "incorrectas": [
+        "Pagarlo y no decir nada",
+        "Borrarlo con corrector",
+        "Prestarle la tarjeta a un amigo"
+      ],
+      "categoria": "Seguridad",
+      "dato_extra": "Revisar tu estado de cuenta cada mes es de Ciudadanos CEN responsables."
+    },
+    {
+      "id": "t9",
+      "pregunta": "¿Cuál es el límite de crédito?",
+      "respuesta_correcta": "El monto máximo que el banco te permite deber",
+      "incorrectas": [
+        "La fecha en que caduca la tarjeta",
+        "La velocidad de la tarjeta",
+        "El número de compras al día"
+      ],
+      "categoria": "Operativa",
+      "dato_extra": "Nunca es bueno llegar al límite; deja siempre un espacio libre."
+    },
+    {
+      "id": "t10",
+      "pregunta": "Si no tienes dinero para pagar lo que compraste con la tarjeta, ¿qué sucede?",
+      "respuesta_correcta": "La deuda crece por los intereses y tu fama financiera se arruina",
+      "incorrectas": [
+        "El banco te perdona",
+        "Te dan otra tarjeta más grande",
+        "Se borra la deuda en un año"
+      ],
+      "categoria": "Consecuencias",
+      "dato_extra": "La responsabilidad es la base de todo el sistema de crédito."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

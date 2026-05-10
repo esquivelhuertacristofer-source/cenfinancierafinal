@@ -1,0 +1,91 @@
+{
+  "code": "P2-1-5-B",
+  "unit_code": "P2-1-5",
+  "unit_title": "El ahorro familiar: el ejemplo en casa",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTA",
+  "titulo": "¡Ahorro en Acción!",
+  "descripcion": "Los desperdicios están atacando la economía de la casa. ¡Usa tus reflejos de genio para salvar el dinero de tu familia!",
+  "objetivo": "Identificar hábitos de ahorro y desperdicio en un entorno de juego dinámico",
+  "xp": 400,
+  "game_type": "catch",
+  "duracion": 60,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa los objetos verdes de ahorro. ¡Huye de los rojos que desperdician dinero!",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Interruptor OFF",
+      "emoji": "🔘",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "g2",
+      "label": "Llave Cerrada",
+      "emoji": "🚰",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g3",
+      "label": "Lista de Súper",
+      "emoji": "📝",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "g4",
+      "label": "Juguete Cuidado",
+      "emoji": "🧸",
+      "tipo": "correcto",
+      "puntos": 250
+    },
+    {
+      "id": "g5",
+      "label": "Panel Solar",
+      "emoji": "☀️",
+      "tipo": "correcto",
+      "puntos": 600
+    },
+    {
+      "id": "b1",
+      "label": "Foco Prendido",
+      "emoji": "💡",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "b2",
+      "label": "Goteo de Agua",
+      "emoji": "💧",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "b3",
+      "label": "Comida a la Basura",
+      "emoji": "🗑️",
+      "tipo": "incorrecto",
+      "puntos": -500
+    },
+    {
+      "id": "b4",
+      "label": "Refri Abierto",
+      "emoji": "❄️",
+      "tipo": "incorrecto",
+      "puntos": -400
+    },
+    {
+      "id": "b5",
+      "label": "Gasto Hormiga",
+      "emoji": "🐜",
+      "tipo": "incorrecto",
+      "puntos": -200
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

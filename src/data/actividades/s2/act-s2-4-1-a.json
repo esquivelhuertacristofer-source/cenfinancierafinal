@@ -1,0 +1,155 @@
+{
+  "code": "ACT-S2-4-1-A",
+  "unit_code": "S2-4-1",
+  "unit_title": "Business Model Canvas avanzado: los 9 bloques en práctica",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Balance General",
+  "descripcion": "No te dejes engañar por las apariencias. Tu riqueza real no es lo que gastas, sino lo que te queda después de pagar tus deudas.",
+  "objetivo": "Calcular el patrimonio neto personal y entender la relación entre activos y pasivos",
+  "xp": 500,
+  "descripcion_formula": "Patrimonio Neto = Suma(Activos) - Suma(Pasivos).",
+  "inputs": [
+    {
+      "id": "total_activos_s2",
+      "label": "Valor de todo lo que tienes (Ahorros, Inversiones, Bienes) ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 1000000,
+      "step": 10000,
+      "default": 100000,
+      "unit": "$"
+    },
+    {
+      "id": "total_pasivos_s2",
+      "label": "Todo lo que debes (Créditos, Tarjetas, Préstamos) ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 1000000,
+      "step": 10000,
+      "default": 20000,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "total_activos_s2 - total_pasivos_s2",
+  "output_label": "Tu Patrimonio Neto (Riqueza Real)",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "🚨 ¡Alerta de Insolvencia! Debes más de lo que tienes. Estás en una posición financiera muy peligrosa. Necesitas un plan urgente de desendeudamiento.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "resultado > 500000",
+      "mensaje": "🌟 ¡Excelente Salud Financiera! Tienes un patrimonio sólido. Estás construyendo verdadera riqueza.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Muchas personas parecen ricas porque tienen autos y casas (activos), pero están quebradas porque sus deudas (pasivos) son mayores. El Patrimonio Neto es la única verdad.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es el bloque más importante del Business Model Canvas para un negocio que acaba de empezar? ¿Cómo se veía el Canvas de Netflix comparado con el de Blockbuster?",
+  "comparativa_espera": "Netflix tenía un Canvas radicalmente diferente al de Blockbuster: sin tiendas físicas, sin multas por retraso, con suscripción mensual. Un modelo de negocio diferente destruyó a una empresa de $6,000 millones en menos de 10 años.",
+  "outputs_multiples": [
+    {
+      "id": "patrimonio_neto",
+      "label": "Patrimonio Neto",
+      "formula": "total_activos_s2 - total_pasivos_s2",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Lo que realmente tienes: activos menos lo que debes"
+    },
+    {
+      "id": "razon_endeudamiento",
+      "label": "Razón de Endeudamiento",
+      "formula": "Math.round(total_pasivos_s2 / Math.max(1, total_activos_s2) * 100)",
+      "prefix": "",
+      "suffix": "% de tus activos son deuda",
+      "descripcion": "Menos de 40% es saludable; más de 60% es zona de riesgo"
+    },
+    {
+      "id": "proyeccion_10_anos",
+      "label": "Patrimonio en 10 Años",
+      "formula": "Math.round((total_activos_s2 - total_pasivos_s2) * Math.pow(1.08, Math.min(anios_sim, 10)))",
+      "prefix": "$",
+      "suffix": " proyectado",
+      "descripcion": "Si tu patrimonio neto crece al 8% anual"
+    },
+    {
+      "id": "apalancamiento",
+      "label": "Índice de Apalancamiento",
+      "formula": "Math.round(total_activos_s2 / Math.max(1, total_activos_s2 - total_pasivos_s2) * 10) / 10",
+      "prefix": "×",
+      "suffix": " (ideal <2×)",
+      "descripcion": "Cuántas veces tus activos superan tu patrimonio neto propio"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "patrimonio_neto",
+      "label": "Patrimonio Neto",
+      "color": "#6366f1"
+    },
+    {
+      "id": "razon_endeudamiento",
+      "label": "Razón de Endeudamiento",
+      "color": "#22c55e"
+    }
+  ]
+}

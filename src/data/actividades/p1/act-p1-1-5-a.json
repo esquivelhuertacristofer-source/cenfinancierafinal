@@ -1,0 +1,90 @@
+{
+  "code": "ACT-P1-1-5-A",
+  "unit_code": "P1-1-5",
+  "unit_title": "Mi meta de ahorro: quiero comprar...",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RELLENA",
+  "complejidad": "MAESTRÍA",
+  "titulo": "Mi Plan Maestro de Ahorro",
+  "contexto": "Un verdadero Genio Financiero no solo sueña, ¡hace un plan maestro!",
+  "descripcion": "Completa tu compromiso para alcanzar tu meta y demuestra tu sabiduría financiera.",
+  "objetivo": "Desarrollar habilidades de planificación y compromiso personal con el ahorro",
+  "xp": 200,
+  "texto": "Hola, soy un experto de CEN Academy y mi meta es comprar __blank1__. Sé que este sueño tiene un precio de __blank2__ pesos. Para lograrlo, voy a __blank3__ mi dinero cada domingo. He decidido que no voy a gastar en __blank4__ innecesarios porque prefiero mi meta mayor. Mi __blank5__ será el lugar seguro donde guardaré mis monedas. Sé que ahorrar requiere mucha __blank6__, pero cuando lo logre me sentiré muy __blank7__ porque fue gracias a mi propio __blank8__.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "un balón",
+        "un libro",
+        "un juguete especial"
+      ],
+      "respuesta": "un balón"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "100",
+        "50",
+        "200"
+      ],
+      "respuesta": "100"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "guardar",
+        "gastar",
+        "tirar"
+      ],
+      "respuesta": "guardar"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "antojos",
+        "libros",
+        "estudios"
+      ],
+      "respuesta": "antojos"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "alcancía",
+        "bolsillo",
+        "calle"
+      ],
+      "respuesta": "alcancía"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "paciencia",
+        "prisa",
+        "suerte"
+      ],
+      "respuesta": "paciencia"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "orgulloso",
+        "triste",
+        "aburrido"
+      ],
+      "respuesta": "orgulloso"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "esfuerzo",
+        "regalo",
+        "accidente"
+      ],
+      "respuesta": "esfuerzo"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

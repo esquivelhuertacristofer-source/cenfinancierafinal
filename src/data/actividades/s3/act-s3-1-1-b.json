@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S3-1-1-B",
+  "unit_code": "S3-1-1",
+  "unit_title": "Finanzas personales integradas: el cuadro completo de mi vida",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Detectives de Ciclos",
+  "descripcion": "¿Sabes identificar si la economía está enferma o en su mejor momento? ¡Demuestra que eres un analista macro!",
+  "objetivo": "Identificar las fases del ciclo económico y comprender los indicadores de salud de un país",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "mac1",
+      "texto": "¿Qué significa que el PIB de un país sea positivo?",
+      "opciones": [
+        "Que el gobierno tiene mucho dinero",
+        "Que la suma de todos los bienes y servicios producidos en el país aumentó respecto al año anterior",
+        "Que los precios bajaron",
+        "Que no hay deudas"
+      ],
+      "correcta": 1,
+      "explicacion": "El PIB es como el 'sueldo' de un país; si sube, hay más actividad económica."
+    },
+    {
+      "id": "mac2",
+      "texto": "¿Qué es la 'Recesión' técnica?",
+      "opciones": [
+        "Cuando la gente deja de comprar dulces",
+        "Cuando el PIB cae durante dos trimestres (6 meses) consecutivos",
+        "Cuando el banco cierra un día",
+        "Cuando sube el precio del dólar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el síntoma claro de que la economía se está contrayendo."
+    },
+    {
+      "id": "mac3",
+      "texto": "¿Cómo afecta la INFLACIÓN a tu poder de compra?",
+      "opciones": [
+        "Te permite comprar más cosas",
+        "Hace que tu dinero valga menos, por lo que necesitas más billetes para comprar lo mismo que antes",
+        "No le afecta",
+        "Hace que el banco te regale intereses"
+      ],
+      "correcta": 1,
+      "explicacion": "La inflación es el aumento generalizado de los precios."
+    },
+    {
+      "id": "mac4",
+      "texto": "¿Cuál es la fase del ciclo económico donde hay máximo empleo y mucho optimismo?",
+      "opciones": [
+        "Valle",
+        "Pico (Cresta)",
+        "Recesión",
+        "Depresión"
+      ],
+      "correcta": 1,
+      "explicacion": "En el pico, la economía está a su máxima capacidad, pero suele ser la señal de que pronto vendrá una caída."
+    },
+    {
+      "id": "mac5",
+      "texto": "¿Qué suele pasar con el Desempleo durante una expansión económica?",
+      "opciones": [
+        "Aumenta",
+        "Disminuye, ya que las empresas necesitan más gente para producir más",
+        "Se queda igual",
+        "No existe el desempleo"
+      ],
+      "correcta": 1,
+      "explicacion": "Más crecimiento suele significar más trabajo para todos."
+    },
+    {
+      "id": "mac6",
+      "texto": "¿Qué es el 'IPC' (Índice de Precios al Consumidor)?",
+      "opciones": [
+        "Un impuesto nuevo",
+        "La herramienta que se usa para medir la inflación analizando el costo de una 'canasta básica'",
+        "El precio de las acciones",
+        "Un tipo de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "Mide cuánto ha subido el costo de la vida para una familia promedio."
+    },
+    {
+      "id": "mac7",
+      "texto": "¿Qué es el 'PIB per cápita'?",
+      "opciones": [
+        "El PIB total dividido entre el número de habitantes",
+        "Lo que gana el presidente",
+        "El dinero que hay en los bancos",
+        "Un tipo de moneda"
+      ],
+      "correcta": 0,
+      "explicacion": "Sirve para comparar la riqueza promedio entre diferentes países."
+    },
+    {
+      "id": "mac8",
+      "texto": "¿Cuál es la diferencia entre PIB Real y PIB Nominal?",
+      "opciones": [
+        "No hay diferencia",
+        "El PIB Real elimina el efecto de la inflación para ver el crecimiento verdadero de la producción",
+        "El PIB Nominal es más importante",
+        "Uno es en dólares y otro en pesos"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has completado el análisis de salud económica nacional."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S3-3-4-B",
+  "unit_code": "S3-3-4",
+  "unit_title": "Invertir en startups: el mundo del Venture Capital",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Estructuras de Protección",
+  "descripcion": "¿Sabes cómo se blinda una fortuna contra el tiempo y los problemas legales? ¡Ponte a prueba!",
+  "objetivo": "Identificar las herramientas legales y financieras utilizadas para la protección de activos y la sucesión patrimonial",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "leg1",
+      "texto": "¿Qué es un 'Fideicomiso' (Trust)?",
+      "opciones": [
+        "Un préstamo de honor",
+        "Un contrato legal donde entregas bienes a una institución para que los administre bajo reglas estrictas en beneficio de alguien más",
+        "Un tipo de cuenta bancaria compartida",
+        "Un seguro de vida"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la herramienta más poderosa para proteger activos de demandas y asegurar que se usen como tú quieras."
+    },
+    {
+      "id": "leg2",
+      "texto": "¿Quién es el 'Fideicomisario' (Beneficiario)?",
+      "opciones": [
+        "La persona que entrega el dinero",
+        "La persona que recibe los beneficios o bienes del fideicomiso",
+        "El banco que lo administra",
+        "El juez que lo autoriza"
+      ],
+      "correcta": 1,
+      "explicacion": "Suelen ser los hijos, nietos o fundaciones benéficas."
+    },
+    {
+      "id": "leg3",
+      "texto": "¿Qué es un 'Testamento'?",
+      "opciones": [
+        "Un contrato de trabajo",
+        "Un documento legal donde una persona expresa su voluntad sobre el destino de sus bienes tras su muerte",
+        "Una deuda pendiente",
+        "Un tipo de inversión"
+      ],
+      "correcta": 1,
+      "explicacion": "Es esencial para evitar que el estado decida qué pasa con tus cosas."
+    },
+    {
+      "id": "leg4",
+      "texto": "¿Cuál es la función de una empresa 'Holding'?",
+      "opciones": [
+        "Vender productos de limpieza",
+        "Una empresa cuya única función es ser dueña de las acciones de otras empresas para centralizar el control y proteger el patrimonio",
+        "Un banco internacional",
+        "Una tienda de ropa"
+      ],
+      "correcta": 1,
+      "explicacion": "Permite organizar imperios empresariales de forma eficiente y segura."
+    },
+    {
+      "id": "leg5",
+      "texto": "¿Qué significa 'Blindaje de Activos'?",
+      "opciones": [
+        "Ponerles una armadura de metal",
+        "Estructurar la propiedad de tal forma que los bienes personales estén protegidos contra riesgos del negocio o demandas legales",
+        "No pagar deudas",
+        "Esconder el dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Separa tu vida personal de los riesgos de tu empresa."
+    },
+    {
+      "id": "leg6",
+      "texto": "¿Qué es la 'Planeación Sucesoria'?",
+      "opciones": [
+        "Saber quién sigue en la fila",
+        "El proceso de diseñar cómo se transferirá el liderazgo y la riqueza de una generación a otra",
+        "Hacer ejercicio",
+        "Planear las vacaciones familiares"
+      ],
+      "correcta": 1,
+      "explicacion": "Evita conflictos familiares y asegura que el negocio continúe."
+    },
+    {
+      "id": "leg7",
+      "texto": "¿Qué es un 'Albacea'?",
+      "opciones": [
+        "Un tipo de ave",
+        "La persona encargada de cumplir la voluntad del fallecido y administrar los bienes durante el proceso de herencia",
+        "El dueño de la funeraria",
+        "Un abogado del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una posición de gran confianza y responsabilidad."
+    },
+    {
+      "id": "leg8",
+      "texto": "¿Por qué se dice que el patrimonio debe estar 'Diversificado' incluso geográficamente?",
+      "opciones": [
+        "Para viajar más",
+        "Para reducir el riesgo de que una crisis en un solo país afecte toda tu riqueza",
+        "Para pagar menos impuestos ilegalmente",
+        "Porque es divertido"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has completado el análisis de blindaje patrimonial de alto nivel."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

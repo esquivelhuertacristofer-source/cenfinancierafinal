@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S3-3-1-B",
+  "unit_code": "S3-3-1",
+  "unit_title": "Plan de retiro anticipado: construirlo desde los 15",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Protección Profesional",
+  "descripcion": "¿Sabes cómo protegen los grandes empresarios su patrimonio de las catástrofes? ¡Ponte a prueba!",
+  "objetivo": "Identificar los tipos de seguros especializados y los términos técnicos de la gestión de riesgos profesional",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ins1",
+      "texto": "¿Qué es la 'Responsabilidad Civil' en un seguro empresarial?",
+      "opciones": [
+        "Pagar los impuestos del año",
+        "La cobertura que paga si tu empresa causa un daño accidental a otra persona o a su propiedad (ej: un cliente se resbala en tu tienda)",
+        "El sueldo de los empleados",
+        "Un tipo de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "Es esencial para evitar quiebras por demandas legales."
+    },
+    {
+      "id": "ins2",
+      "texto": "¿Qué cubre un 'Seguro de Hombre Clave'?",
+      "opciones": [
+        "El uniforme de los trabajadores",
+        "Compensar a la empresa si un socio o empleado vital para el negocio fallece o queda incapacitado",
+        "Pagar el gimnasio del jefe",
+        "Asegurar las llaves de la oficina"
+      ],
+      "correcta": 1,
+      "explicacion": "Protege la continuidad del negocio ante la pérdida de talento crítico."
+    },
+    {
+      "id": "ins3",
+      "texto": "¿Qué es el 'Deducible'?",
+      "opciones": [
+        "La cantidad total que te paga el seguro",
+        "La cantidad fija que TÚ debes pagar antes de que el seguro cubra el resto del siniestro",
+        "Un impuesto al lujo",
+        "El nombre de la aseguradora"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre más alto sea el deducible, más barata será la mensualidad del seguro."
+    },
+    {
+      "id": "ins4",
+      "texto": "¿Qué es la 'Prima' en un contrato de seguro?",
+      "opciones": [
+        "Una pariente del dueño",
+        "El pago periódico (mensual o anual) que haces para mantener activa tu protección",
+        "El premio que te dan si no chocas",
+        "Un descuento"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el precio del servicio de transferencia de riesgo."
+    },
+    {
+      "id": "ins5",
+      "texto": "¿Por qué es importante el 'Ciberseguro' hoy en día?",
+      "opciones": [
+        "Para comprar videojuegos",
+        "Para proteger a la empresa de los costos de ataques hackers, robo de datos o secuestro de información",
+        "Para tener internet más rápido",
+        "No es importante"
+      ],
+      "correcta": 1,
+      "explicacion": "Los ataques digitales son hoy una de las mayores causas de quiebra empresarial."
+    },
+    {
+      "id": "ins6",
+      "texto": "¿Qué significa 'Siniestro'?",
+      "opciones": [
+        "Una persona mala",
+        "La ocurrencia del accidente o evento que está cubierto por el seguro",
+        "Un tipo de contrato",
+        "Pagar tarde"
+      ],
+      "correcta": 1,
+      "explicacion": "Es cuando el riesgo se vuelve realidad."
+    },
+    {
+      "id": "ins7",
+      "texto": "¿Qué es el 'Coaseguro'?",
+      "opciones": [
+        "Asegurarse dos veces",
+        "Un porcentaje del daño total que el asegurado debe pagar adicional al deducible (común en gastos médicos)",
+        "Un regalo de la aseguradora",
+        "Pagar el seguro entre dos personas"
+      ],
+      "correcta": 1,
+      "explicacion": "Sirve para que el asegurado también tenga interés en cuidar los costos."
+    },
+    {
+      "id": "ins8",
+      "texto": "¿Cuál es la principal ventaja de tener seguros empresariales?",
+      "opciones": [
+        "Gastar más dinero",
+        "Tener paz mental y asegurar que la empresa sobreviva a eventos catastróficos inesperados",
+        "No tener que trabajar",
+        "Evitar auditorías"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes cómo blindar una empresa profesionalmente."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

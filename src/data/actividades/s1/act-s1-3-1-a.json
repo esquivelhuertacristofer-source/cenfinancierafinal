@@ -1,0 +1,156 @@
+{
+  "code": "ACT-S1-3-1-A",
+  "unit_code": "S1-3-1",
+  "unit_title": "El interés compuesto: el poder del tiempo en el dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Máquina del Tiempo del Dinero",
+  "descripcion": "Einstein llamó al interés compuesto 'la octava maravilla del mundo': quien lo entiende, lo gana; quien no, lo paga. Esta simulación va a cambiar para siempre cómo ves el dinero que tienes hoy.",
+  "objetivo": "Visualizar el crecimiento exponencial del interés compuesto versus el ahorro lineal, y cuantificar el costo real de procrastinar la inversión",
+  "xp": 500,
+  "descripcion_formula": "Capital Final = Capital_inicial × (1+r)^n + Aportación × [(1+r)^n - 1] / r — donde r = tasa mensual, n = meses. El secreto: cada mes ganas interés SOBRE TUS INTERESES acumulados, no solo sobre el capital original.",
+  "inputs": [
+    {
+      "id": "capital_inicial",
+      "label": "Capital inicial que inviertes hoy",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación adicional cada mes",
+      "type": "slider",
+      "min": 0,
+      "max": 10000,
+      "step": 500,
+      "default": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_anual",
+      "label": "Rendimiento anual de inversión",
+      "type": "slider",
+      "min": 3,
+      "max": 15,
+      "step": 0.5,
+      "default": 8,
+      "unit": "%",
+      "referencia": "CETES: ~10% | Fondo índice S&P500 histórico: ~10% | Cuenta de ahorro bancaria: ~3-4%"
+    },
+    {
+      "id": "anos",
+      "label": "Años que lo dejas crecer",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "anos_espera",
+      "label": "Años que esperarías antes de empezar",
+      "type": "slider",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 5,
+      "unit": "años",
+      "ayuda": "Esto calcula cuánto dinero pierdes por no empezar hoy"
+    }
+  ],
+  "formula": "capital_inicial * Math.pow(1 + tasa_anual/100/12, anos*12) + aportacion_mensual * ((Math.pow(1 + tasa_anual/100/12, anos*12) - 1) / (tasa_anual/100/12))",
+  "outputs_multiples": [
+    {
+      "id": "capital_compuesto",
+      "label": "Tu capital con interés compuesto (empezando HOY)",
+      "formula": "capital_inicial * Math.pow(1 + tasa_anual/100/12, anos*12) + aportacion_mensual * ((Math.pow(1 + tasa_anual/100/12, anos*12) - 1) / (tasa_anual/100/12))",
+      "prefix": "$",
+      "descripcion": "El capital que acumularías si empezas a invertir hoy."
+    },
+    {
+      "id": "capital_lineal",
+      "label": "Si solo ahorraras sin invertir (colchón)",
+      "formula": "capital_inicial + aportacion_mensual * anos * 12",
+      "prefix": "$",
+      "descripcion": "Lo que tendrías guardando el dinero sin ningún rendimiento."
+    },
+    {
+      "id": "ganancia_pura_intereses",
+      "label": "Lo que el dinero generó solo (sin que trabajaras)",
+      "formula": "(capital_inicial * Math.pow(1 + tasa_anual/100/12, anos*12) + aportacion_mensual * ((Math.pow(1 + tasa_anual/100/12, anos*12) - 1) / (tasa_anual/100/12))) - (capital_inicial + aportacion_mensual * anos * 12)",
+      "prefix": "$",
+      "descripcion": "Esta cantidad la generó el interés compuesto, no tú. Es el 'dinero que trabaja mientras duermes'."
+    },
+    {
+      "id": "costo_de_esperar",
+      "label": "Costo de esperar antes de empezar",
+      "formula": "(capital_inicial * Math.pow(1 + tasa_anual/100/12, anos*12) + aportacion_mensual * ((Math.pow(1 + tasa_anual/100/12, anos*12) - 1) / (tasa_anual/100/12))) - (capital_inicial * Math.pow(1 + tasa_anual/100/12, Math.max(0, anos - anos_espera)*12) + aportacion_mensual * ((Math.pow(1 + tasa_anual/100/12, Math.max(0, anos - anos_espera)*12) - 1) / (tasa_anual/100/12)))",
+      "prefix": "- $",
+      "descripcion": "Cada año que procrastinas tiene este precio. La demora financiera es el error más caro que existe."
+    }
+  ],
+  "output_label": "Tu capital final con interés compuesto",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "portafolio_compuesto",
+      "label": "Con interés compuesto",
+      "color": "#FF8C00"
+    },
+    {
+      "id": "portafolio_lineal",
+      "label": "Sin invertir (ahorro simple)",
+      "color": "#6b7280"
+    }
+  ],
+  "regla_72": {
+    "titulo": "La Regla del 72",
+    "descripcion": "Para saber en cuántos años se duplica tu dinero: divide 72 entre tu tasa de rendimiento anual.",
+    "ejemplo": "Con 8% anual → 72 ÷ 8 = 9 años para duplicar. Con 12% → 6 años."
+  },
+  "escenarios": [
+    {
+      "condicion": "anos >= 30 && tasa_anual >= 8",
+      "mensaje": "🚀 ¡La maravilla del largo plazo! Con 30+ años, los intereses acumulados superarán el total de lo que tú aportaste. Tu dinero genera más que tú.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "anos_espera >= 10",
+      "mensaje": "⏰ DATO BRUTAL: Esperar 10 años antes de empezar puede costarte más de la MITAD de tu riqueza final. El tiempo vale más que el dinero.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "anos_espera >= 5 && anos_espera < 10",
+      "mensaje": "⚠️ Esperar 5 años parece poco, pero con interés compuesto ese retraso puede costarte entre 20-40% de tu capital final. El mejor momento para empezar fue ayer.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "aportacion_mensual === 0",
+      "mensaje": "💡 Con solo $500 al mes adicionales cambiarías drásticamente el resultado. Las aportaciones regulares son tan importantes como el capital inicial.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "tasa_anual < 5",
+      "mensaje": "📊 Comparación real: CETES hoy paga ~10% anual. Tu cuenta de ahorro bancaria normal da ~3-4%. Después de 20 años esa diferencia es millones de pesos.",
+      "tipo": "info"
+    }
+  ],
+  "pregunta_reflexion": "Si empezaras a invertir $1,000 al mes hoy en lugar de esperar 10 años, ¿cuánto dinero perderías por esperar? ¿Por qué crees que la mayoría de personas espera en lugar de empezar ahora?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {"valor": 25, "mensaje": "Punto de partida: Los cimientos están listos."},
+    {"valor": 50, "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."},
+    {"valor": 75, "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."},
+    {"valor": 100, "mensaje": "¡Meta Alcanzada! Has dominado el interés compuesto."}
+  ],
+  "comparativa_espera": "Si esperas 5 años antes de empezar a invertir, podrías perder entre 25-40% de tu capital final proyectado. Cada año de retraso tiene un costo compuesto."
+}

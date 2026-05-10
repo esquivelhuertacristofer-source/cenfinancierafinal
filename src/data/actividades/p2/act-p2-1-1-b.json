@@ -1,0 +1,137 @@
+{
+  "code": "P2-1-1-B",
+  "unit_code": "P2-1-1",
+  "unit_title": "El dinero tiene historia: del trueque a los billetes",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Detective de la Historia",
+  "descripcion": "¿Sabes cómo conseguía la gente lo que necesitaba hace mil años? ¡Demuestra que eres un experto en el tiempo!",
+  "objetivo": "Validar el conocimiento sobre la evolución histórica del dinero y el concepto de trueque",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cómo se llama el intercambio de cosas por cosas sin usar dinero?",
+      "opciones": [
+        "Compra",
+        "Trueque",
+        "Regalo",
+        "Robo"
+      ],
+      "correcta": 1,
+      "explicacion": "El trueque fue la primera forma de comercio: 'Te cambio mi zapato por tus manzanas'."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuál era el principal problema del trueque?",
+      "opciones": [
+        "Era muy aburrido",
+        "Era difícil que las dos personas quisieran lo que el otro ofrecía al mismo tiempo",
+        "No se podían usar las manos",
+        "Era ilegal"
+      ],
+      "correcta": 1,
+      "explicacion": "Si tú tenías maíz pero el otro quería carne, ¡no podías hacer el cambio! Por eso inventamos el dinero."
+    },
+    {
+      "id": "q3",
+      "texto": "En el México antiguo, ¿qué se usaba como 'moneda' deliciosa?",
+      "opciones": [
+        "Piedras",
+        "Granos de Cacao",
+        "Hojas de árbol",
+        "Flores"
+      ],
+      "correcta": 1,
+      "explicacion": "El cacao era valioso, fácil de contar y a todos les gustaba. ¡Era dinero chocolate!"
+    },
+    {
+      "id": "q4",
+      "texto": "¿De qué palabra viene 'Salario' (el pago por trabajar)?",
+      "opciones": [
+        "De Saltar",
+        "De la Sal (con la que se pagaba en Roma)",
+        "De la Selva",
+        "De un nombre"
+      ],
+      "correcta": 1,
+      "explicacion": "Hace mucho, la sal era tan valiosa para conservar comida que servía para pagar sueldos."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué las monedas de metal (oro y plata) fueron un gran invento?",
+      "opciones": [
+        "Porque brillaban mucho",
+        "Porque duraban para siempre y no se echaban a perder como el cacao",
+        "Porque eran más ligeras",
+        "Porque eran suaves"
+      ],
+      "correcta": 1,
+      "explicacion": "El metal es resistente. Podías guardar una moneda 10 años y seguía valiendo lo mismo."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué son los billetes realmente?",
+      "opciones": [
+        "Dibujos bonitos",
+        "Papeles que representan una cantidad de dinero guardada en un banco",
+        "Hojas de árbol pintadas",
+        "Regalos del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Los billetes nacieron como 'recibos' de oro que eran más fáciles de cargar que las monedas pesadas."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuál es la base para que el dinero funcione?",
+      "opciones": [
+        "La magia",
+        "La confianza (que todos creamos que ese papel vale algo)",
+        "El pegamento",
+        "El color"
+      ],
+      "correcta": 1,
+      "explicacion": "Si nadie confiara en el billete, nadie te daría comida a cambio de él. ¡La confianza es el valor real!"
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué es el 'Dinero Digital'?",
+      "opciones": [
+        "Dinero hecho con los dedos",
+        "Dinero que vive en computadoras y tarjetas, sin ser billetes físicos",
+        "Dinero de mentiras",
+        "Dinero que no vale nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Hoy en día, la mayoría del dinero son números que viajan por internet."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cómo se llama el lugar en México que fabrica las monedas?",
+      "opciones": [
+        "La Fábrica de Juguetes",
+        "La Casa de Moneda",
+        "El Castillo de Cristal",
+        "La Tienda Central"
+      ],
+      "correcta": 1,
+      "explicacion": "La Casa de Moneda de México es una de las más antiguas y famosas del mundo."
+    },
+    {
+      "id": "q10",
+      "texto": "Si tú pudieras inventar el dinero del futuro, ¿cómo sería?",
+      "opciones": [
+        "Seguro y fácil de usar para todos",
+        "Difícil de entender",
+        "Solo para gente rica",
+        "Que se pierda fácil"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! El dinero siempre evoluciona para ser más seguro y práctico para la humanidad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

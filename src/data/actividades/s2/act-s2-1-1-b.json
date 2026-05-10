@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-1-1-B",
+  "unit_code": "S2-1-1",
+  "unit_title": "Macroeconomía para jóvenes: PIB, inflación, desempleo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¿Cuándo comprar y cuándo vender?",
+  "descripcion": "¿Eres un analista de negocios o un observador de gráficas? ¡Descubre tu estilo de inversión!",
+  "objetivo": "Identificar las herramientas y objetivos específicos del análisis técnico y del análisis fundamental",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "tef1",
+      "texto": "¿Cuál es el objetivo principal del Análisis Fundamental?",
+      "opciones": [
+        "Predecir el precio de mañana",
+        "Calcular el 'Valor Real' de una empresa basándose en sus finanzas y su futuro",
+        "Ver colores en una gráfica",
+        "Saber cuánta gente está comprando"
+      ],
+      "correcta": 1,
+      "explicacion": "El fundamental busca empresas sólidas que valgan más de lo que cuesta su acción hoy."
+    },
+    {
+      "id": "tef2",
+      "texto": "¿En qué se basa el Análisis Técnico?",
+      "opciones": [
+        "En las noticias del periódico",
+        "En el estudio de las gráficas de precios y el volumen de transacciones pasadas",
+        "En lo que dice el CEO",
+        "En el clima del país"
+      ],
+      "correcta": 1,
+      "explicacion": "El análisis técnico cree que el precio ya contiene toda la información necesaria."
+    },
+    {
+      "id": "tef3",
+      "texto": "¿Qué es el 'Valor Intrínseco'?",
+      "opciones": [
+        "El precio de la acción hoy",
+        "El valor real que debería tener la empresa según sus activos y ganancias",
+        "Un tipo de moneda digital",
+        "La deuda del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el precio es menor al valor intrínseco, se considera una 'ganga' para el inversor fundamental."
+    },
+    {
+      "id": "tef4",
+      "texto": "¿Qué busca un analista técnico con una gráfica?",
+      "opciones": [
+        "Dibujar paisajes",
+        "Identificar patrones y tendencias para predecir movimientos futuros del precio",
+        "Ver cuánto ganaron el año pasado",
+        "Saber el nombre de los empleados"
+      ],
+      "correcta": 1,
+      "explicacion": "La historia del precio tiende a repetirse en patrones reconocibles."
+    },
+    {
+      "id": "tef5",
+      "texto": "Si quieres invertir para tu retiro (a 30 años), ¿qué análisis es más importante?",
+      "opciones": [
+        "Análisis Técnico",
+        "Análisis Fundamental (porque importa la salud de la empresa a largo plazo)",
+        "No hacer análisis",
+        "Análisis de noticias rápidas"
+      ],
+      "correcta": 1,
+      "explicacion": "A largo plazo, los buenos negocios siempre superan a las gráficas temporales."
+    },
+    {
+      "id": "tef6",
+      "texto": "¿Qué es un 'Day Trader'?",
+      "opciones": [
+        "Alguien que ahorra por años",
+        "Alguien que compra y vende acciones en el mismo día usando análisis técnico",
+        "Un empleado del banco",
+        "Un cajero automático"
+      ],
+      "correcta": 1,
+      "explicacion": "Buscan ganancias rápidas aprovechando la volatilidad diaria."
+    },
+    {
+      "id": "tef7",
+      "texto": "¿Qué significa la frase 'El mercado es eficiente'?",
+      "opciones": [
+        "Que no gasta luz",
+        "Que el precio de la acción siempre refleja toda la información disponible de inmediato",
+        "Que todos ganan dinero",
+        "Que los bancos son rápidos"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una teoría que dice que es casi imposible 'ganarle' al mercado consistentemente."
+    },
+    {
+      "id": "tef8",
+      "texto": "¿Cuál es la mejor forma de invertir según los expertos modernos?",
+      "opciones": [
+        "Usar solo un tipo de análisis",
+        "Combinar ambos: Fundamental para elegir qué comprar y Técnico para elegir el momento de entrada",
+        "Seguir consejos de extraños",
+        "No invertir"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora tienes las dos herramientas más poderosas del inversionista profesional."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

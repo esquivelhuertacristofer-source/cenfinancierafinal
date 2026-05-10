@@ -1,0 +1,101 @@
+{
+  "code": "ACT-P3-3-5-A",
+  "unit_code": "P3-3-5",
+  "unit_title": "Las deudas malas y cómo evitarlas",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Deuda Buena o Deuda Mala?",
+  "descripcion": "No todas las deudas son iguales. Aprende a distinguir las que te ayudan a crecer de las que te encadenan.",
+  "objetivo": "Clasificar los tipos de crédito según su impacto en el patrimonio y la productividad personal",
+  "xp": 250,
+  "instruccion": "Arrastra cada ejemplo de deuda a su columna correcta: ¿Es una DEUDA BUENA o una DEUDA MALA?",
+  "items": [
+    {
+      "id": "b1",
+      "label": "Préstamo para ir a la Universidad",
+      "emoji": "🎓",
+      "categoria_correcta": "buena",
+      "feedback": "¡Buena! Invertir en tu conocimiento siempre da los mejores intereses."
+    },
+    {
+      "id": "m1",
+      "label": "Comprar dulces a crédito",
+      "emoji": "🍭",
+      "categoria_correcta": "mala",
+      "feedback": "Mala. Los dulces se acaban rápido y la deuda se queda mucho tiempo."
+    },
+    {
+      "id": "b2",
+      "label": "Hipoteca para comprar tu casa",
+      "emoji": "🏠",
+      "categoria_correcta": "buena",
+      "feedback": "¡Buena! Una casa es un patrimonio que te protege y suele valer más con el tiempo."
+    },
+    {
+      "id": "m2",
+      "label": "Pedir prestado para ir a una fiesta",
+      "emoji": "🎉",
+      "categoria_correcta": "mala",
+      "feedback": "Mala. Nunca pidas prestado para algo que dura solo unas horas."
+    },
+    {
+      "id": "b3",
+      "label": "Crédito para poner un negocio propio",
+      "emoji": "🏬",
+      "categoria_correcta": "buena",
+      "feedback": "¡Buena! Si el negocio tiene éxito, el crédito se pagará solo con las ganancias."
+    },
+    {
+      "id": "m3",
+      "label": "Comprar ropa de lujo que no puedes pagar",
+      "emoji": "👗",
+      "categoria_correcta": "mala",
+      "feedback": "Mala. La ropa pierde valor en cuanto sale de la tienda."
+    },
+    {
+      "id": "b4",
+      "label": "Comprar una laptop para estudiar",
+      "emoji": "💻",
+      "categoria_correcta": "buena",
+      "feedback": "¡Buena! Es una herramienta para que seas mejor en la escuela o trabajo."
+    },
+    {
+      "id": "m4",
+      "label": "Comprar el juguete más nuevo a meses con intereses",
+      "emoji": "🤖",
+      "categoria_correcta": "mala",
+      "feedback": "Mala. Pagarás mucho más de lo que el juguete vale realmente."
+    },
+    {
+      "id": "b5",
+      "label": "Crédito para un auto que usarás de taxi",
+      "emoji": "🚕",
+      "categoria_correcta": "buena",
+      "feedback": "¡Buena! El auto se convierte en una herramienta para generar dinero."
+    },
+    {
+      "id": "m5",
+      "label": "Pagar la cena de ayer con tarjeta y no liquidarla",
+      "emoji": "🍕",
+      "categoria_correcta": "mala",
+      "feedback": "Mala. Estás pagando intereses por algo que ya te comiste."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "buena",
+      "label": "DEUDA BUENA (Inversión)",
+      "emoji": "🚀",
+      "color": "#16a34a"
+    },
+    {
+      "id": "mala",
+      "label": "DEUDA MALA (Gasto)",
+      "emoji": "⚓",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

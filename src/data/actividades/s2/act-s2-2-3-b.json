@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S2-2-3-B",
+  "unit_code": "S2-2-3",
+  "unit_title": "El seguro de desempleo y otros seguros laborales",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mundo del Venture Capital",
+  "descripcion": "¿Podrás convencer a los tiburones o te quedarás sin inversión? ¡Demuestra que conoces las reglas del juego de las Startups!",
+  "objetivo": "Identificar los términos técnicos y las etapas de inversión en empresas de alto crecimiento",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "vc1",
+      "pregunta": "¿Qué es un 'Unicornio' en el mundo de los negocios?",
+      "respuesta_correcta": "Una empresa tecnológica privada que alcanza un valor de más de $1,000 millones de dólares",
+      "incorrectas": [
+        "Un animal mitológico",
+        "Una empresa que no tiene competencia",
+        "Un banco muy antiguo"
+      ],
+      "dato_extra": "Ejemplos famosos fueron Uber, Airbnb o Kavak antes de salir a bolsa."
+    },
+    {
+      "id": "vc2",
+      "pregunta": "¿Qué significa el 'Burn Rate'?",
+      "respuesta_correcta": "La velocidad a la que una startup gasta su dinero para crecer antes de ser rentable",
+      "incorrectas": [
+        "La tasa de incendios en la oficina",
+        "La velocidad del internet",
+        "El precio de las acciones"
+      ],
+      "dato_extra": "Si el burn rate es muy alto y no hay nueva inversión, la empresa quiebra."
+    },
+    {
+      "id": "vc3",
+      "pregunta": "¿Qué es el 'Equity'?",
+      "respuesta_correcta": "El porcentaje de propiedad o acciones que tienes en una empresa",
+      "incorrectas": [
+        "Un préstamo que debes pagar",
+        "El nombre de la marca",
+        "Un tipo de impuesto"
+      ],
+      "dato_extra": "Los fundadores dan 'equity' a cambio de dinero para hacer crecer el negocio."
+    },
+    {
+      "id": "vc4",
+      "pregunta": "¿Qué es un 'Ángel Inversionista'?",
+      "respuesta_correcta": "Una persona que invierte su propio dinero en startups que están empezando a cambio de acciones",
+      "incorrectas": [
+        "Una persona que dona dinero",
+        "Un empleado del banco",
+        "Un cura"
+      ],
+      "dato_extra": "Suelen ser los primeros en creer en una idea cuando solo es un prototipo."
+    },
+    {
+      "id": "vc5",
+      "pregunta": "¿Qué significa 'Crowdfunding'?",
+      "respuesta_correcta": "Conseguir financiamiento de muchas personas a través de internet, en lugar de un solo gran banco",
+      "incorrectas": [
+        "Vender productos en la calle",
+        "Pedir dinero al gobierno",
+        "Un tipo de ahorro grupal"
+      ],
+      "dato_extra": "Permite que cualquier persona sea inversionista con montos pequeños."
+    },
+    {
+      "id": "vc6",
+      "pregunta": "¿Qué es un 'Exit' (Salida)?",
+      "respuesta_correcta": "Cuando los inversionistas venden sus acciones (en una IPO o a otra empresa) para cobrar sus ganancias",
+      "incorrectas": [
+        "Cuando la empresa quiebra",
+        "Salir de la oficina",
+        "Cerrar la página web"
+      ],
+      "dato_extra": "Es el momento en que el riesgo se convierte en riqueza real."
+    },
+    {
+      "id": "vc7",
+      "pregunta": "¿Cuál es la diferencia entre una Startup y una PyME (Pequeña Empresa)?",
+      "respuesta_correcta": "La Startup busca un crecimiento masivo y rápido usando tecnología; la PyME busca estabilidad y rentabilidad local",
+      "incorrectas": [
+        "La Startup es más grande",
+        "La PyME usa computadoras",
+        "No hay diferencia"
+      ],
+      "dato_extra": "Una panadería es una PyME; una app que entrega pan en todo el mundo es una Startup."
+    },
+    {
+      "id": "vc8",
+      "pregunta": "¿Qué es el 'Pitch Deck'?",
+      "respuesta_correcta": "Una presentación breve y visual que usan los emprendedores para convencer a los inversionistas",
+      "incorrectas": [
+        "Un contrato legal",
+        "El logo de la empresa",
+        "Una tarjeta de crédito"
+      ],
+      "dato_extra": "Debe ser claro, emocionante y mostrar cómo se ganará dinero."
+    },
+    {
+      "id": "vc9",
+      "pregunta": "¿Qué es el Capital de Riesgo (Venture Capital)?",
+      "respuesta_correcta": "Fondos de inversión que manejan dinero de terceros para invertirlo en startups de alto potencial",
+      "incorrectas": [
+        "Dinero que el banco te presta para tu casa",
+        "Dinero que se guarda bajo el colchón",
+        "Un seguro de vida"
+      ],
+      "dato_extra": "Es el combustible que ha creado gigantes como Google o Facebook."
+    },
+    {
+      "id": "vc10",
+      "pregunta": "¿Cuál es la regla de oro al invertir en capital privado?",
+      "respuesta_correcta": "Solo invertir dinero que estés dispuesto a perder al 100%, ya que el riesgo es altísimo",
+      "incorrectas": [
+        "Invertir todos tus ahorros",
+        "Pedir prestado para invertir",
+        "No investigar antes"
+      ],
+      "dato_extra": "¡Felicidades! Tienes la mentalidad de un inversionista de Silicon Valley."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

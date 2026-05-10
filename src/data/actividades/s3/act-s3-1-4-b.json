@@ -1,0 +1,105 @@
+{
+  "code": "ACT-S3-1-4-B",
+  "unit_code": "S3-1-4",
+  "unit_title": "La economía digital: gig economy, plataformas e ingresos alternativos",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Origen de Todo",
+  "descripcion": "Detrás de cada producto que usas hay una materia prima. ¿Sabes clasificarlas correctamente?",
+  "objetivo": "Identificar los diferentes tipos de commodities y sus aplicaciones en la industria y economía global",
+  "xp": 400,
+  "instruccion": "Arrastra cada materia prima a la categoría que le corresponde.",
+  "items": [
+    {
+      "id": "com1",
+      "label": "Barril de Petróleo Crudo",
+      "emoji": "🛢️",
+      "categoria_correcta": "energia",
+      "feedback": "La base del transporte, la energía y la fabricación de plásticos en el mundo."
+    },
+    {
+      "id": "com2",
+      "label": "Litio para Baterías",
+      "emoji": "🔋",
+      "categoria_correcta": "tecnologicos",
+      "feedback": "El 'oro blanco' del siglo XXI, esencial para los coches eléctricos y celulares."
+    },
+    {
+      "id": "com3",
+      "label": "Cables de Cobre",
+      "emoji": "🔌",
+      "categoria_correcta": "industriales",
+      "feedback": "El mejor conductor. Si el cobre sube de precio, construir edificios y tecnología es más caro."
+    },
+    {
+      "id": "com4",
+      "label": "Lingotes de Oro",
+      "emoji": "🟡",
+      "categoria_correcta": "preciosos",
+      "feedback": "El activo de refugio por excelencia cuando hay crisis financieras."
+    },
+    {
+      "id": "com5",
+      "label": "Trigo y Maíz",
+      "emoji": "🌽",
+      "categoria_correcta": "agricolas",
+      "feedback": "Llamados 'Soft Commodities'. Son la base de la alimentación de miles de millones de personas."
+    },
+    {
+      "id": "com6",
+      "label": "Gas Natural",
+      "emoji": "🔥",
+      "categoria_correcta": "energia",
+      "feedback": "Fuente clave para la calefacción y la generación de electricidad en las ciudades."
+    },
+    {
+      "id": "com7",
+      "label": "Plata Industrial",
+      "emoji": "🥈",
+      "categoria_correcta": "preciosos",
+      "feedback": "Metal con doble función: es reserva de valor y se usa mucho en paneles solares y electrónica."
+    },
+    {
+      "id": "com8",
+      "label": "Ganado en Pie",
+      "emoji": "🐄",
+      "categoria_correcta": "agricolas",
+      "feedback": "Un commodity vital para la industria alimentaria de proteínas a nivel mundial."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "energia",
+      "label": "ENERGÍA",
+      "emoji": "⚡",
+      "color": "#1e293b"
+    },
+    {
+      "id": "tecnologicos",
+      "label": "METALES TECNOLÓGICOS",
+      "emoji": "📱",
+      "color": "#1e40af"
+    },
+    {
+      "id": "industriales",
+      "label": "METALES INDUSTRIALES",
+      "emoji": "🏗️",
+      "color": "#94a3b8"
+    },
+    {
+      "id": "preciosos",
+      "label": "METALES PRECIOSOS",
+      "emoji": "✨",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "agricolas",
+      "label": "AGRÍCOLAS (SOFTS)",
+      "emoji": "🚜",
+      "color": "#166534"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

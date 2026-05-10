@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-4-4-A",
+  "unit_code": "P4-4-4",
+  "unit_title": "Atención al cliente y ventas: el arte de servir",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Cliente Difícil",
+  "descripcion": "Un cliente llega a tu puesto gritando porque dice que las galletas están duras. Todo el mundo te está mirando. ¿Cómo vas a resolverlo?",
+  "objetivo": "Desarrollar habilidades de inteligencia emocional y resolución de conflictos orientadas al servicio al cliente",
+  "xp": 450,
+  "personaje_principal": "Líder de Servicio",
+  "contexto_inicial": "Estás en la feria y un cliente te avienta la bolsa de galletas en la mesa. ¡Está furioso!",
+  "nodo_inicial": "reaccion_emocional",
+  "nodos": {
+    "reaccion_emocional": {
+      "id": "reaccion_emocional",
+      "texto": "El cliente grita: '¡Esto es una porquería! ¡Mis galletas están duras como piedra!'",
+      "opciones": [
+        {
+          "id": "empatia_escucha",
+          "texto": "Mantener la calma, pedir una disculpa y escuchar qué pasó",
+          "siguiente_nodo": "solucion_negocio",
+          "consecuencia": "¡Muy bien! Bajar el tono de voz y escuchar suele calmar a las personas.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "defensiva_grito",
+          "texto": "Gritarle también: '¡Usted no sabe nada, mis galletas son las mejores!'",
+          "siguiente_nodo": "final_pelea",
+          "consecuencia": "¡Grave error! Ahora todos en la feria piensan que eres un mal vendedor.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "solucion_negocio": {
+      "id": "solucion_negocio",
+      "texto": "El cliente se calma un poco al ver que lo escuchas. Te dice que las quería para un regalo importante hoy mismo. ¿Qué le ofreces?",
+      "opciones": [
+        {
+          "id": "cambio_regalo",
+          "texto": "Cambiarle el producto por uno fresco y regalarle una pieza extra por la molestia",
+          "siguiente_nodo": "final_lealtad",
+          "consecuencia": "¡Estrategia maestra! Convertiste una queja en un cliente feliz.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "devolucion_dinero",
+          "texto": "Regresarle su dinero y pedirle que se vaya",
+          "siguiente_nodo": "final_neutro",
+          "consecuencia": "Es justo, pero perdiste la oportunidad de ganar un cliente recurrente.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_lealtad": {
+      "id": "final_lealtad",
+      "texto": "¡Increíble! El cliente quedó tan impresionado con tu servicio que trajo a 3 amigos más a comprarte.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El servicio al cliente es la mejor publicidad que el dinero no puede comprar."
+    },
+    "final_pelea": {
+      "id": "final_pelea",
+      "texto": "La gente se alejó de tu puesto. El cliente puso una queja con los maestros y te cerraron el negocio.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Nunca ganes una discusión para perder un cliente. La humildad es negocio."
+    },
+    "final_neutro": {
+      "id": "final_neutro",
+      "texto": "El cliente se fue sin gritar, pero no volverá. Al menos evitaste un problema mayor.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Resolver el problema es el mínimo; deleitar al cliente es lo que te hace grande."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

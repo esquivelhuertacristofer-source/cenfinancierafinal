@@ -1,0 +1,135 @@
+{
+  "code": "P2-3-4-B",
+  "unit_code": "P2-3-4",
+  "unit_title": "Ahorro para Navidad: planificar con tiempo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro del Calendario",
+  "descripcion": "¿Sabes cómo convertir un sueño gigante en pasos pequeñitos? ¡Aprende el secreto de los grandes ahorradores!",
+  "objetivo": "Validar la comprensión de la planificación a largo plazo y la división de metas",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Si quieres un regalo de $100 para Navidad, ¿cuándo es el mejor momento para empezar a ahorrar?",
+      "opciones": [
+        "Un día antes de Navidad",
+        "Muchos meses antes (ejemplo: en verano)",
+        "Cuando Santa Claus llegue",
+        "Nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "Empezar con tiempo hace que el esfuerzo de cada semana sea muy pequeñito y fácil."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Por qué es más fácil ahorrar $1 peso diario que juntar $30 en un solo día?",
+      "opciones": [
+        "Porque $1 peso pesa menos",
+        "Porque es más fácil encontrar o ganar una moneda pequeña cada día que conseguir un billete grande de repente",
+        "Porque el calendario es mágico",
+        "Porque sí"
+      ],
+      "correcta": 1,
+      "explicacion": "Los pasos pequeños te llevan a cualquier lugar si no dejas de caminar."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cómo se llama cuando divides una meta grande (como una bici) en partes pequeñas semanales?",
+      "opciones": [
+        "Fraccionamiento o Planificación",
+        "Multiplicación",
+        "Adivinanza",
+        "Gasto"
+      ],
+      "correcta": 0,
+      "explicacion": "Planear es romper un gran reto en pedacitos que sí puedes manejar."
+    },
+    {
+      "id": "q4",
+      "texto": "Si quieres ahorrar para Navidad y estamos en JUNIO, ¿cuántos meses tienes para juntar el dinero?",
+      "opciones": [
+        "1 mes",
+        "6 meses (Junio a Diciembre)",
+        "12 meses",
+        "2 días"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Tienes medio año para lograr tu meta sin prisas."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál es el mejor amigo de un ahorrador que tiene una meta muy grande?",
+      "opciones": [
+        "La suerte",
+        "El Tiempo y la Paciencia",
+        "Gritar fuerte",
+        "Comprar lotería"
+      ],
+      "correcta": 1,
+      "explicacion": "Con tiempo y paciencia, ¡puedes lograr cosas increíbles!"
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: Si empiezas a ahorrar tarde, tendrás que guardar MUCHO MÁS dinero cada día para llegar al mismo objetivo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! La prisa cuesta dinero. Empezar temprano es ahorrar esfuerzo."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué es una 'Meta Estacional'?",
+      "opciones": [
+        "Algo que solo pasa en una estación del año, como la Navidad o el inicio de clases",
+        "Un tipo de dulce",
+        "Una meta que cambia de color",
+        "Un tren"
+      ],
+      "correcta": 0,
+      "explicacion": "Saber que estos eventos vienen cada año te permite prepararte con tiempo."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cómo te sientes cuando logras una meta larga después de meses de esfuerzo?",
+      "opciones": [
+        "Cansado y enojado",
+        "Orgulloso, feliz y con mucha confianza en ti mismo",
+        "Indiferente",
+        "Triste"
+      ],
+      "correcta": 1,
+      "explicacion": "Lograr algo difícil te enseña que eres capaz de cualquier cosa que te propongas."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Qué debes hacer si una semana no pudiste ahorrar lo que planeaste?",
+      "opciones": [
+        "Rendirte y gastar todo lo ahorrado",
+        "Esforzarte un poquito más la siguiente semana para recuperar el paso",
+        "Llorar y no volver a ahorrar",
+        "No importa"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo importante es no rendirse. ¡Un pequeño tropiezo no detiene a un campeón!"
+    },
+    {
+      "id": "q10",
+      "texto": "¿Para qué sirve usar un calendario en tu plan de ahorro?",
+      "opciones": [
+        "Para ver los dibujos de los meses",
+        "Para marcar tu progreso y ver cuánto te falta para el día del éxito",
+        "Para saber qué día es hoy solamente",
+        "Para rayarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Ver tu progreso te motiva a seguir adelante hasta la meta final."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

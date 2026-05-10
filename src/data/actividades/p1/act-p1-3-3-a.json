@@ -1,0 +1,214 @@
+{
+  "code": "ACT-P1-3-3-A",
+  "unit_code": "P1-3-3",
+  "unit_title": "El cajero automático: ¿de dónde sale el dinero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "Ceny y el Código de Seguridad",
+  "descripcion": "Ir al cajero es una misión de alta seguridad. ¿Serás capaz de guiar a Ceny y su Papá para retirar dinero sin que nadie descubra sus secretos?",
+  "objetivo": "Aprender protocolos de seguridad bancaria, manejo prudente de efectivo y protección de información personal.",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Papá y Ceny han llegado al banco. Papá necesita retirar dinero para comprar los víveres de la semana. 'Ceny, tú eres mi oficial de seguridad hoy', dice Papá mientras saca su tarjeta.",
+  "nodo_inicial": "el_nip_secreto",
+  "nodos": {
+    "el_nip_secreto": {
+      "id": "el_nip_secreto",
+      "texto": "Papá está por poner su número secreto (NIP). Hay una persona parada muy cerca. ¿Qué hace el oficial Ceny?",
+      "opciones": [
+        {
+          "id": "tapar_teclado",
+          "texto": "Ponerse frente al teclado y tapar con su mano",
+          "siguiente_nodo": "la_cantidad_justa",
+          "consecuencia": "¡Excelente! Un oficial Diamond siempre protege la información. Nadie pudo ver el número.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "ignorar_persona",
+          "texto": "Dejar que Papá lo ponga solo",
+          "siguiente_nodo": "alerta_seguridad",
+          "consecuencia": "La persona de atrás estiró el cuello y pudo ver un poco. ¡Eso es peligroso!",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "alerta_seguridad": {
+      "id": "alerta_seguridad",
+      "texto": "Papá nota a la persona y decide cancelar y volver a empezar. 'Ceny, debemos estar más alertas', susurra Papá.",
+      "opciones": [
+        {
+          "id": "entendido_oficial",
+          "texto": "¡Entendido! Estaré alerta",
+          "siguiente_nodo": "la_cantidad_justa",
+          "consecuencia": "Ceny ahora vigila mejor el entorno.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "la_cantidad_justa": {
+      "id": "la_cantidad_justa",
+      "texto": "La pantalla dice que hay $1,000. Papá solo necesita $300 para el súper. ¿Qué le aconseja Ceny?",
+      "opciones": [
+        {
+          "id": "solo_necesario",
+          "texto": "Sacar solo los $300 necesarios",
+          "siguiente_nodo": "salida_segura",
+          "consecuencia": "¡Correcto! Es mejor dejar el resto seguro en el banco y no cargar tanto efectivo en la calle.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "sacar_todo",
+          "texto": "Sacar los $1,000 para que no falte",
+          "siguiente_nodo": "consecuencia_exceso",
+          "consecuencia": "Papá saca un fajo grande de billetes. Ahora la bolsa de Papá se ve muy bultosa.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "consecuencia_exceso": {
+      "id": "consecuencia_exceso",
+      "texto": "Papá camina con las manos en las bolsas, sintiéndose un poco preocupado por si alguien nota que trae mucho dinero. ¿Qué piensa Ceny?",
+      "opciones": [
+        {
+          "id": "leccion_exceso",
+          "texto": "Menos dinero en la calle es más seguridad",
+          "siguiente_nodo": "salida_segura",
+          "consecuencia": "Ceny aprende que el banco es la mejor bóveda.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "salida_segura": {
+      "id": "salida_segura",
+      "texto": "La máquina entrega el dinero. Papá lo toma. ¿Qué deben hacer antes de salir del cuartito del cajero?",
+      "opciones": [
+        {
+          "id": "guardar_adentro",
+          "texto": "Guardar bien el dinero y la tarjeta ANTES de salir",
+          "siguiente_nodo": "el_misterio_del_ticket",
+          "consecuencia": "¡Súper! Nunca hay que mostrar el dinero al abrir la puerta del banco.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "contar_afuera",
+          "texto": "Salir rápido y contar el dinero en la banqueta",
+          "siguiente_nodo": "riesgo_afuera",
+          "consecuencia": "¡Error de seguridad! Mostrar dinero en la calle atrae miradas innecesarias.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "riesgo_afuera": {
+      "id": "riesgo_afuera",
+      "texto": "Papá guarda el dinero rápido cuando nota que alguien lo ve. 'Ceny, esto se hace adentro donde hay cámaras', explica Papá.",
+      "opciones": [
+        {
+          "id": "aprender_protocolo",
+          "texto": "Anotado en mi manual de oficial",
+          "siguiente_nodo": "el_misterio_del_ticket",
+          "consecuencia": "Ceny refuerza su conocimiento de seguridad física.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "el_misterio_del_ticket": {
+      "id": "el_misterio_del_ticket",
+      "texto": "El cajero imprime un ticket con el saldo. ¿Qué instrucción le da Ceny a Papá?",
+      "opciones": [
+        {
+          "id": "guardar_ticket",
+          "texto": "Guardar el ticket para revisar los gastos en casa",
+          "siguiente_nodo": "el_extrano_del_banco",
+          "consecuencia": "¡Excelente! Los comprobantes ayudan a llevar el control del presupuesto.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "tirar_ticket",
+          "texto": "Tirarlo al bote de basura del banco",
+          "siguiente_nodo": "el_extrano_del_banco",
+          "consecuencia": "A veces en los tickets hay información que otros no deben ver. Tirarlos no es lo más seguro.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "el_extrano_del_banco": {
+      "id": "el_extrano_del_banco",
+      "texto": "Al salir, un desconocido se acerca a Ceny: '¡Hola! Mi tarjeta se trabó, ¿puedes decirle a tu Papá que me ayude a sacarla?'. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "no_hablar",
+          "texto": "No hablar y caminar cerca de Papá",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Perfecto! Los niños no deben hablar con extraños en el banco. Papá se encarga de llamar al guardia.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "tratar_ayudar",
+          "texto": "Llamar a Papá para que ayude al señor",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Papá le explica a Ceny que hay personas que usan trucos para engañar en los bancos. Es mejor llamar al personal de seguridad oficial.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "final_diamante": {
+      "id": "final_diamante",
+      "texto": "¡ERES UN GUARDIÁN BANCARIO NIVEL DIAMANTE! Has protegido el NIP, el dinero y la seguridad de Ceny. ¡El banco está seguro gracias a ti!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La seguridad bancaria empieza con la discreción. Protege tu información y nunca bajes la guardia en lugares públicos."
+    },
+    "final_leccion_seguridad": {
+      "id": "final_leccion_seguridad",
+      "texto": "Completaste la misión, pero aprendiste que en el banco la seguridad es lo primero. ¡Sigue practicando para ser un guardián experto!",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "No todos los que piden ayuda en un banco son lo que parecen. Siempre confía en el personal oficial del banco."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.Mastery",
+  "resumen_patrimonio_al_final": true
+}

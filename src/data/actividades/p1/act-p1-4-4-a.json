@@ -1,0 +1,141 @@
+{
+  "code": "ACT-P1-4-4-A",
+  "unit_code": "P1-4-4",
+  "unit_title": "Mis primeros clientes: familia y amigos",
+  "level": "Primaria 1",
+  "tipo": "DECIDE",
+  "complejidad": "BAJO",
+  "titulo": "La Primera Venta de Ceny",
+  "descripcion": "Ceny ha terminado sus lápices decorados y quiere mostrárselos a su familia. ¿Cómo logrará que su primer negocio sea un éxito?",
+  "objetivo": "Practicar habilidades de comunicación, amabilidad y manejo del rechazo.",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny está en la sala con su Abuelita y su primo Tico. Tiene su canasta de lápices decorados listos para la venta.",
+  "nodo_inicial": "el_acercamiento",
+  "nodos": {
+    "el_acercamiento": {
+      "id": "el_acercamiento",
+      "texto": "Ceny se acerca a su Abuelita. ¿Cómo debe empezar la plática?",
+      "opciones": [
+        {
+          "id": "saludo_amable",
+          "texto": "Saludar con una sonrisa y preguntar si tiene un momento",
+          "siguiente_nodo": "la_explicacion",
+          "consecuencia": "La Abuelita sonríe y deja su tejido. '¡Claro que sí, Ceny! Cuéntame qué traes ahí.'",
+          "xp_bonus": 100,
+          "es_optima": true
+        },
+        {
+          "id": "exigir_venta",
+          "texto": "Llegar y decirle: '¡Cómprame un lápiz, valen 10 pesos!'",
+          "siguiente_nodo": "la_sorpresa",
+          "consecuencia": "La Abuelita se sorprende. '¡Ay Ceny, qué modales! Casi me asustas.'",
+          "xp_bonus": 10,
+          "es_optima": false
+        }
+      ]
+    },
+    "la_explicacion": {
+      "id": "la_explicacion",
+      "texto": "Ceny muestra sus lápices. La Abuelita pregunta: '¿Por qué estos lápices son especiales?'.",
+      "opciones": [
+        {
+          "id": "explicar_valor",
+          "texto": "Explicar que ella los decoró a mano con mucho cuidado",
+          "siguiente_nodo": "la_venta_abuela",
+          "consecuencia": "La Abuelita admira el trabajo. 'Se nota que les pusiste mucho amor. ¡Me llevaré el del marciano!'",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "mentir_magia",
+          "texto": "Decir que son lápices mágicos que hacen la tarea solos",
+          "siguiente_nodo": "la_desconfianza",
+          "consecuencia": "La Abuelita ríe. 'Ceny, sabes que eso no es cierto. Debes ser honesta con lo que vendes.'",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "la_sorpresa": {
+      "id": "la_sorpresa",
+      "texto": "La Abuelita le dice que debe ser más educada. Ceny respira hondo. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "disculpa",
+          "texto": "Pedir disculpas y empezar de nuevo con el Guion de Oro",
+          "siguiente_nodo": "la_explicacion",
+          "consecuencia": "Mucho mejor. La Abuelita acepta escuchar la presentación.",
+          "xp_bonus": 50,
+          "es_optima": true
+        },
+        {
+          "id": "irse_enojado",
+          "texto": "Enojarse e irse a su cuarto",
+          "siguiente_nodo": "final_triste",
+          "consecuencia": "Ceny perdió su primera oportunidad por no saber manejar sus emociones.",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "la_venta_abuela": {
+      "id": "la_venta_abuela",
+      "texto": "¡Primera venta lograda! Ahora el primo Tico se acerca. Él dice: 'Están padres, pero yo ya tengo muchos lápices, no necesito otro'.",
+      "opciones": [
+        {
+          "id": "aceptar_no",
+          "texto": "Darle las gracias de todos modos con una sonrisa",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "Tico se queda pensando. 'Sabes, no lo necesito para mí, pero ¡mi amigo Juan cumple años mañana! Sí te compro uno para regalo.'",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "insistir_molesto",
+          "texto": "Decirle: '¡Ándale Tico, no seas malo, cómprame uno!'",
+          "siguiente_nodo": "final_neutral",
+          "consecuencia": "Tico se siente presionado y se va. 'No Ceny, así no se vale.'",
+          "xp_bonus": 50,
+          "es_optima": false
+        }
+      ]
+    },
+    "la_desconfianza": {
+      "id": "la_desconfianza",
+      "texto": "La Abuelita ya no está tan convencida. ¿Cómo recupera Ceny la confianza?",
+      "opciones": [
+        {
+          "id": "ser_honesto",
+          "texto": "Decir la verdad: 'Perdón Abuela, no son mágicos, pero sí son los más bonitos de la escuela.'",
+          "siguiente_nodo": "la_venta_abuela",
+          "consecuencia": "La honestidad salva el día. La Abuelita decide comprar uno para premiar su sinceridad.",
+          "xp_bonus": 100,
+          "es_optima": true
+        }
+      ]
+    },
+    "final_exito": {
+      "id": "final_exito",
+      "texto": "¡Increíble! Ceny vendió dos lápices. Aprendió que la amabilidad, la honestidad y saber aceptar un 'no' con una sonrisa son las llaves del éxito.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Tus primeros clientes te enseñan cómo tratar a los que vendrán después. ¡Trátalos siempre con amor y respeto!"
+    },
+    "final_neutral": {
+      "id": "final_neutral",
+      "texto": "Ceny vendió uno a su abuela, pero alejó a su primo por ser muy insistente. La próxima vez, recordará que escuchar es tan importante como hablar.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "Vender es ayudar, no obligar. ¡Sigue practicando tu Guion de Oro!"
+    },
+    "final_triste": {
+      "id": "final_triste",
+      "texto": "Ceny no vendió nada hoy. Se sintió frustrada y se rindió muy rápido. Recuerda que todos los grandes emprendedores recibieron muchos 'no' al principio.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El 'no' de un cliente no es algo personal. ¡Vuelve a intentarlo mañana con una gran sonrisa!"
+    }
+  },
+  "versión": "2026.Diamond.Story"
+}

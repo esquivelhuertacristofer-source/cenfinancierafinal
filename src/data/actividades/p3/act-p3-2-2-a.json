@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P3-2-2-A",
+  "unit_code": "P3-2-2",
+  "unit_title": "Cuentas de ahorro para niños",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "SIMPLE",
+  "titulo": "Mi Primera Cuenta Bancaria",
+  "descripcion": "Abre tu cuenta virtual. Descubre cuánto dinero ganas cuando el banco te paga intereses por ser un gran ahorrador.",
+  "objetivo": "Entender el concepto de saldo bancario y la ganancia por intereses en una cuenta formal",
+  "xp": 250,
+  "descripcion_formula": "Calculamos el saldo final sumando el ahorro inicial más los intereses ganados (Interés = Saldo × Tasa / 100).",
+  "inputs": [
+    {
+      "id": "ahorro_inicial",
+      "label": "Monto para abrir tu cuenta",
+      "type": "slider",
+      "min": 100,
+      "max": 5000,
+      "step": 100,
+      "default": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_anual",
+      "label": "Tasa de interés (Regalo del banco)",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "step": 1,
+      "default": 8,
+      "unit": "% anual"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "ahorro_inicial * (1 + tasa_anual / 100)",
+  "output_label": "Tu Saldo después de 1 año",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado > 5000",
+      "mensaje": "🏆 ¡Súper Ahorrador! Tu dinero está creciendo rápido gracias a los intereses.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_anual >= 10",
+      "mensaje": "📈 ¡Buena elección! Elegiste un banco que paga muy buenos intereses.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "tasa_anual < 5",
+      "mensaje": "🐌 Crecimiento lento. Recuerda que siempre es mejor buscar cuentas que paguen más intereses.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué ventaja tiene guardar tu dinero en una cuenta de ahorro vs dejarlo en casa? ¿Qué pasaría con $500 guardados en casa vs en una cuenta al 4% anual después de 5 años?",
+  "outputs_multiples": [
+    {
+      "id": "saldo_un_anio",
+      "label": "Saldo Después de 1 Año",
+      "formula": "Math.round(ahorro_inicial * (1 + tasa_anual / 100))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Tu dinero más los intereses ganados en 12 meses"
+    },
+    {
+      "id": "intereses_ganados",
+      "label": "Intereses que te Regala el Banco",
+      "formula": "Math.round(ahorro_inicial * tasa_anual / 100)",
+      "prefix": "$",
+      "suffix": " gratis",
+      "descripcion": "Dinero extra que ganas sin trabajar"
+    },
+    {
+      "id": "saldo_cinco_anios",
+      "label": "Saldo en 5 Años",
+      "formula": "Math.round(ahorro_inicial * Math.pow(1 + tasa_anual/100, 5))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "El poder del tiempo: tu dinero con interés compuesto"
+    },
+    {
+      "id": "tasa_vs_inflacion",
+      "label": "Tu Tasa vs Inflación (4.5%)",
+      "formula": "Math.round((tasa_anual - 4.5) * 10) / 10",
+      "prefix": "",
+      "suffix": "% de diferencia",
+      "descripcion": "Si es positivo, tu dinero crece en términos reales"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "saldo_un_anio",
+      "label": "Saldo Después de 1 Año",
+      "color": "#6366f1"
+    },
+    {
+      "id": "intereses_ganados",
+      "label": "Intereses que te Regala el Banco",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "La cuenta de ahorro infantil BBVA Libretón pagaba 2% anual en 2024. En comparación, CETES pagaba 10.5%. Un niño que aprende a buscar el mejor rendimiento desde pequeño toma mejores decisiones toda la vida."
+}

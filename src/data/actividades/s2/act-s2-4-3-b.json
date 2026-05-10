@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S2-4-3-B",
+  "unit_code": "S2-4-3",
+  "unit_title": "Fundraising: Series A, B, C — ¿cómo funciona realmente?",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿A dónde va mi dinero?",
+  "descripcion": "Los impuestos son el combustible de un país. ¡Descubre cómo funcionan y por qué son importantes!",
+  "objetivo": "Identificar los tipos de impuestos básicos y el destino de la recaudación fiscal en beneficio de la sociedad",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "tax1",
+      "pregunta": "¿Qué es el 'RFC'?",
+      "respuesta_correcta": "Registro Federal de Contribuyentes: tu clave única para realizar actividades económicas legales",
+      "incorrectas": [
+        "Un tipo de red social",
+        "Una cuenta de banco",
+        "Un permiso de conducir"
+      ],
+      "dato_extra": "Sin RFC no puedes trabajar formalmente ni abrir empresas."
+    },
+    {
+      "id": "tax2",
+      "pregunta": "¿Qué es el 'ISR' (Impuesto Sobre la Renta)?",
+      "respuesta_correcta": "Un impuesto que se paga directamente sobre tus ganancias o sueldo (entre más ganas, más pagas)",
+      "incorrectas": [
+        "Un impuesto al comprar dulces",
+        "Un regalo del gobierno",
+        "Un pago por usar internet"
+      ],
+      "dato_extra": "Es un impuesto progresivo para que los que más tienen apoyen más al país."
+    },
+    {
+      "id": "tax3",
+      "pregunta": "¿Qué es el 'IVA' (Impuesto al Valor Agregado)?",
+      "respuesta_correcta": "Un impuesto al consumo que ya viene incluido en la mayoría de los productos que compras",
+      "incorrectas": [
+        "Un impuesto a los ahorros",
+        "Un descuento del 16%",
+        "Un pago para el jefe"
+      ],
+      "dato_extra": "Cada vez que compras algo, estás contribuyendo al presupuesto del país."
+    },
+    {
+      "id": "tax4",
+      "pregunta": "¿Cuál es un ejemplo de 'Bien Público' pagado con impuestos?",
+      "respuesta_correcta": "Alumbrado público, parques, seguridad nacional y escuelas públicas",
+      "incorrectas": [
+        "Tu suscripción de Netflix",
+        "El internet de tu casa",
+        "Tu ropa nueva"
+      ],
+      "dato_extra": "Los impuestos permiten que tengamos cosas que todos usamos pero nadie podría pagar solo."
+    },
+    {
+      "id": "tax5",
+      "pregunta": "¿Qué es una 'Deducción Personal'?",
+      "respuesta_correcta": "Gastos que la ley permite restar de tus ingresos para pagar menos impuestos (ej: gastos médicos)",
+      "incorrectas": [
+        "Un regaño del banco",
+        "Un robo de identidad",
+        "Pagar tarde"
+      ],
+      "dato_extra": "Saber qué es deducible es la mejor forma legal de ahorrar dinero."
+    },
+    {
+      "id": "tax6",
+      "pregunta": "¿Cuál es la diferencia entre 'Evasión' y 'Elusión' fiscal?",
+      "respuesta_correcta": "La Evasión es ilegal (no pagar); la Elusión es usar la ley estratégicamente para pagar lo mínimo permitido",
+      "incorrectas": [
+        "Son lo mismo",
+        "Una es para empresas y otra para personas",
+        "No existen esos términos"
+      ],
+      "dato_extra": "Un buen ciudadano cumple la ley, un buen financiero la conoce a fondo."
+    },
+    {
+      "id": "tax7",
+      "pregunta": "¿Qué pasa si no pagas tus impuestos a tiempo?",
+      "respuesta_correcta": "El gobierno te cobra recargos (intereses), multas y puede congelar tus cuentas",
+      "incorrectas": [
+        "No pasa nada",
+        "Te dan un premio por ahorrar",
+        "El banco te los paga"
+      ],
+      "dato_extra": "Es mucho más caro pagar multas que pagar el impuesto a tiempo."
+    },
+    {
+      "id": "tax8",
+      "pregunta": "¿Qué es la 'Declaración Anual'?",
+      "respuesta_correcta": "Un informe que haces una vez al año para ver si pagaste lo justo o si te deben devolver dinero",
+      "incorrectas": [
+        "Una carta de amor",
+        "Un examen de la escuela",
+        "Una suscripción"
+      ],
+      "dato_extra": "Es el momento de revisar tu saldo a favor."
+    },
+    {
+      "id": "tax9",
+      "pregunta": "¿Para qué sirve el presupuesto público?",
+      "respuesta_correcta": "Para planear en qué se gastará el dinero de los impuestos (salud, educación, infraestructura)",
+      "incorrectas": [
+        "Para dárselo a los bancos",
+        "Para imprimir más billetes",
+        "Para guardarlo en una caja fuerte"
+      ],
+      "dato_extra": "Como ciudadano, puedes revisar en qué se gasta ese dinero."
+    },
+    {
+      "id": "tax10",
+      "pregunta": "¿Cuál es el beneficio de vivir en una sociedad fiscalmente responsable?",
+      "respuesta_correcta": "Mejores servicios públicos, mayor estabilidad económica y menos deuda para el país",
+      "incorrectas": [
+        "Que todo sea gratis",
+        "Que no haya reglas",
+        "Que todos sean ricos"
+      ],
+      "dato_extra": "¡Felicidades! Has dado el primer paso para ser un ciudadano financiero ejemplar."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

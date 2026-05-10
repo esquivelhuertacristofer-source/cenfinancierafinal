@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-3-2-B",
+  "unit_code": "P4-3-2",
+  "unit_title": "Ahorro vs. inversión: ¿cuál es la diferencia?",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Camino de la Inversión",
+  "descripcion": "¿Estás listo para hacer que tu dinero crezca? Pon a prueba tu lógica de inversionista.",
+  "objetivo": "Evaluar la comprensión de los principios básicos de inversión: riesgo, rendimiento y horizonte temporal",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "inv1",
+      "texto": "¿Cuál es la principal diferencia entre ahorrar e invertir?",
+      "opciones": [
+        "Ahorrar es gastar e invertir es guardar",
+        "Ahorrar es guardar el dinero e invertir es ponerlo a trabajar para que crezca",
+        "Son exactamente lo mismo",
+        "Invertir es solo para los genios"
+      ],
+      "correcta": 1,
+      "explicacion": "La inversión busca que tu dinero genere más dinero a través de intereses o ganancias."
+    },
+    {
+      "id": "inv2",
+      "texto": "¿Qué significa el término 'Riesgo' en la inversión?",
+      "opciones": [
+        "Que el dinero siempre se multiplica",
+        "La posibilidad de que la inversión no salga como esperabas y pierdas dinero",
+        "Un tipo de dulce",
+        "Que el banco te regala un seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "Toda inversión tiene un riesgo; aprender a manejarlo es la clave del éxito."
+    },
+    {
+      "id": "inv3",
+      "texto": "Por lo general, si una inversión ofrece una ganancia MUY alta en poco tiempo, el riesgo es...",
+      "opciones": [
+        "Muy bajo",
+        "Inexistente",
+        "Muy alto",
+        "No tiene riesgo"
+      ],
+      "correcta": 2,
+      "explicacion": "Regla de oro: A mayor rendimiento potencial, mayor es el riesgo que corres."
+    },
+    {
+      "id": "inv4",
+      "texto": "¿Qué es la 'Diversificación'?",
+      "opciones": [
+        "Comprar muchos juguetes iguales",
+        "No poner todos tus huevos en una misma canasta (repartir tu dinero en diferentes inversiones)",
+        "Gastar el dinero en muchas tiendas",
+        "Ahorrar en billetes de muchos colores"
+      ],
+      "correcta": 1,
+      "explicacion": "Si una inversión falla, las otras te protegen. Es la mejor forma de bajar el riesgo."
+    },
+    {
+      "id": "inv5",
+      "texto": "¿Cuál es el mejor momento para empezar a invertir?",
+      "opciones": [
+        "Cuando seas abuelito",
+        "Hoy mismo, porque el tiempo hace que el dinero crezca más",
+        "Cuando tengas millones de pesos",
+        "Nunca, es muy peligroso"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre más joven empieces, más tiempo tiene tu dinero para multiplicarse."
+    },
+    {
+      "id": "inv6",
+      "texto": "¿Qué es la 'Liquidez'?",
+      "opciones": [
+        "Cuando el dinero se moja",
+        "La facilidad con la que puedes convertir tu inversión en dinero en efectivo",
+        "Un tipo de refresco",
+        "La cantidad de monedas que tienes"
+      ],
+      "correcta": 1,
+      "explicacion": "Si necesitas el dinero hoy mismo, buscas algo con alta liquidez (como una cuenta bancaria)."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

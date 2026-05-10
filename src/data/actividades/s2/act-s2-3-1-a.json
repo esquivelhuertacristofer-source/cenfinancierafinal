@@ -1,0 +1,145 @@
+{
+  "code": "ACT-S2-3-1-A",
+  "unit_code": "S2-3-1",
+  "unit_title": "La Bolsa Mexicana de Valores (BMV): cómo invertir",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Deuda que Construye",
+  "descripcion": "No todas las deudas son iguales. Aprende a usar el dinero de otros para multiplicar tu riqueza, no para restarla.",
+  "objetivo": "Diferenciar entre deuda productiva (que genera ingresos) y deuda de consumo (que genera gastos)",
+  "xp": 500,
+  "descripcion_formula": "Calculamos la Utilidad Neta después del crédito. Utilidad = (IncrementoIngresos - PagoIntereses).",
+  "inputs": [
+    {
+      "id": "monto_credito_s2",
+      "label": "Monto del Préstamo ($)",
+      "type": "slider",
+      "min": 5000,
+      "max": 50000,
+      "step": 5000,
+      "default": 20000,
+      "unit": "$"
+    },
+    {
+      "id": "tipo_uso_credito",
+      "label": "¿En qué usarás el dinero?",
+      "type": "select",
+      "default": "Equipo de Trabajo (Inversión)",
+      "opciones": [
+        "Equipo de Trabajo (Inversión)",
+        "Vacaciones/Ropa (Consumo)"
+      ]
+    },
+    {
+      "id": "tasa_interes_credito",
+      "label": "Tasa de Interés Anual (%)",
+      "type": "slider",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 25,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "tipo_uso_credito === 'Equipo de Trabajo (Inversión)' ? (monto_credito_s2 * 0.5) - (monto_credito_s2 * (tasa_interes_credito/100)) : 0 - (monto_credito_s2 * (tasa_interes_credito/100))",
+  "output_label": "Impacto en tu Riqueza tras 1 año",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado > 0",
+      "mensaje": "🚀 ¡Deuda Inteligente! Estás usando el dinero del banco para producir más. Lo que ganas con tu equipo es mayor a lo que pagas de interés. Esto es progreso.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tipo_uso_credito === 'Vacaciones/Ropa (Consumo)'",
+      "mensaje": "💸 ¡Trampa de Consumo! Pediste prestado para algo que no produce dinero. Ahora tienes menos riqueza y una deuda que pagar. Estás trabajando para el banco.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 La Deuda Buena es la que alguien más paga por ti (como un inquilino o tus clientes). La Deuda Mala es la que tú pagas con tu sudor.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Por qué las acciones de una empresa pueden subir aunque la economía en general vaya mal? ¿Qué diferencia hay entre comprar acciones individuales vs un ETF del IPC?",
+  "comparativa_espera": "El historial crediticio en México se construye en años pero se destruye en semanas. Un pago tardío puede bajar tu score 50-100 puntos. Un buen score (750+) puede ahorrarte hasta 3% anual en tasas hipotecarias — cientos de miles de pesos en una hipoteca a 20 años.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "comparativa_optima",
+      "label": "Con Estrategia Óptima",
+      "formula": "Math.round(resultado_principal * 1.25)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Si aplicas la estrategia más eficiente disponible"
+    },
+    {
+      "id": "costo_deuda",
+      "label": "Costo Real de la Deuda",
+      "formula": "Math.round(resultado_principal * 0.15)",
+      "prefix": "$",
+      "suffix": " de costo financiero",
+      "descripcion": "El precio real de usar dinero prestado"
+    },
+    {
+      "id": "tiempo_liquidacion",
+      "label": "Tiempo Estimado de Liquidación",
+      "formula": "Math.ceil(resultado_principal / (resultado_principal * 0.08))",
+      "prefix": "",
+      "suffix": " meses estimados",
+      "descripcion": "Meses para liquidar al ritmo actual"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "comparativa_optima",
+      "label": "Con Estrategia Óptima",
+      "color": "#22c55e"
+    }
+  ]
+}

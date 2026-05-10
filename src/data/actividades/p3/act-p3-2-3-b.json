@@ -1,0 +1,68 @@
+{
+  "code": "ACT-P3-2-3-B",
+  "unit_code": "P3-2-3",
+  "unit_title": "La seguridad en el uso de tarjetas y NIP",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "SIMPLE",
+  "titulo": "Los Mandamientos del NIP",
+  "descripcion": "Un buen Ciudadano CEN sabe que la seguridad es primero. Completa las reglas para proteger tu dinero digital.",
+  "objetivo": "Interiorizar las normas básicas de protección de claves y plásticos bancarios",
+  "xp": 250,
+  "texto": "Mi clave de 4 números se llama __BLANK_1__ y debe ser siempre __BLANK_2__. Nunca debo anotarla en __BLANK_3__ ni compartirla por mensajes de texto. Si mi tarjeta se pierde, debo pedirle a mis papás que la manden __BLANK_4__ de inmediato. Al usar un cajero, debo __BLANK_5__ el teclado con mi mano para que nadie vea qué números presiono.",
+  "blanks": [
+    {
+      "id": "blank_1",
+      "respuesta": "NIP",
+      "opciones": [
+        "NIP",
+        "PIN",
+        "Nombre",
+        "Código"
+      ]
+    },
+    {
+      "id": "blank_2",
+      "respuesta": "secreta",
+      "opciones": [
+        "pública",
+        "secreta",
+        "fácil",
+        "larga"
+      ]
+    },
+    {
+      "id": "blank_3",
+      "respuesta": "papel",
+      "opciones": [
+        "papel",
+        "el banco",
+        "la mente",
+        "el aire"
+      ]
+    },
+    {
+      "id": "blank_4",
+      "respuesta": "bloquear",
+      "opciones": [
+        "pintar",
+        "bloquear",
+        "limpiar",
+        "regalar"
+      ]
+    },
+    {
+      "id": "blank_5",
+      "respuesta": "tapar",
+      "opciones": [
+        "tapar",
+        "golpear",
+        "mirar",
+        "limpiar"
+      ]
+    }
+  ],
+  "contexto": "Imagina que estás enseñando a un amigo a usar su primera tarjeta de ahorro infantil de forma segura.",
+  "versión": "2026.Diamond.V2"
+}

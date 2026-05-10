@@ -1,0 +1,115 @@
+{
+  "code": "P2-3-3-A",
+  "unit_code": "P2-3-3",
+  "unit_title": "Mi primera alcancía digital: apps de ahorro para niños",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "Escudo de Seguridad Digital",
+  "descripcion": "El dinero digital es invisible, por eso hay que cuidarlo con un escudo de seguridad. ¿Sabes proteger tu fortuna?",
+  "objetivo": "Identificar prácticas seguras y riesgosas en el manejo de herramientas financieras digitales",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción al grupo correcto: ¿Es una acción SEGURA o una acción PELIGROSA?",
+  "items": [
+    {
+      "id": "s1",
+      "label": "Guardar mi clave en secreto",
+      "emoji": "🤫",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Exacto! Tu clave es personal y secreta como un tesoro."
+    },
+    {
+      "id": "p1",
+      "label": "Contar mi clave a mis amigos",
+      "emoji": "🗣️",
+      "categoria_correcta": "peligroso",
+      "feedback": "¡Cuidado! Si alguien más sabe tu clave, podría usar tu dinero."
+    },
+    {
+      "id": "s2",
+      "label": "Preguntar a mis papás antes de descargar",
+      "emoji": "👨‍👩‍👧",
+      "categoria_correcta": "seguro",
+      "feedback": "Muy bien. Los adultos te ayudan a saber si una app es segura."
+    },
+    {
+      "id": "p2",
+      "label": "Usar mi cumple como clave",
+      "emoji": "🎂",
+      "categoria_correcta": "peligroso",
+      "feedback": "Peligroso. Es una clave muy fácil de adivinar para los extraños."
+    },
+    {
+      "id": "s3",
+      "label": "Cerrar sesión al terminar",
+      "emoji": "🚪",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Súper! Así nadie más puede entrar a tu cuenta por accidente."
+    },
+    {
+      "id": "p3",
+      "label": "Dar mis datos a un extraño en un juego",
+      "emoji": "🎭",
+      "categoria_correcta": "peligroso",
+      "feedback": "¡Nunca lo hagas! Los extraños en internet pueden ser peligrosos."
+    },
+    {
+      "id": "s4",
+      "label": "Poner una clave difícil (ej: 5824)",
+      "emoji": "🔢",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Bien pensado! Una clave difícil es un candado más fuerte."
+    },
+    {
+      "id": "p4",
+      "label": "Creer mensajes de 'Ganaste un Millón'",
+      "emoji": "🤑",
+      "categoria_correcta": "peligroso",
+      "feedback": "Es una trampa común para robar tus datos. ¡Ignóralos!"
+    },
+    {
+      "id": "s5",
+      "label": "Revisar mi saldo con un adulto",
+      "emoji": "👁️",
+      "categoria_correcta": "seguro",
+      "feedback": "Saber cuánto dinero tienes te ayuda a detectar si algo anda mal."
+    },
+    {
+      "id": "p5",
+      "label": "Escribir mi clave en el cuaderno",
+      "emoji": "📓",
+      "categoria_correcta": "peligroso",
+      "feedback": "Cualquiera que tome tu cuaderno podría ver tu secreto."
+    },
+    {
+      "id": "s6",
+      "label": "Ignorar anuncios que piden dinero",
+      "emoji": "🚫",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Excelente! Los anuncios mentirosos son trampas de gasto."
+    },
+    {
+      "id": "p6",
+      "label": "Dejar mi app abierta en otra tableta",
+      "emoji": "📱",
+      "categoria_correcta": "peligroso",
+      "feedback": "Peligroso. Siempre borra tu rastro en dispositivos ajenos."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "seguro",
+      "label": "ACCIÓN SEGURA",
+      "emoji": "🛡️",
+      "color": "#16a34a"
+    },
+    {
+      "id": "peligroso",
+      "label": "ACCIÓN PELIGROSA",
+      "emoji": "⚠️",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

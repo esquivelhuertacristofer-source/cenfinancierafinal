@@ -1,0 +1,127 @@
+{
+  "code": "ACT-P4-3-5-B",
+  "unit_code": "P4-3-5",
+  "unit_title": "Mi plan financiero de vida: metas a corto, mediano y largo plazo",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Viaje al Futuro",
+  "descripcion": "Un portal se abre en tu cuarto. Es tu 'Yo' de 30 años. Dependiendo de lo que elijas hoy, verás cómo cambia su vida. ¡Elige con sabiduría!",
+  "objetivo": "Comprender el impacto acumulado de las pequeñas decisiones financieras en la calidad de vida futura",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Tu 'Yo' del futuro te dice: 'Hola, tengo 30 años. Mi vida actual depende de lo que tú hagas hoy. Tengo un reto para ti'.",
+  "nodo_inicial": "regalo_cumple",
+  "nodos": {
+    "regalo_cumple": {
+      "id": "regalo_cumple",
+      "texto": "Recibes $1,000 pesos de regalo por tu cumpleaños. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "ahorro_inversion",
+          "texto": "Ahorrar $500 e invertirlos en un fondo a largo plazo",
+          "siguiente_nodo": "segundo_paso",
+          "consecuencia": "¡Increíble! Esos $500 con interés compuesto serán miles cuando yo tenga 30.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "gasto_total",
+          "texto": "Gastarlo todo en un juguete nuevo de moda",
+          "siguiente_nodo": "segundo_paso",
+          "consecuencia": "El juguete se romperá en un mes y yo no tendré ese capital inicial.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "segundo_paso": {
+      "id": "segundo_paso",
+      "texto": "Tienes tiempo libre el fin de semana. ¿En qué lo usas?",
+      "opciones": [
+        {
+          "id": "estudio_habilidad",
+          "texto": "Tomar un curso online de programación o finanzas",
+          "siguiente_nodo": "tercer_paso",
+          "consecuencia": "¡Bien! Esa habilidad me permitirá ganar 3 veces más salario en el futuro.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "jugar_todo_dia",
+          "texto": "Jugar videojuegos todo el día sin aprender nada nuevo",
+          "siguiente_nodo": "tercer_paso",
+          "consecuencia": "Te divertiste, pero perdiste la oportunidad de prepararte mejor.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "tercer_paso": {
+      "id": "tercer_paso",
+      "texto": "Aparece una oportunidad de poner un pequeño negocio de galletas en la escuela. ¿Qué decides?",
+      "opciones": [
+        {
+          "id": "emprender_riesgo",
+          "texto": "Arriesgarte, aprender a vender y manejar el dinero",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Eres un valiente! Aprender a emprender de niño es la mejor escuela.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "comodidad",
+          "texto": "No hacer nada por miedo a que nadie compre",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Te quedaste igual, sin aprender nada sobre el valor del trabajo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_exito_total": {
+      "id": "final_exito_total",
+      "texto": "¡Increíble! Tu 'Yo' del futuro tiene una casa, un gran trabajo y tranquilidad financiera gracias a tu esfuerzo de hoy.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Las semillas que siembras hoy son los frutos que comerás mañana. ¡Sigue así!"
+    },
+    "final_comodo": {
+      "id": "final_comodo",
+      "texto": "Tu 'Yo' del futuro vive al día y siempre está preocupado por el dinero. ¡Todavía estás a tiempo de cambiar esto!",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La comodidad de hoy puede ser la dificultad del mañana. ¡Empieza a planear!"
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

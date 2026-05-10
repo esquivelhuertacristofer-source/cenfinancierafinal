@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P1-3-2-B",
+  "unit_code": "P1-3-2",
+  "unit_title": "¿Cuánto cuesta mi meta? Calcular lo que necesito",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RELLENA",
+  "complejidad": "ALTA",
+  "titulo": "El Diario de un Ahorrador",
+  "descripcion": "Ceny está escribiendo sus metas en su cuaderno. ¡Ayúdalo a que los números cuadren perfectamente!",
+  "objetivo": "Reforzar el cálculo de faltantes y la terminología de planificación financiera",
+  "xp": 200,
+  "texto": "Hoy descubrí que mi meta cuesta $100. Si en mi alcancía ya tengo $60, entonces me faltan __BLANK1__ pesos para lograrlo. Para saber este número, tuve que hacer una __BLANK2__. Ayer vi que el precio bajó a $90, ¡ahora mi misión es más __BLANK3__! Solo me faltan __BLANK4__ pesos. Saber exactamente cuánto necesito me da mucha __BLANK5__. Cada moneda que ahorro me acerca un __BLANK6__ más a mi sueño. No voy a __BLANK7__ porque soy un Genio Financiero de __BLANK8__.",
+  "blanks": [
+    {
+      "id": "BLANK1",
+      "opciones": [
+        "40",
+        "10",
+        "100"
+      ],
+      "correcta": "40"
+    },
+    {
+      "id": "BLANK2",
+      "opciones": [
+        "resta",
+        "suma",
+        "canción"
+      ],
+      "correcta": "resta"
+    },
+    {
+      "id": "BLANK3",
+      "opciones": [
+        "fácil",
+        "difícil",
+        "aburrida"
+      ],
+      "correcta": "fácil"
+    },
+    {
+      "id": "BLANK4",
+      "opciones": [
+        "30",
+        "50",
+        "90"
+      ],
+      "correcta": "30"
+    },
+    {
+      "id": "BLANK5",
+      "opciones": [
+        "seguridad",
+        "tristeza",
+        "hambre"
+      ],
+      "correcta": "seguridad"
+    },
+    {
+      "id": "BLANK6",
+      "opciones": [
+        "paso",
+        "salto",
+        "vuelo"
+      ],
+      "correcta": "paso"
+    },
+    {
+      "id": "BLANK7",
+      "opciones": [
+        "rendirme",
+        "gastar",
+        "dormir"
+      ],
+      "correcta": "rendirme"
+    },
+    {
+      "id": "BLANK8",
+      "opciones": [
+        "CEN Academy",
+        "juguete",
+        "papel"
+      ],
+      "correcta": "CEN Academy"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

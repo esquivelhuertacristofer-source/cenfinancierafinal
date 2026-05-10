@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P5-3-3-B",
+  "unit_code": "P5-3-3",
+  "unit_title": "Interés Compuesto: la octava maravilla del mundo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Secreto de las AFOREs",
+  "descripcion": "¿Sabes quién cuida el dinero de los trabajadores en México? ¡Descubre el poder de las AFOREs!",
+  "objetivo": "Identificar el funcionamiento del sistema de ahorro para el retiro en México (SAR)",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "afo1",
+      "texto": "¿Qué significa la palabra AFORE?",
+      "opciones": [
+        "Administradora de Fondos para el Retiro",
+        "Asociación de Futuros Operadores Ricos y Exitosos",
+        "Ayuda Financiera Organizada y Real",
+        "Agencia de Fortunas en Efectivo"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una institución que invierte tu dinero para que crezca mientras tú trabajas."
+    },
+    {
+      "id": "afo2",
+      "texto": "¿De quién es el dinero que está en una AFORE?",
+      "opciones": [
+        "Del gobierno",
+        "Del banco",
+        "Del trabajador (es una cuenta individual)",
+        "De la empresa"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada trabajador tiene su propia cuenta con su nombre, como una alcancía personal."
+    },
+    {
+      "id": "afo3",
+      "texto": "¿A qué edad se retira normalmente una persona en México?",
+      "opciones": [
+        "A los 40 años",
+        "A los 65 años",
+        "A los 80 años",
+        "Nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "A los 65 años es cuando puedes disponer de tu fondo completo para vivir tu jubilación."
+    },
+    {
+      "id": "afo4",
+      "texto": "¿Qué son las 'Aportaciones Voluntarias'?",
+      "opciones": [
+        "Multas que te cobran",
+        "Dinero extra que tú decides ahorrar en tu AFORE para que crezca más",
+        "Regalos que le haces al banco",
+        "Pagos por usar la App"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la mejor forma de subir tu pensión final por decisión propia."
+    },
+    {
+      "id": "afo5",
+      "texto": "¿En qué tres cosas debes fijarte para elegir la mejor AFORE?",
+      "opciones": [
+        "En el color del logo",
+        "En los Rendimientos, las Comisiones y el Servicio",
+        "En qué tan cerca está de tu casa",
+        "En si te regalan una pluma"
+      ],
+      "correcta": 1,
+      "explicacion": "Buscas que te paguen más (rendimiento) y te cobren menos (comisión)."
+    },
+    {
+      "id": "afo6",
+      "texto": "¿Qué es la CONSAR?",
+      "opciones": [
+        "Una marca de computadoras",
+        "La autoridad que vigila que las AFOREs cuiden bien tu dinero",
+        "Un tipo de moneda",
+        "El nombre de un banco"
+      ],
+      "correcta": 1,
+      "explicacion": "CONSAR es el guardián que asegura que nadie toque tu dinero sin permiso."
+    },
+    {
+      "id": "afo7",
+      "texto": "¿Por qué el dinero de la AFORE crece tanto en 40 años?",
+      "opciones": [
+        "Por arte de magia",
+        "Por el Interés Compuesto (el dinero genera ganancias que se reinvierten)",
+        "Porque el gobierno le mete dinero",
+        "Porque los billetes se reproducen"
+      ],
+      "correcta": 1,
+      "explicacion": "El tiempo es el mejor aliado del interés compuesto."
+    },
+    {
+      "id": "afo8",
+      "texto": "¿Cuándo es el mejor momento para empezar a pensar en tu AFORE?",
+      "opciones": [
+        "Cuando cumplas 60 años",
+        "Desde tu primer trabajo formal",
+        "Cuando seas jefe",
+        "Nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre más joven empieces, más millonario serás al retirarte."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

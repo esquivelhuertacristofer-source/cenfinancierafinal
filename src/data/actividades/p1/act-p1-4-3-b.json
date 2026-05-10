@@ -1,0 +1,125 @@
+{
+  "code": "ACT-P1-4-3-B",
+  "unit_code": "P1-4-3",
+  "unit_title": "El precio justo: ni muy caro ni muy barato",
+  "level": "Primaria 1",
+  "tipo": "QUIZ",
+  "titulo": "Certificación en Precios Justos",
+  "descripcion": "Asegúrate de saber cómo equilibrar tus gastos y tus ganancias para que tu negocio sea exitoso.",
+  "objetivo": "Evaluar la capacidad de distinguir entre costo, ganancia y precio justo.",
+  "xp": 300,
+  "aprobacion_minima": 0.6,
+  "preguntas": [
+    {
+      "texto": "Si hacer un dulce te cuesta $5 y lo vendes a $5, ¿cuánto dinero ganaste?",
+      "opciones": [
+        "Ganaste $5",
+        "No ganaste nada ($0), solo recuperaste lo que gastaste",
+        "Perdiste dinero",
+        "El precio siempre lo fija el gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Si vendes al mismo precio que te costó, no ganas nada. La ganancia viene de vender MÁS caro que el costo."
+    },
+    {
+      "texto": "¿Qué es la 'Ganancia'?",
+      "opciones": [
+        "El dinero total que recibes",
+        "El dinero extra que te queda después de pagar los materiales",
+        "El nombre de una moneda",
+        "Mientras más barato, siempre es mejor para el negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Ganancia = Precio de venta − Costo de materiales. Lo que sobra después de pagar los materiales es tu ganancia."
+    },
+    {
+      "texto": "¿Qué pasa si pones un precio MUY CARO que nadie puede pagar?",
+      "opciones": [
+        "Te vuelves rico rápido",
+        "Nadie compra tu producto y tu negocio fracasa",
+        "El producto se vuelve mejor",
+        "El precio no tiene relación con los costos"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Así es! Un precio muy alto ahuyenta a los clientes. El precio debe ser justo: ni tan bajo que pierdas, ni tan alto que no vendan."
+    },
+    {
+      "texto": "Si gastaste $10 en materiales y quieres ganar $5, ¿cuál es el precio de venta?",
+      "opciones": [
+        "$5",
+        "$10",
+        "$15",
+        "Solo importa el precio si vendes en el extranjero"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Bien calculado! Costo $10 + Ganancia deseada $5 = Precio de venta $15. ¡Esa es la fórmula del precio justo!"
+    },
+    {
+      "texto": "¿Por qué es importante recuperar el 'Costo'?",
+      "opciones": [
+        "Para poder comprar materiales y seguir trabajando mañana",
+        "Para comprar juguetes",
+        "No es importante",
+        "Solo funciona los días de lluvia"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Recuperar el costo te permite comprar más materiales y continuar produciendo. Sin eso, el negocio se detiene."
+    },
+    {
+      "texto": "Verdadero o Falso: Un precio justo ayuda a que los clientes confíen en ti.",
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si el cliente es tu amigo",
+        "Es exclusivo de los negocios de tecnología"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Verdadero! Los clientes que sienten que pagaron un precio justo por algo bueno regresan y recomiendan tu negocio."
+    },
+    {
+      "texto": "¿Qué puedes hacer si nadie compra tu producto porque dicen que es caro?",
+      "opciones": [
+        "Llorar",
+        "Revisar tus costos y ver si puedes bajar un poquito el precio o mejorar el producto",
+        "Enojarte con los clientes",
+        "Las tarjetas de crédito son exactamente igual que efectivo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Muy bien! Cuando nadie compra, hay que revisar los costos o mejorar el producto. Adaptarse es clave para emprender."
+    },
+    {
+      "texto": "Si vendes 2 lápices a $10 cada uno, ¿cuánto dinero entró en total a tu caja?",
+      "opciones": [
+        "$10",
+        "$20",
+        "$5",
+        "El banco siempre decide por ti cuánto debes usar"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! 2 lápices × $10 cada uno = $20 en total. Así calculas cuánto dinero entra a tu caja cada día."
+    },
+    {
+      "texto": "¿Cuál es el símbolo que usamos para los precios?",
+      "opciones": [
+        "&",
+        "$",
+        "#",
+        "Puedes cobrar lo que quieras sin importar el costo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! El símbolo $ representa pesos (o dólares). Usarlo correctamente en tus precios es parte de ser un negocio serio."
+    },
+    {
+      "texto": "¿Cómo se siente un cliente cuando paga un precio justo por algo muy bueno?",
+      "opciones": [
+        "Engañado",
+        "Satisfecho y feliz",
+        "Triste",
+        "Copiar exactamente lo de la competencia es la mejor estrategia"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Un precio justo + buen producto = cliente feliz que regresa. Esa es la receta del éxito en cualquier negocio."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

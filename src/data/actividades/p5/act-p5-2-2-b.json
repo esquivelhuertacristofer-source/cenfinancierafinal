@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P5-2-2-B",
+  "unit_code": "P5-2-2",
+  "unit_title": "El CAT: desenmascarando el costo real",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Cripto-Inteligencia",
+  "descripcion": "¿Estás listo para el futuro del dinero? ¡Pon a prueba tu conocimiento sobre la revolución digital!",
+  "objetivo": "Evaluar la comprensión de los conceptos básicos de criptoactivos y sus riesgos asociados",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "cr1",
+      "pregunta": "¿Quién inventó el Bitcoin (según su seudónimo)?",
+      "respuesta_correcta": "Satoshi Nakamoto",
+      "incorrectas": [
+        "Elon Musk",
+        "Bill Gates",
+        "Mark Zuckerberg"
+      ],
+      "dato_extra": "Nadie sabe quién es realmente Satoshi Nakamoto, ¡es el gran misterio de internet!"
+    },
+    {
+      "id": "cr2",
+      "pregunta": "¿Por qué el Bitcoin se compara con el Oro?",
+      "respuesta_correcta": "Porque es escaso (solo existirán 21 millones) y difícil de conseguir",
+      "incorrectas": [
+        "Porque es de color dorado",
+        "Porque brilla mucho",
+        "Porque se puede fundir"
+      ],
+      "dato_extra": "Al ser limitado, mucha gente cree que su valor subirá con el tiempo."
+    },
+    {
+      "id": "cr3",
+      "pregunta": "¿Qué es una 'Wallet' en el mundo cripto?",
+      "respuesta_correcta": "Una billetera digital donde guardas tus llaves para usar tus criptomonedas",
+      "incorrectas": [
+        "Una tarjeta de plástico",
+        "Un banco físico",
+        "Una aplicación para jugar"
+      ],
+      "dato_extra": "Existen wallets en apps y también wallets físicas que parecen USB."
+    },
+    {
+      "id": "cr4",
+      "pregunta": "¿Qué pasa si pierdes las 'Palabras Semilla' (claves) de tu wallet?",
+      "respuesta_correcta": "Pierdes el acceso a tu dinero para siempre; nadie te puede ayudar",
+      "incorrectas": [
+        "Llamas al soporte técnico",
+        "Pides una contraseña nueva",
+        "No pasa nada"
+      ],
+      "dato_extra": "En el mundo cripto, tú eres tu propio banco. La responsabilidad es total."
+    },
+    {
+      "id": "cr5",
+      "pregunta": "¿Qué significa que las criptomonedas sean 'Volátiles'?",
+      "respuesta_correcta": "Que su precio puede subir o bajar muchísimo en muy poco tiempo",
+      "incorrectas": [
+        "Que pueden volar",
+        "Que son invisibles",
+        "Que son ilegales"
+      ],
+      "dato_extra": "Invertir en cripto es de muy alto riesgo debido a estos cambios bruscos."
+    },
+    {
+      "id": "cr6",
+      "pregunta": "¿Qué es la 'Minería' de criptomonedas?",
+      "respuesta_correcta": "Usar computadoras potentes para resolver problemas matemáticos y verificar transacciones",
+      "incorrectas": [
+        "Picar piedras en una mina real",
+        "Buscar monedas en el jardín",
+        "Comprar monedas en el banco"
+      ],
+      "dato_extra": "Los mineros reciben recompensas en criptomonedas por su trabajo."
+    },
+    {
+      "id": "cr7",
+      "pregunta": "¿Qué es Ethereum?",
+      "respuesta_correcta": "Una red blockchain que permite crear 'Contratos Inteligentes' y apps",
+      "incorrectas": [
+        "Un tipo de gas",
+        "El nombre de un planeta",
+        "Una marca de computadoras"
+      ],
+      "dato_extra": "Ethereum es como una computadora mundial que nadie puede apagar."
+    },
+    {
+      "id": "cr8",
+      "pregunta": "¿Qué es un NFT?",
+      "respuesta_correcta": "Un certificado digital de propiedad de algo único (como arte o música) en el blockchain",
+      "incorrectas": [
+        "Una moneda común",
+        "Un tipo de virus",
+        "Un archivo que se puede copiar mil veces"
+      ],
+      "dato_extra": "NFT significa 'Token No Fungible', es decir, que no hay dos iguales."
+    },
+    {
+      "id": "cr9",
+      "pregunta": "¿Por qué algunas personas critican el Bitcoin?",
+      "respuesta_correcta": "Porque la minería gasta muchísima electricidad",
+      "incorrectas": [
+        "Porque es muy lento",
+        "Porque es muy barato",
+        "Porque es aburrido"
+      ],
+      "dato_extra": "Se están buscando formas de minar usando solo energías limpias."
+    },
+    {
+      "id": "cr10",
+      "pregunta": "¿Cuál es la regla número 1 antes de comprar cripto?",
+      "respuesta_correcta": "Investigar mucho y nunca invertir dinero que no puedas permitirte perder",
+      "incorrectas": [
+        "Comprar lo que diga un influencer",
+        "Gastar todos tus ahorros",
+        "Pedir prestado para comprar"
+      ],
+      "dato_extra": "¡Felicidades! Ahora tienes una base sólida sobre el futuro financiero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

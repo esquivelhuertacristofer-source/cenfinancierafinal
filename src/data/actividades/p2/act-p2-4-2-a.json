@@ -1,0 +1,71 @@
+{
+  "code": "ACT-P2-4-2-A",
+  "unit_code": "P2-4-2",
+  "unit_title": "Los materiales cuestan: calcular los gastos de producción",
+  "level": "Primaria 2",
+  "tipo": "SIMULADOR",
+  "complejidad": "BAJO",
+  "titulo": "Mi Taller de Costos",
+  "descripcion": "Calcula cuánto dinero necesitas invertir antes de vender tu primer producto. ¡Cada peso cuenta!",
+  "objetivo": "Aprender a enlistar e identificar los costos de los insumos necesarios para la producción.",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "cantidad_limones",
+      "label": "Bolsa de Limones ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "$"
+    },
+    {
+      "id": "kilo_azucar",
+      "label": "Kilo de Azúcar ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 15,
+      "unit": "$"
+    },
+    {
+      "id": "paquete_vasos",
+      "label": "Paquete de Vasos ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 10,
+      "unit": "$"
+    }
+  ],
+  "formula": "cantidad_limones + kilo_azucar + paquete_vasos",
+  "output_label": "Inversión Necesaria",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "escenarios": [
+    {
+      "condicion": "resultado == 0",
+      "mensaje": "⚠️ ¡Cuidado! Sin ingredientes no hay producto. Necesitas invertir algo para empezar.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado > 150",
+      "mensaje": "🧐 ¡Wow! Es mucha inversión para un pequeño puesto. Trata de buscar precios más baratos para empezar.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado > 0 && resultado <= 80",
+      "mensaje": "✅ ¡Excelente! Es una inversión pequeña y fácil de recuperar. ¡Estás listo para producir!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Recuerda: Un buen emprendedor anota hasta el último centavo para saber si su negocio es negocio.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

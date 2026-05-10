@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P4-1-1-A",
+  "unit_code": "P4-1-1",
+  "unit_title": "Los bancos: ¿qué son y para qué sirven?",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Banco Virtual",
+  "descripcion": "Bienvenido a tu primer banca digital. Aprende a gestionar tus depósitos, retiros y pagos de servicios de forma segura.",
+  "objetivo": "Comprender la dinámica de ingresos y egresos dentro de una cuenta bancaria digital",
+  "xp": 400,
+  "descripcion_formula": "Calculamos el saldo final: Saldo Inicial + Depósitos - Retiros - Pagos de Servicios.",
+  "inputs": [
+    {
+      "id": "saldo_inicial",
+      "label": "Tu saldo inicial",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000,
+      "step": 500,
+      "default": 2000,
+      "unit": "$"
+    },
+    {
+      "id": "depositos",
+      "label": "Depósitos (Ahorro o Regalos)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "retiros",
+      "label": "Retiros en efectivo",
+      "type": "slider",
+      "min": 0,
+      "max": 2000,
+      "step": 100,
+      "default": 200,
+      "unit": "$"
+    },
+    {
+      "id": "pagos",
+      "label": "Pago de servicios (Luz/Internet)",
+      "type": "slider",
+      "min": 0,
+      "max": 3000,
+      "step": 100,
+      "default": 800,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "saldo_inicial + depositos - retiros - pagos",
+  "output_label": "Tu Saldo Disponible",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "pie",
+  "escenarios": [
+    {
+      "condicion": "resultado >= 1000",
+      "mensaje": "✅ ¡Excelente gestión! Tienes un saldo saludable para imprevistos.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 1000 && resultado > 0",
+      "mensaje": "⚠️ ¡Atención! Tu saldo es bajo. Intenta reducir los retiros para ahorrar más.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado <= 0",
+      "mensaje": "🚨 ¡Cuenta en Rojo! Gastaste más de lo que tenías. Revisa tus gastos urgentemente.",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Por qué es más seguro guardar dinero en un banco que debajo del colchón? ¿Qué servicios te da el banco que no puedes darte solo?",
+  "comparativa_espera": "Los bancos en México procesan más de 1 millón de transacciones por hora. Revisar tu estado de cuenta mensualmente, aunque sea 5 minutos, puede ayudarte a detectar cargos no reconocidos y mejorar tu presupuesto.",
+  "outputs_multiples": [
+    {
+      "id": "saldo_disponible",
+      "label": "Saldo Disponible",
+      "formula": "Math.max(0, saldo_inicial + depositos - retiros - pagos)",
+      "prefix": "$",
+      "suffix": " pesos",
+      "descripcion": "Lo que tienes disponible en tu cuenta"
+    },
+    {
+      "id": "total_salidas",
+      "label": "Total de Salidas",
+      "formula": "retiros + pagos",
+      "prefix": "$",
+      "suffix": " pesos",
+      "descripcion": "Todo lo que salió de tu cuenta"
+    },
+    {
+      "id": "porcentaje_usado",
+      "label": "Porcentaje del Saldo Usado",
+      "formula": "Math.round((retiros + pagos) / (saldo_inicial + depositos) * 100)",
+      "prefix": "",
+      "suffix": "% utilizado",
+      "descripcion": "Qué tan eficientemente estás usando tu dinero"
+    },
+    {
+      "id": "estado_cuenta",
+      "label": "Estado de la Cuenta",
+      "formula": "(saldo_inicial + depositos - retiros - pagos) >= 0 ? 1 : 0",
+      "prefix": "",
+      "suffix": " (1=sano, 0=negativo)",
+      "descripcion": "Si es negativo, gastaste más de lo que tenías"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "saldo_disponible",
+      "label": "Saldo Disponible",
+      "color": "#6366f1"
+    },
+    {
+      "id": "total_salidas",
+      "label": "Total de Salidas",
+      "color": "#22c55e"
+    }
+  ]
+}

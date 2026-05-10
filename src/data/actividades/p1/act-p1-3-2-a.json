@@ -1,0 +1,61 @@
+{
+  "code": "ACT-P1-3-2-A",
+  "unit_code": "P1-3-2",
+  "unit_title": "¿Cuánto cuesta mi meta? Calcular lo que necesito",
+  "level": "Primaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "BAJO",
+  "titulo": "Detective de Metas",
+  "descripcion": "¡Usa tu superpoder de la resta! Ajusta el precio de tu meta y tu ahorro para descubrir cuánto te falta para lograr tu sueño.",
+  "objetivo": "Aprender a calcular brechas de ahorro mediante la resta de valores.",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "precio_meta",
+      "label": "Precio de la Meta ($)",
+      "type": "slider",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "default": 100,
+      "unit": "$"
+    },
+    {
+      "id": "ahorro_actual",
+      "label": "Dinero Ahorrado ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 40,
+      "unit": "$"
+    }
+  ],
+  "formula": "precio_meta - ahorro_actual",
+  "output_label": "Misión Pendiente (Faltante)",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "escenarios": [
+    {
+      "condicion": "resultado > 0",
+      "mensaje": "🔍 Detective, todavía nos falta un poco. ¡Cada moneda que ahorres te acerca más!",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado == 0",
+      "mensaje": "🌟 ¡META LOGRADA! Tienes exactamente lo que necesitas. ¡A la tienda!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "💰 ¡SÚPER AHORRADOR! Tienes más de lo necesario. ¡El resto es para tu próxima meta!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "ahorro_actual >= precio_meta * 0.5 && ahorro_actual < precio_meta",
+      "mensaje": "⚡ ¡Ya vas a la mitad del camino! No te rindas, el final está cerca.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

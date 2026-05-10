@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-1-2-A",
+  "unit_code": "P6-1-2",
+  "unit_title": "Las finanzas personales a lo largo de la vida",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Derecho u Obligación?",
+  "descripcion": "En el mundo de los derivados, no es lo mismo estar obligado que tener el derecho a elegir. ¡Aprende las diferencias!",
+  "objetivo": "Diferenciar entre opciones (CALL/PUT) y futuros, comprendiendo el concepto de prima y ejercicio del derecho",
+  "xp": 250,
+  "instruccion": "Arrastra cada característica a su categoría correcta.",
+  "items": [
+    {
+      "id": "o1",
+      "label": "Derecho a COMPRAR un activo",
+      "emoji": "🛒",
+      "categoria_correcta": "call",
+      "feedback": "Si el precio sube, usas tu CALL para comprar barato."
+    },
+    {
+      "id": "o2",
+      "label": "Derecho a VENDER un activo",
+      "emoji": "💰",
+      "categoria_correcta": "put",
+      "feedback": "Si el precio baja, usas tu PUT para vender caro."
+    },
+    {
+      "id": "o3",
+      "label": "Obligación de cumplir el trato",
+      "emoji": "⚖️",
+      "categoria_correcta": "futuro",
+      "feedback": "En los futuros no hay elección, se debe cumplir."
+    },
+    {
+      "id": "o4",
+      "label": "Se paga una 'Prima' (Costo)",
+      "emoji": "🎟️",
+      "categoria_correcta": "opcion_general",
+      "feedback": "La prima es el precio que pagas por tener el derecho a elegir."
+    },
+    {
+      "id": "o5",
+      "label": "Se puede dejar vencer sin usarlo",
+      "emoji": "⏳",
+      "categoria_correcta": "opcion_general",
+      "feedback": "Si el mercado no te conviene, simplemente no usas la opción."
+    },
+    {
+      "id": "o6",
+      "label": "Protección contra la subida de precios",
+      "emoji": "📈",
+      "categoria_correcta": "call",
+      "feedback": "Ideal para compradores que temen que algo suba."
+    },
+    {
+      "id": "o7",
+      "label": "Protección contra la caída de precios",
+      "emoji": "📉",
+      "categoria_correcta": "put",
+      "feedback": "Ideal para vendedores que temen que su producto valga menos."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "call",
+      "label": "OPCIÓN CALL",
+      "emoji": "🟢",
+      "color": "#10b981"
+    },
+    {
+      "id": "put",
+      "label": "OPCIÓN PUT",
+      "emoji": "🔴",
+      "color": "#ef4444"
+    },
+    {
+      "id": "futuro",
+      "label": "FUTURO",
+      "emoji": "⛓️",
+      "color": "#1f2937"
+    },
+    {
+      "id": "opcion_general",
+      "label": "REGLA DE OPCIONES",
+      "emoji": "⚙️",
+      "color": "#3b82f6"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

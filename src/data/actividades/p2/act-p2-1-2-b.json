@@ -1,0 +1,135 @@
+{
+  "code": "P2-1-2-B",
+  "unit_code": "P2-1-2",
+  "unit_title": "Billetes y monedas: aprende a identificar todos",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro de la Moneda",
+  "descripcion": "México tiene billetes hermosos. ¿Eres capaz de reconocer cada uno y encontrar sus secretos?",
+  "objetivo": "Validar la identificación de denominaciones y elementos de seguridad de la moneda nacional",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿De qué color es el billete de $100 donde aparece Sor Juana Inés de la Cruz?",
+      "opciones": [
+        "Azul",
+        "Rojo",
+        "Rosa",
+        "Verde"
+      ],
+      "correcta": 1,
+      "explicacion": "El billete de $100 es rojo y es uno de los más premiados por su belleza en el mundo."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué animal aparece en el billete rosa de $50?",
+      "opciones": [
+        "Una ballena",
+        "Un ajolote",
+        "Un jaguar",
+        "Un águila"
+      ],
+      "correcta": 1,
+      "explicacion": "¡El ajolote! Es un símbolo de Xochimilco y de la naturaleza mexicana."
+    },
+    {
+      "id": "q3",
+      "texto": "¿De qué material está hecho el billete de $50 para que dure más y aguante el agua?",
+      "opciones": [
+        "Papel de cuaderno",
+        "Plástico (polímero)",
+        "Tela",
+        "Cartón"
+      ],
+      "correcta": 1,
+      "explicacion": "El polímero es un plástico especial que hace que el billete sea muy resistente y difícil de romper."
+    },
+    {
+      "id": "q4",
+      "texto": "Si tocas las palabras 'Banco de México' en un billete, ¿qué deberías sentir?",
+      "opciones": [
+        "Que está muy liso",
+        "Relieve (se siente rugoso al tacto)",
+        "Que está mojado",
+        "Que tiene pegamento"
+      ],
+      "correcta": 1,
+      "explicacion": "El relieve es una de las marcas de seguridad más importantes. ¡Tus dedos son detectives!"
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué personajes aparecen en el billete verde de $200?",
+      "opciones": [
+        "Benito Juárez",
+        "Miguel Hidalgo y José María Morelos",
+        "Sor Juana",
+        "Frida Kahlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Ellos son los héroes que lucharon por la Independencia de México."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué sucede con el número del billete cuando lo inclinas o lo mueves?",
+      "opciones": [
+        "Se borra",
+        "Cambia de color (ejemplo: de verde a azul)",
+        "Se hace más grande",
+        "Empieza a brillar"
+      ],
+      "correcta": 1,
+      "explicacion": "Esta es la tinta que cambia de color, un secreto que los falsificadores no pueden copiar fácilmente."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuál es la moneda que tiene un centro dorado y un borde plateado?",
+      "opciones": [
+        "La de 1 peso",
+        "La de 10 pesos",
+        "La de 50 centavos",
+        "La de 2 pesos"
+      ],
+      "correcta": 1,
+      "explicacion": "La moneda de $10 es bimetálica y es muy fácil de distinguir por sus dos colores."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué debes hacer si un billete se te rompe un poquito?",
+      "opciones": [
+        "Tirarlo a la basura",
+        "Pegarlo con cinta transparente y seguir usándolo o llevarlo al banco",
+        "Llorar",
+        "Rayarlo todo"
+      ],
+      "correcta": 1,
+      "explicacion": "Un billete roto no pierde su valor si está completo. Puedes cambiarlo por uno nuevo en cualquier banco."
+    },
+    {
+      "id": "q9",
+      "texto": "Verdadero o Falso: Los billetes de mayor valor (como el de $500) son un poco más largos que los de menor valor.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! Esto ayuda a las personas que no pueden ver bien a distinguir el valor por el tamaño."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Por qué es importante NO rayar ni pintar los billetes?",
+      "opciones": [
+        "Porque se ven feos",
+        "Porque pueden perder su valor y las máquinas no los aceptarán",
+        "Porque nos regañan",
+        "Porque se ensucian las manos"
+      ],
+      "correcta": 1,
+      "explicacion": "Debemos cuidar el dinero porque es una herramienta que todos usamos. ¡Mantenlos limpios y sanos!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

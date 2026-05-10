@@ -1,0 +1,88 @@
+{
+  "code": "ACT-P3-4-1-A",
+  "unit_code": "P3-4-2",
+  "unit_title": "¿Quién es mi cliente? El mercado objetivo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Cliente Diamante",
+  "descripcion": "Para que tu negocio sea un éxito, debes conocer muy bien a quién le vas a vender. ¡Crea el perfil de tu cliente ideal!",
+  "objetivo": "Aprender los conceptos básicos de segmentación de mercado y perfil del consumidor",
+  "xp": 350,
+  "output_type": "Perfil de Cliente",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "quien_es",
+      "titulo": "👥 ¿Quién es tu cliente?",
+      "descripcion": "Danos los datos básicos de la persona que comprará tu producto.",
+      "campos": [
+        {
+          "id": "edad_cliente",
+          "label": "¿Qué edad tiene?",
+          "type": "select",
+          "opciones": [
+            "Bebé",
+            "Niño/a",
+            "Joven",
+            "Adulto",
+            "Abuelito/a"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "gustos_cliente",
+          "label": "¿Qué le gusta hacer?",
+          "type": "text",
+          "placeholder": "Ej: Jugar futbol, leer, cocinar...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "necesidad",
+      "titulo": "💡 ¿Qué problema le resuelves?",
+      "descripcion": "La gente compra cosas para solucionar algo o sentirse mejor.",
+      "campos": [
+        {
+          "id": "problema_cliente",
+          "label": "¿Cuál es su necesidad?",
+          "type": "textarea",
+          "placeholder": "Ej: Tiene sed en el recreo, necesita un regalo para su mamá...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "donde_pago",
+      "titulo": "📍 ¿Dónde está y cuánto paga?",
+      "descripcion": "Busca a tu cliente donde él se sienta cómodo.",
+      "campos": [
+        {
+          "id": "lugar_cliente",
+          "label": "¿Dónde lo puedes encontrar?",
+          "type": "text",
+          "placeholder": "Ej: En la escuela, en el parque, por internet...",
+          "requerido": true
+        },
+        {
+          "id": "precio_max",
+          "label": "¿Cuánto es lo máximo que pagaría?",
+          "type": "number",
+          "placeholder": "Monto en pesos",
+          "requerido": true
+        },
+        {
+          "id": "precio_minimo_viable",
+          "label": "Precio Mínimo Viable",
+          "type": "calculated",
+          "formula": "Math.round(precio_max * 0.65)",
+          "unit": "$",
+          "ayuda": "El precio más bajo al que aún valdría la pena vender (65% del máximo)"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-4-3-A",
+  "unit_code": "S3-4-3",
+  "unit_title": "Propiedad intelectual: protege tus ideas y marcas",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "ALTO",
+  "titulo": "El Mundo de los Bancos",
+  "descripcion": "El dinero tiene diferentes reglas según el país. ¿Puedes dominar el tablero financiero global?",
+  "objetivo": "Identificar las funciones de los organismos financieros internacionales y las características de diferentes sistemas económicos",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "glob1",
+      "pregunta": "¿Qué es el 'FMI' (Fondo Monetario Internacional)?",
+      "respuesta_correcta": "Una organización que busca la estabilidad financiera mundial y presta dinero a países en crisis a cambio de reformas",
+      "incorrectas": [
+        "Un banco privado para millonarios",
+        "La empresa que imprime dólares",
+        "Un club de comercio"
+      ],
+      "dato_extra": "Es como el 'bombero' que acude cuando un país se queda sin dinero para pagar sus deudas."
+    },
+    {
+      "id": "glob2",
+      "pregunta": "¿Cuál es la principal característica de las 'Finanzas Islámicas'?",
+      "respuesta_correcta": "Prohíben el cobro de intereses (Riba) y las inversiones en negocios no éticos o de azar",
+      "incorrectas": [
+        "No permiten usar billetes",
+        "Solo se puede invertir en petróleo",
+        "Son gratis"
+      ],
+      "dato_extra": "En lugar de intereses, el banco y el cliente comparten las ganancias y pérdidas del negocio."
+    },
+    {
+      "id": "glob3",
+      "pregunta": "¿Por qué el Dólar (USD) es la 'Moneda de Reserva' mundial?",
+      "respuesta_correcta": "Porque es la moneda más aceptada para el comercio internacional (como el petróleo) y se considera la más segura",
+      "incorrectas": [
+        "Porque es la más bonita",
+        "Porque Estados Unidos lo obliga por ley",
+        "Porque el oro ya no existe"
+      ],
+      "dato_extra": "Casi todos los países guardan una gran parte de sus ahorros en dólares."
+    },
+    {
+      "id": "glob4",
+      "pregunta": "¿Qué hace el 'Banco Mundial'?",
+      "respuesta_correcta": "Financia proyectos de desarrollo a largo plazo, como escuelas, hospitales y puentes en países pobres",
+      "incorrectas": [
+        "Prestar dinero para comprar casas",
+        "Imprimir dinero para todo el mundo",
+        "Cobrar impuestos globales"
+      ],
+      "dato_extra": "Su objetivo principal es reducir la pobreza extrema en el planeta."
+    },
+    {
+      "id": "glob5",
+      "pregunta": "¿Qué es un 'Paraíso Fiscal' (Tax Haven)?",
+      "respuesta_correcta": "Países o territorios que cobran impuestos muy bajos o nulos para atraer capitales extranjeros",
+      "incorrectas": [
+        "Una playa para millonarios",
+        "Un banco que regala dinero",
+        "Donde se guarda el oro del mundo"
+      ],
+      "dato_extra": "Aunque es legal en muchos casos, el uso de estos lugares es muy vigilado para evitar el lavado de dinero."
+    },
+    {
+      "id": "glob6",
+      "pregunta": "¿Qué es la 'Reserva Federal' (FED)?",
+      "respuesta_correcta": "El Banco Central de EE.UU., cuya política de tasas de interés afecta a toda la economía mundial",
+      "incorrectas": [
+        "La policía de los bancos",
+        "El tesoro nacional",
+        "Una reserva de petróleo"
+      ],
+      "dato_extra": "Cuando la FED sube tasas, el dinero suele regresar a EE.UU., afectando a las monedas de otros países."
+    },
+    {
+      "id": "glob7",
+      "pregunta": "¿Cuál es la función de los 'Bancos de Desarrollo' regionales (como el BID)?",
+      "respuesta_correcta": "Apoyar el crecimiento económico y social específicamente en regiones como América Latina",
+      "incorrectas": [
+        "Competir con los bancos comerciales",
+        "Vender acciones en la bolsa",
+        "Dar préstamos personales"
+      ],
+      "dato_extra": "Ayudan a que los países de una región progresen juntos."
+    },
+    {
+      "id": "glob8",
+      "pregunta": "¿Qué es un 'Mercado Emergente'?",
+      "respuesta_correcta": "Países con economías en rápido crecimiento pero con mayor riesgo que los países desarrollados (ej: India, Brasil, México)",
+      "incorrectas": [
+        "Un mercado donde venden fruta",
+        "Países que acaban de inventar el dinero",
+        "Países que no tienen deuda"
+      ],
+      "dato_extra": "Ofrecen grandes oportunidades de ganancia pero con mucha volatilidad."
+    },
+    {
+      "id": "glob9",
+      "pregunta": "¿Qué significa que un sistema financiero sea 'Bancocéntrico'?",
+      "respuesta_correcta": "Que las empresas se financian principalmente a través de préstamos bancarios en lugar de la bolsa de valores",
+      "incorrectas": [
+        "Que los bancos están en el centro de la ciudad",
+        "Que solo existen los bancos",
+        "Que el banco central manda a todos"
+      ],
+      "dato_extra": "Muchos países europeos y latinoamericanos funcionan así, a diferencia de EE.UU."
+    },
+    {
+      "id": "glob10",
+      "pregunta": "¿Cuál es la tendencia actual de las 'CBDC' (Monedas Digitales de Bancos Centrales)?",
+      "respuesta_correcta": "Crear versiones digitales oficiales de monedas nacionales (como un 'Cripto-Peso' o 'E-Yuan')",
+      "incorrectas": [
+        "Prohibir el internet en los bancos",
+        "Regalar Bitcoins a todos",
+        "Eliminar los bancos centrales"
+      ],
+      "dato_extra": "¡Felicidades! Has completado el tour por las grandes ligas financieras mundos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

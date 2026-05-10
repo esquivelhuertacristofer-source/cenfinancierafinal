@@ -1,0 +1,65 @@
+{
+  "code": "ACT-P3-2-1-B",
+  "unit_code": "P3-2-1",
+  "unit_title": "La banca y el sistema financiero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "MEMORIA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Quién es quién en el Banco?",
+  "descripcion": "Encuentra los pares correctos. Empareja la palabra con su misión secreta en el mundo de las finanzas.",
+  "objetivo": "Relacionar términos financieros clave con sus descripciones funcionales",
+  "xp": 300,
+  "modo": "texto-texto",
+  "pares": [
+    {
+      "id": "p1",
+      "termino": "Banxico",
+      "definicion": "Fabrica los billetes",
+      "emoji": "🏦"
+    },
+    {
+      "id": "p2",
+      "termino": "CONDUSEF",
+      "definicion": "Te ayuda y defiende",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "p3",
+      "termino": "Banco",
+      "definicion": "Guarda tus ahorros",
+      "emoji": "🏧"
+    },
+    {
+      "id": "p4",
+      "termino": "Cajero",
+      "definicion": "Entrega billetes",
+      "emoji": "💳"
+    },
+    {
+      "id": "p5",
+      "termino": "NIP",
+      "definicion": "Tu clave secreta",
+      "emoji": "🔑"
+    },
+    {
+      "id": "p6",
+      "termino": "Interés",
+      "definicion": "Premio por ahorrar",
+      "emoji": "📈"
+    },
+    {
+      "id": "p7",
+      "termino": "Bóveda",
+      "definicion": "Lugar súper seguro",
+      "emoji": "🔒"
+    },
+    {
+      "id": "p8",
+      "termino": "Préstamo",
+      "definicion": "Dinero que se devuelve",
+      "emoji": "🤝"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

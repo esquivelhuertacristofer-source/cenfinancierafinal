@@ -1,0 +1,68 @@
+{
+  "code": "ACT-P4-2-2-B",
+  "unit_code": "P4-2-2",
+  "unit_title": "Compras en línea: cómo saber si un sitio es seguro",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mis 5 Reglas de Oro",
+  "descripcion": "Completar este manual te convertirá en un experto protegiendo el dinero de tu familia en internet.",
+  "objetivo": "Memorizar y aplicar las mejores prácticas de seguridad en transacciones electrónicas",
+  "xp": 250,
+  "texto": "Para comprar seguro, siempre reviso que la dirección empiece con __BLANK_1__. Nunca realizo compras conectado a una __BLANK_2__ en el parque o cafetería. Al pagar, el banco me pedirá el código __BLANK_3__ que está atrás de mi tarjeta, pero jamás me pedirá mi __BLANK_4__. Al terminar, siempre debo revisar mi __BLANK_5__ para confirmar que el cobro sea correcto.",
+  "blanks": [
+    {
+      "id": "blank_1",
+      "respuesta": "https",
+      "opciones": [
+        "http",
+        "https",
+        "www",
+        "ftp"
+      ]
+    },
+    {
+      "id": "blank_2",
+      "respuesta": "red pública",
+      "opciones": [
+        "red pública",
+        "computadora",
+        "silla",
+        "tienda"
+      ]
+    },
+    {
+      "id": "blank_3",
+      "respuesta": "CVV",
+      "opciones": [
+        "NIP",
+        "CVV",
+        "Nombre",
+        "Banco"
+      ]
+    },
+    {
+      "id": "blank_4",
+      "respuesta": "NIP",
+      "opciones": [
+        "NIP",
+        "Email",
+        "Dirección",
+        "Apellido"
+      ]
+    },
+    {
+      "id": "blank_5",
+      "respuesta": "estado de cuenta",
+      "opciones": [
+        "álbum",
+        "estado de cuenta",
+        "reloj",
+        "juego"
+      ]
+    }
+  ],
+  "contexto": "Imagina que estás enseñando a un amigo a comprar su primer videojuego digital de forma segura.",
+  "versión": "2026.Diamond.V2"
+}

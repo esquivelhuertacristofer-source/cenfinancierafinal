@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P6-4-3-B",
+  "unit_code": "P6-4-3",
+  "unit_title": "Ventas y Negociación: El arte del 'SÍ'",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Gigantes de la Industria",
+  "descripcion": "¿Sabías que muchas de tus marcas favoritas tienen el mismo dueño? ¡Descubre los secretos de las compras más grandes del mundo!",
+  "objetivo": "Identificar casos de éxito de M&A y comprender las motivaciones estratégicas detrás de la consolidación empresarial",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "ma1",
+      "pregunta": "¿Qué significa 'Fusión' en los negocios?",
+      "respuesta_correcta": "Cuando dos empresas de tamaño similar deciden unirse para crear una nueva empresa más fuerte",
+      "incorrectas": [
+        "Cuando una empresa quiebra",
+        "Cuando el dueño renuncia",
+        "Cuando cambian de nombre"
+      ],
+      "dato_extra": "La fusión busca que ambas empresas ganen al compartir sus secretos y recursos."
+    },
+    {
+      "id": "ma2",
+      "pregunta": "¿Por qué Disney compró Marvel y Pixar?",
+      "respuesta_correcta": "Para tener mejores personajes e historias y atraer a más público",
+      "incorrectas": [
+        "Porque le sobraba el dinero",
+        "Para cerrar la competencia",
+        "Porque no sabía hacer películas"
+      ],
+      "dato_extra": "Al comprar estas empresas, Disney se volvió el dueño de los superhéroes más famosos."
+    },
+    {
+      "id": "ma3",
+      "pregunta": "¿Qué gran empresa compró a Instagram y WhatsApp?",
+      "respuesta_correcta": "Facebook (ahora Meta)",
+      "incorrectas": [
+        "Google",
+        "Apple",
+        "Nintendo"
+      ],
+      "dato_extra": "Meta compró estas apps para dominar el mundo de las redes sociales."
+    },
+    {
+      "id": "ma4",
+      "pregunta": "¿Qué es la 'Adquisición'?",
+      "respuesta_correcta": "Cuando una empresa más grande compra a una más pequeña para absorberla",
+      "incorrectas": [
+        "Cuando una empresa pide un préstamo",
+        "Cuando se cambia de oficina",
+        "Cuando se venden dulces"
+      ],
+      "dato_extra": "Las empresas grandes compran a las pequeñas para obtener su tecnología o sus clientes."
+    },
+    {
+      "id": "ma5",
+      "pregunta": "¿Por qué Google compró Android si ellos no hacían celulares?",
+      "respuesta_correcta": "Porque querían que su buscador y apps estuvieran en todos los celulares del mundo",
+      "incorrectas": [
+        "Porque les gustaba el robot verde",
+        "Fue un error",
+        "Para vender cables"
+      ],
+      "dato_extra": "Hoy Android es el sistema operativo más usado del planeta gracias a esa compra."
+    },
+    {
+      "id": "ma6",
+      "pregunta": "¿Qué es una 'Sinergia'?",
+      "respuesta_correcta": "Cuando el resultado de dos empresas unidas es mayor que si trabajaran por separado",
+      "incorrectas": [
+        "Un tipo de energía solar",
+        "Una pelea entre socios",
+        "Un contrato de renta"
+      ],
+      "dato_extra": "Es el 'ingrediente secreto' que hace que las fusiones valgan la pena."
+    },
+    {
+      "id": "ma7",
+      "pregunta": "¿Cuál es un riesgo de que una empresa compre a otra?",
+      "respuesta_correcta": "Que las culturas de los empleados sean muy distintas y no se lleven bien",
+      "incorrectas": [
+        "Que tengan demasiado dinero",
+        "Que los clientes se pongan felices",
+        "Que el logo sea muy bonito"
+      ],
+      "dato_extra": "Si las personas no se entienden, la fusión puede fallar."
+    },
+    {
+      "id": "ma8",
+      "pregunta": "¿Qué empresa compró a la marca de audífonos Beats?",
+      "respuesta_correcta": "Apple",
+      "incorrectas": [
+        "Sony",
+        "Samsung",
+        "Microsoft"
+      ],
+      "dato_extra": "Apple quería la tecnología de música y el estilo de la marca Beats."
+    },
+    {
+      "id": "ma9",
+      "pregunta": "¿Qué pasa con la competencia cuando muchas empresas se unen?",
+      "respuesta_correcta": "Puede disminuir, por eso existen leyes para evitar que una sola empresa controle todo (Monopolio)",
+      "incorrectas": [
+        "La competencia siempre sube",
+        "La competencia desaparece y es bueno",
+        "Nada"
+      ],
+      "dato_extra": "Los gobiernos vigilan las fusiones para proteger a los consumidores."
+    },
+    {
+      "id": "ma10",
+      "pregunta": "¿Cuál es la lección principal de M&A?",
+      "respuesta_correcta": "Que unidos somos más fuertes si compartimos una visión y valores comunes",
+      "incorrectas": [
+        "Que hay que comprar todo",
+        "Que ser grande es lo único que importa",
+        "Que el dinero lo compra todo"
+      ],
+      "dato_extra": "¡Felicidades! Ahora entiendes cómo se construyen los imperios modernos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

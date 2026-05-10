@@ -1,0 +1,161 @@
+{
+  "code": "ACT-P4-3-3-A",
+  "unit_code": "P4-3-3",
+  "unit_title": "El interés compuesto: la magia de hacer crecer tu dinero",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "COMPLEJO",
+  "titulo": "La Magia del Interés Compuesto",
+  "descripcion": "Mueve los controles y observa cómo tu dinero crece de forma exponencial con el tiempo. Compara el ahorro lineal (alcancía) vs. el interés compuesto (inversión).",
+  "objetivo": "Comprender visualmente el efecto del tiempo y la tasa en el crecimiento compuesto",
+  "xp": 200,
+  "descripcion_formula": "Calcula el valor futuro con interés compuesto: VF = Capital × (1 + tasa/100)^años",
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Capital inicial",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "aportacion",
+      "label": "Aportación mensual",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "tasa",
+      "label": "Tasa anual de rendimiento",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 0.5,
+      "default": 8,
+      "unit": "%"
+    },
+    {
+      "id": "años",
+      "label": "Años de inversión",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 10,
+      "unit": "años"
+    }
+  ],
+  "formula": "capital * Math.pow(1 + tasa/100, años) + aportacion * 12 * ((Math.pow(1 + tasa/100, años) - 1) / (tasa/100))",
+  "output_label": "Tu dinero al final del período",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_labels": [
+    "Año 1",
+    "Año 5",
+    "Año 10",
+    "Año 15",
+    "Año 20",
+    "Año 25",
+    "Año 30",
+    "Año 35",
+    "Año 40"
+  ],
+  "escenarios": [
+    {
+      "condicion": "resultado > 1000000",
+      "mensaje": "🎉 ¡Serás millonario! El tiempo es tu mejor aliado.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 500000",
+      "mensaje": "💪 ¡Excelente! Estás construyendo una base sólida.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 100000",
+      "mensaje": "👍 Buen comienzo. Intenta aumentar tus aportaciones.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado <= 100000",
+      "mensaje": "📈 El tiempo es clave — intenta aumentar los años.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿A qué edad empezarías a invertir si pudieras? Si inviertes $500 al mes desde los 15 años vs desde los 25, ¿cuánto dinero extra crees que tiene quien empezó antes a los 65?",
+  "comparativa_espera": "Comenzar a invertir a los 15 en lugar de a los 25 puede resultar en un portafolio 2.5 a 3 veces mayor al momento del retiro. Los 10 años de ventaja son el regalo más grande del interés compuesto.",
+  "outputs_multiples": [
+    {
+      "id": "saldo_final",
+      "label": "Saldo Final",
+      "formula": "Math.round(capital * Math.pow(1 + tasa/100, años) + aportacion * 12 * (Math.pow(1 + tasa/100, años) - 1) / Math.max(0.001, tasa/100))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Tu capital más aportaciones con interés compuesto"
+    },
+    {
+      "id": "ganancia_total",
+      "label": "Ganancia Total",
+      "formula": "Math.round(capital * Math.pow(1 + tasa/100, años) + aportacion * 12 * (Math.pow(1 + tasa/100, años) - 1) / Math.max(0.001, tasa/100) - capital - aportacion * 12 * años)",
+      "prefix": "$",
+      "suffix": " de ganancia",
+      "descripcion": "Los intereses que genera el interés compuesto"
+    },
+    {
+      "id": "anios_para_duplicar",
+      "label": "Años para Duplicar",
+      "formula": "Math.round(72 / Math.max(1, tasa))",
+      "prefix": "",
+      "suffix": " años (Regla 72)",
+      "descripcion": "A esta tasa, tu dinero se duplica en este tiempo"
+    },
+    {
+      "id": "aporte_vs_interes",
+      "label": "Porcentaje que son Intereses",
+      "formula": "Math.round((capital * Math.pow(1 + tasa/100, años) + aportacion * 12 * (Math.pow(1 + tasa/100, años) - 1) / Math.max(0.001, tasa/100) - capital - aportacion * 12 * años) / Math.max(1, capital * Math.pow(1 + tasa/100, años) + aportacion * 12 * (Math.pow(1 + tasa/100, años) - 1) / Math.max(0.001, tasa/100)) * 100)",
+      "prefix": "",
+      "suffix": "% son intereses puros",
+      "descripcion": "Cuánto de tu saldo final vino de los intereses (no de ti)"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "saldo_final",
+      "label": "Saldo Final",
+      "color": "#6366f1"
+    },
+    {
+      "id": "ganancia_total",
+      "label": "Ganancia Total",
+      "color": "#22c55e"
+    }
+  ]
+}

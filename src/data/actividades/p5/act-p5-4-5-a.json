@@ -1,0 +1,314 @@
+{
+  "code": "ACT-P5-4-5-A",
+  "unit_code": "P5-4-5",
+  "unit_title": "Shark Tank CEN: la hora de la verdad",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Shark Tank CEN",
+  "descripcion": "Tienes 3 minutos para presentar tu negocio ante 4 tiburones con $500,000 MXN cada uno. Son implacables: si tus números no cuadran, no hay deal. Construye tu pitch completo — con proyecciones financieras reales.",
+  "objetivo": "Construir y defender un pitch de inversión completo integrando propuesta de valor, proyecciones financieras y negociación",
+  "xp": 400,
+  "output_type": "Deck de Inversión CEN",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "el_problema",
+      "titulo": "🎯 El Problema — 30 segundos",
+      "descripcion": "Los tiburones SOLO invierten en problemas reales. Un problema vago = sin inversión.",
+      "campos": [
+        {
+          "id": "problema_descripcion",
+          "label": "¿Qué problema resuelves? (sé muy específico)",
+          "type": "textarea",
+          "placeholder": "Ej: 'Los estudiantes de secundaria pierden 2 horas semanales buscando apuntes desorganizados en grupos de WhatsApp. No hay forma de buscar ni de saber si la información es correcta.'",
+          "requerido": true,
+          "min_palabras": 20,
+          "ayuda": "El mejor problema se puede medir: '¿cuántas personas?' y '¿cuánto tiempo/dinero pierden?'"
+        },
+        {
+          "id": "afectados",
+          "label": "¿A cuántas personas afecta en México?",
+          "type": "select",
+          "opciones": [
+            "Miles (1,000 - 50,000)",
+            "Cientos de miles (50K - 500K)",
+            "Millones (500K - 5M)",
+            "Más de 5 millones"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "urgencia",
+          "label": "¿Qué tan urgente es resolverlo HOY?",
+          "type": "select",
+          "opciones": [
+            "Lo necesitan AHORA — es una emergencia",
+            "Lo necesitan este año — mejora importante",
+            "Sería una mejora gradual — es un lujo"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "la_solucion",
+      "titulo": "💡 Tu Solución — 30 segundos",
+      "descripcion": "¿Qué tienes TÚ que nadie más tiene? Los tiburones siempre preguntan '¿por qué no Google?'",
+      "campos": [
+        {
+          "id": "solucion_una_oracion",
+          "label": "Tu producto o servicio en UNA oración",
+          "type": "text",
+          "placeholder": "Ej: 'Una app que organiza automáticamente los apuntes de clase con IA y permite búsqueda instantánea'",
+          "requerido": true,
+          "ayuda": "Si necesitas más de una oración, todavía no tienes claridad sobre tu negocio."
+        },
+        {
+          "id": "diferenciador",
+          "label": "¿Por qué tu solución es MEJOR que las existentes? (responde '¿Por qué no Google/YouTube/ChatGPT?')",
+          "type": "textarea",
+          "placeholder": "Los tiburones van a preguntar esto siempre. Si no tienes respuesta, no hay deal.",
+          "requerido": true
+        },
+        {
+          "id": "traccion",
+          "label": "¿Ya tienes usuarios o clientes?",
+          "type": "select",
+          "opciones": [
+            "Sí, tengo clientes PAGANDO (el más poderoso)",
+            "Tengo usuarios activos en beta gratuita",
+            "Tengo lista de espera con emails reales",
+            "Tengo el prototipo funcionando",
+            "Todavía es solo una idea"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "los_numeros",
+      "titulo": "📊 Los Números — 60 segundos (los más importantes)",
+      "descripcion": "Los tiburones viven en Excel. Sin números creíbles, sin inversión. Aquí se gana o se pierde el deal.",
+      "campos": [
+        {
+          "id": "precio_unitario",
+          "label": "Precio de venta por unidad o suscripción mensual ($MXN)",
+          "type": "number",
+          "min": 1,
+          "max": 99999,
+          "placeholder": "299",
+          "requerido": true,
+          "ayuda": "¿Ya validaste que alguien pagaría este precio?"
+        },
+        {
+          "id": "costo_unitario",
+          "label": "Costo para producir o entregar cada unidad ($MXN)",
+          "type": "number",
+          "min": 0,
+          "max": 99999,
+          "placeholder": "45",
+          "requerido": true,
+          "ayuda": "Incluye: materiales, tiempo, plataformas, envío si aplica"
+        },
+        {
+          "id": "clientes_meta_y1",
+          "label": "Meta de clientes/ventas en el Año 1",
+          "type": "number",
+          "min": 1,
+          "max": 1000000,
+          "placeholder": "500",
+          "requerido": true,
+          "ayuda": "Sé realista — los tiburones verifican si es alcanzable con el presupuesto pedido"
+        },
+        {
+          "id": "inversion_pedida",
+          "label": "¿Cuánto dinero pides a los tiburones? ($MXN)",
+          "type": "slider",
+          "min": 50000,
+          "max": 2000000,
+          "step": 50000,
+          "default": 500000,
+          "unit": "$"
+        },
+        {
+          "id": "porcentaje_ofrecido",
+          "label": "¿Qué % de tu empresa ofreces a cambio?",
+          "type": "slider",
+          "min": 5,
+          "max": 49,
+          "step": 1,
+          "default": 20,
+          "unit": "%"
+        },
+        {
+          "id": "margen_bruto_shark",
+          "label": "Margen Bruto del Producto (%)",
+          "type": "calculated",
+          "formula": "Math.round((precio_unitario - costo_unitario) / Math.max(1, precio_unitario) * 100)",
+          "unit": "%",
+          "ayuda": "Los inversores quieren ver márgenes brutos superiores al 50%"
+        },
+        {
+          "id": "valuacion_implicita",
+          "label": "Valuación Implícita del Negocio",
+          "type": "calculated",
+          "formula": "Math.round(inversion_pedida / Math.max(1, porcentaje_ofrecido) * 100)",
+          "unit": "$",
+          "ayuda": "Si ofreces X% por $Y, la empresa vale Y/X×100"
+        }
+      ],
+      "calculos_automaticos": [
+        {
+          "id": "margen_bruto_unitario",
+          "label": "Margen bruto por unidad",
+          "formula": "precio_unitario - costo_unitario",
+          "prefix": "$",
+          "alerta_si": "margen < precio * 0.4",
+          "alerta_mensaje": "⚠️ Margen menor al 40%. Los tiburones lo van a cuestionar."
+        },
+        {
+          "id": "margen_pct",
+          "label": "Margen bruto %",
+          "formula": "((precio_unitario - costo_unitario) / precio_unitario) * 100",
+          "suffix": "%"
+        },
+        {
+          "id": "revenue_anual_y1",
+          "label": "Ingresos proyectados Año 1",
+          "formula": "precio_unitario * clientes_meta_y1",
+          "prefix": "$"
+        },
+        {
+          "id": "utilidad_bruta_y1",
+          "label": "Utilidad bruta Año 1",
+          "formula": "(precio_unitario - costo_unitario) * clientes_meta_y1",
+          "prefix": "$"
+        },
+        {
+          "id": "valuacion_implicita",
+          "label": "Valuación implícita de tu empresa",
+          "formula": "inversion_pedida / (porcentaje_ofrecido / 100)",
+          "prefix": "$",
+          "ayuda": "Esto es lo que dices que vale toda tu empresa. Los tiburones lo comparan con tus ingresos."
+        },
+        {
+          "id": "multiplo_ventas",
+          "label": "Múltiplo de valuación (Valuación ÷ Ingresos Y1)",
+          "formula": "(inversion_pedida / (porcentaje_ofrecido/100)) / (precio_unitario * clientes_meta_y1)",
+          "suffix": "x",
+          "alerta_si": "multiplo > 20",
+          "alerta_mensaje": "⚠️ Múltiplo mayor a 20x. Los tiburones dirán que está inflado para una empresa sin historial."
+        }
+      ]
+    },
+    {
+      "id": "el_equipo",
+      "titulo": "👥 El Equipo — 30 segundos",
+      "descripcion": "Los tiburones dicen: 'Invierto en personas, no en ideas. Las ideas valen $0 — la ejecución vale millones.'",
+      "campos": [
+        {
+          "id": "tu_superpoder",
+          "label": "¿Cuál es TU superpoder único en este negocio?",
+          "type": "text",
+          "placeholder": "Ej: 'Soy el mejor programador de mi generación' / 'Conozco personalmente a 200 clientes potenciales' / 'Ya vendí $30,000 de este producto en mi escuela'",
+          "requerido": true
+        },
+        {
+          "id": "socios_habilidades",
+          "label": "¿Tienes socios? ¿Qué habilidad clave aportan que tú no tienes?",
+          "type": "textarea",
+          "placeholder": "Si vas solo: explica por qué puedes ejecutar solo o a quién contratarías primero con el dinero.",
+          "requerido": false
+        }
+      ]
+    },
+    {
+      "id": "cierre_del_deal",
+      "titulo": "🤝 Cierre — 30 segundos",
+      "descripcion": "Llegó el momento. Los tiburones tienen preguntas difíciles. Esta es tu última oportunidad.",
+      "campos": [
+        {
+          "id": "uso_del_dinero",
+          "label": "¿En qué exactamente gastas los $500,000? (desglose por categoría)",
+          "type": "textarea",
+          "placeholder": "Ej:\n• Marketing digital: $200,000 (40%)\n• Desarrollo de tecnología: $150,000 (30%)\n• Primer empleado (dev): $100,000 (20%)\n• Inventario inicial: $50,000 (10%)\n\nLos tiburones necesitan saber que no malgastarás.",
+          "requerido": true
+        },
+        {
+          "id": "respuesta_valuacion_alta",
+          "label": "Tiburón dice: 'Tu valuación está inflada para una empresa sin historial.' ¿Qué respondes?",
+          "type": "textarea",
+          "placeholder": "Opción 1: Defiende con datos comparables ('empresas similares se valuaron en X')\nOpción 2: Negocia inteligente ('estoy abierto a bajar si el tiburón se compromete a X')\nOpción 3: Muestra tracción que justifique el múltiplo",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "evaluacion_tiburones_automatica": [
+    {
+      "tiburon": "Rodrigo — El Financiero 💹",
+      "avatar": "💹",
+      "evalua_campos": [
+        "margen_pct",
+        "multiplo_ventas"
+      ],
+      "criterio_bueno": "margen_pct >= 40 && multiplo_ventas <= 15",
+      "critica_si_malo": "Tu margen del X% es muy ajustado para escalar. Y una valuación de Xx sobre ingresos proyectados es especulativa.",
+      "oferta_si_bueno": "Me interesa. $500,000 por el X% que pides. ¿Cerramos?"
+    },
+    {
+      "tiburon": "Elena — La Marketera 🎯",
+      "avatar": "🎯",
+      "evalua_campos": [
+        "problema_descripcion",
+        "diferenciador"
+      ],
+      "criterio_bueno": "tiene_diferenciador_claro && problema_especifico",
+      "critica_si_malo": "No veo diferenciación real. ¿Por qué no lo hace Google mañana? Necesito una ventaja competitiva sostenible.",
+      "oferta_si_bueno": "Me encanta la propuesta de valor. Pero solo si incluyes mi red de contactos como estrategia de distribución."
+    },
+    {
+      "tiburon": "Carlos — El Serial Entrepreneur 🚀",
+      "avatar": "🚀",
+      "evalua_campos": [
+        "traccion",
+        "tu_superpoder"
+      ],
+      "criterio_bueno": "traccion !== 'Todavía es solo una idea' && superpoder_especifico",
+      "critica_si_malo": "Sin tracción, esto es solo una idea. Las ideas valen $0. Vuelve cuando tengas 100 clientes pagando.",
+      "oferta_si_bueno": "Veo al emprendedor en ti. Te ofrezco el dinero, pero quiero mentoría activa por 2 años."
+    },
+    {
+      "tiburon": "Ana — La Analista de Datos 📊",
+      "avatar": "📊",
+      "evalua_campos": [
+        "clientes_meta_y1",
+        "uso_del_dinero"
+      ],
+      "criterio_bueno": "proyeccion_realista && uso_del_dinero_detallado",
+      "critica_si_malo": "¿Cómo llegas a X clientes con $500K? Dame el CAC (costo de adquisición por cliente) y necesito ver el desglose por canal.",
+      "oferta_si_bueno": "Los números son sólidos. Acepto la oferta pero necesito un seat en el consejo."
+    }
+  ],
+  "posibles_resultados": [
+    {
+      "tiburones_interesados": 4,
+      "resultado": "🎉 ¡DEAL MULTISHARK! Cuatro tiburones quieren invertir. Ahora negocias cuál te conviene más."
+    },
+    {
+      "tiburones_interesados": 2,
+      "resultado": "👍 Deal cerrado. Dos tiburones invierten. Asegúrate de que sus habilidades sean complementarias."
+    },
+    {
+      "tiburones_interesados": 1,
+      "resultado": "✅ Un tiburón mordió. No es el escenario ideal, pero es un deal. Ejecuta."
+    },
+    {
+      "tiburones_interesados": 0,
+      "resultado": "❌ Sin deal hoy. Los tiburones te dieron el mejor feedback gratuito del mundo. ¿Qué mejorarías?"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

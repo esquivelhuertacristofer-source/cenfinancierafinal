@@ -1,0 +1,133 @@
+{
+  "code": "ACT-S1-1-3-A",
+  "unit_code": "S1-1-3",
+  "unit_title": "El mercado laboral: contratos, salarios y prestaciones",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Construyendo el Índice",
+  "descripcion": "¿Por qué elegir una empresa si puedes comprar todas? Diseña tu propio fondo de inversión (ETF) y mira el poder de la diversificación.",
+  "objetivo": "Comprender el concepto de diversificación sectorial y la estructura de un fondo indexado",
+  "xp": 450,
+  "output_type": "Folleto de Mi Fondo ETF",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "tema_fondo",
+      "titulo": "🎨 El Tema de tu Fondo",
+      "descripcion": "¿En qué se especializará tu inversión?",
+      "campos": [
+        {
+          "id": "nombre_etf",
+          "label": "Nombre de tu ETF",
+          "type": "text",
+          "placeholder": "Ej: GlobalTech 100...",
+          "requerido": true
+        },
+        {
+          "id": "enfoque_sectorial",
+          "label": "Sector Principal",
+          "type": "select",
+          "opciones": [
+            "Tecnología y Chips",
+            "Energías Renovables",
+            "Salud y Biotecnología",
+            "Consumo Masivo",
+            "S&P 500 (Las más grandes)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "seleccion_activos",
+      "titulo": "🏢 Selección de Gigantes",
+      "descripcion": "Elige las empresas que formarán parte de tu canasta (selecciona 3).",
+      "campos": [
+        {
+          "id": "empresa_1",
+          "label": "Empresa 1",
+          "type": "select",
+          "opciones": [
+            "Apple (AAPL)",
+            "Microsoft (MSFT)",
+            "Tesla (TSLA)",
+            "Nvidia (NVDA)",
+            "Amazon (AMZN)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "empresa_2",
+          "label": "Empresa 2",
+          "type": "select",
+          "opciones": [
+            "Google (GOOGL)",
+            "Meta (META)",
+            "Netflix (NFLX)",
+            "Adobe (ADBE)",
+            "Intel (INTC)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "empresa_3",
+          "label": "Empresa 3",
+          "type": "select",
+          "opciones": [
+            "Visa (V)",
+            "Walmart (WMT)",
+            "Coca-Cola (KO)",
+            "Disney (DIS)",
+            "PepsiCo (PEP)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "comision_y_estrategia",
+      "titulo": "⚙️ Estrategia y Costos",
+      "descripcion": "Define cómo se manejará el fondo.",
+      "campos": [
+        {
+          "id": "tipo_gestion",
+          "label": "Tipo de Gestión",
+          "type": "select",
+          "opciones": [
+            "Pasiva (Sigue al índice - Barato)",
+            "Activa (Un experto elige - Caro)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "mensaje_inversionista_s1",
+          "label": "¿Por qué deberían invertir en tu fondo?",
+          "type": "textarea",
+          "placeholder": "Ej: Porque combinamos seguridad con las empresas más innovadoras...",
+          "requerido": true
+        },
+        {
+          "id": "capital_etf",
+          "label": "Capital Inicial para tu ETF ($)",
+          "type": "slider",
+          "min": 500,
+          "max": 100000,
+          "step": 500,
+          "default": 10000,
+          "requerido": false
+        },
+        {
+          "id": "valor_10_anos",
+          "label": "Valor en 10 Años (10% anual)",
+          "type": "calculated",
+          "formula": "Math.round(capital_etf * Math.pow(1.10, 10))",
+          "unit": "$",
+          "ayuda": "El IPC mexicano ha rendido ~10-12% anual en los últimos 20 años"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

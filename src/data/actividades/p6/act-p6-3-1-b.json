@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-3-1-B",
+  "unit_code": "P6-3-1",
+  "unit_title": "Simulador de ahorro: proyectar mi futuro financiero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Filo de la Deuda",
+  "descripcion": "¿Sabes cuándo la deuda te ayuda y cuándo te destruye? ¡Pon a prueba tu sabiduría financiera!",
+  "objetivo": "Identificar las condiciones bajo las cuales el apalancamiento es una estrategia válida o un riesgo excesivo",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "apa1",
+      "texto": "¿Qué es el 'Apalancamiento' en finanzas?",
+      "opciones": [
+        "Usar una palanca para abrir una caja fuerte",
+        "Invertir usando dinero prestado para intentar aumentar la ganancia potencial",
+        "Ahorrar mucho dinero",
+        "Pedir permiso para invertir"
+      ],
+      "correcta": 1,
+      "explicacion": "Es usar la fuerza del dinero de otros para mover proyectos más grandes."
+    },
+    {
+      "id": "apa2",
+      "texto": "¿Cuál es el mayor riesgo del apalancamiento?",
+      "opciones": [
+        "Que el banco te regale el dinero",
+        "Que si el precio baja, pierdes tu dinero mucho más rápido que si no hubieras pedido prestado",
+        "Que no puedas gastar el dinero",
+        "Que la bolsa cierre"
+      ],
+      "correcta": 1,
+      "explicacion": "El apalancamiento magnifica los resultados, ¡incluyendo las pérdidas!"
+    },
+    {
+      "id": "apa3",
+      "texto": "¿Qué es un 'Margin Call' (Llamada de Margen)?",
+      "opciones": [
+        "Una llamada para felicitarte",
+        "Cuando el banco te obliga a poner más dinero o vender tu inversión porque el precio cayó demasiado",
+        "Un mensaje de texto de un amigo",
+        "Una oferta de descuento"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el momento en que el banco se protege para no perder su dinero prestado."
+    },
+    {
+      "id": "apa4",
+      "texto": "¿En qué situación es más común y aceptable el apalancamiento para una persona?",
+      "opciones": [
+        "Para comprar dulces",
+        "Para comprar una casa (Hipoteca)",
+        "Para irse de vacaciones",
+        "Para comprar ropa de marca"
+      ],
+      "correcta": 1,
+      "explicacion": "Una hipoteca es una forma de apalancamiento para adquirir un bien que suele subir de valor."
+    },
+    {
+      "id": "apa5",
+      "texto": "Si inviertes $100 propios y pides $100 prestados (Apalancamiento 2:1), y la inversión sube 10%, ¿cuánto ganaste sobre TU dinero?",
+      "opciones": [
+        "10%",
+        "20% (ganaste $20 sobre tus $100 iniciales)",
+        "5%",
+        "0%"
+      ],
+      "correcta": 1,
+      "explicacion": "Ganaste el 10% de $200 ($20), lo cual representa el 20% de tu capital original."
+    },
+    {
+      "id": "apa6",
+      "texto": "¿Qué pasa si en el ejemplo anterior la inversión BAJA 10%?",
+      "opciones": [
+        "No pierdes nada",
+        "Pierdes el 20% de tu dinero real",
+        "Solo pierdes $10",
+        "El banco te perdona"
+      ],
+      "correcta": 1,
+      "explicacion": "La pérdida también se multiplica por dos."
+    },
+    {
+      "id": "apa7",
+      "texto": "¿Cuál es la regla de oro para usar apalancamiento?",
+      "opciones": [
+        "Usar siempre el máximo posible",
+        "Solo usarlo si el rendimiento esperado es mucho mayor que el interés que te cobra el banco",
+        "No decirle a nadie",
+        "Usarlo solo en días soleados"
+      ],
+      "correcta": 1,
+      "explicacion": "El costo del préstamo (interés) debe ser menor a lo que planeas ganar."
+    },
+    {
+      "id": "apa8",
+      "texto": "¿Por qué los expertos dicen que el apalancamiento es para inversionistas experimentados?",
+      "opciones": [
+        "Porque es aburrido",
+        "Porque requiere mucha disciplina para no perder la cabeza y saber cuándo retirarse",
+        "Porque es muy barato",
+        "Porque es ilegal para novatos"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes que con gran poder (palanca) viene una gran responsabilidad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

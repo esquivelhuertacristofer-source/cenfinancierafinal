@@ -1,0 +1,141 @@
+{
+  "code": "ACT-S1-1-1-A",
+  "unit_code": "S1-1-1",
+  "unit_title": "El dinero y la sociedad: historia económica de México",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Sobrevive a las Crisis de México",
+  "descripcion": "México tuvo 5 grandes crisis económicas en el siglo XX y XXI. En cada una, el peso se devaluó, los ahorros se evaporaron y el desempleo explotó. Pero no todos perdieron igual. ¿Qué pasó con $100,000 pesos invertidos en distintos instrumentos durante la crisis del Error de Diciembre de 1994 o el COVID de 2020?",
+  "objetivo": "Analizar el impacto de las crisis económicas mexicanas en distintos instrumentos de ahorro e inversión, y entender por qué la diversificación protege el patrimonio",
+  "xp": 500,
+  "descripcion_formula": "Cada crisis afectó diferente a cada instrumento. La devaluación destruye efectivo y deudas en pesos, pero favorece dólares y exportaciones. La bolsa cae en crisis pero se recupera en años.",
+  "inputs": [
+    {
+      "id": "capital_historico",
+      "label": "Capital Invertido ($)",
+      "type": "slider",
+      "min": 10000,
+      "max": 500000,
+      "step": 10000,
+      "default": 100000,
+      "unit": "$"
+    },
+    {
+      "id": "crisis_seleccionada",
+      "label": "Crisis Económica",
+      "type": "select",
+      "options": [
+        { "label": "1982 — Crisis de la deuda y nacionalización bancaria", "value": "1982" },
+        { "label": "1994 — Error de Diciembre (devaluación 100%)", "value": "1994" },
+        { "label": "2008 — Crisis global (Lehman Brothers)", "value": "2008" },
+        { "label": "2020 — COVID-19 (PIB -8.5%)", "value": "2020" }
+      ],
+      "default": "1994"
+    },
+    {
+      "id": "instrumento_proteccion",
+      "label": "¿Dónde tenías tu dinero?",
+      "type": "select",
+      "options": [
+        { "label": "Efectivo en pesos (debajo del colchón)", "value": "efectivo" },
+        { "label": "Dólares / divisas extranjeras", "value": "dolares" },
+        { "label": "CETES (gobierno federal)", "value": "cetes" },
+        { "label": "Acciones en la Bolsa Mexicana (IPC)", "value": "bolsa" },
+        { "label": "Bienes raíces (propiedad)", "value": "bienes_raices" }
+      ],
+      "default": "efectivo"
+    },
+    {
+      "id": "anos_recuperacion",
+      "label": "Años que esperaste para recuperarte",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.round(capital_historico * (instrumento_proteccion === 'efectivo' ? (crisis_seleccionada === '1994' ? 0.5 : crisis_seleccionada === '1982' ? 0.3 : crisis_seleccionada === '2008' ? 0.87 : 0.92) : instrumento_proteccion === 'dolares' ? (crisis_seleccionada === '1994' ? 2.0 : crisis_seleccionada === '1982' ? 1.8 : crisis_seleccionada === '2008' ? 1.15 : 1.22) : instrumento_proteccion === 'cetes' ? (crisis_seleccionada === '1994' ? 1.2 : crisis_seleccionada === '1982' ? 1.5 : crisis_seleccionada === '2008' ? 1.08 : 1.05) : instrumento_proteccion === 'bolsa' ? (crisis_seleccionada === '1994' ? 0.65 : crisis_seleccionada === '1982' ? 0.6 : crisis_seleccionada === '2008' ? 0.45 : 0.8) : (crisis_seleccionada === '1994' ? 1.1 : crisis_seleccionada === '1982' ? 1.4 : crisis_seleccionada === '2008' ? 0.95 : 1.05)))",
+  "output_label": "Valor de tu Capital al Fondo de la Crisis",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "valor_en_crisis",
+      "label": "Valor en el Peor Momento de la Crisis",
+      "formula": "Math.round(capital_historico * (instrumento_proteccion === 'efectivo' ? (crisis_seleccionada === '1994' ? 0.5 : crisis_seleccionada === '1982' ? 0.3 : crisis_seleccionada === '2008' ? 0.87 : 0.92) : instrumento_proteccion === 'dolares' ? (crisis_seleccionada === '1994' ? 2.0 : crisis_seleccionada === '1982' ? 1.8 : crisis_seleccionada === '2008' ? 1.15 : 1.22) : instrumento_proteccion === 'cetes' ? (crisis_seleccionada === '1994' ? 1.2 : crisis_seleccionada === '1982' ? 1.5 : crisis_seleccionada === '2008' ? 1.08 : 1.05) : instrumento_proteccion === 'bolsa' ? (crisis_seleccionada === '1994' ? 0.65 : crisis_seleccionada === '1982' ? 0.6 : crisis_seleccionada === '2008' ? 0.45 : 0.8) : (crisis_seleccionada === '1994' ? 1.1 : crisis_seleccionada === '1982' ? 1.4 : crisis_seleccionada === '2008' ? 0.95 : 1.05)))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Cuánto valía tu inversión en el peor momento de la crisis"
+    },
+    {
+      "id": "ganancia_o_perdida",
+      "label": "Ganancia o Pérdida",
+      "formula": "Math.round(capital_historico * (instrumento_proteccion === 'efectivo' ? (crisis_seleccionada === '1994' ? 0.5 : crisis_seleccionada === '1982' ? 0.3 : crisis_seleccionada === '2008' ? 0.87 : 0.92) : instrumento_proteccion === 'dolares' ? (crisis_seleccionada === '1994' ? 2.0 : crisis_seleccionada === '1982' ? 1.8 : crisis_seleccionada === '2008' ? 1.15 : 1.22) : instrumento_proteccion === 'cetes' ? (crisis_seleccionada === '1994' ? 1.2 : crisis_seleccionada === '1982' ? 1.5 : crisis_seleccionada === '2008' ? 1.08 : 1.05) : instrumento_proteccion === 'bolsa' ? (crisis_seleccionada === '1994' ? 0.65 : crisis_seleccionada === '1982' ? 0.6 : crisis_seleccionada === '2008' ? 0.45 : 0.8) : (crisis_seleccionada === '1994' ? 1.1 : crisis_seleccionada === '1982' ? 1.4 : crisis_seleccionada === '2008' ? 0.95 : 1.05)) - capital_historico)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Positivo = ganaste (protegido), negativo = perdiste"
+    },
+    {
+      "id": "valor_recuperado",
+      "label": "Valor Después de Recuperación",
+      "formula": "Math.round(capital_historico * (instrumento_proteccion === 'efectivo' ? (crisis_seleccionada === '1994' ? 0.5 : crisis_seleccionada === '1982' ? 0.3 : crisis_seleccionada === '2008' ? 0.87 : 0.92) : instrumento_proteccion === 'dolares' ? (crisis_seleccionada === '1994' ? 2.0 : crisis_seleccionada === '1982' ? 1.8 : crisis_seleccionada === '2008' ? 1.15 : 1.22) : instrumento_proteccion === 'cetes' ? (crisis_seleccionada === '1994' ? 1.2 : crisis_seleccionada === '1982' ? 1.5 : crisis_seleccionada === '2008' ? 1.08 : 1.05) : instrumento_proteccion === 'bolsa' ? (crisis_seleccionada === '1994' ? 0.65 : crisis_seleccionada === '1982' ? 0.6 : crisis_seleccionada === '2008' ? 0.45 : 0.8) : (crisis_seleccionada === '1994' ? 1.1 : crisis_seleccionada === '1982' ? 1.4 : crisis_seleccionada === '2008' ? 0.95 : 1.05)) * Math.pow(instrumento_proteccion === 'bolsa' ? 1.14 : 1.06, anos_recuperacion))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Lo que vale tu inversión después de los años de recuperación"
+    },
+    {
+      "id": "leccion_numerica",
+      "label": "Porcentaje de Capital Conservado",
+      "formula": "Math.round(capital_historico * (instrumento_proteccion === 'efectivo' ? (crisis_seleccionada === '1994' ? 0.5 : crisis_seleccionada === '1982' ? 0.3 : crisis_seleccionada === '2008' ? 0.87 : 0.92) : instrumento_proteccion === 'dolares' ? (crisis_seleccionada === '1994' ? 2.0 : crisis_seleccionada === '1982' ? 1.8 : crisis_seleccionada === '2008' ? 1.15 : 1.22) : instrumento_proteccion === 'cetes' ? (crisis_seleccionada === '1994' ? 1.2 : crisis_seleccionada === '1982' ? 1.5 : crisis_seleccionada === '2008' ? 1.08 : 1.05) : instrumento_proteccion === 'bolsa' ? (crisis_seleccionada === '1994' ? 0.65 : crisis_seleccionada === '1982' ? 0.6 : crisis_seleccionada === '2008' ? 0.45 : 0.8) : (crisis_seleccionada === '1994' ? 1.1 : crisis_seleccionada === '1982' ? 1.4 : crisis_seleccionada === '2008' ? 0.95 : 1.05)) / capital_historico * 100)",
+      "prefix": "",
+      "suffix": "% de tu capital",
+      "descripcion": "Qué porcentaje de tu dinero original sobrevivió la crisis"
+    }
+  ],
+  "linea_del_tiempo": {
+    "titulo": "Las 4 grandes crisis económicas de México moderno",
+    "eventos": [
+      { "año": "1982", "crisis": "Crisis de la deuda", "devaluacion": "-70%", "causa": "Caída del petróleo + deuda externa + nacionalización bancos" },
+      { "año": "1994", "crisis": "Error de Diciembre", "devaluacion": "-50%", "causa": "Devaluación abrupta del peso por crisis política + EZLN" },
+      { "año": "2008", "crisis": "Crisis global", "devaluacion": "-25%", "causa": "Colapso hipotecario en EE.UU. contagia a México" },
+      { "año": "2020", "crisis": "COVID-19", "devaluacion": "-20%", "causa": "Pandemia global, caída del turismo y remesas" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "valor_en_crisis",
+      "label": "Valor en Crisis ($)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "valor_recuperado",
+      "label": "Valor Recuperado ($)",
+      "color": "#22c55e"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "instrumento_proteccion === 'efectivo' && crisis_seleccionada === '1982'",
+      "mensaje": "💀 Destrucción total. En la crisis de 1982, el peso perdió el 70% de su valor. $100,000 pesos en efectivo valían como $30,000. Los que tenían dólares o bienes raíces sobrevivieron.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "instrumento_proteccion === 'dolares'",
+      "mensaje": "🛡️ Los dólares funcionan como cobertura en crisis mexicanas porque cada devaluación hace que el dólar valga más pesos. Tener algo en divisas extranjeras protege tu poder adquisitivo.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "instrumento_proteccion === 'bolsa' && anos_recuperacion >= 3",
+      "mensaje": "📈 La bolsa cae en crisis pero se recupera. Quien aguantó la caída de 2008 sin vender, había recuperado todo para 2011 y tenía más que nunca en 2015. El tiempo es el aliado del inversionista paciente.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Cómo cambió la forma en que los mexicanos usaban el dinero desde el trueque hasta las apps de pago? ¿Qué crees que pasará con el dinero en los próximos 20 años?",
+  "comparativa_espera": "México tuvo 5 grandes crisis monetarias en el siglo XX. Cada una destruyó décadas de ahorro familiar. Los que entendían el sistema financiero lograron protegerse — los demás perdieron todo."
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-1-5-A",
+  "unit_code": "S2-1-5",
+  "unit_title": "Crisis económicas: lecciones del 94, 2008 y 2020 en México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "COMPLEJO",
+  "titulo": "Sobreviviendo a la Gran Crisis del 94",
+  "descripcion": "Es diciembre de 1994. Eres el responsable de las finanzas de tu familia. El 'Error de Diciembre' ha estallado y el peso se devalúa rápidamente. ¿Qué decisiones tomarás para proteger el patrimonio familiar?",
+  "objetivo": "Comprender el impacto de las crisis macroeconómicas en las finanzas personales y practicar la toma de decisiones bajo presión",
+  "xp": 300,
+  "personaje_principal": "Ciudadano Diamond",
+  "contexto_inicial": "Acabas de escuchar en las noticias que el tipo de cambio se ha disparado. Tu familia tiene una deuda en el banco y ahorros en pesos. El pánico se siente en las calles.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "El dólar pasó de 3.40 a 5.00 pesos en un abrir y cerrar de ojos. Tienes una tarjeta de crédito con saldo y algo de dinero en el banco. ¿Cuál es tu primera acción?",
+      "personaje": "Noticiero Económico",
+      "opciones": [
+        {
+          "id": "c1_a",
+          "texto": "Correr al banco a retirar todo y comprar dólares",
+          "siguiente_nodo": "panico_dolar",
+          "consecuencia": "Llegas tarde, el tipo de cambio ya subió más y perdiste poder adquisitivo.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "c1_b",
+          "texto": "Pagar inmediatamente el saldo total de la tarjeta de crédito",
+          "siguiente_nodo": "deuda_pagada",
+          "consecuencia": "¡Excelente decisión! Las tasas de interés están por subir al 100%. Te libraste de una deuda impagable.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "panico_dolar": {
+      "id": "panico_dolar",
+      "texto": "Compraste dólares a un precio muy alto. Ahora el banco anuncia que las tasas de interés de tu tarjeta de crédito subieron del 20% al 80%. Tu deuda se está duplicando cada mes. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "c2_a",
+          "texto": "Vender los dólares para intentar pagar la deuda",
+          "siguiente_nodo": "recuperacion_parcial",
+          "consecuencia": "Logras reducir el daño, pero el costo de oportunidad fue muy alto.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "c2_b",
+          "texto": "Ignorar la deuda y esperar a que la crisis pase",
+          "siguiente_nodo": "quiebra_familiar",
+          "consecuencia": "La deuda se volvió astronómica. El banco ha iniciado procesos de embargo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "deuda_pagada": {
+      "id": "deuda_pagada",
+      "texto": "Sin deudas, tu familia está en una posición más fuerte. Sin embargo, los precios en el supermercado suben cada semana (inflación). Tu ingreso ya no alcanza. ¿Cómo ajustas el presupuesto?",
+      "opciones": [
+        {
+          "id": "c3_a",
+          "texto": "Eliminar todos los gastos no esenciales y buscar un ingreso extra",
+          "siguiente_nodo": "exito_final",
+          "consecuencia": "La austeridad y el esfuerzo extra permitieron a tu familia navegar la crisis sin perder sus bienes.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "c3_b",
+          "texto": "Pedir un nuevo préstamo para mantener el estilo de vida",
+          "siguiente_nodo": "quiebra_familiar",
+          "consecuencia": "En una crisis con tasas altas, pedir prestado para consumir es un error fatal.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "recuperacion_parcial": {
+      "id": "recuperacion_parcial",
+      "texto": "Lograste salvar la casa, pero los ahorros de años se esfumaron. La lección dolió, pero ahora sabes que la deuda es el mayor peligro en una crisis.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La gestión de la deuda es más importante que la especulación con divisas. En una crisis de tasas altas, estar libre de deuda es tu mejor escudo."
+    },
+    "quiebra_familiar": {
+      "id": "quiebra_familiar",
+      "texto": "La crisis te ha superado. La falta de acción y las malas decisiones (pedir prestado en tasas altas) llevaron a la pérdida del patrimonio.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Ignorar los indicadores macroeconómicos puede tener consecuencias devastadoras. El conocimiento financiero no es un lujo, es una herramienta de supervivencia."
+    },
+    "exito_final": {
+      "id": "exito_final",
+      "texto": "¡Felicidades! Tu familia no solo sobrevivió, sino que aprendió a administrar recursos en la escasez. Son parte del grupo que logró salir adelante tras el 94.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La rapidez para pagar deudas y la capacidad de ajuste en el gasto son las llaves para sobrevivir a cualquier tormenta económica. ¡Eres un maestro Diamond!"
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

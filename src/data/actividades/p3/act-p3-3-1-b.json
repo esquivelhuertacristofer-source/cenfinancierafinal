@@ -1,0 +1,111 @@
+{
+  "code": "ACT-P3-3-1-B",
+  "unit_code": "P3-3-1",
+  "unit_title": "¿Qué es el crédito y cuándo usarlo?",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro del Crédito",
+  "descripcion": "¿Sabes qué significa la palabra crédito? ¡Demuestra que conoces las reglas para pedir prestado de forma inteligente!",
+  "objetivo": "Validar la comprensión de los conceptos fundamentales del crédito y la responsabilidad financiera",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué significa la palabra 'Crédito'?",
+      "opciones": [
+        "Regalo de dinero",
+        "Creencia o Confianza en que alguien devolverá el dinero",
+        "Comprar cosas gratis",
+        "Un tipo de billete"
+      ],
+      "correcta": 1,
+      "explicacion": "Crédito viene de 'creer'. El banco cree que eres honesto y le devolverás el dinero."
+    },
+    {
+      "id": "q2",
+      "texto": "Cuando pides un crédito, ¿cómo se llama el costo extra que pagas por el servicio?",
+      "opciones": [
+        "Propina",
+        "Interés",
+        "Impuesto de regalo",
+        "Multa"
+      ],
+      "correcta": 1,
+      "explicacion": "El interés es el 'precio' de usar dinero que no es tuyo hoy."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cuál es un uso inteligente del crédito?",
+      "opciones": [
+        "Comprar una caja de dulces",
+        "Comprar una herramienta para poner un negocio",
+        "Pagar el cine",
+        "Comprar ropa de moda"
+      ],
+      "correcta": 1,
+      "explicacion": "Usar crédito para algo que te ayudará a ganar más dinero es una decisión sabia."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué pasa si pides un crédito y no lo pagas a tiempo?",
+      "opciones": [
+        "Nada, el banco olvida la deuda",
+        "Pierdes la confianza del banco y luego nadie te prestará",
+        "El banco te da más dinero",
+        "Te regalan un premio"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu reputación financiera es muy valiosa. Si no pagas, cierras tus puertas al futuro."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Quiénes pueden otorgar créditos de forma segura y legal?",
+      "opciones": [
+        "Cualquier persona en la calle",
+        "Los bancos y las instituciones financieras autorizadas",
+        "Tiendas de juguetes",
+        "Nadie"
+      ],
+      "correcta": 1,
+      "explicacion": "Los bancos están regulados y son el lugar más seguro para manejar créditos."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué es el 'Capital' en un crédito?",
+      "opciones": [
+        "La ciudad más grande",
+        "El monto total de dinero que te prestaron originalmente",
+        "Los intereses",
+        "El nombre del banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Capital es la cantidad base que recibiste al inicio."
+    },
+    {
+      "id": "q7",
+      "texto": "Verdadero o Falso: ¿Es buena idea pedir un crédito para pagar otro crédito?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Falso! Eso se llama 'cadena de deudas' y es muy peligroso para tu dinero."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Por qué es importante leer el contrato de un crédito?",
+      "opciones": [
+        "Para ver los dibujos",
+        "Para saber cuánto vas a pagar en total y en qué fechas",
+        "No es importante leerlo",
+        "Para rayarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Conocer las reglas te ayuda a ser un deudor responsable y exitoso."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

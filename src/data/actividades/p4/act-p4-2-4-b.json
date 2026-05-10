@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-2-4-B",
+  "unit_code": "P4-2-4",
+  "unit_title": "Contraseñas y seguridad: protegiendo mis datos financieros",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro de la Privacidad",
+  "descripcion": "¿Sabes cómo mantener tus secretos a salvo de los hackers? ¡Pon a prueba tu inteligencia digital!",
+  "objetivo": "Evaluar el conocimiento sobre la gestión segura de claves y privacidad digital",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "p1",
+      "texto": "¿Con quién debes compartir tus contraseñas o NIP bancario?",
+      "opciones": [
+        "Con mis mejores amigos",
+        "Con nadie (solo mis padres si es necesario)",
+        "Con un asesor del banco que me llame por teléfono",
+        "Con quien me lo pida por mensaje"
+      ],
+      "correcta": 1,
+      "explicacion": "Las contraseñas son personales. El banco NUNCA te pedirá tu clave por teléfono o mensaje."
+    },
+    {
+      "id": "p2",
+      "texto": "¿Cada cuánto tiempo es recomendable cambiar tus contraseñas importantes?",
+      "opciones": [
+        "Cada 10 años",
+        "Nunca, es mejor dejar la misma",
+        "Cada pocos meses (ej. cada 6 meses)",
+        "Cada vez que como helado"
+      ],
+      "correcta": 2,
+      "explicacion": "Cambiar las claves periódicamente dificulta que alguien pueda entrar a tus cuentas."
+    },
+    {
+      "id": "p3",
+      "texto": "¿Qué es la 'Autenticación de dos pasos'?",
+      "opciones": [
+        "Caminar dos pasos antes de entrar",
+        "Poner dos contraseñas iguales",
+        "Usar tu clave y además un código que llega a tu celular",
+        "Tener dos cuentas de banco"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una capa extra de seguridad muy fuerte. Aunque alguien robe tu clave, necesitaría tu celular para entrar."
+    },
+    {
+      "id": "p4",
+      "texto": "Si recibes un correo que dice 'Tu cuenta será bloqueada si no pones tu clave aquí', ¿qué haces?",
+      "opciones": [
+        "Poner mi clave rápido",
+        "Ignorarlo y borrarlo; los bancos no piden claves por correo",
+        "Responder con un insulto",
+        "Llamar a todos mis amigos"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa es una técnica de fraude llamada Phishing. El banco nunca te amenazará así."
+    },
+    {
+      "id": "p5",
+      "texto": "¿Por qué no debes usar la misma contraseña para todo?",
+      "opciones": [
+        "Porque es aburrido",
+        "Porque si alguien descubre una clave, podrá entrar a todas tus cuentas",
+        "Porque el banco te regaña",
+        "No hay problema en usar la misma"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada 'puerta' digital debe tener su propia llave única para mayor seguridad."
+    },
+    {
+      "id": "p6",
+      "texto": "¿Cuál es la mejor forma de recordar contraseñas difíciles?",
+      "opciones": [
+        "Anotarlas en un papel pegado a la pantalla",
+        "Usar un 'Gestor de Contraseñas' seguro o una regla mnemotécnica",
+        "Ponerlas de fondo de pantalla",
+        "No recordarlas y pedir cambio de clave cada vez"
+      ],
+      "correcta": 1,
+      "explicacion": "Un gestor de contraseñas es como una caja fuerte digital para tus llaves."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

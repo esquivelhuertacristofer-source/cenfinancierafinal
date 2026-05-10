@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-3-3-B",
+  "unit_code": "P1-3-3",
+  "unit_title": "El cajero automático: ¿de dónde sale el dinero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Detective de Bancos",
+  "descripcion": "¿Sabes cómo funciona el dinero invisible de las tarjetas? ¡Demuestra que eres un experto tecnológico!",
+  "objetivo": "Diferenciar entre dinero físico y digital, y comprender la seguridad bancaria básica",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es un cajero automático?",
+      "opciones": [
+        "Una máquina que fabrica billetes",
+        "Una ventana que te da el dinero que tienes guardado en el banco",
+        "Una caja de juegos",
+        "Un buzón de cartas"
+      ],
+      "correcta": 1,
+      "explicacion": "El cajero solo entrega el dinero que ya ganamos y depositamos antes en el banco."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué pieza de plástico necesitas para usar el cajero?",
+      "opciones": [
+        "Una ficha de juego",
+        "Una tarjeta de débito o crédito",
+        "Una regla",
+        "Un carné escolar"
+      ],
+      "correcta": 1,
+      "explicacion": "La tarjeta tiene un chip que le dice al cajero quién eres y cuánto dinero tienes."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué significa NIP?",
+      "opciones": [
+        "Número de Identificación Personal",
+        "Niño Inteligente y Precavido",
+        "No Importa el Precio",
+        "Número Invisible de Plata"
+      ],
+      "correcta": 0,
+      "explicacion": "Es tu contraseña de 4 números. ¡Es la llave de tu tesoro!"
+    },
+    {
+      "id": "q4",
+      "texto": "¿A quién le puedes decir tu NIP?",
+      "opciones": [
+        "A tu mejor amigo",
+        "A un extraño que te ayude",
+        "A nadie (solo a tus papás en emergencia)",
+        "A un maestro"
+      ],
+      "correcta": 2,
+      "explicacion": "El NIP es un secreto absoluto para proteger tu dinero de los ladrones."
+    },
+    {
+      "id": "q5",
+      "texto": "Si tienes $50 pesos en el banco, ¿puedes sacar $100 del cajero?",
+      "opciones": [
+        "Sí, el cajero es generoso",
+        "No, solo puedes sacar lo que realmente tienes",
+        "Tal vez si pides por favor",
+        "Solo si es Navidad"
+      ],
+      "correcta": 1,
+      "explicacion": "El cajero no regala dinero. Si intentas sacar más de lo que tienes, te dirá que no hay saldo."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué debes hacer si el cajero se queda con tu tarjeta?",
+      "opciones": [
+        "Patear la máquina",
+        "Ir al banco con un adulto para pedir ayuda",
+        "Irte a casa y no decir nada",
+        "Intentar sacarla con un palo"
+      ],
+      "correcta": 1,
+      "explicacion": "A veces las máquinas fallan. Lo mejor es avisar de inmediato a los encargados del banco."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cómo se llama el 'dinero' que no vemos pero está en la tarjeta?",
+      "opciones": [
+        "Dinero fantasma",
+        "Dinero digital",
+        "Dinero de juguete",
+        "Puntos de premio"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero digital es real y sirve para pagar en tiendas sin usar billetes físicos."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Por qué es más seguro tener el dinero en el banco que bajo el colchón?",
+      "opciones": [
+        "Porque el banco es más grande",
+        "Porque el banco tiene guardias, cámaras y sistemas de seguridad",
+        "Porque en el banco no se ensucia",
+        "No es más seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "Los bancos protegen tu dinero de robos, incendios o accidentes que puedan pasar en casa."
+    },
+    {
+      "id": "q9",
+      "texto": "Verdadero o Falso: ¡El cajero funciona las 24 horas del día!",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! Los cajeros están listos siempre para cuando necesitemos efectivo."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Qué debes recoger siempre antes de irte del cajero?",
+      "opciones": [
+        "Tu dinero, tu tarjeta y tu ticket",
+        "Solo el dinero",
+        "Solo el ticket",
+        "Nada, se puede quedar ahí"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Revisión final! Dinero, Tarjeta y Ticket. ¡Un genio financiero nunca olvida nada!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

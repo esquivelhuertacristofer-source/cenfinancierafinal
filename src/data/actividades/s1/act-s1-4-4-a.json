@@ -1,0 +1,112 @@
+{
+  "code": "ACT-S1-4-4-A",
+  "unit_code": "S1-4-4",
+  "unit_title": "Contabilidad básica: balance y estado de resultados",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Plan de Carrera",
+  "descripcion": "Tu educación es la inversión más rentable que harás en tu vida. ¿Sabes cuánto vale tu futuro profesional?",
+  "objetivo": "Calcular el retorno de inversión (ROI) de una carrera profesional y proyectar ingresos a largo plazo",
+  "xp": 500,
+  "output_type": "Análisis de Inversión Educativa",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "eleccion_profesion",
+      "titulo": "🎓 La Profesión",
+      "descripcion": "¿A qué te quieres dedicar?",
+      "campos": [
+        {
+          "id": "nombre_carrera",
+          "label": "Carrera o Profesión",
+          "type": "text",
+          "placeholder": "Ej: Programador de IA, Médico, Arquitecto...",
+          "requerido": true
+        },
+        {
+          "id": "sector_laboral",
+          "label": "Sector",
+          "type": "select",
+          "opciones": [
+            "Tecnología",
+            "Salud",
+            "Finanzas",
+            "Artes y Creatividad",
+            "Ingeniería"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "costo_estudio",
+      "titulo": "💰 La Inversión",
+      "descripcion": "¿Cuánto costará prepararte?",
+      "campos": [
+        {
+          "id": "costo_universidad",
+          "label": "Costo total de la carrera ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 2000000,
+          "step": 50000,
+          "default": 500000,
+          "unit": "$"
+        },
+        {
+          "id": "años_estudio",
+          "label": "Duración (Años)",
+          "type": "slider",
+          "min": 1,
+          "max": 7,
+          "step": 1,
+          "default": 4,
+          "unit": "años"
+        }
+      ]
+    },
+    {
+      "id": "proyeccion_ingresos",
+      "titulo": "📈 El Retorno",
+      "descripcion": "¿Cuánto esperas ganar al graduarte?",
+      "campos": [
+        {
+          "id": "sueldo_inicial_mensual",
+          "label": "Sueldo Mensual Inicial ($)",
+          "type": "slider",
+          "min": 5000,
+          "max": 100000,
+          "step": 5000,
+          "default": 20000,
+          "unit": "$"
+        },
+        {
+          "id": "habilidades_clave",
+          "label": "¿Qué habilidades te harán ganar más?",
+          "type": "textarea",
+          "placeholder": "Ej: Inglés fluido, manejo de datos, liderazgo de equipos...",
+          "requerido": true
+        },
+        {
+          "id": "roi_educacion_10a",
+          "label": "ROI de Tu Educación (10 años laborales)",
+          "type": "calculated",
+          "formula": "Math.round((sueldo_inicial_mensual * 12 * 10 - costo_universidad) / Math.max(1, costo_universidad) * 100)",
+          "unit": "%",
+          "ayuda": "Retorno de inversión de estudiar en los primeros 10 años de carrera"
+        },
+        {
+          "id": "costo_mensual_carrera",
+          "label": "Costo Mensual de la Carrera",
+          "type": "calculated",
+          "formula": "Math.round(costo_universidad / Math.max(1, años_estudio) / 12)",
+          "unit": "$/mes",
+          "ayuda": "Lo que \"cuesta\" cada mes de estudios dividiendo el total entre años × 12"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

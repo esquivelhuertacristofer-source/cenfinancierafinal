@@ -1,0 +1,136 @@
+{
+  "code": "ACT-P1-2-1-A",
+  "unit_code": "P1-2-1",
+  "unit_title": "Necesito vs. quiero: la diferencia más importante",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "El Filtro de los Genios",
+  "descripcion": "A veces queremos todo, pero solo necesitamos algunas cosas para vivir bien. ¿Sabes distinguirlas?",
+  "objetivo": "Diferenciar gastos vitales (necesidades) de gastos de satisfacción personal (deseos)",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto al lugar correcto. ¿Es una NECESIDAD para vivir o un DESEO para divertirse?",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Agua potable",
+      "emoji": "🚰",
+      "categoria_correcta": "necesidad",
+      "feedback": "¡Vital! Sin agua no podemos vivir."
+    },
+    {
+      "id": "i2",
+      "label": "Consola de juegos",
+      "emoji": "🎮",
+      "categoria_correcta": "deseo",
+      "feedback": "Es muy divertido, pero no es vital para respirar."
+    },
+    {
+      "id": "i3",
+      "label": "Frutas y verduras",
+      "emoji": "🍎",
+      "categoria_correcta": "necesidad",
+      "feedback": "La comida sana nos da energía para crecer."
+    },
+    {
+      "id": "i4",
+      "label": "Helado gigante",
+      "emoji": "🍦",
+      "categoria_correcta": "deseo",
+      "feedback": "Un gusto delicioso, pero es un deseo."
+    },
+    {
+      "id": "i5",
+      "label": "Ropa de invierno",
+      "emoji": "🧥",
+      "categoria_correcta": "necesidad",
+      "feedback": "Protegernos del frío es una necesidad básica."
+    },
+    {
+      "id": "i6",
+      "label": "Disfraz de superhéroe",
+      "emoji": "🦸",
+      "categoria_correcta": "deseo",
+      "feedback": "¡Poderoso! Pero es para jugar, no para sobrevivir."
+    },
+    {
+      "id": "i7",
+      "label": "Casa o techo",
+      "emoji": "🏠",
+      "categoria_correcta": "necesidad",
+      "feedback": "Tener un lugar seguro donde dormir es fundamental."
+    },
+    {
+      "id": "i8",
+      "label": "Smartwatch",
+      "emoji": "⌚",
+      "categoria_correcta": "deseo",
+      "feedback": "Un gadget tecnológico que podemos esperar."
+    },
+    {
+      "id": "i9",
+      "label": "Medicinas",
+      "emoji": "💊",
+      "categoria_correcta": "necesidad",
+      "feedback": "Recuperar la salud es una necesidad urgente."
+    },
+    {
+      "id": "i10",
+      "label": "Paseo al cine",
+      "emoji": "🍿",
+      "categoria_correcta": "deseo",
+      "feedback": "Ir al cine es genial, pero es un deseo de ocio."
+    },
+    {
+      "id": "i11",
+      "label": "Zapatos escolares",
+      "emoji": "👟",
+      "categoria_correcta": "necesidad",
+      "feedback": "Necesitamos calzado para caminar y protegernos."
+    },
+    {
+      "id": "i12",
+      "label": "Juguete de moda",
+      "emoji": "🧸",
+      "categoria_correcta": "deseo",
+      "feedback": "Las modas pasan, las necesidades se quedan."
+    },
+    {
+      "id": "i13",
+      "label": "Jabón y aseo",
+      "emoji": "🧼",
+      "categoria_correcta": "necesidad",
+      "feedback": "La higiene es necesaria para no enfermarnos."
+    },
+    {
+      "id": "i14",
+      "label": "Viaje a la playa",
+      "emoji": "🏖️",
+      "categoria_correcta": "deseo",
+      "feedback": "Vacacionar es un deseo que se planea con ahorro."
+    },
+    {
+      "id": "i15",
+      "label": "Educación y libros",
+      "emoji": "📚",
+      "categoria_correcta": "necesidad",
+      "feedback": "Aprender es una necesidad para tu futuro."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "necesidad",
+      "label": "NECESIDAD (Vital)",
+      "emoji": "🆘",
+      "color": "#1e40af"
+    },
+    {
+      "id": "deseo",
+      "label": "DESEO (Gusto)",
+      "emoji": "✨",
+      "color": "#7c3aed"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

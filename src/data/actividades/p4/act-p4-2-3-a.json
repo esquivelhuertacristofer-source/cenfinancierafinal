@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P4-2-3-A",
+  "unit_code": "P4-2-3",
+  "unit_title": "El cajero automático: pasos para usarlo con seguridad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Calculadora de Retiro",
+  "descripcion": "Sacar dinero de un cajero que no es de tu banco te cobra una comisión. ¡Aprende a calcular cuánto dinero te quedará realmente!",
+  "objetivo": "Calcular el costo transaccional de usar cajeros automáticos de diferentes redes bancarias",
+  "xp": 400,
+  "descripcion_formula": "Saldo Final = Saldo Actual - (Monto a Retirar + Comisión del Cajero).",
+  "inputs": [
+    {
+      "id": "saldo_banco",
+      "label": "Tu saldo en el banco",
+      "type": "slider",
+      "min": 500,
+      "max": 5000,
+      "step": 100,
+      "default": 2000,
+      "unit": "$"
+    },
+    {
+      "id": "monto_retiro",
+      "label": "Monto que quieres retirar",
+      "type": "slider",
+      "min": 100,
+      "max": 2000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "tipo_cajero",
+      "label": "Tipo de Cajero",
+      "type": "select",
+      "default": "Mi Banco",
+      "opciones": [
+        "Cajero de MI BANCO ($0 comisión)",
+        "Cajero de OTRO BANCO ($35 comisión)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "saldo_banco - (monto_retiro + (tipo_cajero === 'Cajero de MI BANCO ($0 comisión)' ? 0 : 35))",
+  "output_label": "Tu nuevo saldo después del retiro",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "🚨 ¡Fondos Insuficientes! No puedes retirar esa cantidad más la comisión. Intenta un monto menor.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "tipo_cajero === 'Cajero de OTRO BANCO ($35 comisión)'",
+      "mensaje": "💸 ¡Ojo! Estás pagando $35 por comodidad. Si caminas a tu banco, esos $35 se quedan en tu ahorro.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "tipo_cajero === 'Cajero de MI BANCO ($0 comisión)' && resultado > 0",
+      "mensaje": "✅ ¡Bien hecho! No pagaste comisiones innecesarias. Tu dinero está completo.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué información NUNCA debes dar al usar un cajero automático? ¿Qué harías si el cajero se queda con tu tarjeta y no la regresa?",
+  "comparativa_espera": "Comparar opciones financieras antes de decidir puede ahorrarte miles de pesos a lo largo del tiempo. El hábito de evaluar siempre al menos 2-3 alternativas es uno de los más valiosos en finanzas personales.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado Principal",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado de la simulación"
+    },
+    {
+      "id": "comparativa_a",
+      "label": "Opción A",
+      "formula": "resultado_principal * 0.85",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Escenario conservador"
+    },
+    {
+      "id": "comparativa_b",
+      "label": "Opción B",
+      "formula": "resultado_principal * 1.15",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Escenario optimista"
+    },
+    {
+      "id": "diferencia",
+      "label": "Diferencia entre opciones",
+      "formula": "Math.abs(resultado_principal * 0.30)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Impacto de la decisión"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado Principal",
+      "color": "#6366f1"
+    },
+    {
+      "id": "comparativa_a",
+      "label": "Opción A",
+      "color": "#22c55e"
+    }
+  ]
+}

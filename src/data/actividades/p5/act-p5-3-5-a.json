@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-3-5-A",
+  "unit_code": "P5-3-5",
+  "unit_title": "Oro y Plata: dinero de verdad por milenios",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Emprendimiento con Causa",
+  "descripcion": "Las mejores empresas del futuro no solo ganan dinero, ¡cambian el mundo! Diseña tu propio negocio con impacto social.",
+  "objetivo": "Integrar conceptos de rentabilidad económica con responsabilidad social y ambiental",
+  "xp": 400,
+  "output_type": "Plan de Empresa Social",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "la_causa_social",
+      "titulo": "🌍 El Problema",
+      "descripcion": "¿Qué cosa del mundo te gustaría arreglar con tu empresa?",
+      "campos": [
+        {
+          "id": "problema_elegido",
+          "label": "Elige tu causa",
+          "type": "select",
+          "opciones": [
+            "Contaminación por plásticos",
+            "Falta de agua limpia",
+            "Educación para todos",
+            "Hambre y desperdicio de comida"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "por_que_causa",
+          "label": "¿Por qué elegiste este problema?",
+          "type": "textarea",
+          "placeholder": "Ej: Porque me pone triste ver basura en la playa...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "el_modelo_negocio",
+      "titulo": "💰 El Negocio",
+      "descripcion": "¿Cómo vas a ganar dinero para que tu empresa pueda seguir ayudando?",
+      "campos": [
+        {
+          "id": "que_vendes",
+          "label": "¿Qué producto o servicio ofreces?",
+          "type": "text",
+          "placeholder": "Ej: Tenis hechos de botellas recicladas...",
+          "requerido": true
+        },
+        {
+          "id": "modelo_ingreso",
+          "label": "¿Quién te va a pagar?",
+          "type": "select",
+          "opciones": [
+            "Clientes individuales",
+            "Otras empresas",
+            "El gobierno"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "meta_clientes_anio_1",
+          "label": "Meta de Clientes Primer Año",
+          "type": "slider",
+          "min": 10,
+          "max": 1000,
+          "step": 10,
+          "default": 100,
+          "requerido": false
+        },
+        {
+          "id": "impacto_proyectado",
+          "label": "Personas Impactadas Directamente",
+          "type": "calculated",
+          "formula": "Math.round(meta_clientes_anio_1 * 1.5)",
+          "unit": " personas",
+          "ayuda": "Cada cliente impacta en promedio 1.5 personas en su comunidad"
+        }
+      ]
+    },
+    {
+      "id": "el_impacto_real",
+      "titulo": "📈 El Impacto",
+      "descripcion": "¿Cómo sabremos que estás ayudando de verdad?",
+      "campos": [
+        {
+          "id": "metrica_exito",
+          "label": "¿Qué medirás para saber si vas bien?",
+          "type": "text",
+          "placeholder": "Ej: Kilos de basura recogidos, niños inscritos...",
+          "requerido": true
+        },
+        {
+          "id": "promesa_social",
+          "label": "Tu compromiso como empresario social",
+          "type": "textarea",
+          "placeholder": "Yo me comprometo a que mi empresa siempre...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

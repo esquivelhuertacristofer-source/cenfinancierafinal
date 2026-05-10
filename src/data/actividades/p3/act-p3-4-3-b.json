@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P3-4-3-B",
+  "unit_code": "P3-4-3",
+  "unit_title": "Marketing y Publicidad Creativa",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "SIMPLE",
+  "titulo": "El Poder de la Publicidad",
+  "descripcion": "¿Sabes por qué elegimos unas marcas sobre otras? Pon a prueba tus conocimientos sobre el mundo de los anuncios.",
+  "objetivo": "Comprender los principios de la persuasión publicitaria y la ética en la comunicación de marca",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "t1",
+      "pregunta": "¿Qué es un 'Slogan'?",
+      "respuesta_correcta": "Una frase corta y pegajosa que identifica a una marca",
+      "incorrectas": [
+        "El nombre del dueño",
+        "El precio del producto",
+        "Una canción de cuna"
+      ],
+      "dato_extra": "Los mejores slogans suelen tener menos de 5 palabras."
+    },
+    {
+      "id": "t2",
+      "pregunta": "¿Para qué sirve un logotipo?",
+      "respuesta_correcta": "Para que la gente reconozca visualmente tu marca de inmediato",
+      "incorrectas": [
+        "Para decorar la oficina",
+        "Para que el producto pese menos",
+        "No sirve para nada"
+      ],
+      "dato_extra": "Marcas como Apple o Nike son reconocidas mundialmente solo por su logo."
+    },
+    {
+      "id": "t3",
+      "pregunta": "¿Qué es la publicidad engañosa?",
+      "respuesta_correcta": "Prometer cosas que el producto no puede cumplir",
+      "incorrectas": [
+        "Hacer anuncios divertidos",
+        "Poner el precio en rojo",
+        "Vender por internet"
+      ],
+      "dato_extra": "La publicidad engañosa es ilegal y daña la reputación de tu negocio."
+    },
+    {
+      "id": "t4",
+      "pregunta": "¿Cuál es el objetivo principal del marketing?",
+      "respuesta_correcta": "Crear valor y satisfacer las necesidades del cliente",
+      "incorrectas": [
+        "Gritar muy fuerte",
+        "Gastar todo el dinero en televisión",
+        "Obligar a la gente a comprar"
+      ],
+      "dato_extra": "El buen marketing hace que vender sea mucho más fácil."
+    },
+    {
+      "id": "t5",
+      "pregunta": "¿Dónde podemos encontrar publicidad hoy en día?",
+      "respuesta_correcta": "En redes sociales, radio, televisión y carteles en la calle",
+      "incorrectas": [
+        "Solo en los periódicos viejos",
+        "En ninguna parte",
+        "Solo en las tiendas"
+      ],
+      "dato_extra": "Hoy en día, la publicidad en internet es la más grande del mundo."
+    },
+    {
+      "id": "t6",
+      "pregunta": "¿Qué significa 'Propuesta de Valor'?",
+      "respuesta_correcta": "Lo que hace que tu producto sea especial y mejor que los demás",
+      "incorrectas": [
+        "El costo de fabricación",
+        "Una oferta de descuento",
+        "Un regalo sorpresa"
+      ],
+      "dato_extra": "Tu propuesta de valor es la razón por la que el cliente te elige a ti."
+    },
+    {
+      "id": "t7",
+      "pregunta": "¿Por qué las marcas usan colores específicos?",
+      "respuesta_correcta": "Porque los colores transmiten emociones y sentimientos",
+      "incorrectas": [
+        "Porque eran los colores favoritos del pintor",
+        "Porque eran los más baratos",
+        "Para gastar menos tinta"
+      ],
+      "dato_extra": "El rojo suele transmitir energía y el azul confianza."
+    },
+    {
+      "id": "t8",
+      "pregunta": "¿Qué es un 'Jingle'?",
+      "respuesta_correcta": "Una canción corta y pegajosa para un anuncio",
+      "incorrectas": [
+        "Un tipo de juguete",
+        "El nombre de un cliente",
+        "Un error en la fábrica"
+      ],
+      "dato_extra": "¿Alguna vez has tarareado la canción de un comercial? ¡Eso es un Jingle!"
+    },
+    {
+      "id": "t9",
+      "pregunta": "¿A quién va dirigida la publicidad de juguetes?",
+      "respuesta_correcta": "A los niños (consumidores) y a los padres (compradores)",
+      "incorrectas": [
+        "A los abuelitos solamente",
+        "A los perros",
+        "A nadie en particular"
+      ],
+      "dato_extra": "A veces el que usa el producto no es el mismo que lo paga."
+    },
+    {
+      "id": "t10",
+      "pregunta": "¿Cuál es el mejor tipo de publicidad?",
+      "respuesta_correcta": "La recomendación de un cliente satisfecho (boca en boca)",
+      "incorrectas": [
+        "Un anuncio muy caro",
+        "Gritar en la calle",
+        "Poner muchos papeles en los postes"
+      ],
+      "dato_extra": "¡Un cliente feliz es tu mejor vendedor!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

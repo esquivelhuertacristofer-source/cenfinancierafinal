@@ -1,0 +1,143 @@
+{
+  "code": "ACT-P5-2-2-A",
+  "unit_code": "P5-2-2",
+  "unit_title": "El CAT: desenmascarando el costo real",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Calculadora del CAT",
+  "descripcion": "El banco te dice '18% anual' pero el costo real es mucho más. El CAT (Costo Anual Total) incluye tasa de interés, comisiones y todos los costos ocultos. Calcula el verdadero precio del crédito antes de firmarlo.",
+  "objetivo": "Calcular el CAT de un crédito personal y comparar distintas ofertas para tomar la decisión financiera más conveniente",
+  "xp": 500,
+  "descripcion_formula": "Cuota mensual usando amortización francesa: PMT = Monto × tasa_m / (1-(1+tasa_m)^-n). CAT ≈ ((1 + (tasa_nominal/12 + comision_apertura/12/100))^12 - 1) × 100",
+  "inputs": [
+    {
+      "id": "monto_credito",
+      "label": "Monto del Crédito ($)",
+      "type": "slider",
+      "min": 5000,
+      "max": 100000,
+      "step": 5000,
+      "default": 20000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_nominal_anual",
+      "label": "Tasa Nominal Anual (%)",
+      "type": "slider",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "default": 36,
+      "unit": "%",
+      "referencia": "Promedio tarjetas México: 74.4% (Banxico 2024)"
+    },
+    {
+      "id": "comision_apertura",
+      "label": "Comisión por Apertura (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 8,
+      "step": 0.5,
+      "default": 2,
+      "unit": "%"
+    },
+    {
+      "id": "plazo_meses",
+      "label": "Plazo del Crédito (Meses)",
+      "type": "slider",
+      "min": 3,
+      "max": 36,
+      "step": 3,
+      "default": 12,
+      "unit": "meses"
+    }
+  ],
+  "formula": "Math.round((monto_credito * (tasa_nominal_anual/100/12)) / (1 - Math.pow(1 + tasa_nominal_anual/100/12, -plazo_meses)))",
+  "output_label": "Cuota Mensual ($)",
+  "output_prefix": "$",
+  "output_suffix": "/mes",
+  "outputs_multiples": [
+    {
+      "id": "cuota_mensual",
+      "label": "Cuota Mensual",
+      "formula": "Math.round((monto_credito * (tasa_nominal_anual/100/12)) / (1 - Math.pow(1 + tasa_nominal_anual/100/12, -plazo_meses)))",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Lo que pagas cada mes al banco"
+    },
+    {
+      "id": "total_pagado",
+      "label": "Total Pagado",
+      "formula": "Math.round(((monto_credito * (tasa_nominal_anual/100/12)) / (1 - Math.pow(1 + tasa_nominal_anual/100/12, -plazo_meses))) * plazo_meses + monto_credito * comision_apertura/100)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Todo lo que terminas pagando (cuotas + comisión)"
+    },
+    {
+      "id": "intereses_y_comisiones",
+      "label": "Costo Total del Crédito",
+      "formula": "Math.round(((monto_credito * (tasa_nominal_anual/100/12)) / (1 - Math.pow(1 + tasa_nominal_anual/100/12, -plazo_meses))) * plazo_meses + monto_credito * comision_apertura/100 - monto_credito)",
+      "prefix": "$",
+      "suffix": " extra",
+      "descripcion": "Lo que le pagas al banco de más por usar su dinero"
+    },
+    {
+      "id": "cat_estimado",
+      "label": "CAT Estimado",
+      "formula": "Math.round((Math.pow(1 + (tasa_nominal_anual/100 + comision_apertura/100*12/plazo_meses)/12, 12) - 1) * 100 * 10) / 10",
+      "prefix": "",
+      "suffix": "% anual",
+      "descripcion": "El costo real anual que el banco está obligado a publicar"
+    }
+  ],
+  "comparativa_cat": {
+    "titulo": "CAT real en México (Banxico 2024)",
+    "datos": [
+      { "producto": "Tarjeta de crédito departamental", "cat": "74.4%" },
+      { "producto": "Crédito personal banco grande", "cat": "35-55%" },
+      { "producto": "Crédito de nómina", "cat": "25-45%" },
+      { "producto": "Hipoteca fija 20 años", "cat": "12-16%" },
+      { "producto": "CETES (inversión, no crédito)", "cat": "10.5%" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "cuota_mensual",
+      "label": "Cuota Mensual ($)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "cat_estimado",
+      "label": "CAT (%)",
+      "color": "#f59e0b"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "cat_estimado > 60",
+      "mensaje": "🔥 CAT mayor al 60%. Este crédito es una trampa. Por $20,000 prestados podrías terminar pagando el doble o más. ¡Compara antes de firmar!",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "cat_estimado > 35 && cat_estimado <= 60",
+      "mensaje": "⚠️ CAT elevado. Hay opciones más baratas en el mercado. Busca una institución con menor CAT o considera si realmente necesitas el crédito ahora.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "cat_estimado <= 20",
+      "mensaje": "✅ CAT razonable. Estás cerca de las mejores tasas disponibles en México. Asegúrate de no pagar por seguros o servicios que no necesitas.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El CAT lo dice todo: incluye tasa, comisiones y costos de seguros obligatorios. Siempre compara CAT, no solo la tasa mensual.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Un banco ofrece tarjeta al 45% anual y otro al 72% anual pero sin anualidad. ¿Cuál conviene más a largo plazo? ¿Cómo te ayudaría el CAT a comparar ambas opciones?",
+  "comparativa_espera": "El CAT promedio de tarjetas de crédito en México es 74.4% anual (Banxico 2024). Una deuda de $10,000 pagando solo el mínimo puede tardar más de 30 años en liquidarse completamente."
+}

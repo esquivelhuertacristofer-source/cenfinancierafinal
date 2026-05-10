@@ -1,0 +1,116 @@
+{
+  "code": "ACT-S3-3-3-B",
+  "unit_code": "S3-3-3",
+  "unit_title": "Criptoactivos y blockchain: el futuro del valor",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Estrategia de Cobertura",
+  "descripcion": "No dejes el éxito de tu empresa a la suerte. ¡Diseña un plan profesional para enfrentar la volatilidad del mercado!",
+  "objetivo": "Desarrollar un plan de gestión de riesgos financieros utilizando herramientas de cobertura para asegurar la rentabilidad",
+  "xp": 600,
+  "output_type": "Plan Maestro de Gestión de Riesgos",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "diagnostico_riesgo_s3",
+      "titulo": "🔍 Identificación del Riesgo",
+      "descripcion": "¿Cuál es el mayor peligro externo para tu negocio hoy?",
+      "campos": [
+        {
+          "id": "tipo_riesgo_s3",
+          "label": "Factor de Riesgo",
+          "type": "select",
+          "opciones": [
+            "Tipo de Cambio (Dólar)",
+            "Precio de Materia Prima (ej: Trigo, Acero)",
+            "Tasas de Interés (Deuda)",
+            "Precio de Energía (Gasolina/Luz)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "exposicion_riesgo",
+          "label": "¿Por qué este factor es peligroso para ti?",
+          "type": "textarea",
+          "placeholder": "Ej: Si el precio del trigo sube 20%, el costo de mi panadería será mayor que mis ventas...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "seleccion_herramienta_s3",
+      "titulo": "🛠️ Selección de Herramientas",
+      "descripcion": "¿Qué instrumento usarás para protegerte?",
+      "campos": [
+        {
+          "id": "herramienta_cobertura",
+          "label": "Instrumento Financiero",
+          "type": "select",
+          "opciones": [
+            "Contrato de Futuros (Fijar precio)",
+            "Opción (Derecho a comprar/vender)",
+            "Seguro Tradicional",
+            "Diversificación de Proveedores"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "justificacion_herramienta",
+          "label": "¿Por qué elegiste esta herramienta?",
+          "type": "textarea",
+          "placeholder": "Ej: Prefiero una opción porque si el precio baja me beneficio, pero si sube estoy protegido...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "presupuesto_cobertura_s3",
+      "titulo": "💰 El Costo de la Certeza",
+      "descripcion": "Nada es gratis. ¿Cuánto invertirás en tu protección?",
+      "campos": [
+        {
+          "id": "prima_presupuesto",
+          "label": "Presupuesto para la Prima de Cobertura ($)",
+          "type": "slider",
+          "min": 1000,
+          "max": 50000,
+          "step": 1000,
+          "default": 5000,
+          "unit": "$"
+        },
+        {
+          "id": "punto_quiebre_s3",
+          "label": "Precio crítico (¿A qué precio tu negocio deja de ser rentable?)",
+          "type": "text",
+          "placeholder": "Ej: Si el dólar llega a $24",
+          "requerido": true
+        },
+        {
+          "id": "costo_anual_cobertura",
+          "label": "Costo Anual de la Cobertura",
+          "type": "calculated",
+          "formula": "prima_presupuesto * 12",
+          "unit": "$/año",
+          "ayuda": "El costo total de mantener tu estrategia de cobertura durante un año"
+        }
+      ]
+    },
+    {
+      "id": "resumen_estrategia_s3",
+      "titulo": "📋 Resumen del Plan",
+      "descripcion": "Define tu postura ante el riesgo.",
+      "campos": [
+        {
+          "id": "postura_riesgo",
+          "label": "Mi filosofía de riesgo",
+          "type": "textarea",
+          "placeholder": "Ej: Mi prioridad es la estabilidad de los empleos de mi empresa, por lo que siempre cubriré el 50% de mis costos...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

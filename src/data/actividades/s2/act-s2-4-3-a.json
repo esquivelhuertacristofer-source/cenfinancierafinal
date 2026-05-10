@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S2-4-3-A",
+  "unit_code": "S2-4-3",
+  "unit_title": "Fundraising: Series A, B, C — ¿cómo funciona realmente?",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "El Laberinto de los Impuestos",
+  "descripcion": "Acabas de abrir tu primer negocio. ¡Cuidado! El socio más importante (y estricto) es el SAT. ¿Podrás mantener tus cuentas claras?",
+  "objetivo": "Comprender la responsabilidad fiscal, la gestión del IVA y la importancia de las deducciones legales",
+  "xp": 500,
+  "mecanica": "Toma decisiones fiscales mes a mes. Mantén tu 'Salud Fiscal' alta para evitar auditorías.",
+  "escenarios": [
+    {
+      "id": "tax1",
+      "texto": "Vendes un producto por $1,160. De ese dinero, $160 son de IVA. ¿Qué haces con ese extra?",
+      "imagen": "💰",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Muy bien! Ese dinero no es tuyo, solo lo estás recaudando para el gobierno. Guardarlo te evita deudas fiscales.",
+      "feedback_error": "❌ ¡Error grave! Gastaste el IVA como si fuera utilidad. Cuando llegue el momento de pagarlo, no tendrás dinero. Salud Fiscal -30.",
+      "tipo_ataque": "Gestión de IVA"
+    },
+    {
+      "id": "tax2",
+      "texto": "Necesitas una computadora para trabajar. Si pides FACTURA, puedes restar ese gasto de tus impuestos.",
+      "imagen": "💻",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Inteligente! Esto se llama Deducción. Al ser un gasto necesario para tu negocio, pagas menos impuestos legalmente.",
+      "feedback_error": "❌ Perdiste una oportunidad. Al no pedir factura, pagas el precio total y no recuperas nada en tu declaración.",
+      "tipo_ataque": "Deducciones"
+    },
+    {
+      "id": "tax3",
+      "texto": "Es fin de mes y toca declarar tus ingresos. Tuviste ventas en efectivo que nadie vio. ¿Las declaras?",
+      "imagen": "🤫",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Correcto! Ser honesto te protege de auditorías y multas gigantescas en el futuro. Tu reputación fiscal sube.",
+      "feedback_error": "❌ ¡Peligro! Ocultar ingresos es Evasión Fiscal. Si te descubren, las multas serán mayores que todo lo que ganaste.",
+      "tipo_ataque": "Declaración de Ingresos"
+    },
+    {
+      "id": "tax4",
+      "texto": "Llega el momento de la Declaración Anual. Como tuviste gastos médicos facturados, el gobierno te devuelve dinero.",
+      "imagen": "🏥",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades! Por tener tus papeles en orden, recibes un 'Saldo a Favor'. ¡Dinero extra directo a tu cuenta!",
+      "feedback_error": "❌ Por no llevar orden en tus facturas, perdiste el derecho a recuperar ese dinero.",
+      "tipo_ataque": "Saldo a Favor"
+    },
+    {
+      "id": "tax5",
+      "texto": "Tu negocio creció y ahora tienes empleados. ¿Debes pagar sus cuotas de seguridad social (IMSS)?",
+      "imagen": "👥",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Excelente! Ser un patrón responsable asegura el futuro de tu equipo y evita clausuras legales.",
+      "feedback_error": "❌ ¡Clausura! No cumplir con los derechos de tus trabajadores es la forma más rápida de cerrar tu negocio.",
+      "tipo_ataque": "Responsabilidad Social"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Toma decisiones fiscales. ¿Qué harías en cada situación? Mantén tu Salud Fiscal alta.",
+  "duracion": 150,
+  "opciones_clasificacion": [
+    "CORRECTO (Cumplir)",
+    "EVASIÓN (Ilegal)"
+  ],
+  "items": [
+    {
+      "id": "tax1",
+      "label": "Vendes un producto por $1,160. De ese dinero, $160 son de IVA. ¿Qué haces con ese extra?",
+      "emoji": "💰",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Muy bien! Ese dinero no es tuyo, solo lo estás recaudando para el gobierno. Guardarlo te evita deudas fiscales.",
+      "feedback_error": "❌ ¡Error grave! Gastaste el IVA como si fuera utilidad. Cuando llegue el momento de pagarlo, no tendrás dinero. Salud Fiscal -30.",
+      "puntos": 100
+    },
+    {
+      "id": "tax2",
+      "label": "Necesitas una computadora para trabajar. Si pides FACTURA, puedes restar ese gasto de tus impuestos.",
+      "emoji": "💻",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Inteligente! Esto se llama Deducción. Al ser un gasto necesario para tu negocio, pagas menos impuestos legalmente.",
+      "feedback_error": "❌ Perdiste una oportunidad. Al no pedir factura, pagas el precio total y no recuperas nada en tu declaración.",
+      "puntos": 100
+    },
+    {
+      "id": "tax3",
+      "label": "Es fin de mes y toca declarar tus ingresos. Tuviste ventas en efectivo que nadie vio. ¿Las declaras?",
+      "emoji": "🤫",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Correcto! Ser honesto te protege de auditorías y multas gigantescas en el futuro. Tu reputación fiscal sube.",
+      "feedback_error": "❌ ¡Peligro! Ocultar ingresos es Evasión Fiscal. Si te descubren, las multas serán mayores que todo lo que ganaste.",
+      "puntos": 100
+    },
+    {
+      "id": "tax4",
+      "label": "Llega el momento de la Declaración Anual. Como tuviste gastos médicos facturados, el gobierno te dev...",
+      "emoji": "🏥",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Felicidades! Por tener tus papeles en orden, recibes un 'Saldo a Favor'. ¡Dinero extra directo a tu cuenta!",
+      "feedback_error": "❌ Por no llevar orden en tus facturas, perdiste el derecho a recuperar ese dinero.",
+      "puntos": 100
+    },
+    {
+      "id": "tax5",
+      "label": "Tu negocio creció y ahora tienes empleados. ¿Debes pagar sus cuotas de seguridad social (IMSS)?",
+      "emoji": "👥",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Excelente! Ser un patrón responsable asegura el futuro de tu equipo y evita clausuras legales.",
+      "feedback_error": "❌ ¡Clausura! No cumplir con los derechos de tus trabajadores es la forma más rápida de cerrar tu negocio.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 500
+  }
+}

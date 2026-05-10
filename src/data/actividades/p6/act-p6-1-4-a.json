@@ -1,0 +1,99 @@
+{
+  "code": "ACT-P6-1-4-A",
+  "unit_code": "P6-1-4",
+  "unit_title": "Tecnología financiera: fintech en México",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Museo de las Burbujas",
+  "descripcion": "La historia nos enseña que el dinero fácil a veces desaparece de golpe. ¿Puedes identificar las crisis más grandes del mundo?",
+  "objetivo": "Identificar las causas y patrones comunes en las crisis financieras históricas",
+  "xp": 250,
+  "instruccion": "Arrastra cada hecho a la crisis financiera correspondiente.",
+  "items": [
+    {
+      "id": "h1",
+      "label": "Bulbos de flores que valían más que una mansión",
+      "emoji": "🌷",
+      "categoria_correcta": "tulipomanía",
+      "feedback": "Holanda, siglo XVII: la primera burbuja financiera registrada."
+    },
+    {
+      "id": "h2",
+      "label": "Caída estrepitosa de Wall Street y desempleo masivo",
+      "emoji": "📉",
+      "categoria_correcta": "1929",
+      "feedback": "La Gran Depresión: cambió las leyes financieras del mundo."
+    },
+    {
+      "id": "h3",
+      "label": "Empresas de internet que valían billones sin vender nada",
+      "emoji": "💻",
+      "categoria_correcta": "dotcom",
+      "feedback": "Año 2000: el exceso de optimismo en la tecnología explotó."
+    },
+    {
+      "id": "h4",
+      "label": "Préstamos de casas (Subprime) que nadie podía pagar",
+      "emoji": "🏠",
+      "categoria_correcta": "2008",
+      "feedback": "La Gran Recesión: inició por una crisis en el sector inmobiliario."
+    },
+    {
+      "id": "h5",
+      "label": "Pánico en los bancos; la gente corría a sacar su dinero",
+      "emoji": "🏃",
+      "categoria_correcta": "1929",
+      "feedback": "La falta de confianza derrumbó el sistema bancario."
+    },
+    {
+      "id": "h6",
+      "label": "Venta de contratos por flores que aún no habían crecido",
+      "emoji": "📜",
+      "categoria_correcta": "tulipomanía",
+      "feedback": "Fue el inicio de los mercados de futuros, pero usado de forma loca."
+    },
+    {
+      "id": "h7",
+      "label": "Las hipotecas se vendían como si fueran inversiones seguras",
+      "emoji": "📑",
+      "categoria_correcta": "2008",
+      "feedback": "Los bancos cometieron errores graves al evaluar el riesgo."
+    },
+    {
+      "id": "h8",
+      "label": "Cualquier empresa con '.com' en su nombre subía de precio",
+      "emoji": "🌐",
+      "categoria_correcta": "dotcom",
+      "feedback": "La gente invertía sin entender el negocio, solo por la moda."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "tulipomanía",
+      "label": "TULIPOMANÍA (1637)",
+      "emoji": "🌷",
+      "color": "#f87171"
+    },
+    {
+      "id": "1929",
+      "label": "GRAN DEPRESIÓN (1929)",
+      "emoji": "🧥",
+      "color": "#4b5563"
+    },
+    {
+      "id": "dotcom",
+      "label": "BURBUJA DOT-COM (2000)",
+      "emoji": "⌨️",
+      "color": "#60a5fa"
+    },
+    {
+      "id": "2008",
+      "label": "CRISIS INMOBILIARIA (2008)",
+      "emoji": "🏚️",
+      "color": "#f59e0b"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

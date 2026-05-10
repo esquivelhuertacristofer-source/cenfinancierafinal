@@ -1,0 +1,118 @@
+{
+  "code": "ACT-P5-1-5-A",
+  "unit_code": "P5-1-5",
+  "unit_title": "Impuestos y Civismo: el SAT y mi país",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Rescate Económico en Auroria",
+  "descripcion": "El país de Auroria está en crisis: su moneda no vale nada y la gente no tiene trabajo. Tú representas al FMI. ¿Cómo ayudarás sin empeorar las cosas?",
+  "objetivo": "Comprender la función de los préstamos internacionales y las reformas estructurales en economías en crisis",
+  "xp": 500,
+  "personaje_principal": "Analista Senior",
+  "contexto_inicial": "El presidente de Auroria te pide 1,000 millones de dólares para salvar a su país. El FMI puede darlos, pero el país debe comprometerse a cambiar.",
+  "nodo_inicial": "el_prestamo",
+  "nodos": {
+    "el_prestamo": {
+      "id": "el_prestamo",
+      "texto": "Auroria gasta mucho dinero en cosas que no sirven. ¿Qué les exiges primero?",
+      "opciones": [
+        {
+          "id": "educacion_tecnologia",
+          "texto": "Invertir el dinero en educación y nuevas tecnologías",
+          "siguiente_nodo": "segundo_paso_p5",
+          "consecuencia": "¡Excelente visión! La educación es la base del crecimiento a largo plazo.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pagar_deudas_viejas",
+          "texto": "Usar todo el dinero para pagar deudas viejas a otros países",
+          "siguiente_nodo": "crisis_social",
+          "consecuencia": "Esto calma a los bancos, pero la gente de Auroria sigue sin comida ni trabajo.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "segundo_paso_p5": {
+      "id": "segundo_paso_p5",
+      "texto": "El país empieza a mejorar, pero todavía necesitan más empleos. ¿Qué sugieres?",
+      "opciones": [
+        {
+          "id": "facilitar_negocios",
+          "texto": "Bajar impuestos a nuevas empresas para que den trabajo",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Paso maestro! Las empresas empezaron a contratar a miles de personas.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "subsidio_total",
+          "texto": "Regalarle dinero a todo el mundo sin que trabajen",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El dinero se acabó rápido y los precios subieron tanto que ahora nadie puede comprar nada.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "crisis_social": {
+      "id": "crisis_social",
+      "texto": "La gente está enojada porque el dinero no se usó para mejorar su vida. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "rectificar_camino",
+          "texto": "Cambiar el plan y enfocar el resto en salud y escuelas",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡A tiempo! Lograste salvar la situación escuchando las necesidades reales.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_prosperidad": {
+      "id": "final_prosperidad",
+      "texto": "¡Felicidades! Auroria es ahora un país próspero y agradecido con el FMI por su buena guía.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Ayudar a un país no es solo darle dinero, sino enseñarle a administrarlo mejor."
+    },
+    "final_inflacion": {
+      "id": "final_inflacion",
+      "texto": "Auroria fracasó. El dinero se desperdició y la crisis es peor que antes. ¡Aprendiste una dura lección!",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Regalar dinero sin crear valor siempre genera inflación y pobreza a largo plazo."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

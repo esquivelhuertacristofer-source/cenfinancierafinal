@@ -1,0 +1,106 @@
+{
+  "code": "ACT-P5-3-1-B",
+  "unit_code": "P5-3-1",
+  "unit_title": "El Perfil de Inversionista: conócete a ti mismo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Plan Maestro de Ahorro",
+  "descripcion": "No dejes tu futuro al azar. ¡Diseña hoy tu plan de 5 años y descubre cuánto puedes lograr con disciplina!",
+  "objetivo": "Establecer metas financieras de mediano plazo y cuantificar el esfuerzo necesario para alcanzarlas",
+  "xp": 400,
+  "output_type": "Hoja de Ruta Financiera",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "meta_5_anios",
+      "titulo": "🎯 Mi Meta a 5 Años",
+      "descripcion": "¿Qué quieres haber logrado cuando tengas 15 o 16 años?",
+      "campos": [
+        {
+          "id": "nombre_meta_p5",
+          "label": "¿Cuál es tu gran objetivo?",
+          "type": "select",
+          "opciones": [
+            "Mi primer coche usado",
+            "Fondo para universidad",
+            "Un viaje de graduación",
+            "Comprar equipo para mi negocio"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "costo_aproximado",
+          "label": "¿Cuánto crees que cueste esa meta?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "el_esfuerzo_mensual",
+      "titulo": "💪 El Esfuerzo Mensual",
+      "descripcion": "¿Cómo vas a juntar ese dinero?",
+      "campos": [
+        {
+          "id": "ahorro_mensual_compromiso",
+          "label": "¿Cuánto dinero puedes ahorrar cada mes?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "fuente_ingreso",
+          "label": "¿De dónde vendrá ese dinero?",
+          "type": "text",
+          "placeholder": "Ej: De mis domingos, de vender dulces, de trabajos en casa...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "el_factor_interes",
+      "titulo": "🚀 El Impulso del Interés",
+      "descripcion": "¿Dónde pondrás a trabajar tu ahorro?",
+      "campos": [
+        {
+          "id": "instrumento_elegido",
+          "label": "¿En qué instrumento invertirás?",
+          "type": "select",
+          "opciones": [
+            "CETES (Seguro)",
+            "Acciones (Crecimiento)",
+            "Negocio propio (Emprendimiento)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "compromiso_p5",
+          "label": "Tu compromiso personal",
+          "type": "textarea",
+          "placeholder": "Escribe por qué no te vas a rendir en estos 5 años...",
+          "requerido": true
+        },
+        {
+          "id": "meses_para_meta",
+          "label": "Meses para Alcanzar la Meta",
+          "type": "calculated",
+          "formula": "Math.ceil(costo_aproximado / Math.max(1, ahorro_mensual_compromiso))",
+          "unit": " meses",
+          "ayuda": "Sin intereses, así tardas en alcanzar tu meta"
+        },
+        {
+          "id": "total_5_anos",
+          "label": "Total Ahorrado en 5 Años",
+          "type": "calculated",
+          "formula": "ahorro_mensual_compromiso * 60",
+          "unit": "$",
+          "ayuda": "5 años × 12 meses × tu aportación mensual"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,141 @@
+{
+  "code": "ACT-P5-2-4-B",
+  "unit_code": "P5-2-4",
+  "unit_title": "Publicidad y Redes Sociales: el truco del deseo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Alerta de Hackeo",
+  "descripcion": "Te llega un mensaje: 'Se ha realizado una compra por $2,000 en una tienda de otro país'. Tú no hiciste esa compra. ¡Rápido! ¿Qué haces?",
+  "objetivo": "Aprender el protocolo de respuesta ante cargos no reconocidos y posible robo de identidad",
+  "xp": 450,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny está cenando cuando su celular vibra con una alerta bancaria. Alguien está usando sus datos en el extranjero.",
+  "nodo_inicial": "primer_paso_crisis",
+  "nodos": {
+    "primer_paso_crisis": {
+      "id": "primer_paso_crisis",
+      "texto": "El pánico te invade. ¿Cuál es la primera acción inteligente?",
+      "opciones": [
+        {
+          "id": "bloquear_tarjeta",
+          "texto": "Entrar a la App y bloquear/apagar la tarjeta de inmediato",
+          "siguiente_nodo": "denuncia_banco",
+          "consecuencia": "¡Perfecto! Detuviste cualquier otro intento de compra al instante.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "esperar_ver",
+          "texto": "Esperar a mañana para ir al banco físicamente",
+          "siguiente_nodo": "mas_cargos",
+          "consecuencia": "¡Cuidado! Los ladrones digitales son rápidos y harán más compras mientras esperas.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "mas_cargos": {
+      "id": "mas_cargos",
+      "texto": "¡Oh no! Llega otra alerta por $1,500. Siguen gastando tu dinero.",
+      "opciones": [
+        {
+          "id": "reaccionar_tarde",
+          "texto": "¡Ya basta! Bloquear la tarjeta ahora mismo",
+          "siguiente_nodo": "denuncia_banco",
+          "consecuencia": "Por fin reaccionaste, pero ya perdiste más dinero del necesario.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "denuncia_banco": {
+      "id": "denuncia_banco",
+      "texto": "Con la tarjeta bloqueada, ahora debes formalizar la queja. ¿A quién llamas?",
+      "opciones": [
+        {
+          "id": "llamar_banco_oficial",
+          "texto": "Llamar al número oficial del banco (detrás de la tarjeta)",
+          "siguiente_nodo": "prevencion_final",
+          "consecuencia": "El banco toma tu reporte e inicia la investigación para devolverte el dinero.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "buscar_ayuda_fb",
+          "texto": "Poner un post en Facebook preguntando qué hacer",
+          "siguiente_nodo": "estafadores_extra",
+          "consecuencia": "Mucha gente te da consejos contradictorios y pierdes tiempo valioso.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "estafadores_extra": {
+      "id": "estafadores_extra",
+      "texto": "Alguien te escribe por privado diciendo que él puede 'hackear' al ladrón si le das tu contraseña.",
+      "opciones": [
+        {
+          "id": "bloquear_nuevo_estafador",
+          "texto": "Bloquear a esa persona; es otro estafador aprovechando tu miedo",
+          "siguiente_nodo": "prevencion_final",
+          "consecuencia": "¡Bien hecho! Tienes la mente fría para detectar buitres digitales.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "prevencion_final": {
+      "id": "prevencion_final",
+      "texto": "Lograste salvar tu cuenta. Pero ¿cómo evitar que pase de nuevo?",
+      "opciones": [
+        {
+          "id": "mejorar_seguridad",
+          "texto": "Cambiar todas las contraseñas y activar el Doble Factor (2FA)",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Ahora tu identidad digital es un búnker impenetrable.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_recuperado": {
+      "id": "final_recuperado",
+      "texto": "¡Felicidades! Recuperaste tu seguridad. Aprendiste que la rapidez y el uso de canales oficiales son tus mejores armas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Ante un fraude, la calma es tu aliada y la rapidez tu escudo. ¡Nunca compartas tus claves!"
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P5-2-1-A",
+  "unit_code": "P5-2-1",
+  "unit_title": "La Tarjeta de Crédito: dinero prestado, no regalado",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Escudo Digital",
+  "descripcion": "Las amenazas en internet son cada vez más inteligentes. ¿Podrás interceptar los virus y proteger tu información?",
+  "objetivo": "Identificar y diferenciar tipos de ciberataques modernos y medidas de protección",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 60,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Haz clic en las ACCIONES SEGURAS (✅) y bloquea las AMENAZAS (🚫).",
+  "items": [
+    {
+      "id": "t1",
+      "label": "Ransomware: 'Tus archivos están bloqueados'",
+      "emoji": "🔓",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "s1",
+      "label": "Actualización de Sistema Oficial",
+      "emoji": "🔄",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "t2",
+      "label": "Archivo.exe adjunto de un extraño",
+      "emoji": "📁",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "s2",
+      "label": "Usar una VPN en red pública",
+      "emoji": "🌐",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "t3",
+      "label": "Anuncio: '¡Tu celular tiene 10 virus! Haz clic'",
+      "emoji": "⚠️",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s3",
+      "label": "Autenticación de Dos Pasos (2FA) activa",
+      "emoji": "📱",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "t4",
+      "label": "USB que encontraste tirada en la calle",
+      "emoji": "💾",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "s4",
+      "label": "Navegar solo en sitios con HTTPS",
+      "emoji": "🔒",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "t5",
+      "label": "Llamada: 'Danos tu código de WhatsApp'",
+      "emoji": "📞",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "s5",
+      "label": "Contraseña de 16 caracteres con símbolos",
+      "emoji": "🔑",
+      "tipo": "correcto",
+      "puntos": 100
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

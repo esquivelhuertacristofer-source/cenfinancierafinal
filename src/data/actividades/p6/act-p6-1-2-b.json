@@ -1,0 +1,127 @@
+{
+  "code": "ACT-P6-1-2-B",
+  "unit_code": "P6-1-2",
+  "unit_title": "Las finanzas personales a lo largo de la vida",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Gamer Inteligente",
+  "descripcion": "Quieres la nueva PC Gamer de $20,000. Pero hay rumores de que el precio cambiará pronto. ¿Pagarás por el derecho a congelar el precio?",
+  "objetivo": "Experimentar el uso de opciones de compra (CALL) y entender el costo/beneficio de la prima",
+  "xp": 450,
+  "personaje_principal": "Lucas",
+  "contexto_inicial": "Lucas tiene $20,000 ahorrados. La tienda le ofrece una 'Opción Call' por $500: esto le da el derecho a comprar la PC a $20,000 dentro de un mes, pase lo que pase.",
+  "nodo_inicial": "comprar_opcion",
+  "nodos": {
+    "comprar_opcion": {
+      "id": "comprar_opcion",
+      "texto": "¿Vale la pena gastar $500 solo por el derecho a decidir después?",
+      "opciones": [
+        {
+          "id": "si_opcion",
+          "texto": "Sí, pagar los $500 de prima",
+          "siguiente_nodo": "escenario_mercado_p6",
+          "consecuencia": "Pagaste tu prima. Ahora tienes un 'seguro' de precio.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "no_opcion",
+          "texto": "No, mejor guardo mis $500 y espero",
+          "siguiente_nodo": "escenario_sin_seguro",
+          "consecuencia": "Decidiste arriesgarte al mercado libre.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "escenario_mercado_p6": {
+      "id": "escenario_mercado_p6",
+      "texto": "¡Llegó el día! Hubo escasez de chips y el precio de la PC subió a $25,000 en todas las tiendas. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "ejercer_derecho",
+          "texto": "Usar mi opción y comprar a $20,000",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Genial! Ahorraste $4,500 ($5,000 de diferencia menos los $500 de la prima).",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "no_ejercer_opcion",
+          "texto": "No ejercer la opción y venderla a otro por lo poco que vale ahora",
+          "siguiente_nodo": "final_triste_gamer",
+          "consecuencia": "Renunciaste a la ganancia. La opción que pagaste apenas recuperó $50.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "escenario_sin_seguro": {
+      "id": "escenario_sin_seguro",
+      "texto": "El precio subió a $25,000. Como no tienes opción congelada, ahora te falta dinero.",
+      "opciones": [
+        {
+          "id": "ahorrar_mas",
+          "texto": "Ahorrar otros $5,000 durante meses",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Te quedarás sin jugar mucho tiempo por no haberte protegido.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "endeudarse_para_pc",
+          "texto": "Pedir un crédito a tasa alta para comprar la PC ahora mismo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Compraste la PC, pero ahora debes mucho más que el valor original.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_exito_opcion": {
+      "id": "final_exito_opcion",
+      "texto": "¡Felicidades! Entendiste que pagar una pequeña prima te protege de grandes sorpresas. ¡A jugar!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Las opciones son la mejor forma de manejar la incertidumbre en los negocios."
+    },
+    "final_triste_gamer": {
+      "id": "final_triste_gamer",
+      "texto": "Aprendiste que el mercado no siempre te favorece. A veces, pagar por seguridad es la mejor inversión.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Ignorar los riesgos suele salir más caro que protegerse de ellos."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

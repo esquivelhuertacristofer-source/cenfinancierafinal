@@ -1,0 +1,87 @@
+{
+  "code": "ACT-P3-2-4-A",
+  "unit_code": "P3-2-4",
+  "unit_title": "El ahorro formal vs. el ahorro informal",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿Formal o Informal?",
+  "descripcion": "Existen muchas formas de guardar dinero. Algunas son seguras y reguladas, otras dependen de la suerte o de la palabra de las personas.",
+  "objetivo": "Diferenciar entre métodos de ahorro protegidos por la ley y métodos informales de alto riesgo",
+  "xp": 250,
+  "instruccion": "Arrastra cada método de ahorro al grupo correcto: ¿Es AHORRO FORMAL o AHORRO INFORMAL?",
+  "items": [
+    {
+      "id": "f1",
+      "label": "Cuenta de ahorro infantil",
+      "emoji": "🏦",
+      "categoria_correcta": "formal",
+      "feedback": "¡Formal! Está protegido por el IPAB y te da intereses."
+    },
+    {
+      "id": "i1",
+      "label": "Debajo del colchón",
+      "emoji": "🛏️",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Es peligroso por robos, incendios o porque el dinero pierde valor."
+    },
+    {
+      "id": "i2",
+      "label": "Una tanda con los vecinos",
+      "emoji": "👥",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Si alguien no paga o se va con el dinero, nadie te defiende."
+    },
+    {
+      "id": "f2",
+      "label": "App oficial de un banco",
+      "emoji": "📱",
+      "categoria_correcta": "formal",
+      "feedback": "¡Formal! Es tecnología bancaria segura y regulada."
+    },
+    {
+      "id": "i3",
+      "label": "Alcancía de puerquito",
+      "emoji": "🐷",
+      "categoria_correcta": "informal",
+      "feedback": "Informal. Es un buen comienzo, pero no es tan seguro como un banco."
+    },
+    {
+      "id": "f3",
+      "label": "Caja de ahorro escolar oficial",
+      "emoji": "🏫",
+      "categoria_correcta": "formal",
+      "feedback": "Formal. Si tiene reglas claras y está registrada, es ahorro formal."
+    },
+    {
+      "id": "i4",
+      "label": "Guardar dinero con un amigo",
+      "emoji": "🤝",
+      "categoria_correcta": "informal",
+      "feedback": "¡Peligro! El dinero y la amistad no deben mezclarse de esa forma."
+    },
+    {
+      "id": "f4",
+      "label": "Cuenta de nómina de mis papás",
+      "emoji": "💳",
+      "categoria_correcta": "formal",
+      "feedback": "¡Formal! El dinero está en el sistema bancario mexicano."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "formal",
+      "label": "AHORRO FORMAL (Seguro)",
+      "emoji": "⚖️",
+      "color": "#16a34a"
+    },
+    {
+      "id": "informal",
+      "label": "AHORRO INFORMAL (Riesgoso)",
+      "emoji": "⚠️",
+      "color": "#ef4444"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

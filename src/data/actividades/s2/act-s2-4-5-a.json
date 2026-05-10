@@ -1,0 +1,143 @@
+{
+  "code": "ACT-S2-4-5-A",
+  "unit_code": "S2-4-5",
+  "unit_title": "Emprendimiento con propósito: RSE y empresas sociales",
+  "level": "Secundaria 2",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Poder de Invertir Joven",
+  "descripcion": "Simula cómo crecería tu dinero si empiezas a invertir hoy mismo comparado con esperar 10 años. ¡La diferencia te sorprenderá!",
+  "objetivo": "Comprender visualmente el impacto del tiempo en el interés compuesto",
+  "xp": 800,
+  "inputs": [
+    {
+      "id": "monto_inicial_s2",
+      "label": "Monto inicial para invertir ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_interes_s2",
+      "label": "Tasa de rendimiento anual (%)",
+      "type": "slider",
+      "min": 5,
+      "max": 15,
+      "step": 1,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "tiempo_espera",
+      "label": "¿Cuándo empezarás a invertir?",
+      "type": "select",
+      "default": "Hoy mismo",
+      "opciones": [
+        "Hoy mismo",
+        "En 10 años"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "monto_inicial_s2 * Math.pow((1 + (tasa_interes_s2 / 100)), (tiempo_espera === 'Hoy mismo' ? 20 : 10))",
+  "output_label": "Tu Capital tras 20 años",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "tiempo_espera === 'Hoy mismo'",
+      "mensaje": "💎 ¡Impresionante! El tiempo es tu mejor amigo. Al empezar hoy, el interés compuesto trabajó el doble para ti.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tiempo_espera === 'En 10 años'",
+      "mensaje": "🐢 Perdiste 10 años de crecimiento. Aunque inviertas la misma cantidad, tu resultado final es mucho menor por no aprovechar el tiempo.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "Invertir no es solo para adultos; el tiempo es el activo más valioso que tienes ahora.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Puede un negocio ser rentable Y tener impacto social positivo al mismo tiempo? ¿Qué empresa mexicana con propósito social conoces que también sea sustentable económicamente?",
+  "comparativa_espera": "Las empresas B certificadas en México demuestran que propósito social y rentabilidad no se contradicen. Las empresas con propósito claro retienen mejor al talento joven y tienen menor rotación de personal.",
+  "outputs_multiples": [
+    {
+      "id": "valor_al_retiro",
+      "label": "Valor al Retiro",
+      "formula": "Math.round(monto_inicial_s2 * Math.pow(1 + tasa_interes_s2/100, anios_sim))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "El poder del interés compuesto a lo largo del tiempo"
+    },
+    {
+      "id": "duplicaciones",
+      "label": "Veces que se Duplica tu Dinero",
+      "formula": "Math.floor(anios_sim / Math.max(1, 72 / Math.max(1, tasa_interes_s2)))",
+      "prefix": "",
+      "suffix": "× duplicaciones",
+      "descripcion": "Cuántas veces se duplica tu capital con la Regla 72"
+    },
+    {
+      "id": "costo_esperar_5_anos",
+      "label": "Costo de Esperar 5 Años",
+      "formula": "Math.round(monto_inicial_s2 * Math.pow(1 + tasa_interes_s2/100, anios_sim) - monto_inicial_s2 * Math.pow(1 + tasa_interes_s2/100, Math.max(1, anios_sim - 5)))",
+      "prefix": "$",
+      "suffix": " perdidos por esperar",
+      "descripcion": "5 años menos de mercado tiene este costo enorme"
+    },
+    {
+      "id": "pensión_mensual_4pct",
+      "label": "Pensión Mensual Estimada (Regla 4%)",
+      "formula": "Math.round(monto_inicial_s2 * Math.pow(1 + tasa_interes_s2/100, anios_sim) * 0.04 / 12)",
+      "prefix": "$",
+      "suffix": "/mes de retiro",
+      "descripcion": "Retiro sostenible al 4% anual de tu patrimonio final"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "valor_al_retiro",
+      "label": "Valor al Retiro",
+      "color": "#6366f1"
+    },
+    {
+      "id": "duplicaciones",
+      "label": "Veces que se Duplica tu Dinero",
+      "color": "#22c55e"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P3-1-2-B",
+  "unit_code": "P3-1-2",
+  "unit_title": "Cuestionario: Mi Presupuesto Maestro",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "Un tipo de ahorro",
+        "Un plan escrito donde anotas cuánto dinero esperas recibir y en qué planeas gastarlo",
+        "El dinero que te sobra al final del mes",
+        "Los niños nunca tendrán que pagar impuestos"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es un Presupuesto?",
+      "explicacion": "¡Correcto! El presupuesto es tu mapa de navegación financiera."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Todo el dinero que sale de tu bolsillo",
+        "Todo el dinero que entra a tu bolsillo (sueldo, mesada, premios)",
+        "El dinero que debes",
+        "Solo funciona si tienes cuenta bancaria desde niño"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué son los Ingresos?",
+      "explicacion": "¡Exacto! Los ingresos son el motor de tu economía."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Todo el dinero que sale de tu bolsillo para pagar cosas o comprar algo",
+        "El dinero que guardas en la alcancía",
+        "Los regalos que recibes",
+        "Ahorrar mucho hace que el dinero pierda su valor mágico"
+      ],
+      "correcta": 0,
+      "texto": "¿Qué son los Egresos?",
+      "explicacion": "¡Bien! Controlar los egresos es la clave para que el dinero rinda."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Para gastar más rápido",
+        "Para asegurar que el dinero alcance para lo importante y no quedarnos en cero",
+        "Para presumir a los amigos",
+        "Pedir prestado es siempre la peor decisión financiera"
+      ],
+      "correcta": 1,
+      "texto": "¿Para qué sirve hacer un presupuesto ANTES de gastar?",
+      "explicacion": "¡Correcto! La prevención evita problemas de dinero."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "$180",
+        "$20",
+        "$10",
+        "El gobierno siempre te lo devuelve al final del año"
+      ],
+      "correcta": 1,
+      "texto": "Si tus Ingresos son $100 y tus Egresos son $80, ¿cuánto te sobra?",
+      "explicacion": "¡Bien! $100 - $80 = $20. Ese es tu ahorro potencial."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Algo que compras una vez al año",
+        "Un gasto que tienes que hacer siempre cada mes (como la renta o la comida)",
+        "Un dulce que se te antojó",
+        "Las tarjetas de crédito son exactamente igual que efectivo"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es un 'Egreso Fijo'?",
+      "explicacion": "¡Exacto! Los gastos fijos son los primeros que debemos cubrir."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Un gasto que cambia cada vez (como diversiones o antojos)",
+        "El dinero que siempre recibes",
+        "Una regla matemática",
+        "El presupuesto solo lo hacen contadores profesionales"
+      ],
+      "correcta": 0,
+      "texto": "¿Qué es un 'Egreso Variable'?",
+      "explicacion": "¡Bien! Aquí es donde más fácil podemos recortar gastos para ahorrar."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Gastar todo lo que ganas",
+        "Que tus egresos nunca sean mayores que tus ingresos",
+        "Pedir prestado siempre",
+        "Es un juego que solo se juega en computadora"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es la regla de oro del presupuesto?",
+      "explicacion": "¡Correcto! Si gastas más de lo que ganas, tendrás deudas."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si tienes suerte",
+        "Solo funciona si tienes más de 18 años"
+      ],
+      "correcta": 0,
+      "texto": "Verdadero o Falso: Un presupuesto te ayuda a cumplir tus metas más rápido.",
+      "explicacion": "¡Exacto! El presupuesto te dice exactamente cuánto falta para tu meta."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "No hacer nada",
+        "Revisar tu presupuesto y ver dónde puedes gastar menos el próximo mes",
+        "Llorar y rendirte",
+        "Invertir siempre genera pérdidas para principiantes"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué debes hacer si al final del mes ves que gastaste más de lo planeado?",
+      "explicacion": "¡Bien hecho! Ajustar el presupuesto es parte de aprender a manejarlo."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: Mi Presupuesto Maestro",
+  "xp": 300,
+  "level": "Primaria 3"
+}

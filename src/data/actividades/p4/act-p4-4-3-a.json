@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-4-3-A",
+  "unit_code": "P4-4-3",
+  "unit_title": "Marketing y publicidad: contando mi historia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Campaña 360",
+  "descripcion": "¡Haz que todo el mundo hable de tu negocio! Diseña anuncios para diferentes lugares y llega a más clientes.",
+  "objetivo": "Adaptar el mensaje publicitario a diferentes canales de comunicación (visual, digital y auditivo)",
+  "xp": 350,
+  "output_type": "Plan de Medios",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "cartel_escolar",
+      "titulo": "🖼️ El Cartel Escolar",
+      "descripcion": "Diseña lo que verán tus compañeros en los pasillos.",
+      "campos": [
+        {
+          "id": "titulo_cartel",
+          "label": "Título del Cartel (Grande)",
+          "type": "text",
+          "placeholder": "Ej: ¡Sacia tu sed con LimonYá!",
+          "requerido": true
+        },
+        {
+          "id": "imagen_cartel",
+          "label": "¿Qué dibujo o foto pondrías?",
+          "type": "text",
+          "placeholder": "Ej: Una limonada con hielos saltando...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "post_digital",
+      "titulo": "📱 Post de Instagram",
+      "descripcion": "Crea contenido digital que sea 'compartible'.",
+      "campos": [
+        {
+          "id": "texto_post",
+          "label": "Frase para la foto",
+          "type": "textarea",
+          "placeholder": "Ej: La mejor forma de refrescar tu día. #Refresco #Natural #Cen",
+          "requerido": true
+        },
+        {
+          "id": "oferta_digital",
+          "label": "¿Qué promoción darías en redes?",
+          "type": "text",
+          "placeholder": "Ej: 2x1 si nos sigues...",
+          "requerido": true
+        },
+        {
+          "id": "presupuesto_digital",
+          "label": "Presupuesto para Publicidad Digital ($)",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": false
+        },
+        {
+          "id": "alcance_estimado",
+          "label": "Personas Alcanzadas Estimadas",
+          "type": "calculated",
+          "formula": "Math.round(presupuesto_digital * 100)",
+          "unit": " personas",
+          "ayuda": "Con publicidad digital bien segmentada, ~100 personas por peso invertido"
+        }
+      ]
+    },
+    {
+      "id": "guion_audio",
+      "titulo": "🎤 Anuncio por Bocina",
+      "descripcion": "Escribe lo que dirás en el micrófono del recreo.",
+      "campos": [
+        {
+          "id": "guion_voz",
+          "label": "Guion (máximo 15 segundos)",
+          "type": "textarea",
+          "placeholder": "Ej: ¡Atención! ¿Cansado del calor? Ven por tu LimonYá a solo $15...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S3-2-2-A",
+  "unit_code": "S3-2-2",
+  "unit_title": "Finanzas en la universidad: vivir con presupuesto limitado",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Estructura de Capital",
+  "descripcion": "Tu empresa necesita dinero para crecer. ¿Qué camino elegirás? ¿Serás el dueño absoluto con deudas o compartirás el éxito con socios?",
+  "objetivo": "Evaluar las ventajas y desventajas de financiar una empresa mediante deuda bancaria o emisión de acciones",
+  "xp": 600,
+  "output_type": "Propuesta de Estructura Financiera",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "expansion_meta_s3",
+      "titulo": "🚀 El Proyecto de Expansión",
+      "descripcion": "Necesitas $10,000,000 para abrir fábricas en 3 países.",
+      "campos": [
+        {
+          "id": "monto_deuda_s3",
+          "label": "Monto a pedir al Banco (Préstamo) ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 10000000,
+          "step": 1000000,
+          "default": 5000000,
+          "unit": "$"
+        },
+        {
+          "id": "monto_equity_s3",
+          "label": "Monto a pedir a Inversionistas (Venta de acciones) ($)",
+          "type": "slider",
+          "min": 0,
+          "max": 10000000,
+          "step": 1000000,
+          "default": 5000000,
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "analisis_control_s3",
+      "titulo": "⚖️ Control vs Costo",
+      "descripcion": "Analiza qué estás sacrificando en cada opción.",
+      "campos": [
+        {
+          "id": "porcentaje_venta_s3",
+          "label": "¿Qué porcentaje de tu empresa estás dispuesto a ceder a los socios?",
+          "type": "slider",
+          "min": 0,
+          "max": 49,
+          "step": 1,
+          "default": 20,
+          "unit": "%"
+        },
+        {
+          "id": "razon_financiamiento",
+          "label": "¿Por qué elegiste esta mezcla de dinero?",
+          "type": "textarea",
+          "placeholder": "Ej: Prefiero no deberle tanto al banco para no ahogarme con intereses, aunque tenga que compartir mis ganancias con socios...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "escenario_futuro_s3",
+      "titulo": "🔮 El Futuro del Negocio",
+      "descripcion": "Imagina que la empresa vale 10 veces más en 5 años.",
+      "campos": [
+        {
+          "id": "reflexion_final_cap",
+          "label": "¿Preferirías haber pagado el préstamo al 10% o ser dueño de ese 30% que vendiste?",
+          "type": "textarea",
+          "placeholder": "Reflexiona sobre el costo de oportunidad del capital...",
+          "requerido": true
+        },
+        {
+          "id": "leverage_ratio",
+          "label": "Índice de Apalancamiento (Deuda/Capital)",
+          "type": "calculated",
+          "formula": "Math.round(monto_deuda_s3 / Math.max(1, monto_equity_s3) * 100) / 100",
+          "unit": "× (recomendado <2×)",
+          "ayuda": "Ratio >2× puede ser riesgoso en etapas tempranas"
+        },
+        {
+          "id": "wacc_estimado",
+          "label": "WACC Estimado",
+          "type": "calculated",
+          "formula": "Math.round((monto_deuda_s3 / Math.max(1, monto_deuda_s3 + monto_equity_s3) * 8 + monto_equity_s3 / Math.max(1, monto_deuda_s3 + monto_equity_s3) * 15) * 10) / 10",
+          "unit": "% costo de capital",
+          "ayuda": "Costo promedio ponderado: deuda ~8%, capital propio ~15%"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

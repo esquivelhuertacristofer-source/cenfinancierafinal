@@ -1,0 +1,127 @@
+{
+  "code": "ACT-P6-3-4-A",
+  "unit_code": "P6-3-4",
+  "unit_title": "Impuestos: contribuyendo al bien común",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Blindando a la Familia",
+  "descripcion": "Tienes un dinero extra este mes. ¿Lo usarás para un viaje de lujo o para proteger a los tuyos ante lo inesperado?",
+  "objetivo": "Comprender la importancia de los seguros como herramienta de protección patrimonial y gestión de riesgos",
+  "xp": 450,
+  "personaje_principal": "Papá/Mamá (Líder Familiar)",
+  "contexto_inicial": "Tu familia tiene ahorros, pero no tienen seguros. Este mes te sobran $5,000 pesos. Tienes dos opciones.",
+  "nodo_inicial": "la_eleccion_proteccion",
+  "nodos": {
+    "la_eleccion_proteccion": {
+      "id": "la_eleccion_proteccion",
+      "texto": "¿En qué usarás el dinero extra?",
+      "opciones": [
+        {
+          "id": "seguro_medico",
+          "texto": "Contratar un Seguro de Gastos Médicos Mayores (SGMM)",
+          "siguiente_nodo": "accidente_con_seguro",
+          "consecuencia": "¡Decisión responsable! Ahora tu familia tiene un escudo invisible.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "viaje_lujo",
+          "texto": "Irse a un hotel de lujo el fin de semana",
+          "siguiente_nodo": "accidente_sin_seguro",
+          "consecuencia": "Se divirtieron mucho, pero se gastaron todo el dinero extra.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "accidente_con_seguro": {
+      "id": "accidente_con_seguro",
+      "texto": "¡Oh no! Un miembro de la familia tuvo una apendicitis de emergencia. La cuenta del hospital es de $100,000. Como tienes seguro, tú solo pagas el deducible de $5,000.",
+      "opciones": [
+        {
+          "id": "pagar_deducible",
+          "texto": "Pagar el deducible y usar el seguro",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Tu ahorro sigue casi intacto. El seguro pagó los $95,000 restantes.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pelear_deducible",
+          "texto": "Discutir con la aseguradora meses para no pagar el deducible",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El hospital te cobró intereses mientras peleabas. Pagaste más al final.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": -30
+        }
+      ]
+    },
+    "accidente_sin_seguro": {
+      "id": "accidente_sin_seguro",
+      "texto": "¡Emergencia! La cuenta del hospital es de $100,000. Como no tienes seguro, tienes que usar TODOS tus ahorros y pedir prestado.",
+      "opciones": [
+        {
+          "id": "pedir_prestamo",
+          "texto": "Pedir prestado y endeudarse por años",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La emergencia pasó, pero ahora tu familia es más pobre por no estar prevenida.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "no_atenderse",
+          "texto": "No atenderse en hospital privado y esperar turno en el IMSS",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La espera agravó la situación. La salud deteriorada generó más gastos.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_tranquilidad": {
+      "id": "final_tranquilidad",
+      "texto": "¡Felicidades! Entendiste que el seguro no es un gasto, es la forma de que una emergencia no se convierta en una tragedia financiera.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Es mejor tener un seguro y no usarlo, que necesitarlo y no tenerlo."
+    },
+    "final_deuda_cara": {
+      "id": "final_deuda_cara",
+      "texto": "Aprendiste de la forma difícil. Las emergencias ocurren, y estar preparado es la única forma de proteger tus sueños.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No dejes al azar lo que puedes proteger con un seguro."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

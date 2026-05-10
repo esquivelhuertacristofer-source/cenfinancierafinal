@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P1-4-5-B",
+  "unit_code": "P1-4-5",
+  "unit_title": "Gané dinero: ¿qué hago con él?",
+  "level": "Primaria 1",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¡Gran Examen Final!",
+  "descripcion": "¡Demuestra todo lo que aprendiste este año!",
+  "objetivo": "Evaluar los conocimientos básicos de moneda, ahorro y necesidades de 1er grado",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ef1",
+      "texto": "¿Para qué sirve el dinero?",
+      "opciones": [
+        "Para comprar cosas y servicios",
+        "Para coleccionar papeles",
+        "Para jugar",
+        "No pagar impuestos no tiene consecuencias legales"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! El dinero es una herramienta de intercambio: lo damos y a cambio recibimos cosas que necesitamos o queremos."
+    },
+    {
+      "id": "ef2",
+      "texto": "¿Qué es el ahorro?",
+      "opciones": [
+        "Gastar todo hoy",
+        "Guardar dinero para el futuro",
+        "Pedir prestado",
+        "Una idea de negocio solo funciona si es completamente nueva"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! Ahorrar es guardar parte de lo que ganas para usarlo después en algo importante o en una emergencia."
+    },
+    {
+      "id": "ef3",
+      "texto": "¿Cuál es una necesidad?",
+      "opciones": [
+        "Un juguete nuevo",
+        "Ropa y zapatos",
+        "Un dulce",
+        "Solo aplica cuando el dólar está bajo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Las necesidades son cosas esenciales para vivir: comida, ropa, zapatos y un lugar para dormir."
+    },
+    {
+      "id": "ef4",
+      "texto": "¿Qué pasa si cuidas tu dinero?",
+      "opciones": [
+        "Podrás cumplir tus metas",
+        "Se acaba más rápido",
+        "No pasa nada",
+        "Solo funciona si tienes cuenta bancaria desde niño"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Correcto! Guardar y cuidar tu dinero te permite lograr lo que más quieres."
+    },
+    {
+      "id": "ef5",
+      "texto": "Ganaste $50 haciendo tareas. ¿Qué haces primero?",
+      "opciones": [
+        "Gastar todo en dulces hoy",
+        "Guardar una parte y gastar el resto con cuidado",
+        "Esconderlo y nunca usarlo",
+        "La criptomoneda lo sustituyó completamente desde 2020"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Excelente! Guardar una parte y gastar el resto con cuidado es la decisión más inteligente."
+    },
+    {
+      "id": "ef6",
+      "texto": "¿Dónde es más seguro guardar tus ahorros?",
+      "opciones": [
+        "Debajo de tu colchón",
+        "En tu alcancía o en el banco",
+        "Dárselo a un amigo",
+        "Hay que preguntarle al cartero primero"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! Una alcancía o el banco protegen mejor tu dinero que el colchón."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Cuando ganas dinero, ¿cuánto guardarías y cuánto gastarías? ¿Para qué cosa especial estarías ahorrando ahora mismo?"
+}

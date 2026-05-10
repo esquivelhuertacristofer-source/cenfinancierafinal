@@ -1,0 +1,145 @@
+{
+  "code": "ACT-S2-4-2-A",
+  "unit_code": "S2-4-2",
+  "unit_title": "Estrategia de crecimiento: cómo escalar un negocio",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Poder del Tiempo",
+  "descripcion": "El interés compuesto es la octava maravilla del mundo. ¡Descubre cómo el tiempo puede convertir unos pocos pesos en una fortuna!",
+  "objetivo": "Visualizar el impacto exponencial del interés compuesto a largo plazo y la importancia de comenzar a invertir temprano",
+  "xp": 600,
+  "descripcion_formula": "Valor Futuro = P * (((1 + r)^n - 1) / r). Donde P es la inversión mensual, r la tasa mensual y n el número de meses.",
+  "inputs": [
+    {
+      "id": "ahorro_mensual_ret",
+      "label": "Inversión Mensual ($)",
+      "type": "slider",
+      "min": 100,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "edad_inicio_ret",
+      "label": "Edad a la que empiezas a invertir",
+      "type": "slider",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "rendimiento_anual_ret",
+      "label": "Rendimiento Anual Esperado (%)",
+      "type": "slider",
+      "min": 5,
+      "max": 15,
+      "step": 1,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "ahorro_mensual_ret * (((Math.pow(1 + (rendimiento_anual_ret/100/12), (65 - edad_inicio_ret) * 12) - 1) / (rendimiento_anual_ret/100/12)))",
+  "output_label": "Tu Capital Estimado a los 65 Años",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado > 5000000",
+      "mensaje": "🏦 ¡Eres un futuro millonario! Gracias a que empezaste joven, el interés compuesto hizo todo el trabajo pesado por ti. ¡Felicidades!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "edad_inicio_ret > 40",
+      "mensaje": "⏳ El tiempo se agota. Al empezar tarde, el dinero no tiene tiempo de multiplicarse. Necesitarás ahorrar montos mucho más grandes para alcanzar tu meta.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 En el interés compuesto, los últimos 10 años son los que más dinero generan. Por eso, entre más temprano empieces, más rico serás.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia entre crecer contratando más personas vs crecer con tecnología? ¿Por qué la tecnología permite escalar sin que los costos crezcan proporcionalmente?",
+  "comparativa_espera": "La planificación fiscal avanzada puede reducir la carga impositiva de una empresa entre un 15-30% usando instrumentos legales como la deducción de inversiones, el diferimiento de impuestos y la optimización de la estructura corporativa.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "distribucion_mensual",
+      "label": "Distribución Mensual",
+      "formula": "Math.round(resultado_principal / 12)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El resultado mensualizado"
+    },
+    {
+      "id": "diferencia_estrategias",
+      "label": "Diferencia entre Estrategias",
+      "formula": "Math.round(resultado_principal * 0.3)",
+      "prefix": "$",
+      "suffix": " de impacto",
+      "descripcion": "El costo de elegir mal entre alternativas disponibles"
+    },
+    {
+      "id": "en_20_anios",
+      "label": "En 20 Años",
+      "formula": "Math.round(resultado_principal * Math.pow(1.08, 20))",
+      "prefix": "$",
+      "suffix": " a 20 años",
+      "descripcion": "El poder del interés compuesto en 2 décadas"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "distribucion_mensual",
+      "label": "Distribución Mensual",
+      "color": "#22c55e"
+    }
+  ]
+}

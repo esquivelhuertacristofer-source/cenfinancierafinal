@@ -1,0 +1,119 @@
+{
+  "code": "ACT-P3-1-2-A",
+  "unit_code": "P3-1-2",
+  "unit_title": "Presupuesto: Ingresos y Egresos",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Presupuesto Maestro Familiar",
+  "descripcion": "Ayuda a organizar los gastos de una familia. Debes asignar montos a las 8 categorías principales para que el dinero alcance para todo.",
+  "objetivo": "Identificar y clasificar los gastos reales de un hogar para crear un presupuesto equilibrado",
+  "xp": 400,
+  "output_type": "Presupuesto Familiar",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "ingresos",
+      "titulo": "💰 El Dinero que Entra",
+      "descripcion": "Primero, definamos cuánto dinero gana la familia al mes (Sueldos, ventas, etc).",
+      "campos": [
+        {
+          "id": "ingreso_total",
+          "label": "Ingreso Mensual Total",
+          "type": "number",
+          "placeholder": "Ej: 15000",
+          "requerido": true,
+          "ayuda": "La suma de todo el dinero que llega a casa."
+        }
+      ]
+    },
+    {
+      "id": "gastos_basicos",
+      "titulo": "🏠 Gastos Básicos (Necesidades)",
+      "descripcion": "Cosas que no pueden faltar para vivir bien.",
+      "campos": [
+        {
+          "id": "g_vivienda",
+          "label": "Renta o Casa",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "g_comida",
+          "label": "Alimentación",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "g_servicios",
+          "label": "Luz, Agua e Internet",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "g_transporte",
+          "label": "Gasolina o Camión",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "gastos_estilo",
+      "titulo": "🎒 Educación y Bienestar",
+      "descripcion": "Inversiones en el futuro y salud.",
+      "campos": [
+        {
+          "id": "g_educacion",
+          "label": "Escuela y Útiles",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "g_salud",
+          "label": "Medicinas y Doctor",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "gastos_finales",
+      "titulo": "🎉 Diversión y Ahorro",
+      "descripcion": "El equilibrio entre disfrutar hoy y cuidar el mañana.",
+      "campos": [
+        {
+          "id": "g_diversion",
+          "label": "Paseos y Cine",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "g_ahorro",
+          "label": "Fondo de Ahorro",
+          "type": "number",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "balance_final",
+          "label": "Balance Restante",
+          "type": "calculated",
+          "formula": "ingreso_total - (g_vivienda + g_comida + g_servicios + g_transporte + g_educacion + g_salud + g_diversion + g_ahorro)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si este número es NEGATIVO, ¡debes ajustar tus gastos!"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

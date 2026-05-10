@@ -1,0 +1,98 @@
+{
+  "code": "ACT-P3-1-2-A",
+  "unit_code": "P3-1-2",
+  "unit_title": "Presupuesto: Ingresos y Egresos",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Primer Presupuesto Maestro",
+  "descripcion": "Ayuda a la familia García a organizar sus finanzas. Ingresa sus ingresos y distribuye sus gastos para ver cuánto pueden ahorrar este mes.",
+  "objetivo": "Aprender a equilibrar ingresos y egresos para generar ahorro",
+  "xp": 150,
+  "output_type": "presupuesto",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "ingresos",
+      "titulo": "Fuentes de Ingreso",
+      "descripcion": "¿Cuánto dinero entra a casa este mes?",
+      "campos": [
+        {
+          "id": "sueldo",
+          "label": "Sueldo de Papá/Mamá",
+          "type": "number",
+          "placeholder": "15000",
+          "requerido": true
+        },
+        {
+          "id": "ventas",
+          "label": "Ganancias de Negocio",
+          "type": "number",
+          "placeholder": "2000",
+          "requerido": false
+        },
+        {
+          "id": "total_ingreso",
+          "label": "Total Ingresos",
+          "type": "calculated",
+          "formula": "sueldo + ventas",
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "gastos_fijos",
+      "titulo": "Gastos Obligatorios",
+      "descripcion": "Cosas que tenemos que pagar sí o sí.",
+      "campos": [
+        {
+          "id": "renta",
+          "label": "Renta o Casa",
+          "type": "number",
+          "placeholder": "5000",
+          "requerido": true
+        },
+        {
+          "id": "comida",
+          "label": "Súper y Mercado",
+          "type": "number",
+          "placeholder": "4000",
+          "requerido": true
+        },
+        {
+          "id": "servicios",
+          "label": "Luz, Agua e Internet",
+          "type": "number",
+          "placeholder": "1500",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "analisis",
+      "titulo": "Balance Final",
+      "descripcion": "Veamos cuánto queda para el cochinito de ahorro.",
+      "campos": [
+        {
+          "id": "total_gastos",
+          "label": "Total de Gastos",
+          "type": "calculated",
+          "formula": "renta + comida + servicios",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "ahorro",
+          "label": "Ahorro del Mes",
+          "type": "calculated",
+          "formula": "(sueldo + ventas) - (renta + comida + servicios)",
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

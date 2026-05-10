@@ -1,0 +1,149 @@
+{
+  "code": "ACT-P6-1-1-A",
+  "unit_code": "P6-1-1",
+  "unit_title": "Repaso integrado: el sistema financiero completo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "¿Dónde Pongo Mi Dinero?",
+  "descripcion": "Tienes $10,000 pesos. Tienes 4 opciones: debajo del colchón, en cuenta bancaria, en CETES, o en la bolsa de valores. Cada opción tiene diferente riesgo y diferente rendimiento. Compara cómo crece (o no) tu dinero en cada instrumento del sistema financiero mexicano.",
+  "objetivo": "Comparar los principales instrumentos del sistema financiero mexicano (banco, CETES, bolsa, AFORE) en términos de rendimiento, riesgo y liquidez",
+  "xp": 600,
+  "descripcion_formula": "Colchón: pierde inflación cada año. Banco: tasa ahorro ~2%. CETES: tasa referencia actual. Bolsa: promedio histórico IPC ~12% anual con volatilidad.",
+  "inputs": [
+    {
+      "id": "capital_sistema",
+      "label": "Capital Disponible ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "anos_sistema",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "unit": "años"
+    },
+    {
+      "id": "tasa_cetes_actual",
+      "label": "Tasa CETES Actual (%)",
+      "type": "slider",
+      "min": 4,
+      "max": 15,
+      "step": 0.25,
+      "default": 10.5,
+      "unit": "%",
+      "referencia": "CETES 28 días: ~10.5% en 2024"
+    },
+    {
+      "id": "inflacion_proyectada",
+      "label": "Inflación Proyectada (%)",
+      "type": "slider",
+      "min": 2,
+      "max": 10,
+      "step": 0.5,
+      "default": 4.5,
+      "unit": "%"
+    }
+  ],
+  "formula": "Math.round(capital_sistema * Math.pow(1 + tasa_cetes_actual/100, anos_sistema))",
+  "output_label": "Valor en CETES",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "valor_colchon",
+      "label": "Bajo el Colchón (Efectivo)",
+      "formula": "Math.round(capital_sistema * Math.pow(1 - inflacion_proyectada/100, anos_sistema))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "El dinero no crece pero la inflación reduce su poder de compra cada año"
+    },
+    {
+      "id": "valor_banco",
+      "label": "Cuenta Bancaria de Ahorro",
+      "formula": "Math.round(capital_sistema * Math.pow(1 + 0.02, anos_sistema))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "La mayoría de los bancos pagan ~2% anual en cuentas de ahorro"
+    },
+    {
+      "id": "valor_cetes",
+      "label": "CETES (Gobierno Federal)",
+      "formula": "Math.round(capital_sistema * Math.pow(1 + tasa_cetes_actual/100, anos_sistema))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Deuda del gobierno mexicano — bajo riesgo, rendimiento competitivo"
+    },
+    {
+      "id": "valor_bolsa",
+      "label": "Bolsa de Valores (IPC)",
+      "formula": "Math.round(capital_sistema * Math.pow(1 + 0.12, anos_sistema))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Promedio histórico IPC ~12% anual. Mayor rendimiento pero con volatilidad."
+    }
+  ],
+  "tabla_comparativa": {
+    "titulo": "Características de cada instrumento",
+    "columnas": ["Instrumento", "Rendimiento típico", "Riesgo", "Liquidez", "Garantía"],
+    "filas": [
+      ["Efectivo/Colchón", "0% (pierde inflación)", "Muy bajo", "Inmediata", "Ninguna"],
+      ["Cuenta bancaria", "2% anual", "Muy bajo", "Inmediata", "IPAB hasta $3M"],
+      ["CETES", "8-11% anual", "Muy bajo", "28/91/182 días", "Gobierno Federal"],
+      ["Bolsa (acciones)", "12% promedio histórico", "Medio-Alto", "Misma semana", "Ninguna"],
+      ["AFORE", "8-10% anual", "Bajo", "Solo al retiro", "Regulado por CONSAR"]
+    ]
+  },
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "valor_cetes",
+      "label": "CETES ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "valor_bolsa",
+      "label": "Bolsa/IPC ($)",
+      "color": "#6366f1"
+    },
+    {
+      "id": "valor_banco",
+      "label": "Banco ($)",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "valor_colchon",
+      "label": "Colchón ($)",
+      "color": "#ef4444"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "anos_sistema >= 15",
+      "mensaje": "📈 A largo plazo la diferencia es enorme. La bolsa y los CETES generan muchas veces más que el efectivo. El tiempo es el recurso más valioso en finanzas.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "inflacion_proyectada > tasa_cetes_actual",
+      "mensaje": "⚠️ Inflación alta. Cuando la inflación supera la tasa de CETES, incluso los CETES pierden poder adquisitivo en términos reales. Es una señal de economía en problemas.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "anos_sistema <= 3",
+      "mensaje": "💡 Corto plazo. Para menos de 3 años, CETES y la cuenta bancaria son más seguros que la bolsa, cuya volatilidad puede dar pérdidas en horizontes cortos.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Menciona 5 instituciones financieras en México y el rol específico de cada una. ¿Cómo se conectan entre sí para que la economía funcione?",
+  "comparativa_espera": "El sistema financiero mexicano incluye 50 bancos comerciales, 12 AFOREs y miles de cooperativas. Todos juntos mueven más de $50 billones de pesos al año — un sistema que afecta cada transacción cotidiana."
+}

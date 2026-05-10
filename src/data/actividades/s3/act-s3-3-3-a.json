@@ -1,0 +1,151 @@
+{
+  "code": "ACT-S3-3-3-A",
+  "unit_code": "S3-3-3",
+  "unit_title": "Criptoactivos y blockchain: el futuro del valor",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Blindaje contra el Dólar",
+  "descripcion": "Importas mercancía de EE.UU. Si el dólar sube, tu negocio quiebra. ¿Pagarás por un seguro de cambio o te arriesgarás?",
+  "objetivo": "Entender el uso de contratos forward y coberturas cambiarias para eliminar la incertidumbre en los negocios",
+  "xp": 600,
+  "descripcion_formula": "Costo Final = MontoUSD * TipoCambioFinal (si no hay cobertura) o MontoUSD * TipoCambioPactado (con cobertura).",
+  "inputs": [
+    {
+      "id": "monto_pago_usd",
+      "label": "Deuda a pagar en 3 meses ($ USD)",
+      "type": "slider",
+      "min": 10000,
+      "max": 500000,
+      "step": 10000,
+      "default": 100000,
+      "unit": "USD"
+    },
+    {
+      "id": "estrategia_cobertura_s3",
+      "label": "Estrategia de Blindaje",
+      "type": "select",
+      "default": "Sin Cobertura (Esperar)",
+      "opciones": [
+        "Sin Cobertura (Esperar)",
+        "Contrato Forward (Fijar precio hoy a $18.50)"
+      ]
+    },
+    {
+      "id": "escenario_dolar_futuro",
+      "label": "Tipo de Cambio en 3 meses (Escenario)",
+      "type": "select",
+      "default": "Estable ($18.00)",
+      "opciones": [
+        "Devaluación ($22.00)",
+        "Estable ($18.00)",
+        "Apreciación ($16.00)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "estrategia_cobertura_s3 === 'Contrato Forward (Fijar precio hoy a $18.50)' ? (monto_pago_usd * 18.50) : (monto_pago_usd * (escenario_dolar_futuro === 'Devaluación ($22.00)' ? 22 : escenario_dolar_futuro === 'Estable ($18.00)' ? 18 : 16))",
+  "output_label": "Costo Final en Moneda Local (Pesos)",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "estrategia_cobertura_s3 === 'Contrato Forward (Fijar precio hoy a $18.50)' && escenario_dolar_futuro === 'Devaluación ($22.00)'",
+      "mensaje": "🛡️ ¡Excelente jugada! Al fijar el precio a $18.50, te ahorraste miles de pesos cuando el dólar subió a $22. Tu negocio está a salvo.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "estrategia_cobertura_s3 === 'Sin Cobertura (Esperar)' && escenario_dolar_futuro === 'Devaluación ($22.00)'",
+      "mensaje": "🚨 ¡Desastre Financiero! El dólar subió y ahora tus productos cuestan mucho más de lo que puedes venderlos. Estás perdiendo dinero por no protegerte.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "estrategia_cobertura_s3 === 'Contrato Forward (Fijar precio hoy a $18.50)' && escenario_dolar_futuro === 'Apreciación ($16.00)'",
+      "mensaje": "⚖️ El costo de la certeza. Aunque el dólar bajó a $16 y pudiste pagar menos, tu seguro te obligó a pagar $18.50. Es el precio de dormir tranquilo.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El Hedging (Cobertura) no busca ganar dinero, sino eliminar la incertidumbre para que el negocio pueda operar sin miedo a los cambios de precios.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia entre Bitcoin (moneda digital) y Ethereum (plataforma de contratos inteligentes)? ¿Qué riesgo específico tiene crypto que NO tienen las acciones de la BMV?",
+  "comparativa_espera": "El mercado crypto perdió $2 billones de dólares de capitalización en 2022. A diferencia de acciones, las criptomonedas no tienen respaldo de activos reales ni protección del IPAB ni regulación bancaria.",
+  "outputs_multiples": [
+    {
+      "id": "costo_pesos_hoy",
+      "label": "Costo en Pesos (Hoy, $17.5/USD)",
+      "formula": "Math.round(monto_pago_usd * 17.5)",
+      "prefix": "$",
+      "suffix": " MXN hoy",
+      "descripcion": "El equivalente en pesos al tipo de cambio actual de referencia"
+    },
+    {
+      "id": "riesgo_devaluacion_20",
+      "label": "Costo si el Dólar Llega a $20",
+      "formula": "Math.round(monto_pago_usd * 20)",
+      "prefix": "$",
+      "suffix": " MXN (escenario adverso)",
+      "descripcion": "Si el dólar sube a $20, esto pagarás en pesos"
+    },
+    {
+      "id": "prima_cobertura",
+      "label": "Costo de Cubrir el Riesgo",
+      "formula": "Math.round(monto_pago_usd * 17.5 * 0.025)",
+      "prefix": "$",
+      "suffix": " MXN (prima ~2.5%)",
+      "descripcion": "El costo de contratar cobertura cambiaria para ese monto"
+    },
+    {
+      "id": "ahorro_vs_sin_cobertura",
+      "label": "Ahorro con Cobertura (escenario adverso)",
+      "formula": "Math.round(monto_pago_usd * (20 - 17.5) - monto_pago_usd * 17.5 * 0.025)",
+      "prefix": "$",
+      "suffix": " MXN netos ahorrados",
+      "descripcion": "Lo que ahorras en el peor escenario al haberte cubierto"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "costo_pesos_hoy",
+      "label": "Costo en Pesos (Hoy, $17.5/USD)",
+      "color": "#6366f1"
+    },
+    {
+      "id": "riesgo_devaluacion_20",
+      "label": "Costo si el Dólar Llega a $20",
+      "color": "#22c55e"
+    }
+  ]
+}

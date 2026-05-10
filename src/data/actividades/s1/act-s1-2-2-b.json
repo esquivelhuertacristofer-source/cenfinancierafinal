@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S1-2-2-B",
+  "unit_code": "S1-2-2",
+  "unit_title": "La pensión y el AFORE: cuánto tendré cuando me retire",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Por qué todo sube?",
+  "descripcion": "La inflación puede nacer por muchas razones. ¿Sabrás identificar qué está causando que los precios se disparen?",
+  "objetivo": "Diferenciar entre las diversas causas de la inflación y sus mecanismos de transmisión",
+  "xp": 400,
+  "instruccion": "Arrastra cada situación a la categoría de inflación correspondiente.",
+  "items": [
+    {
+      "id": "inf1",
+      "label": "Mucho dinero en la calle y poca producción",
+      "emoji": "🛍️",
+      "categoria_correcta": "demanda",
+      "feedback": "Hay más compradores que productos disponibles."
+    },
+    {
+      "id": "inf2",
+      "label": "Baja en las tasas de interés que facilita comprar",
+      "emoji": "💳",
+      "categoria_correcta": "demanda",
+      "feedback": "El crédito barato estimula que la gente gaste más."
+    },
+    {
+      "id": "inf3",
+      "label": "Aumento en el precio mundial del petróleo",
+      "emoji": "🛢️",
+      "categoria_correcta": "costos",
+      "feedback": "Si la gasolina sube, todo lo que se transporta sube de precio."
+    },
+    {
+      "id": "inf4",
+      "label": "Sequías que destruyen las cosechas de maíz",
+      "emoji": "🌽",
+      "categoria_correcta": "costos",
+      "feedback": "La escasez de comida hace que su precio aumente."
+    },
+    {
+      "id": "inf5",
+      "label": "El gobierno imprime billetes para pagar sus deudas",
+      "emoji": "🖨️",
+      "categoria_correcta": "monetaria",
+      "feedback": "Más billetes para la misma cantidad de cosas = dinero vale menos."
+    },
+    {
+      "id": "inf6",
+      "label": "Empresas suben precios 'por si acaso' suben mañana",
+      "emoji": "📢",
+      "categoria_correcta": "expectativa",
+      "feedback": "Las expectativas de inflación se vuelven realidad si todos suben precios."
+    },
+    {
+      "id": "inf7",
+      "label": "Aumento de salarios sin que la gente produzca más",
+      "emoji": "📈",
+      "categoria_correcta": "expectativa",
+      "feedback": "Crea una espiral donde los precios deben subir para pagar esos sueldos."
+    },
+    {
+      "id": "inf8",
+      "label": "Devaluación de la moneda (Dólar más caro)",
+      "emoji": "💱",
+      "categoria_correcta": "costos",
+      "feedback": "Comprar piezas del extranjero ahora es más costoso."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "demanda",
+      "label": "INFLACIÓN POR DEMANDA",
+      "emoji": "🔥",
+      "color": "#1e40af"
+    },
+    {
+      "id": "costos",
+      "label": "INFLACIÓN POR COSTOS",
+      "emoji": "🏗️",
+      "color": "#b45309"
+    },
+    {
+      "id": "monetaria",
+      "label": "INFLACIÓN MONETARIA",
+      "emoji": "💸",
+      "color": "#166534"
+    },
+    {
+      "id": "expectativa",
+      "label": "EXPECTATIVAS / ESPIRAL",
+      "emoji": "🌀",
+      "color": "#6b21a8"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

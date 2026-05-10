@@ -1,0 +1,104 @@
+{
+  "code": "ACT-S2-2-2-A",
+  "unit_code": "S2-2-2",
+  "unit_title": "Ciberseguridad financiera: protegiendo tu patrimonio digital",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Portafolio Inmobiliario",
+  "descripcion": "No necesitas comprar un edificio entero para ganar rentas. ¡Diseña tu estrategia inmobiliaria inteligente!",
+  "objetivo": "Diferenciar entre la inversión inmobiliaria directa y la inversión a través de FIBRAS, evaluando sus beneficios",
+  "xp": 400,
+  "output_type": "Estrategia de Inversión Inmobiliaria",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "modelo_inversion_s2",
+      "titulo": "🏢 Elige tu Modelo",
+      "descripcion": "¿Cómo quieres ser dueño de ladrillos?",
+      "campos": [
+        {
+          "id": "tipo_inversion_inm",
+          "label": "Modelo de Inversión",
+          "type": "select",
+          "opciones": [
+            "Inversión Directa (Comprar propiedad física)",
+            "FIBRAS (Invertir en bolsa desde $100)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "monto_inicial_inm",
+          "label": "Capital Inicial ($)",
+          "type": "slider",
+          "min": 100,
+          "max": 1000000,
+          "step": 500,
+          "default": 5000,
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "seleccion_activos_inm",
+      "titulo": "🏗️ Selección de Activos",
+      "descripcion": "¿En qué tipo de edificios quieres invertir?",
+      "campos": [
+        {
+          "id": "sector_inm",
+          "label": "Sector Inmobiliario",
+          "type": "select",
+          "opciones": [
+            "Centros Comerciales",
+            "Naves Industriales (Logística)",
+            "Oficinas Corporativas",
+            "Hoteles y Turismo"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "diversificacion_inm",
+          "label": "¿Quieres diversificar en varios sectores?",
+          "type": "select",
+          "opciones": [
+            "Sí (Más seguro)",
+            "No (Concentrar riesgo)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "analisis_beneficio",
+      "titulo": "💰 Proyección de Rentas",
+      "descripcion": "¿Por qué elegiste esta estrategia?",
+      "campos": [
+        {
+          "id": "justificacion_inm",
+          "label": "Escribe tu estrategia",
+          "type": "textarea",
+          "placeholder": "Ej: Elegí FIBRAS industriales porque el comercio electrónico hace que se necesiten más bodegas y es más líquido que una casa...",
+          "requerido": true
+        },
+        {
+          "id": "dividendo_anual_est",
+          "label": "Dividendo Anual Estimado (FIBRA 7%)",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial_inm * 0.07)",
+          "unit": "$",
+          "ayuda": "Los FIBRAs mexicanos pagan dividendos promedio del 6-8% anual"
+        },
+        {
+          "id": "valor_5_anios",
+          "label": "Valor en 5 Años (plusvalía 5%/año)",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial_inm * Math.pow(1.05, 5))",
+          "unit": "$",
+          "ayuda": "La plusvalía inmobiliaria en México promedió ~5% anual en la última década"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

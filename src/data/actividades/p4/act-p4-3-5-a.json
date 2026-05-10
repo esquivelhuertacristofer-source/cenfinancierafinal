@@ -1,0 +1,97 @@
+{
+  "code": "ACT-P4-3-5-A",
+  "unit_code": "P4-3-5",
+  "unit_title": "Mi plan financiero de vida: metas a corto, mediano y largo plazo",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Mapa del Tesoro",
+  "descripcion": "El futuro no se adivina, se construye. ¡Diseña hoy el mapa de tu vida financiera para los próximos 20 años!",
+  "objetivo": "Desarrollar una visión prospectiva de las finanzas personales y establecer hitos de vida",
+  "xp": 500,
+  "output_type": "Plan de Vida Diamante",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "etapa_estudiante",
+      "titulo": "🎓 De los 10 a los 18 años",
+      "descripcion": "Tu principal trabajo hoy es aprender y crear el hábito del ahorro.",
+      "campos": [
+        {
+          "id": "habilidad_aprender",
+          "label": "¿Qué habilidad nueva quieres aprender?",
+          "type": "text",
+          "placeholder": "Ej: Programación, inglés, carpintería...",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_prepa",
+          "label": "¿Cuánto quieres tener ahorrado al terminar la prepa?",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_3_anios_prepa",
+          "label": "Ahorro en 3 Años de Preparatoria",
+          "type": "calculated",
+          "formula": "ahorro_prepa * 36",
+          "unit": "$",
+          "ayuda": "36 meses de ahorro constante durante la prepa"
+        }
+      ]
+    },
+    {
+      "id": "etapa_joven",
+      "titulo": "🚀 De los 18 a los 30 años",
+      "descripcion": "El momento de empezar a producir y multiplicar tu dinero.",
+      "campos": [
+        {
+          "id": "trabajo_sueno",
+          "label": "¿En qué te gustaría trabajar o qué negocio pondrías?",
+          "type": "text",
+          "placeholder": "Ej: Diseñador de videojuegos, veterinario...",
+          "requerido": true
+        },
+        {
+          "id": "primera_inversion",
+          "label": "¿Cuál sería tu primera gran inversión?",
+          "type": "select",
+          "opciones": [
+            "Un fondo para mi casa",
+            "Acciones de empresas",
+            "Empezar mi propio negocio"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "etapa_adulto",
+      "titulo": "🏠 De los 30 años en adelante",
+      "descripcion": "Construyendo libertad y patrimonio.",
+      "campos": [
+        {
+          "id": "meta_patrimonio",
+          "label": "¿Qué es lo más importante que quieres tener?",
+          "type": "select",
+          "opciones": [
+            "Una casa propia",
+            "Libertad para viajar",
+            "Un fondo para ayudar a otros"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "mensaje_futuro",
+          "label": "Un mensaje para tu 'Yo' del futuro",
+          "type": "textarea",
+          "placeholder": "Escribe algo que te motive...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

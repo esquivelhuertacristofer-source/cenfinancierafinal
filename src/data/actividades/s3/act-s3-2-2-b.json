@@ -1,0 +1,87 @@
+{
+  "code": "ACT-S3-2-2-B",
+  "unit_code": "S3-2-2",
+  "unit_title": "Finanzas en la universidad: vivir con presupuesto limitado",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Dueños vs Acreedores",
+  "descripcion": "En el mundo de los negocios, hay dos formas de estar en una empresa: como el que presta o como el que arriesga. ¿Conoces las reglas?",
+  "objetivo": "Diferenciar los derechos, riesgos y obligaciones de los acreedores frente a los accionistas",
+  "xp": 400,
+  "instruccion": "Arrastra cada concepto a la categoría que le corresponde: ¿Es una característica de la DEUDA o de las ACCIONES?",
+  "items": [
+    {
+      "id": "cap1",
+      "label": "Cobran intereses obligatorios",
+      "emoji": "🏦",
+      "categoria_correcta": "deuda",
+      "feedback": "Los acreedores exigen su pago sin importar si la empresa ganó o perdió dinero."
+    },
+    {
+      "id": "cap2",
+      "label": "Derecho a voto y decisiones",
+      "emoji": "🗳️",
+      "categoria_correcta": "acciones",
+      "feedback": "Como dueño, tienes voz y voto en el rumbo que toma la compañía."
+    },
+    {
+      "id": "cap3",
+      "label": "Cobran primero en caso de quiebra",
+      "emoji": "🥇",
+      "categoria_correcta": "deuda",
+      "feedback": "La ley protege primero a los que prestaron dinero antes que a los dueños."
+    },
+    {
+      "id": "cap4",
+      "label": "Reciben Dividendos",
+      "emoji": "💰",
+      "categoria_correcta": "acciones",
+      "feedback": "Es la parte de las ganancias que se reparte entre los socios o accionistas."
+    },
+    {
+      "id": "cap5",
+      "label": "Tiene una fecha de vencimiento",
+      "emoji": "📅",
+      "categoria_correcta": "deuda",
+      "feedback": "La deuda debe devolverse en un plazo determinado; las acciones son para siempre (o hasta que las vendas)."
+    },
+    {
+      "id": "cap6",
+      "label": "Ganancia ilimitada si la empresa crece",
+      "emoji": "🚀",
+      "categoria_correcta": "acciones",
+      "feedback": "El banco solo gana intereses; el dueño gana todo el crecimiento del valor de la empresa."
+    },
+    {
+      "id": "cap7",
+      "label": "Son los últimos en cobrar (Residuales)",
+      "emoji": "🐢",
+      "categoria_correcta": "acciones",
+      "feedback": "Toman el mayor riesgo: si no queda dinero tras pagar deudas, los dueños no reciben nada."
+    },
+    {
+      "id": "cap8",
+      "label": "Piden garantías o avales",
+      "emoji": "📑",
+      "categoria_correcta": "deuda",
+      "feedback": "Los bancos suelen pedir algo a cambio (propiedades) por si no puedes pagar el préstamo."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "deuda",
+      "label": "DEUDA (Acreedores)",
+      "emoji": "📉",
+      "color": "#1e40af"
+    },
+    {
+      "id": "acciones",
+      "label": "ACCIONES (Dueños)",
+      "emoji": "💎",
+      "color": "#166534"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

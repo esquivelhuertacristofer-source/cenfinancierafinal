@@ -1,0 +1,253 @@
+{
+  "code": "ACT-S2-1-5-A",
+  "unit_code": "S2-1-5",
+  "unit_title": "Crisis económicas: lecciones del 94, 2008 y 2020 en México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "El Gran Crash: Sobrevive Tres Crisis",
+  "descripcion": "Eres parte de la familia Méndez, clase media de la CDMX. Debes tomar decisiones financieras durante las tres crisis más devastadoras de los últimos 30 años. Cada error tiene un costo numérico real. Los que aprendieron las lecciones salieron adelante — los demás perdieron todo.",
+  "objetivo": "Aplicar decisiones financieras correctas en contextos de crisis económica y entender el costo real de las decisiones impulsivas",
+  "xp": 300,
+  "personaje_principal": "Familia Méndez — Clase media, CDMX",
+  "patrimonio_inicial": 250000,
+  "contexto_inicial": "Diciembre 1993. Tienes $250,000 en ahorros, una hipoteca de $800,000 (pagada al corriente) y trabajo estable. Todo parece tranquilo... pero está a punto de cambiar.",
+  "nodo_inicial": "crisis_94_inicio",
+  "nodos": {
+    "crisis_94_inicio": {
+      "id": "crisis_94_inicio",
+      "texto": "📅 DICIEMBRE 1994 — 'El Error de Diciembre'\n\nEl gobierno devalúa el peso de golpe. El dólar pasa de $3.40 a $7.50 pesos en semanas. La inflación explota a 52% anual. Tu hipoteca estaba indexada a UDIS — tu mensualidad se duplica de $3,200 a $6,800/mes de un día para otro.\n\nTu ingreso familiar: $8,500/mes. Tu hipoteca nueva: $6,800/mes.",
+      "patrimonio_actual": 250000,
+      "datos_reales": "Esto le pasó a 1.2 millones de familias mexicanas en 1994. El 'Error de Diciembre' destruyó el patrimonio de una generación.",
+      "opciones": [
+        {
+          "id": "vender_carro",
+          "texto": "Vender el carro para tener liquidez y no caer en mora",
+          "siguiente_nodo": "crisis_94_vendiste_carro",
+          "consecuencia": "Sacaste $85,000 vendiendo el carro. Duele, pero mantienes la casa.",
+          "impacto_patrimonio": -25000,
+          "impacto_label": "-$25,000 (perdiste en la venta urgente del carro)",
+          "xp_bonus": 80,
+          "es_optima": true
+        },
+        {
+          "id": "retirar_ahorros",
+          "texto": "Sacar todos tus ahorros del banco antes de que los congelen",
+          "siguiente_nodo": "crisis_94_retiraste_todo",
+          "consecuencia": "Tienes el efectivo, pero con 52% de inflación, cada mes vale menos.",
+          "impacto_patrimonio": -75000,
+          "impacto_label": "-$75,000 (el efectivo pierde 52% en 12 meses por inflación)",
+          "xp_bonus": 30,
+          "es_optima": false
+        },
+        {
+          "id": "no_hacer_nada",
+          "texto": "No hacer nada — esperar a que el gobierno resuelva la crisis",
+          "siguiente_nodo": "crisis_94_no_actuaste",
+          "consecuencia": "Caíste en mora. El banco inició proceso de adjudicación de tu casa.",
+          "impacto_patrimonio": -200000,
+          "impacto_label": "-$200,000 (perdiste la casa)",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "crisis_94_vendiste_carro": {
+      "id": "crisis_94_vendiste_carro",
+      "texto": "Sacrificaste el carro pero salvaste lo más importante: la casa.\n\nLa crisis duró 2 años. El FMI prestó $50,000 millones de dólares a México para estabilizarlo. Para 1997 ya había recuperación. Con trabajo y sin carro llegaste adelante.\n\n📊 Patrimonio actual: $225,000\nLección: Los activos líquidos (efectivo, carro) se sacrifican para proteger activos de largo plazo (casa).",
+      "patrimonio_actual": 225000,
+      "opciones": [
+        {
+          "id": "continuar_2008",
+          "texto": "→ Avanzar a 2008: La Gran Recesión",
+          "siguiente_nodo": "crisis_2008_inicio",
+          "consecuencia": "Llegas al 2008 con $225,000 y la casa pagada al 60%.",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "crisis_94_retiraste_todo": {
+      "id": "crisis_94_retiraste_todo",
+      "texto": "El dinero en efectivo se derritió con la inflación. $250,000 de iniciales quedaron con poder adquisitivo de $165,000 al cabo de un año.\n\nTu hipoteca casi se fue a cartera vencida, pero lograste refinanciarla con FOBAPROA.\n\n📊 Patrimonio actual: $175,000",
+      "patrimonio_actual": 175000,
+      "opciones": [
+        {
+          "id": "continuar_2008",
+          "texto": "→ Avanzar a 2008 con desventaja",
+          "siguiente_nodo": "crisis_2008_inicio",
+          "consecuencia": "",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "crisis_94_no_actuaste": {
+      "id": "crisis_94_no_actuaste",
+      "texto": "❌ Perdiste la casa. El banco la adjudicó y la vendió para recuperar su préstamo. La familia tuvo que rentar durante 10 años para reconstruirse.\n\nEsta fue la realidad de 800,000 familias mexicanas entre 1994 y 1997.\n\n📊 Patrimonio actual: $50,000 (solo ahorros que quedaron, sin casa)",
+      "patrimonio_actual": 50000,
+      "opciones": [
+        {
+          "id": "continuar_2008_con_desventaja",
+          "texto": "→ Avanzar a 2008 (con gran desventaja)",
+          "siguiente_nodo": "crisis_2008_inicio",
+          "consecuencia": "",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "crisis_2008_inicio": {
+      "id": "crisis_2008_inicio",
+      "texto": "📅 SEPTIEMBRE 2008 — 'La Gran Recesión'\n\nQuiebra Lehman Brothers en EE.UU. En 30 días, la bolsa mexicana (IPC) cae 40%. Tu empresa habla de recortes. Tienes 3 meses de fondo de emergencia.\n\nTus inversiones en fondos: $180,000 → ahora valen $108,000 (en papel).\n\n¿Vendes para 'salvar lo que queda' o aguantas?",
+      "datos_reales": "El IPC cayó de 32,000 a 17,000 puntos entre julio y noviembre 2008. Los que aguantaron recuperaron todo para 2011.",
+      "opciones": [
+        {
+          "id": "vender_inversiones_2008",
+          "texto": "Vender todas las inversiones — ya perdí 40%, no quiero perder más",
+          "siguiente_nodo": "vendio_con_panico",
+          "consecuencia": "Cristalizaste la pérdida. Convertiste una pérdida en papel en una pérdida real.",
+          "impacto_patrimonio": -72000,
+          "impacto_label": "-$72,000 en pérdidas realizadas por vender en pánico",
+          "xp_bonus": 10,
+          "es_optima": false
+        },
+        {
+          "id": "aguantar_2008",
+          "texto": "No vender — las empresas siguen operando, esto es temporal",
+          "siguiente_nodo": "aguanto_la_caida",
+          "consecuencia": "Viste los números en rojo durante 18 meses, pero no vendiste.",
+          "impacto_patrimonio": 0,
+          "impacto_label": "Pérdida en papel — no realizada",
+          "xp_bonus": 100,
+          "es_optima": true
+        },
+        {
+          "id": "comprar_mas_2008",
+          "texto": "COMPRAR más — los precios están en descuento histórico",
+          "siguiente_nodo": "compro_en_el_piso",
+          "consecuencia": "Movimiento audaz. Usaste $50,000 de ahorros para comprar en el mínimo histórico.",
+          "impacto_patrimonio": -50000,
+          "impacto_label": "Inversión de $50,000 adicionales en el piso del mercado",
+          "xp_bonus": 150,
+          "es_optima": true
+        }
+      ]
+    },
+    "vendio_con_panico": {
+      "id": "vendio_con_panico",
+      "texto": "Para octubre 2010, el IPC ya recuperó el 100% de lo perdido y siguió subiendo.\n\nTú lo vendiste en el piso y te perdiste la recuperación completa. Es el error más costoso del inversionista promedio: vender con pánico y comprar con euforia.\n\n📊 Costo del error: aproximadamente $90,000 en plusvalía perdida.",
+      "patrimonio_actual_delta": -90000,
+      "opciones": [
+        {
+          "id": "continuar_2020",
+          "texto": "→ Avanzar a 2020: COVID-19",
+          "siguiente_nodo": "crisis_2020_inicio",
+          "consecuencia": "",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "aguanto_la_caida": {
+      "id": "aguanto_la_caida",
+      "texto": "Fue psicológicamente muy difícil. Ver tus inversiones 40% abajo durante 18 meses pone a prueba cualquier plan.\n\nPero para 2011: tus $180,000 de inversión ya valían $215,000. El mercado te pagó por tu paciencia.\n\n📊 Ganancia por no vender: +$35,000 vs. pérdida de -$72,000 si hubieras vendido.",
+      "patrimonio_actual_delta": 35000,
+      "opciones": [
+        {
+          "id": "continuar_2020",
+          "texto": "→ Avanzar a 2020: COVID-19",
+          "siguiente_nodo": "crisis_2020_inicio",
+          "consecuencia": "",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "compro_en_el_piso": {
+      "id": "compro_en_el_piso",
+      "texto": "Movimiento legendario. Compraste cuando todos tenían miedo.\n\nPara 2013: esos $50,000 invertidos en el piso valían $145,000. Un retorno del 190% en 5 años.\n\nWarren Buffett dice: 'Sé codicioso cuando otros tienen miedo, y miedoso cuando otros son codiciosos.' Lo hiciste exactamente así.\n\n📊 Ganancia en la inversión del piso: +$95,000",
+      "patrimonio_actual_delta": 95000,
+      "opciones": [
+        {
+          "id": "continuar_2020",
+          "texto": "→ Avanzar a 2020: COVID-19",
+          "siguiente_nodo": "crisis_2020_inicio",
+          "consecuencia": "",
+          "impacto_patrimonio": 0,
+          "xp_bonus": 0,
+          "es_optima": true
+        }
+      ]
+    },
+    "crisis_2020_inicio": {
+      "id": "crisis_2020_inicio",
+      "texto": "📅 MARZO 2020 — COVID-19\n\nEl mundo se detiene en 72 horas. Tu empresa cierra 'temporalmente'. No hay ingreso por 3 meses.\n\nEsta vez aprendiste. Tienes 6 meses de fondo de emergencia en liquidez. Tus inversiones están diversificadas.\n\n¿Cómo navegas esta crisis?",
+      "datos_reales": "En México, 1.1 millones de personas perdieron su trabajo formal en 2020. El PIB cayó 8.5% — la peor caída desde la Gran Depresión.",
+      "opciones": [
+        {
+          "id": "usar_fondo_emergencia",
+          "texto": "Activar el fondo de emergencia y no tocar las inversiones",
+          "siguiente_nodo": "final_sobrevivio_bien",
+          "consecuencia": "El fondo cumplió exactamente su función. Tus inversiones se recuperaron en 6 meses.",
+          "impacto_patrimonio": 0,
+          "impacto_label": "Fondo de emergencia absorbió el golpe",
+          "xp_bonus": 120,
+          "es_optima": true
+        },
+        {
+          "id": "pedir_credito_covid",
+          "texto": "Pedir créditos de emergencia — el fondo no alcanza para todos los gastos",
+          "siguiente_nodo": "final_deuda_covid",
+          "consecuencia": "Saliste, pero con $90,000 de nuevas deudas a tasas altas.",
+          "impacto_patrimonio": -90000,
+          "impacto_label": "-$90,000 en deudas nuevas a pagar los siguientes 3 años",
+          "xp_bonus": 40,
+          "es_optima": false
+        },
+        {
+          "id": "reinventarse_covid",
+          "texto": "Buscar trabajo freelance digital mientras dura el cierre",
+          "siguiente_nodo": "final_se_adapto",
+          "consecuencia": "Encontraste consultoría en línea. Tus ingresos se diversificaron permanentemente.",
+          "impacto_patrimonio": 45000,
+          "impacto_label": "+$45,000 en ingresos adicionales en 6 meses de reinvención",
+          "xp_bonus": 200,
+          "es_optima": true
+        }
+      ]
+    },
+    "final_sobrevivio_bien": {
+      "id": "final_sobrevivio_bien",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "🏆 LA FAMILIA MÉNDEZ: 30 AÑOS DESPUÉS\n\nSobreviviste las 3 crisis más grandes con el patrimonio intacto y aprendizajes que valen más que el dinero.\n\nPatrimonio estimado al llegar a 2023: significativamente mayor al de 1993, con casa pagada e inversiones diversificadas.",
+      "reflexion_final": "Las tres lecciones que sobreviven a cualquier crisis:\n1. El fondo de emergencia no es opcional — es el cimiento de todo plan financiero\n2. Las inversiones bien diversificadas se recuperan siempre de las crisis (el tiempo cura las pérdidas en papel)\n3. La paciencia y la disciplina son las armas más poderosas — las decisiones impulsivas en crisis destrozan el patrimonio",
+      "opciones": []
+    },
+    "final_deuda_covid": {
+      "id": "final_deuda_covid",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "⚠️ Sobreviviste, pero con cicatrices financieras.\n\nLos $90,000 de deuda tardarán 4 años en pagarse. La siguiente crisis te encontrará más vulnerable.",
+      "reflexion_final": "COVID demostró que 3 meses de fondo de emergencia no son suficientes — los expertos recomiendan 6 meses. Cada crisis nos enseña cuánto necesitamos realmente. ¿Cuánto tiempo tardarías hoy en construir un fondo de 6 meses?",
+      "opciones": []
+    },
+    "final_se_adapto": {
+      "id": "final_se_adapto",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "💡 No solo sobreviviste — la crisis fue tu catalizador.\n\nDescubriste habilidades que no sabías que tenías. La diversificación de ingresos que empezaste en 2020 siguió generando $15,000/mes adicionales incluso cuando regresaste a tu trabajo normal.",
+      "reflexion_final": "Las personas con habilidades digitales y mentalidad adaptable no solo sobreviven las crisis — las usan como trampolines. La diversificación de ingresos es tan importante como la diversificación de inversiones.",
+      "opciones": []
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Diamond.V2"
+}

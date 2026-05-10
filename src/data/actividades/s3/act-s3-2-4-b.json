@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S3-2-4-B",
+  "unit_code": "S3-2-4",
+  "unit_title": "Independencia financiera acelerada: el concepto FIRE",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Transparencia y Confianza",
+  "descripcion": "¿Sabes qué leyes y reglas protegen a los inversionistas de las malas prácticas? ¡Ponte a prueba!",
+  "objetivo": "Identificar los principios del gobierno corporativo y las prácticas éticas en el entorno empresarial",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "eth1",
+      "texto": "¿Cuál es la función principal del 'Consejo de Administración'?",
+      "opciones": [
+        "Contratar a todos los empleados",
+        "Vigilar y supervisar la gestión del Director General (CEO) para proteger los intereses de los dueños",
+        "Hacer la limpieza",
+        "Vender los productos"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el órgano que asegura que la empresa se maneje de forma honesta y eficiente."
+    },
+    {
+      "id": "eth2",
+      "texto": "¿Qué es el 'Insider Trading' (Uso de información privilegiada)?",
+      "opciones": [
+        "Intercambiar tarjetas de béisbol",
+        "Usar información secreta de la empresa para ganar dinero comprando o vendiendo acciones antes que los demás",
+        "Hacer publicidad en internet",
+        "Hablar con los compañeros de trabajo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un delito grave porque da una ventaja injusta y destruye la confianza en el mercado."
+    },
+    {
+      "id": "eth3",
+      "texto": "¿Qué significa tener una 'Responsabilidad Fiduciaria'?",
+      "opciones": [
+        "Tener que pagar una multa",
+        "La obligación legal y ética de actuar siempre en el mejor interés de los demás (ej: de los accionistas)",
+        "Ser dueño de una fábrica",
+        "Saber usar una computadora"
+      ],
+      "correcta": 1,
+      "explicacion": "Un administrador debe cuidar el dinero ajeno como si fuera propio, o mejor."
+    },
+    {
+      "id": "eth4",
+      "texto": "¿Para qué sirve una 'Auditoría' externa?",
+      "opciones": [
+        "Para pedir un préstamo",
+        "Para que expertos independientes revisen que las cuentas y finanzas de la empresa sean reales y verdaderas",
+        "Para despedir gente",
+        "Para diseñar el logo"
+      ],
+      "correcta": 1,
+      "explicacion": "Da garantía a los inversionistas de que la empresa no está inventando números."
+    },
+    {
+      "id": "eth5",
+      "texto": "¿Qué son los criterios 'ESG'?",
+      "opciones": [
+        "Tipos de archivos digitales",
+        "Factores Ambientales, Sociales y de Gobierno que miden el impacto positivo de una empresa en el mundo",
+        "Códigos de programación",
+        "Nombres de bancos"
+      ],
+      "correcta": 1,
+      "explicacion": "Hoy en día, los grandes inversionistas solo ponen dinero en empresas que cuidan el planeta y a la sociedad."
+    },
+    {
+      "id": "eth6",
+      "texto": "¿Qué es un 'Conflicto de Interés'?",
+      "opciones": [
+        "Cuando dos personas pelean por dinero",
+        "Cuando una persona debe tomar una decisión pero tiene un interés personal que podría nublar su juicio",
+        "No estar de acuerdo con el jefe",
+        "Vender un producto caro"
+      ],
+      "correcta": 1,
+      "explicacion": "Por ejemplo, contratar a un familiar menos capaz solo por ser pariente."
+    },
+    {
+      "id": "eth7",
+      "texto": "¿Qué significa que una empresa sea 'Transparente'?",
+      "opciones": [
+        "Que sus oficinas son de vidrio",
+        "Que comparte toda su información financiera y decisiones importantes con el público y sus accionistas",
+        "Que no tiene secretos con sus competidores",
+        "Que regala sus productos"
+      ],
+      "correcta": 1,
+      "explicacion": "La transparencia es la base de la confianza en los negocios."
+    },
+    {
+      "id": "eth8",
+      "texto": "¿Por qué la Ética es rentable a largo plazo?",
+      "opciones": [
+        "Porque no pagas impuestos",
+        "Porque atrae mejores empleados, clientes leales e inversionistas serios que evitan riesgos legales",
+        "No es rentable",
+        "Porque el gobierno te da premios"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has comprendido que el valor de una empresa reside en su integridad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P4-1-2-A",
+  "unit_code": "P4-1-2",
+  "unit_title": "Cuenta de ahorro: cómo funciona y para qué la necesito",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Batalla de los Bancos",
+  "descripcion": "Elige el mejor banco para tu ahorro. Algunos te dan más 'premio' (intereses), pero otros te cobran más por manejar tu dinero.",
+  "objetivo": "Comparar el impacto de las tasas de interés y las comisiones en el ahorro a largo plazo",
+  "xp": 400,
+  "descripcion_formula": "Calculamos el saldo final proyectado a 12 meses considerando: (Ahorro Total * Interés) - Comisiones Anuales.",
+  "inputs": [
+    {
+      "id": "ahorro_mensual",
+      "label": "Ahorro al mes",
+      "type": "slider",
+      "min": 100,
+      "max": 2000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "banco_tipo",
+      "label": "Tipo de Banco",
+      "type": "select",
+      "default": "Banco A",
+      "opciones": [
+        "Banco A (Alto interés, alta comisión)",
+        "Banco B (Bajo interés, sin comisión)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación Mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    }
+  ],
+  "formula": "banco_tipo === 'Banco A (Alto interés, alta comisión)' ? (ahorro_mensual * 12 * 1.08) - 300 : (ahorro_mensual * 12 * 1.02)",
+  "output_label": "Tu Dinero después de 1 año",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "ahorro_mensual < 300 && banco_tipo === 'Banco A (Alto interés, alta comisión)'",
+      "mensaje": "⚠️ ¡Cuidado! Si ahorras poco, la comisión del Banco A se 'come' tus ganancias. Te conviene el Banco B.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "ahorro_mensual >= 1000 && banco_tipo === 'Banco A (Alto interés, alta comisión)'",
+      "mensaje": "💰 ¡Excelente elección! Como ahorras mucho, el alto interés compensa la comisión y ganas más dinero.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "banco_tipo === 'Banco B (Bajo interés, sin comisión)'",
+      "mensaje": "🛡️ Elección Segura. No ganas mucho interés, pero tu dinero está a salvo de cobros extras.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Para qué usarías una cuenta de cheques vs una de ahorro? ¿Cuánto dinero extra generarían $10,000 en una cuenta con 4% anual después de 5 años?",
+  "comparativa_espera": "Elegir el banco con menor comisión y mayor tasa puede parecer pequeño al inicio, pero en 10 años puede representar decenas de miles de pesos de diferencia. La CONDUSEF publica comparativas mensuales de todos los bancos en México.",
+  "outputs_multiples": [
+    {
+      "id": "dinero_un_anio",
+      "label": "Dinero Después de 1 Año",
+      "formula": "Math.round(banco_tipo === 'Banco A (Alto interés, alta comisión)' ? (ahorro_mensual * 12 * 1.08) - 300 : (ahorro_mensual * 12 * 1.02))",
+      "prefix": "$",
+      "suffix": " pesos",
+      "descripcion": "Tu saldo total con intereses menos comisiones"
+    },
+    {
+      "id": "comision_anual",
+      "label": "Comisiones que Paga en 1 Año",
+      "formula": "banco_tipo === 'Banco A (Alto interés, alta comisión)' ? 300 : 0",
+      "prefix": "$",
+      "suffix": " en comisiones",
+      "descripcion": "Las comisiones anuales que cobra el banco"
+    },
+    {
+      "id": "intereses_brutos",
+      "label": "Intereses Brutos",
+      "formula": "Math.round(banco_tipo === 'Banco A (Alto interés, alta comisión)' ? ahorro_mensual * 12 * 0.08 : ahorro_mensual * 12 * 0.02)",
+      "prefix": "$",
+      "suffix": " de intereses",
+      "descripcion": "Lo que ganas antes de descontar comisiones"
+    },
+    {
+      "id": "diferencia_entre_bancos",
+      "label": "Diferencia Entre Opciones",
+      "formula": "Math.abs(Math.round((ahorro_mensual * 12 * 1.08) - 300 - (ahorro_mensual * 12 * 1.02)))",
+      "prefix": "$",
+      "suffix": " de diferencia",
+      "descripcion": "Cuánto más o menos ganas eligiendo bien tu banco"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "dinero_un_anio",
+      "label": "Dinero Después de 1 Año",
+      "color": "#6366f1"
+    },
+    {
+      "id": "comision_anual",
+      "label": "Comisiones que Paga en 1 Año",
+      "color": "#22c55e"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-4-4-B",
+  "unit_code": "P4-4-4",
+  "unit_title": "Atención al cliente y ventas: el arte de servir",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "RULETA",
+  "complejidad": "MEDIO",
+  "titulo": "Situaciones de Venta",
+  "descripcion": "Gira la ruleta y prepárate para atender a diferentes tipos de clientes. ¡Tu reputación está en juego!",
+  "objetivo": "Entrenar la respuesta rápida y asertiva ante diversas solicitudes y comportamientos de los clientes",
+  "xp": 400,
+  "giros": 5,
+  "escenarios": [
+    {
+      "id": "sv_1",
+      "situacion": "Un cliente te dice: 'Me encanta tu producto, pero si te compro 10, ¿me das un precio especial?'",
+      "opciones": [
+        "Decir que no, el precio es fijo",
+        "Ofrecer un pequeño descuento por mayoreo",
+        "Regalarle los 10"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "El descuento por mayoreo es una técnica clásica para vender más volumen.",
+      "categoria": "Estrategia"
+    },
+    {
+      "id": "sv_2",
+      "situacion": "Un cliente te hace una pregunta técnica sobre los ingredientes que no sabes responder.",
+      "opciones": [
+        "Inventar una respuesta",
+        "Ser honesto, pedir un momento e investigar la respuesta correcta",
+        "Ignorar la pregunta"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "La honestidad y la precisión generan confianza en la marca.",
+      "categoria": "Servicio"
+    },
+    {
+      "id": "sv_3",
+      "situacion": "Tienes una fila larga y un cliente empieza a quejarse de la espera.",
+      "opciones": [
+        "Gritarle que se espere",
+        "Agradecer su paciencia y ofrecerle una pequeña prueba gratis mientras espera",
+        "Atender más lento"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Reconocer la espera del cliente y darle un detalle reduce su frustración.",
+      "categoria": "Crisis"
+    },
+    {
+      "id": "sv_4",
+      "situacion": "Un cliente te sugiere que el empaque debería ser de otro color. ¿Qué haces?",
+      "opciones": [
+        "Decirle que a él no le importa",
+        "Anotar la sugerencia y agradecerle por ayudar a mejorar el negocio",
+        "Olvidarlo de inmediato"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "La retroalimentación de los clientes es oro puro para innovar.",
+      "categoria": "Innovación"
+    },
+    {
+      "id": "sv_5",
+      "situacion": "Un cliente quiere pagarte con un billete de $500, pero no tienes cambio.",
+      "opciones": [
+        "Perder la venta",
+        "Pedirle amablemente si tiene una tarjeta o un billete más chico, o ver si alguien te puede cambiar",
+        "Quedarte con todo el cambio"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Buscar opciones de pago alternativas es parte de un buen servicio.",
+      "categoria": "Operaciones"
+    },
+    {
+      "id": "sv_6",
+      "situacion": "Un cliente trae a un amigo para que también te compre. ¡Qué buena suerte!",
+      "opciones": [
+        "Atenderlos normal",
+        "Agradecer al cliente por la recomendación y darle un beneficio especial por traer a un amigo",
+        "Cobrarles el doble"
+      ],
+      "mejor_opcion": 1,
+      "explicacion": "Premiar la recomendación (boca a boca) asegura que te traigan más clientes.",
+      "categoria": "Fidelización"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

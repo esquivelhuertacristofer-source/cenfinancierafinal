@@ -1,0 +1,165 @@
+{
+  "code": "ACT-S1-4-5-A",
+  "unit_code": "S1-4-5",
+  "unit_title": "Casos de éxito mexicanos: emprendedores que lo lograron",
+  "level": "Secundaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Viaje del Emprendedor Mexicano",
+  "descripcion": "Carlos Slim empezó vendiendo dulces en la escuela. Los fundadores de Clip (pagos digitales), Kavak (autos usados) y Cornershop (supermercado en línea) empezaron igual que tú: con una idea y poco dinero. Simula el crecimiento de una startup mexicana y ve qué decisiones marcan la diferencia.",
+  "objetivo": "Modelar el crecimiento de un emprendimiento mexicano desde idea hasta negocio viable, entendiendo la importancia de reinversión, crecimiento compuesto y el tiempo hasta el punto de equilibrio",
+  "xp": 600,
+  "descripcion_formula": "Ingreso mes n = ingreso_inicial × (1 + crecimiento_mensual/100)^n. Punto de equilibrio = mes donde ingresos_acumulados > costos_acumulados. Valor negocio = ingreso_anual × multiplo_sector.",
+  "inputs": [
+    {
+      "id": "inversion_inicial_emp",
+      "label": "Inversión Inicial ($)",
+      "type": "slider",
+      "min": 5000,
+      "max": 500000,
+      "step": 5000,
+      "default": 50000,
+      "unit": "$"
+    },
+    {
+      "id": "ingreso_primer_mes",
+      "label": "Ingresos del Primer Mes ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 8000,
+      "unit": "$"
+    },
+    {
+      "id": "crecimiento_mensual_emp",
+      "label": "Crecimiento Mensual (%)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 10,
+      "unit": "%",
+      "referencia": "Startups exitosas en etapa temprana: 10-20% mensual. Negocios maduros: 2-5%"
+    },
+    {
+      "id": "pct_reinversion",
+      "label": "% de Ganancias que Reinviertes",
+      "type": "slider",
+      "min": 0,
+      "max": 80,
+      "step": 10,
+      "default": 50,
+      "unit": "%"
+    },
+    {
+      "id": "sector_emprendimiento",
+      "label": "Sector del Negocio",
+      "type": "select",
+      "options": [
+        { "label": "Tecnología / App (múltiplo x15-25)", "value": "tech" },
+        { "label": "Comercio / Retail (múltiplo x5-8)", "value": "retail" },
+        { "label": "Alimentos y Bebidas (múltiplo x4-6)", "value": "food" },
+        { "label": "Servicios (múltiplo x6-10)", "value": "servicios" }
+      ],
+      "default": "tech"
+    }
+  ],
+  "formula": "Math.round(ingreso_primer_mes * Math.pow(1 + crecimiento_mensual_emp/100, 36))",
+  "output_label": "Ingresos en el Mes 36",
+  "output_prefix": "$",
+  "output_suffix": "/mes",
+  "outputs_multiples": [
+    {
+      "id": "ingresos_mes_36",
+      "label": "Ingresos Mensuales al Año 3",
+      "formula": "Math.round(ingreso_primer_mes * Math.pow(1 + crecimiento_mensual_emp/100, 36))",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Los ingresos mensuales que generará tu negocio en el mes 36 con crecimiento compuesto"
+    },
+    {
+      "id": "mes_punto_equilibrio",
+      "label": "Mes en que Llegas al Punto de Equilibrio",
+      "formula": "Math.ceil(Math.log(1 + inversion_inicial_emp * crecimiento_mensual_emp/100 / ingreso_primer_mes) / Math.log(1 + crecimiento_mensual_emp/100))",
+      "prefix": "Mes ",
+      "suffix": "",
+      "descripcion": "Cuando acumulado de ingresos supera tu inversión inicial"
+    },
+    {
+      "id": "valor_negocio_3_anos",
+      "label": "Valuación del Negocio a 3 Años",
+      "formula": "Math.round(ingreso_primer_mes * Math.pow(1 + crecimiento_mensual_emp/100, 36) * 12 * (sector_emprendimiento === 'tech' ? 15 : sector_emprendimiento === 'retail' ? 6 : sector_emprendimiento === 'food' ? 5 : 8))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Lo que vale tu negocio para un inversionista (ingreso anual × múltiplo del sector)"
+    },
+    {
+      "id": "roi_emprendedor",
+      "label": "Retorno sobre tu Inversión",
+      "formula": "Math.round((ingreso_primer_mes * Math.pow(1 + crecimiento_mensual_emp/100, 36) * 12 * (sector_emprendimiento === 'tech' ? 15 : sector_emprendimiento === 'retail' ? 6 : sector_emprendimiento === 'food' ? 5 : 8) - inversion_inicial_emp) / inversion_inicial_emp * 100)",
+      "prefix": "",
+      "suffix": "% de retorno",
+      "descripcion": "Cuántas veces multiplicaste tu inversión inicial al llegar al año 3"
+    }
+  ],
+  "casos_reales_mexico": {
+    "titulo": "Emprendedores mexicanos que lo lograron",
+    "casos": [
+      {
+        "empresa": "Clip",
+        "fundador": "Adolfo Babatz",
+        "inicio": "2012, terminal de cobro para pequeños negocios",
+        "hoy": "Más de 1 millón de comercios activos, valuación $2 billion USD",
+        "leccion": "Identificó que millones de negocios no podían cobrar con tarjeta"
+      },
+      {
+        "empresa": "Kavak",
+        "fundador": "Carlos García Ottati",
+        "inicio": "2016, compra-venta de autos usados con garantía",
+        "hoy": "Primer unicornio mexicano ($1 billion USD), opera en 10 países",
+        "leccion": "Resolvió la falta de confianza en el mercado de autos de segunda mano"
+      },
+      {
+        "empresa": "Kueski",
+        "fundador": "Adalberto Flores",
+        "inicio": "2012, crédito personal en línea para no bancarizados",
+        "hoy": "Más de 10 millones de usuarios, BNPL líder en México",
+        "leccion": "El 50% de México no tiene acceso a crédito formal — esa es la oportunidad"
+      }
+    ]
+  },
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "ingresos_mes_36",
+      "label": "Ingresos Proyectados ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "valor_negocio_3_anos",
+      "label": "Valuación del Negocio ($)",
+      "color": "#6366f1"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "crecimiento_mensual_emp >= 15",
+      "mensaje": "🚀 Crecimiento de startup. 15%+ mensual es el territorio de las empresas de alto crecimiento. Esto solo es sostenible si tienes product-market fit real y reinviertes agresivamente.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pct_reinversion < 30",
+      "mensaje": "⚠️ Reinversión baja. Los emprendedores más exitosos de México reinvirtieron el 50-80% de sus primeras ganancias. Gastar demasiado pronto es la trampa que frena el crecimiento compuesto.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "mes_punto_equilibrio > 24",
+      "mensaje": "💡 Punto de equilibrio lejano. Tardar más de 24 meses en recuperar la inversión es normal en tech, pero requiere capital suficiente para aguantar. ¿Tienes runway para llegar?",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Qué tienen en común Carlos Slim y los fundadores de Clip, Kueski o Conekta? ¿Qué lección del empresario mexicano que más admiras aplicarías tú hoy?",
+  "comparativa_espera": "México tiene 12 billonarios en dólares (Forbes 2024). Todos empezaron identificando una necesidad del mercado mexicano que nadie más estaba resolviendo con calidad y escala suficientes."
+}

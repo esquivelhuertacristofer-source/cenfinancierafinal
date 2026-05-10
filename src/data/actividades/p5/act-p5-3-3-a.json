@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P5-3-3-A",
+  "unit_code": "P5-3-3",
+  "unit_title": "Interés Compuesto: la octava maravilla del mundo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Yo Viejito",
+  "descripcion": "Parece falta mucho, pero si ahorras para tu retiro desde joven, ¡serás un abuelito millonario! Ve cuánto dinero tendrás a los 65 años.",
+  "objetivo": "Comprender la importancia del ahorro a largo plazo para la jubilación y el poder del interés compuesto en décadas",
+  "xp": 500,
+  "descripcion_formula": "Calculamos el ahorro acumulado durante 43 años de trabajo (de los 22 a los 65), con una tasa promedio del 8% anual.",
+  "inputs": [
+    {
+      "id": "sueldo_estimado",
+      "label": "Tu sueldo mensual soñado",
+      "type": "slider",
+      "min": 10000,
+      "max": 100000,
+      "step": 5000,
+      "default": 30000,
+      "unit": "$"
+    },
+    {
+      "id": "porcentaje_retiro",
+      "label": "% que ahorrarás para el retiro",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 6,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "(sueldo_estimado * porcentaje_retiro/100 * 12) * ((Math.pow(1 + 0.08, 43) - 1) / 0.08)",
+  "output_label": "Tu Fondo para el Retiro a los 65 años",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado > 10000000",
+      "mensaje": "🌟 ¡Increíble! Tendrás más de 10 millones de pesos. Tu retiro será de lujo.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 3000000 && resultado <= 10000000",
+      "mensaje": "🏠 ¡Muy bien! Tendrás un retiro cómodo y seguro. El ahorro constante funcionó.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado <= 3000000",
+      "mensaje": "⚠️ ¡Atención! Tu fondo es bajo para 40 años de vida. ¡Considera ahorrar un 5% más!",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuánto dinero tendrías a los 65 años si empezaras a invertir $1,000 al mes hoy con 8% anual? ¿Qué diferencia haría haber empezado 10 años antes?",
+  "comparativa_espera": "La BMV ha existido desde 1894. Quienes invirtieron en el IPC hace 20 años y no vendieron en las crisis, hoy tienen más de 6 veces su capital inicial. La consistencia supera al timing en inversiones.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "valor_futuro_5a",
+      "label": "Valor Futuro a 5 Años",
+      "formula": "Math.round(resultado_principal * Math.pow(1.08, 5))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Creciendo al 8% anual compuesto"
+    },
+    {
+      "id": "rentabilidad_anual",
+      "label": "Rentabilidad Anual Estimada",
+      "formula": "8",
+      "prefix": "",
+      "suffix": "% anual promedio",
+      "descripcion": "Rendimiento histórico promedio del IPC a largo plazo"
+    },
+    {
+      "id": "costo_de_no_invertir",
+      "label": "Costo de No Invertir (5 años)",
+      "formula": "Math.round(resultado_principal * (Math.pow(1.08, 5) - 1))",
+      "prefix": "$",
+      "suffix": " que perderías",
+      "descripcion": "Lo que dejas de ganar si guardas el dinero sin invertir"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "valor_futuro_5a",
+      "label": "Valor Futuro a 5 Años",
+      "color": "#22c55e"
+    }
+  ]
+}

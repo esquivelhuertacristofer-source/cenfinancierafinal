@@ -1,0 +1,143 @@
+{
+  "code": "ACT-P6-1-5-A",
+  "unit_code": "P6-1-5",
+  "unit_title": "Criptomonedas: qué son y qué riesgos reales tienen",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Montaña Rusa Cripto",
+  "descripcion": "Bitcoin subió 1,000% en 2020-2021. Luego bajó 77% en 2022. Si hubieras invertido $10,000 en el pico de noviembre 2021, ¿cuánto tendrías en diciembre 2022? Simula el riesgo real de invertir en criptomonedas y aprende por qué la diversificación salva patrimonios.",
+  "objetivo": "Comprender la volatilidad extrema de las criptomonedas, el concepto de diversificación y por qué ningún activo de alto riesgo debe representar todo el portafolio",
+  "xp": 500,
+  "descripcion_formula": "Valor en bear = capital × (1 - caida_bear/100). Valor diversificado = capital × pct_cripto/100 × (1-caida_bear/100) + capital × (1-pct_cripto/100) × 1.08. La parte no cripto crece al 8% anual conservador.",
+  "inputs": [
+    {
+      "id": "capital_cripto",
+      "label": "Capital a Invertir ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "pct_en_cripto",
+      "label": "% del Capital en Criptomonedas",
+      "type": "slider",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 50,
+      "unit": "%"
+    },
+    {
+      "id": "escenario_cripto",
+      "label": "Escenario del Mercado Cripto",
+      "type": "select",
+      "options": [
+        { "label": "Bull Market (+300%)", "value": 3 },
+        { "label": "Mercado Lateral (+10%)", "value": 0.1 },
+        { "label": "Bear Market (-60%)", "value": -0.6 },
+        { "label": "Crash Extremo (-80%)", "value": -0.8 }
+      ],
+      "default": -0.6
+    },
+    {
+      "id": "anos_hodl",
+      "label": "Años que mantienes la inversión",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.round(capital_cripto * (pct_en_cripto/100) * (1 + escenario_cripto))",
+  "output_label": "Valor de tu parte cripto",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "valor_parte_cripto",
+      "label": "Valor de tu Parte Cripto",
+      "formula": "Math.round(capital_cripto * (pct_en_cripto/100) * (1 + escenario_cripto))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Cuánto vale solo la parte invertida en cripto según el escenario"
+    },
+    {
+      "id": "valor_parte_tradicional",
+      "label": "Valor de tu Parte Tradicional",
+      "formula": "Math.round(capital_cripto * (1 - pct_en_cripto/100) * Math.pow(1.08, anos_hodl))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "La parte en instrumentos tradicionales (CETES/bolsa) creciendo al 8% anual"
+    },
+    {
+      "id": "valor_total_portafolio",
+      "label": "Portafolio Total",
+      "formula": "Math.round(capital_cripto * (pct_en_cripto/100) * (1 + escenario_cripto) + capital_cripto * (1 - pct_en_cripto/100) * Math.pow(1.08, anos_hodl))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Todo junto: cripto + inversiones tradicionales"
+    },
+    {
+      "id": "diferencia_vs_sin_diversificar",
+      "label": "Lo que te Salvó Diversificar",
+      "formula": "Math.round(capital_cripto * (pct_en_cripto/100) * (1 + escenario_cripto) + capital_cripto * (1 - pct_en_cripto/100) * Math.pow(1.08, anos_hodl) - capital_cripto * (1 + escenario_cripto))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Diferencia entre tu portafolio diversificado vs si hubieras puesto todo en cripto"
+    }
+  ],
+  "casos_reales": {
+    "titulo": "Lo que pasó en la historia",
+    "eventos": [
+      { "año": "2021 (pico)", "btc": "$68,000", "eth": "$4,800", "nota": "El máximo histórico" },
+      { "año": "2022 (fondo)", "btc": "$16,000", "eth": "$1,100", "nota": "Caída de -77% en BTC" },
+      { "año": "2023 (recuperación)", "btc": "$44,000", "eth": "$2,400", "nota": "Parcialmente recuperado" },
+      { "año": "2024", "btc": "$67,000", "eth": "$3,500", "nota": "Cerca del máximo histórico" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "valor_parte_cripto",
+      "label": "Valor Cripto ($)",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "valor_parte_tradicional",
+      "label": "Valor Tradicional ($)",
+      "color": "#22c55e"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "escenario_cripto === -0.8 && pct_en_cripto > 70",
+      "mensaje": "💀 Pérdida catastrófica. Pusiste demasiado en cripto durante un crash del 80%. Esto le pasó a miles de personas en 2022. No es teoría — es historia reciente.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "escenario_cripto === -0.8 && pct_en_cripto <= 15",
+      "mensaje": "🛡️ La diversificación funcionó. Aunque el cripto cayó 80%, solo perdiste una pequeña fracción de tu portafolio total. Tus inversiones tradicionales siguieron creciendo.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "escenario_cripto === 3",
+      "mensaje": "🚀 Bull market. El cripto multiplicó por 4. Pero recuerda: este escenario ocurre después de años de espera y paciencia a través de múltiples crashes.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pct_en_cripto > 50",
+      "mensaje": "⚠️ Concentración alta. La mayoría de los expertos financieros recomienda no superar el 5-10% del portafolio en activos de alto riesgo como cripto.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Si Bitcoin puede perder el 70% de su valor en meses (como en 2022), ¿qué porcentaje de tus ahorros sería prudente poner en criptomonedas? ¿Cambia tu respuesta según tu perfil de riesgo?",
+  "comparativa_espera": "Bitcoin perdió 77% de su valor entre noviembre 2021 y diciembre 2022. Quien invirtió $100,000 en el pico tenía $23,000 un año después. El riesgo cripto está documentado y es real."
+}

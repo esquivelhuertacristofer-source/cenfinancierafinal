@@ -1,0 +1,257 @@
+{
+  "code": "ACT-P5-4-5-B",
+  "unit_code": "P5-4-5",
+  "unit_title": "Shark Tank CEN: la hora de la verdad",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Certificación Final: Maestro Financiero P5",
+  "descripcion": "¡Llegó el momento de la verdad! Demuestra todo lo que sabes y obtén tu certificación de fin de primaria. ¡Tú puedes!",
+  "objetivo": "Validar la adquisición integral de conocimientos y competencias financieras del 5to grado",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ex1",
+      "texto": "Si un país imprime muchísimo dinero sin que crezca su producción, ¿qué sucede?",
+      "opciones": [
+        "Todos se vuelven ricos",
+        "Ocurre la Inflación (los precios suben y el dinero vale menos)",
+        "El dinero se vuelve de colores",
+        "No pasa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El exceso de dinero sin valor real detrás genera inflación."
+    },
+    {
+      "id": "ex2",
+      "texto": "¿Qué es el 'Tipo de Cambio'?",
+      "opciones": [
+        "Cambiar de ropa",
+        "El precio de una moneda frente a otra (ej: pesos por dólares)",
+        "Cambiar de banco",
+        "Un tipo de dulce"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el valor relativo de las divisas en el mundo."
+    },
+    {
+      "id": "ex3",
+      "texto": "¿Para qué sirve el Fondo Monetario Internacional (FMI)?",
+      "opciones": [
+        "Para regalar juguetes",
+        "Para prestar dinero a países en crisis y estabilizar el mundo",
+        "Para imprimir billetes",
+        "Para organizar fiestas"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el guardián de la estabilidad financiera global."
+    },
+    {
+      "id": "ex4",
+      "texto": "¿Qué significa comprar una 'Acción' en la Bolsa?",
+      "opciones": [
+        "Hacer una buena obra",
+        "Comprar una pequeñísima parte de una empresa y ser su dueño",
+        "Pedir un préstamo",
+        "Ver una película"
+      ],
+      "correcta": 1,
+      "explicacion": "Eres socio de las empresas en las que inviertes."
+    },
+    {
+      "id": "ex5",
+      "texto": "¿Cuál es la ventaja principal del Blockchain?",
+      "opciones": [
+        "Que es muy rápido",
+        "Que es inmutable (nadie puede borrar o cambiar los datos sin permiso)",
+        "Que es gratis",
+        "Que es de color azul"
+      ],
+      "correcta": 1,
+      "explicacion": "La seguridad y transparencia son su base."
+    },
+    {
+      "id": "ex6",
+      "texto": "Si una inversión te promete 'Garantizado ganar 50% al mes', ¿qué debes sospechar?",
+      "opciones": [
+        "Que es una oportunidad única",
+        "Que es un fraude o esquema piramidal",
+        "Que son muy generosos",
+        "Que el banco cerrará"
+      ],
+      "correcta": 1,
+      "explicacion": "Rendimientos irreales suelen ser estafas."
+    },
+    {
+      "id": "ex7",
+      "texto": "¿Qué es el Interés Compuesto?",
+      "opciones": [
+        "Un interés muy difícil de entender",
+        "Cuando las ganancias de tu dinero generan nuevas ganancias a su vez",
+        "Un cobro que te hace el banco",
+        "Dinero que se pierde"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la fuerza más poderosa para crear riqueza con el tiempo."
+    },
+    {
+      "id": "ex8",
+      "texto": "¿Por qué es importante 'Diversificar'?",
+      "opciones": [
+        "Para tener muchas carteras",
+        "Para repartir el riesgo y no perder todo si una inversión falla",
+        "Para gastar más dinero",
+        "Para ser famoso"
+      ],
+      "correcta": 1,
+      "explicacion": "No pongas todos tus huevos en una sola canasta."
+    },
+    {
+      "id": "ex9",
+      "texto": "¿Cuál es el propósito de los impuestos?",
+      "opciones": [
+        "Hacer pobre a la gente",
+        "Pagar servicios públicos como escuelas, hospitales y seguridad",
+        "Guardar dinero en una caja fuerte",
+        "Comprar dulces"
+      ],
+      "correcta": 1,
+      "explicacion": "Son la base de la vida en sociedad."
+    },
+    {
+      "id": "ex10",
+      "texto": "¿Qué es la Inteligencia Emocional en los negocios?",
+      "opciones": [
+        "Saber mucho de matemáticas",
+        "La capacidad de entender y manejar nuestras emociones y las de los demás",
+        "Ser muy frío con el dinero",
+        "No tener amigos"
+      ],
+      "correcta": 1,
+      "explicacion": "Las relaciones humanas son el motor de los negocios."
+    },
+    {
+      "id": "ex11",
+      "texto": "¿Qué es una AFORE?",
+      "opciones": [
+        "Un tipo de coche",
+        "Una institución que administra el ahorro para el retiro de los trabajadores",
+        "Una tienda de ropa",
+        "Un banco internacional"
+      ],
+      "correcta": 1,
+      "explicacion": "Es tu fondo para cuando seas viejito."
+    },
+    {
+      "id": "ex12",
+      "texto": "¿Qué significa 'Riesgo vs Rendimiento'?",
+      "opciones": [
+        "Que siempre ganas mucho",
+        "Que a mayor posibilidad de ganancia, suele haber mayor riesgo de perder",
+        "Que el riesgo no existe",
+        "Que el dinero es infinito"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el equilibrio fundamental de toda inversión."
+    },
+    {
+      "id": "ex13",
+      "texto": "¿Qué es la 'Huella Digital'?",
+      "opciones": [
+        "Tu dedo marcado en el cel",
+        "Toda la información que dejas al usar internet",
+        "Un tipo de arte",
+        "Una contraseña"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu rastro en internet es permanente. ¡Cuídalo!"
+    },
+    {
+      "id": "ex14",
+      "texto": "¿Para qué sirve un Presupuesto 50/30/20?",
+      "opciones": [
+        "Para sumar 100",
+        "Para dividir tus ingresos en Necesidades, Deseos y Ahorro/Deuda",
+        "Para gastar todo",
+        "Para pedir préstamos"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una regla de oro para la salud financiera."
+    },
+    {
+      "id": "ex15",
+      "texto": "¿Qué es un 'Commodity'?",
+      "opciones": [
+        "Un objeto de lujo",
+        "Una materia prima básica como el petróleo, el oro o el maíz",
+        "Una moneda digital",
+        "Un tipo de servicio"
+      ],
+      "correcta": 1,
+      "explicacion": "Son los ladrillos con los que se construye la economía real."
+    },
+    {
+      "id": "ex16",
+      "texto": "¿Qué hace un 'Líder Ético'?",
+      "opciones": [
+        "Gana dinero sin importar el daño a los demás",
+        "Busca el éxito de su equipo y el bien de la sociedad",
+        "Manda mucho a todos",
+        "Es el que más grita"
+      ],
+      "correcta": 1,
+      "explicacion": "El liderazgo es servicio e integridad."
+    },
+    {
+      "id": "ex17",
+      "texto": "¿Por qué es peligroso el Ransomware?",
+      "opciones": [
+        "Porque borra tus juegos",
+        "Porque secuestra tu información y pide dinero por ella",
+        "Porque gasta mucha batería",
+        "Porque es muy ruidoso"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una de las amenazas digitales más graves actualmente."
+    },
+    {
+      "id": "ex18",
+      "texto": "¿Qué es el IVA en México?",
+      "opciones": [
+        "Un impuesto al trabajo",
+        "Un impuesto al consumo (se paga al comprar)",
+        "Un regalo del banco",
+        "Un tipo de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "El Impuesto al Valor Agregado."
+    },
+    {
+      "id": "ex19",
+      "texto": "¿Qué es el Mercado Forex?",
+      "opciones": [
+        "Un mercado de comida",
+        "El mercado donde se intercambian todas las divisas del mundo",
+        "Una bolsa de valores",
+        "Un sistema de seguridad"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el mercado más grande y líquido del mundo."
+    },
+    {
+      "id": "ex20",
+      "texto": "¿Cuál es el consejo financiero más importante para tu vida?",
+      "opciones": [
+        "Gastar todo hoy",
+        "Empezar a ahorrar e invertir lo antes posible con disciplina y ética",
+        "Esperar a ser adulto para aprender",
+        "No preocuparse por el dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades, Maestro! Estás listo para conquistar tu futuro financiero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

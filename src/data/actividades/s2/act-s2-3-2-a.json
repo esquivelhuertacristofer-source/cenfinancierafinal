@@ -1,0 +1,145 @@
+{
+  "code": "ACT-S2-3-2-A",
+  "unit_code": "S2-3-2",
+  "unit_title": "Análisis fundamental: evaluar el valor de una empresa",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Efecto Multiplicador",
+  "descripcion": "¿Quieres ganar dinero rápido usando el capital de otros? Ten cuidado: el apalancamiento es un acelerador, tanto de la riqueza como de la ruina.",
+  "objetivo": "Visualizar matemáticamente cómo el apalancamiento magnifica los resultados (positivos y negativos) de una inversión",
+  "xp": 600,
+  "descripcion_formula": "Rendimiento sobre Capital Propio (ROE) = ((ValorFinal - ValorInicial) / InversionPropia) * 100. ValorFinal incluye el costo del interés.",
+  "inputs": [
+    {
+      "id": "inversion_propia_s2",
+      "label": "Tu Capital Inicial ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "nivel_apalancamiento",
+      "label": "Nivel de Apalancamiento (X)",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1,
+      "unit": "x"
+    },
+    {
+      "id": "desempeño_activo",
+      "label": "Rendimiento del Activo (%)",
+      "type": "slider",
+      "min": -20,
+      "max": 20,
+      "step": 2,
+      "default": 5,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "((((inversion_propia_s2 * nivel_apalancamiento) * (1 + desempeño_activo/100)) - (inversion_propia_s2 * (nivel_apalancamiento - 1) * 1.1) - inversion_propia_s2) / inversion_propia_s2) * 100",
+  "output_label": "Rendimiento Real sobre tu Dinero",
+  "output_prefix": "",
+  "output_suffix": "%",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "nivel_apalancamiento > 5 && desempeño_activo < 0",
+      "mensaje": "🚨 ¡Ruina Total! Al estar muy apalancado, una pequeña caída en el precio borró todo tu dinero. Esto es lo que pasa cuando tomas riesgos que no puedes cubrir.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "nivel_apalancamiento > 5 && desempeño_activo > 5",
+      "mensaje": "💰 ¡Ganancia Explosiva! Gracias al dinero prestado, multiplicaste tu capital inicial de forma masiva. Pero recuerda: tuviste suerte, no siempre sube.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El apalancamiento es como usar una palanca física: permite mover objetos pesados (grandes inversiones) con poco esfuerzo (poco capital), pero si la palanca se rompe, el golpe es fuerte.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si FEMSA reporta utilidades récord pero sus acciones bajan ese día, ¿es señal de compra o de venta? ¿Cuándo el análisis fundamental te da ventaja sobre quien solo mira gráficas de precios?",
+  "comparativa_espera": "Las finanzas conductuales demuestran que las personas toman mejores decisiones financieras cuando ven los números concretos que cuando los estiman mentalmente. Simular antes de decidir es una de las mejores prácticas de los inversionistas exitosos.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "impacto_5a",
+      "label": "Impacto a 5 Años",
+      "formula": "resultado_principal * 5",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "El efecto acumulado durante 5 años"
+    },
+    {
+      "id": "ahorro_optimo",
+      "label": "Ahorro si Optimizas",
+      "formula": "Math.round(resultado_principal * 0.2)",
+      "prefix": "$",
+      "suffix": " de ahorro potencial",
+      "descripcion": "Lo que podrías ahorrar con la mejor estrategia disponible"
+    },
+    {
+      "id": "roi_decision",
+      "label": "ROI de la Decisión",
+      "formula": "Math.round(resultado_principal * 0.25 / resultado_principal * 100)",
+      "prefix": "",
+      "suffix": "% de retorno",
+      "descripcion": "El retorno porcentual de tomar esta decisión informada"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "impacto_5a",
+      "label": "Impacto a 5 Años",
+      "color": "#22c55e"
+    }
+  ]
+}

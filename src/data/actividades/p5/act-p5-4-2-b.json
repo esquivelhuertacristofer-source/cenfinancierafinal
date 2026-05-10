@@ -1,0 +1,124 @@
+{
+  "code": "ACT-P5-4-2-B",
+  "unit_code": "P5-4-2",
+  "unit_title": "Costos Fijos vs. Variables: la salud del negocio",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Manifiesto de Líder",
+  "descripcion": "Un gran líder sabe quién es y qué defiende. ¡Escribe tu propio código de honor y prepárate para guiar a otros!",
+  "objetivo": "Definir un marco ético y estratégico personal para el ejercicio del liderazgo",
+  "xp": 350,
+  "output_type": "Manifiesto de Liderazgo",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "mis_pilares_eticos",
+      "titulo": "⚖️ Mis Valores",
+      "descripcion": "Elige los 3 valores que nunca vas a romper en tus negocios.",
+      "campos": [
+        {
+          "id": "valor_1",
+          "label": "Valor 1",
+          "type": "select",
+          "opciones": [
+            "Honestidad",
+            "Puntualidad",
+            "Generosidad",
+            "Excelencia",
+            "Justicia"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "valor_2",
+          "label": "Valor 2",
+          "type": "select",
+          "opciones": [
+            "Honestidad",
+            "Puntualidad",
+            "Generosidad",
+            "Excelencia",
+            "Justicia"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "valor_3",
+          "label": "Valor 3",
+          "type": "select",
+          "opciones": [
+            "Honestidad",
+            "Puntualidad",
+            "Generosidad",
+            "Excelencia",
+            "Justicia"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "compromiso_equipo",
+      "titulo": "🤝 Con mi Equipo",
+      "descripcion": "¿Cómo quieres que la gente se sienta trabajando contigo?",
+      "campos": [
+        {
+          "id": "trato_equipo",
+          "label": "¿Cuál es tu promesa hacia tus colaboradores?",
+          "type": "textarea",
+          "placeholder": "Ej: Yo me comprometo a escucharlos siempre y a ayudarlos a ser mejores cada día...",
+          "requerido": true
+        },
+        {
+          "id": "manejo_error",
+          "label": "¿Qué harás cuando alguien de tu equipo cometa un error?",
+          "type": "text",
+          "placeholder": "Ej: En lugar de gritar, le enseñaré cómo hacerlo bien...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "mi_vision_grande",
+      "titulo": "✨ Mi Gran Visión",
+      "descripcion": "¿Qué huella quieres dejar en el mundo con tu liderazgo?",
+      "campos": [
+        {
+          "id": "vision_mundo",
+          "label": "Mi sueño es que mi empresa/liderazgo logre...",
+          "type": "textarea",
+          "placeholder": "Ej: Crear un mundo donde nadie tenga hambre y todos tengan educación...",
+          "requerido": true
+        },
+        {
+          "id": "frase_lider",
+          "label": "Escribe una frase que te motive en los días difíciles",
+          "type": "text",
+          "placeholder": "Ej: 'Rendirse no es una opción' o 'Juntos llegamos más lejos'...",
+          "requerido": true
+        },
+        {
+          "id": "personas_a_impactar",
+          "label": "Personas que Quieres Impactar con tu Empresa",
+          "type": "slider",
+          "min": 1000,
+          "max": 1000000,
+          "step": 1000,
+          "default": 10000,
+          "requerido": false
+        },
+        {
+          "id": "empleos_proyectados",
+          "label": "Empleos que Podría Crear tu Empresa",
+          "type": "calculated",
+          "formula": "Math.round(personas_a_impactar / 50)",
+          "unit": " empleos directos",
+          "ayuda": "Referencia: 1 empleo directo impacta a ~50 personas en la economía"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,162 @@
+{
+  "code": "ACT-P4-3-3-A",
+  "unit_code": "P4-3-3",
+  "unit_title": "El interés compuesto: la magia de hacer crecer tu dinero",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Bola de Nieve Imparable",
+  "descripcion": "¿Sabías que Einstein llamó al interés compuesto 'la octava maravilla del mundo'? Mueve los controles y mira cómo el tiempo multiplica tu dinero exponencialmente. Luego descubre cuánto te CUESTA esperar 5 años más.",
+  "objetivo": "Visualizar la diferencia entre crecimiento lineal y exponencial y el costo de oportunidad del tiempo",
+  "xp": 250,
+  "descripcion_formula": "VF = Capital × (1+r)^n + Aportación×12 × ((1+r)^n - 1) / r. Se calcula también sin interés (alcancía) y ajustado por inflación.",
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Capital inicial hoy",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "aportacion",
+      "label": "Ahorro mensual adicional",
+      "type": "slider",
+      "min": 0,
+      "max": 3000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    },
+    {
+      "id": "tasa",
+      "label": "Rendimiento anual",
+      "type": "slider",
+      "min": 4,
+      "max": 18,
+      "step": 0.5,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "anos",
+      "label": "Años de inversión",
+      "type": "slider",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "inflacion",
+      "label": "Inflación anual estimada",
+      "type": "slider",
+      "min": 3,
+      "max": 9,
+      "step": 0.5,
+      "default": 4.5,
+      "unit": "%"
+    }
+  ],
+  "formula": "capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * ((Math.pow(1 + tasa/100, anos) - 1) / (tasa/100))",
+  "formula_sin_interes": "capital + aportacion * 12 * anos",
+  "formula_real": "(capital * Math.pow(1+tasa/100, anos) + aportacion*12 * ((Math.pow(1+tasa/100,anos)-1)/(tasa/100))) / Math.pow(1+inflacion/100, anos)",
+  "formula_esperar_5_anos": "capital * Math.pow(1+tasa/100, Math.max(0,anos-5)) + aportacion*12 * ((Math.pow(1+tasa/100,Math.max(0,anos-5))-1)/(tasa/100))",
+  "output_label": "Tu dinero con interés compuesto",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "saldo_final",
+      "label": "Saldo Final",
+      "color": "#6366f1"
+    },
+    {
+      "id": "aportaciones_totales",
+      "label": "Total Aportado",
+      "color": "#22c55e"
+    }
+  ],
+  "milestones": [
+    {
+      "valor": 100000,
+      "mensaje": "🎯 ¡$100,000! La bola de nieve empieza a rodar."
+    },
+    {
+      "valor": 500000,
+      "mensaje": "🚀 ¡Medio millón! El interés está trabajando más que tú."
+    },
+    {
+      "valor": 1000000,
+      "mensaje": "💎 ¡MILLONARIO! Einstein tenía razón."
+    }
+  ],
+  "comparativa_espera": {
+    "titulo": "¿Cuánto te CUESTA esperar 5 años más?",
+    "descripcion": "Si empezaras este mismo plan dentro de 5 años, perderías:"
+  },
+  "escenarios": [
+    {
+      "condicion": "resultado > 1000000",
+      "mensaje": "💎 ¡Club del millón! El interés compuesto te hizo millonario sin trabajo extra.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 500000",
+      "mensaje": "🚀 ¡Muy sólido! Tienes la base para la independencia financiera.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "anos < 15",
+      "mensaje": "⏰ Revelación: si mueves el slider de años de 10 a 30, tu dinero no se triplica — se MULTIPLICA POR 17.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "aportacion === 0",
+      "mensaje": "💡 Prueba a poner $500/mes de aportación. Los resultados a 20 años te van a dejar sin palabras.",
+      "tipo": "warning"
+    }
+  ],
+  "pregunta_reflexion": "Ahora que ves estos números reales: ¿a qué edad quisieras haber empezado a invertir? ¿Qué harías diferente esta semana?",
+  "versión": "2026.Diamond.V2",
+  "outputs_multiples": [
+    {
+      "id": "saldo_final",
+      "label": "Saldo Final",
+      "formula": "Math.round(capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * (Math.pow(1 + tasa/100, anos) - 1) / Math.max(0.001, tasa/100))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Tu capital más aportaciones más intereses compuestos"
+    },
+    {
+      "id": "aportaciones_totales",
+      "label": "Total Aportado",
+      "formula": "capital + aportacion * 12 * anos",
+      "prefix": "$",
+      "suffix": " invertidos",
+      "descripcion": "La suma de tu capital inicial más todas tus aportaciones"
+    },
+    {
+      "id": "ganancia_nominal",
+      "label": "Ganancia por Interés Compuesto",
+      "formula": "Math.round(capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * (Math.pow(1 + tasa/100, anos) - 1) / Math.max(0.001, tasa/100) - capital - aportacion * 12 * anos)",
+      "prefix": "$",
+      "suffix": " de ganancia",
+      "descripcion": "El dinero que genera el dinero — sin trabajar más"
+    },
+    {
+      "id": "saldo_real",
+      "label": "Saldo Real (ajustado por inflación)",
+      "formula": "Math.round((capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * (Math.pow(1 + tasa/100, anos) - 1) / Math.max(0.001, tasa/100)) / Math.pow(1 + inflacion/100, anos))",
+      "prefix": "$",
+      "suffix": " poder adquisitivo real",
+      "descripcion": "Lo que realmente valen esos pesos en el futuro"
+    }
+  ]
+}

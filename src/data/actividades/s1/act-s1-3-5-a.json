@@ -1,0 +1,118 @@
+{
+  "code": "ACT-S1-3-5-A",
+  "unit_code": "S1-3-5",
+  "unit_title": "Análisis básico de estados financieros personales",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Sobreviviendo al Desastre",
+  "descripcion": "Un terremoto ha dañado tu zona y tu negocio no puede abrir. ¿Estás preparado para que el mundo se detenga por unos días?",
+  "objetivo": "Comprender la importancia de los planes de continuidad y los fondos de emergencia ante desastres",
+  "xp": 450,
+  "personaje_principal": "Inversionista",
+  "contexto_inicial": "Tienes un negocio de logística. Un desastre natural corta las carreteras y el internet. Tus clientes están preocupados y tus empleados no pueden llegar.",
+  "nodo_inicial": "impacto_desastre",
+  "nodos": {
+    "impacto_desastre": {
+      "id": "impacto_desastre",
+      "texto": "No tienes ingresos hoy y tienes que pagar sueldos mañana. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "usar_fondo",
+          "texto": "Activar el Fondo de Emergencia de 6 meses (Resiliencia)",
+          "siguiente_nodo": "continuidad_negocio",
+          "consecuencia": "Pudiste pagar los sueldos y mantener la calma de tu equipo. El negocio sobrevivirá.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir un préstamo urgente al banco (Deuda de crisis)",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El banco te cobra intereses altísimos por el riesgo. Ahora debes dinero además de tener el local dañado.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "continuidad_negocio": {
+      "id": "continuidad_negocio",
+      "texto": "Pasan 2 semanas. Tienes tus documentos en la nube y puedes operar desde otra ciudad. Tus clientes están impresionados por tu orden.",
+      "opciones": [
+        {
+          "id": "final_lider_resiliente",
+          "texto": "Ver cómo tu plan de crisis salvó tu reputación",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "Ganaste nuevos clientes que buscan seguridad.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_exito_crisis": {
+      "id": "final_exito_crisis",
+      "texto": "¡Felicidades! Eres un estratega. Sabes que la verdadera riqueza es la capacidad de sobrevivir a lo inesperado.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un plan de contingencia no evita el desastre, pero evita que el desastre se convierta en quiebra."
+    },
+    "final_deuda_eterna": {
+      "id": "final_deuda_eterna",
+      "texto": "Lograste abrir de nuevo, pero ahora trabajas para pagar los intereses del préstamo de emergencia. Te costará años recuperarte.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El ahorro de emergencia es el seguro más barato que puedes tener."
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

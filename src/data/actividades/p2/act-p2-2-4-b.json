@@ -1,0 +1,137 @@
+{
+  "code": "P2-2-4-B",
+  "unit_code": "P2-2-4",
+  "unit_title": "Los descuentos: ¿siempre convienen?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Escudo Anti-Publicidad",
+  "descripcion": "¿Eres capaz de ver más allá de los letreros brillantes? ¡Demuestra que eres un comprador experto!",
+  "objetivo": "Validar el análisis crítico de ofertas y la toma de decisiones basada en la utilidad real",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Ves unos dulces que NO te gustan pero tienen un letrero de '50% de DESCUENTO'. ¿Qué es lo más inteligente?",
+      "opciones": [
+        "Comprarlos porque están baratos",
+        "No comprarlos porque no los necesitas ni te gustan",
+        "Comprar muchos para regalar",
+        "Llorar por el descuento"
+      ],
+      "correcta": 1,
+      "explicacion": "Un descuento en algo que no te sirve no es ahorro, ¡es un gasto innecesario!"
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué significa el término '2x1' en una tienda?",
+      "opciones": [
+        "Que pagas 2 y te dan 1",
+        "Que pagas 1 y te llevas 2 del mismo producto",
+        "Que las cosas son gratis",
+        "Que la tienda está cerrada"
+      ],
+      "correcta": 1,
+      "explicacion": "El 2x1 conviene solo si realmente vas a usar las dos cosas antes de que se echen a perder."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por qué las tiendas usan letreros de colores brillantes (rojo o amarillo) para las ofertas?",
+      "opciones": [
+        "Para adornar",
+        "Para que tu cerebro se emocione y compres rápido sin pensar mucho",
+        "Porque son sus colores favoritos",
+        "Para que no los veas"
+      ],
+      "correcta": 1,
+      "explicacion": "Los colores brillantes son imanes para tus ojos. ¡Usa tu cerebro antes que tus ojos!"
+    },
+    {
+      "id": "q4",
+      "texto": "Si un cuaderno cuesta $20 normalmente y hoy tiene un descuento de $5, ¿cuánto vas a pagar?",
+      "opciones": [
+        "$25",
+        "$15",
+        "$5",
+        "$10"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! 20 menos 5 es igual a 15. Ahorraste $5 para tu alcancía."
+    },
+    {
+      "id": "q5",
+      "texto": "Si NO necesitas una mochila nueva, pero ves una en oferta, ¿estás ahorrando si la compras?",
+      "opciones": [
+        "Sí, porque costó menos de lo normal",
+        "No, porque estás gastando dinero que no tenías que gastar en primer lugar",
+        "Solo si es de tu color favorito",
+        "Solo si tus amigos la compran"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahorrar es guardar dinero, no gastarlo en cosas que no son necesarias ahora."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: 'Gastar menos' en un capricho NO es lo mismo que 'Ahorrar'.",
+      "opciones": [
+        "Verdadero (solo ahorras si guardas la diferencia)",
+        "Falso",
+        "Es exactamente lo mismo",
+        "Depende del día"
+      ],
+      "correcta": 0,
+      "explicacion": "Si compras un juguete de $100 en $80, gastaste $80. Solo ahorraste $20 si los metiste a la alcancía."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué debes preguntarte antes de aprovechar un descuento 'Tentador'?",
+      "opciones": [
+        "¿Tengo suficiente dinero?",
+        "¿Realmente lo necesito o lo tenía planeado comprar?",
+        "¿Qué dirán mis amigos?",
+        "¿Es de marca famosa?"
+      ],
+      "correcta": 1,
+      "explicacion": "La necesidad es la brújula del comprador inteligente."
+    },
+    {
+      "id": "q8",
+      "texto": "Si compras un juego de $100 con 20% de descuento, ¿cuánto dinero extra podrías meter a tu alcancía?",
+      "opciones": [
+        "$100",
+        "$20",
+        "$0",
+        "$50"
+      ],
+      "correcta": 1,
+      "explicacion": "Esos $20 son tu premio por ser un detective de descuentos."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cuál es la mejor defensa contra las 'ofertas de última hora' (que dicen '¡Solo hoy!')?",
+      "opciones": [
+        "Correr a la tienda",
+        "Tener paciencia y pensar si realmente lo quieres o es solo la prisa",
+        "Cerrar los ojos",
+        "Comprar dos"
+      ],
+      "correcta": 1,
+      "explicacion": "La prisa es enemiga del buen ahorro. ¡Tómate tu tiempo!"
+    },
+    {
+      "id": "q10",
+      "texto": "Si un 'Combo' de 3 hamburguesas cuesta $90 y cada una por separado cuesta $25, ¿te conviene el combo si solo tienes hambre para una?",
+      "opciones": [
+        "Sí, porque ahorras en el total",
+        "No, porque gastas $90 cuando podrías haber gastado solo $25",
+        "Sí, para guardarlas un mes",
+        "No sé"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Cuidado! Los combos a veces nos hacen gastar mucho más de lo que pensábamos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

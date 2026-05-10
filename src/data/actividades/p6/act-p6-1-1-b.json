@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-1-1-B",
+  "unit_code": "P6-1-1",
+  "unit_title": "Repaso integrado: el sistema financiero completo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Contratos de Futuro",
+  "descripcion": "¿Sabes cómo las empresas se protegen de las sorpresas en los precios? ¡Demuestra tu conocimiento!",
+  "objetivo": "Identificar los componentes y propósitos de los mercados de derivados",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "fut1",
+      "texto": "¿Qué es un 'Contrato de Futuro'?",
+      "opciones": [
+        "Un acuerdo para comprar o vender algo en una fecha futura a un precio pactado hoy",
+        "Un contrato para trabajar en el futuro",
+        "Un tipo de seguro de vida",
+        "Una moneda del futuro"
+      ],
+      "correcta": 0,
+      "explicacion": "Pactas el precio hoy para que no te afecten los cambios del mañana."
+    },
+    {
+      "id": "fut2",
+      "texto": "¿Cuál es la principal razón por la que un granjero usa un futuro?",
+      "opciones": [
+        "Para ganar la lotería",
+        "Para asegurar que podrá pagar sus gastos sin importar si el precio del trigo baja",
+        "Para no tener que trabajar",
+        "Para comprar un tractor nuevo"
+      ],
+      "correcta": 1,
+      "explicacion": "Se llama 'Cobertura' y sirve para dar estabilidad al negocio."
+    },
+    {
+      "id": "fut3",
+      "texto": "¿Qué tipo de cosas se pueden negociar en contratos de futuros?",
+      "opciones": [
+        "Solo juguetes",
+        "Materias primas (oro, petróleo, maíz), divisas y acciones",
+        "Solo aire",
+        "Cosas que ya no existen"
+      ],
+      "correcta": 1,
+      "explicacion": "Casi cualquier activo que tenga un precio cambiante se puede negociar a futuro."
+    },
+    {
+      "id": "fut4",
+      "texto": "Si pactas comprar petróleo a $80 y en el futuro el precio sube a $100, ¿qué pasó con tu contrato?",
+      "opciones": [
+        "Perdiste dinero",
+        "Ahorraste dinero porque compraste más barato de lo que vale el mercado",
+        "El contrato se cancela",
+        "Te cobran una multa"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu contrato te permitió comprar a un precio menor al del mercado real."
+    },
+    {
+      "id": "fut5",
+      "texto": "¿Qué es un 'Especulador' en el mercado de futuros?",
+      "opciones": [
+        "Alguien que fabrica el producto",
+        "Alguien que compra y vende buscando ganar dinero con los cambios de precio, sin usar el producto real",
+        "Un tipo de policía",
+        "El dueño de la bolsa"
+      ],
+      "correcta": 1,
+      "explicacion": "Los especuladores asumen el riesgo que los productores no quieren tener."
+    },
+    {
+      "id": "fut6",
+      "texto": "¿Dónde se negocian estos contratos de forma oficial?",
+      "opciones": [
+        "En el mercado de la esquina",
+        "En las Bolsas de Derivados (como el MexDer en México)",
+        "Por mensaje de texto",
+        "En un banco de madera"
+      ],
+      "correcta": 1,
+      "explicacion": "Existen mercados especializados y regulados para esto."
+    },
+    {
+      "id": "fut7",
+      "texto": "¿Por qué los futuros ayudan a que los precios en el súper no cambien tanto?",
+      "opciones": [
+        "Porque obligan a las tiendas a no subir precios",
+        "Porque las fábricas aseguran sus costos y así no tienen que subir sus precios de golpe",
+        "Porque el gobierno lo dice",
+        "No ayudan en nada"
+      ],
+      "correcta": 1,
+      "explicacion": "La estabilidad de costos permite estabilidad de precios al consumidor."
+    },
+    {
+      "id": "fut8",
+      "texto": "¿Qué es la 'Fecha de Vencimiento'?",
+      "opciones": [
+        "Cuando se echa a perder la comida",
+        "El día en que se debe cumplir el intercambio pactado en el contrato",
+        "El día que cierran la bolsa",
+        "Tu cumpleaños"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el plazo límite del acuerdo."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

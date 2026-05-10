@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P2-4-1-A",
+  "unit_code": "P2-4-1",
+  "unit_title": "Ideas de negocio en casa: limonada, manualidades",
+  "level": "Primaria 2",
+  "tipo": "DECIDE",
+  "complejidad": "BAJO",
+  "titulo": "La Gran Idea de Ceny",
+  "descripcion": "Ceny quiere iniciar su primer pequeño negocio en casa para ayudar a su familia y aprender a ganar su propio dinero. ¿Qué idea elegirá?",
+  "objetivo": "Identificar oportunidades de negocio basadas en necesidades reales y talentos personales.",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Es un sábado muy caluroso en el vecindario. Ceny observa que sus vecinos están afuera, sudando y buscando algo refrescante. Ella tiene un árbol de limones en el patio y sabe hacer manualidades.",
+  "nodo_inicial": "viendo_oportunidades",
+  "nodos": {
+    "viendo_oportunidades": {
+      "id": "viendo_oportunidades",
+      "texto": "Ceny ve a sus vecinos acalorados. ¿Qué idea de negocio debería elegir para ayudarlos hoy?",
+      "opciones": [
+        {
+          "id": "vender_limonada",
+          "texto": "Poner un puesto de limonada fresca",
+          "siguiente_nodo": "preparando_limonada",
+          "consecuencia": "¡Excelente elección! Hace mucho calor y la gente tiene sed. ¡La limonada será un éxito!",
+          "xp_bonus": 150,
+          "es_optima": true
+        },
+        {
+          "id": "vender_bufandas",
+          "texto": "Tejer bufandas de lana para vender",
+          "siguiente_nodo": "clima_caluroso",
+          "consecuencia": "Ceny empieza a tejer, pero se da cuenta de que nadie quiere lana con este calor.",
+          "xp_bonus": 10,
+          "es_optima": false
+        }
+      ]
+    },
+    "preparando_limonada": {
+      "id": "preparando_limonada",
+      "texto": "Ceny tiene los limones, pero necesita azúcar y vasos. ¿A quién debería pedir ayuda?",
+      "opciones": [
+        {
+          "id": "pedir_permiso",
+          "texto": "Pedir permiso a sus papás y proponerles un plan",
+          "siguiente_nodo": "negocio_aprobado",
+          "consecuencia": "Sus papás están orgullosos. '¡Claro, Ceny! Te prestaremos el azúcar si nos prometes ser muy ordenada.'",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "tomar_cosas",
+          "texto": "Tomar el azúcar de la cocina sin avisar",
+          "siguiente_nodo": "problema_cocina",
+          "consecuencia": "Mamá se da cuenta y se molesta porque iba a usar ese azúcar para el postre.",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "clima_caluroso": {
+      "id": "clima_caluroso",
+      "texto": "Ceny está sudando con la lana. Se da cuenta de que un negocio debe resolver una NECESIDAD actual. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "cambiar_idea",
+          "texto": "Guardar la lana para el invierno y buscar algo frío",
+          "siguiente_nodo": "viendo_oportunidades",
+          "consecuencia": "¡Muy inteligente! Los emprendedores se adaptan a lo que sus clientes necesitan.",
+          "xp_bonus": 100,
+          "es_optima": true
+        }
+      ]
+    },
+    "problema_cocina": {
+      "id": "problema_cocina",
+      "texto": "Mamá le explica que en un negocio siempre hay que ser HONESTO y pedir permiso. Ceny se disculpa. ¿Cómo sigue?",
+      "opciones": [
+        {
+          "id": "disculparse",
+          "texto": "Pedir perdón y explicar su gran idea de la limonada",
+          "siguiente_nodo": "negocio_aprobado",
+          "consecuencia": "Mamá acepta las disculpas. 'Está bien, pero recuerda que un negocio formal siempre pide permiso.'",
+          "xp_bonus": 50,
+          "es_optima": true
+        }
+      ]
+    },
+    "negocio_aprobado": {
+      "id": "negocio_aprobado",
+      "texto": "¡El puesto está listo! Los vecinos se acercan. ¿Cómo debe Ceny ofrecer su producto?",
+      "opciones": [
+        {
+          "id": "gritar_amable",
+          "texto": "Saludar con una sonrisa: '¡Hola! ¿Gusta una limonada bien fría para el calor?'",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "¡Los vecinos están encantados! Compran varios vasos y felicitan a Ceny por su iniciativa.",
+          "xp_bonus": 250,
+          "es_optima": true
+        },
+        {
+          "id": "estar_seria",
+          "texto": "Quedarse callada y esperar a que alguien le hable",
+          "siguiente_nodo": "final_lento",
+          "consecuencia": "Algunas personas pasan de largo porque no saben si está vendiendo o solo sentada ahí.",
+          "xp_bonus": 50,
+          "es_optima": false
+        }
+      ]
+    },
+    "final_exito": {
+      "id": "final_exito",
+      "texto": "¡Increíble! Ceny vendió toda la limonada. Ganó sus primeros pesos y, lo más importante, ¡aprendió que sus ideas pueden ayudar a otros!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Emprender es ver un problema y ofrecer una solución con una sonrisa. ¡Felicidades, pequeña empresaria!"
+    },
+    "final_lento": {
+      "id": "final_lento",
+      "texto": "Ceny vendió un poco, pero se dio cuenta de que la COMUNICACIÓN es clave. La próxima vez invitará a sus clientes con más entusiasmo.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "Un buen producto necesita que la gente sepa que existe. ¡Usa tu voz y tu sonrisa!"
+    }
+  },
+  "versión": "2026.Diamond.Story"
+}

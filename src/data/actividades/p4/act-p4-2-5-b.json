@@ -1,0 +1,118 @@
+{
+  "code": "ACT-P4-2-5-B",
+  "unit_code": "P4-2-5",
+  "unit_title": "Fraudes y estafas digitales: Ciber-Guardianes",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Primo en Problemas",
+  "descripcion": "Recibes un mensaje de un número desconocido. Dice ser tu primo favorito y que necesita dinero urgente. ¿Qué harás?",
+  "objetivo": "Aprender a identificar y neutralizar ataques de ingeniería social mediante la verificación de identidad",
+  "xp": 450,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny está tranquila jugando cuando recibe un WhatsApp: '¡Hola! Soy tu primo, perdí mi cel y necesito que me prestes $200 para un taxi. ¡Ayúdame!'",
+  "nodo_inicial": "duda_inicial",
+  "nodos": {
+    "duda_inicial": {
+      "id": "duda_inicial",
+      "texto": "El mensaje suena muy urgente y Ceny quiere ayudar a su primo. Pero el número es nuevo.",
+      "opciones": [
+        {
+          "id": "pregunta_secreta",
+          "texto": "Hacerle una pregunta que solo su primo real sepa",
+          "siguiente_nodo": "respuesta_fallida",
+          "consecuencia": "¡Excelente idea! La información personal es la mejor prueba.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "creer_ciego",
+          "texto": "Preguntarle cómo se los mandas porque te preocupa",
+          "siguiente_nodo": "trampa_dinero",
+          "consecuencia": "¡Cuidado! Te estás dejando llevar por la emoción sin verificar quién es.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "respuesta_fallida": {
+      "id": "respuesta_fallida",
+      "texto": "Ceny pregunta: '¿Cómo se llama el perro de nuestra abuela?'. El supuesto primo responde: 'No tengo tiempo para juegos, ¡ayúdame ya!'.",
+      "opciones": [
+        {
+          "id": "bloquear_reportar",
+          "texto": "Bloquear el número y llamar al número real de su primo",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Perfecto! Al llamar al número real, descubres que tu primo está bien y en su casa.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "sentirse_mal",
+          "texto": "Sentirse mal y mandarle el dinero por si acaso",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Mandaste el dinero y el estafador te bloqueó de inmediato.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "trampa_dinero": {
+      "id": "trampa_dinero",
+      "texto": "El estafador te dice: 'Pásame el número de tarjeta de tus papás'. ¡Esto ya es muy extraño!",
+      "opciones": [
+        {
+          "id": "reaccionar_tarde",
+          "texto": "¡Ni loco! Bloquear de inmediato",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Casi caes, pero tu instinto te salvó a tiempo.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_exito": {
+      "id": "final_exito",
+      "texto": "¡Felicidades! Salvaste tu dinero y aprendiste que los estafadores usan la urgencia para que no pienses.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Antes de ayudar con dinero por mensaje, siempre verifica por una llamada de voz."
+    },
+    "final_robo": {
+      "id": "final_robo",
+      "texto": "Te han estafado. Los $200 se perdieron. Que esto te sirva para ser más precavido en el futuro.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La ingeniería social funciona porque somos buenas personas, pero hay que ser inteligentes también."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

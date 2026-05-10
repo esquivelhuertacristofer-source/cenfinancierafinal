@@ -1,0 +1,142 @@
+{
+  "code": "P2-2-1-A",
+  "unit_code": "P2-2-1",
+  "unit_title": "Mi lista de deseos vs. mi lista de necesidades",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "El Semáforo de mis Compras",
+  "descripcion": "¿Sabes poner en orden tus ganas de comprar? ¡Usa el semáforo para decidir qué va primero!",
+  "objetivo": "Categorizar gastos en necesidades, deseos y gastos postergables",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto al color del semáforo que le corresponde: VERDE (Necesidad), AMARILLO (Duda/Espera), ROJO (Deseo/Lujo).",
+  "items": [
+    {
+      "id": "n1",
+      "label": "Leche y Huevos",
+      "emoji": "🥛",
+      "categoria_correcta": "verde",
+      "feedback": "¡Exacto! La alimentación es una necesidad verde: ¡adelante!"
+    },
+    {
+      "id": "d1",
+      "label": "Robot de Juguete",
+      "emoji": "🤖",
+      "categoria_correcta": "rojo",
+      "feedback": "Es muy divertido, pero es un deseo. Puede esperar al ahorro."
+    },
+    {
+      "id": "n2",
+      "label": "Zapatos Escolares",
+      "emoji": "👟",
+      "categoria_correcta": "verde",
+      "feedback": "Necesitas calzado para ir a aprender. ¡Es prioridad!"
+    },
+    {
+      "id": "d2",
+      "label": "Dulces y Paletas",
+      "emoji": "🍭",
+      "categoria_correcta": "rojo",
+      "feedback": "Son ricos, pero no los necesitas para vivir sano. ¡Semáforo rojo!"
+    },
+    {
+      "id": "a1",
+      "label": "Libro de Cuentos",
+      "emoji": "📚",
+      "categoria_correcta": "amarillo",
+      "feedback": "Es bueno leer, pero piénsalo: ¿tienes otros sin leer en casa?"
+    },
+    {
+      "id": "n3",
+      "label": "Jabón y Champú",
+      "emoji": "🧼",
+      "categoria_correcta": "verde",
+      "feedback": "La higiene es vital para tu salud. ¡Verde siempre!"
+    },
+    {
+      "id": "d3",
+      "label": "Disfraz de Superhéroe",
+      "emoji": "🦸",
+      "categoria_correcta": "rojo",
+      "feedback": "Es para jugar, un deseo que se cumple con el ahorro del 'domingo'."
+    },
+    {
+      "id": "n4",
+      "label": "Agua Simple",
+      "emoji": "💧",
+      "categoria_correcta": "verde",
+      "feedback": "Tu cuerpo la necesita cada día. ¡Prioridad máxima!"
+    },
+    {
+      "id": "a2",
+      "label": "Cena en Restaurante",
+      "emoji": "🍕",
+      "categoria_correcta": "amarillo",
+      "feedback": "Podemos comer en casa más barato. Ir fuera es un gusto especial."
+    },
+    {
+      "id": "n5",
+      "label": "Medicinas",
+      "emoji": "🤒",
+      "categoria_correcta": "verde",
+      "feedback": "Recuperar la salud es una necesidad que no puede esperar."
+    },
+    {
+      "id": "d4",
+      "label": "Nueva Skin de Videojuego",
+      "emoji": "🎭",
+      "categoria_correcta": "rojo",
+      "feedback": "Es solo un adorno digital. ¡Rojo total!"
+    },
+    {
+      "id": "a3",
+      "label": "Mochila con Luces",
+      "emoji": "🎒",
+      "categoria_correcta": "amarillo",
+      "feedback": "Si tu mochila vieja aún sirve, esta puede esperar un poco."
+    },
+    {
+      "id": "n6",
+      "label": "Internet para Clases",
+      "emoji": "💻",
+      "categoria_correcta": "verde",
+      "feedback": "Hoy en día es una herramienta necesaria para aprender."
+    },
+    {
+      "id": "d5",
+      "label": "Helado de 3 Bolas",
+      "emoji": "🍦",
+      "categoria_correcta": "rojo",
+      "feedback": "Un deseo delicioso, pero opcional."
+    },
+    {
+      "id": "a4",
+      "label": "Viaje al Cine",
+      "emoji": "🎬",
+      "categoria_correcta": "amarillo",
+      "feedback": "Es divertido, pero planeémoslo para cuando el presupuesto esté listo."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "verde",
+      "label": "VERDE: ¡NECESIDAD!",
+      "emoji": "🟢",
+      "color": "#16a34a"
+    },
+    {
+      "id": "amarillo",
+      "label": "AMARILLO: ¡PIÉNSALO!",
+      "emoji": "🟡",
+      "color": "#ca8a04"
+    },
+    {
+      "id": "rojo",
+      "label": "ROJO: ¡DESEO!",
+      "emoji": "🔴",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

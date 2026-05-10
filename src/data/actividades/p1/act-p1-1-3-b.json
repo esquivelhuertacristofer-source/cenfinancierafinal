@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-1-3-B",
+  "unit_code": "P1-1-3",
+  "unit_title": "El trabajo y el dinero: de dónde vienen los pesos",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Cazadores de Talentos",
+  "descripcion": "¿Sabes cómo las personas consiguen sus monedas? ¡Demuestra que eres un experto!",
+  "objetivo": "Comprender el concepto de salario, profesión y la relación entre talento y remuneración",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es el 'Salario'?",
+      "opciones": [
+        "Un tipo de sal",
+        "El dinero que recibes a cambio de tu trabajo",
+        "Un regalo de cumpleaños",
+        "Un dulce"
+      ],
+      "correcta": 1,
+      "explicacion": "El salario es el pago justo por el tiempo y el esfuerzo que una persona dedica a su trabajo."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Por qué las personas estudian mucho para ser profesionistas?",
+      "opciones": [
+        "Porque les gusta el uniforme",
+        "Para tener talentos especiales y ayudar a otros trabajando",
+        "Porque no tienen nada que hacer",
+        "Para dormir más"
+      ],
+      "correcta": 1,
+      "explicacion": "Estudiar nos da 'superpoderes' (conocimientos) que luego usamos para trabajar y ganar dinero."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cuál de estos es un trabajo que ayuda a la comunidad?",
+      "opciones": [
+        "Jugar videojuegos todo el día",
+        "Ser policía y cuidarnos",
+        "Dormir en el parque",
+        "Ver la televisión"
+      ],
+      "correcta": 1,
+      "explicacion": "Muchos trabajos, además de dar dinero, sirven para que todos vivamos seguros y felices."
+    },
+    {
+      "id": "q4",
+      "texto": "Si Ceny ayuda a su mamá a recoger la mesa, ¿es un trabajo o una colaboración?",
+      "opciones": [
+        "Un trabajo por el que debe cobrar mucho",
+        "Una colaboración para ayudar a su familia",
+        "Una travesura",
+        "Un secreto"
+      ],
+      "correcta": 1,
+      "explicacion": "En casa todos ayudamos porque somos un equipo, ¡eso se llama colaboración familiar!"
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué se necesita para ser un buen trabajador en el futuro?",
+      "opciones": [
+        "Mucha suerte",
+        "Esfuerzo, puntualidad y ganas de aprender",
+        "Tener muchos juguetes",
+        "Saber gritar"
+      ],
+      "correcta": 1,
+      "explicacion": "Ser responsable desde niño te prepara para ser un gran profesional cuando crezcas."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cómo se le llama al dinero que ganan los doctores, ingenieros o maestros?",
+      "opciones": [
+        "Dulces",
+        "Sueldo o Salario",
+        "Puntos de juego",
+        "Premios"
+      ],
+      "correcta": 1,
+      "explicacion": "Sueldo y Salario son las palabras que usamos para el pago de los trabajadores."
+    },
+    {
+      "id": "q7",
+      "texto": "Verdadero o Falso: Todos los trabajos requieren esfuerzo físico o mental.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Algunos cansan el cuerpo y otros cansan la mente, pero todos son valiosos."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué pasa si una persona no quiere trabajar ni esforzarse?",
+      "opciones": [
+        "Le regalan dinero",
+        "No tendrá dinero para sus necesidades y deseos",
+        "Tendrá muchos amigos",
+        "Se vuelve mago"
+      ],
+      "correcta": 1,
+      "explicacion": "El trabajo es la forma honesta de conseguir lo que necesitamos para vivir."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cuál es el 'trabajo' más importante de un niño de tu edad?",
+      "opciones": [
+        "Trabajar en una oficina",
+        "Aprender, estudiar y jugar sanamente",
+        "Cocinar para todos",
+        "Limpiar toda la calle"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu labor principal ahora es preparar tu mente para el futuro. ¡Ese es tu gran esfuerzo!"
+    },
+    {
+      "id": "q10",
+      "texto": "¿De dónde sacan las tiendas el dinero para pagarle a sus empleados?",
+      "opciones": [
+        "De un árbol mágico",
+        "De las ventas que hacen a los clientes",
+        "Del suelo",
+        "Se lo encuentran"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando compramos algo, ayudamos a que esa tienda pueda pagarle a las personas que trabajan ahí."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

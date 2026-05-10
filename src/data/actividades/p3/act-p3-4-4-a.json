@@ -1,0 +1,160 @@
+{
+  "code": "ACT-P3-4-4-A",
+  "unit_code": "P3-4-4",
+  "unit_title": "Costos, Precios y Ganancias",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Puesto de Limonada",
+  "descripcion": "Aprende a manejar los números de tu negocio. Si tus costos son altos y tu precio bajo, ¡perderás dinero! Encuentra el equilibrio perfecto.",
+  "objetivo": "Calcular la utilidad bruta y entender el impacto de los costos fijos y variables",
+  "xp": 400,
+  "descripcion_formula": "Utilidad = (Precio de Venta - Costo Variable) * Unidades Vendidas - Costo Fijo",
+  "inputs": [
+    {
+      "id": "costo_vaso",
+      "label": "Costo por vaso (Ingredientes)",
+      "type": "slider",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "$"
+    },
+    {
+      "id": "precio_venta",
+      "label": "Precio de venta al público",
+      "type": "slider",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "default": 15,
+      "unit": "$"
+    },
+    {
+      "id": "renta_puesto",
+      "label": "Renta del puesto (Costo Fijo)",
+      "type": "slider",
+      "min": 50,
+      "max": 200,
+      "step": 10,
+      "default": 100,
+      "unit": "$"
+    },
+    {
+      "id": "vasos_vendidos",
+      "label": "Vasos vendidos por día",
+      "type": "slider",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "unit": "vasos"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(precio_venta - costo_vaso) * vasos_vendidos - renta_puesto",
+  "output_label": "Tu Ganancia del Día",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado > 200",
+      "mensaje": "🍋 ¡Magnate de la limonada! Tienes un negocio muy rentable.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 0 && resultado <= 200",
+      "mensaje": "👍 ¡Vas bien! Estás ganando dinero, pero podrías optimizar tus costos.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado == 0",
+      "mensaje": "⚖️ ¡Punto de Equilibrio! No perdiste nada, pero tampoco ganaste. ¡Sube un poco el precio!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "🚨 ¡Cuidado! Estás perdiendo dinero. Revisa tus costos o sube el precio de venta.",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si compras materiales por $30 y haces 10 galletas, ¿cuánto debe costar cada una para ganar $5 por galleta? ¿Qué pasaría con tu negocio si vendes más barato que tu costo de producción?",
+  "outputs_multiples": [
+    {
+      "id": "ganancia_dia",
+      "label": "Ganancia del Día",
+      "formula": "Math.max(0, (precio_venta - costo_vaso) * vasos_vendidos - renta_puesto)",
+      "prefix": "$",
+      "suffix": " pesos",
+      "descripcion": "Lo que te queda después de pagar todo"
+    },
+    {
+      "id": "margen_por_vaso",
+      "label": "Ganancia por Cada Vaso",
+      "formula": "Math.round(precio_venta - costo_vaso)",
+      "prefix": "$",
+      "suffix": "/vaso",
+      "descripcion": "Lo que ganas en cada venta individual"
+    },
+    {
+      "id": "vasos_para_equilibrio",
+      "label": "Vasos para No Perder",
+      "formula": "Math.ceil(renta_puesto / Math.max(1, precio_venta - costo_vaso))",
+      "prefix": "",
+      "suffix": " vasos mínimo",
+      "descripcion": "Debes vender al menos esto para cubrir la renta del puesto"
+    },
+    {
+      "id": "ganancia_semana",
+      "label": "Si Vendes 5 Días a la Semana",
+      "formula": "Math.max(0, (precio_venta - costo_vaso) * vasos_vendidos - renta_puesto) * 5",
+      "prefix": "$",
+      "suffix": "/semana",
+      "descripcion": "Tu ingreso semanal si mantienes el mismo ritmo"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "ganancia_dia",
+      "label": "Ganancia del Día",
+      "color": "#6366f1"
+    },
+    {
+      "id": "margen_por_vaso",
+      "label": "Ganancia por Cada Vaso",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "Los OXXO de FEMSA venden millones de productos diarios aplicando exactamente esta lógica: calcular el margen por producto, los costos fijos y el punto de equilibrio. El mismo principio aplica a cualquier negocio, grande o pequeño."
+}

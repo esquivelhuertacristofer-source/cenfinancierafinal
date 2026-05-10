@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P3-2-5-A",
+  "unit_code": "P3-2-5",
+  "unit_title": "Interés simple: Cómo crece tu dinero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Sembrando Dinero",
+  "descripcion": "El interés simple es como una planta: si siembras una semilla (capital) y esperas (tiempo), obtendrás frutos (intereses).",
+  "objetivo": "Comprender la relación entre capital, tasa y tiempo en el cálculo de intereses",
+  "xp": 400,
+  "descripcion_formula": "Calculamos el interés ganado multiplicando Capital × Tasa × Años. Luego sumamos todo para el saldo final.",
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Capital Inicial (Lo que guardas)",
+      "type": "slider",
+      "min": 1000,
+      "max": 50000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa",
+      "label": "Tasa de interés anual (%)",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "años",
+      "label": "Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "capital + (capital * (tasa / 100) * años)",
+  "output_label": "Tu Dinero Total después de esperar",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado >= capital * 2",
+      "mensaje": "🌳 ¡Tu árbol de dinero ha crecido al doble! La paciencia y una buena tasa son imbatibles.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > capital * 1.5 && resultado < capital * 2",
+      "mensaje": "🌿 ¡Excelente crecimiento! Tus ahorros están trabajando duro para ti.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado <= capital * 1.2",
+      "mensaje": "🌱 Un crecimiento pequeño pero seguro. Recuerda que a más años, más frutos cosecharás.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si prestas $500 con interés simple del 10% anual, ¿cuánto dinero extra recibirás en 3 años? ¿Por qué el interés compuesto da más dinero que el simple con el tiempo?",
+  "outputs_multiples": [
+    {
+      "id": "monto_total",
+      "label": "Tu Dinero Total",
+      "formula": "Math.round(capital + (capital * (tasa / 100) * años))",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Capital inicial más todos los intereses simples ganados"
+    },
+    {
+      "id": "intereses_totales",
+      "label": "Intereses Ganados (Solo el Premio)",
+      "formula": "Math.round(capital * (tasa / 100) * años)",
+      "prefix": "$",
+      "suffix": " MXN",
+      "descripcion": "Dinero extra que el banco te da por guardar con ellos"
+    },
+    {
+      "id": "interes_por_anio",
+      "label": "Premio Anual del Banco",
+      "formula": "Math.round(capital * tasa / 100)",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "Lo que ganas cada año sin mover un dedo"
+    },
+    {
+      "id": "multiplicador",
+      "label": "¿Cuántas Veces Creció?",
+      "formula": "Math.round((1 + (tasa/100) * años) * 100) / 100",
+      "prefix": "×",
+      "suffix": " tu capital original",
+      "descripcion": "Por cada peso inicial, ahora tienes este múltiplo"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "monto_total",
+      "label": "Tu Dinero Total",
+      "color": "#6366f1"
+    },
+    {
+      "id": "intereses_totales",
+      "label": "Intereses Ganados (Solo el Premio)",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "Con interés simple, $10,000 al 8% anual generan $800 cada año. Con interés compuesto, generan $859 el primer año y cada vez más — la diferencia es enorme a 20 años."
+}

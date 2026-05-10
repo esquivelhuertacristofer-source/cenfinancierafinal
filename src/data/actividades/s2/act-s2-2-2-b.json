@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S2-2-2-B",
+  "unit_code": "S2-2-2",
+  "unit_title": "Ciberseguridad financiera: protegiendo tu patrimonio digital",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Negocio de las Rentas",
+  "descripcion": "Invertir en ladrillos es un arte y una ciencia. ¿Sabes clasificar los conceptos clave del mundo inmobiliario?",
+  "objetivo": "Identificar los términos técnicos y riesgos asociados a la inversión en bienes raíces",
+  "xp": 400,
+  "instruccion": "Arrastra cada concepto a la categoría que mejor lo describa.",
+  "items": [
+    {
+      "id": "inm1",
+      "label": "Comprar un local físico",
+      "emoji": "🏠",
+      "categoria_correcta": "directa",
+      "feedback": "Tienes el control total, pero requiere mucho capital y es difícil de vender rápido."
+    },
+    {
+      "id": "inm2",
+      "label": "Comprar títulos de FIBRAS",
+      "emoji": "📈",
+      "categoria_correcta": "fibras",
+      "feedback": "Puedes venderlos en segundos en la bolsa y recibir rentas proporcionales."
+    },
+    {
+      "id": "inm3",
+      "label": "Plusvalía",
+      "emoji": "🚀",
+      "categoria_correcta": "metricas",
+      "feedback": "Es el aumento del valor de la propiedad con el tiempo debido a la ubicación."
+    },
+    {
+      "id": "inm4",
+      "label": "Cap Rate",
+      "emoji": "📊",
+      "categoria_correcta": "metricas",
+      "feedback": "El porcentaje de retorno anual que obtienes solo por cobrar rentas."
+    },
+    {
+      "id": "inm5",
+      "label": "Riesgo de Vacancia",
+      "emoji": "🔲",
+      "categoria_correcta": "riesgos",
+      "feedback": "El peligro de que tu local esté vacío y no genere ingresos pero sí gastos."
+    },
+    {
+      "id": "inm6",
+      "label": "Predial y Mantenimiento",
+      "emoji": "🛠️",
+      "categoria_correcta": "riesgos",
+      "feedback": "Gastos fijos que reducen tu utilidad real si no los administras bien."
+    },
+    {
+      "id": "inm7",
+      "label": "Diversificación de Inquilinos",
+      "emoji": "👥",
+      "categoria_correcta": "fibras",
+      "feedback": "Las FIBRAS tienen cientos de inquilinos, si uno se va, los otros siguen pagando."
+    },
+    {
+      "id": "inm8",
+      "label": "Gestión Activa (Tú reparas)",
+      "emoji": "🔧",
+      "categoria_correcta": "directa",
+      "feedback": "En la inversión directa tú eres el responsable de las reparaciones y el trato con clientes."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "directa",
+      "label": "INVERSIÓN DIRECTA",
+      "emoji": "🧱",
+      "color": "#9a3412"
+    },
+    {
+      "id": "fibras",
+      "label": "INVERSIÓN EN FIBRAS",
+      "emoji": "🏙️",
+      "color": "#1e40af"
+    },
+    {
+      "id": "metricas",
+      "label": "MÉTRICAS DE GANANCIA",
+      "emoji": "💰",
+      "color": "#166534"
+    },
+    {
+      "id": "riesgos",
+      "label": "GASTOS Y RIESGOS",
+      "emoji": "⚠️",
+      "color": "#991b1b"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

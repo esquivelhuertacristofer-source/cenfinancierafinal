@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S1-4-2-B",
+  "unit_code": "S1-4-2",
+  "unit_title": "Investigación de mercado: cómo conocer a mi cliente real",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Escalones de la Libertad",
+  "descripcion": "La riqueza no es cuánto dinero tienes, sino cuántos días puedes vivir sin trabajar. ¡Descubre tu nivel de libertad!",
+  "objetivo": "Diferenciar las etapas de la independencia financiera y las prioridades en cada una",
+  "xp": 400,
+  "instruccion": "Arrastra cada situación al escalón de libertad financiera que le corresponde.",
+  "items": [
+    {
+      "id": "lib1",
+      "label": "Vivir 'cheque a cheque', sin ahorros",
+      "emoji": "🏃",
+      "categoria_correcta": "supervivencia",
+      "feedback": "Estás atrapado en la carrera de la rata. Un imprevisto sería un desastre."
+    },
+    {
+      "id": "lib2",
+      "label": "Tener deudas de tarjetas bajo control",
+      "emoji": "📉",
+      "categoria_correcta": "supervivencia",
+      "feedback": "El primer paso es dejar de cavar el hoyo de la deuda."
+    },
+    {
+      "id": "lib3",
+      "label": "Fondo de emergencia de 6 meses de gastos",
+      "emoji": "🛡️",
+      "categoria_correcta": "seguridad",
+      "feedback": "Ahora puedes dormir tranquilo. Una pérdida de empleo es solo un contratiempo."
+    },
+    {
+      "id": "lib4",
+      "label": "Tener todos tus seguros contratados",
+      "emoji": "🏥",
+      "categoria_correcta": "seguridad",
+      "feedback": "Tus ahorros están blindados contra accidentes o enfermedades."
+    },
+    {
+      "id": "lib5",
+      "label": "Tus rendimientos pagan tu renta y comida",
+      "emoji": "🏠",
+      "categoria_correcta": "independencia",
+      "feedback": "¡Hito histórico! Ya no necesitas trabajar para sobrevivir."
+    },
+    {
+      "id": "lib6",
+      "label": "Poder dejar tu empleo hoy mismo",
+      "emoji": "🚪",
+      "categoria_correcta": "independencia",
+      "feedback": "Eres libre de elegir cómo usar tu tiempo, el activo más valioso."
+    },
+    {
+      "id": "lib7",
+      "label": "Tus inversiones pagan lujos y viajes pro",
+      "emoji": "✈️",
+      "categoria_correcta": "libertad",
+      "feedback": "Nivel maestro. El dinero sobra para vivir la vida que soñaste."
+    },
+    {
+      "id": "lib8",
+      "label": "Donar a causas y crear una fundación",
+      "emoji": "🤝",
+      "categoria_correcta": "libertad",
+      "feedback": "Tu dinero se convierte en impacto social y un legado para el mundo."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "supervivencia",
+      "label": "NIVEL 1: SUPERVIVENCIA",
+      "emoji": "⚠️",
+      "color": "#dc2626"
+    },
+    {
+      "id": "seguridad",
+      "label": "NIVEL 2: SEGURIDAD",
+      "emoji": "🛡️",
+      "color": "#2563eb"
+    },
+    {
+      "id": "independencia",
+      "label": "NIVEL 3: INDEPENDENCIA",
+      "emoji": "🔓",
+      "color": "#059669"
+    },
+    {
+      "id": "libertad",
+      "label": "NIVEL 4: LIBERTAD / LEGADO",
+      "emoji": "👑",
+      "color": "#7c3aed"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

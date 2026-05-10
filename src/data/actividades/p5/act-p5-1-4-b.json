@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P5-1-4-B",
+  "unit_code": "P5-1-4",
+  "unit_title": "La Bolsa de Valores: siendo dueño de empresas",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Materias Primas en tu Vida",
+  "descripcion": "¿Sabías que el precio de tu pan depende del clima en Rusia o Ucrania? ¡Descubre el fascinante mundo de los commodities!",
+  "objetivo": "Comprender la relación entre las materias primas, los precios al consumidor y la geografía económica",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "com1",
+      "pregunta": "¿Qué pasa si hay una sequía muy fuerte y se pierde el 50% de la cosecha de maíz?",
+      "respuesta_correcta": "El precio del maíz y de la tortilla sube mucho",
+      "incorrectas": [
+        "El precio baja",
+        "No pasa nada",
+        "Regalan el maíz"
+      ],
+      "dato_extra": "La escasez siempre hace que los precios suban."
+    },
+    {
+      "id": "com2",
+      "pregunta": "¿Por qué el Litio es llamado 'el nuevo oro blanco'?",
+      "respuesta_correcta": "Porque es esencial para fabricar las baterías de celulares y autos eléctricos",
+      "incorrectas": [
+        "Porque sirve para hacer pasteles",
+        "Porque es muy brillante",
+        "Porque se usa para hacer ropa"
+      ],
+      "dato_extra": "México tiene uno de los yacimientos de litio más grandes del mundo."
+    },
+    {
+      "id": "com3",
+      "pregunta": "¿Qué commodity se usa para fabricar casi todo el cableado eléctrico de una ciudad?",
+      "respuesta_correcta": "Cobre",
+      "incorrectas": [
+        "Plástico",
+        "Oro",
+        "Algodón"
+      ],
+      "dato_extra": "El cobre es un excelente conductor de electricidad."
+    },
+    {
+      "id": "com4",
+      "pregunta": "¿En qué lugar del mundo se deciden los precios de muchos de estos productos?",
+      "respuesta_correcta": "En las Bolsas de Futuros (como Chicago o Londres)",
+      "incorrectas": [
+        "En el supermercado de la esquina",
+        "En una tómbola",
+        "Por votación en internet"
+      ],
+      "dato_extra": "Los precios se negocian meses antes de que el producto sea cosechado."
+    },
+    {
+      "id": "com5",
+      "pregunta": "¿Por qué el petróleo es tan importante para el precio de la comida?",
+      "respuesta_correcta": "Porque se necesita para el combustible de los tractores y camiones que traen la comida",
+      "incorrectas": [
+        "Porque la comida se hace con petróleo",
+        "Porque el petróleo es dulce",
+        "No tiene relación"
+      ],
+      "dato_extra": "Si sube la gasolina, suele subir todo lo que se transporta en camión."
+    },
+    {
+      "id": "com6",
+      "pregunta": "¿Qué es un recurso 'No Renovable'?",
+      "respuesta_correcta": "Un recurso que se agota y la tierra tarda millones de años en volver a crear (como el petróleo)",
+      "incorrectas": [
+        "Un recurso que nunca se acaba",
+        "Un recurso que se puede reciclar",
+        "Un juguete viejo"
+      ],
+      "dato_extra": "Cuidar estos recursos es vital para el futuro del planeta."
+    },
+    {
+      "id": "com7",
+      "pregunta": "¿Cuál de estos es un commodity de 'lujo' usado como reserva de valor?",
+      "respuesta_correcta": "Oro",
+      "incorrectas": [
+        "Sal",
+        "Agua",
+        "Arena"
+      ],
+      "dato_extra": "El oro no se oxida y mantiene su valor por siglos."
+    },
+    {
+      "id": "com8",
+      "pregunta": "¿Qué pasa si se descubre un nuevo yacimiento gigante de plata?",
+      "respuesta_correcta": "Al haber mucha oferta, el precio de la plata tiende a bajar",
+      "incorrectas": [
+        "El precio sube",
+        "La plata desaparece",
+        "Todos los bancos cierran"
+      ],
+      "dato_extra": "A mayor oferta (abundancia), menor precio."
+    },
+    {
+      "id": "com9",
+      "pregunta": "¿Qué país es uno de los mayores exportadores de aguacate (el oro verde) del mundo?",
+      "respuesta_correcta": "México",
+      "incorrectas": [
+        "Canadá",
+        "Rusia",
+        "Egipto"
+      ],
+      "dato_extra": "¡El aguacate mexicano es famoso en todo el planeta!"
+    },
+    {
+      "id": "com10",
+      "pregunta": "¿Para qué sirve saber sobre commodities?",
+      "respuesta_correcta": "Para entender cómo funcionan los precios y la economía del mundo real",
+      "incorrectas": [
+        "Para saber cocinar",
+        "Para ser granjero",
+        "No sirve para nada"
+      ],
+      "dato_extra": "¡Felicidades! Ahora entiendes la base física de la economía."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

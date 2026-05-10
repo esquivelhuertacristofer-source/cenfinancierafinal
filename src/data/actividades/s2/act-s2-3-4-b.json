@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S2-3-4-B",
+  "unit_code": "S2-3-4",
+  "unit_title": "Renta fija vs. variable: elegir según mis metas",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "La Letra Pequeña de los Préstamos",
+  "descripcion": "Comprar una casa o un auto es una de las decisiones más grandes de tu vida. ¡Asegúrate de saber lo que estás firmando!",
+  "objetivo": "Comprender los componentes técnicos y los costos ocultos de los créditos para activos de alto valor",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "hip1",
+      "pregunta": "¿Qué es el 'Enganche' (Down Payment)?",
+      "respuesta_correcta": "La cantidad de dinero propia que pagas al inicio para que el banco te preste el resto",
+      "incorrectas": [
+        "Un tipo de seguro",
+        "La comisión del vendedor",
+        "Un regalo del banco"
+      ],
+      "dato_extra": "Entre mayor sea tu enganche, menores serán tus intereses totales."
+    },
+    {
+      "id": "hip2",
+      "pregunta": "¿Qué es la 'Escrituración'?",
+      "respuesta_correcta": "El proceso legal ante notario para certificar que tú eres el dueño de la propiedad",
+      "incorrectas": [
+        "Pintar la casa",
+        "Poner el nombre en el timbre",
+        "Pedir permiso al vecino"
+      ],
+      "dato_extra": "Suele costar entre el 4% y el 7% del valor de la casa. ¡Es un gasto extra importante!"
+    },
+    {
+      "id": "hip3",
+      "pregunta": "¿Por qué un crédito automotriz suele ser más caro que uno hipotecario?",
+      "respuesta_correcta": "Porque un auto pierde valor rápido (se deprecia), lo que lo hace una garantía menos segura para el banco",
+      "incorrectas": [
+        "Porque el auto corre",
+        "Porque los bancos odian los autos",
+        "No es más caro"
+      ],
+      "dato_extra": "Un auto pierde hasta el 20% de su valor apenas sale de la agencia."
+    },
+    {
+      "id": "hip4",
+      "pregunta": "¿Qué son los 'Pagos Adelantados a Capital'?",
+      "respuesta_correcta": "Dinero extra que pagas para reducir la deuda original y ahorrarte meses o años de intereses",
+      "incorrectas": [
+        "Pagar la luz antes de tiempo",
+        "Dar propina al banco",
+        "Un error del sistema"
+      ],
+      "dato_extra": "Es la mejor estrategia para terminar de pagar tu casa en la mitad de tiempo."
+    },
+    {
+      "id": "hip5",
+      "pregunta": "¿Qué es una 'Tabla de Amortización'?",
+      "respuesta_correcta": "Un documento que detalla cuánto de cada mensualidad se va al pago de la deuda y cuánto al pago de intereses",
+      "incorrectas": [
+        "Un calendario de vacaciones",
+        "Una lista de precios",
+        "Un mapa del banco"
+      ],
+      "dato_extra": "¡Ojo! Al principio, casi todo tu dinero se va a pagar intereses, no la casa."
+    },
+    {
+      "id": "hip6",
+      "pregunta": "¿Qué es el 'Arrendamiento' (Leasing) de un auto?",
+      "respuesta_correcta": "Pagar una renta mensual por usar el auto sin ser el dueño total, con opción a comprarlo al final",
+      "incorrectas": [
+        "Robar un auto",
+        "Comprar un auto usado",
+        "Un seguro contra choques"
+      ],
+      "dato_extra": "Es muy común en empresas porque tiene beneficios en los impuestos."
+    },
+    {
+      "id": "hip7",
+      "pregunta": "¿Cuál es la ventaja de una Hipoteca con Tasa Fija?",
+      "respuesta_correcta": "Que tu pago mensual nunca cambiará, dándote seguridad aunque la economía del país esté mal",
+      "incorrectas": [
+        "Que es más barata",
+        "Que el banco te regala dinero",
+        "Que no pagas impuestos"
+      ],
+      "dato_extra": "En tiempos de incertidumbre, la tasa fija es la reina de la tranquilidad."
+    },
+    {
+      "id": "hip8",
+      "pregunta": "¿Qué cubre el 'Seguro de Vida' ligado a una hipoteca?",
+      "respuesta_correcta": "Si el titular fallece, el seguro paga la deuda restante y la familia se queda con la casa sin deuda",
+      "incorrectas": [
+        "Paga los gastos médicos",
+        "Paga las vacaciones",
+        "No existe ese seguro"
+      ],
+      "dato_extra": "Es obligatorio en casi todos los bancos para proteger la inversión."
+    },
+    {
+      "id": "hip9",
+      "pregunta": "¿Qué es la 'Plusvalía' de una zona?",
+      "respuesta_correcta": "El aumento del valor de tu propiedad debido a mejoras en la ciudad (nuevas avenidas, parques, etc.)",
+      "incorrectas": [
+        "Un tipo de impuesto",
+        "Cuando el banco te cobra más",
+        "El color de la casa"
+      ],
+      "dato_extra": "La ubicación es el factor #1 para que una casa sea una buena inversión."
+    },
+    {
+      "id": "hip10",
+      "pregunta": "¿Cuál es la regla de oro antes de comprar un auto a crédito?",
+      "respuesta_correcta": "Que el pago mensual no supere el 15% de tus ingresos, para no ahogar tus finanzas",
+      "incorrectas": [
+        "Comprar el más rápido",
+        "Elegir el color rojo",
+        "No revisar el motor"
+      ],
+      "dato_extra": "¡Felicidades! Estás listo para tomar decisiones patrimoniales de gran nivel."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

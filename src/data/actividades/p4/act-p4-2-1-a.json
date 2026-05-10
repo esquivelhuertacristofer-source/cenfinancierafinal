@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P4-2-1-A",
+  "unit_code": "P4-2-1",
+  "unit_title": "La tarjeta de débito: usarla bien y sin perder el control",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Control con Débito",
+  "descripcion": "Usar tarjeta es cómodo, pero es fácil olvidar cuánto dinero te queda. Simula una semana de gastos y asegúrate de no gastar más de lo que tienes.",
+  "objetivo": "Entender que la tarjeta de débito usa dinero propio y requiere un control de saldo riguroso",
+  "xp": 400,
+  "descripcion_formula": "Saldo Final = Saldo Inicial - Gastos Seleccionados. Si el saldo llega a cero, no puedes seguir comprando.",
+  "inputs": [
+    {
+      "id": "gasto_comida",
+      "label": "Comida de la semana",
+      "type": "slider",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "default": 400,
+      "unit": "$"
+    },
+    {
+      "id": "gasto_diversion",
+      "label": "Salida al cine/juegos",
+      "type": "slider",
+      "min": 0,
+      "max": 600,
+      "step": 50,
+      "default": 300,
+      "unit": "$"
+    },
+    {
+      "id": "gasto_regalo",
+      "label": "Regalo de cumpleaños",
+      "type": "slider",
+      "min": 0,
+      "max": 1000,
+      "step": 100,
+      "default": 200,
+      "unit": "$"
+    },
+    {
+      "id": "gasto_antojos",
+      "label": "Dulces y antojos",
+      "type": "slider",
+      "min": 0,
+      "max": 400,
+      "step": 20,
+      "default": 100,
+      "unit": "$"
+    }
+  ],
+  "formula": "2000 - (gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos)",
+  "output_label": "Saldo Restante en tu Tarjeta",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado >= 500",
+      "mensaje": "🌟 ¡Maestro del Control! Gastaste con inteligencia y aún tienes ahorro en tu tarjeta.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 500 && resultado >= 0",
+      "mensaje": "⚠️ ¡Cuidado! Te queda muy poco dinero para terminar la semana. ¡No gastes más!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "🚫 ¡TRANSACCIÓN RECHAZADA! Has intentado gastar dinero que no tienes. Esto es el peligro de no revisar tu saldo.",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuál es la diferencia principal entre tarjeta de débito y de crédito? ¿Por qué es más seguro usar una tarjeta que llevar efectivo en la calle?",
+  "comparativa_espera": "El 43% de los jóvenes mexicanos no sabe cuánto gasta cada mes. Las tarjetas de débito con notificaciones instantáneas cambiaron esto: ahora puedes saber en tiempo real si estás excediendo tu presupuesto.",
+  "outputs_multiples": [
+    {
+      "id": "saldo_restante",
+      "label": "Saldo Restante en la Tarjeta",
+      "formula": "Math.max(0, 2000 - (gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos))",
+      "prefix": "$",
+      "suffix": " disponibles",
+      "descripcion": "Lo que queda en tu tarjeta de débito"
+    },
+    {
+      "id": "total_gastado",
+      "label": "Total Gastado",
+      "formula": "gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos",
+      "prefix": "$",
+      "suffix": " gastados",
+      "descripcion": "La suma de todos tus gastos"
+    },
+    {
+      "id": "porcentaje_gastado",
+      "label": "% del Presupuesto Usado",
+      "formula": "Math.round((gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos) / 2000 * 100)",
+      "prefix": "",
+      "suffix": "% del presupuesto",
+      "descripcion": "Qué tanto de tus $2,000 ya utilizaste"
+    },
+    {
+      "id": "mayor_gasto",
+      "label": "Mayor Categoría de Gasto",
+      "formula": "Math.max(gasto_comida, gasto_diversion, gasto_regalo, gasto_antojos)",
+      "prefix": "$",
+      "suffix": " (categoría mayor)",
+      "descripcion": "El gasto que más pesa en tu presupuesto"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "saldo_restante",
+      "label": "Saldo Restante en la Tarjeta",
+      "color": "#6366f1"
+    },
+    {
+      "id": "total_gastado",
+      "label": "Total Gastado",
+      "color": "#22c55e"
+    }
+  ]
+}

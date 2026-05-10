@@ -1,0 +1,82 @@
+{
+  "code": "ACT-P4-3-1-A",
+  "unit_code": "P4-3-1",
+  "unit_title": "La regla 50/30/20: el presupuesto que sí funciona",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Presupuesto Maestro",
+  "descripcion": "Aprender a dividir tu dinero es la habilidad más importante para ser libre financieramente. ¡Usa la regla de oro!",
+  "objetivo": "Aplicar la regla 50/30/20 para la distribución eficiente del ingreso personal",
+  "xp": 350,
+  "output_type": "Plan Presupuestal",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "ingresos",
+      "titulo": "💵 Mis Ingresos",
+      "descripcion": "¿Cuánto dinero recibes al mes? (Domingos, regalos, trabajos).",
+      "campos": [
+        {
+          "id": "monto_total",
+          "label": "Ingreso Total Mensual",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "necesidades",
+      "titulo": "🏠 50% Necesidades",
+      "descripcion": "Cosas sin las que no puedes vivir (comida, transporte, escuela).",
+      "campos": [
+        {
+          "id": "gastos_necesidades",
+          "label": "¿Qué es lo más importante que pagas?",
+          "type": "textarea",
+          "placeholder": "Ej: Mi lunch, transporte al colegio...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "deseos",
+      "titulo": "🎮 30% Deseos",
+      "descripcion": "Cosas que quieres pero no son obligatorias (juguetes, salidas, dulces).",
+      "campos": [
+        {
+          "id": "gastos_deseos",
+          "label": "¿En qué se te antoja gastar?",
+          "type": "text",
+          "placeholder": "Ej: Videojuegos, helados...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "ahorro",
+      "titulo": "🐷 20% Ahorro e Inversión",
+      "descripcion": "Tu yo del futuro te lo agradecerá.",
+      "campos": [
+        {
+          "id": "meta_ahorro",
+          "label": "¿Para qué estás ahorrando este 20%?",
+          "type": "text",
+          "placeholder": "Ej: Una bici, mi universidad, un fondo de emergencia...",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_minimo_20",
+          "label": "Tu Ahorro Mínimo (20% de tus ingresos)",
+          "type": "calculated",
+          "formula": "Math.round(monto_total * 0.20)",
+          "unit": "$",
+          "ayuda": "La Regla 50/30/20 recomienda guardar siempre el 20%"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

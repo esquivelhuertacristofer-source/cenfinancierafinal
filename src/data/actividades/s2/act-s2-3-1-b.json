@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-3-1-B",
+  "unit_code": "S2-3-1",
+  "unit_title": "La Bolsa Mexicana de Valores (BMV): cómo invertir",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Tipos de Crédito",
+  "descripcion": "En el mundo del dinero, no todos los préstamos son iguales. ¿Sabes cuál elegir según tu meta?",
+  "objetivo": "Identificar los diferentes instrumentos de crédito y sus características principales",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "cre1",
+      "texto": "¿Qué es el 'Crédito Revolvente' (ej: Tarjeta de Crédito)?",
+      "opciones": [
+        "Un crédito que gira en círculos",
+        "Una línea de dinero que puedes usar, pagar y volver a usar sin pedir permiso de nuevo",
+        "Un préstamo para comprar una casa",
+        "Un dinero que te regala el banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Es como una bolsa de dinero siempre disponible, pero si no la pagas mes a mes, los intereses crecen rápido."
+    },
+    {
+      "id": "cre2",
+      "texto": "¿Qué significa 'CAT' (Costo Anual Total)?",
+      "opciones": [
+        "La comida del gato",
+        "El porcentaje real que te cuesta un crédito al año, incluyendo intereses, comisiones y seguros",
+        "El total de dinero que pediste",
+        "Un tipo de ahorro"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Ojo! El CAT siempre es mayor que la tasa de interés. Es lo único que debes usar para comparar qué banco es más barato."
+    },
+    {
+      "id": "cre3",
+      "texto": "¿Qué es un 'Crédito Hipotecario'?",
+      "opciones": [
+        "Un préstamo para comprar un auto",
+        "Un préstamo a largo plazo (15-20 años) destinado exclusivamente a comprar una casa o terreno",
+        "Dinero para ir de viaje",
+        "Un seguro de vida"
+      ],
+      "correcta": 1,
+      "explicacion": "La propiedad misma sirve como garantía para el banco."
+    },
+    {
+      "id": "cre4",
+      "texto": "¿Qué es el 'Colateral' o Garantía?",
+      "opciones": [
+        "Un tipo de moneda",
+        "Un bien (como una casa o auto) que el banco puede tomar si tú no pagas el crédito",
+        "Un amigo que te presta dinero",
+        "Un descuento"
+      ],
+      "correcta": 1,
+      "explicacion": "Tener colateral baja el riesgo del banco y, por lo tanto, te dan una tasa de interés más baja."
+    },
+    {
+      "id": "cre5",
+      "texto": "¿Qué significa ser 'Totalero' con tu tarjeta de crédito?",
+      "opciones": [
+        "Tener muchas tarjetas",
+        "Pagar el 100% de lo que gastaste cada mes para no generar ni un peso de intereses",
+        "Pagar solo el mínimo",
+        "No usar la tarjeta"
+      ],
+      "correcta": 1,
+      "explicacion": "Ser totalero es la mejor forma de usar el dinero del banco gratis."
+    },
+    {
+      "id": "cre6",
+      "texto": "¿Qué es un 'Aval' o Fiador?",
+      "opciones": [
+        "Una persona que vende seguros",
+        "Una persona que se compromete legalmente a pagar la deuda si tú no lo haces",
+        "Un empleado del banco",
+        "Un tipo de cuenta"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Mucho cuidado! Ser aval de alguien es poner en riesgo tu propio patrimonio."
+    },
+    {
+      "id": "cre7",
+      "texto": "¿Cuál es la principal diferencia entre un crédito y un préstamo simple?",
+      "opciones": [
+        "Ninguna",
+        "El crédito es una línea disponible; el préstamo te dan todo el dinero de golpe y empiezas a pagar intereses por el total",
+        "Uno es legal y el otro no",
+        "Uno es para niños"
+      ],
+      "correcta": 1,
+      "explicacion": "Los préstamos suelen usarse para proyectos específicos (como comprar maquinaria)."
+    },
+    {
+      "id": "cre8",
+      "texto": "¿Qué es la 'Capacidad de Pago'?",
+      "opciones": [
+        "Cuánto dinero tienes en total",
+        "El porcentaje de tus ingresos que puedes dedicar a pagar deudas sin poner en riesgo tus gastos básicos (máximo 30%)",
+        "El límite de tu tarjeta",
+        "Lo que ganas en un año"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes cómo evaluar un crédito como un profesional."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

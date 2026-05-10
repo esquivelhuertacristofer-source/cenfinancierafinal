@@ -1,0 +1,243 @@
+{
+  "code": "ACT-S3-2-4-A",
+  "unit_code": "S3-2-4",
+  "unit_title": "Independencia financiera acelerada: el concepto FIRE",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Calculadora FIRE: Tu Fecha de Libertad",
+  "descripcion": "FIRE = Financial Independence, Retire Early. Existe una fórmula matemática exacta que dice cuándo puedes dejar de trabajar para siempre. Esta calculadora te da tu fecha real de libertad financiera. Prepárate: los resultados van a cambiar cómo ves el trabajo.",
+  "objetivo": "Calcular el número FIRE personal y entender cómo la tasa de ahorro — no el ingreso — determina el tiempo hasta la independencia financiera",
+  "xp": 300,
+  "descripcion_formula": "Número FIRE = Gastos anuales en retiro × 25 (basado en la Regla del 4% del Trinity Study). El portafolio de esa magnitud genera en promedio 4% anual, cubriendo tus gastos para siempre.",
+  "inputs": [
+    {
+      "id": "edad",
+      "label": "Tu edad actual",
+      "type": "slider",
+      "min": 14,
+      "max": 35,
+      "step": 1,
+      "default": 15,
+      "unit": "años"
+    },
+    {
+      "id": "ingreso",
+      "label": "Ingreso mensual neto (actual o esperado)",
+      "type": "slider",
+      "min": 5000,
+      "max": 120000,
+      "step": 2500,
+      "default": 20000,
+      "unit": "$"
+    },
+    {
+      "id": "gastos_retiro",
+      "label": "Gastos mensuales que quieres en el retiro",
+      "type": "slider",
+      "min": 5000,
+      "max": 80000,
+      "step": 1000,
+      "default": 25000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_ahorro",
+      "label": "% de tu ingreso que ahorras e inviertes",
+      "type": "slider",
+      "min": 5,
+      "max": 80,
+      "step": 5,
+      "default": 30,
+      "unit": "%"
+    },
+    {
+      "id": "rendimiento",
+      "label": "Rendimiento anual de inversiones",
+      "type": "slider",
+      "min": 5,
+      "max": 15,
+      "step": 0.5,
+      "default": 8,
+      "unit": "%"
+    },
+    {
+      "id": "patrimonio_actual",
+      "label": "Inversiones que ya tienes acumuladas",
+      "type": "slider",
+      "min": 0,
+      "max": 500000,
+      "step": 5000,
+      "default": 0,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula_fire_number": "gastos_retiro * 12 * 25",
+  "formula_anos_para_fire": "Math.log(1 + (gastos_retiro*12*25 - patrimonio_actual) * (rendimiento/100) / (ingreso * tasa_ahorro/100 * 12)) / Math.log(1 + rendimiento/100)",
+  "formula": "gastos_retiro * 12 * 25",
+  "outputs_multiples": [
+    {
+      "id": "fire_number",
+      "label": "Tu Número FIRE (lo que necesitas acumular)",
+      "formula": "gastos_retiro * 12 * 25",
+      "prefix": "$",
+      "descripcion": "Cuando tengas esta cantidad invertida, puedes retirar el 4% anual y vivir sin trabajar — para siempre."
+    },
+    {
+      "id": "edad_retiro",
+      "label": "Edad en que alcanzas FIRE",
+      "formula": "edad + Math.max(0, Math.ceil(Math.log(1 + (gastos_retiro*12*25 - patrimonio_actual) * (rendimiento/100) / (ingreso * tasa_ahorro/100 * 12)) / Math.log(1 + rendimiento/100)))",
+      "suffix": " años"
+    },
+    {
+      "id": "ahorro_mensual_real",
+      "label": "Lo que ahorras e inviertes cada mes",
+      "formula": "ingreso * tasa_ahorro / 100",
+      "prefix": "$"
+    },
+    {
+      "id": "ingreso_pasivo_futuro",
+      "label": "Ingreso pasivo mensual proyectado en FIRE",
+      "formula": "(gastos_retiro * 12 * 25) * 0.04 / 12",
+      "prefix": "$",
+      "descripcion": "El 4% anual de tu portafolio FIRE dividido entre 12 meses."
+    }
+  ],
+  "output_label": "Tu Número FIRE",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "portafolio_acumulado",
+      "label": "Tu portafolio creciendo",
+      "color": "#FF8C00"
+    },
+    {
+      "id": "fire_number_line",
+      "label": "Línea de meta FIRE",
+      "color": "#22c55e",
+      "tipo": "horizontal"
+    }
+  ],
+  "tabla_tasas_ahorro": {
+    "titulo": "La tabla que cambia vidas",
+    "subtitulo": "Con $20,000/mes de ingreso y 8% de rendimiento anual",
+    "filas": [
+      {
+        "tasa_ahorro": 10,
+        "gastos_restantes_pct": 90,
+        "anos_aproximados": 43,
+        "edad_retiro_desde_15": 58
+      },
+      {
+        "tasa_ahorro": 20,
+        "gastos_restantes_pct": 80,
+        "anos_aproximados": 32,
+        "edad_retiro_desde_15": 47
+      },
+      {
+        "tasa_ahorro": 30,
+        "gastos_restantes_pct": 70,
+        "anos_aproximados": 25,
+        "edad_retiro_desde_15": 40
+      },
+      {
+        "tasa_ahorro": 40,
+        "gastos_restantes_pct": 60,
+        "anos_aproximados": 19,
+        "edad_retiro_desde_15": 34
+      },
+      {
+        "tasa_ahorro": 50,
+        "gastos_restantes_pct": 50,
+        "anos_aproximados": 14,
+        "edad_retiro_desde_15": 29
+      },
+      {
+        "tasa_ahorro": 60,
+        "gastos_restantes_pct": 40,
+        "anos_aproximados": 10,
+        "edad_retiro_desde_15": 25
+      },
+      {
+        "tasa_ahorro": 70,
+        "gastos_restantes_pct": 30,
+        "anos_aproximados": 7,
+        "edad_retiro_desde_15": 22
+      }
+    ],
+    "insight": "La tasa de ahorro determina cuándo te retiras — NO el nivel de ingreso. Una persona que gana $15,000/mes y ahorra 50% llega a FIRE antes que quien gana $50,000 y ahorra 10%."
+  },
+  "comparativas_rapidas": [
+    {
+      "id": "si_ahorraras_10",
+      "label": "Si ahorras solo 10%",
+      "tasa": 10
+    },
+    {
+      "id": "si_ahorraras_50",
+      "label": "Si ahorras el 50%",
+      "tasa": 50
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "resultado > 0 && (Math.log(1+(resultado-patrimonio_actual)*(rendimiento/100)/(ingreso*tasa_ahorro/100*12))/Math.log(1+rendimiento/100)) < 15",
+      "mensaje": "🔥 ¡FIRE antes de los 30! Eres una máquina de ahorro. El 0.1% de las personas logra esto.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_ahorro >= 40",
+      "mensaje": "💪 Tasa de ahorro >40%. Con esa disciplina te retiras antes que el 95% de la población.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_ahorro < 20",
+      "mensaje": "📊 Dato que cambia todo: si subes de 20% a 40% de ahorro, reduces tu tiempo de trabajo a LA MITAD.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "gastos_retiro > ingreso * 0.9",
+      "mensaje": "⚠️ Tus gastos en retiro son casi iguales a tu ingreso actual. Considera reducirlos — cada $1,000 menos en gastos reduce tu FIRE number en $300,000.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "patrimonio_actual > 0",
+      "mensaje": "🎯 ¡Ya tienes inversiones! Ese capital está trabajando para ti ahora mismo.",
+      "tipo": "success"
+    }
+  ],
+  "pregunta_reflexion": "Tu número FIRE es la cantidad que te compra la libertad permanente. Viendo los resultados: ¿qué es más poderoso — ganar más o gastar menos? ¿Qué cambiarías en tu plan de vida para lograr FIRE antes?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "comparativa_espera": "La tasa de ahorro es el factor que más controlas en FIRE. Ganar el doble no te acerca el doble si también gastas el doble. Una persona con $15,000/mes ahorrando 50% llega a FIRE antes que una con $40,000/mes ahorrando 10%."
+}

@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P3-4-1-A",
+  "unit_code": "P3-4-1",
+  "unit_title": "¿Qué es ser emprendedor?",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El ADN del Emprendedor",
+  "descripcion": "Ser emprendedor es ver oportunidades donde otros ven problemas. Acompaña a Ceny en su primer día buscando ideas de negocio.",
+  "objetivo": "Identificar características y actitudes emprendedoras en situaciones cotidianas",
+  "xp": 450,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Es un día caluroso en el parque. Hay mucha gente, pero nadie vende agua fría. Ceny nota que todos están sedientos.",
+  "nodo_inicial": "la_oportunidad",
+  "nodos": {
+    "la_oportunidad": {
+      "id": "la_oportunidad",
+      "texto": "¡Hace mucho calor! Ceny tiene $100 pesos. ¿Qué debería hacer un emprendedor?",
+      "opciones": [
+        {
+          "id": "comprar_helado",
+          "texto": "Comprar un helado para ella y sentarse a descansar",
+          "siguiente_nodo": "final_descanso",
+          "consecuencia": "Ceny disfrutó su helado, pero no aprovechó la oportunidad de ayudar a otros.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        },
+        {
+          "id": "vender_agua",
+          "texto": "Comprar un paquete de botellas de agua fría para venderlas",
+          "siguiente_nodo": "la_venta",
+          "consecuencia": "¡Esa es mentalidad emprendedora! Viste una necesidad y decidiste actuar.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "la_venta": {
+      "id": "la_venta",
+      "texto": "Ceny empieza a ofrecer el agua, pero un cliente le dice que está un poco cara. ¿Cómo reacciona un emprendedor?",
+      "opciones": [
+        {
+          "id": "enojarse",
+          "texto": "Enojarse y dejar de vender",
+          "siguiente_nodo": "final_rendirse",
+          "consecuencia": "Rendirse al primer obstáculo no es parte del ADN emprendedor.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        },
+        {
+          "id": "explicar_valor",
+          "texto": "Explicar que están muy frías y que ella las llevó hasta ahí",
+          "siguiente_nodo": "exito_venta",
+          "consecuencia": "¡Excelente! La perseverancia y la comunicación son claves del éxito.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "exito_venta": {
+      "id": "exito_venta",
+      "texto": "¡Vendió todas las aguas! Ahora tiene $200 pesos. ¡Dobló su dinero!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Emprender es observar, tomar la iniciativa y no rendirse ante los problemas."
+    },
+    "final_descanso": {
+      "id": "final_descanso",
+      "texto": "Hoy decidiste ser consumidor. ¡Mañana intenta ser emprendedor!",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Los emprendedores siempre están atentos a cómo pueden servir a los demás."
+    },
+    "final_rendirse": {
+      "id": "final_rendirse",
+      "texto": "Incluso los grandes empresarios fallaron muchas veces antes de triunfar. ¡Inténtalo de nuevo!",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La resiliencia es el superpoder de todo emprendedor."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

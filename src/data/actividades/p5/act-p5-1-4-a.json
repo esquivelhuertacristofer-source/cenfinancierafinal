@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P5-1-4-A",
+  "unit_code": "P5-1-4",
+  "unit_title": "La Bolsa de Valores: siendo dueño de empresas",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Valor de la Tierra",
+  "descripcion": "Los 'Commodities' son productos básicos que se usan para todo. ¿Sabes clasificarlos según su origen?",
+  "objetivo": "Identificar y categorizar los principales tipos de materias primas y su importancia económica",
+  "xp": 250,
+  "instruccion": "Arrastra cada recurso a su categoría correspondiente.",
+  "items": [
+    {
+      "id": "c1",
+      "label": "Petróleo",
+      "emoji": "🛢️",
+      "categoria_correcta": "energeticos",
+      "feedback": "La base del combustible y plásticos del mundo."
+    },
+    {
+      "id": "c2",
+      "label": "Oro",
+      "emoji": "🥇",
+      "categoria_correcta": "metales",
+      "feedback": "El metal precioso por excelencia y refugio de valor."
+    },
+    {
+      "id": "c3",
+      "label": "Maíz",
+      "emoji": "🌽",
+      "categoria_correcta": "agricolas",
+      "feedback": "Esencial para la alimentación humana y animal."
+    },
+    {
+      "id": "c4",
+      "label": "Gas Natural",
+      "emoji": "🔥",
+      "categoria_correcta": "energeticos",
+      "feedback": "Energía clave para calefacción e industria."
+    },
+    {
+      "id": "c5",
+      "label": "Litio",
+      "emoji": "🔋",
+      "categoria_correcta": "metales",
+      "feedback": "El metal de las baterías del futuro (celulares y autos)."
+    },
+    {
+      "id": "c6",
+      "label": "Trigo",
+      "emoji": "🌾",
+      "categoria_correcta": "agricolas",
+      "feedback": "La base del pan y cereales en todo el mundo."
+    },
+    {
+      "id": "c7",
+      "label": "Ganado vacuno",
+      "emoji": "🐄",
+      "categoria_correcta": "ganaderos",
+      "feedback": "Materia prima para carne, leche y cuero."
+    },
+    {
+      "id": "c8",
+      "label": "Plata",
+      "emoji": "🥈",
+      "categoria_correcta": "metales",
+      "feedback": "Metal usado en joyería y también en tecnología."
+    },
+    {
+      "id": "c9",
+      "label": "Algodón",
+      "emoji": "👕",
+      "categoria_correcta": "agricolas",
+      "feedback": "La fibra vegetal más usada en la ropa."
+    },
+    {
+      "id": "c10",
+      "label": "Cobre",
+      "emoji": "🔌",
+      "categoria_correcta": "metales",
+      "feedback": "Sin el cobre no habría electricidad en las casas."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "energeticos",
+      "label": "ENERGÉTICOS",
+      "emoji": "⚡",
+      "color": "#1f2937"
+    },
+    {
+      "id": "metales",
+      "label": "METALES",
+      "emoji": "🛠️",
+      "color": "#9ca3af"
+    },
+    {
+      "id": "agricolas",
+      "label": "AGRÍCOLAS",
+      "emoji": "🚜",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "ganaderos",
+      "label": "GANADEROS",
+      "emoji": "🤠",
+      "color": "#b45309"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

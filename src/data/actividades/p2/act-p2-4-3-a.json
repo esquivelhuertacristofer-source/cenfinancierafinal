@@ -1,0 +1,90 @@
+{
+  "code": "ACT-P2-4-3-A",
+  "unit_code": "P2-4-3",
+  "unit_title": "¿Cuánto voy a ganar? Entendiendo la ganancia",
+  "level": "Primaria 2",
+  "tipo": "DECIDE",
+  "complejidad": "BAJO",
+  "titulo": "El Tesoro de la Ganancia",
+  "descripcion": "Ceny ha vendido sus dibujos y tiene un billete de $20 en la mano. ¿Qué hará con él? Ayúdala a entender la diferencia entre ingresos y ganancia.",
+  "objetivo": "Diferenciar entre el ingreso total y la ganancia real descontando los costos.",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny está muy feliz. Acaba de vender un dibujo de un marciano a su abuelita por $20. Pero recuerda que las hojas y los colores le costaron $5.",
+  "nodo_inicial": "el_billete",
+  "nodos": {
+    "el_billete": {
+      "id": "el_billete",
+      "texto": "¡Tienes $20 pesos en la mano! Pero antes de ir por un helado, recuerda los $5 que costaron los materiales. ¿Qué es lo primero que debes hacer?",
+      "opciones": [
+        {
+          "id": "separar_costos",
+          "texto": "Separar $5 para comprar materiales mañana",
+          "siguiente_nodo": "la_ganancia_real",
+          "consecuencia": "¡Excelente! Eso se llama ser responsable. Ahora ya tienes asegurado el negocio de mañana.",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "gastar_todo",
+          "texto": "Gastarme los $20 en un helado gigante",
+          "siguiente_nodo": "sin_materiales",
+          "consecuencia": "El helado estuvo rico, pero ahora tienes $0 y no tienes hojas para seguir dibujando.",
+          "xp_bonus": 0,
+          "es_optima": false
+        }
+      ]
+    },
+    "la_ganancia_real": {
+      "id": "la_ganancia_real",
+      "texto": "Ya separaste los $5 del costo. Ahora te quedan $15. ¡Esa es tu GANANCIA REAL! ¿Qué harás con ella?",
+      "opciones": [
+        {
+          "id": "ahorrar_invertir",
+          "texto": "Ahorrar $10 y usar $5 para un dulce",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "¡Perfecto! Estás ahorrando para algo grande y premiando tu esfuerzo al mismo tiempo.",
+          "xp_bonus": 200,
+          "es_optima": true
+        },
+        {
+          "id": "reinvertir_todo",
+          "texto": "Comprar colores más brillantes con toda la ganancia",
+          "siguiente_nodo": "final_crecimiento",
+          "consecuencia": "¡Wow! Estás reinvirtiendo para que tus dibujos sean de mejor calidad. ¡Tus clientes estarán felices!",
+          "xp_bonus": 150,
+          "es_optima": true
+        }
+      ]
+    },
+    "sin_materiales": {
+      "id": "sin_materiales",
+      "texto": "Ceny está triste porque quería hacer más dibujos pero no tiene dinero para hojas. ¿Qué aprendió?",
+      "opciones": [
+        {
+          "id": "aprender_leccion",
+          "texto": "Que primero debo recuperar mi costo antes de gastar",
+          "siguiente_nodo": "el_billete",
+          "consecuencia": "¡Exacto! Vamos a intentarlo de nuevo, esta vez con más orden.",
+          "xp_bonus": 50,
+          "es_optima": true
+        }
+      ]
+    },
+    "final_exito": {
+      "id": "final_exito",
+      "texto": "¡Felicidades! Ceny entendió que la ganancia es su premio, pero el costo es sagrado para que el negocio siga vivo.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un negocio exitoso es aquel que siempre tiene dinero para comprar materiales y seguir trabajando. ¡Eres un genio financiero!"
+    },
+    "final_crecimiento": {
+      "id": "final_crecimiento",
+      "texto": "¡Increíble! Ceny decidió reinvertir para crecer. Sus dibujos ahora brillan más y podrá cobrar un poquito más por su gran calidad.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Reinvertir en tu negocio es la forma más rápida de alcanzar tus sueños. ¡Sigue brillando!"
+    }
+  },
+  "versión": "2026.Diamond.Story"
+}

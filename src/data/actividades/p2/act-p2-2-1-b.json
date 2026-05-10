@@ -1,0 +1,135 @@
+{
+  "code": "P2-2-1-B",
+  "unit_code": "P2-2-1",
+  "unit_title": "Mi lista de deseos vs. mi lista de necesidades",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Genio de las Prioridades",
+  "descripcion": "¿Eres capaz de elegir lo más importante? ¡Ponte a prueba con el reto del semáforo!",
+  "objetivo": "Validar la comprensión de la jerarquía de gastos y el concepto de postergación de la gratificación",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "En el semáforo del gasto, ¿qué color representan las necesidades vitales (comida, techo, salud)?",
+      "opciones": [
+        "Rojo",
+        "Verde",
+        "Azul",
+        "Amarillo"
+      ],
+      "correcta": 1,
+      "explicacion": "El verde significa 'Adelante'. Las necesidades son lo primero que debemos pagar siempre."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuál de estos es un ejemplo de una necesidad escolar?",
+      "opciones": [
+        "Un sacapuntas que brilla",
+        "Lápices y cuadernos para escribir",
+        "Un videojuego de sumas",
+        "Una mochila de marca cara"
+      ],
+      "correcta": 1,
+      "explicacion": "Los lápices y cuadernos son herramientas básicas para tu aprendizaje diario."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por qué un helado es un DESEO y no una necesidad?",
+      "opciones": [
+        "Porque es frío",
+        "Porque puedes vivir perfectamente bien sin comerlo hoy mismo",
+        "Porque es muy caro",
+        "Porque se derrite"
+      ],
+      "correcta": 1,
+      "explicacion": "Los deseos son cosas que nos gustan pero que no son obligatorias para sobrevivir."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué significa el color AMARILLO en nuestras compras?",
+      "opciones": [
+        "Que es gratis",
+        "Que debemos esperar, pensar e investigar si realmente nos conviene ahora",
+        "Que debemos correr a comprarlo",
+        "Que es peligroso"
+      ],
+      "correcta": 1,
+      "explicacion": "El amarillo es para dudar y analizar. ¡Un genio financiero nunca compra sin pensar!"
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué sucede si gastas todo tu dinero en deseos (semáforo rojo) primero?",
+      "opciones": [
+        "Te dan un premio",
+        "No tendrás dinero para lo que realmente necesitas (como comida o renta)",
+        "Te vuelves más inteligente",
+        "El dinero se duplica"
+      ],
+      "correcta": 1,
+      "explicacion": "Si compras juguetes antes que comida, tu familia se meterá en problemas de dinero."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: Los deseos pueden esperar a que ahorremos dinero extra después de pagar lo importante.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Los deseos son premios que nos damos por ser responsables con lo necesario."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuál de estos es una necesidad de salud?",
+      "opciones": [
+        "Un peluche de doctor",
+        "Vendas y medicina si te enfermas",
+        "Una paleta de caramelo",
+        "Ver dibujos animados"
+      ],
+      "correcta": 1,
+      "explicacion": "Estar sanos es vital para poder jugar, estudiar y crecer."
+    },
+    {
+      "id": "q8",
+      "texto": "Si quieres un juguete nuevo pero no tienes dinero extra, ¿qué es lo mejor que puedes hacer?",
+      "opciones": [
+        "Llorar en la tienda",
+        "Ahorrar un poquito cada semana hasta completar el precio",
+        "Pedir dinero a extraños",
+        "Robarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "La paciencia y el ahorro son los superpoderes de un Ciudadano CEN."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Qué es la 'jerarquización'?",
+      "opciones": [
+        "Un tipo de baile",
+        "Poner las cosas en orden de importancia, de lo más necesario a lo menos",
+        "Gastar todo rápido",
+        "No comprar nada nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "Es hacer una lista donde lo más importante va hasta arriba."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cómo te sientes cuando sabes que tus necesidades (comida, casa, escuela) ya están pagadas?",
+      "opciones": [
+        "Asustado",
+        "Tranquilo y seguro",
+        "Aburrido",
+        "Enojado"
+      ],
+      "correcta": 1,
+      "explicacion": "Pagar lo necesario primero nos da PAZ MENTAL para disfrutar de la vida."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P5-4-4-B",
+  "unit_code": "P5-4-4",
+  "unit_title": "Marketing de Contenidos: el arte de ayudar",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Empatía y Negocios",
+  "descripcion": "¿Sabes leer las emociones de los demás? ¡Descubre cómo el corazón también ayuda a tu billetera!",
+  "objetivo": "Evaluar la comprensión de habilidades interpersonales aplicadas al entorno empresarial",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "eq1",
+      "texto": "¿Qué es la 'Escucha Activa'?",
+      "opciones": [
+        "Oír lo que dicen mientras ves tu celular",
+        "Prestar atención total, sin interrumpir y tratando de entender el sentimiento del otro",
+        "Escuchar música mientras trabajas",
+        "Anotar todo lo que dicen palabra por palabra"
+      ],
+      "correcta": 1,
+      "explicacion": "Escuchar con el corazón y la mente abierta es la base de todo trato exitoso."
+    },
+    {
+      "id": "eq2",
+      "texto": "¿Qué significa una negociación 'Ganar-Ganar'?",
+      "opciones": [
+        "Que yo gano dos veces",
+        "Que ambas partes salen beneficiadas y felices con el acuerdo",
+        "Que convenzo al otro de hacer lo que yo quiero",
+        "Que nadie gana nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Los mejores negocios son los que duran mucho tiempo porque todos están felices."
+    },
+    {
+      "id": "eq3",
+      "texto": "¿Por qué es importante la Inteligencia Emocional en un líder?",
+      "opciones": [
+        "Para saber actuar con calma cuando algo sale mal",
+        "Para que todos le tengan miedo",
+        "Para no tener sentimientos",
+        "Para ser el más divertido"
+      ],
+      "correcta": 0,
+      "explicacion": "Un líder que no controla su enojo o miedo asusta a su equipo y toma malas decisiones."
+    },
+    {
+      "id": "eq4",
+      "texto": "¿Qué es la 'Empatía'?",
+      "opciones": [
+        "Saber mucho de números",
+        "Ponerse en los zapatos del otro para entender su situación",
+        "Darle la razón a todos siempre",
+        "Ser muy simpático"
+      ],
+      "correcta": 1,
+      "explicacion": "La empatía te ayuda a crear productos que la gente realmente necesita."
+    },
+    {
+      "id": "eq5",
+      "texto": "Si un socio te da una 'Crítica Constructiva', ¿cómo debes reaccionar?",
+      "opciones": [
+        "Enojándote y dejando de hablarle",
+        "Escuchando con humildad y viendo cómo puedes mejorar",
+        "Diciéndole que él está peor",
+        "Cerrando el negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "La crítica constructiva es un regalo para que tu negocio crezca."
+    },
+    {
+      "id": "eq6",
+      "texto": "¿Cómo se maneja el estrés antes de una presentación importante?",
+      "opciones": [
+        "Tomando mucho refresco",
+        "Respirando profundo y visualizando el éxito",
+        "Gritándole a alguien",
+        "Huyendo del lugar"
+      ],
+      "correcta": 1,
+      "explicacion": "Controlar tu cuerpo ayuda a calmar tu mente."
+    },
+    {
+      "id": "eq7",
+      "texto": "¿Qué es la 'Asertividad'?",
+      "opciones": [
+        "Decir lo que piensas de forma clara y respetuosa, sin agredir ni callarte",
+        "Estar siempre de acuerdo con el jefe",
+        "Ser muy tímido",
+        "Gritar para que te escuchen"
+      ],
+      "correcta": 0,
+      "explicacion": "Ser asertivo permite que tus ideas se escuchen sin crear conflictos."
+    },
+    {
+      "id": "eq8",
+      "texto": "¿Por qué las empresas buscan gente con buena Inteligencia Emocional?",
+      "opciones": [
+        "Porque son más baratos",
+        "Porque trabajan mejor en equipo y resuelven problemas sin pelear",
+        "Porque no se cansan",
+        "Porque saben mucho de computadoras"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes que el éxito financiero también se construye con emociones sanas."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-4-1-B",
+  "unit_code": "S1-4-1",
+  "unit_title": "Lean Startup: validar antes de invertir tiempo y dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¿Cuánto valgo realmente?",
+  "descripcion": "¿Sabes la diferencia entre ser rico y parecer rico? ¡Pon a prueba tu conocimiento sobre activos y pasivos!",
+  "objetivo": "Identificar y clasificar correctamente los elementos que componen el patrimonio neto personal",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "pat1",
+      "texto": "¿Qué es un 'Activo'?",
+      "opciones": [
+        "Algo que te gusta mucho",
+        "Cualquier cosa que poseas y que tenga valor o que ponga dinero en tu bolsillo",
+        "El dinero que debes al banco",
+        "Un gasto necesario"
+      ],
+      "correcta": 1,
+      "explicacion": "Ejemplos: ahorros, acciones, una casa que rentas o tu propia educación."
+    },
+    {
+      "id": "pat2",
+      "texto": "¿Qué es un 'Pasivo'?",
+      "opciones": [
+        "Una persona que no trabaja",
+        "Cualquier deuda u obligación que saque dinero de tu bolsillo",
+        "Un regalo del banco",
+        "Un activo que ya no usas"
+      ],
+      "correcta": 1,
+      "explicacion": "Ejemplos: préstamos, saldos de tarjetas de crédito o impuestos por pagar."
+    },
+    {
+      "id": "pat3",
+      "texto": "¿Cómo se calcula el 'Patrimonio Neto'?",
+      "opciones": [
+        "Sumando todo tu salario del año",
+        "Activos menos Pasivos",
+        "Activos más Pasivos",
+        "Lo que tienes en el banco solamente"
+      ],
+      "correcta": 1,
+      "explicacion": "Es lo que realmente te quedaría si hoy vendieras todo lo que tienes y pagaras todo lo que debes."
+    },
+    {
+      "id": "pat4",
+      "texto": "¿Por qué un auto nuevo se considera un pasivo para la mayoría de las personas?",
+      "opciones": [
+        "Porque es muy rápido",
+        "Porque pierde valor cada año (depreciación) y genera gastos de gasolina, seguro y mantenimiento",
+        "Porque no es una casa",
+        "No es un pasivo, es un activo"
+      ],
+      "correcta": 1,
+      "explicacion": "A menos que lo uses para un negocio que te dé dinero, un auto es un gasto constante."
+    },
+    {
+      "id": "pat5",
+      "texto": "¿Qué significa tener un 'Patrimonio Neto Negativo'?",
+      "opciones": [
+        "Que no tienes dinero en efectivo",
+        "Que debes más dinero del que valen todas tus posesiones",
+        "Que el banco te debe dinero",
+        "Que eres una persona humilde"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una señal de alerta financiera que debe corregirse ahorrando y pagando deudas."
+    },
+    {
+      "id": "pat6",
+      "texto": "¿Qué es la 'Liquidez'?",
+      "opciones": [
+        "El agua que tomas",
+        "La facilidad con la que puedes convertir un activo en dinero efectivo (cash) rápido",
+        "El valor de tu casa",
+        "Tener muchas deudas"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero en tu cuenta es muy líquido; una casa tiene poca liquidez porque tarda meses en venderse."
+    },
+    {
+      "id": "pat7",
+      "texto": "¿Qué es la 'Depreciación'?",
+      "opciones": [
+        "Sentirse triste por el dinero",
+        "La pérdida de valor que sufren los objetos (como la tecnología o autos) por el uso y el tiempo",
+        "Cuando el dólar baja",
+        "Pagar menos impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso los activos que se deprecian no son buenas inversiones a largo plazo."
+    },
+    {
+      "id": "pat8",
+      "texto": "¿Cuál es la mejor estrategia para aumentar tu patrimonio neto?",
+      "opciones": [
+        "Comprar mucha ropa de marca",
+        "Adquirir activos que suban de valor (apreciación) o generen ingresos, y reducir pasivos",
+        "Pedir muchos préstamos",
+        "Ganar la lotería"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora tienes la brújula para medir tu verdadero progreso financiero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

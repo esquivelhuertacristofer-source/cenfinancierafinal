@@ -1,0 +1,123 @@
+{
+  "code": "ACT-P6-3-5-A",
+  "unit_code": "P6-3-5",
+  "unit_title": "Perfil de inversor: conócete a ti mismo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Número de Libertad",
+  "descripcion": "¿Sabías que hay un número exacto que te permite dejar de trabajar y vivir de tus inversiones? ¡Vamos a calcular el tuyo!",
+  "objetivo": "Comprender la regla del 4% y proyectar metas de independencia financiera a largo plazo",
+  "xp": 1000,
+  "output_type": "Plan Maestro de Libertad",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "estilo_vida_futuro",
+      "titulo": "🏠 Mi Vida Ideal",
+      "descripcion": "Imagina cuánto dinero necesitarías al mes para vivir feliz en el futuro.",
+      "campos": [
+        {
+          "id": "gasto_mensual_ideal",
+          "label": "Gasto mensual proyectado ($)",
+          "type": "text",
+          "placeholder": "Ej: 30000",
+          "requerido": true
+        },
+        {
+          "id": "descripcion_estilo",
+          "label": "¿Cómo sería un día en tu vida libre?",
+          "type": "textarea",
+          "placeholder": "Ej: Me levantaría a leer, viajaría y ayudaría en un refugio...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "calculo_libertad",
+      "titulo": "📈 El Cálculo Mágico",
+      "descripcion": "Para vivir de tus rentas, necesitas tener invertido 25 veces tu gasto anual.",
+      "campos": [
+        {
+          "id": "numero_libertad",
+          "label": "Tu Número de Libertad (Gasto Mensual x 300)",
+          "type": "text",
+          "placeholder": "Calcula: Gasto Mensual * 300",
+          "requerido": true
+        },
+        {
+          "id": "edad_meta",
+          "label": "¿A qué edad quieres alcanzar este número?",
+          "type": "slider",
+          "min": 30,
+          "max": 65,
+          "step": 1,
+          "default": 45,
+          "unit": "años"
+        },
+        {
+          "id": "gasto_mensual_num",
+          "label": "Tu Gasto Mensual Ideal ($)",
+          "type": "slider",
+          "min": 5000,
+          "max": 150000,
+          "step": 1000,
+          "default": 30000,
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "numero_fire_calculado",
+          "label": "Tu Número de Libertad Financiera",
+          "type": "calculated",
+          "formula": "gasto_mensual_num * 300",
+          "unit": "$",
+          "ayuda": "Gasto mensual × 300 = el patrimonio para no trabajar nunca (Regla del 4% anual)"
+        },
+        {
+          "id": "anos_para_lograrlo",
+          "label": "Años de Inversión Necesarios",
+          "type": "calculated",
+          "formula": "Math.max(1, edad_meta - 18)",
+          "unit": " años ahorrando desde los 18",
+          "ayuda": "El tiempo que tienes para construir tu número de libertad"
+        }
+      ]
+    },
+    {
+      "id": "plan_accion_p6",
+      "titulo": "🚀 Mi Plan de Acción",
+      "descripcion": "¿Cómo vas a construir esa montaña de dinero?",
+      "campos": [
+        {
+          "id": "inversion_mensual",
+          "label": "¿Cuánto invertirás cada mes desde tu primer trabajo?",
+          "type": "text",
+          "placeholder": "Ej: 2000",
+          "requerido": true
+        },
+        {
+          "id": "estrategia_activos",
+          "label": "Mis activos favoritos serán...",
+          "type": "select",
+          "opciones": [
+            "Bolsa de Valores (Acciones)",
+            "Bienes Raíces (Rentas)",
+            "Negocios Propios",
+            "Criptomonedas"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "promesa_libertad",
+          "label": "Escribe tu compromiso final",
+          "type": "textarea",
+          "placeholder": "Yo me comprometo a ser disciplinado y nunca dejar de aprender...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

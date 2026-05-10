@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-1-1-B",
+  "unit_code": "S1-1-1",
+  "unit_title": "El dinero y la sociedad: historia económica de México",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Lenguaje de la Bolsa",
+  "descripcion": "¿Sabes qué pasa en el piso de remates? Pon a prueba tu conocimiento sobre el mercado de capitales.",
+  "objetivo": "Identificar los conceptos básicos del mercado de valores y el rol de los accionistas",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "bol1",
+      "texto": "¿Qué representas cuando compras una acción?",
+      "opciones": [
+        "Que le prestaste dinero al banco",
+        "Que eres dueño de una parte proporcional de la empresa",
+        "Que eres un cliente especial",
+        "Que puedes usar sus productos gratis"
+      ],
+      "correcta": 1,
+      "explicacion": "Una acción es un título de propiedad sobre una parte de la empresa."
+    },
+    {
+      "id": "bol2",
+      "texto": "¿Qué es un 'Dividendo'?",
+      "opciones": [
+        "Una operación matemática",
+        "La parte de las ganancias de la empresa que se reparte entre los accionistas",
+        "Un impuesto nuevo",
+        "La deuda de la empresa"
+      ],
+      "correcta": 1,
+      "explicacion": "Es tu premio en efectivo por ser socio de una empresa que gana dinero."
+    },
+    {
+      "id": "bol3",
+      "texto": "¿Cómo se le llama al símbolo de 3 o 4 letras que identifica a una empresa en la bolsa (Ej: AAPL para Apple)?",
+      "opciones": [
+        "Código Secreto",
+        "Ticker",
+        "Nombre Corto",
+        "Sello Postal"
+      ],
+      "correcta": 1,
+      "explicacion": "El Ticker sirve para encontrar y comprar acciones rápidamente en el sistema."
+    },
+    {
+      "id": "bol4",
+      "texto": "¿Qué significa que el mercado esté en tendencia 'Bull' (Toro)?",
+      "opciones": [
+        "Que los precios están bajando",
+        "Que los precios están subiendo y hay optimismo",
+        "Que el mercado está cerrado",
+        "Que hay mucha violencia"
+      ],
+      "correcta": 1,
+      "explicacion": "El toro ataca de abajo hacia arriba, simbolizando el crecimiento de los precios."
+    },
+    {
+      "id": "bol5",
+      "texto": "¿Qué es la 'Capitalización de Mercado' (Market Cap)?",
+      "opciones": [
+        "El dinero que la empresa tiene en el banco",
+        "El valor total de la empresa en la bolsa (Precio acción x Total de acciones)",
+        "El número de empleados",
+        "La ciudad donde está la empresa"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el tamaño 'real' de la empresa según lo que vale en el mercado."
+    },
+    {
+      "id": "bol6",
+      "texto": "¿Qué es un 'Bear Market' (Oso)?",
+      "opciones": [
+        "Un mercado de animales",
+        "Cuando los precios bajan y hay miedo en los inversionistas",
+        "Cuando el mercado abre en invierno",
+        "Cuando las acciones son baratas"
+      ],
+      "correcta": 1,
+      "explicacion": "El oso ataca de arriba hacia abajo con sus garras, simbolizando la caída de los precios."
+    },
+    {
+      "id": "bol7",
+      "texto": "¿Cuál es la función de una Bolsa de Valores (como la BMV o el NYSE)?",
+      "opciones": [
+        "Guardar el dinero de la gente",
+        "Ser el lugar (digital o físico) donde compradores y vendedores intercambian acciones de forma segura",
+        "Imprimir los billetes",
+        "Vender seguros"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el mercado organizado donde se encuentran los inversionistas."
+    },
+    {
+      "id": "bol8",
+      "texto": "¿Por qué las empresas salen a la bolsa?",
+      "opciones": [
+        "Para hacerse famosas",
+        "Para conseguir capital (dinero) y poder crecer, construir fábricas o investigar tecnología",
+        "Para pagar menos impuestos",
+        "Porque es obligatorio"
+      ],
+      "correcta": 1,
+      "explicacion": "La bolsa es una fuente de financiamiento masiva para que las empresas escalen sus ideas."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

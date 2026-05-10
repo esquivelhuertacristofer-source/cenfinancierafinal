@@ -1,0 +1,68 @@
+{
+  "code": "ACT-P3-1-3-B",
+  "unit_code": "P3-1-3",
+  "unit_title": "Gastos fijos vs. Gastos variables",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "SIMPLE",
+  "titulo": "El Secreto de la Planificación",
+  "descripcion": "Completa el texto para descubrir cómo los expertos en dinero organizan sus gastos para que siempre les sobre algo para ahorrar.",
+  "objetivo": "Reforzar la comprensión de los conceptos de gasto fijo y variable y su impacto en el ahorro",
+  "xp": 250,
+  "texto": "Para tener un presupuesto sano, debo saber que los gastos __BLANK_1__ son los que no cambian, como la renta. Sin embargo, los gastos __BLANK_2__ son los más importantes de vigilar, porque ahí es donde podemos __BLANK_3__ dinero. Si decido no comprar ese juguete o ir menos al cine, mi capacidad de __BLANK_4__ crecerá mucho. Un buen administrador siempre paga sus compromisos __BLANK_5__ primero y luego decide cuánto gastar en lo demás.",
+  "blanks": [
+    {
+      "id": "blank_1",
+      "respuesta": "fijos",
+      "opciones": [
+        "fijos",
+        "variables",
+        "divertidos",
+        "grandes"
+      ]
+    },
+    {
+      "id": "blank_2",
+      "respuesta": "variables",
+      "opciones": [
+        "fijos",
+        "variables",
+        "invisibles",
+        "obligatorios"
+      ]
+    },
+    {
+      "id": "blank_3",
+      "respuesta": "ahorrar",
+      "opciones": [
+        "perder",
+        "ahorrar",
+        "regalar",
+        "esconder"
+      ]
+    },
+    {
+      "id": "blank_4",
+      "respuesta": "ahorro",
+      "opciones": [
+        "ahorro",
+        "deuda",
+        "hambre",
+        "sueño"
+      ]
+    },
+    {
+      "id": "blank_5",
+      "respuesta": "fijos",
+      "opciones": [
+        "fijos",
+        "variables",
+        "pequeños",
+        "nuevos"
+      ]
+    }
+  ],
+  "contexto": "Imagina que eres el contador de tu casa y debes explicarle a tu familia cómo van a juntar dinero para las vacaciones.",
+  "versión": "2026.Diamond.V2"
+}

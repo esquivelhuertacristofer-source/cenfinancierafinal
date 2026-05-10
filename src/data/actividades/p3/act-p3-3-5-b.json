@@ -1,0 +1,111 @@
+{
+  "code": "ACT-P3-3-5-B",
+  "unit_code": "P3-3-5",
+  "unit_title": "Las deudas malas y cómo evitarlas",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "¡Libre de Deudas Malas!",
+  "descripcion": "¿Sabes detectar una trampa financiera antes de caer en ella? ¡Demuestra que eres un Ciudadano CEN responsable!",
+  "objetivo": "Identificar patrones de endeudamiento negativo y fortalecer la toma de decisiones preventiva",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál es la característica principal de una 'Deuda Mala'?",
+      "opciones": [
+        "Te ayuda a comprar una casa",
+        "Se usa para comprar algo que no necesitas y que pierde valor rápido",
+        "Es un préstamo para estudiar",
+        "No tiene intereses"
+      ],
+      "correcta": 1,
+      "explicacion": "Las deudas malas suelen ser para caprichos o deseos que no puedes pagar hoy."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Por qué es peligroso tener muchas deudas malas?",
+      "opciones": [
+        "Porque te dan muchos premios",
+        "Porque te quitan el dinero que podrías usar para ahorrar y cumplir tus sueños",
+        "Porque el banco se pone feliz",
+        "No es peligroso"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada peso que pagas en intereses de deudas malas es un peso menos para tu futuro."
+    },
+    {
+      "id": "q3",
+      "texto": "Si quieres un juguete nuevo pero no tienes dinero, ¿qué es lo más inteligente?",
+      "opciones": [
+        "Pedirle prestado a todo el mundo",
+        "Ahorrar un poco cada semana hasta completar el precio",
+        "Usar la tarjeta de crédito de tus papás sin permiso",
+        "Llorar en la tienda"
+      ],
+      "correcta": 1,
+      "explicacion": "El ahorro es el antídoto contra las deudas malas."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué significa estar 'sobreendeudado'?",
+      "opciones": [
+        "Tener mucho dinero guardado",
+        "Que tus deudas son tan grandes que ya no te alcanza para pagar lo básico (comida, renta)",
+        "Que tienes muchas tarjetas de colores",
+        "Que el banco te quiere mucho"
+      ],
+      "correcta": 1,
+      "explicacion": "El sobreendeudamiento es una situación muy estresante que debemos evitar."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál de estos es un síntoma de una deuda mala?",
+      "opciones": [
+        "El dinero te ayuda a poner un negocio",
+        "Solo pagas el mínimo y la deuda nunca baja",
+        "Pagas todo a tiempo",
+        "No tiene intereses"
+      ],
+      "correcta": 1,
+      "explicacion": "Si la deuda no baja, estás en una trampa de intereses."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: ¿Una deuda para comprar una casa puede ser considerada una 'Deuda Buena'?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Verdadero. Una casa es un patrimonio que te da seguridad y suele subir de valor."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué debes hacer antes de pedir cualquier crédito?",
+      "opciones": [
+        "Cerrar los ojos y firmar",
+        "Hacer un presupuesto para ver si realmente puedes pagarlo cada mes",
+        "Preguntarle a un desconocido",
+        "Gastar el dinero antes de tenerlo"
+      ],
+      "correcta": 1,
+      "explicacion": "La planificación es la base de un crédito exitoso."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cuál es la mejor regla para usar el crédito?",
+      "opciones": [
+        "Pedir prestado para todo",
+        "Solo usar crédito para cosas que duren más que la propia deuda",
+        "No pagar nunca",
+        "Usar crédito solo para dulces"
+      ],
+      "correcta": 1,
+      "explicacion": "Si lo que compraste se acaba antes de que termines de pagarlo, ¡fue una mala decisión!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

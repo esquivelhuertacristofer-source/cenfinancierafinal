@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-4-2-A",
+  "unit_code": "P6-4-2",
+  "unit_title": "Formalidad Empresarial: Sociedades y RFC",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Pitch de Elevador",
+  "descripcion": "Tienes 60 segundos en un elevador con el inversionista más rico del mundo. ¿Qué le dirás para que invierta en tu negocio?",
+  "objetivo": "Sintetizar un modelo de negocio en un discurso de ventas persuasivo y estructurado",
+  "xp": 500,
+  "output_type": "Guion de Pitch de Elevador",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "el_gancho_problema",
+      "titulo": "🎣 El Gancho",
+      "descripcion": "Empieza con un dato curioso o un problema que todos entiendan.",
+      "campos": [
+        {
+          "id": "problema_pitch",
+          "label": "¿Cuál es el problema que quieres resolver?",
+          "type": "textarea",
+          "placeholder": "Ej: ¿Sabías que cada año se tiran millones de toneladas de plástico al mar?...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "la_solucion_magica",
+      "titulo": "💡 La Solución",
+      "descripcion": "Explica por qué tu producto es mejor que los demás.",
+      "campos": [
+        {
+          "id": "nombre_producto_pitch",
+          "label": "Nombre de tu invento",
+          "type": "text",
+          "placeholder": "Ej: EcoTenis...",
+          "requerido": true
+        },
+        {
+          "id": "diferenciador",
+          "label": "¿Qué te hace único?",
+          "type": "textarea",
+          "placeholder": "Ej: Somos los únicos que usan plástico reciclado de las playas para hacer tenis de lujo...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "el_pedido_final",
+      "titulo": "🤝 El Trato",
+      "descripcion": "Sé claro en lo que buscas.",
+      "campos": [
+        {
+          "id": "capital_buscado",
+          "label": "¿Cuánto dinero necesitas?",
+          "type": "text",
+          "placeholder": "Ej: Busco 1 millón de pesos...",
+          "requerido": true
+        },
+        {
+          "id": "porcentaje_ofrecido",
+          "label": "¿Qué porcentaje de tu empresa darás a cambio?",
+          "type": "slider",
+          "min": 1,
+          "max": 49,
+          "step": 1,
+          "default": 10,
+          "unit": "%"
+        },
+        {
+          "id": "frase_cierre",
+          "label": "Tu frase de impacto final",
+          "type": "text",
+          "placeholder": "Ej: ¡Hagamos que el planeta sea verde y rentable juntos!...",
+          "requerido": true
+        },
+        {
+          "id": "equity_retenido",
+          "label": "Equity que Conservas Tú",
+          "type": "calculated",
+          "formula": "Math.round(100 - porcentaje_ofrecido)",
+          "unit": "%",
+          "ayuda": "Lo que te queda como fundador después de aceptar la inversión"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

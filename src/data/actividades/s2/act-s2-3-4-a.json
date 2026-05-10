@@ -1,0 +1,102 @@
+{
+  "code": "ACT-S2-3-4-A",
+  "unit_code": "S2-3-4",
+  "unit_title": "Renta fija vs. variable: elegir según mis metas",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Plan de Vivienda: Rentar vs Comprar",
+  "descripcion": "Comprar una casa es la meta de muchos, pero ¿es siempre el mejor negocio financiero? ¡Haz las cuentas antes de firmar!",
+  "objetivo": "Evaluar el costo de oportunidad y el impacto financiero a largo plazo de un crédito hipotecario frente a la inversión",
+  "xp": 500,
+  "output_type": "Análisis Comparativo de Vivienda",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "el_inmueble_s2",
+      "titulo": "🏠 La Propiedad",
+      "descripcion": "Elige la casa o departamento de tus sueños.",
+      "campos": [
+        {
+          "id": "valor_propiedad_s2",
+          "label": "Valor de la Propiedad ($)",
+          "type": "slider",
+          "min": 1000000,
+          "max": 5000000,
+          "step": 100000,
+          "default": 2000000,
+          "unit": "$"
+        },
+        {
+          "id": "ahorro_disponible_s2",
+          "label": "Dinero que tienes hoy (Enganche) ($)",
+          "type": "slider",
+          "min": 200000,
+          "max": 1000000,
+          "step": 50000,
+          "default": 400000,
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "estrategia_vivienda",
+      "titulo": "⚖️ La Estrategia",
+      "descripcion": "¿Qué harás con tu dinero?",
+      "campos": [
+        {
+          "id": "opcion_elegida",
+          "label": "Tu Elección",
+          "type": "select",
+          "opciones": [
+            "Comprar con Crédito Hipotecario",
+            "Rentar e Invertir el Enganche en la Bolsa"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "plazo_analisis",
+          "label": "Plazo de Tiempo (Años)",
+          "type": "slider",
+          "min": 5,
+          "max": 20,
+          "step": 5,
+          "default": 15,
+          "unit": "años"
+        }
+      ]
+    },
+    {
+      "id": "analisis_financiero",
+      "titulo": "📊 El Resultado",
+      "descripcion": "Reflexiona sobre tu decisión.",
+      "campos": [
+        {
+          "id": "conclusiones_vivienda",
+          "label": "¿Cuál crees que será tu patrimonio final?",
+          "type": "textarea",
+          "placeholder": "Ej: Si compro, tendré una casa propia. Si rento e invierto, espero tener más dinero en el banco que lo que vale la casa...",
+          "requerido": true
+        },
+        {
+          "id": "enganche_pct",
+          "label": "Porcentaje de Enganche",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_disponible_s2 / Math.max(1, valor_propiedad_s2) * 100)",
+          "unit": "%",
+          "ayuda": "Se recomienda 20%+ de enganche para una hipoteca saludable"
+        },
+        {
+          "id": "mensualidad_hipoteca",
+          "label": "Mensualidad Hipotecaria de Referencia",
+          "type": "calculated",
+          "formula": "Math.round((valor_propiedad_s2 - ahorro_disponible_s2) * (0.10/12) / (1 - Math.pow(1 + 0.10/12, -(plazo_analisis * 12))))",
+          "unit": "$/mes",
+          "ayuda": "Estimado al 10% anual durante el plazo elegido"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

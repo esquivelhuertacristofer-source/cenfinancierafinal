@@ -1,0 +1,104 @@
+{
+  "code": "ACT-P3-4-5-A",
+  "unit_code": "P3-4-5",
+  "unit_title": "Feria de emprendedores en la escuela",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Plan de Feria",
+  "descripcion": "¡La gran feria ha llegado! Antes de poner tu puesto, necesitas un plan maestro para que todo salga perfecto.",
+  "objetivo": "Integrar conceptos de costos, precios, marketing y ventas en un plan de acción real",
+  "xp": 500,
+  "output_type": "Plan de Negocio Escolar",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "producto_estelar",
+      "titulo": "📦 Mi Producto Estelar",
+      "descripcion": "¿Qué vas a ofrecer en la feria?",
+      "campos": [
+        {
+          "id": "nombre_idea",
+          "label": "Nombre del Negocio",
+          "type": "text",
+          "placeholder": "Ej: Galletas El Diamante",
+          "requerido": true
+        },
+        {
+          "id": "descripcion_producto",
+          "label": "¿Qué vendes?",
+          "type": "textarea",
+          "placeholder": "Describe tu producto o servicio...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "finanzas_feria",
+      "titulo": "💰 Los Números",
+      "descripcion": "Asegúrate de que tu negocio sea rentable.",
+      "campos": [
+        {
+          "id": "costo_unitario",
+          "label": "Costo por unidad",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "precio_feria",
+          "label": "Precio de venta",
+          "type": "number",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "meta_ventas",
+          "label": "¿Cuántos quieres vender?",
+          "type": "number",
+          "unit": "unidades",
+          "requerido": true
+        },
+        {
+          "id": "ganancia_estimada",
+          "label": "Ganancia Total Estimada",
+          "type": "calculated",
+          "formula": "Math.round((precio_feria - costo_unitario) * meta_ventas)",
+          "unit": "$",
+          "ayuda": "Si vendes toda tu meta de unidades"
+        },
+        {
+          "id": "punto_equilibrio_feria",
+          "label": "Ventas Mínimas para No Perder",
+          "type": "calculated",
+          "formula": "Math.ceil(costo_unitario * meta_ventas / Math.max(1, precio_feria))",
+          "unit": " unidades mínimas",
+          "ayuda": "Debajo de esto pierdes dinero"
+        }
+      ]
+    },
+    {
+      "id": "el_stand",
+      "titulo": "🎪 Mi Stand",
+      "descripcion": "¿Cómo se verá tu lugar en la feria?",
+      "campos": [
+        {
+          "id": "materiales_stand",
+          "label": "Cosas que necesito llevar",
+          "type": "textarea",
+          "placeholder": "Ej: Mantel, letrero, caja para el dinero...",
+          "requerido": true
+        },
+        {
+          "id": "pitch_venta",
+          "label": "Tu frase de venta (Pitch)",
+          "type": "text",
+          "placeholder": "Ej: ¡Pruebe las mejores galletas de la escuela!",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

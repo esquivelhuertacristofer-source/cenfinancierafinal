@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-3-1-B",
+  "unit_code": "S1-3-1",
+  "unit_title": "El interés compuesto: el poder del tiempo en el dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Lenguaje de las Pólizas",
+  "descripcion": "¿Sabes qué significa 'Deducible' o 'Coaseguro'? ¡No dejes que la letra pequeña te tome por sorpresa!",
+  "objetivo": "Identificar los conceptos técnicos fundamentales de un contrato de seguro de gastos médicos",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "seg1",
+      "texto": "¿Qué es el 'Coaseguro'?",
+      "opciones": [
+        "Un segundo seguro que compras",
+        "Un porcentaje de los gastos totales (además del deducible) que tú debes pagar",
+        "El dinero que te regala el seguro",
+        "Un descuento por pagar a tiempo"
+      ],
+      "correcta": 1,
+      "explicacion": "Suele ser el 10%. Sirve para que el asegurado también cuide los costos del hospital."
+    },
+    {
+      "id": "seg2",
+      "texto": "¿Qué es el 'Tope de Coaseguro'?",
+      "opciones": [
+        "Lo máximo que la aseguradora va a pagar",
+        "La cantidad máxima que TÚ vas a pagar de coaseguro, sin importar qué tan cara sea la cuenta",
+        "Un límite de velocidad",
+        "El precio de la póliza"
+      ],
+      "correcta": 1,
+      "explicacion": "Es vital porque evita que una cuenta de millones de pesos te deje sin ahorros."
+    },
+    {
+      "id": "seg3",
+      "texto": "¿Qué significa 'Preexistencia'?",
+      "opciones": [
+        "Vivir en el pasado",
+        "Una enfermedad o padecimiento que ya tenías antes de contratar el seguro",
+        "Un beneficio por ser cliente antiguo",
+        "El nombre del hospital"
+      ],
+      "correcta": 1,
+      "explicacion": "La mayoría de los seguros no cubren enfermedades que ya sabías que tenías."
+    },
+    {
+      "id": "seg4",
+      "texto": "¿Qué es el 'Periodo de Espera'?",
+      "opciones": [
+        "El tiempo que esperas en la sala del hospital",
+        "El tiempo que debe pasar desde que contratas el seguro para que cubra ciertas enfermedades específicas",
+        "El tiempo que tarda en llegar la ambulancia",
+        "La duración del contrato"
+      ],
+      "correcta": 1,
+      "explicacion": "Sirve para evitar que la gente contrate el seguro solo cuando ya sabe que se va a operar."
+    },
+    {
+      "id": "seg5",
+      "texto": "¿A qué se refiere la 'Red Médica'?",
+      "opciones": [
+        "A los amigos del doctor",
+        "Al grupo de hospitales y doctores que tienen convenio con tu aseguradora",
+        "A una página web de medicina",
+        "A los medicamentos genéricos"
+      ],
+      "correcta": 1,
+      "explicacion": "Si vas a un hospital de la red, el pago suele ser directo y más sencillo."
+    },
+    {
+      "id": "seg6",
+      "texto": "¿Qué es la 'Suma Asegurada'?",
+      "opciones": [
+        "El total de tus ahorros",
+        "El monto máximo de dinero que la aseguradora pagará por un evento o enfermedad",
+        "Lo que pagas cada mes",
+        "El número de personas aseguradas"
+      ],
+      "correcta": 1,
+      "explicacion": "Debes asegurarte de que sea lo suficientemente alta para cubrir cirugías costosas."
+    },
+    {
+      "id": "seg7",
+      "texto": "¿Qué es el 'Pago Directo'?",
+      "opciones": [
+        "Pagar en efectivo",
+        "Cuando la aseguradora le paga directamente al hospital sin que tú tengas que desembolsar el dinero (menos tu parte)",
+        "Pagar el seguro cada mes",
+        "Un soborno"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el beneficio más cómodo para no descapitalizarte ante una emergencia."
+    },
+    {
+      "id": "seg8",
+      "texto": "¿Cuál es la función del 'Ajustador' en un seguro de auto?",
+      "opciones": [
+        "Arreglar el motor",
+        "La persona que evalúa el accidente para decidir quién tuvo la culpa y cuánto pagará el seguro",
+        "Vender seguros en la calle",
+        "Limpiar los vidrios"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora conoces los términos que te darán tranquilidad en momentos difíciles."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

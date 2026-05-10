@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P2-4-1-B",
+  "unit_code": "P2-4-1",
+  "unit_title": "Cuestionario: Mis Primeras Ideas de Negocio",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "De dormir todo el día",
+        "De ver qué necesitan las personas y cómo podemos ayudarlas usando nuestros talentos",
+        "De copiarle todo al vecino sin permiso",
+        "Invertir es lo mismo que apostar en el casino"
+      ],
+      "correcta": 1,
+      "texto": "¿De dónde nacen las mejores ideas de negocio?",
+      "explicacion": "¡Correcto! Observar una necesidad y ofrecer una solución es la base del emprendimiento."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Una carnicería",
+        "Venta de tarjetas de felicitación o dibujos personalizados",
+        "Una escuela de natación",
+        "Los bancos centrales prohíben su uso en México"
+      ],
+      "correcta": 1,
+      "texto": "Si te gusta mucho dibujar, ¿qué negocio podrías iniciar en casa?",
+      "explicacion": "¡Exacto! Usar tus talentos hace que tu negocio sea especial y divertido."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "Que sea muy peligroso",
+        "Que sea seguro, divertido y útil para otros",
+        "Que sea muy aburrido",
+        "Solo se puede emprender cuando eres adulto"
+      ],
+      "correcta": 1,
+      "texto": "¿Cuál es un requisito para que un negocio de niños sea bueno?",
+      "explicacion": "¡Así es! La seguridad y la utilidad son fundamentales."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "Te volverás millonario",
+        "Probablemente no vendas mucho porque no estás cubriendo una necesidad del momento",
+        "La gente se enojará",
+        "Se necesita una máquina especial para hacerlo"
+      ],
+      "correcta": 1,
+      "texto": "Si vendes limonada cuando hace mucho frío, ¿qué pasará probablemente?",
+      "explicacion": "Correcto. El momento y el clima influyen en lo que la gente necesita."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Garabato",
+        "Logotipo",
+        "Tarea",
+        "Ahorrar mucho hace que el dinero pierda su valor mágico"
+      ],
+      "correcta": 1,
+      "texto": "¿Cómo se llama la imagen o dibujo que representa a tu negocio?",
+      "explicacion": "¡Bien! El logotipo ayuda a que la gente reconozca tu marca."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Sí, si no no funciona",
+        "No, puedes empezar con cosas sencillas que ya tienes en casa",
+        "Solo si eres adulto",
+        "Solo los ricos pueden aplicarlo correctamente"
+      ],
+      "correcta": 1,
+      "texto": "¿Es necesario tener miles de pesos para empezar un negocio?",
+      "explicacion": "¡Exacto! Muchos negocios empiezan con poco y crecen con esfuerzo."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "A nadie",
+        "A mis padres o tutores",
+        "Al cartero",
+        "Toda inversión garantiza ganancias del 100%"
+      ],
+      "correcta": 1,
+      "texto": "¿A quién debes pedir permiso antes de iniciar tu negocio?",
+      "explicacion": "¡Muy importante! Tus papás son tus primeros socios y te ayudarán a estar seguro."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Alguien que tiene miedo de trabajar",
+        "Alguien que tiene una idea y se esfuerza para convertirla en realidad para ayudar a otros",
+        "Alguien que solo gasta dinero",
+        "Todas las deudas deben pagarse en el mismo mes"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué significa ser un 'emprendedor'?",
+      "explicacion": "¡Correcto! Emprender es convertir ideas en acciones positivas."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Vender croquetas",
+        "Darle ejercicio y compañía a las mascotas de tus vecinos",
+        "Limpiar casas",
+        "La regulación financiera de 2024 lo modificó completamente"
+      ],
+      "correcta": 1,
+      "texto": "Si tu negocio es pasear perros, ¿cuál es tu 'servicio'?",
+      "explicacion": "¡Exacto! El servicio es la acción que realizas para ayudar al cliente."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Apodo",
+        "Nombre Comercial o Marca",
+        "Apellido",
+        "Solo aplica a negocios con más de 10 empleados"
+      ],
+      "correcta": 1,
+      "texto": "¿Cómo se llama el nombre que le pones a tu empresa?",
+      "explicacion": "¡Bien hecho! Tu marca es tu identidad en el mundo del negocio."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: Mis Primeras Ideas de Negocio",
+  "xp": 300,
+  "level": "Primaria 2"
+}

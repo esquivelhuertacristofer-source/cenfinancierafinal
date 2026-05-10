@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-3-4-B",
+  "unit_code": "P6-3-4",
+  "unit_title": "Impuestos: contribuyendo al bien común",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Escudo del Patrimonio",
+  "descripcion": "¿Sabes qué significan las palabras de una póliza de seguros? ¡Prepárate para proteger tu futuro!",
+  "objetivo": "Identificar y comprender los términos básicos de los contratos de seguros",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "seg1",
+      "texto": "¿Qué es la 'Prima' en un seguro?",
+      "opciones": [
+        "La hija de tu tía",
+        "El costo periódico que pagas por tener la protección del seguro",
+        "El dinero que te devuelven",
+        "Un tipo de premio"
+      ],
+      "correcta": 1,
+      "explicacion": "La prima es el 'boleto' que pagas para estar protegido."
+    },
+    {
+      "id": "seg2",
+      "texto": "¿Qué es el 'Deducible'?",
+      "opciones": [
+        "Lo que el seguro no te quiere pagar",
+        "La cantidad fija de dinero que tú debes pagar antes de que el seguro empiece a cubrir los gastos",
+        "Un descuento en la tienda",
+        "Dinero que se pierde para siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "Es tu participación en el gasto. Entre mayor sea el deducible, más barata suele ser la prima."
+    },
+    {
+      "id": "seg3",
+      "texto": "¿A quién se le llama 'Beneficiario'?",
+      "opciones": [
+        "Al dueño de la aseguradora",
+        "A la persona que recibirá el dinero del seguro en caso de que algo pase (ej: tus hijos)",
+        "Al doctor del hospital",
+        "Al vendedor de seguros"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la persona protegida por el contrato."
+    },
+    {
+      "id": "seg4",
+      "texto": "¿Qué es la 'Suma Asegurada'?",
+      "opciones": [
+        "La suma de todos tus ahorros",
+        "El monto máximo que la aseguradora pagará por un evento (ej: 10 millones de pesos)",
+        "Lo que pagas cada mes",
+        "El número de personas en el seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el límite del escudo. Siempre busca sumas aseguradas altas para enfermedades graves."
+    },
+    {
+      "id": "seg5",
+      "texto": "¿Por qué es importante contratar un seguro de vida cuando eres joven y sano?",
+      "opciones": [
+        "Porque es más caro",
+        "Porque te sale mucho más barato y es más fácil que te acepten",
+        "Porque no lo necesitas",
+        "Porque te dan regalos"
+      ],
+      "correcta": 1,
+      "explicacion": "El riesgo es menor para la aseguradora, por lo que te cobran menos."
+    },
+    {
+      "id": "seg6",
+      "texto": "¿Qué cubre un Seguro de Responsabilidad Civil?",
+      "opciones": [
+        "Tus propios gastos",
+        "Los daños que tú le causes a otras personas o a su propiedad (ej: en un choque)",
+        "Tus vacaciones",
+        "Tus estudios"
+      ],
+      "correcta": 1,
+      "explicacion": "Te protege de tener que pagar fortunas por errores accidentales."
+    },
+    {
+      "id": "seg7",
+      "texto": "¿Qué es el 'Coaseguro'?",
+      "opciones": [
+        "Tener dos seguros iguales",
+        "Un porcentaje del gasto total que tú pagas después del deducible",
+        "Un descuento por pronto pago",
+        "Un seguro compartido con amigos"
+      ],
+      "correcta": 1,
+      "explicacion": "Suele ser un 10% del total. Ayuda a que las personas no gasten de más en el hospital sin necesidad."
+    },
+    {
+      "id": "seg8",
+      "texto": "¿Cuál es la función social de los seguros?",
+      "opciones": [
+        "Hacer ricos a los bancos",
+        "Repartir el riesgo de unos pocos entre muchas personas para que nadie caiga en la pobreza por un accidente",
+        "Cobrar mucho dinero",
+        "Dar empleo a vendedores"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora entiendes que los seguros son una red de apoyo mutuo organizada."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

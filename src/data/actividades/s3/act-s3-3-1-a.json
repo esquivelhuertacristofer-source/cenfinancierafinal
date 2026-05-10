@@ -1,0 +1,217 @@
+{
+  "code": "ACT-S3-3-1-A",
+  "unit_code": "S3-3-1",
+  "unit_title": "Plan de retiro anticipado: construirlo desde los 15",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Construye Tu Portafolio de Retiro",
+  "descripcion": "El FIRE number ya lo calculaste. Ahora la pregunta real es: ¿cómo llegas ahí? Este simulador te muestra cómo asignar tu capital entre 3 clases de activos y cómo el balance agresivo vs. conservador cambia tu fecha de retiro.",
+  "objetivo": "Simular la construcción de un portafolio de retiro diversificado y entender cómo la asignación de activos determina el riesgo y la velocidad de acumulación",
+  "xp": 500,
+  "descripcion_formula": "Rendimiento Portafolio = (% acciones × 10%) + (% bonos × 7%) + (% efectivo × 4%). Portfolio Final = Capital × (1 + rendimiento_ponderado)^años + Aportación × [((1+r)^n - 1) / r]",
+  "inputs": [
+    {
+      "id": "capital_inicial_ret",
+      "label": "Capital inicial para el retiro",
+      "type": "slider",
+      "min": 0,
+      "max": 500000,
+      "step": 5000,
+      "default": 20000,
+      "unit": "$"
+    },
+    {
+      "id": "aportacion_mensual_ret",
+      "label": "Aportación mensual al portafolio",
+      "type": "slider",
+      "min": 500,
+      "max": 30000,
+      "step": 500,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "pct_acciones",
+      "label": "% del portafolio en Acciones/ETFs (alto rendimiento, alta volatilidad)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 60,
+      "unit": "%",
+      "referencia": "Acciones: rendimiento histórico ~10% anual, con años de -30% y años de +40%"
+    },
+    {
+      "id": "pct_bonos",
+      "label": "% del portafolio en Bonos/CETES (rendimiento medio, bajo riesgo)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30,
+      "unit": "%",
+      "referencia": "Bonos/CETES: rendimiento ~7% anual, muy estables"
+    },
+    {
+      "id": "anos_hasta_retiro",
+      "label": "Años que planeas trabajar antes de retirarte",
+      "type": "slider",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "meta_fire",
+      "label": "Tu Número FIRE (meta de portafolio para retiro)",
+      "type": "slider",
+      "min": 1000000,
+      "max": 30000000,
+      "step": 500000,
+      "default": 7500000,
+      "unit": "$"
+    }
+  ],
+  "formula": "capital_inicial_ret * Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) + aportacion_mensual_ret * ((Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) - 1) / ((pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12))",
+  "outputs_multiples": [
+    {
+      "id": "portafolio_proyectado",
+      "label": "Tu portafolio proyectado al retiro",
+      "formula": "capital_inicial_ret * Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) + aportacion_mensual_ret * ((Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) - 1) / ((pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12))",
+      "prefix": "$",
+      "descripcion": "Con esta asignación de activos y estas aportaciones."
+    },
+    {
+      "id": "rendimiento_ponderado",
+      "label": "Rendimiento anual ponderado del portafolio",
+      "formula": "pct_acciones/100*10 + pct_bonos/100*7 + (100-pct_acciones-pct_bonos)/100*4",
+      "suffix": "% anual",
+      "descripcion": "El rendimiento promedio que generará tu combinación de activos."
+    },
+    {
+      "id": "pct_meta_alcanzada",
+      "label": "% de tu meta FIRE que alcanzas",
+      "formula": "Math.min(150, Math.round((capital_inicial_ret * Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) + aportacion_mensual_ret * ((Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) - 1) / ((pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12))) / meta_fire * 100))",
+      "suffix": "% de la meta",
+      "descripcion": "Qué tan cerca de la libertad financiera llegas."
+    },
+    {
+      "id": "ingreso_pasivo_mensual",
+      "label": "Ingreso pasivo mensual al retiro (Regla 4%)",
+      "formula": "Math.round((capital_inicial_ret * Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) + aportacion_mensual_ret * ((Math.pow(1 + (pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12, anos_hasta_retiro*12) - 1) / ((pct_acciones/100*0.10 + pct_bonos/100*0.07 + (100-pct_acciones-pct_bonos)/100*0.04)/12))) * 0.04 / 12)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El 4% anual de tu portafolio dividido entre 12 meses, sin tocar el capital."
+    }
+  ],
+  "output_label": "Tu portafolio al retiro",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "portafolio_agresivo",
+      "label": "Portafolio agresivo (80% acciones)",
+      "color": "#FF8C00"
+    },
+    {
+      "id": "portafolio_tuyo",
+      "label": "Tu portafolio actual",
+      "color": "#22c55e"
+    },
+    {
+      "id": "portafolio_conservador",
+      "label": "Portafolio conservador (20% acciones)",
+      "color": "#a78bfa"
+    },
+    {
+      "id": "meta_fire_line",
+      "label": "Tu meta FIRE",
+      "color": "#ef4444",
+      "tipo": "horizontal"
+    }
+  ],
+  "comparativa_estrategias": {
+    "titulo": "Estrategias según tu horizonte de tiempo",
+    "filas": [
+      {
+        "edad": "15-25 años",
+        "estrategia": "Agresiva",
+        "acciones": 80,
+        "bonos": 15,
+        "efectivo": 5,
+        "razon": "Tienes tiempo de recuperarte de crisis. Aprovecha el crecimiento máximo."
+      },
+      {
+        "edad": "25-40 años",
+        "estrategia": "Moderada-Agresiva",
+        "acciones": 60,
+        "bonos": 30,
+        "efectivo": 10,
+        "razon": "Sigues con horizonte largo pero empiezas a proteger lo acumulado."
+      },
+      {
+        "edad": "40-55 años",
+        "estrategia": "Moderada",
+        "acciones": 40,
+        "bonos": 45,
+        "efectivo": 15,
+        "razon": "El capital acumulado importa más — menos riesgo, rendimiento estable."
+      },
+      {
+        "edad": "55+ años",
+        "estrategia": "Conservadora",
+        "acciones": 20,
+        "bonos": 60,
+        "efectivo": 20,
+        "razon": "Preservar el capital es la prioridad. Ya no hay tiempo de recuperarse de grandes caídas."
+      }
+    ]
+  },
+  "escenarios": [
+    {
+      "condicion": "pct_acciones + pct_bonos > 100",
+      "mensaje": "⚠️ La suma de acciones + bonos no puede superar 100%. El resto va a efectivo/liquidez.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "pct_acciones >= 70 && anos_hasta_retiro >= 15",
+      "mensaje": "🚀 Portafolio agresivo con horizonte largo — la combinación perfecta. Las crisis a corto plazo no te afectan porque tienes tiempo de recuperarte.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "pct_acciones >= 70 && anos_hasta_retiro < 10",
+      "mensaje": "⚠️ Portafolio muy agresivo con poco tiempo. Una crisis a 3 años de tu retiro podría destruir 40% de tu capital justo cuando más lo necesitas.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "pct_acciones <= 20",
+      "mensaje": "📊 Portafolio muy conservador. Bueno para proteger capital, pero con 14-15 años tienes décadas por delante — considera subir el % en acciones para aprovechar el crecimiento.",
+      "tipo": "info"
+    }
+  ],
+  "pregunta_reflexion": "¿Qué porcentaje de tu portafolio pondrías en acciones si tienes 15 años y planeas retirarte a los 40? ¿Por qué tiene sentido ser más agresivo cuando eres joven?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Portafolio iniciado: Los primeros pesos invertidos son los más importantes."
+    },
+    {
+      "valor": 50,
+      "mensaje": "A mitad del camino — el interés compuesto ya empieza a hacer su magia."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona final: El dinero que genera tu portafolio supera tus aportaciones."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡META FIRE ALCANZADA! Libertad financiera lograda."
+    }
+  ],
+  "comparativa_espera": "Un portafolio 60% acciones / 40% bonos ha generado históricamente 9-11% anual en México. Las AFOREs aplican exactamente esta lógica de diversificación para los $5 billones de pesos de ahorro para el retiro de los trabajadores mexicanos."
+}

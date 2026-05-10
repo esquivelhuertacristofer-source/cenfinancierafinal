@@ -1,0 +1,134 @@
+{
+  "code": "ACT-P5-4-3-A",
+  "unit_code": "P5-4-3",
+  "unit_title": "El Punto de Equilibrio: ¿cuánto debo vender para no perder?",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "¿Cuánto Debo Vender Para No Perder?",
+  "descripcion": "Tienes un negocio de limonadas. Cada mes pagas $800 de renta aunque no vendas nada. Cada limonada cuesta $8 hacerla y la vendes en $20. ¿Cuántas limonadas necesitas vender para que el negocio no pierda dinero? Eso es el punto de equilibrio.",
+  "objetivo": "Calcular el punto de equilibrio de un negocio y entender la diferencia entre costos fijos, costos variables y precio de venta",
+  "xp": 450,
+  "descripcion_formula": "Punto de Equilibrio = Costos Fijos / (Precio - Costo Variable por Unidad). El margen de contribución es lo que cada venta aporta a cubrir los costos fijos.",
+  "inputs": [
+    {
+      "id": "costo_fijo_mensual",
+      "label": "Costos Fijos al Mes ($)",
+      "type": "slider",
+      "min": 500,
+      "max": 20000,
+      "step": 500,
+      "default": 3000,
+      "unit": "$",
+      "referencia": "Renta, sueldos fijos, servicios — pagos que haces aunque no vendas nada"
+    },
+    {
+      "id": "precio_unitario",
+      "label": "Precio de Venta por Unidad ($)",
+      "type": "slider",
+      "min": 10,
+      "max": 500,
+      "step": 5,
+      "default": 80,
+      "unit": "$"
+    },
+    {
+      "id": "costo_variable_unitario",
+      "label": "Costo Variable por Unidad ($)",
+      "type": "slider",
+      "min": 5,
+      "max": 400,
+      "step": 5,
+      "default": 35,
+      "unit": "$",
+      "referencia": "Materiales, ingredientes, empaque — lo que gastas solo cuando produces una unidad"
+    },
+    {
+      "id": "meta_ventas_mensuales",
+      "label": "Ventas Proyectadas al Mes (unidades)",
+      "type": "slider",
+      "min": 10,
+      "max": 500,
+      "step": 10,
+      "default": 100,
+      "unit": "uds"
+    }
+  ],
+  "formula": "Math.ceil(costo_fijo_mensual / Math.max(1, precio_unitario - costo_variable_unitario))",
+  "output_label": "Punto de Equilibrio (unidades/mes)",
+  "output_prefix": "",
+  "output_suffix": " unidades",
+  "outputs_multiples": [
+    {
+      "id": "punto_equilibrio_unidades",
+      "label": "Punto de Equilibrio",
+      "formula": "Math.ceil(costo_fijo_mensual / Math.max(1, precio_unitario - costo_variable_unitario))",
+      "prefix": "",
+      "suffix": " unidades/mes",
+      "descripcion": "Ventas mínimas para que el negocio no pierda dinero"
+    },
+    {
+      "id": "ingresos_en_pe",
+      "label": "Ingresos en el Punto de Equilibrio",
+      "formula": "Math.ceil(costo_fijo_mensual / Math.max(1, precio_unitario - costo_variable_unitario)) * precio_unitario",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Los ingresos exactos que cubren todos tus costos sin ganar ni perder"
+    },
+    {
+      "id": "margen_por_unidad",
+      "label": "Margen de Contribución",
+      "formula": "precio_unitario - costo_variable_unitario",
+      "prefix": "$",
+      "suffix": " por unidad",
+      "descripcion": "Lo que cada venta aporta para cubrir costos fijos y generar ganancia"
+    },
+    {
+      "id": "ganancia_si_llegas_meta",
+      "label": "Ganancia si Alcanzas tu Meta",
+      "formula": "Math.max(0, (precio_unitario - costo_variable_unitario) * meta_ventas_mensuales - costo_fijo_mensual)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Ganancia neta si logras vender tu meta mensual"
+    }
+  ],
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "ingresos_totales",
+      "label": "Ingresos Totales ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "costos_totales",
+      "label": "Costos Totales ($)",
+      "color": "#ef4444"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "meta_ventas_mensuales > Math.ceil(costo_fijo_mensual / Math.max(1, precio_unitario - costo_variable_unitario)) * 1.5",
+      "mensaje": "🏆 Negocio Rentable. Tu meta de ventas supera ampliamente el punto de equilibrio. Tienes un colchón de seguridad. ¡Buen plan de negocio!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "meta_ventas_mensuales < Math.ceil(costo_fijo_mensual / Math.max(1, precio_unitario - costo_variable_unitario))",
+      "mensaje": "🔥 ¡Peligro! Tu meta de ventas está por debajo del punto de equilibrio. El negocio perdería dinero cada mes. Debes reducir costos fijos, bajar el costo variable o subir el precio.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "precio_unitario - costo_variable_unitario < precio_unitario * 0.2",
+      "mensaje": "⚠️ Margen muy bajo. Tu margen de contribución es menor al 20% del precio. Cualquier problema (mermas, devoluciones) puede hacerte perder dinero.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El punto de equilibrio es el número más importante de cualquier negocio. Si no sabes cuánto debes vender cada mes para sobrevivir, estás volando a ciegas.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Qué pasa si tu negocio vende menos del punto de equilibrio durante 3 meses seguidos? ¿Qué ajustarías primero: reducir costos o subir el precio de venta?",
+  "comparativa_espera": "El 80% de los nuevos negocios cierran en sus primeros 5 años. La razón principal: no sabían cuánto necesitaban vender cada mes para sobrevivir. El punto de equilibrio es el número más importante de cualquier negocio."
+}

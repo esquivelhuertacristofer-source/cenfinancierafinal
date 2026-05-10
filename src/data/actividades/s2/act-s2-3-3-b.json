@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-3-3-B",
+  "unit_code": "S2-3-3",
+  "unit_title": "Construir mi portafolio de inversión: paso a paso",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Valor de tu Palabra",
+  "descripcion": "¿Sabes qué dice tu historial financiero de ti? ¡Descubre cómo convertirte en el cliente favorito de los bancos!",
+  "objetivo": "Identificar los factores que componen el puntaje crediticio y desmitificar el funcionamiento de las sociedades de información crediticia",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "bur1",
+      "texto": "¿Qué es el 'Buró de Crédito'?",
+      "opciones": [
+        "Una lista negra de gente que no paga",
+        "Una empresa que guarda el historial de cómo usas y pagas tus créditos (buenos y malos)",
+        "Una oficina del gobierno que te multa",
+        "Un banco"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Mito derribado! Estar en el buró es necesario para que te presten; lo que importa es si tienes 'palomita' o 'tache'."
+    },
+    {
+      "id": "bur2",
+      "texto": "¿Cuál es el factor que MÁS influye en tu puntaje crediticio?",
+      "opciones": [
+        "Tener mucho dinero en el banco",
+        "Tu puntualidad en los pagos (pagar antes o en la fecha límite)",
+        "El color de tu tarjeta",
+        "Tu edad"
+      ],
+      "correcta": 1,
+      "explicacion": "Pagar a tiempo es el 35% de tu calificación."
+    },
+    {
+      "id": "bur3",
+      "texto": "¿Qué es la 'Utilización de Crédito'?",
+      "opciones": [
+        "Cuánto dinero sacas del cajero",
+        "El porcentaje de tu límite que usas (ej: si tienes $10k y debes $9k, usas el 90%)",
+        "Tener muchas tarjetas",
+        "Pagar el total"
+      ],
+      "correcta": 1,
+      "explicacion": "Los expertos recomiendan no usar más del 30% de tu límite para tener un score alto."
+    },
+    {
+      "id": "bur4",
+      "texto": "¿Cuánto tiempo suele tardar en borrarse una mancha negativa en tu historial?",
+      "opciones": [
+        "Para siempre",
+        "Entre 1 y 6 años, dependiendo del monto de la deuda",
+        "Un mes",
+        "Diez años"
+      ],
+      "correcta": 1,
+      "explicacion": "La ley establece que la información debe actualizarse y borrarse después de cierto tiempo si ya pagaste."
+    },
+    {
+      "id": "bur5",
+      "texto": "¿Por qué es importante revisar tu historial al menos una vez al año?",
+      "opciones": [
+        "Para ver si tienes premios",
+        "Para detectar errores o robos de identidad (alguien pidiendo créditos a tu nombre)",
+        "Porque el banco te obliga",
+        "Para gastar dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "El robo de identidad puede destruir tu crédito sin que te des cuenta."
+    },
+    {
+      "id": "bur6",
+      "texto": "¿Tener muchas deudas pequeñas es mejor que tener una grande?",
+      "opciones": [
+        "Sí, se ve mejor",
+        "No, tener muchas cuentas abiertas y activas puede hacerte ver como un cliente riesgoso",
+        "Es lo mismo",
+        "Depende del banco"
+      ],
+      "correcta": 1,
+      "explicacion": "La simplicidad y el control son mejores para tu puntaje."
+    },
+    {
+      "id": "bur7",
+      "texto": "¿Cuál es un beneficio de tener un puntaje de crédito alto (>750)?",
+      "opciones": [
+        "Que te den una tarjeta de plástico",
+        "Tener acceso a las tasas de interés más bajas del mercado, ahorrando mucho dinero en préstamos",
+        "No pagar impuestos",
+        "Que el banco te regale una casa"
+      ],
+      "correcta": 1,
+      "explicacion": "Un buen score es como tener un descuento de por vida en el costo del dinero."
+    },
+    {
+      "id": "bur8",
+      "texto": "¿Qué pasa si nunca has pedido un crédito y no estás en el Buró?",
+      "opciones": [
+        "Es perfecto, no debes nada",
+        "Eres un 'fantasma financiero' y los bancos no te prestarán porque no saben si eres buena paga",
+        "Eres rico",
+        "No puedes trabajar"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes que construir un buen historial es una tarea que empieza desde joven."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

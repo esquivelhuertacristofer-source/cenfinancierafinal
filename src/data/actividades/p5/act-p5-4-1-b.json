@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P5-4-1-B",
+  "unit_code": "P5-4-1",
+  "unit_title": "El Equipo Ideal: roles para el éxito",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "De la Idea a la Mesa",
+  "descripcion": "¿Sabes qué paso va primero en una Pizzería? ¡Ordena los procesos para que tu negocio sea el mejor!",
+  "objetivo": "Identificar la secuencia lógica de una cadena de valor empresarial",
+  "xp": 250,
+  "instruccion": "Arrastra los pasos en el orden correcto (del 1 al 10).",
+  "items": [
+    {
+      "id": "p1",
+      "label": "1. Estudio de mercado (¿Qué pizza quieren?)",
+      "emoji": "📋",
+      "categoria_correcta": "inicio",
+      "feedback": "Primero investigamos qué quiere el cliente."
+    },
+    {
+      "id": "p2",
+      "label": "2. Compra de ingredientes frescos",
+      "emoji": "🛒",
+      "categoria_correcta": "inicio",
+      "feedback": "Sin materia prima no hay producto."
+    },
+    {
+      "id": "p3",
+      "label": "3. Preparación de la masa secreta",
+      "emoji": "🍞",
+      "categoria_correcta": "produccion",
+      "feedback": "La base de la calidad."
+    },
+    {
+      "id": "p4",
+      "label": "4. Armado de la pizza con ingredientes",
+      "emoji": "🍕",
+      "categoria_correcta": "produccion",
+      "feedback": "Poniendo el valor agregado."
+    },
+    {
+      "id": "p5",
+      "label": "5. Horneado a temperatura perfecta",
+      "emoji": "🔥",
+      "categoria_correcta": "produccion",
+      "feedback": "Transformación final del producto."
+    },
+    {
+      "id": "p6",
+      "label": "6. Empaque en cajas ecológicas",
+      "emoji": "📦",
+      "categoria_correcta": "entrega",
+      "feedback": "Protegiendo el producto para el viaje."
+    },
+    {
+      "id": "p7",
+      "label": "7. Publicidad en redes sociales",
+      "emoji": "📱",
+      "categoria_correcta": "entrega",
+      "feedback": "¡Que todos sepan que estamos listos!"
+    },
+    {
+      "id": "p8",
+      "label": "8. Venta y Cobro al cliente",
+      "emoji": "💰",
+      "categoria_correcta": "final",
+      "feedback": "Aquí es donde recuperas tu inversión."
+    },
+    {
+      "id": "p9",
+      "label": "9. Entrega rápida a domicilio",
+      "emoji": "🛵",
+      "categoria_correcta": "final",
+      "feedback": "Cumpliendo la promesa al cliente."
+    },
+    {
+      "id": "p10",
+      "label": "10. Encuesta de satisfacción",
+      "emoji": "⭐",
+      "categoria_correcta": "final",
+      "feedback": "¿Les gustó? ¡Esto nos ayuda a mejorar!"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "inicio",
+      "label": "PLANEAR Y PREPARAR",
+      "emoji": "🧠",
+      "color": "#1e3a8a"
+    },
+    {
+      "id": "produccion",
+      "label": "CREAR EL PRODUCTO",
+      "emoji": "🛠️",
+      "color": "#b45309"
+    },
+    {
+      "id": "entrega",
+      "label": "MARKETING Y EMPAQUE",
+      "emoji": "📢",
+      "color": "#047857"
+    },
+    {
+      "id": "final",
+      "label": "VENTA Y SERVICIO",
+      "emoji": "🤝",
+      "color": "#7c3aed"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

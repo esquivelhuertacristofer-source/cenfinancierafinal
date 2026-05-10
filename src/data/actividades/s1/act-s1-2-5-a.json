@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S1-2-5-A",
+  "unit_code": "S1-2-5",
+  "unit_title": "Negociación salarial: pedir un aumento con argumentos",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mapa de los Recursos",
+  "descripcion": "El mundo se mueve por las materias primas. ¿Sabes para qué sirven y por qué los países pelean por ellas?",
+  "objetivo": "Identificar los principales commodities y su importancia estratégica en la economía global",
+  "xp": 400,
+  "instruccion": "Arrastra cada recurso a su uso estratégico correcto.",
+  "items": [
+    {
+      "id": "res1",
+      "label": "Petróleo Crudo",
+      "emoji": "🛢️",
+      "categoria_correcta": "energia",
+      "feedback": "Base de la gasolina, plásticos y fertilizantes."
+    },
+    {
+      "id": "res2",
+      "label": "Gas Natural",
+      "emoji": "🔥",
+      "categoria_correcta": "energia",
+      "feedback": "Usado para generar electricidad y calefacción."
+    },
+    {
+      "id": "res3",
+      "label": "Litio",
+      "emoji": "🔋",
+      "categoria_correcta": "tecnologia",
+      "feedback": "El 'oro blanco': indispensable para baterías de autos eléctricos."
+    },
+    {
+      "id": "res4",
+      "label": "Cobre",
+      "emoji": "🔌",
+      "categoria_correcta": "tecnologia",
+      "feedback": "El mejor conductor para cables eléctricos y construcción."
+    },
+    {
+      "id": "res5",
+      "label": "Oro",
+      "emoji": "🥇",
+      "categoria_correcta": "refugio",
+      "feedback": "Activo que mantiene su valor durante guerras y crisis financieras."
+    },
+    {
+      "id": "res6",
+      "label": "Plata",
+      "emoji": "🥈",
+      "categoria_correcta": "refugio",
+      "feedback": "Usada en joyería y componentes electrónicos avanzados."
+    },
+    {
+      "id": "res7",
+      "label": "Trigo y Maíz",
+      "emoji": "🌾",
+      "categoria_correcta": "comida",
+      "feedback": "Base de la alimentación mundial; su escasez causa hambrunas."
+    },
+    {
+      "id": "res8",
+      "label": "Soja",
+      "emoji": "🌱",
+      "categoria_correcta": "comida",
+      "feedback": "Principal fuente de proteína para la ganadería global."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "energia",
+      "label": "ENERGÍA E INDUSTRIA",
+      "emoji": "🏭",
+      "color": "#1e3a8a"
+    },
+    {
+      "id": "tecnologia",
+      "label": "TECNOLOGÍA Y FUTURO",
+      "emoji": "🚀",
+      "color": "#b45309"
+    },
+    {
+      "id": "refugio",
+      "label": "RESERVA DE VALOR",
+      "emoji": "💎",
+      "color": "#047857"
+    },
+    {
+      "id": "comida",
+      "label": "SEGURIDAD ALIMENTARIA",
+      "emoji": "🍞",
+      "color": "#7c3aed"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

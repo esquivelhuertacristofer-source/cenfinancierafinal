@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P3-4-4-B",
+  "unit_code": "P3-4-4",
+  "unit_title": "Costos, Precios y Ganancias",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "La Fórmula del Éxito",
+  "descripcion": "¿Sabes cómo ponerle precio a tus productos para no perder dinero? ¡Pon a prueba tu lógica financiera!",
+  "objetivo": "Evaluar la capacidad de calcular precios y distinguir entre ingresos y ganancias",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Si fabricar una pulsera te cuesta $10 y quieres ganar $5, ¿a qué precio debes venderla?",
+      "opciones": [
+        "$5",
+        "$10",
+        "$15",
+        "$20"
+      ],
+      "correcta": 2,
+      "explicacion": "Precio = Costo + Ganancia. $10 + $5 = $15."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué es un 'Costo Fijo'?",
+      "opciones": [
+        "Algo que pagas siempre, vendas o no (como la renta)",
+        "El precio de la fruta que cambia cada día",
+        "Un regalo para los clientes",
+        "El dinero que ganas"
+      ],
+      "correcta": 0,
+      "explicacion": "Los costos fijos no dependen de cuánto vendas; siempre están ahí."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué es la 'Ganancia'?",
+      "opciones": [
+        "Todo el dinero que entra a la caja",
+        "El dinero que te queda después de pagar todos tus costos",
+        "Lo que le pagas a tus proveedores",
+        "El precio que ves en la etiqueta"
+      ],
+      "correcta": 1,
+      "explicacion": "Ventas - Costos = Ganancia. Es tu beneficio real."
+    },
+    {
+      "id": "q4",
+      "texto": "Si vendes algo a un precio menor de lo que te costó hacerlo, ¿qué sucede?",
+      "opciones": [
+        "Ganas mucho dinero",
+        "Tienes una pérdida",
+        "El banco te da un premio",
+        "No pasa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el precio es menor al costo, pierdes dinero cada vez que vendes."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál es un ejemplo de 'Costo Variable' en un puesto de jugos?",
+      "opciones": [
+        "La renta del local",
+        "Las naranjas (mientras más jugos hagas, más naranjas compras)",
+        "El letrero del negocio",
+        "La mesa donde pones los jugos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los costos variables cambian según la cantidad de producto que fabriques."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Para qué sirve el 'Punto de Equilibrio'?",
+      "opciones": [
+        "Para saber cuánto vender para no perder ni ganar dinero",
+        "Para que el puesto no se caiga",
+        "Para contar las monedas rápido",
+        "Para cerrar el negocio"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el momento en que tus ventas cubren exactamente tus gastos."
+    },
+    {
+      "id": "q7",
+      "texto": "Si subes mucho el precio de tu producto, ¿qué podría pasar?",
+      "opciones": [
+        "Venderás más que nunca",
+        "La gente podría dejar de comprar porque es muy caro",
+        "El producto se vuelve mágico",
+        "Todos los clientes estarán felices"
+      ],
+      "correcta": 1,
+      "explicacion": "El precio debe ser justo para el cliente y rentable para ti."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cuál es la mejor forma de aumentar tus ganancias?",
+      "opciones": [
+        "Gastar más dinero en adornos",
+        "Reducir tus costos o vender más unidades a un buen precio",
+        "No pagarle a nadie",
+        "Cerrar el negocio temprano"
+      ],
+      "correcta": 1,
+      "explicacion": "Ser eficiente con los costos y constante con las ventas es la clave."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

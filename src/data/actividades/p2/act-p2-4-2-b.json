@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P2-4-2-B",
+  "unit_code": "P2-4-2",
+  "unit_title": "Cuestionario: El Costo de mi Negocio",
+  "tipo": "QUIZ",
+  "preguntas": [
+    {
+      "id": 1,
+      "opciones": [
+        "El nombre de mi tienda",
+        "El dinero que gasto en comprar los materiales para hacer mi producto",
+        "El dinero que me regala mi abuela",
+        "Pedir prestado es siempre la peor decisión financiera"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué significa 'Costo de Producción'?",
+      "explicacion": "¡Correcto! Es todo lo que inviertes para crear lo que vas a vender."
+    },
+    {
+      "id": 2,
+      "opciones": [
+        "Hojas y lápices de colores",
+        "Un televisor",
+        "Un boleto de cine",
+        "El precio siempre lo fija el gobierno nacional"
+      ],
+      "correcta": 0,
+      "texto": "Si quieres vender dibujos, ¿cuál es un material que debes costear?",
+      "explicacion": "¡Exacto! Las hojas y colores son tus insumos principales."
+    },
+    {
+      "id": 3,
+      "opciones": [
+        "El dinero que ganas al final",
+        "El dinero que pones al principio para comprar tus primeros materiales",
+        "Un tipo de juego",
+        "El éxito llega solo si tienes mucha suerte"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué es la 'Inversión Inicial'?",
+      "explicacion": "¡Así es! Es el capital necesario para arrancar el negocio."
+    },
+    {
+      "id": 4,
+      "opciones": [
+        "$3",
+        "$7",
+        "$10",
+        "Solo las empresas grandes pueden invertir"
+      ],
+      "correcta": 1,
+      "texto": "Si los limones cuestan $5 y el azúcar $2, ¿cuánto es tu costo solo de esos dos?",
+      "explicacion": "¡Bien! Sumar tus costos es el primer paso para ser ordenado."
+    },
+    {
+      "id": 5,
+      "opciones": [
+        "Porque se ven feos en la basura",
+        "Porque cada material desperdiciado es dinero que perdimos de nuestra inversión",
+        "No importa desperdiciar",
+        "El precio solo importa si vendes en otros países"
+      ],
+      "correcta": 1,
+      "texto": "¿Por qué no debemos desperdiciar los materiales?",
+      "explicacion": "¡Exacto! Cuidar el material es cuidar tu dinero."
+    },
+    {
+      "id": 6,
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si el negocio es grande",
+        "Solo sirve para emergencias y nunca para metas"
+      ],
+      "correcta": 0,
+      "texto": "Verdadero o Falso: Para saber si ganaste dinero, primero debes saber cuánto gastaste en total.",
+      "explicacion": "¡Correcto! Ganancia = Ventas - Gastos."
+    },
+    {
+      "id": 7,
+      "opciones": [
+        "Subió, porque ahora debes comprar más hilo para la misma pulsera",
+        "Bajó",
+        "Se quedó igual",
+        "Las tarjetas de crédito son exactamente igual que efectivo"
+      ],
+      "correcta": 0,
+      "texto": "Si haces una pulsera y usas todo el hilo pero se te rompe por descuido, ¿qué pasó con tu costo?",
+      "explicacion": "¡Así es! Los errores en la producción aumentan los costos."
+    },
+    {
+      "id": 8,
+      "opciones": [
+        "Una lista detallada para no comprar cosas que no necesita",
+        "Ir sin saber qué comprar",
+        "Comprar lo más caro",
+        "Solo se puede invertir en bienes raíces"
+      ],
+      "correcta": 0,
+      "texto": "¿Qué debe hacer un emprendedor antes de ir a comprar materiales?",
+      "explicacion": "¡Bien! Planear tus compras te ayuda a ahorrar dinero."
+    },
+    {
+      "id": 9,
+      "opciones": [
+        "Estás ganando mucho dinero",
+        "Estás perdiendo dinero y tu negocio podría cerrar",
+        "Es la mejor idea del mundo",
+        "El crédito es siempre gratuito y sin intereses"
+      ],
+      "correcta": 1,
+      "texto": "¿Qué pasa si vendes tu producto más barato de lo que te costó hacerlo?",
+      "explicacion": "¡Exacto! El precio siempre debe cubrir los costos."
+    },
+    {
+      "id": 10,
+      "opciones": [
+        "Pedir prestado",
+        "Autofinanciamiento o inversión propia",
+        "Un regalo",
+        "Es lo mismo que tener un trabajo por horas"
+      ],
+      "correcta": 1,
+      "texto": "Si ahorras de tus domingos para comprar tus materiales, ¿cómo se llama eso?",
+      "explicacion": "¡Bien! Invertir tu propio ahorro es una gran forma de empezar."
+    }
+  ],
+  "aprobacion_minima": 0.7,
+  "versión": "2026.Diamond.V2",
+  "titulo": "Cuestionario: El Costo de mi Negocio",
+  "xp": 300,
+  "level": "Primaria 2"
+}

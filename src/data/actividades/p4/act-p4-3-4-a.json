@@ -1,0 +1,145 @@
+{
+  "code": "ACT-P4-3-4-A",
+  "unit_code": "P4-3-4",
+  "unit_title": "Inflación: por qué los precios suben y cómo protegernos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Carrera del Valor",
+  "descripcion": "En 10 años, los precios van a subir. Si dejas tu dinero quieto, el 'Monstruo de la Inflación' se lo comerá. ¡Aprende a ganarle la carrera!",
+  "objetivo": "Entender el concepto de tasa de interés real y la necesidad de invertir para superar la inflación",
+  "xp": 500,
+  "descripcion_formula": "Comparamos el Valor Real de tu dinero: (Capital * (1 + Tasa Inversión)^10) / (1 + Tasa Inflación)^10.",
+  "inputs": [
+    {
+      "id": "capital_inicial",
+      "label": "Tu ahorro hoy",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_inflacion",
+      "label": "Inflación anual estimada (%)",
+      "type": "slider",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "%"
+    },
+    {
+      "id": "tasa_rendimiento",
+      "label": "Tu tasa de inversión (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "capital_inicial * Math.pow((1 + tasa_rendimiento/100) / (1 + tasa_inflacion/100), 10)",
+  "output_label": "Poder de Compra Real en 10 años",
+  "output_prefix": "$",
+  "output_suffix": " pesos",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "tasa_rendimiento > tasa_inflacion",
+      "mensaje": "🏆 ¡Ganaste! Tu inversión creció más que los precios. Tu dinero ahora vale MÁS que hoy.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasa_rendimiento == tasa_inflacion",
+      "mensaje": "⚖️ ¡Empate! Tu dinero mantuvo su valor, pero no creció. Al menos el monstruo no se lo comió.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "tasa_rendimiento < tasa_inflacion",
+      "mensaje": "📉 ¡Perdiste! Los precios subieron más que tu dinero. Aunque tengas 'más billetes', te alcanza para MENOS cosas.",
+      "tipo": "danger"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué producto de uso diario ha subido más de precio en el último año en tu ciudad? ¿Cómo protegerías tus ahorros si la inflación llegara al 10% anual?",
+  "comparativa_espera": "Las pequeñas decisiones financieras repetidas a lo largo del tiempo son las que más impactan el patrimonio. Un hábito de ahorro de $500 mensuales durante 30 años puede generar más de $1,000,000 con inversión inteligente.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado de la simulación"
+    },
+    {
+      "id": "impacto_mensual",
+      "label": "Impacto Mensual",
+      "formula": "resultado_principal / 12",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El efecto mensual de esta decisión"
+    },
+    {
+      "id": "impacto_anual",
+      "label": "Impacto Anual",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "El impacto total en un año"
+    },
+    {
+      "id": "en_5_anios",
+      "label": "En 5 Años",
+      "formula": "resultado_principal * 5",
+      "prefix": "$",
+      "suffix": " acumulado",
+      "descripcion": "El valor de mantener este hábito por 5 años"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "impacto_mensual",
+      "label": "Impacto Mensual",
+      "color": "#22c55e"
+    }
+  ]
+}

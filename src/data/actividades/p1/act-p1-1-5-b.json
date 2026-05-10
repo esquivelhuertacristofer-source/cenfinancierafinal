@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-1-5-B",
+  "unit_code": "P1-1-5",
+  "unit_title": "Mi meta de ahorro: quiero comprar...",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Estratega de Sueños",
+  "descripcion": "¿Tienes lo que se necesita para ser un maestro de las metas? ¡Demuéstralo en este desafío final del bloque!",
+  "objetivo": "Identificar y aplicar los principios de metas claras, realistas y motivadoras",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es lo primero que debes saber sobre tu meta?",
+      "opciones": [
+        "Su color",
+        "Su precio (cuánto dinero necesitas)",
+        "Su nombre",
+        "Si brilla"
+      ],
+      "correcta": 1,
+      "explicacion": "Saber el precio es fundamental para calcular cuánto tiempo debes ahorrar."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Por qué es importante elegir UNA sola meta a la vez?",
+      "opciones": [
+        "Para no cansarte",
+        "Para enfocar todo tu dinero y llegar más rápido",
+        "Porque no caben en la alcancía",
+        "Para no confundirte"
+      ],
+      "correcta": 1,
+      "explicacion": "Enfocar tus recursos en un solo objetivo es el secreto de los ahorradores más rápidos."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Qué significa que una meta sea 'Clara'?",
+      "opciones": [
+        "Que brilla mucho",
+        "Que sabes exactamente qué quieres y cuánto cuesta",
+        "Que es de color blanco",
+        "Que es transparente"
+      ],
+      "correcta": 1,
+      "explicacion": "Una meta clara no tiene dudas: 'Quiero ESE balón que cuesta $100'."
+    },
+    {
+      "id": "q4",
+      "texto": "Si tu meta es muy, muy cara y tardarás un año, ¿qué puedes hacer?",
+      "opciones": [
+        "Rendirte",
+        "Dividirla en metas pequeñas (metas volantes)",
+        "Llorar",
+        "Pedir un deseo"
+      ],
+      "correcta": 1,
+      "explicacion": "Dividir una meta grande en pasos pequeños hace que el camino sea más fácil y divertido."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál es el mejor lugar para poner el dibujo de tu meta?",
+      "opciones": [
+        "Debajo de la cama",
+        "En un lugar donde lo veas todos los días",
+        "En la basura",
+        "En un cajón cerrado"
+      ],
+      "correcta": 1,
+      "explicacion": "Ver tu meta te recuerda por qué estás esforzándote y te motiva a seguir."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué debes hacer si tus amigos te invitan a gastar tu dinero de la meta?",
+      "opciones": [
+        "Gastar para que no se enojen",
+        "Decir 'no gracias, estoy ahorrando para algo grande'",
+        "Enojarte con ellos",
+        "Esconderte"
+      ],
+      "correcta": 1,
+      "explicacion": "Ser valiente y fiel a tu meta es una característica de un líder financiero."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Por qué las metas de ahorro nos hacen mejores personas?",
+      "opciones": [
+        "Porque nos dan juguetes",
+        "Porque nos enseñan paciencia y disciplina",
+        "Porque nos hacen ricos",
+        "No nos hacen mejores"
+      ],
+      "correcta": 1,
+      "explicacion": "La paciencia y la disciplina son valores que te servirán para toda la vida, no solo para el dinero."
+    },
+    {
+      "id": "q8",
+      "texto": "Verdadero o Falso: Una meta puede cambiar si descubres algo que te emociona más.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Cierto! Tú eres el dueño de tus sueños y puedes ajustar tu plan si es necesario."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Qué pasa cuando metes la ÚLTIMA moneda para completar tu meta?",
+      "opciones": [
+        "Se rompe la alcancía",
+        "Sientes la gran satisfacción del logro",
+        "Te pones triste",
+        "Se acaba el juego"
+      ],
+      "correcta": 1,
+      "explicacion": "Ese momento es mágico: la prueba de que tu esfuerzo valió la pena."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cuál es el paso siguiente después de lograr una meta?",
+      "opciones": [
+        "Dejar de ahorrar",
+        "Celebrar y luego elegir tu SIGUIENTE gran sueño",
+        "Dormir",
+        "Olvidar todo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡El éxito es un ciclo! Siempre hay un nuevo horizonte que alcanzar."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,16 @@
+{
+  "code": "ACT-P1-2-3-A",
+  "unit_code": "P1-2-3",
+  "unit_title": "El precio de las cosas: ¿caro o barato?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "CRECIMIENTO",
+  "complejidad": "MAESTRÍA",
+  "titulo": "El Secreto del Crecimiento",
+  "descripcion": "Ceny quiere un equipo de exploración de $500. Su dinero crece solo, ¡pero crece más rápido si Ceny estudia! ¿Podrás ayudarle a no gastar en dulces para llegar a la meta?",
+  "objetivo": "Entender el valor del tiempo y la inversión en conocimiento para acelerar el cumplimiento de metas de ahorro.",
+  "xp": 600,
+  "meta_objetivo": 500,
+  "instruccion": "Usa los botones para decidir: ¿Inviertes en saber para crecer más rápido o gastas en un antojo hoy?",
+  "versión": "2026.Diamond.Growth"
+}

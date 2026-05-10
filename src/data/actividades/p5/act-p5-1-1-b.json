@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P5-1-1-B",
+  "unit_code": "P5-1-1",
+  "unit_title": "El Banco de México: el cerebro del dinero",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mundo Conectado",
+  "descripcion": "¿Sabes cómo viaja el dinero de un país a otro? ¡Demuestra que eres un experto en la economía mundial!",
+  "objetivo": "Identificar los elementos básicos de la macroeconomía y el comercio internacional",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "glob1",
+      "pregunta": "¿Qué es el 'Tipo de Cambio'?",
+      "respuesta_correcta": "El precio de una moneda expresado en términos de otra (ej: cuántos pesos vale un dólar)",
+      "incorrectas": [
+        "Cuando cambias de opinión en el banco",
+        "El precio de los boletos de avión",
+        "Cuando el banco cierra"
+      ],
+      "dato_extra": "El tipo de cambio sube y baja todos los días según la oferta y la demanda."
+    },
+    {
+      "id": "glob2",
+      "pregunta": "¿Cuál es la moneda más utilizada en el comercio internacional?",
+      "respuesta_correcta": "El Dólar estadounidense (USD)",
+      "incorrectas": [
+        "El Peso mexicano",
+        "El Oro",
+        "El Chocolate"
+      ],
+      "dato_extra": "Casi el 80% del comercio mundial se paga en dólares."
+    },
+    {
+      "id": "glob3",
+      "pregunta": "¿Qué es la 'Exportación'?",
+      "respuesta_correcta": "Vender productos hechos en tu país a otros países",
+      "incorrectas": [
+        "Comprar cosas de fuera",
+        "Viajar de vacaciones",
+        "Esconder el dinero"
+      ],
+      "dato_extra": "México es un gran exportador de autos, aguacates y tecnología."
+    },
+    {
+      "id": "glob4",
+      "pregunta": "¿Qué pasa si un país importa (compra) mucho más de lo que exporta (vende)?",
+      "respuesta_correcta": "Tiene un déficit comercial y su moneda puede perder valor",
+      "incorrectas": [
+        "Se vuelve el más rico del mundo",
+        "No pasa nada",
+        "Todos los ciudadanos reciben un premio"
+      ],
+      "dato_extra": "El equilibrio entre comprar y vender es vital para la salud de un país."
+    },
+    {
+      "id": "glob5",
+      "pregunta": "¿Qué es un 'Arancel'?",
+      "respuesta_correcta": "Un impuesto que se paga por importar productos de otro país",
+      "incorrectas": [
+        "Un tipo de barco",
+        "Una moneda muy antigua",
+        "Un regalo para el presidente"
+      ],
+      "dato_extra": "Los aranceles se usan a veces para proteger los productos hechos en casa."
+    },
+    {
+      "id": "glob6",
+      "pregunta": "¿Por qué es importante el precio del Petróleo para la economía mundial?",
+      "respuesta_correcta": "Porque se usa para transportar casi todos los productos del mundo",
+      "incorrectas": [
+        "Porque es de color negro",
+        "Porque sirve para hacer dulces",
+        "No es importante"
+      ],
+      "dato_extra": "Si el petróleo sube, suele subir el precio de la comida y el transporte en todo el mundo."
+    },
+    {
+      "id": "glob7",
+      "pregunta": "¿Qué es la 'Globalización' financiera?",
+      "respuesta_correcta": "La conexión de todos los mercados del mundo en un solo sistema",
+      "incorrectas": [
+        "Hacer mapas de la tierra",
+        "Pintar el mundo de un solo color",
+        "Vivir en el espacio"
+      ],
+      "dato_extra": "Hoy puedes invertir en una empresa de Japón desde tu celular en México."
+    },
+    {
+      "id": "glob8",
+      "pregunta": "¿Qué institución en México maneja la política de dinero del país?",
+      "respuesta_correcta": "El Banco de México (Banxico)",
+      "incorrectas": [
+        "La Secretaría de Marina",
+        "El Palacio Nacional",
+        "Los bancos comerciales"
+      ],
+      "dato_extra": "Banxico es autónomo, lo que significa que toma sus propias decisiones técnicas."
+    },
+    {
+      "id": "glob9",
+      "pregunta": "¿Qué significa que una moneda se 'Deprecie'?",
+      "respuesta_correcta": "Que pierde valor frente a otras monedas",
+      "incorrectas": [
+        "Que se vuelve más bonita",
+        "Que se rompe",
+        "Que ya no existe"
+      ],
+      "dato_extra": "Cuando el peso se deprecia, comprar cosas de EE.UU. sale más caro."
+    },
+    {
+      "id": "glob10",
+      "pregunta": "¿Para qué sirven las Reservas Internacionales de un país?",
+      "respuesta_correcta": "Para dar estabilidad y seguridad ante crisis económicas",
+      "incorrectas": [
+        "Para gastarlas en fiestas nacionales",
+        "Para repartirlas entre la gente",
+        "No sirven de mucho"
+      ],
+      "dato_extra": "Es como el fondo de emergencia de todo el país."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

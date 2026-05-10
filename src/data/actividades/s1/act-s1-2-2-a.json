@@ -1,0 +1,155 @@
+{
+  "code": "ACT-S1-2-2-A",
+  "unit_code": "S1-2-2",
+  "unit_title": "La pensión y el AFORE: cuánto tendré cuando me retire",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Viaje en el Tiempo del Dinero",
+  "descripcion": "El dinero no vale por el número impreso, sino por lo que puedes comprar con él. ¡Mira cómo la inflación reduce el tamaño de tus ahorros si no los proteges!",
+  "objetivo": "Calcular la pérdida de poder adquisitivo a través del tiempo debido a la inflación acumulada",
+  "xp": 500,
+  "descripcion_formula": "Calculamos el Poder de Compra Real (PCR). PCR = Capital / (1 + Inflación)^Años.",
+  "inputs": [
+    {
+      "id": "ahorro_colchon",
+      "label": "Dinero guardado ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 5000,
+      "default": 50000,
+      "unit": "$"
+    },
+    {
+      "id": "tasa_inflacion_anual",
+      "label": "Tasa de Inflación Anual (%)",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "%"
+    },
+    {
+      "id": "años_pasados",
+      "label": "Años que pasaron",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 10,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "ahorro_colchon / Math.pow(1 + (tasa_inflacion_anual / 100), años_pasados)",
+  "output_label": "Tu Poder de Compra Real en el Futuro",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "tasa_inflacion_anual > 10",
+      "mensaje": "🧨 ¡Hiperinflación! Tu dinero está desapareciendo a toda velocidad. Es urgente invertir en activos reales como oro, acciones o inmuebles.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "ahorro_colchon / Math.pow(1 + (tasa_inflacion_anual / 100), años_pasados) < (ahorro_colchon / 2)",
+      "mensaje": "📉 ¡Mitad de Valor! En este tiempo, tus ahorros solo alcanzan para comprar la mitad de lo que comprabas antes. ¡El ahorro estático es peligroso!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Para que tu riqueza crezca, tus inversiones deben rendir más que el número de la inflación. A eso se le llama Rendimiento Real.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Cuánto dinero necesitarías acumular en tu AFORE para recibir $20,000 al mes de pensión? ¿Qué cambios en tus hábitos de hoy mejorarían tu pensión en 40 años?",
+  "comparativa_espera": "Los trabajadores con IMSS que también hacen aportaciones voluntarias a su AFORE aumentan su pensión estimada en promedio un 35-60%. El gobierno iguala parte de las aportaciones voluntarias — es dinero gratis que pocos aprovechan.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "por_semana",
+      "label": "Equivalente Semanal",
+      "formula": "Math.round(resultado_principal / 52)",
+      "prefix": "$",
+      "suffix": "/semana",
+      "descripcion": "El resultado distribuido en semanas"
+    },
+    {
+      "id": "valor_10a",
+      "label": "Valor en 10 Años",
+      "formula": "Math.round(resultado_principal * Math.pow(1.08, 10))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Con reinversión al 8% anual durante 10 años"
+    },
+    {
+      "id": "impacto_retiro",
+      "label": "Impacto en tu Retiro",
+      "formula": "Math.round(resultado_principal * 40)",
+      "prefix": "$",
+      "suffix": " efecto vida laboral",
+      "descripcion": "Si mantienes este resultado durante 40 años de vida laboral"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "por_semana",
+      "label": "Equivalente Semanal",
+      "color": "#22c55e"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-1-5-B",
+  "unit_code": "S1-1-5",
+  "unit_title": "El tipo de cambio: cómo afecta la economía cotidiana",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Gobierno Corporativo",
+  "descripcion": "¿Quién vigila a los que mandan? ¡Descubre cómo se protegen los derechos de todos los socios de una empresa!",
+  "objetivo": "Comprender la estructura de mando de una empresa pública y los estándares éticos modernos (ESG)",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "gov1",
+      "texto": "¿Qué es el 'Consejo de Administración' (Board of Directors)?",
+      "opciones": [
+        "Un grupo de empleados que limpian la oficina",
+        "Un grupo de expertos elegidos por los accionistas para vigilar y aconsejar al CEO",
+        "Los clientes más importantes",
+        "El departamento de quejas"
+      ],
+      "correcta": 1,
+      "explicacion": "El Consejo asegura que el CEO trabaje para el beneficio de todos los dueños, no solo el suyo."
+    },
+    {
+      "id": "gov2",
+      "texto": "¿Qué es el 'Deber Fiduciario'?",
+      "opciones": [
+        "La obligación de pagar impuestos",
+        "La obligación legal y ética de actuar siempre en el mejor interés de los accionistas",
+        "Un tipo de seguro",
+        "Firmar cheques"
+      ],
+      "correcta": 1,
+      "explicacion": "Los directivos deben cuidar el dinero de los socios como si fuera suyo (o mejor)."
+    },
+    {
+      "id": "gov3",
+      "texto": "¿Qué significan las siglas 'ESG'?",
+      "opciones": [
+        "Empresas Súper Grandes",
+        "Environmental, Social and Governance (Ambiental, Social y Gobernanza)",
+        "Estrategia de Seguridad Global",
+        "Efectivo, Sueldos y Ganancias"
+      ],
+      "correcta": 1,
+      "explicacion": "Son los criterios que miden si una empresa es buena para el planeta, para la sociedad y si es honesta."
+    },
+    {
+      "id": "gov4",
+      "texto": "¿Por qué es importante la transparencia financiera?",
+      "opciones": [
+        "Para que todos vean el logo",
+        "Para que los inversionistas tengan información real para tomar decisiones y no sean engañados",
+        "Porque es más barato",
+        "Para gastar más en publicidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin información honesta, el mercado de valores no puede funcionar."
+    },
+    {
+      "id": "gov5",
+      "texto": "¿Qué derecho tiene un accionista minoritario (que tiene pocas acciones)?",
+      "opciones": [
+        "Ninguno",
+        "Derecho a recibir información clara y a participar en las votaciones de la asamblea",
+        "Derecho a ser el CEO",
+        "Derecho a productos gratis"
+      ],
+      "correcta": 1,
+      "explicacion": "Incluso con una sola acción, tienes derechos que la ley protege."
+    },
+    {
+      "id": "gov6",
+      "texto": "¿Para qué sirve una 'Auditoría' externa?",
+      "opciones": [
+        "Para despedir personas",
+        "Para que una empresa independiente revise que las cuentas de la empresa sean reales y honestas",
+        "Para inventar números",
+        "Para pagar menos luz"
+      ],
+      "correcta": 1,
+      "explicacion": "Los auditores son como los 'árbitros' que certifican que no hay trampa en los números."
+    },
+    {
+      "id": "gov7",
+      "texto": "¿Cuál es un ejemplo de mala gobernanza?",
+      "opciones": [
+        "Tener muchas ventas",
+        "Que el CEO use el dinero de la empresa para sus gastos personales",
+        "Contratar a los mejores expertos",
+        "Tener un Consejo independiente"
+      ],
+      "correcta": 1,
+      "explicacion": "Mezclar el dinero personal con el de la empresa es una falta grave de ética."
+    },
+    {
+      "id": "gov8",
+      "texto": "¿Cómo influye el comportamiento ético en el valor de una acción?",
+      "opciones": [
+        "No influye",
+        "Las empresas éticas suelen ser más estables y valiosas a largo plazo porque la gente confía en ellas",
+        "Hace que el precio baje",
+        "Solo importa la ganancia"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has completado el primer bloque de S1. Ya piensas como un inversionista profesional y ético."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-1-2-B",
+  "unit_code": "S3-1-2",
+  "unit_title": "Mi plan financiero: de los 15 a los 65 años",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Poder del Banco Central",
+  "descripcion": "¿Sabes quién controla el precio del dinero en el mundo? ¡Demuestra que conoces los secretos del Banco Central!",
+  "objetivo": "Identificar las funciones principales de un Banco Central y su impacto en la economía nacional e internacional",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "mon1",
+      "pregunta": "¿Cuál es el objetivo principal de la mayoría de los Bancos Centrales?",
+      "respuesta_correcta": "Mantener la estabilidad de precios (controlar la inflación)",
+      "incorrectas": [
+        "Prestar dinero a las personas",
+        "Hacer que el gobierno sea rico",
+        "Vender acciones"
+      ],
+      "dato_extra": "Muchos bancos tienen un objetivo de inflación del 2% o 3% anual."
+    },
+    {
+      "id": "mon2",
+      "pregunta": "¿Qué significa que un Banco Central sea 'Autónomo'?",
+      "respuesta_correcta": "Que toma sus decisiones sin que el gobierno o los políticos le digan qué hacer",
+      "incorrectas": [
+        "Que funciona con robots",
+        "Que no tiene oficinas",
+        "Que no usa dinero"
+      ],
+      "dato_extra": "La autonomía evita que los políticos impriman dinero solo para ganar votos."
+    },
+    {
+      "id": "mon3",
+      "pregunta": "¿Cómo se llama el Banco Central de los Estados Unidos?",
+      "respuesta_correcta": "Reserva Federal (FED)",
+      "incorrectas": [
+        "Banco de América",
+        "Tesoro Nacional",
+        "Banco Mundial"
+      ],
+      "dato_extra": "Es el banco más poderoso del mundo porque controla el dólar."
+    },
+    {
+      "id": "mon4",
+      "pregunta": "¿Qué sucede si el Banco Central imprime demasiado dinero sin que la producción del país crezca?",
+      "respuesta_correcta": "Se genera Hiperinflación y el dinero pierde su valor",
+      "incorrectas": [
+        "Todos se vuelven ricos",
+        "Los precios bajan",
+        "No pasa nada"
+      ],
+      "dato_extra": "Países como Venezuela o Zimbabue han sufrido esto por imprimir billetes en exceso."
+    },
+    {
+      "id": "mon5",
+      "pregunta": "¿Qué es el dinero 'Fiduciario' (Fiat)?",
+      "respuesta_correcta": "Dinero que no tiene respaldo en oro, sino que vale por la confianza legal y del gobierno que lo emite",
+      "incorrectas": [
+        "Dinero de juguete",
+        "Dinero respaldado en petróleo",
+        "Dinero electrónico solamente"
+      ],
+      "dato_extra": "Casi todas las monedas del mundo hoy son fiduciarias."
+    },
+    {
+      "id": "mon6",
+      "pregunta": "¿Qué es la 'Tasa de Referencia'?",
+      "respuesta_correcta": "El precio al que el Banco Central le presta dinero a los otros bancos comerciales",
+      "incorrectas": [
+        "El precio del dólar",
+        "Lo que pagas de IVA",
+        "La tasa de ahorro del banco"
+      ],
+      "dato_extra": "Es la base para todas las demás tasas de interés del país."
+    },
+    {
+      "id": "mon7",
+      "pregunta": "¿Qué es el 'Encaje Legal' o Reserva?",
+      "respuesta_correcta": "El porcentaje de dinero que los bancos deben guardar obligatoriamente y no pueden prestar",
+      "incorrectas": [
+        "Un tipo de ropa",
+        "Un impuesto al ahorro",
+        "Una comisión bancaria"
+      ],
+      "dato_extra": "Sirve para asegurar que los bancos siempre tengan efectivo disponible."
+    },
+    {
+      "id": "mon8",
+      "pregunta": "Si el Banco Central quiere 'Enfriar' la economía, ¿qué hace?",
+      "respuesta_correcta": "Sube las tasas de interés",
+      "incorrectas": [
+        "Baja las tasas de interés",
+        "Regala dinero",
+        "Cierra los bancos"
+      ],
+      "dato_extra": "Se hace para evitar que la inflación suba demasiado rápido."
+    },
+    {
+      "id": "mon9",
+      "pregunta": "¿Qué significa 'Liquidez' en el sistema financiero?",
+      "respuesta_correcta": "La facilidad con la que el dinero fluye y está disponible para transacciones rápidas",
+      "incorrectas": [
+        "Que el dinero es líquido",
+        "Que hay muchas deudas",
+        "Que el banco no tiene luz"
+      ],
+      "dato_extra": "El Banco Central actúa como 'prestamista de última instancia' para asegurar la liquidez."
+    },
+    {
+      "id": "mon10",
+      "pregunta": "¿Por qué es importante que un país tenga Reservas Internacionales (Oro, Dólares)?",
+      "respuesta_correcta": "Para dar confianza al mundo y poder enfrentar crisis económicas externas",
+      "incorrectas": [
+        "Para coleccionarlos",
+        "Para gastarlos en vacaciones del presidente",
+        "No son importantes"
+      ],
+      "dato_extra": "¡Felicidades! Ahora entiendes cómo funciona el cerebro del sistema financiero."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

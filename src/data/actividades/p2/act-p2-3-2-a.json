@@ -1,0 +1,136 @@
+{
+  "code": "P2-3-2-A",
+  "unit_code": "P2-3-2",
+  "unit_title": "Ingresos y gastos: que no gaste más de lo que tengo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "Llenando el Tanque de Fortuna",
+  "descripcion": "Tu dinero es como un tanque de agua. ¿Sabes qué cosas lo llenan y qué cosas abren la llave para que se vacíe?",
+  "objetivo": "Diferenciar claramente entre fuentes de ingreso y conceptos de gasto",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto al grupo correcto: ¿Es un INGRESO (Entra dinero) o un GASTO (Sale dinero)?",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Mi domingo semanal",
+      "emoji": "🪙",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Exacto! Es dinero fresco que entra a tu tanque."
+    },
+    {
+      "id": "g1",
+      "label": "Comprar un helado",
+      "emoji": "🍦",
+      "categoria_correcta": "gasto",
+      "feedback": "¡Glup! El agua sale del tanque por este gusto delicioso."
+    },
+    {
+      "id": "i2",
+      "label": "Vender mis galletas",
+      "emoji": "🍪",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Emprendedor! Tu trabajo llena el tanque de agua nueva."
+    },
+    {
+      "id": "g2",
+      "label": "Pagar el transporte",
+      "emoji": "🚌",
+      "categoria_correcta": "gasto",
+      "feedback": "Un gasto necesario que vacía un poco tu tanque cada día."
+    },
+    {
+      "id": "i3",
+      "label": "Premio por buenas notas",
+      "emoji": "🏆",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Felicidades! Tu esfuerzo escolar también trae ingresos."
+    },
+    {
+      "id": "g3",
+      "label": "Comprar un sacapuntas",
+      "emoji": "✏️",
+      "categoria_correcta": "gasto",
+      "feedback": "Un gasto pequeño pero necesario para tu educación."
+    },
+    {
+      "id": "i4",
+      "label": "Regalo de mis abuelos",
+      "emoji": "👵",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Qué suerte! Los abuelitos también ayudan a llenar tu tanque."
+    },
+    {
+      "id": "g4",
+      "label": "Pagar la luz de la casa",
+      "emoji": "💡",
+      "categoria_correcta": "gasto",
+      "feedback": "Un gasto fijo muy importante que hace que la casa funcione."
+    },
+    {
+      "id": "i5",
+      "label": "Vender un juguete viejo",
+      "emoji": "🧸",
+      "categoria_correcta": "ingreso",
+      "feedback": "Vender lo que no usas es una forma genial de obtener ingresos."
+    },
+    {
+      "id": "g5",
+      "label": "Cine y palomitas",
+      "emoji": "🍿",
+      "categoria_correcta": "gasto",
+      "feedback": "Un gasto de diversión. ¡Cuidado con no vaciar mucho el tanque!"
+    },
+    {
+      "id": "i6",
+      "label": "Pago por lavar el carro",
+      "emoji": "🧽",
+      "categoria_correcta": "ingreso",
+      "feedback": "Ayudar en tareas extras en casa te genera ingresos."
+    },
+    {
+      "id": "g6",
+      "label": "Comprar medicina",
+      "emoji": "💊",
+      "categoria_correcta": "gasto",
+      "feedback": "Un gasto de emergencia que debemos cubrir para estar sanos."
+    },
+    {
+      "id": "i7",
+      "label": "Dinero de mi cumpleaños",
+      "emoji": "🎂",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Tu día especial también es un día de grandes ingresos!"
+    },
+    {
+      "id": "g7",
+      "label": "Renta de la casa",
+      "emoji": "🏠",
+      "categoria_correcta": "gasto",
+      "feedback": "El gasto más grande y necesario de una familia."
+    },
+    {
+      "id": "i8",
+      "label": "Encontrar una moneda",
+      "emoji": "✨",
+      "categoria_correcta": "ingreso",
+      "feedback": "¡Un ingreso inesperado! Aprovéchalo para ahorrar."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "ingreso",
+      "label": "INGRESO (¡Llenar!)",
+      "emoji": "📥",
+      "color": "#16a34a"
+    },
+    {
+      "id": "gasto",
+      "label": "GASTO (¡Vaciar!)",
+      "emoji": "📤",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

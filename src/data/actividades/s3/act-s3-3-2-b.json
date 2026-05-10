@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-3-2-B",
+  "unit_code": "S3-3-2",
+  "unit_title": "Inversión inmobiliaria: ladrillos físicos y digitales",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mundo de los Derivados",
+  "descripcion": "¿Puedes hablar el lenguaje de los grandes tesoreros y especuladores? ¡Demuéstralo!",
+  "objetivo": "Identificar los componentes y tipos de contratos derivados financieros y su utilidad en el mercado global",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "der1",
+      "pregunta": "¿Qué es un 'Activo Subyacente'?",
+      "respuesta_correcta": "El activo real (oro, petróleo, acciones, dólar) del cual el contrato derivado obtiene su valor",
+      "incorrectas": [
+        "Un tipo de contrato",
+        "La firma del dueño",
+        "Un activo que no vale nada"
+      ],
+      "dato_extra": "Se llama 'derivado' porque su precio deriva de algo más."
+    },
+    {
+      "id": "der2",
+      "pregunta": "¿Cuál es la diferencia principal entre un Futuro y una Opción?",
+      "respuesta_correcta": "El Futuro es una OBLIGACIÓN de comprar/vender; la Opción es un DERECHO pero no una obligación",
+      "incorrectas": [
+        "No hay diferencia",
+        "Los futuros son solo para comida",
+        "Las opciones son gratis"
+      ],
+      "dato_extra": "En una opción, puedes decidir no usarla si el precio no te conviene."
+    },
+    {
+      "id": "der3",
+      "pregunta": "¿Qué es una Opción 'CALL'?",
+      "respuesta_correcta": "Un contrato que te da el derecho de COMPRAR un activo a un precio fijo en el futuro",
+      "incorrectas": [
+        "Un contrato para vender",
+        "Una llamada telefónica al banco",
+        "Un tipo de préstamo"
+      ],
+      "dato_extra": "Se usa cuando esperas que el precio suba."
+    },
+    {
+      "id": "der4",
+      "pregunta": "¿Qué es una Opción 'PUT'?",
+      "respuesta_correcta": "Un contrato que te da el derecho de VENDER un activo a un precio fijo (funciona como un seguro contra caídas)",
+      "incorrectas": [
+        "Un contrato para comprar",
+        "Invertir en petróleo",
+        "Una deuda"
+      ],
+      "dato_extra": "Los inversionistas compran 'Puts' para protegerse si creen que la bolsa va a caer."
+    },
+    {
+      "id": "der5",
+      "pregunta": "¿Qué es el 'Strike Price' (Precio de Ejercicio)?",
+      "respuesta_correcta": "El precio fijado en el contrato al cual se podrá comprar o vender el activo subyacente",
+      "incorrectas": [
+        "El precio de hoy",
+        "La ganancia final",
+        "El precio de la prima"
+      ],
+      "dato_extra": "Es el punto de referencia para saber si ganaste o perdiste dinero."
+    },
+    {
+      "id": "der6",
+      "pregunta": "¿Qué es la 'Prima' en una opción?",
+      "respuesta_correcta": "El precio que pagas hoy para tener el derecho (la opción) en el futuro",
+      "incorrectas": [
+        "La ganancia del banco",
+        "Un pariente del corredor",
+        "El valor total del oro"
+      ],
+      "dato_extra": "Si no usas la opción, lo único que pierdes es la prima."
+    },
+    {
+      "id": "der7",
+      "pregunta": "¿Qué significa hacer 'Hedging' (Cobertura)?",
+      "respuesta_correcta": "Usar derivados para reducir el riesgo de pérdidas en tu negocio o inversiones reales",
+      "incorrectas": [
+        "Apostar todo al rojo",
+        "Comprar acciones al azar",
+        "Vender todo y huir"
+      ],
+      "dato_extra": "Las aerolíneas hacen hedging con el petróleo para que sus boletos no suban de precio de repente."
+    },
+    {
+      "id": "der8",
+      "pregunta": "¿Qué es el 'Apalancamiento' en los derivados?",
+      "respuesta_correcta": "Poder controlar una gran cantidad de activos con muy poco dinero inicial (lo cual aumenta ganancias y riesgos)",
+      "incorrectas": [
+        "Usar una palanca real",
+        "Pedir un descuento",
+        "No pagar intereses"
+      ],
+      "dato_extra": "¡Cuidado! El apalancamiento puede hacer que pierdas mucho más de lo que invertiste."
+    },
+    {
+      "id": "der9",
+      "pregunta": "¿Qué es la 'Fecha de Vencimiento'?",
+      "respuesta_correcta": "El día límite en que el contrato derivado deja de tener validez",
+      "incorrectas": [
+        "El día que te pagan",
+        "Cuando el banco cierra",
+        "Cuando el oro desaparece"
+      ],
+      "dato_extra": "A diferencia de las acciones, los derivados tienen 'caducidad'."
+    },
+    {
+      "id": "der10",
+      "pregunta": "¿Cuál es la función social de los mercados de futuros?",
+      "respuesta_correcta": "Dar estabilidad a los precios de alimentos y energía para que las empresas puedan planear el futuro",
+      "incorrectas": [
+        "Hacer ricos a los bancos",
+        "Imprimir más billetes",
+        "No tienen función"
+      ],
+      "dato_extra": "¡Felicidades! Has completado el análisis de los instrumentos más complejos del mercado."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

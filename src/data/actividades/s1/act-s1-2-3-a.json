@@ -1,0 +1,127 @@
+{
+  "code": "ACT-S1-2-3-A",
+  "unit_code": "S1-2-3",
+  "unit_title": "Crédito hipotecario: cómo funciona INFONAVIT",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Termómetro de las Naciones",
+  "descripcion": "¿Cómo sabemos si a un país le va bien o mal? ¡Pon a prueba tu conocimiento sobre la métrica más importante de la economía!",
+  "objetivo": "Comprender el concepto de PIB, sus componentes y su importancia como indicador de bienestar económico",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "pib1",
+      "pregunta": "¿Qué significa PIB?",
+      "respuesta_correcta": "Producto Interno Bruto (el valor total de todo lo producido en un país en un año)",
+      "incorrectas": [
+        "Precio de Inversión Bancaria",
+        "Producción Individual Bruta",
+        "Plan de Impuestos Básicos"
+      ],
+      "dato_extra": "Si el PIB crece, significa que la economía está produciendo más bienes y servicios."
+    },
+    {
+      "id": "pib2",
+      "pregunta": "¿Qué es una 'Recesión'?",
+      "respuesta_correcta": "Cuando el PIB de un país baja durante al menos dos trimestres seguidos (6 meses)",
+      "incorrectas": [
+        "Cuando la gente se va de vacaciones",
+        "Cuando el dólar sube",
+        "Cuando el banco cierra un día"
+      ],
+      "dato_extra": "En las recesiones, el consumo baja y el desempleo suele subir."
+    },
+    {
+      "id": "pib3",
+      "pregunta": "¿Qué es el 'PIB Per Cápita'?",
+      "respuesta_correcta": "El PIB total dividido entre el número de habitantes de un país",
+      "incorrectas": [
+        "El PIB de las personas ricas",
+        "Lo que paga cada persona de impuestos",
+        "El precio de las cosas por cabeza"
+      ],
+      "dato_extra": "Es una medida aproximada de la riqueza promedio de los ciudadanos."
+    },
+    {
+      "id": "pib4",
+      "pregunta": "¿Cuál de estos NO es un componente del PIB?",
+      "respuesta_correcta": "Los ahorros que guardas bajo tu colchón",
+      "incorrectas": [
+        "El consumo de las familias",
+        "La inversión de las empresas",
+        "El gasto del gobierno en hospitales"
+      ],
+      "dato_extra": "El dinero solo cuenta para el PIB cuando se usa para comprar o producir algo."
+    },
+    {
+      "id": "pib5",
+      "pregunta": "¿Qué son las 'Exportaciones Netas' en el PIB?",
+      "respuesta_correcta": "La diferencia entre lo que el país vende al extranjero y lo que le compra (Exportaciones - Importaciones)",
+      "incorrectas": [
+        "El total de camiones que salen del país",
+        "Vender cosas usadas",
+        "Los impuestos de aduana"
+      ],
+      "dato_extra": "Si un país vende más de lo que compra, su PIB aumenta."
+    },
+    {
+      "id": "pib6",
+      "pregunta": "¿Qué pasa durante la fase de 'Expansión' de un ciclo económico?",
+      "respuesta_correcta": "Las ventas suben, hay más empleos y la gente tiene más confianza para gastar",
+      "incorrectas": [
+        "Los precios bajan mucho",
+        "Las empresas cierran",
+        "El gobierno deja de gastar"
+      ],
+      "dato_extra": "Es la 'primavera' de la economía."
+    },
+    {
+      "id": "pib7",
+      "pregunta": "¿Qué es una 'Depresión Económica'?",
+      "respuesta_correcta": "Una recesión muy larga y profunda (varios años de caída)",
+      "incorrectas": [
+        "Cuando la gente está triste",
+        "Un día de bajas ventas",
+        "Cuando no hay internet"
+      ],
+      "dato_extra": "La más famosa fue la Gran Depresión de 1929."
+    },
+    {
+      "id": "pib8",
+      "pregunta": "¿Por qué el PIB no mide la felicidad de un país?",
+      "respuesta_correcta": "Porque solo mide el valor del dinero y las cosas, no la salud, el tiempo libre o la ecología",
+      "incorrectas": [
+        "Porque es una fórmula secreta",
+        "Porque solo cuenta a los adultos",
+        "Porque los economistas no saben qué es la felicidad"
+      ],
+      "dato_extra": "Es una gran herramienta, pero no lo dice todo sobre la vida."
+    },
+    {
+      "id": "pib9",
+      "pregunta": "¿Cómo afecta el avance tecnológico al PIB?",
+      "respuesta_correcta": "Lo hace crecer porque permite producir más cosas con menos recursos",
+      "incorrectas": [
+        "Lo hace bajar",
+        "No le afecta",
+        "Hace que el dinero desaparezca"
+      ],
+      "dato_extra": "La innovación es el motor del crecimiento a largo plazo."
+    },
+    {
+      "id": "pib10",
+      "pregunta": "¿Qué es la 'Productividad'?",
+      "respuesta_correcta": "La cantidad de bienes y servicios producidos por cada hora de trabajo",
+      "incorrectas": [
+        "Trabajar muchas horas sin descanso",
+        "Tener muchas máquinas",
+        "Vender cosas caras"
+      ],
+      "dato_extra": "¡Felicidades! Ahora sabes cómo se mide el éxito de las naciones."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "comparativa_espera": "La regla 50/30/20 es el presupuesto más ampliamente recomendado en el mundo: 50% necesidades, 30% deseos, 20% ahorro e inversión. Aplicado durante 20 años sobre un salario promedio mexicano puede generar más de $1,000,000 en activos."
+}

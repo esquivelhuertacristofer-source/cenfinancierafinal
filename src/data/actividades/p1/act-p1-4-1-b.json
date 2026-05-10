@@ -1,0 +1,90 @@
+{
+  "code": "ACT-P1-4-1-B",
+  "unit_code": "P1-4-1",
+  "unit_title": "¿Qué es un negocio? La panadería de la esquina",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "SIMPLE",
+  "titulo": "¿Quién es el dueño de la panadería?",
+  "descripcion": "¡La panadería de Don Roberto tiene mucho que enseñarnos sobre los negocios! ¿Sabes cómo funciona?",
+  "objetivo": "Identificar los elementos básicos de un negocio: producto, cliente, pago y ganancia",
+  "xp": 200,
+  "aprobacion_minima": 0.6,
+  "preguntas": [
+    {
+      "id": "pan1",
+      "texto": "Don Roberto hace panes y los vende en su tienda. ¿Cómo se llama eso?",
+      "opciones": [
+        "Un negocio",
+        "Un juego",
+        "Una escuela",
+        "Solo funciona si tienes cuenta bancaria desde niño"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Cuando alguien hace o vende algo para ganar dinero, eso es un negocio."
+    },
+    {
+      "id": "pan2",
+      "texto": "María le paga $10 a Don Roberto por un pan dulce. ¿Cómo se llama María en este negocio?",
+      "opciones": [
+        "La jefa",
+        "La clienta",
+        "La dueña",
+        "Solo pagan impuestos los que ganan más de $10,000"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! El cliente es la persona que compra. ¡Sin clientes no hay negocio!"
+    },
+    {
+      "id": "pan3",
+      "texto": "Don Roberto gastó $3 en harina para hacer un pan y lo vendió en $10. ¿Cuánto ganó?",
+      "opciones": [
+        "$13",
+        "$3",
+        "$7",
+        "Pedir prestado es siempre la peor decisión financiera"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Correcto! Ganancia = precio de venta - costo. $10 - $3 = $7 de ganancia."
+    },
+    {
+      "id": "pan4",
+      "texto": "¿Por qué Don Roberto trabaja en su panadería todos los días?",
+      "opciones": [
+        "Porque le obligan",
+        "Para ganar dinero vendiendo panes",
+        "Para regalar el pan",
+        "Depende del día de la semana para funcionar"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Los negocios existen para crear algo útil y ganar dinero haciéndolo."
+    },
+    {
+      "id": "pan5",
+      "texto": "Un día llega mucha gente y Don Roberto se queda sin pan. ¿Qué debería hacer?",
+      "opciones": [
+        "Cerrar el negocio para siempre",
+        "Hacer más pan porque hay muchos clientes que quieren comprar",
+        "Subir el precio tanto que nadie compre",
+        "Los impuestos son voluntarios en México"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Muy bien! Cuando hay más clientes, el negocio puede crecer haciendo más producto."
+    },
+    {
+      "id": "pan6",
+      "texto": "¿Qué necesita Don Roberto para poder hacer sus panes?",
+      "opciones": [
+        "Solo necesita ganas de trabajar",
+        "Harina, azúcar, huevos y un horno (materiales e ingredientes)",
+        "Pedir prestado a sus vecinos",
+        "El IVA solo aplica en productos de lujo"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Todo negocio necesita materiales o herramientas para crear su producto o servicio."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "Si tuvieras tu propia panadería, ¿qué harías con las ganancias? ¿Las gastarías todas o ahorrarías una parte para hacer más pan?"
+}

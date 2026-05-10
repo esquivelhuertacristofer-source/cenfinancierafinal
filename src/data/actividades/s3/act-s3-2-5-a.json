@@ -1,0 +1,122 @@
+{
+  "code": "ACT-S3-2-5-A",
+  "unit_code": "S3-2-5",
+  "unit_title": "Psicología del dinero: mentalidad de abundancia vs. escasez",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Pitch Deck del Futuro",
+  "descripcion": "Tienes la idea que cambiará el mundo. Ahora debes convencer a los inversionistas de que eres el indicado para ejecutarla.",
+  "objetivo": "Diseñar un modelo de negocio escalable y estructurar una propuesta de inversión profesional",
+  "xp": 600,
+  "output_type": "Pitch Deck de Inversión",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "problema_solucion_s3",
+      "titulo": "💡 El Problema y la Solución",
+      "descripcion": "Si no resuelves un dolor real, no tienes un negocio.",
+      "campos": [
+        {
+          "id": "problema_detectado",
+          "label": "¿Qué problema grande quieres resolver?",
+          "type": "textarea",
+          "placeholder": "Ej: La falta de acceso a educación de calidad en zonas rurales...",
+          "requerido": true
+        },
+        {
+          "id": "solucion_propuesta",
+          "label": "¿Cómo lo resuelve tu producto?",
+          "type": "textarea",
+          "placeholder": "Ej: Una plataforma offline que funciona con energía solar...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "mercado_modelo_s3",
+      "titulo": "📊 Mercado y Modelo de Negocio",
+      "descripcion": "¿A cuánta gente llegarás y cómo ganarás dinero?",
+      "campos": [
+        {
+          "id": "tam_mercado_s3",
+          "label": "Tamaño del mercado (Millones de personas)",
+          "type": "slider",
+          "min": 1,
+          "max": 1000,
+          "step": 10,
+          "default": 100,
+          "unit": "M"
+        },
+        {
+          "id": "modelo_ingresos_s3",
+          "label": "Modelo de Ingresos",
+          "type": "select",
+          "opciones": [
+            "Suscripción (SaaS)",
+            "Venta Directa",
+            "Publicidad",
+            "Freemium (Básico gratis, avanzado de pago)"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "ventaja_competitiva_s3",
+      "titulo": "🏰 Tu Fortaleza (Moat)",
+      "descripcion": "¿Por qué no te pueden copiar fácilmente?",
+      "campos": [
+        {
+          "id": "moat_negocio",
+          "label": "Tu ventaja competitiva",
+          "type": "textarea",
+          "placeholder": "Ej: Tenemos una patente única, efecto de red (muchos usuarios), o costos bajísimos...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "la_propuesta_shark",
+      "titulo": "🦈 La Oferta",
+      "descripcion": "¿Qué pides y qué das?",
+      "campos": [
+        {
+          "id": "capital_solicitado",
+          "label": "Inversión que buscas ($)",
+          "type": "text",
+          "placeholder": "Ej: $5,000,000",
+          "requerido": true
+        },
+        {
+          "id": "equity_ofrecido",
+          "label": "Porcentaje de la empresa que entregas (%)",
+          "type": "slider",
+          "min": 1,
+          "max": 49,
+          "step": 1,
+          "default": 10,
+          "unit": "%"
+        },
+        {
+          "id": "mercado_capturar_5pct",
+          "label": "Ingresos al Capturar 5% del Mercado",
+          "type": "calculated",
+          "formula": "Math.round(tam_mercado_s3 * 0.05)",
+          "unit": "$ anuales",
+          "ayuda": "Capturar el 5% de un mercado grande ya es una empresa exitosa"
+        },
+        {
+          "id": "equity_retenido_s3",
+          "label": "Equity que Conservas como Fundador",
+          "type": "calculated",
+          "formula": "Math.round(100 - equity_ofrecido)",
+          "unit": "% de tu empresa",
+          "ayuda": "Lo que te queda a ti y tu equipo después de esta ronda de financiamiento"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

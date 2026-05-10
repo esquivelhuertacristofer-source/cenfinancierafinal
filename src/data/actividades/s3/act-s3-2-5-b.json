@@ -1,0 +1,88 @@
+{
+  "code": "ACT-S3-2-5-B",
+  "unit_code": "S3-2-5",
+  "unit_title": "Psicología del dinero: mentalidad de abundancia vs. escasez",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "JUEGO",
+  "complejidad": "ALTO",
+  "titulo": "El Shark Tank del Aula",
+  "descripcion": "Tienes 1 millón de dólares para invertir. Tres emprendedores te presentan sus negocios. ¿A quién le darás tu dinero?",
+  "objetivo": "Desarrollar criterio de inversión basado en escalabilidad, riesgo y retorno potencial",
+  "xp": 500,
+  "mecanica": "Evalúa los proyectos y elige dónde invertir tu capital. Ve el resultado de tu inversión en 5 años.",
+  "escenarios": [
+    {
+      "id": "deal1",
+      "texto": "Proyecto A: 'La Panadería de Doña Rosa'. Es un negocio muy querido, con clientes leales y ventas estables. Quieren el $1M para abrir 5 sucursales más.",
+      "imagen": "🥖",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "Invertiste en estabilidad. 5 años después, recuperaste tu inversión y ganaste un 50% extra. Es un negocio seguro pero creció lento.",
+      "feedback_error": "Elegiste el camino seguro. No está mal, pero en el mundo de las inversiones de alto impacto, te perdiste de los grandes multiplicadores.",
+      "tipo_ataque": "Negocio Tradicional"
+    },
+    {
+      "id": "deal2",
+      "texto": "Proyecto B: 'EduMind AI'. Una App que usa inteligencia artificial para enseñar matemáticas de forma personalizada. Es muy arriesgado, pero si funciona, llegará a todo el planeta.",
+      "imagen": "🤖",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Gran golpe! 5 años después, la empresa fue comprada por Google. Tu $1M se convirtió en $20M. ¡Eres un tiburón de las inversiones!",
+      "feedback_error": "❌ Perdiste la oportunidad de tu vida. La tecnología escala de forma que los negocios físicos no pueden competir.",
+      "tipo_ataque": "Startup Tecnológica"
+    },
+    {
+      "id": "deal3",
+      "texto": "Proyecto C: 'CleanGlobal'. Una empresa de limpieza industrial que usa robots básicos. Tienen contratos con 10 fábricas. Es un punto medio entre riesgo y seguridad.",
+      "imagen": "🧹",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "Inversión sólida. La empresa creció bien y tu dinero se triplicó. Un retorno muy decente para un riesgo moderado.",
+      "feedback_error": "Buscaste el punto medio. Es una estrategia válida de diversificación.",
+      "tipo_ataque": "Servicios Escalables"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Evalúa cada proyecto de negocio y decide si INVERTIR o RECHAZAR la propuesta.",
+  "duracion": 120,
+  "opciones_clasificacion": [
+    "INVERTIR",
+    "RECHAZAR"
+  ],
+  "items": [
+    {
+      "id": "deal1",
+      "label": "Proyecto A: 'La Panadería de Doña Rosa'. Es un negocio muy querido, con clientes leales y ventas est...",
+      "emoji": "🥖",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "Invertiste en estabilidad. 5 años después, recuperaste tu inversión y ganaste un 50% extra. Es un negocio seguro pero creció lento.",
+      "feedback_error": "Elegiste el camino seguro. No está mal, pero en el mundo de las inversiones de alto impacto, te perdiste de los grandes multiplicadores.",
+      "puntos": 100
+    },
+    {
+      "id": "deal2",
+      "label": "Proyecto B: 'EduMind AI'. Una App que usa inteligencia artificial para enseñar matemáticas de forma ...",
+      "emoji": "🤖",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Gran golpe! 5 años después, la empresa fue comprada por Google. Tu $1M se convirtió en $20M. ¡Eres un tiburón de las inversiones!",
+      "feedback_error": "❌ Perdiste la oportunidad de tu vida. La tecnología escala de forma que los negocios físicos no pueden competir.",
+      "puntos": 100
+    },
+    {
+      "id": "deal3",
+      "label": "Proyecto C: 'CleanGlobal'. Una empresa de limpieza industrial que usa robots básicos. Tienen contrat...",
+      "emoji": "🧹",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "Inversión sólida. La empresa creció bien y tu dinero se triplicó. Un retorno muy decente para un riesgo moderado.",
+      "feedback_error": "Buscaste el punto medio. Es una estrategia válida de diversificación.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 300
+  }
+}

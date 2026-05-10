@@ -1,0 +1,135 @@
+{
+  "code": "P2-3-2-B",
+  "unit_code": "P2-3-2",
+  "unit_title": "Ingresos y gastos: que no gaste más de lo que tengo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Maestro del Balance",
+  "descripcion": "Si tu tanque de dinero se vacía, ¡estás en problemas! ¿Sabes cómo mantenerlo siempre con agua?",
+  "objetivo": "Validar la comprensión de la relación entre ingresos y gastos y la importancia del superávit",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Si tu mamá te da $20 y tú compras un juguete de $30 pidiendo prestado lo que falta, ¿cómo está tu tanque?",
+      "opciones": [
+        "Lleno y feliz",
+        "Tiene un hoyo (deuda) y está en problemas",
+        "Se volvió de oro",
+        "No importa"
+      ],
+      "correcta": 1,
+      "explicacion": "Gastar más de lo que tienes crea una deuda que tendrás que pagar después con mucho esfuerzo."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué representa el 'tubo' por donde entra el agua al tanque de tu fortuna?",
+      "opciones": [
+        "La tienda",
+        "Tus ingresos (domingo, premios, trabajo)",
+        "La basura",
+        "El recreo"
+      ],
+      "correcta": 1,
+      "explicacion": "Los ingresos son la fuente que llena tu tanque cada semana."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cómo se llama cuando gastas MENOS de lo que recibes y te sobra agua en el tanque?",
+      "opciones": [
+        "Pérdida",
+        "Ahorro o Superávit",
+        "Error",
+        "Mala suerte"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Esa es la meta! Que siempre te sobre un poco para el futuro."
+    },
+    {
+      "id": "q4",
+      "texto": "Si tu balanza se inclina hacia el lado ROJO (Gastos), ¿qué es lo primero que debes hacer?",
+      "opciones": [
+        "Poner más gastos rojos",
+        "Eliminar o recortar un gasto de 'deseo' (como un dulce) para equilibrar",
+        "Romper la balanza",
+        "No hacer nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Recortar deseos es la forma más rápida de arreglar tu presupuesto."
+    },
+    {
+      "id": "q5",
+      "texto": "Verdadero o Falso: Si una persona gana mucho dinero pero gasta MUCHO MÁS de lo que gana, en realidad es pobre y tiene problemas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "No importa cuánto ganes, si gastas más, siempre estarás en deuda."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cuál es la 'Regla de Oro' de todo genio financiero?",
+      "opciones": [
+        "Gasta hoy, paga mañana",
+        "Nunca gastes más de lo que tienes en tu tanque",
+        "El dinero es solo papel",
+        "Compra todo lo que brille"
+      ],
+      "correcta": 1,
+      "explicacion": "Esta regla te garantiza una vida tranquila y sin deudas."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué son los 'Gastos Hormiga'?",
+      "opciones": [
+        "Comida para hormigas",
+        "Pequeños gastos diarios que parecen poquito pero que sumados vacían tu tanque",
+        "Billetes chiquitos",
+        "Regalos"
+      ],
+      "correcta": 1,
+      "explicacion": "Un chicle aquí, una estampa allá... ¡cuidado con las hormigas del dinero!"
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cómo puedes hacer que entre más agua a tu tanque?",
+      "opciones": [
+        "Gritando fuerte",
+        "Buscando formas de ganar ingresos extra (ayudando en casa o emprendiendo)",
+        "Esperando que llueva dinero",
+        "Gastando más"
+      ],
+      "correcta": 1,
+      "explicacion": "El esfuerzo y la creatividad son los motores de tus ingresos."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Por qué es peligroso tener el 'tanque vacío' permanentemente?",
+      "opciones": [
+        "Porque hace calor",
+        "Porque si hay una emergencia (como enfermarse), no tienes cómo pagar la solución",
+        "Porque la alcancía se ve fea",
+        "Porque sí"
+      ],
+      "correcta": 1,
+      "explicacion": "El ahorro es tu escudo protector contra los días difíciles."
+    },
+    {
+      "id": "q10",
+      "texto": "Si ahorras $2 de cada $10 que recibes, ¿qué le pasará a tu tanque con el tiempo?",
+      "opciones": [
+        "Se va a secar",
+        "Se va a ir llenando poco a poco hasta tener un gran tesoro",
+        "Se va a romper",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "La constancia es la magia que convierte monedas en fortunas."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

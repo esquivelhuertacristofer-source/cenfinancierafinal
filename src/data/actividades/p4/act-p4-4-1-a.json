@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P4-4-1-A",
+  "unit_code": "P4-4-1",
+  "unit_title": "El ADN del emprendedor: detectando oportunidades",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Mentalidad Diamante",
+  "descripcion": "Emprender no es solo ganar dinero, es resolver problemas y nunca rendirse. ¡Enfréntate a tu primer gran reto!",
+  "objetivo": "Fomentar la resiliencia y la capacidad de pivotar ante el fracaso inicial de una idea de negocio",
+  "xp": 450,
+  "personaje_principal": "Futuro Líder",
+  "contexto_inicial": "Decidiste vender pulseras tejidas a tus amigos. Invertiste todo tu ahorro, pero ¡nadie te ha comprado ninguna! ¿Qué haces?",
+  "nodo_inicial": "crisis_inicial",
+  "nodos": {
+    "crisis_inicial": {
+      "id": "crisis_inicial",
+      "texto": "Estás triste porque no has vendido nada. Te sientes frustrado.",
+      "opciones": [
+        {
+          "id": "preguntar_clientes",
+          "texto": "Preguntarles a tus amigos por qué no les gustan las pulseras",
+          "siguiente_nodo": "ajuste_idea",
+          "consecuencia": "¡Paso de valiente! Escuchar al cliente es el primer paso al éxito.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "rendirse_ya",
+          "texto": "Cerrar el negocio y decir que emprender es muy difícil",
+          "siguiente_nodo": "final_rendicion",
+          "consecuencia": "Te rendiste muy pronto. El fracaso es solo una lección.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "ajuste_idea": {
+      "id": "ajuste_idea",
+      "texto": "Tus amigos dicen: 'Están bonitas, pero son muy caras y los colores no nos gustan'. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "cambiar_diseno",
+          "texto": "Cambiar los colores y buscar materiales más baratos para bajar el precio",
+          "siguiente_nodo": "exito_negocio",
+          "consecuencia": "¡Eso se llama PIVOTAR! Ajustaste tu idea a lo que el mercado quería.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "insistir_mismo",
+          "texto": "Seguir vendiendo las mismas pulseras al mismo precio",
+          "siguiente_nodo": "final_estancado",
+          "consecuencia": "Si el cliente no lo quiere, por más que insistas, no te lo comprará.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "exito_negocio": {
+      "id": "exito_negocio",
+      "texto": "¡Increíble! Con los nuevos colores y el precio justo, ¡vendiste todas en el recreo! Ahora tienes capital para crecer.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un emprendedor no es el que nunca falla, sino el que aprende rápido de sus fallas."
+    },
+    "final_rendicion": {
+      "id": "final_rendicion",
+      "texto": "Decidiste no seguir. Perdiste tu ahorro y te quedaste con muchas pulseras guardadas. ¿Quieres intentar de nuevo?",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "A veces la victoria está justo después del primer fracaso. ¡No te detengas!"
+    },
+    "final_estancado": {
+      "id": "final_estancado",
+      "texto": "Pasan las semanas y sigues sin vender. Tu negocio se quedó estancado por no escuchar al cliente.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El mercado manda. Si quieres vender, debes ofrecer algo que la gente valore y pueda pagar."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

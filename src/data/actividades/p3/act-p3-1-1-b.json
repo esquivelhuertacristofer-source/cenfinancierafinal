@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-1-1-B",
+  "unit_code": "P3-1-1",
+  "unit_title": "El valor del ahorro y metas financieras",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "SIMPLE",
+  "titulo": "Mi Mapa de Metas Diamante",
+  "descripcion": "Vamos a crear tu plan de ahorro personal. Define tres metas: una para hoy mismo, una para el fin de año y una para el futuro.",
+  "objetivo": "Aprender a formalizar metas financieras con nombre, monto y tiempo de ejecución",
+  "xp": 300,
+  "output_type": "Mapa de Metas",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "meta_corta",
+      "titulo": "🚀 Meta a Corto Plazo (1 mes)",
+      "descripcion": "¿Qué algo pequeño te gustaría lograr en las próximas 4 semanas?",
+      "campos": [
+        {
+          "id": "nombre_corta",
+          "label": "¿Qué quieres comprar?",
+          "type": "text",
+          "placeholder": "Ej: Un sobre de estampas",
+          "requerido": true
+        },
+        {
+          "id": "precio_corta",
+          "label": "¿Cuánto cuesta?",
+          "type": "number",
+          "placeholder": "Monto en pesos",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_semanal_corta",
+          "label": "Ahorro semanal necesario",
+          "type": "calculated",
+          "formula": "precio_corta / 4",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Esto es lo que debes guardar cada domingo del mes."
+        }
+      ]
+    },
+    {
+      "id": "meta_mediana",
+      "titulo": "🗓️ Meta a Mediano Plazo (6 meses)",
+      "descripcion": "Piensa en algo un poco más grande para el final del ciclo escolar.",
+      "campos": [
+        {
+          "id": "nombre_mediana",
+          "label": "¿Cuál es tu sueño mediano?",
+          "type": "text",
+          "placeholder": "Ej: Un videojuego o ropa nueva",
+          "requerido": true
+        },
+        {
+          "id": "precio_mediana",
+          "label": "¿Cuál es su precio?",
+          "type": "number",
+          "placeholder": "Monto en pesos",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_semanal_mediana",
+          "label": "Ahorro semanal necesario",
+          "type": "calculated",
+          "formula": "precio_mediana / 24",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Calculado para ahorrar durante 24 semanas (6 meses)."
+        }
+      ]
+    },
+    {
+      "id": "meta_larga",
+      "titulo": "🏰 Meta a Largo Plazo (1 año)",
+      "descripcion": "¡El sueño más grande! Algo que requiera mucha paciencia y esfuerzo.",
+      "campos": [
+        {
+          "id": "nombre_larga",
+          "label": "¿Qué es lo que más deseas?",
+          "type": "text",
+          "placeholder": "Ej: Una bicicleta o tableta",
+          "requerido": true
+        },
+        {
+          "id": "precio_larga",
+          "label": "¿Cuánto cuesta ese gran sueño?",
+          "type": "number",
+          "placeholder": "Monto en pesos",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_semanal_larga",
+          "label": "Ahorro semanal necesario",
+          "type": "calculated",
+          "formula": "precio_larga / 52",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Este es tu plan de ahorro para todo un año (52 semanas)."
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

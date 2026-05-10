@@ -1,0 +1,144 @@
+{
+  "code": "P2-2-3-A",
+  "unit_code": "P2-2-3",
+  "unit_title": "El domingo: ¿gasto todo o guardo algo?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTA",
+  "titulo": "El Desafío de mis $50 Pesos",
+  "descripcion": "¡Es domingo y tu abuelito te dio $50 pesos! Tienes toda la semana por delante. ¿Serás capaz de administrarlos como un genio?",
+  "objetivo": "Practicar la distribución del dinero a lo largo del tiempo y fomentar el ahorro preventivo",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Tienes $50 pesos en tu mano. Es domingo por la mañana. Te sientes rico, pero recuerda: ¡no recibirás más hasta el próximo domingo!",
+  "nodo_inicial": "domingo_tarde",
+  "nodos": {
+    "domingo_tarde": {
+      "id": "domingo_tarde",
+      "texto": "Ves un carrito de helados. El helado triple cuesta $30 pesos. Si lo compras, te sentirás muy feliz, pero te quedarán solo $20 para el resto de la semana. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "helado_pequeño",
+          "texto": "Comprar uno sencillo de $10 y guardar $40",
+          "siguiente_nodo": "martes_escuela",
+          "consecuencia": "¡Sabia decisión! Disfrutaste un postre y tu tesoro sigue siendo grande.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "helado_triple",
+          "texto": "¡Comprar el triple de $30!",
+          "siguiente_nodo": "martes_escuela",
+          "consecuencia": "Estuvo delicioso, pero ahora tu cartera se siente mucho más ligera.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "martes_escuela": {
+      "id": "martes_escuela",
+      "texto": "Es martes. En la escuela ves que todos tus amigos tienen las nuevas estampas de dinosaurios. El sobre cuesta $15 pesos.",
+      "opciones": [
+        {
+          "id": "ahorrar_estampas",
+          "texto": "No comprar hoy para ahorrar para el balón de fútbol que quieres",
+          "siguiente_nodo": "viernes_emergencia",
+          "consecuencia": "¡Paciencia de campeón! Estás más cerca de tu meta grande.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "comprar_estampas",
+          "texto": "Comprar el sobre de estampas",
+          "siguiente_nodo": "viernes_emergencia",
+          "consecuencia": "Te salieron estampas padres, pero... ¿cuánto dinero te queda?",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "viernes_emergencia": {
+      "id": "viernes_emergencia",
+      "texto": "¡Oh no! Es viernes y se te perdió tu sacapuntas. Necesitas uno nuevo para terminar la tarea. Cuesta $10 pesos.",
+      "opciones": [
+        {
+          "id": "comprar_sacapuntas",
+          "texto": "Usar tu dinero guardado para el sacapuntas",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "¡Menos mal que guardaste dinero! Pudiste resolver tu problema sin pedir prestado.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "no_tengo_dinero",
+          "texto": "¡No me queda dinero! Tengo que pedir prestado",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "Estar endeudado se siente feo. La próxima semana hay que administrar mejor.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "domingo_final": {
+      "id": "domingo_final",
+      "texto": "¡Llegó el nuevo domingo! Si fuiste inteligente, aún tienes algo de dinero en tu alcancía. Si no, empiezas desde cero.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "La mesada es tu primer entrenamiento para la vida. ¡Aprender a decir 'ahora no' a un antojo pequeño te permitirá decir 'sí' a un sueño grande!"
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

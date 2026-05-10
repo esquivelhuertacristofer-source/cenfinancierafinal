@@ -1,0 +1,118 @@
+{
+  "code": "ACT-P6-4-2-B",
+  "unit_code": "P6-4-2",
+  "unit_title": "Formalidad Empresarial: Sociedades y RFC",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Frente a los Tiburones",
+  "descripcion": "Tu negocio está listo para crecer. Necesitas $1,000,000. Tienes dos ofertas sobre la mesa. ¿Cuál elegirás para tu futuro?",
+  "objetivo": "Comparar las fuentes de financiamiento (deuda vs capital) y entender el valor del capital inteligente",
+  "xp": 500,
+  "personaje_principal": "Vale",
+  "contexto_inicial": "Vale tiene un negocio de jugos orgánicos. Necesita una máquina nueva que cuesta 1 millón. Opción A: Préstamo del Banco (Pagas 15% de interés anual, pero sigues siendo dueño de todo). Opción B: Inversionista Ángel (Te da el millón, pero quiere el 25% de tu empresa).",
+  "nodo_inicial": "el_dilema_del_dinero",
+  "nodos": {
+    "el_dilema_del_dinero": {
+      "id": "el_dilema_del_dinero",
+      "texto": "¿Qué es más valioso para ti ahora?",
+      "opciones": [
+        {
+          "id": "ir_con_banco",
+          "texto": "Pedir el préstamo al Banco (Deuda)",
+          "siguiente_nodo": "reto_inesperado",
+          "consecuencia": "Te quedaste con el 100% de la empresa, pero ahora tienes una deuda pesada que pagar cada mes.",
+          "xp_bonus": 100,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "ir_con_angel",
+          "texto": "Aceptar al Inversionista Ángel (Capital)",
+          "siguiente_nodo": "exito_con_socio",
+          "consecuencia": "Ya no eres dueño de todo, pero ahora tienes a un experto que te ayuda a vender más.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "exito_con_socio": {
+      "id": "exito_con_socio",
+      "texto": "¡Increíble! Tu socio te presentó con los dueños de una cadena nacional de súper mercados. Tu negocio creció 10 veces más rápido que si estuvieras sola.",
+      "opciones": [
+        {
+          "id": "celebrar_exito",
+          "texto": "Aceptar que un buen socio vale más que el dinero",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Aprendiste que el 'Smart Capital' abre puertas que el dinero solo no puede.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_dueño_total": {
+      "id": "final_dueño_total",
+      "texto": "Sigues siendo el único jefe, pero creces muy lento porque tienes que pagar el préstamo. A veces, compartir el pastel ayuda a que el pastel sea mucho más grande.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "En los negocios, el 100% de cero es cero. Es mejor tener el 75% de un imperio que el 100% de algo pequeño."
+    },
+    "final_exito_angel": {
+      "id": "final_exito_angel",
+      "texto": "¡Felicidades! Entendiste que el liderazgo también significa saber cuándo pedir ayuda y compartir el éxito.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un buen inversionista trae su billetera, pero un gran inversionista trae sus contactos y sabiduría."
+    },
+    "reto_inesperado": {
+      "id": "reto_inesperado",
+      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "opciones": [
+        {
+          "id": "usar_ahorro",
+          "texto": "Usar una pequeña parte de mis ahorros",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "pedir_prestado",
+          "texto": "Pedir prestado a un amigo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

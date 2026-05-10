@@ -1,0 +1,145 @@
+{
+  "code": "ACT-S2-3-5-A",
+  "unit_code": "S2-3-5",
+  "unit_title": "Inversión sostenible: ISR y finanzas con impacto social",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Bola de Nieve vs Avalancha",
+  "descripcion": "Estás atrapado en deudas. ¿Cómo saldrás? ¿Usarás la lógica de las matemáticas o la fuerza de tu psicología?",
+  "objetivo": "Comparar los métodos de pago de deuda para entender la relación entre ahorro financiero y motivación psicológica",
+  "xp": 600,
+  "descripcion_formula": "Calculamos el tiempo y el interés total pagado. Avalancha prioriza Tasa Interés. Bola de Nieve prioriza Monto Menor.",
+  "inputs": [
+    {
+      "id": "presupuesto_mensual_s2",
+      "label": "Dinero Extra para pagar deudas ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000,
+      "step": 500,
+      "default": 2000,
+      "unit": "$"
+    },
+    {
+      "id": "estrategia_pago_s2",
+      "label": "Estrategia de Salida",
+      "type": "select",
+      "default": "Método Bola de Nieve (Emocional)",
+      "opciones": [
+        "Método Bola de Nieve (Emocional)",
+        "Método Avalancha (Matemático)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "aportacion_mensual",
+      "label": "Aportación Mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 500,
+      "unit": "$"
+    }
+  ],
+  "formula": "estrategia_pago_s2 === 'Método Avalancha (Matemático)' ? 12 : 18",
+  "output_label": "Meses para estar libre de deudas",
+  "output_prefix": "",
+  "output_suffix": " meses",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "estrategia_pago_s2 === 'Método Avalancha (Matemático)'",
+      "mensaje": "📈 ¡Estrategia Matemática! Al pagar primero la deuda con el interés más alto (60%), te ahorraste miles en intereses y terminaste más rápido. Pero cuidado: requiere mucha disciplina.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "estrategia_pago_s2 === 'Método Bola de Nieve (Emocional)'",
+      "mensaje": "❄️ ¡Estrategia Psicológica! Al pagar primero la deuda más pequeña, sentiste victorias rápidas que te mantuvieron motivado. Pagaste un poco más de interés, pero ¡lo lograste!",
+      "tipo": "info"
+    },
+    {
+      "condicion": "presupuesto_mensual_s2 < 1500",
+      "mensaje": "⚠️ ¡Alerta! Con ese presupuesto tardarás demasiado y los intereses se comerán tu dinero. Necesitas buscar ingresos extra o recortar más gastos.",
+      "tipo": "warning"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Pagarías más por un producto de una empresa que cuida el medio ambiente? ¿Cómo afecta a los rendimientos financieros invertir con criterios ESG (Ambiental, Social, Gobierno)?",
+  "comparativa_espera": "Los fondos de inversión ESG han superado en rendimiento a los fondos tradicionales en 7 de los últimos 10 años. Las empresas con buena gobernanza tienen en promedio menos escándalos y quiebras inesperadas.",
+  "outputs_multiples": [
+    {
+      "id": "deuda_eliminada",
+      "label": "Deuda Total Eliminada",
+      "formula": "presupuesto_mensual_s2 * 12 * anios_sim",
+      "prefix": "$",
+      "suffix": " pagados",
+      "descripcion": "El total de deuda que eliminas con tu estrategia"
+    },
+    {
+      "id": "intereses_ahorrados",
+      "label": "Intereses Que Te Ahorras",
+      "formula": "Math.round(presupuesto_mensual_s2 * 12 * anios_sim * 0.15)",
+      "prefix": "$",
+      "suffix": " en intereses salvados",
+      "descripcion": "Con una estrategia agresiva ahorras ~15% del total pagado"
+    },
+    {
+      "id": "patrimonio_post_deuda",
+      "label": "Patrimonio si Inviertes Después",
+      "formula": "Math.round(aportacion_mensual * 12 * Math.max(1, anios_sim - 2) * Math.pow(1.10, anios_sim/2))",
+      "prefix": "$",
+      "suffix": " al quedar libre",
+      "descripcion": "Si conviertes el pago de deuda en inversión una vez libre"
+    },
+    {
+      "id": "meses_libertad_financiera",
+      "label": "Meses hasta Libertad de Deuda",
+      "formula": "Math.ceil(presupuesto_mensual_s2 * 12 * anios_sim / Math.max(1, presupuesto_mensual_s2))",
+      "prefix": "",
+      "suffix": " meses para ser libre",
+      "descripcion": "El tiempo estimado para cerrar completamente la deuda"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "deuda_eliminada",
+      "label": "Deuda Total Eliminada",
+      "color": "#6366f1"
+    },
+    {
+      "id": "intereses_ahorrados",
+      "label": "Intereses Que Te Ahorras",
+      "color": "#22c55e"
+    }
+  ]
+}

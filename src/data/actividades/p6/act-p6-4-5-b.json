@@ -1,0 +1,66 @@
+{
+  "id": "ACT-P6-4-5-B",
+  "tipo": "QUIZ",
+  "titulo": "Certificación Final: Emprendimiento Social",
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "texto": "¿Cuál es el objetivo principal de un emprendimiento social?",
+      "opciones": [
+        "Ganar mucho dinero solamente",
+        "Resolver un problema de la comunidad o el ambiente",
+        "Ser famoso en redes sociales",
+        "Invertir siempre garantiza ganar dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "El emprendimiento social busca generar un impacto positivo en la sociedad."
+    },
+    {
+      "texto": "¿Qué significa que un proyecto sea 'sustentable'?",
+      "opciones": [
+        "Que se puede mantener por sí mismo sin agotar recursos",
+        "Que es muy caro de realizar",
+        "Que solo dura un par de días",
+        "Es lo mismo que regalar el dinero"
+      ],
+      "correcta": 0,
+      "explicacion": "La sustentabilidad permite que los proyectos perduren en el tiempo respetando el entorno."
+    },
+    {
+      "texto": "Un ejemplo de emprendimiento social es:",
+      "opciones": [
+        "Una tienda de dulces caros",
+        "Una empresa que limpia océanos y fabrica productos reciclados",
+        "Un banco tradicional",
+        "Solo se puede invertir en bienes raíces"
+      ],
+      "correcta": 1,
+      "explicacion": "Resolver problemas ambientales es una forma clave de emprendimiento social."
+    },
+    {
+      "texto": "¿Por qué es importante el trabajo en equipo en estos proyectos?",
+      "opciones": [
+        "Para que uno trabaje y los demás descansen",
+        "Para combinar diferentes talentos y lograr metas más grandes",
+        "Para competir entre los miembros",
+        "Invertir es ilegal para menores de edad"
+      ],
+      "correcta": 1,
+      "explicacion": "La colaboración multiplica el impacto de los proyectos sociales."
+    },
+    {
+      "texto": "Para iniciar un emprendimiento social, lo primero es:",
+      "opciones": [
+        "Identificar una necesidad o problema en tu entorno",
+        "Comprar mucha maquinaria",
+        "Esperar a que alguien más lo haga",
+        "Es una tarea que solo hacen los papás"
+      ],
+      "correcta": 0,
+      "explicacion": "Todo gran cambio comienza detectando dónde se necesita ayuda."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "xp": 300,
+  "level": "Primaria 6"
+}

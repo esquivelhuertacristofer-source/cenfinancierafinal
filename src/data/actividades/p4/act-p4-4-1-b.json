@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P4-4-1-B",
+  "unit_code": "P4-4-1",
+  "unit_title": "El ADN del emprendedor: detectando oportunidades",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Perfil del Emprendedor",
+  "descripcion": "¿Crees que tienes lo necesario para cambiar el mundo con tus ideas? ¡Descubre tu ADN emprendedor!",
+  "objetivo": "Identificar las características psicológicas y actitudinales de un emprendedor",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "adn1",
+      "texto": "¿Cuál es la principal motivación de un gran emprendedor?",
+      "opciones": [
+        "Ganar dinero rápido sin trabajar",
+        "Resolver un problema o necesidad de los demás",
+        "Ser el jefe para mandar a todos",
+        "No ir a la escuela"
+      ],
+      "correcta": 1,
+      "explicacion": "Los mejores negocios nacen de querer ayudar a otros a solucionar un problema."
+    },
+    {
+      "id": "adn2",
+      "texto": "¿Qué significa ser 'Resiliente'?",
+      "opciones": [
+        "Saber dibujar muy bien",
+        "Capacidad para recuperarse de los fracasos y seguir intentándolo",
+        "Tener mucho dinero en el banco",
+        "Hablar muchos idiomas"
+      ],
+      "correcta": 1,
+      "explicacion": "Un emprendedor se cae 10 veces y se levanta 11."
+    },
+    {
+      "id": "adn3",
+      "texto": "Si tienes una idea pero no estás seguro si funcionará, ¿qué hace un emprendedor?",
+      "opciones": [
+        "Se olvida de la idea por miedo",
+        "Investiga y hace una prueba pequeña para aprender",
+        "Gasta todo su dinero de golpe en la idea",
+        "Espera a que alguien más lo haga"
+      ],
+      "correcta": 1,
+      "explicacion": "Tomar riesgos calculados y probar antes de invertir mucho es vital."
+    },
+    {
+      "id": "adn4",
+      "texto": "¿Por qué es importante la disciplina para un emprendedor?",
+      "opciones": [
+        "Para que no le regañen",
+        "Para ser constante y cumplir con sus metas y clientes",
+        "Para usar uniforme",
+        "No es importante"
+      ],
+      "correcta": 1,
+      "explicacion": "La constancia vence al talento cuando el talento no se esfuerza."
+    },
+    {
+      "id": "adn5",
+      "texto": "¿Qué es la 'Creatividad' en los negocios?",
+      "opciones": [
+        "Saber pintar cuadros",
+        "Buscar formas nuevas y mejores de hacer las cosas",
+        "Copiar lo que hacen los demás",
+        "Usar muchos colores en el letrero"
+      ],
+      "correcta": 1,
+      "explicacion": "Innovar es mejorar algo que ya existe o inventar algo totalmente nuevo."
+    },
+    {
+      "id": "adn6",
+      "texto": "¿Qué debe hacer un emprendedor si un cliente le da una queja?",
+      "opciones": [
+        "Enojarse con el cliente",
+        "Escuchar con atención para mejorar el producto",
+        "Ignorar la queja",
+        "Dejar de venderle"
+      ],
+      "correcta": 1,
+      "explicacion": "Las quejas son la mejor fuente de información para que tu negocio crezca."
+    },
+    {
+      "id": "adn7",
+      "texto": "¿Un emprendedor nace o se hace?",
+      "opciones": [
+        "Solo se nace",
+        "Se hace a través del aprendizaje, la práctica y el esfuerzo",
+        "Depende de la suerte",
+        "Solo si tus papás tienen negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "Cualquier persona puede aprender a emprender si tiene ganas de aprender."
+    },
+    {
+      "id": "adn8",
+      "texto": "¿Cuál es la recompensa de un emprendedor exitoso?",
+      "opciones": [
+        "Solo el dinero",
+        "La satisfacción de crear algo útil y la libertad financiera",
+        "Tener muchos amigos",
+        "Salir en la televisión"
+      ],
+      "correcta": 1,
+      "explicacion": "Crear valor para el mundo y lograr tus metas personales es el mayor premio."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

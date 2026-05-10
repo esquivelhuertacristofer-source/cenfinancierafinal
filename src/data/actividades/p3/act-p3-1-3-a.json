@@ -1,0 +1,115 @@
+{
+  "code": "ACT-P3-1-3-A",
+  "unit_code": "P3-1-3",
+  "unit_title": "Gastos fijos vs. Gastos variables",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "SIMPLE",
+  "titulo": "¿Fijo o Variable?",
+  "descripcion": "Aprende a diferenciar los gastos que llegan siempre igual de los que cambian cada mes. ¡Es el secreto para ahorrar!",
+  "objetivo": "Clasificar gastos según su periodicidad y flexibilidad para la planificación financiera",
+  "xp": 250,
+  "instruccion": "Arrastra cada gasto a la columna correcta: ¿Es un GASTO FIJO o un GASTO VARIABLE?",
+  "items": [
+    {
+      "id": "f1",
+      "label": "Renta de la casa",
+      "emoji": "🏠",
+      "categoria_correcta": "fijo",
+      "feedback": "¡Correcto! La renta no cambia y hay que pagarla cada mes sin falta."
+    },
+    {
+      "id": "f2",
+      "label": "Mensualidad de la escuela",
+      "emoji": "🎒",
+      "categoria_correcta": "fijo",
+      "feedback": "¡Fijo! Es un compromiso que se repite mes con mes."
+    },
+    {
+      "id": "v1",
+      "label": "Tacos al pastor el viernes",
+      "emoji": "🌮",
+      "categoria_correcta": "variable",
+      "feedback": "¡Exacto! Este gasto cambia según cuántos tacos comas o si decides no ir."
+    },
+    {
+      "id": "f3",
+      "label": "Internet y Teléfono",
+      "emoji": "🌐",
+      "categoria_correcta": "fijo",
+      "feedback": "¡Fijo! El plan de internet suele costar lo mismo cada mes."
+    },
+    {
+      "id": "v2",
+      "label": "Regalo para el cumple de un amigo",
+      "emoji": "🎁",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! No todos los meses hay cumpleaños ni cuestan lo mismo."
+    },
+    {
+      "id": "v3",
+      "label": "Recibo de la Luz",
+      "emoji": "💡",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! El precio cambia dependiendo de cuánto tiempo prendas los focos."
+    },
+    {
+      "id": "f4",
+      "label": "Suscripción a Netflix/Disney",
+      "emoji": "📺",
+      "categoria_correcta": "fijo",
+      "feedback": "¡Fijo! Te cobran lo mismo cada mes aunque no lo veas."
+    },
+    {
+      "id": "v4",
+      "label": "Boletos para el Cine",
+      "emoji": "🎬",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! Es un gusto que puedes decidir tener o no."
+    },
+    {
+      "id": "v5",
+      "label": "La despensa de la semana",
+      "emoji": "🛒",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! Depende de qué cosas ricas o necesarias elijas comprar."
+    },
+    {
+      "id": "v6",
+      "label": "Un juguete nuevo",
+      "emoji": "🧸",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! Es un deseo que no ocurre todo el tiempo."
+    },
+    {
+      "id": "v7",
+      "label": "Ropa nueva",
+      "emoji": "👕",
+      "categoria_correcta": "variable",
+      "feedback": "¡Variable! Solo compras ropa de vez en cuando."
+    },
+    {
+      "id": "f5",
+      "label": "Gimnasio o Club",
+      "emoji": "🏋️",
+      "categoria_correcta": "fijo",
+      "feedback": "¡Fijo! Es una cuota mensual establecida."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "fijo",
+      "label": "GASTO FIJO (No cambia)",
+      "emoji": "📌",
+      "color": "#ef4444"
+    },
+    {
+      "id": "variable",
+      "label": "GASTO VARIABLE (Cambia)",
+      "emoji": "🎲",
+      "color": "#f59e0b"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

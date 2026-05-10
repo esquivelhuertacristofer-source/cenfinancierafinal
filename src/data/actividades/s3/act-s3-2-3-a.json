@@ -1,0 +1,151 @@
+{
+  "code": "ACT-S3-2-3-A",
+  "unit_code": "S3-2-3",
+  "unit_title": "El primer trabajo: negociar salario, prestaciones y contrato",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Salida a Bolsa",
+  "descripcion": "Tu empresa ha crecido tanto que el mundo entero quiere ser dueño de una parte. ¡Es el día de tu IPO!",
+  "objetivo": "Entender el proceso de Oferta Pública Inicial (IPO) y cómo se determina el precio de las acciones en el mercado primario",
+  "xp": 600,
+  "descripcion_formula": "Capital Recaudado = AccionesVendidas * PrecioIPO. Éxito del Día 1 = (DemandaMarket - PrecioIPO) * Volatilidad.",
+  "inputs": [
+    {
+      "id": "acciones_a_vender_s3",
+      "label": "Número de Acciones a vender",
+      "type": "slider",
+      "min": 100000,
+      "max": 1000000,
+      "step": 100000,
+      "default": 500000,
+      "unit": "acciones"
+    },
+    {
+      "id": "precio_ipo_s3",
+      "label": "Precio Inicial por Acción ($)",
+      "type": "slider",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 20,
+      "unit": "$"
+    },
+    {
+      "id": "sentimiento_mercado_s3",
+      "label": "Sentimiento del Mercado",
+      "type": "select",
+      "default": "Normal",
+      "opciones": [
+        "Miedo (Bearish)",
+        "Normal",
+        "Euforia (Bullish)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "acciones_a_vender_s3 * precio_ipo_s3",
+  "output_label": "Capital Total Recaudado para la Empresa",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "precio_ipo_s3 > 80 && sentimiento_mercado_s3 === 'Miedo (Bearish)'",
+      "mensaje": "🚨 ¡Fracaso de IPO! El precio era demasiado alto para un mercado con miedo. Nadie compró tus acciones y el precio se desplomó el primer día.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "precio_ipo_s3 < 10 && sentimiento_mercado_s3 === 'Euforia (Bullish)'",
+      "mensaje": "💸 'Dejaste dinero en la mesa'. Tus acciones volaron pero pudiste haber recaudado mucho más dinero para tu empresa si hubieras puesto un precio más alto.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "precio_ipo_s3 > 15 && precio_ipo_s3 < 30 && sentimiento_mercado_s3 === 'Normal'",
+      "mensaje": "✅ ¡IPO Exitosa! Encontraste el punto de equilibrio justo. La empresa recaudó millones y los inversionistas están felices con el precio inicial.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 IPO significa 'Initial Public Offering'. Es cuando una empresa vende acciones al público por primera vez.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Te ofrecen $18,000 mensuales brutos. ¿Cuánto recibirás neto después de IMSS e ISR? ¿Qué valen realmente las prestaciones extra en pesos — seguro médico, INFONAVIT, bono anual?",
+  "comparativa_espera": "Las prestaciones legales en México equivalen al 35-45% adicional sobre el salario nominal. Un sueldo de $15,000 brutos tiene un costo total de $21,000-$22,000 para el empleador incluyendo todas las obligaciones.",
+  "outputs_multiples": [
+    {
+      "id": "ingresos_ipo",
+      "label": "Ingresos Brutos del IPO",
+      "formula": "Math.round(acciones_a_vender_s3 * precio_ipo_s3)",
+      "prefix": "$",
+      "suffix": " USD",
+      "descripcion": "El dinero que recibes por las acciones vendidas en bolsa"
+    },
+    {
+      "id": "valor_acciones_retenidas",
+      "label": "Valor de lo que Retienes",
+      "formula": "Math.round((10000 - acciones_a_vender_s3) * precio_ipo_s3 * 1.5)",
+      "prefix": "$",
+      "suffix": " USD potencial",
+      "descripcion": "Las acciones que guardas podrían valer más después del IPO"
+    },
+    {
+      "id": "impuesto_est",
+      "label": "Impuesto Estimado (10% ISR)",
+      "formula": "Math.round(acciones_a_vender_s3 * precio_ipo_s3 * 0.10)",
+      "prefix": "$",
+      "suffix": " USD en impuestos",
+      "descripcion": "La ganancia de capital paga ISR — siempre planifica con el fisco"
+    },
+    {
+      "id": "valuacion_empresa",
+      "label": "Valuación Implícita de la Empresa",
+      "formula": "Math.round(10000 * precio_ipo_s3)",
+      "prefix": "$",
+      "suffix": " USD total",
+      "descripcion": "Si vendes el N% y eso vale X, la empresa completa vale X/N%"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "ingresos_ipo",
+      "label": "Ingresos Brutos del IPO",
+      "color": "#6366f1"
+    },
+    {
+      "id": "valor_acciones_retenidas",
+      "label": "Valor de lo que Retienes",
+      "color": "#22c55e"
+    }
+  ]
+}

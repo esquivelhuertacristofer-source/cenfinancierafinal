@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P5-2-5-A",
+  "unit_code": "P5-2-5",
+  "unit_title": "Consumo Sustentable: el planeta y mi cartera",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "La Historia de la Confianza",
+  "descripcion": "¿Sabías que la palabra Crédito viene de 'Confiar'? ¡Descubre cómo hemos prestado dinero a través de los siglos!",
+  "objetivo": "Conocer la evolución histórica del crédito y su función social y económica",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "cre1",
+      "pregunta": "¿Qué significa originalmente la palabra 'Crédito'?",
+      "respuesta_correcta": "Confianza (de la palabra latina 'Credere')",
+      "incorrectas": [
+        "Dinero gratis",
+        "Deuda eterna",
+        "Comprar mucho"
+      ],
+      "dato_extra": "Tener crédito significa que el banco confía en que les devolverás el dinero."
+    },
+    {
+      "id": "cre2",
+      "pregunta": "¿Cómo se prestaba dinero en la antigüedad antes de los bancos?",
+      "respuesta_correcta": "Basándose en la palabra y reputación de la persona o con garantías (objetos valiosos)",
+      "incorrectas": [
+        "Con tarjetas de piedra",
+        "No existían los préstamos",
+        "Solo los reyes prestaban"
+      ],
+      "dato_extra": "La reputación (tu buen nombre) era tu garantía más importante."
+    },
+    {
+      "id": "cre3",
+      "pregunta": "¿Dónde aparecieron los primeros bancos modernos que conocemos hoy?",
+      "respuesta_correcta": "En las ciudades de Italia (como Florencia y Venecia) hace cientos de años",
+      "incorrectas": [
+        "En Estados Unidos",
+        "En una isla desierta",
+        "En el espacio"
+      ],
+      "dato_extra": "La palabra 'Banco' viene del banco de madera donde se sentaban los cambistas de dinero."
+    },
+    {
+      "id": "cre4",
+      "pregunta": "¿Qué es el 'Interés' en un préstamo?",
+      "respuesta_correcta": "El precio que pagas por usar el dinero de otra persona por un tiempo",
+      "incorrectas": [
+        "Un regalo del banco",
+        "Una multa por ser pobre",
+        "El nombre del gerente"
+      ],
+      "dato_extra": "Es justo que quien presta gane algo por el riesgo y por no usar su dinero mientras tú lo tienes."
+    },
+    {
+      "id": "cre5",
+      "pregunta": "¿Qué pasa si alguien tiene un 'Mal Historial Crediticio'?",
+      "respuesta_correcta": "Nadie querrá prestarle dinero o le cobrarán intereses mucho más caros",
+      "incorrectas": [
+        "Le dan un premio",
+        "No pasa nada",
+        "Le regalan una tarjeta nueva"
+      ],
+      "dato_extra": "Cuidar tu historial es como cuidar tu calificación en la escuela."
+    },
+    {
+      "id": "cre6",
+      "pregunta": "¿Cuándo apareció la primera tarjeta de crédito moderna?",
+      "respuesta_correcta": "En la década de 1950 (Diners Club)",
+      "incorrectas": [
+        "En el año 1800",
+        "Ayer mismo",
+        "Hace 2,000 años"
+      ],
+      "dato_extra": "Surgió porque alguien olvidó su cartera en una cena y pensó en una forma de pagar sin efectivo."
+    },
+    {
+      "id": "cre7",
+      "pregunta": "¿Qué es el 'Buró de Crédito' en México?",
+      "respuesta_correcta": "Una empresa que guarda el historial de cómo pagas tus créditos (buenos y malos)",
+      "incorrectas": [
+        "Una lista negra de gente mala",
+        "Un banco del gobierno",
+        "Una tienda de muebles"
+      ],
+      "dato_extra": "Estar en el Buró no es malo, lo malo es estar con una 'calificación' de no pagador."
+    },
+    {
+      "id": "cre8",
+      "pregunta": "¿Por qué el crédito ayuda a la economía de un país?",
+      "respuesta_correcta": "Porque permite que las personas y empresas compren cosas grandes o inicien negocios hoy mismo",
+      "incorrectas": [
+        "Porque hace que todos gasten de más",
+        "Porque los bancos son ricos",
+        "No ayuda en nada"
+      ],
+      "dato_extra": "Sin crédito, sería casi imposible comprar una casa o poner una fábrica."
+    },
+    {
+      "id": "cre9",
+      "pregunta": "¿Cuál es la regla de oro para usar el crédito?",
+      "respuesta_correcta": "Nunca pedir prestado más de lo que puedes pagar con seguridad",
+      "incorrectas": [
+        "Pedir lo más que te den",
+        "No pagar nunca",
+        "Usar el crédito para comprar dulces"
+      ],
+      "dato_extra": "El crédito es una herramienta, úsala con inteligencia, no con emoción."
+    },
+    {
+      "id": "cre10",
+      "pregunta": "¿Qué es la 'Capacidad de Pago'?",
+      "respuesta_correcta": "La cantidad de dinero que te sobra después de tus gastos básicos para pagar deudas",
+      "incorrectas": [
+        "Lo que tienes en la bolsa",
+        "Lo que ganas en total",
+        "Un súper poder"
+      ],
+      "dato_extra": "¡Felicidades! Entiendes que el crédito se basa en la realidad, no en deseos."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

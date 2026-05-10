@@ -1,0 +1,80 @@
+{
+  "code": "P2-3-1-A",
+  "unit_code": "P2-3-1",
+  "unit_title": "El presupuesto de Ceny para la semana",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "RELLENA",
+  "complejidad": "ALTA",
+  "titulo": "El Plano de mi Fortuna",
+  "descripcion": "Un presupuesto es como el plano de una casa. ¡Aprende a construir tu semana sin quedarte sin un peso!",
+  "objetivo": "Aprender a distribuir el dinero disponible entre gastos necesarios y ahorro",
+  "xp": 200,
+  "texto": "Para hacer un presupuesto, primero anoto mis [BLANK1], que es el dinero que recibo de mi domingo. Luego resto mis [BLANK2], que es el dinero que sale de mi bolsa. Si quiero un juguete caro, debo separar una parte para el [BLANK3] antes de gastar en dulces. Un presupuesto me ayuda a que el dinero me [BLANK4] para toda la semana. Si gasto más de lo que tengo, tendré problemas y tendré que pedir [BLANK5]. Por eso, un genio financiero siempre hace un [BLANK6] el domingo por la noche. ¡Tener un [BLANK7] me da libertad para comprar lo que realmente importa!",
+  "espacios": [
+    {
+      "id": "BLANK1",
+      "opciones": [
+        "ingresos",
+        "gastos",
+        "juguetes"
+      ],
+      "correcta": "ingresos"
+    },
+    {
+      "id": "BLANK2",
+      "opciones": [
+        "gastos",
+        "regalos",
+        "premios"
+      ],
+      "correcta": "gastos"
+    },
+    {
+      "id": "BLANK3",
+      "opciones": [
+        "ahorro",
+        "cine",
+        "juego"
+      ],
+      "correcta": "ahorro"
+    },
+    {
+      "id": "BLANK4",
+      "opciones": [
+        "alcance",
+        "sobre",
+        "falte"
+      ],
+      "correcta": "alcance"
+    },
+    {
+      "id": "BLANK5",
+      "opciones": [
+        "prestado",
+        "permiso",
+        "comida"
+      ],
+      "correcta": "prestado"
+    },
+    {
+      "id": "BLANK6",
+      "opciones": [
+        "plan",
+        "dibujo",
+        "pastel"
+      ],
+      "correcta": "plan"
+    },
+    {
+      "id": "BLANK7",
+      "opciones": [
+        "mapa",
+        "tesoro",
+        "carro"
+      ],
+      "correcta": "mapa"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

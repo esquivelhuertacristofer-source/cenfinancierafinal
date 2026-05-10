@@ -1,0 +1,136 @@
+{
+  "code": "P2-2-2-A",
+  "unit_code": "P2-2-2",
+  "unit_title": "Decidir con información: comparar precios",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "Detective de Compras",
+  "descripcion": "No todo el que gasta dinero lo hace bien. ¿Sabes qué hábitos tiene un genio de las compras?",
+  "objetivo": "Diferenciar entre hábitos de consumo inteligente y consumo impulsivo",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción al grupo correcto: ¿Es un CONSUMIDOR INTELIGENTE o un CONSUMIDOR IMPULSIVO?",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Compara en 3 tiendas antes",
+      "emoji": "🕵️",
+      "categoria_correcta": "inteligente",
+      "feedback": "¡Muy bien! Buscar información te hace ahorrar dinero."
+    },
+    {
+      "id": "p1",
+      "label": "Compra lo primero que ve",
+      "emoji": "🏃",
+      "categoria_correcta": "impulsivo",
+      "feedback": "¡Cuidado! Podrías estar pagando mucho más de lo necesario."
+    },
+    {
+      "id": "i2",
+      "label": "Usa una Lista de Súper",
+      "emoji": "📝",
+      "categoria_correcta": "inteligente",
+      "feedback": "La lista es tu escudo contra los gastos innecesarios."
+    },
+    {
+      "id": "p2",
+      "label": "Se deja llevar por el empaque",
+      "emoji": "🎁",
+      "categoria_correcta": "impulsivo",
+      "feedback": "A veces lo más bonito por fuera no es lo mejor por dentro."
+    },
+    {
+      "id": "i3",
+      "label": "Revisa la caducidad",
+      "emoji": "📅",
+      "categoria_correcta": "inteligente",
+      "feedback": "Comprar algo que va a caducar mañana es tirar dinero."
+    },
+    {
+      "id": "p3",
+      "label": "Gasta todo en un minuto",
+      "emoji": "⏱️",
+      "categoria_correcta": "impulsivo",
+      "feedback": "El dinero 'quema' en la bolsa de los impulsivos."
+    },
+    {
+      "id": "i4",
+      "label": "Busca el mejor precio",
+      "emoji": "💰",
+      "categoria_correcta": "inteligente",
+      "feedback": "Ahorrar $5 aquí y $5 allá hace una gran alcancía."
+    },
+    {
+      "id": "p4",
+      "label": "Compra por imitación",
+      "emoji": "👥",
+      "categoria_correcta": "impulsivo",
+      "feedback": "No compres algo solo porque tus amigos lo tienen."
+    },
+    {
+      "id": "i5",
+      "label": "Pregunta el precio antes",
+      "emoji": "❓",
+      "categoria_correcta": "inteligente",
+      "feedback": "Saber cuánto vas a pagar evita sorpresas en la caja."
+    },
+    {
+      "id": "p5",
+      "label": "Ignora las ofertas reales",
+      "emoji": "🙈",
+      "categoria_correcta": "impulsivo",
+      "feedback": "No aprovechar un descuento en algo necesario es un error."
+    },
+    {
+      "id": "i6",
+      "label": "Calcula su cambio",
+      "emoji": "🧮",
+      "categoria_correcta": "inteligente",
+      "feedback": "Revisar que te regresen lo justo es parte de cuidar tu dinero."
+    },
+    {
+      "id": "p6",
+      "label": "Compra dulces sin hambre",
+      "emoji": "🍭",
+      "categoria_correcta": "impulsivo",
+      "feedback": "Los antojos momentáneos vacían tu cartera rápido."
+    },
+    {
+      "id": "i7",
+      "label": "Espera a las rebajas",
+      "emoji": "⏳",
+      "categoria_correcta": "inteligente",
+      "feedback": "La paciencia rinde frutos con mejores precios."
+    },
+    {
+      "id": "p7",
+      "label": "Tira el ticket de compra",
+      "emoji": "🧾",
+      "categoria_correcta": "impulsivo",
+      "feedback": "Sin ticket no puedes reclamar si algo sale mal."
+    },
+    {
+      "id": "i8",
+      "label": "Cuida sus pertenencias",
+      "emoji": "🛡️",
+      "categoria_correcta": "inteligente",
+      "feedback": "¡Cuidar es ahorrar! No tendrás que comprar repuestos."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "inteligente",
+      "label": "GENIO INTELIGENTE",
+      "emoji": "🧠",
+      "color": "#1e40af"
+    },
+    {
+      "id": "impulsivo",
+      "label": "COMPRADOR IMPULSIVO",
+      "emoji": "💸",
+      "color": "#b91c1c"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

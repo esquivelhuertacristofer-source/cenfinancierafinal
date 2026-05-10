@@ -1,0 +1,93 @@
+{
+  "code": "ACT-S1-1-2-A",
+  "unit_code": "S1-1-2",
+  "unit_title": "La deuda pública: ¿de dónde sale el dinero del gobierno?",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Radar del Valor",
+  "descripcion": "Antes de comprar una acción, debes revisar los números de la empresa. ¿Sabes qué significa cada dato?",
+  "objetivo": "Clasificar las métricas financieras básicas para realizar un análisis fundamental inicial",
+  "xp": 400,
+  "instruccion": "Arrastra cada métrica a la categoría correcta para analizar la salud de la empresa.",
+  "items": [
+    {
+      "id": "met1",
+      "label": "Ventas Totales (Ingresos)",
+      "emoji": "📈",
+      "categoria_correcta": "crecimiento",
+      "feedback": "Indica si la empresa está atrayendo más dinero cada año."
+    },
+    {
+      "id": "met2",
+      "label": "Número de Clientes Nuevos",
+      "emoji": "👥",
+      "categoria_correcta": "crecimiento",
+      "feedback": "Muestra la expansión de la marca en el mercado."
+    },
+    {
+      "id": "met3",
+      "label": "Deuda Total",
+      "emoji": "📉",
+      "categoria_correcta": "salud",
+      "feedback": "Es vital que la deuda no sea mayor a lo que la empresa puede pagar."
+    },
+    {
+      "id": "met4",
+      "label": "Efectivo en Caja (Cash)",
+      "emoji": "💰",
+      "categoria_correcta": "salud",
+      "feedback": "Dinero disponible para emergencias o nuevas compras."
+    },
+    {
+      "id": "met5",
+      "label": "Margen de Ganancia (%)",
+      "emoji": "💎",
+      "categoria_correcta": "eficiencia",
+      "feedback": "Indica cuánto dinero se queda la empresa por cada dólar vendido."
+    },
+    {
+      "id": "met6",
+      "label": "Retorno sobre Capital (ROE)",
+      "emoji": "🔄",
+      "categoria_correcta": "eficiencia",
+      "feedback": "Mide qué tan bien usa la empresa el dinero de los socios."
+    },
+    {
+      "id": "met7",
+      "label": "Costo de Fabricación",
+      "emoji": "🏭",
+      "categoria_correcta": "eficiencia",
+      "feedback": "Si este costo baja, la empresa es más eficiente."
+    },
+    {
+      "id": "met8",
+      "label": "Apertura de nuevas sucursales",
+      "emoji": "📍",
+      "categoria_correcta": "crecimiento",
+      "feedback": "Señal física de expansión del negocio."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "crecimiento",
+      "label": "MÉTRICAS DE CRECIMIENTO",
+      "emoji": "🚀",
+      "color": "#166534"
+    },
+    {
+      "id": "salud",
+      "label": "SALUD FINANCIERA",
+      "emoji": "🛡️",
+      "color": "#1e40af"
+    },
+    {
+      "id": "eficiencia",
+      "label": "EFICIENCIA OPERATIVA",
+      "emoji": "⚙️",
+      "color": "#6b21a8"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

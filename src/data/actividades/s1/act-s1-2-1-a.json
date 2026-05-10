@@ -1,0 +1,139 @@
+{
+  "code": "ACT-S1-2-1-A",
+  "unit_code": "S1-2-1",
+  "unit_title": "El IMSS e ISSSTE: seguridad social y sus beneficios reales",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "¿Cuánto Vale Tu IMSS?",
+  "descripcion": "El IMSS es uno de los beneficios más valiosos de trabajar en la formalidad — pero la mayoría de los mexicanos no sabe cuánto vale realmente. Calcula el valor monetario de tu seguridad social: desde tu pensión futura hasta cuánto te cuesta una hospitalización si NO tienes IMSS.",
+  "objetivo": "Cuantificar el valor económico real de la seguridad social IMSS/ISSSTE: pensión estimada, cobertura médica y prestaciones, comparándola con el costo de tener las mismas coberturas de forma privada",
+  "xp": 600,
+  "descripcion_formula": "Cuota IMSS mensual ≈ salario × 10.075% (parte empleado+patrón simplificada). Pensión estimada = salario × 0.4 × años_cotizados/30 (fórmula RCV simplificada). Seguro médico privado equivalente: ~$2,500-$5,000/mes.",
+  "inputs": [
+    {
+      "id": "salario_mensual_imss",
+      "label": "Salario Mensual Bruto ($)",
+      "type": "slider",
+      "min": 3000,
+      "max": 80000,
+      "step": 1000,
+      "default": 15000,
+      "unit": "$"
+    },
+    {
+      "id": "anos_cotizados",
+      "label": "Años Cotizando al IMSS",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "tipo_trabajador",
+      "label": "Tipo de Empleo",
+      "type": "select",
+      "options": [
+        { "label": "Trabajador IMSS (empresa privada)", "value": "imss" },
+        { "label": "Trabajador ISSSTE (gobierno)", "value": "issste" },
+        { "label": "Trabajador Informal (sin seguridad social)", "value": "informal" }
+      ],
+      "default": "imss"
+    },
+    {
+      "id": "edad_actual_imss",
+      "label": "Edad Actual",
+      "type": "slider",
+      "min": 15,
+      "max": 55,
+      "step": 1,
+      "default": 25,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.round(salario_mensual_imss * 0.10075)",
+  "output_label": "Aportación al IMSS por mes (empleado + patrón)",
+  "output_prefix": "$",
+  "output_suffix": "/mes",
+  "outputs_multiples": [
+    {
+      "id": "aportacion_imss_mensual",
+      "label": "Aportación IMSS Mensual (Empleado+Patrón)",
+      "formula": "Math.round(salario_mensual_imss * 0.10075)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El total que se aporta al IMSS mensualmente entre tú y tu patrón"
+    },
+    {
+      "id": "pension_estimada_mensual",
+      "label": "Pensión Estimada a los 65 años",
+      "formula": "tipo_trabajador === 'informal' ? 0 : Math.round(salario_mensual_imss * 0.4 * Math.min(anos_cotizados, 30) / 30)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Pensión aproximada bajo el régimen de Cuenta Individual (simplificado)"
+    },
+    {
+      "id": "valor_seguro_medico_anual",
+      "label": "Valor del Seguro Médico Anual",
+      "formula": "tipo_trabajador === 'informal' ? 0 : Math.round(salario_mensual_imss * 0.03 * 12 + 36000)",
+      "prefix": "$",
+      "suffix": "/año",
+      "descripcion": "Lo que pagarías de forma privada por cobertura médica equivalente (hospitalización, medicamentos, maternidad)"
+    },
+    {
+      "id": "costo_hospitalización_sin_imss",
+      "label": "Hospitalización Grave Sin IMSS",
+      "formula": "tipo_trabajador === 'informal' ? 250000 : 0",
+      "prefix": "$",
+      "suffix": " promedio",
+      "descripcion": "Costo promedio de una hospitalización grave en hospital privado mexicano (IMSS lo cubre gratis)"
+    }
+  ],
+  "tabla_beneficios": {
+    "titulo": "IMSS vs Informal: lo que pierdes sin seguridad social",
+    "beneficios": [
+      { "prestacion": "Atención médica", "imss": "Gratis ilimitada", "informal": "$500-$3,000 por consulta" },
+      { "prestacion": "Hospitalización", "imss": "Sin costo", "informal": "$50,000-$500,000" },
+      { "prestacion": "Maternidad", "imss": "Subsidio 100% + semanas de descanso", "informal": "Ninguno" },
+      { "prestacion": "Incapacidad por enfermedad", "imss": "60% del salario", "informal": "Ninguno" },
+      { "prestacion": "Pensión por vejez", "imss": "Hasta 40% del salario último", "informal": "Ninguna" },
+      { "prestacion": "AFORE (ahorro retiro)", "imss": "6.5% del salario mensual", "informal": "Ninguno" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "valor_seguro_medico_anual",
+      "label": "Valor Seguro Médico Anual ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "pension_estimada_mensual",
+      "label": "Pensión Mensual Estimada ($)",
+      "color": "#6366f1"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "tipo_trabajador === 'informal'",
+      "mensaje": "⚠️ Sin seguridad social. El 55% de México trabaja así. Un accidente o enfermedad grave puede destruir décadas de ahorro. El costo invisible de la informalidad es enorme.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "anos_cotizados >= 30 && tipo_trabajador !== 'informal'",
+      "mensaje": "🏆 Cotización completa. Con 30+ años cotizados tienes derecho a la pensión máxima. Tu seguridad social es un activo financiero significativo que muchos mexicanos no valoran.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "anos_cotizados < 10 && tipo_trabajador !== 'informal'",
+      "mensaje": "⏰ Apenas empiezas. Cada año que trabajas en la formalidad suma a tu historial de cotización. Interrumpir el trabajo formal tiene un costo a largo plazo en tu pensión.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Qué beneficios concretos del IMSS o ISSSTE usarías si perdieras tu trabajo o te enfermaras gravemente? ¿Cómo cambia completamente tu situación si trabajas en la informalidad?",
+  "comparativa_espera": "El 55% de los trabajadores en México trabaja en la informalidad — sin IMSS, sin AFORE, sin seguro de desempleo. Un solo accidente grave puede destruir décadas de ahorro sin esas coberturas."
+}

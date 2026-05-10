@@ -1,0 +1,115 @@
+{
+  "code": "P2-1-1-A",
+  "unit_code": "P2-1-1",
+  "unit_title": "El dinero tiene historia: del trueque a los billetes",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "El Túnel del Tiempo del Dinero",
+  "descripcion": "¡Viaja al pasado y al presente! ¿Sabes qué usaban nuestros abuelos aztecas para comprar y qué usamos nosotros hoy?",
+  "objetivo": "Identificar y clasificar medios de intercambio históricos y modernos",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto al grupo correcto: ¿Es DINERO ANTIGUO o DINERO MODERNO?",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Granos de Cacao",
+      "emoji": "🫘",
+      "categoria_correcta": "antiguo",
+      "feedback": "¡Cierto! Los aztecas lo usaban como dinero delicioso."
+    },
+    {
+      "id": "i2",
+      "label": "Tarjeta de Débito",
+      "emoji": "💳",
+      "categoria_correcta": "moderno",
+      "feedback": "¡Exacto! Es dinero digital que vive en un chip."
+    },
+    {
+      "id": "i3",
+      "label": "Sal de Mar",
+      "emoji": "🧂",
+      "categoria_correcta": "antiguo",
+      "feedback": "En Roma se pagaba con sal, ¡de ahí viene la palabra salario!"
+    },
+    {
+      "id": "i4",
+      "label": "Pago con Celular (QR)",
+      "emoji": "📱",
+      "categoria_correcta": "moderno",
+      "feedback": "Hoy el dinero viaja por el aire con tecnología."
+    },
+    {
+      "id": "i5",
+      "label": "Conchas Marinas",
+      "emoji": "🐚",
+      "categoria_correcta": "antiguo",
+      "feedback": "En muchas islas usaban conchas hermosas como monedas."
+    },
+    {
+      "id": "i6",
+      "label": "Billete de $100",
+      "emoji": "💵",
+      "categoria_correcta": "moderno",
+      "feedback": "El papel moneda es una forma moderna y ligera de llevar valor."
+    },
+    {
+      "id": "i7",
+      "label": "Piedras Grandes (Rai)",
+      "emoji": "🪨",
+      "categoria_correcta": "antiguo",
+      "feedback": "¡Eran tan pesadas que nadie podía robárselas!"
+    },
+    {
+      "id": "i8",
+      "label": "Reloj Inteligente",
+      "emoji": "⌚",
+      "categoria_correcta": "moderno",
+      "feedback": "¡Incluso con tu reloj puedes pagar hoy en día!"
+    },
+    {
+      "id": "i9",
+      "label": "Plumas Quetzal",
+      "emoji": "🪶",
+      "categoria_correcta": "antiguo",
+      "feedback": "Eran muy valiosas y servían para el trueque."
+    },
+    {
+      "id": "i10",
+      "label": "Transferencia Banco",
+      "emoji": "💻",
+      "categoria_correcta": "moderno",
+      "feedback": "Dinero que se mueve entre computadoras sin billetes físicos."
+    },
+    {
+      "id": "i11",
+      "label": "Lingotes de Oro",
+      "emoji": "📀",
+      "categoria_correcta": "antiguo",
+      "feedback": "Antes de los billetes, el metal pesado era el rey."
+    },
+    {
+      "id": "i12",
+      "label": "Criptomoneda",
+      "emoji": "🪙",
+      "categoria_correcta": "moderno",
+      "feedback": "¡La forma más nueva y digital de dinero que existe!"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "antiguo",
+      "label": "DINERO ANTIGUO",
+      "emoji": "🏛️",
+      "color": "#92400e"
+    },
+    {
+      "id": "moderno",
+      "label": "DINERO MODERNO",
+      "emoji": "⚡",
+      "color": "#0369a1"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,125 @@
+{
+  "code": "ACT-P1-4-2-B",
+  "unit_code": "P1-4-2",
+  "unit_title": "Hacer algo para venderlo: lápices decorados",
+  "level": "Primaria 1",
+  "tipo": "QUIZ",
+  "titulo": "Certificación de Productor Artesanal",
+  "descripcion": "Demuestra que conoces los secretos para transformar materiales simples en productos valiosos.",
+  "objetivo": "Evaluar la comprensión de valor agregado, control de calidad y materia prima.",
+  "xp": 300,
+  "aprobacion_minima": 0.6,
+  "preguntas": [
+    {
+      "texto": "¿Qué significa agregar valor a un producto?",
+      "opciones": [
+        "Hacerlo más pesado",
+        "Usar creatividad y trabajo para que sea mejor y más especial",
+        "Pintarlo de negro",
+        "Necesitas estudiar economía en la universidad antes"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Agregar valor es transformar algo sencillo en algo más útil y especial usando creatividad y trabajo."
+    },
+    {
+      "texto": "Si un lápiz normal cuesta $3 y tú gastas $2 en decorarlo, ¿qué precio es justo?",
+      "opciones": [
+        "$1 (pierdes dinero)",
+        "$8 (pagas materiales y tu trabajo)",
+        "$0 (es gratis)",
+        "Invertir es lo mismo que apostar en el casino"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien calculado! El precio cubre el costo de materiales ($3+$2=$5) más el valor de tu trabajo. $8 es un precio justo."
+    },
+    {
+      "texto": "¿Cuál de estos es una 'Materia Prima'?",
+      "opciones": [
+        "El cliente",
+        "El pegamento",
+        "El precio",
+        "Invertir siempre genera pérdidas para principiantes"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! La materia prima son los materiales que usas para fabricar tu producto: pegamento, pinturas, hilo, etc."
+    },
+    {
+      "texto": "¿Qué es el 'Control de Calidad'?",
+      "opciones": [
+        "Revisar que el producto esté bien hecho y no se rompa",
+        "Jugar con los materiales",
+        "Gritar fuerte",
+        "Solo aplica en países con inflación menor al 3% anual"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Revisar que el producto esté perfecto antes de venderlo mantiene felices a tus clientes y protege tu reputación."
+    },
+    {
+      "texto": "¿Por qué un producto hecho a mano puede ser más valioso?",
+      "opciones": [
+        "Porque es único y tiene el esfuerzo de una persona",
+        "Porque es más viejo",
+        "No es valioso",
+        "Es mejor guardar el dinero debajo del colchón siempre"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Así es! Lo que haces a mano lleva tu esfuerzo y creatividad únicos. ¡Eso lo hace especial y diferente a todo lo demás!"
+    },
+    {
+      "texto": "¿Qué debes hacer si a tu lápiz se le despega un ojo?",
+      "opciones": [
+        "Venderlo así",
+        "Arreglarlo antes de ofrecerlo al cliente",
+        "Esconderlo",
+        "Solo aplica en economías de mercado emergente tipo B"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Un emprendedor responsable entrega productos en excelente estado. Si hay un defecto, hay que arreglarlo primero."
+    },
+    {
+      "texto": "Verdadero o Falso: Un emprendedor debe cuidar sus materiales para no desperdiciar dinero.",
+      "opciones": [
+        "Verdadero",
+        "Falso",
+        "Solo si es un lápiz azul",
+        "Una idea de negocio solo funciona si es completamente nueva"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Verdadero! Cuidar los materiales es cuidar tu inversión. Cada pieza desperdiciada es dinero que no podrás recuperar."
+    },
+    {
+      "texto": "¿Qué es la 'Creatividad' en un negocio?",
+      "opciones": [
+        "Dormir mucho",
+        "Tener ideas nuevas para que tu producto sea diferente y mejor",
+        "Copiar todo igual",
+        "Es lo mismo que tener una tarjeta de crédito"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! La creatividad te permite hacer productos únicos que llamen la atención y que los clientes quieran comprar."
+    },
+    {
+      "texto": "Si vendes tu lápiz, ¿qué haces con el dinero?",
+      "opciones": [
+        "Lo tiras",
+        "Compras más materiales para hacer más lápices y ahorras el resto",
+        "Te compras un helado gigante y ya no trabajas",
+        "El banco siempre decide por ti cuánto debes usar"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Un buen emprendedor reinvierte en su negocio y ahorra una parte. ¡Así el negocio puede seguir creciendo!"
+    },
+    {
+      "texto": "¿Cómo te sientes al ver tu producto terminado?",
+      "opciones": [
+        "Aburrido",
+        "Orgulloso de mi talento",
+        "Enojado",
+        "El crédito es siempre gratuito y sin intereses"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Bien! Sentirte orgulloso de lo que creaste con tus manos es la mejor señal de que lo hiciste con esfuerzo y calidad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

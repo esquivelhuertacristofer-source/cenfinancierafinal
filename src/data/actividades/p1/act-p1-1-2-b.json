@@ -1,0 +1,142 @@
+{
+  "code": "ACT-P1-1-2-B",
+  "unit_code": "P1-1-2",
+  "unit_title": "Para qué sirve el dinero: comprar, ahorrar y dar",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Los Tres Frascos Mágicos",
+  "descripcion": "Un genio financiero divide su dinero en 3 destinos. ¿Sabes a dónde va cada cosa?",
+  "objetivo": "Categorizar acciones financieras en Gastar, Ahorrar y Compartir",
+  "xp": 250,
+  "instruccion": "Arrastra cada objeto o acción al frasco que le corresponde.",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Helado de fresa",
+      "emoji": "🍦",
+      "categoria_correcta": "gastar",
+      "feedback": "¡Gastar es disfrutar el ahora!"
+    },
+    {
+      "id": "i2",
+      "label": "Alcancía llena",
+      "emoji": "🐷",
+      "categoria_correcta": "ahorrar",
+      "feedback": "¡Ahorrar es proteger tu futuro!"
+    },
+    {
+      "id": "i3",
+      "label": "Regalo para mamá",
+      "emoji": "🎁",
+      "categoria_correcta": "dar",
+      "feedback": "¡Dar es compartir tu felicidad!"
+    },
+    {
+      "id": "i4",
+      "label": "Ticket de cine",
+      "emoji": "🎟️",
+      "categoria_correcta": "gastar",
+      "feedback": "Gastar en experiencias también cuenta."
+    },
+    {
+      "id": "i5",
+      "label": "Cuenta de Banco",
+      "emoji": "🏦",
+      "categoria_correcta": "ahorrar",
+      "feedback": "Un lugar muy seguro para tu tesoro."
+    },
+    {
+      "id": "i6",
+      "label": "Donar juguetes",
+      "emoji": "🧸",
+      "categoria_correcta": "dar",
+      "feedback": "Hacer feliz a otro niño es muy valioso."
+    },
+    {
+      "id": "i7",
+      "label": "Zapatos nuevos",
+      "emoji": "👟",
+      "categoria_correcta": "gastar",
+      "feedback": "A veces gastamos en cosas que necesitamos."
+    },
+    {
+      "id": "i8",
+      "label": "Meta: Bicicleta",
+      "emoji": "🚲",
+      "categoria_correcta": "ahorrar",
+      "feedback": "¡Ahorrar para algo grande vale la pena!"
+    },
+    {
+      "id": "i9",
+      "label": "Comida para perritos",
+      "emoji": "🐕",
+      "categoria_correcta": "dar",
+      "feedback": "Ayudar a los animalitos es un gran gesto."
+    },
+    {
+      "id": "i10",
+      "label": "Dulces coloridos",
+      "emoji": "🍭",
+      "categoria_correcta": "gastar",
+      "feedback": "Pequeños gastos que se acaban rápido."
+    },
+    {
+      "id": "i11",
+      "label": "Guardar para el viaje",
+      "emoji": "✈️",
+      "categoria_correcta": "ahorrar",
+      "feedback": "¡Paciencia para una meta lejana!"
+    },
+    {
+      "id": "i12",
+      "label": "Compartir tu lunch",
+      "emoji": "🥪",
+      "categoria_correcta": "dar",
+      "feedback": "Dar no solo es dinero, es compartir lo que tienes."
+    },
+    {
+      "id": "i13",
+      "label": "Videojuego nuevo",
+      "emoji": "🎮",
+      "categoria_correcta": "gastar",
+      "feedback": "Un deseo divertido que cuesta monedas."
+    },
+    {
+      "id": "i14",
+      "label": "Fondo de emergencia",
+      "emoji": "🛡️",
+      "categoria_correcta": "ahorrar",
+      "feedback": "Dinero guardado por si algo se rompe."
+    },
+    {
+      "id": "i15",
+      "label": "Regalar una planta",
+      "emoji": "🪴",
+      "categoria_correcta": "dar",
+      "feedback": "Sembrar vida también es una forma de dar."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "gastar",
+      "label": "GASTAR (Disfrutar)",
+      "emoji": "🛒",
+      "color": "#ef4444"
+    },
+    {
+      "id": "ahorrar",
+      "label": "AHORRAR (Crecer)",
+      "emoji": "📈",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "dar",
+      "label": "DAR (Compartir)",
+      "emoji": "❤️",
+      "color": "#ec4899"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

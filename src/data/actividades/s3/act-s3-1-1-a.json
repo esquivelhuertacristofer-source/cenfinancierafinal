@@ -1,0 +1,150 @@
+{
+  "code": "ACT-S3-1-1-A",
+  "unit_code": "S3-1-1",
+  "unit_title": "Finanzas personales integradas: el cuadro completo de mi vida",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Panel de Control de la Economía",
+  "descripcion": "La economía no es plana; tiene estaciones. ¿Sabes qué pasa cuando el PIB sube pero la inflación se sale de control?",
+  "objetivo": "Comprender la relación entre el PIB, la Inflación y las Tasas de Interés en el ciclo económico",
+  "xp": 600,
+  "descripcion_formula": "Impacto Económico = (CrecimientoPIB * 0.5) - (Inflacion * 0.3) - (TasaInteres * 0.2).",
+  "inputs": [
+    {
+      "id": "crecimiento_pib_s3",
+      "label": "Crecimiento del PIB (%)",
+      "type": "slider",
+      "min": -5,
+      "max": 10,
+      "step": 1,
+      "default": 2,
+      "unit": "%"
+    },
+    {
+      "id": "inflacion_s3",
+      "label": "Tasa de Inflación (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 3,
+      "unit": "%"
+    },
+    {
+      "id": "tasas_banco_s3",
+      "label": "Tasas de Interés (Banco Central) (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 5,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(crecimiento_pib_s3 * 10) - (inflacion_s3 * 5) + (tasas_banco_s3 * 2)",
+  "output_label": "Índice de Salud Económica",
+  "output_prefix": "",
+  "output_suffix": " pts",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "crecimiento_pib_s3 < 0 && inflacion_s3 > 10",
+      "mensaje": "⚠️ ¡Estanflación! Es el peor escenario: la economía no crece pero los precios suben. El desempleo aumentará y la gente perderá poder de compra.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "crecimiento_pib_s3 > 5 && inflacion_s3 < 4",
+      "mensaje": "🚀 ¡Auge Dorado! La economía crece con fuerza y los precios están estables. Es el momento ideal para la inversión y el empleo.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "tasas_banco_s3 > 10",
+      "mensaje": "📉 Frenazo Económico. El Banco Central ha subido las tasas para detener la inflación. Pedir prestado es muy caro, por lo que el crecimiento se detendrá.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 El PIB (Producto Interno Bruto) mide todo lo que un país produce. Si el PIB cae durante dos trimestres seguidos, entramos en Recesión.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Diseña tu estado financiero personal completo hoy: activos, pasivos, ingresos y gastos. ¿Cuál es tu patrimonio neto actual? ¿Cuál quieres que sea en exactamente 5 años?",
+  "comparativa_espera": "La deuda soberana mexicana (CETES, bonos M, Udibonos) es considerada investment grade por Moody's y S&P. Los inversionistas institucionales de todo el mundo compran deuda mexicana. Tú puedes hacer lo mismo desde $100 en cetesdirecto.com.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "costo_mensual",
+      "label": "Costo Mensual",
+      "formula": "Math.round(resultado_principal / 12)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El costo mensualizado"
+    },
+    {
+      "id": "eficiencia_vs_alternativa",
+      "label": "vs Alternativa Más Barata",
+      "formula": "Math.round(resultado_principal * 0.15)",
+      "prefix": "$",
+      "suffix": " de diferencia",
+      "descripcion": "El costo adicional vs la opción más económica"
+    },
+    {
+      "id": "valor_en_5a",
+      "label": "Valor Futuro a 5 Años",
+      "formula": "Math.round(resultado_principal * Math.pow(1.07, 5))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Si el resultado crece al 7% anual"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "costo_mensual",
+      "label": "Costo Mensual",
+      "color": "#22c55e"
+    }
+  ]
+}

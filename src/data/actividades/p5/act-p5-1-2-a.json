@@ -1,0 +1,139 @@
+{
+  "code": "ACT-P5-1-2-A",
+  "unit_code": "P5-1-2",
+  "unit_title": "Las AFOREs: sembrando mi futuro",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Elige Tu AFORE",
+  "descripcion": "Cada trabajador formal en México tiene una AFORE. Pero no todas son iguales: la diferencia de comisiones entre la mejor y la peor puede costar hasta $300,000 pesos en tu pensión final. Elige bien y simula cuánto tendrás al retirarte.",
+  "objetivo": "Calcular el saldo estimado de AFORE al jubilarse, entender el impacto de las comisiones y comparar dos AFOREs con distintas tasas",
+  "xp": 500,
+  "descripcion_formula": "Aportación mensual AFORE = salario × 6.5% (cuota obrera-patronal-gobierno RCV). Saldo = aportacion × [((1+r_neto)^n - 1) / r_neto]. r_neto = rendimiento_afore - comision_afore.",
+  "inputs": [
+    {
+      "id": "salario_afore",
+      "label": "Salario Mensual ($)",
+      "type": "slider",
+      "min": 5000,
+      "max": 80000,
+      "step": 1000,
+      "default": 18000,
+      "unit": "$"
+    },
+    {
+      "id": "edad_inicio_afore",
+      "label": "Edad Actual",
+      "type": "slider",
+      "min": 15,
+      "max": 45,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
+    },
+    {
+      "id": "afore_elegida",
+      "label": "AFORE Elegida",
+      "type": "select",
+      "options": [
+        { "label": "PENSIONISSSTE (comisión 0.57%, rend. 8.5%)", "value": "pensionissste" },
+        { "label": "Citibanamex (comisión 0.68%, rend. 8.2%)", "value": "citibanamex" },
+        { "label": "SURA (comisión 0.72%, rend. 8.1%)", "value": "sura" },
+        { "label": "Azteca (comisión 0.98%, rend. 7.4%)", "value": "azteca" }
+      ],
+      "default": "pensionissste"
+    },
+    {
+      "id": "aportacion_voluntaria_pct",
+      "label": "Aportación Voluntaria Extra (%)",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "default": 2,
+      "unit": "%"
+    }
+  ],
+  "formula": "Math.round(salario_afore * 0.065 * ((Math.pow(1 + (afore_elegida === 'pensionissste' ? 0.085-0.0057 : afore_elegida === 'citibanamex' ? 0.082-0.0068 : afore_elegida === 'sura' ? 0.081-0.0072 : 0.074-0.0098) / 12, (65-edad_inicio_afore)*12) - 1) / ((afore_elegida === 'pensionissste' ? 0.085-0.0057 : afore_elegida === 'citibanamex' ? 0.082-0.0068 : afore_elegida === 'sura' ? 0.081-0.0072 : 0.074-0.0098) / 12)))",
+  "output_label": "Saldo Estimado a los 65 años",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "saldo_afore_65",
+      "label": "Saldo AFORE a los 65 años",
+      "formula": "Math.round((salario_afore * 0.065 + salario_afore * aportacion_voluntaria_pct/100) * ((Math.pow(1 + (afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12, (65-edad_inicio_afore)*12) - 1) / ((afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12)))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Saldo acumulado en tu AFORE al llegar a los 65 años"
+    },
+    {
+      "id": "pension_mensual_estimada",
+      "label": "Pensión Mensual Estimada",
+      "formula": "Math.round((salario_afore * 0.065 + salario_afore * aportacion_voluntaria_pct/100) * ((Math.pow(1 + (afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12, (65-edad_inicio_afore)*12) - 1) / ((afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12)) / 240)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Estimado dividiendo el saldo entre 20 años de retiro (240 meses)"
+    },
+    {
+      "id": "diferencia_vs_mejor",
+      "label": "Diferencia vs AFORE Más Barata",
+      "formula": "Math.round(((salario_afore * 0.065 + salario_afore * aportacion_voluntaria_pct/100) * ((Math.pow(1 + 0.0793/12, (65-edad_inicio_afore)*12) - 1) / (0.0793/12))) - ((salario_afore * 0.065 + salario_afore * aportacion_voluntaria_pct/100) * ((Math.pow(1 + (afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12, (65-edad_inicio_afore)*12) - 1) / ((afore_elegida === 'pensionissste' ? 0.0793 : afore_elegida === 'citibanamex' ? 0.0752 : afore_elegida === 'sura' ? 0.0738 : 0.0642) / 12))))",
+      "prefix": "$",
+      "suffix": " menos que PENSIONISSSTE",
+      "descripcion": "Lo que pierdes por no estar en la AFORE con menor comisión"
+    },
+    {
+      "id": "aportacion_mensual_total",
+      "label": "Aportación Total al Mes",
+      "formula": "Math.round(salario_afore * 0.065 + salario_afore * aportacion_voluntaria_pct/100)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "Lo que entra a tu AFORE cada mes (obligatoria + tu aportación voluntaria)"
+    }
+  ],
+  "tabla_afores": {
+    "titulo": "AFOREs principales en México (CONSAR 2024)",
+    "datos": [
+      { "afore": "PENSIONISSSTE", "comision": "0.57%", "rendimiento_10a": "8.5%", "calificacion": "⭐⭐⭐⭐⭐" },
+      { "afore": "Citibanamex", "comision": "0.68%", "rendimiento_10a": "8.2%", "calificacion": "⭐⭐⭐⭐" },
+      { "afore": "SURA", "comision": "0.72%", "rendimiento_10a": "8.1%", "calificacion": "⭐⭐⭐⭐" },
+      { "afore": "Profuturo", "comision": "0.87%", "rendimiento_10a": "7.9%", "calificacion": "⭐⭐⭐" },
+      { "afore": "Azteca", "comision": "0.98%", "rendimiento_10a": "7.4%", "calificacion": "⭐⭐" }
+    ]
+  },
+  "chart_type": "line",
+  "chart_series": [
+    {
+      "id": "saldo_afore_65",
+      "label": "Saldo Acumulado ($)",
+      "color": "#22c55e"
+    },
+    {
+      "id": "pension_mensual_estimada",
+      "label": "Pensión Mensual ($)",
+      "color": "#6366f1"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "afore_elegida === 'azteca'",
+      "mensaje": "⚠️ AFORE con comisión alta. La diferencia de 0.41% vs PENSIONISSSTE puede traducirse en $100,000-$300,000 pesos menos en tu pensión final. Puedes cambiar de AFORE gratis una vez al año.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "aportacion_voluntaria_pct >= 3",
+      "mensaje": "🏆 Excelente estrategia. Las aportaciones voluntarias son 100% deducibles de impuestos Y crecen para tu retiro. Es la mejor inversión que existe para un trabajador formal mexicano.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "edad_inicio_afore <= 20",
+      "mensaje": "⏰ Empezar joven es la mayor ventaja. Cada año que adelantas tu ahorro puede significar $50,000-$100,000 pesos más en tu pensión gracias al interés compuesto.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Qué porcentaje de tu sueldo futuro irá a tu AFORE automáticamente? ¿Por qué es importante revisar tu saldo de AFORE aunque solo tengas 20 años?",
+  "comparativa_espera": "Las diferencias de comisiones entre AFOREs pueden representar hasta $300,000 de diferencia en tu pensión final. Elegir la AFORE con menor comisión y mayor rendimiento es una de las decisiones más importantes de tu vida laboral."
+}

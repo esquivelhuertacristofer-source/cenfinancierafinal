@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-1-4-B",
+  "unit_code": "S1-1-4",
+  "unit_title": "Impuestos y gasto público: cómo se usa mi dinero",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Secreto de los Millonarios",
+  "descripcion": "¿Sabes por qué los que empiezan antes terminan con mucho más dinero? ¡Descubre las leyes de la riqueza!",
+  "objetivo": "Evaluar la comprensión del interés compuesto, la inflación y el impacto del tiempo en las finanzas",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "exp1",
+      "texto": "¿Qué es la 'Regla del 72'?",
+      "opciones": [
+        "Una regla para medir billetes",
+        "Un cálculo rápido para saber en cuántos años se duplicará tu dinero (72 / Tasa de interés)",
+        "La edad a la que te retiras",
+        "El número de meses del año"
+      ],
+      "correcta": 1,
+      "explicacion": "Si tu inversión te da 10% anual, tardarás 7.2 años en duplicar tu dinero."
+    },
+    {
+      "id": "exp2",
+      "texto": "¿Cuál es el principal 'enemigo' de tu interés compuesto a largo plazo?",
+      "opciones": [
+        "El banco",
+        "La Inflación (porque hace que el dinero valga menos en el futuro)",
+        "Los otros inversionistas",
+        "La tecnología"
+      ],
+      "correcta": 1,
+      "explicacion": "Debes buscar rendimientos que sean mayores a la inflación para ganar dinero real."
+    },
+    {
+      "id": "exp3",
+      "texto": "¿Qué pasa si empiezas a invertir a los 20 años en lugar de a los 30?",
+      "opciones": [
+        "No pasa nada, es igual",
+        "Tendrás mucho más dinero al final porque le diste 10 años más a la 'bola de nieve' para crecer",
+        "Gastarás más dinero",
+        "Perderás el tiempo"
+      ],
+      "correcta": 1,
+      "explicacion": "En el interés compuesto, los últimos años son los que más dinero generan."
+    },
+    {
+      "id": "exp4",
+      "texto": "¿Qué significa que el interés sea 'compuesto'?",
+      "opciones": [
+        "Que es muy difícil",
+        "Que los intereses que ganas se vuelven a invertir para generar más intereses",
+        "Que es un interés compartido",
+        "Que se paga dos veces"
+      ],
+      "correcta": 1,
+      "explicacion": "Es interés sobre interés. ¡Crecimiento exponencial!"
+    },
+    {
+      "id": "exp5",
+      "texto": "¿Cómo funciona el interés compuesto en una DEUDA (como una tarjeta de crédito)?",
+      "opciones": [
+        "Igual que en el ahorro (te ayuda)",
+        "Al revés: la deuda crece cada vez más rápido y se puede volver impagable",
+        "No existe en las deudas",
+        "Solo se paga una vez"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso nunca debes dejar que los intereses de una deuda se acumulen."
+    },
+    {
+      "id": "exp6",
+      "texto": "¿Cuál es el factor más importante en la fórmula del interés compuesto?",
+      "opciones": [
+        "El capital inicial",
+        "El Tiempo",
+        "El color del dinero",
+        "El nombre del banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Incluso con poco dinero, si tienes mucho tiempo, serás rico."
+    },
+    {
+      "id": "exp7",
+      "texto": "¿Qué es el 'Rendimiento Real'?",
+      "opciones": [
+        "Lo que el banco te dice",
+        "Tu rendimiento total menos la inflación",
+        "El dinero que tienes en efectivo",
+        "Una moneda de oro"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el poder de compra real que ganaste después de considerar que los precios subieron."
+    },
+    {
+      "id": "exp8",
+      "texto": "¿Qué tipo de activos aprovechan mejor el interés compuesto?",
+      "opciones": [
+        "Los que no pagan nada",
+        "Los que reinvierten sus ganancias automáticamente (como acciones o fondos)",
+        "Las cuentas de ahorro que sacas cada mes",
+        "Los billetes guardados en casa"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes por qué el tiempo es tu activo más valioso."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

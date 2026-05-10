@@ -1,0 +1,191 @@
+{
+  "code": "ACT-P1-1-2-A",
+  "unit_code": "P1-1-2",
+  "unit_title": "Para qué sirve el dinero: comprar, ahorrar y dar",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "Ceny y el Laberinto del Presupuesto",
+  "descripcion": "Ceny tiene $200 para su gran meta: un Telescopio ($180). Pero el camino a las estrellas está lleno de tentaciones y sorpresas. ¿Podrás guiarla sin que pierda el rumbo?",
+  "objetivo": "Aprender a equilibrar deseos, necesidades, imprevistos y generosidad dentro de un presupuesto limitado.",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny sale de casa con sus $200. El sol brilla y las tiendas están llenas de cosas nuevas. 'Recuerda el Telescopio, Ceny', se dice a sí misma mientras camina hacia la zona comercial.",
+  "nodo_inicial": "tentacion_patines",
+  "nodos": {
+    "tentacion_patines": {
+      "id": "tentacion_patines",
+      "texto": "¡Wow! Unos patines de oferta por solo $100. Son hermosos y Ceny siempre ha querido unos. Si los compra, solo le quedará la mitad de su dinero. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "comprar_patines",
+          "texto": "¡Comprar los patines ahora! ($100)",
+          "siguiente_nodo": "imprevisto_mochila",
+          "consecuencia": "Ceny estrena patines, pero su meta del Telescopio ahora está muy, muy lejos.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "seguir_plan",
+          "texto": "Ignorar los patines y seguir el plan",
+          "siguiente_nodo": "imprevisto_mochila",
+          "consecuencia": "Ceny es fuerte. Sabe que el Telescopio la llevará más lejos que los patines.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "imprevisto_mochila": {
+      "id": "imprevisto_mochila",
+      "texto": "¡Zas! El cierre de su mochila se rompe. Repararlo cuesta $40 en el taller de la esquina. Si no lo hace, sus cosas podrían perderse. ¿Qué decide?",
+      "opciones": [
+        {
+          "id": "reparar_mochila",
+          "texto": "Pagar la reparación ($40)",
+          "siguiente_nodo": "necesidad_sed",
+          "consecuencia": "Ceny protege sus pertenencias. Es un gasto necesario para evitar un problema mayor.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "arriesgarse",
+          "texto": "Tratar de cargarla rota para ahorrar",
+          "siguiente_nodo": "consecuencia_caida",
+          "consecuencia": "Ceny intenta ahorrar, pero el camino es largo y pesado.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "consecuencia_caida": {
+      "id": "consecuencia_caida",
+      "texto": "¡Oh no! Un libro se cayó y se raspó la portada. Ahora Ceny se siente mal por no haber arreglado el cierre a tiempo.",
+      "opciones": [
+        {
+          "id": "continuar_triste",
+          "texto": "Continuar el camino con cuidado",
+          "siguiente_nodo": "necesidad_sed",
+          "consecuencia": "Ceny aprende que lo barato sale caro.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "necesidad_sed": {
+      "id": "necesidad_sed",
+      "texto": "Hace mucho calor y Ceny tiene mucha sed. Una botella de agua cuesta $15. También puede esperar 20 minutos hasta llegar a la fuente de la biblioteca que es gratis. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "comprar_agua",
+          "texto": "Comprar el agua ahora ($15)",
+          "siguiente_nodo": "dilema_social_ajolin",
+          "consecuencia": "Ceny se siente fresca, pero gastó dinero que podía haber ahorrado con paciencia.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "esperar_fuente",
+          "texto": "Esperar a la fuente gratuita",
+          "siguiente_nodo": "dilema_social_ajolin",
+          "consecuencia": "¡Gran disciplina! Ceny domina sus impulsos por una meta mayor.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "dilema_social_ajolin": {
+      "id": "dilema_social_ajolin",
+      "texto": "En la biblioteca está Ajolín. Necesita $20 para completar su pasaje de regreso a casa porque perdió una moneda. ¿Qué hará Ceny?",
+      "opciones": [
+        {
+          "id": "ayudar_ajolin",
+          "texto": "Prestarle los $20 a su amigo",
+          "siguiente_nodo": "el_hallazgo_final",
+          "consecuencia": "Ceny practica el DAR. Ajolín está muy agradecido. ¡La amistad vale mucho!",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "no_ayudar",
+          "texto": "Decir que no puede porque tiene una meta",
+          "siguiente_nodo": "el_hallazgo_final",
+          "consecuencia": "Ceny prioriza su dinero sobre la necesidad de su amigo. Se siente un poco egoísta.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "el_hallazgo_final": {
+      "id": "el_hallazgo_final",
+      "texto": "Saliendo de la biblioteca, Ceny ve una moneda de $10 en el suelo cerca de la recepción. No hay nadie alrededor. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "guardar_moneda",
+          "texto": "Guardarla para su Telescopio",
+          "siguiente_nodo": "balance_final",
+          "consecuencia": "Ceny tiene $10 más, pero sabe que ese dinero no es suyo.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "entregar_moneda",
+          "texto": "Entregarla al bibliotecario",
+          "siguiente_nodo": "balance_final",
+          "consecuencia": "¡Integridad Total! Ceny es honesta incluso cuando nadie la ve.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
+    },
+    "balance_final": {
+      "id": "balance_final",
+      "texto": "Es hora de llegar a la tienda. El Telescopio cuesta $180. ¿Tendrá Ceny suficiente después de todo su recorrido?",
+      "opciones": [
+        {
+          "id": "ver_resultado",
+          "texto": "Ver el balance de mi sabiduría",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Has guiado a Ceny a través de un día complejo.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "final_maestria": {
+      "id": "final_maestria",
+      "texto": "Si fuiste disciplinado, Ceny tiene su Telescopio Y la amistad de Ajolín. Si gastaste por impulso, aprendiste que el camino a las estrellas requiere enfoque. ¡Felicidades por completar este maratón de decisiones!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un presupuesto no es una cárcel, es un mapa para llegar a donde realmente quieres estar. ¡Sigue así, estratega!"
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.Mastery",
+  "resumen_patrimonio_al_final": true
+}

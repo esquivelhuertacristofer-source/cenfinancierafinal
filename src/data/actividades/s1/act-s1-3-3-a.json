@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S1-3-3-A",
+  "unit_code": "S1-3-3",
+  "unit_title": "La inflación y su impacto en el ahorro e inversión",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Hacker vs Búnker",
+  "descripcion": "Los ciberdelincuentes no usan armas, usan palabras y trucos digitales. ¿Podrás detectar sus trampas antes de que roben tu cuenta?",
+  "objetivo": "Identificar y prevenir las principales técnicas de ingeniería social y ataques digitales financieros",
+  "xp": 500,
+  "mecanica": "Analiza cada mensaje y decide si es una AMENAZA o es SEGURO.",
+  "escenarios": [
+    {
+      "id": "hck1",
+      "texto": "Recibes un correo de 'Servicio_Al_Cliente_Banco@gmail.com' diciendo que tu cuenta está bloqueada y debes hacer clic en un link para reactivarla.",
+      "imagen": "📧",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Bien hecho! Un banco real nunca usa cuentas de @gmail y nunca te manda links para poner tus claves.",
+      "feedback_error": "❌ ¡Caíste! Eso es Phishing. Acabas de entregarle tu clave al hacker.",
+      "tipo_ataque": "Phishing"
+    },
+    {
+      "id": "hck2",
+      "texto": "Recibes una llamada. Una voz grabada dice que ganaste un premio de $10,000 y debes presionar 1 para dar tu NIP y confirmar el depósito.",
+      "imagen": "📞",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Correcto! Los bancos nunca piden tu NIP o claves por teléfono. Esto es Vishing.",
+      "feedback_error": "❌ ¡Error! Nunca des información sensible por teléfono. Han vaciado tu cuenta.",
+      "tipo_ataque": "Vishing"
+    },
+    {
+      "id": "hck3",
+      "texto": "Llega un SMS: 'ALERTA BANCO: Compra por $5,000 en Amazon no reconocida. Si no fuiste tú, entra aquí: bit.ly/bancofalso'.",
+      "imagen": "📱",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! El link acortado (bit.ly) es una señal clara de Smishing. Buscan asustarte para que actúes sin pensar.",
+      "feedback_error": "❌ ¡Caíste! El miedo es la herramienta favorita de los hackers. Siempre revisa tu app oficial directamente.",
+      "tipo_ataque": "Smishing"
+    },
+    {
+      "id": "hck4",
+      "texto": "La app oficial de tu banco te manda una notificación push diciendo que se inició sesión en un dispositivo nuevo. No hay links, solo te avisa.",
+      "imagen": "🔔",
+      "opcion_correcta": "SEGURO",
+      "feedback_acierto": "¡Exacto! Las notificaciones informativas dentro de la app oficial son la forma segura en que el banco se comunica.",
+      "feedback_error": "❌ ¡Cuidado! Si bloqueas los avisos reales, no sabrás cuando alguien realmente entre a tu cuenta.",
+      "tipo_ataque": "Comunicación Real"
+    },
+    {
+      "id": "hck5",
+      "texto": "Encuentras un código QR pegado en un cajero automático que dice: 'Escanea aquí para ganar meses sin intereses'.",
+      "imagen": "🔳",
+      "opcion_correcta": "AMENAZA",
+      "feedback_acierto": "¡Muy bien! Eso es Quishing. Los hackers pegan QR falsos sobre los reales para llevarte a páginas infectadas.",
+      "feedback_error": "❌ ¡Peligro! Escanear QR desconocidos en lugares públicos puede instalar malware en tu celular.",
+      "tipo_ataque": "Quishing"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Analiza cada mensaje y decide: ¿es una AMENAZA o es SEGURO?",
+  "duracion": 120,
+  "opciones_clasificacion": [
+    "AMENAZA",
+    "SEGURO"
+  ],
+  "items": [
+    {
+      "id": "hck1",
+      "label": "Recibes un correo de 'Servicio_Al_Cliente_Banco@gmail.com' diciendo que tu cuenta está bloqueada y d...",
+      "emoji": "📧",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Bien hecho! Un banco real nunca usa cuentas de @gmail y nunca te manda links para poner tus claves.",
+      "feedback_error": "❌ ¡Caíste! Eso es Phishing. Acabas de entregarle tu clave al hacker.",
+      "puntos": 100
+    },
+    {
+      "id": "hck2",
+      "label": "Recibes una llamada. Una voz grabada dice que ganaste un premio de $10,000 y debes presionar 1 para ...",
+      "emoji": "📞",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Correcto! Los bancos nunca piden tu NIP o claves por teléfono. Esto es Vishing.",
+      "feedback_error": "❌ ¡Error! Nunca des información sensible por teléfono. Han vaciado tu cuenta.",
+      "puntos": 100
+    },
+    {
+      "id": "hck3",
+      "label": "Llega un SMS: 'ALERTA BANCO: Compra por $5,000 en Amazon no reconocida. Si no fuiste tú, entra aquí:...",
+      "emoji": "📱",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Excelente! El link acortado (bit.ly) es una señal clara de Smishing. Buscan asustarte para que actúes sin pensar.",
+      "feedback_error": "❌ ¡Caíste! El miedo es la herramienta favorita de los hackers. Siempre revisa tu app oficial directamente.",
+      "puntos": 100
+    },
+    {
+      "id": "hck4",
+      "label": "La app oficial de tu banco te manda una notificación push diciendo que se inició sesión en un dispos...",
+      "emoji": "🔔",
+      "tipo": "correcto",
+      "respuesta_correcta": "SEGURO",
+      "feedback_acierto": "¡Exacto! Las notificaciones informativas dentro de la app oficial son la forma segura en que el banco se comunica.",
+      "feedback_error": "❌ ¡Cuidado! Si bloqueas los avisos reales, no sabrás cuando alguien realmente entre a tu cuenta.",
+      "puntos": 100
+    },
+    {
+      "id": "hck5",
+      "label": "Encuentras un código QR pegado en un cajero automático que dice: 'Escanea aquí para ganar meses sin ...",
+      "emoji": "🔳",
+      "tipo": "correcto",
+      "respuesta_correcta": "AMENAZA",
+      "feedback_acierto": "¡Muy bien! Eso es Quishing. Los hackers pegan QR falsos sobre los reales para llevarte a páginas infectadas.",
+      "feedback_error": "❌ ¡Peligro! Escanear QR desconocidos en lugares públicos puede instalar malware en tu celular.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 500
+  }
+}

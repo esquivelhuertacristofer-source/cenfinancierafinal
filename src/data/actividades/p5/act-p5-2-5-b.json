@@ -1,0 +1,101 @@
+{
+  "code": "ACT-P5-2-5-B",
+  "unit_code": "P5-2-5",
+  "unit_title": "Consumo Sustentable: el planeta y mi cartera",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Primer Historial",
+  "descripcion": "Tu historial crediticio es tu 'boleta de calificaciones' financiera. ¡Aprende a construir un historial de 10 desde ahora!",
+  "objetivo": "Establecer hábitos de responsabilidad financiera para la futura gestión de créditos",
+  "xp": 350,
+  "output_type": "Perfil de Crédito Diamante",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "mi_perfil_crediticio",
+      "titulo": "👤 Mi Identidad Financiera",
+      "descripcion": "¿Cómo quieres que los bancos te vean en el futuro?",
+      "campos": [
+        {
+          "id": "meta_credito",
+          "label": "¿Para qué te gustaría pedir un crédito en el futuro?",
+          "type": "select",
+          "opciones": [
+            "Comprar mi primer auto",
+            "Pagar mi universidad",
+            "Poner un gran negocio",
+            "Comprar una casa"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "valor_reputacion",
+          "label": "¿Qué significa para ti que la gente confíe en tu palabra?",
+          "type": "textarea",
+          "placeholder": "Ej: Significa que soy una persona honesta y responsable...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "buenos_habitos",
+      "titulo": "✅ Hábitos de Oro",
+      "descripcion": "Escribe 3 acciones que harás para que tu historial siempre sea excelente.",
+      "campos": [
+        {
+          "id": "habito_1",
+          "label": "Hábito 1 (Ej: Pagar siempre a tiempo)",
+          "type": "text",
+          "requerido": true
+        },
+        {
+          "id": "habito_2",
+          "label": "Hábito 2 (Ej: No gastar más de lo que gano)",
+          "type": "text",
+          "requerido": true
+        },
+        {
+          "id": "habito_3",
+          "label": "Hábito 3 (Ej: Revisar mis cuentas cada semana)",
+          "type": "text",
+          "requerido": true
+        },
+        {
+          "id": "meta_score_buro",
+          "label": "Meta de Score de Buró (400-850)",
+          "type": "slider",
+          "min": 400,
+          "max": 850,
+          "step": 10,
+          "default": 700,
+          "requerido": false
+        },
+        {
+          "id": "anos_para_score",
+          "label": "Años Estimados para Lograr tu Score",
+          "type": "calculated",
+          "formula": "Math.max(1, Math.ceil((meta_score_buro - 400) / 50))",
+          "unit": " años con buenos hábitos",
+          "ayuda": "Pagando a tiempo, el score sube ~50 puntos por año"
+        }
+      ]
+    },
+    {
+      "id": "mi_promesa",
+      "titulo": "📜 Mi Compromiso",
+      "descripcion": "Un crédito es un contrato. ¿Cuál es tu compromiso de honor?",
+      "campos": [
+        {
+          "id": "compromiso_financiero",
+          "label": "Yo me comprometo a...",
+          "type": "textarea",
+          "placeholder": "Ej: Ser un usuario responsable del crédito y nunca pedir dinero que no pueda devolver...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

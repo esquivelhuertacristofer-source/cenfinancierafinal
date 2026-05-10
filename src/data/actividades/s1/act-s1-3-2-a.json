@@ -1,0 +1,107 @@
+{
+  "code": "ACT-S1-1-2-A",
+  "unit_code": "S1-3-2",
+  "unit_title": "Fondos de inversión vs. ETFs: diferencias clave",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Blindando mi Negocio",
+  "descripcion": "Tu empresa está creciendo, pero un solo accidente podría llevarte a la quiebra. ¿Sabrás elegir las protecciones correctas?",
+  "objetivo": "Identificar las necesidades de aseguramiento específicas para diferentes modelos de negocio",
+  "xp": 400,
+  "output_type": "Programa de Seguros Corporativos",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "giro_negocio",
+      "titulo": "🏢 Tu Empresa",
+      "descripcion": "¿A qué se dedica tu negocio?",
+      "campos": [
+        {
+          "id": "nombre_empresa_s1",
+          "label": "Nombre de tu Empresa",
+          "type": "text",
+          "placeholder": "Ej: TechNova Solutions...",
+          "requerido": true
+        },
+        {
+          "id": "tipo_negocio",
+          "label": "Giro Comercial",
+          "type": "select",
+          "opciones": [
+            "Fábrica de Ropa",
+            "Restaurante Gourmet",
+            "Desarrollo de Software",
+            "Transporte de Carga"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "coberturas_criticas",
+      "titulo": "🛡️ Elegir Protecciones",
+      "descripcion": "Selecciona las 3 coberturas que consideres más importantes para tu giro.",
+      "campos": [
+        {
+          "id": "cobertura_1",
+          "label": "Cobertura Primaria",
+          "type": "select",
+          "opciones": [
+            "Daños por Incendio/Inundación",
+            "Robo de Mercancía",
+            "Responsabilidad Civil (Daños a terceros)",
+            "Ciberataques y Robo de Datos"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "cobertura_2",
+          "label": "Cobertura Secundaria",
+          "type": "select",
+          "opciones": [
+            "Interrupción de Negocio (Pérdida de utilidades)",
+            "Seguro de Hombre Clave (Protección de líderes)",
+            "Fidelidad de Empleados (Robos internos)",
+            "Transporte de Mercancía"
+          ],
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "resumen_blindaje",
+      "titulo": "✅ Resumen del Plan",
+      "descripcion": "Justifica tu estrategia ante los socios.",
+      "campos": [
+        {
+          "id": "justificacion_seguro",
+          "label": "¿Por qué elegiste estas coberturas?",
+          "type": "textarea",
+          "placeholder": "Ej: Elegí Ciberataques porque manejamos datos de clientes y Responsabilidad Civil por si ocurre un accidente en el local...",
+          "requerido": true
+        },
+        {
+          "id": "valor_activos_empresa",
+          "label": "Valor de los Activos a Asegurar ($)",
+          "type": "slider",
+          "min": 50000,
+          "max": 5000000,
+          "step": 50000,
+          "default": 500000,
+          "requerido": false
+        },
+        {
+          "id": "prima_anual_est",
+          "label": "Prima Anual Estimada",
+          "type": "calculated",
+          "formula": "Math.round(valor_activos_empresa * 0.015)",
+          "unit": "$/año",
+          "ayuda": "El seguro empresarial suele costar ~1.5% del valor de los activos asegurados"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

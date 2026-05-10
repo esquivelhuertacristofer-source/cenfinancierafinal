@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-2-2-B",
+  "unit_code": "P1-2-2",
+  "unit_title": "Cuando no alcanza: elegir entre dos cosas",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Carrera de Decisiones",
+  "descripcion": "En la vida no se puede tener todo al mismo tiempo. ¿Sabes qué pierdes cuando eliges algo?",
+  "objetivo": "Identificar el costo de oportunidad en escenarios simples de la vida diaria",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué significa 'Elegir es renunciar'?",
+      "opciones": [
+        "Que te regalan dos cosas",
+        "Que al decir SÍ a una opción, le dices NO a la otra",
+        "Que pierdes todo tu dinero",
+        "Que no importa lo que elijas"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada decisión tiene un 'costo': lo que dejaste de hacer o tener por elegir tu primera opción."
+    },
+    {
+      "id": "q2",
+      "texto": "Si eliges comprar un helado, ¿cuál es tu costo de oportunidad?",
+      "opciones": [
+        "El sabor del helado",
+        "El dinero que ya no podrás usar para un juguete",
+        "El frío del helado",
+        "La cuchara"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu costo es la OTRA cosa que podrías haber comprado con ese mismo dinero."
+    },
+    {
+      "id": "q3",
+      "texto": "Tienes tiempo para ver UN video o hacer tu tarea. Si eliges el video, ¿qué pierdes?",
+      "opciones": [
+        "El video",
+        "La oportunidad de aprender y tener buena calificación",
+        "La televisión",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El tiempo también es valioso. ¡Tu costo de oportunidad fue tu aprendizaje!"
+    },
+    {
+      "id": "q4",
+      "texto": "Si ahorras tu moneda de $10 en lugar de gastarla, ¿cuál es el costo?",
+      "opciones": [
+        "La moneda que guardaste",
+        "El dulce que NO te comiste hoy",
+        "La alcancía",
+        "No hay costo"
+      ],
+      "correcta": 1,
+      "explicacion": "Incluso ahorrar tiene un costo: no disfrutar el dinero en este preciso momento."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué es importante pensar en el costo de oportunidad?",
+      "opciones": [
+        "Para estar tristes",
+        "Para estar seguros de que lo que elegimos es lo que más nos importa",
+        "Para no comprar nada",
+        "Para ser rápidos"
+      ],
+      "correcta": 1,
+      "explicacion": "Pensar en lo que dejas ir te ayuda a valorar más lo que decidiste conservar."
+    },
+    {
+      "id": "q6",
+      "texto": "Si eliges dormir 10 minutos más, ¿cuál es el costo?",
+      "opciones": [
+        "Tu cama",
+        "Tiempo para desayunar con calma o jugar antes de ir a la escuela",
+        "Tu sueño",
+        "Tus cobijas"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada minuto que usamos en algo, es un minuto que no usamos en otra cosa."
+    },
+    {
+      "id": "q7",
+      "texto": "En una tienda, solo puedes llevar un libro de animales o uno de dinosaurios. Eliges animales. ¿Cuál es el costo?",
+      "opciones": [
+        "El libro de animales",
+        "El libro de dinosaurios que se quedó en la tienda",
+        "El dinero del libro",
+        "El vendedor"
+      ],
+      "correcta": 1,
+      "explicacion": "El libro que NO te llevaste es tu costo de oportunidad."
+    },
+    {
+      "id": "q8",
+      "texto": "Verdadero o Falso: Si alguien te regala algo, ¿tiene costo de oportunidad para TI?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Falso! Si es un regalo y no usaste tu dinero ni tu tiempo, no tuviste que renunciar a nada."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Cómo puedes reducir tu arrepentimiento al elegir?",
+      "opciones": [
+        "No eligiendo nada",
+        "Pensando cuál opción te hace feliz por más tiempo",
+        "Cerrando los ojos",
+        "Comprando lo primero que veas"
+      ],
+      "correcta": 1,
+      "explicacion": "Elegir lo que tiene valor duradero hace que el costo de oportunidad parezca más pequeño."
+    },
+    {
+      "id": "q10",
+      "texto": "Si decides prestarle tu juguete a un amigo, ¿cuál es tu costo?",
+      "opciones": [
+        "Tu amigo",
+        "El tiempo que tú no podrás jugar con él mientras lo tenga tu amigo",
+        "El juguete se borra",
+        "No hay costo"
+      ],
+      "correcta": 1,
+      "explicacion": "Prestar también tiene un costo de oportunidad de tiempo, ¡pero ganas un amigo feliz!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

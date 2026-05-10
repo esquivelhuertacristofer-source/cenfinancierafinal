@@ -1,0 +1,126 @@
+{
+  "code": "ACT-P6-2-3-B",
+  "unit_code": "P6-2-3",
+  "unit_title": "Independencia financiera: el concepto y el camino",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Seguridad Nivel Búnker",
+  "descripcion": "¿Sabías que tu celular es más seguro que una caja fuerte de acero? ¡Descubre las tecnologías que protegen tu dinero digital!",
+  "objetivo": "Identificar y aplicar conceptos de ciberseguridad avanzada en transacciones financieras",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "sec1",
+      "pregunta": "¿Qué es la 'Tokenización' en los pagos con celular?",
+      "respuesta_correcta": "Sustituir tu número real de tarjeta por un código único (token) que solo sirve para una compra",
+      "incorrectas": [
+        "Cambiar dinero por fichas de juego",
+        "Guardar monedas en una caja",
+        "Usar una tarjeta de cartón"
+      ],
+      "dato_extra": "Si alguien roba el 'token', no podrá usarlo para comprar nada más. ¡Es súper seguro!"
+    },
+    {
+      "id": "sec2",
+      "pregunta": "¿Por qué es mejor usar tu huella o cara (Biometría) que una contraseña?",
+      "respuesta_correcta": "Porque es única y es casi imposible de copiar u olvidar",
+      "incorrectas": [
+        "Porque es más divertido",
+        "Porque el celular brilla más",
+        "Porque no gasta batería"
+      ],
+      "dato_extra": "Tu biometría convierte tu cuerpo en tu llave financiera."
+    },
+    {
+      "id": "sec3",
+      "pregunta": "¿Qué significa 2FA (Autenticación de Dos Factores)?",
+      "respuesta_correcta": "Usar dos métodos distintos para entrar a tu cuenta (ej: contraseña + código al celular)",
+      "incorrectas": [
+        "Pagar dos veces",
+        "Tener dos cuentas de banco",
+        "Usar dos computadoras al mismo tiempo"
+      ],
+      "dato_extra": "El 2FA detiene al 99% de los hackers, incluso si saben tu contraseña."
+    },
+    {
+      "id": "sec4",
+      "pregunta": "¿Qué debes hacer si recibes un SMS diciendo que tu cuenta está bloqueada y que des clic a un link?",
+      "respuesta_correcta": "Ignorarlo; es un ataque de 'Smishing' (Phishing por SMS)",
+      "incorrectas": [
+        "Dar clic rápido para arreglarlo",
+        "Enviar mi contraseña para que me crean",
+        "Llamar al número que viene en el mensaje"
+      ],
+      "dato_extra": "Los bancos reales nunca te pedirán tus claves por mensaje o link."
+    },
+    {
+      "id": "sec5",
+      "pregunta": "¿Es seguro comprar en línea usando el Wi-Fi gratis de un parque o centro comercial?",
+      "respuesta_correcta": "No, es peligroso porque alguien podría 'interceptar' tu información",
+      "incorrectas": [
+        "Sí, es gratis y rápido",
+        "Sí, si el parque es bonito",
+        "Solo si compras cosas baratas"
+      ],
+      "dato_extra": "Usa siempre tus datos móviles o una red protegida para cosas de dinero."
+    },
+    {
+      "id": "sec6",
+      "pregunta": "¿Qué es la 'Encriptación'?",
+      "respuesta_correcta": "Convertir tu información en un código secreto que solo el banco puede leer",
+      "incorrectas": [
+        "Guardar dinero en un sobre",
+        "Hablar en clave con amigos",
+        "Cerrar la sesión de la app"
+      ],
+      "dato_extra": "Sin la llave correcta, tu información parece basura para un hacker."
+    },
+    {
+      "id": "sec7",
+      "pregunta": "¿Para qué sirve el candadito que sale en la barra de direcciones del navegador?",
+      "respuesta_correcta": "Indica que la conexión es segura y está cifrada (HTTPS)",
+      "incorrectas": [
+        "Indica que la página es famosa",
+        "Indica que la página es de juegos",
+        "No sirve para nada"
+      ],
+      "dato_extra": "¡Nunca pongas datos de tu tarjeta en una página sin el candadito!"
+    },
+    {
+      "id": "sec8",
+      "pregunta": "¿Cómo ayuda la IA a proteger tus compras?",
+      "respuesta_correcta": "Detecta patrones inusuales (como una compra en China y otra en México al mismo tiempo)",
+      "incorrectas": [
+        "Haciendo que las cosas sean gratis",
+        "Eligiendo qué ropa debes comprar",
+        "Imprimiendo dinero"
+      ],
+      "dato_extra": "La IA es como un guardia que nunca duerme."
+    },
+    {
+      "id": "sec9",
+      "pregunta": "¿Qué es una 'Cold Wallet' (Billetera Fría)?",
+      "respuesta_correcta": "Un dispositivo físico desconectado de internet para guardar criptomonedas con máxima seguridad",
+      "incorrectas": [
+        "Una billetera que se guarda en el refrigerador",
+        "Una billetera vacía",
+        "Un tipo de moneda helada"
+      ],
+      "dato_extra": "Si no está en internet, no lo pueden hackear."
+    },
+    {
+      "id": "sec10",
+      "pregunta": "¿Cuál es el eslabón más débil de la seguridad financiera?",
+      "respuesta_correcta": "El ser humano (cuando confiamos en desconocidos o usamos claves fáciles)",
+      "incorrectas": [
+        "Las computadoras",
+        "Los cables de internet",
+        "Las tarjetas de plástico"
+      ],
+      "dato_extra": "¡Felicidades! Ahora tú eres el eslabón más fuerte de tu propia seguridad."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

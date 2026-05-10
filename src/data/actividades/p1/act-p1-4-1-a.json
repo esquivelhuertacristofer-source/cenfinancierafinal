@@ -1,0 +1,133 @@
+{
+  "code": "ACT-P1-4-1-A",
+  "unit_code": "P1-4-1",
+  "unit_title": "¿Qué es un negocio? La panadería de la esquina",
+  "level": "Primaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "SIMPLE",
+  "titulo": "Mi Meta de Juguete",
+  "descripcion": "Ahorrar es más fácil cuando tienes una meta. ¿Qué juguete quieres comprar?",
+  "objetivo": "Aprender a dividir una meta grande en pequeños ahorros semanales",
+  "xp": 100,
+  "inputs": [
+    {
+      "id": "costo_juguete",
+      "label": "Costo del Juguete ($)",
+      "type": "slider",
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "default": 200,
+      "unit": "$"
+    },
+    {
+      "id": "ahorro_semanal",
+      "label": "Mi Ahorro Semanal ($)",
+      "type": "slider",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "$"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.ceil(costo_juguete / ahorro_semanal)",
+  "output_label": "Semanas necesarias para lograrlo",
+  "output_prefix": "",
+  "output_suffix": " semanas",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado <= 4",
+      "mensaje": "🚀 ¡Qué rápido! En menos de un mes tendrás tu juguete.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado > 10",
+      "mensaje": "🐢 Vas un poco lento, pero la paciencia es la clave del ahorro.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "¡Cada moneda cuenta para llegar a tu meta!",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué necesita una panadería para funcionar? Si haces 10 panes y cada uno cuesta $5 hacerlo pero lo vendes en $12, ¿cuánto ganas en total?",
+  "outputs_multiples": [
+    {
+      "id": "semanas_para_meta",
+      "label": "Semanas para tu Meta",
+      "formula": "Math.ceil(costo_juguete / ahorro_semanal)",
+      "prefix": "",
+      "suffix": " semanas",
+      "descripcion": "Cuántas semanas de ahorro disciplinado necesitas"
+    },
+    {
+      "id": "total_ahorrado_en_mes",
+      "label": "Lo que Ahorras en 1 Mes",
+      "formula": "ahorro_semanal * 4",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Si ahorras cada semana del mes"
+    },
+    {
+      "id": "ahorro_que_sobra",
+      "label": "Dinero que Sobra al Llegar",
+      "formula": "Math.max(0, ahorro_semanal * Math.ceil(costo_juguete / ahorro_semanal) - costo_juguete)",
+      "prefix": "$",
+      "suffix": " extra",
+      "descripcion": "El sobrante si sigues ahorrando el mismo monto"
+    },
+    {
+      "id": "en_un_anio",
+      "label": "Cuánto Ahorras en 1 Año",
+      "formula": "ahorro_semanal * 52",
+      "prefix": "$",
+      "suffix": " en total",
+      "descripcion": "52 semanas de ahorro constante"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "semanas_para_meta",
+      "label": "Semanas para tu Meta",
+      "color": "#6366f1"
+    },
+    {
+      "id": "total_ahorrado_en_mes",
+      "label": "Lo que Ahorras en 1 Mes",
+      "color": "#22c55e"
+    }
+  ],
+  "comparativa_espera": "Un niño que ahorra $50 semanales desde los 7 años hasta los 18 acumula más de $28,000 pesos — suficiente para su primera laptop, su primer curso o el inicio de su fondo universitario."
+}

@@ -1,0 +1,155 @@
+{
+  "code": "ACT-P5-4-1-A",
+  "unit_code": "P5-4-1",
+  "unit_title": "El Equipo Ideal: roles para el éxito",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Fábrica de Ideas",
+  "descripcion": "Un negocio es como un reloj: si una pieza falla, todo se detiene. ¡Configura tu cadena de producción y ve qué tan rápido puedes entregar!",
+  "objetivo": "Comprender la interdependencia de los procesos empresariales y la importancia de la eficiencia en cada etapa",
+  "xp": 500,
+  "descripcion_formula": "La Eficiencia Total está limitada por el paso más lento (Cuello de Botella). Calculamos: Eficiencia = Math.min(pasos).",
+  "inputs": [
+    {
+      "id": "ef_diseno",
+      "label": "Velocidad de Diseño",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts"
+    },
+    {
+      "id": "ef_produccion",
+      "label": "Velocidad de Fábrica",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts"
+    },
+    {
+      "id": "ef_ventas",
+      "label": "Velocidad de Ventas",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts"
+    },
+    {
+      "id": "ef_entrega",
+      "label": "Velocidad de Envío",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "Math.min(ef_diseno, ef_produccion, ef_ventas, ef_entrega) * 10",
+  "output_label": "Eficiencia Real de tu Empresa",
+  "output_prefix": "",
+  "output_suffix": "%",
+  "chart_type": "bar",
+  "escenarios": [
+    {
+      "condicion": "resultado >= 80",
+      "mensaje": "⚙️ ¡Máquina Perfecta! Todos tus departamentos trabajan a la misma velocidad. No hay desperdicio.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "resultado < 80 && (ef_diseno < 5 || ef_produccion < 5 || ef_ventas < 5 || ef_entrega < 5)",
+      "mensaje": "⚠️ Tienes un 'Cuello de Botella'. Aunque un departamento sea muy rápido, el más lento detiene a todos. ¡Invierte en el más débil!",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Tip: Un buen líder no hace que uno corra mucho, sino que todos avancen al mismo ritmo.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "¿Qué rol jugarías tú en un equipo emprendedor: liderazgo, finanzas, tecnología o ventas? ¿Qué habilidad que te falta buscarías en un socio estratégico?",
+  "comparativa_espera": "Las decisiones financieras más importantes de la vida se toman entre los 25 y 45 años: primera hipoteca, primer crédito auto, primeras inversiones. Tener educación financiera sólida en esos momentos puede valer millones a los 65.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "por_mes",
+      "label": "Dividido en 12 Meses",
+      "formula": "Math.round(resultado_principal / 12)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El impacto mensualizado"
+    },
+    {
+      "id": "en_10_anios",
+      "label": "Proyección a 10 Años",
+      "formula": "Math.round(resultado_principal * 10 * 1.08)",
+      "prefix": "$",
+      "suffix": " acumulado",
+      "descripcion": "Si mantienes el resultado y lo reinviertes"
+    },
+    {
+      "id": "diferencia_vs_base",
+      "label": "Diferencia vs Sin Optimización",
+      "formula": "Math.round(resultado_principal * 0.2)",
+      "prefix": "+$",
+      "suffix": " de mejora",
+      "descripcion": "El beneficio de tomar decisiones informadas"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "por_mes",
+      "label": "Dividido en 12 Meses",
+      "color": "#22c55e"
+    }
+  ]
+}

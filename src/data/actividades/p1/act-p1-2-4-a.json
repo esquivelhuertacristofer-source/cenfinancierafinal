@@ -1,0 +1,139 @@
+{
+  "code": "ACT-P1-2-4-A",
+  "unit_code": "P1-2-4",
+  "unit_title": "Pedir prestado: sí o no, ¿y por qué?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MAESTRÍA",
+  "titulo": "El Lápiz de Ajolín y el Valor de la Palabra",
+  "descripcion": "Pedir prestado es como recibir una moneda de oro: si la cuidas, te darán más; si la pierdes, la puerta se cierra. ¿Qué hará Ceny con la confianza de su mejor amigo?",
+  "objetivo": "Entender la responsabilidad de los préstamos y cómo la honestidad protege la reputación financiera futura.",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ajolín ha prestado su lápiz favorito a Ceny para terminar su dibujo. Es un lápiz de edición especial que Ajolín cuida mucho. Ceny ha terminado su dibujo, ¡y quedó perfecto!",
+  "nodo_inicial": "el_primer_impulso",
+  "nodos": {
+    "el_primer_impulso": {
+      "id": "el_primer_impulso",
+      "texto": "Ceny mira el lápiz. Es tan cómodo que quiere seguir dibujando en su casa. Ajolín no está cerca para pedírselo. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "devolver_ahora",
+          "texto": "Buscar a Ajolín y devolverlo ahora mismo",
+          "siguiente_nodo": "final_sabiduria",
+          "consecuencia": "Ceny cumple su palabra. Ajolín está feliz y le dice: '¡Ceny, puedes pedírmelo cuando quieras porque eres muy responsable!'",
+          "xp_bonus": 500,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "llevar_a_casa",
+          "texto": "Llevarlo a casa 'solo un ratito' (Préstamo no autorizado)",
+          "siguiente_nodo": "el_accidente_en_casa",
+          "consecuencia": "Ceny se lleva el lápiz. Se siente un poco nerviosa, pero cree que no pasará nada malo.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        }
+      ]
+    },
+    "el_accidente_en_casa": {
+      "id": "el_accidente_en_casa",
+      "texto": "¡Oh no! Mientras Ceny dibujaba en su cuarto, el lápiz rodó de la mesa y la punta se rompió por dentro. Ahora el lápiz ya no es perfecto como antes. ¿Qué hará mañana?",
+      "opciones": [
+        {
+          "id": "confesar_verdad",
+          "texto": "Decirle la verdad a Ajolín mañana",
+          "siguiente_nodo": "la_reparacion_del_dano",
+          "consecuencia": "Ceny decide ser honesta, aunque tiene mucho miedo de que Ajolín se enoje.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "esconder_lapiz",
+          "texto": "Guardar el lápiz en su mochila y fingir que se le olvidó",
+          "siguiente_nodo": "la_busqueda_de_ajolin",
+          "consecuencia": "Ceny elige ocultar el problema. El secreto pesa mucho en su mochila.",
+          "xp_bonus": 10,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "la_reparacion_del_dano": {
+      "id": "la_reparacion_del_dano",
+      "texto": "Ajolín escucha a Ceny. Se pone triste, pero valora que le dijera la verdad. Ceny tiene $20 pesos para su recreo. Un lápiz nuevo igual cuesta $15. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "reponer_lapiz",
+          "texto": "Usar sus $15 para comprarle un lápiz nuevo",
+          "siguiente_nodo": "final_reparador",
+          "consecuencia": "Ceny entiende que ser responsable significa arreglar lo que rompemos.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        },
+        {
+          "id": "solo_pedir_perdon",
+          "texto": "Solo pedir perdón y quedarse con sus $20",
+          "siguiente_nodo": "final_leccion_dura",
+          "consecuencia": "Ajolín la perdona, pero ya no vuelve a prestarle sus cosas especiales.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "la_busqueda_de_ajolin": {
+      "id": "la_busqueda_de_ajolin",
+      "texto": "Ajolín llega corriendo: '¡Ceny! ¿Tienes mi lápiz? ¡Lo necesito para el examen!'. Ceny siente que su corazón late rápido. ¿Qué responde?",
+      "opciones": [
+        {
+          "id": "mentir_perdida",
+          "texto": "Decir que se le perdió en el camino",
+          "siguiente_nodo": "final_reputacion_rota",
+          "consecuencia": "Una mentira lleva a otra. Ajolín está muy triste y otros amigos escuchan lo que pasó.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "rectificar_verdad",
+          "texto": "Arrepentirse y confesar que lo tiene roto",
+          "siguiente_nodo": "la_reparacion_del_dano",
+          "consecuencia": "¡Casi era tarde! Pero la verdad salvó la situación a tiempo.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 10
+        }
+      ]
+    },
+    "final_sabiduria": {
+      "id": "final_sabiduria",
+      "texto": "¡EXCELENTE! Ceny demostró que su PALABRA vale más que cualquier objeto. Al devolverlo a tiempo, mantuvo su reputación intacta. ¡En el futuro, todos confiarán en ella para grandes proyectos!",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "En el mundo del dinero, tu reputación es tu mejor crédito. Cuida lo prestado como si fuera tuyo... ¡o mejor!"
+    },
+    "final_reparador": {
+      "id": "final_reparador",
+      "texto": "Cometiste un error al llevarte el lápiz, pero lo arreglaste como un profesional. Al reponer el daño con tu propio dinero, Ajolín aprendió que puede confiar en tu honestidad.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Reparar un error cuesta dinero, pero mentir cuesta amigos y confianza. ¡Elegiste bien al final!"
+    },
+    "final_leccion_dura": {
+      "id": "final_leccion_dura",
+      "texto": "Ceny se quedó con su dinero, pero perdió la confianza de Ajolín. A veces el costo de oportunidad de un helado es la amistad de alguien que te ayudó.",
+      "es_final": true,
+      "tipo_final": "neutral",
+      "reflexion_final": "Pedir perdón es el primer paso, pero la responsabilidad financiera requiere acción. ¡La próxima vez, repón lo dañado!"
+    },
+    "final_reputacion_rota": {
+      "id": "final_reputacion_rota",
+      "texto": "Misión Fallida. Ceny mintió y Ajolín ya no confía en ella. En el futuro, cuando Ceny necesite ayuda, será difícil encontrar a alguien que le preste algo.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Una mentira es una deuda que nunca terminas de pagar. ¡La honestidad es la base de todo trato financiero!"
+    }
+  },
+  "versión": "2026.Diamond.Mastery",
+  "resumen_patrimonio_al_final": true
+}

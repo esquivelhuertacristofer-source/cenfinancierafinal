@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P6-2-2-A",
+  "unit_code": "P6-2-2",
+  "unit_title": "Negociar una deuda: cómo hablar con un acreedor",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Algoritmos al Poder",
+  "descripcion": "La IA toma miles de decisiones financieras por segundo. ¿Sabrás distinguir cuando está ayudando o cuando está cometiendo un error?",
+  "objetivo": "Identificar los beneficios y riesgos éticos del uso de IA en servicios financieros",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 60,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Haz clic en las ACCIONES POSITIVAS DE IA (✅) y evita los ERRORES O SESGOS (🚫).",
+  "items": [
+    {
+      "id": "ia1",
+      "label": "Detección de compra fraudulenta en 0.1 segundos",
+      "emoji": "🛡️",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "ia_e1",
+      "label": "Algoritmo que rechaza crédito por prejuicios (Sesgo)",
+      "emoji": "❌",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "ia2",
+      "label": "Predicción de tendencias de mercado con Big Data",
+      "emoji": "📈",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "ia_e2",
+      "label": "Robot que vende todo por un error de conexión",
+      "emoji": "🔌",
+      "tipo": "incorrecto",
+      "puntos": -250
+    },
+    {
+      "id": "ia3",
+      "label": "Asistente financiero personalizado 24/7",
+      "emoji": "🤖",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "ia_e3",
+      "label": "Deepfake pidiendo dinero con voz de un familiar",
+      "emoji": "🎭",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "ia4",
+      "label": "Optimización automática de impuestos",
+      "emoji": "📑",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "ia_e4",
+      "label": "IA que ignora a personas de ciertos países",
+      "emoji": "🌍",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "ia5",
+      "label": "Traducción instantánea de contratos globales",
+      "emoji": "🗣️",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "ia_e5",
+      "label": "Alucinación de IA inventando datos financieros",
+      "emoji": "🌀",
+      "tipo": "incorrecto",
+      "puntos": -150
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

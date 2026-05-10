@@ -1,0 +1,160 @@
+{
+  "code": "ACT-P5-3-2-A",
+  "unit_code": "P5-3-2",
+  "unit_title": "CETES: prestándole dinero al gobierno",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Chef de la Inversión",
+  "descripcion": "Invertir es como cocinar: necesitas los ingredientes correctos en las cantidades exactas. ¡Crea tu portafolio y ve qué tan seguro y rentable es!",
+  "objetivo": "Aprender a balancear un portafolio de inversión utilizando diferentes clases de activos",
+  "xp": 500,
+  "descripcion_formula": "Calculamos el Rendimiento Promedio Ponderado: (%Cetes*11 + %Bolsa*15 + %Cripto*40 + %Oro*5) / 100.",
+  "inputs": [
+    {
+      "id": "porcentaje_cetes",
+      "label": "% en CETES (Seguro)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "unit": "%"
+    },
+    {
+      "id": "porcentaje_bolsa",
+      "label": "% en Bolsa (Crecimiento)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 30,
+      "unit": "%"
+    },
+    {
+      "id": "porcentaje_cripto",
+      "label": "% en Cripto (Arriesgado)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10,
+      "unit": "%"
+    },
+    {
+      "id": "porcentaje_oro",
+      "label": "% en Oro (Refugio)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "%"
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "(porcentaje_cetes * 11 + porcentaje_bolsa * 15 + porcentaje_cripto * 40 + porcentaje_oro * 5) / 100",
+  "output_label": "Rendimiento Estimado Anual",
+  "output_prefix": "",
+  "output_suffix": "%",
+  "chart_type": "pie",
+  "escenarios": [
+    {
+      "condicion": "porcentaje_cripto > 30",
+      "mensaje": "⚠️ ¡Cuidado, Chef! Tu receta es muy picante. Si las criptomonedas bajan, podrías perder mucho dinero.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "porcentaje_cetes > 60",
+      "mensaje": "🛡️ Eres un chef muy precavido. Tu dinero está seguro, pero crecerá lento. ¡Considera un poco más de Bolsa!",
+      "tipo": "info"
+    },
+    {
+      "condicion": "porcentaje_cetes + porcentaje_bolsa + porcentaje_cripto + porcentaje_oro != 100",
+      "mensaje": "🚫 ¡Error en la receta! La suma de tus porcentajes debe ser exactamente 100%.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "✅ ¡Portafolio Equilibrado! Tienes un poco de todo para protegerte y crecer al mismo tiempo.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si los CETES pagan 10% anual y la inflación es 5%, ¿cuánto ganas en términos reales? ¿Por qué invertir en CETES es mejor que dejar el dinero en una cuenta de ahorro normal?",
+  "comparativa_espera": "Los inversionistas más exitosos del mundo, como Warren Buffett, aplican el mismo principio: comprar activos buenos a precios justos y mantenerlos largo plazo. La paciencia es la ventaja competitiva más accesible.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado principal"
+    },
+    {
+      "id": "eficiencia",
+      "label": "Eficiencia vs Alternativa",
+      "formula": "Math.round(resultado_principal * 1.12)",
+      "prefix": "$",
+      "suffix": " vs CETES",
+      "descripcion": "Lo que generaría en CETES al 12%"
+    },
+    {
+      "id": "riesgo_ajustado",
+      "label": "Resultado Ajustado por Riesgo",
+      "formula": "Math.round(resultado_principal * 0.85)",
+      "prefix": "$",
+      "suffix": " (pesimista)",
+      "descripcion": "Si el resultado fuera 15% menor al esperado"
+    },
+    {
+      "id": "horizonte_largo",
+      "label": "En un Horizonte de 10 Años",
+      "formula": "Math.round(resultado_principal * 2.59)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Reinvirtiendo al 10% anual durante 10 años"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "eficiencia",
+      "label": "Eficiencia vs Alternativa",
+      "color": "#22c55e"
+    }
+  ]
+}

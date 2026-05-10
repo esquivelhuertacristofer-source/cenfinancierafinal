@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P4-2-5-A",
+  "unit_code": "P4-2-5",
+  "unit_title": "Fraudes y estafas digitales: Ciber-Guardianes",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Detector de Phishing",
+  "descripcion": "Los estafadores se hacen pasar por bancos o amigos para robarte. ¿Podrás detectar sus trampas antes de caer en ellas?",
+  "objetivo": "Desarrollar el ojo crítico para identificar intentos de ingeniería social y phishing en medios digitales",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 50,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Haz clic en los mensajes SEGUROS (✅) y rechaza los FRAUDES (🚫) rápidamente.",
+  "items": [
+    {
+      "id": "f1",
+      "label": "SMS: ¡Ganaste un iPhone! Da clic aquí para reclamar",
+      "emoji": "📱",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s1",
+      "label": "Banco: Tu estado de cuenta ya está disponible en la APP oficial",
+      "emoji": "🏦",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f2",
+      "label": "WA: Hola primo, perdí mi cel, ¿me prestas $500?",
+      "emoji": "👨",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "f3",
+      "label": "Correo: Cuenta BLOQUEADA. Entra a www.banco-seguro-ya.net",
+      "emoji": "📧",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s2",
+      "label": "Tienda: Tu pedido ha sido enviado. Sigue el paquete con este número",
+      "emoji": "📦",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f4",
+      "label": "Llamada: Soy del banco, dame tu clave para cancelar un robo",
+      "emoji": "📞",
+      "tipo": "incorrecto",
+      "puntos": -200
+    },
+    {
+      "id": "f5",
+      "label": "Anuncio: ¡Hazte rico en 1 día sin hacer nada!",
+      "emoji": "🚀",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s3",
+      "label": "Email: Actualizamos nuestros términos de uso. No requiere acción",
+      "emoji": "📜",
+      "tipo": "correcto",
+      "puntos": 50
+    },
+    {
+      "id": "f6",
+      "label": "SMS: Tienes un paquete detenido, paga $20 para liberarlo aquí",
+      "emoji": "🚧",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "s4",
+      "label": "Banco: Nunca te pediremos tus claves por teléfono o correo",
+      "emoji": "🛡️",
+      "tipo": "correcto",
+      "puntos": 100
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S3-2-1-B",
+  "unit_code": "S3-2-1",
+  "unit_title": "La primera declaración fiscal: ISR y deducciones básicas",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Precio del Éxito",
+  "descripcion": "¿Sabes qué hace que una empresa valga billones de dólares? ¡Demuestra tus conocimientos en finanzas corporativas!",
+  "objetivo": "Identificar los componentes clave que determinan el valor de una empresa y los métodos de valuación básicos",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "val1",
+      "texto": "¿Qué es la 'Capitalización de Mercado' (Market Cap)?",
+      "opciones": [
+        "El dinero que la empresa tiene en la caja fuerte",
+        "El valor total de todas las acciones de la empresa (Precio acción x Número de acciones)",
+        "La suma de las deudas de la empresa",
+        "El precio de su edificio más caro"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el valor 'etiqueta' que el mercado le pone a la empresa entera en la bolsa."
+    },
+    {
+      "id": "val2",
+      "texto": "¿Por qué una empresa tecnológica puede valer más que una fábrica de acero que gana lo mismo?",
+      "opciones": [
+        "Porque sus oficinas son más modernas",
+        "Porque tiene una mayor 'Escalabilidad' (puede crecer rápido con pocos costos)",
+        "Porque usa más luz",
+        "No puede valer más"
+      ],
+      "correcta": 1,
+      "explicacion": "El mercado paga por el potencial de crecimiento futuro."
+    },
+    {
+      "id": "val3",
+      "texto": "¿Qué es un 'Activo Intangible'?",
+      "opciones": [
+        "Dinero en efectivo",
+        "Cosas que no se pueden tocar pero tienen gran valor como la marca, patentes o software",
+        "Un edificio viejo",
+        "Una deuda"
+      ],
+      "correcta": 1,
+      "explicacion": "Marcas como Apple o Coca-Cola valen billones solo por su nombre y patentes."
+    },
+    {
+      "id": "val4",
+      "texto": "¿Qué significa que un negocio sea 'Escalable'?",
+      "opciones": [
+        "Que tiene muchas escaleras",
+        "Que sus ingresos pueden crecer mucho sin que sus costos suban en la misma proporción",
+        "Que vende escaleras",
+        "Que tiene muchos empleados"
+      ],
+      "correcta": 1,
+      "explicacion": "El software es el ejemplo perfecto de escalabilidad."
+    },
+    {
+      "id": "val5",
+      "texto": "¿Qué es la 'Utilidad Neta'?",
+      "opciones": [
+        "Todo el dinero que entra a la empresa",
+        "Lo que queda después de restar todos los gastos e impuestos a los ingresos",
+        "El sueldo del jefe",
+        "Un tipo de préstamo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la ganancia real que la empresa generó para sus dueños."
+    },
+    {
+      "id": "val6",
+      "texto": "¿Qué es un 'Múltiplo de Valuación'?",
+      "opciones": [
+        "Un número que se multiplica por la utilidad para estimar el valor de la empresa",
+        "La tabla de multiplicar",
+        "Una suma de deudas",
+        "Un tipo de interés"
+      ],
+      "correcta": 0,
+      "explicacion": "Ayuda a comparar si una empresa está cara o barata respecto a sus competidoras."
+    },
+    {
+      "id": "val7",
+      "texto": "¿Qué es el 'Venture Capital'?",
+      "opciones": [
+        "Un banco que presta para comprar casas",
+        "Fondos de inversión que ponen dinero en startups de alto riesgo a cambio de ser dueños de una parte",
+        "Ahorrar para las vacaciones",
+        "Vender ropa"
+      ],
+      "correcta": 1,
+      "explicacion": "Son los motores que financian el crecimiento de empresas como Uber o Airbnb en sus inicios."
+    },
+    {
+      "id": "val8",
+      "texto": "¿Cuál es la 'Salida' (Exit) más común para un inversionista exitoso?",
+      "opciones": [
+        "Que la empresa quiebre",
+        "Vender sus acciones cuando la empresa sale a la bolsa (IPO) o es comprada por otra más grande",
+        "Pedir un préstamo",
+        "Cerrar el negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora sabes cómo se mide el éxito en el mundo de los negocios globales."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

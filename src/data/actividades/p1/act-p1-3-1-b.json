@@ -1,0 +1,135 @@
+{
+  "code": "ACT-P1-3-1-B",
+  "unit_code": "P1-3-1",
+  "unit_title": "¿Cuánto tengo? Aprender a contar mi dinero",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Tesoro de la Alcancía",
+  "descripcion": "¡Es hora de abrir el cochinito! Demuestra que eres el mejor contador de CEN Academy.",
+  "objetivo": "Validar habilidades de suma de monedas y estimación de valor total",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Si tienes una moneda de $10 y una de $5, ¿cuánto tienes?",
+      "opciones": [
+        "$10 pesos",
+        "$15 pesos",
+        "$20 pesos",
+        "$5 pesos"
+      ],
+      "correcta": 1,
+      "explicacion": "10 + 5 suma 15. ¡Es un buen comienzo para tu ahorro!"
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué es más fácil para contar muchas monedas?",
+      "opciones": [
+        "Contar de una en una",
+        "Hacer montoncitos de 10 en 10",
+        "No contarlas",
+        "Pintarlas"
+      ],
+      "correcta": 1,
+      "explicacion": "Agrupar por 10 es un truco de contadores expertos para no equivocarse."
+    },
+    {
+      "id": "q3",
+      "texto": "Si tienes 5 monedas de $2 pesos, ¿cuántas de a peso necesitas para tener lo mismo?",
+      "opciones": [
+        "5 monedas",
+        "10 monedas",
+        "2 monedas",
+        "20 monedas"
+      ],
+      "correcta": 1,
+      "explicacion": "5 x 2 son 10, así que necesitas diez monedas de a peso."
+    },
+    {
+      "id": "q4",
+      "texto": "Ceny tiene un billete de $20 y una moneda de $10. ¿Cuánto es en total?",
+      "opciones": [
+        "$20",
+        "$10",
+        "$30",
+        "$40"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Súper! 20 más 10 son 30. ¡Ya puedes comprar algo grande!"
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué valor tiene la moneda mexicana que es dorada en el centro y plateada afuera?",
+      "opciones": [
+        "$1",
+        "$2",
+        "$5",
+        "$10"
+      ],
+      "correcta": 3,
+      "explicacion": "Esa es la moneda de $10, ¡la más valiosa de las comunes!"
+    },
+    {
+      "id": "q6",
+      "texto": "Si tienes $50 y gastas $10 en un sacapuntas, ¿cuánto te queda?",
+      "opciones": [
+        "$50",
+        "$40",
+        "$60",
+        "$10"
+      ],
+      "correcta": 1,
+      "explicacion": "50 menos 10 son 40. Siempre cuenta tu dinero después de gastar."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Por qué es importante saber cuánto dinero tienes exactamente?",
+      "opciones": [
+        "Para presumir",
+        "Para saber si te alcanza para tu meta y que no te den mal el cambio",
+        "Para nada",
+        "Para jugar"
+      ],
+      "correcta": 1,
+      "explicacion": "El conocimiento es seguridad. Si sabes cuánto tienes, nadie puede engañarte."
+    },
+    {
+      "id": "q8",
+      "texto": "Verdadero o Falso: Dos monedas de $5 valen lo mismo que una de $10.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! 5 + 5 = 10. Son equivalentes."
+    },
+    {
+      "id": "q9",
+      "texto": "Si cuentas de 10 en 10, ¿qué número sigue después del 40?",
+      "opciones": [
+        "41",
+        "50",
+        "60",
+        "100"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Excelente! 10, 20, 30, 40... ¡50!"
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cómo se siente saber que estás cuidando y contando bien tu dinero?",
+      "opciones": [
+        "Triste",
+        "Responsable y como un Genio Financiero",
+        "Enojado",
+        "Aburrido"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Esa es la actitud CEN! El orden es la base del éxito."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

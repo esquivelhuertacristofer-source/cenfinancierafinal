@@ -1,0 +1,126 @@
+{
+  "code": "ACT-S3-1-5-B",
+  "unit_code": "S3-1-5",
+  "unit_title": "Checklist de preparación financiera para la vida adulta",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Globalización Financiera",
+  "descripcion": "¿Sabes cómo los tratados y las fronteras afectan tu bolsillo? ¡Demuestra tu visión de mundo!",
+  "objetivo": "Comprender los conceptos de comercio internacional, tratados comerciales y fenómenos económicos globales",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "geo1",
+      "pregunta": "¿Qué es un 'Arancel'?",
+      "respuesta_correcta": "Un impuesto que se aplica a los productos que vienen de otros países para proteger la industria local",
+      "incorrectas": [
+        "Un tipo de moneda",
+        "Un descuento en el súper",
+        "Un permiso para viajar"
+      ],
+      "dato_extra": "Los aranceles hacen que los productos importados sean más caros."
+    },
+    {
+      "id": "geo2",
+      "pregunta": "¿Qué es el 'Nearshoring'?",
+      "respuesta_correcta": "Cuando las empresas mueven sus fábricas a países cercanos a su mercado principal (ej: empresas de EE.UU. mudándose a México)",
+      "incorrectas": [
+        "Vivir cerca de la playa",
+        "Un tipo de deporte acuático",
+        "Comprar acciones en China"
+      ],
+      "dato_extra": "México es uno de los países más beneficiados del mundo por este fenómeno."
+    },
+    {
+      "id": "geo3",
+      "pregunta": "¿Cuál es la función del G20?",
+      "respuesta_correcta": "Un foro de los 20 países con las economías más grandes para discutir temas financieros y económicos mundiales",
+      "incorrectas": [
+        "Un grupo de 20 bancos",
+        "Un equipo de fútbol",
+        "Un tipo de moneda digital"
+      ],
+      "dato_extra": "Las decisiones del G20 marcan el rumbo de la economía global."
+    },
+    {
+      "id": "geo4",
+      "pregunta": "¿Qué es una 'Sanción Económica'?",
+      "respuesta_correcta": "Un castigo comercial y financiero aplicado por países a otro país para obligarlo a cambiar su conducta política",
+      "incorrectas": [
+        "Una multa de tránsito",
+        "Un premio por exportar",
+        "Un nuevo tratado de paz"
+      ],
+      "dato_extra": "Pueden incluir el bloqueo de cuentas bancarias y la prohibición de vender tecnología al país sancionado."
+    },
+    {
+      "id": "geo5",
+      "pregunta": "¿Qué significa la 'Balanza Comercial'?",
+      "respuesta_correcta": "La diferencia entre el valor de lo que un país exporta (vende) y lo que importa (compra) al resto del mundo",
+      "incorrectas": [
+        "El peso de los barcos",
+        "El precio del dólar",
+        "La deuda de los ciudadanos"
+      ],
+      "dato_extra": "Si exportas más de lo que importas, tienes un 'superávit' comercial."
+    },
+    {
+      "id": "geo6",
+      "pregunta": "¿Qué es el 'Proteccionismo'?",
+      "respuesta_correcta": "Una política económica que busca favorecer los productos nacionales limitando la competencia extranjera",
+      "incorrectas": [
+        "Cuidar el medio ambiente",
+        "Tener un seguro de vida",
+        "Invertir en oro"
+      ],
+      "dato_extra": "Lo opuesto al proteccionismo es el 'Libre Comercio'."
+    },
+    {
+      "id": "geo7",
+      "pregunta": "¿Qué son los 'Mercados Emergentes'?",
+      "respuesta_correcta": "Países en desarrollo con alto potencial de crecimiento (como México, India o Brasil)",
+      "incorrectas": [
+        "Países que acaban de aparecer en el mapa",
+        "Mercados que solo abren de noche",
+        "Países muy pobres"
+      ],
+      "dato_extra": "Son más riesgosos para invertir pero pueden dar ganancias mucho mayores."
+    },
+    {
+      "id": "geo8",
+      "pregunta": "¿Qué es la OMC (Organización Mundial del Comercio)?",
+      "respuesta_correcta": "La única organización internacional que se ocupa de las normas que rigen el comercio entre los países",
+      "incorrectas": [
+        "Un banco que presta dinero",
+        "Un grupo de ONGs",
+        "Una empresa de barcos"
+      ],
+      "dato_extra": "Ayuda a resolver conflictos comerciales de forma pacífica."
+    },
+    {
+      "id": "geo9",
+      "pregunta": "¿Qué es una 'Guerra de Divisas'?",
+      "respuesta_correcta": "Cuando los países intentan bajar el valor de su propia moneda para hacer sus exportaciones más competitivas",
+      "incorrectas": [
+        "Una pelea por billetes",
+        "Cuando se prohíbe el dólar",
+        "Un tipo de estafa"
+      ],
+      "dato_extra": "Puede causar inestabilidad en todo el sistema financiero mundial."
+    },
+    {
+      "id": "geo10",
+      "pregunta": "¿Cuál es la clave para ser un inversionista exitoso en un mundo globalizado?",
+      "respuesta_correcta": "La diversificación geográfica y estar informado sobre los eventos internacionales",
+      "incorrectas": [
+        "Invertir solo en tu ciudad",
+        "No ver las noticias",
+        "Esperar que no pase nada"
+      ],
+      "dato_extra": "¡Felicidades! Has completado el primer bloque de Secundaria 3. ¡Eres un estratega global!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

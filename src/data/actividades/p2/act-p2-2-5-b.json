@@ -1,0 +1,135 @@
+{
+  "code": "P2-2-5-B",
+  "unit_code": "P2-2-5",
+  "unit_title": "Ser responsable con el dinero prestado",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Guardián del Honor",
+  "descripcion": "¿Sabes qué significa pedir prestado? ¡Demuestra que eres una persona de palabra!",
+  "objetivo": "Validar la comprensión de la ética del crédito y la importancia de la devolución puntual",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué es el dinero 'prestado'?",
+      "opciones": [
+        "Un regalo que me puedo quedar",
+        "Dinero que alguien me da para ayudarme, pero que debo devolver después",
+        "Dinero que encontré",
+        "Un premio por ser guapo"
+      ],
+      "correcta": 1,
+      "explicacion": "El préstamo es una ayuda temporal, no es dinero tuyo para siempre."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Por qué es muy importante pagar tus deudas a tiempo?",
+      "opciones": [
+        "Para que no nos regañen",
+        "Para mantener la CONFIANZA y que nos vuelvan a ayudar si lo necesitamos",
+        "Para que me den un dulce",
+        "Para presumir"
+      ],
+      "correcta": 1,
+      "explicacion": "Cumplir tu palabra hace que la gente crea en ti y te apoye en el futuro."
+    },
+    {
+      "id": "q3",
+      "texto": "Si tienes el dinero para pagar lo que debes, pero ves un juguete que quieres mucho, ¿qué debes hacer?",
+      "opciones": [
+        "Comprar el juguete y esconderme de quien me prestó",
+        "Pagar primero mi deuda y luego ahorrar para el juguete",
+        "Gastar el dinero y decir que me lo robaron",
+        "Pedir más prestado"
+      ],
+      "correcta": 1,
+      "explicacion": "Las deudas son compromisos de honor. Siempre van antes que los gustos personales."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Qué significa la palabra 'Crédito'?",
+      "opciones": [
+        "Dinero gratis",
+        "Creer en la palabra de otra persona (Confianza)",
+        "Una tarjeta de plástico",
+        "Un tipo de cereal"
+      ],
+      "correcta": 1,
+      "explicacion": "Crédito viene de 'creer'. Si alguien te da crédito, es porque cree en ti."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué sucede con la confianza cuando NO devuelves algo que te prestaron (dinero o un juguete)?",
+      "opciones": [
+        "Se hace más grande",
+        "Se rompe y es muy difícil de recuperar",
+        "No pasa nada, a todos se les olvida",
+        "Te vuelves más rico"
+      ],
+      "correcta": 1,
+      "explicacion": "La confianza es como un espejo: si se rompe, aunque lo pegues, se nota la marca."
+    },
+    {
+      "id": "q6",
+      "texto": "Verdadero o Falso: Es mejor evitar pedir prestado si puedes ahorrar para comprarlo tú mismo con tu esfuerzo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Ahorrar es más seguro que endeudarse. ¡Un genio financiero prefiere su propio dinero!"
+    },
+    {
+      "id": "q7",
+      "texto": "¿A quién le puedes pedir ayuda o dinero prestado si tienes una emergencia?",
+      "opciones": [
+        "A un extraño en la calle",
+        "A mis padres, abuelos o maestros de confianza",
+        "A nadie, me quedo callado",
+        "A mis amigos que tampoco tienen dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "En emergencias, la familia y las personas que te quieren son los mejores aliados."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué debes hacer si por alguna razón NO puedes pagar el día que prometiste?",
+      "opciones": [
+        "Esconderte para que no te vean",
+        "Hablar con honestidad, explicar qué pasó y dar una nueva fecha",
+        "Decir mentiras",
+        "Enojarte con quien te prestó"
+      ],
+      "correcta": 1,
+      "explicacion": "La honestidad salva la confianza incluso cuando tienes problemas."
+    },
+    {
+      "id": "q9",
+      "texto": "¿Por qué es importante cuidar los objetos que nos prestan (como un libro o una goma)?",
+      "opciones": [
+        "Porque son nuevos",
+        "Porque no son nuestros y debemos regresarlos igual de bien que como nos los dieron",
+        "Porque si se rompen no los pago",
+        "Porque sí"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuidar lo ajeno es una señal de respeto y buena educación."
+    },
+    {
+      "id": "q10",
+      "texto": "¿Cuál es la misión de un Ciudadano CEN con respecto a sus deudas?",
+      "opciones": [
+        "No pagar nunca",
+        "Ser una persona de palabra que siempre cumple sus compromisos",
+        "Pedir prestado a todo el mundo",
+        "Gastar el dinero de otros"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Tu palabra es tu firma! Cumplir te hace grande."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

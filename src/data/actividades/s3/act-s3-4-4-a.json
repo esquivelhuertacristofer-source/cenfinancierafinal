@@ -1,0 +1,139 @@
+{
+  "code": "ACT-S3-4-4-A",
+  "unit_code": "S3-4-4",
+  "unit_title": "Exit Strategy: El gran retiro del emprendedor",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Portafolio de Vida",
+  "descripcion": "Este es tu examen final de vida. Diseña la estrategia financiera que seguirás desde hoy hasta tu retiro. ¡El futuro empieza ahora!",
+  "objetivo": "Integrar todos los conocimientos de finanzas personales, corporativas y gestión de riesgos en un plan financiero integral",
+  "xp": 1000,
+  "output_type": "Master Plan Financiero de Vida",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "metas_grandes_s3",
+      "titulo": "🎯 Metas de Vida",
+      "descripcion": "¿Para qué quieres el dinero? Define tus motores.",
+      "campos": [
+        {
+          "id": "meta_libertad_s3",
+          "label": "¿A qué edad quieres ser financieramente libre (no tener que trabajar)?",
+          "type": "slider",
+          "min": 30,
+          "max": 75,
+          "step": 1,
+          "default": 55,
+          "unit": "años"
+        },
+        {
+          "id": "sueno_financiero",
+          "label": "Describe tu meta más grande",
+          "type": "textarea",
+          "placeholder": "Ej: Crear una fundación para niños, viajar por el mundo, ser dueño de un equipo de fútbol...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "estrategia_inversion_s3",
+      "titulo": "📈 Estrategia de Crecimiento",
+      "descripcion": "¿Cómo harás que tu dinero trabaje por ti?",
+      "campos": [
+        {
+          "id": "mezcla_activos_s3",
+          "label": "Distribución del Portafolio (%)",
+          "type": "select",
+          "opciones": [
+            "Agresivo (80% Acciones/Cripto, 20% Bonos)",
+            "Moderado (50% Acciones, 50% Bonos)",
+            "Conservador (20% Acciones, 80% Bonos/Oro)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "ahorro_mensual_s3",
+          "label": "Porcentaje de tus ingresos que ahorrarás/invertirás siempre",
+          "type": "slider",
+          "min": 5,
+          "max": 50,
+          "step": 5,
+          "default": 20,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "blindaje_riesgos_s3",
+      "titulo": "🛡️ Blindaje y Protección",
+      "descripcion": "Nadie es invencible. Protege tu camino.",
+      "campos": [
+        {
+          "id": "seguros_clave_s3",
+          "label": "Seguros que consideras obligatorios",
+          "type": "select",
+          "opciones": [
+            "Médico + Vida",
+            "Médico + Responsabilidad Civil",
+            "Todo Incluido (Médico, Vida, Ciber, Hogar)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "plan_emergencia_s3",
+          "label": "¿De cuántos meses será tu Fondo de Emergencia?",
+          "type": "slider",
+          "min": 3,
+          "max": 24,
+          "step": 3,
+          "default": 6,
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "legado_final_s3",
+      "titulo": "💎 El Legado",
+      "descripcion": "¿Qué dejarás cuando ya no estés?",
+      "campos": [
+        {
+          "id": "herramienta_sucesion",
+          "label": "¿Qué usarás para proteger tu herencia?",
+          "type": "select",
+          "opciones": [
+            "Fideicomiso (Trust)",
+            "Testamento Simple",
+            "Donación en Vida"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "causa_social_s3",
+          "label": "¿A qué causa social dedicarás parte de tu riqueza?",
+          "type": "textarea",
+          "placeholder": "Ej: Educación, Cambio Climático, Salud, Artes...",
+          "requerido": true
+        },
+        {
+          "id": "meta_ahorro_mensual_est",
+          "label": "Ahorro Mensual Recomendado (20% de ingresos)",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_mensual_s3 * 200)",
+          "unit": "$",
+          "ayuda": "Si tu % de ahorro fuera tu ingreso mensual estimado, este sería tu ahorro mensual real"
+        },
+        {
+          "id": "fondo_emergencia_meses",
+          "label": "Fondo de Emergencia Sugerido",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_mensual_s3 * 200 * plan_emergencia_s3)",
+          "unit": "$",
+          "ayuda": "Tu ahorro mensual estimado × los meses de cobertura configurados"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

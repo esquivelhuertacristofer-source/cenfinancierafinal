@@ -1,0 +1,93 @@
+{
+  "code": "ACT-P3-2-1-A",
+  "unit_code": "P3-2-1",
+  "unit_title": "La banca y el sistema financiero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Mapa Bancario de México",
+  "descripcion": "En el mundo del dinero, cada equipo tiene una tarea. ¿Sabes quién fabrica los billetes y quién te defiende si tienes un problema?",
+  "objetivo": "Identificar las principales instituciones financieras de México y sus funciones básicas",
+  "xp": 250,
+  "instruccion": "Arrastra cada institución a su función correcta en el sistema financiero.",
+  "items": [
+    {
+      "id": "b1",
+      "label": "Banco de México (Banxico)",
+      "emoji": "🏦",
+      "categoria_correcta": "gobierno",
+      "feedback": "¡Exacto! Banxico es el 'banco de bancos' y fabrica los billetes."
+    },
+    {
+      "id": "c1",
+      "label": "CONDUSEF",
+      "emoji": "⚖️",
+      "categoria_correcta": "defensa",
+      "feedback": "¡Bien! Ellos son los árbitros que te defienden si el banco se equivoca."
+    },
+    {
+      "id": "b2",
+      "label": "Banco Comercial (Ej: BBVA, Banorte)",
+      "emoji": "🏧",
+      "categoria_correcta": "servicio",
+      "feedback": "¡Correcto! Aquí es donde las personas guardan su dinero y piden préstamos."
+    },
+    {
+      "id": "b3",
+      "label": "Casa de Moneda",
+      "emoji": "🪙",
+      "categoria_correcta": "gobierno",
+      "feedback": "¡Muy bien! Ellos acuñan todas las monedas de metal que usamos."
+    },
+    {
+      "id": "c2",
+      "label": "Profeco",
+      "emoji": "📋",
+      "categoria_correcta": "defensa",
+      "feedback": "Ellos defienden a los compradores de productos en tiendas y mercados."
+    },
+    {
+      "id": "b4",
+      "label": "Cajero Automático",
+      "emoji": "💳",
+      "categoria_correcta": "servicio",
+      "feedback": "Es la máquina que te permite sacar tu dinero en cualquier momento."
+    },
+    {
+      "id": "b5",
+      "label": "Bóveda del Banco",
+      "emoji": "🔒",
+      "categoria_correcta": "servicio",
+      "feedback": "El lugar más seguro donde se guarda el efectivo de los clientes."
+    },
+    {
+      "id": "b6",
+      "label": "CNBV",
+      "emoji": "👁️",
+      "categoria_correcta": "gobierno",
+      "feedback": "Ellos vigilan que todos los bancos se porten bien y sigan las reglas."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "gobierno",
+      "label": "LAS AUTORIDADES (Reglas)",
+      "emoji": "🇲🇽",
+      "color": "#16a34a"
+    },
+    {
+      "id": "servicio",
+      "label": "LOS SERVICIOS (Tu dinero)",
+      "emoji": "💰",
+      "color": "#0284c7"
+    },
+    {
+      "id": "defensa",
+      "label": "LOS DEFENSORES (Ayuda)",
+      "emoji": "🛡️",
+      "color": "#dc2626"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

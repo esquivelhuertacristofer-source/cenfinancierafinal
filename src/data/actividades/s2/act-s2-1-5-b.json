@@ -1,0 +1,127 @@
+{
+  "code": "ACT-S2-1-5-B",
+  "unit_code": "S2-1-5",
+  "unit_title": "Crisis económicas: lecciones del 94, 2008 y 2020 en México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "El Momento de la Verdad",
+  "descripcion": "Tu operación va en rojo. El precio acaba de tocar tu límite de pérdida (Stop Loss). Pero sientes que 'ya casi va a subir'. ¿Respetarás tu plan?",
+  "objetivo": "Validar la importancia de la disciplina operativa y el cumplimiento de las reglas de gestión de riesgo",
+  "xp": 500,
+  "personaje_principal": "Estratega",
+  "contexto_inicial": "Invertiste en una empresa de Inteligencia Artificial. Tu plan decía salir si perdías el 5%. El precio acaba de bajar ese 5%. Estás en el momento crítico.",
+  "nodo_inicial": "la_trampa_esperanza",
+  "nodos": {
+    "la_trampa_esperanza": {
+      "id": "la_trampa_esperanza",
+      "texto": "Tu cerebro te dice: 'Si vendo ahora, la pérdida será real. Si espero un poquito más, seguro recupero'. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "respetar_stop",
+          "texto": "Vender de inmediato (Cerrar pérdida pequeña)",
+          "siguiente_nodo": "capital_salvado",
+          "consecuencia": "Fue difícil apretar el botón, pero perdiste poco y aún tienes el 95% de tu capital para la próxima oportunidad.",
+          "xp_bonus": 400,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "esperanza_toxica",
+          "texto": "Bajar el Stop Loss y esperar (Esperanza tóxica)",
+          "siguiente_nodo": "caida_libre",
+          "consecuencia": "Te dejaste llevar por la emoción. El precio sigue bajando y ahora la pérdida es del 20%.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "caida_libre": {
+      "id": "caida_libre",
+      "texto": "La caída se acelera. Estás paralizado por el miedo. ¿Vendes ahora o esperas un milagro?",
+      "opciones": [
+        {
+          "id": "venta_tardia",
+          "texto": "Vender ahora (Pérdida gigante)",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Perdiste una gran parte de tus ahorros por no seguir tu propio plan inicial.",
+          "xp_bonus": 50,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        },
+        {
+          "id": "promediar_a_la_baja",
+          "texto": "Comprar más acciones para \"promediar el precio\" y recuperar más rápido",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La acción siguió cayendo. Ahora tienes el doble de pérdidas.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "capital_salvado": {
+      "id": "capital_salvado",
+      "texto": "Poco después de vender, sale una noticia pésima y la acción cae otro 40%. ¡Te salvaste por seguir tus reglas!",
+      "opciones": [
+        {
+          "id": "final_disciplina_oro",
+          "texto": "Ver el poder de la disciplina",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "La disciplina te salvó de la ruina.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "reinvertir_emocion",
+          "texto": "Reinvertir inmediatamente en otra acción que \"parece barata ahora\"",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La segunda acción también cayó. El trading emocional rara vez funciona.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": -30
+        }
+      ]
+    },
+    "final_trader_exitoso": {
+      "id": "final_trader_exitoso",
+      "texto": "¡Felicidades! Has superado la prueba más difícil: aceptar una pérdida pequeña para evitar una ruina total.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "En el trading, el Stop Loss no es una derrota, es un seguro de vida para tu capital."
+    },
+    "final_cuenta_quemada": {
+      "id": "final_cuenta_quemada",
+      "texto": "Has aprendido una lección costosa. El mercado no tiene piedad con quienes no tienen disciplina.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Tu esperanza no mueve los precios. Solo tu plan protege tu dinero."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

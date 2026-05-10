@@ -1,0 +1,112 @@
+{
+  "code": "ACT-P6-2-4-A",
+  "unit_code": "P6-2-4",
+  "unit_title": "Carta de crédito: derechos y responsabilidades",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Mi Negocio en el Metaverso",
+  "descripcion": "En el futuro, las personas pasarán mucho tiempo en mundos virtuales. ¿Qué negocio pondrás tú para los avatares?",
+  "objetivo": "Entender la creación de valor en bienes digitales y el concepto de escasez digital",
+  "xp": 450,
+  "output_type": "Proyecto de Negocio Virtual",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "concepto_virtual",
+      "titulo": "🎨 ¿Qué venderás?",
+      "descripcion": "Elige el tipo de negocio que abrirás en el mundo digital.",
+      "campos": [
+        {
+          "id": "tipo_negocio_v",
+          "label": "Tipo de Negocio",
+          "type": "select",
+          "opciones": [
+            "Diseño de Ropa para Avatares",
+            "Venta de Terrenos y Mansiones Virtuales",
+            "Galería de Arte NFT",
+            "Cine y Conciertos Virtuales"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "nombre_tienda",
+          "label": "Nombre de tu marca",
+          "type": "text",
+          "placeholder": "Ej: CyberStyle 3000...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "economia_virtual",
+      "titulo": "🪙 Tu Moneda y Precios",
+      "descripcion": "¿Cómo cobrarás por tus productos?",
+      "campos": [
+        {
+          "id": "moneda_uso",
+          "label": "Moneda de pago",
+          "type": "select",
+          "opciones": [
+            "Robux/V-Bucks",
+            "Tokens Propios",
+            "Criptomonedas (ETH/SOL)",
+            "Pesos/Dólares"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "precio_promedio",
+          "label": "Precio promedio de un objeto",
+          "type": "text",
+          "placeholder": "Ej: 10 tokens por camisa...",
+          "requerido": true
+        },
+        {
+          "id": "precio_producto_digital",
+          "label": "Precio de Tu Producto Digital ($MXN)",
+          "type": "slider",
+          "min": 10,
+          "max": 5000,
+          "step": 10,
+          "default": 200,
+          "requerido": false
+        },
+        {
+          "id": "ingresos_mes_1",
+          "label": "Ingresos con 10 Ventas Mensuales",
+          "type": "calculated",
+          "formula": "precio_producto_digital * 10",
+          "unit": "$",
+          "ayuda": "Un producto digital puede venderse muchas veces sin costo adicional de producción"
+        }
+      ]
+    },
+    {
+      "id": "valor_agregado_v",
+      "titulo": "✨ ¿Por qué eres único?",
+      "descripcion": "¿Qué hace que tu producto digital sea especial?",
+      "campos": [
+        {
+          "id": "escasez_digital",
+          "label": "¿Tus objetos serán limitados o infinitos?",
+          "type": "select",
+          "opciones": [
+            "Limitados (Solo 100 en el mundo)",
+            "Infinitos (Para todos)"
+          ],
+          "requerido": true
+        },
+        {
+          "id": "descripcion_experiencia",
+          "label": "Describe la experiencia de entrar a tu tienda",
+          "type": "textarea",
+          "placeholder": "Ej: Hay música futurista y puedes probarte la ropa con un clic...",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

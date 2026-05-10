@@ -1,0 +1,101 @@
+{
+  "code": "ACT-P4-3-2-A",
+  "unit_code": "P4-3-2",
+  "unit_title": "Ahorro vs. inversión: ¿cuál es la diferencia?",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Ahorro o Inversión?",
+  "descripcion": "El ahorro guarda tu dinero para hoy, la inversión lo multiplica para mañana. ¿Sabes distinguirlos?",
+  "objetivo": "Diferenciar entre instrumentos de ahorro y vehículos de inversión según su riesgo y rendimiento",
+  "xp": 250,
+  "instruccion": "Arrastra cada instrumento a la caja correcta: AHORRO (para hoy) o INVERSIÓN (para el futuro).",
+  "items": [
+    {
+      "id": "a1",
+      "label": "Alcancía de cerdito",
+      "emoji": "🐷",
+      "categoria_correcta": "ahorro",
+      "feedback": "Ahorro básico. Seguro pero tu dinero no crece."
+    },
+    {
+      "id": "i1",
+      "label": "CETES (Préstamo al gobierno)",
+      "emoji": "📜",
+      "categoria_correcta": "inversion",
+      "feedback": "¡Bien! Es una inversión muy segura que te paga intereses."
+    },
+    {
+      "id": "a2",
+      "label": "Dinero debajo del colchón",
+      "emoji": "🛏️",
+      "categoria_correcta": "ahorro",
+      "feedback": "Ahorro riesgoso (se puede perder) y no crece nada."
+    },
+    {
+      "id": "i2",
+      "label": "Acciones de empresas (como Disney o Apple)",
+      "emoji": "📈",
+      "categoria_correcta": "inversion",
+      "feedback": "Inversión. Puede darte mucho dinero, pero también puede bajar de valor."
+    },
+    {
+      "id": "a3",
+      "label": "Cuenta de banco básica",
+      "emoji": "🏦",
+      "categoria_correcta": "ahorro",
+      "feedback": "Ahorro seguro. Siempre disponible pero con poco rendimiento."
+    },
+    {
+      "id": "i3",
+      "label": "Comprar una casa para rentar",
+      "emoji": "🏠",
+      "categoria_correcta": "inversion",
+      "feedback": "Inversión en Bienes Raíces. Genera dinero cada mes por la renta."
+    },
+    {
+      "id": "i4",
+      "label": "Tu propio negocio de dulces",
+      "emoji": "🍭",
+      "categoria_correcta": "inversion",
+      "feedback": "¡Inversión emprendedora! Usas dinero para generar más dinero con tu trabajo."
+    },
+    {
+      "id": "a4",
+      "label": "Dinero en tu cartera",
+      "emoji": "👛",
+      "categoria_correcta": "ahorro",
+      "feedback": "Ahorro para el gasto diario. Muy líquido pero se gasta fácil."
+    },
+    {
+      "id": "i5",
+      "label": "Inversión en Oro",
+      "emoji": "🥇",
+      "categoria_correcta": "inversion",
+      "feedback": "Inversión en metales. Suele mantener su valor contra la inflación."
+    },
+    {
+      "id": "i6",
+      "label": "Criptomonedas",
+      "emoji": "₿",
+      "categoria_correcta": "inversion",
+      "feedback": "Inversión de muy alto riesgo. Puede subir mucho o desaparecer."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "ahorro",
+      "label": "AHORRO (Seguro y a la mano)",
+      "emoji": "🛡️",
+      "color": "#60a5fa"
+    },
+    {
+      "id": "inversion",
+      "label": "INVERSIÓN (Para crecer tu dinero)",
+      "emoji": "🚀",
+      "color": "#16a34a"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

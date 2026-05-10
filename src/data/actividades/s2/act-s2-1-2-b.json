@@ -1,0 +1,129 @@
+{
+  "code": "ACT-S2-1-2-B",
+  "unit_code": "S2-1-2",
+  "unit_title": "La política monetaria: cómo Banxico controla la inflación",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Cazador de Tendencias",
+  "descripcion": "El mercado siempre se mueve en una dirección. Tu trabajo es identificarla antes de que sea tarde. ¿Estás listo?",
+  "objetivo": "Diferenciar entre tendencias alcistas, bajistas y laterales en una gráfica de precios",
+  "xp": 400,
+  "mecanica": "Analiza la descripción de la gráfica y elige la TENDENCIA correcta.",
+  "escenarios": [
+    {
+      "id": "ten1",
+      "texto": "La gráfica muestra una serie de 'picos' cada vez más altos y 'valles' que nunca bajan más que el anterior.",
+      "imagen": "📈",
+      "opcion_correcta": "ALCISTA (BULLISH)",
+      "feedback_acierto": "¡Correcto! Máximos y mínimos crecientes definen una tendencia alcista clara.",
+      "feedback_error": "❌ ¡Error! Si el precio sube escalonadamente, es una tendencia alcista.",
+      "tipo_ataque": "Estructura de Mercado"
+    },
+    {
+      "id": "ten2",
+      "texto": "El precio está atrapado entre un 'techo' y un 'piso' plano. No sube ni baja, solo se mueve de lado.",
+      "imagen": "↔️",
+      "opcion_correcta": "LATERAL (RANGO)",
+      "feedback_acierto": "¡Bien hecho! El mercado está descansando o acumulando energía. No hay dirección clara.",
+      "feedback_error": "❌ ¡Error! Esto se llama rango o consolidación.",
+      "tipo_ataque": "Estructura de Mercado"
+    },
+    {
+      "id": "ten3",
+      "texto": "Cada vez que el precio intenta subir, se detiene en un punto más bajo que el anterior, y las caídas son cada vez más profundas.",
+      "imagen": "📉",
+      "opcion_correcta": "BAJISTA (BEARISH)",
+      "feedback_acierto": "¡Exacto! El pesimismo domina el mercado. Los vendedores tienen el control total.",
+      "feedback_error": "❌ ¡Error! Máximos decrecientes indican una tendencia bajista.",
+      "tipo_ataque": "Estructura de Mercado"
+    },
+    {
+      "id": "ten4",
+      "texto": "Después de bajar por mucho tiempo, el precio rompe el último 'techo' hacia arriba con mucho volumen.",
+      "imagen": "🚀",
+      "opcion_correcta": "CAMBIO DE TENDENCIA (ALCISTA)",
+      "feedback_acierto": "¡Excelente! Has detectado un 'Rompimiento' (Breakout). El mercado está cambiando de humor.",
+      "feedback_error": "❌ ¡Error! Cuando se rompe una resistencia importante tras una caída, suele iniciar una subida.",
+      "tipo_ataque": "Psicología de Precios"
+    },
+    {
+      "id": "ten5",
+      "texto": "El precio sube y baja con saltos gigantescos y desordenados. No hay patrón de picos o valles claros.",
+      "imagen": "🎢",
+      "opcion_correcta": "VOLÁTIL / SIN TENDENCIA",
+      "feedback_acierto": "¡Muy inteligente! A veces lo mejor es no operar. Un mercado errático es muy peligroso.",
+      "feedback_error": "❌ ¡Cuidado! Si no hay un patrón claro, no hay tendencia. Es mejor esperar.",
+      "tipo_ataque": "Riesgo de Mercado"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "game_type": "clasificacion",
+  "instruccion": "Analiza la descripción de la gráfica y elige la TENDENCIA correcta.",
+  "duracion": 150,
+  "opciones_clasificacion": [
+    "ALCISTA (BULLISH)",
+    "BAJISTA (BEARISH)",
+    "LATERAL (RANGO)",
+    "CAMBIO DE TENDENCIA (ALCISTA)",
+    "VOLÁTIL / SIN TENDENCIA"
+  ],
+  "items": [
+    {
+      "id": "ten1",
+      "label": "La gráfica muestra una serie de 'picos' cada vez más altos y 'valles' que nunca bajan más que el ant...",
+      "emoji": "📈",
+      "tipo": "correcto",
+      "respuesta_correcta": "ALCISTA (BULLISH)",
+      "feedback_acierto": "¡Correcto! Máximos y mínimos crecientes definen una tendencia alcista clara.",
+      "feedback_error": "❌ ¡Error! Si el precio sube escalonadamente, es una tendencia alcista.",
+      "puntos": 100
+    },
+    {
+      "id": "ten2",
+      "label": "El precio está atrapado entre un 'techo' y un 'piso' plano. No sube ni baja, solo se mueve de lado.",
+      "emoji": "↔️",
+      "tipo": "correcto",
+      "respuesta_correcta": "LATERAL (RANGO)",
+      "feedback_acierto": "¡Bien hecho! El mercado está descansando o acumulando energía. No hay dirección clara.",
+      "feedback_error": "❌ ¡Error! Esto se llama rango o consolidación.",
+      "puntos": 100
+    },
+    {
+      "id": "ten3",
+      "label": "Cada vez que el precio intenta subir, se detiene en un punto más bajo que el anterior, y las caídas ...",
+      "emoji": "📉",
+      "tipo": "correcto",
+      "respuesta_correcta": "BAJISTA (BEARISH)",
+      "feedback_acierto": "¡Exacto! El pesimismo domina el mercado. Los vendedores tienen el control total.",
+      "feedback_error": "❌ ¡Error! Máximos decrecientes indican una tendencia bajista.",
+      "puntos": 100
+    },
+    {
+      "id": "ten4",
+      "label": "Después de bajar por mucho tiempo, el precio rompe el último 'techo' hacia arriba con mucho volumen.",
+      "emoji": "🚀",
+      "tipo": "correcto",
+      "respuesta_correcta": "CAMBIO DE TENDENCIA (ALCISTA)",
+      "feedback_acierto": "¡Excelente! Has detectado un 'Rompimiento' (Breakout). El mercado está cambiando de humor.",
+      "feedback_error": "❌ ¡Error! Cuando se rompe una resistencia importante tras una caída, suele iniciar una subida.",
+      "puntos": 100
+    },
+    {
+      "id": "ten5",
+      "label": "El precio sube y baja con saltos gigantescos y desordenados. No hay patrón de picos o valles claros.",
+      "emoji": "🎢",
+      "tipo": "correcto",
+      "respuesta_correcta": "VOLÁTIL / SIN TENDENCIA",
+      "feedback_acierto": "¡Muy inteligente! A veces lo mejor es no operar. Un mercado errático es muy peligroso.",
+      "feedback_error": "❌ ¡Cuidado! Si no hay un patrón claro, no hay tendencia. Es mejor esperar.",
+      "puntos": 100
+    }
+  ],
+  "puntos": {
+    "acierto": 100,
+    "error": -25,
+    "max_posible": 500
+  }
+}

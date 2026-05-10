@@ -1,0 +1,66 @@
+{
+  "id": "ACT-S2-4-4-B",
+  "tipo": "QUIZ",
+  "titulo": "Certificación: Estrategias de Negociación",
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "texto": "¿Qué es la negociación ganar-ganar?",
+      "opciones": [
+        "Ceder en todo para evitar conflicto",
+        "Buscar un acuerdo que beneficie a ambas partes",
+        "Tratar de obtener la mayor ventaja posible sin importar el otro",
+        "Los costos no importan si el producto es muy bonito"
+      ],
+      "correcta": 1,
+      "explicacion": "La negociación ganar-ganar busca beneficios mutuos y relaciones a largo plazo."
+    },
+    {
+      "texto": "¿Cuál es un elemento clave de la comunicación asertiva en una negociación?",
+      "opciones": [
+        "Hablar más fuerte que el otro",
+        "Escucha activa y empatía",
+        "Interrumpir constantemente",
+        "Los niños nunca tendrán que pagar impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "Escuchar y entender la posición del otro es fundamental para llegar a acuerdos."
+    },
+    {
+      "texto": "En una negociación, el MAAN se refiere a:",
+      "opciones": [
+        "Mejor Alternativa a un Acuerdo Negociado",
+        "Máximo Ahorro de Activos Nacionales",
+        "Método de Análisis de Acciones Nuevas",
+        "Solo aplica a negocios con más de 10 empleados"
+      ],
+      "correcta": 0,
+      "explicacion": "El MAAN es tu plan B si la negociación actual no llega a un acuerdo."
+    },
+    {
+      "texto": "¿Por qué es importante investigar antes de una negociación comercial?",
+      "opciones": [
+        "Para intimidar a la contraparte",
+        "Para conocer el valor de mercado y los intereses del otro",
+        "No es importante, lo mejor es improvisar",
+        "El crédito es siempre gratuito y sin intereses"
+      ],
+      "correcta": 1,
+      "explicacion": "La información es poder en cualquier proceso de negociación."
+    },
+    {
+      "texto": "Un cierre de negociación exitoso debe incluir:",
+      "opciones": [
+        "Un apretón de manos solamente",
+        "Un resumen claro de los acuerdos y próximos pasos",
+        "Promesas verbales que no se anotan",
+        "Es necesario pedir prestado para cualquier negocio"
+      ],
+      "correcta": 1,
+      "explicacion": "La claridad en los acuerdos evita conflictos futuros."
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "xp": 300,
+  "level": "Secundaria 2"
+}

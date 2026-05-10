@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-2-1-B",
+  "unit_code": "P6-2-1",
+  "unit_title": "La trampa del crédito al consumo: cómo evitarla",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Misión Diamond: El Mundo DeFi",
+  "descripcion": "¿Sabes cómo funciona el sistema financiero del futuro? ¡Pon a prueba tu inteligencia digital!",
+  "objetivo": "Identificar los elementos clave de las finanzas descentralizadas y sus diferencias con la banca tradicional",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "def1",
+      "texto": "¿Qué significa 'DeFi'?",
+      "opciones": [
+        "Deudas Financieras",
+        "Finanzas Descentralizadas (Decentralized Finance)",
+        "Depósitos de Fin de Año",
+        "Defensa Financiera"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un sistema que usa la tecnología para quitar a los intermediarios como los bancos."
+    },
+    {
+      "id": "def2",
+      "texto": "¿Cuál es la tecnología base que permite que las DeFi existan?",
+      "opciones": [
+        "La radio",
+        "El Blockchain",
+        "El correo postal",
+        "Las tarjetas de plástico"
+      ],
+      "correcta": 1,
+      "explicacion": "El blockchain permite registrar transacciones de forma segura y pública sin un banco."
+    },
+    {
+      "id": "def3",
+      "texto": "¿Qué es un 'Smart Contract' (Contrato Inteligente)?",
+      "opciones": [
+        "Un contrato que sabe hablar",
+        "Un programa de computadora que ejecuta acuerdos automáticamente cuando se cumplen las condiciones",
+        "Un papel con mucha inteligencia",
+        "Un contrato que se firma con luz"
+      ],
+      "correcta": 1,
+      "explicacion": "En DeFi, el código de la computadora es el que asegura que se cumplan las reglas."
+    },
+    {
+      "id": "def4",
+      "texto": "En DeFi, ¿quién guarda tu dinero?",
+      "opciones": [
+        "El banco central",
+        "Tú mismo (en tu wallet), mediante el contrato inteligente",
+        "Una oficina secreta",
+        "Nadie lo guarda"
+      ],
+      "correcta": 1,
+      "explicacion": "Tú mantienes el control de tus claves y activos (Auto-custodia)."
+    },
+    {
+      "id": "def5",
+      "texto": "¿Qué es un 'Pool de Liquidez'?",
+      "opciones": [
+        "Una alberca para banqueros",
+        "Un fondo común donde muchas personas ponen su dinero para que otros puedan intercambiar monedas",
+        "Un tipo de seguro",
+        "Una deuda muy grande"
+      ],
+      "correcta": 1,
+      "explicacion": "Es como una 'caja común' digital que permite los intercambios."
+    },
+    {
+      "id": "def6",
+      "texto": "¿Cuál es uno de los mayores riesgos de las DeFi?",
+      "opciones": [
+        "Que el banco cierre",
+        "Que el código del contrato inteligente tenga un error o falla de seguridad",
+        "Que se acabe el papel moneda",
+        "Que el gerente se lleve el dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Al no haber humanos, si el código falla, no hay una oficina para reclamar."
+    },
+    {
+      "id": "def7",
+      "texto": "¿Qué significa que el sistema sea 'Permissionless' (Sin permisos)?",
+      "opciones": [
+        "Que es ilegal",
+        "Que cualquier persona con internet puede usarlo sin pedirle permiso a un banco",
+        "Que no tiene reglas",
+        "Que es gratis siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "Las DeFi están abiertas para todo el mundo, vivas donde vivas."
+    },
+    {
+      "id": "def8",
+      "texto": "¿Por qué las DeFi pueden pagar mejores intereses que un banco?",
+      "opciones": [
+        "Porque fabrican dinero",
+        "Porque al no tener edificios ni miles de empleados, ahorran costos y reparten mejor la ganancia",
+        "Porque no pagan impuestos",
+        "Porque es un truco"
+      ],
+      "correcta": 1,
+      "explicacion": "La eficiencia tecnológica permite mejores condiciones para los usuarios."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

@@ -1,0 +1,89 @@
+{
+  "code": "ACT-P6-2-4-B",
+  "unit_code": "P6-2-4",
+  "unit_title": "Carta de crédito: derechos y responsabilidades",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "¿Terrenos Digitales?",
+  "descripcion": "Tienes la oportunidad de comprar un terreno al lado del estadio de conciertos en 'LuminarWorld' por $2,000. ¿Es una mina de oro o una trampa?",
+  "objetivo": "Evaluar los riesgos y beneficios de la inversión en activos digitales intangibles",
+  "xp": 500,
+  "personaje_principal": "Dani",
+  "contexto_inicial": "Dani tiene $2,000. Puede invertirlos en una cuenta de ahorro que le da 10% anual, o comprar un terreno virtual donde podrá poner publicidad y cobrar renta a otros jugadores.",
+  "nodo_inicial": "la_decision_virtual",
+  "nodos": {
+    "la_decision_virtual": {
+      "id": "la_decision_virtual",
+      "texto": "Comprar el terreno virtual es arriesgado. Si el juego deja de ser popular, tu terreno valdrá $0. ¿Qué eliges?",
+      "opciones": [
+        {
+          "id": "comprar_terreno",
+          "texto": "Comprar el terreno (Riesgo alto, recompensa alta)",
+          "siguiente_nodo": "exito_metaverso",
+          "consecuencia": "¡Arriesgado! Compraste el terreno. Ahora veamos si el juego crece.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "ahorro_seguro",
+          "texto": "Invertir en ahorro tradicional (Riesgo bajo, ganancia segura)",
+          "siguiente_nodo": "final_ahorro_p6",
+          "consecuencia": "Elegiste la seguridad. Tu dinero crecerá poco a poco, pero nunca desaparecerá.",
+          "xp_bonus": 200,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "exito_metaverso": {
+      "id": "exito_metaverso",
+      "texto": "¡Increíble! Un cantante famoso dará un concierto en el estadio de al lado. Marcas de ropa quieren rentar tu terreno para poner sus logos. ¿Cuánto cobrarás?",
+      "opciones": [
+        {
+          "id": "cobro_justo",
+          "texto": "Cobrar una renta mensual moderada para tener clientes fijos",
+          "siguiente_nodo": "final_imperio_virtual",
+          "consecuencia": "¡Excelente! Creaste un flujo de dinero pasivo en el mundo digital.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "cobro_excesivo",
+          "texto": "Cobrar muchísimo dinero ahora mismo",
+          "siguiente_nodo": "final_terreno_vacio",
+          "consecuencia": "Nadie quiso rentarte por caro. El concierto pasó y perdiste la oportunidad.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "final_ahorro_p6": {
+      "id": "final_ahorro_p6",
+      "texto": "Tu dinero está a salvo. Viste cómo algunos se hicieron ricos con terrenos y otros perdieron todo. Tú dormiste tranquilo.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "La mejor inversión es la que te permite dormir bien por las noches."
+    },
+    "final_imperio_virtual": {
+      "id": "final_imperio_virtual",
+      "texto": "¡Eres un magnate del metaverso! Entendiste que el valor digital depende de la atención y la ubicación.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "En el mundo digital, donde hay ojos, hay valor. ¡Úsalo con sabiduría!"
+    },
+    "final_terreno_vacio": {
+      "id": "final_terreno_vacio",
+      "texto": "Tu terreno sigue ahí, pero nadie lo visita. Aprendiste que el valor digital puede ser muy volátil.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No todo lo que brilla en la pantalla es oro. Investiga la utilidad real antes de invertir."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-3-5-B",
+  "unit_code": "P6-3-5",
+  "unit_title": "Perfil de inversor: conócete a ti mismo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Mentalidad de Abundancia",
+  "descripcion": "El dinero es solo una herramienta. ¡Descubre si tienes la mentalidad de un verdadero millonario libre!",
+  "objetivo": "Consolidar hábitos psicológicos y éticos para la gestión de la riqueza a largo plazo",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "psy1",
+      "texto": "¿Cuál es la definición real de 'Riqueza' para una persona libre?",
+      "opciones": [
+        "Tener muchos coches de lujo",
+        "Tener suficiente dinero invertido para ser dueño de tu propio tiempo",
+        "Ganar más que tus vecinos",
+        "Tener mucho dinero en efectivo"
+      ],
+      "correcta": 1,
+      "explicacion": "La verdadera riqueza es la libertad de hacer lo que quieras con tu tiempo."
+    },
+    {
+      "id": "psy2",
+      "texto": "¿Qué es la 'Gratificación Postergada'?",
+      "opciones": [
+        "No comprar nada nunca",
+        "Saber esperar y ahorrar hoy para tener una recompensa mucho mayor mañana",
+        "Estar triste por no gastar",
+        "Gastar solo en cosas baratas"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el superpoder que permite que el interés compuesto funcione."
+    },
+    {
+      "id": "psy3",
+      "texto": "¿Por qué los millonarios suelen vivir de forma sencilla?",
+      "opciones": [
+        "Porque son tacaños",
+        "Porque saben que el dinero que NO gastan es el que les da su libertad",
+        "Porque no les gusta el lujo",
+        "Porque no tienen dinero real"
+      ],
+      "correcta": 1,
+      "explicacion": "La riqueza es lo que no se ve (las inversiones), no lo que se presume (los gastos)."
+    },
+    {
+      "id": "psy4",
+      "texto": "¿Qué papel juega la disciplina en tu plan de libertad?",
+      "opciones": [
+        "Ninguno, es pura suerte",
+        "Es el motor que te hace invertir mes con mes, pase lo que pase",
+        "Es solo para la escuela",
+        "Solo sirve si ganas mucho"
+      ],
+      "correcta": 1,
+      "explicacion": "La disciplina vence al talento y a la suerte en las finanzas."
+    },
+    {
+      "id": "psy5",
+      "texto": "¿Qué es la 'Filantropía'?",
+      "opciones": [
+        "Coleccionar monedas",
+        "Usar parte de tu riqueza para ayudar a resolver problemas del mundo",
+        "Un tipo de negocio de ropa",
+        "Saber mucho de filosofía"
+      ],
+      "correcta": 1,
+      "explicacion": "Un líder financiero entiende que ayudar a otros es la mejor inversión social."
+    },
+    {
+      "id": "psy6",
+      "texto": "¿Cuál es el mejor activo que puedes tener?",
+      "opciones": [
+        "Un coche rápido",
+        "Tu cerebro (tu educación y capacidad de aprender)",
+        "Una casa grande",
+        "Ropa de marca"
+      ],
+      "correcta": 1,
+      "explicacion": "Tu mente es lo que genera todas tus otras riquezas. ¡Nunca dejes de aprender!"
+    },
+    {
+      "id": "psy7",
+      "texto": "¿Qué debes hacer si tu inversión baja de precio un día?",
+      "opciones": [
+        "Llorar y vender todo",
+        "Mantener la calma y recordar que tu plan es a largo plazo",
+        "Pedir un préstamo para recuperar",
+        "Echarle la culpa al banco"
+      ],
+      "correcta": 1,
+      "explicacion": "El mercado tiene ciclos. La paciencia es la clave del éxito."
+    },
+    {
+      "id": "psy8",
+      "texto": "¿Cuándo es el mejor momento para empezar a invertir?",
+      "opciones": [
+        "Cuando sea adulto",
+        "¡Hoy mismo! (o lo antes posible)",
+        "Cuando me sobre mucho dinero",
+        "Nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! El tiempo es el ingrediente más importante del interés compuesto. ¡Felicidades, futuro millonario libre!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

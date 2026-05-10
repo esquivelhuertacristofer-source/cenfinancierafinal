@@ -1,0 +1,63 @@
+{
+  "code": "ACT-P1-4-5-A",
+  "unit_code": "P1-4-5",
+  "unit_title": "Gané dinero: ¿qué hago con él?",
+  "level": "Primaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Las Tres Cajas del Tesoro",
+  "descripcion": "¡Felicidades! Has vendido tus productos y tienes dinero en la mano. Ahora debes aprender a repartirlo para que tu negocio nunca muera.",
+  "objetivo": "Entender la importancia de separar el dinero para reinversión, ahorro y disfrute personal.",
+  "xp": 600,
+  "inputs": [
+    {
+      "id": "ingreso_total",
+      "label": "Dinero Ganado ($)",
+      "type": "slider",
+      "min": 10,
+      "max": 500,
+      "step": 10,
+      "default": 100,
+      "unit": "$"
+    }
+  ],
+  "formula": "ingreso_total",
+  "output_label": "Tu Tesoro",
+  "output_prefix": "$",
+  "outputs_multiples": [
+    {
+      "id": "caja_negocio",
+      "label": "Caja 1: Para el Negocio (Reinversión)",
+      "formula": "ingreso_total * 0.5",
+      "prefix": "$",
+      "descripcion": "Dinero para comprar más materiales y seguir trabajando."
+    },
+    {
+      "id": "caja_ahorro",
+      "label": "Caja 2: Para el Ahorro (Tu Meta)",
+      "formula": "ingreso_total * 0.3",
+      "prefix": "$",
+      "descripcion": "Dinero para tus sueños grandes del futuro."
+    },
+    {
+      "id": "caja_yo",
+      "label": "Caja 3: Para Mí (Gasto Personal)",
+      "formula": "ingreso_total * 0.2",
+      "prefix": "$",
+      "descripcion": "Un pequeño premio por tu gran esfuerzo."
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "ingreso_total >= 100",
+      "mensaje": "📈 ¡Excelente! Con este reparto, tu negocio siempre tendrá dinero para materiales y tú siempre estarás ahorrando.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 La regla de oro: La primera caja (Negocio) es la más importante. ¡Si la vacías, el negocio se acaba!",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

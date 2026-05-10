@@ -1,0 +1,127 @@
+{
+  "code": "ACT-P1-3-1-A",
+  "unit_code": "P1-3-1",
+  "unit_title": "¿Cuánto tengo? Aprender a contar mi dinero",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "Maestro de las Equivalencias",
+  "descripcion": "¿Sabías que muchas monedas pequeñas pueden valer lo mismo que una grande? ¡Demuestra que sabes contar!",
+  "objetivo": "Desarrollar habilidades de suma y equivalencia entre diferentes denominaciones de monedas mexicanas",
+  "xp": 250,
+  "instruccion": "Arrastra los grupos de monedas a la moneda que vale exactamente lo mismo.",
+  "items": [
+    {
+      "id": "i1",
+      "label": "Dos monedas de $5",
+      "emoji": "🪙🪙",
+      "categoria_correcta": "10pesos",
+      "feedback": "¡Exacto! 5 + 5 son 10."
+    },
+    {
+      "id": "i2",
+      "label": "Cinco monedas de $1",
+      "emoji": "🪙🪙🪙🪙🪙",
+      "categoria_correcta": "5pesos",
+      "feedback": "¡Muy bien! Cinco de a peso valen una de a cinco."
+    },
+    {
+      "id": "i3",
+      "label": "Diez monedas de $1",
+      "emoji": "🪙x10",
+      "categoria_correcta": "10pesos",
+      "feedback": "¡Súper! Un montón de 10 monedas de peso hacen una de diez."
+    },
+    {
+      "id": "i4",
+      "label": "Dos monedas de $1",
+      "emoji": "🪙🪙",
+      "categoria_correcta": "2pesos",
+      "feedback": "¡Cierto! 1 + 1 son 2."
+    },
+    {
+      "id": "i5",
+      "label": "Dos monedas de $2 y una de $1",
+      "emoji": "🪙🪙+🪙",
+      "categoria_correcta": "5pesos",
+      "feedback": "¡Excelente suma! 2 + 2 + 1 son 5."
+    },
+    {
+      "id": "i6",
+      "label": "Cinco monedas de $2",
+      "emoji": "🪙x5",
+      "categoria_correcta": "10pesos",
+      "feedback": "¡Dominas las tablas! 2 x 5 son 10."
+    },
+    {
+      "id": "i7",
+      "label": "Cuatro monedas de $5",
+      "emoji": "🪙x4",
+      "categoria_correcta": "20pesos",
+      "feedback": "¡Wow! 5, 10, 15, 20. ¡Equivale a un billete azul!"
+    },
+    {
+      "id": "i8",
+      "label": "Dos monedas de $10",
+      "emoji": "🪙🪙",
+      "categoria_correcta": "20pesos",
+      "feedback": "¡Fácil para un genio! 10 + 10 son 20."
+    },
+    {
+      "id": "i9",
+      "label": "Veinte monedas de $1",
+      "emoji": "🪙x20",
+      "categoria_correcta": "20pesos",
+      "feedback": "¡Mucha moneda! Pero valen lo mismo que un billete de $20."
+    },
+    {
+      "id": "i10",
+      "label": "Tres monedas de $1 y una de $2",
+      "emoji": "🪙x3+🪙",
+      "categoria_correcta": "5pesos",
+      "feedback": "¡Correcto! 3 + 2 son 5."
+    },
+    {
+      "id": "i11",
+      "label": "Ocho monedas de $1 y una de $2",
+      "emoji": "🪙x8+🪙",
+      "categoria_correcta": "10pesos",
+      "feedback": "¡Gran conteo! 8 + 2 son 10."
+    },
+    {
+      "id": "i12",
+      "label": "Una de $10 y dos de $5",
+      "emoji": "🪙+🪙🪙",
+      "categoria_correcta": "20pesos",
+      "feedback": "¡Suma maestra! 10 + 10 son 20."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "2pesos",
+      "label": "VALE $2",
+      "emoji": "🥈",
+      "color": "#94a3b8"
+    },
+    {
+      "id": "5pesos",
+      "label": "VALE $5",
+      "emoji": "🥉",
+      "color": "#b45309"
+    },
+    {
+      "id": "10pesos",
+      "label": "VALE $10",
+      "emoji": "🥇",
+      "color": "#eab308"
+    },
+    {
+      "id": "20pesos",
+      "label": "VALE $20",
+      "emoji": "🟦",
+      "color": "#2563eb"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

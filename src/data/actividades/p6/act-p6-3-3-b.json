@@ -1,0 +1,105 @@
+{
+  "code": "ACT-P6-3-3-B",
+  "unit_code": "P6-3-3",
+  "unit_title": "Comprar vs. Rentar: El dilema del patrimonio",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Ciclo Inmobiliario",
+  "descripcion": "Invertir en propiedades es un viaje de 5 etapas. ¿Sabes qué hacer en cada una para maximizar tu ganancia?",
+  "objetivo": "Identificar las fases de la inversión inmobiliaria y las acciones clave para generar valor",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción a la fase correspondiente del ciclo de inversión.",
+  "items": [
+    {
+      "id": "ci1",
+      "label": "Estudiar la zona y la plusvalía futura",
+      "emoji": "🔍",
+      "categoria_correcta": "analisis",
+      "feedback": "Primero investigamos dónde habrá crecimiento."
+    },
+    {
+      "id": "ci2",
+      "label": "Comprar en preventa (más barato)",
+      "emoji": "🏗️",
+      "categoria_correcta": "analisis",
+      "feedback": "Comprar antes de que esté terminado ahorra dinero."
+    },
+    {
+      "id": "ci3",
+      "label": "Remodelar y pintar para subir el valor",
+      "emoji": "🎨",
+      "categoria_correcta": "mejora",
+      "feedback": "El valor agregado permite cobrar más renta."
+    },
+    {
+      "id": "ci4",
+      "label": "Instalar sistemas de ahorro de agua",
+      "emoji": "💧",
+      "categoria_correcta": "mejora",
+      "feedback": "Una casa eficiente es más atractiva."
+    },
+    {
+      "id": "ci5",
+      "label": "Cobrar renta mensual a los inquilinos",
+      "emoji": "💰",
+      "categoria_correcta": "flujo",
+      "feedback": "Esto es lo que te da libertad financiera."
+    },
+    {
+      "id": "ci6",
+      "label": "Pagar impuestos y mantenimiento",
+      "emoji": "🛠️",
+      "categoria_correcta": "flujo",
+      "feedback": "Un buen dueño cuida su inversión."
+    },
+    {
+      "id": "ci7",
+      "label": "Vender la propiedad cuando subió de precio",
+      "emoji": "🤝",
+      "categoria_correcta": "salida",
+      "feedback": "Aquí es donde realizas tu ganancia de plusvalía."
+    },
+    {
+      "id": "ci8",
+      "label": "Comprar un edificio más grande con la ganancia",
+      "emoji": "🏢",
+      "categoria_correcta": "reinv",
+      "feedback": "¡El interés compuesto aplicado a los ladrillos!"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "analisis",
+      "label": "1. ANÁLISIS Y COMPRA",
+      "emoji": "📋",
+      "color": "#1e3a8a"
+    },
+    {
+      "id": "mejora",
+      "label": "2. VALOR AGREGADO",
+      "emoji": "🛠️",
+      "color": "#b45309"
+    },
+    {
+      "id": "flujo",
+      "label": "3. RENTA Y FLUJO",
+      "emoji": "💵",
+      "color": "#047857"
+    },
+    {
+      "id": "salida",
+      "label": "4. VENTA / SALIDA",
+      "emoji": "📈",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "reinv",
+      "label": "5. REINVERSIÓN",
+      "emoji": "🔄",
+      "color": "#db2777"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

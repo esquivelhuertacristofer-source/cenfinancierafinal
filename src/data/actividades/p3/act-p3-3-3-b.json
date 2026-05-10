@@ -1,0 +1,68 @@
+{
+  "code": "ACT-P3-3-3-B",
+  "unit_code": "P3-3-3",
+  "unit_title": "Préstamos para el hogar (Hipotecas)",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "SIMPLE",
+  "titulo": "El Camino a Casa",
+  "descripcion": "Comprar una casa toma tiempo y mucha organización. Completa el texto con las palabras correctas para entender cómo funciona.",
+  "objetivo": "Aprender el vocabulario específico relacionado con la adquisición de vivienda a través de crédito",
+  "xp": 250,
+  "texto": "Para comprar una casa, lo primero que necesito es tener un ahorro llamado __BLANK_1__. El resto del dinero me lo presta el banco a través de un crédito llamado __BLANK_2__. Este préstamo dura muchos __BLANK_3__, a veces hasta 20. Mientras termino de pagar, la casa es la __BLANK_4__ del banco. Al final, recibo mis __BLANK_5__ que demuestran que la casa es 100% mía.",
+  "blanks": [
+    {
+      "id": "blank_1",
+      "respuesta": "enganche",
+      "opciones": [
+        "enganche",
+        "regalo",
+        "cambio",
+        "premio"
+      ]
+    },
+    {
+      "id": "blank_2",
+      "respuesta": "hipoteca",
+      "opciones": [
+        "tanda",
+        "hipoteca",
+        "regalo",
+        "nómina"
+      ]
+    },
+    {
+      "id": "blank_3",
+      "respuesta": "años",
+      "opciones": [
+        "días",
+        "años",
+        "minutos",
+        "siglos"
+      ]
+    },
+    {
+      "id": "blank_4",
+      "respuesta": "garantía",
+      "opciones": [
+        "garantía",
+        "decoración",
+        "fiesta",
+        "regalo"
+      ]
+    },
+    {
+      "id": "blank_5",
+      "respuesta": "escrituras",
+      "opciones": [
+        "tareas",
+        "escrituras",
+        "fotos",
+        "cartas"
+      ]
+    }
+  ],
+  "contexto": "Imagina que eres un notario explicando a una familia joven cómo será el proceso para comprar su primera casa.",
+  "versión": "2026.Diamond.V2"
+}

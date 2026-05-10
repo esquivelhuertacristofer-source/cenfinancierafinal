@@ -1,0 +1,156 @@
+{
+  "code": "ACT-S2-1-3-A",
+  "unit_code": "S2-1-3",
+  "unit_title": "Comercio internacional: exportaciones e importaciones de México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "El Impacto del Volumen",
+  "descripcion": "¿Sabías que tu propia compra puede cambiar el precio de una acción? Descubre qué pasa cuando intentas mover mucho dinero en un mercado pequeño.",
+  "objetivo": "Comprender el concepto de liquidez y deslizamiento (slippage) según el tamaño de la orden y el volumen del mercado",
+  "xp": 500,
+  "descripcion_formula": "Calculamos el Deslizamiento (Slippage). Slippage = (TamañoOrden / LiquidezMercado) * 100.",
+  "inputs": [
+    {
+      "id": "monto_orden_s2",
+      "label": "Monto de tu compra ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 10000000,
+      "step": 10000,
+      "default": 50000,
+      "unit": "$"
+    },
+    {
+      "id": "tipo_mercado_s2",
+      "label": "Liquidez del Mercado",
+      "type": "select",
+      "default": "Mercado Grande (S&P 500)",
+      "opciones": [
+        "Mercado Grande (S&P 500)",
+        "Mercado Mediano (Empresas Locales)",
+        "Mercado Pequeño (Penny Stocks)"
+      ]
+    },
+    {
+      "id": "anios_sim",
+      "label": "Horizonte de Tiempo (Años)",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    },
+    {
+      "id": "escenario_tipo",
+      "label": "Escenario de Mercado",
+      "type": "select",
+      "options": [
+        {
+          "label": "Conservador",
+          "value": 0.8
+        },
+        {
+          "label": "Moderado",
+          "value": 1
+        },
+        {
+          "label": "Optimista",
+          "value": 1.2
+        }
+      ],
+      "default": 1
+    }
+  ],
+  "formula": "(monto_orden_s2 / (tipo_mercado_s2 === 'Mercado Grande (S&P 500)' ? 1000000000 : tipo_mercado_s2 === 'Mercado Mediano (Empresas Locales)' ? 50000000 : 5000000)) * 100",
+  "output_label": "Deslizamiento del Precio (Slippage)",
+  "output_prefix": "",
+  "output_suffix": "%",
+  "chart_type": "line",
+  "escenarios": [
+    {
+      "condicion": "resultado > 5",
+      "mensaje": "⚠️ ¡Peligro de Liquidez! Tu orden es tan grande para este mercado que tú mismo estás empujando el precio hacia arriba. Acabarás comprando mucho más caro de lo que pensabas.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "resultado < 0.1",
+      "mensaje": "✅ Ejecución Perfecta. El mercado es lo suficientemente profundo para absorber tu orden sin mover el precio. Esto es alta liquidez.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 La liquidez es la facilidad para comprar o vender un activo rápidamente sin afectar su precio significativamente.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "Punto de partida: Los cimientos están listos."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
+    },
+    {
+      "valor": 75,
+      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
+    }
+  ],
+  "pregunta_reflexion": "Si exportas artesanías a EE.UU. y el dólar sube de $17 a $20 pesos, ¿ganas o pierdes? ¿Qué industrias mexicanas se benefician de un peso débil y cuáles sufren con esa situación?",
+  "comparativa_espera": "Los mercados financieros latinoamericanos se han integrado más en las últimas dos décadas. Una crisis en Brasil o Argentina ahora puede afectar las tasas en México en horas. La macroeconomía global es la nueva realidad para todo inversionista.",
+  "outputs_multiples": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "formula": "resultado_principal",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Resultado calculado"
+    },
+    {
+      "id": "impacto_mensual",
+      "label": "Impacto Mensual",
+      "formula": "Math.round(resultado_principal / 12)",
+      "prefix": "$",
+      "suffix": "/mes",
+      "descripcion": "El efecto mensual de esta estrategia"
+    },
+    {
+      "id": "diferencia_10a",
+      "label": "Diferencia en 10 Años",
+      "formula": "Math.round(resultado_principal * 10)",
+      "prefix": "$",
+      "suffix": " en 10 años",
+      "descripcion": "El impacto acumulado a largo plazo"
+    },
+    {
+      "id": "vs_sin_plan",
+      "label": "vs Sin Planificación",
+      "formula": "Math.round(resultado_principal * 0.3)",
+      "prefix": "$",
+      "suffix": " de ventaja anual",
+      "descripcion": "Lo que ganas por planificar vs actuar sin estrategia"
+    }
+  ],
+  "chart_series": [
+    {
+      "id": "resultado_principal",
+      "label": "Resultado",
+      "color": "#6366f1"
+    },
+    {
+      "id": "impacto_mensual",
+      "label": "Impacto Mensual",
+      "color": "#22c55e"
+    }
+  ]
+}

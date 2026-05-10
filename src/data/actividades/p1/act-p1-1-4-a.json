@@ -1,0 +1,52 @@
+{
+  "code": "ACT-P1-1-4-A",
+  "unit_code": "P1-1-4",
+  "unit_title": "Mi primer cochinito: ¿cómo y dónde guardo mi dinero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RADAR",
+  "complejidad": "MAESTRÍA",
+  "titulo": "Radar de Prioridades Vitales",
+  "descripcion": "Ceny está en el mercado central. Solo tiene $100 y debe comprar lo vital antes de que se agote el tiempo. ¿Podrás ayudarle a ignorar los dulces y juguetes para comprar lo que realmente importa?",
+  "objetivo": "Diferenciar en tiempo real entre necesidades (vitales) y deseos (gustos), practicando la toma de decisiones presupuestaria.",
+  "xp": 500,
+  "instruccion": "¡Escanea! Haz clic solo en los objetos que Ceny NECESITA para vivir y estudiar. Evita los DESEOS para no gastar de más.",
+  "items": [
+    {
+      "label": "Comida Sana",
+      "type": "need",
+      "icon_key": "comida"
+    },
+    {
+      "label": "Medicinas",
+      "type": "need",
+      "icon_key": "salud"
+    },
+    {
+      "label": "Libros de Clase",
+      "type": "need",
+      "icon_key": "escuela"
+    },
+    {
+      "label": "Ropa de Abrigo",
+      "type": "need",
+      "icon_key": "ropa"
+    },
+    {
+      "label": "Videojuegos",
+      "type": "want",
+      "icon_key": "diversion"
+    },
+    {
+      "label": "Dulces Gigantes",
+      "type": "want",
+      "icon_key": "dulces"
+    },
+    {
+      "label": "Juguete de Moda",
+      "type": "want",
+      "icon_key": "diversion"
+    }
+  ],
+  "versión": "2026.Diamond.Radar"
+}

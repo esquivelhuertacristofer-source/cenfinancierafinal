@@ -1,0 +1,61 @@
+{
+  "code": "ACT-P1-4-3-A",
+  "unit_code": "P1-4-3",
+  "unit_title": "El precio justo: ni muy caro ni muy barato",
+  "level": "Primaria 1",
+  "tipo": "SIMULADOR",
+  "complejidad": "BAJO",
+  "titulo": "Calculadora del Emprendedor",
+  "descripcion": "Ayuda a Ceny a ponerle precio a sus productos. Recuerda: el precio debe cubrir tus gastos y dejarte una ganancia.",
+  "objetivo": "Aprender a sumar costos y ganancias para determinar el precio final de venta.",
+  "xp": 400,
+  "inputs": [
+    {
+      "id": "costo_materiales",
+      "label": "Costo de Materiales ($)",
+      "type": "slider",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 10,
+      "unit": "$"
+    },
+    {
+      "id": "ganancia_deseada",
+      "label": "Ganancia por tu Trabajo ($)",
+      "type": "slider",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 5,
+      "unit": "$"
+    }
+  ],
+  "formula": "costo_materiales + ganancia_deseada",
+  "output_label": "Precio Final de Venta",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "escenarios": [
+    {
+      "condicion": "ganancia_deseada <= 0",
+      "mensaje": "⚠️ ¡Cuidado! Estás trabajando gratis. Un emprendedor debe cobrar por su tiempo y esfuerzo.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "ganancia_deseada > costo_materiales * 2",
+      "mensaje": "🧐 El precio es muy alto. Los clientes podrían preferir comprar en otro lugar si el precio es exagerado.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "ganancia_deseada >= costo_materiales * 0.2 && ganancia_deseada <= costo_materiales",
+      "mensaje": "✅ ¡Precio Justo! Estás cubriendo tus gastos y obteniendo una ganancia razonable. ¡Tus clientes estarán felices!",
+      "tipo": "success"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "💡 Recuerda: El Precio Justo es aquel que te permite seguir trabajando y que tus clientes pueden pagar con gusto.",
+      "tipo": "info"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

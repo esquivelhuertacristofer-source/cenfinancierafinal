@@ -1,0 +1,115 @@
+{
+  "code": "P2-3-4-A",
+  "unit_code": "P2-3-4",
+  "unit_title": "Ahorro para Navidad: planificar con tiempo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTA",
+  "titulo": "¿Rápido o con Paciencia?",
+  "descripcion": "No todos los sueños cuestan lo mismo. ¿Sabes cuáles se logran en unos días y cuáles toman muchos meses?",
+  "objetivo": "Diferenciar entre metas de ahorro a corto y largo plazo",
+  "xp": 250,
+  "instruccion": "Arrastra cada meta al grupo correcto: ¿Es AHORRO CORTO PLAZO (Rápido) o AHORRO LARGO PLAZO (Paciencia)?",
+  "items": [
+    {
+      "id": "c1",
+      "label": "Un helado el viernes",
+      "emoji": "🍦",
+      "categoria_correcta": "corto",
+      "feedback": "¡Corto Plazo! Solo necesitas ahorrar unos días."
+    },
+    {
+      "id": "l1",
+      "label": "Bicicleta nueva (6 meses)",
+      "emoji": "🚲",
+      "categoria_correcta": "largo",
+      "feedback": "¡Largo Plazo! Necesitas constancia durante muchos meses."
+    },
+    {
+      "id": "c2",
+      "label": "Sobre de estampas",
+      "emoji": "🃏",
+      "categoria_correcta": "corto",
+      "feedback": "Rápido. Con lo de un domingo lo puedes lograr."
+    },
+    {
+      "id": "l2",
+      "label": "Viaje a la playa (1 año)",
+      "emoji": "🏖️",
+      "categoria_correcta": "largo",
+      "feedback": "Paciencia. Es un sueño grande que se construye paso a paso."
+    },
+    {
+      "id": "c3",
+      "label": "Boleto para el cine",
+      "emoji": "🎬",
+      "categoria_correcta": "corto",
+      "feedback": "Corto Plazo. Lo planeas para este fin de semana."
+    },
+    {
+      "id": "l3",
+      "label": "Regalo de Navidad",
+      "emoji": "🎄",
+      "categoria_correcta": "largo",
+      "feedback": "Largo Plazo. ¡Empezar en verano te hace la vida fácil!"
+    },
+    {
+      "id": "c4",
+      "label": "Un lápiz de colores",
+      "emoji": "✏️",
+      "categoria_correcta": "corto",
+      "feedback": "Muy rápido. Es una meta pequeña y sencilla."
+    },
+    {
+      "id": "l4",
+      "label": "Consola de juegos",
+      "emoji": "🎮",
+      "categoria_correcta": "largo",
+      "feedback": "Largo Plazo. Ahorrar un poquito cada semana es la clave."
+    },
+    {
+      "id": "c5",
+      "label": "Una paleta",
+      "emoji": "🍭",
+      "categoria_correcta": "corto",
+      "feedback": "Al instante. Casi no requiere ahorro previo."
+    },
+    {
+      "id": "l5",
+      "label": "Fiesta de cumpleaños",
+      "emoji": "🥳",
+      "categoria_correcta": "largo",
+      "feedback": "Largo Plazo. ¡Se planea con meses de anticipación!"
+    },
+    {
+      "id": "c6",
+      "label": "Cena de pizza",
+      "emoji": "🍕",
+      "categoria_correcta": "corto",
+      "feedback": "Corto Plazo. Un gusto para disfrutar pronto."
+    },
+    {
+      "id": "l6",
+      "label": "Telescopio",
+      "emoji": "🔭",
+      "categoria_correcta": "largo",
+      "feedback": "Largo Plazo. Para ver las estrellas hay que saber esperar."
+    }
+  ],
+  "categorias": [
+    {
+      "id": "corto",
+      "label": "CORTO PLAZO (¡Pronto!)",
+      "emoji": "⏱️",
+      "color": "#0ea5e9"
+    },
+    {
+      "id": "largo",
+      "label": "LARGO PLAZO (¡Paciencia!)",
+      "emoji": "🗓️",
+      "color": "#8b5cf6"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

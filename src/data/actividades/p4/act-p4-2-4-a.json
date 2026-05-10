@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P4-2-4-A",
+  "unit_code": "P4-2-4",
+  "unit_title": "Contraseñas y seguridad: protegiendo mis datos financieros",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "La Llave de Diamante",
+  "descripcion": "Una contraseña débil es como dejar la puerta de tu casa abierta. ¡Ayuda a Ceny a construir la llave más fuerte del mundo!",
+  "objetivo": "Aprender los criterios técnicos para la creación de contraseñas seguras y robustas",
+  "xp": 400,
+  "game_type": "click",
+  "duracion": 40,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa los ingredientes para una contraseña FUERTE (✅) y evita los DEBILITADORES (🚫).",
+  "items": [
+    {
+      "id": "f1",
+      "label": "Letras Mayúsculas (A, B, C)",
+      "emoji": "🔠",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f2",
+      "label": "Números (7, 4, 9)",
+      "emoji": "🔢",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "f3",
+      "label": "Símbolos (@, #, $)",
+      "emoji": "🔣",
+      "tipo": "correcto",
+      "puntos": 150
+    },
+    {
+      "id": "d1",
+      "label": "Tu fecha de nacimiento",
+      "emoji": "🎂",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "d2",
+      "label": "Tu nombre o apellido",
+      "emoji": "🆔",
+      "tipo": "incorrecto",
+      "puntos": -100
+    },
+    {
+      "id": "d3",
+      "label": "La palabra 'password' o '1234'",
+      "emoji": "⌨️",
+      "tipo": "incorrecto",
+      "puntos": -150
+    },
+    {
+      "id": "f4",
+      "label": "Más de 10 caracteres",
+      "emoji": "📏",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "d4",
+      "label": "El nombre de tu mascota",
+      "emoji": "🐶",
+      "tipo": "incorrecto",
+      "puntos": -50
+    },
+    {
+      "id": "f5",
+      "label": "Mezcla de letras y números",
+      "emoji": "🔀",
+      "tipo": "correcto",
+      "puntos": 100
+    },
+    {
+      "id": "d5",
+      "label": "Usar la misma clave para todo",
+      "emoji": "🔑",
+      "tipo": "incorrecto",
+      "puntos": -200
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

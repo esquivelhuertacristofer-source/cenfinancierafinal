@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P5-4-2-A",
+  "unit_code": "P5-4-2",
+  "unit_title": "Costos Fijos vs. Variables: la salud del negocio",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Perfil de Líder 360",
+  "descripcion": "¿Tienes lo que se necesita para guiar a un equipo al éxito? ¡Descubre las cualidades de los grandes líderes!",
+  "objetivo": "Identificar rasgos de liderazgo ético y habilidades de gestión de equipos",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "lid1",
+      "texto": "¿Cuál es la cualidad más importante de un líder financiero?",
+      "opciones": [
+        "Ser el que más dinero tiene",
+        "La Integridad (que sus acciones coincidan con sus palabras)",
+        "Ser el más gritón",
+        "Saber todos los trucos de magia"
+      ],
+      "correcta": 1,
+      "explicacion": "La confianza se basa en la integridad. Si nadie confía en ti, no puedes liderar."
+    },
+    {
+      "id": "lid2",
+      "texto": "¿Qué significa 'Delegar'?",
+      "opciones": [
+        "Hacer todo tú solo porque nadie lo hace mejor",
+        "Confiar tareas importantes a los miembros de tu equipo según sus talentos",
+        "Mandar a los demás para tú descansar",
+        "Borrar archivos de la computadora"
+      ],
+      "correcta": 1,
+      "explicacion": "Un gran líder sabe que no puede hacerlo todo; necesita la fuerza de su equipo."
+    },
+    {
+      "id": "lid3",
+      "texto": "Si el negocio pierde dinero por un error, ¿qué hace un buen líder?",
+      "opciones": [
+        "Culpa al empleado más nuevo",
+        "Asume la responsabilidad y busca una solución junto con su equipo",
+        "Esconde los papeles para que nadie se entere",
+        "Renuncia de inmediato"
+      ],
+      "correcta": 1,
+      "explicacion": "La responsabilidad (accountability) es la marca de un líder maduro."
+    },
+    {
+      "id": "lid4",
+      "texto": "¿Qué es la 'Visión' en un negocio?",
+      "opciones": [
+        "Tener buena vista",
+        "Tener una idea clara de hacia dónde quieres llevar tu empresa en el futuro",
+        "Mirar mucha televisión",
+        "Saber leer el futuro en una bola de cristal"
+      ],
+      "correcta": 1,
+      "explicacion": "La visión inspira a los demás a trabajar por un objetivo común."
+    },
+    {
+      "id": "lid5",
+      "texto": "¿Cómo motiva un líder a su equipo?",
+      "opciones": [
+        "Amenazándolos con correrlos",
+        "Reconociendo su esfuerzo y dándoles las herramientas para crecer",
+        "Dándoles muchos dulces",
+        "Ignorándolos para que se esfuercen más"
+      ],
+      "correcta": 1,
+      "explicacion": "La motivación positiva crea equipos leales y eficientes."
+    },
+    {
+      "id": "lid6",
+      "texto": "¿Qué es la 'Resiliencia'?",
+      "opciones": [
+        "Saber mucho de leyes",
+        "La capacidad de levantarse y seguir adelante después de un fracaso",
+        "Un tipo de metal",
+        "Ser muy flexible"
+      ],
+      "correcta": 1,
+      "explicacion": "En los negocios habrá días malos. La resiliencia te mantiene en el juego."
+    },
+    {
+      "id": "lid7",
+      "texto": "¿Por qué un líder debe saber escuchar?",
+      "opciones": [
+        "Para perder el tiempo",
+        "Porque las mejores ideas a veces vienen de quien menos lo esperas",
+        "Para saber los chismes",
+        "No debe escuchar, solo mandar"
+      ],
+      "correcta": 1,
+      "explicacion": "La escucha activa permite detectar problemas y oportunidades a tiempo."
+    },
+    {
+      "id": "lid8",
+      "texto": "¿Cuál es el objetivo final de un líder?",
+      "opciones": [
+        "Ser famoso",
+        "Que el equipo logre su meta y todos crezcan juntos",
+        "Tener una oficina grande",
+        "Mandar a muchas personas"
+      ],
+      "correcta": 1,
+      "explicacion": "El éxito del líder es el éxito de su equipo."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

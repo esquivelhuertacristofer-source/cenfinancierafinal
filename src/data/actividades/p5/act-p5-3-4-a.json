@@ -1,0 +1,183 @@
+{
+  "code": "ACT-P5-3-4-A",
+  "unit_code": "P5-3-4",
+  "unit_title": "La Bolsa de Valores: ser dueño de las grandes empresas",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Soy Dueño de la Bolsa Mexicana",
+  "descripcion": "Cuando compras una acción de FEMSA, te conviertes en dueño real de una parte de esa empresa. Si FEMSA gana dinero, tú ganas. Si FEMSA vale más, tus acciones valen más. Este simulador te muestra qué tan poderoso es ser dueño de las empresas más grandes de México.",
+  "objetivo": "Entender el concepto de acción como parte de propiedad de una empresa, la relación precio-rendimiento y la diversificación de portafolio",
+  "xp": 450,
+  "descripcion_formula": "Valor del Portafolio = Σ (Acciones_empresa × Precio_actual_empresa). Rendimiento % = (Valor_actual - Inversión_inicial) / Inversión_inicial × 100.",
+  "contexto_empresas": "Las siguientes empresas son reales y cotizan en la Bolsa Mexicana de Valores (BMV). Los rendimientos son promedios históricos reales aproximados.",
+  "inputs": [
+    {
+      "id": "inversion_total",
+      "label": "¿Cuánto dinero tienes para invertir en total?",
+      "type": "slider",
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "default": 10000,
+      "unit": "$"
+    },
+    {
+      "id": "pct_femsa",
+      "label": "% que inviertes en FEMSA (Oxxo, Coca-Cola México)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30,
+      "unit": "%",
+      "dato_empresa": "FEMSA es dueña de OXXO (21,000 tiendas en México) y Coca-Cola FEMSA. Rendimiento histórico promedio: ~9% anual."
+    },
+    {
+      "id": "pct_walmex",
+      "label": "% que inviertes en Walmart México (supertiendas)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30,
+      "unit": "%",
+      "dato_empresa": "Walmart México opera más de 3,800 tiendas. Es la empresa más grande en empleados en México. Rendimiento promedio: ~11% anual."
+    },
+    {
+      "id": "pct_amx",
+      "label": "% que inviertes en América Móvil (Telcel, Claro)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 20,
+      "unit": "%",
+      "dato_empresa": "América Móvil de Carlos Slim — la empresa de telecomunicaciones más grande de Latinoamérica. Telcel tiene 80M clientes en México. Rendimiento promedio: ~8% anual."
+    },
+    {
+      "id": "pct_cemex",
+      "label": "% que inviertes en CEMEX (cemento del mundo)",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 20,
+      "unit": "%",
+      "dato_empresa": "CEMEX es la 3ª empresa cementera del mundo, fundada en Monterrey. Opera en 50 países. Rendimiento promedio: ~7% anual (más volátil)."
+    },
+    {
+      "id": "anos_inversion",
+      "label": "¿Cuántos años dejarías invertido tu dinero?",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "años"
+    }
+  ],
+  "formula": "inversion_total * Math.pow(1 + (pct_femsa/100*0.09 + pct_walmex/100*0.11 + pct_amx/100*0.08 + pct_cemex/100*0.07), anos_inversion)",
+  "outputs_multiples": [
+    {
+      "id": "valor_final_portafolio",
+      "label": "Valor de tu portafolio después de los años",
+      "formula": "inversion_total * Math.pow(1 + (pct_femsa/100*0.09 + pct_walmex/100*0.11 + pct_amx/100*0.08 + pct_cemex/100*0.07), anos_inversion)",
+      "prefix": "$",
+      "descripcion": "Lo que valdrían tus acciones si los rendimientos históricos se mantienen."
+    },
+    {
+      "id": "ganancia_total",
+      "label": "Tu ganancia como propietario",
+      "formula": "inversion_total * Math.pow(1 + (pct_femsa/100*0.09 + pct_walmex/100*0.11 + pct_amx/100*0.08 + pct_cemex/100*0.07), anos_inversion) - inversion_total",
+      "prefix": "$",
+      "descripcion": "Cuánto dinero generaron las empresas para ti, su co-dueño."
+    },
+    {
+      "id": "rendimiento_pct",
+      "label": "Tu rendimiento total como porcentaje",
+      "formula": "Math.round((Math.pow(1 + (pct_femsa/100*0.09 + pct_walmex/100*0.11 + pct_amx/100*0.08 + pct_cemex/100*0.07), anos_inversion) - 1) * 100)",
+      "suffix": "%",
+      "descripcion": "Por cada $100 que invertiste, esto es lo que recibiste de regreso extra."
+    },
+    {
+      "id": "rendimiento_promedio_portafolio",
+      "label": "Rendimiento anual promedio de tu mezcla",
+      "formula": "Math.round((pct_femsa/100*9 + pct_walmex/100*11 + pct_amx/100*8 + pct_cemex/100*7) * 10) / 10",
+      "suffix": "% anual",
+      "descripcion": "Tu portafolio mezclado genera este rendimiento promedio por año."
+    }
+  ],
+  "output_label": "Valor final de tu portafolio",
+  "output_prefix": "$",
+  "output_suffix": " MXN",
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "valor_portafolio",
+      "label": "Tu portafolio creciendo",
+      "color": "#FF8C00"
+    },
+    {
+      "id": "inversion_inicial",
+      "label": "Lo que invertiste",
+      "color": "#6b7280"
+    }
+  ],
+  "datos_curiosos": [
+    "Cuando compras 1 acción de Walmart México, eres co-dueño de sus 3,800+ tiendas.",
+    "FEMSA reparte dividendos: te pagan solo por tener sus acciones, sin venderlas.",
+    "La Bolsa Mexicana de Valores (BMV) existe desde 1894 — hace más de 130 años.",
+    "Jóvenes de 15 años pueden invertir en la bolsa con autorización de sus padres.",
+    "El IPC (Índice de Precios y Cotizaciones) muestra cómo van las 35 empresas más grandes de México."
+  ],
+  "escenarios": [
+    {
+      "condicion": "pct_femsa + pct_walmex + pct_amx + pct_cemex > 100",
+      "mensaje": "🚫 La suma de tus inversiones supera el 100%. Ajusta los porcentajes.",
+      "tipo": "danger"
+    },
+    {
+      "condicion": "pct_femsa + pct_walmex + pct_amx + pct_cemex < 100",
+      "mensaje": "💡 Tienes capital sin asignar. El restante se quedaría en efectivo sin generar rendimiento.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "pct_cemex >= 60",
+      "mensaje": "⚠️ CEMEX es volátil — cuando la economía va mal, la construcción cae fuerte. Diversifica más entre varias empresas.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "pct_femsa >= 20 && pct_walmex >= 20 && pct_amx >= 10 && pct_cemex >= 10",
+      "mensaje": "✅ ¡Portafolio diversificado! Tienes empresas de consumo, retail, telecomunicaciones e industria. Si un sector cae, los otros te protegen.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "anos_inversion >= 10",
+      "mensaje": "🏆 Inversionista de largo plazo. Las personas que mantienen acciones 10+ años raramente pierden dinero. La paciencia es la estrategia ganadora.",
+      "tipo": "success"
+    }
+  ],
+  "pregunta_reflexion": "Si hoy compraras acciones de FEMSA, ¿qué cosas de tu vida diaria cambiarían para hacerte más rico? ¿Cada vez que alguien compra algo en OXXO, cómo te afecta a ti?",
+  "versión": "2026.Diamond.V2",
+  "milestones": [
+    {
+      "valor": 25,
+      "mensaje": "¡Inversionista principiante! Ya entiendes que comprar acciones = ser dueño."
+    },
+    {
+      "valor": 50,
+      "mensaje": "¡Tu portafolio crece! El tiempo y las empresas trabajan para ti."
+    },
+    {
+      "valor": 75,
+      "mensaje": "¡Inversionista experimentado! Entiendes diversificación y rendimientos."
+    },
+    {
+      "valor": 100,
+      "mensaje": "¡Maestro de la BMV! Las empresas más grandes de México trabajan para ti."
+    }
+  ],
+  "comparativa_espera": "El IPC (Índice de Precios y Cotizaciones) mexicano incluye las 35 empresas más grandes del país. FEMSA, América Móvil, Walmex y CEMEX representan juntas más del 50% del índice. Invertir en el IPC es ser copropietario de la columna vertebral de la economía mexicana."
+}

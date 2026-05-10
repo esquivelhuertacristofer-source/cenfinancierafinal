@@ -1,0 +1,118 @@
+{
+  "code": "ACT-P5-4-4-A",
+  "unit_code": "P5-4-4",
+  "unit_title": "Marketing de Contenidos: el arte de ayudar",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Cliente Furioso",
+  "descripcion": "Un cliente importante te grita por teléfono porque su pedido llegó tarde. ¿Cómo manejarás esta bomba emocional?",
+  "objetivo": "Desarrollar habilidades de resolución de conflictos y empatía en el servicio al cliente",
+  "xp": 450,
+  "personaje_principal": "Líder del Proyecto",
+  "contexto_inicial": "Acabas de recibir una llamada. El Sr. Gruñón está muy molesto y dice que nunca volverá a comprarte. El retraso no fue tu culpa, fue del transporte.",
+  "nodo_inicial": "reaccion_emocional",
+  "nodos": {
+    "reaccion_emocional": {
+      "id": "reaccion_emocional",
+      "texto": "El Sr. Gruñón te está insultando. ¿Qué haces primero?",
+      "opciones": [
+        {
+          "id": "escucha_activa",
+          "texto": "Dejar que termine de hablar, respirar profundo y decir: 'Entiendo su molestia, Sr. Gruñón'",
+          "siguiente_nodo": "buscar_solucion",
+          "consecuencia": "¡Excelente! Al no gritar tú también, bajaste la tensión de la llamada.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "defenderse_gritando",
+          "texto": "Interrumpirlo y decirle: '¡No es mi culpa! ¡Es culpa del camión!'",
+          "siguiente_nodo": "pelea_total",
+          "consecuencia": "Ahora ambos están gritando y no hay forma de arreglar nada.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "buscar_solucion": {
+      "id": "buscar_solucion",
+      "texto": "El cliente se calmó un poco al sentirse escuchado. Ahora, ¿cómo arreglas el problema?",
+      "opciones": [
+        {
+          "id": "compensacion_sorpresa",
+          "texto": "Ofrecerle un descuento en su próxima compra y enviarle un regalo extra hoy",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "¡Brillante! Convertiste a un enemigo en un cliente leal para siempre.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "solo_explicar",
+          "texto": "Solo decirle que ya va en camino y que espere",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El cliente se queda, pero no está feliz. Probablemente busque a otro proveedor después.",
+          "xp_bonus": 100,
+          "es_optima": false,
+          "impacto_patrimonio": -50
+        }
+      ]
+    },
+    "pelea_total": {
+      "id": "pelea_total",
+      "texto": "El Sr. Gruñón te colgó y puso un comentario horrible en tus redes sociales.",
+      "opciones": [
+        {
+          "id": "pedir_disculpas_publicas",
+          "texto": "Escribirle una disculpa pública y ofrecer arreglarlo",
+          "siguiente_nodo": "final_excelente",
+          "consecuencia": "Lograste calmar las cosas, pero el daño a tu marca ya está hecho.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
+    },
+    "final_fidelizado": {
+      "id": "final_fidelizado",
+      "texto": "¡Felicidades! Eres un maestro de la Inteligencia Emocional. Lograste que el cliente hablara bien de ti a pesar del error.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "En los negocios, la gente olvida lo que dijiste, pero nunca cómo los hiciste sentir."
+    },
+    "final_neutral": {
+      "id": "final_neutral",
+      "texto": "El cliente se fue. Aprendiste que tener la razón no es lo más importante si pierdes la relación.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "A veces es mejor perder una discusión para ganar un cliente."
+    },
+    "final_excelente": {
+      "id": "final_excelente",
+      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    }
+  },
+  "versión": "2026.Diamond.V2",
+  "resumen_patrimonio_al_final": true
+}

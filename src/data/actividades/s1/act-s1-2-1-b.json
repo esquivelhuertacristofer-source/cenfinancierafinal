@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S1-2-1-B",
+  "unit_code": "S1-2-1",
+  "unit_title": "El IMSS e ISSSTE: seguridad social y sus beneficios reales",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "El Guardián del Valor",
+  "descripcion": "¿Sabes quién cuida que tu dinero no se convierta en papel sin valor? ¡Pon a prueba tu conocimiento sobre el Banco Central!",
+  "objetivo": "Identificar las funciones del Banco Central y el impacto de la política monetaria en la vida cotidiana",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "mon1",
+      "texto": "¿Cuál es la principal misión del Banco de México (Banxico)?",
+      "opciones": [
+        "Prestar dinero a las familias",
+        "Preservar el valor de la moneda nacional (controlar la inflación)",
+        "Pagar el sueldo de los políticos",
+        "Ser el banco más grande del mundo"
+      ],
+      "correcta": 1,
+      "explicacion": "Su prioridad es que los precios no suban descontroladamente para proteger tu poder de compra."
+    },
+    {
+      "id": "mon2",
+      "texto": "¿Qué sucede cuando el Banco Central SUBE las tasas de interés?",
+      "opciones": [
+        "El dinero se vuelve más barato",
+        "Pedir préstamos es más caro y el ahorro paga más; esto ayuda a bajar la inflación",
+        "La gente gasta más",
+        "Las empresas contratan más gente"
+      ],
+      "correcta": 1,
+      "explicacion": "Al ser más caro pedir prestado, la gente gasta menos y los precios dejan de subir."
+    },
+    {
+      "id": "mon3",
+      "texto": "¿Por qué el Banco Central debe ser 'Independiente' del gobierno?",
+      "opciones": [
+        "Porque no les gusta trabajar juntos",
+        "Para evitar que los políticos impriman dinero para sus proyectos, causando inflación",
+        "Porque es una empresa privada",
+        "Porque así es la tradición"
+      ],
+      "correcta": 1,
+      "explicacion": "La independencia asegura que las decisiones financieras se tomen con lógica técnica, no política."
+    },
+    {
+      "id": "mon4",
+      "texto": "¿Qué pasaría si el gobierno imprimiera billetes infinitos para todos?",
+      "opciones": [
+        "Todos seríamos ricos",
+        "Habría hiperinflación: el dinero perdería su valor y los precios subirían a las nubes",
+        "La economía crecería mucho",
+        "No pasaría nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero solo tiene valor si hay productos y servicios que lo respalden."
+    },
+    {
+      "id": "mon5",
+      "texto": "¿Cómo afecta una tasa de interés ALTA a alguien que quiere comprar una casa?",
+      "opciones": [
+        "Le ayuda porque paga menos",
+        "Le perjudica porque su crédito hipotecario será más caro cada mes",
+        "No le afecta",
+        "Le regalan el dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Las tasas del Banco Central influyen en lo que te cobran los bancos comerciales."
+    },
+    {
+      "id": "mon6",
+      "texto": "¿Qué es la 'Política Monetaria'?",
+      "opciones": [
+        "La política de los gobernantes",
+        "Las acciones que toma el Banco Central para gestionar la cantidad de dinero y las tasas en la economía",
+        "Las leyes sobre los bancos",
+        "El diseño de los billetes"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el conjunto de herramientas para mantener la economía estable."
+    },
+    {
+      "id": "mon7",
+      "texto": "¿Qué es el 'Encaje Legal'?",
+      "opciones": [
+        "Un tipo de ropa",
+        "La reserva de dinero que los bancos deben guardar obligatoriamente en el Banco Central",
+        "Un impuesto al ahorro",
+        "Una ley de comercio"
+      ],
+      "correcta": 1,
+      "explicacion": "Sirve para asegurar que los bancos tengan dinero disponible si los clientes quieren retirarlo."
+    },
+    {
+      "id": "mon8",
+      "texto": "¿Cuál es la meta de inflación ideal para la mayoría de los Bancos Centrales (incluyendo México)?",
+      "opciones": [
+        "0%",
+        "Alrededor del 3% (Estabilidad con ligero crecimiento)",
+        "10%",
+        "50%"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora entiendes que el equilibrio es la clave de una economía sana."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

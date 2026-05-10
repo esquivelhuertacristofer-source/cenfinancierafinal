@@ -1,0 +1,144 @@
+{
+  "code": "ACT-S3-2-1-A",
+  "unit_code": "S3-2-1",
+  "unit_title": "La primera declaración fiscal: ISR y deducciones básicas",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "Declara Tu ISR",
+  "descripcion": "El SAT ya sabe cuánto ganas. La pregunta es: ¿sabes tú cuánto te retuvieron de más y puedes recuperarlo? En México, al hacer tu declaración anual puedes deducir gastos médicos, colegiaturas e hipotecas y recuperar miles de pesos. Simula tu primera declaración.",
+  "objetivo": "Calcular el ISR anual a pagar o a favor, aplicar deducciones personales permitidas por el SAT y entender la diferencia entre retención mensual y declaración anual",
+  "xp": 500,
+  "descripcion_formula": "Base gravable = ingresos_anuales - deducciones_permitidas. ISR según tabla SAT 2024. Si ISR retenido mensualmente > ISR anual calculado → hay saldo a favor (devolución).",
+  "inputs": [
+    {
+      "id": "ingreso_anual_isr",
+      "label": "Ingresos Anuales ($)",
+      "type": "slider",
+      "min": 50000,
+      "max": 1000000,
+      "step": 10000,
+      "default": 180000,
+      "unit": "$",
+      "referencia": "Salario mínimo anual 2024: ~$81,000. Promedio empleado formal: ~$180,000"
+    },
+    {
+      "id": "deducciones_medicas",
+      "label": "Gastos Médicos y Dentales ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 80000,
+      "step": 1000,
+      "default": 8000,
+      "unit": "$",
+      "referencia": "Incluye honorarios médicos, dentistas, hospitales, lentes — con comprobante fiscal (CFDI)"
+    },
+    {
+      "id": "deducciones_educativas",
+      "label": "Colegiaturas Pagadas ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 50000,
+      "step": 500,
+      "default": 12000,
+      "unit": "$",
+      "referencia": "Límite SAT por nivel: Primaria $14,200, Secundaria $11,520, Preparatoria $19,900"
+    },
+    {
+      "id": "aportaciones_voluntarias_afore",
+      "label": "Aportaciones Voluntarias AFORE ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 100000,
+      "step": 1000,
+      "default": 5000,
+      "unit": "$",
+      "referencia": "100% deducibles hasta el 10% del ingreso anual o 5 UMAs anuales"
+    }
+  ],
+  "formula": "Math.max(0, Math.round((ingreso_anual_isr - deducciones_medicas - deducciones_educativas - aportaciones_voluntarias_afore - 96588) * 0.16))",
+  "output_label": "ISR Estimado a Pagar ($)",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "outputs_multiples": [
+    {
+      "id": "base_gravable",
+      "label": "Base Gravable",
+      "formula": "Math.max(0, ingreso_anual_isr - deducciones_medicas - deducciones_educativas - aportaciones_voluntarias_afore)",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "Ingreso menos deducciones — sobre esto se calcula el ISR"
+    },
+    {
+      "id": "isr_calculado",
+      "label": "ISR Anual Calculado",
+      "formula": "Math.max(0, Math.round((Math.max(0, ingreso_anual_isr - deducciones_medicas - deducciones_educativas - aportaciones_voluntarias_afore) - 96588) * 0.16 + 10298))",
+      "prefix": "$",
+      "suffix": "",
+      "descripcion": "ISR según la tabla progresiva del SAT 2024 (simplificada para nivel educativo)"
+    },
+    {
+      "id": "isr_retenido_mensual",
+      "label": "ISR Retenido por tu Patrón (aprox.)",
+      "formula": "Math.round(ingreso_anual_isr * 0.10)",
+      "prefix": "$",
+      "suffix": " al año",
+      "descripcion": "Lo que tu patrón retuvo cada mes sin considerar tus deducciones personales"
+    },
+    {
+      "id": "saldo_a_favor",
+      "label": "Devolución Estimada del SAT",
+      "formula": "Math.max(0, Math.round(ingreso_anual_isr * 0.10 - Math.max(0, (Math.max(0, ingreso_anual_isr - deducciones_medicas - deducciones_educativas - aportaciones_voluntarias_afore) - 96588) * 0.16 + 10298)))",
+      "prefix": "$",
+      "suffix": " de devolución",
+      "descripcion": "Dinero que el SAT te regresa porque retuvieron más del ISR que corresponde"
+    }
+  ],
+  "deducciones_sat_2024": {
+    "titulo": "Deducciones personales permitidas por el SAT",
+    "lista": [
+      { "tipo": "Honorarios médicos y dentales", "limite": "Sin límite (con CFDI)" },
+      { "tipo": "Gastos hospitalarios y medicamentos", "limite": "Sin límite (con CFDI)" },
+      { "tipo": "Lentes y aparatos ortopédicos", "limite": "Sin límite (con CFDI)" },
+      { "tipo": "Colegiaturas", "limite": "Según nivel educativo: $12K-$24K" },
+      { "tipo": "Primas de seguro de gastos médicos mayores", "limite": "Sin límite (con CFDI)" },
+      { "tipo": "Aportaciones complementarias AFORE", "limite": "10% del ingreso o 5 UMAs" },
+      { "tipo": "Intereses reales de hipoteca", "limite": "1.5 millones de UDIS" },
+      { "tipo": "Donativos a instituciones autorizadas", "limite": "7% del ingreso del año anterior" }
+    ]
+  },
+  "chart_type": "bar",
+  "chart_series": [
+    {
+      "id": "isr_retenido_mensual",
+      "label": "ISR Retenido ($)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "isr_calculado",
+      "label": "ISR Real ($)",
+      "color": "#22c55e"
+    }
+  ],
+  "escenarios": [
+    {
+      "condicion": "saldo_a_favor > 5000",
+      "mensaje": "💰 ¡Devolución significativa! El SAT te debe dinero. Presentar tu declaración anual con todas tus deducciones puede devolverte miles de pesos. No presentarla es regalarle dinero al gobierno.",
+      "tipo": "success"
+    },
+    {
+      "condicion": "deducciones_medicas + deducciones_educativas + aportaciones_voluntarias_afore < 5000",
+      "mensaje": "📋 Pocas deducciones. Si tienes gastos médicos, colegiaturas o seguro médico mayor, solicita siempre la factura (CFDI). Cada factura puede reducir tu ISR.",
+      "tipo": "warning"
+    },
+    {
+      "condicion": "aportaciones_voluntarias_afore > 20000",
+      "mensaje": "🏆 Estrategia inteligente. Las aportaciones voluntarias al AFORE son 100% deducibles Y crecen para tu retiro. Es la mejor deducción disponible para un trabajador formal.",
+      "tipo": "success"
+    }
+  ],
+  "versión": "2026.Diamond.V2",
+  "pregunta_reflexion": "¿Cuándo estarás obligado a presentar declaración anual de impuestos? ¿Qué gastos que ya pagas hoy puedes deducir del ISR — médico, colegiatura, hipoteca?",
+  "comparativa_espera": "En México, el ISR sobre sueldos se retiene automáticamente. Al declarar anualmente puedes recuperar el exceso retenido — el mexicano promedio recupera entre $3,500 y $8,000 pesos al año en devoluciones del SAT."
+}

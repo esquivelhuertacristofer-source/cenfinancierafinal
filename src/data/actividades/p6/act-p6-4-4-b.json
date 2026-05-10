@@ -1,0 +1,113 @@
+{
+  "code": "ACT-P6-4-4-B",
+  "unit_code": "P6-4-4",
+  "unit_title": "Financiamiento: Gasolina para tu negocio",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Liderazgo Transformacional",
+  "descripcion": "¿Eres un jefe que manda o un líder que inspira? ¡Descubre las claves para guiar a tu equipo al éxito!",
+  "objetivo": "Diferenciar los estilos de liderazgo y valorar las habilidades socioemocionales en la gestión de equipos",
+  "xp": 200,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "lid1",
+      "texto": "¿Cuál es la principal diferencia entre un jefe y un líder?",
+      "opciones": [
+        "El jefe manda porque tiene el puesto; el líder inspira porque tiene la confianza del equipo",
+        "El jefe gana más dinero",
+        "El líder trabaja menos",
+        "No hay diferencia"
+      ],
+      "correcta": 1,
+      "explicacion": "El liderazgo se gana con el ejemplo y la empatía, no con un título."
+    },
+    {
+      "id": "lid2",
+      "texto": "¿Qué es el 'Liderazgo de Servicio'?",
+      "opciones": [
+        "Hacer que los demás te sirvan",
+        "Poner las necesidades de tu equipo antes que las tuyas para ayudarlos a crecer",
+        "Trabajar en un restaurante",
+        "No dar órdenes"
+      ],
+      "correcta": 1,
+      "explicacion": "Un gran líder es el mayor servidor de su equipo."
+    },
+    {
+      "id": "lid3",
+      "texto": "¿Por qué la 'Empatía' es una habilidad financiera y de negocios?",
+      "opciones": [
+        "Porque te hace sentir bien",
+        "Porque entender las emociones de tus clientes y empleados ayuda a tomar mejores decisiones y evitar conflictos",
+        "Porque es un requisito legal",
+        "No lo es"
+      ],
+      "correcta": 1,
+      "explicacion": "Los negocios están hechos de personas. Si entiendes a las personas, entiendes el negocio."
+    },
+    {
+      "id": "lid4",
+      "texto": "¿Qué debe hacer un líder ante un error de su equipo?",
+      "opciones": [
+        "Buscar a quién culpar y castigarlo",
+        "Asumir la responsabilidad y buscar soluciones junto al equipo para que no vuelva a pasar",
+        "Ignorarlo",
+        "Hacer el trabajo él mismo"
+      ],
+      "correcta": 1,
+      "explicacion": "Un líder protege a su equipo en los errores y reparte el crédito en los aciertos."
+    },
+    {
+      "id": "lid5",
+      "texto": "¿Qué es la 'Visión Compartida'?",
+      "opciones": [
+        "Que todos usen lentes",
+        "Cuando todo el equipo cree en el mismo sueño y trabaja con pasión por él",
+        "Ver una película juntos",
+        "Que todos piensen igual"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin un sueño común, el equipo es solo un grupo de personas trabajando por un sueldo."
+    },
+    {
+      "id": "lid6",
+      "texto": "¿Cuál es la función de un 'Mentor'?",
+      "opciones": [
+        "Hacer tu trabajo por ti",
+        "Darte consejos basados en su experiencia para ayudarte a evitar errores y crecer más rápido",
+        "Prestarte dinero",
+        "Darte órdenes"
+      ],
+      "correcta": 1,
+      "explicacion": "Un mentor es un guía que ya estuvo donde tú estás ahora."
+    },
+    {
+      "id": "lid7",
+      "texto": "¿Por qué es importante delegar tareas?",
+      "opciones": [
+        "Para no trabajar",
+        "Para que los demás aprendan y tú puedas enfocarte en las decisiones estratégicas",
+        "Porque es divertido",
+        "No es importante"
+      ],
+      "correcta": 1,
+      "explicacion": "No puedes hacerlo todo solo. Delegar es demostrar confianza en tu equipo."
+    },
+    {
+      "id": "lid8",
+      "texto": "¿Cuál es el fin último de un líder transformacional?",
+      "opciones": [
+        "Ser famoso",
+        "Hacer que su equipo sea mejor de lo que él mismo es",
+        "Ganar todos los premios",
+        "Tener muchos seguidores"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Ahora estás listo para guiar a la próxima generación de líderes."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

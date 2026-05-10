@@ -1,0 +1,113 @@
+{
+  "code": "ACT-S2-4-2-B",
+  "unit_code": "S2-4-2",
+  "unit_title": "Estrategia de crecimiento: cómo escalar un negocio",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Pensiones y AFOREs",
+  "descripcion": "¿Sabes quién pagará tus cuentas cuando dejes de trabajar? ¡Aprende cómo funciona el sistema de retiro!",
+  "objetivo": "Comprender los mecanismos de ahorro para el retiro, cuentas individuales y aportaciones voluntarias",
+  "xp": 300,
+  "aprobacion_minima": 0.8,
+  "preguntas": [
+    {
+      "id": "ret1",
+      "texto": "¿Qué es una 'AFORE'?",
+      "opciones": [
+        "Un banco que te presta dinero",
+        "Instituciones que administran los ahorros para el retiro de los trabajadores en cuentas individuales",
+        "Un seguro de auto",
+        "Una cuenta de ahorros del gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada trabajador tiene su propia cuenta donde se guarda dinero para su vejez."
+    },
+    {
+      "id": "ret2",
+      "texto": "¿De dónde viene el dinero que se guarda en tu AFORE?",
+      "opciones": [
+        "Solo de tu sueldo",
+        "De una aportación tripartita: Patrón, Gobierno y Tú (el trabajador)",
+        "Es un regalo del banco",
+        "De los impuestos generales"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un esfuerzo conjunto para asegurar tu futuro."
+    },
+    {
+      "id": "ret3",
+      "texto": "¿Qué es el 'Ahorro Voluntario'?",
+      "opciones": [
+        "Ahorrar solo si quieres",
+        "Dinero extra que tú decides aportar a tu cuenta de retiro para aumentar tu pensión final",
+        "Guardar dinero en una alcancía",
+        "No pagar impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "El ahorro voluntario es la forma más rápida de asegurar un retiro digno."
+    },
+    {
+      "id": "ret4",
+      "texto": "¿Qué son las 'SIEFORES'?",
+      "opciones": [
+        "Los dueños de las AFOREs",
+        "Fondos de inversión donde las AFOREs invierten tu dinero según tu edad (más riesgo si eres joven, menos si eres mayor)",
+        "Tipos de tarjetas",
+        "Bancos internacionales"
+      ],
+      "correcta": 1,
+      "explicacion": "Buscan maximizar tu dinero según el tiempo que te falta para retirarte."
+    },
+    {
+      "id": "ret5",
+      "texto": "¿Por qué es peligroso depender solo de la pensión mínima?",
+      "opciones": [
+        "Porque no te la dan",
+        "Porque suele ser muy baja y no alcanza para cubrir todos los gastos de salud y vida en la vejez",
+        "Porque es ilegal",
+        "Porque te la quitan"
+      ],
+      "correcta": 1,
+      "explicacion": "Debes construir tu propio fondo de inversión complementario."
+    },
+    {
+      "id": "ret6",
+      "texto": "¿Qué efecto tiene la Inflación en tu ahorro para el retiro?",
+      "opciones": [
+        "Hace que tu dinero crezca",
+        "Reduce el poder de compra de tus ahorros si no están invertidos a una tasa mayor que la inflación",
+        "No le afecta",
+        "Hace que el banco te pague más"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso tu dinero DEBE estar invertido, no solo guardado."
+    },
+    {
+      "id": "ret7",
+      "texto": "¿A qué edad es la jubilación estándar en la mayoría de los sistemas actuales?",
+      "opciones": [
+        "50 años",
+        "65 años",
+        "80 años",
+        "40 años"
+      ],
+      "correcta": 1,
+      "explicacion": "Aunque muchos buscan el 'Retiro Temprano' ahorrando más e invirtiendo mejor."
+    },
+    {
+      "id": "ret8",
+      "texto": "¿Cuál es la mayor ventaja de ser un trabajador joven respecto al retiro?",
+      "opciones": [
+        "Que tienes mucha energía",
+        "Que tienes el factor TIEMPO a tu favor para que el interés compuesto multiplique tu dinero",
+        "Que no pagas impuestos",
+        "Que no tienes deudas"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Tienes el activo más valioso: tiempo. ¡Aprovéchalo!"
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

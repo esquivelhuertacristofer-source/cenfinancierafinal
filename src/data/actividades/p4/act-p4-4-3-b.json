@@ -1,0 +1,128 @@
+{
+  "code": "ACT-P4-4-3-B",
+  "unit_code": "P4-4-3",
+  "unit_title": "Marketing y publicidad: contando mi historia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Arte de Convencer",
+  "descripcion": "¿Sabes qué hay detrás de tus marcas favoritas? ¡Descubre los trucos del marketing y úsalos para tu negocio!",
+  "objetivo": "Identificar conceptos clave de marketing, branding y ética publicitaria",
+  "xp": 300,
+  "preguntas": [
+    {
+      "id": "mkt1",
+      "pregunta": "¿Qué es el 'Mercado Meta'?",
+      "pregunta_larga": "Si vendes patinetas profesionales, ¿quién es tu mercado meta?",
+      "respuesta_correcta": "Jóvenes y niños que les gustan los deportes extremos",
+      "incorrectas": [
+        "Bebés y sus mamás",
+        "Abuelitos que buscan descansar",
+        "Personas que odian salir de casa"
+      ],
+      "dato_extra": "Enfocarte en la gente que realmente necesita tu producto te ahorra tiempo y dinero."
+    },
+    {
+      "id": "mkt2",
+      "pregunta": "¿Por qué muchas marcas de comida rápida usan el color ROJO?",
+      "respuesta_correcta": "Porque el rojo transmite energía y abre el apetito",
+      "incorrectas": [
+        "Porque es el color más barato",
+        "Porque el rojo ayuda a dormir",
+        "Porque no había otros colores"
+      ],
+      "dato_extra": "La psicología del color es fundamental para conectar con las emociones del cliente."
+    },
+    {
+      "id": "mkt3",
+      "pregunta": "¿Qué es un 'Llamado a la Acción' (Call to Action)?",
+      "respuesta_correcta": "Una instrucción clara para que el cliente compre (ej: '¡Llama ya!', '¡Compra ahora!')",
+      "incorrectas": [
+        "Un grito de guerra",
+        "Una canción de cuna",
+        "El nombre del producto"
+      ],
+      "dato_extra": "Sin un llamado a la acción, la gente puede olvidar comprar aunque le guste el anuncio."
+    },
+    {
+      "id": "mkt4",
+      "pregunta": "¿Cuál es la diferencia entre Publicidad y Propaganda?",
+      "respuesta_correcta": "La publicidad vende productos/servicios y la propaganda promueve ideas o causas",
+      "incorrectas": [
+        "Son lo mismo",
+        "La publicidad es gratis y la propaganda no",
+        "La propaganda solo es en la tele"
+      ],
+      "dato_extra": "Ambas usan la persuasión, pero con objetivos diferentes."
+    },
+    {
+      "id": "mkt5",
+      "pregunta": "¿Por qué es importante la ética en la publicidad?",
+      "respuesta_correcta": "Porque mentir hace que los clientes pierdan la confianza en ti y nunca vuelvan",
+      "incorrectas": [
+        "No es importante, lo que importa es vender",
+        "Porque el papel es caro",
+        "Para que el anuncio se vea más bonito"
+      ],
+      "dato_extra": "Un cliente engañado es un cliente perdido para siempre."
+    },
+    {
+      "id": "mkt6",
+      "pregunta": "¿Qué es el 'Marketing Digital'?",
+      "pregunta_larga": "¿Cuál es un ejemplo de marketing digital?",
+      "respuesta_correcta": "Un anuncio que aparece mientras ves videos en YouTube",
+      "incorrectas": [
+        "Un volante que te dan en la calle",
+        "Un anuncio en el periódico impreso",
+        "Un cartel en la carretera"
+      ],
+      "dato_extra": "Hoy en día pasamos mucho tiempo en pantallas, por eso el marketing digital es tan potente."
+    },
+    {
+      "id": "mkt7",
+      "pregunta": "¿Para qué sirve un 'Slogan'?",
+      "respuesta_correcta": "Para que la gente recuerde tu marca con una frase pegajosa",
+      "incorrectas": [
+        "Para poner el precio",
+        "Para que el logo se vea más grande",
+        "Para confundir a la competencia"
+      ],
+      "dato_extra": "'Just Do It' o 'Me encanta' son ejemplos de slogans mundiales."
+    },
+    {
+      "id": "mkt8",
+      "pregunta": "¿Qué es el 'Branding'?",
+      "respuesta_correcta": "La personalidad y los valores que la gente asocia con tu marca",
+      "incorrectas": [
+        "Ponerle nombre a un perro",
+        "Solo el diseño del logotipo",
+        "Vender productos baratos"
+      ],
+      "dato_extra": "El branding es 'lo que dicen de ti cuando no estás en la habitación'."
+    },
+    {
+      "id": "mkt9",
+      "pregunta": "¿Qué es una 'Promoción'?",
+      "respuesta_correcta": "Un incentivo temporal para atraer clientes (ej: 2x1, descuento del 20%)",
+      "incorrectas": [
+        "El precio normal del producto",
+        "Un tipo de transporte",
+        "Un examen difícil"
+      ],
+      "dato_extra": "Las promociones ayudan a dar a conocer productos nuevos rápidamente."
+    },
+    {
+      "id": "mkt10",
+      "pregunta": "¿Cuál es la mejor publicidad?",
+      "respuesta_correcta": "Un producto de excelente calidad que los clientes recomienden solos",
+      "incorrectas": [
+        "Un anuncio muy caro en el Super Bowl",
+        "Gritar por un megáfono",
+        "Poner muchos folletos en los carros"
+      ],
+      "dato_extra": "Nada vence a un cliente feliz que le cuenta a sus amigos sobre ti."
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}

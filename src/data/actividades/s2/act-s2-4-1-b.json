@@ -1,0 +1,102 @@
+{
+  "code": "ACT-S2-4-1-B",
+  "unit_code": "S2-4-1",
+  "unit_title": "Business Model Canvas avanzado: los 9 bloques en práctica",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Plan de Crecimiento de Patrimonio",
+  "descripcion": "Tu valor neto es el marcador de tu juego financiero. ¡Diseña la estrategia para hacerlo crecer año con año!",
+  "objetivo": "Establecer metas financieras a mediano plazo y definir acciones para incrementar activos y reducir pasivos",
+  "xp": 600,
+  "output_type": "Estrategia de Crecimiento Patrimonial",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "meta_patrimonio_s2",
+      "titulo": "🎯 Tu Meta a 5 Años",
+      "descripcion": "¿Cuánto quieres valer en el futuro?",
+      "campos": [
+        {
+          "id": "objetivo_valor_neto",
+          "label": "Meta de Patrimonio Neto ($)",
+          "type": "slider",
+          "min": 100000,
+          "max": 10000000,
+          "step": 100000,
+          "default": 500000,
+          "unit": "$"
+        },
+        {
+          "id": "proposito_riqueza",
+          "label": "¿Para qué quieres construir este patrimonio?",
+          "type": "textarea",
+          "placeholder": "Ej: Para tener libertad de elegir mi trabajo, para asegurar la educación de mis hijos, para viajar por el mundo...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "ataque_activos_s2",
+      "titulo": "🚀 Operación: Subir Activos",
+      "descripcion": "¿Cómo harás que entre más dinero?",
+      "campos": [
+        {
+          "id": "estrategia_activos",
+          "label": "Acciones para aumentar activos",
+          "type": "textarea",
+          "placeholder": "Ej: Invertir el 20% de mi sueldo cada mes, comprar FIBRAS, aprender una habilidad de alta demanda (programación, ventas)...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "defensa_pasivos_s2",
+      "titulo": "🛡️ Operación: Bajar Pasivos",
+      "descripcion": "¿Cómo evitarás que el dinero se escape?",
+      "campos": [
+        {
+          "id": "estrategia_pasivos",
+          "label": "Acciones para reducir deudas",
+          "type": "textarea",
+          "placeholder": "Ej: No usar tarjetas de crédito para lujos, pagar deudas viejas con el método avalancha, vivir por debajo de mis posibilidades...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "numero_libertad_s2",
+      "titulo": "🕊️ El Número de Libertad",
+      "descripcion": "¿Cuánto dinero invertido necesitas para que los intereses paguen tus gastos básicos?",
+      "campos": [
+        {
+          "id": "calculo_libertad",
+          "label": "Mi Número de Libertad Financiera ($)",
+          "type": "text",
+          "placeholder": "Ej: $5,000,000 (basado en la regla del 4%)",
+          "requerido": true
+        },
+        {
+          "id": "gasto_mensual_actual",
+          "label": "Tu Gasto Mensual Actual ($)",
+          "type": "slider",
+          "min": 5000,
+          "max": 100000,
+          "step": 1000,
+          "default": 20000,
+          "requerido": false
+        },
+        {
+          "id": "numero_fire_personal",
+          "label": "Tu Número FIRE (Libertad Financiera)",
+          "type": "calculated",
+          "formula": "Math.round(gasto_mensual_actual * 12 * 25)",
+          "unit": "$",
+          "ayuda": "Con 25× tus gastos anuales invertidos, vives para siempre de los rendimientos (Regla 4%)"
+        }
+      ]
+    }
+  ],
+  "versión": "2026.Diamond.V2"
+}
