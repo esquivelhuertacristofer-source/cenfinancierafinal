@@ -40,3 +40,24 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 scripts/
+
+# Respaldos y archivos de debug (nunca versionar)
+_respaldo-*/
+_archivo_debug_*/
+_pre-port-backup/
+_pre-fix-backup/
+_diagnostico*.log
+_build-*.log
+build_log.txt
+*.bak
+*.bak2
+*.bak3
+audit_activities.py
+audit_types.py
+clean_json.py
+find_line.py
+find_trailing_commas.py
+process_images.py
+robust_engine.py
+strict_validate.py
+validate_json.py

@@ -255,7 +255,7 @@ export default function ModulosPage() {
               {/* Header section when no grade selected */}
               <div className="space-y-4">
                  <h1 className={`text-7xl font-black tracking-tighter leading-none ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
-                   Biblioteca <span className={`italic font-serif ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#FF8C00]'}`}>CEN</span>
+                   Biblioteca <span className={`italic font-sans ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#FF8C00]'}`}>CEN</span>
                  </h1>
                  <p className={`text-lg font-medium max-w-xl ${theme === 'dark' ? 'text-white/40' : 'text-slate-500'}`}>
                    Explora los niveles académicos alineados con la visión de excelencia de CEN Academy.

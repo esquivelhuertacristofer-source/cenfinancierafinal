@@ -459,21 +459,6 @@ export default function PlaneamientoPage() {
         </div>
       </main>
 
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(1, 28, 64, 0.1);
-          border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(1, 28, 64, 0.2);
-        }
-      `}</style>
     </div>
   );
 }

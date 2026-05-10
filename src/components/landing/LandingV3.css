@@ -17,7 +17,7 @@
 }
 
 /* Base resets for the landing page scope */
-.landing-v3-root {
+.landing-v3, .landing-v3-root {
   font-family: 'Epilogue', system-ui, sans-serif;
   background: var(--bg);
   color: var(--ink);
@@ -746,7 +746,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -1152,7 +1152,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -1253,7 +1253,7 @@ h1.hero-title .underlined::after {
 }
 
 .levels-intro .scroll-cue .lbl {
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -1292,7 +1292,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -1622,7 +1622,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -1779,7 +1779,7 @@ h1.hero-title .underlined::after {
 }
 
 .scard .sc-step {
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2205,7 +2205,7 @@ h1.hero-title .underlined::after {
   padding: 9px 18px;
   border-radius: 999px;
   cursor: pointer;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -2447,7 +2447,7 @@ h1.hero-title .underlined::after {
   padding: 8px 14px;
   border-radius: 999px;
   cursor: pointer;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -2874,7 +2874,7 @@ h1.hero-title .underlined::after {
   color: #fff;
   padding: 9px 18px;
   border-radius: 999px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -2922,7 +2922,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -3293,7 +3293,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -3504,7 +3504,7 @@ h1.hero-title .underlined::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -3620,7 +3620,7 @@ h1.hero-title .underlined::after {
   font-weight: 900;
   line-height: 0.5;
   color: var(--cen-orange);
-  font-family: 'Epilogue';
+  font-family: 'Epilogue', system-ui, sans-serif;
 }
 
 .test-card.tall .tc-q-mark {

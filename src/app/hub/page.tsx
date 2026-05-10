@@ -935,7 +935,6 @@ export default function StudentHubV19() {
                   return pillars.slice(0, idx).reduce((acc, p) => acc + p.units.length, 0);
                 })()}
                 onComplete={async (id) => {
-                  console.log("Activity completed:", id);
                   setCompleted(prev => new Set([...prev, id]));
                   if (profile?.id) {
                     try {

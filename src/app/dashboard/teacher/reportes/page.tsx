@@ -43,7 +43,7 @@ export default function ReportesPage() {
   if (loading) return null;
 
   return (
-    <div className={`flex min-h-screen font-['Epilogue'] relative overflow-hidden transition-colors duration-1000 ${theme === 'dark' ? 'bg-[#011C40]' : 'bg-[#F4F1EA]'}`}>
+    <div className={`flex min-h-screen font-['Epilogue'] relative overflow-hidden transition-colors duration-1000 ${theme === 'dark' ? 'bg-[#011C40] theme-dark' : 'bg-[#F4F1EA]'}`}>
       
       {/* CINEMATIC BACKGROUND LAYER */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -127,7 +127,7 @@ export default function ReportesPage() {
              <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div>
                    <h1 className={`text-7xl font-black tracking-tighter leading-none mb-4 ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
-                     Reportes <span className={`italic font-serif ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#FF8C00]'}`}>Académicos</span>
+                     Reportes <span className={`italic font-sans ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#FF8C00]'}`}>Académicos</span>
                    </h1>
                    <p className={`text-lg font-medium max-w-xl ${theme === 'dark' ? 'text-white/40' : 'text-slate-500'}`}>
                      Analiza el desempeño de tu grupo con datos verificados y genera informes para la coordinación.
@@ -237,18 +237,6 @@ export default function ReportesPage() {
         </div>
       </main>
 
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: ${theme === 'dark' ? 'rgba(255, 255, 255, 0.08)' : 'rgba(1, 28, 64, 0.08)'};
-          border-radius: 20px;
-        }
-      `}</style>
     </div>
   );
 }

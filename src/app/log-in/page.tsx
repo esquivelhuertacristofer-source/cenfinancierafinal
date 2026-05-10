@@ -44,16 +44,6 @@ export default function LoginPage() {
                 setError("La conexión está tardando más de lo normal. Prueba con el acceso de invitado o verifica tu red.");
             }, 8000);
 
-            // ─── VIRTUAL ACCOUNTS BYPASS (development only) ───
-            if (process.env.NODE_ENV === 'development' && password === "diamondmaster" && (email === 'profesor.prueba@cen.edu' || email === 'estudiante.prueba@cen.edu')) {
-                const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
-                if (!authError) {
-                    localStorage.removeItem('cen_test_profile');
-                    window.location.href = "/hub";
-                    return;
-                }
-            }
-
             const { error: authError } = await supabase.auth.signInWithPassword({
                 email,
                 password,
@@ -69,6 +59,20 @@ export default function LoginPage() {
 
             // Clear any previous test profile on real successful login
             localStorage.removeItem('cen_test_profile');
+
+            // Redirect based on role
+            try {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (user) {
+                    const { data: profile } = await supabase.from("profiles").select("role").eq("id", user.id).single();
+                    if (profile?.role === "teacher") {
+                        window.location.href = "/dashboard/teacher";
+                        return;
+                    }
+                }
+            } catch {
+                // fallback to hub if profile query fails
+            }
 
             window.location.href = "/hub";
         } catch (err: any) {

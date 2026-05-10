@@ -823,16 +823,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
         </div>
       )}
 
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.05); border-radius: 20px; }
-        @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.8; } }
-        @keyframes float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        .animate-twinkle { animation: twinkle 4s infinite; }
-        .animate-float-slow { animation: float-slow 8s infinite ease-in-out; }
-        .animate-spin-slow { animation: spin 60s linear infinite; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      `}</style>
     </div>
   );
 }

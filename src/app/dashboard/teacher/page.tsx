@@ -81,7 +81,7 @@ export default function TeacherDashboard() {
   );
 
   return (
-    <div className={`flex min-h-screen font-['Epilogue'] relative overflow-hidden transition-colors duration-1000 ${theme === 'dark' ? 'bg-[#011C40]' : 'bg-[#F4F1EA]'}`}>
+    <div className={`flex min-h-screen font-['Epilogue'] relative overflow-hidden transition-colors duration-1000 ${theme === 'dark' ? 'bg-[#011C40] theme-dark' : 'bg-[#F4F1EA]'}`}>
       
       {/* CINEMATIC BACKGROUND LAYER */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -203,25 +203,6 @@ export default function TeacherDashboard() {
 
       </main>
 
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: ${theme === 'dark' ? 'rgba(255, 255, 255, 0.08)' : 'rgba(1, 28, 64, 0.08)'};
-          border-radius: 20px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: ${theme === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'rgba(1, 28, 64, 0.15)'};
-        }
-        
-        .premium-shadow {
-          box-shadow: ${theme === 'dark' ? '0 50px 100px rgba(0,0,0,0.5)' : '0 50px 100px rgba(1, 28, 64, 0.08)'};
-        }
-      `}</style>
     </div>
   );
 }
