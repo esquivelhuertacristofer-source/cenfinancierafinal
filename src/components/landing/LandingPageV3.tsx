@@ -53,13 +53,12 @@ export default function LandingPageV3() {
           <div className="video-modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-modal" onClick={() => setShowDemo(false)}>&times;</button>
             <div className="video-aspect">
-              <iframe 
-                src={`${DEMO_VIDEO_URL}?autoplay=1`} 
-                title="CEN Academy Presentation" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                src={`${DEMO_VIDEO_URL}?autoplay=1`}
+                title="CEN Academy Presentation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                referrerPolicy="no-referrer"
               ></iframe>
             </div>
             <div className="video-modal-footer" style={{ padding: '40px', background: '#011C40', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
