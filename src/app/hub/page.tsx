@@ -1043,21 +1043,32 @@ export default function StudentHubV19() {
                 </div>
 
                 {/* Contenedor del Video / Poster de Presentación */}
-                <div className="flex-1 bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-inner relative group">
-                   <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                   <img 
-                      src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"} 
-                      className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-[10s]" 
-                      alt="Presentación"
-                   />
-                   <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-12 text-center">
-                      <div className="w-24 h-24 bg-[#FF8C00] rounded-full flex items-center justify-center text-white mb-8 animate-pulse shadow-[0_0_50px_#FF8C00]">
-                         <Play size={40} fill="white" />
-                      </div>
-                      <h3 className="text-5xl font-black text-white tracking-tighter mb-4 italic uppercase">Misión {profile?.grade}00</h3>
-                      <p className="text-xl text-white/60 font-medium max-w-md">Contenido audiovisual en proceso de renderizado Diamond.</p>
-                   </div>
-                   <div className="absolute inset-0 pointer-events-none border-[10px] border-white/5 rounded-[40px] z-30" />
+                <div className="flex-1 bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-inner relative">
+                   {gradeMeta?.introVideo ? (
+                     <iframe
+                       src={gradeMeta.introVideo}
+                       className="w-full h-full"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                       allowFullScreen
+                       title={`Introducción ${gradeMeta.title}`}
+                     />
+                   ) : (
+                     <>
+                       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                       <img
+                         src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"}
+                         className="w-full h-full object-cover opacity-60"
+                         alt="Presentación"
+                       />
+                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-12 text-center">
+                         <div className="w-24 h-24 bg-[#FF8C00] rounded-full flex items-center justify-center text-white mb-8 animate-pulse shadow-[0_0_50px_#FF8C00]">
+                           <Play size={40} fill="white" />
+                         </div>
+                         <h3 className="text-5xl font-black text-white tracking-tighter mb-4 italic uppercase">Misión {profile?.grade}00</h3>
+                         <p className="text-xl text-white/60 font-medium max-w-md">Contenido audiovisual próximamente.</p>
+                       </div>
+                     </>
+                   )}
                 </div>
              </div>
 

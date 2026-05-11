@@ -235,7 +235,7 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
   });
 }
 
-export const GRADE_INFO: Record<string, { title: string; objective: string; briefing: string; skills: string[]; accentColor: string; secondaryColor: string; coreImage: string; arenaQuiz: QuizQuestion[] }> = {
+export const GRADE_INFO: Record<string, { title: string; objective: string; briefing: string; skills: string[]; accentColor: string; secondaryColor: string; coreImage: string; introVideo: string; arenaQuiz: QuizQuestion[] }> = {
   'primary-1': {
     title: 'Mis Primeros Pesos',
     objective: 'Descubrir el valor del dinero y el esfuerzo personal.',
@@ -244,6 +244,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#FF8C00',
     secondaryColor: '#FFD700',
     coreImage: '/assets/landing-v3/Primaria1.png',
+    introVideo: 'https://www.youtube.com/embed/gf3_Kr69zXY',
     arenaQuiz: [
       { q: '¿Qué es el dinero?', options: ['Papel mágico', 'Un medio para intercambiar bienes y servicios', 'Un juguete'], correct: 1, explanation: 'El dinero es una herramienta que inventamos para facilitar el intercambio de cosas sin tener que cargar con bultos pesados.' },
       { q: '¿Cómo se llaman los animales en el billete de 50 pesos?', options: ['Perros', 'Ajolotes', 'Gatos'], correct: 1, explanation: 'El ajolote es un símbolo de nuestra biodiversidad y aparece en el billete más bonito del mundo.' },
@@ -265,6 +266,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#F59E0B',
     secondaryColor: '#FB1818',
     coreImage: '/assets/landing-v3/Primaria2.png',
+    introVideo: 'https://www.youtube.com/embed/VBbg_lsuA2w',
     arenaQuiz: [
       { q: '¿Qué usaban antes de que existieran las monedas en México?', options: ['Piedras', 'Cacao y plumas', 'Dulces'], correct: 1, explanation: 'Nuestros antepasados valoraban el cacao porque era difícil de conseguir y muy útil.' },
       { q: '¿Qué es el trueque?', options: ['Comprar con tarjeta', 'Intercambiar un objeto por otro sin usar dinero', 'Regalar cosas'], correct: 1, explanation: 'Fue la primera forma de comercio: yo te doy mis manzanas y tú me das tus plátanos.' },
@@ -286,6 +288,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#10B981',
     secondaryColor: '#34D399',
     coreImage: '/assets/landing-v3/Primaria3.png',
+    introVideo: 'https://www.youtube.com/embed/cqZ9SeURemg',
     arenaQuiz: [
       { q: '¿Cuál es la diferencia entre necesidad y deseo?', options: ['No hay diferencia', 'Necesidad es vital para vivir, deseo es algo opcional', 'Deseo es más importante'], correct: 1, explanation: 'Las necesidades como el agua son prioridad. Los deseos como un juguete pueden esperar.' },
       { q: '¿Qué es un gasto fijo?', options: ['Comprar un juguete', 'Pagar la renta o los servicios de la casa cada mes', 'Un regalo de cumpleaños'], correct: 1, explanation: 'Los gastos fijos son compromisos que tenemos que pagar sí o sí cada mes.' },
@@ -307,6 +310,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#06B6D4',
     secondaryColor: '#22D3EE',
     coreImage: '/assets/landing-v3/Primaria4.png',
+    introVideo: 'https://www.youtube.com/embed/ceq7pZaJ-pk',
     arenaQuiz: [
       { q: '¿Para qué sirven principalmente los bancos?', options: ['Para regalar dinero', 'Para cuidar el dinero y dar préstamos', 'Para fabricar billetes'], correct: 1, explanation: 'Los bancos conectan a quienes tienen ahorros con quienes necesitan préstamos para crecer.' },
       { q: '¿Qué es el interés en una cuenta de ahorro?', options: ['Un cobro que nos hace el banco', 'Un premio que nos da el banco por guardar nuestro dinero con ellos', 'Un impuesto'], correct: 1, explanation: 'Es la recompensa que recibes por permitir que el banco use tu dinero para dar créditos.' },
@@ -328,6 +332,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#3B82F6',
     secondaryColor: '#60A5FA',
     coreImage: '/assets/landing-v3/Primaria5.png',
+    introVideo: 'https://www.youtube.com/embed/Et7LuL8yqE4',
     arenaQuiz: [
       { q: '¿Qué es un emprendedor?', options: ['Alguien que trabaja en una oficina', 'Alguien que identifica una oportunidad y crea un proyecto o negocio', 'Un deportista'], correct: 1, explanation: 'Un emprendedor es alguien que se atreve a convertir una idea en una solución para los demás.' },
       { q: '¿Qué es el valor agregado?', options: ['Cobrar más caro porque sí', 'Una característica extra que hace que un producto sea mejor o diferente a los demás', 'El precio de envío'], correct: 1, explanation: 'Es ese "toque especial" que hace que la gente elija tu producto por encima de otros.' },
@@ -349,6 +354,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#6366F1',
     secondaryColor: '#818CF8',
     coreImage: '/assets/landing-v3/Primaria6.png',
+    introVideo: 'https://www.youtube.com/embed/iry2ikhKt9Y',
     arenaQuiz: [
       { q: '¿Qué son los impuestos?', options: ['Donaciones voluntarias', 'Pagos obligatorios al gobierno para servicios públicos como calles y escuelas', 'Regalos al banco'], correct: 1, explanation: 'Los impuestos son la contribución de todos para tener servicios que beneficien a la comunidad.' },
       { q: '¿Qué es el comercio internacional?', options: ['Comprar en la tienda de la esquina', 'El intercambio de productos y servicios entre diferentes países', 'Vender cosas usadas'], correct: 1, explanation: 'Es lo que permite que comas frutas de otros países o uses tecnología de todo el mundo.' },
@@ -370,6 +376,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#8B5CF6',
     secondaryColor: '#A78BFA',
     coreImage: '/assets/landing-v3/Secundaria1.png',
+    introVideo: 'https://www.youtube.com/embed/KM8hGmclQP0',
     arenaQuiz: [
       { q: '¿Qué es el T-MEC?', options: ['Un tratado de paz', 'El Tratado comercial entre México, Estados Unidos y Canadá', 'Una marca de ropa'], correct: 1, explanation: 'Es la alianza más importante de México para facilitar la venta de nuestros productos en el extranjero.' },
       { q: '¿Qué significa el fenómeno del Nearshoring?', options: ['Vender por internet', 'La relocalización de empresas cerca de sus mercados principales (como empresas que vienen a México)', 'Comprar acciones'], correct: 1, explanation: 'Es una gran oportunidad para México, pues muchas empresas quieren estar cerca de EE.UU. e invierten aquí.' },
@@ -391,6 +398,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#D946EF',
     secondaryColor: '#E879F9',
     coreImage: '/assets/landing-v3/Secundaria2.png',
+    introVideo: 'https://www.youtube.com/embed/aGLKmZm3jmU',
     arenaQuiz: [
       { q: '¿Qué es el interés compuesto?', options: ['Interés que se cobra una sola vez', 'Interés que se calcula sobre el capital y también sobre los intereses acumulados', 'Un tipo de descuento'], correct: 1, explanation: 'Einstein lo llamó la octava maravilla del mundo, porque hace que tu dinero crezca de forma exponencial.' },
       { q: '¿Qué es un activo financiero?', options: ['Algo que saca dinero de tu bolsillo', 'Algo que pone dinero en tu bolsillo (genera ingresos o valor)', 'Una deuda'], correct: 1, explanation: 'Los activos son tus mejores amigos: trabajan para ti generando más dinero incluso mientras duermes.' },
@@ -412,6 +420,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
     accentColor: '#F43F5E',
     secondaryColor: '#FB7185',
     coreImage: '/assets/landing-v3/Secundaria3.png',
+    introVideo: 'https://www.youtube.com/embed/9_3jOn3FOyA',
     arenaQuiz: [
       { q: '¿Qué es un plan financiero integral?', options: ['Una lista de deseos', 'Un documento que proyecta ingresos, gastos, ahorros e inversiones a largo plazo', 'Un presupuesto del mes'], correct: 1, explanation: 'Es el plano arquitectónico de tu vida económica que te guía hacia el éxito generacional.' },
       { q: '¿Qué es el Venture Capital (Capital de Riesgo)?', options: ['Préstamos bancarios', 'Inversión en startups o empresas con alto potencial de crecimiento y alto riesgo', 'Ahorro formal'], correct: 1, explanation: 'Es el combustible que impulsa a las empresas más innovadoras del mundo a cambiar el futuro.' },
