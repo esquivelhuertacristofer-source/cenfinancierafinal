@@ -48,7 +48,7 @@ export default function SecondaryGrid() {
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-cen-cyan/60 mb-3">Nivel Avanzado</p>
             <h2 className="text-5xl lg:text-6xl font-black text-white tracking-tighter">
-              Nivel <span className="text-cen-cyan">Secundaria.</span>
+              Nivel <span className="text-cen-cyan">Secundaria / Bachillerato.</span>
             </h2>
           </div>
           <p className="max-w-sm text-lg text-white/40 font-medium leading-relaxed">

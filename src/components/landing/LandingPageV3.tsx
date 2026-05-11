@@ -320,8 +320,8 @@ export default function LandingPageV3() {
           <section className="secundaria">
             <div className="sec-head">
               <div>
-                <div className="sh-eyebrow"><span className="pip"></span> ETAPA 02 · SECUNDARIA</div>
-                <h2>Academia <em>Secundaria</em></h2>
+                <div className="sh-eyebrow"><span className="pip"></span> ETAPA 02 · SECUNDARIA / BACHILLERATO</div>
+                <h2>Academia <em>Secundaria / Bachillerato</em></h2>
                 <p className="sh-sub">Para los que ya están tomando decisiones.</p>
               </div>
             </div>
