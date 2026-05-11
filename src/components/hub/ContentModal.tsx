@@ -210,9 +210,8 @@ const FiscalSummaryCard = memo(({ unitCode }: { unitCode: string }) => {
 
 // ─── Pestañas Optimizadas ─────────────────────────────────────────────────────
 
-const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo }: { unit: Unit; onComplete: () => void; isDone: boolean; color: string; theme: ThemeType; onShowVideo: (show: boolean) => void }) => {
+const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; color: string; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
   const [readingFinished, setReadingFinished] = useState(isDone);
-  const [isSyncing, setIsSyncing] = useState(false);
   const sections = unit.theory?.sections || unit.strategy?.phases || [];
   const intro = unit.theory?.introduction || unit.theory?.concept || unit.theory?.description || unit.strategy?.objective || unit.objective;
   const unitNumber = parseInt(unit.code.match(/\d+/)?.[0] || '1');
@@ -315,30 +314,19 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo }:
 
       <div className="mt-40 flex justify-center pb-40">
         {!readingFinished ? (
-          <button 
-            disabled={isSyncing}
-            className={`group relative h-28 px-24 rounded-[2rem] transition-all hover:scale-[1.05] overflow-hidden ${isSyncing ? 'bg-white/20' : 'bg-white'}`} 
-            onClick={async () => { 
-              setIsSyncing(true);
-              await new Promise(r => setTimeout(r, 1500));
-              setReadingFinished(true); 
-              onComplete(); 
-              setIsSyncing(false);
+          <button
+            className="group relative h-28 px-24 rounded-[2rem] transition-all hover:scale-[1.05] overflow-hidden bg-white"
+            onClick={() => {
+              setReadingFinished(true);
+              onComplete();
             }}
           >
-            {isSyncing ? (
-              <div className="flex items-center gap-6">
-                <div className="w-10 h-10 border-4 border-[#0A0118] border-t-transparent rounded-full animate-spin" />
-                <span className="text-3xl font-black text-[#0A0118] uppercase tracking-[0.3em]">Sincronizando...</span>
-              </div>
-            ) : (
-              <div className="flex items-center gap-6">
-                 <span className="text-3xl font-black text-[#0A0118] uppercase tracking-[0.3em]">Finalizar Misión</span>
-                 <div className="w-12 h-12 bg-[#0A0118] rounded-2xl flex items-center justify-center text-white transition-transform group-hover:translate-x-3">
-                    <ChevronRight size={24} />
-                 </div>
-              </div>
-            )}
+            <div className="flex items-center gap-6">
+               <span className="text-3xl font-black text-[#0A0118] uppercase tracking-[0.3em]">{nextLabel ?? 'Continuar'}</span>
+               <div className="w-12 h-12 bg-[#0A0118] rounded-2xl flex items-center justify-center text-white transition-transform group-hover:translate-x-3">
+                  <ChevronRight size={24} />
+               </div>
+            </div>
           </button>
         ) : (
           <div className="flex items-center gap-10 px-20 py-10 bg-[#10B981]/10 border border-[#10B981]/30 text-[#10B981] rounded-[3rem] animate-in zoom-in duration-700">
@@ -346,8 +334,8 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo }:
                 <CheckCircle2 size={40} />
              </div>
              <div className="text-left">
-                <div className="text-xs font-black uppercase tracking-[0.5em] opacity-60 mb-2">Ecosistema Sincronizado</div>
-                <div className="text-4xl font-black uppercase tracking-widest">Misión Guardada</div>
+                <div className="text-xs font-black uppercase tracking-[0.5em] opacity-60 mb-2">Contenido Revisado</div>
+                <div className="text-4xl font-black uppercase tracking-widest">Lectura Completada</div>
              </div>
           </div>
         )}
@@ -428,11 +416,11 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { uni
         </div>
         <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">Práctica Completada ✓</h3>
         <p className="text-white/40 text-xl font-medium mb-12">Tus resultados han sido sincronizados con el Profesor.</p>
-        <button 
-          onClick={() => onComplete()} 
+        <button
+          onClick={() => onComplete()}
           className="px-16 py-6 bg-white text-[#0A0118] rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
         >
-          Continuar Misión
+          Continuar al Quiz
         </button>
       </div>
     );
@@ -667,6 +655,10 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
     return (done / total) * 100;
   }, [unit.contents, completed]);
 
+  // Flujo pedagógico: teoria → práctica → quiz (sin marcar completa hasta pasar el quiz)
+  const nextAfterTheory = unit.contents.find(c => c.type !== 'theory');
+  const theoryNextLabel = nextAfterTheory?.type === 'simulator' ? 'Ir a la Práctica' : 'Ir al Cuestionario';
+
   return (
     <div className="fixed inset-0 z-[2000] bg-[#0A0118] flex font-sans animate-in fade-in duration-700 overflow-hidden">
       <AdventureBackground color={pillar.color} theme={theme} />
@@ -767,9 +759,34 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
 
       <main className="flex-1 overflow-y-auto pl-48 pr-[100px] py-[80px] custom-scrollbar relative z-10 scroll-smooth">
         <div className="relative z-10 max-w-7xl mx-auto pb-60">
-          {activeTab === 'theory' && <TheoryTab unit={unit} isDone={isDone('theory')} onComplete={() => handleComplete('theory')} color={pillar.color} theme={theme} onShowVideo={setShowUnitVideo} />}
-          {activeTab === 'simulator' && <SimulatorTab unitCode={unit.code} isDone={isDone('simulator')} onComplete={() => handleComplete('simulator')} color={pillar.color} theme={theme} />}
-          {activeTab === 'quiz' && <QuizTab unitCode={unit.code} isDone={isDone('quiz')} onComplete={(score) => handleComplete('quiz', score)} theme={theme} />}
+          {activeTab === 'theory' && (
+            <TheoryTab
+              unit={unit}
+              isDone={isDone('theory')}
+              onComplete={() => setActiveTab(nextAfterTheory?.type ?? 'quiz')}
+              nextLabel={theoryNextLabel}
+              color={pillar.color}
+              theme={theme}
+              onShowVideo={setShowUnitVideo}
+            />
+          )}
+          {activeTab === 'simulator' && (
+            <SimulatorTab
+              unitCode={unit.code}
+              isDone={isDone('simulator')}
+              onComplete={() => { handleComplete('simulator'); setActiveTab('quiz'); }}
+              color={pillar.color}
+              theme={theme}
+            />
+          )}
+          {activeTab === 'quiz' && (
+            <QuizTab
+              unitCode={unit.code}
+              isDone={isDone('quiz')}
+              onComplete={(score) => handleComplete('quiz', score)}
+              theme={theme}
+            />
+          )}
         </div>
       </main>
 
