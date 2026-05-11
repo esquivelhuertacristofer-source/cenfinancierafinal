@@ -4666,3 +4666,135 @@ h1.hero-title .underlined::after {
 .audience-toggle button.on.fam {
   background: var(--cen-orange);
 }
+
+/* =================================================================
+   MOBILE OPTIMIZATION — phones ≤ 768px
+   ================================================================= */
+@media (max-width: 768px) {
+
+  /* ---- NAV: logo + CTA button only ---- */
+  .nav {
+    justify-content: space-between;
+    gap: 0;
+    padding: 14px 20px;
+  }
+  .nav-links { display: none; }
+  .nav-right a:not(.nav-btn-primary) { display: none; }
+  .nav-right { gap: 0; }
+
+  /* ---- HERO: text only, hide the illustrated right side ---- */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-left {
+    padding: 56px 24px 48px;
+  }
+  h1.hero-title {
+    font-size: clamp(38px, 10vw, 56px);
+  }
+  .hero-sub {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .btn-cta, .btn-cta-demo {
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+  .hero-right {
+    display: none;
+  }
+
+  /* ---- TIERS: 1 column ---- */
+  .tiers {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- PRIMARIA / SECUNDARIA: 1 column, full-width content ---- */
+  .primaria, .secundaria {
+    padding: 40px 20px 24px;
+  }
+  .pri-head, .sec-head {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .primaria-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  /* Override the inline maxWidth: 50% so text fills the card */
+  .pcard > div[style] {
+    max-width: 90% !important;
+  }
+  .pcard {
+    min-height: 240px !important;
+    padding: 24px !important;
+  }
+
+  /* ---- SECTIONS: reduce padding ---- */
+  .section {
+    padding: 40px 20px;
+  }
+  .section-head h2 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  /* ---- ALLIES ---- */
+  .allies {
+    padding: 36px 20px 28px;
+  }
+  .allies h2 {
+    font-size: clamp(26px, 7vw, 38px);
+  }
+
+  /* ---- LIVE BAND: stack, hide Mexico map ---- */
+  .live-band {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    margin: 0 12px;
+  }
+  .live-band h2 {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+  .mexico-map {
+    display: none;
+  }
+  .live-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .live-stat h4 {
+    font-size: 28px;
+  }
+
+  /* ---- CTA BAND ---- */
+  .cta-band {
+    padding: 40px 24px;
+    margin: 32px 12px;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    padding: 40px 24px 24px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .fb-legal {
+    justify-content: center;
+  }
+
+  /* ---- VIDEO MODAL ---- */
+  .video-modal-content {
+    width: calc(100vw - 32px);
+    border-radius: 20px;
+  }
+  .video-modal-footer {
+    padding: 24px !important;
+  }
+  .video-modal-footer h4 {
+    font-size: 20px !important;
+  }
+}
