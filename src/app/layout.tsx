@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "CEN | Plataforma de Educación Financiera",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" suppressHydrationWarning>
       <body className="font-epilogue antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );

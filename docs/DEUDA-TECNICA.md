@@ -1,56 +1,81 @@
 # Deuda Técnica — CEN Academy
-> Inventario generado automáticamente el 2026-05-10
-
-No se encontraron comentarios `// TODO`, `// FIXME` ni `// HACK` en el código fuente.
-Los ítems a continuación son deuda técnica identificada durante el proceso de estabilización.
+> Última actualización: 2026-05-10 | Post Sprint 3
 
 ---
 
-## Alta Prioridad
+## Resuelto en Sprint 2
 
-| # | Archivo | Descripción | Esfuerzo |
-|---|---------|-------------|----------|
-| 1 | `src/data/actividades/p5/act-p5-1-1-a.json` | `unit_title` incorrecto ("El sistema financiero global" → "El Banco de México...") | 5 min |
-| 2 | `src/data/actividades/s2/act-s2-4-1-a.json` | `unit_title` incorrecto | 5 min |
-| 3 | `src/data/actividades/s3/act-s3-2-4-a.json` | `unit_title` incorrecto | 5 min |
-| 4 | `src/data/actividades/s2/act-s2-1-5-a.json` | `unit_title` incorrecto | 5 min |
-| 5 | `src/data/actividades/p5/act-p5-4-5-a.json` | `unit_title` incorrecto ("Mi Portafolio" → "Shark Tank CEN") | 5 min |
+| # | Descripción | Sprint |
+|---|-------------|--------|
+| ✅ | `unit_title` incorrecto en 5 JSONs (ya estaban corregidos) | Sprint 2 |
+| ✅ | BuilderActivity: `calculos_automaticos` sin implementar → Panel "Calculadora en Vivo" | Sprint 2 |
+| ✅ | Recharts dimensiones negativas en SimulatorActivity | Sprint 2 |
+| ✅ | SyncEngine: `getSyncQueue()` sin validación UUID | Sprint 2 |
+| ✅ | `output: 'standalone'` en next.config.ts | Sprint 2 |
 
-## Media Prioridad
+## Resuelto en Sprint 3
 
-| # | Archivo | Descripción | Esfuerzo |
-|---|---------|-------------|----------|
-| 6 | `src/components/activities/BuilderActivity.tsx` | No renderiza `calculos_automaticos` de CONSTRUCTOR — los campos se muestran pero los cálculos en vivo no funcionan | 2h |
-| 7 | `src/app/hub/page.tsx` | Recharts `width/height` puede ser -1 en mount inicial si el contenedor no tiene dimensiones | 30 min |
-| 8 | `src/lib/hub.ts` | `getSyncQueue()` no valida que los items existentes sean UUIDs válidos al cargar la página | 30 min |
-| 9 | Supabase | Verificar manualmente que trigger `protect_sensitive_profile_fields` sigue activo | 15 min |
-
-## Baja Prioridad
-
-| # | Archivo | Descripción | Esfuerzo |
-|---|---------|-------------|----------|
-| 10 | `public/assets/extra/4.png` | Reemplazar placeholder (copia de 3.png) con imagen real | 5 min |
-| 11 | `src/app/dashboard/*/page.tsx` | Componentes de teacher usan `font-serif` (serif del navegador). Considerar usar `dashboard-serif-premium` (Playfair Display) explícitamente si se desea consistencia | 30 min |
-| 12 | `docs/ACTIVIDADES_UPGRADE_V2.md` | Las versiones mejoradas de 30 actividades están documentadas pero no aplicadas al código | 4-8h |
-| 13 | `next.config.ts` | Usar `output: 'standalone'` en producción para mejorar imagen Docker/Vercel | 15 min |
-| 14 | `src/app/academia/**` | Páginas de academia (bloque1–bloque7) son stubs — sin contenido real | Variable |
+| # | Descripción | Sprint |
+|---|-------------|--------|
+| ✅ | `typescript.ignoreBuildErrors: true` eliminado (0 errores confirmados) | Sprint 3 |
+| ✅ | Hub sidebar: colapsable en mobile (drawer) | Sprint 3 |
+| ✅ | Hub pillars grid: `minmax(420px)` → grid responsivo 1/2/3 columnas | Sprint 3 |
+| ✅ | Hub fuentes: `96px`, `44px`, `56px` → `clamp()` | Sprint 3 |
+| ✅ | Teacher dashboard: `ml-[260px]` → `md:ml-[260px]` (6 páginas) | Sprint 3 |
+| ✅ | Sidebar.tsx: `flex` → `hidden md:flex` (oculta en mobile) | Sprint 3 |
+| ✅ | Vercel Analytics integrado en layout.tsx | Sprint 3 |
+| ✅ | SyncEngine: logging con contexto (usuario, cantidad, resultado) | Sprint 3 |
+| ✅ | SyncEngine: auto-discard items > 7 días en cola | Sprint 3 |
+| ✅ | `supabase/security_triggers.sql` placeholder versionado | Sprint 3 |
+| ✅ | `supabase/indexes.sql` generado (pendiente ejecución manual) | Sprint 3 |
 
 ---
 
-## Seguridad Pendiente de Verificación Manual
+## 🔴 Alta Prioridad (sin esto hay riesgos activos)
 
-Estos ítems requieren acceso al panel de Supabase:
-
-1. **Trigger `protect_sensitive_profile_fields`**: Verificar que previene que un estudiante actualice `role` a `admin` via REST
-2. **RLS en tabla `progress`**: Verificar que `anon` no puede leer, `authenticated` solo ve su propia data
-3. **RLS en tabla `profiles`**: Verificar que `authenticated` solo puede actualizar campos no-críticos de su propio perfil
+| # | Descripción | Esfuerzo | Acción requerida |
+|---|-------------|----------|------------------|
+| 1 | **Trigger `protect_sensitive_profile_fields` no versionado** — existe en Supabase pero no en código. Si el proyecto se migra, el control de seguridad se pierde silenciosamente. | 20 min | Usuario: copiar SQL desde Supabase Dashboard → pegar en `supabase/security_triggers.sql` → commit |
+| 2 | **Ejecutar `supabase/indexes.sql`** — índices de performance generados pero no aplicados. | 5 min | Usuario: Supabase Dashboard → SQL Editor → pegar y ejecutar el archivo |
+| 3 | **Sin aviso de privacidad ni consentimiento parental** — la plataforma maneja datos de menores. Requisito LFPDPPP México para escuelas reales. | 2-4h (legal + desarrollo) | Requiere decisión de producto + redacción legal |
+| 4 | **Sin monitoreo de errores en producción** — Sentry no completado. Errores en producción son invisibles. | 30 min | Usuario: crear cuenta en sentry.io → crear proyecto Next.js → ejecutar `npx @sentry/wizard@latest -i nextjs` → agregar DSN a Vercel env vars |
 
 ---
 
-## Variables de Entorno en Vercel
+## 🟠 Media Prioridad
 
-Verificar en Vercel Dashboard → Settings → Environment Variables:
+| # | Descripción | Esfuerzo |
+|---|-------------|----------|
+| 5 | `public/assets/extra/4.png` — placeholder (copia de 3.png). Imagen decorativa sin contenido real. | 5 min cuando esté disponible |
+| 6 | `src/app/academia/**` — páginas de academia son stubs sin contenido real (bloque1–bloque7) | Variable |
+| 7 | `docs/ACTIVIDADES_UPGRADE_V2.md` — 30 actividades mejoradas documentadas pero no aplicadas | 4-8h |
+| 8 | Mobile responsive completo — los 3 fixes críticos se aplicaron en Sprint 3 pero verificación visual diferida. Ver `MOBILE-AUDIT-SPRINT2.md` para los 25 issues restantes. **Prioridad solo si se expande a B2C / uso doméstico en celular.** | Sprint completo |
+
+---
+
+## 🟡 Baja Prioridad
+
+| # | Descripción | Esfuerzo |
+|---|-------------|----------|
+| 9 | RLS tabla `profiles` — solo se verificó `progress` en Sprint 2. Verificar manualmente en Supabase Dashboard. | 15 min |
+| 10 | Sin tests automatizados (unitarios, integración o e2e). Toda la validación es manual + build. | Sprint completo |
+| 11 | Sin staging environment — cambios van directo a producción desde el branch main. | Configuración Vercel |
+
+---
+
+## Acciones Manuales Pendientes del Usuario (ordenadas por urgencia)
+
+1. **URGENTE** — Pegar SQL del trigger en `supabase/security_triggers.sql` → hacer commit
+2. **IMPORTANTE** — Ejecutar `supabase/indexes.sql` en Supabase Dashboard SQL Editor
+3. **IMPORTANTE** — Completar setup de Sentry (ver instrucciones en REPORTE-SPRINT3-CLAUDE.md)
+4. **LEGAL** — Agregar aviso de privacidad antes de usuarios reales en escuelas
+
+---
+
+## Variables de Entorno Requeridas (Vercel Dashboard)
+
 - `NEXT_PUBLIC_SUPABASE_URL` — requerido
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — requerido
+- `SENTRY_DSN` — pendiente (cuando se complete setup de Sentry)
 
 La `service_role key` de Supabase NO debe estar en variables de entorno del frontend.

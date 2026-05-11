@@ -41,7 +41,7 @@ export default function Sidebar({
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-40 flex h-screen w-[260px] flex-col bg-[#011C40] overflow-hidden shadow-[20px_0_60px_rgba(1,28,64,0.3)] border-r border-white/5 font-['Epilogue'] transition-all noise-texture">
+    <aside className="hidden md:flex fixed left-0 top-0 z-40 h-screen w-[260px] flex-col bg-[#011C40] overflow-hidden shadow-[20px_0_60px_rgba(1,28,64,0.3)] border-r border-white/5 font-['Epilogue'] transition-all noise-texture">
       
       {/* Decorative Gradient Glows (Landing Parity) */}
       <div className="absolute -left-20 -top-20 w-64 h-64 bg-[#FF8C00]/30 rounded-full blur-[100px] pointer-events-none opacity-40 animate-pulse" />

@@ -479,7 +479,9 @@ export async function markActivityComplete(userId: string, activityId: string) {
  */
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-function getSyncQueue(): { userId: string, activityId: string, attempts?: number }[] {
+const SYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
+
+function getSyncQueue(): { userId: string, activityId: string, attempts?: number, timestamp?: number }[] {
   if (typeof window === 'undefined') return [];
   const saved = localStorage.getItem('cen_sync_queue');
   if (!saved) return [];
@@ -489,13 +491,20 @@ function getSyncQueue(): { userId: string, activityId: string, attempts?: number
       localStorage.removeItem('cen_sync_queue');
       return [];
     }
-    const valid = queue.filter((item: any) =>
-      item && typeof item === 'object' &&
-      item.userId && UUID_REGEX.test(item.userId) &&
-      item.activityId && typeof item.activityId === 'string'
-    );
+    const now = Date.now();
+    const valid = queue.filter((item: any) => {
+      if (!item || typeof item !== 'object') return false;
+      if (!item.userId || !UUID_REGEX.test(item.userId)) return false;
+      if (!item.activityId || typeof item.activityId !== 'string') return false;
+      // Descartar items más viejos de 7 días
+      if (item.timestamp && (now - item.timestamp) > SYNC_MAX_AGE_MS) {
+        console.warn(`[SyncEngine] Descartando item expirado (>7 días): ${item.activityId}`);
+        return false;
+      }
+      return true;
+    });
     if (valid.length !== queue.length) {
-      console.warn(`[SyncEngine] Limpiados ${queue.length - valid.length} items inválidos al cargar`);
+      console.warn(`[SyncEngine] Limpiados ${queue.length - valid.length} items (inválidos o expirados) al cargar`);
       localStorage.setItem('cen_sync_queue', JSON.stringify(valid));
     }
     return valid;
@@ -518,9 +527,9 @@ function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
   const queue = getSyncQueue();
   // Evitar duplicados en la cola
   if (!queue.some(item => item.userId === userId && item.activityId === activityId)) {
-    queue.push({ userId, activityId, attempts });
+    queue.push({ userId, activityId, attempts, timestamp: Date.now() });
     localStorage.setItem('cen_sync_queue', JSON.stringify(queue));
-    if (process.env.NODE_ENV === 'development') console.log(`[SyncEngine] Actividad encolada offline: ${activityId}`);
+    console.info(`[SyncEngine] Actividad encolada offline: ${activityId} (cola total: ${queue.length + 1} items)`);
   }
 }
 
@@ -529,11 +538,17 @@ export async function processSyncQueue() {
   const queue = getSyncQueue();
   if (queue.length === 0) return;
 
-  if (process.env.NODE_ENV === 'development') console.log(`[SyncEngine] Procesando cola (${queue.length} elementos)...`);
+  // Determinar estado de sesión para contexto de log
+  let userContext = 'desconocido';
+  try {
+    const { data: { session } } = await supabase.auth.getSession();
+    userContext = session?.user?.id ? `usuario:${session.user.id.slice(0, 8)}...` : 'invitado/sin-sesión';
+  } catch { /* no bloquear el sync si falla la sesión */ }
+
+  console.info(`[SyncEngine] Procesando cola: ${queue.length} item(s) | ${userContext}`);
 
   const results = await Promise.allSettled(
     queue.map(item => {
-      // Incrementar contador de intentos
       item.attempts = (item.attempts || 0) + 1;
       return (supabase.from('progress').upsert(
         { user_id: item.userId, activity_id: item.activityId },
@@ -542,18 +557,21 @@ export async function processSyncQueue() {
     })
   );
 
+  let synced = 0;
+  let failed = 0;
   const remaining = queue.filter((item, i) => {
     const r = results[i];
     const isError = r.status === 'rejected' || (r.status === 'fulfilled' && (r.value as any)?.error);
-    
-    // Fix B: Descartar tras 3 fallos
-    if (isError && (item.attempts || 0) < 3) return true;
-    if (isError && (item.attempts || 0) >= 3) {
-      console.warn(`[SyncEngine] Descartando actividad tras 3 fallos consecutivos: ${item.activityId}`);
+    if (!isError) { synced++; return false; }
+    failed++;
+    if ((item.attempts || 0) >= 3) {
+      console.warn(`[SyncEngine] Descartando actividad tras 3 fallos: ${item.activityId}`);
+      return false;
     }
-    return false;
+    return true;
   });
 
+  console.info(`[SyncEngine] Resultado: ${synced} sincronizados, ${failed} fallidos, ${remaining.length} en cola`);
   localStorage.setItem('cen_sync_queue', JSON.stringify(remaining));
 }
 

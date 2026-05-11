@@ -194,7 +194,7 @@ export default function ModulosPage() {
 
       <Sidebar teacherName={teacher?.full_name} groupId={teacher?.group_id} />
 
-      <main className="flex-1 ml-[260px] relative z-10 dashboard-scrollbar-thin overflow-y-auto h-screen flex flex-col">
+      <main className="flex-1 md:ml-[260px] relative z-10 dashboard-scrollbar-thin overflow-y-auto h-screen flex flex-col">
         
         {/* HUD STATUS BAR */}
         <div className={`sticky top-0 z-50 backdrop-blur-3xl border-b px-12 py-5 flex items-center justify-between transition-all duration-700 ${theme === 'dark' ? 'bg-[#011C40]/80 border-white/5 shadow-2xl' : 'bg-[#F4F1EA]/80 border-[#011C40]/5 shadow-lg'}`}>

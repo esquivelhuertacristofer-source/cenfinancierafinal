@@ -212,7 +212,7 @@ export default function AlumnosPage() {
   if (loading) return (
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue']">
       <Sidebar teacherName="..." groupId="..." />
-      <main className="flex-1 ml-[260px] p-12 space-y-16">
+      <main className="flex-1 md:ml-[260px] p-12 space-y-16">
         <div className="h-64 bg-[#011C40] rounded-[4rem] animate-pulse" />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {[1,2,3,4,5,6].map(i => (
@@ -227,7 +227,7 @@ export default function AlumnosPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] relative overflow-hidden">
       <Sidebar teacherName={teacher?.full_name} groupId={teacher?.group_id} />
 
-      <main className="flex-1 ml-[260px] p-12 space-y-16 relative z-10">
+      <main className="flex-1 md:ml-[260px] p-12 space-y-16 relative z-10">
         
         {/* HEADER */}
         <div className="relative overflow-hidden rounded-[4rem] bg-[#011C40] p-16 shadow-2xl animate-in fade-in slide-in-from-top-12 duration-700">

@@ -157,7 +157,7 @@ export default function BibliografiaPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] text-[#011C40]">
       <Sidebar teacherName="Profesor CEN" groupId="MASTER-REF" />
 
-      <main className="flex-1 ml-[260px] p-12 space-y-12 relative">
+      <main className="flex-1 md:ml-[260px] p-8 md:p-12 space-y-12 relative">
         
         {/* HEADER SECTION */}
         <div className="relative overflow-hidden rounded-[3.5rem] bg-[#011C40] p-16 shadow-[0_40px_80px_rgba(1,28,64,0.3)] animate-in fade-in slide-in-from-top-12 duration-700">

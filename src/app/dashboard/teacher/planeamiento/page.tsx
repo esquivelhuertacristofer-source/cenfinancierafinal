@@ -61,7 +61,7 @@ export default function PlaneamientoPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] text-[#011C40]">
       <Sidebar teacherName="Profesor CEN" groupId={`${selectedGrade.toUpperCase()}-A`} />
 
-      <main className="flex-1 ml-[260px] flex h-screen overflow-hidden">
+      <main className="flex-1 md:ml-[260px] flex h-screen overflow-hidden">
         
         {/* LEFT PANEL: UNIT SELECTOR (Bento Sidebar) */}
         <div className="w-[380px] bg-white/50 backdrop-blur-xl border-r border-white/40 flex flex-col shadow-[20px_0_40px_rgba(0,0,0,0.02)] relative z-10">

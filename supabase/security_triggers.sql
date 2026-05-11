@@ -1,0 +1,42 @@
+-- supabase/security_triggers.sql
+-- IMPORTANTE: Este archivo debe contener el trigger protect_sensitive_profile_fields
+-- y cualquier otro trigger de seguridad activo en producción.
+--
+-- Sin este archivo versionado, si el proyecto Supabase se migra o recrea,
+-- los controles de seguridad se pierden silenciosamente.
+--
+-- INSTRUCCIONES PARA EL USUARIO:
+-- 1. Ir a https://supabase.com/dashboard/project/<tu-proyecto>/database/functions
+-- 2. Buscar la función protect_sensitive_profile_fields
+-- 3. Copiar el código completo (CREATE OR REPLACE FUNCTION ... LANGUAGE plpgsql SECURITY DEFINER)
+-- 4. Pegarlo abajo de la línea marcada
+-- 5. Hacer lo mismo para el trigger asociado en /database/triggers
+-- 6. Hacer git add supabase/security_triggers.sql && git commit && git push
+--
+-- =====================================================
+-- PEGAR AQUÍ EL TRIGGER protect_sensitive_profile_fields:
+-- =====================================================
+
+-- TODO: usuario debe pegar el código exacto del Supabase Dashboard
+-- Ejemplo de estructura esperada:
+--
+-- CREATE OR REPLACE FUNCTION protect_sensitive_profile_fields()
+-- RETURNS TRIGGER LANGUAGE plpgsql SECURITY DEFINER AS $$
+-- BEGIN
+--   IF NEW.role IS DISTINCT FROM OLD.role THEN
+--     RAISE EXCEPTION 'No puedes cambiar el campo role directamente.';
+--   END IF;
+--   RETURN NEW;
+-- END;
+-- $$;
+--
+-- CREATE OR REPLACE TRIGGER trg_protect_sensitive_profile_fields
+--   BEFORE UPDATE ON profiles
+--   FOR EACH ROW EXECUTE FUNCTION protect_sensitive_profile_fields();
+
+-- =====================================================
+-- Otros triggers de seguridad (si existen):
+-- =====================================================
+
+-- TODO: verificar en el dashboard si hay otros triggers SECURITY DEFINER
+-- en Database > Triggers

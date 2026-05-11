@@ -19,7 +19,8 @@ import {
   Coins,
   Medal,
   Play,
-  Cloud
+  Cloud,
+  Menu
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import {
@@ -70,6 +71,7 @@ export default function StudentHubV19() {
   const [showContentModal, setShowContentModal] = useState(false);
   const [activeUnit, setActiveUnit] = useState<any>(null);
   const [isDark, setIsDark] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [totalXP, setTotalXP] = useState(0);
   const [arenaQuiz, setArenaQuiz] = useState<QuizQuestion[]>([]);
@@ -301,10 +303,33 @@ export default function StudentHubV19() {
         .side-hud {
           width: 320px; background: var(--bg-side); border-right: 1px solid var(--border);
           backdrop-filter: blur(40px); display: flex; flex-direction: column; padding: 48px 24px; z-index: 50;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        @media (max-width: 768px) {
+          .side-hud { position: fixed; top: 0; left: 0; height: 100vh; transform: translateX(-100%); z-index: 200; box-shadow: 20px 0 60px rgba(0,0,0,0.5); }
+          .side-hud.open { transform: translateX(0); }
+        }
+        .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 190; backdrop-filter: blur(4px); }
+        @media (max-width: 768px) {
+          .sidebar-overlay.visible { display: block; }
+          .hamburger-btn { display: flex !important; }
+        }
+        .hamburger-btn {
+          display: none; position: fixed; top: 20px; left: 20px; z-index: 100;
+          width: 52px; height: 52px; border-radius: 16px; background: var(--bg-side);
+          border: 1px solid var(--border); cursor: pointer; align-items: center; justify-content: center;
+          color: var(--text-main); box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: all 0.3s;
+        }
+        .hamburger-btn:hover { background: #FF8C00; color: white; border-color: transparent; }
+        .sidebar-close-btn {
+          display: none; position: absolute; top: 16px; right: 16px;
+          width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.1);
+          border: none; cursor: pointer; align-items: center; justify-content: center; color: var(--text-main);
+        }
+        @media (max-width: 768px) { .sidebar-close-btn { display: flex; } }
 
         .brand-container { margin-bottom: 60px; padding: 0 10px; }
-        .brand-top { font-size: 44px; font-family: 'Epilogue', sans-serif; font-weight: 900; letter-spacing: -0.06em; color: var(--text-main); line-height: 1; }
+        .brand-top { font-size: clamp(1.5rem, 5vw, 2.75rem); font-family: 'Epilogue', sans-serif; font-weight: 900; letter-spacing: -0.06em; color: var(--text-main); line-height: 1; }
         .brand-sub { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.35em; color: #FF8C00; margin-top: 8px; opacity: 0.9; }
 
         .nav-link {
@@ -329,7 +354,7 @@ export default function StudentHubV19() {
         }
         .gb-glow { position: absolute; top: -50%; left: -20%; width: 60%; height: 200%; background: radial-gradient(circle, var(--grade-accent) 0.15, transparent 70%); pointer-events: none; opacity: 0.15; }
         .gb-tag { font-size: 10px; font-weight: 900; color: var(--grade-accent); text-transform: uppercase; letter-spacing: 0.4em; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
-        .gb-title { font-size: 96px; font-family: 'Epilogue', sans-serif; font-weight: 900; letter-spacing: -0.06em; margin-bottom: 24px; line-height: 0.85; color: var(--text-main); }
+        .gb-title { font-size: clamp(2.5rem, 8vw, 6rem); font-family: 'Epilogue', sans-serif; font-weight: 900; letter-spacing: -0.06em; margin-bottom: 24px; line-height: 0.85; color: var(--text-main); }
         .gb-description { font-size: 20px; line-height: 1.8; color: var(--text-muted); max-width: 850px; margin-bottom: 60px; font-weight: 500; }
 
         .malla-btn {
@@ -350,9 +375,17 @@ export default function StudentHubV19() {
 
         .pillars-section { padding: 80px; width: 100%; }
         .section-header { margin-bottom: 60px; }
-        .section-header h2 { font-size: 56px; font-family: 'Epilogue', sans-serif; font-weight: 900; tracking: -0.06em; margin-bottom: 12px; }
+        .section-header h2 { font-size: clamp(1.75rem, 5vw, 3.5rem); font-family: 'Epilogue', sans-serif; font-weight: 900; tracking: -0.06em; margin-bottom: 12px; }
         
-        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 48px; width: 100%; }
+        .pillars-grid { display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%; }
+        @media (min-width: 640px) { .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+        @media (min-width: 1400px) { .pillars-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
+        @media (max-width: 768px) {
+          .grade-briefing { padding: 60px 20px 40px 20px !important; }
+          .pillars-section { padding: 32px 20px !important; }
+          .gb-grade-badge { display: none; }
+          .theme-toggle { top: 20px; right: 20px; width: 52px; height: 52px; }
+        }
         .p-card-v16 {
           background: var(--card-bg); border: 1px solid var(--border);
           border-radius: 56px; padding: 56px; height: 600px; position: relative; overflow: hidden;
@@ -470,8 +503,19 @@ export default function StudentHubV19() {
         <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto rotate-[80deg]" />
       </div>
 
+      {/* MOBILE HAMBURGER */}
+      <button className="hamburger-btn" onClick={() => setSidebarOpen(true)} aria-label="Abrir menú">
+        <Menu size={22} />
+      </button>
+
+      {/* SIDEBAR OVERLAY (mobile) */}
+      <div className={`sidebar-overlay ${sidebarOpen ? 'visible' : ''}`} onClick={() => setSidebarOpen(false)} />
+
       {/* SIDEBAR */}
-      <aside className="side-hud">
+      <aside className={`side-hud ${sidebarOpen ? 'open' : ''}`}>
+        <button className="sidebar-close-btn" onClick={() => setSidebarOpen(false)} aria-label="Cerrar menú">
+          <X size={18} />
+        </button>
         <div className="brand-container">
           <div className="brand-top">CEN</div>
           <div className="brand-sub">Educación Financiera</div>
