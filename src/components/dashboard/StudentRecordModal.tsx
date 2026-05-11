@@ -8,6 +8,7 @@ interface ProgressItem {
   id: string;
   activity_id: string;
   created_at: string;
+  score?: number | null;
 }
 
 export default function StudentRecordModal({ studentId, studentName, onClose, isDark = true }: { studentId: string; studentName: string; onClose: () => void; isDark?: boolean }) {
@@ -17,13 +18,24 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
   useEffect(() => {
     async function fetchRecord() {
       setLoading(true);
-      const { data } = await supabase
-        .from('progress')
-        .select('*')
+      // Try intentos first (new schema), fall back to progress (legacy)
+      const { data: intentos } = await supabase
+        .from('intentos')
+        .select('id, activity_id, completed_at, score')
         .eq('user_id', studentId)
-        .order('created_at', { ascending: false });
-      
-      setProgress(data || []);
+        .eq('status', 'completed')
+        .order('completed_at', { ascending: false });
+
+      if (intentos && intentos.length > 0) {
+        setProgress(intentos.map((it: any) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
+      } else {
+        const { data } = await supabase
+          .from('progress')
+          .select('*')
+          .eq('user_id', studentId)
+          .order('created_at', { ascending: false });
+        setProgress(data || []);
+      }
       setLoading(false);
     }
     fetchRecord();
@@ -63,7 +75,7 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
           <div className="p-8 bg-white/5 rounded-[30px] border border-white/5">
             <div className="text-[9px] font-black uppercase tracking-[0.3em] opacity-40 mb-2">Puntos XP</div>
             <div className="text-3xl font-black flex items-center gap-3">
-               <Zap className="text-[#FF8C00]" /> {progress.length * 50}
+               <Zap className="text-[#FF8C00]" /> {progress.reduce((acc, p) => acc + (p.score ?? 50), 0)}
             </div>
           </div>
           <div className="p-8 bg-white/5 rounded-[30px] border border-white/5">
@@ -100,8 +112,15 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
                   </div>
                 </div>
               </div>
-              <div className="px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg text-[9px] font-black uppercase tracking-[0.2em] border border-emerald-500/20">
-                Verificado
+              <div className="flex items-center gap-3">
+                {item.score != null && (
+                  <div className="px-3 py-1.5 bg-white/5 rounded-lg text-[9px] font-black uppercase tracking-widest opacity-60">
+                    {item.score}/100
+                  </div>
+                )}
+                <div className="px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg text-[9px] font-black uppercase tracking-[0.2em] border border-emerald-500/20">
+                  Verificado
+                </div>
               </div>
             </div>
           ))}

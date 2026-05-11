@@ -33,6 +33,7 @@ interface Profile {
 export default function TeacherDashboard() {
   const [loading, setLoading] = useState(true);
   const [teacherData, setTeacherData] = useState<Profile | null>(null);
+  const [teacherGroupIds, setTeacherGroupIds] = useState<string[]>([]);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [selectedLevel, setSelectedLevel] = useState<'primaria' | 'secundaria'>('secundaria');
   const router = useRouter();
@@ -54,8 +55,17 @@ export default function TeacherDashboard() {
           return;
         }
         setTeacherData(profile);
-        // Autodetect level based on group_id or profile metadata if available
         if (profile.group_id?.toLowerCase().includes('p')) setSelectedLevel('primaria');
+
+        // Load grupos from institutional schema
+        const { data: grupos } = await supabase
+          .from("grupos")
+          .select("id, grado")
+          .eq("id_profesor", user.id);
+        if (grupos && grupos.length > 0) {
+          setTeacherGroupIds(grupos.map((g: any) => g.id));
+          if (grupos.some((g: any) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
+        }
       } catch {
         // silent
       } finally {
@@ -184,19 +194,19 @@ export default function TeacherDashboard() {
                 </div>
              </div>
              
-             <MetricCards groupId={teacherData?.group_id} isDark={theme === 'dark'} />
+             <MetricCards groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} isDark={theme === 'dark'} />
           </div>
 
           {/* BENTO GRID: FEED & RANKING */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch pb-20 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-400">
             {/* PANEL IZQUIERDO: ACTIVIDAD */}
             <div className="lg:col-span-7">
-               <LatestDeliveries groupId={teacherData?.group_id} isDark={theme === 'dark'} />
+               <LatestDeliveries groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} isDark={theme === 'dark'} />
             </div>
-            
+
             {/* PANEL DERECHO: NARANJA PREMIUM (RANKING) */}
             <div className="lg:col-span-5">
-               <TopAlumnos groupId={teacherData?.group_id} isDark={theme === 'dark'} />
+               <TopAlumnos groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} isDark={theme === 'dark'} />
             </div>
           </div>
         </div>

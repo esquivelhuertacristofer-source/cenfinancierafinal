@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# generated artifacts (credentials PDFs, validation outputs)
+output/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

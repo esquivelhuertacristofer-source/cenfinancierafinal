@@ -463,21 +463,58 @@ export async function getCompletedActivities(userId: string): Promise<Set<string
   return withTimeout(query, 4000, new Set<string>());
 }
 
-export async function markActivityComplete(userId: string, activityId: string) {
-  // Intentar sincronizar con Supabase inmediatamente
-  try {
-    const { error } = await withTimeout(
-      supabase.from('progress').upsert({ user_id: userId, activity_id: activityId }, { onConflict: 'user_id,activity_id' }) as unknown as Promise<{ error: { message: string } | null }>,
-      3000,
-      { error: { message: 'timeout' } }
-    );
+export async function markActivityComplete(
+  userId: string,
+  activityId: string,
+  opts: { score?: number; tiempo_segundos?: number; last_step?: number } = {}
+) {
+  console.info(`[markActivityComplete] Iniciando guardado — usuario:${userId.slice(0,8)}... actividad:${activityId}`);
 
-    if (!error) return true;
-    
-    // Si falla o hay timeout, encolar localmente
+  try {
+    // Escribir a tabla intentos (nueva — métricas detalladas)
+    const intentoPayload = {
+      user_id:         userId,
+      activity_id:     activityId,
+      status:          'completed' as const,
+      score:           opts.score ?? null,
+      tiempo_segundos: opts.tiempo_segundos ?? null,
+      last_step:       opts.last_step ?? null,
+      completed_at:    new Date().toISOString(),
+    };
+
+    const [intentoResult, progressResult] = await Promise.all([
+      withTimeout(
+        supabase.from('intentos').insert(intentoPayload) as unknown as Promise<{ error: { message: string; code?: string } | null }>,
+        3000,
+        { error: { message: 'timeout', code: 'TIMEOUT' } }
+      ),
+      // Mantener tabla progress por compatibilidad con código existente
+      withTimeout(
+        supabase.from('progress').upsert({ user_id: userId, activity_id: activityId }, { onConflict: 'user_id,activity_id' }) as unknown as Promise<{ error: { message: string; code?: string } | null }>,
+        3000,
+        { error: { message: 'timeout', code: 'TIMEOUT' } }
+      ),
+    ]);
+
+    if (intentoResult.error) {
+      console.warn(`[markActivityComplete] ⚠️ intentos falló — código:${intentoResult.error.code} msg:${intentoResult.error.message}`);
+    }
+    if (progressResult.error) {
+      console.warn(`[markActivityComplete] ⚠️ progress falló — código:${progressResult.error.code} msg:${progressResult.error.message}`);
+    }
+
+    if (!intentoResult.error || !progressResult.error) {
+      console.info(`[markActivityComplete] ✅ Guardado exitosamente — actividad:${activityId}`);
+      return true;
+    }
+
+    // Ambas fallaron → encolar para sync offline
+    console.error(`[markActivityComplete] ❌ Ambas escrituras fallaron, encolando offline`);
     addToSyncQueue(userId, activityId);
     return false;
-  } catch (e) {
+
+  } catch (e: any) {
+    console.error(`[markActivityComplete] ❌ Excepción inesperada — ${e?.message ?? e}`);
     addToSyncQueue(userId, activityId);
     return false;
   }
