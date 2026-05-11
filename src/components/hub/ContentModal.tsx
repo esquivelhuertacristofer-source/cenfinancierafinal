@@ -426,7 +426,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { uni
         <div className="w-40 h-40 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 flex items-center justify-center text-[#10B981] mb-10 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
            <CheckCircle2 size={80} className="animate-bounce" />
         </div>
-        <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">Laboratorio Completado</h3>
+        <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">Práctica Completada ✓</h3>
         <p className="text-white/40 text-xl font-medium mb-12">Tus resultados han sido sincronizados con el Profesor.</p>
         <button 
           onClick={() => onComplete()} 

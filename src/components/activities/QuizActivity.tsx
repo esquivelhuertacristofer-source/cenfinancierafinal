@@ -58,7 +58,17 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
     setIsSubmitting(true);
     setTimeout(() => {
       if (onComplete) onComplete(score);
+      setIsSubmitting(false);
     }, 500);
+  };
+
+  const handleRetry = () => {
+    setCurrentIdx(0);
+    setAnswers([]);
+    setShowFeedback(false);
+    setIsFinished(false);
+    setIsSubmitting(false);
+    setStreak(0);
   };
   if (!preguntas.length || !currentQuestion) {
     return (
@@ -94,6 +104,9 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                     {passed ? 'Certificación Lograda' : 'Revisión Necesaria'}
                   </h2>
                   <p className="text-white/40 text-lg md:text-xl font-medium italic">Resultado de la Evaluación Diamond</p>
+                  {!passed && (
+                    <p className="text-white/30 text-base font-medium">Puedes volver a intentarlo cuando quieras</p>
+                  )}
                </div>
 
                <div className="grid grid-cols-2 gap-4">
@@ -107,15 +120,16 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                   </div>
                </div>
 
-               <motion.button 
+               <motion.button
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
-                 onClick={handleFinalize}
+                 onClick={passed ? handleFinalize : handleRetry}
                  disabled={isSubmitting}
-                 className={`w-full py-8 md:py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]
+                 className={`w-full py-8 md:py-10 rounded-[40px] font-black text-xs uppercase tracking-[0.6em] transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]
+                   ${passed ? 'bg-white text-black' : 'bg-[#FF8C00] text-black'}
                    ${isSubmitting ? 'opacity-50' : ''}`}
                >
-                  {isSubmitting ? 'Sincronizando...' : 'Finalizar Certificación'}
+                  {isSubmitting ? 'Sincronizando...' : passed ? 'Finalizar Certificación' : 'Reintentar'}
                </motion.button>
             </div>
          </div>
