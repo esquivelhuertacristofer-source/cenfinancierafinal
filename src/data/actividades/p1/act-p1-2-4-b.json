@@ -10,106 +10,56 @@
   "descripcion": "¡Entrena tu mente y tu memoria! Encuentra las palabras que siempre van juntas cuando hablamos de prestar y cumplir.",
   "objetivo": "Asociar conceptos de responsabilidad y ética financiera mediante el juego de memoria",
   "xp": 300,
-  "parejas": [
+  "pares": [
     {
-      "id": 1,
-      "texto": "Préstamo",
-      "emoji": "🤝"
+      "id": "p1",
+      "termino": "Préstamo 🤝",
+      "definicion": "Devolver 🔙"
     },
     {
-      "id": 1,
-      "texto": "Devolver",
-      "emoji": "🔙"
+      "id": "p2",
+      "termino": "Confianza ✨",
+      "definicion": "Promesa 🗣️"
     },
     {
-      "id": 2,
-      "texto": "Confianza",
-      "emoji": "✨"
+      "id": "p3",
+      "termino": "Deuda 📉",
+      "definicion": "Pagar 💰"
     },
     {
-      "id": 2,
-      "texto": "Promesa",
-      "emoji": "🗣️"
+      "id": "p4",
+      "termino": "Amigo 🧒",
+      "definicion": "Ayudar 🆘"
     },
     {
-      "id": 3,
-      "texto": "Deuda",
-      "emoji": "📉"
+      "id": "p5",
+      "termino": "Ahorro 🐷",
+      "definicion": "Alcancía 🛖"
     },
     {
-      "id": 3,
-      "texto": "Pagar",
-      "emoji": "💰"
+      "id": "p6",
+      "termino": "Plazo 📅",
+      "definicion": "Tiempo ⌛"
     },
     {
-      "id": 4,
-      "texto": "Amigo",
-      "emoji": "🧒"
+      "id": "p7",
+      "termino": "Responsable ✅",
+      "definicion": "Cuidar 👐"
     },
     {
-      "id": 4,
-      "texto": "Ayudar",
-      "emoji": "🆘"
+      "id": "p8",
+      "termino": "Palabra 👂",
+      "definicion": "Cumplir 🎯"
     },
     {
-      "id": 5,
-      "texto": "Ahorro",
-      "emoji": "🐷"
+      "id": "p9",
+      "termino": "Reponer 🔄",
+      "definicion": "Nuevo 🆕"
     },
     {
-      "id": 5,
-      "texto": "Alcancía",
-      "emoji": "🛖"
-    },
-    {
-      "id": 6,
-      "texto": "Plazo",
-      "emoji": "📅"
-    },
-    {
-      "id": 6,
-      "texto": "Tiempo",
-      "emoji": "⌛"
-    },
-    {
-      "id": 7,
-      "texto": "Responsable",
-      "emoji": "✅"
-    },
-    {
-      "id": 7,
-      "texto": "Cuidar",
-      "emoji": "👐"
-    },
-    {
-      "id": 8,
-      "texto": "Palabra",
-      "emoji": "👂"
-    },
-    {
-      "id": 8,
-      "texto": "Cumplir",
-      "emoji": "🎯"
-    },
-    {
-      "id": 9,
-      "texto": "Reponer",
-      "emoji": "🔄"
-    },
-    {
-      "id": 9,
-      "texto": "Nuevo",
-      "emoji": "🆕"
-    },
-    {
-      "id": 10,
-      "texto": "Gracias",
-      "emoji": "🙏"
-    },
-    {
-      "id": 10,
-      "texto": "Amabilidad",
-      "emoji": "😊"
+      "id": "p10",
+      "termino": "Gracias 🙏",
+      "definicion": "Amabilidad 😊"
     }
   ],
   "versión": "2026.Diamond.V2"

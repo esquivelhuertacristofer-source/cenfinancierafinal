@@ -1,5 +1,5 @@
 {
-  "code": "ACT-P2-3-1-A",
+  "code": "P2-3-1-A",
   "unit_code": "P2-3-1",
   "unit_title": "El presupuesto de Ceny para la semana",
   "level": "Primaria 2",
@@ -10,9 +10,8 @@
   "descripcion": "Un presupuesto es como el plano de una casa. ¡Aprende a construir tu semana sin quedarte sin un peso!",
   "objetivo": "Aprender a distribuir el dinero disponible entre gastos necesarios y ahorro",
   "xp": 200,
-  "contexto": "Lee el texto y elige la palabra correcta para cada espacio en blanco.",
-  "texto": "Para hacer un presupuesto, primero anoto mis __BLANK1__, que es el dinero que recibo de mi domingo. Luego resto mis __BLANK2__, que es el dinero que sale de mi bolsa. Si quiero un juguete caro, debo separar una parte para el __BLANK3__ antes de gastar en dulces. Un presupuesto me ayuda a que el dinero me __BLANK4__ para toda la semana. Si gasto más de lo que tengo, tendré problemas y tendré que pedir __BLANK5__. Por eso, un genio financiero siempre hace un __BLANK6__ el domingo por la noche. ¡Tener un __BLANK7__ me da libertad para comprar lo que realmente importa!",
-  "blanks": [
+  "texto": "Para hacer un presupuesto, primero anoto mis [BLANK1], que es el dinero que recibo de mi domingo. Luego resto mis [BLANK2], que es el dinero que sale de mi bolsa. Si quiero un juguete caro, debo separar una parte para el [BLANK3] antes de gastar en dulces. Un presupuesto me ayuda a que el dinero me [BLANK4] para toda la semana. Si gasto más de lo que tengo, tendré problemas y tendré que pedir [BLANK5]. Por eso, un genio financiero siempre hace un [BLANK6] el domingo por la noche. ¡Tener un [BLANK7] me da libertad para comprar lo que realmente importa!",
+  "espacios": [
     {
       "id": "BLANK1",
       "opciones": [
@@ -20,7 +19,7 @@
         "gastos",
         "juguetes"
       ],
-      "respuesta": "ingresos"
+      "correcta": "ingresos"
     },
     {
       "id": "BLANK2",
@@ -29,7 +28,7 @@
         "regalos",
         "premios"
       ],
-      "respuesta": "gastos"
+      "correcta": "gastos"
     },
     {
       "id": "BLANK3",
@@ -38,7 +37,7 @@
         "cine",
         "juego"
       ],
-      "respuesta": "ahorro"
+      "correcta": "ahorro"
     },
     {
       "id": "BLANK4",
@@ -47,7 +46,7 @@
         "sobre",
         "falte"
       ],
-      "respuesta": "alcance"
+      "correcta": "alcance"
     },
     {
       "id": "BLANK5",
@@ -56,7 +55,7 @@
         "permiso",
         "comida"
       ],
-      "respuesta": "prestado"
+      "correcta": "prestado"
     },
     {
       "id": "BLANK6",
@@ -65,7 +64,7 @@
         "dibujo",
         "pastel"
       ],
-      "respuesta": "plan"
+      "correcta": "plan"
     },
     {
       "id": "BLANK7",
@@ -74,7 +73,7 @@
         "tesoro",
         "carro"
       ],
-      "respuesta": "mapa"
+      "correcta": "mapa"
     }
   ],
   "versión": "2026.Diamond.V2"

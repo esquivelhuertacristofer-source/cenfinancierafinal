@@ -10,15 +10,54 @@
   "descripcion": "Demuestra que conoces los términos de los expertos para proteger el mundo digital.",
   "objetivo": "Reforzar el vocabulario técnico y los conceptos teóricos de la ciberseguridad",
   "xp": 300,
-  "parrafo": "La ciberseguridad protege nuestra información. El pilar de la [Confidencialidad] asegura que solo nosotros veamos nuestros datos. Si alguien secuestra tus archivos y pide dinero por ellos, se trata de un [Ransomware]. Nunca debemos conectar una [USB] que encontremos en la calle, pues puede tener virus. Para que nuestras cuentas sean casi imposibles de hackear, debemos activar el [Doble Factor] de Autenticación. Finalmente, navegar en sitios que empiezan con [HTTPS] nos asegura que la conexión está cifrada y segura.",
-  "opciones": [
-    "Confidencialidad",
-    "Ransomware",
-    "USB",
-    "Doble Factor",
-    "HTTPS",
-    "Virus",
-    "Contraseña"
+  "contexto": "Completa el texto con el término técnico correcto de cada espacio.",
+  "texto": "La ciberseguridad protege nuestra información. El pilar de la __BLANK1__ asegura que solo nosotros veamos nuestros datos. Si alguien secuestra tus archivos y pide dinero por ellos, se trata de un __BLANK2__. Nunca debemos conectar una __BLANK3__ que encontremos en la calle, pues puede tener virus. Para que nuestras cuentas sean casi imposibles de hackear, debemos activar el __BLANK4__ de Autenticación. Finalmente, navegar en sitios que empiezan con __BLANK5__ nos asegura que la conexión está cifrada y segura.",
+  "blanks": [
+    {
+      "id": "BLANK1",
+      "opciones": [
+        "Confidencialidad",
+        "Disponibilidad",
+        "Integridad"
+      ],
+      "respuesta": "Confidencialidad"
+    },
+    {
+      "id": "BLANK2",
+      "opciones": [
+        "Ransomware",
+        "Virus",
+        "Spam"
+      ],
+      "respuesta": "Ransomware"
+    },
+    {
+      "id": "BLANK3",
+      "opciones": [
+        "USB",
+        "Cable",
+        "Teclado"
+      ],
+      "respuesta": "USB"
+    },
+    {
+      "id": "BLANK4",
+      "opciones": [
+        "Doble Factor",
+        "Contraseña",
+        "PIN"
+      ],
+      "respuesta": "Doble Factor"
+    },
+    {
+      "id": "BLANK5",
+      "opciones": [
+        "HTTPS",
+        "HTTP",
+        "FTP"
+      ],
+      "respuesta": "HTTPS"
+    }
   ],
   "versión": "2026.Diamond.V2"
 }

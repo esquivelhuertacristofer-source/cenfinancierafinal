@@ -47,30 +47,6 @@
       "mejor_opcion": 1,
       "explicacion": "Cuidar los recursos es una forma vital de ahorro familiar.",
       "categoria": "#0ea5e9"
-    },
-    {
-      "id": "r4",
-      "situacion": "Misión Gratitud: Alguien te regaló un juguete. ¿Qué haces con él para demostrar que sabes valorarlo?",
-      "opciones": [
-        "Lo rompo jugando fuerte",
-        "Lo cuido, lo guardo bien y lo comparto con mis amigos",
-        "Lo vendo en seguida"
-      ],
-      "mejor_opcion": 1,
-      "explicacion": "Cuidar lo que tenemos es la primera forma de ser buenos administradores.",
-      "categoria": "#10b981"
-    },
-    {
-      "id": "r5",
-      "situacion": "¡Reto del Supermercado! Tienes $10 pesos. ¿Qué compras primero?",
-      "opciones": [
-        "Los dulces más caros que veo",
-        "Primero apunto qué necesito y elijo lo más importante",
-        "Gasto todo de una vez en lo que veo"
-      ],
-      "mejor_opcion": 1,
-      "explicacion": "Planear antes de gastar es la clave del presupuesto inteligente.",
-      "categoria": "#8b5cf6"
     }
   ],
   "versión": "2026.Diamond.V2"

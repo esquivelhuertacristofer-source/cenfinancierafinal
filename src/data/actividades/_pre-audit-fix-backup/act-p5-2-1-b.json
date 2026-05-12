@@ -1,0 +1,24 @@
+{
+  "code": "ACT-P5-2-1-B",
+  "unit_code": "P5-2-1",
+  "unit_title": "La Tarjeta de Crédito: dinero prestado, no regalado",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "El Código del Ciber-Guardián",
+  "descripcion": "Demuestra que conoces los términos de los expertos para proteger el mundo digital.",
+  "objetivo": "Reforzar el vocabulario técnico y los conceptos teóricos de la ciberseguridad",
+  "xp": 300,
+  "parrafo": "La ciberseguridad protege nuestra información. El pilar de la [Confidencialidad] asegura que solo nosotros veamos nuestros datos. Si alguien secuestra tus archivos y pide dinero por ellos, se trata de un [Ransomware]. Nunca debemos conectar una [USB] que encontremos en la calle, pues puede tener virus. Para que nuestras cuentas sean casi imposibles de hackear, debemos activar el [Doble Factor] de Autenticación. Finalmente, navegar en sitios que empiezan con [HTTPS] nos asegura que la conexión está cifrada y segura.",
+  "opciones": [
+    "Confidencialidad",
+    "Ransomware",
+    "USB",
+    "Doble Factor",
+    "HTTPS",
+    "Virus",
+    "Contraseña"
+  ],
+  "versión": "2026.Diamond.V2"
+}

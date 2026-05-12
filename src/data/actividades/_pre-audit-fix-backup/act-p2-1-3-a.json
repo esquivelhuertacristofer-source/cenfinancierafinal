@@ -1,5 +1,5 @@
 {
-  "code": "ACT-P2-1-3-A",
+  "code": "P2-1-3-A",
   "unit_code": "P2-1-3",
   "unit_title": "Los ingresos de mi familia: de dónde viene el dinero",
   "level": "Primaria 2",
@@ -10,9 +10,8 @@
   "descripcion": "El dinero no aparece por arte de magia en el cajero. ¡Descubre el camino que recorre antes de llegar a tu casa!",
   "objetivo": "Identificar fuentes de ingreso y valorar el esfuerzo laboral familiar",
   "xp": 200,
-  "contexto": "Lee el texto y elige la palabra correcta para cada espacio en blanco.",
-  "texto": "Todo el dinero que entra a mi casa se llama __BLANK1__. Mi mamá trabaja en una empresa y recibe un __BLANK2__ cada quincena como pago. Mi tío tiene su propio negocio de pasteles, él es un __BLANK3__ valiente. Mis abuelitos reciben una __BLANK4__ porque ya trabajaron muchos años y ahora descansan. Este dinero no es un regalo, es el resultado del __BLANK5__ y del __BLANK6__ de mi familia. Cuando cuido mis útiles y mi ropa, ayudo a que el __BLANK7__ de mi casa rinda más. ¡Soy un __BLANK8__ financiero que agradece el trabajo!",
-  "blanks": [
+  "texto": "Todo el dinero que entra a mi casa se llama [BLANK1]. Mi mamá trabaja en una empresa y recibe un [BLANK2] cada quincena como pago. Mi tío tiene su propio negocio de pasteles, él es un [BLANK3] valiente. Mis abuelitos reciben una [BLANK4] porque ya trabajaron muchos años y ahora descansan. Este dinero no es un regalo, es el resultado del [BLANK5] y del [BLANK6] de mi familia. Cuando cuido mis útiles y mi ropa, ayudo a que el [BLANK7] de mi casa rinda más. ¡Soy un [BLANK8] financiero que agradece el trabajo!",
+  "espacios": [
     {
       "id": "BLANK1",
       "opciones": [
@@ -20,7 +19,7 @@
         "gasto",
         "regalo"
       ],
-      "respuesta": "ingreso"
+      "correcta": "ingreso"
     },
     {
       "id": "BLANK2",
@@ -29,7 +28,7 @@
         "premio",
         "dulce"
       ],
-      "respuesta": "sueldo"
+      "correcta": "sueldo"
     },
     {
       "id": "BLANK3",
@@ -38,7 +37,7 @@
         "empleado",
         "mago"
       ],
-      "respuesta": "emprendedor"
+      "correcta": "emprendedor"
     },
     {
       "id": "BLANK4",
@@ -47,7 +46,7 @@
         "propina",
         "beca"
       ],
-      "respuesta": "pensión"
+      "correcta": "pensión"
     },
     {
       "id": "BLANK5",
@@ -56,7 +55,7 @@
         "suerte",
         "accidente"
       ],
-      "respuesta": "esfuerzo"
+      "correcta": "esfuerzo"
     },
     {
       "id": "BLANK6",
@@ -65,7 +64,7 @@
         "juego",
         "clima"
       ],
-      "respuesta": "tiempo"
+      "correcta": "tiempo"
     },
     {
       "id": "BLANK7",
@@ -74,7 +73,7 @@
         "agua",
         "juguete"
       ],
-      "respuesta": "dinero"
+      "correcta": "dinero"
     },
     {
       "id": "BLANK8",
@@ -83,7 +82,7 @@
         "niño",
         "estudiante"
       ],
-      "respuesta": "genio"
+      "correcta": "genio"
     }
   ],
   "versión": "2026.Diamond.V2"
