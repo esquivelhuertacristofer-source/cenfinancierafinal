@@ -19,6 +19,18 @@ export default function TerminosPage() {
       </header>
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-6 py-16">
+        {/* Banner de borrador — visible hasta revisión legal formal */}
+        <div className="mb-8 rounded-2xl border-2 border-[#F59E0B] bg-[#FFFBEB] px-6 py-4 flex gap-3 items-start">
+          <span className="text-[#F59E0B] text-xl mt-0.5">⚠</span>
+          <div>
+            <p className="font-black text-[#92400E] text-sm uppercase tracking-wide">Documento en revisión legal</p>
+            <p className="text-[#78350F] text-sm mt-1">
+              Estos términos de uso son un <strong>borrador funcional</strong> pendiente de revisión y aprobación
+              por el área legal de CEN antes de la publicación definitiva.
+            </p>
+          </div>
+        </div>
+
         <div className="bg-white rounded-3xl border border-[#E2E8F0] p-8 md:p-12 space-y-8">
           <div className="space-y-2">
             <p className="text-xs font-black uppercase tracking-[0.3em] text-[#FF8C00]">Documento Legal</p>

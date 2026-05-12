@@ -461,12 +461,21 @@ export default function LandingPageV3() {
                 <div className="fc-value">722 537 9594<br/>729 178 9196</div>
               </div>
             </div>
-            <div className="footer-bottom">
-              <span>© 2026 Campaña de Educación Nacional. Todos los derechos reservados.</span>
-              <div className="fb-legal" style={{display: 'flex', gap: '20px'}}>
-                <Link href="/privacidad">Privacidad</Link>
-                <Link href="/terminos">Términos</Link>
+            <div className="footer-bottom" style={{flexDirection: 'column', gap: '12px', alignItems: 'flex-start'}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', flexWrap: 'wrap', gap: '12px', alignItems: 'center'}}>
+                <span>© 2026 CEN — Campaña Educativa Nacional. Todos los derechos reservados.</span>
+                <div className="fb-legal" style={{display: 'flex', gap: '20px'}}>
+                  <Link href="/privacidad">Privacidad</Link>
+                  <Link href="/terminos">Términos</Link>
+                </div>
               </div>
+              <p style={{fontSize: '11px', color: 'rgba(255,255,255,0.35)', lineHeight: '1.6', maxWidth: '760px', margin: 0}}>
+                El contenido pedagógico, la marca, el código fuente, los diseños, ilustraciones, simulaciones interactivas
+                y materiales didácticos son propiedad exclusiva de CEN — Campaña Educativa Nacional. Su reproducción,
+                distribución o uso sin autorización expresa por escrito constituye una infracción a los derechos de autor
+                protegidos bajo la Ley Federal del Derecho de Autor de México. Marcas registradas, metodología pedagógica
+                e identidad visual son propiedad de CEN — Campaña Educativa Nacional.
+              </p>
             </div>
           </footer>
         </main>

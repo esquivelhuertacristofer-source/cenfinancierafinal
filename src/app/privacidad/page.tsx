@@ -19,66 +19,249 @@ export default function PrivacidadPage() {
       </header>
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-6 py-16">
+        {/* Banner de borrador — visible hasta revisión legal formal */}
+        <div className="mb-8 rounded-2xl border-2 border-[#F59E0B] bg-[#FFFBEB] px-6 py-4 flex gap-3 items-start">
+          <span className="text-[#F59E0B] text-xl mt-0.5">⚠</span>
+          <div>
+            <p className="font-black text-[#92400E] text-sm uppercase tracking-wide">Documento en revisión legal</p>
+            <p className="text-[#78350F] text-sm mt-1">
+              Este aviso de privacidad es un <strong>borrador funcional</strong> que cumple la estructura exigida por la LFPDPPP.
+              Los campos marcados con <strong>[PENDIENTE]</strong> deben ser completados por el responsable legal de CEN antes de la publicación definitiva.
+            </p>
+          </div>
+        </div>
+
         <div className="bg-white rounded-3xl border border-[#E2E8F0] p-8 md:p-12 space-y-8">
           <div className="space-y-2">
             <p className="text-xs font-black uppercase tracking-[0.3em] text-[#FF8C00]">Documento Legal</p>
             <h1 className="text-4xl font-black text-[#011C40] tracking-tight">Aviso de Privacidad</h1>
             <p className="text-[#64748B] font-medium">Última actualización: mayo 2026</p>
+            <p className="text-xs text-[#94A3B8]">
+              Elaborado conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP),
+              su Reglamento y los Lineamientos del Aviso de Privacidad publicados en el DOF.
+            </p>
           </div>
 
           <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">1. Responsable del tratamiento</h2>
+            <h2 className="text-xl font-black text-[#011C40]">I. Identidad y domicilio del responsable</h2>
             <p>
-              CEN — Centro de Educación Financiera (en adelante "CEN") es el responsable del tratamiento de los datos personales que usted proporciona al utilizar esta plataforma educativa. Para cualquier consulta relacionada con el tratamiento de sus datos, puede contactarnos a través de los canales institucionales habilitados.
+              <strong>CEN — Campaña Educativa Nacional</strong> (en adelante &ldquo;CEN&rdquo; o &ldquo;el Responsable&rdquo;) es el responsable
+              del tratamiento de los datos personales que usted proporciona al utilizar la plataforma CEN Educación Financiera.
             </p>
-          </section>
-
-          <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">2. Datos que recopilamos</h2>
-            <p>Recopilamos únicamente los datos necesarios para la prestación del servicio educativo:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Nombre completo y correo electrónico institucional</li>
-              <li>Datos de progreso académico (actividades completadas, puntuaciones, tiempo de estudio)</li>
-              <li>Información de sesión (inicio y cierre de sesión, dispositivos utilizados)</li>
+            <ul className="list-none pl-0 space-y-1 text-sm">
+              <li><strong>Denominación:</strong> CEN — Campaña Educativa Nacional</li>
+              <li><strong>Domicilio:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: domicilio fiscal completo]</span></li>
+              <li><strong>RFC:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: RFC]</span></li>
+              <li><strong>Correo de contacto:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo del área de privacidad]</span></li>
             </ul>
           </section>
 
           <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">3. Finalidad del tratamiento</h2>
-            <p>Los datos recopilados se utilizan exclusivamente para:</p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Proveer acceso a los contenidos y actividades de la plataforma</li>
-              <li>Generar reportes de progreso académico para docentes y administradores</li>
-              <li>Mejorar la experiencia educativa y el contenido de la plataforma</li>
-              <li>Cumplir con obligaciones institucionales y normativas aplicables</li>
+            <h2 className="text-xl font-black text-[#011C40]">II. Datos personales que se recaban</h2>
+            <p>Para la prestación del servicio educativo, CEN recaba las siguientes categorías de datos:</p>
+            <div className="space-y-3">
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Datos de identificación e contacto</p>
+                <ul className="list-disc pl-6 space-y-1 text-sm">
+                  <li>Nombre completo</li>
+                  <li>Correo electrónico institucional</li>
+                  <li>Grado escolar / grupo asignado (alumnos)</li>
+                  <li>Rol en la plataforma (alumno, docente, administrador)</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Datos académicos y de uso</p>
+                <ul className="list-disc pl-6 space-y-1 text-sm">
+                  <li>Actividades completadas, puntuaciones y tiempo de estudio</li>
+                  <li>Avance por módulo, pilar y segmento curricular</li>
+                  <li>Registros de inicio/cierre de sesión y dispositivos utilizados</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Datos sensibles</p>
+                <p className="text-sm">
+                  CEN <strong>no recaba datos sensibles</strong> en el sentido del artículo 3, fracción VI de la LFPDPPP
+                  (origen racial, estado de salud, creencias religiosas, etc.).
+                </p>
+              </div>
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Menores de edad</p>
+                <p className="text-sm">
+                  Cuando los usuarios sean menores de edad, el tratamiento se realiza bajo la supervisión y responsabilidad
+                  de la institución educativa contratante, quien actúa como representante legal conforme a la normativa aplicable.
+                  CEN no recaba directamente datos de menores fuera del contexto institucional.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">III. Finalidades del tratamiento</h2>
+            <div className="space-y-3">
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Finalidades primarias (necesarias para la relación jurídica)</p>
+                <ul className="list-disc pl-6 space-y-1 text-sm">
+                  <li>Proveer acceso autenticado a los contenidos, actividades y evaluaciones de la plataforma</li>
+                  <li>Registrar y mostrar el progreso académico individual del alumno</li>
+                  <li>Generar reportes de avance grupal para docentes y administradores institucionales</li>
+                  <li>Administrar cuentas de usuario, grupos y permisos de acceso</li>
+                  <li>Cumplir con obligaciones legales y normativas aplicables al servicio educativo</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-bold text-[#011C40] text-sm">Finalidades secundarias (requieren consentimiento adicional)</p>
+                <ul className="list-disc pl-6 space-y-1 text-sm">
+                  <li>Envío de comunicaciones informativas o promocionales sobre nuevos módulos y funcionalidades</li>
+                  <li>Elaboración de estadísticas agregadas y anonimizadas para investigación educativa</li>
+                </ul>
+                <p className="text-sm mt-2">
+                  Si usted no desea que sus datos sean tratados para las finalidades secundarias, puede manifestarlo
+                  enviando un correo a <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo de privacidad]</span> con
+                  el asunto &ldquo;Oposición a finalidades secundarias&rdquo;.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">IV. Transferencias de datos personales</h2>
+            <p>
+              CEN podrá transferir sus datos personales a los siguientes terceros, sin requerir su consentimiento
+              conforme al artículo 37 de la LFPDPPP:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-[#F8FAFC]">
+                    <th className="text-left py-2 px-3 border border-[#E2E8F0] font-bold text-[#011C40]">Receptor</th>
+                    <th className="text-left py-2 px-3 border border-[#E2E8F0] font-bold text-[#011C40]">Finalidad</th>
+                    <th className="text-left py-2 px-3 border border-[#E2E8F0] font-bold text-[#011C40]">Fundamento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Supabase Inc. (EE.UU.)</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Almacenamiento y gestión de base de datos</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Art. 37 fr. I — necesario para la relación contractual</td>
+                  </tr>
+                  <tr className="bg-[#F8FAFC]">
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Vercel Inc. (EE.UU.)</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Hospedaje y despliegue de la plataforma</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Art. 37 fr. I — necesario para la relación contractual</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Institución educativa contratante</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Reportes de progreso académico de sus alumnos</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Art. 37 fr. I — cumplimiento de obligación contractual</td>
+                  </tr>
+                  <tr className="bg-[#F8FAFC]">
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Autoridades competentes</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Cumplimiento de obligaciones legales</td>
+                    <td className="py-2 px-3 border border-[#E2E8F0]">Art. 37 fr. IV — mandato legal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm">
+              Las transferencias a proveedores tecnológicos ubicados en el extranjero (Supabase, Vercel) se realizan
+              mediante contratos que garantizan un nivel de protección equivalente al de la LFPDPPP.
+            </p>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">V. Medios para ejercer los derechos ARCO</h2>
+            <p>
+              Como titular de los datos, usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> (derechos ARCO)
+              al tratamiento de sus datos personales, así como a <strong>revocar el consentimiento</strong> otorgado,
+              conforme a los artículos 28–37 de la LFPDPPP.
+            </p>
+            <div className="bg-[#F8FAFC] rounded-xl p-4 space-y-2 text-sm">
+              <p><strong>Para ejercer sus derechos ARCO, presente una solicitud que incluya:</strong></p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Nombre completo y correo institucional registrado en la plataforma</li>
+                <li>Descripción clara del derecho que desea ejercer y los datos involucrados</li>
+                <li>Copia de identificación oficial vigente</li>
+              </ul>
+              <p className="mt-2">
+                <strong>Enviar a:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo del área de privacidad]</span><br />
+                <strong>Asunto:</strong> Solicitud de derechos ARCO — [nombre del titular]
+              </p>
+              <p>
+                CEN responderá en un plazo máximo de <strong>20 días hábiles</strong> contados a partir de la recepción
+                de la solicitud completa, conforme al artículo 32 de la LFPDPPP.
+              </p>
+            </div>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">VI. Mecanismos para revocar el consentimiento</h2>
+            <p>
+              En cualquier momento usted puede revocar el consentimiento otorgado para el tratamiento de sus datos,
+              siempre que ello sea compatible con la prestación del servicio educativo. La revocación no tendrá efectos
+              retroactivos sobre los tratamientos ya realizados.
+            </p>
+            <p className="text-sm">
+              Para solicitar la revocación, envíe un correo a <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo]</span> con
+              el asunto &ldquo;Revocación de consentimiento&rdquo;. Tenga en cuenta que la revocación puede implicar la
+              imposibilidad de continuar utilizando la plataforma.
+            </p>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">VII. Uso de cookies y tecnologías de rastreo</h2>
+            <p>
+              La plataforma utiliza cookies de sesión estrictamente necesarias para mantener la autenticación del usuario.
+              No se utilizan cookies de rastreo publicitario ni herramientas de análisis de comportamiento que impliquen
+              la reidentificación del titular.
+            </p>
+            <p className="text-sm">
+              Usted puede configurar su navegador para rechazar cookies; sin embargo, esto impedirá el funcionamiento
+              correcto de la plataforma, ya que la autenticación depende de ellas.
+            </p>
+          </section>
+
+          <section className="space-y-4 text-[#334155] leading-relaxed">
+            <h2 className="text-xl font-black text-[#011C40]">VIII. Medidas de seguridad</h2>
+            <p>
+              CEN implementa medidas técnicas, administrativas y físicas para proteger sus datos personales contra
+              pérdida, robo, uso no autorizado, divulgación, alteración o destrucción:
+            </p>
+            <ul className="list-disc pl-6 space-y-1 text-sm">
+              <li>Cifrado en tránsito (TLS 1.3) y en reposo (AES-256) mediante infraestructura Supabase</li>
+              <li>Autenticación con contraseña hasheada (bcrypt) y tokens de sesión seguros</li>
+              <li>Acceso a datos restringido por roles (Row Level Security en base de datos)</li>
+              <li>Monitoreo de errores y alertas de seguridad mediante Sentry</li>
+              <li>Actualizaciones periódicas de dependencias y revisiones de seguridad</li>
             </ul>
           </section>
 
           <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">4. Almacenamiento y seguridad</h2>
+            <h2 className="text-xl font-black text-[#011C40]">IX. Conservación de los datos</h2>
             <p>
-              Los datos se almacenan en servidores seguros mediante Supabase (infraestructura en la nube con cifrado en tránsito y en reposo). CEN implementa medidas técnicas y organizativas para proteger sus datos contra acceso no autorizado, pérdida o divulgación indebida.
+              Los datos personales se conservarán durante el tiempo que dure la relación contractual con la institución
+              educativa y, una vez concluida, por el período que señalen las obligaciones legales aplicables o durante
+              <span className="text-[#F59E0B] font-bold"> [PENDIENTE: período de retención en años] </span>
+              adicionales para fines de respaldo e historial académico, tras lo cual serán eliminados o anonimizados.
             </p>
           </section>
 
           <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">5. Derechos del titular</h2>
+            <h2 className="text-xl font-black text-[#011C40]">X. Cambios al aviso de privacidad</h2>
             <p>
-              Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (derechos ARCO), así como a revocar el consentimiento otorgado. Para ejercer estos derechos, contacte a su institución educativa o al administrador de la plataforma.
+              CEN se reserva el derecho de modificar este aviso de privacidad en cualquier momento para reflejar cambios
+              legislativos, operativos o en la prestación del servicio. Las modificaciones serán publicadas en esta página
+              con la fecha de actualización y, cuando sean sustanciales, se notificarán a los titulares por correo
+              electrónico institucional.
             </p>
           </section>
 
           <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">6. Menores de edad</h2>
+            <h2 className="text-xl font-black text-[#011C40]">XI. Autoridad competente</h2>
             <p>
-              Esta plataforma está dirigida a estudiantes en contexto educativo supervisado. El tratamiento de datos de menores de edad se realiza bajo la responsabilidad y consentimiento de la institución educativa contratante, conforme a la normativa aplicable.
-            </p>
-          </section>
-
-          <section className="space-y-4 text-[#334155] leading-relaxed">
-            <h2 className="text-xl font-black text-[#011C40]">7. Cambios a este aviso</h2>
-            <p>
-              CEN se reserva el derecho de modificar este aviso de privacidad en cualquier momento. Las modificaciones serán publicadas en esta página con indicación de la fecha de actualización.
+              Si considera que su derecho a la protección de datos personales ha sido vulnerado, tiene derecho a
+              interponer una queja o denuncia ante el <strong>Instituto Nacional de Transparencia, Acceso a la
+              Información y Protección de Datos Personales (INAI)</strong>, www.inai.org.mx, o ante los tribunales
+              competentes conforme a la legislación mexicana.
             </p>
           </section>
         </div>
