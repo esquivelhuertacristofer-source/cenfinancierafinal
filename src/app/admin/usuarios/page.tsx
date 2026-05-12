@@ -9,7 +9,7 @@ import {
   Download, ClipboardList, Trash2, ShieldAlert, LogOut,
   PlusCircle, ChevronRight, FileSpreadsheet, X, Eye,
 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 import {
   onboardInstitutionalUsers,
   createGrupo,
@@ -461,7 +461,7 @@ export default function AdminUsuariosPage() {
                               <td className="px-3 py-1.5">
                                 {row.valid
                                   ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                                  : <AlertCircle className="w-3.5 h-3.5 text-red-500" title={row.error} />}
+                                  : <AlertCircle className="w-3.5 h-3.5 text-red-500" aria-label={row.error} />}
                               </td>
                               <td className="px-3 py-1.5 font-medium text-[#011C40]">
                                 {row.nombre_completo}

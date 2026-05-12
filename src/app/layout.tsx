@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: "CEN | Plataforma de Educación Financiera",
@@ -38,6 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-epilogue antialiased">
         {children}
         <Analytics />
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: { fontFamily: "var(--font-sans)", fontSize: "14px" },
+            classNames: { toast: "rounded-2xl border border-white/10 shadow-xl" },
+          }}
+        />
       </body>
     </html>
   );

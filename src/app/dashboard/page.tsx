@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo, useCallback } from "react";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { LayoutDashboard, Users, TrendingUp, AlertTriangle, Clock, ChevronRight, X } from "lucide-react";

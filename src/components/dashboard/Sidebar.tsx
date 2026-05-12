@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Panel Principal",      href: "/dashboard/teacher" },

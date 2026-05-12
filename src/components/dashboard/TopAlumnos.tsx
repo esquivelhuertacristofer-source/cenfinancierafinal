@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabase";
-import { Trophy, Star, ArrowRight, Zap } from "lucide-react";
+import { supabase } from "@/lib/supabase-browser";
+import { Trophy, Star, ArrowRight, Zap, AlertCircle } from "lucide-react";
+import { notify } from "@/lib/toast";
 
 interface TopAlumnoReal {
   name: string;
@@ -22,6 +23,7 @@ export default function TopAlumnos({
 }) {
   const [topList, setTopList] = useState<TopAlumnoReal[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -89,7 +91,8 @@ export default function TopAlumnos({
 
         setTopList(processed);
       } catch {
-        // silent
+        setError(true);
+        notify.fetchError();
       } finally {
         setLoading(false);
       }
@@ -127,6 +130,11 @@ export default function TopAlumnos({
           <div className="flex flex-col items-center justify-center py-24 gap-6">
             <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin" />
             <p className="text-[10px] font-black uppercase tracking-widest text-white/40">Auditando Ranking...</p>
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center py-24 gap-4">
+            <AlertCircle className="w-10 h-10 text-white/40" />
+            <p className="text-[10px] font-black uppercase tracking-widest text-white/40 text-center">Error al cargar el ranking</p>
           </div>
         ) : topList.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 gap-4">
@@ -182,9 +190,12 @@ export default function TopAlumnos({
         )}
       </div>
 
-      <button className="w-full mt-10 py-6 bg-white/10 hover:bg-white text-white hover:text-[#FF8C00] font-black rounded-[2.5rem] border border-white/20 text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-xl backdrop-blur-xl">
+      <button
+        aria-label="Ver ranking completo de alumnos"
+        className="w-full mt-10 py-6 bg-white/10 hover:bg-white text-white hover:text-[#FF8C00] font-black rounded-[2.5rem] border border-white/20 text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-xl backdrop-blur-xl"
+      >
         <span>Auditores Completos</span>
-        <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-3 transition-transform" />
+        <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-3 transition-transform" aria-hidden="true" />
       </button>
     </div>
   );

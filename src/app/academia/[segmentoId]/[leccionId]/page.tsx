@@ -4,7 +4,7 @@
  * @author Cristofer Huerta (Luminar Tech)
  */
 
-import { supabase } from "../../../../lib/supabase"; 
+import { supabase } from "@/lib/supabase-browser"; 
 import SecureGame from "../../../../components/SecureGame";
 import { notFound } from "next/navigation";
 

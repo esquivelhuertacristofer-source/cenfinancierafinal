@@ -1,5 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-import { supabase } from './supabase';
+import { supabase } from '@/lib/supabase-browser';
 
 export { supabase };
 
@@ -523,7 +522,7 @@ export async function markActivityComplete(
 /**
  * Cola de Sincronización Local (Offline Resilience)
  */
-const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 const SYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
 

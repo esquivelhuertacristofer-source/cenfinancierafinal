@@ -534,7 +534,7 @@ export default function StudentHubV19() {
             try { 
               playSFX('click'); 
               localStorage.removeItem('cen_test_profile'); // Clear virtual session
-              const { supabase } = await import('../../lib/supabase');
+              const { supabase } = await import('@/lib/supabase-browser');
               await supabase.auth.signOut();
               window.location.href = '/log-in'; 
             } catch(e){

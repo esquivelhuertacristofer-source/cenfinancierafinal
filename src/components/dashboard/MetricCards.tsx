@@ -1,8 +1,9 @@
 "use client";
 
-import { Users, LayoutGrid, TrendingUp, Loader2, Award, ArrowUpRight } from "lucide-react";
+import { Users, LayoutGrid, TrendingUp, Loader2, Award, ArrowUpRight, AlertCircle } from "lucide-react";
 import { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
+import { notify } from "@/lib/toast";
 
 export default function MetricCards({
   groupId,
@@ -14,6 +15,7 @@ export default function MetricCards({
   isDark?: boolean;
 }) {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [stats, setStats] = useState({ alumnos: 0, grupos: 1, practicas: 0 });
   const [mounted, setMounted] = useState(false);
 
@@ -78,7 +80,8 @@ export default function MetricCards({
           setStats({ alumnos: aCount ?? 0, grupos: groups.length || 1, practicas: pCount ?? 0 });
         }
       } catch {
-        // silent
+        setError(true);
+        notify.fetchError();
       } finally {
         setLoading(false);
       }
@@ -87,6 +90,15 @@ export default function MetricCards({
   }, [groupId, teacherGroupIds, isDark]);
 
   if (!mounted) return null;
+
+  if (error) {
+    return (
+      <div className={`flex items-center gap-3 rounded-3xl border px-6 py-4 ${isDark ? "bg-white/5 border-white/10 text-white/60" : "bg-red-50 border-red-100 text-red-600"}`}>
+        <AlertCircle className="w-5 h-5 shrink-0" />
+        <span className="text-sm font-medium">No se pudieron cargar las métricas. Recarga la página para intentarlo de nuevo.</span>
+      </div>
+    );
+  }
 
   const cards = [
     {
@@ -128,6 +140,8 @@ export default function MetricCards({
         return (
           <div
             key={card.title}
+            role="article"
+            aria-label={`${card.title}: ${loading ? "cargando" : card.value}`}
             className={`group relative h-[240px] rounded-[3rem] border transition-all duration-700 flex flex-col p-10 overflow-hidden shadow-2xl ${
               isDark
                 ? "bg-white/5 border-white/5 backdrop-blur-2xl hover:bg-white/10 hover:-translate-y-2"

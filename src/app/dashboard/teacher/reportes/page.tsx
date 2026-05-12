@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import PerformanceChart from "../../../../components/dashboard/PerformanceChart";

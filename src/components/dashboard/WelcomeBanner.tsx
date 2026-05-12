@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 import { Sparkles, ArrowRight, Zap, Target, Star, Shield } from "lucide-react";
 
 export default function WelcomeBanner({ 

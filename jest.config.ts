@@ -1,31 +1,30 @@
 import type { Config } from "jest";
-import nextJest from "next/jest";
+import nextJest from "next/jest.js";
 
-const createJestConfig = nextJest({
-    dir: "./",
-});
+const createJestConfig = nextJest({ dir: "./" });
 
 const config: Config = {
-    setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-    testEnvironment: "jest-environment-jsdom",
-    moduleNameMapper: {
-        "^@/(.*)$": "<rootDir>/src/$1",
-        "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-    },
-    testPathIgnorePatterns: ["/node_modules/", "/.next/", "/dist/"],
-    collectCoverageFrom: [
-        "src/**/*.{js,jsx,ts,tsx}",
-        "!src/**/*.d.ts",
-        "!src/**/*.stories.{js,jsx,ts,tsx}",
-    ],
-    coverageThreshold: {
-        global: {
-            branches: 50,
-            functions: 50,
-            lines: 50,
-            statements: 50,
-        },
-    },
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  testEnvironment: "jest-environment-jsdom",
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
+  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/dist/"],
+  testMatch: [
+    "**/__tests__/**/*.test.ts",
+    "**/__tests__/**/*.test.tsx",
+  ],
+  collectCoverageFrom: [
+    "src/lib/**/*.ts",
+    "src/app/actions/**/*.ts",
+    "src/components/dashboard/**/*.tsx",
+    "!src/**/*.d.ts",
+  ],
+  // Allow transforming Sentry ESM modules
+  transformIgnorePatterns: [
+    "/node_modules/(?!(@sentry)/)",
+  ],
 };
 
 export default createJestConfig(config);

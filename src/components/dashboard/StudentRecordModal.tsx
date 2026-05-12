@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Trophy, BookOpen, Clock, CheckCircle2, Star, Zap, ShieldCheck } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '@/lib/supabase-browser';
 
 interface ProgressItem {
   id: string;

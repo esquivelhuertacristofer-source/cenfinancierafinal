@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../../../lib/supabase";
+import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import {
@@ -463,6 +463,7 @@ export default function AlumnosPage() {
                 <input
                   type="text"
                   placeholder="Buscar alumno, grupo..."
+                  aria-label="Buscar alumno por nombre, correo o grupo"
                   className="w-full pl-16 pr-6 py-6 bg-white/5 border border-white/10 rounded-[2.5rem] text-white focus:border-[#FF8C00] outline-none transition-all backdrop-blur-xl"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -498,8 +499,12 @@ export default function AlumnosPage() {
             {filtered.map((student, i) => (
               <div
                 key={student.id}
+                role="button"
+                tabIndex={0}
+                aria-label={`Ver expediente de ${student.full_name}`}
                 onClick={() => setSelected(student)}
-                className="group relative bg-white rounded-[3.5rem] p-12 cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-slate-100 flex flex-col h-full overflow-hidden animate-in fade-in slide-in-from-bottom-8 fill-mode-backwards"
+                onKeyDown={(e) => e.key === "Enter" && setSelected(student)}
+                className="group relative bg-white rounded-[3.5rem] p-12 cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-slate-100 flex flex-col h-full overflow-hidden animate-in fade-in slide-in-from-bottom-8 fill-mode-backwards focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:ring-offset-2"
                 style={{ animationDelay: `${i * 50}ms` }}
               >
                 <div className="flex items-start justify-between mb-8">

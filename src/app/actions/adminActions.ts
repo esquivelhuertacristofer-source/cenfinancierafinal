@@ -10,8 +10,6 @@ function getAdminClient() {
   return createClient(url, key, { auth: { autoRefreshToken: false, persistSession: false } });
 }
 
-const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
-
 // Mapa de grado a school_level legible
 const GRADO_A_SCHOOL_LEVEL: Record<string, string> = {
   P1: "Primaria 1", P2: "Primaria 2", P3: "Primaria 3",
@@ -19,7 +17,7 @@ const GRADO_A_SCHOOL_LEVEL: Record<string, string> = {
   S1: "Secundaria 1", S2: "Secundaria 2", S3: "Secundaria 3",
 };
 
-function generateEmail(fullName: string, existing: Set<string>): string {
+function generateEmail(fullName: string, existing: Set<string>, domain: string): string {
   const base = fullName
     .toLowerCase()
     .normalize("NFD")
@@ -28,10 +26,10 @@ function generateEmail(fullName: string, existing: Set<string>): string {
     .trim()
     .replace(/\s+/g, ".");
 
-  let email = `${base}@${EMAIL_DOMAIN}`;
+  let email = `${base}@${domain}`;
   let counter = 1;
   while (existing.has(email)) {
-    email = `${base}${counter}@${EMAIL_DOMAIN}`;
+    email = `${base}${counter}@${domain}`;
     counter++;
   }
   existing.add(email);
@@ -54,6 +52,7 @@ export async function onboardInstitutionalUsers(
     throw new Error("La contraseña debe tener al menos 8 caracteres.");
   }
 
+  const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
   const admin = getAdminClient();
   const pw = password.trim();
   const schoolLevel = GRADO_A_SCHOOL_LEVEL[grado] ?? grado;
@@ -64,7 +63,7 @@ export async function onboardInstitutionalUsers(
     const name = rawName.trim();
     if (!name) continue;
 
-    const email = generateEmail(name, usedEmails);
+    const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
 
     try {
       const { error: authError } = await admin.auth.admin.createUser({

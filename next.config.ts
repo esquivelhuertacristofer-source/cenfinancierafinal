@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withSentryConfig } from "@sentry/nextjs";
 
 const nextConfig: NextConfig = {
   output: 'standalone',
@@ -17,4 +18,23 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withSentryConfig(nextConfig, {
+  // Silent during CI to avoid noise
+  silent: !process.env.CI,
+
+  // Use tunnel to bypass ad blockers
+  tunnelRoute: "/monitoring",
+
+  // Source maps: upload to Sentry but strip from client bundle
+  sourcemaps: {
+    disable: false,
+  },
+
+  // Annotate React components for better error context
+  reactComponentAnnotation: {
+    enabled: true,
+  },
+
+  // Don't auto-instrument Vercel Cron (we manage that manually)
+  automaticVercelMonitors: false,
+});
