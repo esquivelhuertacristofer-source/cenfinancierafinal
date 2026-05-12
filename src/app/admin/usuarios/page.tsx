@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import {
   Users, Upload, CheckCircle2, AlertCircle, Loader2,
   Download, ClipboardList, Trash2, ShieldAlert, LogOut,
-  PlusCircle, ChevronRight,
+  PlusCircle, ChevronRight, FileSpreadsheet, X, Eye,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import {
@@ -16,10 +16,20 @@ import {
   getGrupos,
 } from "../../actions/adminActions";
 import jsPDF from "jspdf";
+import * as XLSX from "xlsx";
+import Papa from "papaparse";
 
 interface Grupo { id: string; nombre: string; grado: string }
+interface ImportRow {
+  nombre_completo: string;
+  grado_override?: string;
+  email_personal?: string;
+  valid: boolean;
+  error?: string;
+}
 
 const GRADOS = ["P1","P2","P3","P4","P5","P6","S1","S2","S3"];
+const MAX_IMPORT_ROWS = 200;
 
 export default function AdminUsuariosPage() {
   const router = useRouter();
@@ -38,6 +48,11 @@ export default function AdminUsuariosPage() {
   const [grupos,          setGrupos]          = useState<Grupo[]>([]);
   const [processing,      setProcessing]      = useState(false);
   const [results,         setResults]         = useState<{ success: {name:string;email:string}[]; errors: {name:string;message:string}[] } | null>(null);
+
+  // Import state
+  const [importRows,      setImportRows]      = useState<ImportRow[]>([]);
+  const [dragActive,      setDragActive]      = useState(false);
+  const [importFileName,  setImportFileName]  = useState("");
 
   // ── Guardia de seguridad ──────────────────────────────────────────────────
   useEffect(() => {
@@ -82,18 +97,88 @@ export default function AdminUsuariosPage() {
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const normalizeHeader = (h: string) =>
+    h.toLowerCase().replace(/[^a-z_]/g, '').replace(/\s+/g, '_');
+
+  const parseRawRows = (rawRows: Record<string, string>[]) => {
+    const rows: ImportRow[] = rawRows.slice(0, MAX_IMPORT_ROWS).map(row => {
+      const keys = Object.keys(row);
+      // Find nombre_completo column (flexible matching)
+      const nameKey = keys.find(k =>
+        ['nombre_completo','nombre','name','full_name','alumno'].includes(normalizeHeader(k))
+      );
+      const gradoKey = keys.find(k => normalizeHeader(k) === 'grado');
+      const emailKey = keys.find(k => ['email_personal','email'].includes(normalizeHeader(k)));
+
+      const nombre = nameKey ? String(row[nameKey]).trim() : '';
+      if (!nombre || nombre.split(' ').length < 2) {
+        return { nombre_completo: nombre || '(vacío)', valid: false, error: 'Nombre incompleto (mínimo 2 palabras)' };
+      }
+      return {
+        nombre_completo: nombre,
+        grado_override: gradoKey ? String(row[gradoKey]).trim() : undefined,
+        email_personal: emailKey ? String(row[emailKey]).trim() : undefined,
+        valid: true,
+      };
+    });
+    return rows;
+  };
+
+  const processFile = (file: File) => {
+    setImportFileName(file.name);
+    const ext = file.name.split('.').pop()?.toLowerCase();
+
+    if (ext === 'xlsx' || ext === 'xls') {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const data = new Uint8Array(ev.target?.result as ArrayBuffer);
+        const wb = XLSX.read(data, { type: 'array' });
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        const rawRows = XLSX.utils.sheet_to_json<Record<string, string>>(ws, { defval: '' });
+        setImportRows(parseRawRows(rawRows));
+      };
+      reader.readAsArrayBuffer(file);
+    } else {
+      Papa.parse<Record<string, string>>(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => setImportRows(parseRawRows(results.data)),
+      });
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragActive(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) processFile(file);
+  };
+
+  const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const text = ev.target?.result as string;
-      const names = text.split("\n")
-        .map(l => l.split(",")[0].replace(/"/g, "").trim())
-        .filter(n => n && !["nombre","name"].includes(n.toLowerCase()));
-      setNamesText(names.join("\n"));
-    };
-    reader.readAsText(file);
+    if (file) processFile(file);
+    e.target.value = '';
+  };
+
+  const applyImport = () => {
+    const validNames = importRows.filter(r => r.valid).map(r => r.nombre_completo);
+    setNamesText(prev => {
+      const existing = prev.trim();
+      return existing ? `${existing}\n${validNames.join('\n')}` : validNames.join('\n');
+    });
+    setImportRows([]);
+    setImportFileName('');
+  };
+
+  const downloadTemplate = () => {
+    const ws = XLSX.utils.aoa_to_sheet([
+      ['nombre_completo', 'grado', 'email_personal'],
+      ['Juan Pérez García', 'P4', ''],
+      ['María Elena Sánchez', 'P4', ''],
+    ]);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Alumnos');
+    XLSX.writeFile(wb, 'plantilla-alumnos-cen.xlsx');
   };
 
   const handleProcess = async () => {
@@ -319,13 +404,85 @@ export default function AdminUsuariosPage() {
                 </div>
               </div>
 
-              {/* Cargar CSV */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <input type="file" accept=".csv,.txt" onChange={handleFileUpload} className="hidden" id="csv-upload" />
-                <label htmlFor="csv-upload" className="cursor-pointer flex items-center gap-2 px-5 py-3 bg-gray-100 text-[#011C40] rounded-xl font-bold hover:bg-gray-200 transition-all text-sm">
-                  <Upload className="w-4 h-4" /> Cargar CSV
-                </label>
-                <span className="text-xs text-[#011C40]/40">Primera columna = nombres completos</span>
+              {/* Importar Excel / CSV */}
+              <div className="pt-4 border-t border-gray-100 space-y-3">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-black uppercase text-[#011C40]/40">Importar desde archivo</p>
+                  <button
+                    onClick={downloadTemplate}
+                    className="flex items-center gap-1.5 text-[10px] font-bold text-[#FF8C00] hover:underline"
+                  >
+                    <Download className="w-3.5 h-3.5" /> Descargar plantilla .xlsx
+                  </button>
+                </div>
+
+                <div
+                  onDragOver={e => { e.preventDefault(); setDragActive(true); }}
+                  onDragLeave={() => setDragActive(false)}
+                  onDrop={handleDrop}
+                  className={`relative border-2 border-dashed rounded-2xl p-6 text-center transition-all cursor-pointer ${dragActive ? 'border-[#FF8C00] bg-[#FF8C00]/5' : 'border-gray-200 bg-gray-50 hover:border-[#011C40]/30'}`}
+                >
+                  <input type="file" accept=".xlsx,.xls,.csv" onChange={handleFileInput} className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
+                  <FileSpreadsheet className="w-8 h-8 text-[#011C40]/20 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-[#011C40]/50">
+                    {importFileName ? importFileName : 'Arrastra un .xlsx o .csv aquí'}
+                  </p>
+                  <p className="text-[10px] text-[#011C40]/30 mt-1">o haz clic para seleccionar · máx. {MAX_IMPORT_ROWS} filas</p>
+                </div>
+
+                {/* Preview table */}
+                {importRows.length > 0 && (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <p className="text-xs font-bold text-[#011C40]/60">
+                        <span className="text-emerald-600 font-black">{importRows.filter(r => r.valid).length} válidos</span>
+                        {importRows.filter(r => !r.valid).length > 0 && (
+                          <span className="text-red-500 font-black ml-2">{importRows.filter(r => !r.valid).length} con error</span>
+                        )}
+                        {' '}— {importRows.length} filas totales
+                      </p>
+                      <button onClick={() => { setImportRows([]); setImportFileName(''); }} className="text-gray-400 hover:text-red-500 transition-colors">
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    <div className="rounded-2xl border border-gray-100 overflow-hidden max-h-52 overflow-y-auto">
+                      <table className="w-full text-xs">
+                        <thead className="bg-[#011C40] text-white sticky top-0">
+                          <tr>
+                            <th className="text-left px-3 py-2 font-black text-[9px] uppercase tracking-wide">Estado</th>
+                            <th className="text-left px-3 py-2 font-black text-[9px] uppercase tracking-wide">Nombre Completo</th>
+                            <th className="text-left px-3 py-2 font-black text-[9px] uppercase tracking-wide hidden sm:table-cell">Grado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {importRows.map((row, i) => (
+                            <tr key={i} className={`border-t border-gray-50 ${row.valid ? '' : 'bg-red-50'}`}>
+                              <td className="px-3 py-1.5">
+                                {row.valid
+                                  ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                                  : <AlertCircle className="w-3.5 h-3.5 text-red-500" title={row.error} />}
+                              </td>
+                              <td className="px-3 py-1.5 font-medium text-[#011C40]">
+                                {row.nombre_completo}
+                                {!row.valid && <span className="ml-2 text-red-400 text-[9px]">{row.error}</span>}
+                              </td>
+                              <td className="px-3 py-1.5 text-[#011C40]/40 hidden sm:table-cell">{row.grado_override || grado}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <button
+                      onClick={applyImport}
+                      disabled={importRows.filter(r => r.valid).length === 0}
+                      className="w-full py-3 bg-[#011C40] text-white rounded-xl font-black text-sm flex items-center justify-center gap-2 hover:bg-[#042a5e] transition-all disabled:opacity-40"
+                    >
+                      <Eye className="w-4 h-4" /> Aplicar {importRows.filter(r => r.valid).length} nombres válidos
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -422,9 +579,10 @@ export default function AdminUsuariosPage() {
                 {[
                   ["1", "Crea o selecciona el Grupo de destino."],
                   ["2", "Elige el Grado, Rol y define la contraseña del lote."],
-                  ["3", "Pega los nombres (uno por línea) o carga un CSV."],
-                  ["4", "Haz clic en Generar Cuentas y espera."],
-                  ["5", "Descarga el PDF con credenciales para entregar a la escuela."],
+                  ["3", "Importa un .xlsx/.csv con la columna nombre_completo (descarga la plantilla), o pega los nombres manualmente."],
+                  ["4", "Revisa la previsualización y aplica los nombres válidos."],
+                  ["5", "Haz clic en Generar Cuentas y espera."],
+                  ["6", "Descarga el PDF con credenciales para entregar a la escuela."],
                 ].map(([n, t]) => (
                   <div key={n} className="flex gap-3">
                     <div className="h-7 w-7 rounded-full bg-[#FF8C00]/10 text-[#FF8C00] flex items-center justify-center font-black text-xs flex-shrink-0">{n}</div>

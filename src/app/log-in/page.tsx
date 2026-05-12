@@ -6,6 +6,7 @@ import { supabase } from "../../lib/supabase";
 import Link from "next/link";
 import Image from "next/image";
 import { TEST_ACCOUNTS } from "../../lib/hub";
+import FooterLegal from "../../components/FooterLegal";
 
 /**
  * @component LoginPage
@@ -16,13 +17,16 @@ export default function LoginPage() {
     const [password, setPassword] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
+    const [consentChecked, setConsentChecked] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
-        // Only redirect if already logged in
         async function checkSession() {
             const { data } = await supabase.auth.getSession();
-            if (data.session) router.replace("/hub");
+            if (data.session) {
+                document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Lax";
+                router.replace("/hub");
+            }
         }
         checkSession();
     }, [router]);
@@ -41,7 +45,7 @@ export default function LoginPage() {
 
             const rescue = setTimeout(() => {
                 setLoading(false);
-                setError("La conexión está tardando más de lo normal. Prueba con el acceso de invitado o verifica tu red.");
+                setError("La conexión está tardando más de lo normal. Verifica tu red e inténtalo de nuevo.");
             }, 8000);
 
             const { error: authError } = await supabase.auth.signInWithPassword({
@@ -59,6 +63,7 @@ export default function LoginPage() {
 
             // Clear any previous test profile on real successful login
             localStorage.removeItem('cen_test_profile');
+            document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Lax";
 
             // Redirect based on role
             try {
@@ -83,7 +88,8 @@ export default function LoginPage() {
     }, [email, password, router]);
 
     return (
-        <div className="min-h-screen w-full flex bg-[#F8F9FB] font-epilogue">
+        <div className="min-h-screen w-full flex flex-col bg-[#F8F9FB] font-epilogue">
+        <div className="flex flex-1">
             {/* LEFT SIDE: Branding & Illustration (Hidden on mobile) */}
             <div className="hidden lg:flex w-1/2 relative bg-gradient-to-br from-[#011C40] to-[#011126] overflow-hidden flex-col justify-between p-12 lg:p-16">
                 {/* Decorative background elements */}
@@ -189,9 +195,25 @@ export default function LoginPage() {
                             </div>
                         </div>
 
+                        <label className="flex items-start gap-3 cursor-pointer select-none">
+                            <input
+                                type="checkbox"
+                                checked={consentChecked}
+                                onChange={e => setConsentChecked(e.target.checked)}
+                                className="mt-1 w-5 h-5 rounded border-2 border-[#CBD5E1] accent-[#FF8C00] cursor-pointer flex-shrink-0"
+                            />
+                            <span className="text-sm text-[#64748B] font-medium leading-relaxed">
+                                He leído y acepto el{' '}
+                                <Link href="/privacidad" className="text-[#FF8C00] font-bold hover:underline" target="_blank">Aviso de Privacidad</Link>
+                                {' '}y los{' '}
+                                <Link href="/terminos" className="text-[#FF8C00] font-bold hover:underline" target="_blank">Términos de Uso</Link>
+                                {' '}de la plataforma.
+                            </span>
+                        </label>
+
                         <button
                             type="submit"
-                            disabled={loading}
+                            disabled={loading || !consentChecked}
                             className="w-full mt-6 bg-[#011C40] text-white py-5 rounded-2xl font-black text-lg shadow-[0_10px_25px_rgba(1,28,64,0.15)] hover:shadow-[0_15px_35px_rgba(1,28,64,0.25)] hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 flex items-center justify-center gap-3 group overflow-hidden relative"
                         >
                             {/* Button Shine Effect */}
@@ -211,14 +233,7 @@ export default function LoginPage() {
                         </button>
                     </form>
 
-                    <div className="mt-12 pt-8 border-t border-[#E2E8F0] text-center space-y-6">
-                        <button 
-                            onClick={() => window.location.href = "/hub"}
-                            className="w-full py-4 bg-[#F8FAFC] text-[#64748B] rounded-2xl font-bold text-sm border-2 border-transparent hover:border-[#FF8C00] hover:text-[#FF8C00] transition-all flex items-center justify-center gap-2 group"
-                        >
-                            Acceder como Invitado <i className="fas fa-user-ninja opacity-50 group-hover:opacity-100"></i>
-                        </button>
-                        
+                    <div className="mt-12 pt-8 border-t border-[#E2E8F0] text-center">
                         <p className="text-sm font-semibold text-[#64748B]">
                             ¿No tienes cuenta? <Link href="/#niveles" className="text-[#FF8C00] font-bold hover:underline">Explora nuestros niveles</Link>
                         </p>
@@ -226,6 +241,8 @@ export default function LoginPage() {
                 </div>
             </div>
 
+        </div>
+        <FooterLegal />
         </div>
     );
 }

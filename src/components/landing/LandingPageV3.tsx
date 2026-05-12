@@ -90,7 +90,6 @@ export default function LandingPageV3() {
               <a href="#metodologia">Metodología</a>
             </div>
             <div className="nav-right">
-              <Link href="/hub" className="px-6 py-3 font-bold text-[#64748B] hover:text-[#FF8C00] transition-colors">Portal Académico</Link>
               <Link href="/log-in" className="nav-btn-primary">Iniciar Sesión</Link>
             </div>
           </nav>
@@ -465,8 +464,8 @@ export default function LandingPageV3() {
             <div className="footer-bottom">
               <span>© 2026 Campaña de Educación Nacional. Todos los derechos reservados.</span>
               <div className="fb-legal" style={{display: 'flex', gap: '20px'}}>
-                <a href="#" rel="noopener noreferrer">Privacidad</a>
-                <a href="#" rel="noopener noreferrer">Términos</a>
+                <Link href="/privacidad">Privacidad</Link>
+                <Link href="/terminos">Términos</Link>
               </div>
             </div>
           </footer>

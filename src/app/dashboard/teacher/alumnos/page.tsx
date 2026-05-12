@@ -21,7 +21,10 @@ import {
   AlertCircle,
   X,
   Loader2,
+  Download,
+  FileText,
 } from "lucide-react";
+import jsPDF from "jspdf";
 
 interface IntentoEntry {
   activity_id: string;
@@ -219,59 +222,203 @@ export default function AlumnosPage() {
     return level;
   };
 
-  const handlePrintPDF = (student: Student) => {
-    const win = window.open("", "_blank");
-    if (!win) return;
-    win.document.write(`
-      <html>
-        <head>
-          <title>Expediente — ${student.full_name}</title>
-          <style>
-            body { font-family: sans-serif; padding: 40px; color: #011C40; }
-            h1 { border-bottom: 2px solid #FF8C00; padding-bottom: 10px; }
-            .meta { margin-bottom: 30px; }
-            .kpis { display: flex; gap: 24px; margin-bottom: 30px; }
-            .kpi { background: #f8f9fa; padding: 16px 24px; border-radius: 12px; text-align: center; }
-            .kpi .val { font-size: 32px; font-weight: 900; color: #011C40; }
-            .kpi .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-top: 4px; }
-            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-            th, td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; }
-            th { background: #f8f9fa; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-          </style>
-        </head>
-        <body>
-          <h1>Expediente Académico: ${student.full_name}</h1>
-          <div class="meta">
-            <p><strong>Nivel:</strong> ${getLevelLabel(student.school_level)}</p>
-            <p><strong>Grupo:</strong> ${student.grupo_nombre || student.group_id || "Sin grupo"}</p>
-            <p><strong>Email:</strong> ${student.email || "—"}</p>
-          </div>
-          <div class="kpis">
-            <div class="kpi"><div class="val">${student.progress_count}</div><div class="lbl">Actividades</div></div>
-            <div class="kpi"><div class="val">${student.avg_score}</div><div class="lbl">Puntaje Prom.</div></div>
-            <div class="kpi"><div class="val">${student.total_minutes}</div><div class="lbl">Min. Invertidos</div></div>
-          </div>
-          <h2>Historial de Actividades</h2>
-          <table>
-            <thead>
-              <tr><th>Actividad</th><th>Fecha</th><th>Puntaje</th><th>Tiempo</th></tr>
-            </thead>
-            <tbody>
-              ${(student.history || []).map((h) => `
-                <tr>
-                  <td>${h.activity_id}</td>
-                  <td>${new Date(h.completed_at).toLocaleString("es-MX")}</td>
-                  <td>${h.score ?? "—"}</td>
-                  <td>${h.tiempo_segundos ? Math.round(h.tiempo_segundos / 60) + " min" : "—"}</td>
-                </tr>
-              `).join("")}
-            </tbody>
-          </table>
-          <script>window.print();</script>
-        </body>
-      </html>
-    `);
-    win.document.close();
+  const handleIndividualPDF = (student: Student) => {
+    const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+    // Header bar
+    doc.setFillColor(1, 28, 64);
+    doc.rect(0, 0, 210, 42, 'F');
+    doc.setFillColor(255, 140, 0);
+    doc.rect(0, 42, 210, 2, 'F');
+
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(20);
+    doc.setFont('helvetica', 'bold');
+    doc.text('CEN — Expediente Académico', 15, 20);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+    doc.text(`Generado: ${new Date().toLocaleDateString('es-MX')}`, 15, 30);
+    doc.text(`Docente: ${teacher?.full_name ?? ''}`, 15, 37);
+
+    // Student name + metadata
+    doc.setTextColor(1, 28, 64);
+    doc.setFontSize(17);
+    doc.setFont('helvetica', 'bold');
+    doc.text(student.full_name, 15, 58);
+
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(100, 116, 139);
+    doc.text(`Nivel: ${getLevelLabel(student.school_level)}`, 15, 67);
+    doc.text(`Grupo: ${student.grupo_nombre || student.group_id || '—'}`, 15, 73);
+    doc.text(`Email: ${student.email || '—'}`, 15, 79);
+
+    // KPI boxes
+    const kpis = [
+      { label: 'ACTIVIDADES', value: `${student.progress_count}/20` },
+      { label: 'PUNTAJE PROM.', value: `${student.avg_score}/100` },
+      { label: 'MIN. INVERTIDOS', value: `${student.total_minutes}` },
+    ];
+    kpis.forEach((kpi, i) => {
+      const x = 15 + i * 62;
+      doc.setFillColor(248, 249, 251);
+      doc.roundedRect(x, 88, 57, 26, 3, 3, 'F');
+      doc.setFontSize(16);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(1, 28, 64);
+      doc.text(kpi.value, x + 28.5, 101, { align: 'center' });
+      doc.setFontSize(6.5);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(148, 163, 184);
+      doc.text(kpi.label, x + 28.5, 109, { align: 'center' });
+    });
+
+    // Section title
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(1, 28, 64);
+    doc.text('Historial de Actividades', 15, 128);
+
+    // Table header
+    doc.setFillColor(1, 28, 64);
+    doc.rect(15, 132, 180, 9, 'F');
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(255, 255, 255);
+    doc.text('ACTIVIDAD', 19, 138);
+    doc.text('FECHA', 95, 138);
+    doc.text('PUNTAJE', 148, 138);
+    doc.text('TIEMPO', 178, 138);
+
+    const history = student.history || [];
+    let y = 141;
+    history.forEach((entry, idx) => {
+      if (y > 272) return;
+      if (idx % 2 === 0) {
+        doc.setFillColor(248, 249, 251);
+        doc.rect(15, y, 180, 8, 'F');
+      }
+      doc.setFontSize(7.5);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(30, 41, 59);
+      doc.text(entry.activity_id, 19, y + 5.5);
+      doc.text(new Date(entry.completed_at).toLocaleDateString('es-MX'), 95, y + 5.5);
+      doc.text(entry.score !== null ? String(entry.score) : '—', 163, y + 5.5, { align: 'right' });
+      doc.text(entry.tiempo_segundos ? `${Math.round(entry.tiempo_segundos / 60)}m` : '—', 192, y + 5.5, { align: 'right' });
+      y += 8;
+    });
+
+    if (history.length === 0) {
+      doc.setFontSize(9);
+      doc.setTextColor(148, 163, 184);
+      doc.text('Sin actividades registradas.', 19, 150);
+    }
+
+    // Footer
+    doc.setFontSize(7);
+    doc.setTextColor(203, 213, 225);
+    doc.text('© 2026 CEN — Documento generado automáticamente', 105, 288, { align: 'center' });
+
+    doc.save(`expediente-${student.full_name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
+  };
+
+  const handleGroupPDF = () => {
+    const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+
+    // Header
+    doc.setFillColor(1, 28, 64);
+    doc.rect(0, 0, 297, 38, 'F');
+    doc.setFillColor(255, 140, 0);
+    doc.rect(0, 38, 297, 2, 'F');
+
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(20);
+    doc.setFont('helvetica', 'bold');
+    doc.text('CEN — Informe Grupal de Desempeño', 15, 18);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+    doc.text(`Docente: ${teacher?.full_name ?? ''}`, 15, 28);
+    doc.text(`Generado: ${new Date().toLocaleDateString('es-MX')}`, 15, 35);
+
+    // Summary stats
+    const totalStudents = students.length;
+    const activeStudents = students.filter(s => s.progress_count > 0).length;
+    const groupAvg = totalStudents
+      ? Math.round(students.reduce((s, st) => s + st.avg_score, 0) / totalStudents)
+      : 0;
+    const totalActivities = students.reduce((s, st) => s + st.progress_count, 0);
+
+    const summaryItems = [
+      { label: 'ALUMNOS TOTALES', value: String(totalStudents) },
+      { label: 'ALUMNOS ACTIVOS', value: String(activeStudents) },
+      { label: 'PUNTAJE GRUPAL', value: `${groupAvg}/100` },
+      { label: 'ACTIVIDADES COMPLETADAS', value: String(totalActivities) },
+    ];
+    summaryItems.forEach((item, i) => {
+      const x = 15 + i * 70;
+      doc.setFillColor(248, 249, 251);
+      doc.roundedRect(x, 46, 65, 22, 3, 3, 'F');
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(1, 28, 64);
+      doc.text(item.value, x + 32.5, 55, { align: 'center' });
+      doc.setFontSize(6);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(148, 163, 184);
+      doc.text(item.label, x + 32.5, 62, { align: 'center' });
+    });
+
+    // Table title
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(1, 28, 64);
+    doc.text('Detalle por Alumno', 15, 80);
+
+    // Table header
+    doc.setFillColor(1, 28, 64);
+    doc.rect(15, 84, 267, 9, 'F');
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(255, 255, 255);
+    doc.text('#', 18, 90);
+    doc.text('NOMBRE COMPLETO', 27, 90);
+    doc.text('GRUPO', 115, 90);
+    doc.text('ACTIVIDADES', 150, 90);
+    doc.text('PUNTAJE PROM.', 185, 90);
+    doc.text('MIN. INVERTIDOS', 225, 90);
+    doc.text('ESTADO', 260, 90);
+
+    // Sort by score desc for ranking
+    const ranked = [...students].sort((a, b) => b.avg_score - a.avg_score);
+    let y = 93;
+    ranked.forEach((s, idx) => {
+      if (y > 188) return;
+      if (idx % 2 === 0) {
+        doc.setFillColor(248, 249, 251);
+        doc.rect(15, y, 267, 8, 'F');
+      }
+      doc.setFontSize(7.5);
+      doc.setFont('helvetica', idx < 3 ? 'bold' : 'normal');
+      doc.setTextColor(30, 41, 59);
+      doc.text(String(idx + 1), 18, y + 5.5);
+      doc.text(s.full_name, 27, y + 5.5);
+      doc.text(s.grupo_nombre || s.group_id || '—', 115, y + 5.5);
+      doc.text(`${s.progress_count}/20`, 160, y + 5.5, { align: 'right' });
+      doc.text(`${s.avg_score}/100`, 200, y + 5.5, { align: 'right' });
+      doc.text(`${s.total_minutes}m`, 240, y + 5.5, { align: 'right' });
+      const estado = s.progress_count >= 10 ? 'Al corriente' : s.progress_count > 0 ? 'En progreso' : 'Sin inicio';
+      doc.setTextColor(s.progress_count >= 10 ? 16 : s.progress_count > 0 ? 180 : 148, s.progress_count >= 10 ? 185 : s.progress_count > 0 ? 120 : 163, s.progress_count >= 10 ? 129 : 0);
+      doc.text(estado, 260, y + 5.5);
+      doc.setTextColor(30, 41, 59);
+      y += 8;
+    });
+
+    // Footer
+    doc.setFontSize(7);
+    doc.setTextColor(203, 213, 225);
+    doc.text('© 2026 CEN — Documento generado automáticamente', 148.5, 198, { align: 'center' });
+
+    doc.save(`informe-grupal-cen-${new Date().toISOString().split('T')[0]}.pdf`);
   };
 
   if (loading) return (
@@ -321,9 +468,18 @@ export default function AlumnosPage() {
                   onChange={(e) => setSearch(e.target.value)}
                 />
               </div>
-              <p className="text-[10px] font-black text-white/20 uppercase tracking-widest text-center">
-                {filtered.length} alumno{filtered.length !== 1 ? "s" : ""} encontrado{filtered.length !== 1 ? "s" : ""}
-              </p>
+              <div className="flex items-center gap-3">
+                <p className="text-[10px] font-black text-white/20 uppercase tracking-widest flex-1 text-center">
+                  {filtered.length} alumno{filtered.length !== 1 ? "s" : ""} encontrado{filtered.length !== 1 ? "s" : ""}
+                </p>
+                <button
+                  onClick={handleGroupPDF}
+                  disabled={students.length === 0}
+                  className="flex items-center gap-2 px-5 py-3 bg-[#FF8C00] text-black rounded-[2rem] font-black text-[10px] uppercase tracking-[0.3em] hover:bg-[#FFB057] transition-all shadow-lg active:scale-95 disabled:opacity-40"
+                >
+                  <FileText className="w-4 h-4" /> Informe Grupal
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -469,10 +625,10 @@ export default function AlumnosPage() {
               </div>
 
               <button
-                onClick={() => handlePrintPDF(selected)}
+                onClick={() => handleIndividualPDF(selected)}
                 className="relative z-10 w-full py-6 bg-white text-[#011C40] rounded-[2rem] font-black text-[11px] uppercase tracking-[0.3em] hover:bg-[#FF8C00] hover:text-white transition-all shadow-xl active:scale-95 flex items-center justify-center gap-4"
               >
-                <Printer className="w-5 h-5" /> Exportar Expediente
+                <Download className="w-5 h-5" /> Descargar Expediente PDF
               </button>
             </div>
 
