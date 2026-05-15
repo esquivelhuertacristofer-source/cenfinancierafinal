@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from "sonner";
 
 export const metadata = {
+  metadataBase: new URL('https://cenfinancierafinal.vercel.app'),
   title: "CEN | Plataforma de Educación Financiera",
   description: "Plataforma educativa líder en inteligencia financiera para niños y jóvenes de 6 a 15 años. Misiones, simuladores y actividades diseñadas por edades.",
   keywords: ["educación financiera", "finanzas para niños", "finanzas para jóvenes", "CEN", "educación primaria", "educación secundaria", "México"],
