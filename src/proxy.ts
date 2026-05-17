@@ -5,36 +5,54 @@ import { checkLoginRateLimit } from './lib/rate-limiter';
 
 const PROTECTED_PREFIXES = ['/hub', '/dashboard', '/admin'];
 
-const CSP = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.supabase.co https://i.pravatar.cc",
-  "font-src 'self' data:",
-  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.sentry.io https://vitals.vercel-insights.com https://vercel.live",
-  "media-src 'self'",
-  "object-src 'none'",
-  "frame-src 'none'",
-  "frame-ancestors 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "upgrade-insecure-requests",
-].join('; ');
+function buildCSP(nonce: string): string {
+  return [
+    "default-src 'self'",
+    // nonce + strict-dynamic: only nonce'd scripts and scripts they load are allowed.
+    // 'unsafe-inline' is intentionally absent — removing it is the goal of SEC-006.
+    // 'unsafe-eval' removed: production builds do not require eval().
+    // https://vercel.live kept for Vercel deployment previews.
+    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://vercel.live`,
+    // style-src keeps unsafe-inline: inline styles from Tailwind/Sonner are not
+    // executable and the risk profile is much lower than script injection.
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: blob: https://*.supabase.co https://i.pravatar.cc",
+    "font-src 'self' data:",
+    "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.sentry.io https://vitals.vercel-insights.com https://vercel.live",
+    "media-src 'self'",
+    "object-src 'none'",
+    "frame-src 'none'",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "upgrade-insecure-requests",
+  ].join('; ');
+}
 
-function applySecurityHeaders(response: NextResponse): void {
+function applySecurityHeaders(response: NextResponse, nonce: string): void {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
-  response.headers.set('Content-Security-Policy', CSP);
+  response.headers.set('Content-Security-Policy', buildCSP(nonce));
 }
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Rate-limit login POSTs to mitigate brute-force
+  // Generate per-request nonce for CSP.
+  // The nonce is forwarded as x-nonce in the request headers so that
+  // layout.tsx (and any async Server Component) can read it via headers().
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
+
+  // Build a mutable copy of request headers containing the nonce.
+  const reqHeaders = new Headers(request.headers);
+  reqHeaders.set('x-nonce', nonce);
+
+  // Rate-limit login POSTs to mitigate brute-force (legacy guard — the real
+  // rate limiting is in loginAction Server Action, see authActions.ts).
   if (pathname === '/log-in' && request.method === 'POST') {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
     const { allowed } = checkLoginRateLimit(`login:${ip}`);
@@ -48,7 +66,8 @@ export async function proxy(request: NextRequest) {
 
   // Supabase session passthrough: propagates cookie refreshes across the response.
   // IMPORTANT: do not add logic between createServerClient and getUser().
-  let supabaseResponse = NextResponse.next({ request });
+  // We pass reqHeaders (with x-nonce) so that the layout can read the nonce.
+  let supabaseResponse = NextResponse.next({ request: { headers: reqHeaders } });
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -58,7 +77,8 @@ export async function proxy(request: NextRequest) {
         getAll() { return request.cookies.getAll(); },
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
-          supabaseResponse = NextResponse.next({ request });
+          // Preserve x-nonce when Supabase recreates the response for cookie refresh.
+          supabaseResponse = NextResponse.next({ request: { headers: reqHeaders } });
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
@@ -77,7 +97,7 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  applySecurityHeaders(supabaseResponse);
+  applySecurityHeaders(supabaseResponse, nonce);
   return supabaseResponse;
 }
 

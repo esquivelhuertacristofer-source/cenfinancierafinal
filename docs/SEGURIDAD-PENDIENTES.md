@@ -1,6 +1,6 @@
 # Deuda de Seguridad — CEN Educación Financiera
 
-**Última actualización:** 2026-05-17 (SEC-001, SEC-002, SEC-003, SEC-004 resueltos)
+**Última actualización:** 2026-05-17 (SEC-001 a SEC-007 resueltos o documentados)
 **Fuente:** Auditoría OWASP Top 10 (2021) — ver `docs/AUDITORIA-OWASP-FINANCIERA.md`
 
 ---
@@ -48,25 +48,45 @@
 - **Coherencia UAEMEX:** Sincronizado con la versión entregada en auditoría UAEMEX (2026-05-13) donde xlsx fue reemplazado por PapaParse + CSV nativo.
 - **Archivo modificado:** `src/app/admin/usuarios/page.tsx`
 
-### SEC-005 — new Function() en math-engine y BuilderActivity
+### ~~SEC-005 — new Function() en math-engine y BuilderActivity~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A03 Injection
-- **Severidad:** Media (riesgo acotado en estado actual)
-- **Archivos:** `src/lib/math-engine.ts:23`, `src/components/activities/BuilderActivity.tsx:42,48,62`
-- **Descripción:** Uso de `new Function()` para evaluar fórmulas matemáticas. Fórmulas provienen de archivos JSON del repositorio (developer-controlled). Riesgo se elevaría a CRÍTICO si fórmulas vinieran de base de datos o input de usuario.
-- **Cómo resolver:** Reemplazar con biblioteca `mathjs` que provee un evaluador de expresiones matemáticas sin acceso a scope global.
+- **Acción:** `new Function()` reemplazado por `evaluate()` de `mathjs` en todos los usos.
+  - `src/lib/math-engine.ts`: reescrito con `evaluate(normalizeFormula(f), variables)`. Eliminado `new Function('return ...')()`.
+  - `src/components/activities/BuilderActivity.tsx`: 3 instancias migradas a `evaluate()` con scope objeto.
+  - `normalizeFormula()` convierte `Math.ceil/max/round/pow/min/abs/sqrt/log` → equivalentes mathjs. Las fórmulas reales del proyecto usan estos métodos.
+  - mathjs NO tiene acceso a `process`, `require`, ni globals JS — solo evalúa expresiones matemáticas.
+- **Tests:** 17 tests en `src/__tests__/math-engine.test.ts` (normalización, aritmética, fórmulas reales con Math.*, robustez, rechazo de código arbitrario).
+- **Archivos:** `src/lib/math-engine.ts`, `src/components/activities/BuilderActivity.tsx`, `package.json` (`mathjs` añadido).
 
-### SEC-006 — CSP con unsafe-inline en script-src
+### ~~SEC-006 — CSP con unsafe-inline en script-src~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A05 Security Misconfiguration
-- **Severidad:** Media
-- **Archivo:** `src/proxy.ts`
-- **Descripción:** La CSP implementada incluye `'unsafe-inline'` en `script-src` porque Next.js/Turbopack inyecta scripts inline. Con `'unsafe-inline'`, XSS puede ejecutar scripts inline.
-- **Cómo resolver:** Implementar nonce-based CSP. Requiere generar un nonce por request y pasarlo a Next.js via `nonce` en la configuración. Complejidad media-alta.
+- **Acción:** Nonce-based CSP implementada en `src/proxy.ts`.
+  - Se genera un nonce por request via `crypto.randomUUID()` → base64.
+  - `script-src` reemplazado: `'unsafe-inline' 'unsafe-eval'` → `'nonce-${nonce}' 'strict-dynamic'`.
+  - `'unsafe-eval'` eliminado completamente (builds de producción no lo requieren).
+  - `style-src` mantiene `'unsafe-inline'` — styles inline no son ejecutables, riesgo aceptado.
+  - El nonce se pasa como `x-nonce` en los request headers para que Next.js App Router lo aplique a sus scripts de hidratación.
+- **Limitación:** El comportamiento con Turbopack (Next.js 16.1.6) no fue verificado en browser — requiere validación manual en staging antes de deploy a producción. Si los scripts de hidratación quedan bloqueados, agregar `'unsafe-inline'` de vuelta a `script-src` como fallback temporal.
+- **Archivos:** `src/proxy.ts`.
 
-### SEC-007 — Anon key en git history
+### SEC-007 — Anon key en git history — PROCEDIMIENTO DOCUMENTADO
 - **Categoría:** A02 Cryptographic Failures
-- **Severidad:** Baja (anon key es pública por diseño)
-- **Descripción:** `docs/CREDENCIALES_MAESTRAS.md` contiene el Supabase anon key en git history. Archivo removido del tracking (.gitignore actualizado). El historial persiste.
-- **Acción recomendada:** Si se quiere limpiar el historial, usar `git filter-repo` o BFG Repo Cleaner. Rotar el anon key en el Supabase dashboard como buena práctica aunque no sea urgente.
+- **Severidad:** Baja (anon key es pública por diseño en Supabase)
+- **Estado:** Archivo removido del tracking (.gitignore actualizado en auditoría anterior). El historial git persiste. La ejecución de la rotación es acción manual del usuario.
+
+#### Procedimiento de rotación (ejecutar manualmente):
+
+1. Ir a **Supabase Dashboard** → Project Settings → API
+2. Click en **"Rotate anon key"** (o "Regenerate")
+3. Copiar la nueva anon key
+4. Actualizar la variable `NEXT_PUBLIC_SUPABASE_ANON_KEY` en:
+   - **Vercel Dashboard** → Settings → Environment Variables → Production + Preview + Development
+   - `.env.local` (desarrollo local)
+5. Trigger un **re-deploy** en Vercel (o push cualquier commit)
+6. Verificar que login, queries y Supabase Realtime siguen funcionando
+7. La key vieja permanece en git history pero **ya no es funcional** una vez rotada
+
+> **Nota:** Limpiar el historial git (`git filter-repo` / BFG Repo Cleaner) es opcional. La key rotada en el historial no representa riesgo porque ya no funciona.
 
 ---
 
@@ -75,8 +95,8 @@
 ### SEC-008 — Security logger sin integración en flujos individuales
 - **Categoría:** A09 Logging & Monitoring
 - **Severidad:** Baja
-- **Descripción:** El módulo `src/lib/security-logger.ts` fue creado pero no está integrado en los flujos de login, admin actions ni API routes. Los eventos de seguridad no se están logueando actualmente.
-- **Cómo resolver:** Integrar `logSecurityEvent()` en login (éxito/fallo), adminActions, y los API routes que retornan 401/403.
+- **Descripción:** El módulo `src/lib/security-logger.ts` fue creado pero no está integrado en todos los flujos. Login y logout ya están integrados vía `authActions.ts`. Faltan: adminActions, y los API routes que retornan 401/403.
+- **Cómo resolver:** Integrar `logSecurityEvent()` en `requireAdminSession()` cuando lanza UNAUTHORIZED/FORBIDDEN, y en las API routes relevantes.
 
 ### SEC-009 — Next.js 16.1.6 con CVEs de middleware bypass
 - **Categoría:** A06 Vulnerable Components
@@ -84,3 +104,17 @@
 - **CVEs:** GHSA-26hh-7cqf-hhc6 (middleware bypass), GHSA-vfv6-92ff-j949 (cache poisoning), GHSA-mg66-mrh9-m8jx (DoS)
 - **Nota:** El fix requiere `npm audit fix --force` que puede actualizar Next.js a una versión con breaking changes. Evaluar si hay una versión 16.1.x o 16.2.x que resuelva estos CVEs sin breaking changes.
 - **Cómo resolver:** `npm install next@latest` o evaluar la versión mínima con los fixes y actualizar específicamente.
+
+### SEC-010 — Rate limiter in-memory no distribuido
+- **Categoría:** A04 Insecure Design (deuda residual de SEC-003)
+- **Severidad:** Baja actual / Media si escala a producción real
+- **Descripción:** El rate limiter en `src/lib/rate-limiter.ts` usa un `Map` en memoria de proceso. En Vercel con auto-scaling, cada instancia serverless tiene su propio contador independiente. Un atacante puede multiplicar intentos siendo enrutado a instancias distintas, circunvalando los límites configurados.
+- **Impacto actual:** Bajo — la plataforma tiene tráfico acotado y pocas instancias activas simultáneas.
+- **Cuándo abordar:** Antes de exponer la plataforma a usuarios concurrentes en producción real (>100 usuarios activos simultáneos).
+- **Solución recomendada:** Migrar `rateLimit()` en `authActions.ts` a **Upstash Ratelimit** (Redis distribuido, gratis hasta cierto límite, integración nativa con Vercel Edge/Serverless).
+  ```ts
+  import { Ratelimit } from '@upstash/ratelimit';
+  import { Redis } from '@upstash/redis';
+  const ratelimit = new Ratelimit({ redis: Redis.fromEnv(), limiter: Ratelimit.slidingWindow(5, '60 s') });
+  ```
+- **Esfuerzo estimado:** 2-3 horas incluido setup de Upstash y configuración en Vercel.

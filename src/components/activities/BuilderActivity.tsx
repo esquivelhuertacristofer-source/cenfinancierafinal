@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import { evaluate } from 'mathjs';
+import { normalizeFormula } from '../../lib/math-engine';
 import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
 import { ArrowLeft, ChevronRight, ChevronLeft, CheckCircle2, Calculator, Sparkles, Zap, FileText } from 'lucide-react';
 
@@ -37,16 +39,16 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
     if (!data.calculos_automaticos?.length) return [];
     const keys = Object.keys(formData);
     const vals = Object.values(formData);
+    const scope = Object.fromEntries(keys.map((k, i) => [k, vals[i]]));
     return data.calculos_automaticos.map((calc: CalcAutomatico) => {
       try {
-        const fn = new Function(...keys, `return ${calc.formula}`);
-        const result = fn(...vals);
-        const computed = typeof result === 'number' && isFinite(result) ? result : null;
+        const result = evaluate(normalizeFormula(calc.formula), scope);
+        const num = Number(result);
+        const computed = isFinite(num) ? num : null;
         let alertActive = false;
         if (calc.alerta_si && computed !== null) {
           try {
-            const alertFn = new Function(...keys, `return ${calc.alerta_si}`);
-            alertActive = !!alertFn(...vals);
+            alertActive = !!evaluate(normalizeFormula(calc.alerta_si), scope);
           } catch { /* condición no evaluable aún */ }
         }
         return { ...calc, computed, alertActive };
@@ -59,10 +61,10 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
   const getFieldValue = (field: BuilderField) => {
     if (field.type === 'calculated' && field.formula) {
       try {
-        const func = new Function(...Object.keys(formData), `return ${field.formula}`);
-        const result = func(...Object.values(formData));
-        return isNaN(result) ? 0 : result;
-      } catch (e) {
+        const result = evaluate(normalizeFormula(field.formula), formData);
+        const num = Number(result);
+        return isNaN(num) ? 0 : num;
+      } catch {
         return 0;
       }
     }

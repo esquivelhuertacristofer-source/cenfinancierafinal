@@ -34,6 +34,10 @@ export const viewport = {
   themeColor: '#0A0118',
 };
 
+// The nonce for CSP is generated per-request in proxy.ts and set as the
+// x-nonce request header. Next.js App Router reads it automatically and
+// applies it to its own hydration <script> tags, so the layout does not
+// need to read or forward it explicitly.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning>

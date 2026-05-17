@@ -13,9 +13,9 @@
 |-----------|-----------|----------|-------|--------|-------|--------|
 | A01 Broken Access Control | 4 | 0 | 2 | 1 | 1 | Resuelto (requireAdminSession + JWT proxy 2026-05-17) |
 | A02 Cryptographic Failures | 3 | 0 | 1 | 2 | 0 | Resuelto |
-| A03 Injection | 2 | 0 | 1 | 1 | 0 | Resuelto (path traversal) + Documentado |
+| A03 Injection | 2 | 0 | 1 | 1 | 0 | Resuelto (path traversal + mathjs 2026-05-17) |
 | A04 Insecure Design | 1 | 0 | 1 | 0 | 0 | Resuelto (loginAction + dual rate limit 2026-05-17) |
-| A05 Security Misconfiguration | 4 | 0 | 2 | 2 | 0 | Resuelto |
+| A05 Security Misconfiguration | 4 | 0 | 2 | 2 | 0 | Resuelto (nonce-based CSP 2026-05-17) |
 | A06 Vulnerable Components | 6 | 0 | 4 | 2 | 0 | Resuelto (xlsx eliminado 2026-05-17, migración CSV) |
 | A07 Auth Failures | 2 | 0 | 1 | 1 | 0 | Resuelto (PKCE + JWT proxy + cen_session eliminado 2026-05-17) |
 | A08 Data Integrity | 0 | 0 | 0 | 0 | 0 | N/A — No issues |
@@ -23,7 +23,7 @@
 | A10 SSRF | 0 | 0 | 0 | 0 | 0 | N/A — No issues |
 
 **Totales:** 23 hallazgos | 0 críticos | 12 altos | 8 medios | 3 bajos
-**Resueltos en sesión:** 16 | **Resueltos post-sesión:** 4 (SEC-001, SEC-002, SEC-003, SEC-004) | **Documentados como deuda:** 3
+**Resueltos en sesión:** 16 | **Resueltos post-sesión:** 7 (SEC-001 a SEC-007) | **Deudas técnicas activas:** 3 (SEC-008, SEC-009, SEC-010)
 
 ---
 
@@ -93,11 +93,11 @@
 
 ### Hallazgo 3.2 — new Function() en math-engine y BuilderActivity
 - **Severidad:** MEDIA
-- **Archivos:** `src/lib/math-engine.ts:23`, `src/components/activities/BuilderActivity.tsx:42,48,62`
-- **Descripción:** Se usa `new Function()` para evaluar fórmulas matemáticas. Las fórmulas provienen de archivos JSON developer-controlled (`src/data/actividades/`), no de input de usuario. En BuilderActivity, los valores de usuario se pasan como argumentos de función (no interpolados en el string), lo que es seguro. En math-engine.ts, los valores se interpolan pero pasan por sanitización regex.
-- **Riesgo real:** Bajo en el estado actual. El riesgo sería alto si las fórmulas vinieran de input de usuario o de la base de datos sin validación.
-- **Recomendación:** Reemplazar con `mathjs` library para eliminar el riesgo completamente.
-- **Estado:** 📋 DOCUMENTADO como deuda MEDIA — no fix inmediato por riesgo acotado
+- **Archivos:** `src/lib/math-engine.ts`, `src/components/activities/BuilderActivity.tsx`
+- **Descripción:** `new Function()` reemplazado por `evaluate()` de `mathjs`. Las fórmulas siguen siendo developer-controlled (JSON del repo), pero mathjs elimina el vector de ejecución de código arbitrario completamente — no tiene acceso a `process`, `require`, ni globales JS.
+- **Fix:** Instalado `mathjs@15.2.0`. `normalizeFormula()` convierte `Math.X` → equivalentes mathjs. Todos los usos de `new Function()` migrados (4 instancias: 1 en math-engine, 3 en BuilderActivity).
+- **Tests:** 17 tests en `src/__tests__/math-engine.test.ts`.
+- **Estado:** ✅ RESUELTO (2026-05-17)
 
 ### Hallazgo 3.3 — dangerouslySetInnerHTML
 - **Resultado:** Sin instancias encontradas. ✅
@@ -120,13 +120,13 @@
 
 ## A05:2021 — Security Misconfiguration
 
-### Hallazgo 5.1 — Sin Content-Security-Policy
-- **Severidad:** ALTA
+### Hallazgo 5.1 — CSP con unsafe-inline / unsafe-eval en script-src
+- **Severidad:** ALTA (inicial) / MEDIA (post-primera-fix)
 - **Archivo:** `src/proxy.ts`
-- **Descripción:** El proxy ya tenía X-Content-Type-Options, X-Frame-Options, HSTS, etc., pero faltaba CSP. Sin CSP, XSS exitoso puede exfiltrar datos libremente.
-- **Fix:** CSP añadida con política restrictiva: `default-src 'self'`, scripts limitados a self + inline (necesario para Tailwind), connect limitado a Supabase + Sentry + Vercel Analytics.
-- **Nota:** `'unsafe-inline'` en `script-src` es necesario para los inline scripts de Next.js/Turbopack. Migrar a nonce-based CSP en una siguiente iteración elimina este vector.
-- **Estado:** ✅ RESUELTO
+- **Descripción:** CSP inicial tenía `'unsafe-inline'` y `'unsafe-eval'` en `script-src`. Ambos eliminados en segunda iteración.
+- **Fix final (SEC-006):** Nonce-based CSP implementada. Nonce generado por request via `crypto.randomUUID()` → base64. `script-src` usa `'nonce-${nonce}' 'strict-dynamic'`. `'unsafe-eval'` eliminado completamente. `style-src` mantiene `'unsafe-inline'` (CSS inline, riesgo aceptado). El nonce se propaga via header `x-nonce` al App Router.
+- **Limitación documentada:** Comportamiento con Turbopack no verificado en browser — requiere validación manual antes de deploy a producción.
+- **Estado:** ✅ RESUELTO (2026-05-17)
 
 ### Hallazgo 5.2 — HSTS condicional (solo HTTPS)
 - **Severidad:** MEDIA
@@ -233,12 +233,26 @@
 | `src/app/api/activity/[activityId]/route.ts` | Whitelist regex anti-path-traversal |
 | `src/app/api/curriculum/[levelGrade]/route.ts` | Whitelist regex anti-path-traversal |
 | `src/app/api/test-sentry/route.ts` | Bloqueo 403 en producción |
-| `src/app/log-in/page.tsx` | Cookie: `Secure; SameSite=Strict` |
+| `src/app/log-in/page.tsx` | Cookie: `Secure; SameSite=Strict` → loginAction |
 | `src/lib/supabase-browser.ts` | `flowType: 'pkce'` |
 | `src/lib/rate-limiter.ts` | Función genérica `rateLimit({ key, max, windowMs })` |
 | `src/lib/security-logger.ts` | Campos `email`, `action`; tipo `logout_success` añadidos |
-| `src/proxy.ts` | CSP header + rate limit hook + HSTS siempre |
+| `src/lib/math-engine.ts` | REESCRITO — mathjs en lugar de new Function() |
+| `src/components/activities/BuilderActivity.tsx` | 3 new Function() → mathjs evaluate() |
+| `src/proxy.ts` | Nonce-based CSP; nonce per-request; unsafe-eval eliminado |
 | `src/app/hello/page.tsx` | ELIMINADO |
 | `scripts/audit-rls.ts` | NUEVO — script de auditoría RLS |
 | `.gitignore` | Añadido `docs/CREDENCIALES*.md` |
-| `package-lock.json` | Actualizado (npm audit fix) |
+| `package-lock.json` | Actualizado (mathjs, zod añadidos; npm audit fix) |
+
+---
+
+## Deudas técnicas activas (no bloquean producción)
+
+| ID | Categoría | Descripción | Prioridad |
+|----|-----------|-------------|-----------|
+| SEC-008 | A09 Logging | Security logger no integrado en adminActions ni API routes | Baja |
+| SEC-009 | A06 Components | Next.js 16.1.6 CVEs (middleware bypass, cache poisoning) — requiere evaluar update | Baja/Media |
+| SEC-010 | A04 Design | Rate limiter in-memory no distribuido entre instancias Vercel | Baja actual |
+
+**Procedimiento manual pendiente (usuario):** SEC-007 — Rotación de anon key de Supabase (ver `SEGURIDAD-PENDIENTES.md`).
