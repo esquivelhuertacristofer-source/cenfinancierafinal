@@ -24,7 +24,7 @@ export default function LoginPage() {
         async function checkSession() {
             const { data } = await supabase.auth.getSession();
             if (data.session) {
-                document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Lax";
+                document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Strict; Secure";
                 router.replace("/hub");
             }
         }
@@ -63,7 +63,7 @@ export default function LoginPage() {
 
             // Clear any previous test profile on real successful login
             localStorage.removeItem('cen_test_profile');
-            document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Lax";
+            document.cookie = "cen_session=1; path=/; max-age=604800; SameSite=Strict; Secure";
 
             // Redirect based on role
             try {

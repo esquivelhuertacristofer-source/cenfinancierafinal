@@ -7,6 +7,12 @@ export async function GET(
   { params }: { params: Promise<{ levelGrade: string }> }
 ) {
   const { levelGrade } = await params;
+
+  // Whitelist: only alphanumeric and one hyphen — blocks path traversal
+  if (!/^[a-z0-9]+-[a-z0-9]+$/i.test(levelGrade)) {
+    return NextResponse.json(null, { status: 400 });
+  }
+
   const parts = levelGrade.split('-');
   if (parts.length !== 2) return NextResponse.json(null, { status: 400 });
 

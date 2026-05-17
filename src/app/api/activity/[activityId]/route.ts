@@ -7,6 +7,12 @@ export async function GET(
   { params }: { params: Promise<{ activityId: string }> }
 ) {
   const { activityId } = await params;
+
+  // Whitelist: only alphanumeric and hyphens — blocks path traversal via ../
+  if (!/^[a-z0-9-]+$/i.test(activityId)) {
+    return NextResponse.json(null, { status: 404 });
+  }
+
   const parts = activityId.toUpperCase().split('-');
 
   if (parts.length < 4 || parts[0] !== 'ACT') {

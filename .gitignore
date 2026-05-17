@@ -44,6 +44,9 @@ output/
 next-env.d.ts
 scripts/
 
+# Docs con credenciales — gestionar sólo en variables de entorno, nunca versionar valores reales
+docs/CREDENCIALES*.md
+
 # Respaldos y archivos de debug (nunca versionar)
 _respaldo-*/
 _archivo_debug_*/

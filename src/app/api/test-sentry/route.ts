@@ -2,8 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import * as Sentry from '@sentry/nextjs';
 
 // GET /api/test-sentry?test=true — manually verify Sentry connectivity
-// Only works in non-production or with ?secret=xxx to prevent accidental triggering
+// Blocked in production (returns 403)
 export async function GET(request: NextRequest) {
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json({ error: 'Not available in production' }, { status: 403 });
+  }
+
   const { searchParams } = new URL(request.url);
   const isTest = searchParams.get('test') === 'true';
 
@@ -14,9 +18,9 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SENTRY_DSN) {
+  if (!process.env.NEXT_PUBLIC_SENTRY_DSN) {
     return NextResponse.json(
-      { error: 'NEXT_PUBLIC_SENTRY_DSN not configured. See docs/SENTRY-SETUP-INSTRUCCIONES.md' },
+      { error: 'NEXT_PUBLIC_SENTRY_DSN not configured.' },
       { status: 503 }
     );
   }
