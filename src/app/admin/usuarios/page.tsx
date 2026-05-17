@@ -16,7 +16,6 @@ import {
   getGrupos,
 } from "../../actions/adminActions";
 import jsPDF from "jspdf";
-import * as XLSX from "xlsx";
 import Papa from "papaparse";
 
 interface Grupo { id: string; nombre: string; grado: string }
@@ -126,25 +125,11 @@ export default function AdminUsuariosPage() {
 
   const processFile = (file: File) => {
     setImportFileName(file.name);
-    const ext = file.name.split('.').pop()?.toLowerCase();
-
-    if (ext === 'xlsx' || ext === 'xls') {
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        const data = new Uint8Array(ev.target?.result as ArrayBuffer);
-        const wb = XLSX.read(data, { type: 'array' });
-        const ws = wb.Sheets[wb.SheetNames[0]];
-        const rawRows = XLSX.utils.sheet_to_json<Record<string, string>>(ws, { defval: '' });
-        setImportRows(parseRawRows(rawRows));
-      };
-      reader.readAsArrayBuffer(file);
-    } else {
-      Papa.parse<Record<string, string>>(file, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => setImportRows(parseRawRows(results.data)),
-      });
-    }
+    Papa.parse<Record<string, string>>(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => setImportRows(parseRawRows(results.data)),
+    });
   };
 
   const handleDrop = (e: React.DragEvent) => {
@@ -171,14 +156,14 @@ export default function AdminUsuariosPage() {
   };
 
   const downloadTemplate = () => {
-    const ws = XLSX.utils.aoa_to_sheet([
-      ['nombre_completo', 'grado', 'email_personal'],
-      ['Juan Pérez García', 'P4', ''],
-      ['María Elena Sánchez', 'P4', ''],
-    ]);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Alumnos');
-    XLSX.writeFile(wb, 'plantilla-alumnos-cen.xlsx');
+    const csv = 'nombre_completo,grado,email_personal\nJuan Pérez García,P4,\nMaría Elena Sánchez,P4,\n';
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'plantilla-alumnos-cen.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const handleProcess = async () => {
@@ -412,7 +397,7 @@ export default function AdminUsuariosPage() {
                     onClick={downloadTemplate}
                     className="flex items-center gap-1.5 text-[10px] font-bold text-[#FF8C00] hover:underline"
                   >
-                    <Download className="w-3.5 h-3.5" /> Descargar plantilla .xlsx
+                    <Download className="w-3.5 h-3.5" /> Descargar plantilla .csv
                   </button>
                 </div>
 
@@ -422,10 +407,10 @@ export default function AdminUsuariosPage() {
                   onDrop={handleDrop}
                   className={`relative border-2 border-dashed rounded-2xl p-6 text-center transition-all cursor-pointer ${dragActive ? 'border-[#FF8C00] bg-[#FF8C00]/5' : 'border-gray-200 bg-gray-50 hover:border-[#011C40]/30'}`}
                 >
-                  <input type="file" accept=".xlsx,.xls,.csv" onChange={handleFileInput} className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
+                  <input type="file" accept=".csv" onChange={handleFileInput} className="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
                   <FileSpreadsheet className="w-8 h-8 text-[#011C40]/20 mx-auto mb-2" />
                   <p className="text-sm font-bold text-[#011C40]/50">
-                    {importFileName ? importFileName : 'Arrastra un .xlsx o .csv aquí'}
+                    {importFileName ? importFileName : 'Arrastra un .csv aquí'}
                   </p>
                   <p className="text-[10px] text-[#011C40]/30 mt-1">o haz clic para seleccionar · máx. {MAX_IMPORT_ROWS} filas</p>
                 </div>
@@ -579,7 +564,7 @@ export default function AdminUsuariosPage() {
                 {[
                   ["1", "Crea o selecciona el Grupo de destino."],
                   ["2", "Elige el Grado, Rol y define la contraseña del lote."],
-                  ["3", "Importa un .xlsx/.csv con la columna nombre_completo (descarga la plantilla), o pega los nombres manualmente."],
+                  ["3", "Importa un .csv con la columna nombre_completo (descarga la plantilla), o pega los nombres manualmente."],
                   ["4", "Revisa la previsualización y aplica los nombres válidos."],
                   ["5", "Haz clic en Generar Cuentas y espera."],
                   ["6", "Descarga el PDF con credenciales para entregar a la escuela."],

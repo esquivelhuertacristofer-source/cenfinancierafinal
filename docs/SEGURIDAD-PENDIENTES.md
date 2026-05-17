@@ -1,6 +1,6 @@
 # Deuda de Seguridad — CEN Educación Financiera
 
-**Última actualización:** 2026-05-17
+**Última actualización:** 2026-05-17 (SEC-004 resuelto)
 **Fuente:** Auditoría OWASP Top 10 (2021) — ver `docs/AUDITORIA-OWASP-FINANCIERA.md`
 
 ---
@@ -40,13 +40,16 @@
 
 ## MEDIA PRIORIDAD
 
-### SEC-004 — xlsx con vulnerabilidades sin fix disponible
+### ~~SEC-004 — xlsx con vulnerabilidades sin fix disponible~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A06 Vulnerable Components
-- **Severidad:** Alta (en el paquete) / Media (en contexto de uso)
-- **Paquete:** `xlsx@0.18.5` (SheetJS Community Edition)
-- **CVEs:** GHSA-4r6h-8v6p-xvw6 (Prototype Pollution), GHSA-5pgg-2g8v-p4x9 (ReDoS)
-- **Contexto de uso:** Se usa para exportar reportes (generación), no para parsear archivos subidos por usuarios. El riesgo real de prototype pollution se activa principalmente al *parsear* archivos no confiables.
-- **Cómo resolver:** Reemplazar `xlsx` con `exceljs` (MIT, mantenido activamente, sin CVEs conocidos)
+- **Paquete eliminado:** `xlsx@0.18.5` (SheetJS Community Edition)
+- **CVEs eliminados:** GHSA-4r6h-8v6p-xvw6 (Prototype Pollution), GHSA-5pgg-2g8v-p4x9 (ReDoS)
+- **Acción:** `npm uninstall xlsx` — migración completa a CSV nativo + PapaParse (ya existente)
+  - `downloadTemplate()` reemplazada: genera `.csv` con `Blob + URL.createObjectURL` (sin dependencias)
+  - `processFile()` simplificada: solo acepta `.csv` vía PapaParse (rama `xlsx/xls` eliminada)
+  - Input de archivo: `accept=".csv"` (antes `.xlsx,.xls,.csv`)
+- **Coherencia UAEMEX:** Sincronizado con la versión entregada en auditoría UAEMEX (2026-05-13) donde xlsx fue reemplazado por PapaParse + CSV nativo.
+- **Archivo modificado:** `src/app/admin/usuarios/page.tsx`
 
 ### SEC-005 — new Function() en math-engine y BuilderActivity
 - **Categoría:** A03 Injection

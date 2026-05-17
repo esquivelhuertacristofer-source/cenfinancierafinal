@@ -16,14 +16,14 @@
 | A03 Injection | 2 | 0 | 1 | 1 | 0 | Resuelto (path traversal) + Documentado |
 | A04 Insecure Design | 1 | 0 | 1 | 0 | 0 | Parcial (rate limit proxy + deuda) |
 | A05 Security Misconfiguration | 4 | 0 | 2 | 2 | 0 | Resuelto |
-| A06 Vulnerable Components | 6 | 0 | 4 | 2 | 0 | Parcial (3/6 resueltos, xlsx deuda) |
+| A06 Vulnerable Components | 6 | 0 | 4 | 2 | 0 | Resuelto (xlsx eliminado 2026-05-17, migración CSV) |
 | A07 Auth Failures | 2 | 0 | 1 | 1 | 0 | Parcial (cookie + PKCE resuelto, cen_session deuda) |
 | A08 Data Integrity | 0 | 0 | 0 | 0 | 0 | N/A — No issues |
 | A09 Logging & Monitoring | 1 | 0 | 0 | 1 | 0 | Resuelto |
 | A10 SSRF | 0 | 0 | 0 | 0 | 0 | N/A — No issues |
 
 **Totales:** 23 hallazgos | 0 críticos | 12 altos | 8 medios | 3 bajos
-**Resueltos en sesión:** 16 | **Documentados como deuda:** 7
+**Resueltos en sesión:** 16 | **Resueltos post-sesión:** 1 (SEC-004) | **Documentados como deuda:** 6
 
 ---
 
