@@ -1,6 +1,6 @@
 # Deuda de Seguridad — CEN Educación Financiera
 
-**Última actualización:** 2026-05-17 (SEC-001, SEC-002, SEC-004 resueltos)
+**Última actualización:** 2026-05-17 (SEC-001, SEC-002, SEC-003, SEC-004 resueltos)
 **Fuente:** Auditoría OWASP Top 10 (2021) — ver `docs/AUDITORIA-OWASP-FINANCIERA.md`
 
 ---
@@ -20,13 +20,18 @@
 - **Rutas protegidas:** `/hub`, `/dashboard`, `/admin` (añadida).
 - **Archivos:** `src/proxy.ts`, `src/app/log-in/page.tsx`.
 
-### SEC-003 — Rate limiting real en login
+### ~~SEC-003 — Rate limiting real en login~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A04 Insecure Design
-- **Severidad:** Alta
-- **Descripción:** El rate limiter actual (in-memory, proxy) intercepta POSTs a `/log-in` (la página), no la llamada real a Supabase auth. El flujo real de login va directo desde el cliente al servidor de Supabase vía SDK, sin pasar por nuestro proxy. Supabase tiene rate limiting nativo pero no controlamos sus umbrales.
-- **Cómo resolver:**
-  1. Migrar `supabase.auth.signInWithPassword()` a una Server Action que primero aplique rate limiting
-  2. O configurar rate limits específicos en el dashboard de Supabase: Auth > Rate Limits > Limit signups per IP
+- **Acción:** Login migrado a Server Action exclusiva (`src/app/actions/authActions.ts`).
+  - `loginAction(email, password)` aplica doble rate limit antes de llamar a Supabase: 5 req/min por IP, 10 req/5min por email (normalizado lowercase).
+  - `supabase.auth.signInWithPassword()` ya no se llama desde el cliente — sólo desde el servidor.
+  - `logoutAction()` centraliza el logout con logging de evento.
+  - Validación con Zod: email válido + password no vacío.
+  - Eventos `login_success`, `login_failure`, `login_rate_limited`, `logout_success` logueados vía `security-logger.ts`.
+- **Limitación documentada:** Rate limiter in-memory — no persistente entre instancias Vercel serverless. Para entornos multi-instancia, migrar a Upstash Redis.
+- **Configuración manual recomendada (Supabase Dashboard):** Auth > Rate Limits — revisar umbrales de signups/IP como capa adicional.
+- **Tests:** 8 tests en `src/__tests__/authActions.test.ts` (email inválido, password vacío, credenciales incorrectas, IP rate limit, email rate limit, log failure, log success, retorno de rol).
+- **Archivos:** `src/app/actions/authActions.ts` (NUEVO), `src/lib/rate-limiter.ts` (función `rateLimit` genérica), `src/lib/security-logger.ts` (campos `email`, `action`, tipo `logout_success`), `src/app/log-in/page.tsx` (usa `loginAction`).
 
 ---
 

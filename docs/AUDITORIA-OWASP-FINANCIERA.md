@@ -14,7 +14,7 @@
 | A01 Broken Access Control | 4 | 0 | 2 | 1 | 1 | Resuelto (requireAdminSession + JWT proxy 2026-05-17) |
 | A02 Cryptographic Failures | 3 | 0 | 1 | 2 | 0 | Resuelto |
 | A03 Injection | 2 | 0 | 1 | 1 | 0 | Resuelto (path traversal) + Documentado |
-| A04 Insecure Design | 1 | 0 | 1 | 0 | 0 | Parcial (rate limit proxy + deuda) |
+| A04 Insecure Design | 1 | 0 | 1 | 0 | 0 | Resuelto (loginAction + dual rate limit 2026-05-17) |
 | A05 Security Misconfiguration | 4 | 0 | 2 | 2 | 0 | Resuelto |
 | A06 Vulnerable Components | 6 | 0 | 4 | 2 | 0 | Resuelto (xlsx eliminado 2026-05-17, migración CSV) |
 | A07 Auth Failures | 2 | 0 | 1 | 1 | 0 | Resuelto (PKCE + JWT proxy + cen_session eliminado 2026-05-17) |
@@ -23,7 +23,7 @@
 | A10 SSRF | 0 | 0 | 0 | 0 | 0 | N/A — No issues |
 
 **Totales:** 23 hallazgos | 0 críticos | 12 altos | 8 medios | 3 bajos
-**Resueltos en sesión:** 16 | **Resueltos post-sesión:** 3 (SEC-001, SEC-002, SEC-004) | **Documentados como deuda:** 4
+**Resueltos en sesión:** 16 | **Resueltos post-sesión:** 4 (SEC-001, SEC-002, SEC-003, SEC-004) | **Documentados como deuda:** 3
 
 ---
 
@@ -109,12 +109,12 @@
 
 ## A04:2021 — Insecure Design
 
-### Hallazgo 4.1 — Sin rate limiting en login
+### Hallazgo 4.1 — Sin rate limiting real en login
 - **Severidad:** ALTA
-- **Descripción:** El flujo de login llama directamente a `supabase.auth.signInWithPassword()` desde el cliente sin pasar por un endpoint server-side donde aplicar rate limiting. Supabase tiene rate limiting nativo en el auth server, pero no tenemos control sobre los umbrales.
-- **Fix parcial:** Añadido `src/lib/rate-limiter.ts` (in-memory, 10 intentos / 15 minutos). Integrado en `src/proxy.ts` para requests POST a `/log-in`.
-- **Limitación:** El login real no genera POST a `/log-in` (va directo a Supabase via SDK); el rate limiter en proxy intercepta attempts de POST a la página, no la llamada API. Para rate limiting robusto, migrar auth a Server Action.
-- **Estado:** ⚠️ PARCIAL — ver SEGURIDAD-PENDIENTES.md
+- **Descripción:** El flujo de login llamaba directamente a `supabase.auth.signInWithPassword()` desde el cliente, sin pasar por ningún endpoint server-side donde aplicar rate limiting.
+- **Fix:** Login migrado a Server Action exclusiva `loginAction` en `src/app/actions/authActions.ts`. Rate limit doble: 5 req/min por IP + 10 req/5min por email. `supabase.auth.signInWithPassword()` sólo se llama desde el servidor.
+- **Limitación documentada:** Rate limiter in-memory — no compartido entre instancias Vercel serverless. Migrar a Upstash Redis para entornos multi-instancia.
+- **Estado:** ✅ RESUELTO (2026-05-17)
 
 ---
 
@@ -229,13 +229,14 @@
 
 | Archivo | Cambio |
 |---------|--------|
+| `src/app/actions/authActions.ts` | NUEVO — loginAction + logoutAction con rate limiting |
 | `src/app/api/activity/[activityId]/route.ts` | Whitelist regex anti-path-traversal |
 | `src/app/api/curriculum/[levelGrade]/route.ts` | Whitelist regex anti-path-traversal |
 | `src/app/api/test-sentry/route.ts` | Bloqueo 403 en producción |
 | `src/app/log-in/page.tsx` | Cookie: `Secure; SameSite=Strict` |
 | `src/lib/supabase-browser.ts` | `flowType: 'pkce'` |
-| `src/lib/rate-limiter.ts` | NUEVO — rate limiter in-memory |
-| `src/lib/security-logger.ts` | NUEVO — logger de eventos de seguridad |
+| `src/lib/rate-limiter.ts` | Función genérica `rateLimit({ key, max, windowMs })` |
+| `src/lib/security-logger.ts` | Campos `email`, `action`; tipo `logout_success` añadidos |
 | `src/proxy.ts` | CSP header + rate limit hook + HSTS siempre |
 | `src/app/hello/page.tsx` | ELIMINADO |
 | `scripts/audit-rls.ts` | NUEVO — script de auditoría RLS |

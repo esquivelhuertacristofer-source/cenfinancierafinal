@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase-browser";
+import { loginAction } from "@/app/actions/authActions";
 import Link from "next/link";
 import Image from "next/image";
 import { TEST_ACCOUNTS } from "../../lib/hub";
@@ -32,7 +33,7 @@ export default function LoginPage() {
 
     const handleSignIn = useCallback(async (e: React.SyntheticEvent): Promise<void> => {
         e.preventDefault();
-        
+
         if (!email || !password) {
             setError("Por favor, introduce tu correo y contraseña.");
             return;
@@ -47,15 +48,13 @@ export default function LoginPage() {
                 setError("La conexión está tardando más de lo normal. Verifica tu red e inténtalo de nuevo.");
             }, 8000);
 
-            const { error: authError } = await supabase.auth.signInWithPassword({
-                email,
-                password,
-            });
+            // Auth goes through Server Action — client never calls supabase.auth.signIn* directly
+            const result = await loginAction(email, password);
 
             clearTimeout(rescue);
 
-            if (authError) {
-                setError(authError.message === "Invalid login credentials" ? "Credenciales incorrectas" : authError.message);
+            if (!result.success) {
+                setError(result.error);
                 setLoading(false);
                 return;
             }
@@ -63,23 +62,15 @@ export default function LoginPage() {
             // Clear any previous test profile on real successful login
             localStorage.removeItem('cen_test_profile');
 
-            // Redirect based on role
-            try {
-                const { data: { user } } = await supabase.auth.getUser();
-                if (user) {
-                    const { data: profile } = await supabase.from("profiles").select("role").eq("id", user.id).single();
-                    if (profile?.role === "teacher") {
-                        window.location.href = "/dashboard/teacher";
-                        return;
-                    }
-                }
-            } catch {
-                // fallback to hub if profile query fails
+            // Redirect based on role returned by Server Action
+            if (result.role === "teacher") {
+                window.location.href = "/dashboard/teacher";
+                return;
             }
 
             window.location.href = "/hub";
-        } catch (err: any) {
-            setError("Error inesperado: " + (err.message || "Error de conexión"));
+        } catch (err: unknown) {
+            setError("Error inesperado: " + ((err instanceof Error ? err.message : null) || "Error de conexión"));
             setLoading(false);
         }
         return;
