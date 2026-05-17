@@ -1,15 +1,14 @@
-import { createClient } from '@supabase/supabase-js';
+import { createBrowserClient } from '@supabase/ssr';
 
 // Browser-side Supabase singleton.
+// Uses cookie-based session storage so the Edge proxy can validate JWTs server-side.
 // Import this in all client components and hooks.
-// For server actions that need service_role, use adminActions.ts instead.
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    flowType: 'pkce',
-    persistSession: true,
-    detectSessionInUrl: true,
+export const supabase = createBrowserClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  {
+    auth: {
+      flowType: 'pkce',
+    },
   }
-});
+);

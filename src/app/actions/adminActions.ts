@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@supabase/supabase-js";
+import { requireAdminSession } from "@/lib/supabase-server";
 
 // Admin client con service_role — solo en Server Actions, nunca en el cliente
 function getAdminClient() {
@@ -48,6 +49,8 @@ export async function onboardInstitutionalUsers(
   grado: string,
   password: string
 ): Promise<OnboardResult> {
+  await requireAdminSession();
+
   if (!password || password.trim().length < 8) {
     throw new Error("La contraseña debe tener al menos 8 caracteres.");
   }
@@ -97,6 +100,8 @@ export async function createGrupo(
   grado: string,
   idProfesor: string | null
 ): Promise<{ id: string; nombre: string } | null> {
+  await requireAdminSession();
+
   const admin = getAdminClient();
   const { data, error } = await admin
     .from("grupos")
@@ -109,6 +114,8 @@ export async function createGrupo(
 }
 
 export async function getGrupos(): Promise<{ id: string; nombre: string; grado: string }[]> {
+  await requireAdminSession();
+
   const admin = getAdminClient();
   const { data, error } = await admin.from("grupos").select("id, nombre, grado").order("nombre");
   if (error) return [];

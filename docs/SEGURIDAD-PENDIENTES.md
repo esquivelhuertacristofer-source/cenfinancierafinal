@@ -1,32 +1,24 @@
 # Deuda de Seguridad — CEN Educación Financiera
 
-**Última actualización:** 2026-05-17 (SEC-004 resuelto)
+**Última actualización:** 2026-05-17 (SEC-001, SEC-002, SEC-004 resueltos)
 **Fuente:** Auditoría OWASP Top 10 (2021) — ver `docs/AUDITORIA-OWASP-FINANCIERA.md`
 
 ---
 
 ## ALTA PRIORIDAD
 
-### SEC-001 — adminActions.ts sin verificación de rol del caller
+### ~~SEC-001 — adminActions.ts sin verificación de rol del caller~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A01 Broken Access Control
-- **Severidad:** Alta
-- **Archivos:** `src/app/actions/adminActions.ts`
-- **Descripción:** Las Server Actions que usan `SUPABASE_SERVICE_ROLE_KEY` (`onboardInstitutionalUsers`, `createGrupo`, `getGrupos`) no verifican que el usuario autenticado tenga rol `admin` o `super_admin` antes de ejecutar operaciones privilegiadas. Cualquier usuario con acceso al cliente podría invocarlas.
-- **Por qué no se resolvió:** Requiere instalar `@supabase/ssr` y migrar el flujo de autenticación a cookies SSR. Sin eso, no hay forma de leer la sesión en Server Actions sin cambiar la arquitectura.
-- **Estimado de resolución:** 2–3 horas
-- **Cómo resolver:**
-  1. `npm install @supabase/ssr`
-  2. Crear `src/lib/supabase-server.ts` usando `createServerClient` de `@supabase/ssr`
-  3. En cada Server Action, llamar `requireAdminSession()` antes de `getAdminClient()`
-  4. Migrar `supabase-browser.ts` a `createBrowserClient` de `@supabase/ssr` para cookie-based sessions
+- **Acciones resueltas:** `onboardInstitutionalUsers`, `createGrupo`, `getGrupos`
+- **Acción:** Instalado `@supabase/ssr`. Creado `src/lib/supabase-server.ts` con `requireAdminSession()` que valida JWT + rol server-side. Las 3 Server Actions llaman `await requireAdminSession()` como primera instrucción — si falla, lanzan `UNAUTHORIZED` o `FORBIDDEN` antes de tocar `service_role`.
+- **Cambios:** `src/lib/supabase-server.ts` (NUEVO), `src/app/actions/adminActions.ts`, `src/lib/supabase-browser.ts` (migrado a `createBrowserClient`).
+- **Tests:** 7 tests de control de acceso + 10 de `requireAdminSession` (100% cobertura en `supabase-server.ts`).
 
-### SEC-002 — cen_session cookie es trivialmente forgeable
+### ~~SEC-002 — cen_session cookie es trivialmente forgeable~~ ✅ RESUELTO (2026-05-17)
 - **Categoría:** A07 Auth Failures / A01 Access Control
-- **Severidad:** Media-Alta
-- **Archivo:** `src/proxy.ts`, `src/app/log-in/page.tsx`
-- **Descripción:** El proxy auth guard verifica solo `if (!request.cookies.get('cen_session'))`. Cualquier usuario puede ejecutar `document.cookie = "cen_session=1"` en el navegador para bypasear el redirect. Los datos reales están protegidos por Supabase RLS, pero la UI de /hub y /dashboard es accesible sin autenticación real.
-- **Por qué no se resolvió:** Requiere el mismo refactor de `@supabase/ssr` que SEC-001.
-- **Cómo resolver:** Después de implementar SEC-001, reemplazar el check de `cen_session` en `proxy.ts` por validación del JWT de Supabase usando `createServerClient`.
+- **Acción:** `src/proxy.ts` migrado a async. Reemplazado `!request.cookies.get('cen_session')` por `supabase.auth.getUser()` de `@supabase/ssr`. Cookie `cen_session` manual eliminada de `log-in/page.tsx`. El proxy ahora valida el JWT firmado de Supabase en lugar de un cookie custom forgeable. Token refresh propagado automáticamente via `setAll` callback.
+- **Rutas protegidas:** `/hub`, `/dashboard`, `/admin` (añadida).
+- **Archivos:** `src/proxy.ts`, `src/app/log-in/page.tsx`.
 
 ### SEC-003 — Rate limiting real en login
 - **Categoría:** A04 Insecure Design
