@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import './LandingV3.css';
-import { TIERS, ALLIES, VALUES, DEMO_VIDEO_URL } from './LandingData';
+import { TIERS, ALLIES, DEMO_VIDEO_URL } from './LandingData';
+import { Rocket, PlayCircle, ArrowRight, TrendingUp, MapPin, Zap } from 'lucide-react';
 
 // Custom hook for counting animation
 const useCounter = (target: number, durationMs = 2000, start = 0) => {
@@ -114,10 +115,10 @@ export default function LandingPageV3() {
                 </p>
                 <div className="hero-cta-row">
                   <Link href="/log-in" className="btn-cta">
-                    Comenzar ahora <i className="fas fa-rocket"></i>
+                    Comenzar ahora <Rocket className="inline w-4 h-4 ml-1" />
                   </Link>
                   <button className="btn-cta-demo" onClick={() => setShowDemo(true)}>
-                    <i className="fas fa-play-circle"></i> Descubre tu plataforma
+                    <PlayCircle className="inline w-5 h-5" /> Descubre tu plataforma
                   </button>
                 </div>
               </div>
@@ -247,7 +248,7 @@ export default function LandingPageV3() {
 
                   <div className="read-more-btn">
                     <div className="read-more-pill">Explorar Grados</div>
-                    <div className="read-more-arrow"><i className="fas fa-arrow-right"></i></div>
+                    <div className="read-more-arrow"><ArrowRight className="inline w-4 h-4" /></div>
                   </div>
                 </Link>
               ))}
@@ -307,7 +308,7 @@ export default function LandingPageV3() {
                   </div>
 
                   <div className="pc-cta" style={{ background: 'var(--cen-orange)', color: '#fff', padding: '10px 24px', borderRadius: '999px', fontSize: '14px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', width: 'fit-content', marginTop: 'auto', alignSelf: 'flex-start' }}>
-                    Acceder <i className="fas fa-arrow-right"></i>
+                    Acceder <ArrowRight className="inline w-4 h-4" />
                   </div>
                 </Link>
               ))}
@@ -370,7 +371,7 @@ export default function LandingPageV3() {
                   </div>
 
                   <div className="pc-cta" style={{ background: 'var(--cen-orange)', color: '#fff', padding: '10px 24px', borderRadius: '999px', fontSize: '14px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', width: 'fit-content', alignSelf: 'flex-start' }}>
-                    Acceder <i className="fas fa-arrow-right"></i>
+                    Acceder <ArrowRight className="inline w-4 h-4" />
                   </div>
                 </Link>
               ))}
@@ -388,17 +389,17 @@ export default function LandingPageV3() {
                 <div className="live-stat">
                   <h4>{countKids.toLocaleString()}<span>+</span></h4>
                   <div className="lbl">Niños activos</div>
-                  <div className="sub"><i className="fas fa-trending-up"></i> +217 esta semana</div>
+                  <div className="sub"><TrendingUp className="inline w-3 h-3 mr-1" /> +217 esta semana</div>
                 </div>
                 <div className="live-stat">
                   <h4>{countSchools}</h4>
                   <div className="lbl">Escuelas</div>
-                  <div className="sub"><i className="fas fa-map-marker-alt"></i> 12 estados</div>
+                  <div className="sub"><MapPin className="inline w-3 h-3 mr-1" /> 12 estados</div>
                 </div>
                 <div className="live-stat">
                   <h4>{countLessons}k</h4>
                   <div className="lbl">Lecciones hoy</div>
-                  <div className="sub"><i className="fas fa-bolt"></i> en este momento</div>
+                  <div className="sub"><Zap className="inline w-3 h-3 mr-1" /> en este momento</div>
                 </div>
               </div>
             </div>

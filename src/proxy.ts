@@ -21,7 +21,7 @@ function buildCSP(): string {
     "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.sentry.io https://vitals.vercel-insights.com https://vercel.live",
     "media-src 'self'",
     "object-src 'none'",
-    "frame-src 'none'",
+    "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
