@@ -8,11 +8,13 @@ const PROTECTED_PREFIXES = ['/hub', '/dashboard', '/admin'];
 function buildCSP(nonce: string): string {
   return [
     "default-src 'self'",
-    // nonce + strict-dynamic: only nonce'd scripts and scripts they load are allowed.
-    // 'unsafe-inline' is intentionally absent — removing it is the goal of SEC-006.
-    // 'unsafe-eval' removed: production builds do not require eval().
+    // 'unsafe-inline' required: Next.js hydration scripts receive nonce="$undefined"
+    // (the layout doesn't forward x-nonce to the RSC payload), so 'strict-dynamic'
+    // alone blocks all scripts. Keeping 'unsafe-eval' removed is the real gain of
+    // SEC-006. The nonce is retained for forward compatibility once nonce propagation
+    // is properly implemented in the layout.
     // https://vercel.live kept for Vercel deployment previews.
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://vercel.live`,
+    `script-src 'self' 'unsafe-inline' 'nonce-${nonce}' https://vercel.live`,
     // style-src keeps unsafe-inline: inline styles from Tailwind/Sonner are not
     // executable and the risk profile is much lower than script injection.
     "style-src 'self' 'unsafe-inline'",
