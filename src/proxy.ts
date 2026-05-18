@@ -5,21 +5,19 @@ import { checkLoginRateLimit } from './lib/rate-limiter';
 
 const PROTECTED_PREFIXES = ['/hub', '/dashboard', '/admin'];
 
-function buildCSP(nonce: string): string {
+function buildCSP(): string {
   return [
     "default-src 'self'",
-    // 'unsafe-inline' required: Next.js hydration scripts receive nonce="$undefined"
-    // (the layout doesn't forward x-nonce to the RSC payload), so 'strict-dynamic'
-    // alone blocks all scripts. Keeping 'unsafe-eval' removed is the real gain of
-    // SEC-006. The nonce is retained for forward compatibility once nonce propagation
-    // is properly implemented in the layout.
-    // https://vercel.live kept for Vercel deployment previews.
-    `script-src 'self' 'unsafe-inline' 'nonce-${nonce}' https://vercel.live`,
-    // style-src keeps unsafe-inline: inline styles from Tailwind/Sonner are not
-    // executable and the risk profile is much lower than script injection.
-    "style-src 'self' 'unsafe-inline'",
+    // unsafe-eval removed (SEC-006 gain). Nonce approach abandoned: browsers ignore
+    // 'unsafe-inline' when a nonce is also present (CSP Level 3), which re-breaks
+    // Next.js hydration. Plain 'unsafe-inline' is required until nonce propagation
+    // is properly wired through the RSC layout.
+    "script-src 'self' 'unsafe-inline' https://vercel.live",
+    // Google Fonts loaded via @import in globals.css requires googleapis.com in style-src
+    // and gstatic.com in font-src.
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: blob: https://*.supabase.co https://i.pravatar.cc",
-    "font-src 'self' data:",
+    "font-src 'self' data: https://fonts.gstatic.com",
     "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://*.sentry.io https://vitals.vercel-insights.com https://vercel.live",
     "media-src 'self'",
     "object-src 'none'",
@@ -31,14 +29,14 @@ function buildCSP(nonce: string): string {
   ].join('; ');
 }
 
-function applySecurityHeaders(response: NextResponse, nonce: string): void {
+function applySecurityHeaders(response: NextResponse): void {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
-  response.headers.set('Content-Security-Policy', buildCSP(nonce));
+  response.headers.set('Content-Security-Policy', buildCSP());
 }
 
 export async function proxy(request: NextRequest) {
@@ -99,7 +97,7 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  applySecurityHeaders(supabaseResponse, nonce);
+  applySecurityHeaders(supabaseResponse);
   return supabaseResponse;
 }
 
