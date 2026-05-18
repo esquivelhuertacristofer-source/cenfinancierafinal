@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { supabase } from "@/lib/supabase-browser";
+import { logoutAction } from "@/app/actions/authActions";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Panel Principal",      href: "/dashboard/teacher" },
@@ -151,7 +151,7 @@ export default function Sidebar({
 
         <button
           onClick={async () => {
-            await supabase.auth.signOut();
+            await logoutAction();
             window.location.href = "/log-in";
           }}
           className="group flex w-full items-center justify-center gap-3 rounded-[1.75rem] bg-white text-[#011C40] px-6 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-500 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_20px_40px_rgba(255,140,0,0.3)] active:scale-95 border border-white/10"

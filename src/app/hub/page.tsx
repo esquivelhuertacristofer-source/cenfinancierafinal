@@ -23,6 +23,7 @@ import {
   Menu
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { logoutAction } from '@/app/actions/authActions';
 import {
   getPillarsForGrade,
   getCompletedActivities,
@@ -530,16 +531,15 @@ export default function StudentHubV19() {
         <button 
           className="nav-link mt-auto opacity-30 hover:opacity-100" 
           onMouseEnter={() => playSFX('hover')} 
-          onClick={async () => { 
-            try { 
-              playSFX('click'); 
-              localStorage.removeItem('cen_test_profile'); // Clear virtual session
-              const { supabase } = await import('@/lib/supabase-browser');
-              await supabase.auth.signOut();
-              window.location.href = '/log-in'; 
+          onClick={async () => {
+            try {
+              playSFX('click');
+              localStorage.removeItem('cen_test_profile');
+              await logoutAction();
+              window.location.href = '/log-in';
             } catch(e){
               window.location.href = '/log-in';
-            } 
+            }
           }}
         >
           <LogOut size={20} /><span>Cerrar Sesión</span>

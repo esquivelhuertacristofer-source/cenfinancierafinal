@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { supabase } from "@/lib/supabase-browser";
+import { logoutAction } from "@/app/actions/authActions";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { LayoutDashboard, Users, TrendingUp, AlertTriangle, Clock, ChevronRight, X } from "lucide-react";
@@ -61,7 +62,7 @@ export default function TeacherDashboard() {
   }, [router]);
 
   const handleSignOut = useCallback(async () => {
-    await supabase.auth.signOut();
+    await logoutAction();
     router.push("/");
   }, [router]);
 

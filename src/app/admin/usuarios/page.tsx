@@ -15,6 +15,7 @@ import {
   createGrupo,
   getGrupos,
 } from "../../actions/adminActions";
+import { logoutAction } from "../../actions/authActions";
 import jsPDF from "jspdf";
 import Papa from "papaparse";
 
@@ -63,7 +64,7 @@ export default function AdminUsuariosPage() {
         .from("profiles").select("role, full_name").eq("id", user.id).single();
 
       if (!profile || profile.role !== "admin") {
-        await supabase.auth.signOut();
+        await logoutAction();
         router.replace("/log-in");
         return;
       }
@@ -289,7 +290,7 @@ export default function AdminUsuariosPage() {
           </div>
         </div>
         <button
-          onClick={async () => { await supabase.auth.signOut(); router.push("/log-in"); }}
+          onClick={async () => { await logoutAction(); router.push("/log-in"); }}
           className="flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm font-bold"
         >
           <LogOut className="w-4 h-4" /> Cerrar Sesión
