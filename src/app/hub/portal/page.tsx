@@ -56,7 +56,7 @@ export default function MissionPage() {
       try {
         const profile = await Promise.race([
           getCurrentProfile(),
-          new Promise<null>((resolve) => setTimeout(() => resolve(null), 100))
+          new Promise<null>((resolve) => setTimeout(() => resolve(null), 3000))
         ]);
 
         const effectiveProfile = profile || FALLBACK_PROFILE;

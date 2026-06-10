@@ -45,7 +45,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
   };
 
   const handleNext = () => {
-    if (currentIdx < data.preguntas.length - 1) {
+    if (currentIdx < preguntas.length - 1) {
       setCurrentIdx(prev => prev + 1);
       setShowFeedback(false);
     } else {
@@ -164,7 +164,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
             <div className="w-16 h-16 bg-white/[0.03] border border-white/10 rounded-[25px] flex flex-col items-center justify-center backdrop-blur-2xl">
                <span className="text-xl font-black italic text-white/80">{currentIdx + 1}</span>
                <div className="w-4 h-px bg-white/10 my-0.5" />
-               <span className="text-[10px] font-black opacity-30">{data.preguntas.length}</span>
+               <span className="text-[10px] font-black opacity-30">{preguntas.length}</span>
             </div>
          </div>
       </header>

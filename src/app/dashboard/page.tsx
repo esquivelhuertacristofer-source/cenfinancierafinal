@@ -49,10 +49,11 @@ export default function TeacherDashboard() {
 
       const groups = tp.group_id ? tp.group_id.split(",").map(g => g.trim()) : [];
 
-      const [{ data: studs }, { data: prog }] = await Promise.all([
-        supabase.from("profiles").select("*").in("school_level", ["primary","secondary"]).in("group_id", groups).order("full_name"),
-        supabase.from("progress").select("*").order("completed_at", { ascending: false }),
-      ]);
+      const { data: studs } = await supabase.from("profiles").select("*").in("school_level", ["primary","secondary"]).in("group_id", groups).order("full_name");
+      const studentIds = (studs ?? []).map((s: Profile) => s.id);
+      const { data: prog } = studentIds.length > 0
+        ? await supabase.from("progress").select("*").in("user_id", studentIds).order("completed_at", { ascending: false })
+        : { data: [] };
 
       setStudents((studs ?? []) as Profile[]);
       setProgressList((prog ?? []) as Progress[]);

@@ -6,9 +6,14 @@ import { createSupabaseServerClient } from '@/lib/supabase-server';
 import { rateLimit } from '@/lib/rate-limiter';
 import { logSecurityEvent } from '@/lib/security-logger';
 
+function maskEmail(email: string): string {
+  const [local, domain] = email.split('@');
+  return `${local.slice(0, 2)}***@${domain ?? '?'}`;
+}
+
 const LoginSchema = z.object({
   email: z.string().email('Correo electrónico inválido'),
-  password: z.string().min(1, 'La contraseña es requerida'),
+  password: z.string().min(8, 'La contraseña debe tener al menos 8 caracteres'),
 });
 
 export type LoginResult =
@@ -31,7 +36,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
   // Rate limit by IP: 5 attempts per minute
   const ipLimit = rateLimit({ key: `login:ip:${ip}`, max: 5, windowMs: 60 * 1000 });
   if (!ipLimit.allowed) {
-    logSecurityEvent({ event: 'login_rate_limited', ip, email, detail: 'IP limit exceeded' });
+    logSecurityEvent({ event: 'login_rate_limited', ip, email: maskEmail(email), detail: 'IP limit exceeded' });
     return { success: false, error: 'Demasiados intentos. Espera un momento e inténtalo de nuevo.' };
   }
 
@@ -39,7 +44,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
   const emailKey = email.toLowerCase().trim();
   const emailLimit = rateLimit({ key: `login:email:${emailKey}`, max: 10, windowMs: 5 * 60 * 1000 });
   if (!emailLimit.allowed) {
-    logSecurityEvent({ event: 'login_rate_limited', ip, email, detail: 'email limit exceeded' });
+    logSecurityEvent({ event: 'login_rate_limited', ip, email: maskEmail(email), detail: 'email limit exceeded' });
     return { success: false, error: 'Demasiados intentos para esta cuenta. Espera 5 minutos.' };
   }
 
@@ -54,7 +59,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
     logSecurityEvent({
       event: 'login_failure',
       ip,
-      email,
+      email: maskEmail(email),
       detail: authError?.message ?? 'no user returned',
     });
     return {
@@ -76,7 +81,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
     event: 'login_success',
     userId: data.user.id,
     ip,
-    email,
+    email: maskEmail(email),
   });
 
   return { success: true, role: profile?.role ?? null };

@@ -29,14 +29,19 @@ function buildCSP(): string {
   ].join('; ');
 }
 
-function applySecurityHeaders(response: NextResponse): void {
+function applySecurityHeaders(response: NextResponse, isProtectedRoute = false): void {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+  response.headers.set('Cross-Origin-Resource-Policy', 'same-origin');
   response.headers.set('Content-Security-Policy', buildCSP());
+  if (isProtectedRoute) {
+    response.headers.set('Cache-Control', 'no-store, private');
+  }
 }
 
 export async function proxy(request: NextRequest) {
@@ -97,7 +102,8 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  applySecurityHeaders(supabaseResponse);
+  const isProtectedRoute = PROTECTED_PREFIXES.some(prefix => pathname.startsWith(prefix));
+  applySecurityHeaders(supabaseResponse, isProtectedRoute);
   return supabaseResponse;
 }
 

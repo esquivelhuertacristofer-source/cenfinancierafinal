@@ -159,7 +159,7 @@ export default function TeacherDashboard() {
              <div className={`flex items-center gap-3 px-5 py-2.5 rounded-2xl border shadow-inner transition-all ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-slate-100'}`}>
                 <Clock className={`w-4 h-4 ${theme === 'dark' ? 'text-white/30' : 'text-slate-400'}`} />
                 <span className={`text-[11px] font-black uppercase tracking-[0.2em] ${theme === 'dark' ? 'text-white/50' : 'text-[#011C40]/60'}`}>
-                  LUN 4 MAY
+                  {new Date().toLocaleDateString('es-MX', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase()}
                 </span>
              </div>
           </div>

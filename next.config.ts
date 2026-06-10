@@ -25,9 +25,10 @@ export default withSentryConfig(nextConfig, {
   // Use tunnel to bypass ad blockers
   tunnelRoute: "/monitoring",
 
-  // Source maps: upload to Sentry but strip from client bundle
+  // Source maps: upload to Sentry, then delete from the build to prevent exposure
   sourcemaps: {
     disable: false,
+    deleteSourcemapsAfterUpload: true,
   },
 
   // Annotate React components for better error context

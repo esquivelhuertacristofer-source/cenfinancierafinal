@@ -502,7 +502,7 @@ export async function markActivityComplete(
       console.warn(`[markActivityComplete] ⚠️ progress falló — código:${progressResult.error.code} msg:${progressResult.error.message}`);
     }
 
-    if (!intentoResult.error || !progressResult.error) {
+    if (!intentoResult.error && !progressResult.error) {
       console.info(`[markActivityComplete] ✅ Guardado exitosamente — actividad:${activityId}`);
       return true;
     }
@@ -574,7 +574,7 @@ function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
   if (!queue.some(item => item.userId === userId && item.activityId === activityId)) {
     queue.push({ userId, activityId, attempts, timestamp: Date.now() });
     localStorage.setItem('cen_sync_queue', JSON.stringify(queue));
-    console.info(`[SyncEngine] Actividad encolada offline: ${activityId} (cola total: ${queue.length + 1} items)`);
+    console.info(`[SyncEngine] Actividad encolada offline: ${activityId} (cola total: ${queue.length} items)`);
   }
 }
 

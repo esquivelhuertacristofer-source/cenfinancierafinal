@@ -109,7 +109,10 @@ export async function createGrupo(
     .select("id, nombre")
     .single();
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    console.error('[adminActions] createGrupo error:', error.message);
+    throw new Error("No se pudo crear el grupo. Intente de nuevo.");
+  }
   return data;
 }
 

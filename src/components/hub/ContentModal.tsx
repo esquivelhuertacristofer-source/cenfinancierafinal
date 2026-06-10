@@ -554,7 +554,7 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme }: { unitCode: strin
         <QuizActivity
           data={data}
           onComplete={(score) => {
-            if (score >= (data.aprobacion_minima * 100)) {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
               setIsFinishedLocal(true);
               onComplete(score);
             }
