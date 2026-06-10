@@ -102,8 +102,9 @@ export default function PrivacidadPage() {
                 </ul>
                 <p className="text-sm mt-2">
                   Si usted no desea que sus datos sean tratados para las finalidades secundarias, puede manifestarlo
-                  enviando un correo a <strong>privacidad@cenfinanciera.com</strong> con
-                  el asunto &ldquo;Oposición a finalidades secundarias&rdquo;.
+                  enviando un correo a{' '}
+                  <a href="mailto:privacidad@cenfinanciera.com?subject=Oposici%C3%B3n%20a%20finalidades%20secundarias" className="text-[#FF8C00] underline font-bold">privacidad@cenfinanciera.com</a>{' '}
+                  con el asunto &ldquo;Oposición a finalidades secundarias&rdquo;.
                 </p>
               </div>
             </div>
@@ -154,7 +155,7 @@ export default function PrivacidadPage() {
             </p>
           </section>
 
-          <section className="space-y-4 text-[#334155] leading-relaxed">
+          <section id="arco" className="space-y-4 text-[#334155] leading-relaxed">
             <h2 className="text-xl font-black text-[#011C40]">V. Medios para ejercer los derechos ARCO</h2>
             <p>
               Como titular de los datos, usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> (derechos ARCO)
@@ -169,7 +170,8 @@ export default function PrivacidadPage() {
                 <li>Copia de identificación oficial vigente</li>
               </ul>
               <p className="mt-2">
-                <strong>Enviar a:</strong> privacidad@cenfinanciera.com<br />
+                <strong>Enviar a:</strong>{' '}
+                <a href="mailto:privacidad@cenfinanciera.com?subject=Solicitud%20de%20derechos%20ARCO" className="text-[#FF8C00] underline">privacidad@cenfinanciera.com</a><br />
                 <strong>Asunto:</strong> Solicitud de derechos ARCO — [nombre del titular]
               </p>
               <p>
@@ -187,8 +189,9 @@ export default function PrivacidadPage() {
               retroactivos sobre los tratamientos ya realizados.
             </p>
             <p className="text-sm">
-              Para solicitar la revocación, envíe un correo a <strong>privacidad@cenfinanciera.com</strong> con
-              el asunto &ldquo;Revocación de consentimiento&rdquo;. Tenga en cuenta que la revocación puede implicar la
+              Para solicitar la revocación, envíe un correo a{' '}
+              <a href="mailto:privacidad@cenfinanciera.com?subject=Revocaci%C3%B3n%20de%20consentimiento" className="text-[#FF8C00] underline font-bold">privacidad@cenfinanciera.com</a>{' '}
+              con el asunto &ldquo;Revocación de consentimiento&rdquo;. Tenga en cuenta que la revocación puede implicar la
               imposibilidad de continuar utilizando la plataforma.
             </p>
           </section>

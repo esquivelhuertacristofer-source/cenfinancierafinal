@@ -14,6 +14,7 @@ export default function FooterLegal() {
           <div className="flex items-center gap-6 text-sm text-[#94A3B8] font-medium">
             <Link href="/privacidad" className="hover:text-[#FF8C00] transition-colors">Aviso de Privacidad</Link>
             <Link href="/terminos" className="hover:text-[#FF8C00] transition-colors">Términos de Uso</Link>
+            <Link href="/privacidad#arco" className="hover:text-[#FF8C00] transition-colors">Gestionar mis datos</Link>
           </div>
         </div>
 
