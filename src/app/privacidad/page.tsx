@@ -38,7 +38,7 @@ export default function PrivacidadPage() {
             </p>
             <ul className="list-none pl-0 space-y-1 text-sm">
               <li><strong>Denominación:</strong> CEN — Campaña Educativa Nacional</li>
-              <li><strong>Correo de contacto:</strong> privacidad@cenfinanciera.com</li>
+              <li><strong>Correo de contacto:</strong> campanaeducativanacional@gmail.com</li>
             </ul>
           </section>
 
@@ -103,7 +103,7 @@ export default function PrivacidadPage() {
                 <p className="text-sm mt-2">
                   Si usted no desea que sus datos sean tratados para las finalidades secundarias, puede manifestarlo
                   enviando un correo a{' '}
-                  <a href="mailto:privacidad@cenfinanciera.com?subject=Oposici%C3%B3n%20a%20finalidades%20secundarias" className="text-[#FF8C00] underline font-bold">privacidad@cenfinanciera.com</a>{' '}
+                  <a href="mailto:campanaeducativanacional@gmail.com?subject=Oposici%C3%B3n%20a%20finalidades%20secundarias" className="text-[#FF8C00] underline font-bold">campanaeducativanacional@gmail.com</a>{' '}
                   con el asunto &ldquo;Oposición a finalidades secundarias&rdquo;.
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function PrivacidadPage() {
               </ul>
               <p className="mt-2">
                 <strong>Enviar a:</strong>{' '}
-                <a href="mailto:privacidad@cenfinanciera.com?subject=Solicitud%20de%20derechos%20ARCO" className="text-[#FF8C00] underline">privacidad@cenfinanciera.com</a><br />
+                <a href="mailto:campanaeducativanacional@gmail.com?subject=Solicitud%20de%20derechos%20ARCO" className="text-[#FF8C00] underline">campanaeducativanacional@gmail.com</a><br />
                 <strong>Asunto:</strong> Solicitud de derechos ARCO — [nombre del titular]
               </p>
               <p>
@@ -190,7 +190,7 @@ export default function PrivacidadPage() {
             </p>
             <p className="text-sm">
               Para solicitar la revocación, envíe un correo a{' '}
-              <a href="mailto:privacidad@cenfinanciera.com?subject=Revocaci%C3%B3n%20de%20consentimiento" className="text-[#FF8C00] underline font-bold">privacidad@cenfinanciera.com</a>{' '}
+              <a href="mailto:campanaeducativanacional@gmail.com?subject=Revocaci%C3%B3n%20de%20consentimiento" className="text-[#FF8C00] underline font-bold">campanaeducativanacional@gmail.com</a>{' '}
               con el asunto &ldquo;Revocación de consentimiento&rdquo;. Tenga en cuenta que la revocación puede implicar la
               imposibilidad de continuar utilizando la plataforma.
             </p>
