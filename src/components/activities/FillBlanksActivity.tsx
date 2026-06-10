@@ -47,7 +47,7 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
     data.blanks.forEach(b => {
       if (userAnswers[b.id.toLowerCase()] === b.respuesta) correct++;
     });
-    return Math.round((correct / data.blanks.length) * 100);
+    return data.blanks.length > 0 ? Math.round((correct / data.blanks.length) * 100) : 0;
   }, [userAnswers, data.blanks]);
 
   const handleFinish = () => {

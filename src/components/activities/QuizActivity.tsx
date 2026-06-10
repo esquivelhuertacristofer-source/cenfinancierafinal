@@ -235,7 +235,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                           onClick={handleNext}
                           className="w-full py-8 md:py-10 bg-[#FF8C00] text-black rounded-[40px] font-black text-sm uppercase tracking-[0.6em] shadow-[0_25px_80px_rgba(255,140,0,0.3)] flex items-center justify-center gap-4"
                        >
-                          {currentIdx < data.preguntas.length - 1 ? 'Siguiente Pregunta' : 'Consolidar Misión'}
+                          {currentIdx < preguntas.length - 1 ? 'Siguiente Pregunta' : 'Consolidar Misión'}
                           <ChevronRight />
                        </motion.button>
                     </motion.div>

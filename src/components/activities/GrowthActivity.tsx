@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Wallet, BookOpen, Gift, Rocket, ChevronRight, Zap, Target } from 'lucide-react';
 
@@ -16,6 +16,12 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [events, setEvents] = useState<{ id: number, text: string, type: 'plus' | 'minus' }[]>([]);
   const targetGoal = data.meta_objetivo || 500;
+  const completionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const completeNow = () => {
+    if (completionTimeout.current) clearTimeout(completionTimeout.current);
+    onComplete?.(100);
+  };
 
   // Lógica de crecimiento automático
   useEffect(() => {
@@ -25,7 +31,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
         const next = prev + (1 * multiplier);
         if (next >= targetGoal) {
           setIsFinished(true);
-          setTimeout(() => onComplete?.(100), 4000);
+          completionTimeout.current = setTimeout(() => onComplete?.(100), 4000);
           return targetGoal;
         }
         return next;
@@ -154,13 +160,13 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
       {/* OVERLAY DE ÉXITO */}
       <AnimatePresence>
         {isFinished && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
+            className="fixed inset-0 z-[2500] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
           >
              <div className="text-center space-y-12">
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0, y: 50 }}
                   animate={{ scale: 1, y: 0 }}
                   className="w-40 h-40 bg-emerald-500 rounded-[50px] flex items-center justify-center mx-auto shadow-[0_0_80px_rgba(16,185,129,0.5)]"
@@ -172,6 +178,17 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
                   <p className="text-2xl text-white/40 font-medium italic">¡Tu paciencia y sabiduría han llenado la bóveda!</p>
                 </div>
                 <div className="text-5xl font-black text-emerald-400 italic">CRECIMIENTO FINAL: x{multiplier.toFixed(1)}</div>
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={completeNow}
+                  className="px-20 py-8 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] shadow-2xl"
+                >
+                  Continuar
+                </motion.button>
              </div>
           </motion.div>
         )}

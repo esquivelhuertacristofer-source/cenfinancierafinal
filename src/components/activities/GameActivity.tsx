@@ -194,7 +194,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
 
       {/* INTRODUCCIÓN GLASS */}
       {gameState === 'intro' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 z-[200] bg-[#0A0118]/60 backdrop-blur-2xl flex items-center justify-center p-10">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-[#0A0118]/60 backdrop-blur-2xl flex items-center justify-center p-10">
            <div className="max-w-xl text-center space-y-12">
               <div className="w-28 h-28 bg-white/10 rounded-[40px] flex items-center justify-center mx-auto border border-white/20">
                  <PlayCircle size={60} className="text-white" />
@@ -217,7 +217,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
 
       {/* FINALIZACIÓN GLASS */}
       {gameState === 'finished' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 z-[300] bg-black/80 backdrop-blur-3xl flex items-center justify-center p-10">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/80 backdrop-blur-3xl flex items-center justify-center p-10">
            <div className="text-center space-y-12">
               <div className="w-48 h-48 bg-emerald-500 rounded-[60px] flex items-center justify-center mx-auto shadow-[0_0_150px_rgba(16,185,129,0.4)]">
                  <Trophy size={100} className="text-white" />

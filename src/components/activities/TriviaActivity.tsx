@@ -37,6 +37,20 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     return () => clearInterval(timer);
   }, [timeLeft, isFinished]);
 
+  if (!data.preguntas.length || !currentQuestion) {
+    return (
+      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
+        <p className="text-white/40 text-xl font-medium text-center">Sin preguntas disponibles.</p>
+        <button
+          onClick={() => onComplete && onComplete(0)}
+          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
+        >
+          Continuar
+        </button>
+      </div>
+    );
+  }
+
   const handleNext = (isCorrect: boolean) => {
     if (isCorrect) {
       setScore(prev => prev + 1);
@@ -55,7 +69,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     }
   };
 
-  const finalPercent = Math.round((score / data.preguntas.length) * 100);
+  const finalPercent = data.preguntas.length > 0 ? Math.round((score / data.preguntas.length) * 100) : 0;
 
   if (isFinished) {
     return (

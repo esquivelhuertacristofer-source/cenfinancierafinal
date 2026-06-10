@@ -126,7 +126,7 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
            <motion.button 
              whileHover={{ scale: 1.05 }}
              whileTap={{ scale: 0.95 }}
-             onClick={() => { setIsCompleted(true); if (onComplete) onComplete(100); }}
+             onClick={() => setIsCompleted(true)}
              className="w-full py-10 bg-[#FF8C00] text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] shadow-[0_20px_80px_rgba(255,140,0,0.3)] flex items-center justify-center gap-4 group"
            >
               Finalizar Simulación <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -212,7 +212,7 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-2xl flex items-center justify-center p-8"
+            className="fixed inset-0 z-[2500] bg-black/90 backdrop-blur-2xl flex items-center justify-center p-8"
           >
              <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-20 text-center space-y-12">
                 <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="w-32 h-32 bg-[#FF8C00] text-black rounded-[40px] flex items-center justify-center mx-auto shadow-[0_0_80px_rgba(255,140,0,0.5)]">

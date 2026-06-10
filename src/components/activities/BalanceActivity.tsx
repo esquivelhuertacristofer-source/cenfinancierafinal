@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, BookOpen, Trophy, Target, Sparkles, Coins, X } from 'lucide-react';
 
@@ -16,6 +16,12 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
   const [money, setMoney] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [status, setStatus] = useState<'idle' | 'charging' | 'success'>('idle');
+  const completionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const completeNow = () => {
+    if (completionTimeout.current) clearTimeout(completionTimeout.current);
+    onComplete?.(100);
+  };
 
   // Lógica Financiera: El dinero crece según el trabajo multiplicado por las habilidades
   useEffect(() => {
@@ -27,7 +33,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
           const next = prev + (0.5 * hourlyRate);
           if (next >= 100) {
             setIsFinished(true);
-            setTimeout(() => onComplete?.(100), 3000);
+            completionTimeout.current = setTimeout(() => onComplete?.(100), 3000);
             return 100;
           }
           return next;
@@ -163,13 +169,13 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
       {/* OVERLAY DE ÉXITO */}
       <AnimatePresence>
         {isFinished && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-3xl flex items-center justify-center p-20"
+            className="fixed inset-0 z-[2500] bg-black/90 backdrop-blur-3xl flex items-center justify-center p-20"
           >
              <div className="text-center space-y-10">
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   className="w-48 h-48 bg-emerald-500 rounded-[60px] flex items-center justify-center mx-auto shadow-[0_0_100px_rgba(16,185,129,0.5)]"
@@ -181,6 +187,17 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
                   <p className="text-3xl text-white/60 font-medium italic">Has entendido que el conocimiento multiplica tu valor.</p>
                 </div>
                 <div className="text-5xl font-black text-emerald-400 italic">AHORRO TOTAL: ${Math.floor(money * 10)}</div>
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={completeNow}
+                  className="px-20 py-8 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] shadow-2xl"
+                >
+                  Continuar
+                </motion.button>
              </div>
           </motion.div>
         )}
