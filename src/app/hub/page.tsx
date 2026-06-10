@@ -232,8 +232,8 @@ export default function StudentHubV19() {
     </div>
   );
 
-  const totalDone = pillars.reduce((acc, p) => acc + getPillarProgress(p, completed).done, 0);
-  const totalUnits = pillars.reduce((acc, p) => acc + p.units.length, 0);
+  const totalDone = pillars.reduce((acc, p) => acc + (getPillarProgress(p, completed)?.done ?? 0), 0);
+  const totalUnits = pillars.reduce((acc, p) => acc + (p.units?.length ?? 0), 0);
   const totalPct = totalUnits > 0 ? Math.round((totalDone / totalUnits) * 100) : 0;
 
   return (
