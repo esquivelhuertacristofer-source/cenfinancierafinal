@@ -618,17 +618,24 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const handleComplete = async (contentType: ContentType, score: number = 100) => {
     const id = getActivityId(unit.code, contentType);
 
+    // Prevenir doble-completado (doble clic, re-render, etc.)
+    if (completed.has(id)) return;
+
     // Guardar copia del estado previo de completados para comparar rangos
     const oldCompleted = new Set(completed);
 
     if (userId && userId !== 'guest_user') {
-      await markActivityComplete(userId, id);
-      const actSuffix = contentType === 'quiz' ? 'B' : 'A';
-      const actData = await getActivityData(`ACT-${unit.code}-${actSuffix}`);
-      const xpEarned = calculateXP(score, actData?.xp ?? 150);
-      const xpKey = `cen_xp_${userId}`;
-      const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
-      localStorage.setItem(xpKey, String(current + xpEarned));
+      try {
+        await markActivityComplete(userId, id);
+        const actSuffix = contentType === 'quiz' ? 'B' : 'A';
+        const actData = await getActivityData(`ACT-${unit.code}-${actSuffix}`);
+        const xpEarned = calculateXP(score, actData?.xp ?? 150);
+        const xpKey = `cen_xp_${userId}`;
+        const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
+        localStorage.setItem(xpKey, String(current + xpEarned));
+      } catch {
+        // Fallo de red — el flujo continúa; XP se reintentará en próxima sesión
+      }
     }
     onComplete(id);
     
