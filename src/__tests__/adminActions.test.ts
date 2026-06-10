@@ -41,7 +41,13 @@ import { onboardInstitutionalUsers, createGrupo, getGrupos } from '@/app/actions
 const mockRequireAdminSession = jest.mocked(requireAdminSession);
 
 const ADMIN_SESSION = {
-  user: { id: 'admin-uid' },
+  user: {
+    id: 'admin-uid',
+    app_metadata: {},
+    user_metadata: {},
+    aud: 'authenticated',
+    created_at: '2024-01-01T00:00:00.000Z',
+  },
   profile: { id: 'admin-uid', role: 'admin', escuela_id: 'esc-1' },
   isAdmin: true as const,
   isSuperAdmin: false as const,

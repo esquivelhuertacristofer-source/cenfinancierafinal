@@ -4,8 +4,6 @@
  * @description Clon estructural de la página del Segmento y Temario.
  */
 
-// 1. Ruta corregida (Solo 3 niveles arriba)
-import { supabase } from "@/lib/supabase-browser";
 import Link from "next/link";
 
 export default async function PrimerosPasosPage() {

@@ -1,8 +1,9 @@
-import { supabase } from "@/lib/supabase-browser"; 
+import { createSupabaseServerClient } from "@/lib/supabase-server";
 import Link from "next/link";
 
 export default async function SegmentoPage({ params }: { params: Promise<{ segmentoId: string }> }) {
   const { segmentoId } = await params;
+  const supabase = await createSupabaseServerClient();
   const { data: lecciones } = await supabase.from('lecciones').select('*').eq('segmento_id', segmentoId).order('orden');
 
   return (

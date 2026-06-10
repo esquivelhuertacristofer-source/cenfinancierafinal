@@ -4,16 +4,17 @@
  * @author Cristofer Huerta (Luminar Tech)
  */
 
-import { supabase } from "@/lib/supabase-browser"; 
+import { createSupabaseServerClient } from "@/lib/supabase-server";
 import SecureGame from "../../../../components/SecureGame";
 import { notFound } from "next/navigation";
 
-export default async function BloquePage({ 
-  params 
-}: { 
-  params: Promise<{ segmentoId: string, leccionId: string }> 
+export default async function BloquePage({
+  params
+}: {
+  params: Promise<{ segmentoId: string, leccionId: string }>
 }) {
   const { leccionId } = await params;
+  const supabase = await createSupabaseServerClient();
 
   // 1. Obtenemos los bloques de contenido (juegos o fichas) vinculados a esta lección
   const { data: bloques } = await supabase
