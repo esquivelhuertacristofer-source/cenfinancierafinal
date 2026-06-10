@@ -35,13 +35,15 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [shake, setShake] = useState(false);
 
-  const totalNeeds = data.items?.filter((i: any) => i.type === 'need').length || 4;
+  const totalNeeds = data.items?.filter((i: any) => i.type === 'need').length ?? 0;
 
   useEffect(() => {
-    const rawItems = data.items || [];
+    const rawItems: any[] = data.items || [];
+    if (rawItems.length === 0) return;
     const interval = setInterval(() => {
       if (items.length < 5 && !isFinished) {
         const source = rawItems[Math.floor(Math.random() * rawItems.length)];
+        if (!source) return;
         const newItem: Item = {
           id: Math.random(),
           label: source.label,
@@ -72,7 +74,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
         type: 'good' 
       });
       
-      if (nextNeedsFound >= totalNeeds) {
+      if (totalNeeds > 0 && nextNeedsFound >= totalNeeds) {
          setIsFinished(true);
          setTimeout(() => onComplete?.(100), 5000);
       }

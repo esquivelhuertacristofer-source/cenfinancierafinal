@@ -49,6 +49,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
           const nextB = b - cost;
           if (nextB <= 0) {
             setIsLost(true);
+            setTimeout(() => onComplete?.(0), 4000);
             return 0;
           }
           return nextB;
