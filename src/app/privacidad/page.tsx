@@ -19,18 +19,6 @@ export default function PrivacidadPage() {
       </header>
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-6 py-16">
-        {/* Banner de borrador — visible hasta revisión legal formal */}
-        <div className="mb-8 rounded-2xl border-2 border-[#F59E0B] bg-[#FFFBEB] px-6 py-4 flex gap-3 items-start">
-          <span className="text-[#F59E0B] text-xl mt-0.5">⚠</span>
-          <div>
-            <p className="font-black text-[#92400E] text-sm uppercase tracking-wide">Documento en revisión legal</p>
-            <p className="text-[#78350F] text-sm mt-1">
-              Este aviso de privacidad es un <strong>borrador funcional</strong> que cumple la estructura exigida por la LFPDPPP.
-              Los campos marcados con <strong>[PENDIENTE]</strong> deben ser completados por el responsable legal de CEN antes de la publicación definitiva.
-            </p>
-          </div>
-        </div>
-
         <div className="bg-white rounded-3xl border border-[#E2E8F0] p-8 md:p-12 space-y-8">
           <div className="space-y-2">
             <p className="text-xs font-black uppercase tracking-[0.3em] text-[#FF8C00]">Documento Legal</p>
@@ -50,9 +38,7 @@ export default function PrivacidadPage() {
             </p>
             <ul className="list-none pl-0 space-y-1 text-sm">
               <li><strong>Denominación:</strong> CEN — Campaña Educativa Nacional</li>
-              <li><strong>Domicilio:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: domicilio fiscal completo]</span></li>
-              <li><strong>RFC:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: RFC]</span></li>
-              <li><strong>Correo de contacto:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo del área de privacidad]</span></li>
+              <li><strong>Correo de contacto:</strong> privacidad@cenfinanciera.com</li>
             </ul>
           </section>
 
@@ -116,7 +102,7 @@ export default function PrivacidadPage() {
                 </ul>
                 <p className="text-sm mt-2">
                   Si usted no desea que sus datos sean tratados para las finalidades secundarias, puede manifestarlo
-                  enviando un correo a <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo de privacidad]</span> con
+                  enviando un correo a <strong>privacidad@cenfinanciera.com</strong> con
                   el asunto &ldquo;Oposición a finalidades secundarias&rdquo;.
                 </p>
               </div>
@@ -183,7 +169,7 @@ export default function PrivacidadPage() {
                 <li>Copia de identificación oficial vigente</li>
               </ul>
               <p className="mt-2">
-                <strong>Enviar a:</strong> <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo del área de privacidad]</span><br />
+                <strong>Enviar a:</strong> privacidad@cenfinanciera.com<br />
                 <strong>Asunto:</strong> Solicitud de derechos ARCO — [nombre del titular]
               </p>
               <p>
@@ -201,7 +187,7 @@ export default function PrivacidadPage() {
               retroactivos sobre los tratamientos ya realizados.
             </p>
             <p className="text-sm">
-              Para solicitar la revocación, envíe un correo a <span className="text-[#F59E0B] font-bold">[PENDIENTE: correo]</span> con
+              Para solicitar la revocación, envíe un correo a <strong>privacidad@cenfinanciera.com</strong> con
               el asunto &ldquo;Revocación de consentimiento&rdquo;. Tenga en cuenta que la revocación puede implicar la
               imposibilidad de continuar utilizando la plataforma.
             </p>
@@ -240,7 +226,7 @@ export default function PrivacidadPage() {
             <p>
               Los datos personales se conservarán durante el tiempo que dure la relación contractual con la institución
               educativa y, una vez concluida, por el período que señalen las obligaciones legales aplicables o durante
-              <span className="text-[#F59E0B] font-bold"> [PENDIENTE: período de retención en años] </span>
+              <strong> 5 (cinco) años </strong>
               adicionales para fines de respaldo e historial académico, tras lo cual serán eliminados o anonimizados.
             </p>
           </section>
