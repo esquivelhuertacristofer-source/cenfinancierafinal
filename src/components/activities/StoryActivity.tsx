@@ -34,7 +34,19 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
   // Fallback de imagen para asegurar que NADA se vea roto
   const characterImage = "/assets/png/ceny-guide.png";
 
-  if (!currentNode) return null;
+  if (!currentNode) {
+    return (
+      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
+        <p className="text-white/40 text-xl font-medium text-center">Este escenario no tiene contenido disponible.</p>
+        <button
+          onClick={handleFinish}
+          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
+        >
+          Continuar
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full h-full min-h-[600px] flex flex-col relative z-10">

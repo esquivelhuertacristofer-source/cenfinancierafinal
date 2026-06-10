@@ -71,7 +71,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
 
   if (isFinished) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 z-[200] bg-black/60 backdrop-blur-2xl flex items-center justify-center p-10">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/60 backdrop-blur-2xl flex items-center justify-center p-10">
          <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[60px] p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-12">

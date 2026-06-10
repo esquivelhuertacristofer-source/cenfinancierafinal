@@ -35,6 +35,18 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
     setCards(allCards.sort(() => Math.random() - 0.5));
   }, [data.pares]);
 
+  const handleReset = () => {
+    const allCards: Card[] = [];
+    data.pares.forEach(p => {
+      allCards.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
+      allCards.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
+    });
+    setCards(allCards.sort(() => Math.random() - 0.5));
+    setFlippedCards([]);
+    setMoves(0);
+    setIsFinished(false);
+  };
+
   const handleCardClick = (card: Card) => {
     if (card.isFlipped || card.isMatched || flippedCards.length === 2) return;
 
@@ -100,7 +112,7 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
               <span className="text-[10px] font-black text-white/30 uppercase tracking-widest mr-4">Movimientos:</span>
               <span className="text-xl font-black">{moves}</span>
            </div>
-           <button onClick={() => window.location.reload()} className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all">
+           <button onClick={handleReset} className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all">
               <RefreshCw size={20} />
            </button>
         </div>

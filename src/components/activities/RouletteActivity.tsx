@@ -32,7 +32,9 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
       setIsSpinning(false);
       // Seleccionar un escenario aleatorio que no haya salido
       const available = data.escenarios.filter(s => !history.includes(s.id));
-      const chosen = available[Math.floor(Math.random() * available.length)];
+      const pool = available.length > 0 ? available : data.escenarios;
+      const chosen = pool[Math.floor(Math.random() * pool.length)];
+      if (!chosen) { setIsSpinning(false); return; }
       setCurrentScenario(chosen);
       setHistory(prev => [...prev, chosen.id]);
     }, 3000);
@@ -51,7 +53,7 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
   const handleNextTurn = () => {
     if (history.length >= data.giros) {
       setIsFinished(true);
-      if (onComplete) onComplete(Math.round((score / data.giros) * 100));
+      if (onComplete) onComplete(data.giros > 0 ? Math.round((score / data.giros) * 100) : 0);
     } else {
       setCurrentScenario(null);
       setSelectedIdx(null);
