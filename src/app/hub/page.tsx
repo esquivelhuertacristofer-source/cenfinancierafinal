@@ -80,6 +80,8 @@ export default function StudentHubV19() {
   const [score, setScore] = useState(0);
   const [showPresentation, setShowPresentation] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [showGame, setShowGame] = useState(false);
+  const [gameCompleted, setGameCompleted] = useState(false);
 
   const playSFX = useCallback((key: keyof typeof SOUNDS) => {
     try {
@@ -755,9 +757,47 @@ export default function StudentHubV19() {
             })}
           </div>
 
+          {/* JUEGO ESPECIAL CARD */}
+          <div
+            className="mt-48 p-24 rounded-[72px] flex items-center justify-between shadow-2xl relative overflow-hidden border cursor-pointer transition-all hover:scale-[1.01]"
+            style={{
+              background: 'linear-gradient(135deg, #1a0533 0%, #2d0a5e 40%, #0a1a3d 100%)',
+              borderColor: 'rgba(192, 132, 252, 0.2)',
+              boxShadow: '0 40px 80px rgba(120, 40, 200, 0.2)'
+            }}
+            onMouseEnter={() => playSFX('hover')}
+            onClick={() => { playSFX('click'); setShowGame(true); }}
+          >
+             <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10 blur-[100px] -mr-40 -mt-40 bg-purple-500 rounded-full pointer-events-none" />
+             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-10 blur-[80px] -ml-20 -mb-20 bg-fuchsia-500 rounded-full pointer-events-none" />
+             <div className="relative z-10 max-w-3xl">
+                <div className="flex items-center gap-3 font-black uppercase text-xs tracking-[0.4em] mb-8 text-purple-300">
+                  <Sparkles size={24} className="text-purple-300" /> Actividad Bono
+                </div>
+                <h2 className="text-7xl font-black text-white tracking-tighter mb-10 leading-none">Juego Financiero</h2>
+                <p className="text-2xl font-bold text-white/50 leading-relaxed mb-12">
+                  Pon en práctica lo aprendido en una aventura interactiva. Completa el juego para ganar XP extra.
+                </p>
+                <div className="flex items-center gap-6">
+                  <div className="inline-flex items-center gap-3 px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-white shadow-[0_20px_40px_rgba(168,85,247,0.4)]"
+                       style={{ background: 'linear-gradient(135deg, #a855f7, #7c3aed)' }}>
+                    <Play size={22} fill="white" /> Jugar Ahora
+                  </div>
+                  {gameCompleted && (
+                    <div className="flex items-center gap-2 px-6 py-4 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-black uppercase tracking-widest">
+                      <Medal size={18} /> ¡Completado!
+                    </div>
+                  )}
+                </div>
+             </div>
+             <div className="hidden 2xl:flex items-center justify-center w-72 h-72 opacity-30">
+                <div className="text-[180px] select-none">🎮</div>
+             </div>
+          </div>
+
           {/* ARENA CARD */}
-          <div 
-            className="mt-48 p-24 bg-gradient-to-br from-[#011C40] to-[#011126] rounded-[72px] flex items-center justify-between shadow-2xl relative overflow-hidden border border-white/5 cursor-pointer"
+          <div
+            className="mt-24 p-24 bg-gradient-to-br from-[#011C40] to-[#011126] rounded-[72px] flex items-center justify-between shadow-2xl relative overflow-hidden border border-white/5 cursor-pointer"
             onMouseEnter={() => playSFX('hover')}
             onClick={startArena}
           >
@@ -781,6 +821,66 @@ export default function StudentHubV19() {
         </section>
 
       </main>
+
+      {/* MODAL DEL JUEGO */}
+      {showGame && (
+        <div className="fixed inset-0 z-[3500] flex flex-col">
+          <div className="fixed inset-0 bg-black/95 backdrop-blur-2xl" />
+
+          {/* BARRA SUPERIOR */}
+          <div className="relative z-10 flex items-center justify-between px-10 py-6 border-b border-white/10"
+               style={{ background: 'rgba(26, 5, 51, 0.95)' }}>
+            <div className="flex items-center gap-4">
+              <div className="text-2xl">🎮</div>
+              <div>
+                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-300">Actividad Bono</div>
+                <div className="text-xl font-black text-white">Juego Financiero</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              {!gameCompleted ? (
+                <button
+                  onClick={() => {
+                    setGameCompleted(true);
+                    if (profile?.id && profile.id !== 'guest_user') {
+                      const xpKey = `cen_xp_${profile.id}`;
+                      const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
+                      localStorage.setItem(xpKey, String(current + 200));
+                      setTotalXP(prev => prev + 200);
+                    }
+                    playSFX('complete');
+                    setShowGame(false);
+                  }}
+                  className="flex items-center gap-2 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest text-white transition-all hover:scale-105"
+                  style={{ background: 'linear-gradient(135deg, #10b981, #059669)', boxShadow: '0 10px 30px rgba(16,185,129,0.3)' }}
+                >
+                  <Medal size={18} /> Terminé el juego (+200 XP)
+                </button>
+              ) : (
+                <div className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-black uppercase tracking-widest">
+                  <Medal size={18} /> ¡Completado! +200 XP
+                </div>
+              )}
+              <button
+                onClick={() => setShowGame(false)}
+                className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-500 transition-all text-white"
+              >
+                <X size={22} />
+              </button>
+            </div>
+          </div>
+
+          {/* IFRAME DEL JUEGO */}
+          <div className="relative z-10 flex-1 w-full">
+            <iframe
+              src="/games/juego-financiero/index.html"
+              className="w-full h-full border-none"
+              allow="autoplay; fullscreen; gamepad"
+              title="Juego Financiero CEN"
+            />
+          </div>
+        </div>
+      )}
 
       {/* MALLA CURRICULAR MODAL */}
       {showCurriculum && (
