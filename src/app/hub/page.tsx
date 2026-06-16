@@ -528,6 +528,7 @@ export default function StudentHubV19() {
           <div className={`nav-link ${!activePillar ? 'active' : ''} cursor-pointer`} onMouseEnter={() => playSFX('hover')} onClick={() => { playSFX('click'); setActivePillar(null); if(window.location.pathname !== '/hub') router.push('/hub'); }}><LayoutDashboard size={20} /><span>Portal de Misiones</span></div>
           <div className={`nav-link cursor-pointer ${window.location.pathname.includes('/library') ? 'active' : ''}`} onMouseEnter={() => playSFX('hover')} onClick={() => { playSFX('click'); router.push('/hub/library'); }}><Library size={20} /><span>Biblioteca</span></div>
           <div className={`nav-link cursor-pointer ${window.location.pathname.includes('/logros') ? 'active' : ''}`} onMouseEnter={() => playSFX('hover')} onClick={() => { playSFX('click'); router.push('/hub/logros'); }}><Trophy size={20} /><span>Mis Logros</span></div>
+          <div className="nav-link cursor-pointer" onMouseEnter={() => playSFX('hover')} onClick={() => { playSFX('click'); setShowGame(true); }} style={{ background: 'linear-gradient(135deg,#7c3aed,#a855f7)', color: 'white' }}><Play size={20} fill="white" /><span>Juego Bono</span></div>
         </nav>
         
         <button 
@@ -691,6 +692,24 @@ export default function StudentHubV19() {
              </div>
           </div>
         </header>
+
+        {/* JUEGO BANNER — visible inmediatamente al entrar al hub */}
+        <div
+          id="juego-financiero"
+          className="mx-20 mt-16 mb-0 p-16 rounded-[48px] flex items-center justify-between cursor-pointer transition-all hover:scale-[1.01] border"
+          style={{ background:'linear-gradient(135deg,#7c1d1d 0%,#991b1b 50%,#7c1d1d 100%)', borderColor:'rgba(252,165,165,0.4)', boxShadow:'0 20px 60px rgba(220,38,38,0.5)' }}
+          onClick={() => { playSFX('click'); setShowGame(true); }}
+        >
+          <div>
+            <div className="text-xs font-black uppercase tracking-[0.4em] text-red-300 mb-3">🎮 Actividad Bono</div>
+            <div className="text-5xl font-black text-white mb-2">Juego Financiero</div>
+            <div className="text-lg text-white/60 mb-6">Pon en práctica lo aprendido · +200 XP</div>
+            <div className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-white text-sm uppercase tracking-widest" style={{ background:'rgba(255,255,255,0.15)' }}>
+              <Play size={18} fill="white" /> Jugar Ahora
+            </div>
+            {gameCompleted && <span className="ml-4 text-green-300 font-black text-sm">✓ ¡Completado!</span>}
+          </div>
+        </div>
 
         {/* PILLARS SECTION */}
         <section className="pillars-section">
