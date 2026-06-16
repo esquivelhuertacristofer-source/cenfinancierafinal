@@ -759,11 +759,12 @@ export default function StudentHubV19() {
 
           {/* JUEGO ESPECIAL CARD */}
           <div
+            id="juego-financiero"
             className="mt-48 p-24 rounded-[72px] flex items-center justify-between shadow-2xl relative overflow-hidden border cursor-pointer transition-all hover:scale-[1.01]"
             style={{
-              background: 'linear-gradient(135deg, #1a0533 0%, #2d0a5e 40%, #0a1a3d 100%)',
-              borderColor: 'rgba(192, 132, 252, 0.2)',
-              boxShadow: '0 40px 80px rgba(120, 40, 200, 0.2)'
+              background: 'linear-gradient(135deg, #7c1d1d 0%, #991b1b 40%, #7f1d1d 100%)',
+              borderColor: 'rgba(252, 165, 165, 0.4)',
+              boxShadow: '0 40px 80px rgba(220, 38, 38, 0.4)'
             }}
             onMouseEnter={() => playSFX('hover')}
             onClick={() => { playSFX('click'); setShowGame(true); }}
