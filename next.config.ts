@@ -11,30 +11,17 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
-  outputFileTracingIncludes: {
-    '/api/activity/[activityId]': ['./src/data/actividades/**/*.json'],
-    '/api/curriculum/[levelGrade]': ['./src/data/pedagogia/**/*.json'],
-  },
 };
 
 export default withSentryConfig(nextConfig, {
-  // Silent during CI to avoid noise
-  silent: !process.env.CI,
-
-  // Use tunnel to bypass ad blockers
+  silent: true,
   tunnelRoute: "/monitoring",
-
-  // Source maps: upload to Sentry, then delete from the build to prevent exposure
   sourcemaps: {
-    disable: false,
-    deleteSourcemapsAfterUpload: true,
+    disable: !process.env.SENTRY_AUTH_TOKEN,
+    deleteSourcemapsAfterUpload: !!process.env.SENTRY_AUTH_TOKEN,
   },
-
-  // Annotate React components for better error context
   reactComponentAnnotation: {
     enabled: true,
   },
-
-  // Don't auto-instrument Vercel Cron (we manage that manually)
   automaticVercelMonitors: false,
 });
