@@ -79,17 +79,22 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
   }, [activityId]);
 
   const handleComplete = useCallback(async (score: number = 0) => {
-    const profile = await getCurrentProfile();
-    if (profile?.id && profile.id !== 'guest_user') {
-      const tiempo_segundos = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
-      await markActivityComplete(profile.id, activityId, { score, tiempo_segundos });
-      const racha = getAndUpdateRacha(profile.id);
-      const xpEarned = calculateXP(score, data?.xp ?? 0, racha);
-      const xpKey = `cen_xp_${profile.id}`;
-      const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
-      localStorage.setItem(xpKey, String(current + xpEarned));
+    try {
+      const profile = await getCurrentProfile();
+      if (profile?.id && profile.id !== 'guest_user') {
+        const tiempo_segundos = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
+        await markActivityComplete(profile.id, activityId, { score, tiempo_segundos });
+        const racha = getAndUpdateRacha(profile.id);
+        const xpEarned = calculateXP(score, data?.xp ?? 0, racha);
+        const xpKey = `cen_xp_${profile.id}`;
+        const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
+        localStorage.setItem(xpKey, String(current + xpEarned));
+      }
+    } catch (e) {
+      console.warn('[ActivityPage] Fallo al guardar el progreso, se continúa igual', e);
+    } finally {
+      router.back();
     }
-    router.back();
   }, [activityId, data, router]);
 
   if (loading) return <ActivityLoader />;

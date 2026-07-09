@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import { SimulatorActivityData } from '../../types/activities';
-import { TrendingUp, Zap, Sparkles, CheckCircle2, AlertCircle, Info, Calculator, ArrowRight, BarChart3 } from 'lucide-react';
+import { TrendingUp, Zap, Sparkles, CheckCircle2, AlertCircle, Info, Calculator, ArrowRight, BarChart3, X } from 'lucide-react';
 import { solveFormula } from '../../lib/math-engine';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -59,6 +59,16 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
 
   const handleInputChange = (id: string, value: any) => {
     setInputs(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+      return;
+    }
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete && onComplete(simulationScore);
   };
 
   return (
@@ -228,6 +238,13 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
             animate={{ opacity: 1 }}
             className="fixed inset-0 z-[2500] bg-black/90 backdrop-blur-2xl flex items-center justify-center p-8"
           >
+             <button
+               onClick={handleClose}
+               aria-label="Cerrar"
+               className="absolute top-10 right-10 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+             >
+                <X size={24} />
+             </button>
              <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-20 text-center space-y-12">
                 <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="w-32 h-32 bg-[#FF8C00] text-black rounded-[40px] flex items-center justify-center mx-auto shadow-[0_0_80px_rgba(255,140,0,0.5)]">
                    <CheckCircle2 size={64} />

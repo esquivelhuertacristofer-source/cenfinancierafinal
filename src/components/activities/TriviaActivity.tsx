@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { TriviaActivityData } from '../../types/activities';
-import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame } from 'lucide-react';
+import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame, X } from 'lucide-react';
 
 interface Props {
   data: TriviaActivityData;
@@ -74,9 +74,26 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
 
   const finalPercent = data.preguntas.length > 0 ? Math.round((score / data.preguntas.length) * 100) : 0;
 
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+      return;
+    }
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete && onComplete(finalPercent);
+  };
+
   if (isFinished) {
     return (
       <div className="flex items-center justify-center p-4 animate-in fade-in zoom-in duration-1000 min-h-[600px] relative z-50">
+         <button
+           onClick={handleClose}
+           aria-label="Cerrar"
+           className="absolute top-10 right-10 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+         >
+            <X size={24} />
+         </button>
          <div className="max-w-xl w-full bg-white/[0.05] border border-white/10 rounded-[60px] p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-12">

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Target, CheckCircle2, Zap, Heart, Star, Pizza, Briefcase, Plus, Sparkles } from 'lucide-react';
+import { Target, CheckCircle2, Zap, Heart, Star, Pizza, Briefcase, Plus, Sparkles, X } from 'lucide-react';
 
 interface Item {
   id: number;
@@ -115,6 +115,17 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
     timeoutsRef.current.push(feedbackTimeout);
   };
 
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+      return;
+    }
+    if (!hasCompletedRef.current) {
+      hasCompletedRef.current = true;
+      onComplete?.(Math.round(budget));
+    }
+  };
+
   const getRank = () => {
     if (budget >= 60) return { title: "Estratega Maestro", color: "text-emerald-400" };
     if (budget >= 30) return { title: "Comprador Inteligente", color: "text-yellow-400" };
@@ -204,6 +215,13 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
             animate={{ opacity: 1 }}
             className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
           >
+             <button
+               onClick={handleClose}
+               aria-label="Cerrar"
+               className="absolute top-10 right-10 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+             >
+                <X size={24} />
+             </button>
              <div className="text-center space-y-16 max-w-5xl">
                 <motion.div 
                   initial={{ scale: 0, rotate: -30 }}

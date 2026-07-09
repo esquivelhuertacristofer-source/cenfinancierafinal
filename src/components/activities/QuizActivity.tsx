@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { QuizActivityData } from '../../types/activities';
-import { CheckCircle2, XCircle, Info, ChevronRight, Trophy, Zap, Sparkles, Flame } from 'lucide-react';
+import { CheckCircle2, XCircle, Info, ChevronRight, Trophy, Zap, Sparkles, Flame, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
@@ -72,6 +72,16 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
     }, 500);
   };
 
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+      return;
+    }
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete?.(score);
+  };
+
   const handleRetry = () => {
     setCurrentIdx(0);
     setAnswers([]);
@@ -96,6 +106,13 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
         animate={{ opacity: 1, scale: 1 }}
         className="flex items-center justify-center p-4 min-h-[600px] w-full relative z-50"
       >
+         <button
+           onClick={handleClose}
+           aria-label="Cerrar"
+           className="absolute top-10 right-10 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+         >
+            <X size={24} />
+         </button>
          <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[60px] p-10 md:p-16 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             

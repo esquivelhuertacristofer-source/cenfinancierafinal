@@ -4,7 +4,7 @@ import React, { useState, useMemo, useRef } from 'react';
 import { evaluate } from 'mathjs';
 import { normalizeFormula } from '../../lib/math-engine';
 import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
-import { ArrowLeft, ChevronRight, ChevronLeft, CheckCircle2, Calculator, Sparkles, Zap, FileText } from 'lucide-react';
+import { ArrowLeft, ChevronRight, ChevronLeft, CheckCircle2, Calculator, Sparkles, Zap, FileText, X } from 'lucide-react';
 
 interface Props {
   data: BuilderActivityData;
@@ -98,10 +98,25 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
     onComplete?.(finalScore);
   };
 
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+    } else {
+      reportCompletion();
+    }
+  };
+
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in zoom-in duration-1000 font-sans">
          <div className="max-w-4xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-20 text-center relative overflow-hidden">
+            <button
+              onClick={handleClose}
+              aria-label="Cerrar"
+              className="absolute top-10 right-10 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all z-20"
+            >
+               <X size={24} />
+            </button>
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/10 to-transparent pointer-events-none" />
             
             <div className="relative z-10 space-y-12">
