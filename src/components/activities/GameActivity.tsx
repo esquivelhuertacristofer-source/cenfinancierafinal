@@ -31,6 +31,9 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
   const [gameState, setGameState] = useState<'intro' | 'playing' | 'finished'>('intro');
   const [feedback, setFeedback] = useState<{ id: number, x: number, y: number, text: string, color: string } | null>(null);
   const requestRef = useRef<number>(0);
+  const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasCompletedRef = useRef(false);
+  const maxPossibleScoreRef = useRef(0);
 
   const startGame = () => {
     setGameState('playing');
@@ -38,15 +41,22 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
     setLives(3);
     setTimeLeft(data.duracion || 60);
     setObjects([]);
+    hasCompletedRef.current = false;
+    maxPossibleScoreRef.current = 0;
   };
 
   useEffect(() => {
     if (gameState !== 'playing') return;
 
     const spawnInterval = setInterval(() => {
+      if (!data.items || data.items.length === 0) return;
       const randomItem = data.items[Math.floor(Math.random() * data.items.length)];
+      if (!randomItem) return;
+      if (randomItem.tipo === 'correcto') {
+        maxPossibleScoreRef.current += randomItem.puntos || 0;
+      }
       // VELOCIDAD MÍNIMA: Casi flotando para máxima facilidad
-      const baseSpeed = 0.5; 
+      const baseSpeed = 0.5;
       const newObj: GameObject = {
         id: Date.now() + Math.random(),
         dataId: randomItem.id,
@@ -114,14 +124,33 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
   const showFeedback = (x: number, y: number, text: string, color: string) => {
     const id = Date.now();
     setFeedback({ id, x, y, text, color });
-    setTimeout(() => setFeedback(prev => prev?.id === id ? null : prev), 1000);
+    if (feedbackTimeoutRef.current) clearTimeout(feedbackTimeoutRef.current);
+    feedbackTimeoutRef.current = setTimeout(() => {
+      setFeedback(prev => prev?.id === id ? null : prev);
+      feedbackTimeoutRef.current = null;
+    }, 1000);
   };
 
+  // Limpieza de timers pendientes al desmontar (evita fugas y setState tras unmount)
   useEffect(() => {
-    if (gameState === 'finished') {
-      onComplete?.(100); // Siempre aprobar si termina por tiempo
+    return () => {
+      if (feedbackTimeoutRef.current) clearTimeout(feedbackTimeoutRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (gameState === 'finished' && !hasCompletedRef.current) {
+      hasCompletedRef.current = true;
+      const maxScore = maxPossibleScoreRef.current;
+      // Score real: puntos obtenidos vs. puntos máximos posibles que llegaron a aparecer.
+      // Si no alcanzó a aparecer ningún objeto "correcto" (partida cortada muy pronto),
+      // se evalúa por vidas restantes en vez de dividir entre 0.
+      const realScore = maxScore > 0
+        ? Math.max(0, Math.min(100, Math.round((score / maxScore) * 100)))
+        : (lives > 0 ? 100 : 0);
+      onComplete?.(realScore);
     }
-  }, [gameState, onComplete]);
+  }, [gameState, onComplete, score, lives]);
 
   return (
     <div className="w-full h-full min-h-[600px] bg-transparent relative flex flex-col items-center justify-center font-sans overflow-visible select-none p-0">

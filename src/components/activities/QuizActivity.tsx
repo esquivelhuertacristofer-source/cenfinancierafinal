@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { QuizActivityData } from '../../types/activities';
 import { CheckCircle2, XCircle, Info, ChevronRight, Trophy, Zap, Sparkles, Flame } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,6 +18,15 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [streak, setStreak] = useState(0);
+  const hasCompletedRef = useRef(false);
+  const finalizeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Limpieza del timeout de finalización al desmontar
+  useEffect(() => {
+    return () => {
+      if (finalizeTimeoutRef.current) clearTimeout(finalizeTimeoutRef.current);
+    };
+  }, []);
 
   const preguntas = data.preguntas || (data as any).questions || [];
   const currentQuestion = preguntas[currentIdx];
@@ -55,10 +64,11 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
 
 
   const handleFinalize = () => {
+    if (hasCompletedRef.current) return; // evita doble envío/XP duplicado si el usuario vuelve a pulsar
+    hasCompletedRef.current = true;
     setIsSubmitting(true);
-    setTimeout(() => {
-      if (onComplete) onComplete(score);
-      setIsSubmitting(false);
+    finalizeTimeoutRef.current = setTimeout(() => {
+      onComplete?.(score);
     }, 500);
   };
 

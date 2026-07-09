@@ -17,11 +17,35 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [status, setStatus] = useState<'idle' | 'charging' | 'success'>('idle');
   const completionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const activeChargeInterval = useRef<ReturnType<typeof setInterval> | null>(null);
+  const hasCompletedRef = useRef(false);
+
+  // Score real: refleja qué tanto invirtió el alumno en "habilidades" (aprendizaje),
+  // que es la lección central de la actividad ("entre más aprendas, más vale tu tiempo").
+  // workHours no suma al score porque trabajar sin estudiar es precisamente el
+  // comportamiento subóptimo que la actividad busca desincentivar.
+  const reportCompletion = () => {
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    if (completionTimeout.current) {
+      clearTimeout(completionTimeout.current);
+      completionTimeout.current = null;
+    }
+    const finalScore = Math.round(Math.min(100, Math.max(0, skills)));
+    onComplete?.(finalScore);
+  };
 
   const completeNow = () => {
-    if (completionTimeout.current) clearTimeout(completionTimeout.current);
-    onComplete?.(100);
+    reportCompletion();
   };
+
+  // Limpieza de timers pendientes si el componente se desmonta antes de tiempo
+  useEffect(() => {
+    return () => {
+      if (completionTimeout.current) clearTimeout(completionTimeout.current);
+      if (activeChargeInterval.current) clearInterval(activeChargeInterval.current);
+    };
+  }, []);
 
   // Lógica Financiera: El dinero crece según el trabajo multiplicado por las habilidades
   useEffect(() => {
@@ -33,7 +57,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
           const next = prev + (0.5 * hourlyRate);
           if (next >= 100) {
             setIsFinished(true);
-            completionTimeout.current = setTimeout(() => onComplete?.(100), 3000);
+            completionTimeout.current = setTimeout(() => reportCompletion(), 3000);
             return 100;
           }
           return next;
@@ -48,6 +72,29 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
     setStatus('charging');
     if (type === 'skills') setSkills(prev => Math.min(prev + 1, 100));
     else setWorkHours(prev => Math.min(prev + 1.2, 100));
+  };
+
+  // Inicia el "hold to charge": evita crear un segundo interval en paralelo
+  // (p.ej. si un dispositivo táctil dispara mousedown y touchstart sintéticos)
+  // y garantiza que el interval quede referenciado para poder limpiarlo si
+  // el componente se desmonta mientras el usuario mantiene presionado.
+  const startCharging = (type: 'skills' | 'work') => {
+    if (activeChargeInterval.current) {
+      clearInterval(activeChargeInterval.current);
+    }
+    const interval = setInterval(() => charge(type), 50);
+    activeChargeInterval.current = interval;
+    const stop = () => {
+      clearInterval(interval);
+      if (activeChargeInterval.current === interval) activeChargeInterval.current = null;
+      setStatus('idle');
+      // Quita ambos listeners explícitamente: {once:true} solo auto-remueve el
+      // evento que sí disparó, dejando el otro colgado en window indefinidamente.
+      window.removeEventListener('mouseup', stop);
+      window.removeEventListener('touchend', stop);
+    };
+    window.addEventListener('mouseup', stop, { once: true });
+    window.addEventListener('touchend', stop, { once: true });
   };
 
   return (
@@ -128,15 +175,9 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
       {/* CONTROLES */}
       <div className="mt-24 grid grid-cols-2 gap-40 relative z-40">
          <div className="flex flex-col items-center gap-6">
-            <motion.button 
-              onMouseDown={() => {
-                const interval = setInterval(() => charge('skills'), 50);
-                window.addEventListener('mouseup', () => { clearInterval(interval); setStatus('idle'); }, { once: true });
-              }}
-              onTouchStart={() => {
-                const interval = setInterval(() => charge('skills'), 50);
-                window.addEventListener('touchend', () => { clearInterval(interval); setStatus('idle'); }, { once: true });
-              }}
+            <motion.button
+              onMouseDown={() => startCharging('skills')}
+              onTouchStart={() => startCharging('skills')}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="w-32 h-32 rounded-full bg-blue-500 text-white shadow-[0_20px_60px_rgba(59,130,246,0.5)] border-none flex items-center justify-center cursor-pointer group"
@@ -147,15 +188,9 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
          </div>
 
          <div className="flex flex-col items-center gap-6">
-            <motion.button 
-              onMouseDown={() => {
-                const interval = setInterval(() => charge('work'), 50);
-                window.addEventListener('mouseup', () => { clearInterval(interval); setStatus('idle'); }, { once: true });
-              }}
-              onTouchStart={() => {
-                const interval = setInterval(() => charge('work'), 50);
-                window.addEventListener('touchend', () => { clearInterval(interval); setStatus('idle'); }, { once: true });
-              }}
+            <motion.button
+              onMouseDown={() => startCharging('work')}
+              onTouchStart={() => startCharging('work')}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="w-32 h-32 rounded-full bg-orange-500 text-white shadow-[0_20px_60px_rgba(249,115,22,0.5)] border-none flex items-center justify-center cursor-pointer group"

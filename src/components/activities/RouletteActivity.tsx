@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { RouletteActivityData, RouletteScenario } from '@/types/activities';
 import { ArrowLeft, RefreshCw, Zap, Star, AlertTriangle, CheckCircle2, ChevronRight, Trophy } from 'lucide-react';
 
@@ -20,15 +20,25 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [score, setScore] = useState(0);
 
+  const hasCompletedRef = useRef(false);
+  const spinTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Evita que el timeout de giro dispare setState tras desmontar el componente
+  useEffect(() => {
+    return () => {
+      if (spinTimeoutRef.current) clearTimeout(spinTimeoutRef.current);
+    };
+  }, []);
+
   const handleSpin = () => {
     if (isSpinning || history.length >= data.giros) return;
-    
+
     setIsSpinning(true);
     const newRotation = rotation + 1440 + Math.random() * 360;
     setRotation(newRotation);
 
     // Simular tiempo de giro
-    setTimeout(() => {
+    spinTimeoutRef.current = setTimeout(() => {
       setIsSpinning(false);
       // Seleccionar un escenario aleatorio que no haya salido
       const available = data.escenarios.filter(s => !history.includes(s.id));
@@ -53,7 +63,10 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
   const handleNextTurn = () => {
     if (history.length >= data.giros) {
       setIsFinished(true);
-      if (onComplete) onComplete(data.giros > 0 ? Math.round((score / data.giros) * 100) : 0);
+      if (onComplete && !hasCompletedRef.current) {
+        hasCompletedRef.current = true;
+        onComplete(data.giros > 0 ? Math.round((score / data.giros) * 100) : 0);
+      }
     } else {
       setCurrentScenario(null);
       setSelectedIdx(null);

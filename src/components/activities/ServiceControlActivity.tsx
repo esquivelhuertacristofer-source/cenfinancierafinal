@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Droplets, Flame, AlertTriangle, ShieldCheck, Timer, Wallet, RefreshCw, PlayCircle } from 'lucide-react';
 
@@ -23,6 +23,26 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
   const [gameStarted, setGameStarted] = useState(false);
   const [showRedAlert, setShowRedAlert] = useState(false);
 
+  // Ref sincronizado con el presupuesto real más reciente: evita leer un
+  // valor de `budget` obsoleto (closure de un render anterior) al calcular
+  // el score final, y evita que `onComplete` se dispare dos veces si el
+  // tiempo se agota justo en el mismo tick en que el presupuesto llega a 0.
+  const budgetRef = useRef(budget);
+  const hasCompletedRef = useRef(false);
+  const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+    };
+  }, []);
+
+  const completeOnce = (finalScore: number) => {
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete?.(finalScore);
+  };
+
   useEffect(() => {
     if (!gameStarted || isFinished || isLost) return;
 
@@ -39,17 +59,20 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
           if (s.level > 50) cost += (s.level - 50) * 0.3;
           if (s.level > 85) criticalCount++;
         });
-        
+
         if (cost > 10) {
           setShowRedAlert(true);
-          setTimeout(() => setShowRedAlert(false), 200);
+          const alertTimeout = setTimeout(() => setShowRedAlert(false), 200);
+          timeoutsRef.current.push(alertTimeout);
         }
 
         setBudget(b => {
           const nextB = b - cost;
+          budgetRef.current = Math.max(0, nextB);
           if (nextB <= 0) {
             setIsLost(true);
-            setTimeout(() => onComplete?.(0), 4000);
+            const lostTimeout = setTimeout(() => completeOnce(0), 4000);
+            timeoutsRef.current.push(lostTimeout);
             return 0;
           }
           return nextB;
@@ -60,7 +83,8 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
       setTimeLeft(t => {
         if (t <= 1) {
           setIsFinished(true);
-          setTimeout(() => onComplete?.(Math.max(0, Math.floor(budget/10))), 4000);
+          const finishTimeout = setTimeout(() => completeOnce(Math.max(0, Math.floor(budgetRef.current / 10))), 4000);
+          timeoutsRef.current.push(finishTimeout);
           return 0;
         }
         return t - 1;

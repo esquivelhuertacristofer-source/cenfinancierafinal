@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { TriviaActivityData } from '../../types/activities';
 import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame } from 'lucide-react';
 
@@ -17,13 +17,16 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [streak, setStreak] = useState(0);
   const [maxStreak, setMaxStreak] = useState(0);
+  const hasCompletedRef = useRef(false);
 
-  const currentQuestion = data.preguntas[currentIdx];
+  // Optional chaining: si `data.preguntas` viniera undefined, el acceso
+  // directo (`data.preguntas[currentIdx]`) provocaría un crash inmediato.
+  const currentQuestion = data.preguntas?.[currentIdx];
 
   // Generar opciones mezcladas para la pregunta actual
   const shuffledOptions = useMemo(() => {
     if (!currentQuestion) return [];
-    return [...currentQuestion.incorrectas, currentQuestion.respuesta_correcta]
+    return [...(currentQuestion.incorrectas || []), currentQuestion.respuesta_correcta]
       .sort(() => Math.random() - 0.5);
   }, [currentQuestion]);
 
@@ -37,7 +40,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     return () => clearInterval(timer);
   }, [timeLeft, isFinished]);
 
-  if (!data.preguntas.length || !currentQuestion) {
+  if (!data.preguntas?.length || !currentQuestion) {
     return (
       <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
         <p className="text-white/40 text-xl font-medium text-center">Sin preguntas disponibles.</p>
@@ -96,8 +99,12 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                      <div className="text-7xl font-black text-white italic tracking-tighter">x{maxStreak}</div>
                   </div>
                </div>
-               <button 
-                 onClick={() => onComplete && onComplete(finalPercent)}
+               <button
+                 onClick={() => {
+                   if (hasCompletedRef.current) return;
+                   hasCompletedRef.current = true;
+                   onComplete && onComplete(finalPercent);
+                 }}
                  className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.6em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
                >
                   Registrar Puntuación Élite

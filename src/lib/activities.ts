@@ -47,6 +47,34 @@ export function prefetchActivity(activityId: string) {
 export function calculateXP(score: number, xpBase: number, racha: number = 0): number {
   const perfectionBonus = score === 100 ? 50 : 0;
   const streakBonus = racha >= 5 ? 100 : racha >= 3 ? 30 : 0;
-  
+
   return Math.round((xpBase * (score / 100)) + perfectionBonus + streakBonus);
+}
+
+/**
+ * Actualiza y devuelve la racha de días consecutivos con actividad completada.
+ * Persiste en localStorage por usuario; se resetea si hay un día de hueco.
+ */
+export function getAndUpdateRacha(userId: string): number {
+  if (typeof window === 'undefined') return 0;
+
+  const key = `cen_racha_${userId}`;
+  const today = new Date().toISOString().slice(0, 10);
+
+  let stored: { count: number; lastDate: string } | null = null;
+  try {
+    stored = JSON.parse(localStorage.getItem(key) ?? 'null');
+  } catch {
+    stored = null;
+  }
+
+  if (stored?.lastDate === today) {
+    return stored.count;
+  }
+
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const count = stored?.lastDate === yesterday ? stored.count + 1 : 1;
+
+  localStorage.setItem(key, JSON.stringify({ count, lastDate: today }));
+  return count;
 }

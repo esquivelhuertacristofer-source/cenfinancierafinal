@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { MatchingActivityData, MemoryPair } from '@/types/activities';
 import { ArrowLeft, CheckCircle2, Trophy, RefreshCw } from 'lucide-react';
 
@@ -24,20 +24,33 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
   const [flippedCards, setFlippedCards] = useState<Card[]>([]);
   const [moves, setMoves] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const pendingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Inicializar cartas
   useEffect(() => {
     const allCards: Card[] = [];
-    data.pares.forEach(p => {
+    (data.pares || []).forEach(p => {
       allCards.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
       allCards.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
     });
     setCards(allCards.sort(() => Math.random() - 0.5));
   }, [data.pares]);
 
+  // Limpieza de timeouts pendientes al desmontar (evita que un match/mismatch
+  // en vuelo dispare onComplete o toque estado tras salir de la actividad)
+  useEffect(() => {
+    return () => {
+      if (pendingTimeoutRef.current) clearTimeout(pendingTimeoutRef.current);
+    };
+  }, []);
+
   const handleReset = () => {
+    if (pendingTimeoutRef.current) {
+      clearTimeout(pendingTimeoutRef.current);
+      pendingTimeoutRef.current = null;
+    }
     const allCards: Card[] = [];
-    data.pares.forEach(p => {
+    (data.pares || []).forEach(p => {
       allCards.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
       allCards.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
     });
@@ -57,23 +70,31 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
     if (flippedCards.length === 1) {
       setMoves(prev => prev + 1);
       const firstCard = flippedCards[0];
-      
+      const movesSoFar = moves + 1; // moves aún no se actualizó en este closure; +1 refleja el incremento pendiente
+
       if (firstCard.pairId === card.pairId) {
         // MATCH!
-        setTimeout(() => {
+        pendingTimeoutRef.current = setTimeout(() => {
           setCards(prev => prev.map(c => c.pairId === card.pairId ? { ...c, isMatched: true } : c));
           setFlippedCards([]);
           // Check if finished
           if (newCards.every(c => c.isMatched || c.pairId === card.pairId)) {
             setIsFinished(true);
-            if (onComplete) onComplete(100);
+            const totalPairs = data.pares?.length || 0;
+            // Score real: relación entre el mínimo de movimientos posible (1 por par) y los movimientos reales.
+            const realScore = (totalPairs > 0 && movesSoFar > 0)
+              ? Math.max(0, Math.min(100, Math.round((totalPairs / movesSoFar) * 100)))
+              : 100;
+            if (onComplete) onComplete(realScore);
           }
+          pendingTimeoutRef.current = null;
         }, 600);
       } else {
         // NO MATCH
-        setTimeout(() => {
+        pendingTimeoutRef.current = setTimeout(() => {
           setCards(prev => prev.map(c => c.id === firstCard.id || c.id === card.id ? { ...c, isFlipped: false } : c));
           setFlippedCards([]);
+          pendingTimeoutRef.current = null;
         }, 1200);
       }
     }

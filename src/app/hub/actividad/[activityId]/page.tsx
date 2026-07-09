@@ -1,18 +1,20 @@
 'use client';
 
-import React, { useEffect, useState, useCallback, memo } from 'react';
+import React, { useEffect, useState, useCallback, useRef, memo } from 'react';
 import { notFound, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import { getActivityData, calculateXP } from '@/lib/activities';
+import { getActivityData, calculateXP, getAndUpdateRacha } from '@/lib/activities';
 import { getCurrentProfile, markActivityComplete } from '@/lib/hub';
 import { Loader2, ArrowLeft, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Carga dinámica de componentes
-const SimulatorActivity = dynamic(() => import('@/components/activities/SimulatorActivity'), { loading: () => <ActivityLoader /> });
+// ssr:false en Simulator (recharts) y Builder (mathjs): esas librerías están
+// excluidas del bundle del Worker (ver next.config.ts) y solo existen en el cliente.
+const SimulatorActivity = dynamic(() => import('@/components/activities/SimulatorActivity'), { ssr: false, loading: () => <ActivityLoader /> });
 const QuizActivity = dynamic(() => import('@/components/activities/QuizActivity'), { loading: () => <ActivityLoader /> });
 const StoryActivity = dynamic(() => import('@/components/activities/StoryActivity'), { loading: () => <ActivityLoader /> });
-const BuilderActivity = dynamic(() => import('@/components/activities/BuilderActivity'), { loading: () => <ActivityLoader /> });
+const BuilderActivity = dynamic(() => import('@/components/activities/BuilderActivity'), { ssr: false, loading: () => <ActivityLoader /> });
 const TriviaActivity = dynamic(() => import('@/components/activities/TriviaActivity'), { loading: () => <ActivityLoader /> });
 const DragDropActivity = dynamic(() => import('@/components/activities/DragDropActivity'), { loading: () => <ActivityLoader /> });
 const FillBlanksActivity = dynamic(() => import('@/components/activities/FillBlanksActivity'), { loading: () => <ActivityLoader /> });
@@ -53,6 +55,7 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const startTimeRef = useRef<number>(Date.now());
 
   useEffect(() => {
     async function load() {
@@ -78,8 +81,10 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
   const handleComplete = useCallback(async (score: number = 0) => {
     const profile = await getCurrentProfile();
     if (profile?.id && profile.id !== 'guest_user') {
-      await markActivityComplete(profile.id, activityId);
-      const xpEarned = calculateXP(score, data?.xp ?? 0);
+      const tiempo_segundos = Math.max(0, Math.round((Date.now() - startTimeRef.current) / 1000));
+      await markActivityComplete(profile.id, activityId, { score, tiempo_segundos });
+      const racha = getAndUpdateRacha(profile.id);
+      const xpEarned = calculateXP(score, data?.xp ?? 0, racha);
       const xpKey = `cen_xp_${profile.id}`;
       const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
       localStorage.setItem(xpKey, String(current + xpEarned));

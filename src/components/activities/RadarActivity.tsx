@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, CheckCircle2, Zap, Heart, Star, Pizza, Briefcase, Plus, Sparkles } from 'lucide-react';
 
@@ -37,6 +37,15 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
 
   const totalNeeds = data.items?.filter((i: any) => i.type === 'need').length ?? 0;
 
+  const hasCompletedRef = useRef(false);
+  const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+    };
+  }, []);
+
   useEffect(() => {
     const rawItems: any[] = data.items || [];
     if (rawItems.length === 0) return;
@@ -56,9 +65,10 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
         };
         setItems(prev => [...prev, newItem]);
 
-        setTimeout(() => {
+        const expiryTimeout = setTimeout(() => {
           setItems(prev => prev.filter(i => i.id !== newItem.id));
         }, 3000);
+        timeoutsRef.current.push(expiryTimeout);
       }
     }, 1500);
     return () => clearInterval(interval);
@@ -67,28 +77,42 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   const handleScan = (item: Item) => {
     if (item.type === 'need') {
       const nextNeedsFound = needsFound + 1;
+      // Presupuesto restante tras este acierto: refleja el desempeño real
+      // (se calcula aquí, no leyendo `budget` de estado que aún no se actualizó).
+      const nextBudget = Math.max(budget - 10, 0);
       setNeedsFound(nextNeedsFound);
-      setBudget(prev => Math.max(prev - 10, 0));
-      setLastFeedback({ 
-        text: `¡${item.label} es VITAL! Sabia decisión.`, 
-        type: 'good' 
+      setBudget(nextBudget);
+      setLastFeedback({
+        text: `¡${item.label} es VITAL! Sabia decisión.`,
+        type: 'good'
       });
-      
+
       if (totalNeeds > 0 && nextNeedsFound >= totalNeeds) {
          setIsFinished(true);
-         setTimeout(() => onComplete?.(100), 5000);
+         const completionTimeout = setTimeout(() => {
+           if (!hasCompletedRef.current) {
+             hasCompletedRef.current = true;
+             // Score real: presupuesto conservado (0-100) tras identificar
+             // correctamente todas las necesidades, penalizado por cada
+             // "deseo" comprado por error.
+             onComplete?.(Math.round(nextBudget));
+           }
+         }, 5000);
+         timeoutsRef.current.push(completionTimeout);
       }
     } else {
       setBudget(prev => Math.max(prev - 20, 0));
       setShake(true);
-      setLastFeedback({ 
-        text: `¡Cuidado! ${item.label} es un DESEO. Gastaste de más.`, 
-        type: 'warn' 
+      setLastFeedback({
+        text: `¡Cuidado! ${item.label} es un DESEO. Gastaste de más.`,
+        type: 'warn'
       });
-      setTimeout(() => setShake(false), 500);
+      const shakeTimeout = setTimeout(() => setShake(false), 500);
+      timeoutsRef.current.push(shakeTimeout);
     }
     setItems(prev => prev.filter(i => i.id !== item.id));
-    setTimeout(() => setLastFeedback(null), 2500);
+    const feedbackTimeout = setTimeout(() => setLastFeedback(null), 2500);
+    timeoutsRef.current.push(feedbackTimeout);
   };
 
   const getRank = () => {

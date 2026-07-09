@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { evaluate } from 'mathjs';
 import { normalizeFormula } from '../../lib/math-engine';
 import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
@@ -17,7 +17,8 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
   const [formData, setFormData] = useState<Record<string, any>>({});
   const [isFinished, setIsFinished] = useState(false);
 
-  const currentStep = data.pasos[currentStepIdx];
+  const currentStep = data.pasos?.[currentStepIdx];
+  const hasCompletedRef = useRef(false);
 
   const handleFieldChange = (fieldId: string, value: any) => {
     setFormData(prev => ({ ...prev, [fieldId]: value }));
@@ -71,6 +72,32 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
     return formData[field.id] || '';
   };
 
+  // Score real: combina (1) qué porcentaje de los campos obligatorios ("requerido")
+  // fueron llenados por el alumno y (2) qué porcentaje de las alertas financieras
+  // (calculos_automaticos.alerta_si) NO están activas al finalizar, es decir, qué tan
+  // sana quedó la estrategia construida. Ambas señales existen ya en el modelo de datos.
+  const finalScore = useMemo(() => {
+    const allFields = (data.pasos || []).flatMap(p => p.campos || []);
+    const requiredFields = allFields.filter(f => f.requerido && f.type !== 'calculated');
+    const filledCount = requiredFields.filter(f => {
+      const val = formData[f.id];
+      if (f.type === 'number') return typeof val === 'number' && isFinite(val);
+      return val !== undefined && val !== null && String(val).trim() !== '';
+    }).length;
+    const fieldsRatio = requiredFields.length > 0 ? filledCount / requiredFields.length : 1;
+
+    const alertCount = liveCalcs.filter(c => c.alertActive).length;
+    const alertsRatio = liveCalcs.length > 0 ? (liveCalcs.length - alertCount) / liveCalcs.length : 1;
+
+    return Math.round(((fieldsRatio + alertsRatio) / 2) * 100);
+  }, [data.pasos, formData, liveCalcs]);
+
+  const reportCompletion = () => {
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete?.(finalScore);
+  };
+
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in zoom-in duration-1000 font-sans">
@@ -90,11 +117,11 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                  {data.pasos.map(step => (
+                  {(data.pasos || []).map(step => (
                     <div key={step.id} className="p-8 bg-white/5 border border-white/10 rounded-[40px] space-y-4 backdrop-blur-xl">
                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-400">{step.titulo}</h4>
                        <div className="space-y-2">
-                          {step.campos.map(field => (
+                          {(step.campos || []).map(field => (
                             <div key={field.id} className="flex justify-between text-sm">
                                <span className="opacity-30">{field.label}:</span>
                                <span className="font-bold text-white/80">
@@ -107,8 +134,8 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
                   ))}
                </div>
 
-               <button 
-                 onClick={() => onComplete && onComplete(100)}
+               <button
+                 onClick={reportCompletion}
                  className="w-full py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] hover:scale-105 transition-all shadow-2xl"
                >
                   Finalizar Misión Diamond
@@ -119,9 +146,15 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
     );
   }
 
+  // Blindaje: si el contenido llega mal formado (pasos vacío), evita el crash
+  // de acceder a currentStep.titulo/campos sobre un índice inexistente.
+  if (!currentStep) {
+    return null;
+  }
+
   return (
     <div className="w-full h-full bg-transparent text-white flex flex-col relative overflow-hidden font-sans">
-      
+
       {/* HUD DE PROGRESO */}
       <header className="p-10 md:p-20 flex justify-between items-center relative z-20">
          <div className="flex flex-col">
@@ -157,7 +190,7 @@ export default function BuilderActivity({ data, onComplete, onClose }: Props) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-               {currentStep.campos.map(field => (
+               {(currentStep.campos || []).map(field => (
                  <div key={field.id} className={`space-y-4 ${field.type === 'textarea' ? 'md:col-span-2' : ''} group`}>
                     <label className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] group-focus-within:text-emerald-400 transition-colors">{field.label}</label>
 

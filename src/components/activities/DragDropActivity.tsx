@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { DragDropActivityData } from '../../types/activities';
 import { Trophy, Star, Sparkles, CheckCircle2, Zap, Flame, ChevronRight, MousePointer2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function DragDropActivity({ data, onComplete, onClose }: Props) {
-  const [items, setItems] = useState(data.items.map(item => ({ 
+  const [items, setItems] = useState((data.items || []).map(item => ({
     ...item, 
     assignedCategoryId: null as string | null, 
     status: 'idle' as 'idle' | 'correct' | 'wrong' 
@@ -24,6 +24,15 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [isFeedbackCorrect, setIsFeedbackCorrect] = useState(true);
+  const finishTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasCompletedRef = useRef(false);
+
+  // Limpieza del timer de cierre si el componente se desmonta antes de que dispare
+  useEffect(() => {
+    return () => {
+      if (finishTimeoutRef.current) clearTimeout(finishTimeoutRef.current);
+    };
+  }, []);
 
   const pendingItems = useMemo(() => items.filter(i => !i.assignedCategoryId), [items]);
 
@@ -60,14 +69,21 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
 
     setSelectedItemId(null);
     if (items.filter(i => !i.assignedCategoryId).length === 1) {
-       setTimeout(() => setIsFinished(true), 3000);
+       finishTimeoutRef.current = setTimeout(() => setIsFinished(true), 3000);
     }
   };
 
   const finalScore = useMemo(() => {
+    if (items.length === 0) return 0;
     const correct = items.filter(i => i.assignedCategoryId === i.categoria_correcta).length;
     return Math.round((correct / items.length) * 100);
   }, [items]);
+
+  const reportCompletion = () => {
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    onComplete?.(finalScore);
+  };
 
   if (isFinished) {
     return (
@@ -101,7 +117,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
                <motion.button 
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
-                 onClick={() => onComplete && onComplete(finalScore)}
+                 onClick={reportCompletion}
                  className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.6em] shadow-[0_20px_50px_rgba(255,255,255,0.15)] group"
                >
                   Recibir Galardón <ChevronRight className="inline-block group-hover:translate-x-2 transition-transform" />
@@ -211,7 +227,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
 
          <section className="lg:col-span-8 space-y-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-               {data.categorias.map((cat) => (
+               {(data.categorias || []).map((cat) => (
                  <motion.div 
                    key={cat.id}
                    whileHover={{ scale: selectedItemId ? 1.02 : 1 }}

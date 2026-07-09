@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { StoryActivityData } from '../../types/activities';
 import { ChevronRight, Award, Sparkles, BookOpen, Star, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,8 +15,15 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
   const [currentNodeId, setCurrentNodeId] = useState(data.nodo_inicial);
   const [totalBonus, setTotalBonus] = useState(0);
   const [lastConsequence, setLastConsequence] = useState<string | null>(null);
+  // Rastrean las decisiones tomadas para poder calcular un score real
+  // basado en cuántas fueron la opción óptima (`es_optima`).
+  const [optimalChoices, setOptimalChoices] = useState(0);
+  const [totalChoices, setTotalChoices] = useState(0);
+  const hasCompletedRef = useRef(false);
 
-  const currentNode = useMemo(() => data.nodos[currentNodeId], [currentNodeId, data.nodos]);
+  // Optional chaining en `data.nodos` por si el JSON de la actividad viene
+  // incompleto: evita un crash y cae en el fallback "sin contenido".
+  const currentNode = useMemo(() => data.nodos?.[currentNodeId], [currentNodeId, data.nodos]);
 
   const handleChoice = (choiceId: string) => {
     const choice = currentNode.opciones?.find(o => o.id === choiceId);
@@ -24,11 +31,27 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
 
     setLastConsequence(choice.consecuencia);
     setTotalBonus(prev => prev + (choice.xp_bonus || 0));
+    setTotalChoices(prev => prev + 1);
+    if (choice.es_optima) setOptimalChoices(prev => prev + 1);
     setCurrentNodeId(choice.siguiente_nodo);
   };
 
+  // Score real: prioriza el tipo de final alcanzado ('bueno'/'regular'/'malo');
+  // si el nodo final no lo especifica, usa la proporción de decisiones
+  // óptimas tomadas a lo largo de la historia.
+  const computeScore = (): number => {
+    const tipoFinal = currentNode?.tipo_final;
+    if (tipoFinal === 'bueno') return 100;
+    if (tipoFinal === 'regular') return 60;
+    if (tipoFinal === 'malo') return 30;
+    if (totalChoices > 0) return Math.round((optimalChoices / totalChoices) * 100);
+    return 100; // sin decisiones ni final evaluable (ej. contenido incompleto)
+  };
+
   const handleFinish = () => {
-    if (onComplete) onComplete(100);
+    if (hasCompletedRef.current) return;
+    hasCompletedRef.current = true;
+    if (onComplete) onComplete(computeScore());
   };
 
   // Fallback de imagen para asegurar que NADA se vea roto

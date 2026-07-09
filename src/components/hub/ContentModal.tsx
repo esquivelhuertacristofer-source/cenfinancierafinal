@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, memo } from 'react';
+import { useState, useEffect, useMemo, useRef, memo } from 'react';
 import { 
   Play, 
   BookOpen, 
@@ -37,13 +37,11 @@ import {
   X
 } from 'lucide-react';
 import { markActivityComplete } from '../../lib/hub';
-import { getActivityData, calculateXP } from '../../lib/activities';
+import { getActivityData, calculateXP, getAndUpdateRacha } from '../../lib/activities';
 
 // Importación de todos los motores de actividades Diamond State
 import QuizActivity from '../activities/QuizActivity';
 import TriviaActivity from '../activities/TriviaActivity';
-import SimulatorActivity from '../activities/SimulatorActivity';
-import BuilderActivity from '../activities/BuilderActivity';
 import StoryActivity from '../activities/StoryActivity';
 import GameActivity from '../activities/GameActivity';
 import DragDropActivity from '../activities/DragDropActivity';
@@ -54,6 +52,33 @@ import BalanceActivity from '../activities/BalanceActivity';
 import RadarActivity from '../activities/RadarActivity';
 import GrowthActivity from '../activities/GrowthActivity';
 import ServiceControlActivity from '../activities/ServiceControlActivity';
+
+// ─── Importaciones dinámicas de mecánicas Supremo (lazy-loaded) ──────────────
+import dynamic from 'next/dynamic';
+
+// Simulator (recharts) y Builder (mathjs) se cargan solo en el navegador:
+// sus librerías están excluidas del bundle del Worker (ver next.config.ts,
+// límite 3 MiB gzip del plan free de Cloudflare) y renderizarlas en SSR
+// crashearía con imports vacíos.
+const SimulatorActivity = dynamic(() => import('../activities/SimulatorActivity'), { ssr: false });
+const BuilderActivity = dynamic(() => import('../activities/BuilderActivity'), { ssr: false });
+
+const SupremoLoading = () => (
+  <div className="flex items-center justify-center py-40 gap-4">
+    <div className="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin" />
+    <span className="text-white/40 font-black uppercase tracking-[0.3em] text-sm">Cargando Reto...</span>
+  </div>
+);
+
+const CochintoVivo     = dynamic(() => import('./mechanics/CochintoVivo'),     { ssr: false, loading: () => <SupremoLoading /> });
+const SupermercadoCaos = dynamic(() => import('./mechanics/SupermercadoCaos'), { ssr: false, loading: () => <SupremoLoading /> });
+const FamiliaRamirez   = dynamic(() => import('./mechanics/FamiliaRamirez'),   { ssr: false, loading: () => <SupremoLoading /> });
+const BancoDelTiempo   = dynamic(() => import('./mechanics/BancoDelTiempo'),   { ssr: false, loading: () => <SupremoLoading /> });
+const InversorA10      = dynamic(() => import('./mechanics/InversorA10'),      { ssr: false, loading: () => <SupremoLoading /> });
+const PrimerNegocio    = dynamic(() => import('./mechanics/PrimerNegocio'),    { ssr: false, loading: () => <SupremoLoading /> });
+const NegociaSueldo    = dynamic(() => import('./mechanics/NegociaSueldo'),    { ssr: false, loading: () => <SupremoLoading /> });
+const CrisisRoom       = dynamic(() => import('./mechanics/CrisisRoom'),       { ssr: false, loading: () => <SupremoLoading /> });
+const PortfolioBuilder = dynamic(() => import('./mechanics/PortfolioBuilder'), { ssr: false, loading: () => <SupremoLoading /> });
 
 import DiamondVideoPlayer from './DiamondVideoPlayer';
 import { EXPERT_VIDEOS } from '../../lib/expertVideos';
@@ -386,7 +411,7 @@ const normalizeActivityData = (data: any) => {
   return d;
 };
 
-const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { unitCode: string; onComplete: () => void; isDone: boolean; color: string; theme: any }) => {
+const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: any; isSupremoUnit?: boolean }) => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
@@ -420,7 +445,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { uni
           onClick={() => onComplete()}
           className="px-16 py-6 bg-white text-[#0A0118] rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
         >
-          Continuar al Quiz
+          {isSupremoUnit ? 'Finalizar Reto' : 'Continuar al Quiz'}
         </button>
       </div>
     );
@@ -428,8 +453,10 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { uni
 
   if (!data) return (
     <div className="text-center py-40">
-       <p className="text-white/20 text-3xl font-black mb-8">Esta unidad utiliza el sistema de laboratorio clásico.</p>
-       <button onClick={() => onComplete()} className="px-12 py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Completar Práctica</button>
+       <div className="text-6xl mb-6">🔧</div>
+       <p className="text-white/40 text-2xl font-black mb-4">Actividad no disponible</p>
+       <p className="text-white/20 text-base font-medium mb-10">Esta práctica aún no está configurada.<br/>Puedes marcarla como completada y continuar.</p>
+       <button onClick={() => onComplete()} className="px-12 py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Marcar como completada</button>
     </div>
   );
 
@@ -450,23 +477,48 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme }: { uni
   const isGrowth = ['GROWTH', 'CRECIMIENTO', 'BOVEDA', 'SIMULADOR_AHORRO'].includes(activityType);
   const isServiceControl = ['SERVICE_CONTROL', 'CONSOLA', 'SERVICIOS', 'CONTROL_GASTOS'].includes(activityType);
 
-  const isKnown = isSimulator || isBuilder || isStory || isGame || isDragDrop || isMatching || isFillBlanks || isRoulette || isBalance || isRadar || isGrowth || isServiceControl;
+  // ─── Mecánicas Supremo ────────────────────────────────────────────────────
+  const rawTipo = (data.tipo || data.type || '').toLowerCase().trim();
+  const isCochintoVivo     = rawTipo === 'cochinito_vivo';
+  const isSupermercadoCaos = rawTipo === 'supermercado_caos';
+  const isFamiliaRamirez   = rawTipo === 'familia_ramirez';
+  const isBancoDelTiempo   = rawTipo === 'banco_del_tiempo';
+  const isInversorA10      = rawTipo === 'inversor_a10';
+  const isPrimerNegocio    = rawTipo === 'primer_negocio';
+  const isNegociaSueldo    = rawTipo === 'negocia_sueldo';
+  const isCrisisRoom       = rawTipo === 'crisis_room';
+  const isPortfolioBuilder = rawTipo === 'portfolio_builder';
+  const isSupremo = isCochintoVivo || isSupermercadoCaos || isFamiliaRamirez || isBancoDelTiempo ||
+                    isInversorA10 || isPrimerNegocio || isNegociaSueldo || isCrisisRoom || isPortfolioBuilder;
+
+  const isKnown = isSimulator || isBuilder || isStory || isGame || isDragDrop || isMatching || isFillBlanks || isRoulette || isBalance || isRadar || isGrowth || isServiceControl || isSupremo;
 
   return (
     <div className="animate-in fade-in duration-1000">
-      {isSimulator && <SimulatorActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isBuilder && <BuilderActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isStory && <StoryActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isGame && <GameActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isDragDrop && <DragDropActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isMatching && <MatchingActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isFillBlanks && <FillBlanksActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isRoulette && <RouletteActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isBalance && <BalanceActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isRadar && <RadarActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isGrowth && <GrowthActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      {isServiceControl && <ServiceControlActivity data={data} onComplete={() => { setIsFinishedLocal(true); onComplete(); }} />}
-      
+      {isSimulator && <SimulatorActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBuilder && <BuilderActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isStory && <StoryActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGame && <GameActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isDragDrop && <DragDropActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isMatching && <MatchingActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFillBlanks && <FillBlanksActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRoulette && <RouletteActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBalance && <BalanceActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRadar && <RadarActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGrowth && <GrowthActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isServiceControl && <ServiceControlActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+
+      {/* ─── Mecánicas Supremo ─── */}
+      {isCochintoVivo     && <CochintoVivo     activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isSupermercadoCaos && <SupermercadoCaos activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFamiliaRamirez   && <FamiliaRamirez   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBancoDelTiempo   && <BancoDelTiempo   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isInversorA10      && <InversorA10      activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPrimerNegocio    && <PrimerNegocio    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isNegociaSueldo    && <NegociaSueldo    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isCrisisRoom       && <CrisisRoom       activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPortfolioBuilder && <PortfolioBuilder activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+
       {!isKnown && (
         <div className="text-center p-20 border border-white/5 bg-white/5 rounded-[40px]">
            <h3 className="text-white text-4xl font-black mb-4">Misión Especial Detectada</h3>
@@ -564,31 +616,56 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme }: { unitCode: strin
       {isFillBlanks && (
         <FillBlanksActivity
           data={data}
-          onComplete={() => { setIsFinishedLocal(true); onComplete(100); }}
+          onComplete={(score) => {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
+              setIsFinishedLocal(true);
+              onComplete(score);
+            }
+          }}
         />
       )}
       {isStory && (
         <StoryActivity
           data={data}
-          onComplete={() => { setIsFinishedLocal(true); onComplete(100); }}
+          onComplete={(score) => {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
+              setIsFinishedLocal(true);
+              onComplete(score);
+            }
+          }}
         />
       )}
       {isDragDrop && (
         <DragDropActivity
           data={data}
-          onComplete={() => { setIsFinishedLocal(true); onComplete(100); }}
+          onComplete={(score) => {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
+              setIsFinishedLocal(true);
+              onComplete(score);
+            }
+          }}
         />
       )}
       {isMatching && (
         <MatchingActivity
           data={data}
-          onComplete={() => { setIsFinishedLocal(true); onComplete(100); }}
+          onComplete={(score) => {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
+              setIsFinishedLocal(true);
+              onComplete(score);
+            }
+          }}
         />
       )}
       {isRoulette && (
         <RouletteActivity
           data={data}
-          onComplete={() => { setIsFinishedLocal(true); onComplete(100); }}
+          onComplete={(score) => {
+            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
+              setIsFinishedLocal(true);
+              onComplete(score);
+            }
+          }}
         />
       )}
       {!isTrivia && !isGame && !isQuiz && !isFillBlanks && !isStory && !isDragDrop && !isMatching && !isRoulette && (
@@ -609,11 +686,16 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const [rankUp, setRankUp] = useState<{ pillarTitle: string; rank: string; color: string } | null>(null);
   const [showUnitVideo, setShowUnitVideo] = useState(false);
   const theme = useMemo(() => getUnitTheme(unit), [unit]);
+  const tabStartRef = useRef<number>(Date.now());
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
   }, []);
+
+  useEffect(() => {
+    tabStartRef.current = Date.now();
+  }, [activeTab]);
 
   const handleComplete = async (contentType: ContentType, score: number = 100) => {
     const id = getActivityId(unit.code, contentType);
@@ -623,13 +705,15 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
 
     // Guardar copia del estado previo de completados para comparar rangos
     const oldCompleted = new Set(completed);
+    const tiempo_segundos = Math.max(0, Math.round((Date.now() - tabStartRef.current) / 1000));
 
     if (userId && userId !== 'guest_user') {
       try {
-        await markActivityComplete(userId, id);
+        await markActivityComplete(userId, id, { score, tiempo_segundos });
         const actSuffix = contentType === 'quiz' ? 'B' : 'A';
         const actData = await getActivityData(`ACT-${unit.code}-${actSuffix}`);
-        const xpEarned = calculateXP(score, actData?.xp ?? 150);
+        const racha = getAndUpdateRacha(userId);
+        const xpEarned = calculateXP(score, actData?.xp ?? 150, racha);
         const xpKey = `cen_xp_${userId}`;
         const current = parseInt(localStorage.getItem(xpKey) ?? '0', 10);
         localStorage.setItem(xpKey, String(current + xpEarned));
@@ -781,9 +865,10 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
             <SimulatorTab
               unitCode={unit.code}
               isDone={isDone('simulator')}
-              onComplete={() => { handleComplete('simulator'); setActiveTab('quiz'); }}
+              onComplete={(score) => { handleComplete('simulator', score); if (!unit.code.includes('SUPREMO')) setActiveTab('quiz'); }}
               color={pillar.color}
               theme={theme}
+              isSupremoUnit={unit.code.includes('SUPREMO')}
             />
           )}
           {activeTab === 'quiz' && (

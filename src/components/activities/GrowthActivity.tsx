@@ -17,10 +17,28 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
   const [events, setEvents] = useState<{ id: number, text: string, type: 'plus' | 'minus' }[]>([]);
   const targetGoal = data.meta_objetivo || 500;
   const completionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasCompletedRef = useRef(false);
+  const investCountRef = useRef(0);
+  const spendCountRef = useRef(0);
+
+  // Score real: recompensa las decisiones de inversión frente a los gastos impulsivos.
+  // Si el jugador no tomó ninguna decisión (solo esperó a que creciera el capital),
+  // se considera una meta alcanzada de forma pasiva (100).
+  const computeScore = () => {
+    const totalActions = investCountRef.current + spendCountRef.current;
+    if (totalActions === 0) return 100;
+    return Math.max(0, Math.min(100, Math.round((investCountRef.current / totalActions) * 100)));
+  };
+
+  const finalizeCompletion = () => {
+    if (hasCompletedRef.current) return; // evita disparar onComplete más de una vez (auto + botón manual)
+    hasCompletedRef.current = true;
+    onComplete?.(computeScore());
+  };
 
   const completeNow = () => {
     if (completionTimeout.current) clearTimeout(completionTimeout.current);
-    onComplete?.(100);
+    finalizeCompletion();
   };
 
   // Lógica de crecimiento automático
@@ -31,7 +49,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
         const next = prev + (1 * multiplier);
         if (next >= targetGoal) {
           setIsFinished(true);
-          completionTimeout.current = setTimeout(() => onComplete?.(100), 4000);
+          completionTimeout.current = setTimeout(() => finalizeCompletion(), 4000);
           return targetGoal;
         }
         return next;
@@ -39,6 +57,13 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
     }, 1000);
     return () => clearInterval(interval);
   }, [multiplier, isFinished, targetGoal]);
+
+  // Limpieza del timeout de auto-finalización al desmontar (evita onComplete tras salir de la actividad)
+  useEffect(() => {
+    return () => {
+      if (completionTimeout.current) clearTimeout(completionTimeout.current);
+    };
+  }, []);
 
   const addEvent = (text: string, type: 'plus' | 'minus') => {
     const id = Math.random();
@@ -50,6 +75,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
     if (balance >= 30) {
       setBalance(prev => prev - 30);
       setMultiplier(prev => prev + 0.5);
+      investCountRef.current += 1;
       addEvent("¡Invertiste en Conocimiento! Multiplicador x" + (multiplier + 0.5), 'plus');
     } else {
       addEvent("No tienes suficiente para invertir", 'minus');
@@ -59,6 +85,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
   const handleSpend = () => {
     if (balance >= 50) {
        setBalance(prev => prev - 50);
+       spendCountRef.current += 1;
        addEvent("¡Gastaste en un deseo! El ahorro bajó.", 'minus');
     }
   };

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { SimulatorActivityData } from '../../types/activities';
 import { TrendingUp, Zap, Sparkles, CheckCircle2, AlertCircle, Info, Calculator, ArrowRight, BarChart3 } from 'lucide-react';
 import { solveFormula } from '../../lib/math-engine';
@@ -16,24 +16,38 @@ interface Props {
 export default function SimulatorActivity({ data, onComplete, onClose }: Props) {
   const [inputs, setInputs] = useState<Record<string, any>>(() => {
     const initial: Record<string, any> = {};
-    data.inputs.forEach(input => {
+    (data.inputs || []).forEach(input => {
       initial[input.id] = input.default;
     });
     return initial;
   });
 
   const [isCompleted, setIsCompleted] = useState(false);
+  const hasCompletedRef = useRef(false);
 
   const result = useMemo(() => {
     return solveFormula(data.formula, inputs);
   }, [inputs, data.formula]);
 
   const activeScenario = useMemo(() => {
-    return data.escenarios.find(s => {
+    return (data.escenarios || []).find(s => {
       const res = solveFormula(s.condicion, { resultado: result, ...inputs });
       return Number(res) === 1 || (res as unknown) === true;
     });
   }, [result, inputs, data.escenarios]);
+
+  // Score real basado en el resultado de la simulación: se usa el tipo de
+  // escenario alcanzado (éxito/advertencia/peligro) según las decisiones del
+  // alumno en los inputs, en vez de un valor fijo.
+  const simulationScore = useMemo(() => {
+    switch (activeScenario?.tipo) {
+      case 'success': return 100;
+      case 'info': return 75;
+      case 'warning': return 60;
+      case 'danger': return 30;
+      default: return 50; // sin escenario coincidente: resultado neutro
+    }
+  }, [activeScenario]);
 
   // Generar datos ficticios pero reactivos para la gráfica
   const chartData = useMemo(() => {
@@ -80,7 +94,7 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
            </header>
 
            <div className="space-y-8 p-10 bg-white/[0.02] border border-white/10 rounded-[60px] backdrop-blur-3xl">
-              {data.inputs.map((input, idx) => (
+              {(data.inputs || []).map((input, idx) => (
                 <motion.div 
                   key={input.id} 
                   initial={{ opacity: 0, y: 10 }}
@@ -222,8 +236,12 @@ export default function SimulatorActivity({ data, onComplete, onClose }: Props) 
                    <h2 className="text-6xl font-black italic tracking-tighter uppercase">Simulación Validada</h2>
                    <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">"{data.titulo}"</span></p>
                 </div>
-                <button 
-                  onClick={() => onComplete && onComplete(100)}
+                <button
+                  onClick={() => {
+                    if (hasCompletedRef.current) return;
+                    hasCompletedRef.current = true;
+                    onComplete && onComplete(simulationScore);
+                  }}
                   className="w-full py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] hover:scale-105 transition-all"
                 >
                    Finalizar Misión
