@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { withSentryConfig } from "@sentry/nextjs";
 
 const nextConfig: NextConfig = {
   images: {
@@ -11,17 +10,25 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Librerías que solo se ejecutan en el navegador, excluidas del bundle
+      // del servidor (límite 3 MiB gzip del Worker en plan free de Cloudflare):
+      // - jspdf: solo se instancia en handlers de click (descargas de PDF).
+      // - mathjs/recharts: solo en SimulatorActivity/BuilderActivity, que se
+      //   montan con dynamic(..., { ssr: false }).
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        jspdf: false,
+        mathjs: false,
+        recharts: false,
+      };
+    }
+    return config;
+  },
 };
 
-export default withSentryConfig(nextConfig, {
-  silent: true,
-  tunnelRoute: "/monitoring",
-  sourcemaps: {
-    disable: !process.env.SENTRY_AUTH_TOKEN,
-    deleteSourcemapsAfterUpload: !!process.env.SENTRY_AUTH_TOKEN,
-  },
-  reactComponentAnnotation: {
-    enabled: true,
-  },
-  automaticVercelMonitors: false,
-});
+// Sentry eliminado (2026-07-08): nunca tuvo DSN configurado (inerte) y su SDK
+// de servidor (+OpenTelemetry) inflaba el Worker de Cloudflare por encima del
+// límite de 3 MiB gzip del plan free.
+export default nextConfig;

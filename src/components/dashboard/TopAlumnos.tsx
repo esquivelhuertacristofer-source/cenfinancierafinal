@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
+import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { Trophy, Star, ArrowRight, Zap, AlertCircle } from "lucide-react";
 import { notify } from "@/lib/toast";
 
@@ -25,54 +26,28 @@ export default function TopAlumnos({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
     setMounted(true);
+    if (idsLoading) return;
     async function fetchTop() {
       setLoading(true);
       try {
-        const useNewSchema = teacherGroupIds && teacherGroupIds.length > 0;
-        const groups = useNewSchema
-          ? teacherGroupIds!
-          : groupId ? groupId.split(",").map((g) => g.trim()) : [];
-
-        let studentIds: string[] = [];
-
-        if (useNewSchema) {
-          const { data: memberships } = await supabase
-            .from("alumnos_grupos")
-            .select("id_alumno")
-            .in("id_grupo", groups);
-          studentIds = memberships?.map((m: any) => m.id_alumno) ?? [];
-        } else if (groups.length > 0) {
-          const { data: studentsInGroup } = await supabase
-            .from("profiles")
-            .select("id")
-            .in("group_id", groups);
-          studentIds = studentsInGroup?.map((s: any) => s.id) ?? [];
-        }
-
         if (studentIds.length === 0) { setLoading(false); return; }
 
-        // Load profiles + intentos count in parallel
-        const [profilesRes, intentosRes] = await Promise.all([
+        // Load profiles + intentos stats in parallel (agregación en Postgres, no en JS)
+        const [profilesRes, statsRes] = await Promise.all([
           supabase.from("profiles").select("id, full_name").in("id", studentIds),
-          supabase
-            .from("intentos")
-            .select("user_id, score")
-            .in("user_id", studentIds)
-            .eq("status", "completed"),
+          supabase.rpc("get_intentos_stats", { p_student_ids: studentIds }),
         ]);
 
         const profiles = profilesRes.data ?? [];
-        const intentos = intentosRes.data ?? [];
+        const stats = statsRes.data ?? [];
 
-        // Aggregate score per student: completed count * 10 + avg score bonus
-        const scoreMap: Record<string, number> = {};
-        const countMap: Record<string, number> = {};
-        for (const intento of intentos as any[]) {
-          scoreMap[intento.user_id] = (scoreMap[intento.user_id] ?? 0) + (intento.score ?? 50);
-          countMap[intento.user_id] = (countMap[intento.user_id] ?? 0) + 1;
+        const statsMap: Record<string, { completed_count: number; avg_score: number }> = {};
+        for (const s of stats as any[]) {
+          statsMap[s.user_id] = { completed_count: s.completed_count, avg_score: s.avg_score };
         }
 
         const COLORS = isDark
@@ -81,7 +56,9 @@ export default function TopAlumnos({
 
         const processed = profiles
           .map((p: any) => {
-            const totalXp = (countMap[p.id] ?? 0) * 10 + Math.round((scoreMap[p.id] ?? 0) / Math.max(countMap[p.id] ?? 1, 1));
+            const stat = statsMap[p.id];
+            // completed count * 10 + avg score bonus
+            const totalXp = (stat?.completed_count ?? 0) * 10 + (stat?.avg_score ?? 0);
             const initials = p.full_name?.split(" ").map((n: string) => n[0]).slice(0, 2).join("").toUpperCase() || "??";
             return { name: p.full_name || "Estudiante", score: totalXp, initials, color: "" };
           })
@@ -98,7 +75,7 @@ export default function TopAlumnos({
       }
     }
     fetchTop();
-  }, [groupId, teacherGroupIds, isDark]);
+  }, [studentIds, idsLoading, isDark]);
 
   if (!mounted) return null;
 

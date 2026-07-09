@@ -37,10 +37,38 @@ function generateEmail(fullName: string, existing: Set<string>, domain: string):
   return email;
 }
 
+// ─── Tipos existentes ────────────────────────────────────────────────────────
+
 export interface OnboardResult {
   success: { name: string; email: string }[];
   errors:  { name: string; message: string }[];
 }
+
+// ─── Tipos nuevos ────────────────────────────────────────────────────────────
+
+export interface EscuelaOnboardEntry {
+  nombre: string;
+  grupo: string;
+  grado: string;
+  rol: "student" | "teacher";
+}
+
+export interface EscuelaOnboardResult {
+  escuelaId: string;
+  escuelaNombre: string;
+  results: { name: string; email: string; grupo: string; grado: string; rol: "student" | "teacher" }[];
+  errors:  { name: string; mensaje: string }[];
+}
+
+export interface EscuelaStats {
+  id: string;
+  nombre: string;
+  created_at: string;
+  grupos_count: number;
+  alumnos_count: number;
+}
+
+// ─── Acciones existentes ─────────────────────────────────────────────────────
 
 export async function onboardInstitutionalUsers(
   names: string[],
@@ -123,4 +151,161 @@ export async function getGrupos(): Promise<{ id: string; nombre: string; grado: 
   const { data, error } = await admin.from("grupos").select("id, nombre, grado").order("nombre");
   if (error) return [];
   return data ?? [];
+}
+
+// ─── Nuevas acciones: Escuelas ────────────────────────────────────────────────
+
+export async function getEscuelas(): Promise<EscuelaStats[]> {
+  await requireAdminSession();
+  const admin = getAdminClient();
+
+  const { data, error } = await admin
+    .from("escuelas")
+    .select("id, nombre, created_at, grupos(id)")
+    .order("created_at", { ascending: false });
+
+  if (error || !data) return [];
+
+  const results: EscuelaStats[] = [];
+  for (const e of data as any[]) {
+    const grupoIds: string[] = (e.grupos ?? []).map((g: any) => g.id);
+    let alumnos_count = 0;
+    if (grupoIds.length > 0) {
+      const { count } = await admin
+        .from("alumnos_grupos")
+        .select("*", { count: "exact", head: true })
+        .in("id_grupo", grupoIds);
+      alumnos_count = count ?? 0;
+    }
+    results.push({
+      id: e.id,
+      nombre: e.nombre,
+      created_at: e.created_at,
+      grupos_count: grupoIds.length,
+      alumnos_count,
+    });
+  }
+  return results;
+}
+
+export async function onboardEscuela(
+  escuelaNombre: string,
+  entries: EscuelaOnboardEntry[],
+  password: string
+): Promise<EscuelaOnboardResult> {
+  await requireAdminSession();
+
+  if (!escuelaNombre.trim()) throw new Error("El nombre de la escuela es requerido.");
+  if (!password || password.trim().length < 8) throw new Error("La contraseña debe tener al menos 8 caracteres.");
+
+  const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
+  const admin = getAdminClient();
+  const pw = password.trim();
+  const usedEmails = new Set<string>();
+  const result: EscuelaOnboardResult = {
+    escuelaId: "",
+    escuelaNombre: escuelaNombre.trim(),
+    results: [],
+    errors: [],
+  };
+
+  // 1. Crear escuela
+  const { data: escuela, error: escuelaErr } = await admin
+    .from("escuelas")
+    .insert({ nombre: escuelaNombre.trim() })
+    .select("id, nombre")
+    .single();
+
+  if (escuelaErr || !escuela) {
+    throw new Error(`No se pudo crear la escuela: ${escuelaErr?.message}`);
+  }
+  result.escuelaId = escuela.id;
+
+  // 2. Agrupar entradas por (grupo, grado)
+  const groupMap = new Map<string, EscuelaOnboardEntry[]>();
+  for (const entry of entries) {
+    const key = `${entry.grupo.trim()}||${entry.grado.trim().toUpperCase()}`;
+    if (!groupMap.has(key)) groupMap.set(key, []);
+    groupMap.get(key)!.push(entry);
+  }
+
+  // 3. Procesar cada grupo
+  for (const [key, members] of groupMap.entries()) {
+    const [grupoNombre, grado] = key.split("||");
+    const schoolLevel = GRADO_A_SCHOOL_LEVEL[grado] ?? grado;
+
+    // Crear grupo
+    const { data: grupo, error: grupoErr } = await admin
+      .from("grupos")
+      .insert({ nombre: grupoNombre, grado, escuela_id: escuela.id })
+      .select("id")
+      .single();
+
+    if (grupoErr || !grupo) {
+      for (const m of members) {
+        result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': ${grupoErr?.message ?? "error"}` });
+      }
+      continue;
+    }
+    const grupoId = grupo.id;
+
+    const teachers = members.filter((m) => m.rol === "teacher");
+    const students = members.filter((m) => m.rol === "student");
+
+    // Crear profesores primero (su ID se asigna como id_profesor del grupo)
+    for (const t of teachers) {
+      const name = t.nombre.trim();
+      if (!name) continue;
+      const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
+      try {
+        const { data: authData, error: authErr } = await admin.auth.admin.createUser({
+          email,
+          password: pw,
+          email_confirm: true,
+          user_metadata: { full_name: name, role: "teacher", school_level: schoolLevel, group_id: grupoId },
+        });
+        if (authErr || !authData?.user) {
+          result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
+          continue;
+        }
+        const tid = authData.user.id;
+        // Asignar como profesor del grupo (primer profesor del grupo gana)
+        const { data: g } = await admin.from("grupos").select("id_profesor").eq("id", grupoId).single();
+        if (!g?.id_profesor) {
+          await admin.from("grupos").update({ id_profesor: tid }).eq("id", grupoId);
+        }
+        // Vincular a la escuela
+        await admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", tid);
+        result.results.push({ name, email, grupo: grupoNombre, grado, rol: "teacher" });
+      } catch (err: any) {
+        result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
+      }
+    }
+
+    // Crear alumnos (el trigger handle_new_user los vincula a alumnos_grupos via group_id)
+    for (const s of students) {
+      const name = s.nombre.trim();
+      if (!name) continue;
+      const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
+      try {
+        const { data: authData, error: authErr } = await admin.auth.admin.createUser({
+          email,
+          password: pw,
+          email_confirm: true,
+          user_metadata: { full_name: name, role: "student", school_level: schoolLevel, group_id: grupoId },
+        });
+        if (authErr || !authData?.user) {
+          result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
+          continue;
+        }
+        // Vincular a la escuela
+        await admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", authData.user.id);
+        result.results.push({ name, email, grupo: grupoNombre, grado, rol: "student" });
+      } catch (err: any) {
+        result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
+      }
+    }
+  }
+
+  return result;
 }

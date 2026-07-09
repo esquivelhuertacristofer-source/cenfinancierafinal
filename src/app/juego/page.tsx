@@ -65,7 +65,7 @@ export default function JuegoPage() {
 
       {/* Iframe del juego */}
       <iframe
-        src="/games/juego-financiero/index.html"
+        src="/games/juego-financiero/"
         className="flex-1 w-full border-none"
         allow="autoplay; fullscreen; gamepad"
         title="Juego Financiero CEN"

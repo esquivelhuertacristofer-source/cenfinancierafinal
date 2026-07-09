@@ -1,0 +1,90 @@
+{
+  "id": "ACT-S1-SUPREMO-SUELDO",
+  "title": "Negocia Tu Sueldo",
+  "description": "Tienes tres ofertas de trabajo reales en México. Practica la negociación salarial y maximiza tu compensación total incluyendo prestaciones.",
+  "type": "negocia_sueldo",
+  "xp": 200,
+  "duration": 420,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "s1",
+  "content": {
+    "jobs": [
+      {
+        "id": "tec_bancario",
+        "company": "BBVA México",
+        "title": "Analista Junior de Crédito",
+        "emoji": "🏦",
+        "initial_salary": 12000,
+        "max_salary": 17500,
+        "benefits": [
+          { "name": "Seguro de gastos médicos mayores", "emoji": "🏥", "value": 4200 },
+          { "name": "Fondo de ahorro 13%", "emoji": "💰", "value": 1560 },
+          { "name": "Vale de despensa mensual", "emoji": "🛒", "value": 900 },
+          { "name": "30 días de aguinaldo", "emoji": "🎁", "value": 12000 }
+        ]
+      },
+      {
+        "id": "startup_tech",
+        "company": "Kueski (Fintech)",
+        "title": "Coordinador de Operaciones",
+        "emoji": "💻",
+        "initial_salary": 16000,
+        "max_salary": 24000,
+        "benefits": [
+          { "name": "Acciones de la empresa (ESOP)", "emoji": "📈", "value": 5000 },
+          { "name": "Home office permanente", "emoji": "🏠", "value": 2400 },
+          { "name": "Presupuesto de capacitación", "emoji": "📚", "value": 1800 },
+          { "name": "Seguro de salud", "emoji": "🏥", "value": 2400 }
+        ]
+      },
+      {
+        "id": "gobierno",
+        "company": "SAT (Servicio de Administración Tributaria)",
+        "title": "Auditor Fiscal Junior",
+        "emoji": "🏛️",
+        "initial_salary": 10500,
+        "max_salary": 14000,
+        "benefits": [
+          { "name": "ISSSTE (seguro salud completo)", "emoji": "🏥", "value": 6000 },
+          { "name": "FOVISSSTE (crédito vivienda)", "emoji": "🏠", "value": 3500 },
+          { "name": "Pensión ISSSTE garantizada", "emoji": "👴", "value": 8000 },
+          { "name": "40 días de aguinaldo", "emoji": "🎁", "value": 14000 },
+          { "name": "Estabilidad laboral total", "emoji": "🛡️", "value": 2000 }
+        ]
+      }
+    ],
+    "negotiation_options": [
+      {
+        "label": "Pedir aumento del 15% al salario base",
+        "type": "salary_increase",
+        "value": 0.15,
+        "success_rate": 0.55
+      },
+      {
+        "label": "Pedir aumento del 10% al salario base",
+        "type": "salary_increase",
+        "value": 0.10,
+        "success_rate": 0.75
+      },
+      {
+        "label": "Pedir 5 días adicionales de vacaciones",
+        "type": "vacation",
+        "value": 5,
+        "success_rate": 0.80
+      },
+      {
+        "label": "Solicitar beca de capacitación $3,000",
+        "type": "training",
+        "value": 3000,
+        "success_rate": 0.70
+      },
+      {
+        "label": "Aceptar la oferta tal como está",
+        "type": "accept",
+        "value": 0,
+        "success_rate": 1.0
+      }
+    ]
+  }
+}

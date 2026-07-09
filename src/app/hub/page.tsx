@@ -697,11 +697,11 @@ export default function StudentHubV19() {
         <div
           id="juego-financiero"
           className="mx-20 mt-16 mb-0 p-16 rounded-[48px] flex items-center justify-between cursor-pointer transition-all hover:scale-[1.01] border"
-          style={{ background:'linear-gradient(135deg,#7c1d1d 0%,#991b1b 50%,#7c1d1d 100%)', borderColor:'rgba(252,165,165,0.4)', boxShadow:'0 20px 60px rgba(220,38,38,0.5)' }}
+          style={{ background:'linear-gradient(135deg,#854d0e 0%,#a16207 50%,#854d0e 100%)', borderColor:'rgba(253,224,71,0.4)', boxShadow:'0 20px 60px rgba(234,179,8,0.5)' }}
           onClick={() => { playSFX('click'); setShowGame(true); }}
         >
           <div>
-            <div className="text-xs font-black uppercase tracking-[0.4em] text-red-300 mb-3">🎮 Actividad Bono</div>
+            <div className="text-xs font-black uppercase tracking-[0.4em] text-yellow-300 mb-3">🎮 Actividad Bono</div>
             <div className="text-5xl font-black text-white mb-2">Juego Financiero</div>
             <div className="text-lg text-white/60 mb-6">Pon en práctica lo aprendido · +200 XP</div>
             <div className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-white text-sm uppercase tracking-widest" style={{ background:'rgba(255,255,255,0.15)' }}>
@@ -781,26 +781,26 @@ export default function StudentHubV19() {
             id="juego-financiero"
             className="mt-48 p-24 rounded-[72px] flex items-center justify-between shadow-2xl relative overflow-hidden border cursor-pointer transition-all hover:scale-[1.01]"
             style={{
-              background: 'linear-gradient(135deg, #7c1d1d 0%, #991b1b 40%, #7f1d1d 100%)',
-              borderColor: 'rgba(252, 165, 165, 0.4)',
-              boxShadow: '0 40px 80px rgba(220, 38, 38, 0.4)'
+              background: 'linear-gradient(135deg, #854d0e 0%, #a16207 40%, #92400e 100%)',
+              borderColor: 'rgba(253, 224, 71, 0.4)',
+              boxShadow: '0 40px 80px rgba(234, 179, 8, 0.4)'
             }}
             onMouseEnter={() => playSFX('hover')}
             onClick={() => { playSFX('click'); setShowGame(true); }}
           >
-             <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10 blur-[100px] -mr-40 -mt-40 bg-purple-500 rounded-full pointer-events-none" />
-             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-10 blur-[80px] -ml-20 -mb-20 bg-fuchsia-500 rounded-full pointer-events-none" />
+             <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10 blur-[100px] -mr-40 -mt-40 bg-yellow-400 rounded-full pointer-events-none" />
+             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] opacity-10 blur-[80px] -ml-20 -mb-20 bg-amber-400 rounded-full pointer-events-none" />
              <div className="relative z-10 max-w-3xl">
-                <div className="flex items-center gap-3 font-black uppercase text-xs tracking-[0.4em] mb-8 text-purple-300">
-                  <Sparkles size={24} className="text-purple-300" /> Actividad Bono
+                <div className="flex items-center gap-3 font-black uppercase text-xs tracking-[0.4em] mb-8 text-yellow-300">
+                  <Sparkles size={24} className="text-yellow-300" /> Actividad Bono
                 </div>
                 <h2 className="text-7xl font-black text-white tracking-tighter mb-10 leading-none">Juego Financiero</h2>
                 <p className="text-2xl font-bold text-white/50 leading-relaxed mb-12">
                   Pon en práctica lo aprendido en una aventura interactiva. Completa el juego para ganar XP extra.
                 </p>
                 <div className="flex items-center gap-6">
-                  <div className="inline-flex items-center gap-3 px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-white shadow-[0_20px_40px_rgba(168,85,247,0.4)]"
-                       style={{ background: 'linear-gradient(135deg, #a855f7, #7c3aed)' }}>
+                  <div className="inline-flex items-center gap-3 px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-white shadow-[0_20px_40px_rgba(245,158,11,0.4)]"
+                       style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}>
                     <Play size={22} fill="white" /> Jugar Ahora
                   </div>
                   {gameCompleted && (
@@ -893,7 +893,7 @@ export default function StudentHubV19() {
           {/* IFRAME DEL JUEGO */}
           <div className="relative z-10 flex-1 w-full">
             <iframe
-              src="/games/juego-financiero/index.html"
+              src="/games/juego-financiero/"
               className="w-full h-full border-none"
               allow="autoplay; fullscreen; gamepad"
               title="Juego Financiero CEN"

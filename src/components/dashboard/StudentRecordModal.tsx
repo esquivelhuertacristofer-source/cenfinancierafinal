@@ -24,7 +24,8 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
         .select('id, activity_id, completed_at, score')
         .eq('user_id', studentId)
         .eq('status', 'completed')
-        .order('completed_at', { ascending: false });
+        .order('completed_at', { ascending: false })
+        .limit(50);
 
       if (intentos && intentos.length > 0) {
         setProgress(intentos.map((it: any) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
@@ -33,7 +34,8 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
           .from('progress')
           .select('*')
           .eq('user_id', studentId)
-          .order('created_at', { ascending: false });
+          .order('created_at', { ascending: false })
+          .limit(50);
         setProgress(data || []);
       }
       setLoading(false);

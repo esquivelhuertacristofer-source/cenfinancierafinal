@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
+import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { Activity, Clock, CheckCircle2, ArrowUpRight, Zap, Sparkles } from "lucide-react";
 import StudentRecordModal from "./StudentRecordModal";
 
@@ -28,32 +29,15 @@ export default function LatestDeliveries({
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState<{ id: string; name: string } | null>(null);
+  const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
     setMounted(true);
+    if (idsLoading) return;
 
     const fetchLatest = async () => {
       try {
         const useNewSchema = teacherGroupIds && teacherGroupIds.length > 0;
-        const groups = useNewSchema
-          ? teacherGroupIds!
-          : groupId ? groupId.split(",").map((g) => g.trim()) : [];
-
-        let studentIds: string[] = [];
-
-        if (useNewSchema) {
-          const { data: memberships } = await supabase
-            .from("alumnos_grupos")
-            .select("id_alumno")
-            .in("id_grupo", groups);
-          studentIds = memberships?.map((m: any) => m.id_alumno) ?? [];
-        } else if (groups.length > 0) {
-          const { data: studentsInGroup } = await supabase
-            .from("profiles")
-            .select("id")
-            .in("group_id", groups);
-          studentIds = studentsInGroup?.map((s: any) => s.id) ?? [];
-        }
 
         if (studentIds.length === 0) { setDeliveries([]); setLoading(false); return; }
 
@@ -118,15 +102,16 @@ export default function LatestDeliveries({
 
     fetchLatest();
 
-    // Real-time subscription — listen on intentos AND progress for coverage
-    const channel = supabase
-      .channel("realtime_deliveries")
-      .on("postgres_changes", { event: "INSERT", schema: "public", table: "intentos" }, fetchLatest)
-      .on("postgres_changes", { event: "INSERT", schema: "public", table: "progress" }, fetchLatest)
-      .subscribe();
+    // Polling en vez de Realtime: una suscripción global de postgres_changes
+    // reenviaba un evento a cada dashboard de profesor abierto por cada INSERT
+    // de CUALQUIER alumno de toda la plataforma (fan-out sin filtro posible,
+    // porque intentos/progress no tienen columna group_id/escuela_id).
+    const pollInterval = setInterval(() => {
+      if (typeof window !== "undefined" && navigator.onLine) fetchLatest();
+    }, 45000);
 
-    return () => { supabase.removeChannel(channel); };
-  }, [groupId, teacherGroupIds, isDark]);
+    return () => clearInterval(pollInterval);
+  }, [studentIds, idsLoading, teacherGroupIds, isDark]);
 
   if (!mounted) return null;
 

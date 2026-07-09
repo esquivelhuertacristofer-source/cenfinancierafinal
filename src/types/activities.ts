@@ -1,8 +1,17 @@
 // ─── BASE ───────────────────────────────────────────────────────────────────
-export type ActivityType = 
+export type ActivityType =
   | 'SIMULADOR' | 'QUIZ' | 'ARRASTRA' | 'TRIVIA' | 'RELLENA'
   | 'DECIDE' | 'CONSTRUCTOR' | 'MEMORIA' | 'JUEGO' | 'RULETA'
-  | 'BALANCE' | 'RADAR' | 'CRECIMIENTO' | 'CONTROL';
+  | 'BALANCE' | 'RADAR' | 'CRECIMIENTO' | 'CONTROL'
+  | 'cochinito_vivo'
+  | 'supermercado_caos'
+  | 'familia_ramirez'
+  | 'banco_del_tiempo'
+  | 'inversor_a10'
+  | 'primer_negocio'
+  | 'negocia_sueldo'
+  | 'crisis_room'
+  | 'portfolio_builder';
 
 export type Complexity = 'SIMPLE' | 'MEDIO' | 'COMPLEJO';
 

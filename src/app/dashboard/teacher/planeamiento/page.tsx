@@ -20,31 +20,35 @@ import {
   Sparkles,
   Info
 } from "lucide-react";
-import { pedagogiaData } from "../../../../data/pedagogia/hub";
-
 export default function PlaneamientoPage() {
   const [selectedGrade, setSelectedGrade] = useState<string>("p1");
   const [activeTab, setActiveTab] = useState<"estrategia" | "teoria" | "evaluacion">("estrategia");
   const [searchQuery, setSearchQuery] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [currentData, setCurrentData] = useState<any | null>(null);
+  const [activeUnit, setActiveUnit] = useState<any>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const getGradeData = (grade: string) => {
-    if (grade.startsWith('s')) return (pedagogiaData.secundaria as any)[grade];
-    return (pedagogiaData.primaria as any)[grade];
-  };
-
-  const currentData = getGradeData(selectedGrade);
-  const [activeUnit, setActiveUnit] = useState<any>(Object.values(currentData)[0]);
-
+  // Los JSON de pedagogía (~2 MB) ya no se importan en el bundle: se sirven
+  // como assets estáticos desde public/data (límite de 3 MiB gzip del Worker).
   useEffect(() => {
-    setActiveUnit(Object.values(currentData)[0]);
+    let cancelled = false;
+    const dir = selectedGrade.startsWith("s") ? "secundaria" : "primaria";
+    fetch(`/data/pedagogia/${dir}/${selectedGrade}.json`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data) return;
+        setCurrentData(data);
+        setActiveUnit(Object.values(data)[0]);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
   }, [selectedGrade]);
 
-  if (!mounted) return null;
+  if (!mounted || !currentData) return null;
 
   const units = Object.values(currentData).map((u: any) => ({
     code: u.code,

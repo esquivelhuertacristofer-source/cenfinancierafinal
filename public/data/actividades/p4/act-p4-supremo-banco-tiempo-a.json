@@ -1,0 +1,109 @@
+{
+  "id": "ACT-P4-SUPREMO-BANCO-TIEMPO",
+  "title": "Banco del Tiempo: Tres Crisis",
+  "description": "Viaja al pasado y toma decisiones de inversión durante las tres grandes crisis económicas de México. ¿Habrías protegido tu dinero?",
+  "type": "banco_del_tiempo",
+  "xp": 225,
+  "duration": 540,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p4",
+  "content": {
+    "starting_amount": 10000,
+    "crises": [
+      {
+        "year": 1994,
+        "name": "El Efecto Tequila",
+        "context": "Diciembre 1994: el gobierno devalúa el peso de 3.4 a más de 7 pesos por dólar en días. Los bancos quiebran, las tasas de interés llegan al 100% anual y México pide rescate al FMI y a EE.UU. Los precios se disparan y miles de familias pierden sus casas.",
+        "options": [
+          {
+            "label": "Guardar en pesos bajo el colchón",
+            "description": "No pierdas lo nominal, pero la inflación del 52% te come el poder adquisitivo.",
+            "multiplier": 0.48,
+            "explanation": "Guardaste los pesos, pero con inflación del 52% tu dinero compra menos de la mitad que antes."
+          },
+          {
+            "label": "Comprar dólares en casa de cambio",
+            "description": "El peso se devaluó: tus dólares ahora valen el doble en pesos.",
+            "multiplier": 2.1,
+            "explanation": "¡Ganaste! El dólar subió de $3.40 a más de $7. Tus $10,000 pesos compraron ~$2,900 USD que después volvieron a valer $20,000+ pesos."
+          },
+          {
+            "label": "Dejarlo en Cetes a 28 días",
+            "description": "Las tasas llegaron al 80-100% anual para frenar la fuga de capitales.",
+            "multiplier": 1.35,
+            "explanation": "Los Cetes pagaron muy bien, pero el rendimiento no alcanzó a superar la inflación real del momento."
+          },
+          {
+            "label": "Invertir en acciones de la Bolsa Mexicana",
+            "description": "El IPC de la BMV cayó más del 50% en pesos reales durante la crisis.",
+            "multiplier": 0.55,
+            "explanation": "La Bolsa se desplomó junto con el peso. Las acciones perdieron valor nominal y real."
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "name": "Crisis Financiera Global",
+        "context": "Septiembre 2008: el banco Lehman Brothers colapsa en EE.UU. y arrastra a todo el mundo. México entra en recesión, el dólar sube de $10 a $15 pesos, la BMV cae 40% y miles de maquiladoras cierran. El gobierno Calderón usa las reservas del Banxico para estabilizar.",
+        "options": [
+          {
+            "label": "Cetes a 91 días (tasa ~8% anual)",
+            "description": "Instrumento seguro del gobierno mexicano, tasa real positiva.",
+            "multiplier": 1.08,
+            "explanation": "Los Cetes mantuvieron su valor. Con inflación de ~6%, la ganancia real fue pequeña pero positiva."
+          },
+          {
+            "label": "Comprar dólares",
+            "description": "El dólar subió de $10 a $15, una ganancia del 50%.",
+            "multiplier": 1.50,
+            "explanation": "El peso perdió 35% de su valor frente al dólar. Quien apostó al dólar ganó significativamente."
+          },
+          {
+            "label": "Acciones BMV (IPC)",
+            "description": "El Índice de Precios y Cotizaciones cayó de 32,000 a 17,000 puntos.",
+            "multiplier": 0.53,
+            "explanation": "La BMV cayó casi 50%. Aunque luego se recuperó, quien vendió en pánico perdió la mitad."
+          },
+          {
+            "label": "Oro (metal precioso)",
+            "description": "El oro sube en tiempos de crisis como refugio de valor.",
+            "multiplier": 1.25,
+            "explanation": "El oro subió cerca de 25% en 2008, comportándose como refugio seguro ante la incertidumbre global."
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "name": "COVID-19: La Gran Pausa",
+        "context": "Marzo 2020: la pandemia paraliza la economía global. México decreta cuarentena, el peso llega a $25 por dólar (mínimo histórico), la economía cae 8.5% y más de 3 millones de empleos formales se pierden en dos meses. El Banxico baja tasas para estimular el crédito.",
+        "options": [
+          {
+            "label": "Cetes (tasa bajando de 7% a 4%)",
+            "description": "El Banxico recortó tasas agresivamente para estimular la economía.",
+            "multiplier": 1.06,
+            "explanation": "Cetes pagó menos que en años anteriores, pero fue seguro. La inflación fue de ~3.4%, dejando ganancia real pequeña."
+          },
+          {
+            "label": "Dólares o fondos en USD",
+            "description": "El peso tocó mínimo histórico de $25.13 por dólar en abril 2020.",
+            "multiplier": 1.45,
+            "explanation": "El peso se devaluó 20-25%. Quien tenía dólares protegió su poder adquisitivo y ganó al reconvertir."
+          },
+          {
+            "label": "Acciones de plataformas digitales (S&P 500)",
+            "description": "Netflix, Zoom, Amazon y otras tech se dispararon durante el confinamiento.",
+            "multiplier": 1.65,
+            "explanation": "El S&P 500 cerró 2020 con ganancias del 16%. Las acciones tech fueron las grandes ganadoras del año."
+          },
+          {
+            "label": "Negocios físicos locales",
+            "description": "Restaurantes, tiendas de ropa y salones cerraron por meses.",
+            "multiplier": 0.30,
+            "explanation": "Los negocios físicos no esenciales sufrieron pérdidas devastadoras. Muchos cerraron definitivamente."
+          }
+        ]
+      }
+    ]
+  }
+}

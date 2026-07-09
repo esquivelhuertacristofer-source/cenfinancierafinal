@@ -1,0 +1,97 @@
+{
+  "id": "ACT-P2-SUPREMO-SUPERMERCADO",
+  "title": "Supermercado en Caos",
+  "description": "Tienes $150 pesos y 90 segundos para comprar solo lo que necesitas en la lista antes de que suban los precios.",
+  "type": "supermercado_caos",
+  "xp": 175,
+  "duration": 360,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p2",
+  "content": {
+    "budget": 150,
+    "time_limit": 90,
+    "items": [
+      {
+        "id": "leche",
+        "name": "Leche Lala 1L",
+        "emoji": "🥛",
+        "base_price": 22.50,
+        "is_on_list": true,
+        "price_spike": { "at_second": 30, "new_price": 28.00 }
+      },
+      {
+        "id": "pan",
+        "name": "Pan Bimbo Grande",
+        "emoji": "🍞",
+        "base_price": 36.00,
+        "is_on_list": true,
+        "price_spike": null
+      },
+      {
+        "id": "frijoles",
+        "name": "Frijoles Bayos 1kg",
+        "emoji": "🫘",
+        "base_price": 28.00,
+        "is_on_list": true,
+        "price_spike": { "at_second": 50, "new_price": 35.00 }
+      },
+      {
+        "id": "refresco",
+        "name": "Coca-Cola 2L",
+        "emoji": "🥤",
+        "base_price": 35.00,
+        "is_on_list": false,
+        "price_spike": null
+      },
+      {
+        "id": "papas",
+        "name": "Sabritas 170g",
+        "emoji": "🥔",
+        "base_price": 19.50,
+        "is_on_list": false,
+        "price_spike": null
+      },
+      {
+        "id": "huevos",
+        "name": "Huevo Bachoco 30pz",
+        "emoji": "🥚",
+        "base_price": 52.00,
+        "is_on_list": true,
+        "price_spike": { "at_second": 60, "new_price": 62.00 }
+      },
+      {
+        "id": "tortillas",
+        "name": "Tortillas de maíz 1kg",
+        "emoji": "🫓",
+        "base_price": 18.00,
+        "is_on_list": true,
+        "price_spike": null
+      },
+      {
+        "id": "chocolate",
+        "name": "Carlos V Caja 12pz",
+        "emoji": "🍫",
+        "base_price": 25.00,
+        "is_on_list": false,
+        "price_spike": null
+      },
+      {
+        "id": "jabón",
+        "name": "Jabón Roma 900g",
+        "emoji": "🧼",
+        "base_price": 14.50,
+        "is_on_list": true,
+        "price_spike": null
+      },
+      {
+        "id": "arroz",
+        "name": "Arroz Morelos 1kg",
+        "emoji": "🍚",
+        "base_price": 21.00,
+        "is_on_list": false,
+        "price_spike": { "at_second": 45, "new_price": 26.00 }
+      }
+    ]
+  }
+}

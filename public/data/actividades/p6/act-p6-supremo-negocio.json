@@ -1,0 +1,83 @@
+{
+  "id": "ACT-P6-SUPREMO-NEGOCIO",
+  "title": "Mi Primer Negocio",
+  "description": "Con $500 pesos de capital, abre tu puesto de aguas frescas en el mercado. Elige precio, inventario y ubicación para maximizar ganancias en 5 días.",
+  "type": "primer_negocio",
+  "xp": 200,
+  "duration": 480,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p6",
+  "content": {
+    "product": "Aguas Frescas",
+    "capital": 500,
+    "unit_cost": 8,
+    "unit_price_options": [
+      { "label": "$12 por vaso (precio popular)", "price": 12 },
+      { "label": "$15 por vaso (precio estándar)", "price": 15 },
+      { "label": "$20 por vaso (precio premium)", "price": 20 }
+    ],
+    "inventory_options": [
+      { "label": "30 vasos (inventario pequeño)", "units": 30, "cost": 240 },
+      { "label": "50 vasos (inventario mediano)", "units": 50, "cost": 400 },
+      { "label": "60 vasos (inventario grande)", "units": 60, "cost": 480 }
+    ],
+    "locations": [
+      {
+        "name": "Mercado Juárez",
+        "emoji": "🏪",
+        "description": "Mucha afluencia de señoras y trabajadores. Competencia alta.",
+        "base_demand_per_day": 45
+      },
+      {
+        "name": "Parque de los Venados",
+        "emoji": "🌳",
+        "description": "Familias los fines de semana. Demanda variable según el clima.",
+        "base_demand_per_day": 30
+      },
+      {
+        "name": "Afuera del OXXO céntrico",
+        "emoji": "🏬",
+        "description": "Transeúntes todo el día. Demanda moderada y constante.",
+        "base_demand_per_day": 38
+      }
+    ],
+    "daily_events": [
+      {
+        "emoji": "☀️",
+        "description": "¡Día de mucho calor! La gente tiene más sed.",
+        "demand_modifier": 1.4
+      },
+      {
+        "emoji": "🌧️",
+        "description": "Lluvia por la tarde. Pocos clientes salen de casa.",
+        "demand_modifier": 0.5
+      },
+      {
+        "emoji": "🎪",
+        "description": "Hay feria cerca. Doble afluencia en el parque.",
+        "demand_modifier": 1.8
+      },
+      {
+        "emoji": "🏫",
+        "description": "Día de quincena. Las familias tienen más dinero para gastar.",
+        "demand_modifier": 1.3
+      },
+      {
+        "emoji": "😴",
+        "description": "Día tranquilo. Demanda normal.",
+        "demand_modifier": 1.0
+      },
+      {
+        "emoji": "🚧",
+        "description": "Obra en la calle principal. Menos gente pasa por tu zona.",
+        "demand_modifier": 0.65
+      },
+      {
+        "emoji": "📣",
+        "description": "Un vecino publicó tu puesto en Facebook. ¡Más clientes!",
+        "demand_modifier": 1.6
+      }
+    ]
+  }
+}

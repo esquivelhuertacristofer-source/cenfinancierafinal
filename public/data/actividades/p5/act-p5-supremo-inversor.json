@@ -1,0 +1,129 @@
+{
+  "id": "ACT-P5-SUPREMO-INVERSOR",
+  "title": "Inversor A-10",
+  "description": "Administra un portafolio de $50,000 pesos durante 10 meses en el mercado mexicano. Diversifica entre CETES, acciones y FIBRAS.",
+  "type": "inversor_a10",
+  "xp": 225,
+  "duration": 540,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p5",
+  "content": {
+    "starting_capital": 50000,
+    "months": 10,
+    "options": [
+      {
+        "id": "cetes",
+        "name": "CETES Directo",
+        "emoji": "🏛️",
+        "description": "Títulos de deuda del gobierno federal mexicano. Seguros y predecibles.",
+        "base_return_monthly": 0.0075,
+        "risk_level": "low",
+        "color": "emerald"
+      },
+      {
+        "id": "amx",
+        "name": "América Móvil (AMX)",
+        "emoji": "📱",
+        "description": "La empresa de telecomunicaciones de Carlos Slim. Cotiza en BMV y NYSE.",
+        "base_return_monthly": 0.018,
+        "risk_level": "medium",
+        "color": "blue"
+      },
+      {
+        "id": "fibra_mty",
+        "name": "FIBRA Monterrey",
+        "emoji": "🏢",
+        "description": "Fondo de bienes raíces industriales y comerciales en el norte de México.",
+        "base_return_monthly": 0.014,
+        "risk_level": "medium",
+        "color": "amber"
+      },
+      {
+        "id": "walmex",
+        "name": "Walmart México (WALMEX)",
+        "emoji": "🛒",
+        "description": "La mayor cadena de retail en México. Defensive stock con dividendos estables.",
+        "base_return_monthly": 0.012,
+        "risk_level": "low",
+        "color": "cyan"
+      },
+      {
+        "id": "crypto_btc",
+        "name": "Bitcoin (fracción)",
+        "emoji": "₿",
+        "description": "Criptomoneda global. Alto riesgo y alta volatilidad, pero potencial de grandes ganancias.",
+        "base_return_monthly": 0.045,
+        "risk_level": "high",
+        "color": "amber"
+      },
+      {
+        "id": "bimbo",
+        "name": "Grupo Bimbo (BIMBO)",
+        "emoji": "🍞",
+        "description": "El mayor fabricante de pan del mundo, con sede en México. Estable y global.",
+        "base_return_monthly": 0.010,
+        "risk_level": "low",
+        "color": "indigo"
+      }
+    ],
+    "events": [
+      {
+        "month": 2,
+        "description": "Banxico baja tasa de referencia 25 puntos base. CETES rinden menos.",
+        "emoji": "📉",
+        "affected_option_id": "cetes",
+        "return_modifier": -0.002
+      },
+      {
+        "month": 3,
+        "description": "Nearshoring: empresas asiáticas instalan plantas en Monterrey. FIBRA Mty al alza.",
+        "emoji": "🏭",
+        "affected_option_id": "fibra_mty",
+        "return_modifier": 0.025
+      },
+      {
+        "month": 4,
+        "description": "Volatilidad en el tipo de cambio. El peso cae frente al dólar. Bitcoin rebota.",
+        "emoji": "💱",
+        "affected_option_id": "crypto_btc",
+        "return_modifier": 0.08
+      },
+      {
+        "month": 5,
+        "description": "Resultados trimestrales de América Móvil: pierden suscriptores en Claro Brasil.",
+        "emoji": "😟",
+        "affected_option_id": "amx",
+        "return_modifier": -0.04
+      },
+      {
+        "month": 6,
+        "description": "Elecciones en México. Incertidumbre política: la bolsa cae, los CETES suben.",
+        "emoji": "🗳️",
+        "affected_option_id": "cetes",
+        "return_modifier": 0.004
+      },
+      {
+        "month": 7,
+        "description": "Bimbo lanza expansión en India y China. Precio de acción sube.",
+        "emoji": "🌏",
+        "affected_option_id": "bimbo",
+        "return_modifier": 0.022
+      },
+      {
+        "month": 8,
+        "description": "Reguladores globales anuncian posibles restricciones a criptomonedas.",
+        "emoji": "⚖️",
+        "affected_option_id": "crypto_btc",
+        "return_modifier": -0.12
+      },
+      {
+        "month": 9,
+        "description": "Walmart México reporta ventas récord en Hot Sale y El Buen Fin.",
+        "emoji": "🛍️",
+        "affected_option_id": "walmex",
+        "return_modifier": 0.03
+      }
+    ]
+  }
+}

@@ -115,6 +115,9 @@ const CATEGORY_STYLES: Record<string, any> = {
   'Inversión y Patrimonio': { gradient: 'from-amber-500 to-yellow-600', ring: '#D97706', icon: '💎' },
   'Emprendimiento y Liderazgo': { gradient: 'from-purple-600 to-violet-700', ring: '#7C3AED', icon: '👑' },
 
+  // Supremo challenges
+  'Reto Supremo': { gradient: 'from-violet-600 to-purple-900', ring: '#8B5CF6', icon: '⚡' },
+
   // Fallbacks
   'Ahorro': { gradient: 'from-orange-500 to-amber-600', ring: '#F97316', icon: '💰' },
   'Inversión': { gradient: 'from-sky-500 to-indigo-600', ring: '#0EA5E9', icon: '📈' },
@@ -196,6 +199,7 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
     const category = unitRaw.category || 'General';
     if (!categories[category]) categories[category] = [];
     
+    const isSupremoUnit = String(unitRaw.code).includes('SUPREMO');
     const unit: Unit = {
       code: unitRaw.code,
       title: unitRaw.title || 'Sin Título',
@@ -203,11 +207,13 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
       modality: deriveModality(unitRaw),
       priority: 'essential',
       objective: unitRaw.metadata?.objective || unitRaw.objective || '',
-      contents: [
-        { type: 'theory', label: 'Marco Teórico', url: null, required: true },
-        { type: 'simulator', label: 'Laboratorio / Ejercicio', url: null, required: false },
-        { type: 'quiz', label: 'Evaluación', url: null, required: true },
-      ],
+      contents: isSupremoUnit
+        ? [{ type: 'simulator' as ContentType, label: '⚡ Reto Supremo', url: null, required: true }]
+        : [
+            { type: 'theory', label: 'Marco Teórico', url: null, required: true },
+            { type: 'simulator', label: 'Laboratorio / Ejercicio', url: null, required: false },
+            { type: 'quiz', label: 'Evaluación', url: null, required: true },
+          ],
       metadata: unitRaw.metadata,
       strategy: unitRaw.strategy,
       theory: unitRaw.theory,
@@ -470,20 +476,16 @@ export async function markActivityComplete(
   console.info(`[markActivityComplete] Iniciando guardado — usuario:${userId.slice(0,8)}... actividad:${activityId}`);
 
   try {
-    // Escribir a tabla intentos (nueva — métricas detalladas)
-    const intentoPayload = {
-      user_id:         userId,
-      activity_id:     activityId,
-      status:          'completed' as const,
-      score:           opts.score ?? null,
-      tiempo_segundos: opts.tiempo_segundos ?? null,
-      last_step:       opts.last_step ?? null,
-      completed_at:    new Date().toISOString(),
-    };
-
+    // Escribir a tabla intentos vía RPC (acumula tiempo, conserva mejor score — ver record_intento.sql)
     const [intentoResult, progressResult] = await Promise.all([
       withTimeout(
-        supabase.from('intentos').insert(intentoPayload) as unknown as Promise<{ error: { message: string; code?: string } | null }>,
+        supabase.rpc('record_intento', {
+          p_user_id: userId,
+          p_activity_id: activityId,
+          p_score: opts.score ?? null,
+          p_tiempo_segundos: opts.tiempo_segundos ?? null,
+          p_last_step: opts.last_step ?? null,
+        }) as unknown as Promise<{ error: { message: string; code?: string } | null }>,
         3000,
         { error: { message: 'timeout', code: 'TIMEOUT' } }
       ),
@@ -592,30 +594,25 @@ export async function processSyncQueue() {
 
   console.info(`[SyncEngine] Procesando cola: ${queue.length} item(s) | ${userContext}`);
 
-  const results = await Promise.allSettled(
-    queue.map(item => {
-      item.attempts = (item.attempts || 0) + 1;
-      return (supabase.from('progress').upsert(
-        { user_id: item.userId, activity_id: item.activityId },
-        { onConflict: 'user_id,activity_id' }
-      ) as unknown as Promise<{ error: { message: string } | null }>)
-    })
+  queue.forEach(item => { item.attempts = (item.attempts || 0) + 1; });
+
+  const { error } = await supabase.from('progress').upsert(
+    queue.map(item => ({ user_id: item.userId, activity_id: item.activityId })),
+    { onConflict: 'user_id,activity_id' }
   );
 
-  let synced = 0;
-  let failed = 0;
-  const remaining = queue.filter((item, i) => {
-    const r = results[i];
-    const isError = r.status === 'rejected' || (r.status === 'fulfilled' && (r.value as any)?.error);
-    if (!isError) { synced++; return false; }
-    failed++;
-    if ((item.attempts || 0) >= 3) {
-      console.warn(`[SyncEngine] Descartando actividad tras 3 fallos: ${item.activityId}`);
-      return false;
-    }
-    return true;
-  });
+  const remaining = error
+    ? queue.filter(item => {
+        if ((item.attempts || 0) >= 3) {
+          console.warn(`[SyncEngine] Descartando actividad tras 3 fallos: ${item.activityId}`);
+          return false;
+        }
+        return true;
+      })
+    : [];
 
+  const synced = error ? 0 : queue.length;
+  const failed = error ? queue.length : 0;
   console.info(`[SyncEngine] Resultado: ${synced} sincronizados, ${failed} fallidos, ${remaining.length} en cola`);
   localStorage.setItem('cen_sync_queue', JSON.stringify(remaining));
 }
@@ -679,25 +676,24 @@ export async function getArenaQuiz(grade: number, schoolLevel: string): Promise<
 }
 
 export function getUnitStatus(unit: Unit, pillar: PillarMeta, completed: Set<string>) {
-  // Verificamos si la unidad está completada buscando el ID de su quiz/evaluación (B)
-  const isDone = completed.has(`ACT-${unit.code}-B`);
-  if (isDone) return 'completed';
+  const completionId = unit.code.includes('SUPREMO') ? `ACT-${unit.code}-A` : `ACT-${unit.code}-B`;
+  if (completed.has(completionId)) return 'completed';
 
-  // Lógica de desbloqueo secuencial opcional:
-  // Si es la primera unidad, está disponible.
-  // Si no, verificamos si la anterior está completada.
   const idx = pillar.units.findIndex(u => u.code === unit.code);
   if (idx === 0) return 'available';
 
   const prevUnit = pillar.units[idx - 1];
-  const prevDone = completed.has(`ACT-${prevUnit.code}-B`);
+  const prevCompletionId = prevUnit.code.includes('SUPREMO') ? `ACT-${prevUnit.code}-A` : `ACT-${prevUnit.code}-B`;
+  const prevDone = completed.has(prevCompletionId);
 
-  return prevDone ? 'available' : 'available'; // Forzamos 'available' para evitar bloqueos en demo, pero listos para activar
+  return prevDone ? 'available' : 'available';
 }
 
 export function getPillarProgress(pillar: PillarMeta, completed: Set<string>) {
-  // Una unidad se considera 'done' si su evaluación final (B) está en el set de completados
-  const done = pillar.units.filter(u => completed.has(`ACT-${u.code}-B`)).length;
+  const done = pillar.units.filter(u => {
+    const cid = u.code.includes('SUPREMO') ? `ACT-${u.code}-A` : `ACT-${u.code}-B`;
+    return completed.has(cid);
+  }).length;
   return { done, total: pillar.units.length, pct: Math.round((done / pillar.units.length) * 100) };
 }
 

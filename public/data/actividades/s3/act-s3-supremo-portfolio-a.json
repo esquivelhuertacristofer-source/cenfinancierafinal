@@ -1,0 +1,147 @@
+{
+  "id": "ACT-S3-SUPREMO-PORTFOLIO",
+  "title": "Portfolio Builder: Tu Vida Financiera",
+  "description": "Construye tu portafolio de vida desde los 15 hasta los 65 años. Toma decisiones en cada etapa y observa cómo crecen (o se estancan) tu patrimonio y calidad de vida.",
+  "type": "portfolio_builder",
+  "xp": 250,
+  "duration": 600,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "s3",
+  "content": {
+    "stages": [
+      {
+        "age_start": 15,
+        "age_end": 22,
+        "title": "Preparatoria y Universidad",
+        "emoji": "🎓",
+        "description": "Decides si estudiar, trabajar o ambas cosas. Esta etapa define tu punto de partida.",
+        "choices": [
+          {
+            "label": "UNAM o IPN (pública gratuita)",
+            "description": "Sin deuda. Trabajas medio tiempo en lo que puedes.",
+            "monthly_income_delta": 4500,
+            "monthly_expense_delta": 1800,
+            "annual_savings_rate": 0.12,
+            "annual_return": 0.05
+          },
+          {
+            "label": "Universidad privada con beca 50%",
+            "description": "Mejor red de contactos, deuda moderada de $150k.",
+            "monthly_income_delta": 6000,
+            "monthly_expense_delta": 4500,
+            "annual_savings_rate": 0.05,
+            "annual_return": 0.05
+          },
+          {
+            "label": "Empezar a trabajar de tiempo completo",
+            "description": "Sin título pero con ingresos desde ya. Límite de crecimiento a largo plazo.",
+            "monthly_income_delta": 7000,
+            "monthly_expense_delta": 3500,
+            "annual_savings_rate": 0.10,
+            "annual_return": 0.04
+          }
+        ]
+      },
+      {
+        "age_start": 22,
+        "age_end": 30,
+        "title": "Primer empleo y vida independiente",
+        "emoji": "💼",
+        "description": "Tu primer trabajo formal en México. ¿Cómo manejas tu primer sueldo real?",
+        "choices": [
+          {
+            "label": "Empresa corporativa + Afore voluntaria",
+            "description": "Sueldo estable $18k/mes. Aportas voluntariamente al Afore desde el día 1.",
+            "monthly_income_delta": 18000,
+            "monthly_expense_delta": 12000,
+            "annual_savings_rate": 0.18,
+            "annual_return": 0.07
+          },
+          {
+            "label": "Startup + acciones (ESOP)",
+            "description": "Sueldo variable $14k/mes pero acciones potencialmente valiosas.",
+            "monthly_income_delta": 14000,
+            "monthly_expense_delta": 10000,
+            "annual_savings_rate": 0.10,
+            "annual_return": 0.15
+          },
+          {
+            "label": "Freelance / Economía gig",
+            "description": "Ingresos irregulares $20k promedio. Sin prestaciones ni Afore automático.",
+            "monthly_income_delta": 20000,
+            "monthly_expense_delta": 15000,
+            "annual_savings_rate": 0.08,
+            "annual_return": 0.06
+          }
+        ]
+      },
+      {
+        "age_start": 30,
+        "age_end": 45,
+        "title": "Familia y patrimonio",
+        "emoji": "🏠",
+        "description": "Decides si comprar casa, tener hijos y cómo estructurar tu patrimonio para el mediano plazo.",
+        "choices": [
+          {
+            "label": "Crédito INFONAVIT + inversiones en CETES",
+            "description": "Casa propia con crédito accesible. Ahorras el excedente en instrumentos seguros.",
+            "monthly_income_delta": 35000,
+            "monthly_expense_delta": 24000,
+            "annual_savings_rate": 0.20,
+            "annual_return": 0.09
+          },
+          {
+            "label": "Renta + inversión agresiva en BMV",
+            "description": "Sin deuda hipotecaria. El capital lo pones a trabajar en la Bolsa.",
+            "monthly_income_delta": 35000,
+            "monthly_expense_delta": 20000,
+            "annual_savings_rate": 0.25,
+            "annual_return": 0.13
+          },
+          {
+            "label": "Emprender un negocio propio",
+            "description": "Alto riesgo y mayor potencial. Muchos gastos iniciales pero ingresos escalables.",
+            "monthly_income_delta": 45000,
+            "monthly_expense_delta": 38000,
+            "annual_savings_rate": 0.10,
+            "annual_return": 0.18
+          }
+        ]
+      },
+      {
+        "age_start": 45,
+        "age_end": 65,
+        "title": "Pico productivo y retiro",
+        "emoji": "🌅",
+        "description": "Tus mejores años de ingresos. ¿Cómo preparas tu retiro para vivir dignamente después de los 65?",
+        "choices": [
+          {
+            "label": "Maximizar Afore + Plan Personal de Retiro (PPR)",
+            "description": "Dedicas el 20-25% de tu ingreso a instrumentos de retiro con ventajas fiscales.",
+            "monthly_income_delta": 60000,
+            "monthly_expense_delta": 38000,
+            "annual_savings_rate": 0.28,
+            "annual_return": 0.10
+          },
+          {
+            "label": "Bienes raíces como inversión de retiro",
+            "description": "Compras departamentos para rentar y vivir de los ingresos pasivos.",
+            "monthly_income_delta": 55000,
+            "monthly_expense_delta": 32000,
+            "annual_savings_rate": 0.22,
+            "annual_return": 0.08
+          },
+          {
+            "label": "Continuar trabajando sin plan de retiro formal",
+            "description": "Gastas lo que ganas. Sin plan, dependes de pensión IMSS o de tus hijos.",
+            "monthly_income_delta": 65000,
+            "monthly_expense_delta": 58000,
+            "annual_savings_rate": 0.05,
+            "annual_return": 0.04
+          }
+        ]
+      }
+    ]
+  }
+}

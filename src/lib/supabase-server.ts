@@ -35,7 +35,7 @@ export async function requireAdminSession() {
 
   const { data: profile, error: profileError } = await supabase
     .from('profiles')
-    .select('id, role, escuela_id')
+    .select('id, role')
     .eq('id', user.id)
     .single()
 

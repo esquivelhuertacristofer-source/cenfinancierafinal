@@ -1,0 +1,17 @@
+{
+  "id": "ACT-P1-SUPREMO-COCHINITO",
+  "title": "El Cochinito Vivo",
+  "description": "Ayuda a tu cochinito a llenarse de monedas ahorrando $10 pesos diarios durante 30 días para comprarte algo especial.",
+  "type": "cochinito_vivo",
+  "xp": 150,
+  "duration": 300,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p1",
+  "content": {
+    "goal": 300,
+    "goal_description": "comprar una mochila nueva para la escuela",
+    "duration_days": 30,
+    "deposit_amount": 10
+  }
+}

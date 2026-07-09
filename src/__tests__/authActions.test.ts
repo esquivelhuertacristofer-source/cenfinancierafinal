@@ -46,11 +46,11 @@ jest.mock('@/lib/rate-limiter', () => {
       const bucket = store.get(key);
       if (!bucket || now > bucket.resetAt) {
         store.set(key, { count: 1, resetAt: now + windowMs });
-        return { allowed: true, remaining: max - 1, resetAt: now + windowMs };
+        return Promise.resolve({ allowed: true, remaining: max - 1, resetAt: now + windowMs });
       }
-      if (bucket.count >= max) return { allowed: false, remaining: 0, resetAt: bucket.resetAt };
+      if (bucket.count >= max) return Promise.resolve({ allowed: false, remaining: 0, resetAt: bucket.resetAt });
       bucket.count += 1;
-      return { allowed: true, remaining: max - bucket.count, resetAt: bucket.resetAt };
+      return Promise.resolve({ allowed: true, remaining: max - bucket.count, resetAt: bucket.resetAt });
     }),
     __store: store,
   };
@@ -67,7 +67,7 @@ const mockRateLimit = jest.mocked(rateLimit);
 
 // Helper — make rate limit always allow
 const allowAll = () =>
-  mockRateLimit.mockReturnValue({ allowed: true, remaining: 9, resetAt: Date.now() + 60000 });
+  mockRateLimit.mockResolvedValue({ allowed: true, remaining: 9, resetAt: Date.now() + 60000 });
 
 // ── Tests ────────────────────────────────────────────────────────────────────
 
@@ -119,7 +119,7 @@ describe('loginAction', () => {
 
   it('blocks after IP rate limit (5 attempts per minute)', async () => {
     // Make the IP rate-limit check return blocked immediately
-    mockRateLimit.mockReturnValue({ allowed: false, remaining: 0, resetAt: Date.now() + 60000 });
+    mockRateLimit.mockResolvedValue({ allowed: false, remaining: 0, resetAt: Date.now() + 60000 });
 
     const result = await loginAction('user@test.com', 'password123');
     expect(result.success).toBe(false);
@@ -132,8 +132,8 @@ describe('loginAction', () => {
   it('blocks after email rate limit (10 attempts per 5 minutes)', async () => {
     // First call (IP check) passes, second call (email check) blocks
     mockRateLimit
-      .mockReturnValueOnce({ allowed: true, remaining: 4, resetAt: Date.now() + 60000 })
-      .mockReturnValueOnce({ allowed: false, remaining: 0, resetAt: Date.now() + 300000 });
+      .mockResolvedValueOnce({ allowed: true, remaining: 4, resetAt: Date.now() + 60000 })
+      .mockResolvedValueOnce({ allowed: false, remaining: 0, resetAt: Date.now() + 300000 });
 
     const result = await loginAction('user@test.com', 'password123');
     expect(result.success).toBe(false);

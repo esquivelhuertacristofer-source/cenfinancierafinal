@@ -34,7 +34,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
     'unknown';
 
   // Rate limit by IP: 5 attempts per minute
-  const ipLimit = rateLimit({ key: `login:ip:${ip}`, max: 5, windowMs: 60 * 1000 });
+  const ipLimit = await rateLimit({ key: `login:ip:${ip}`, max: 5, windowMs: 60 * 1000 });
   if (!ipLimit.allowed) {
     logSecurityEvent({ event: 'login_rate_limited', ip, email: maskEmail(email), detail: 'IP limit exceeded' });
     return { success: false, error: 'Demasiados intentos. Espera un momento e inténtalo de nuevo.' };
@@ -42,7 +42,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
 
   // Rate limit by email: 10 attempts per 5 minutes
   const emailKey = email.toLowerCase().trim();
-  const emailLimit = rateLimit({ key: `login:email:${emailKey}`, max: 10, windowMs: 5 * 60 * 1000 });
+  const emailLimit = await rateLimit({ key: `login:email:${emailKey}`, max: 10, windowMs: 5 * 60 * 1000 });
   if (!emailLimit.allowed) {
     logSecurityEvent({ event: 'login_rate_limited', ip, email: maskEmail(email), detail: 'email limit exceeded' });
     return { success: false, error: 'Demasiados intentos para esta cuenta. Espera 5 minutos.' };

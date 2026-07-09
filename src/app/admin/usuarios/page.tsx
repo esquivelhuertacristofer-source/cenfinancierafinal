@@ -280,13 +280,26 @@ export default function AdminUsuariosPage() {
 
       {/* Topbar */}
       <div className="bg-[#011C40] px-8 py-4 flex items-center justify-between shadow-xl">
-        <div className="flex items-center gap-3">
-          <div className="h-9 w-9 bg-[#FF8C00] rounded-xl flex items-center justify-center">
-            <ShieldAlert className="w-5 h-5 text-white" />
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 bg-[#FF8C00] rounded-xl flex items-center justify-center">
+              <ShieldAlert className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <p className="text-white font-black text-sm">Panel de Administración — CEN Financiera</p>
+              <p className="text-white/40 text-xs">Bienvenido, {adminName} · Acceso Restringido</p>
+            </div>
           </div>
-          <div>
-            <p className="text-white font-black text-sm">Panel de Administración — CEN Financiera</p>
-            <p className="text-white/40 text-xs">Bienvenido, {adminName} · Acceso Restringido</p>
+          <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-2xl p-1">
+            <span className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-white bg-[#FF8C00]/20 border border-[#FF8C00]/30">
+              Usuarios
+            </span>
+            <a
+              href="/admin/escuelas"
+              className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-white/50 hover:text-white hover:bg-white/10 transition-all"
+            >
+              Escuelas
+            </a>
           </div>
         </div>
         <button

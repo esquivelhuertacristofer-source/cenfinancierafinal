@@ -8,10 +8,12 @@ import { notify } from "@/lib/toast";
 export default function MetricCards({
   groupId,
   teacherGroupIds,
+  escuelaId,
   isDark = true,
 }: {
   groupId?: string;
   teacherGroupIds?: string[];
+  escuelaId?: string | null;
   isDark?: boolean;
 }) {
   const [loading, setLoading] = useState(true);
@@ -61,23 +63,40 @@ export default function MetricCards({
             .from("profiles")
             .select("*", { count: "exact", head: true })
             .eq("role", "student");
-          if (groups.length > 0) studentQuery = studentQuery.in("group_id", groups);
+          if (groups.length > 0) {
+            studentQuery = studentQuery.in("group_id", groups);
+          } else if (escuelaId) {
+            studentQuery = studentQuery.eq("escuela_id", escuelaId);
+          }
           const { count: aCount } = await studentQuery;
 
-          let progressQuery = supabase
-            .from("progress")
-            .select("*", { count: "exact", head: true });
+          // Roster de referencia para acotar la cuenta de `progress`: por
+          // grupo si existe, si no por escuela (nunca sin filtro alguno).
+          let rosterStudentIds: string[] = [];
           if (groups.length > 0) {
             const { data: students } = await supabase
               .from("profiles")
               .select("id")
               .in("group_id", groups);
-            if (students && students.length > 0)
-              progressQuery = progressQuery.in("user_id", students.map((s: any) => s.id));
+            rosterStudentIds = students?.map((s: any) => s.id) ?? [];
+          } else if (escuelaId) {
+            const { data: students } = await supabase
+              .from("profiles")
+              .select("id")
+              .eq("escuela_id", escuelaId);
+            rosterStudentIds = students?.map((s: any) => s.id) ?? [];
           }
-          const { count: pCount } = await progressQuery;
 
-          setStats({ alumnos: aCount ?? 0, grupos: groups.length || 1, practicas: pCount ?? 0 });
+          let pCount = 0;
+          if (rosterStudentIds.length > 0) {
+            const { count } = await supabase
+              .from("progress")
+              .select("*", { count: "exact", head: true })
+              .in("user_id", rosterStudentIds);
+            pCount = count ?? 0;
+          }
+
+          setStats({ alumnos: aCount ?? 0, grupos: groups.length || 1, practicas: pCount });
         }
       } catch {
         setError(true);
@@ -87,7 +106,7 @@ export default function MetricCards({
       }
     }
     fetchStats();
-  }, [groupId, teacherGroupIds, isDark]);
+  }, [groupId, teacherGroupIds, escuelaId, isDark]);
 
   if (!mounted) return null;
 

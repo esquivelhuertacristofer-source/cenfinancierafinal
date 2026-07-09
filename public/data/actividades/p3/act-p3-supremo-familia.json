@@ -1,0 +1,80 @@
+{
+  "id": "ACT-P3-SUPREMO-FAMILIA",
+  "title": "La Familia Ramírez",
+  "description": "Administra el presupuesto mensual de la Familia Ramírez de Ecatepec: toma decisiones cada semana y sobrevive la emergencia del mes.",
+  "type": "familia_ramirez",
+  "xp": 200,
+  "duration": 480,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "p3",
+  "content": {
+    "family_name": "Familia Ramírez",
+    "monthly_income": 8500,
+    "fixed_expenses": [
+      { "label": "Renta departamento Ecatepec", "amount": 2800 },
+      { "label": "Luz CFE", "amount": 280 },
+      { "label": "Agua", "amount": 90 },
+      { "label": "Gas", "amount": 150 },
+      { "label": "Colegio niños", "amount": 600 }
+    ],
+    "events": [
+      {
+        "day": 5,
+        "emoji": "🎉",
+        "description": "Es el cumpleaños de la abuela. La familia quiere celebrar.",
+        "choices": [
+          { "label": "Fiesta en casa con caldo y tamales", "cost": 250, "mood_effect": "positive" },
+          { "label": "Restaurante en el Centro Histórico", "cost": 850, "mood_effect": "positive" },
+          { "label": "Solo una llamada y un abrazo", "cost": 0, "mood_effect": "neutral" }
+        ]
+      },
+      {
+        "day": 10,
+        "emoji": "📚",
+        "description": "Los útiles del niño se terminaron. Necesita cuadernos y colores.",
+        "choices": [
+          { "label": "Comprar en Coppel a crédito", "cost": 0, "mood_effect": "negative" },
+          { "label": "Ir a la papelería del barrio", "cost": 120, "mood_effect": "positive" },
+          { "label": "Pedir prestado a los primos", "cost": 0, "mood_effect": "neutral" }
+        ]
+      },
+      {
+        "day": 16,
+        "emoji": "🍕",
+        "description": "Los niños quieren pizza del domicilio el viernes.",
+        "choices": [
+          { "label": "Pedir pizza Little Caesars", "cost": 180, "mood_effect": "positive" },
+          { "label": "Hacer pizza casera con tortillas", "cost": 40, "mood_effect": "positive" },
+          { "label": "No, hay frijoles en casa", "cost": 0, "mood_effect": "negative" }
+        ]
+      },
+      {
+        "day": 22,
+        "emoji": "🚗",
+        "description": "El taxi a la escuela subió de precio. Hay que buscar alternativa.",
+        "choices": [
+          { "label": "Seguir en taxi aunque sea más caro", "cost": 200, "mood_effect": "negative" },
+          { "label": "Usar la combi del barrio", "cost": 80, "mood_effect": "neutral" },
+          { "label": "Ir caminando 20 minutos", "cost": 0, "mood_effect": "neutral" }
+        ]
+      },
+      {
+        "day": 27,
+        "emoji": "📱",
+        "description": "El celular del papá se quedó sin plan de datos.",
+        "choices": [
+          { "label": "Recargar $200 pesos OXXO", "cost": 200, "mood_effect": "positive" },
+          { "label": "Recargar $50 pesos básicos", "cost": 50, "mood_effect": "neutral" },
+          { "label": "Usar solo WiFi en casa", "cost": 0, "mood_effect": "neutral" }
+        ]
+      }
+    ],
+    "emergency": {
+      "day": 19,
+      "emoji": "🏥",
+      "description": "¡La mamá tuvo que ir a Urgencias del IMSS! Aunque tiene seguro, hay gastos extra: medicamentos y taxi.",
+      "cost": 650
+    }
+  }
+}

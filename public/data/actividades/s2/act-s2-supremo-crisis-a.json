@@ -1,0 +1,136 @@
+{
+  "id": "ACT-S2-SUPREMO-CRISIS",
+  "title": "Crisis Room: México 1994",
+  "description": "Eres asesor económico del presidente Zedillo en diciembre de 1994. Toma decisiones de política económica para controlar el Efecto Tequila.",
+  "type": "crisis_room",
+  "xp": 250,
+  "duration": 600,
+  "pillar": 1,
+  "unit": 1,
+  "grade": "s2",
+  "content": {
+    "crisis_year": 1994,
+    "crisis_name": "El Efecto Tequila",
+    "briefing": "Es el 20 de diciembre de 1994. El gobierno acaba de devaluar el peso de $3.40 a $5.00 por dólar. Las reservas del Banco de México están casi agotadas (solo quedan $6,000 millones de USD). Los mercados entran en pánico, los Tesobonos (deuda en dólares) vencen en semanas y México no tiene cómo pagarlos. Como asesor económico, debes tomar decisiones urgentes en los próximos días.",
+    "starting_indicators": {
+      "gdp_growth": -0.2,
+      "inflation": 8.0,
+      "unemployment": 3.7,
+      "exchange_rate": 5.0
+    },
+    "rounds": [
+      {
+        "situation": "Las reservas del Banxico caen $1,000 millones por hora. Los inversionistas extranjeros huyen. Necesitas actuar YA para detener la hemorragia de dólares.",
+        "options": [
+          {
+            "label": "Subir tasas de interés al 80% anual",
+            "description": "Atrae capitales extranjeros de regreso, pero frena el crédito interno brutalmente.",
+            "effects": {
+              "gdp_growth_delta": -2.5,
+              "inflation_delta": -3.0,
+              "unemployment_delta": 1.5,
+              "exchange_rate_delta": -1.5
+            }
+          },
+          {
+            "label": "Pedir rescate financiero al FMI y a EE.UU.",
+            "description": "Clinton ofrece $20,000 millones USD. Salvará el tipo de cambio pero con condiciones duras.",
+            "effects": {
+              "gdp_growth_delta": -1.0,
+              "inflation_delta": 2.0,
+              "unemployment_delta": 0.5,
+              "exchange_rate_delta": -2.5
+            }
+          },
+          {
+            "label": "Dejar flotar el peso libremente",
+            "description": "El mercado decide el tipo de cambio. Impredecible pero sin comprometer reservas.",
+            "effects": {
+              "gdp_growth_delta": -1.5,
+              "inflation_delta": 8.0,
+              "unemployment_delta": 1.0,
+              "exchange_rate_delta": 3.5
+            }
+          }
+        ]
+      },
+      {
+        "situation": "Bancos mexicanos están en quiebra técnica. Millones de familias no pueden pagar sus hipotecas (la tasa mensual llegó al 10%). ¿Qué haces con el sistema bancario?",
+        "options": [
+          {
+            "label": "Crear el FOBAPROA (rescate bancario gubernamental)",
+            "description": "El gobierno absorbe las deudas malas. Controversial pero evita el colapso financiero total.",
+            "effects": {
+              "gdp_growth_delta": 1.5,
+              "inflation_delta": 4.0,
+              "unemployment_delta": -0.8,
+              "exchange_rate_delta": 0.5
+            }
+          },
+          {
+            "label": "Dejar quebrar los bancos insolventes",
+            "description": "El mercado se limpia solo pero millones de ahorradores pierden sus depósitos.",
+            "effects": {
+              "gdp_growth_delta": -3.0,
+              "inflation_delta": -1.0,
+              "unemployment_delta": 2.5,
+              "exchange_rate_delta": 1.0
+            }
+          },
+          {
+            "label": "Fusionar bancos débiles con bancos fuertes",
+            "description": "Solución intermedia: los más fuertes absorben a los débiles con ayuda del gobierno.",
+            "effects": {
+              "gdp_growth_delta": 0.5,
+              "inflation_delta": 1.5,
+              "unemployment_delta": 0.5,
+              "exchange_rate_delta": -0.5
+            }
+          }
+        ]
+      },
+      {
+        "situation": "El desempleo sube rápidamente. Millones de familias pierden ingresos. ¿Cómo reactivas la economía sin disparar más la inflación?",
+        "options": [
+          {
+            "label": "Programa de obras públicas de emergencia",
+            "description": "El gobierno contrata directamente para construir infraestructura y generar empleos rápidos.",
+            "effects": {
+              "gdp_growth_delta": 1.8,
+              "inflation_delta": 2.5,
+              "unemployment_delta": -1.5,
+              "exchange_rate_delta": 0.3
+            }
+          },
+          {
+            "label": "Reducir impuestos a empresas exportadoras",
+            "description": "Con el peso barato, las exportaciones son competitivas. Incentiva las maquiladoras.",
+            "effects": {
+              "gdp_growth_delta": 2.2,
+              "inflation_delta": 0.5,
+              "unemployment_delta": -1.0,
+              "exchange_rate_delta": -1.0
+            }
+          },
+          {
+            "label": "Austeridad total: recortar el gasto del gobierno",
+            "description": "El FMI lo exige como condición del rescate. Doloroso a corto plazo.",
+            "effects": {
+              "gdp_growth_delta": -1.0,
+              "inflation_delta": -2.0,
+              "unemployment_delta": 1.8,
+              "exchange_rate_delta": -1.5
+            }
+          }
+        ]
+      }
+    ],
+    "historical_outcome": {
+      "description": "Históricamente: México aceptó el rescate de $50,000 MDD (EE.UU. + FMI), subió tasas al 100%, creó el FOBAPROA y aplicó austeridad severa. La economía cayó 6.9% en 1995, la inflación llegó al 52%, pero México se recuperó en 1996 y pagó el rescate antes de lo previsto.",
+      "gdp_growth": -6.9,
+      "inflation": 52.0,
+      "unemployment": 6.3,
+      "exchange_rate": 7.7
+    }
+  }
+}

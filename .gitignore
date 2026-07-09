@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare (OpenNext + wrangler)
+.open-next/
+.wrangler/
+.wrangler-audit/
+.dev.vars
+
 # generated artifacts (credentials PDFs, validation outputs)
 output/
 
@@ -51,10 +57,11 @@ docs/CREDENCIALES*.md
 _respaldo-*/
 _archivo_debug_*/
 _pre-port-backup/
-_pre-fix-backup/
+_pre-fix-backup*/
 _diagnostico*.log
 _build-*.log
 build_log.txt
+dev-verify.log
 *.bak
 *.bak2
 *.bak3

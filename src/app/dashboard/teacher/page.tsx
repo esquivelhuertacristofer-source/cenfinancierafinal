@@ -28,6 +28,7 @@ interface Profile {
   full_name: string;
   role: string;
   group_id: string;
+  escuela_id: string | null;
 }
 
 export default function TeacherDashboard() {
@@ -170,7 +171,7 @@ export default function TeacherDashboard() {
           
           {/* WELCOME SECTION */}
           <div className="animate-in fade-in slide-in-from-top-12 duration-1000">
-             <WelcomeBanner teacherName={teacherData?.full_name} isDark={theme === 'dark'} currentLevel={selectedLevel} />
+             <WelcomeBanner teacherName={teacherData?.full_name} isDark={theme === 'dark'} currentLevel={selectedLevel} groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} />
           </div>
 
           {/* ANALYTICS SECTION */}
@@ -194,7 +195,7 @@ export default function TeacherDashboard() {
                 </div>
              </div>
              
-             <MetricCards groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} isDark={theme === 'dark'} />
+             <MetricCards groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} escuelaId={teacherData?.escuela_id} isDark={theme === 'dark'} />
           </div>
 
           {/* BENTO GRID: FEED & RANKING */}

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-import fs from 'fs';
+import { getAssetJson } from '@/lib/data-assets';
+
+// Los JSON viven en public/data/actividades/ y se leen como assets estáticos
+// (ver data-assets.ts): empaquetarlos en el Worker reventaría el límite de
+// 3 MiB gzip del plan free de Cloudflare.
 
 export async function GET(
   _request: NextRequest,
@@ -21,19 +24,12 @@ export async function GET(
 
   const level = parts[1].toLowerCase();
   const fileName = activityId.toLowerCase();
-  const filePath = path.join(
-    process.cwd(),
-    'src', 'data', 'actividades', level,
-    `${fileName}.json`
-  );
 
-  try {
-    const content = fs.readFileSync(filePath, 'utf-8');
-    const data = JSON.parse(content);
-    return NextResponse.json(data, {
-      headers: { 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400' },
-    });
-  } catch {
-    return NextResponse.json(null, { status: 404 });
-  }
+  const data = await getAssetJson(`/data/actividades/${level}/${fileName}.json`);
+
+  if (!data) return NextResponse.json(null, { status: 404 });
+
+  return NextResponse.json(data, {
+    headers: { 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400' },
+  });
 }

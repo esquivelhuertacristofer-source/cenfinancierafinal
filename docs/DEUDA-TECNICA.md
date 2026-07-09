@@ -27,7 +27,7 @@
 | ✅ | SyncEngine: logging con contexto (usuario, cantidad, resultado) | Sprint 3 |
 | ✅ | SyncEngine: auto-discard items > 7 días en cola | Sprint 3 |
 | ✅ | `supabase/security_triggers.sql` placeholder versionado | Sprint 3 |
-| ✅ | `supabase/indexes.sql` generado (pendiente ejecución manual) | Sprint 3 |
+| ✅ | `supabase/migrations/legacy_indexes.sql` generado (pendiente ejecución manual) | Sprint 3 |
 
 ---
 
@@ -36,7 +36,7 @@
 | # | Descripción | Esfuerzo | Acción requerida |
 |---|-------------|----------|------------------|
 | 1 | **Trigger `protect_sensitive_profile_fields` no versionado** — existe en Supabase pero no en código. Si el proyecto se migra, el control de seguridad se pierde silenciosamente. | 20 min | Usuario: copiar SQL desde Supabase Dashboard → pegar en `supabase/security_triggers.sql` → commit |
-| 2 | **Ejecutar `supabase/indexes.sql`** — índices de performance generados pero no aplicados. | 5 min | Usuario: Supabase Dashboard → SQL Editor → pegar y ejecutar el archivo |
+| 2 | **Ejecutar `supabase/migrations/legacy_indexes.sql`** — índices de performance generados pero no aplicados. | 5 min | Usuario: Supabase Dashboard → SQL Editor → pegar y ejecutar el archivo |
 | 3 | **Sin aviso de privacidad ni consentimiento parental** — la plataforma maneja datos de menores. Requisito LFPDPPP México para escuelas reales. | 2-4h (legal + desarrollo) | Requiere decisión de producto + redacción legal |
 | 4 | **Sin monitoreo de errores en producción** — Sentry no completado. Errores en producción son invisibles. | 30 min | Usuario: crear cuenta en sentry.io → crear proyecto Next.js → ejecutar `npx @sentry/wizard@latest -i nextjs` → agregar DSN a Vercel env vars |
 
@@ -66,7 +66,7 @@
 ## Acciones Manuales Pendientes del Usuario (ordenadas por urgencia)
 
 1. **URGENTE** — Pegar SQL del trigger en `supabase/security_triggers.sql` → hacer commit
-2. **IMPORTANTE** — Ejecutar `supabase/indexes.sql` en Supabase Dashboard SQL Editor
+2. **IMPORTANTE** — Ejecutar `supabase/migrations/legacy_indexes.sql` en Supabase Dashboard SQL Editor
 3. **IMPORTANTE** — Completar setup de Sentry (ver instrucciones en REPORTE-SPRINT3-CLAUDE.md)
 4. **LEGAL** — Agregar aviso de privacidad antes de usuarios reales en escuelas
 

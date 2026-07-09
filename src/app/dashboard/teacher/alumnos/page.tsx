@@ -49,10 +49,19 @@ interface Student {
 interface TeacherProfile {
   full_name: string;
   group_id: string;
+  escuela_id: string | null;
+}
+
+interface Grupo {
+  id: string;
+  nombre: string;
 }
 
 export default function AlumnosPage() {
   const [teacher, setTeacher] = useState<TeacherProfile | null>(null);
+  const [escuelaNombre, setEscuelaNombre] = useState<string>("");
+  const [gruposList, setGruposList] = useState<Grupo[]>([]);
+  const [selectedGrupoId, setSelectedGrupoId] = useState<string | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
   const [filtered, setFiltered] = useState<Student[]>([]);
   const [search, setSearch] = useState("");
@@ -70,18 +79,30 @@ export default function AlumnosPage() {
 
       const { data: profile } = await supabase
         .from("profiles")
-        .select("full_name, role, group_id")
+        .select("full_name, role, group_id, escuela_id")
         .eq("id", user.id)
         .single();
 
       if (!profile || profile.role !== "teacher") { router.push("/"); return; }
-      setTeacher({ full_name: profile.full_name, group_id: profile.group_id });
+      setTeacher({ full_name: profile.full_name, group_id: profile.group_id, escuela_id: profile.escuela_id ?? null });
+
+      // Cargar nombre de escuela si existe
+      if (profile.escuela_id) {
+        const { data: escuela } = await supabase
+          .from("escuelas")
+          .select("nombre")
+          .eq("id", profile.escuela_id)
+          .single();
+        if (escuela) setEscuelaNombre(escuela.nombre);
+      }
 
       // Load teacher's grupos from institutional schema
       const { data: grupos } = await supabase
         .from("grupos")
         .select("id, nombre")
         .eq("id_profesor", user.id);
+
+      if (grupos && grupos.length > 0) setGruposList(grupos as Grupo[]);
 
       let enriched: Student[] = [];
 
@@ -101,33 +122,29 @@ export default function AlumnosPage() {
         memberships?.forEach((m: any) => { membershipMap[m.id_alumno] = m.id_grupo; });
 
         if (studentIds.length > 0) {
-          const [profilesRes, intentosRes] = await Promise.all([
+          const [profilesRes, statsRes] = await Promise.all([
             supabase.from("profiles").select("id, full_name, email, school_level, group_id").in("id", studentIds),
-            supabase
-              .from("intentos")
-              .select("user_id, score, tiempo_segundos")
-              .in("user_id", studentIds)
-              .eq("status", "completed"),
+            supabase.rpc("get_intentos_stats", { p_student_ids: studentIds }),
           ]);
 
           const profiles = profilesRes.data ?? [];
-          const intentos = intentosRes.data ?? [];
+          const stats = statsRes.data ?? [];
 
-          const countMap: Record<string, number> = {};
-          const scoreSum: Record<string, number> = {};
-          const timeSum: Record<string, number> = {};
-          for (const it of intentos as any[]) {
-            countMap[it.user_id] = (countMap[it.user_id] ?? 0) + 1;
-            scoreSum[it.user_id] = (scoreSum[it.user_id] ?? 0) + (it.score ?? 0);
-            timeSum[it.user_id] = (timeSum[it.user_id] ?? 0) + (it.tiempo_segundos ?? 0);
+          const statsMap: Record<string, { completed_count: number; avg_score: number; total_minutes: number }> = {};
+          for (const s of stats as any[]) {
+            statsMap[s.user_id] = {
+              completed_count: s.completed_count,
+              avg_score: s.avg_score,
+              total_minutes: s.total_minutes,
+            };
           }
 
           enriched = profiles.map((p: any) => ({
             ...p,
             grupo_nombre: grupoMap[membershipMap[p.id]] ?? null,
-            progress_count: countMap[p.id] ?? 0,
-            avg_score: countMap[p.id] ? Math.round(scoreSum[p.id] / countMap[p.id]) : 0,
-            total_minutes: Math.round((timeSum[p.id] ?? 0) / 60),
+            progress_count: statsMap[p.id]?.completed_count ?? 0,
+            avg_score: statsMap[p.id]?.avg_score ?? 0,
+            total_minutes: statsMap[p.id]?.total_minutes ?? 0,
           }));
         }
       } else {
@@ -143,9 +160,11 @@ export default function AlumnosPage() {
         if (groups.length > 0) q = q.in("group_id", groups);
         const { data: rawStudents } = await q;
 
-        const { data: progressData } = await supabase
-          .from("progress")
-          .select("user_id");
+        const legacyStudentIds = (rawStudents ?? []).map((s: any) => s.id);
+
+        const { data: progressData } = legacyStudentIds.length > 0
+          ? await supabase.from("progress").select("user_id").in("user_id", legacyStudentIds)
+          : { data: [] as any[] };
 
         const countMap: Record<string, number> = {};
         (progressData ?? []).forEach((p: any) => { countMap[p.user_id] = (countMap[p.user_id] ?? 0) + 1; });
@@ -176,7 +195,8 @@ export default function AlumnosPage() {
           .select("activity_id, completed_at, score, tiempo_segundos")
           .eq("user_id", selected.id)
           .eq("status", "completed")
-          .order("completed_at", { ascending: false });
+          .order("completed_at", { ascending: false })
+          .limit(50);
 
         if (!error && data) {
           const history = data.map((d: any) => ({
@@ -199,15 +219,22 @@ export default function AlumnosPage() {
   useEffect(() => {
     const q = search.toLowerCase();
     setFiltered(
-      students.filter(
-        (s) =>
+      students.filter((s) => {
+        if (selectedGrupoId) {
+          // Find the grupo nombre for the selected ID
+          const grupoNombre = gruposList.find((g) => g.id === selectedGrupoId)?.nombre;
+          if (grupoNombre && s.grupo_nombre !== grupoNombre) return false;
+        }
+        if (!q) return true;
+        return (
           s.full_name?.toLowerCase().includes(q) ||
           s.email?.toLowerCase().includes(q) ||
           s.grupo_nombre?.toLowerCase().includes(q) ||
           s.group_id?.toLowerCase().includes(q)
-      )
+        );
+      })
     );
-  }, [search, students]);
+  }, [search, students, selectedGrupoId, gruposList]);
 
   if (!mounted) return null;
 
@@ -449,6 +476,11 @@ export default function AlumnosPage() {
               <div className="flex items-center gap-3">
                 <Users className="w-5 h-5 text-[#42E8E0]" />
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Gestión de Alumnado</span>
+                {escuelaNombre && (
+                  <span className="px-3 py-1 bg-[#42E8E0]/10 border border-[#42E8E0]/20 rounded-xl text-[10px] font-black text-[#42E8E0] uppercase tracking-widest">
+                    {escuelaNombre}
+                  </span>
+                )}
               </div>
               <h1 className="text-7xl font-black text-white leading-none tracking-tighter">
                 Mis <span className="dashboard-gradient-orange italic">Alumnos</span>
@@ -484,6 +516,38 @@ export default function AlumnosPage() {
             </div>
           </div>
         </div>
+
+        {/* GROUP TABS (visible solo si el profesor tiene múltiples grupos) */}
+        {gruposList.length > 1 && (
+          <div className="flex items-center gap-3 flex-wrap animate-in fade-in slide-in-from-top-4 duration-500">
+            <button
+              onClick={() => setSelectedGrupoId(null)}
+              className={`px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${
+                selectedGrupoId === null
+                  ? "bg-[#011C40] text-white shadow-lg"
+                  : "bg-white text-slate-400 border border-slate-200 hover:border-[#011C40] hover:text-[#011C40]"
+              }`}
+            >
+              Todos ({students.length})
+            </button>
+            {gruposList.map((g) => {
+              const count = students.filter((s) => s.grupo_nombre === g.nombre).length;
+              return (
+                <button
+                  key={g.id}
+                  onClick={() => setSelectedGrupoId(selectedGrupoId === g.id ? null : g.id)}
+                  className={`px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${
+                    selectedGrupoId === g.id
+                      ? "bg-[#FF8C00] text-white shadow-lg"
+                      : "bg-white text-slate-400 border border-slate-200 hover:border-[#FF8C00]/40 hover:text-[#011C40]"
+                  }`}
+                >
+                  {g.nombre} ({count})
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         {/* STUDENT GRID */}
         {filtered.length === 0 ? (

@@ -2,37 +2,40 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
+import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { Sparkles, ArrowRight, Zap, Target, Star, Shield } from "lucide-react";
 
-export default function WelcomeBanner({ 
-  teacherName, 
+export default function WelcomeBanner({
+  teacherName,
   isDark = true,
-  currentLevel = 'secundaria'
-}: { 
-  teacherName?: string, 
+  currentLevel = 'secundaria',
+  groupId,
+  teacherGroupIds,
+}: {
+  teacherName?: string,
   isDark?: boolean,
-  currentLevel?: 'primaria' | 'secundaria'
+  currentLevel?: 'primaria' | 'secundaria',
+  groupId?: string,
+  teacherGroupIds?: string[],
 }) {
   const [completionRate, setCompletionRate] = useState(88);
   const [mounted, setMounted] = useState(false);
   const [aiInsight, setAiInsight] = useState("");
+  const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
     setMounted(true);
+    if (idsLoading) return;
     const fetchCompletionRate = async () => {
       try {
-        const { count: totalAlumnos } = await supabase
-          .from('profiles')
-          .select('*', { count: 'exact', head: true })
-          .eq('role', 'student');
+        if (studentIds.length > 0) {
+          const { data: progress } = await supabase
+            .from('progress')
+            .select('user_id')
+            .in('user_id', studentIds);
 
-        const { data: progress } = await supabase
-          .from('progress')
-          .select('user_id');
-
-        if (totalAlumnos && totalAlumnos > 0 && progress) {
-          const uniqueAlumnos = new Set(progress.map(i => i.user_id)).size;
-          const rate = Math.round((uniqueAlumnos / totalAlumnos) * 100);
+          const uniqueAlumnos = new Set((progress ?? []).map(i => i.user_id)).size;
+          const rate = Math.round((uniqueAlumnos / studentIds.length) * 100);
           setCompletionRate(rate || 88);
         }
 
@@ -57,7 +60,7 @@ export default function WelcomeBanner({
       }
     };
     fetchCompletionRate();
-  }, [currentLevel]);
+  }, [currentLevel, studentIds, idsLoading]);
 
   if (!mounted) return null;
 

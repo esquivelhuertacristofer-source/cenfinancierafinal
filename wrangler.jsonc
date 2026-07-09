@@ -1,0 +1,44 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cen-financiera",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  // Minificación esbuild al subir: el código de Next ya viene minificado,
+  // pero el pegamento de OpenNext no — ayuda contra el límite de 3 MiB gzip.
+  "minify": true,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // Mantener la URL workers.dev como respaldo/staging: al declarar routes,
+  // wrangler la desactiva por defecto si no se pide explícitamente.
+  "workers_dev": true,
+  "preview_urls": false,
+  // Dominio de producción (zona en la misma cuenta Cloudflare; DNS y SSL
+  // los gestiona Cloudflare automáticamente al desplegar):
+  "routes": [
+    { "pattern": "cenplataformaeducacionfinanciera.com.mx", "custom_domain": true },
+    { "pattern": "www.cenplataformaeducacionfinanciera.com.mx", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  // Fix 4 (escalabilidad): rate limiter de login compartido entre isolates/regiones
+  // (ver src/lib/rate-limiter.ts). Crear el namespace con
+  // `npx wrangler kv namespace create RATE_LIMIT_KV` y reemplazar el id de abajo
+  // con el que devuelva ese comando antes de desplegar — el placeholder actual
+  // hará que el binding falle en producción hasta hacerlo.
+  "kv_namespaces": [
+    { "binding": "RATE_LIMIT_KV", "id": "REPLACE_WITH_REAL_KV_NAMESPACE_ID" }
+  ],
+  // Caché ISR/data-cache de Next.js sobre R2 se puede activar después.
+  // Para el primer deploy la caché en memoria del Worker es suficiente.
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://kmskaebltcbqgqrgrilq.supabase.co"
+  }
+  // Secretos (NO van aquí — se cargan con `wrangler secret put`):
+  //   NEXT_PUBLIC_SUPABASE_ANON_KEY
+  //   SUPABASE_SERVICE_ROLE_KEY
+  //   SUPABASE_JWT_SECRET (Fix 3 escalabilidad — verificación JWT local en middleware.ts)
+}

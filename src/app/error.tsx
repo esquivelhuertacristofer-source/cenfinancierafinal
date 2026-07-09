@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import * as Sentry from '@sentry/nextjs';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 export default function GlobalError({
@@ -12,11 +11,8 @@ export default function GlobalError({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Tag as handled so beforeSend can still forward it, but we know it was caught
-    Sentry.captureException(error, {
-      tags: { 'cen.boundary': 'global', 'cen.handled': 'false' },
-      extra: { digest: error.digest },
-    });
+    // Sentry eliminado (nunca tuvo DSN configurado); el error queda en consola.
+    console.error('[CEN] Error no capturado:', error, error.digest);
   }, [error]);
 
   return (
