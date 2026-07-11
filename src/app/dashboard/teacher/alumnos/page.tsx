@@ -66,6 +66,8 @@ export default function AlumnosPage() {
   const [filtered, setFiltered] = useState<Student[]>([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
   const [selected, setSelected] = useState<Student | null>(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -74,6 +76,8 @@ export default function AlumnosPage() {
   useEffect(() => {
     setMounted(true);
     const init = async () => {
+      setLoadError(false);
+      try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) { router.push("/log-in"); return; }
 
@@ -180,37 +184,44 @@ export default function AlumnosPage() {
 
       setStudents(enriched);
       setFiltered(enriched);
-      setLoading(false);
+      } catch {
+        setLoadError(true);
+      } finally {
+        setLoading(false);
+      }
     };
     init();
-  }, [router]);
+  }, [router, retryKey]);
 
   // Fetch detailed intento history when a student is selected
   useEffect(() => {
     if (selected && !selected.history) {
       const fetchHistory = async () => {
         setLoadingDetails(true);
-        const { data, error } = await supabase
-          .from("intentos")
-          .select("activity_id, completed_at, score, tiempo_segundos")
-          .eq("user_id", selected.id)
-          .eq("status", "completed")
-          .order("completed_at", { ascending: false })
-          .limit(50);
+        try {
+          const { data, error } = await supabase
+            .from("intentos")
+            .select("activity_id, completed_at, score, tiempo_segundos")
+            .eq("user_id", selected.id)
+            .eq("status", "completed")
+            .order("completed_at", { ascending: false })
+            .limit(50);
 
-        if (!error && data) {
-          const history = data.map((d: any) => ({
-            activity_id: d.activity_id,
-            completed_at: d.completed_at,
-            score: d.score,
-            tiempo_segundos: d.tiempo_segundos,
-          }));
-          setSelected((prev) => (prev ? { ...prev, history } : null));
-          setStudents((prev) =>
-            prev.map((s) => (s.id === selected.id ? { ...s, history } : s))
-          );
+          if (!error && data) {
+            const history = data.map((d: any) => ({
+              activity_id: d.activity_id,
+              completed_at: d.completed_at,
+              score: d.score,
+              tiempo_segundos: d.tiempo_segundos,
+            }));
+            setSelected((prev) => (prev ? { ...prev, history } : null));
+            setStudents((prev) =>
+              prev.map((s) => (s.id === selected.id ? { ...s, history } : s))
+            );
+          }
+        } finally {
+          setLoadingDetails(false);
         }
-        setLoadingDetails(false);
       };
       fetchHistory();
     }
@@ -447,6 +458,27 @@ export default function AlumnosPage() {
 
     doc.save(`informe-grupal-cen-${new Date().toISOString().split('T')[0]}.pdf`);
   };
+
+  if (loadError) return (
+    <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue']">
+      <Sidebar teacherName="..." groupId="..." />
+      <main className="flex-1 md:ml-[260px] flex items-center justify-center p-12">
+        <div className="flex flex-col items-center gap-6 text-center max-w-md">
+          <AlertCircle className="w-12 h-12 text-[#011C40]/30" />
+          <p className="text-lg font-black text-[#011C40]">No pudimos conectar con el servidor</p>
+          <p className="text-sm font-medium text-[#011C40]/50">
+            Puede ser una interrupción temporal del servicio. Tu sesión sigue activa; intenta de nuevo en unos segundos.
+          </p>
+          <button
+            onClick={() => { setLoading(true); setRetryKey((k) => k + 1); }}
+            className="px-6 py-3 rounded-2xl font-black text-sm bg-[#FF8C00] text-[#011C40] hover:brightness-110 transition-all"
+          >
+            Reintentar
+          </button>
+        </div>
+      </main>
+    </div>
+  );
 
   if (loading) return (
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue']">

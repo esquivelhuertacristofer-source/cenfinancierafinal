@@ -1,14 +1,14 @@
 import SupabaseStatusBanner from "../../components/SupabaseStatusBanner";
 
-export default function HubLayout({
+export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-[#011126] selection:bg-[#FF8C00] selection:text-[#011126]">
+    <>
       <SupabaseStatusBanner variant="authenticated" />
       {children}
-    </div>
+    </>
   );
 }

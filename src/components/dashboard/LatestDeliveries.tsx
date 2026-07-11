@@ -27,6 +27,8 @@ export default function LatestDeliveries({
 }) {
   const [deliveries, setDeliveries] = useState<DeliveryReal[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState<{ id: string; name: string } | null>(null);
   const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
@@ -37,6 +39,7 @@ export default function LatestDeliveries({
 
     const fetchLatest = async () => {
       try {
+        setError(false);
         const useNewSchema = teacherGroupIds && teacherGroupIds.length > 0;
 
         if (studentIds.length === 0) { setDeliveries([]); setLoading(false); return; }
@@ -94,7 +97,7 @@ export default function LatestDeliveries({
 
         setDeliveries(mapped);
       } catch {
-        // silent
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -111,7 +114,7 @@ export default function LatestDeliveries({
     }, 45000);
 
     return () => clearInterval(pollInterval);
-  }, [studentIds, idsLoading, teacherGroupIds, isDark]);
+  }, [studentIds, idsLoading, teacherGroupIds, isDark, retryKey]);
 
   if (!mounted) return null;
 
@@ -181,6 +184,25 @@ export default function LatestDeliveries({
                 </div>
               </div>
             ))}
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center py-16 gap-4">
+            <Activity className={`w-12 h-12 ${isDark ? "text-white/10" : "text-slate-200"}`} />
+            <p
+              className={`text-[10px] font-black uppercase tracking-widest text-center ${
+                isDark ? "text-white/30" : "text-slate-400"
+              }`}
+            >
+              No pudimos cargar las entregas recientes
+            </p>
+            <button
+              onClick={() => { setLoading(true); setRetryKey((k) => k + 1); }}
+              className={`text-[10px] font-black uppercase tracking-widest px-5 py-2.5 rounded-xl transition-all ${
+                isDark ? "bg-white/5 text-[#42E8E0] hover:bg-white/10" : "bg-slate-50 text-[#011C40] hover:bg-slate-100"
+              }`}
+            >
+              Reintentar
+            </button>
           </div>
         ) : deliveries.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16 gap-4">

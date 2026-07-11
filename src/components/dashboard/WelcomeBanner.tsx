@@ -18,7 +18,7 @@ export default function WelcomeBanner({
   groupId?: string,
   teacherGroupIds?: string[],
 }) {
-  const [completionRate, setCompletionRate] = useState(88);
+  const [completionRate, setCompletionRate] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
   const [aiInsight, setAiInsight] = useState("");
   const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
@@ -36,7 +36,9 @@ export default function WelcomeBanner({
 
           const uniqueAlumnos = new Set((progress ?? []).map(i => i.user_id)).size;
           const rate = Math.round((uniqueAlumnos / studentIds.length) * 100);
-          setCompletionRate(rate || 88);
+          setCompletionRate(rate);
+        } else {
+          setCompletionRate(null);
         }
 
         // AI INSIGHT LOGIC
@@ -56,7 +58,7 @@ export default function WelcomeBanner({
         setAiInsight(levelInsights[Math.floor(Math.random() * levelInsights.length)]);
 
       } catch (err) {
-        setCompletionRate(88);
+        setCompletionRate(null);
       }
     };
     fetchCompletionRate();
@@ -105,7 +107,15 @@ export default function WelcomeBanner({
               </span>
             </h1>
             <p className={`text-xl md:text-2xl font-medium leading-relaxed max-w-2xl transition-colors opacity-70 mx-auto xl:mx-0 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
-              Tu grupo de <span className="uppercase font-black tracking-widest">{currentLevel}</span> está superando las expectativas con un <span className={`font-black underline underline-offset-[12px] ${isDark ? 'text-[#42E8E0] decoration-[#42E8E0]/40' : 'text-[#FF8C00] decoration-[#FF8C00]/40'}`}>{completionRate}% de avance</span>.
+              {completionRate !== null ? (
+                <>
+                  Tu grupo de <span className="uppercase font-black tracking-widest">{currentLevel}</span> está superando las expectativas con un <span className={`font-black underline underline-offset-[12px] ${isDark ? 'text-[#42E8E0] decoration-[#42E8E0]/40' : 'text-[#FF8C00] decoration-[#FF8C00]/40'}`}>{completionRate}% de avance</span>.
+                </>
+              ) : (
+                <>
+                  Tu grupo de <span className="uppercase font-black tracking-widest">{currentLevel}</span> está listo para empezar. <span className="font-black opacity-60">Datos de avance no disponibles por el momento.</span>
+                </>
+              )}
             </p>
           </div>
           

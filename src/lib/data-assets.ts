@@ -9,13 +9,6 @@
 // - next dev (Node): filesystem sobre public/.
 export async function getAssetJson(pathname: string): Promise<unknown | null> {
   try {
-    if (process.env.NODE_ENV === 'development') {
-      const { readFile } = await import('node:fs/promises');
-      const { join } = await import('node:path');
-      const filePath = join(process.cwd(), 'public', ...pathname.split('/').filter(Boolean));
-      return JSON.parse(await readFile(filePath, 'utf-8'));
-    }
-
     const { getCloudflareContext } = await import('@opennextjs/cloudflare');
     const { env } = getCloudflareContext();
     const assets = (env as unknown as {
@@ -23,8 +16,17 @@ export async function getAssetJson(pathname: string): Promise<unknown | null> {
     }).ASSETS;
     // ASSETS.fetch ignora el host de la URL; solo importa el pathname.
     const res = await assets.fetch(new URL(pathname, 'https://assets.local'));
-    if (!res.ok) return null;
-    return await res.json();
+    if (res.ok) return await res.json();
+  } catch {
+    // Sin runtime de Cloudflare Workers disponible (ej. `next dev` / `next start`
+    // en Node plano) — se cae al filesystem debajo.
+  }
+
+  try {
+    const { readFile } = await import('node:fs/promises');
+    const { join } = await import('node:path');
+    const filePath = join(process.cwd(), 'public', ...pathname.split('/').filter(Boolean));
+    return JSON.parse(await readFile(filePath, 'utf-8'));
   } catch {
     return null;
   }

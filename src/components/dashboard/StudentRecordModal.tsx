@@ -14,34 +14,42 @@ interface ProgressItem {
 export default function StudentRecordModal({ studentId, studentName, onClose, isDark = true }: { studentId: string; studentName: string; onClose: () => void; isDark?: boolean }) {
   const [progress, setProgress] = useState<ProgressItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     async function fetchRecord() {
       setLoading(true);
-      // Try intentos first (new schema), fall back to progress (legacy)
-      const { data: intentos } = await supabase
-        .from('intentos')
-        .select('id, activity_id, completed_at, score')
-        .eq('user_id', studentId)
-        .eq('status', 'completed')
-        .order('completed_at', { ascending: false })
-        .limit(50);
-
-      if (intentos && intentos.length > 0) {
-        setProgress(intentos.map((it: any) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
-      } else {
-        const { data } = await supabase
-          .from('progress')
-          .select('*')
+      setError(false);
+      try {
+        // Try intentos first (new schema), fall back to progress (legacy)
+        const { data: intentos } = await supabase
+          .from('intentos')
+          .select('id, activity_id, completed_at, score')
           .eq('user_id', studentId)
-          .order('created_at', { ascending: false })
+          .eq('status', 'completed')
+          .order('completed_at', { ascending: false })
           .limit(50);
-        setProgress(data || []);
+
+        if (intentos && intentos.length > 0) {
+          setProgress(intentos.map((it: any) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
+        } else {
+          const { data } = await supabase
+            .from('progress')
+            .select('*')
+            .eq('user_id', studentId)
+            .order('created_at', { ascending: false })
+            .limit(50);
+          setProgress(data || []);
+        }
+      } catch {
+        setError(true);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
     fetchRecord();
-  }, [studentId]);
+  }, [studentId, retryKey]);
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center p-6 animate-in fade-in duration-500">
@@ -99,6 +107,16 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
              <div className="flex justify-center py-20">
                <div className="w-8 h-8 border-2 border-[#FF8C00] border-t-transparent rounded-full animate-spin" />
              </div>
+          ) : error ? (
+            <div className="flex flex-col items-center py-20 gap-6 text-center">
+              <p className="opacity-50 font-black uppercase tracking-widest text-sm">No pudimos cargar el historial</p>
+              <button
+                onClick={() => setRetryKey((k) => k + 1)}
+                className="px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest bg-[#FF8C00] text-[#0A0118] hover:brightness-110 transition-all"
+              >
+                Reintentar
+              </button>
+            </div>
           ) : progress.length === 0 ? (
             <div className="text-center py-20 opacity-30 font-black uppercase tracking-widest">Sin registros aún</div>
           ) : progress.map((item) => (

@@ -35,6 +35,8 @@ export default function AdminUsuariosPage() {
   const router = useRouter();
   const [authorized, setAuthorized]     = useState(false);
   const [checking,   setChecking]       = useState(true);
+  const [checkError, setCheckError]     = useState(false);
+  const [authRetryKey, setAuthRetryKey] = useState(0);
   const [adminName,  setAdminName]      = useState("");
 
   // Form state
@@ -46,6 +48,7 @@ export default function AdminUsuariosPage() {
   const [role,            setRole]            = useState<"student"|"teacher">("student");
   const [password,        setPassword]        = useState("");
   const [grupos,          setGrupos]          = useState<Grupo[]>([]);
+  const [gruposError,     setGruposError]     = useState(false);
   const [processing,      setProcessing]      = useState(false);
   const [results,         setResults]         = useState<{ success: {name:string;email:string}[]; errors: {name:string;message:string}[] } | null>(null);
 
@@ -54,34 +57,44 @@ export default function AdminUsuariosPage() {
   const [dragActive,      setDragActive]      = useState(false);
   const [importFileName,  setImportFileName]  = useState("");
 
+  const refreshGrupos = useCallback(async () => {
+    try {
+      const data = await getGrupos();
+      setGrupos(data);
+      setGruposError(false);
+    } catch {
+      setGruposError(true);
+    }
+  }, []);
+
   // ── Guardia de seguridad ──────────────────────────────────────────────────
   useEffect(() => {
     (async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { router.replace("/log-in"); return; }
+      setCheckError(false);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) { router.replace("/log-in"); return; }
 
-      const { data: profile } = await supabase
-        .from("profiles").select("role, full_name").eq("id", user.id).single();
+        const { data: profile } = await supabase
+          .from("profiles").select("role, full_name").eq("id", user.id).single();
 
-      if (!profile || profile.role !== "admin") {
-        await logoutAction();
-        router.replace("/log-in");
-        return;
+        if (!profile || profile.role !== "admin") {
+          await logoutAction();
+          router.replace("/log-in");
+          return;
+        }
+
+        setAdminName(profile.full_name ?? "Administrador");
+        setAuthorized(true);
+        setChecking(false);
+
+        await refreshGrupos();
+      } catch {
+        setCheckError(true);
+        setChecking(false);
       }
-
-      setAdminName(profile.full_name ?? "Administrador");
-      setAuthorized(true);
-      setChecking(false);
-
-      const data = await getGrupos();
-      setGrupos(data);
     })();
-  }, [router]);
-
-  const refreshGrupos = useCallback(async () => {
-    const data = await getGrupos();
-    setGrupos(data);
-  }, []);
+  }, [router, authRetryKey, refreshGrupos]);
 
   const handleCreateGroup = async () => {
     if (!newGroupName.trim()) return;
@@ -271,6 +284,20 @@ export default function AdminUsuariosPage() {
     </div>
   );
 
+  if (checkError) return (
+    <div className="min-h-screen bg-[#011C40] flex items-center justify-center">
+      <div className="flex flex-col items-center gap-5 text-white text-center px-6">
+        <p className="font-bold text-white/60">No pudimos verificar tu sesión. Puede ser una falla temporal de conexión.</p>
+        <button
+          onClick={() => { setChecking(true); setAuthRetryKey(k => k + 1); }}
+          className="px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest bg-[#FF8C00] text-[#011C40] hover:brightness-110 transition-all"
+        >
+          Reintentar
+        </button>
+      </div>
+    </div>
+  );
+
   if (!authorized) return null;
 
   const namesCount = namesText.split("\n").filter(n => n.trim()).length;
@@ -343,6 +370,12 @@ export default function AdminUsuariosPage() {
                       <option key={g.id} value={g.id}>{g.nombre} ({g.grado})</option>
                     ))}
                   </select>
+                  {gruposError && (
+                    <p className="text-[10px] text-red-500 font-black uppercase tracking-widest mt-2">
+                      No se pudieron cargar los grupos.{" "}
+                      <button type="button" onClick={() => refreshGrupos()} className="underline">Reintentar</button>
+                    </p>
+                  )}
                 </div>
 
                 {/* Crear nuevo grupo inline */}

@@ -1,7 +1,7 @@
 "use server";
 
 import { createClient } from "@supabase/supabase-js";
-import { requireAdminSession } from "@/lib/supabase-server";
+import { requireAdminSession, withServerTimeout } from "@/lib/supabase-server";
 
 // Admin client con service_role — solo en Server Actions, nunca en el cliente
 function getAdminClient() {
@@ -9,6 +9,15 @@ function getAdminClient() {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY!;
   if (!url || !key) throw new Error("SUPABASE_SERVICE_ROLE_KEY no configurada en variables de entorno.");
   return createClient(url, key, { auth: { autoRefreshToken: false, persistSession: false } });
+}
+
+// Cualquier llamada individual a Supabase dentro de un lote puede quedarse
+// colgada indefinidamente si el servicio está saturado o caído. Sin este
+// límite, un solo item atorado congela el lote completo sin dar ningún
+// error visible al admin (su UI de "procesando" giraría para siempre).
+const OP_TIMEOUT_MS = 15000;
+function withOpTimeout<T>(promise: PromiseLike<T>, label: string): Promise<T> {
+  return withServerTimeout(promise, OP_TIMEOUT_MS, `SUPABASE_UNAVAILABLE: tiempo de espera agotado (${label})`);
 }
 
 // Mapa de grado a school_level legible
@@ -97,17 +106,20 @@ export async function onboardInstitutionalUsers(
     const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
 
     try {
-      const { error: authError } = await admin.auth.admin.createUser({
-        email,
-        password: pw,
-        email_confirm: true,
-        user_metadata: {
-          full_name:    name,
-          role:         role,
-          school_level: schoolLevel,
-          group_id:     groupId ?? null,
-        },
-      });
+      const { error: authError } = await withOpTimeout(
+        admin.auth.admin.createUser({
+          email,
+          password: pw,
+          email_confirm: true,
+          user_metadata: {
+            full_name:    name,
+            role:         role,
+            school_level: schoolLevel,
+            group_id:     groupId ?? null,
+          },
+        }),
+        `crear cuenta de ${name}`
+      );
 
       if (authError) {
         results.errors.push({ name, message: authError.message });
@@ -131,11 +143,16 @@ export async function createGrupo(
   await requireAdminSession();
 
   const admin = getAdminClient();
-  const { data, error } = await admin
-    .from("grupos")
-    .insert({ nombre, grado, id_profesor: idProfesor ?? null })
-    .select("id, nombre")
-    .single();
+  let data, error;
+  try {
+    ({ data, error } = await withOpTimeout(
+      admin.from("grupos").insert({ nombre, grado, id_profesor: idProfesor ?? null }).select("id, nombre").single(),
+      "crear grupo"
+    ));
+  } catch (err: any) {
+    console.error('[adminActions] createGrupo timeout/conexión:', err?.message);
+    throw new Error("No se pudo crear el grupo: falla de conexión con la base de datos. Intente de nuevo.");
+  }
 
   if (error) {
     console.error('[adminActions] createGrupo error:', error.message);
@@ -148,8 +165,20 @@ export async function getGrupos(): Promise<{ id: string; nombre: string; grado: 
   await requireAdminSession();
 
   const admin = getAdminClient();
-  const { data, error } = await admin.from("grupos").select("id, nombre, grado").order("nombre");
-  if (error) return [];
+  let data, error;
+  try {
+    ({ data, error } = await withOpTimeout(
+      admin.from("grupos").select("id, nombre, grado").order("nombre"),
+      "cargar grupos"
+    ));
+  } catch (err: any) {
+    console.error('[adminActions] getGrupos timeout/conexión:', err?.message);
+    throw new Error("No se pudieron cargar los grupos: falla de conexión con la base de datos.");
+  }
+  if (error) {
+    console.error('[adminActions] getGrupos error:', error.message);
+    throw new Error("No se pudieron cargar los grupos.");
+  }
   return data ?? [];
 }
 
@@ -159,22 +188,36 @@ export async function getEscuelas(): Promise<EscuelaStats[]> {
   await requireAdminSession();
   const admin = getAdminClient();
 
-  const { data, error } = await admin
-    .from("escuelas")
-    .select("id, nombre, created_at, grupos(id)")
-    .order("created_at", { ascending: false });
-
-  if (error || !data) return [];
+  let data, error;
+  try {
+    ({ data, error } = await withOpTimeout(
+      admin.from("escuelas").select("id, nombre, created_at, grupos(id)").order("created_at", { ascending: false }),
+      "cargar escuelas"
+    ));
+  } catch (err: any) {
+    console.error('[adminActions] getEscuelas timeout/conexión:', err?.message);
+    throw new Error("No se pudieron cargar las escuelas: falla de conexión con la base de datos.");
+  }
+  if (error || !data) {
+    console.error('[adminActions] getEscuelas error:', error?.message);
+    throw new Error("No se pudieron cargar las escuelas.");
+  }
 
   const results: EscuelaStats[] = [];
   for (const e of data as any[]) {
     const grupoIds: string[] = (e.grupos ?? []).map((g: any) => g.id);
     let alumnos_count = 0;
     if (grupoIds.length > 0) {
-      const { count } = await admin
-        .from("alumnos_grupos")
-        .select("*", { count: "exact", head: true })
-        .in("id_grupo", grupoIds);
+      let count;
+      try {
+        ({ count } = await withOpTimeout(
+          admin.from("alumnos_grupos").select("*", { count: "exact", head: true }).in("id_grupo", grupoIds),
+          `conteo de alumnos de ${e.nombre}`
+        ));
+      } catch (err: any) {
+        console.error('[adminActions] getEscuelas conteo timeout/conexión:', err?.message);
+        throw new Error(`No se pudo cargar el conteo de alumnos de '${e.nombre}': falla de conexión con la base de datos.`);
+      }
       alumnos_count = count ?? 0;
     }
     results.push({
@@ -210,11 +253,15 @@ export async function onboardEscuela(
   };
 
   // 1. Crear escuela
-  const { data: escuela, error: escuelaErr } = await admin
-    .from("escuelas")
-    .insert({ nombre: escuelaNombre.trim() })
-    .select("id, nombre")
-    .single();
+  let escuela, escuelaErr;
+  try {
+    ({ data: escuela, error: escuelaErr } = await withOpTimeout(
+      admin.from("escuelas").insert({ nombre: escuelaNombre.trim() }).select("id, nombre").single(),
+      "crear escuela"
+    ));
+  } catch (err: any) {
+    throw new Error(`No se pudo crear la escuela: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+  }
 
   if (escuelaErr || !escuela) {
     throw new Error(`No se pudo crear la escuela: ${escuelaErr?.message}`);
@@ -235,11 +282,18 @@ export async function onboardEscuela(
     const schoolLevel = GRADO_A_SCHOOL_LEVEL[grado] ?? grado;
 
     // Crear grupo
-    const { data: grupo, error: grupoErr } = await admin
-      .from("grupos")
-      .insert({ nombre: grupoNombre, grado, escuela_id: escuela.id })
-      .select("id")
-      .single();
+    let grupo, grupoErr;
+    try {
+      ({ data: grupo, error: grupoErr } = await withOpTimeout(
+        admin.from("grupos").insert({ nombre: grupoNombre, grado, escuela_id: escuela.id }).select("id").single(),
+        `crear grupo ${grupoNombre}`
+      ));
+    } catch (err: any) {
+      for (const m of members) {
+        result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).` });
+      }
+      continue;
+    }
 
     if (grupoErr || !grupo) {
       for (const m of members) {
@@ -258,48 +312,70 @@ export async function onboardEscuela(
       if (!name) continue;
       const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
       try {
-        const { data: authData, error: authErr } = await admin.auth.admin.createUser({
-          email,
-          password: pw,
-          email_confirm: true,
-          user_metadata: { full_name: name, role: "teacher", school_level: schoolLevel, group_id: grupoId },
-        });
+        const { data: authData, error: authErr } = await withOpTimeout(
+          admin.auth.admin.createUser({
+            email,
+            password: pw,
+            email_confirm: true,
+            user_metadata: { full_name: name, role: "teacher", school_level: schoolLevel, group_id: grupoId },
+          }),
+          `crear cuenta de ${name}`
+        );
         if (authErr || !authData?.user) {
           result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
           continue;
         }
         const tid = authData.user.id;
         // Asignar como profesor del grupo (primer profesor del grupo gana)
-        const { data: g } = await admin.from("grupos").select("id_profesor").eq("id", grupoId).single();
+        const { data: g } = await withOpTimeout(
+          admin.from("grupos").select("id_profesor").eq("id", grupoId).single(),
+          `verificar profesor del grupo ${grupoNombre}`
+        );
         if (!g?.id_profesor) {
-          await admin.from("grupos").update({ id_profesor: tid }).eq("id", grupoId);
+          await withOpTimeout(
+            admin.from("grupos").update({ id_profesor: tid }).eq("id", grupoId),
+            `asignar profesor al grupo ${grupoNombre}`
+          );
         }
-        // Vincular a la escuela
-        await admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", tid);
+        // Vincular a la escuela (el trigger handle_new_user siempre crea el profile con role='student')
+        await withOpTimeout(
+          admin.from("profiles").update({ escuela_id: escuela.id, role: "teacher" }).eq("id", tid),
+          `vincular perfil de ${name}`
+        );
         result.results.push({ name, email, grupo: grupoNombre, grado, rol: "teacher" });
       } catch (err: any) {
         result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
       }
     }
 
-    // Crear alumnos (el trigger handle_new_user los vincula a alumnos_grupos via group_id)
+    // Crear alumnos
     for (const s of students) {
       const name = s.nombre.trim();
       if (!name) continue;
       const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
       try {
-        const { data: authData, error: authErr } = await admin.auth.admin.createUser({
-          email,
-          password: pw,
-          email_confirm: true,
-          user_metadata: { full_name: name, role: "student", school_level: schoolLevel, group_id: grupoId },
-        });
+        const { data: authData, error: authErr } = await withOpTimeout(
+          admin.auth.admin.createUser({
+            email,
+            password: pw,
+            email_confirm: true,
+            user_metadata: { full_name: name, role: "student", school_level: schoolLevel, group_id: grupoId },
+          }),
+          `crear cuenta de ${name}`
+        );
         if (authErr || !authData?.user) {
           result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
           continue;
         }
-        // Vincular a la escuela
-        await admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", authData.user.id);
+        // Vincular a la escuela y al grupo (el trigger handle_new_user NO inserta en alumnos_grupos)
+        await withOpTimeout(
+          admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", authData.user.id),
+          `vincular perfil de ${name}`
+        );
+        await withOpTimeout(
+          admin.from("alumnos_grupos").insert({ id_alumno: authData.user.id, id_grupo: grupoId }),
+          `vincular ${name} al grupo ${grupoNombre}`
+        );
         result.results.push({ name, email, grupo: grupoNombre, grado, rol: "student" });
       } catch (err: any) {
         result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });

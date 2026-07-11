@@ -151,27 +151,65 @@ export default function StudentHubV19() {
     }
     loadData();
 
-    // Sincronización periódica cada 30 segundos si hay conexión
-    const syncInterval = setInterval(async () => {
-      if (typeof window !== 'undefined' && navigator.onLine) {
-        setIsSyncing(true);
-        try {
-          const { processSyncQueue } = await import('../../lib/hub');
-          await processSyncQueue();
-        } catch {
-          // silent
-        } finally {
-          setTimeout(() => setIsSyncing(false), 2000); // Dar tiempo visual al usuario
-        }
+    // Sincronización periódica con backoff exponencial + jitter y circuit breaker.
+    // En condiciones normales se comporta igual que antes (reintento cada 30s);
+    // ante fallos repetidos (ej. Supabase saturado o caído) espacía los reintentos
+    // en vez de martillar el backend cada 30s con miles de alumnos conectados a la vez.
+    const SYNC_BASE_DELAY_MS = 30000;
+    const SYNC_MAX_DELAY_MS = 5 * 60 * 1000; // tope de 5 min entre reintentos
+    const CIRCUIT_OPEN_THRESHOLD = 5; // fallos consecutivos para "abrir" el circuito
+    const CIRCUIT_COOLDOWN_MS = 5 * 60 * 1000; // pausa mientras el circuito está abierto
+
+    let cancelled = false;
+    let syncTimeoutId: ReturnType<typeof setTimeout> | null = null;
+    let consecutiveFailures = 0;
+
+    const scheduleSync = (delay: number) => {
+      if (cancelled) return;
+      syncTimeoutId = setTimeout(runSync, delay);
+    };
+
+    const runSync = async () => {
+      if (cancelled) return;
+      if (typeof window === 'undefined' || !navigator.onLine) {
+        scheduleSync(SYNC_BASE_DELAY_MS);
+        return;
       }
-    }, 30000);
+      setIsSyncing(true);
+      try {
+        const { processSyncQueue } = await import('../../lib/hub');
+        const result = await processSyncQueue();
+        if (result.ok) {
+          consecutiveFailures = 0;
+          scheduleSync(SYNC_BASE_DELAY_MS);
+        } else {
+          consecutiveFailures++;
+          if (consecutiveFailures >= CIRCUIT_OPEN_THRESHOLD) {
+            console.warn(`[SyncEngine] Circuito abierto tras ${consecutiveFailures} fallos consecutivos — próximo intento en ${CIRCUIT_COOLDOWN_MS / 1000}s`);
+            scheduleSync(CIRCUIT_COOLDOWN_MS);
+          } else {
+            const backoff = Math.min(SYNC_BASE_DELAY_MS * 2 ** consecutiveFailures, SYNC_MAX_DELAY_MS);
+            const withJitter = backoff * (0.5 + Math.random() * 0.5); // 50%-100% del backoff, evita que todos los clientes reintenten al mismo tiempo
+            scheduleSync(withJitter);
+          }
+        }
+      } catch {
+        consecutiveFailures++;
+        scheduleSync(Math.min(SYNC_BASE_DELAY_MS * 2 ** consecutiveFailures, SYNC_MAX_DELAY_MS));
+      } finally {
+        setTimeout(() => setIsSyncing(false), 2000); // Dar tiempo visual al usuario
+      }
+    };
+
+    scheduleSync(SYNC_BASE_DELAY_MS);
 
     // Listener para cambios en localStorage (simulador de grado)
     const handleStorage = () => loadData();
     window.addEventListener('storage', handleStorage);
     return () => {
       window.removeEventListener('storage', handleStorage);
-      clearInterval(syncInterval);
+      cancelled = true;
+      if (syncTimeoutId) clearTimeout(syncTimeoutId);
     };
   }, [router]);
 
@@ -692,24 +730,6 @@ export default function StudentHubV19() {
              </div>
           </div>
         </header>
-
-        {/* JUEGO BANNER — visible inmediatamente al entrar al hub */}
-        <div
-          id="juego-financiero"
-          className="mx-20 mt-16 mb-0 p-16 rounded-[48px] flex items-center justify-between cursor-pointer transition-all hover:scale-[1.01] border"
-          style={{ background:'linear-gradient(135deg,#854d0e 0%,#a16207 50%,#854d0e 100%)', borderColor:'rgba(253,224,71,0.4)', boxShadow:'0 20px 60px rgba(234,179,8,0.5)' }}
-          onClick={() => { playSFX('click'); setShowGame(true); }}
-        >
-          <div>
-            <div className="text-xs font-black uppercase tracking-[0.4em] text-yellow-300 mb-3">🎮 Actividad Bono</div>
-            <div className="text-5xl font-black text-white mb-2">Juego Financiero</div>
-            <div className="text-lg text-white/60 mb-6">Pon en práctica lo aprendido · +200 XP</div>
-            <div className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-white text-sm uppercase tracking-widest" style={{ background:'rgba(255,255,255,0.15)' }}>
-              <Play size={18} fill="white" /> Jugar Ahora
-            </div>
-            {gameCompleted && <span className="ml-4 text-green-300 font-black text-sm">✓ ¡Completado!</span>}
-          </div>
-        </div>
 
         {/* PILLARS SECTION */}
         <section className="pillars-section">

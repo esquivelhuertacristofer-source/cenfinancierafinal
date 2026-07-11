@@ -6,8 +6,9 @@ import { supabase } from "@/lib/supabase-browser";
 import { loginAction } from "@/app/actions/authActions";
 import Link from "next/link";
 import Image from "next/image";
-import { TEST_ACCOUNTS } from "../../lib/hub";
+import { TEST_ACCOUNTS, reclaimGuestProgress } from "../../lib/hub";
 import FooterLegal from "../../components/FooterLegal";
+import SupabaseStatusBanner from "../../components/SupabaseStatusBanner";
 
 /**
  * @component LoginPage
@@ -62,6 +63,16 @@ export default function LoginPage() {
             // Clear any previous test profile on real successful login
             localStorage.removeItem('cen_test_profile');
 
+            // Reclamo del progreso guardado en Modo Práctica (si lo hay), best-effort
+            try {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (user) {
+                    await reclaimGuestProgress(user.id);
+                }
+            } catch {
+                // silencioso: nunca debe bloquear el login real
+            }
+
             // Redirect based on role returned by Server Action
             if (result.role === "teacher") {
                 window.location.href = "/dashboard/teacher";
@@ -78,6 +89,7 @@ export default function LoginPage() {
 
     return (
         <div className="min-h-screen w-full flex flex-col bg-[#F8F9FB] font-epilogue">
+        <SupabaseStatusBanner />
         <div className="flex flex-1">
             {/* LEFT SIDE: Branding & Illustration (Hidden on mobile) */}
             <div className="hidden lg:flex w-1/2 relative bg-gradient-to-br from-[#011C40] to-[#011126] overflow-hidden flex-col justify-between p-12 lg:p-16">
@@ -225,6 +237,9 @@ export default function LoginPage() {
                     <div className="mt-12 pt-8 border-t border-[#E2E8F0] text-center">
                         <p className="text-sm font-semibold text-[#64748B]">
                             ¿No tienes cuenta? <Link href="/#niveles" className="text-[#FF8C00] font-bold hover:underline">Explora nuestros niveles</Link>
+                        </p>
+                        <p className="text-xs text-[#94A3B8] font-medium mt-3">
+                            ¿Sin acceso o sin conexión? <Link href="/practica" className="text-[#64748B] font-bold hover:underline hover:text-[#FF8C00]">Continúa en Modo Práctica →</Link>
                         </p>
                     </div>
                 </div>

@@ -33,6 +33,8 @@ interface Profile {
 
 export default function TeacherDashboard() {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
   const [teacherData, setTeacherData] = useState<Profile | null>(null);
   const [teacherGroupIds, setTeacherGroupIds] = useState<string[]>([]);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -41,6 +43,7 @@ export default function TeacherDashboard() {
 
   useEffect(() => {
     const initDashboard = async () => {
+      setError(false);
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) { router.push("/log-in"); return; }
@@ -68,15 +71,32 @@ export default function TeacherDashboard() {
           if (grupos.some((g: any) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
         }
       } catch {
-        // silent
+        setError(true);
       } finally {
         setLoading(false);
       }
     };
     initDashboard();
-  }, [router]);
+  }, [router, retryKey]);
 
   const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+
+  if (error) return (
+    <div className={`min-h-screen flex items-center justify-center font-['Epilogue'] transition-colors duration-700 ${theme === 'dark' ? 'bg-[#011C40]' : 'bg-[#F4F1EA]'}`}>
+      <div className="flex flex-col items-center gap-6 text-center max-w-md px-6">
+        <p className={`text-lg font-black ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>No pudimos conectar con el servidor</p>
+        <p className={`text-sm font-medium ${theme === 'dark' ? 'text-white/50' : 'text-[#011C40]/50'}`}>
+          Puede ser una interrupción temporal del servicio. Tu sesión sigue activa; intenta de nuevo en unos segundos.
+        </p>
+        <button
+          onClick={() => { setLoading(true); setRetryKey((k) => k + 1); }}
+          className="px-6 py-3 rounded-2xl font-black text-sm bg-[#FF8C00] text-[#011C40] hover:brightness-110 transition-all"
+        >
+          Reintentar
+        </button>
+      </div>
+    </div>
+  );
 
   if (loading) return (
     <div className={`min-h-screen flex items-center justify-center font-['Epilogue'] transition-colors duration-700 ${theme === 'dark' ? 'bg-[#011C40]' : 'bg-[#F4F1EA]'}`}>

@@ -181,6 +181,8 @@ export default function AdminEscuelasPage() {
   // Auth
   const [isAdmin, setIsAdmin] = useState(false);
   const [authLoading, setAuthLoading] = useState(true);
+  const [authError, setAuthError] = useState(false);
+  const [authRetryKey, setAuthRetryKey] = useState(0);
 
   // Form
   const [escuelaNombre, setEscuelaNombre] = useState("");
@@ -200,29 +202,39 @@ export default function AdminEscuelasPage() {
   // ── Auth guard ────────────────────────────────────────────────────────────
   useEffect(() => {
     const check = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { router.push("/log-in"); return; }
-      const { data: profile } = await supabase
-        .from("profiles")
-        .select("role")
-        .eq("id", user.id)
-        .single();
-      if (!profile || !["admin", "super_admin"].includes(profile.role)) {
-        router.push("/");
-        return;
+      setAuthError(false);
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) { router.push("/log-in"); return; }
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", user.id)
+          .single();
+        if (!profile || !["admin", "super_admin"].includes(profile.role)) {
+          router.push("/");
+          return;
+        }
+        setIsAdmin(true);
+        setAuthLoading(false);
+      } catch {
+        setAuthError(true);
+        setAuthLoading(false);
       }
-      setIsAdmin(true);
-      setAuthLoading(false);
     };
     check();
-  }, [router]);
+  }, [router, authRetryKey]);
 
   // ── Cargar escuelas existentes ────────────────────────────────────────────
+  const [escuelasError, setEscuelasError] = useState(false);
   const cargarEscuelas = useCallback(async () => {
     setLoadingEscuelas(true);
+    setEscuelasError(false);
     try {
       const data = await getEscuelas();
       setEscuelas(data);
+    } catch {
+      setEscuelasError(true);
     } finally {
       setLoadingEscuelas(false);
     }
@@ -332,6 +344,22 @@ export default function AdminEscuelasPage() {
     return (
       <div className="min-h-screen bg-[#011C40] flex items-center justify-center">
         <Loader2 className="w-10 h-10 text-[#42E8E0] animate-spin" />
+      </div>
+    );
+  }
+
+  if (authError) {
+    return (
+      <div className="min-h-screen bg-[#011C40] flex flex-col items-center justify-center gap-6 px-6 text-center">
+        <p className="text-white/60 font-bold uppercase tracking-widest text-sm">
+          No pudimos verificar tu sesión. Puede ser una falla temporal de conexión.
+        </p>
+        <button
+          onClick={() => { setAuthLoading(true); setAuthRetryKey((k) => k + 1); }}
+          className="px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest bg-[#42E8E0] text-[#011C40] hover:brightness-110 transition-all"
+        >
+          Reintentar
+        </button>
       </div>
     );
   }
@@ -722,6 +750,17 @@ export default function AdminEscuelasPage() {
               {loadingEscuelas ? (
                 <div className="flex flex-col items-center py-8 gap-3">
                   <Loader2 className="w-8 h-8 text-[#011C40] animate-spin" />
+                </div>
+              ) : escuelasError ? (
+                <div className="py-10 text-center space-y-4">
+                  <Building2 className="w-10 h-10 text-slate-200 mx-auto" />
+                  <p className="text-sm text-slate-400 font-medium">No pudimos cargar la lista de escuelas.</p>
+                  <button
+                    onClick={() => cargarEscuelas()}
+                    className="px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest bg-[#011C40] text-white hover:brightness-110 transition-all"
+                  >
+                    Reintentar
+                  </button>
                 </div>
               ) : escuelas.length === 0 ? (
                 <div className="py-10 text-center space-y-3">

@@ -454,7 +454,7 @@ export function getGradeMetadata(grade: number, schoolLevel: string = 'primary')
   };
 }
 
-function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+export function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
   return Promise.race([
     promise,
     new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms)),
@@ -522,6 +522,46 @@ export async function markActivityComplete(
 }
 
 /**
+ * Modo Práctica (Invitado)
+ * Progreso guardado solo en este dispositivo cuando no hay sesión real
+ * (ej. Supabase caído o el alumno aún no tiene cuenta). Se reclama hacia
+ * la cuenta real al iniciar sesión, vía markActivityComplete.
+ */
+const GUEST_PROGRESS_KEY = 'cen_guest_progress';
+
+function getGuestProgressRaw(): string[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const saved = localStorage.getItem(GUEST_PROGRESS_KEY);
+    const parsed = saved ? JSON.parse(saved) : [];
+    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function getGuestCompletedActivities(): Set<string> {
+  return new Set(getGuestProgressRaw());
+}
+
+export function markGuestActivityComplete(activityId: string) {
+  if (typeof window === 'undefined') return;
+  const current = getGuestProgressRaw();
+  if (!current.includes(activityId)) {
+    current.push(activityId);
+    localStorage.setItem(GUEST_PROGRESS_KEY, JSON.stringify(current));
+  }
+}
+
+export async function reclaimGuestProgress(realUserId: string): Promise<number> {
+  const pending = getGuestProgressRaw();
+  if (pending.length === 0) return 0;
+  await Promise.all(pending.map((activityId) => markActivityComplete(realUserId, activityId)));
+  localStorage.removeItem(GUEST_PROGRESS_KEY);
+  return pending.length;
+}
+
+/**
  * Cola de Sincronización Local (Offline Resilience)
  */
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -580,10 +620,12 @@ function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
   }
 }
 
-export async function processSyncQueue() {
-  if (typeof window === 'undefined') return;
+export type SyncQueueResult = { ok: boolean; synced: number; failed: number; remaining: number };
+
+export async function processSyncQueue(): Promise<SyncQueueResult> {
+  if (typeof window === 'undefined') return { ok: true, synced: 0, failed: 0, remaining: 0 };
   const queue = getSyncQueue();
-  if (queue.length === 0) return;
+  if (queue.length === 0) return { ok: true, synced: 0, failed: 0, remaining: 0 };
 
   // Determinar estado de sesión para contexto de log
   let userContext = 'desconocido';
@@ -615,6 +657,7 @@ export async function processSyncQueue() {
   const failed = error ? queue.length : 0;
   console.info(`[SyncEngine] Resultado: ${synced} sincronizados, ${failed} fallidos, ${remaining.length} en cola`);
   localStorage.setItem('cen_sync_queue', JSON.stringify(remaining));
+  return { ok: !error, synced, failed, remaining: remaining.length };
 }
 
 export async function getCurrentProfile(): Promise<UserProfile | null> {
