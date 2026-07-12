@@ -21,7 +21,7 @@ export async function getActivityData(activityId: string) {
 
     const data = await response.json();
 
-    if (!data || (!data.tipo && !data.code)) {
+    if (!data || (!data.tipo && !data.code && !data.id && !data.type)) {
       return null;
     }
 
