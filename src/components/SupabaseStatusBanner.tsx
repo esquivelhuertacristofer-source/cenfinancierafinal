@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { supabase } from '../lib/supabase-browser';
 
 const CHECK_INTERVAL_MS = 15000;
 const CHECK_TIMEOUT_MS = 4000;
 const FAILURES_TO_ALERT = 2;
 
-async function pingSupabase(): Promise<boolean> {
+async function pingSupabase(variant: 'guest' | 'authenticated'): Promise<boolean> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !anonKey) return true; // no se puede verificar, no bloquear la UI con una alarma falsa
@@ -15,13 +16,18 @@ async function pingSupabase(): Promise<boolean> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), CHECK_TIMEOUT_MS);
   try {
-    // Verifica Auth y PostgREST (capa de datos) en paralelo — cualquiera de las dos
-    // caído significa que el alumno/profesor no puede operar con normalidad.
-    const [authRes, dataRes] = await Promise.all([
-      fetch(`${url}/auth/v1/health`, { signal: controller.signal, cache: 'no-store', headers: { apikey: anonKey } }),
-      fetch(`${url}/rest/v1/`, { signal: controller.signal, cache: 'no-store', headers: { apikey: anonKey } }),
-    ]);
-    return authRes.ok && dataRes.ok;
+    if (variant === 'guest') {
+      // Pre-login no hay sesión de usuario, y todas las tablas exigen RLS con
+      // auth.uid() (ninguna política admite el rol anon) — pingear /rest/v1/
+      // con la anon key nunca puede tener éxito y solo generaría falsos positivos.
+      // GoTrue (login) es lo único verificable en este punto.
+      const authRes = await fetch(`${url}/auth/v1/health`, { signal: controller.signal, cache: 'no-store', headers: { apikey: anonKey } });
+      return authRes.ok;
+    }
+    // Autenticado: usamos el cliente real (con la sesión del usuario) para probar
+    // la ruta de lectura de la que depende la app, no solo si el gateway responde.
+    const { error } = await supabase.from('profiles').select('id').limit(1).abortSignal(controller.signal);
+    return !error;
   } catch {
     return false;
   } finally {
@@ -43,7 +49,7 @@ export default function SupabaseStatusBanner({ variant = 'guest' }: SupabaseStat
     let consecutiveFailures = 0;
 
     const check = async () => {
-      const ok = await pingSupabase();
+      const ok = await pingSupabase(variant);
       if (cancelled) return;
       consecutiveFailures = ok ? 0 : consecutiveFailures + 1;
       if (consecutiveFailures >= FAILURES_TO_ALERT) {
@@ -59,7 +65,7 @@ export default function SupabaseStatusBanner({ variant = 'guest' }: SupabaseStat
       cancelled = true;
       clearInterval(intervalId);
     };
-  }, []);
+  }, [variant]);
 
   if (!showBanner || dismissed) return null;
 
