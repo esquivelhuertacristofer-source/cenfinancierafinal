@@ -25,12 +25,9 @@
     "enabled": true
   },
   // Fix 4 (escalabilidad): rate limiter de login compartido entre isolates/regiones
-  // (ver src/lib/rate-limiter.ts). Crear el namespace con
-  // `npx wrangler kv namespace create RATE_LIMIT_KV` y reemplazar el id de abajo
-  // con el que devuelva ese comando antes de desplegar — el placeholder actual
-  // hará que el binding falle en producción hasta hacerlo.
+  // (ver src/lib/rate-limiter.ts).
   "kv_namespaces": [
-    { "binding": "RATE_LIMIT_KV", "id": "REPLACE_WITH_REAL_KV_NAMESPACE_ID" }
+    { "binding": "RATE_LIMIT_KV", "id": "8ede628e17004471b6301940af3f43b4" }
   ],
   // Caché ISR/data-cache de Next.js sobre R2 se puede activar después.
   // Para el primer deploy la caché en memoria del Worker es suficiente.
