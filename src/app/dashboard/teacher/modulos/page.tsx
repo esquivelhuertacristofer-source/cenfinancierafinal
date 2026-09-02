@@ -161,6 +161,19 @@ export default function ModulosPage() {
     getPillarsForGrade(parseInt(numStr), level).then(setPillarsForGrade);
   }, [selectedGrade]);
 
+  // "Abrir Módulo" y las etiquetas de contenido llevan al planeamiento de esa
+  // unidad. El grado se deduce del propio código (P1-1-6 -> p1).
+  const TAB_POR_CONTENIDO: Record<string, string> = {
+    quiz: "evaluacion",
+    reading: "teoria",
+    guide: "teoria",
+  };
+  const abrirUnidad = (code: string, tipoContenido?: string) => {
+    const grado = code.split("-")[0].toLowerCase();
+    const tab = tipoContenido ? TAB_POR_CONTENIDO[tipoContenido] ?? "estrategia" : "estrategia";
+    router.push(`/dashboard/teacher/planeamiento?grado=${grado}&unidad=${code}&tab=${tab}`);
+  };
+
   const CONTENT_COLORS: Record<string, string> = {
     video:     `text-[#011C40] ${theme === 'dark' ? 'bg-white/10' : 'bg-[#011C40]/5'} border-current`,
     reading:   "text-[#42E8E0] bg-[#42E8E0]/10 border-[#42E8E0]/20",
@@ -209,7 +222,13 @@ export default function ModulosPage() {
                   <Library className="w-4 h-4 text-[#42E8E0]" />
                   <div className="flex flex-col">
                      <span className={`text-[9px] font-black uppercase tracking-widest ${theme === 'dark' ? 'text-white/30' : 'text-slate-400'}`}>Bóveda</span>
-                     <span className={`text-[10px] font-black leading-none ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>240 Módulos</span>
+                     {/* Contador real: antes decía "240 Módulos" fijo y quedó
+                         desfasado al ampliar el temario. */}
+                     <span className={`text-[10px] font-black leading-none ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
+                       {selectedGrade
+                         ? `${pillarsForGrade.reduce((n, p) => n + p.units.length, 0)} Módulos`
+                         : `${PREMIUM_GRADES.length} Grados`}
+                     </span>
                   </div>
                 </div>
              </div>
@@ -459,18 +478,21 @@ export default function ModulosPage() {
                                   {unit.contents.map((c) => {
                                     const Icon = CONTENT_ICONS[c.type] ?? BookOpen;
                                     return (
-                                      <div
+                                      <button
                                         key={c.type}
-                                        className={`flex items-center gap-3 rounded-2xl px-5 py-2.5 text-[10px] font-black uppercase tracking-widest border transition-all hover:scale-105 ${CONTENT_COLORS[c.type]}`}
+                                        onClick={() => abrirUnidad(unit.code, c.type)}
+                                        className={`flex items-center gap-3 rounded-2xl px-5 py-2.5 text-[10px] font-black uppercase tracking-widest border transition-all hover:scale-105 cursor-pointer ${CONTENT_COLORS[c.type]}`}
                                       >
                                         <Icon className="h-4 w-4" />
                                         {c.label}
-                                      </div>
+                                      </button>
                                     );
                                   })}
                                 </div>
                               </div>
-                              <button className={`px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all shadow-xl active:scale-95 ${
+                              <button
+                                onClick={() => abrirUnidad(unit.code)}
+                                className={`px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all shadow-xl active:scale-95 cursor-pointer ${
                                 theme === 'dark' ? 'bg-white text-[#011C40] hover:bg-[#42E8E0]' : 'bg-[#011C40] text-white hover:bg-[#FF8C00]'
                               }`}>
                                  Abrir Módulo

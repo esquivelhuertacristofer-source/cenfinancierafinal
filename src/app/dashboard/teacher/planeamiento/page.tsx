@@ -21,6 +21,19 @@ import {
   Sparkles,
   Info
 } from "lucide-react";
+// Deep-link desde "Módulos CEN": ?grado=s1&unidad=S1-1-6&tab=teoria
+// Se lee de window.location en vez de useSearchParams para no forzar a esta
+// página a renderizado dinámico (hoy se prerenderiza como estática).
+function paramsDeUrl() {
+  if (typeof window === "undefined") return {} as Record<string, string>;
+  const q = new URLSearchParams(window.location.search);
+  return {
+    grado: (q.get("grado") || "").toLowerCase(),
+    unidad: (q.get("unidad") || "").toUpperCase(),
+    tab: (q.get("tab") || "").toLowerCase(),
+  };
+}
+
 export default function PlaneamientoPage() {
   const [selectedGrade, setSelectedGrade] = useState<string>("p1");
   const [activeTab, setActiveTab] = useState<"estrategia" | "teoria" | "evaluacion">("estrategia");
@@ -28,6 +41,15 @@ export default function PlaneamientoPage() {
   const mounted = useHasMounted();
   const [currentData, setCurrentData] = useState<any | null>(null);
   const [activeUnit, setActiveUnit] = useState<any>(null);
+  // Unidad pedida por URL; se aplica cuando termina de cargar el grado.
+  const [unidadPedida, setUnidadPedida] = useState<string>("");
+
+  useEffect(() => {
+    const { grado, unidad, tab } = paramsDeUrl();
+    if (/^[ps][1-6]$/.test(grado)) setSelectedGrade(grado);
+    if (unidad) setUnidadPedida(unidad);
+    if (tab === "teoria" || tab === "evaluacion" || tab === "estrategia") setActiveTab(tab);
+  }, []);
 
   // Los JSON de pedagogía (~2 MB) ya no se importan en el bundle: se sirven
   // como assets estáticos desde public/data (límite de 3 MiB gzip del Worker).
@@ -39,11 +61,11 @@ export default function PlaneamientoPage() {
       .then((data) => {
         if (cancelled || !data) return;
         setCurrentData(data);
-        setActiveUnit(Object.values(data)[0]);
+        setActiveUnit(data[unidadPedida] ?? Object.values(data)[0]);
       })
       .catch(() => {});
     return () => { cancelled = true; };
-  }, [selectedGrade]);
+  }, [selectedGrade, unidadPedida]);
 
   if (!mounted || !currentData) return null;
 
