@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-2-8-A",
+  "unit_code": "S2-2-8",
+  "unit_title": "Fondo de emergencia avanzado: dónde guardarlo para que rinda",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Fondo Por Capas",
+  "descripcion": "Clasifica cada instrumento según a qué capa del fondo pertenece.",
+  "objetivo": "Asignar instrumentos a capas de liquidez según su disponibilidad",
+  "xp": 500,
+  "instruccion": "Arrastra cada opción a la capa donde tiene sentido colocarla.",
+  "categorias": [
+    {
+      "id": "inmediata",
+      "label": "Capa 1: disponible hoy",
+      "emoji": "⚡",
+      "color": "#EF4444"
+    },
+    {
+      "id": "dias",
+      "label": "Capa 2: pocos días",
+      "emoji": "📅",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "nunca",
+      "label": "No va en el fondo",
+      "emoji": "🚫",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Saldo en cuenta con tarjeta de débito",
+      "emoji": "💳",
+      "categoria_correcta": "inmediata",
+      "feedback": "Disponible en minutos: perfecto para la primera capa."
+    },
+    {
+      "id": "i2",
+      "label": "Instrumento gubernamental a 28 días",
+      "emoji": "🏛️",
+      "categoria_correcta": "dias",
+      "feedback": "Rinde y se puede liquidar en un plazo razonable."
+    },
+    {
+      "id": "i3",
+      "label": "Acciones de una empresa",
+      "emoji": "📈",
+      "categoria_correcta": "nunca",
+      "feedback": "Su valor puede caer justo cuando necesitas el dinero."
+    },
+    {
+      "id": "i4",
+      "label": "Fondo de inversión de liquidez diaria",
+      "emoji": "💧",
+      "categoria_correcta": "dias",
+      "feedback": "Buena combinación de rendimiento y disponibilidad."
+    },
+    {
+      "id": "i5",
+      "label": "Algo de efectivo en casa",
+      "emoji": "💵",
+      "categoria_correcta": "inmediata",
+      "feedback": "Poco monto, para lo que no admite ni un cajero."
+    },
+    {
+      "id": "i6",
+      "label": "Pagaré con plazo forzoso a un año",
+      "emoji": "🔒",
+      "categoria_correcta": "nunca",
+      "feedback": "La penalización por salida anticipada rompe la función del fondo."
+    },
+    {
+      "id": "i7",
+      "label": "Criptomonedas",
+      "emoji": "🪙",
+      "categoria_correcta": "nunca",
+      "feedback": "Demasiada variación de valor para un fondo de emergencia."
+    },
+    {
+      "id": "i8",
+      "label": "Cuenta de ahorro con retiro sin penalización",
+      "emoji": "🏦",
+      "categoria_correcta": "dias",
+      "feedback": "Menos rendimiento que otras opciones, pero muy accesible."
+    },
+    {
+      "id": "i9",
+      "label": "La misma cuenta donde llega el sueldo y se pagan gastos",
+      "emoji": "🌀",
+      "categoria_correcta": "nunca",
+      "feedback": "Mezclado con el gasto diario, el fondo desaparece en meses."
+    },
+    {
+      "id": "i10",
+      "label": "Aportaciones voluntarias al retiro",
+      "emoji": "👵",
+      "categoria_correcta": "nunca",
+      "feedback": "Excelente instrumento, pero su función es otra por completo."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-8-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-8-a-escena.webp"
+}

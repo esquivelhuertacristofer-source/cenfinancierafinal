@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-2-6-B",
+  "unit_code": "S3-2-6",
+  "unit_title": "RESICO: mi primera decisión fiscal como joven que ya cobra",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Elegir Régimen",
+  "descripcion": "Comprueba que entiendes la lógica de la decisión fiscal.",
+  "objetivo": "Verificar la comprensión de los regímenes fiscales para personas físicas",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El régimen fiscal determina:",
+      "opciones": [
+        "Solo el nombre del contribuyente",
+        "Cuánto se paga, cómo se declara y qué se deduce",
+        "La ciudad de operación",
+        "El tipo de cliente"
+      ],
+      "correcta": 1,
+      "explicacion": "También cuánta contabilidad hay que llevar."
+    },
+    {
+      "id": "q2",
+      "texto": "El régimen simplificado está pensado para:",
+      "opciones": [
+        "Grandes empresas",
+        "Solo empleados",
+        "Personas físicas bajo cierto umbral de ingreso",
+        "Extranjeros"
+      ],
+      "correcta": 2,
+      "explicacion": "Tasas bajas y obligaciones reducidas."
+    },
+    {
+      "id": "q3",
+      "texto": "Su contrapartida es que:",
+      "opciones": [
+        "Paga más",
+        "No se puede facturar",
+        "Exige contabilidad completa",
+        "Prácticamente no permite deducir gastos"
+      ],
+      "correcta": 3,
+      "explicacion": "Calcula sobre ingresos, no sobre utilidad."
+    },
+    {
+      "id": "q4",
+      "texto": "Le conviene a quien:",
+      "opciones": [
+        "Tiene gastos bajos respecto a lo que factura",
+        "Tiene gastos altos",
+        "No factura",
+        "Tiene empleados"
+      ],
+      "correcta": 0,
+      "explicacion": "Si casi todo lo que cobras es ganancia, la tasa baja gana."
+    },
+    {
+      "id": "q5",
+      "texto": "El régimen sobre utilidad calcula el impuesto:",
+      "opciones": [
+        "Sobre los ingresos",
+        "Sobre ingresos menos deducciones autorizadas",
+        "Sobre el capital",
+        "Sobre las ventas brutas"
+      ],
+      "correcta": 1,
+      "explicacion": "Se paga sobre lo que realmente ganaste."
+    },
+    {
+      "id": "q6",
+      "texto": "Ese régimen conviene a quien:",
+      "opciones": [
+        "No gasta nada",
+        "Es empleado",
+        "Tiene costos altos",
+        "No factura"
+      ],
+      "correcta": 2,
+      "explicacion": "Poder deducir compensa las obligaciones adicionales."
+    },
+    {
+      "id": "q7",
+      "texto": "Elegir mal el régimen:",
+      "opciones": [
+        "No tiene consecuencias",
+        "Es imposible",
+        "Lo corrige el sistema",
+        "Puede significar pagar de más u obligaciones desproporcionadas"
+      ],
+      "correcta": 3,
+      "explicacion": "Cambiar después es posible pero implica trámites."
+    },
+    {
+      "id": "q8",
+      "texto": "Las tasas y umbrales vigentes se consultan:",
+      "opciones": [
+        "En la fuente oficial, porque cambian con las reformas",
+        "En redes sociales",
+        "Con un conocido",
+        "No se pueden consultar"
+      ],
+      "correcta": 0,
+      "explicacion": "La lógica permanece; las cifras cambian."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-6-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-6-b-escena.webp"
+}

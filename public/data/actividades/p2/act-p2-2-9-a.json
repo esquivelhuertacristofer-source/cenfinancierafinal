@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P2-2-9-A",
+  "unit_code": "P2-2-9",
+  "unit_title": "Prestar a un amigo: acordar cuándo me lo devuelve",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "El Vale de Ceny",
+  "descripcion": "Un amigo le pidió dinero prestado a Ceny. Completa el acuerdo para que nadie salga perdiendo.",
+  "objetivo": "Redactar un acuerdo de préstamo con los elementos indispensables",
+  "xp": 250,
+  "contexto": "Un compañero le pidió $30 a Ceny en el recreo. Antes de dárselos, Ceny escribe el acuerdo.",
+  "texto": "Le voy a prestar $30 a mi amigo, pero antes vamos a acordar tres cosas. La primera es la __blank1__: treinta pesos exactos. La segunda es la __blank2__ en que me los va a devolver, porque prestar sin eso es casi lo mismo que __blank3__. La tercera es que los dos vamos a poner nuestro __blank4__ en el papelito. Hacer esto no es __blank5__: es cuidar nuestra amistad, porque lo que enfría a los amigos es la incomodidad de no saber. Si llega el día y no me paga, se lo voy a __blank6__ con calma, sin acusarlo, porque casi siempre solo se le __blank7__. Y antes de prestar reviso una cosa importante: nunca presto dinero que ya __blank8__ destino en mi meta.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "cantidad",
+        "hora",
+        "razón"
+      ],
+      "respuesta": "cantidad"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "fecha",
+        "firma",
+        "moneda"
+      ],
+      "respuesta": "fecha"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "regalar",
+        "ahorrar",
+        "invertir"
+      ],
+      "respuesta": "regalar"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "nombre",
+        "dinero",
+        "juguete"
+      ],
+      "respuesta": "nombre"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "desconfianza",
+        "amistad",
+        "ahorro"
+      ],
+      "respuesta": "desconfianza"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "recordar",
+        "gritar",
+        "ocultar"
+      ],
+      "respuesta": "recordar"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "olvidó",
+        "perdió",
+        "rompió"
+      ],
+      "respuesta": "olvidó"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "tiene",
+        "perdió",
+        "gastó"
+      ],
+      "respuesta": "tiene"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-9-a-escena.webp"
+}

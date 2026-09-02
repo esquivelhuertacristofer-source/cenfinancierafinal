@@ -5,122 +5,91 @@
   "level": "Secundaria 3",
   "edad": "14-15 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "El Mundo de los Derivados",
-  "descripcion": "¿Puedes hablar el lenguaje de los grandes tesoreros y especuladores? ¡Demuéstralo!",
-  "objetivo": "Identificar los componentes y tipos de contratos derivados financieros y su utilidad en el mercado global",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "El Negocio del Ladrillo",
+  "descripcion": "Contra el reloj: los números que separan una buena inversión inmobiliaria de una mala, en el mercado mexicano.",
+  "objetivo": "Comprender los indicadores clave de la inversión inmobiliaria y los mitos más costosos del sector.",
+  "xp": 650,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "der1",
-      "pregunta": "¿Qué es un 'Activo Subyacente'?",
-      "respuesta_correcta": "El activo real (oro, petróleo, acciones, dólar) del cual el contrato derivado obtiene su valor",
+      "id": "t1",
+      "pregunta": "\"El ladrillo nunca baja\" es…",
+      "respuesta_correcta": "Un mito: los precios inmobiliarios sí caen y pueden tardar años en recuperarse",
       "incorrectas": [
-        "Un tipo de contrato",
-        "La firma del dueño",
-        "Un activo que no vale nada"
+        "Una verdad comprobada",
+        "Una ley",
+        "Cierto solo en México"
       ],
-      "dato_extra": "Se llama 'derivado' porque su precio deriva de algo más."
+      "dato_extra": "En México hubo caídas reales tras 1995 y en varias zonas turísticas después de 2008."
     },
     {
-      "id": "der2",
-      "pregunta": "¿Cuál es la diferencia principal entre un Futuro y una Opción?",
-      "respuesta_correcta": "El Futuro es una OBLIGACIÓN de comprar/vender; la Opción es un DERECHO pero no una obligación",
+      "id": "t2",
+      "pregunta": "El rendimiento neto por rentas en México suele estar…",
+      "respuesta_correcta": "Entre 3% y 6% anual, después de gastos",
       "incorrectas": [
-        "No hay diferencia",
-        "Los futuros son solo para comida",
-        "Las opciones son gratis"
+        "Arriba del 20%",
+        "Siempre en 15%",
+        "En 1%"
       ],
-      "dato_extra": "En una opción, puedes decidir no usarla si el precio no te conviene."
+      "dato_extra": "Hay que compararlo con los CETES, que no exigen inquilinos ni reparaciones."
     },
     {
-      "id": "der3",
-      "pregunta": "¿Qué es una Opción 'CALL'?",
-      "respuesta_correcta": "Un contrato que te da el derecho de COMPRAR un activo a un precio fijo en el futuro",
+      "id": "t3",
+      "pregunta": "La \"vacancia\" es…",
+      "respuesta_correcta": "El tiempo que el inmueble está sin rentar",
       "incorrectas": [
-        "Un contrato para vender",
-        "Una llamada telefónica al banco",
-        "Un tipo de préstamo"
+        "Un impuesto",
+        "Un tipo de crédito",
+        "Una comisión"
       ],
-      "dato_extra": "Se usa cuando esperas que el precio suba."
+      "dato_extra": "Es el costo que casi nadie presupuesta y el que más desvía los cálculos."
     },
     {
-      "id": "der4",
-      "pregunta": "¿Qué es una Opción 'PUT'?",
-      "respuesta_correcta": "Un contrato que te da el derecho de VENDER un activo a un precio fijo (funciona como un seguro contra caídas)",
+      "id": "t4",
+      "pregunta": "Una FIBRA es…",
+      "respuesta_correcta": "Un vehículo que invierte en inmuebles y cotiza en la Bolsa",
       "incorrectas": [
-        "Un contrato para comprar",
-        "Invertir en petróleo",
-        "Una deuda"
+        "Un tipo de hipoteca",
+        "Un crédito",
+        "Un seguro"
       ],
-      "dato_extra": "Los inversionistas compran 'Puts' para protegerse si creen que la bolsa va a caer."
+      "dato_extra": "Permite invertir en bienes raíces desde montos pequeños y con liquidez diaria."
     },
     {
-      "id": "der5",
-      "pregunta": "¿Qué es el 'Strike Price' (Precio de Ejercicio)?",
-      "respuesta_correcta": "El precio fijado en el contrato al cual se podrá comprar o vender el activo subyacente",
+      "id": "t5",
+      "pregunta": "La \"plusvalía\" de un inmueble…",
+      "respuesta_correcta": "No es ingreso hasta que vendes: es una expectativa",
       "incorrectas": [
-        "El precio de hoy",
-        "La ganancia final",
-        "El precio de la prima"
+        "Se cobra cada año",
+        "Está garantizada",
+        "La paga el gobierno"
       ],
-      "dato_extra": "Es el punto de referencia para saber si ganaste o perdiste dinero."
+      "dato_extra": "Contar la plusvalía como rendimiento anual es el autoengaño más común del sector."
     },
     {
-      "id": "der6",
-      "pregunta": "¿Qué es la 'Prima' en una opción?",
-      "respuesta_correcta": "El precio que pagas hoy para tener el derecho (la opción) en el futuro",
+      "id": "t6",
+      "pregunta": "Al comprar un inmueble hay que sumar al precio…",
+      "respuesta_correcta": "Entre 5% y 8% de escrituración, notario e impuestos",
       "incorrectas": [
-        "La ganancia del banco",
-        "Un pariente del corredor",
-        "El valor total del oro"
+        "Nada más",
+        "1%",
+        "El 30%"
       ],
-      "dato_extra": "Si no usas la opción, lo único que pierdes es la prima."
+      "dato_extra": "Esos costos son la razón por la que comprar para vender en menos de 5 años casi nunca funciona."
     },
     {
-      "id": "der7",
-      "pregunta": "¿Qué significa hacer 'Hedging' (Cobertura)?",
-      "respuesta_correcta": "Usar derivados para reducir el riesgo de pérdidas en tu negocio o inversiones reales",
+      "id": "t7",
+      "pregunta": "El riesgo más subestimado del inmueble propio es…",
+      "respuesta_correcta": "La iliquidez: no puedes venderlo rápido cuando necesitas el dinero",
       "incorrectas": [
-        "Apostar todo al rojo",
-        "Comprar acciones al azar",
-        "Vender todo y huir"
+        "Los impuestos",
+        "El clima",
+        "La inflación"
       ],
-      "dato_extra": "Las aerolíneas hacen hedging con el petróleo para que sus boletos no suban de precio de repente."
-    },
-    {
-      "id": "der8",
-      "pregunta": "¿Qué es el 'Apalancamiento' en los derivados?",
-      "respuesta_correcta": "Poder controlar una gran cantidad de activos con muy poco dinero inicial (lo cual aumenta ganancias y riesgos)",
-      "incorrectas": [
-        "Usar una palanca real",
-        "Pedir un descuento",
-        "No pagar intereses"
-      ],
-      "dato_extra": "¡Cuidado! El apalancamiento puede hacer que pierdas mucho más de lo que invertiste."
-    },
-    {
-      "id": "der9",
-      "pregunta": "¿Qué es la 'Fecha de Vencimiento'?",
-      "respuesta_correcta": "El día límite en que el contrato derivado deja de tener validez",
-      "incorrectas": [
-        "El día que te pagan",
-        "Cuando el banco cierra",
-        "Cuando el oro desaparece"
-      ],
-      "dato_extra": "A diferencia de las acciones, los derivados tienen 'caducidad'."
-    },
-    {
-      "id": "der10",
-      "pregunta": "¿Cuál es la función social de los mercados de futuros?",
-      "respuesta_correcta": "Dar estabilidad a los precios de alimentos y energía para que las empresas puedan planear el futuro",
-      "incorrectas": [
-        "Hacer ricos a los bancos",
-        "Imprimir más billetes",
-        "No tienen función"
-      ],
-      "dato_extra": "¡Felicidades! Has completado el análisis de los instrumentos más complejos del mercado."
+      "dato_extra": "Cuando urge vender, se vende barato. Ese descuento es el precio real de la iliquidez."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

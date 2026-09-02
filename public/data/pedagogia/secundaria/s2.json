@@ -919,13 +919,933 @@
       "rubric": "El alumno identifica patrones históricos de las crisis y propone medidas de prevención financiera realistas."
     }
   },
+  "S2-1-6": {
+    "code": "S2-1-6",
+    "title": "La tasa objetivo: el termostato de la economía",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender qué es la tasa de interés objetivo del banco central y cómo su movimiento afecta el crédito, el ahorro y los precios.",
+      "competencies": [
+        "Comprensión de Política Monetaria",
+        "Análisis de Efectos en Cadena",
+        "Interpretación de Decisiones",
+        "Vinculación Macro-Personal"
+      ],
+      "materials": [
+        "Serie histórica de la tasa objetivo",
+        "Diagrama de efectos en cadena",
+        "Calculadora",
+        "Casos de crédito y ahorro con distintas tasas",
+        "Cartel del termostato económico"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Sube la Tasa",
+          "duration": "15 min",
+          "label": "La noticia recurrente"
+        },
+        {
+          "phase": "Desarrollo: La Cadena",
+          "duration": "30 min",
+          "label": "Cómo llega hasta mí"
+        },
+        {
+          "phase": "Cierre: Decidir",
+          "duration": "15 min",
+          "label": "Qué hago según la tasa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"SUBE LA TASA\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre una noticia sobre un aumento de la tasa objetivo. Pregunte a quién afecta. La mayoría dirá que a los bancos. Explique que afecta a cualquiera que tenga una tarjeta, un crédito, un ahorro o compre cosas, es decir, a todos.",
+          "activity": "Dinámica \"¿A Quién Afecta?\": el grupo enumera a quién toca un movimiento de tasa y descubre que a todos."
+        },
+        {
+          "title": "FASE II: LA CADENA DE EFECTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el mecanismo: el banco central mueve su tasa de referencia, los bancos ajustan las suyas, el crédito se encarece o abarata, la gente y las empresas gastan o invierten más o menos, y eso presiona los precios. Los alumnos dibujan la cadena completa en los dos sentidos.",
+          "activity": "Dinámica \"La Cadena Completa\": cada equipo dibuja qué pasa cuando la tasa sube y cuando baja."
+        },
+        {
+          "title": "FASE III: QUÉ HAGO YO (CIERRE)",
+          "duration": "15 min",
+          "description": "Aterrice el tema: con tasas altas conviene revisar deudas variables y aprovechar mejores rendimientos de ahorro; con tasas bajas el crédito es más accesible pero el ahorro rinde menos. Los alumnos deciden qué harían en dos escenarios opuestos.",
+          "activity": "Dinámica \"Dos Escenarios\": cada equipo define tres acciones concretas para tasas altas y para tasas bajas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando dicen en las noticias que subió la tasa, mucha gente cree que es asunto de bancos. En realidad afecta tu tarjeta, tu crédito, lo que rinde tu ahorro y lo que cuestan las cosas. Es el termostato de toda la economía.",
+      "sections": [
+        {
+          "subtitle": "Qué es la tasa objetivo",
+          "content": "Es la tasa de referencia que fija el banco central para las operaciones de muy corto plazo entre instituciones financieras. No es la tasa que tú pagas, pero es el punto de partida desde el que se construyen casi todas las demás: la de tu tarjeta, la de un crédito automotriz, la de un instrumento de ahorro."
+        },
+        {
+          "subtitle": "Por qué se mueve",
+          "content": "El objetivo principal es mantener la inflación bajo control. Cuando los precios suben demasiado, subir la tasa encarece el crédito, desalienta el gasto y enfría la economía, lo que reduce la presión sobre los precios. Cuando la economía se desacelera demasiado, bajar la tasa abarata el crédito y estimula el gasto. De ahí la analogía del termostato."
+        },
+        {
+          "subtitle": "La cadena hasta tu bolsillo",
+          "content": "El movimiento no llega de inmediato ni de forma idéntica a todos los productos. Los créditos con tasa variable se ajustan rápido; los de tasa fija ya pactada no cambian. Los instrumentos de ahorro suelen reflejar el alza con cierto retraso. Y el efecto sobre los precios tarda meses en verse, porque la economía no reacciona de un día para otro."
+        },
+        {
+          "subtitle": "Qué hacer según el escenario",
+          "content": "Con tasas altas conviene revisar deudas de tasa variable, evitar endeudarse innecesariamente y aprovechar que el ahorro rinde más. Con tasas bajas el crédito es más accesible, lo que puede favorecer una decisión grande bien planeada, pero el ahorro rinde menos y hay que buscar alternativas. La tasa no se controla: se aprovecha."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la tasa objetivo?",
+          "options": [
+            "La tasa de tu tarjeta",
+            "La tasa de referencia que fija el banco central",
+            "La inflación"
+          ],
+          "correct": "La tasa de referencia que fija el banco central"
+        },
+        {
+          "question": "¿Es la tasa que tú pagas?",
+          "options": [
+            "Sí, exactamente",
+            "No tiene relación",
+            "No, pero es el punto de partida de las demás"
+          ],
+          "correct": "No, pero es el punto de partida de las demás"
+        },
+        {
+          "question": "¿Cuál es su objetivo principal?",
+          "options": [
+            "Mantener la inflación bajo control",
+            "Que los bancos ganen",
+            "Bajar impuestos"
+          ],
+          "correct": "Mantener la inflación bajo control"
+        },
+        {
+          "question": "Si los precios suben demasiado:",
+          "options": [
+            "Se baja la tasa",
+            "Se sube la tasa para enfriar la economía",
+            "No se hace nada"
+          ],
+          "correct": "Se sube la tasa para enfriar la economía"
+        },
+        {
+          "question": "Si la economía se desacelera:",
+          "options": [
+            "Se sube",
+            "Se cierra el banco",
+            "Se baja la tasa para estimular el gasto"
+          ],
+          "correct": "Se baja la tasa para estimular el gasto"
+        },
+        {
+          "question": "¿Qué créditos se ajustan rápido?",
+          "options": [
+            "Los de tasa variable",
+            "Los de tasa fija",
+            "Ninguno"
+          ],
+          "correct": "Los de tasa variable"
+        },
+        {
+          "question": "¿Qué pasa con un crédito de tasa fija ya pactado?",
+          "options": [
+            "Sube de inmediato",
+            "No cambia",
+            "Se cancela"
+          ],
+          "correct": "No cambia"
+        },
+        {
+          "question": "¿Cuánto tarda el efecto sobre los precios?",
+          "options": [
+            "Un día",
+            "Un año exacto",
+            "Meses"
+          ],
+          "correct": "Meses"
+        },
+        {
+          "question": "Con tasas altas conviene:",
+          "options": [
+            "Revisar deudas variables y aprovechar el ahorro",
+            "Endeudarse más",
+            "No hacer nada"
+          ],
+          "correct": "Revisar deudas variables y aprovechar el ahorro"
+        },
+        {
+          "question": "Con tasas bajas:",
+          "options": [
+            "Todo rinde más",
+            "El crédito es más accesible y el ahorro rinde menos",
+            "Nada cambia"
+          ],
+          "correct": "El crédito es más accesible y el ahorro rinde menos"
+        }
+      ],
+      "rubric": "Logrado: explica el mecanismo completo y define acciones concretas para cada escenario. En proceso: entiende el objetivo sin trazar la cadena. Inicial: sabe que la tasa afecta el crédito."
+    },
+    "teacher_tips": [
+      "Dibuje la cadena completa en el pizarrón en los dos sentidos: es lo que fija el concepto.",
+      "Use la serie histórica real de la tasa: ver los movimientos de los últimos años lo hace concreto.",
+      "Aterrice siempre en acciones personales; si se queda en teoría, el tema se olvida."
+    ]
+  },
+  "S2-1-7": {
+    "code": "S2-1-7",
+    "title": "Devaluación y depreciación: qué le pasa al peso",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Distinguir devaluación de depreciación y analizar cómo el movimiento del tipo de cambio afecta a distintos actores.",
+      "competencies": [
+        "Comprensión Cambiaria",
+        "Análisis de Ganadores y Perdedores",
+        "Interpretación de Noticias",
+        "Decisión ante Volatilidad"
+      ],
+      "materials": [
+        "Serie del tipo de cambio",
+        "Casos de importadores, exportadores y consumidores",
+        "Calculadora",
+        "Noticias sobre movimientos del peso",
+        "Cartel de devaluación contra depreciación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Cayó el Peso",
+          "duration": "15 min",
+          "label": "Qué significa"
+        },
+        {
+          "phase": "Desarrollo: Quién Gana y Quién Pierde",
+          "duration": "30 min",
+          "label": "No afecta igual a todos"
+        },
+        {
+          "phase": "Cierre: Qué Hago",
+          "duration": "15 min",
+          "label": "Decisiones sensatas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"CAYÓ EL PESO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre una noticia sobre el tipo de cambio. Pregunte si eso es bueno o malo. La respuesta correcta es que depende de quién seas. Explique que un mismo movimiento beneficia a unos y perjudica a otros, y que por eso las noticias sobre el peso siempre suenan alarmantes.",
+          "activity": "Dinámica \"¿Bueno o Malo?\": el grupo evalúa el mismo movimiento desde tres perspectivas distintas."
+        },
+        {
+          "title": "FASE II: GANADORES Y PERDEDORES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la diferencia entre devaluación, que es una decisión oficial de cambiar el valor en un régimen fijo, y depreciación, que es la pérdida de valor por oferta y demanda en un régimen flotante como el mexicano. Los alumnos identifican quién gana y quién pierde con un peso más débil.",
+          "activity": "Dinámica \"Los Dos Lados\": cada equipo clasifica seis actores como beneficiados o perjudicados."
+        },
+        {
+          "title": "FASE III: DECISIONES SENSATAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Advierta contra la reacción impulsiva de comprar dólares cuando ya subieron, que es comprar caro. Explique que para una persona común el tipo de cambio importa sobre todo si tiene ingresos o deudas en otra moneda, y que especular con divisas sin conocimiento es una forma frecuente de perder dinero.",
+          "activity": "Dinámica \"¿Compro Dólares?\": cada equipo evalúa tres perfiles y decide si el tipo de cambio los afecta de verdad."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "\"Cayó el peso\" suena siempre a mala noticia. Pero el mismo movimiento que perjudica a unos beneficia a otros. Entender quién está en cada lado es lo que permite leer la noticia sin alarmarse de más.",
+      "sections": [
+        {
+          "subtitle": "Devaluación no es lo mismo que depreciación",
+          "content": "La devaluación es una decisión oficial de reducir el valor de una moneda dentro de un régimen de tipo de cambio fijo. La depreciación es la pérdida de valor que ocurre por oferta y demanda en un régimen flotante. México opera con tipo de cambio flotante, así que lo que se observa día a día es depreciación o apreciación, no devaluación."
+        },
+        {
+          "subtitle": "Quién gana con un peso más débil",
+          "content": "Ganan los exportadores, porque venden en moneda extranjera y sus costos son en pesos. Ganan quienes reciben remesas o ingresos desde el exterior, porque cada unidad extranjera se convierte en más pesos. Y gana el turismo receptivo, porque el país se vuelve más barato para quien viene de fuera."
+        },
+        {
+          "subtitle": "Quién pierde",
+          "content": "Pierden los importadores y todo lo que dependa de insumos comprados fuera, desde electrónicos hasta ciertos alimentos y medicamentos. Pierde quien tiene deudas en moneda extranjera, porque su deuda crece medida en pesos. Y pierde quien viaja al extranjero. Todo eso se traslada tarde o temprano a los precios internos."
+        },
+        {
+          "subtitle": "Qué debe hacer una persona común",
+          "content": "La reacción más frecuente es comprar dólares justo cuando ya subieron, que es comprar caro después de la noticia. Para la mayoría, el tipo de cambio importa sobre todo si tiene ingresos, deudas o gastos importantes en otra moneda. Especular con divisas sin conocimiento es una forma habitual de perder dinero, no de protegerse."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una devaluación?",
+          "options": [
+            "La caída diaria del peso",
+            "La inflación",
+            "Una decisión oficial en régimen fijo"
+          ],
+          "correct": "Una decisión oficial en régimen fijo"
+        },
+        {
+          "question": "¿Qué es una depreciación?",
+          "options": [
+            "Pérdida de valor por oferta y demanda en régimen flotante",
+            "Una decisión del gobierno",
+            "Un impuesto"
+          ],
+          "correct": "Pérdida de valor por oferta y demanda en régimen flotante"
+        },
+        {
+          "question": "¿Qué régimen tiene México?",
+          "options": [
+            "Fijo",
+            "Flotante",
+            "Ninguno"
+          ],
+          "correct": "Flotante"
+        },
+        {
+          "question": "¿Quién gana con un peso más débil?",
+          "options": [
+            "Los importadores",
+            "Nadie",
+            "Los exportadores"
+          ],
+          "correct": "Los exportadores"
+        },
+        {
+          "question": "¿Por qué ganan?",
+          "options": [
+            "Venden en moneda extranjera y sus costos son en pesos",
+            "Pagan menos impuestos",
+            "Por promoción"
+          ],
+          "correct": "Venden en moneda extranjera y sus costos son en pesos"
+        },
+        {
+          "question": "¿Quién más se beneficia?",
+          "options": [
+            "Quien viaja fuera",
+            "Quien recibe remesas o ingresos del exterior",
+            "Quien importa"
+          ],
+          "correct": "Quien recibe remesas o ingresos del exterior"
+        },
+        {
+          "question": "¿Quién pierde?",
+          "options": [
+            "Los exportadores",
+            "Nadie",
+            "Importadores y quien tiene deudas en moneda extranjera"
+          ],
+          "correct": "Importadores y quien tiene deudas en moneda extranjera"
+        },
+        {
+          "question": "¿Adónde se traslada ese efecto?",
+          "options": [
+            "A los precios internos, tarde o temprano",
+            "A ningún lado",
+            "Solo a las empresas"
+          ],
+          "correct": "A los precios internos, tarde o temprano"
+        },
+        {
+          "question": "¿Cuál es la reacción impulsiva típica?",
+          "options": [
+            "Vender dólares",
+            "Comprar dólares cuando ya subieron",
+            "Ahorrar más"
+          ],
+          "correct": "Comprar dólares cuando ya subieron"
+        },
+        {
+          "question": "¿Cuándo importa realmente a una persona común?",
+          "options": [
+            "Siempre por igual",
+            "Nunca",
+            "Si tiene ingresos, deudas o gastos en otra moneda"
+          ],
+          "correct": "Si tiene ingresos, deudas o gastos en otra moneda"
+        }
+      ],
+      "rubric": "Logrado: distingue ambos conceptos, identifica ganadores y perdedores y evalúa si le afecta personalmente. En proceso: define los términos sin aplicarlos. Inicial: sabe que el peso se mueve."
+    },
+    "teacher_tips": [
+      "La distinción entre devaluación y depreciación es técnica pero importa: los medios las usan mal constantemente.",
+      "El ejercicio de ganadores y perdedores desactiva la lectura alarmista de las noticias cambiarias.",
+      "Advierta explícitamente contra comprar divisas por pánico: es un error costoso y muy común."
+    ]
+  },
+  "S2-1-8": {
+    "code": "S2-1-8",
+    "title": "Deuda pública y calificadoras: por qué importa el rating de México",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender qué es la deuda pública, cómo se financia y qué significa la calificación crediticia de un país.",
+      "competencies": [
+        "Comprensión de Deuda Soberana",
+        "Interpretación de Calificaciones",
+        "Análisis de Sostenibilidad",
+        "Vinculación con la Economía Personal"
+      ],
+      "materials": [
+        "Datos de deuda pública como porcentaje del PIB",
+        "Escalas de calificación crediticia",
+        "Calculadora",
+        "Comparativo internacional",
+        "Cartel de qué mide una calificación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿A Quién le Debe el País?",
+          "duration": "15 min",
+          "label": "La pregunta básica"
+        },
+        {
+          "phase": "Desarrollo: Deuda y Calificación",
+          "duration": "30 min",
+          "label": "Cómo se mide"
+        },
+        {
+          "phase": "Cierre: Por Qué me Afecta",
+          "duration": "15 min",
+          "label": "La conexión personal"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿A QUIÉN LE DEBE EL PAÍS? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte a quién le debe dinero el gobierno. Muchos dirán que a otros países. Explique que buena parte de la deuda está en manos de inversionistas, fondos e instituciones que compraron los títulos que emite, y que cualquier persona que invierte en instrumentos gubernamentales es acreedora del gobierno.",
+          "activity": "Dinámica \"¿Quién Presta?\": el grupo identifica quiénes son realmente los acreedores del país."
+        },
+        {
+          "title": "FASE II: CÓMO SE MIDE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que la deuda no se juzga por su monto absoluto sino en relación con el tamaño de la economía, y que lo que más importa es el costo de servirla. Presente las calificadoras y qué mide su nota: la probabilidad de que el emisor cumpla sus pagos. Los alumnos comparan la deuda de tres países como porcentaje del PIB.",
+          "activity": "Dinámica \"Deuda Relativa\": cada equipo compara países y descubre que el monto absoluto engaña."
+        },
+        {
+          "title": "FASE III: POR QUÉ ME AFECTA (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique la cadena: una calificación más baja encarece el financiamiento del país, eso presiona las tasas internas y el tipo de cambio, y eso llega a los créditos y precios de las personas. Los alumnos trazan la cadena desde una baja de calificación hasta su propia tarjeta.",
+          "activity": "Dinámica \"De la Calificación a mi Tarjeta\": cada equipo dibuja la cadena completa de efectos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando dicen que bajaron la calificación de México, suena a algo lejano. En realidad es una cadena que termina en el costo de tu crédito y en los precios de lo que compras. Vale la pena entender cómo funciona.",
+      "sections": [
+        {
+          "subtitle": "Qué es la deuda pública y a quién se le debe",
+          "content": "Es el dinero que un gobierno debe por haberse financiado emitiendo títulos de deuda. Los acreedores no son principalmente otros países: son inversionistas, fondos de pensiones, bancos e incluso personas que compraron esos instrumentos. Cualquiera que invierte en deuda gubernamental es, técnicamente, acreedor del gobierno."
+        },
+        {
+          "subtitle": "El monto absoluto engaña",
+          "content": "Una deuda de billones suena enorme, pero solo cobra sentido comparada con el tamaño de la economía que la sostiene. Por eso se mide como porcentaje del producto interno bruto. Un país grande puede sostener una deuda absoluta mucho mayor que uno pequeño sin tener un problema, igual que una persona con ingreso alto sostiene un crédito mayor."
+        },
+        {
+          "subtitle": "Qué mide una calificación crediticia",
+          "content": "Las calificadoras evalúan la probabilidad de que un emisor cumpla con sus pagos y expresan ese juicio en una escala de letras. No miden si un gobierno es bueno ni si la economía va bien en general: miden capacidad y disposición de pago. Una nota más alta significa que el emisor puede financiarse a menor costo."
+        },
+        {
+          "subtitle": "La cadena hasta tu bolsillo",
+          "content": "Si la calificación baja, el país paga más por financiarse. Eso presiona las tasas internas hacia arriba y suele afectar al tipo de cambio. Tasas más altas encarecen los créditos de las personas y las empresas, y un peso más débil encarece lo importado. Así una noticia aparentemente lejana termina en el costo de una tarjeta y en el precio de un electrodoméstico."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿A quién le debe principalmente un gobierno?",
+          "options": [
+            "A inversionistas, fondos e instituciones que compraron sus títulos",
+            "Solo a otros países",
+            "A nadie"
+          ],
+          "correct": "A inversionistas, fondos e instituciones que compraron sus títulos"
+        },
+        {
+          "question": "¿Puede una persona ser acreedora del gobierno?",
+          "options": [
+            "No",
+            "Sí, si invierte en deuda gubernamental",
+            "Solo los bancos"
+          ],
+          "correct": "Sí, si invierte en deuda gubernamental"
+        },
+        {
+          "question": "¿Cómo se mide la deuda pública?",
+          "options": [
+            "En monto absoluto",
+            "Por habitante únicamente",
+            "Como porcentaje del PIB"
+          ],
+          "correct": "Como porcentaje del PIB"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Porque solo cobra sentido frente al tamaño de la economía",
+            "Por costumbre",
+            "Por ley internacional"
+          ],
+          "correct": "Porque solo cobra sentido frente al tamaño de la economía"
+        },
+        {
+          "question": "¿Qué miden las calificadoras?",
+          "options": [
+            "Si el gobierno es bueno",
+            "La probabilidad de que el emisor cumpla sus pagos",
+            "La inflación"
+          ],
+          "correct": "La probabilidad de que el emisor cumpla sus pagos"
+        },
+        {
+          "question": "¿Qué significa una nota más alta?",
+          "options": [
+            "Que hay más empleo",
+            "Que bajan los impuestos",
+            "Que el emisor se financia a menor costo"
+          ],
+          "correct": "Que el emisor se financia a menor costo"
+        },
+        {
+          "question": "Si la calificación baja:",
+          "options": [
+            "El país paga más por financiarse",
+            "Paga menos",
+            "No cambia nada"
+          ],
+          "correct": "El país paga más por financiarse"
+        },
+        {
+          "question": "¿Qué presiona eso?",
+          "options": [
+            "Solo los impuestos",
+            "Las tasas internas y el tipo de cambio",
+            "Nada"
+          ],
+          "correct": "Las tasas internas y el tipo de cambio"
+        },
+        {
+          "question": "¿Cómo llega a las personas?",
+          "options": [
+            "No llega",
+            "Baja los precios",
+            "Encarece créditos y lo importado"
+          ],
+          "correct": "Encarece créditos y lo importado"
+        },
+        {
+          "question": "¿Qué importa más que el monto de la deuda?",
+          "options": [
+            "El costo de servirla",
+            "Su color",
+            "Su antigüedad"
+          ],
+          "correct": "El costo de servirla"
+        }
+      ],
+      "rubric": "Logrado: interpreta la deuda en relación al PIB, explica qué mide una calificación y traza la cadena hasta lo personal. En proceso: define los conceptos sin conectarlos. Inicial: sabe que el país se endeuda."
+    },
+    "teacher_tips": [
+      "El ejercicio de comparar deuda absoluta contra deuda como porcentaje del PIB corrige un error muy extendido.",
+      "Aclare que una calificación no juzga a un gobierno: mide capacidad de pago. Evita lecturas políticas del tema.",
+      "La cadena hasta la tarjeta personal es lo que hace que el tema deje de parecer abstracto."
+    ]
+  },
+  "S2-1-9": {
+    "code": "S2-1-9",
+    "title": "Las remesas y su peso real en la economía mexicana",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Analizar el papel de las remesas en la economía mexicana y su efecto sobre los hogares que las reciben.",
+      "competencies": [
+        "Análisis de Flujos Económicos",
+        "Comprensión de Migración",
+        "Evaluación de Costos de Envío",
+        "Uso Productivo de Recursos"
+      ],
+      "materials": [
+        "Datos de remesas anuales",
+        "Comparativo de costos de envío",
+        "Calculadora",
+        "Casos de hogares receptores",
+        "Cartel de usos de la remesa"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Tamaño Real",
+          "duration": "15 min",
+          "label": "Cuánto llega"
+        },
+        {
+          "phase": "Desarrollo: Costos y Usos",
+          "duration": "30 min",
+          "label": "Cuánto se pierde y en qué se usa"
+        },
+        {
+          "phase": "Cierre: Uso Productivo",
+          "duration": "15 min",
+          "label": "De gasto a patrimonio"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL TAMAÑO REAL (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte qué peso creen que tienen las remesas en la economía mexicana. Las estimaciones serán bajas. Explique que representan una de las principales fuentes de divisas del país y el ingreso principal de millones de hogares, con un peso enorme en ciertas regiones.",
+          "activity": "Dinámica \"¿Cuánto Llega?\": el grupo estima el monto anual antes de conocer los datos reales."
+        },
+        {
+          "title": "FASE II: COSTOS Y USOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que enviar dinero tiene costos: comisión de envío y diferencial cambiario, que muchas veces es el costo mayor y el menos visible. Los alumnos calculan cuánto se pierde por cada envío con distintas opciones y descubren la diferencia acumulada en un año.",
+          "activity": "Dinámica \"Cuánto se Pierde\": cada equipo compara tres formas de envío durante doce meses."
+        },
+        {
+          "title": "FASE III: DE GASTO A PATRIMONIO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que la mayor parte de las remesas se destina a consumo, lo cual es legítimo y necesario. El punto es que destinar aunque sea una fracción a ahorro, salud, educación o un pequeño negocio transforma un flujo temporal en patrimonio duradero, que es lo que sostiene al hogar cuando el envío se interrumpe.",
+          "activity": "Dinámica \"Una Fracción\": cada equipo diseña un plan para destinar 10% de la remesa a algo permanente."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Las remesas son una de las principales fuentes de divisas de México y el ingreso principal de millones de hogares. Detrás de cada envío hay costos que casi nadie calcula y una oportunidad que casi nadie aprovecha.",
+      "sections": [
+        {
+          "subtitle": "El peso real en la economía",
+          "content": "Las remesas representan un flujo enorme de divisas hacia el país y, en varias regiones, son la principal fuente de ingreso de los hogares. Su efecto es doble: sostienen el consumo de millones de familias y aportan divisas que influyen en el tipo de cambio. Tienen además una característica valiosa: son bastante estables incluso en crisis."
+        },
+        {
+          "subtitle": "El costo visible y el invisible",
+          "content": "Cada envío tiene dos costos. La comisión es el visible y suele ser el que se compara. El diferencial cambiario es el invisible: la diferencia entre el tipo de cambio real y el que aplica el operador. Con frecuencia ese segundo costo es mayor que la comisión, y es el que hace que dos servicios con la misma comisión entreguen cantidades muy distintas."
+        },
+        {
+          "subtitle": "Cómo comparar bien",
+          "content": "La única comparación válida es cuántos pesos llegan finalmente a manos de quien recibe, con el mismo monto enviado. No la comisión, no el tipo de cambio anunciado por separado: el resultado final. Diferencias de dos o tres por ciento por envío se acumulan de forma significativa a lo largo de un año."
+        },
+        {
+          "subtitle": "De flujo temporal a patrimonio",
+          "content": "La mayor parte de las remesas se destina a alimentación, vivienda y salud, lo cual es completamente legítimo. El punto es que un flujo que depende de que alguien siga trabajando lejos es temporal por naturaleza. Destinar aunque sea una décima parte a ahorro, educación, mejoras de vivienda o un pequeño negocio construye algo que permanece cuando el envío se detiene."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué peso tienen las remesas en México?",
+          "options": [
+            "Son irrelevantes",
+            "Son una de las principales fuentes de divisas",
+            "Solo afectan a una ciudad"
+          ],
+          "correct": "Son una de las principales fuentes de divisas"
+        },
+        {
+          "question": "¿Qué son para muchos hogares?",
+          "options": [
+            "Un extra ocasional",
+            "Un préstamo",
+            "Su ingreso principal"
+          ],
+          "correct": "Su ingreso principal"
+        },
+        {
+          "question": "¿Cómo se comportan en crisis?",
+          "options": [
+            "Son bastante estables",
+            "Desaparecen",
+            "Se duplican"
+          ],
+          "correct": "Son bastante estables"
+        },
+        {
+          "question": "¿Cuál es el costo visible del envío?",
+          "options": [
+            "El diferencial cambiario",
+            "La comisión",
+            "El impuesto"
+          ],
+          "correct": "La comisión"
+        },
+        {
+          "question": "¿Cuál es el invisible?",
+          "options": [
+            "La comisión",
+            "El envío",
+            "El diferencial cambiario"
+          ],
+          "correct": "El diferencial cambiario"
+        },
+        {
+          "question": "¿Cuál suele ser mayor?",
+          "options": [
+            "Muchas veces el diferencial cambiario",
+            "Siempre la comisión",
+            "Ninguno"
+          ],
+          "correct": "Muchas veces el diferencial cambiario"
+        },
+        {
+          "question": "¿Cuál es la comparación válida?",
+          "options": [
+            "Solo la comisión",
+            "Cuántos pesos llegan finalmente",
+            "El nombre del operador"
+          ],
+          "correct": "Cuántos pesos llegan finalmente"
+        },
+        {
+          "question": "¿A qué se destina la mayor parte?",
+          "options": [
+            "A inversión",
+            "A viajes",
+            "A consumo: alimentación, vivienda y salud"
+          ],
+          "correct": "A consumo: alimentación, vivienda y salud"
+        },
+        {
+          "question": "¿Por qué es temporal el flujo?",
+          "options": [
+            "Porque depende de que alguien siga trabajando lejos",
+            "Porque lo prohíbe la ley",
+            "Porque baja cada año"
+          ],
+          "correct": "Porque depende de que alguien siga trabajando lejos"
+        },
+        {
+          "question": "¿Qué transforma el flujo en algo permanente?",
+          "options": [
+            "Gastarlo todo",
+            "Destinar una fracción a ahorro, educación o un negocio",
+            "Guardarlo en casa"
+          ],
+          "correct": "Destinar una fracción a ahorro, educación o un negocio"
+        }
+      ],
+      "rubric": "Logrado: compara costos de envío correctamente y diseña un plan de uso productivo. En proceso: identifica los costos sin calcular el acumulado. Inicial: reconoce la importancia de las remesas."
+    },
+    "teacher_tips": [
+      "El diferencial cambiario es el hallazgo de la clase: casi nadie sabe que existe y suele ser el costo mayor.",
+      "Trate el tema con respeto: en muchos grupos habrá alumnos cuya familia recibe o envía remesas.",
+      "El plan del 10% es realista y concreto. Evite proponer porcentajes que un hogar no podría sostener."
+    ]
+  },
+  "S2-1-10": {
+    "code": "S2-1-10",
+    "title": "Indicadores que sí debo seguir: INPC, IGAE y desempleo",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Identificar los indicadores económicos más útiles para una persona común y saber qué decide cada uno.",
+      "competencies": [
+        "Lectura de Indicadores",
+        "Selección de Información Relevante",
+        "Interpretación de Datos",
+        "Decisión Informada"
+      ],
+      "materials": [
+        "Fichas de indicadores principales",
+        "Series de datos recientes",
+        "Calculadora",
+        "Casos de decisión con datos",
+        "Cartel de qué decide cada indicador"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Demasiados Datos",
+          "duration": "15 min",
+          "label": "Qué vale la pena seguir"
+        },
+        {
+          "phase": "Desarrollo: Tres Indicadores",
+          "duration": "30 min",
+          "label": "Qué mide y qué decide cada uno"
+        },
+        {
+          "phase": "Cierre: Mi Tablero",
+          "duration": "15 min",
+          "label": "Seguir pocos y bien"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DEMASIADOS DATOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre una pantalla de noticias económicas llena de cifras. Pregunte cuáles importan para una persona común. Explique que seguir todo es imposible y contraproducente, y que la habilidad útil es elegir pocos indicadores y saber qué decisión informa cada uno.",
+          "activity": "Dinámica \"¿Cuál Me Sirve?\": el grupo descarta de una lista los indicadores que no cambian ninguna decisión personal."
+        },
+        {
+          "title": "FASE II: QUÉ DECIDE CADA UNO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente tres indicadores clave: el índice de precios, que informa sobre el poder adquisitivo y las decisiones de ahorro; el indicador de actividad económica, que anticipa el ambiente de empleo; y la tasa de desempleo y la informalidad, que describen el mercado laboral. Los alumnos asocian cada indicador con una decisión concreta.",
+          "activity": "Dinámica \"Indicador y Decisión\": cada equipo empareja seis indicadores con la decisión que informan."
+        },
+        {
+          "title": "FASE III: MI TABLERO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos arman un tablero personal de tres a cinco indicadores con la frecuencia con la que los revisarían. Insista en que la frecuencia importa: revisar datos mensuales todos los días genera ruido y ansiedad sin aportar información nueva.",
+          "activity": "Dinámica \"Mi Tablero\": cada alumno define sus indicadores, su frecuencia y qué decisión informa cada uno."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Las noticias económicas están llenas de cifras y casi ninguna cambia lo que vas a hacer mañana. La habilidad útil no es seguirlas todas: es elegir tres o cuatro y saber exactamente qué decisión informa cada una.",
+      "sections": [
+        {
+          "subtitle": "El índice de precios",
+          "content": "Mide cómo cambian los precios de una canasta representativa de bienes y servicios, y es la base para calcular la inflación. Informa dos decisiones muy concretas: si tu ahorro está perdiendo poder de compra y si un aumento de sueldo realmente mejora tu situación. Se publica de forma periódica y con desglose por tipo de producto."
+        },
+        {
+          "subtitle": "El indicador de actividad económica",
+          "content": "Da una lectura más frecuente que el PIB sobre cómo se está moviendo la economía. Su utilidad práctica es anticipar el ambiente laboral: cuando la actividad se desacelera de forma sostenida, suele haber menos contrataciones y más cautela en las empresas. Es útil para decisiones de cambio de empleo o de endeudamiento grande."
+        },
+        {
+          "subtitle": "Desempleo e informalidad",
+          "content": "La tasa de desempleo mide a quienes buscan trabajo y no lo encuentran, pero cuenta solo una parte de la historia. En México la tasa de informalidad es igual o más reveladora, porque describe cuántas personas trabajan sin protección. Juntas dan un retrato mucho más honesto del mercado laboral que cualquiera de las dos por separado."
+        },
+        {
+          "subtitle": "Seguir pocos y con la frecuencia correcta",
+          "content": "Estos indicadores se publican con periodicidad definida, generalmente mensual o trimestral. Revisarlos a diario no aporta nada porque el dato no cambió, pero sí genera ruido y ansiedad. Un tablero de tres a cinco indicadores revisados con la frecuencia con la que se publican es más útil que seguir veinte cifras todos los días."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es útil seguir todos los indicadores?",
+          "options": [
+            "Sí, todos",
+            "Sí, a diario",
+            "No, conviene elegir pocos"
+          ],
+          "correct": "No, conviene elegir pocos"
+        },
+        {
+          "question": "¿Qué mide el índice de precios?",
+          "options": [
+            "El cambio de precios de una canasta representativa",
+            "La producción",
+            "El empleo"
+          ],
+          "correct": "El cambio de precios de una canasta representativa"
+        },
+        {
+          "question": "¿Qué decisiones informa?",
+          "options": [
+            "Cuándo cambiar de casa",
+            "Si el ahorro pierde poder de compra y si un aumento mejora tu situación",
+            "Nada"
+          ],
+          "correct": "Si el ahorro pierde poder de compra y si un aumento mejora tu situación"
+        },
+        {
+          "question": "¿Qué aporta el indicador de actividad económica?",
+          "options": [
+            "El precio del dólar",
+            "La inflación",
+            "Una lectura más frecuente que el PIB"
+          ],
+          "correct": "Una lectura más frecuente que el PIB"
+        },
+        {
+          "question": "¿Para qué sirve en la práctica?",
+          "options": [
+            "Anticipar el ambiente laboral",
+            "Elegir banco",
+            "Calcular impuestos"
+          ],
+          "correct": "Anticipar el ambiente laboral"
+        },
+        {
+          "question": "¿Qué mide la tasa de desempleo?",
+          "options": [
+            "A quienes trabajan",
+            "A quienes buscan trabajo y no lo encuentran",
+            "A los estudiantes"
+          ],
+          "correct": "A quienes buscan trabajo y no lo encuentran"
+        },
+        {
+          "question": "¿Por qué es reveladora la informalidad en México?",
+          "options": [
+            "Porque es más pequeña",
+            "Porque no se mide",
+            "Porque describe cuántos trabajan sin protección"
+          ],
+          "correct": "Porque describe cuántos trabajan sin protección"
+        },
+        {
+          "question": "¿Cómo se leen mejor esos dos?",
+          "options": [
+            "Juntas",
+            "Por separado",
+            "Ninguna"
+          ],
+          "correct": "Juntas"
+        },
+        {
+          "question": "¿Con qué frecuencia se publican estos indicadores?",
+          "options": [
+            "Cada hora",
+            "Generalmente mensual o trimestral",
+            "Cada año"
+          ],
+          "correct": "Generalmente mensual o trimestral"
+        },
+        {
+          "question": "¿Qué genera revisarlos a diario?",
+          "options": [
+            "Mejores decisiones",
+            "Más rendimiento",
+            "Ruido y ansiedad sin información nueva"
+          ],
+          "correct": "Ruido y ansiedad sin información nueva"
+        }
+      ],
+      "rubric": "Logrado: arma un tablero de indicadores con frecuencia y decisión asociada a cada uno. En proceso: identifica indicadores sin vincularlos a decisiones. Inicial: distingue qué mide cada indicador."
+    },
+    "teacher_tips": [
+      "La pregunta que ordena todo es qué decisión cambia este dato. Aplíquela a cada indicador.",
+      "Insista en la frecuencia de publicación: evita que los alumnos revisen datos que no cambiaron.",
+      "Use publicaciones reales del mes en curso para que el tablero sea verificable."
+    ]
+  },
   "S2-2-1": {
     "code": "S2-2-1",
     "title": "Gestión de deuda: CAT, tasas y el costo real del dinero",
     "level": "Secundaria 2",
     "duration": "60 min",
     "difficulty": "Intermedio",
-    "category": "Tu Primer Vuelo Financiero",
+    "category": "Construyendo Independencia",
     "metadata": {
       "objective": "Comprender los componentes del costo del crédito para tomar decisiones de endeudamiento responsables y sostenibles.",
       "competencies": [
@@ -1105,6 +2025,7 @@
     ]
   },
   "S2-2-2": {
+    "code": "S2-2-2",
     "title": "Ciberseguridad financiera: protegiendo tu patrimonio digital",
     "level": "Secundaria 2",
     "duration": "50 min",
@@ -1549,6 +2470,926 @@
     "teacher_tips": [
       "Mencione que septiembre es el mes del testamento en México.",
       "Explique que los beneficiarios de cuentas bancarias son independientes del testamento."
+    ]
+  },
+  "S2-2-6": {
+    "code": "S2-2-6",
+    "title": "Gastos médicos mayores: deducible, coaseguro y suma asegurada",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Calcular cuánto paga realmente el asegurado en un siniestro médico aplicando deducible, coaseguro, tope y suma asegurada.",
+      "competencies": [
+        "Cálculo de Cobertura",
+        "Lectura de Póliza",
+        "Comparación de Planes",
+        "Planeación de Riesgo Médico"
+      ],
+      "materials": [
+        "Póliza de gastos médicos de ejemplo",
+        "Calculadora",
+        "Casos de siniestros de distinto monto",
+        "Comparativo de tres planes",
+        "Cartel de la secuencia de pago"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Tengo Seguro",
+          "duration": "15 min",
+          "label": "Y aun así pagué"
+        },
+        {
+          "phase": "Desarrollo: La Secuencia",
+          "duration": "30 min",
+          "label": "Quién paga qué y en qué orden"
+        },
+        {
+          "phase": "Cierre: Comparar Planes",
+          "duration": "15 min",
+          "label": "Prima contra exposición"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"TENGO SEGURO Y AUN ASÍ PAGUÉ\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien con seguro que recibió una cuenta de $60,000 después de una cirugía. Pregunte cómo es posible. Explique que un seguro de gastos médicos no paga todo desde el primer peso, y que entender la secuencia evita sorpresas justo en el peor momento.",
+          "activity": "Dinámica \"¿Por Qué Pagué?\": el grupo propone explicaciones antes de conocer el mecanismo."
+        },
+        {
+          "title": "FASE II: QUIÉN PAGA QUÉ Y EN QUÉ ORDEN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la secuencia: primero el asegurado cubre el deducible completo; después ambos comparten el resto según el coaseguro hasta llegar al tope; a partir de ahí la aseguradora cubre el resto hasta la suma asegurada; y lo que exceda la suma asegurada vuelve a ser del asegurado. Los alumnos calculan tres siniestros.",
+          "activity": "Dinámica \"Calcula el Siniestro\": cada equipo calcula cuánto paga cada parte en tres montos distintos."
+        },
+        {
+          "title": "FASE III: PRIMA CONTRA EXPOSICIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique el intercambio: una prima más baja casi siempre significa deducible más alto, coaseguro mayor o suma asegurada menor. La pregunta no es cuál es más barato, sino cuánto podría tener que pagar en el peor escenario y si ese monto está disponible.",
+          "activity": "Dinámica \"El Peor Escenario\": cada equipo calcula la exposición máxima de tres planes y elige."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Tener seguro de gastos médicos no significa que la aseguradora pague desde el primer peso. Hay una secuencia, y entenderla antes de un siniestro es lo que evita la sorpresa en el peor momento posible.",
+      "sections": [
+        {
+          "subtitle": "El deducible: lo primero que pagas tú",
+          "content": "Es la cantidad que el asegurado cubre íntegramente antes de que la aseguradora empiece a pagar. Si el deducible es de $20,000 y la cuenta fue de $15,000, la aseguradora no pagará nada. Un deducible alto baja la prima, pero exige tener ese monto disponible el día del siniestro, y por eso el seguro no sustituye al fondo de emergencia."
+        },
+        {
+          "subtitle": "El coaseguro: lo que se comparte",
+          "content": "Una vez cubierto el deducible, el resto se reparte según un porcentaje. Un coaseguro del 10% significa que de cada peso adicional, el asegurado paga diez centavos. Sobre una cuenta grande eso puede ser una cifra considerable, y es la parte que más sorprende a quien nunca leyó su póliza."
+        },
+        {
+          "subtitle": "El tope de coaseguro y la suma asegurada",
+          "content": "La mayoría de las pólizas fijan un tope: una vez que el coaseguro acumulado llega a cierto monto, la aseguradora cubre el resto al cien por ciento. Ese tope es la protección más valiosa de la póliza. Por encima está la suma asegurada, que es el máximo total que cubre; todo lo que exceda ese límite vuelve a ser responsabilidad del asegurado."
+        },
+        {
+          "subtitle": "Comparar por exposición, no por prima",
+          "content": "Una prima baja casi siempre viene con deducible alto, coaseguro mayor o suma asegurada menor. La comparación correcta no es cuál cuesta menos al mes, sino cuánto tendrías que poner de tu bolsillo en el peor escenario y si tienes ese dinero. Un plan barato que exige $80,000 que no tienes no te protege de nada."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el deducible?",
+          "options": [
+            "La prima",
+            "El máximo cubierto",
+            "Lo que el asegurado cubre antes de que la aseguradora pague"
+          ],
+          "correct": "Lo que el asegurado cubre antes de que la aseguradora pague"
+        },
+        {
+          "question": "Si el deducible es $20,000 y la cuenta $15,000:",
+          "options": [
+            "La aseguradora no paga nada",
+            "Paga todo",
+            "Paga la mitad"
+          ],
+          "correct": "La aseguradora no paga nada"
+        },
+        {
+          "question": "¿Qué exige un deducible alto?",
+          "options": [
+            "Nada",
+            "Tener ese monto disponible el día del siniestro",
+            "Pagar más prima"
+          ],
+          "correct": "Tener ese monto disponible el día del siniestro"
+        },
+        {
+          "question": "¿Sustituye el seguro al fondo de emergencia?",
+          "options": [
+            "Sí",
+            "Solo a veces",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Qué es el coaseguro?",
+          "options": [
+            "El porcentaje del resto que paga el asegurado",
+            "El deducible",
+            "La prima"
+          ],
+          "correct": "El porcentaje del resto que paga el asegurado"
+        },
+        {
+          "question": "Con coaseguro del 10%:",
+          "options": [
+            "Paga todo",
+            "De cada peso adicional el asegurado paga diez centavos",
+            "No paga nada"
+          ],
+          "correct": "De cada peso adicional el asegurado paga diez centavos"
+        },
+        {
+          "question": "¿Qué es el tope de coaseguro?",
+          "options": [
+            "La prima máxima",
+            "El deducible",
+            "El monto tras el cual la aseguradora cubre el cien por ciento"
+          ],
+          "correct": "El monto tras el cual la aseguradora cubre el cien por ciento"
+        },
+        {
+          "question": "¿Qué es la suma asegurada?",
+          "options": [
+            "El máximo total que cubre la póliza",
+            "El deducible",
+            "El coaseguro"
+          ],
+          "correct": "El máximo total que cubre la póliza"
+        },
+        {
+          "question": "Lo que excede la suma asegurada:",
+          "options": [
+            "Lo cubre el gobierno",
+            "Vuelve a ser del asegurado",
+            "Se perdona"
+          ],
+          "correct": "Vuelve a ser del asegurado"
+        },
+        {
+          "question": "¿Cuál es la comparación correcta entre planes?",
+          "options": [
+            "Cuál cuesta menos al mes",
+            "Cuál es más conocido",
+            "Cuánto pagarías en el peor escenario"
+          ],
+          "correct": "Cuánto pagarías en el peor escenario"
+        }
+      ],
+      "rubric": "Logrado: calcula la secuencia completa y compara planes por exposición máxima. En proceso: identifica los términos sin calcular. Inicial: sabe que el seguro no paga todo."
+    },
+    "teacher_tips": [
+      "La secuencia de pago debe quedar dibujada en el pizarrón: deducible, coaseguro, tope, suma asegurada.",
+      "Insista en que el seguro no sustituye el fondo de emergencia: sin efectivo no se puede pagar el deducible.",
+      "La comparación por exposición máxima es lo que convierte la clase en una herramienta de decisión real."
+    ]
+  },
+  "S2-2-7": {
+    "code": "S2-2-7",
+    "title": "Robo de identidad: prevención y qué hacer si ya ocurrió",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar las formas de robo de identidad financiera, aplicar medidas de prevención y saber qué hacer si ya ocurrió.",
+      "competencies": [
+        "Seguridad Digital",
+        "Prevención de Fraude",
+        "Respuesta ante Incidentes",
+        "Protección de Datos"
+      ],
+      "materials": [
+        "Casos de robo de identidad",
+        "Checklist de prevención",
+        "Guía de acciones inmediatas",
+        "Ejemplos de mensajes fraudulentos",
+        "Cartel de las primeras 48 horas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Un Crédito Que No Pedí",
+          "duration": "15 min",
+          "label": "Cómo se descubre"
+        },
+        {
+          "phase": "Desarrollo: Cómo Ocurre",
+          "duration": "30 min",
+          "label": "Métodos y prevención"
+        },
+        {
+          "phase": "Cierre: Ya Pasó",
+          "duration": "15 min",
+          "label": "Las primeras horas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: UN CRÉDITO QUE NO PEDÍ (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien que descubre un crédito a su nombre que nunca solicitó. Pregunte cómo pudo pasar. Explique que basta con que alguien obtenga ciertos datos personales, y que la mayoría de las víctimas se enteran meses después, cuando el daño ya está hecho.",
+          "activity": "Dinámica \"¿Cómo se Enteró?\": el grupo enumera formas de descubrir una suplantación y cuál es la más temprana."
+        },
+        {
+          "title": "FASE II: MÉTODOS Y PREVENCIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique los métodos: mensajes que suplantan instituciones, sitios falsos, documentos extraviados o fotografiados, redes públicas inseguras y filtraciones de bases de datos. Presente las medidas: verificación en dos pasos, contraseñas distintas, no compartir datos por mensaje y revisar el reporte de crédito.",
+          "activity": "Dinámica \"Detecta el Fraude\": cada equipo identifica las señales en cinco mensajes fraudulentos."
+        },
+        {
+          "title": "FASE III: LAS PRIMERAS HORAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique la secuencia si ya ocurrió: bloquear accesos y tarjetas, notificar a las instituciones involucradas, presentar la reclamación formal, solicitar el reporte de crédito para dimensionar el daño y conservar todos los comprobantes. Insista en que actuar en las primeras horas cambia el resultado por completo.",
+          "activity": "Dinámica \"Las 48 Horas\": cada equipo ordena las acciones de respuesta en la secuencia correcta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El robo de identidad financiera no requiere que te roben la cartera: basta con que alguien obtenga ciertos datos. Lo más grave es que la mayoría se entera meses después, cuando el daño ya está hecho.",
+      "sections": [
+        {
+          "subtitle": "Cómo obtienen los datos",
+          "content": "Los métodos más comunes son mensajes que aparentan venir de una institución y piden datos o claves, sitios falsos que imitan portales reales, documentos extraviados o fotografiados sin cuidado, uso de redes públicas para operaciones bancarias y filtraciones de bases de datos de empresas. En casi todos los casos la persona entrega la información sin darse cuenta."
+        },
+        {
+          "subtitle": "Las señales de un intento de fraude",
+          "content": "Casi todos comparten los mismos rasgos: urgencia artificial, amenaza de bloqueo o pérdida, un enlace que hay que abrir de inmediato, solicitud de datos que la institución ya tiene, y algún detalle fuera de lugar en la dirección o el remitente. Ninguna institución legítima pide claves completas ni códigos de verificación por mensaje o llamada."
+        },
+        {
+          "subtitle": "Prevención que sí funciona",
+          "content": "Activar verificación en dos pasos en cuentas financieras y de correo, usar contraseñas distintas para cada servicio, no realizar operaciones bancarias en redes públicas, no compartir fotografías de documentos y revisar el reporte de crédito de forma periódica. Esa revisión es la que detecta una suplantación meses antes que cualquier otra señal."
+        },
+        {
+          "subtitle": "Qué hacer si ya ocurrió",
+          "content": "La secuencia importa: bloquear accesos y tarjetas comprometidas, notificar de inmediato a las instituciones involucradas, presentar la reclamación formal por los canales establecidos, solicitar el reporte de crédito para dimensionar el alcance y conservar todos los comprobantes de cada gestión. Las primeras horas son decisivas, y la documentación es lo que sostiene cualquier reclamación posterior."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Se necesita robar la cartera para suplantar una identidad?",
+          "options": [
+            "No, basta con obtener ciertos datos",
+            "Sí, siempre",
+            "Sí, y la firma"
+          ],
+          "correct": "No, basta con obtener ciertos datos"
+        },
+        {
+          "question": "¿Cuándo se entera la mayoría de las víctimas?",
+          "options": [
+            "Al instante",
+            "Meses después, con el daño hecho",
+            "Nunca"
+          ],
+          "correct": "Meses después, con el daño hecho"
+        },
+        {
+          "question": "¿Cuál es un método común?",
+          "options": [
+            "Robo a mano armada",
+            "Ninguno",
+            "Mensajes que aparentan venir de una institución"
+          ],
+          "correct": "Mensajes que aparentan venir de una institución"
+        },
+        {
+          "question": "¿Qué otro método existe?",
+          "options": [
+            "Sitios falsos que imitan portales reales",
+            "Llamar por teléfono a un amigo",
+            "Nada"
+          ],
+          "correct": "Sitios falsos que imitan portales reales"
+        },
+        {
+          "question": "¿Cuál es una señal de fraude?",
+          "options": [
+            "Un saludo cordial",
+            "Urgencia artificial y amenaza de bloqueo",
+            "Una firma larga"
+          ],
+          "correct": "Urgencia artificial y amenaza de bloqueo"
+        },
+        {
+          "question": "¿Piden las instituciones claves completas por mensaje?",
+          "options": [
+            "Sí, siempre",
+            "Solo los bancos grandes",
+            "No, nunca"
+          ],
+          "correct": "No, nunca"
+        },
+        {
+          "question": "¿Qué medida de prevención es clave?",
+          "options": [
+            "Verificación en dos pasos y contraseñas distintas",
+            "Usar la misma contraseña",
+            "Anotarlas en el celular"
+          ],
+          "correct": "Verificación en dos pasos y contraseñas distintas"
+        },
+        {
+          "question": "¿Qué detecta una suplantación temprano?",
+          "options": [
+            "Esperar",
+            "Revisar el reporte de crédito periódicamente",
+            "Cambiar de banco"
+          ],
+          "correct": "Revisar el reporte de crédito periódicamente"
+        },
+        {
+          "question": "¿Cuál es el primer paso si ya ocurrió?",
+          "options": [
+            "Esperar a ver qué pasa",
+            "Cambiar de domicilio",
+            "Bloquear accesos y tarjetas comprometidas"
+          ],
+          "correct": "Bloquear accesos y tarjetas comprometidas"
+        },
+        {
+          "question": "¿Qué sostiene una reclamación posterior?",
+          "options": [
+            "Conservar todos los comprobantes de cada gestión",
+            "La memoria",
+            "La buena fe"
+          ],
+          "correct": "Conservar todos los comprobantes de cada gestión"
+        }
+      ],
+      "rubric": "Logrado: detecta señales de fraude, aplica prevención y ordena la respuesta correctamente. En proceso: identifica métodos sin dominar la respuesta. Inicial: reconoce que existe el riesgo."
+    },
+    "teacher_tips": [
+      "Lleve mensajes fraudulentos reales anonimizados: reconocer las señales impresas es mucho más eficaz.",
+      "Insista en que ninguna institución pide claves completas ni códigos: es la regla que evita más fraudes.",
+      "La revisión periódica del reporte de crédito es la medida preventiva menos conocida y la más efectiva."
+    ]
+  },
+  "S2-2-8": {
+    "code": "S2-2-8",
+    "title": "Fondo de emergencia avanzado: dónde guardarlo para que rinda",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Decidir dónde colocar el fondo de emergencia equilibrando disponibilidad inmediata y rendimiento.",
+      "competencies": [
+        "Gestión de Liquidez",
+        "Selección de Instrumentos",
+        "Diseño por Capas",
+        "Protección del Poder Adquisitivo"
+      ],
+      "materials": [
+        "Comparativo de instrumentos por liquidez",
+        "Calculadora",
+        "Casos de emergencias con distintos plazos",
+        "Formato de diseño por capas",
+        "Cartel de disponibilidad contra rendimiento"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Debajo del Colchón",
+          "duration": "15 min",
+          "label": "El error de siempre"
+        },
+        {
+          "phase": "Desarrollo: Las Capas",
+          "duration": "30 min",
+          "label": "Dividir el fondo"
+        },
+        {
+          "phase": "Cierre: Mi Diseño",
+          "duration": "15 min",
+          "label": "Armar el propio"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DEBAJO DEL COLCHÓN (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte dónde debería estar un fondo de emergencia. Aparecerán dos extremos: en efectivo en casa o invertido a largo plazo. Explique que ambos fallan: el primero pierde con la inflación y el segundo no está disponible cuando se necesita.",
+          "activity": "Dinámica \"Los Dos Extremos\": el grupo identifica qué falla en cada opción extrema."
+        },
+        {
+          "title": "FASE II: DIVIDIR EN CAPAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el diseño por capas: una primera capa de disponibilidad inmediata para lo urgente de hoy, una segunda a pocos días de plazo con algo de rendimiento, y una tercera a plazo corto con mejor tasa para la parte que casi nunca se usa. Los alumnos asignan porcentajes a cada capa.",
+          "activity": "Dinámica \"Tres Capas\": cada equipo distribuye un fondo de $60,000 entre las tres capas y justifica."
+        },
+        {
+          "title": "FASE III: MI DISEÑO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos diseñan su propio esquema considerando qué emergencias requieren dinero en horas y cuáles en días. Insista en la regla que ordena todo: la primera capa debe cubrir lo que puede pasar hoy mismo, y a partir de ahí se puede buscar rendimiento sin comprometer la función del fondo.",
+          "activity": "Dinámica \"Mi Fondo por Capas\": cada alumno arma su esquema con montos y plazos concretos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un fondo de emergencia debajo del colchón pierde con la inflación. Uno invertido a largo plazo no está cuando lo necesitas. La solución no es elegir entre los dos: es dividirlo en capas.",
+      "sections": [
+        {
+          "subtitle": "Los dos errores opuestos",
+          "content": "Guardar todo en efectivo garantiza disponibilidad pero también una pérdida segura de poder adquisitivo año con año. Invertir todo el fondo a plazo largo mejora el rendimiento pero rompe su función principal: estar disponible el día que hace falta. Cada extremo resuelve una cosa y arruina la otra."
+        },
+        {
+          "subtitle": "La regla que ordena todo",
+          "content": "La pregunta correcta no es cuánto rinde sino en cuánto tiempo puedo disponer de él. Una emergencia médica puede necesitar dinero en horas; una reparación puede esperar tres días; un periodo sin ingreso se cubre a lo largo de meses. Cada tipo de emergencia tolera un plazo distinto, y esa tolerancia define dónde colocar cada parte."
+        },
+        {
+          "subtitle": "El diseño por capas",
+          "content": "Una primera capa, la más pequeña, con disponibilidad inmediata para lo que puede pasar hoy. Una segunda capa, la más grande, en un instrumento que se pueda liquidar en pocos días y que al menos compita con la inflación. Y una tercera capa, la parte que casi nunca se toca, en un plazo corto con mejor tasa. Así todo el fondo trabaja sin perder su función."
+        },
+        {
+          "subtitle": "Lo que no debe ser un fondo de emergencia",
+          "content": "No debe estar en instrumentos cuyo valor pueda caer justo cuando se necesita, ni en plazos forzosos con penalización por salida anticipada, ni mezclado con el dinero del gasto diario, porque entonces se usa sin darse cuenta. Un fondo que se confunde con la cuenta de gastos deja de existir en pocos meses."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué problema tiene guardar todo en efectivo?",
+          "options": [
+            "No hay problema",
+            "Pérdida segura de poder adquisitivo",
+            "Rinde demasiado"
+          ],
+          "correct": "Pérdida segura de poder adquisitivo"
+        },
+        {
+          "question": "¿Qué problema tiene invertirlo todo a largo plazo?",
+          "options": [
+            "Rinde poco",
+            "Es ilegal",
+            "No está disponible cuando se necesita"
+          ],
+          "correct": "No está disponible cuando se necesita"
+        },
+        {
+          "question": "¿Cuál es la pregunta correcta?",
+          "options": [
+            "En cuánto tiempo puedo disponer de él",
+            "Cuánto rinde",
+            "Quién lo administra"
+          ],
+          "correct": "En cuánto tiempo puedo disponer de él"
+        },
+        {
+          "question": "¿Tolera cada emergencia el mismo plazo?",
+          "options": [
+            "Sí, todas igual",
+            "No, cada una tolera uno distinto",
+            "Todas requieren meses"
+          ],
+          "correct": "No, cada una tolera uno distinto"
+        },
+        {
+          "question": "¿Cómo debe ser la primera capa?",
+          "options": [
+            "Grande y a plazo largo",
+            "Invertida en acciones",
+            "Pequeña y de disponibilidad inmediata"
+          ],
+          "correct": "Pequeña y de disponibilidad inmediata"
+        },
+        {
+          "question": "¿Cómo debe ser la segunda capa?",
+          "options": [
+            "La más grande, liquidable en pocos días",
+            "La más pequeña",
+            "A diez años"
+          ],
+          "correct": "La más grande, liquidable en pocos días"
+        },
+        {
+          "question": "¿Y la tercera?",
+          "options": [
+            "Todo el fondo",
+            "La parte que casi nunca se toca, a plazo corto con mejor tasa",
+            "En efectivo"
+          ],
+          "correct": "La parte que casi nunca se toca, a plazo corto con mejor tasa"
+        },
+        {
+          "question": "¿Dónde NO debe estar?",
+          "options": [
+            "En el banco",
+            "A pocos días",
+            "En instrumentos cuyo valor pueda caer al necesitarlo"
+          ],
+          "correct": "En instrumentos cuyo valor pueda caer al necesitarlo"
+        },
+        {
+          "question": "¿Qué pasa si se mezcla con el gasto diario?",
+          "options": [
+            "Se usa sin darse cuenta",
+            "Se protege mejor",
+            "Crece más"
+          ],
+          "correct": "Se usa sin darse cuenta"
+        },
+        {
+          "question": "Un fondo mezclado con la cuenta de gastos:",
+          "options": [
+            "Se conserva mejor",
+            "Deja de existir en pocos meses",
+            "Da lo mismo"
+          ],
+          "correct": "Deja de existir en pocos meses"
+        }
+      ],
+      "rubric": "Logrado: diseña un fondo por capas con montos, plazos y justificación. En proceso: entiende el equilibrio sin distribuir capas. Inicial: reconoce los dos errores extremos."
+    },
+    "teacher_tips": [
+      "Ancle todo en la pregunta de en cuánto tiempo se necesita el dinero: es lo que ordena el diseño completo.",
+      "La advertencia sobre mezclar el fondo con la cuenta de gastos evita el error más común y silencioso.",
+      "Pida montos concretos en el diseño final: un esquema en porcentajes abstractos no se aplica después."
+    ]
+  },
+  "S2-2-9": {
+    "code": "S2-2-9",
+    "title": "Sobreendeudamiento: las señales de alerta temprana",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar las señales tempranas de sobreendeudamiento y calcular indicadores objetivos de capacidad de pago.",
+      "competencies": [
+        "Diagnóstico de Endeudamiento",
+        "Cálculo de Indicadores",
+        "Detección Temprana",
+        "Plan de Corrección"
+      ],
+      "materials": [
+        "Formato de cálculo de razón de endeudamiento",
+        "Calculadora",
+        "Lista de señales de alerta",
+        "Casos con distintos niveles de deuda",
+        "Cartel de los umbrales"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Todavía Puedo Pagar",
+          "duration": "15 min",
+          "label": "La frase peligrosa"
+        },
+        {
+          "phase": "Desarrollo: Las Señales",
+          "duration": "30 min",
+          "label": "Objetivas y subjetivas"
+        },
+        {
+          "phase": "Cierre: Actuar Temprano",
+          "duration": "15 min",
+          "label": "Qué hacer con cada señal"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"TODAVÍA PUEDO PAGAR\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que el sobreendeudamiento no llega de golpe: avanza durante meses mientras la persona sigue pagando y cree que todo está bajo control. La frase todavía puedo pagar suele acompañar los últimos meses antes del problema serio.",
+          "activity": "Dinámica \"La Línea del Tiempo\": el grupo ordena las etapas típicas desde el primer crédito hasta la crisis."
+        },
+        {
+          "title": "FASE II: LAS SEÑALES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las señales objetivas: la razón entre pagos de deuda e ingreso neto, pagar solo el mínimo, usar crédito para gastos corrientes, pedir un crédito para pagar otro. Y las subjetivas: evitar revisar estados de cuenta, ansiedad al recibir notificaciones. Los alumnos calculan la razón de endeudamiento en tres casos.",
+          "activity": "Dinámica \"Calcula tu Razón\": cada equipo obtiene el indicador de tres perfiles y los ubica por nivel de riesgo."
+        },
+        {
+          "title": "FASE III: ACTUAR TEMPRANO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique qué hacer en cada nivel: en zona de atención, dejar de adquirir deuda nueva y atacar la de mayor tasa; en zona crítica, hablar con los acreedores antes del primer atraso. Insista en que cada mes de espera reduce las opciones disponibles.",
+          "activity": "Dinámica \"Plan por Nivel\": cada equipo define tres acciones concretas para su caso asignado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El sobreendeudamiento no aparece de un día para otro. Avanza durante meses mientras la persona sigue pagando y cree que todo está controlado. Las señales existen desde mucho antes, y son medibles.",
+      "sections": [
+        {
+          "subtitle": "La razón de endeudamiento",
+          "content": "Es el indicador más útil: la suma de todos los pagos mensuales de deuda dividida entre el ingreso neto. Por debajo de cierto nivel la situación es manejable; conforme sube, el margen para imprevistos desaparece y cualquier gasto inesperado obliga a más crédito. Es un número simple que se calcula en dos minutos y que casi nadie revisa."
+        },
+        {
+          "subtitle": "Las señales objetivas",
+          "content": "Pagar solo el mínimo de la tarjeta de forma habitual, usar crédito para gastos corrientes como comida o servicios, pedir un crédito para pagar otro, no saber cuánto se debe en total, y que el saldo de las tarjetas no baje aunque se pague cada mes. Cada una de estas señales indica que la deuda ya no está financiando decisiones sino sosteniendo la operación diaria."
+        },
+        {
+          "subtitle": "Las señales subjetivas",
+          "content": "Evitar abrir los estados de cuenta, sentir ansiedad al recibir notificaciones del banco, discutir en casa por dinero con frecuencia creciente, o no querer hablar del tema. Estas señales suelen aparecer antes que las cifras críticas y por eso son valiosas: el cuerpo detecta el problema antes de que la calculadora lo confirme."
+        },
+        {
+          "subtitle": "Cada mes de espera reduce las opciones",
+          "content": "Quien actúa en zona de atención tiene muchas alternativas: reordenar pagos, atacar la deuda más cara, reducir gastos, consolidar. Quien espera hasta el primer atraso tiene menos, y quien espera a la cobranza tiene muy pocas. La ventana de opciones se cierra con el tiempo, y esa es la razón para revisar el indicador cada tantos meses."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Llega el sobreendeudamiento de golpe?",
+          "options": [
+            "Sí, de un día para otro",
+            "Solo en crisis",
+            "No, avanza durante meses"
+          ],
+          "correct": "No, avanza durante meses"
+        },
+        {
+          "question": "¿Cuál es el indicador más útil?",
+          "options": [
+            "Pagos de deuda entre ingreso neto",
+            "El saldo total",
+            "El número de tarjetas"
+          ],
+          "correct": "Pagos de deuda entre ingreso neto"
+        },
+        {
+          "question": "¿Qué pasa cuando ese indicador sube?",
+          "options": [
+            "Mejora la situación",
+            "El margen para imprevistos desaparece",
+            "No cambia nada"
+          ],
+          "correct": "El margen para imprevistos desaparece"
+        },
+        {
+          "question": "¿Qué señala pagar solo el mínimo?",
+          "options": [
+            "Buena gestión",
+            "Ahorro",
+            "Que la deuda ya sostiene la operación diaria"
+          ],
+          "correct": "Que la deuda ya sostiene la operación diaria"
+        },
+        {
+          "question": "¿Qué otra señal objetiva existe?",
+          "options": [
+            "Usar crédito para comida o servicios",
+            "Pagar de contado",
+            "Ahorrar"
+          ],
+          "correct": "Usar crédito para comida o servicios"
+        },
+        {
+          "question": "¿Qué indica pedir un crédito para pagar otro?",
+          "options": [
+            "Buena estrategia",
+            "Una señal de alerta clara",
+            "Nada"
+          ],
+          "correct": "Una señal de alerta clara"
+        },
+        {
+          "question": "¿Cuál es una señal subjetiva?",
+          "options": [
+            "Revisar cada semana",
+            "Hacer presupuesto",
+            "Evitar abrir los estados de cuenta"
+          ],
+          "correct": "Evitar abrir los estados de cuenta"
+        },
+        {
+          "question": "¿Cuándo aparecen las señales subjetivas?",
+          "options": [
+            "Antes que las cifras críticas",
+            "Después de todo",
+            "Nunca"
+          ],
+          "correct": "Antes que las cifras críticas"
+        },
+        {
+          "question": "¿Qué pasa con las opciones al esperar?",
+          "options": [
+            "Aumentan",
+            "Se reducen mes con mes",
+            "No cambian"
+          ],
+          "correct": "Se reducen mes con mes"
+        },
+        {
+          "question": "¿Qué conviene hacer en zona de atención?",
+          "options": [
+            "Pedir otro crédito",
+            "Esperar",
+            "Dejar de adquirir deuda nueva y atacar la más cara"
+          ],
+          "correct": "Dejar de adquirir deuda nueva y atacar la más cara"
+        }
+      ],
+      "rubric": "Logrado: calcula la razón de endeudamiento, identifica señales y define un plan por nivel. En proceso: reconoce señales sin cuantificar. Inicial: entiende que el problema avanza gradualmente."
+    },
+    "teacher_tips": [
+      "El cálculo de la razón de endeudamiento debe hacerse en clase: es un indicador que se usa toda la vida.",
+      "Las señales subjetivas suelen resonar más que las cifras. No las omita por parecer menos técnicas.",
+      "Trate el tema sin juicio: puede haber familias de alumnos en esa situación exacta."
+    ]
+  },
+  "S2-2-10": {
+    "code": "S2-2-10",
+    "title": "Negociar con cobranza sin ceder mis derechos",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Conocer los derechos del deudor ante la cobranza y preparar una interacción firme y documentada.",
+      "competencies": [
+        "Conocimiento de Derechos",
+        "Comunicación Asertiva",
+        "Documentación de Gestiones",
+        "Negociación bajo Presión"
+      ],
+      "materials": [
+        "Lista de prácticas indebidas de cobranza",
+        "Formato de registro de contactos",
+        "Guion de respuesta",
+        "Casos de cobranza abusiva",
+        "Cartel de derechos del deudor"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Llamada",
+          "duration": "15 min",
+          "label": "Presión y miedo"
+        },
+        {
+          "phase": "Desarrollo: Mis Derechos",
+          "duration": "30 min",
+          "label": "Qué pueden y qué no"
+        },
+        {
+          "phase": "Cierre: El Registro",
+          "duration": "15 min",
+          "label": "Documentar todo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA LLAMADA (APERTURA)",
+          "duration": "15 min",
+          "description": "Describa una llamada de cobranza con amenazas y presión para pagar de inmediato. Pregunte qué haría la persona. La mayoría dirá que se asustaría. Explique que deber dinero es una situación civil con reglas, no un delito, y que existen prácticas de cobranza que están prohibidas.",
+          "activity": "Dinámica \"¿Puede Hacer Eso?\": el grupo evalúa seis conductas de cobranza y opina cuáles son válidas."
+        },
+        {
+          "title": "FASE II: QUÉ PUEDEN Y QUÉ NO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique lo que un cobrador sí puede hacer: contactar en horarios razonables, informar el saldo y ofrecer opciones de pago. Y lo que no: amenazar, insultar, contactar a vecinos o al trabajo para exponer la deuda, hacerse pasar por autoridad o presentar documentos falsos. Los alumnos clasifican conductas.",
+          "activity": "Dinámica \"Válido o Indebido\": cada equipo clasifica diez conductas y explica su criterio."
+        },
+        {
+          "title": "FASE III: DOCUMENTAR TODO (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a llevar registro: fecha, hora, nombre de quien llama, empresa, lo que se dijo y lo que se acordó. Explique que ese registro es lo que permite presentar una queja ante las instancias correspondientes, y que pedir cualquier acuerdo por escrito antes de pagar es una regla sin excepciones.",
+          "activity": "Dinámica \"Mi Bitácora\": cada alumno registra una llamada simulada con todos los datos requeridos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Una llamada de cobranza con amenazas asusta a cualquiera, y esa es exactamente la intención. Deber dinero es una situación civil con reglas: hay cosas que un cobrador puede hacer y otras que están prohibidas.",
+      "sections": [
+        {
+          "subtitle": "Deber no es delito",
+          "content": "Una deuda de consumo es un asunto civil, no penal. Las amenazas de detención o de consecuencias penales por no pagar un crédito de consumo son una forma de presión, no una descripción de lo que ocurriría. Saber esto cambia por completo la posición de quien recibe la llamada, porque el miedo es la herramienta principal de la cobranza abusiva."
+        },
+        {
+          "subtitle": "Lo que sí puede hacer un cobrador",
+          "content": "Contactar al deudor en horarios razonables, identificarse con nombre y empresa, informar el monto y el origen de la deuda, ofrecer opciones de pago y dejar constancia de los intentos de contacto. Todo eso es parte legítima de su trabajo, y responder con hostilidad a una gestión correcta no ayuda a nadie."
+        },
+        {
+          "subtitle": "Lo que está prohibido",
+          "content": "Amenazar, insultar o humillar, llamar a horas inhábiles de forma reiterada, contactar a vecinos, familiares no obligados o al trabajo para exponer la deuda, hacerse pasar por autoridad o representante legal sin serlo, y enviar documentos que aparenten ser oficiales sin serlo. Todas esas conductas son denunciables ante las instancias correspondientes."
+        },
+        {
+          "subtitle": "El registro y los acuerdos por escrito",
+          "content": "Llevar un registro de cada contacto con fecha, hora, nombre, empresa y lo acordado convierte una situación confusa en un expediente. Y hay una regla sin excepciones: cualquier acuerdo de pago o descuento debe estar por escrito antes de pagar. Un descuento prometido por teléfono y no documentado simplemente no existe cuando llega el siguiente cobrador."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es delito deber dinero de un crédito de consumo?",
+          "options": [
+            "No, es un asunto civil",
+            "Sí",
+            "Solo si es mucho"
+          ],
+          "correct": "No, es un asunto civil"
+        },
+        {
+          "question": "¿Qué son las amenazas de detención?",
+          "options": [
+            "Un procedimiento normal",
+            "Una forma de presión, no una descripción real",
+            "Una obligación legal"
+          ],
+          "correct": "Una forma de presión, no una descripción real"
+        },
+        {
+          "question": "¿Cuál es la herramienta principal de la cobranza abusiva?",
+          "options": [
+            "La cortesía",
+            "La paciencia",
+            "El miedo"
+          ],
+          "correct": "El miedo"
+        },
+        {
+          "question": "¿Qué sí puede hacer un cobrador?",
+          "options": [
+            "Identificarse, informar el saldo y ofrecer opciones",
+            "Insultar",
+            "Llamar al trabajo a exponer la deuda"
+          ],
+          "correct": "Identificarse, informar el saldo y ofrecer opciones"
+        },
+        {
+          "question": "¿Qué está prohibido?",
+          "options": [
+            "Informar el monto",
+            "Amenazar, insultar y humillar",
+            "Ofrecer un plan"
+          ],
+          "correct": "Amenazar, insultar y humillar"
+        },
+        {
+          "question": "¿Puede contactar a vecinos para exponer la deuda?",
+          "options": [
+            "Sí, siempre",
+            "Sí, si no contestas",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Puede hacerse pasar por autoridad?",
+          "options": [
+            "No, está prohibido",
+            "Sí",
+            "Solo por escrito"
+          ],
+          "correct": "No, está prohibido"
+        },
+        {
+          "question": "¿Qué debe incluir el registro de contactos?",
+          "options": [
+            "Solo la fecha",
+            "Fecha, hora, nombre, empresa y lo acordado",
+            "Nada"
+          ],
+          "correct": "Fecha, hora, nombre, empresa y lo acordado"
+        },
+        {
+          "question": "¿Para qué sirve ese registro?",
+          "options": [
+            "Para nada",
+            "Para presumir",
+            "Para presentar una queja ante las instancias correspondientes"
+          ],
+          "correct": "Para presentar una queja ante las instancias correspondientes"
+        },
+        {
+          "question": "¿Qué pasa con un descuento prometido por teléfono?",
+          "options": [
+            "No existe si no está por escrito",
+            "Vale igual",
+            "Es automático"
+          ],
+          "correct": "No existe si no está por escrito"
+        }
+      ],
+      "rubric": "Logrado: distingue conductas válidas de indebidas, registra contactos y exige acuerdos por escrito. En proceso: conoce sus derechos sin documentar. Inicial: sabe que deber no es delito."
+    },
+    "teacher_tips": [
+      "La distinción entre asunto civil y penal es la que más tranquiliza y la que más se desconoce.",
+      "Aclare que la cobranza legítima existe y merece respeto: el objetivo no es evadir sino no ser abusado.",
+      "La regla de acuerdos por escrito antes de pagar debe quedar sin excepciones. Repítala al cierre."
     ]
   },
   "S2-3-1": {
@@ -2398,6 +4239,926 @@
     "teacher_tips": [
       "Mencione que los grandes fondos del mundo (como BlackRock) ya exigen estos criterios.",
       "Hable sobre los bonos verdes."
+    ]
+  },
+  "S2-3-6": {
+    "code": "S2-3-6",
+    "title": "Análisis técnico y fundamental: qué mira cada uno",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Distinguir el análisis fundamental del técnico, comprender qué mira cada uno y para qué horizonte sirve.",
+      "competencies": [
+        "Análisis de Inversiones",
+        "Lectura de Estados Financieros",
+        "Interpretación de Gráficos",
+        "Selección de Método"
+      ],
+      "materials": [
+        "Estado financiero simplificado de una empresa",
+        "Gráfico de precios con indicadores",
+        "Calculadora",
+        "Fichas de conceptos de cada método",
+        "Cartel comparativo de ambos enfoques"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dos Formas de Mirar",
+          "duration": "15 min",
+          "label": "Valor y precio"
+        },
+        {
+          "phase": "Desarrollo: Qué Mira Cada Uno",
+          "duration": "30 min",
+          "label": "Los indicadores"
+        },
+        {
+          "phase": "Cierre: Cuál Uso",
+          "duration": "15 min",
+          "label": "Depende del horizonte"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: VALOR Y PRECIO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que hay dos formas de decidir si una acción vale la pena. Una mira el negocio detrás de la acción; la otra mira el comportamiento del precio. No son excluyentes ni contradictorias: responden preguntas distintas.",
+          "activity": "Dinámica \"¿Negocio o Gráfica?\": el grupo clasifica seis preguntas según qué enfoque las responde."
+        },
+        {
+          "title": "FASE II: LOS INDICADORES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el análisis fundamental: ingresos, utilidades, deuda, márgenes, flujo de efectivo y la relación entre precio y utilidad. Y el técnico: tendencia, volumen, soportes y resistencias, medias móviles. Los alumnos identifican qué indicador pertenece a cada enfoque.",
+          "activity": "Dinámica \"A Qué Escuela Pertenece\": cada equipo clasifica doce indicadores y explica qué mide cada uno."
+        },
+        {
+          "title": "FASE III: DEPENDE DEL HORIZONTE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que el análisis fundamental sirve para decidir en qué invertir a largo plazo, mientras el técnico se usa sobre todo para decisiones de corto plazo y momento de entrada. Advierta que operar en corto plazo con dinero que no se puede perder es una de las formas más rápidas de perderlo.",
+          "activity": "Dinámica \"Elige el Método\": cada equipo asigna un enfoque a tres perfiles de inversionista distintos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay dos formas de mirar una inversión: estudiar el negocio que está detrás o estudiar cómo se ha comportado su precio. No compiten entre sí: responden preguntas distintas y sirven para horizontes distintos.",
+      "sections": [
+        {
+          "subtitle": "El análisis fundamental mira el negocio",
+          "content": "Estudia si la empresa gana dinero, si crece, cuánta deuda tiene, qué márgenes maneja y si genera flujo de efectivo. La pregunta que responde es cuánto vale realmente este negocio y si el precio actual es razonable frente a ese valor. Es el enfoque de quien invierte pensando en años."
+        },
+        {
+          "subtitle": "El análisis técnico mira el precio",
+          "content": "Estudia el comportamiento histórico del precio y del volumen operado, buscando patrones, tendencias y niveles donde el precio ha reaccionado antes. No pretende decir cuánto vale la empresa: pretende identificar momentos de entrada y salida. Es el enfoque de quien opera en plazos cortos."
+        },
+        {
+          "subtitle": "No son enemigos",
+          "content": "Muchos inversionistas usan el fundamental para decidir qué comprar y el técnico para afinar cuándo hacerlo. El error no es usar uno u otro, sino usar el técnico para justificar una inversión de largo plazo en un negocio malo, o esperar que el fundamental prediga el precio de la próxima semana."
+        },
+        {
+          "subtitle": "La advertencia necesaria",
+          "content": "Operar en plazos cortos exige tiempo, disciplina y tolerancia a perder, y la mayoría de quienes lo intentan sin preparación pierde dinero. Para alguien que empieza, el enfoque de largo plazo sobre negocios sólidos o sobre el mercado completo es mucho más razonable que intentar acertar movimientos de días."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué mira el análisis fundamental?",
+          "options": [
+            "El negocio detrás de la acción",
+            "La gráfica del precio",
+            "El volumen"
+          ],
+          "correct": "El negocio detrás de la acción"
+        },
+        {
+          "question": "¿Qué estudia concretamente?",
+          "options": [
+            "Soportes y resistencias",
+            "Ingresos, utilidades, deuda, márgenes y flujo",
+            "Medias móviles"
+          ],
+          "correct": "Ingresos, utilidades, deuda, márgenes y flujo"
+        },
+        {
+          "question": "¿Qué pregunta responde?",
+          "options": [
+            "Cuándo comprar hoy",
+            "Qué dirá la noticia",
+            "Cuánto vale realmente el negocio"
+          ],
+          "correct": "Cuánto vale realmente el negocio"
+        },
+        {
+          "question": "¿Qué mira el análisis técnico?",
+          "options": [
+            "El comportamiento del precio y el volumen",
+            "Los estados financieros",
+            "La deuda"
+          ],
+          "correct": "El comportamiento del precio y el volumen"
+        },
+        {
+          "question": "¿Qué pretende identificar?",
+          "options": [
+            "El valor de la empresa",
+            "Momentos de entrada y salida",
+            "Las utilidades"
+          ],
+          "correct": "Momentos de entrada y salida"
+        },
+        {
+          "question": "¿Son enfoques enemigos?",
+          "options": [
+            "Sí",
+            "Son idénticos",
+            "No, muchos los combinan"
+          ],
+          "correct": "No, muchos los combinan"
+        },
+        {
+          "question": "¿Cómo suelen combinarse?",
+          "options": [
+            "Fundamental para qué comprar, técnico para cuándo",
+            "Al revés siempre",
+            "No se combinan"
+          ],
+          "correct": "Fundamental para qué comprar, técnico para cuándo"
+        },
+        {
+          "question": "¿Cuál es un error común?",
+          "options": [
+            "Leer estados financieros",
+            "Usar el técnico para justificar largo plazo en un mal negocio",
+            "Diversificar"
+          ],
+          "correct": "Usar el técnico para justificar largo plazo en un mal negocio"
+        },
+        {
+          "question": "¿Qué exige operar en plazos cortos?",
+          "options": [
+            "Solo suerte",
+            "Nada",
+            "Tiempo, disciplina y tolerancia a perder"
+          ],
+          "correct": "Tiempo, disciplina y tolerancia a perder"
+        },
+        {
+          "question": "¿Qué es más razonable para quien empieza?",
+          "options": [
+            "El enfoque de largo plazo",
+            "Operar diario",
+            "Apostar todo"
+          ],
+          "correct": "El enfoque de largo plazo"
+        }
+      ],
+      "rubric": "Logrado: clasifica indicadores por enfoque y asigna el método adecuado según horizonte. En proceso: distingue los enfoques sin aplicarlos. Inicial: sabe que hay dos formas de analizar."
+    },
+    "teacher_tips": [
+      "Lleve un estado financiero real simplificado y una gráfica real: ver ambos lado a lado aclara todo.",
+      "Incluya siempre la advertencia sobre operar en corto plazo: es donde más dinero pierden los principiantes.",
+      "Evite presentar un enfoque como superior: cada uno responde una pregunta distinta."
+    ]
+  },
+  "S2-3-7": {
+    "code": "S2-3-7",
+    "title": "ETFs y fondos indizados: comprar el mercado completo",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué son los fondos indizados y los ETFs, y por qué comprar el mercado completo suele vencer a elegir acciones.",
+      "competencies": [
+        "Comprensión de Instrumentos Indizados",
+        "Diversificación",
+        "Análisis de Costos",
+        "Estrategia Pasiva"
+      ],
+      "materials": [
+        "Comparativo de fondos activos e indizados",
+        "Calculadora",
+        "Composición de un índice",
+        "Datos de desempeño comparado",
+        "Cartel de gestión activa contra pasiva"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Elegir la Ganadora",
+          "duration": "15 min",
+          "label": "Lo difícil que es"
+        },
+        {
+          "phase": "Desarrollo: Comprar Todo",
+          "duration": "30 min",
+          "label": "Índices y ETFs"
+        },
+        {
+          "phase": "Cierre: Qué Mirar",
+          "duration": "15 min",
+          "label": "Elegir bien un ETF"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ELEGIR LA GANADORA (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo elegirían en qué empresa invertir. Explique que la mayoría de quienes lo intentan, incluidos profesionales, no logra vencer al promedio del mercado de forma sostenida, y que existe una alternativa que consiste en no elegir.",
+          "activity": "Dinámica \"¿Cuál Habría Ganado?\": el grupo intenta elegir la mejor empresa de una lista de hace diez años."
+        },
+        {
+          "title": "FASE II: ÍNDICES Y ETFS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique qué es un índice: una canasta que representa un mercado o segmento. Un fondo indizado o un ETF replica esa canasta, así que comprar una participación equivale a comprar un pedacito de todas las empresas incluidas. Los alumnos analizan la composición de un índice y calculan su diversificación.",
+          "activity": "Dinámica \"Compro Todo\": cada equipo calcula cuántas empresas adquiere con una sola participación."
+        },
+        {
+          "title": "FASE III: ELEGIR BIEN (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe qué revisar: qué índice replica, cuál es su comisión anual, qué tan bien sigue al índice y cómo se opera. Insista en que la comisión es el factor que más se puede controlar y el que más impacta en el resultado a largo plazo.",
+          "activity": "Dinámica \"Compara Tres\": cada equipo evalúa tres instrumentos indizados y elige con criterios explícitos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Elegir la empresa que va a ganar es muy difícil, incluso para profesionales. Existe una alternativa que consiste en no elegir: comprar un pedacito de todas al mismo tiempo.",
+      "sections": [
+        {
+          "subtitle": "La dificultad de elegir",
+          "content": "Vencer al promedio del mercado de forma sostenida es extraordinariamente difícil. La mayoría de los fondos que lo intentan no lo consigue en periodos largos, y los que sí lo logran rara vez repiten. Esto no significa que sea imposible: significa que la probabilidad está en contra y que además cobran más por intentarlo."
+        },
+        {
+          "subtitle": "Qué es un índice y qué lo replica",
+          "content": "Un índice es una canasta que representa un mercado o un segmento, con reglas públicas sobre qué empresas incluye y con qué peso. Un fondo indizado o un ETF replica esa canasta. Comprar una participación equivale a comprar una fracción de todas las empresas que lo componen, en la misma proporción."
+        },
+        {
+          "subtitle": "La diversificación instantánea",
+          "content": "La ventaja más evidente es que con una sola operación se obtiene exposición a decenas o cientos de empresas. Si una quiebra, el efecto sobre el total es limitado. Esa diversificación es muy difícil de lograr comprando acciones una por una, sobre todo con montos pequeños y pagando comisión por cada operación."
+        },
+        {
+          "subtitle": "Qué revisar antes de comprar",
+          "content": "Qué índice replica exactamente, cuál es su comisión anual, qué tan fielmente sigue al índice, qué tan fácil es comprar y vender, y en qué moneda está denominado. La comisión merece atención especial: es el único factor que se controla con certeza y su efecto acumulado a lo largo de décadas es enorme."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es fácil vencer al promedio del mercado?",
+          "options": [
+            "Sí, con práctica",
+            "No, es extraordinariamente difícil",
+            "Sí, siempre"
+          ],
+          "correct": "No, es extraordinariamente difícil"
+        },
+        {
+          "question": "¿Qué pasa con los fondos que lo intentan?",
+          "options": [
+            "Casi todos lo logran",
+            "Todos lo logran",
+            "La mayoría no lo consigue en periodos largos"
+          ],
+          "correct": "La mayoría no lo consigue en periodos largos"
+        },
+        {
+          "question": "¿Qué es un índice?",
+          "options": [
+            "Una canasta que representa un mercado o segmento",
+            "Una empresa",
+            "Un banco"
+          ],
+          "correct": "Una canasta que representa un mercado o segmento"
+        },
+        {
+          "question": "¿Qué hace un fondo indizado o un ETF?",
+          "options": [
+            "Elige las mejores",
+            "Replica esa canasta",
+            "Compra bonos"
+          ],
+          "correct": "Replica esa canasta"
+        },
+        {
+          "question": "¿Qué compras con una participación?",
+          "options": [
+            "Una sola empresa",
+            "Nada",
+            "Una fracción de todas las empresas del índice"
+          ],
+          "correct": "Una fracción de todas las empresas del índice"
+        },
+        {
+          "question": "¿Cuál es la ventaja más evidente?",
+          "options": [
+            "Diversificación instantánea",
+            "Ganancia garantizada",
+            "Cero riesgo"
+          ],
+          "correct": "Diversificación instantánea"
+        },
+        {
+          "question": "Si una empresa del índice quiebra:",
+          "options": [
+            "Se pierde todo",
+            "El efecto sobre el total es limitado",
+            "No pasa nada nunca"
+          ],
+          "correct": "El efecto sobre el total es limitado"
+        },
+        {
+          "question": "¿Qué hay que revisar?",
+          "options": [
+            "Solo el nombre",
+            "Solo el color",
+            "Índice que replica, comisión, fidelidad y liquidez"
+          ],
+          "correct": "Índice que replica, comisión, fidelidad y liquidez"
+        },
+        {
+          "question": "¿Por qué importa tanto la comisión?",
+          "options": [
+            "Es lo único que se controla con certeza y se acumula",
+            "No importa",
+            "Solo el primer año"
+          ],
+          "correct": "Es lo único que se controla con certeza y se acumula"
+        },
+        {
+          "question": "¿Elimina un ETF el riesgo?",
+          "options": [
+            "Sí, por completo",
+            "No, lo diversifica",
+            "Sí, si es grande"
+          ],
+          "correct": "No, lo diversifica"
+        }
+      ],
+      "rubric": "Logrado: explica qué replica un instrumento indizado y lo evalúa por comisión y fidelidad. En proceso: entiende la diversificación sin criterios de selección. Inicial: sabe que existe la alternativa pasiva."
+    },
+    "teacher_tips": [
+      "El ejercicio de intentar elegir la ganadora de hace diez años es muy convincente y solo toma minutos.",
+      "Insista en que diversificar no elimina el riesgo: lo reparte. Es una distinción importante.",
+      "Mencione instrumentos por tipo y no por marca comercial para que el contenido no envejezca."
+    ]
+  },
+  "S2-3-8": {
+    "code": "S2-3-8",
+    "title": "Rebalanceo: mantener el rumbo del portafolio",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué es el rebalanceo de un portafolio, por qué es necesario y cómo ejecutarlo con reglas claras.",
+      "competencies": [
+        "Gestión de Portafolio",
+        "Disciplina de Inversión",
+        "Control de Riesgo",
+        "Ejecución por Reglas"
+      ],
+      "materials": [
+        "Formato de composición objetivo",
+        "Calculadora",
+        "Caso de portafolio desbalanceado",
+        "Datos de evolución por tipo de activo",
+        "Cartel de las reglas de rebalanceo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Se Desacomodó Solo",
+          "duration": "15 min",
+          "label": "Cómo ocurre"
+        },
+        {
+          "phase": "Desarrollo: Volver al Objetivo",
+          "duration": "30 min",
+          "label": "El mecanismo"
+        },
+        {
+          "phase": "Cierre: Con Qué Regla",
+          "duration": "15 min",
+          "label": "Calendario o umbral"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SE DESACOMODÓ SOLO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un portafolio que empezó con mitad renta fija y mitad variable, y que tras dos años de buen mercado quedó en 30 y 70. Pregunte si eso es bueno. Explique que ese portafolio ahora tiene mucho más riesgo del que su dueño decidió aceptar, sin que él haya hecho nada.",
+          "activity": "Dinámica \"¿Sigue Siendo mi Portafolio?\": el grupo compara la composición original con la actual."
+        },
+        {
+          "title": "FASE II: VOLVER AL OBJETIVO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el rebalanceo: vender parte de lo que creció y comprar de lo que quedó rezagado para volver a la proporción objetivo. Aclare que se siente contraintuitivo porque obliga a vender lo que va bien, y que esa es justamente su virtud: es una regla que impide dejarse llevar por la euforia.",
+          "activity": "Dinámica \"Regresa al 50-50\": cada equipo calcula cuánto vender y cuánto comprar para rebalancear."
+        },
+        {
+          "title": "FASE III: CON QUÉ REGLA (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente los dos criterios: por calendario, revisando cada cierto periodo, o por umbral, cuando una clase se desvía más de cierto porcentaje del objetivo. Mencione los costos: cada operación tiene comisión y puede generar impuestos, así que rebalancear demasiado seguido es contraproducente.",
+          "activity": "Dinámica \"Mi Regla\": cada alumno define su criterio de rebalanceo y justifica la frecuencia."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un portafolio que empezó mitad y mitad puede terminar en 30 y 70 sin que su dueño haya hecho nada. Eso significa que ahora corre mucho más riesgo del que decidió aceptar. El rebalanceo es la regla que lo corrige.",
+      "sections": [
+        {
+          "subtitle": "Por qué se desacomoda solo",
+          "content": "Las distintas clases de activo crecen a ritmos diferentes. Si la parte variable sube mucho más que la fija, su peso dentro del portafolio aumenta aunque nadie compre nada. El resultado es que la composición se desplaza hacia lo que más subió, que suele ser también lo más riesgoso, justo cuando más caro está."
+        },
+        {
+          "subtitle": "Qué es rebalancear",
+          "content": "Es devolver el portafolio a su composición objetivo vendiendo parte de lo que creció por encima de su peso y comprando de lo que quedó rezagado. También se puede hacer sin vender, dirigiendo las nuevas aportaciones hacia la clase que quedó por debajo, lo que evita comisiones e impuestos."
+        },
+        {
+          "subtitle": "Por qué se siente incómodo",
+          "content": "Rebalancear obliga a vender lo que va bien y comprar lo que va mal, que es exactamente lo contrario de lo que dicta el instinto. Esa incomodidad es su mayor virtud: convierte una decisión emocional en una regla mecánica, y evita que el portafolio termine concentrado en lo que más subió justo antes de una corrección."
+        },
+        {
+          "subtitle": "Calendario, umbral y costos",
+          "content": "Se puede rebalancear por calendario, revisando cada seis o doce meses, o por umbral, cuando una clase se desvía más de cierto porcentaje de su objetivo. Ambos criterios funcionan; lo que no funciona es hacerlo sin regla. Y hay que considerar los costos: cada operación tiene comisión y puede generar impuestos, así que rebalancear cada mes suele costar más de lo que aporta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué se desacomoda un portafolio?",
+          "options": [
+            "Por error del banco",
+            "Por la inflación",
+            "Porque las clases de activo crecen a ritmos distintos"
+          ],
+          "correct": "Porque las clases de activo crecen a ritmos distintos"
+        },
+        {
+          "question": "¿Hacia dónde se desplaza la composición?",
+          "options": [
+            "Hacia lo que más subió",
+            "Hacia lo que bajó",
+            "No se desplaza"
+          ],
+          "correct": "Hacia lo que más subió"
+        },
+        {
+          "question": "¿Qué implica eso?",
+          "options": [
+            "Menos riesgo",
+            "Más riesgo del que se decidió aceptar",
+            "Nada"
+          ],
+          "correct": "Más riesgo del que se decidió aceptar"
+        },
+        {
+          "question": "¿Qué es rebalancear?",
+          "options": [
+            "Vender todo",
+            "Comprar más de lo que sube",
+            "Volver a la composición objetivo"
+          ],
+          "correct": "Volver a la composición objetivo"
+        },
+        {
+          "question": "¿Cómo se hace sin vender?",
+          "options": [
+            "Dirigiendo las nuevas aportaciones a lo rezagado",
+            "No se puede",
+            "Cerrando la cuenta"
+          ],
+          "correct": "Dirigiendo las nuevas aportaciones a lo rezagado"
+        },
+        {
+          "question": "¿Por qué se siente incómodo?",
+          "options": [
+            "Es muy complicado",
+            "Obliga a vender lo que va bien",
+            "Cuesta mucho"
+          ],
+          "correct": "Obliga a vender lo que va bien"
+        },
+        {
+          "question": "¿Cuál es su mayor virtud?",
+          "options": [
+            "Garantiza ganancias",
+            "Elimina comisiones",
+            "Convierte una decisión emocional en una regla mecánica"
+          ],
+          "correct": "Convierte una decisión emocional en una regla mecánica"
+        },
+        {
+          "question": "¿Cuáles son los dos criterios?",
+          "options": [
+            "Calendario y umbral",
+            "Suerte y rumor",
+            "Precio y volumen"
+          ],
+          "correct": "Calendario y umbral"
+        },
+        {
+          "question": "¿Qué no funciona?",
+          "options": [
+            "Rebalancear cada año",
+            "Rebalancear sin regla",
+            "Usar umbrales"
+          ],
+          "correct": "Rebalancear sin regla"
+        },
+        {
+          "question": "¿Qué pasa si se rebalancea cada mes?",
+          "options": [
+            "Se gana más",
+            "No pasa nada",
+            "Suele costar más de lo que aporta"
+          ],
+          "correct": "Suele costar más de lo que aporta"
+        }
+      ],
+      "rubric": "Logrado: calcula un rebalanceo completo y define una regla con frecuencia justificada. En proceso: entiende el concepto sin calcular. Inicial: reconoce que el portafolio se desacomoda solo."
+    },
+    "teacher_tips": [
+      "El ejemplo del 50-50 que se convierte en 30-70 es el que hace evidente el problema. Úselo con cifras.",
+      "Destaque la opción de rebalancear con nuevas aportaciones: evita comisiones e impuestos.",
+      "Insista en tener una regla escrita: rebalancear por intuición es no rebalancear."
+    ]
+  },
+  "S2-3-9": {
+    "code": "S2-3-9",
+    "title": "Sesgos del inversionista: pánico, euforia y anclaje",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Identificar los principales sesgos que afectan las decisiones de inversión y aplicar reglas para contrarrestarlos.",
+      "competencies": [
+        "Reconocimiento de Sesgos",
+        "Autocontrol Financiero",
+        "Diseño de Reglas",
+        "Decisión Racional"
+      ],
+      "materials": [
+        "Fichas de sesgos comunes",
+        "Casos de decisiones sesgadas",
+        "Formato de reglas personales",
+        "Datos de comportamiento en crisis",
+        "Cartel de los cinco sesgos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Enemigo Interno",
+          "duration": "15 min",
+          "label": "No es el mercado"
+        },
+        {
+          "phase": "Desarrollo: Los Sesgos",
+          "duration": "30 min",
+          "label": "Cómo operan"
+        },
+        {
+          "phase": "Cierre: Reglas Anti-Sesgo",
+          "duration": "15 min",
+          "label": "Decidir antes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL ENEMIGO NO ES EL MERCADO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que la diferencia entre el rendimiento de un fondo y el que obtienen sus inversionistas suele ser negativa, porque la gente entra y sale en los peores momentos. El obstáculo principal de un inversionista no suele ser el mercado sino sus propias reacciones.",
+          "activity": "Dinámica \"¿Cuándo Vendieron?\": el grupo ubica en una gráfica los momentos donde más gente vendió."
+        },
+        {
+          "title": "FASE II: CÓMO OPERAN LOS SESGOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente cinco sesgos: el pánico que hace vender en las caídas, la euforia que hace comprar en los máximos, el anclaje al precio de compra, la aversión a realizar pérdidas y el exceso de confianza tras aciertos recientes. Los alumnos identifican cuál opera en seis situaciones.",
+          "activity": "Dinámica \"¿Qué Sesgo Es?\": cada equipo diagnostica el sesgo presente en seis decisiones reales."
+        },
+        {
+          "title": "FASE III: DECIDIR ANTES (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que los sesgos no se eliminan con voluntad: se neutralizan con reglas decididas de antemano, cuando no hay emoción. Aportación automática, rebalanceo por umbral, límite de revisión y un plan escrito de qué hacer ante una caída. Los alumnos escriben tres reglas propias.",
+          "activity": "Dinámica \"Mis Tres Reglas\": cada alumno escribe reglas concretas para sus propios sesgos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El obstáculo principal de un inversionista no suele ser el mercado: son sus propias reacciones. La gente entra cuando todo sube y sale cuando todo cae, que es exactamente al revés de lo que conviene.",
+      "sections": [
+        {
+          "subtitle": "Pánico y euforia",
+          "content": "El pánico hace vender durante las caídas, convirtiendo una pérdida temporal en una definitiva. La euforia hace comprar en los máximos, cuando todo el mundo habla de lo mismo y ya subió mucho. Los dos sesgos empujan en la misma dirección equivocada: comprar caro y vender barato."
+        },
+        {
+          "subtitle": "Anclaje y aversión a la pérdida",
+          "content": "El anclaje es fijarse en el precio al que uno compró como si fuera relevante para el futuro: no lo es, lo único que importa es qué se espera de aquí en adelante. La aversión a realizar pérdidas hace conservar inversiones malas solo para no admitir el error, mientras se venden las buenas para asegurar una ganancia pequeña."
+        },
+        {
+          "subtitle": "El exceso de confianza",
+          "content": "Después de dos o tres aciertos, es fácil concluir que uno tiene talento y no suerte. Ese exceso de confianza lleva a concentrar más, operar más y arriesgar más, justo antes de un error grande. Es especialmente peligroso porque llega disfrazado de experiencia."
+        },
+        {
+          "subtitle": "Reglas decididas en frío",
+          "content": "Los sesgos no se vencen con fuerza de voluntad en el momento, porque en el momento es cuando la emoción manda. Se neutralizan con reglas escritas antes: aportación automática cada mes, rebalanceo por umbral, límite de cuántas veces revisar el portafolio y un plan escrito de qué hacer si el mercado cae un porcentaje determinado."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál suele ser el obstáculo principal del inversionista?",
+          "options": [
+            "Sus propias reacciones",
+            "El mercado",
+            "Los impuestos"
+          ],
+          "correct": "Sus propias reacciones"
+        },
+        {
+          "question": "¿Qué hace el pánico?",
+          "options": [
+            "Comprar barato",
+            "Vender durante las caídas",
+            "Esperar"
+          ],
+          "correct": "Vender durante las caídas"
+        },
+        {
+          "question": "¿Qué convierte eso?",
+          "options": [
+            "Una ganancia en pérdida",
+            "Nada",
+            "Una pérdida temporal en definitiva"
+          ],
+          "correct": "Una pérdida temporal en definitiva"
+        },
+        {
+          "question": "¿Qué hace la euforia?",
+          "options": [
+            "Comprar en los máximos",
+            "Vender caro",
+            "Diversificar"
+          ],
+          "correct": "Comprar en los máximos"
+        },
+        {
+          "question": "¿Qué es el anclaje?",
+          "options": [
+            "Diversificar",
+            "Fijarse en el precio de compra como si importara al futuro",
+            "Rebalancear"
+          ],
+          "correct": "Fijarse en el precio de compra como si importara al futuro"
+        },
+        {
+          "question": "¿Qué importa realmente?",
+          "options": [
+            "Lo que pagué",
+            "Lo que subió antes",
+            "Qué se espera de aquí en adelante"
+          ],
+          "correct": "Qué se espera de aquí en adelante"
+        },
+        {
+          "question": "¿Qué hace la aversión a realizar pérdidas?",
+          "options": [
+            "Conservar lo malo y vender lo bueno",
+            "Vender lo malo",
+            "Diversificar"
+          ],
+          "correct": "Conservar lo malo y vender lo bueno"
+        },
+        {
+          "question": "¿Qué provoca el exceso de confianza?",
+          "options": [
+            "Ser prudente",
+            "Concentrar más, operar más y arriesgar más",
+            "Diversificar"
+          ],
+          "correct": "Concentrar más, operar más y arriesgar más"
+        },
+        {
+          "question": "¿Se vencen los sesgos con voluntad?",
+          "options": [
+            "Sí, siempre",
+            "Sí, con práctica",
+            "No, con reglas decididas antes"
+          ],
+          "correct": "No, con reglas decididas antes"
+        },
+        {
+          "question": "¿Qué reglas ayudan?",
+          "options": [
+            "Aportación automática, rebalanceo por umbral y plan escrito",
+            "Revisar a diario",
+            "Seguir noticias"
+          ],
+          "correct": "Aportación automática, rebalanceo por umbral y plan escrito"
+        }
+      ],
+      "rubric": "Logrado: identifica sesgos en casos concretos y redacta reglas propias para neutralizarlos. En proceso: reconoce los sesgos sin diseñar reglas. Inicial: entiende que las emociones afectan decisiones."
+    },
+    "teacher_tips": [
+      "Ubicar en una gráfica real dónde vendió más gente es el ejercicio más convincente de la unidad.",
+      "Insista en que las reglas se escriben en frío: es lo único que funciona cuando llega la emoción.",
+      "El exceso de confianza tras aciertos recientes merece énfasis: es el menos evidente de los cinco."
+    ]
+  },
+  "S2-3-10": {
+    "code": "S2-3-10",
+    "title": "Impuestos sobre inversiones: ISR y retención en México",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender cómo se gravan los rendimientos de las inversiones en México y qué diferencias existen entre instrumentos.",
+      "competencies": [
+        "Comprensión Fiscal de Inversiones",
+        "Cálculo de Rendimiento Neto",
+        "Comparación de Instrumentos",
+        "Planeación Tributaria"
+      ],
+      "materials": [
+        "Constancias de retención de ejemplo",
+        "Calculadora",
+        "Comparativo fiscal de instrumentos",
+        "Casos con distintos rendimientos",
+        "Cartel de retención y declaración"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Rendimiento Que No Llegó",
+          "duration": "15 min",
+          "label": "La retención"
+        },
+        {
+          "phase": "Desarrollo: Cómo se Grava",
+          "duration": "30 min",
+          "label": "Por tipo de instrumento"
+        },
+        {
+          "phase": "Cierre: Rendimiento Neto",
+          "duration": "15 min",
+          "label": "La cifra final"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL RENDIMIENTO QUE NO LLEGÓ COMPLETO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un estado de cuenta donde el rendimiento bruto y el abonado difieren. Explique que la diferencia es una retención de impuesto, que en muchos instrumentos se aplica de forma automática, y que ignorarla lleva a sobreestimar lo que realmente se gana.",
+          "activity": "Dinámica \"¿Dónde Está la Diferencia?\": el grupo localiza la retención en un estado de cuenta."
+        },
+        {
+          "title": "FASE II: CÓMO SE GRAVA CADA INSTRUMENTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique en términos generales que los instrumentos de deuda tienen una retención sobre el capital invertido, que la ganancia por venta de acciones tiene su propio tratamiento, y que ciertos instrumentos de largo plazo para el retiro tienen beneficios fiscales. Los alumnos calculan el rendimiento neto de tres casos.",
+          "activity": "Dinámica \"Bruto y Neto\": cada equipo calcula el rendimiento después de impuestos en tres instrumentos."
+        },
+        {
+          "title": "FASE III: LA CIFRA FINAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Insista en que la comparación correcta entre instrumentos es rendimiento neto después de comisiones, impuestos e inflación. Mencione que las constancias de retención sirven para la declaración anual y que en algunos casos puede resultar un saldo a favor.",
+          "activity": "Dinámica \"El Ganador Neto\": cada equipo ordena tres instrumentos por rendimiento realmente neto."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El rendimiento que anuncia un instrumento no es el que llega a tu bolsillo. Entre uno y otro hay comisiones, impuestos e inflación. Aprender a llegar a la cifra final es lo que permite comparar de verdad.",
+      "sections": [
+        {
+          "subtitle": "La retención automática",
+          "content": "En muchos instrumentos de deuda, la institución retiene una parte a cuenta del impuesto y la entera a la autoridad fiscal. Por eso el rendimiento abonado suele ser menor que el bruto anunciado. Esa retención no es un cobro de la institución: es un anticipo de impuesto que después se refleja en la declaración anual."
+        },
+        {
+          "subtitle": "Cada instrumento tiene su tratamiento",
+          "content": "Los instrumentos de deuda, la ganancia por venta de acciones, los dividendos y los fondos tienen reglas distintas, y en algunos casos el tratamiento depende de dónde esté listado el instrumento. Además, ciertos productos de largo plazo destinados al retiro tienen beneficios fiscales específicos que compensan su menor liquidez."
+        },
+        {
+          "subtitle": "La constancia de retención",
+          "content": "Las instituciones emiten un documento que detalla los rendimientos generados y el impuesto retenido durante el año. Ese documento es indispensable para la declaración anual, y en algunos casos, cuando lo retenido supera lo que realmente correspondía, puede derivar en un saldo a favor. Conservarlo es parte de invertir de forma ordenada."
+        },
+        {
+          "subtitle": "La comparación verdaderamente neta",
+          "content": "Comparar instrumentos por su tasa anunciada es incompleto. La secuencia correcta es tasa bruta, menos comisiones, menos impuestos, menos inflación. Lo que queda es lo que realmente aumentó tu poder de compra. Un instrumento con tasa menor pero mejor tratamiento fiscal puede terminar por encima de otro que se anuncia mejor."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué el rendimiento abonado suele ser menor al bruto?",
+          "options": [
+            "Por un error",
+            "Por una retención de impuesto",
+            "Por comisión del cajero"
+          ],
+          "correct": "Por una retención de impuesto"
+        },
+        {
+          "question": "¿Es la retención un cobro de la institución?",
+          "options": [
+            "Sí",
+            "Es una comisión",
+            "No, es un anticipo de impuesto"
+          ],
+          "correct": "No, es un anticipo de impuesto"
+        },
+        {
+          "question": "¿Tienen todos los instrumentos el mismo tratamiento?",
+          "options": [
+            "No, cada uno tiene reglas distintas",
+            "Sí, todos igual",
+            "Solo dos tipos"
+          ],
+          "correct": "No, cada uno tiene reglas distintas"
+        },
+        {
+          "question": "¿Qué instrumentos tienen beneficios fiscales?",
+          "options": [
+            "Todos",
+            "Ciertos productos de largo plazo para el retiro",
+            "Ninguno"
+          ],
+          "correct": "Ciertos productos de largo plazo para el retiro"
+        },
+        {
+          "question": "¿Qué compensan esos beneficios?",
+          "options": [
+            "Su alto riesgo",
+            "Nada",
+            "Su menor liquidez"
+          ],
+          "correct": "Su menor liquidez"
+        },
+        {
+          "question": "¿Qué es la constancia de retención?",
+          "options": [
+            "Un documento con rendimientos e impuesto retenido del año",
+            "Un recibo de compra",
+            "Un contrato"
+          ],
+          "correct": "Un documento con rendimientos e impuesto retenido del año"
+        },
+        {
+          "question": "¿Para qué sirve?",
+          "options": [
+            "Para nada",
+            "Para la declaración anual",
+            "Para abrir cuentas"
+          ],
+          "correct": "Para la declaración anual"
+        },
+        {
+          "question": "¿Puede resultar un saldo a favor?",
+          "options": [
+            "Nunca",
+            "Siempre",
+            "Sí, si lo retenido supera lo que correspondía"
+          ],
+          "correct": "Sí, si lo retenido supera lo que correspondía"
+        },
+        {
+          "question": "¿Cuál es la secuencia correcta de comparación?",
+          "options": [
+            "Tasa bruta, menos comisiones, impuestos e inflación",
+            "Solo la tasa bruta",
+            "Solo la comisión"
+          ],
+          "correct": "Tasa bruta, menos comisiones, impuestos e inflación"
+        },
+        {
+          "question": "¿Puede un instrumento con tasa menor terminar arriba?",
+          "options": [
+            "No, nunca",
+            "Sí, con mejor tratamiento fiscal",
+            "Solo si es bancario"
+          ],
+          "correct": "Sí, con mejor tratamiento fiscal"
+        }
+      ],
+      "rubric": "Logrado: calcula rendimiento neto completo y compara instrumentos considerando el tratamiento fiscal. En proceso: reconoce la retención sin calcular el neto. Inicial: sabe que hay impuesto sobre rendimientos."
+    },
+    "teacher_tips": [
+      "Evite dar tasas y porcentajes exactos: cambian con las reformas. Enseñe la lógica y remita a la consulta oficial.",
+      "La constancia de retención es un documento concreto que conviene mostrar impreso.",
+      "La secuencia bruta, comisiones, impuestos, inflación es el aprendizaje transferible de la unidad."
     ]
   },
   "S2-4-1": {
@@ -3324,8 +6085,927 @@
       "Enfatice que la RSE debe ser parte del modelo, no un 'parche' final.",
       "Explique que los consumidores modernos prefieren marcas con ética."
     ]
-  }
-,
+  },
+  "S2-4-6": {
+    "code": "S2-4-6",
+    "title": "Unit economics: cuánto cuesta y cuánto deja cada cliente",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Calcular la economía unitaria de un negocio para determinar si cada venta individual genera o destruye valor.",
+      "competencies": [
+        "Economía Unitaria",
+        "Cálculo de Margen",
+        "Diagnóstico de Viabilidad",
+        "Decisión de Escala"
+      ],
+      "materials": [
+        "Formato de economía unitaria",
+        "Calculadora",
+        "Casos de negocios con márgenes distintos",
+        "Datos de costos variables y fijos",
+        "Cartel de la pregunta fundamental"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Vender Más y Perder Más",
+          "duration": "15 min",
+          "label": "La paradoja"
+        },
+        {
+          "phase": "Desarrollo: La Unidad",
+          "duration": "30 min",
+          "label": "Calcular por venta"
+        },
+        {
+          "phase": "Cierre: Antes de Escalar",
+          "duration": "15 min",
+          "label": "La condición previa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: VENDER MÁS Y PERDER MÁS (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un negocio que crece en ventas y aumenta sus pérdidas cada mes. Pregunte cómo es posible. Explique que si cada venta individual pierde dinero, vender más solo multiplica el problema, y que por eso hay que analizar la unidad antes que el total.",
+          "activity": "Dinámica \"Más Ventas, Más Pérdida\": el grupo analiza un caso y localiza dónde está el problema."
+        },
+        {
+          "title": "FASE II: CALCULAR POR UNIDAD (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la economía unitaria: precio de venta menos costos variables directos da la contribución por unidad. Esa contribución es lo que queda para cubrir los costos fijos y generar utilidad. Los alumnos calculan la contribución unitaria y el punto de equilibrio de tres negocios.",
+          "activity": "Dinámica \"Contribución por Unidad\": cada equipo calcula la contribución y el punto de equilibrio."
+        },
+        {
+          "title": "FASE III: LA CONDICIÓN PARA ESCALAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Insista en la regla: solo tiene sentido invertir en crecer cuando la economía unitaria ya es positiva. Escalar un negocio con unidad negativa acelera la quiebra. La secuencia correcta es arreglar la unidad primero, escalar después.",
+          "activity": "Dinámica \"¿Puedo Escalar?\": cada equipo evalúa tres negocios y decide cuáles están listos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay negocios que crecen en ventas y aumentan sus pérdidas cada mes. No es contradicción: si cada venta individual pierde dinero, vender más solo multiplica el problema. Por eso se analiza la unidad antes que el total.",
+      "sections": [
+        {
+          "subtitle": "Qué es la economía unitaria",
+          "content": "Es el análisis de una sola venta: cuánto entra y cuánto sale por cada unidad vendida. Precio menos costos variables directos da la contribución unitaria. Ese número responde la pregunta más importante de cualquier negocio: cada vez que vendo, ¿estoy ganando o perdiendo?"
+        },
+        {
+          "subtitle": "Variables y fijos",
+          "content": "Los costos variables cambian con cada venta: material, empaque, comisión de la plataforma, envío. Los fijos existen aunque no vendas nada: renta, sueldos base, suscripciones. La contribución unitaria solo descuenta los variables, porque los fijos se cubren después con la suma de todas las contribuciones."
+        },
+        {
+          "subtitle": "El punto de equilibrio",
+          "content": "Es el número de unidades que hay que vender para que la suma de contribuciones cubra exactamente los costos fijos. Por debajo se pierde, por encima se gana. Es una cifra que todo negocio debería conocer de memoria, porque convierte una meta vaga en un objetivo verificable cada mes."
+        },
+        {
+          "subtitle": "Arreglar la unidad antes de escalar",
+          "content": "Invertir en crecer cuando la contribución unitaria es negativa acelera la quiebra: cada cliente nuevo aumenta la pérdida. La secuencia correcta es primero arreglar la unidad, subiendo precio, bajando costo variable o cambiando el modelo, y solo después invertir en volumen. Escalar amplifica lo que ya existe, sea bueno o malo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Puede un negocio crecer y perder más?",
+          "options": [
+            "No",
+            "Sí, si cada venta pierde dinero",
+            "Solo en crisis"
+          ],
+          "correct": "Sí, si cada venta pierde dinero"
+        },
+        {
+          "question": "¿Qué es la economía unitaria?",
+          "options": [
+            "El total anual",
+            "Los impuestos",
+            "El análisis de lo que entra y sale por cada venta"
+          ],
+          "correct": "El análisis de lo que entra y sale por cada venta"
+        },
+        {
+          "question": "¿Cómo se calcula la contribución unitaria?",
+          "options": [
+            "Precio menos costos variables directos",
+            "Precio menos todo",
+            "Ingreso total"
+          ],
+          "correct": "Precio menos costos variables directos"
+        },
+        {
+          "question": "¿Qué son los costos variables?",
+          "options": [
+            "Los que existen sin vender",
+            "Los que cambian con cada venta",
+            "Los impuestos"
+          ],
+          "correct": "Los que cambian con cada venta"
+        },
+        {
+          "question": "¿Y los fijos?",
+          "options": [
+            "Los del material",
+            "Los del envío",
+            "Los que existen aunque no vendas nada"
+          ],
+          "correct": "Los que existen aunque no vendas nada"
+        },
+        {
+          "question": "¿Qué cubre la suma de contribuciones?",
+          "options": [
+            "Los costos fijos y luego genera utilidad",
+            "Solo el material",
+            "Nada"
+          ],
+          "correct": "Los costos fijos y luego genera utilidad"
+        },
+        {
+          "question": "¿Qué es el punto de equilibrio?",
+          "options": [
+            "El precio ideal",
+            "Las unidades que cubren exactamente los fijos",
+            "El costo mínimo"
+          ],
+          "correct": "Las unidades que cubren exactamente los fijos"
+        },
+        {
+          "question": "¿Qué pasa al escalar con unidad negativa?",
+          "options": [
+            "Se mejora",
+            "Se equilibra",
+            "Se acelera la quiebra"
+          ],
+          "correct": "Se acelera la quiebra"
+        },
+        {
+          "question": "¿Cuál es la secuencia correcta?",
+          "options": [
+            "Arreglar la unidad y después escalar",
+            "Escalar y después arreglar",
+            "Solo escalar"
+          ],
+          "correct": "Arreglar la unidad y después escalar"
+        },
+        {
+          "question": "¿Qué hace escalar?",
+          "options": [
+            "Corrige errores",
+            "Amplifica lo que ya existe, bueno o malo",
+            "Reduce costos"
+          ],
+          "correct": "Amplifica lo que ya existe, bueno o malo"
+        }
+      ],
+      "rubric": "Logrado: calcula contribución unitaria y punto de equilibrio, y decide sobre escalar con criterio. En proceso: distingue costos variables de fijos sin calcular equilibrio. Inicial: entiende que la unidad importa."
+    },
+    "teacher_tips": [
+      "La separación entre costos variables y fijos es la parte que más se confunde. Practíquela con casos concretos.",
+      "El punto de equilibrio debe quedar como una cifra memorizable: convierte metas vagas en objetivos verificables.",
+      "Insista en la secuencia: arreglar la unidad, después escalar. Es el error más caro del emprendimiento."
+    ]
+  },
+  "S2-4-7": {
+    "code": "S2-4-7",
+    "title": "CAC y LTV: las dos cifras que deciden si puedes escalar",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Calcular el costo de adquisición y el valor de vida del cliente, y usar su relación para decidir si un negocio puede escalar.",
+      "competencies": [
+        "Cálculo de CAC y LTV",
+        "Análisis de Rentabilidad",
+        "Decisión de Inversión en Crecimiento",
+        "Gestión de Retención"
+      ],
+      "materials": [
+        "Formato de cálculo CAC y LTV",
+        "Calculadora",
+        "Datos de retención por periodo",
+        "Casos con distintas relaciones",
+        "Cartel de la razón LTV sobre CAC"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Cuánto Vale un Cliente",
+          "duration": "15 min",
+          "label": "Más que una venta"
+        },
+        {
+          "phase": "Desarrollo: Las Dos Cifras",
+          "duration": "30 min",
+          "label": "Calcularlas"
+        },
+        {
+          "phase": "Cierre: La Relación",
+          "duration": "15 min",
+          "label": "Qué dice el cociente"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CUÁNTO VALE UN CLIENTE (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto vale un cliente. La respuesta común es el monto de su compra. Explique que un cliente que vuelve doce veces vale mucho más que uno que compra una vez, y que esa diferencia cambia por completo cuánto se puede invertir en conseguirlo.",
+          "activity": "Dinámica \"Una Vez o Doce\": el grupo compara dos clientes con la misma compra inicial y distinta recurrencia."
+        },
+        {
+          "title": "FASE II: LAS DOS CIFRAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el costo de adquisición como todo lo invertido en conseguir clientes dividido entre los clientes conseguidos, y el valor de vida como la contribución que deja un cliente durante toda su relación con el negocio. Los alumnos calculan ambas para tres negocios.",
+          "activity": "Dinámica \"Calcula las Dos\": cada equipo obtiene CAC y LTV de tres casos con datos reales."
+        },
+        {
+          "title": "FASE III: QUÉ DICE EL COCIENTE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que la relación entre ambas cifras indica si el negocio puede invertir en crecer. Si el valor de vida no supera claramente el costo de adquisición, cada cliente nuevo destruye valor. Y aclare que mejorar la retención sube el valor de vida sin gastar un peso adicional en publicidad.",
+          "activity": "Dinámica \"¿Invierto o No?\": cada equipo decide si tres negocios deberían aumentar su inversión en adquisición."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un cliente que compra una vez y uno que vuelve doce veces valen cosas muy distintas, aunque su primera compra sea idéntica. Esa diferencia define cuánto puedes gastar en conseguirlo, y si tu negocio puede crecer o no.",
+      "sections": [
+        {
+          "subtitle": "El costo de adquisición",
+          "content": "Es todo lo invertido en conseguir clientes dividido entre el número de clientes efectivamente conseguidos en ese periodo. Incluye publicidad, promociones, comisiones de venta y el tiempo dedicado a conseguirlos. Es una cifra que hay que calcular por canal, porque cada uno tiene un costo muy distinto."
+        },
+        {
+          "subtitle": "El valor de vida del cliente",
+          "content": "Es la contribución total que deja un cliente durante toda su relación con el negocio: su contribución por compra, multiplicada por cuántas veces compra en un periodo, multiplicada por cuánto tiempo permanece. Un cliente que compra poco pero durante años puede valer más que uno que hace una compra grande y desaparece."
+        },
+        {
+          "subtitle": "La relación entre ambas",
+          "content": "Si el valor de vida no supera claramente el costo de adquisición, cada cliente nuevo destruye valor y crecer empeora la situación. Cuando el valor de vida es varias veces mayor que el costo, hay margen para invertir en adquisición con confianza. Ese cociente es una de las cifras que más se miran al evaluar si un negocio puede escalar."
+        },
+        {
+          "subtitle": "La retención es la palanca barata",
+          "content": "Bajar el costo de adquisición es difícil porque depende de mercados competidos. Subir el valor de vida está mucho más en manos del negocio: mejorar el producto, atender bien, dar razones para volver. Aumentar la permanencia de los clientes sube el valor de vida sin gastar un peso adicional en publicidad, y es casi siempre la palanca más rentable."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Valen lo mismo un cliente de una compra y uno de doce?",
+          "options": [
+            "Sí",
+            "Depende del color",
+            "No, el recurrente vale mucho más"
+          ],
+          "correct": "No, el recurrente vale mucho más"
+        },
+        {
+          "question": "¿Cómo se calcula el costo de adquisición?",
+          "options": [
+            "Lo invertido entre los clientes conseguidos",
+            "El precio del producto",
+            "La comisión"
+          ],
+          "correct": "Lo invertido entre los clientes conseguidos"
+        },
+        {
+          "question": "¿Qué incluye?",
+          "options": [
+            "Solo publicidad",
+            "Publicidad, promociones, comisiones y tiempo dedicado",
+            "Solo el envío"
+          ],
+          "correct": "Publicidad, promociones, comisiones y tiempo dedicado"
+        },
+        {
+          "question": "¿Por qué se calcula por canal?",
+          "options": [
+            "Por costumbre",
+            "Por ley",
+            "Porque cada canal tiene un costo muy distinto"
+          ],
+          "correct": "Porque cada canal tiene un costo muy distinto"
+        },
+        {
+          "question": "¿Qué es el valor de vida del cliente?",
+          "options": [
+            "La contribución total durante toda su relación con el negocio",
+            "Su primera compra",
+            "El precio"
+          ],
+          "correct": "La contribución total durante toda su relación con el negocio"
+        },
+        {
+          "question": "¿Qué factores lo componen?",
+          "options": [
+            "Solo el precio",
+            "Contribución por compra, frecuencia y permanencia",
+            "Solo la frecuencia"
+          ],
+          "correct": "Contribución por compra, frecuencia y permanencia"
+        },
+        {
+          "question": "Si el valor de vida no supera el costo de adquisición:",
+          "options": [
+            "Se gana más",
+            "Da igual",
+            "Cada cliente nuevo destruye valor"
+          ],
+          "correct": "Cada cliente nuevo destruye valor"
+        },
+        {
+          "question": "¿Cuándo hay margen para invertir en adquisición?",
+          "options": [
+            "Cuando el valor de vida es varias veces el costo",
+            "Siempre",
+            "Nunca"
+          ],
+          "correct": "Cuando el valor de vida es varias veces el costo"
+        },
+        {
+          "question": "¿Cuál es la palanca más barata?",
+          "options": [
+            "Más publicidad",
+            "Mejorar la retención",
+            "Bajar el precio"
+          ],
+          "correct": "Mejorar la retención"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Porque es fácil",
+            "Porque lo exige la ley",
+            "Sube el valor de vida sin gasto adicional en publicidad"
+          ],
+          "correct": "Sube el valor de vida sin gasto adicional en publicidad"
+        }
+      ],
+      "rubric": "Logrado: calcula ambas cifras, interpreta su relación y propone mejorar retención. En proceso: calcula una de las dos. Inicial: entiende que un cliente recurrente vale más."
+    },
+    "teacher_tips": [
+      "Insista en calcular el costo de adquisición por canal: el promedio general oculta canales inviables.",
+      "La palanca de retención es el hallazgo más accionable: casi siempre es más barata que más publicidad.",
+      "Use casos donde el cociente sea desfavorable: decidir no invertir también es una decisión correcta."
+    ]
+  },
+  "S2-4-8": {
+    "code": "S2-4-8",
+    "title": "Suscripción: el poder del ingreso recurrente",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender el modelo de ingreso recurrente, sus ventajas frente a la venta única y el papel decisivo de la cancelación.",
+      "competencies": [
+        "Modelos de Ingreso",
+        "Gestión de Cancelación",
+        "Proyección de Ingresos",
+        "Diseño de Suscripción"
+      ],
+      "materials": [
+        "Comparativo de venta única y suscripción",
+        "Calculadora",
+        "Datos de cancelación mensual",
+        "Casos de negocios recurrentes",
+        "Cartel del efecto de la cancelación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Empezar de Cero Cada Mes",
+          "duration": "15 min",
+          "label": "La venta única"
+        },
+        {
+          "phase": "Desarrollo: El Ingreso Recurrente",
+          "duration": "30 min",
+          "label": "Cómo se acumula"
+        },
+        {
+          "phase": "Cierre: La Cancelación",
+          "duration": "15 min",
+          "label": "El techo invisible"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EMPEZAR DE CERO CADA MES (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que en un negocio de venta única, cada mes empieza en cero: hay que volver a conseguir todas las ventas. En uno de suscripción, el mes empieza con lo que ya se tenía. Esa diferencia cambia por completo la dinámica del negocio.",
+          "activity": "Dinámica \"Dos Meses de Enero\": el grupo compara el arranque de mes de dos negocios distintos."
+        },
+        {
+          "title": "FASE II: CÓMO SE ACUMULA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Muestre la acumulación: si cada mes se suman clientes y pocos se van, el ingreso crece como una escalera. Los alumnos proyectan doce meses de dos negocios, uno de venta única y otro de suscripción, con el mismo número de clientes nuevos por mes.",
+          "activity": "Dinámica \"Doce Meses\": cada equipo proyecta ambos modelos y compara el resultado final."
+        },
+        {
+          "title": "FASE III: EL TECHO INVISIBLE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que la tasa de cancelación mensual impone un techo: si cada mes se va un porcentaje de la base, llega un punto en que los clientes nuevos solo reemplazan a los que se fueron. Los alumnos calculan ese techo para distintas tasas de cancelación.",
+          "activity": "Dinámica \"¿Dónde se Estanca?\": cada equipo calcula el techo de tres negocios con cancelaciones distintas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "En un negocio de venta única, cada mes empieza en cero. En uno de suscripción, empieza con lo que ya tenías. Esa diferencia parece pequeña el primer mes y es enorme al año.",
+      "sections": [
+        {
+          "subtitle": "La diferencia con la venta única",
+          "content": "En la venta única, todo el esfuerzo comercial de este mes produce el ingreso de este mes y nada más. En la suscripción, el esfuerzo de este mes produce ingreso este mes y todos los siguientes mientras el cliente permanezca. El trabajo se acumula en lugar de reiniciarse, y eso hace la diferencia con el tiempo."
+        },
+        {
+          "subtitle": "Cómo se acumula el ingreso",
+          "content": "Si un negocio suma treinta clientes al mes y casi ninguno se va, al final del año tiene la suma de todos los meses generando ingreso simultáneamente. La gráfica es una escalera ascendente, no una línea plana. Esa acumulación es la razón por la que tantos negocios buscan convertir su producto en algo recurrente."
+        },
+        {
+          "subtitle": "La cancelación pone el techo",
+          "content": "La tasa de cancelación mensual es el porcentaje de clientes que se van cada mes. Impone un límite matemático: cuando la base es tan grande que el porcentaje que se va iguala a los clientes nuevos, el negocio deja de crecer aunque siga vendiendo igual. Con cancelaciones altas ese techo llega muy pronto."
+        },
+        {
+          "subtitle": "Reducir cancelación vale más que vender más",
+          "content": "Bajar la cancelación sube el techo y alarga la permanencia de cada cliente, lo que aumenta el valor de vida sin gastar en adquisición. En negocios recurrentes, un punto menos de cancelación mensual suele valer mucho más que un punto más de clientes nuevos, y es la métrica que primero se revisa al evaluar uno."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cómo empieza cada mes un negocio de venta única?",
+          "options": [
+            "En cero",
+            "Con lo del mes anterior",
+            "Con el doble"
+          ],
+          "correct": "En cero"
+        },
+        {
+          "question": "¿Y uno de suscripción?",
+          "options": [
+            "En cero",
+            "Con lo que ya tenía",
+            "Sin clientes"
+          ],
+          "correct": "Con lo que ya tenía"
+        },
+        {
+          "question": "¿Qué produce el esfuerzo comercial en suscripción?",
+          "options": [
+            "Solo este mes",
+            "Nada",
+            "Ingreso este mes y los siguientes mientras el cliente permanezca"
+          ],
+          "correct": "Ingreso este mes y los siguientes mientras el cliente permanezca"
+        },
+        {
+          "question": "¿Cómo se ve la gráfica de ingreso recurrente?",
+          "options": [
+            "Como una escalera ascendente",
+            "Como una línea plana",
+            "Descendente"
+          ],
+          "correct": "Como una escalera ascendente"
+        },
+        {
+          "question": "¿Qué es la tasa de cancelación?",
+          "options": [
+            "El precio",
+            "El porcentaje de clientes que se van cada mes",
+            "La comisión"
+          ],
+          "correct": "El porcentaje de clientes que se van cada mes"
+        },
+        {
+          "question": "¿Qué impone?",
+          "options": [
+            "Nada",
+            "Un descuento",
+            "Un techo matemático al crecimiento"
+          ],
+          "correct": "Un techo matemático al crecimiento"
+        },
+        {
+          "question": "¿Cuándo deja de crecer el negocio?",
+          "options": [
+            "Cuando los que se van igualan a los nuevos",
+            "Nunca",
+            "Al año exacto"
+          ],
+          "correct": "Cuando los que se van igualan a los nuevos"
+        },
+        {
+          "question": "Con cancelaciones altas:",
+          "options": [
+            "No hay techo",
+            "El techo llega muy pronto",
+            "Se crece más"
+          ],
+          "correct": "El techo llega muy pronto"
+        },
+        {
+          "question": "¿Qué logra bajar la cancelación?",
+          "options": [
+            "Nada",
+            "Baja el precio",
+            "Sube el techo y alarga la permanencia"
+          ],
+          "correct": "Sube el techo y alarga la permanencia"
+        },
+        {
+          "question": "En negocios recurrentes, un punto menos de cancelación:",
+          "options": [
+            "Suele valer más que un punto más de clientes nuevos",
+            "Vale menos",
+            "Da igual"
+          ],
+          "correct": "Suele valer más que un punto más de clientes nuevos"
+        }
+      ],
+      "rubric": "Logrado: proyecta ingreso recurrente y calcula el techo por cancelación. En proceso: entiende la acumulación sin calcular el techo. Inicial: distingue venta única de recurrente."
+    },
+    "teacher_tips": [
+      "La proyección de doce meses lado a lado es lo que hace evidente la diferencia. No la sustituya por explicación.",
+      "El concepto de techo por cancelación es el más valioso y el menos intuitivo. Calcúlelo con cifras.",
+      "Aclare que no todo producto puede ser suscripción: forzar el modelo donde no encaja genera cancelaciones altas."
+    ]
+  },
+  "S2-4-9": {
+    "code": "S2-4-9",
+    "title": "Operaciones y proveedores: la cadena que sostiene la promesa",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender el papel de las operaciones y los proveedores en sostener la promesa que el negocio hace a sus clientes.",
+      "competencies": [
+        "Gestión de Operaciones",
+        "Selección de Proveedores",
+        "Gestión de Riesgo de Cadena",
+        "Diseño de Procesos"
+      ],
+      "materials": [
+        "Mapa de cadena de suministro",
+        "Criterios de evaluación de proveedores",
+        "Casos de fallas operativas",
+        "Formato de plan de contingencia",
+        "Cartel de la promesa y su sostén"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Promesa Rota",
+          "duration": "15 min",
+          "label": "Cuando falla atrás"
+        },
+        {
+          "phase": "Desarrollo: La Cadena",
+          "duration": "30 min",
+          "label": "Proveedores y procesos"
+        },
+        {
+          "phase": "Cierre: Contingencia",
+          "duration": "15 min",
+          "label": "Qué pasa si falla"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PROMESA ROTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee un negocio con excelente producto y publicidad que falla en las entregas. Pregunte qué recuerda el cliente. Explique que la promesa comercial la sostienen las operaciones, y que un buen producto con mala operación pierde clientes más rápido de lo que los consigue.",
+          "activity": "Dinámica \"¿Qué Recuerda el Cliente?\": el grupo enumera qué recuerda alguien tras una mala experiencia."
+        },
+        {
+          "title": "FASE II: PROVEEDORES Y PROCESOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique cómo evaluar un proveedor: precio, sí, pero también cumplimiento de plazos, consistencia de calidad, capacidad de crecer contigo y facilidad de comunicación. Y la importancia de no depender de un solo proveedor crítico. Los alumnos evalúan tres proveedores con una matriz.",
+          "activity": "Dinámica \"Matriz de Proveedores\": cada equipo califica tres opciones en cinco criterios y elige."
+        },
+        {
+          "title": "FASE III: QUÉ PASA SI FALLA (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a construir un plan de contingencia: identificar el eslabón crítico, tener un proveedor alterno probado, mantener inventario de seguridad de lo esencial y acordar por escrito qué ocurre ante un incumplimiento. Insista en que un proveedor alterno no probado no es un plan.",
+          "activity": "Dinámica \"El Eslabón Crítico\": cada equipo identifica el punto más frágil de una cadena y diseña su respaldo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un negocio puede tener un producto excelente y una publicidad impecable, y perder clientes por entregas tardías. La promesa la hace el área comercial; quien la sostiene es la operación.",
+      "sections": [
+        {
+          "subtitle": "La operación sostiene la promesa",
+          "content": "Cuando prometes entregar en tres días, esa promesa depende de que tu proveedor cumpla, de que tu proceso interno funcione y de que la logística responda. El cliente no distingue en qué eslabón falló: recuerda que le fallaste. Un buen producto con mala operación pierde clientes más rápido de lo que los consigue."
+        },
+        {
+          "subtitle": "Cómo evaluar un proveedor",
+          "content": "El precio es un criterio, no el criterio. Igual de importantes son el cumplimiento de plazos, la consistencia de la calidad, la capacidad de acompañar tu crecimiento y la facilidad de comunicación cuando algo sale mal. Un proveedor barato que falla dos veces al año puede costar más que uno caro que nunca falla."
+        },
+        {
+          "subtitle": "El riesgo de depender de uno solo",
+          "content": "Depender de un único proveedor para un insumo crítico es una de las fragilidades más comunes en negocios pequeños. Si ese proveedor sube precios, se retrasa o cierra, el negocio entero se detiene. Tener al menos una alternativa identificada y probada es una inversión de tiempo que se paga en la primera falla."
+        },
+        {
+          "subtitle": "Un plan de contingencia real",
+          "content": "Identificar el eslabón crítico, tener un proveedor alterno con el que ya se haya hecho al menos una compra, mantener inventario de seguridad de lo esencial y acordar por escrito qué ocurre ante un incumplimiento. Un proveedor alterno que solo existe en una lista y con el que nunca se ha operado no es un plan: es una intención."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Quién sostiene la promesa comercial?",
+          "options": [
+            "La publicidad",
+            "La operación",
+            "El precio"
+          ],
+          "correct": "La operación"
+        },
+        {
+          "question": "¿Distingue el cliente en qué eslabón falló?",
+          "options": [
+            "Sí, siempre",
+            "Solo si es grande",
+            "No, recuerda que le fallaste"
+          ],
+          "correct": "No, recuerda que le fallaste"
+        },
+        {
+          "question": "Un buen producto con mala operación:",
+          "options": [
+            "Pierde clientes más rápido de lo que los consigue",
+            "Crece igual",
+            "No tiene problema"
+          ],
+          "correct": "Pierde clientes más rápido de lo que los consigue"
+        },
+        {
+          "question": "¿Es el precio el único criterio para elegir proveedor?",
+          "options": [
+            "Sí",
+            "No, es uno entre varios",
+            "Sí, siempre"
+          ],
+          "correct": "No, es uno entre varios"
+        },
+        {
+          "question": "¿Qué otros criterios importan?",
+          "options": [
+            "El logotipo",
+            "La antigüedad únicamente",
+            "Cumplimiento, consistencia, capacidad de crecer y comunicación"
+          ],
+          "correct": "Cumplimiento, consistencia, capacidad de crecer y comunicación"
+        },
+        {
+          "question": "Un proveedor barato que falla dos veces al año:",
+          "options": [
+            "Puede costar más que uno caro confiable",
+            "Siempre conviene",
+            "Es lo mismo"
+          ],
+          "correct": "Puede costar más que uno caro confiable"
+        },
+        {
+          "question": "¿Cuál es una fragilidad común?",
+          "options": [
+            "Tener varios proveedores",
+            "Depender de un único proveedor crítico",
+            "Comparar precios"
+          ],
+          "correct": "Depender de un único proveedor crítico"
+        },
+        {
+          "question": "¿Qué pasa si ese proveedor falla?",
+          "options": [
+            "No pasa nada",
+            "Mejora",
+            "El negocio entero se detiene"
+          ],
+          "correct": "El negocio entero se detiene"
+        },
+        {
+          "question": "¿Qué incluye un plan de contingencia?",
+          "options": [
+            "Eslabón crítico, alterno probado, inventario y acuerdo escrito",
+            "Solo una lista",
+            "Nada"
+          ],
+          "correct": "Eslabón crítico, alterno probado, inventario y acuerdo escrito"
+        },
+        {
+          "question": "Un proveedor alterno nunca usado:",
+          "options": [
+            "Es suficiente",
+            "No es un plan, es una intención",
+            "Es lo ideal"
+          ],
+          "correct": "No es un plan, es una intención"
+        }
+      ],
+      "rubric": "Logrado: evalúa proveedores con múltiples criterios y diseña un plan de contingencia probado. En proceso: identifica criterios sin plan de respaldo. Inicial: reconoce que la operación sostiene la promesa."
+    },
+    "teacher_tips": [
+      "El punto de que el cliente no distingue el eslabón que falló es el que cambia la perspectiva del grupo.",
+      "La matriz de proveedores con cinco criterios es una herramienta que se lleva directo a la práctica.",
+      "Insista en que el proveedor alterno debe estar probado: es la diferencia entre un plan y una lista."
+    ]
+  },
+  "S2-4-10": {
+    "code": "S2-4-10",
+    "title": "Pivotar: cambiar de rumbo sin perder el aprendizaje",
+    "level": "Secundaria 2",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender qué es un pivote, cuándo tiene sentido hacerlo y cómo conservar el aprendizaje al cambiar de rumbo.",
+      "competencies": [
+        "Adaptación Estratégica",
+        "Análisis de Señales",
+        "Conservación de Aprendizaje",
+        "Decisión de Cambio"
+      ],
+      "materials": [
+        "Casos de negocios que pivotaron",
+        "Formato de decisión de pivote",
+        "Lista de señales de que hay que cambiar",
+        "Matriz de qué conservar y qué soltar",
+        "Cartel de pivotar contra rendirse"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Insistir o Cambiar",
+          "duration": "15 min",
+          "label": "La decisión difícil"
+        },
+        {
+          "phase": "Desarrollo: Cuándo Pivotar",
+          "duration": "30 min",
+          "label": "Las señales"
+        },
+        {
+          "phase": "Cierre: Qué Conservo",
+          "duration": "15 min",
+          "label": "No empezar de cero"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: INSISTIR O CAMBIAR (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee un negocio que lleva un año sin despegar. Pregunte si debe insistir o cambiar. Explique que las dos respuestas pueden ser correctas según los datos, y que el problema es que casi nadie define de antemano qué señales indicarían cada camino.",
+          "activity": "Dinámica \"¿Insisto o Cambio?\": el grupo debate un caso con datos ambiguos y busca qué faltaría saber."
+        },
+        {
+          "title": "FASE II: LAS SEÑALES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las señales de que conviene pivotar: los clientes usan el producto para algo distinto a lo previsto, un segmento pequeño responde mucho mejor que el objetivo, el problema resulta menos doloroso de lo que parecía, o la economía unitaria no se arregla pese a varios intentos. Los alumnos diagnostican tres casos.",
+          "activity": "Dinámica \"Diagnóstico\": cada equipo determina si tres negocios deben pivotar, insistir o cerrar."
+        },
+        {
+          "title": "FASE III: NO EMPEZAR DE CERO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que un pivote bien hecho conserva mucho: los clientes actuales, el conocimiento del mercado, las relaciones con proveedores, la tecnología o el equipo. Pivotar no es tirar todo y empezar de nuevo: es cambiar el elemento que no funciona conservando el resto.",
+          "activity": "Dinámica \"Qué Conservo\": cada equipo lista qué se conserva y qué se suelta en un pivote concreto."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un negocio lleva un año sin despegar. ¿Insistir o cambiar? Las dos respuestas pueden ser correctas, y el problema no es elegir mal: es no haber definido nunca qué señales indicarían cada camino.",
+      "sections": [
+        {
+          "subtitle": "Pivotar no es rendirse",
+          "content": "Un pivote es un cambio de rumbo que conserva lo aprendido: se cambia el segmento de cliente, el problema atendido, el modelo de ingreso o el canal, manteniendo todo lo demás. Rendirse es cerrar. Insistir sin cambiar nada cuando los datos dicen que no funciona no es perseverancia: es repetir el mismo experimento esperando otro resultado."
+        },
+        {
+          "subtitle": "Las señales de que conviene pivotar",
+          "content": "Los clientes usan el producto para algo distinto de lo que se diseñó; un segmento pequeño que no era el objetivo responde mucho mejor que el segmento principal; el problema resulta menos doloroso de lo que parecía y la gente prefiere seguir como estaba; o la economía unitaria no se arregla pese a varios intentos serios de corregirla."
+        },
+        {
+          "subtitle": "Qué se cambia y qué se conserva",
+          "content": "Un pivote cambia un elemento y conserva el resto. Se puede cambiar el segmento manteniendo el producto, cambiar el producto manteniendo el segmento, cambiar el modelo de ingreso manteniendo ambos, o cambiar el canal. Lo que casi siempre se conserva es el conocimiento del mercado, las relaciones construidas y el equipo, que es donde está el valor acumulado."
+        },
+        {
+          "subtitle": "Decidir con señales definidas antes",
+          "content": "La forma de no eternizar la duda es definir de antemano qué resultado en qué plazo indicaría que hay que cambiar. Sin ese acuerdo previo, la decisión se toma por cansancio o por optimismo, que son los dos peores consejeros. Un plan que dice qué se necesita ver en tres meses convierte una discusión emocional en una revisión de datos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un pivote?",
+          "options": [
+            "Cerrar el negocio",
+            "Insistir igual",
+            "Un cambio de rumbo que conserva lo aprendido"
+          ],
+          "correct": "Un cambio de rumbo que conserva lo aprendido"
+        },
+        {
+          "question": "¿Es lo mismo que rendirse?",
+          "options": [
+            "No, rendirse es cerrar",
+            "Sí",
+            "Casi"
+          ],
+          "correct": "No, rendirse es cerrar"
+        },
+        {
+          "question": "Insistir sin cambiar nada cuando los datos dicen que no funciona:",
+          "options": [
+            "Es perseverancia",
+            "Es repetir el mismo experimento",
+            "Es lo correcto"
+          ],
+          "correct": "Es repetir el mismo experimento"
+        },
+        {
+          "question": "¿Cuál es una señal de pivote?",
+          "options": [
+            "Las ventas crecen",
+            "Todo va bien",
+            "Los clientes usan el producto para algo distinto"
+          ],
+          "correct": "Los clientes usan el producto para algo distinto"
+        },
+        {
+          "question": "¿Qué otra señal existe?",
+          "options": [
+            "Un segmento no objetivo responde mucho mejor",
+            "Que el equipo esté cansado",
+            "Que llueva"
+          ],
+          "correct": "Un segmento no objetivo responde mucho mejor"
+        },
+        {
+          "question": "¿Qué indica que el problema no era tan doloroso?",
+          "options": [
+            "Compran mucho",
+            "La gente prefiere seguir como estaba",
+            "Recomiendan"
+          ],
+          "correct": "La gente prefiere seguir como estaba"
+        },
+        {
+          "question": "¿Qué se puede cambiar en un pivote?",
+          "options": [
+            "Todo a la vez siempre",
+            "Nada",
+            "Segmento, problema, modelo de ingreso o canal"
+          ],
+          "correct": "Segmento, problema, modelo de ingreso o canal"
+        },
+        {
+          "question": "¿Qué se conserva casi siempre?",
+          "options": [
+            "Conocimiento del mercado, relaciones y equipo",
+            "Nada",
+            "Solo el nombre"
+          ],
+          "correct": "Conocimiento del mercado, relaciones y equipo"
+        },
+        {
+          "question": "¿Cómo se evita eternizar la duda?",
+          "options": [
+            "Esperando",
+            "Definiendo antes qué resultado en qué plazo indicaría cambiar",
+            "Preguntando a amigos"
+          ],
+          "correct": "Definiendo antes qué resultado en qué plazo indicaría cambiar"
+        },
+        {
+          "question": "¿Cuáles son los dos peores consejeros?",
+          "options": [
+            "Los datos y el plan",
+            "El equipo",
+            "El cansancio y el optimismo"
+          ],
+          "correct": "El cansancio y el optimismo"
+        }
+      ],
+      "rubric": "Logrado: diagnostica señales de pivote y define qué conservar con criterios previos. En proceso: reconoce señales sin plan de decisión. Inicial: distingue pivotar de rendirse."
+    },
+    "teacher_tips": [
+      "La distinción entre pivotar, insistir y cerrar debe quedar clara: son tres decisiones distintas, no dos.",
+      "Insista en definir las señales antes: es lo que evita decidir por cansancio o por ilusión.",
+      "El ejercicio de qué conservar es el que muestra que pivotar no es empezar de cero."
+    ]
+  },
   "S2-SUPREMO-CRISIS": {
     "code": "S2-SUPREMO-CRISIS",
     "title": "Crisis Room: Mexico 1994",

@@ -41,16 +41,6 @@
       "step": 2,
       "default": 10,
       "unit": "pz"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
     }
   ],
   "formula": "(litros_leche * 28) + (kilos_huevo * 52) + (pan_dulce * 14)",

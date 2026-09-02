@@ -1,0 +1,148 @@
+{
+  "code": "ACT-P4-2-7-A",
+  "unit_code": "P4-2-7",
+  "unit_title": "Compras dentro de los videojuegos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Límite en el Juego",
+  "descripcion": "Calcula lo que gastas de verdad en compras dentro de juegos y define tu límite.",
+  "objetivo": "Convertir gasto virtual a pesos y establecer un límite mensual consciente",
+  "xp": 400,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La conversión",
+      "descripcion": "Cuánto cuesta en pesos la moneda virtual del juego.",
+      "campos": [
+        {
+          "id": "precio_paquete",
+          "label": "Precio del paquete de monedas",
+          "type": "slider",
+          "min": 20,
+          "max": 1000,
+          "step": 10,
+          "default": 100,
+          "unit": "$",
+          "ayuda": "El paquete que sueles comprar.",
+          "requerido": true
+        },
+        {
+          "id": "monedas_paquete",
+          "label": "Monedas que trae ese paquete",
+          "type": "slider",
+          "min": 50,
+          "max": 5000,
+          "step": 50,
+          "default": 500,
+          "unit": "monedas",
+          "ayuda": "Viene indicado en la tienda del juego.",
+          "requerido": true
+        },
+        {
+          "id": "valor_moneda",
+          "label": "Cuánto vale una moneda en pesos",
+          "type": "calculated",
+          "formula": "precio_paquete / monedas_paquete",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Lo que compro",
+      "descripcion": "Cuánto gasto realmente en un mes normal.",
+      "campos": [
+        {
+          "id": "compras_mes",
+          "label": "Compras que hago al mes dentro del juego",
+          "type": "slider",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "default": 3,
+          "unit": "compras",
+          "ayuda": "Cuenta también las pequeñas.",
+          "requerido": true
+        },
+        {
+          "id": "monedas_compra",
+          "label": "Monedas que gasto en cada compra",
+          "type": "slider",
+          "min": 10,
+          "max": 2000,
+          "step": 10,
+          "default": 250,
+          "unit": "monedas",
+          "ayuda": "Un promedio de tus compras típicas.",
+          "requerido": true
+        },
+        {
+          "id": "gasto_mes",
+          "label": "Lo que gasto al mes en pesos",
+          "type": "calculated",
+          "formula": "Math.round(precio_paquete / monedas_paquete * monedas_compra * compras_mes)",
+          "unit": "$"
+        },
+        {
+          "id": "gasto_anual",
+          "label": "Lo que gasto al año",
+          "type": "calculated",
+          "formula": "Math.round(precio_paquete / monedas_paquete * monedas_compra * compras_mes * 12)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi límite y mi meta",
+      "descripcion": "Cuánto decido gastar y qué podría lograr con la diferencia.",
+      "campos": [
+        {
+          "id": "limite_mes",
+          "label": "Límite mensual que me pongo",
+          "type": "slider",
+          "min": 0,
+          "max": 800,
+          "step": 20,
+          "default": 100,
+          "unit": "$",
+          "ayuda": "Debe salir de tu domingo o de un ahorro asignado, no del gasto familiar.",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_mensual",
+          "label": "Lo que ahorro al mes con el límite",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.round(precio_paquete / monedas_paquete * monedas_compra * compras_mes) - limite_mes)",
+          "unit": "$"
+        },
+        {
+          "id": "ahorro_anual",
+          "label": "Lo que ahorro al año con el límite",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.round(precio_paquete / monedas_paquete * monedas_compra * compras_mes) - limite_mes) * 12",
+          "unit": "$"
+        },
+        {
+          "id": "espera_horas",
+          "label": "Horas de espera antes de cada compra",
+          "type": "select",
+          "opciones": [
+            "24",
+            "48",
+            "72"
+          ],
+          "default": "24",
+          "ayuda": "La espera desactiva la prisa, el azar y la presión social.",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "limite_gasto_digital",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-2-7-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-7-a-escena.webp"
+}

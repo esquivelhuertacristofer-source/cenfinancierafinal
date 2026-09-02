@@ -130,5 +130,6 @@
   "titulo": "Cuestionario: El Tesoro de la Ganancia",
   "descripcion": "La ganancia es el tesoro que buscas. Comprueba que sabes calcularla, protegerla y distinguirla de las ventas totales.",
   "xp": 300,
-  "level": "Primaria 2"
+  "level": "Primaria 2",
+  "objetivo": "Identificar a quién le sirve un producto y por qué, como primer paso para poder venderlo."
 }

@@ -1,107 +1,121 @@
 {
-  "code": "ACT-S1-1-2-A",
+  "code": "ACT-S1-3-2-A",
   "unit_code": "S1-3-2",
   "unit_title": "Fondos de inversión vs. ETFs: diferencias clave",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "CONSTRUCTOR",
-  "complejidad": "MEDIO",
-  "titulo": "Blindando mi Negocio",
-  "descripcion": "Tu empresa está creciendo, pero un solo accidente podría llevarte a la quiebra. ¿Sabrás elegir las protecciones correctas?",
-  "objetivo": "Identificar las necesidades de aseguramiento específicas para diferentes modelos de negocio",
-  "xp": 400,
-  "output_type": "Programa de Seguros Corporativos",
-  "exportable": true,
-  "pasos": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "Fondo o ETF",
+  "descripcion": "Los dos juntan el dinero de muchas personas para invertirlo en muchas empresas a la vez. Y aun así son distintos en costo, en cómo se compran y en quién decide qué hay dentro.",
+  "objetivo": "Diferenciar fondos de inversión tradicionales de fondos cotizados (ETFs) en cuanto a costos, gestión y liquidez.",
+  "xp": 550,
+  "instruccion": "Arrastra cada característica a donde corresponde.",
+  "categorias": [
     {
-      "id": "giro_negocio",
-      "titulo": "🏢 Tu Empresa",
-      "descripcion": "¿A qué se dedica tu negocio?",
-      "campos": [
-        {
-          "id": "nombre_empresa_s1",
-          "label": "Nombre de tu Empresa",
-          "type": "text",
-          "placeholder": "Ej: TechNova Solutions...",
-          "requerido": true
-        },
-        {
-          "id": "tipo_negocio",
-          "label": "Giro Comercial",
-          "type": "select",
-          "opciones": [
-            "Fábrica de Ropa",
-            "Restaurante Gourmet",
-            "Desarrollo de Software",
-            "Transporte de Carga"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "fondo",
+      "label": "FONDO TRADICIONAL",
+      "emoji": "🏦",
+      "color": "#8b5cf6"
     },
     {
-      "id": "coberturas_criticas",
-      "titulo": "🛡️ Elegir Protecciones",
-      "descripcion": "Selecciona las 3 coberturas que consideres más importantes para tu giro.",
-      "campos": [
-        {
-          "id": "cobertura_1",
-          "label": "Cobertura Primaria",
-          "type": "select",
-          "opciones": [
-            "Daños por Incendio/Inundación",
-            "Robo de Mercancía",
-            "Responsabilidad Civil (Daños a terceros)",
-            "Ciberataques y Robo de Datos"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "cobertura_2",
-          "label": "Cobertura Secundaria",
-          "type": "select",
-          "opciones": [
-            "Interrupción de Negocio (Pérdida de utilidades)",
-            "Seguro de Hombre Clave (Protección de líderes)",
-            "Fidelidad de Empleados (Robos internos)",
-            "Transporte de Mercancía"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "etf",
+      "label": "ETF (FONDO COTIZADO)",
+      "emoji": "📈",
+      "color": "#10b981"
     },
     {
-      "id": "resumen_blindaje",
-      "titulo": "✅ Resumen del Plan",
-      "descripcion": "Justifica tu estrategia ante los socios.",
-      "campos": [
-        {
-          "id": "justificacion_seguro",
-          "label": "¿Por qué elegiste estas coberturas?",
-          "type": "textarea",
-          "placeholder": "Ej: Elegí Ciberataques porque manejamos datos de clientes y Responsabilidad Civil por si ocurre un accidente en el local...",
-          "requerido": true
-        },
-        {
-          "id": "valor_activos_empresa",
-          "label": "Valor de los Activos a Asegurar ($)",
-          "type": "slider",
-          "min": 50000,
-          "max": 5000000,
-          "step": 50000,
-          "default": 500000,
-          "requerido": false
-        },
-        {
-          "id": "prima_anual_est",
-          "label": "Prima Anual Estimada",
-          "type": "calculated",
-          "formula": "Math.round(valor_activos_empresa * 0.015)",
-          "unit": "$/año",
-          "ayuda": "El seguro empresarial suele costar ~1.5% del valor de los activos asegurados"
-        }
-      ]
+      "id": "ambos",
+      "label": "LOS DOS",
+      "emoji": "⚖️",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Se compra y vende en la Bolsa como si fuera una acción",
+      "emoji": "🔔",
+      "categoria_correcta": "etf",
+      "feedback": "Por eso su precio cambia durante todo el día, igual que una acción."
+    },
+    {
+      "id": "i2",
+      "label": "Se compra a través de la operadora, a un precio fijado al cierre del día",
+      "emoji": "🕔",
+      "categoria_correcta": "fondo",
+      "feedback": "Solo hay un precio por día: el valor de la cartera al cierre."
+    },
+    {
+      "id": "i3",
+      "label": "Reparte tu dinero entre muchos activos a la vez",
+      "emoji": "🧺",
+      "categoria_correcta": "ambos",
+      "feedback": "Diversificación instantánea: la razón principal para usar cualquiera de los dos."
+    },
+    {
+      "id": "i4",
+      "label": "Normalmente solo replica un índice, sin gestor que elija",
+      "emoji": "🤖",
+      "categoria_correcta": "etf",
+      "feedback": "Gestión pasiva: por eso sus comisiones son mucho más bajas."
+    },
+    {
+      "id": "i5",
+      "label": "Un gestor decide activamente qué comprar y vender",
+      "emoji": "🧑‍💼",
+      "categoria_correcta": "fondo",
+      "feedback": "Se le paga por intentar ganarle al mercado. La mayoría no lo logra de forma sostenida."
+    },
+    {
+      "id": "i6",
+      "label": "Comisiones típicamente por debajo del 0.5% anual",
+      "emoji": "🪙",
+      "categoria_correcta": "etf",
+      "feedback": "La diferencia de comisiones, compuesta 30 años, es enorme."
+    },
+    {
+      "id": "i7",
+      "label": "Comisiones que pueden superar el 1.5% anual",
+      "emoji": "💸",
+      "categoria_correcta": "fondo",
+      "feedback": "Hay que comparar siempre: la comisión sale de tu rendimiento, ganes o pierdas."
+    },
+    {
+      "id": "i8",
+      "label": "Está regulado y supervisado por la autoridad financiera",
+      "emoji": "🛡️",
+      "categoria_correcta": "ambos",
+      "feedback": "Ambos son vehículos legales y vigilados, a diferencia de muchos \"fondos\" informales."
+    },
+    {
+      "id": "i9",
+      "label": "Puedes vender tu posición en cualquier momento del horario de mercado",
+      "emoji": "⚡",
+      "categoria_correcta": "etf",
+      "feedback": "Mayor liquidez intradía. Útil, aunque no debería tentarte a operar de más."
+    },
+    {
+      "id": "i10",
+      "label": "Suele permitir aportaciones automáticas mensuales pequeñas",
+      "emoji": "🔁",
+      "categoria_correcta": "fondo",
+      "feedback": "Es su gran ventaja práctica para quien empieza: domiciliar y olvidarse."
+    },
+    {
+      "id": "i11",
+      "label": "Tu dinero puede subir o bajar: no hay rendimiento garantizado",
+      "emoji": "📉",
+      "categoria_correcta": "ambos",
+      "feedback": "Ninguno de los dos es una cuenta de ahorro. Diversificar reduce el riesgo, no lo elimina."
+    },
+    {
+      "id": "i12",
+      "label": "Se identifica con una clave de pizarra para comprarlo en el mercado",
+      "emoji": "🏷️",
+      "categoria_correcta": "etf",
+      "feedback": "En México muchos ETFs internacionales se compran desde el SIC de la BMV."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

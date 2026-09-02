@@ -38,7 +38,9 @@
 | 1 | **Trigger `protect_sensitive_profile_fields` no versionado** — existe en Supabase pero no en código. Si el proyecto se migra, el control de seguridad se pierde silenciosamente. | 20 min | Usuario: copiar SQL desde Supabase Dashboard → pegar en `supabase/security_triggers.sql` → commit |
 | 2 | **Ejecutar `supabase/migrations/legacy_indexes.sql`** — índices de performance generados pero no aplicados. | 5 min | Usuario: Supabase Dashboard → SQL Editor → pegar y ejecutar el archivo |
 | 3 | **Sin aviso de privacidad ni consentimiento parental** — la plataforma maneja datos de menores. Requisito LFPDPPP México para escuelas reales. | 2-4h (legal + desarrollo) | Requiere decisión de producto + redacción legal |
-| 4 | **Sin monitoreo de errores en producción** — Sentry no completado. Errores en producción son invisibles. | 30 min | Usuario: crear cuenta en sentry.io → crear proyecto Next.js → ejecutar `npx @sentry/wizard@latest -i nextjs` → agregar DSN a Vercel env vars |
+| 4 | ~~**Sin monitoreo de errores en producción** — Sentry no completado.~~ **NO VIGENTE** — ver nota abajo. | — | — |
+
+> **Nota (2026-07-08) — Sentry removido deliberadamente:** el ítem #4 de esta tabla y las instrucciones de `docs/SENTRY-SETUP-INSTRUCCIONES.md` son **históricas**. Durante la migración de Vercel a Cloudflare Workers, el SDK de Sentry (`@sentry/nextjs`) fue **removido intencionalmente** del proyecto — nunca llegó a tener un DSN configurado (estaba inerte) y su bundle de servidor (+ OpenTelemetry) hacía que el Worker superara el límite de 3 MiB gzip del plan free de Cloudflare. **No reinstalar el paquete ni seguir esas instrucciones como si siguieran vigentes.** Tener monitoreo de errores en producción (Sentry u otra alternativa compatible con Cloudflare Workers) sigue siendo deseable, pero reactivarlo es una **decisión de producto pendiente** — no algo a ejecutar automáticamente. Actualmente los errores de producción se ven en los logs del Worker (`wrangler tail` / dashboard de Cloudflare).
 
 ---
 
@@ -67,15 +69,19 @@
 
 1. **URGENTE** — Pegar SQL del trigger en `supabase/security_triggers.sql` → hacer commit
 2. **IMPORTANTE** — Ejecutar `supabase/migrations/legacy_indexes.sql` en Supabase Dashboard SQL Editor
-3. **IMPORTANTE** — Completar setup de Sentry (ver instrucciones en REPORTE-SPRINT3-CLAUDE.md)
+3. ~~**IMPORTANTE** — Completar setup de Sentry~~ **NO VIGENTE** — Sentry fue removido deliberadamente en la migración a Cloudflare (2026-07-08). Ver nota en la sección "Alta Prioridad" arriba y en `docs/SENTRY-SETUP-INSTRUCCIONES.md`.
 4. **LEGAL** — Agregar aviso de privacidad antes de usuarios reales en escuelas
 
 ---
 
-## Variables de Entorno Requeridas (Vercel Dashboard)
+## Variables de Entorno Requeridas (Cloudflare — `wrangler secret put`)
+
+> Actualizado (2026-07-08): el proyecto se despliega en Cloudflare Workers, no en Vercel. Las variables públicas no sensibles pueden ir en `wrangler.jsonc` (`vars`); los secretos se cargan con `wrangler secret put <NOMBRE>`. Ver `docs/SEGURIDAD-PENDIENTES.md` para el procedimiento completo.
 
 - `NEXT_PUBLIC_SUPABASE_URL` — requerido
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — requerido
-- `SENTRY_DSN` — pendiente (cuando se complete setup de Sentry)
+- `SUPABASE_SERVICE_ROLE_KEY` — requerido (solo servidor)
+- `SUPABASE_JWT_SECRET` — requerido (verificación JWT local en middleware)
+- ~~`SENTRY_DSN`~~ — **NO VIGENTE**, Sentry fue removido deliberadamente (ver nota arriba)
 
 La `service_role key` de Supabase NO debe estar en variables de entorno del frontend.

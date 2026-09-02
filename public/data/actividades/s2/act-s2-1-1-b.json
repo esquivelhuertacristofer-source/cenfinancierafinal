@@ -5,109 +5,109 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "¿Cuándo comprar y cuándo vender?",
-  "descripcion": "¿Eres un analista de negocios o un observador de gráficas? ¡Descubre tu estilo de inversión!",
-  "objetivo": "Identificar las herramientas y objetivos específicos del análisis técnico y del análisis fundamental",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Leer los Números del País",
+  "descripcion": "Cuando en las noticias dicen \"el PIB creció 2.1% y la inflación cerró en 4.3%\", están diciendo algo muy concreto sobre tu vida. Aprende a traducirlo.",
+  "objetivo": "Identificar los principales indicadores macroeconómicos y cómo su variación afecta el entorno económico familiar y nacional.",
+  "xp": 600,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "tef1",
-      "texto": "¿Cuál es el objetivo principal del Análisis Fundamental?",
+      "id": "q1",
+      "texto": "El PIB mide…",
       "opciones": [
-        "Predecir el precio de mañana",
-        "Calcular el 'Valor Real' de una empresa basándose en sus finanzas y su futuro",
-        "Ver colores en una gráfica",
-        "Saber cuánta gente está comprando"
+        "El dinero que tiene el gobierno",
+        "El valor de todo lo que produce un país en un periodo",
+        "La deuda nacional",
+        "El número de empleos"
       ],
       "correcta": 1,
-      "explicacion": "El fundamental busca empresas sólidas que valgan más de lo que cuesta su acción hoy."
+      "explicacion": "Producto Interno Bruto: si crece, en general hay más empleo e ingresos; si cae, lo contrario."
     },
     {
-      "id": "tef2",
-      "texto": "¿En qué se basa el Análisis Técnico?",
+      "id": "q2",
+      "texto": "Que el PIB crezca 2% no significa automáticamente que tú estés mejor porque…",
       "opciones": [
-        "En las noticias del periódico",
-        "En el estudio de las gráficas de precios y el volumen de transacciones pasadas",
-        "En lo que dice el CEO",
-        "En el clima del país"
+        "El PIB no existe",
+        "La riqueza puede repartirse de forma muy desigual",
+        "El PIB solo mide al gobierno",
+        "Siempre estás mejor"
       ],
       "correcta": 1,
-      "explicacion": "El análisis técnico cree que el precio ya contiene toda la información necesaria."
+      "explicacion": "Por eso también se miran el PIB per cápita y los indicadores de desigualdad y pobreza."
     },
     {
-      "id": "tef3",
-      "texto": "¿Qué es el 'Valor Intrínseco'?",
+      "id": "q3",
+      "texto": "La inflación se mide en México con…",
       "opciones": [
-        "El precio de la acción hoy",
-        "El valor real que debería tener la empresa según sus activos y ganancias",
-        "Un tipo de moneda digital",
-        "La deuda del gobierno"
+        "El INPC, una canasta de bienes y servicios que sigue el INEGI",
+        "El precio del dólar",
+        "El salario mínimo",
+        "El PIB"
       ],
-      "correcta": 1,
-      "explicacion": "Si el precio es menor al valor intrínseco, se considera una 'ganga' para el inversor fundamental."
+      "correcta": 0,
+      "explicacion": "Índice Nacional de Precios al Consumidor. Tu inflación personal puede diferir según en qué gastes."
     },
     {
-      "id": "tef4",
-      "texto": "¿Qué busca un analista técnico con una gráfica?",
+      "id": "q4",
+      "texto": "La tasa de desempleo oficial en México suele verse baja porque…",
       "opciones": [
-        "Dibujar paisajes",
-        "Identificar patrones y tendencias para predecir movimientos futuros del precio",
-        "Ver cuánto ganaron el año pasado",
-        "Saber el nombre de los empleados"
+        "Casi todos tienen buen empleo",
+        "Basta trabajar una hora a la semana para no contar como desempleado",
+        "No se mide",
+        "Solo cuenta a los jóvenes"
       ],
       "correcta": 1,
-      "explicacion": "La historia del precio tiende a repetirse en patrones reconocibles."
+      "explicacion": "Por eso hay que mirar también la informalidad y el subempleo: ahí está el retrato real."
     },
     {
-      "id": "tef5",
-      "texto": "Si quieres invertir para tu retiro (a 30 años), ¿qué análisis es más importante?",
+      "id": "q5",
+      "texto": "Si Banxico sube la tasa de interés, en tu vida diaria…",
       "opciones": [
-        "Análisis Técnico",
-        "Análisis Fundamental (porque importa la salud de la empresa a largo plazo)",
-        "No hacer análisis",
-        "Análisis de noticias rápidas"
+        "Los créditos se encarecen y las inversiones en deuda pagan más",
+        "Todo se abarata",
+        "Sube tu sueldo",
+        "No pasa nada"
       ],
-      "correcta": 1,
-      "explicacion": "A largo plazo, los buenos negocios siempre superan a las gráficas temporales."
+      "correcta": 0,
+      "explicacion": "Hipotecas y tarjetas suben; CETES y pagarés también. Perjudica al deudor y beneficia al ahorrador."
     },
     {
-      "id": "tef6",
-      "texto": "¿Qué es un 'Day Trader'?",
+      "id": "q6",
+      "texto": "Una \"recesión\" se define comúnmente como…",
       "opciones": [
-        "Alguien que ahorra por años",
-        "Alguien que compra y vende acciones en el mismo día usando análisis técnico",
-        "Un empleado del banco",
-        "Un cajero automático"
+        "Dos trimestres seguidos de caída del PIB",
+        "Un año con inflación alta",
+        "Cuando sube el dólar",
+        "Cuando hay desempleo"
       ],
-      "correcta": 1,
-      "explicacion": "Buscan ganancias rápidas aprovechando la volatilidad diaria."
+      "correcta": 0,
+      "explicacion": "En recesión conviene tener fondo de emergencia y evitar deuda nueva de consumo."
     },
     {
-      "id": "tef7",
-      "texto": "¿Qué significa la frase 'El mercado es eficiente'?",
+      "id": "q7",
+      "texto": "Si la inflación es 5% y tu sueldo sube 3%…",
       "opciones": [
-        "Que no gasta luz",
-        "Que el precio de la acción siempre refleja toda la información disponible de inmediato",
-        "Que todos ganan dinero",
-        "Que los bancos son rápidos"
+        "Ganaste poder de compra",
+        "Perdiste poder de compra: en la práctica ganas menos",
+        "Quedaste igual",
+        "Ganaste 8%"
       ],
       "correcta": 1,
-      "explicacion": "Es una teoría que dice que es casi imposible 'ganarle' al mercado consistentemente."
+      "explicacion": "El aumento real es aumento nominal menos inflación. Es el cálculo que hay que hacer cada año."
     },
     {
-      "id": "tef8",
-      "texto": "¿Cuál es la mejor forma de invertir según los expertos modernos?",
+      "id": "q8",
+      "texto": "Los indicadores macro sirven a una familia para…",
       "opciones": [
-        "Usar solo un tipo de análisis",
-        "Combinar ambos: Fundamental para elegir qué comprar y Técnico para elegir el momento de entrada",
-        "Seguir consejos de extraños",
-        "No invertir"
+        "Nada, son cosa de economistas",
+        "Decidir si conviene endeudarse, invertir en deuda o guardar liquidez",
+        "Predecir la Bolsa exactamente",
+        "Calcular impuestos"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora tienes las dos herramientas más poderosas del inversionista profesional."
+      "explicacion": "Con tasas altas conviene la deuda gubernamental y no endeudarse; con tasas bajas, al revés."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

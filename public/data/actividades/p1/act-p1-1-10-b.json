@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P1-1-10-B",
+  "unit_code": "P1-1-10",
+  "unit_title": "Ahorrar para dar: el regalo que yo compro",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Buen Regalo",
+  "descripcion": "Responde rápido y demuestra que sabes planear un regalo con tu propio dinero.",
+  "objetivo": "Consolidar el cálculo de ahorro con fecha límite y la distinción entre precio y valor",
+  "xp": 200,
+  "tiempo_por_pregunta": 22,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El regalo cuesta $60 y faltan 30 días. ¿Cuánto guardo al día?",
+      "respuesta_correcta": "$2",
+      "incorrectas": [
+        "$6",
+        "$30",
+        "$10"
+      ],
+      "dato_extra": "60 entre 30 es 2. Con tiempo, la cuota diaria se vuelve pequeña."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El mismo regalo de $60 pero faltan 6 días. ¿Cuánto al día?",
+      "respuesta_correcta": "$10",
+      "incorrectas": [
+        "$2",
+        "$6",
+        "$60"
+      ],
+      "dato_extra": "Menos días, cuota más alta. Por eso los regalos se planean con tiempo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Qué hace que regalar sea distinto de entregar?",
+      "respuesta_correcta": "Que el esfuerzo también fue mío",
+      "incorrectas": [
+        "Que sea más caro",
+        "Que tenga moño",
+        "Que sea sorpresa"
+      ],
+      "dato_extra": "Quien recibe siempre nota la diferencia, aunque no lo diga."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Tengo $48 apartados para un regalo y veo un juguete de $45. ¿Qué hago?",
+      "respuesta_correcta": "No lo compro: ese dinero ya tiene dueño",
+      "incorrectas": [
+        "Lo compro, luego ahorro otra vez",
+        "Compro los dos",
+        "Pido prestado"
+      ],
+      "dato_extra": "El dinero con destino no es dinero disponible. Esa frase salva metas."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Debo vaciar mi alcancía completa para regalar?",
+      "respuesta_correcta": "No, aparto una parte y conservo el resto",
+      "incorrectas": [
+        "Sí, entre más mejor",
+        "Sí, si es familia",
+        "Solo en diciembre"
+      ],
+      "dato_extra": "La generosidad que dura es la que no te deja en ceros."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Qué incluye el valor de un regalo además del precio?",
+      "respuesta_correcta": "El tiempo y el esfuerzo que costó",
+      "incorrectas": [
+        "El tamaño de la caja",
+        "La tienda donde se compró",
+        "El color"
+      ],
+      "dato_extra": "Por eso un dibujo se guarda años y algo caro se olvida."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Mi meta diaria resultó imposible de cumplir. Lo mejor es:",
+      "respuesta_correcta": "Ajustar el plan a una cuota que sí pueda",
+      "incorrectas": [
+        "Rendirme",
+        "Pedir el dinero prestado",
+        "Cambiar de regalo cada día"
+      ],
+      "dato_extra": "Ajustar no es rendirse: es hacer que el plan sea posible."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-10-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-10-b-escena.webp"
+}

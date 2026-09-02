@@ -4,102 +4,129 @@
   "unit_title": "Comprar vs. Rentar: El dilema del patrimonio",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Ciclo Inmobiliario",
-  "descripcion": "Invertir en propiedades es un viaje de 5 etapas. ¿Sabes qué hacer en cada una para maximizar tu ganancia?",
-  "objetivo": "Identificar las fases de la inversión inmobiliaria y las acciones clave para generar valor",
-  "xp": 250,
-  "instruccion": "Arrastra cada acción a la fase correspondiente del ciclo de inversión.",
-  "items": [
-    {
-      "id": "ci1",
-      "label": "Estudiar la zona y la plusvalía futura",
-      "emoji": "🔍",
-      "categoria_correcta": "analisis",
-      "feedback": "Primero investigamos dónde habrá crecimiento."
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "La Casa de los Ramírez",
+  "descripcion": "Los papás de Diego llevan ocho años rentando. Tienen $400,000 ahorrados y todos los tíos les dicen lo mismo en cada comida: \"rentar es tirar el dinero\".",
+  "objetivo": "Analizar la decisión de comprar o rentar considerando permanencia, costo de oportunidad, gastos ocultos y estabilidad laboral.",
+  "xp": 700,
+  "personaje_principal": "Diego",
+  "contexto_inicial": "Pagan $9,000 de renta. La casa que les gusta cuesta $1,800,000. El papá tiene una oferta de trabajo en otra ciudad que aún no ha decidido.",
+  "nodo_inicial": "la_presion",
+  "nodos": {
+    "la_presion": {
+      "id": "la_presion",
+      "texto": "El tío insiste: \"Ocho años rentando son $864,000 tirados a la basura\". ¿Es cierto?",
+      "opciones": [
+        {
+          "id": "matizar",
+          "texto": "No exactamente: pagaron por vivir en algún lado, igual que quien paga intereses al banco",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "Diego separa el gasto de vivienda del gasto de intereses. Nadie vive gratis.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "aceptar",
+          "texto": "Sí, es cierto: hay que comprar ya",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "La familia se entusiasma, pero aún no ha hecho ningún cálculo.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ci2",
-      "label": "Comprar en preventa (más barato)",
-      "emoji": "🏗️",
-      "categoria_correcta": "analisis",
-      "feedback": "Comprar antes de que esté terminado ahorra dinero."
+    "los_numeros": {
+      "id": "los_numeros",
+      "texto": "Hacen las cuentas del crédito: enganche $360,000, mensualidad $14,900 durante 20 años. Además: escrituración $120,000, predial y mantenimiento $27,000 al año. Total de intereses en 20 años: más de $2,000,000.",
+      "opciones": [
+        {
+          "id": "preguntar",
+          "texto": "Antes de decidir, preguntar cuántos años se van a quedar ahí",
+          "siguiente_nodo": "el_trabajo",
+          "consecuencia": "Diego hace la pregunta que nadie había hecho.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "comprar_ya",
+          "texto": "Comprar: la mensualidad se parece a la renta",
+          "siguiente_nodo": "compra_apresurada",
+          "consecuencia": "Firman sin resolver lo del trabajo en otra ciudad.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -360000
+        }
+      ]
     },
-    {
-      "id": "ci3",
-      "label": "Remodelar y pintar para subir el valor",
-      "emoji": "🎨",
-      "categoria_correcta": "mejora",
-      "feedback": "El valor agregado permite cobrar más renta."
+    "el_trabajo": {
+      "id": "el_trabajo",
+      "texto": "Ahí aparece el punto crítico: el papá podría mudarse de ciudad en un año o dos. Vender una casa recién comprada cuesta comisión de 5%, y los primeros años de un crédito casi todo se va a intereses, no a capital.",
+      "opciones": [
+        {
+          "id": "esperar",
+          "texto": "Esperar a que se resuelva lo del trabajo, seguir rentando e invertir los $400,000",
+          "siguiente_nodo": "final_paciente",
+          "consecuencia": "Ponen el ahorro en un fondo y mantienen la flexibilidad.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 180000
+        },
+        {
+          "id": "comprar_igual",
+          "texto": "Comprar de todas formas: \"ya nos las arreglaremos\"",
+          "siguiente_nodo": "compra_apresurada",
+          "consecuencia": "Compran con la duda encima.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -360000
+        }
+      ]
     },
-    {
-      "id": "ci4",
-      "label": "Instalar sistemas de ahorro de agua",
-      "emoji": "💧",
-      "categoria_correcta": "mejora",
-      "feedback": "Una casa eficiente es más atractiva."
+    "compra_apresurada": {
+      "id": "compra_apresurada",
+      "texto": "A los 18 meses llega la oferta definitiva: mudarse o quedarse estancado. Al vender la casa descubren que de los $268,000 pagados en mensualidades, solo $31,000 bajaron la deuda. El resto fueron intereses. Más 5% de comisión al vender.",
+      "opciones": [
+        {
+          "id": "vender",
+          "texto": "Vender y aceptar la pérdida",
+          "siguiente_nodo": "final_perdida",
+          "consecuencia": "Pierden alrededor de $210,000 entre comisión, escrituración e intereses.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -210000
+        },
+        {
+          "id": "rentarla",
+          "texto": "Conservarla y rentarla a otra familia",
+          "siguiente_nodo": "final_arrendador",
+          "consecuencia": "La renta cubre parte de la mensualidad, pero no toda.",
+          "xp_bonus": 130,
+          "impacto_patrimonio": -60000
+        }
+      ]
     },
-    {
-      "id": "ci5",
-      "label": "Cobrar renta mensual a los inquilinos",
-      "emoji": "💰",
-      "categoria_correcta": "flujo",
-      "feedback": "Esto es lo que te da libertad financiera."
+    "final_paciente": {
+      "id": "final_paciente",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Dos años después el papá tomó el trabajo, se mudaron sin ataduras y sus $400,000 se convirtieron en $580,000. Al año siguiente compraron en la nueva ciudad, con más enganche y una tasa mejor.",
+      "reflexion_final": "Comprar casa es casi siempre buena idea, pero solo si te vas a quedar más de 7 u 8 años y tu ingreso es estable. La renta no es dinero tirado: es el precio de la flexibilidad, y a veces la flexibilidad vale exactamente lo que cuesta."
     },
-    {
-      "id": "ci6",
-      "label": "Pagar impuestos y mantenimiento",
-      "emoji": "🛠️",
-      "categoria_correcta": "flujo",
-      "feedback": "Un buen dueño cuida su inversión."
+    "final_perdida": {
+      "id": "final_perdida",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Compraron y vendieron en 18 meses. Perdieron $210,000 y llegaron a la nueva ciudad con menos ahorro del que tenían al principio.",
+      "reflexion_final": "Los primeros años de una hipoteca son casi puros intereses: el capital baja lentísimo. Por eso comprar teniendo dudas sobre dónde vivirás es de las decisiones más caras que existen."
     },
-    {
-      "id": "ci7",
-      "label": "Vender la propiedad cuando subió de precio",
-      "emoji": "🤝",
-      "categoria_correcta": "salida",
-      "feedback": "Aquí es donde realizas tu ganancia de plusvalía."
-    },
-    {
-      "id": "ci8",
-      "label": "Comprar un edificio más grande con la ganancia",
-      "emoji": "🏢",
-      "categoria_correcta": "reinv",
-      "feedback": "¡El interés compuesto aplicado a los ladrillos!"
+    "final_arrendador": {
+      "id": "final_arrendador",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Se quedaron con la casa y la rentaron. Cada mes ponen $3,000 de su bolsa para completar la mensualidad, pero conservan el patrimonio y a largo plazo puede salirles bien.",
+      "reflexion_final": "Convertir una compra apresurada en inversión inmobiliaria es una salida válida, pero exige aguantar un costo mensual durante años. No es un plan: es un rescate."
     }
-  ],
-  "categorias": [
-    {
-      "id": "analisis",
-      "label": "1. ANÁLISIS Y COMPRA",
-      "emoji": "📋",
-      "color": "#1e3a8a"
-    },
-    {
-      "id": "mejora",
-      "label": "2. VALOR AGREGADO",
-      "emoji": "🛠️",
-      "color": "#b45309"
-    },
-    {
-      "id": "flujo",
-      "label": "3. RENTA Y FLUJO",
-      "emoji": "💵",
-      "color": "#047857"
-    },
-    {
-      "id": "salida",
-      "label": "4. VENTA / SALIDA",
-      "emoji": "📈",
-      "color": "#7c3aed"
-    },
-    {
-      "id": "reinv",
-      "label": "5. REINVERSIÓN",
-      "emoji": "🔄",
-      "color": "#db2777"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

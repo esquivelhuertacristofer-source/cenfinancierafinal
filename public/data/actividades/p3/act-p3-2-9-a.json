@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P3-2-9-A",
+  "unit_code": "P3-2-9",
+  "unit_title": "El IPAB: quién protege mi dinero si un banco quiebra",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Escudo del Ahorro",
+  "descripcion": "Mueve las barritas y compara cuánto vale tu ahorro en el banco contra guardarlo en casa.",
+  "objetivo": "Comparar el resultado del ahorro formal protegido contra el ahorro informal",
+  "xp": 200,
+  "inputs": [
+    {
+      "id": "ahorro",
+      "label": "Dinero que voy a guardar",
+      "type": "slider",
+      "min": 500,
+      "max": 50000,
+      "step": 500,
+      "default": 10000,
+      "unit": "$",
+      "referencia": "El ahorro de una familia común está muy por debajo del límite del IPAB."
+    },
+    {
+      "id": "anios",
+      "label": "Años que lo voy a dejar guardado",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3,
+      "unit": "años",
+      "referencia": "Entre más tiempo, más se nota la diferencia."
+    },
+    {
+      "id": "tasa",
+      "label": "Interés anual que paga el banco",
+      "type": "slider",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "unit": "%",
+      "referencia": "Las cuentas de ahorro suelen pagar poco; los pagarés algo más."
+    },
+    {
+      "id": "inflacion",
+      "label": "Inflación anual estimada",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "unit": "%",
+      "referencia": "La inflación le quita valor al dinero guardado en casa."
+    }
+  ],
+  "formula": "Math.round(ahorro * Math.pow(1 + tasa / 100, anios) - ahorro * Math.pow(1 - inflacion / 100, anios))",
+  "descripcion_formula": "Lo que tendrías en el banco con intereses, menos lo que valdría el mismo dinero guardado en casa después de la inflación.",
+  "output_label": "Ventaja del banco sobre guardarlo en casa",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "tasa == 0 && inflacion == 0",
+      "mensaje": "Sin interés ni inflación, la diferencia en dinero es cero. Aun así el banco protege contra robo, incendio y pérdida.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "tasa > inflacion",
+      "mensaje": "El banco te paga más de lo que la inflación te quita: tu dinero no solo está protegido, además crece en valor real.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "tasa < inflacion && tasa > 0",
+      "mensaje": "El interés no alcanza a cubrir la inflación, pero aun así pierdes mucho menos que guardándolo en casa.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "anios >= 7",
+      "mensaje": "A siete años o más la diferencia se vuelve enorme. El tiempo amplifica tanto el interés como la inflación.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "ahorro >= 40000",
+      "mensaje": "Aun con esta cantidad estás muy por debajo del límite del IPAB, que cubre varios millones por persona y por banco.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-9-a-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-2-6-B",
+  "unit_code": "S2-2-6",
+  "unit_title": "Gastos médicos mayores: deducible, coaseguro y suma asegurada",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Cómo Paga un Seguro",
+  "descripcion": "Comprueba que dominas la secuencia de pago.",
+  "objetivo": "Verificar el cálculo de cobertura en gastos médicos mayores",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El deducible es:",
+      "opciones": [
+        "La prima mensual",
+        "El máximo cubierto",
+        "Lo que cubre el asegurado antes de que pague la aseguradora",
+        "El coaseguro"
+      ],
+      "correcta": 2,
+      "explicacion": "Se paga íntegro antes de que la aseguradora intervenga."
+    },
+    {
+      "id": "q2",
+      "texto": "Si la cuenta es menor al deducible:",
+      "opciones": [
+        "La aseguradora paga todo",
+        "Paga la mitad",
+        "Se devuelve la prima",
+        "La aseguradora no paga nada"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso un deducible alto cambia por completo la utilidad de la póliza."
+    },
+    {
+      "id": "q3",
+      "texto": "El coaseguro es:",
+      "opciones": [
+        "El porcentaje del resto que paga el asegurado",
+        "El deducible",
+        "La prima",
+        "El impuesto"
+      ],
+      "correcta": 0,
+      "explicacion": "Se aplica después de cubrir el deducible."
+    },
+    {
+      "id": "q4",
+      "texto": "El tope de coaseguro:",
+      "opciones": [
+        "Es el máximo de la póliza",
+        "Es el monto tras el cual la aseguradora cubre el 100%",
+        "No existe",
+        "Es la prima"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la protección más valiosa en un siniestro grande."
+    },
+    {
+      "id": "q5",
+      "texto": "Lo que excede la suma asegurada:",
+      "opciones": [
+        "Lo cubre el gobierno",
+        "Se perdona",
+        "Vuelve a ser responsabilidad del asegurado",
+        "Lo cubre otra póliza"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso la suma asegurada debe ser realista para tratamientos costosos."
+    },
+    {
+      "id": "q6",
+      "texto": "Una prima baja suele significar:",
+      "opciones": [
+        "Mejor cobertura",
+        "Sin límites",
+        "Más beneficios",
+        "Deducible alto, coaseguro mayor o suma menor"
+      ],
+      "correcta": 3,
+      "explicacion": "El precio siempre está pagando algo."
+    },
+    {
+      "id": "q7",
+      "texto": "La comparación correcta entre planes es:",
+      "opciones": [
+        "Cuánto pagarías en el peor escenario",
+        "Cuál cuesta menos al mes",
+        "Cuál es más conocido",
+        "Cuál tiene más oficinas"
+      ],
+      "correcta": 0,
+      "explicacion": "Un plan barato que exige lo que no tienes no protege."
+    },
+    {
+      "id": "q8",
+      "texto": "El seguro y el fondo de emergencia:",
+      "opciones": [
+        "Son sustitutos",
+        "Se complementan: sin efectivo no se paga el deducible",
+        "Son incompatibles",
+        "Son lo mismo"
+      ],
+      "correcta": 1,
+      "explicacion": "Uno cubre el golpe grande, el otro permite activarlo."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-6-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-6-b-escena.webp"
+}

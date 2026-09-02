@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-1-8-B",
+  "unit_code": "P5-1-8",
+  "unit_title": "La tasa de interés: por qué Banxico la sube o la baja",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Sube o Baja la Tasa",
+  "descripcion": "Clasifica cada efecto según lo que provoca subir o bajar la tasa.",
+  "objetivo": "Asociar movimientos de la tasa de referencia con sus efectos económicos",
+  "xp": 240,
+  "instruccion": "Arrastra cada efecto a la situación que lo provoca.",
+  "categorias": [
+    {
+      "id": "sube",
+      "label": "Cuando la tasa sube",
+      "emoji": "📈",
+      "color": "#EF4444"
+    },
+    {
+      "id": "baja",
+      "label": "Cuando la tasa baja",
+      "emoji": "📉",
+      "color": "#10B981"
+    },
+    {
+      "id": "siempre",
+      "label": "Siempre conviene",
+      "emoji": "⭐",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Pedir prestado se vuelve más caro",
+      "emoji": "💸",
+      "categoria_correcta": "sube",
+      "feedback": "Por eso se frena el consumo y con él la inflación."
+    },
+    {
+      "id": "i2",
+      "label": "El crédito se abarata y las empresas invierten más",
+      "emoji": "🏗️",
+      "categoria_correcta": "baja",
+      "feedback": "Es la forma de reactivar una economía desacelerada."
+    },
+    {
+      "id": "i3",
+      "label": "Los instrumentos de ahorro pagan más",
+      "emoji": "🏦",
+      "categoria_correcta": "sube",
+      "feedback": "Ahorrar se vuelve más atractivo que gastar."
+    },
+    {
+      "id": "i4",
+      "label": "Comparar el rendimiento contra la inflación",
+      "emoji": "⚖️",
+      "categoria_correcta": "siempre",
+      "feedback": "El GAT real importa suban o bajen las tasas."
+    },
+    {
+      "id": "i5",
+      "label": "Conviene postergar créditos grandes",
+      "emoji": "⏸️",
+      "categoria_correcta": "sube",
+      "feedback": "El mismo préstamo cuesta bastante más al mes."
+    },
+    {
+      "id": "i6",
+      "label": "El ahorro rinde poco y hay que cuidar el poder de compra",
+      "emoji": "🔍",
+      "categoria_correcta": "baja",
+      "feedback": "Con tasas bajas es fácil quedar por debajo de la inflación."
+    },
+    {
+      "id": "i7",
+      "label": "Tener un fondo de emergencia disponible",
+      "emoji": "🛡️",
+      "categoria_correcta": "siempre",
+      "feedback": "Ninguna tasa cambia la necesidad de estar preparado."
+    },
+    {
+      "id": "i8",
+      "label": "Aumenta el riesgo de que la inflación se acelere",
+      "emoji": "🔥",
+      "categoria_correcta": "baja",
+      "feedback": "Por eso no se puede bajar la tasa indefinidamente."
+    },
+    {
+      "id": "i9",
+      "label": "La economía se enfría de forma deliberada",
+      "emoji": "❄️",
+      "categoria_correcta": "sube",
+      "feedback": "Es el objetivo buscado: contener los precios."
+    },
+    {
+      "id": "i10",
+      "label": "Que el plazo del instrumento coincida con la meta",
+      "emoji": "📆",
+      "categoria_correcta": "siempre",
+      "feedback": "Una regla que no depende del nivel de tasas."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-8-b-escena.webp"
+}

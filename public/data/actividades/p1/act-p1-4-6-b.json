@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P1-4-6-B",
+  "unit_code": "P1-4-6",
+  "unit_title": "Preguntar antes de hacer: ¿qué le gusta a la gente?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "El Cliente Manda",
+  "descripcion": "Responde rápido: ¿qué pregunta sirve y qué pregunta engaña?",
+  "objetivo": "Consolidar los criterios de una buena investigación de cliente",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué hago antes de producir para vender?",
+      "respuesta_correcta": "Preguntar qué prefiere la gente",
+      "incorrectas": [
+        "Producir mucho",
+        "Hacer lo que me gusta",
+        "Poner precio alto"
+      ],
+      "dato_extra": "Preguntar no cuesta nada y evita desperdiciar materiales."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Cuál es una buena pregunta?",
+      "respuesta_correcta": "¿Cuál de estas tres prefieres?",
+      "incorrectas": [
+        "¿Verdad que esta es la mejor?",
+        "¿No te gusta la roja?",
+        "¿Te gustaría algo rico?"
+      ],
+      "dato_extra": "Abierta, con opciones y sin sugerir. Después, silencio."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Por qué no basta preguntarle a una persona?",
+      "respuesta_correcta": "Porque puede ser la excepción",
+      "incorrectas": [
+        "Porque miente",
+        "Porque tarda",
+        "Porque no sabe"
+      ],
+      "dato_extra": "Con diez respuestas ya empiezas a ver una tendencia real."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Hice 30 galletas de un sabor que nadie quiso. ¿Qué perdí?",
+      "respuesta_correcta": "El dinero de los materiales",
+      "incorrectas": [
+        "Nada",
+        "Solo tiempo",
+        "Clientes"
+      ],
+      "dato_extra": "Ese dinero ya no vuelve. Preguntar antes lo habría evitado."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cómo se llama preguntarle a la gente qué quiere?",
+      "respuesta_correcta": "Investigación de mercado",
+      "incorrectas": [
+        "Publicidad",
+        "Contabilidad",
+        "Inventario"
+      ],
+      "dato_extra": "Suena complicado, pero es exactamente tu hoja de caritas."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Después de preguntar, ¿qué sigue?",
+      "respuesta_correcta": "Contar los votos y decidir",
+      "incorrectas": [
+        "Olvidarlo",
+        "Cambiar las respuestas",
+        "Preguntar otra vez"
+      ],
+      "dato_extra": "Lo que no se cuenta no sirve para decidir nada."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Por qué \"yo no soy mi cliente\"?",
+      "respuesta_correcta": "Porque a la gente puede gustarle algo distinto",
+      "incorrectas": [
+        "Porque no tengo dinero",
+        "Porque soy niño",
+        "Porque no vendo"
+      ],
+      "dato_extra": "Muchos negocios de adultos fracasan justo por olvidar esto."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-6-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-6-b-escena.webp"
+}

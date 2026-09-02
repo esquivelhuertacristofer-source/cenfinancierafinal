@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-4-7-A",
+  "unit_code": "S1-4-7",
+  "unit_title": "MVP: el producto mínimo que ya sirve",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "El Producto Mínimo",
+  "descripcion": "Ceny quiere lanzar un servicio de comida preparada. Cada decisión define cuánto invierte antes de aprender.",
+  "objetivo": "Aplicar el concepto de MVP a un lanzamiento real",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny quiere vender comida preparada semanal. Tiene $30,000 ahorrados y una lista de veinte cosas que \"necesita\" antes de empezar.",
+  "nodo_inicial": "alcance",
+  "nodos": {
+    "alcance": {
+      "id": "alcance",
+      "texto": "Su lista incluye local, marca registrada, sitio web, empaques personalizados y diez recetas. ¿Por dónde empieza?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preparar tres recetas para diez personas conocidas y cobrarles",
+          "siguiente_nodo": "senal",
+          "consecuencia": "Con $1,500 aprende más que con los $30,000 completos.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 28500
+        },
+        {
+          "id": "o2",
+          "texto": "Invertir los $30,000 en montar todo antes de vender el primer platillo",
+          "siguiente_nodo": "todo",
+          "consecuencia": "Gastó todo sin saber si alguien pagaría.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-alcance.webp"
+    },
+    "todo": {
+      "id": "todo",
+      "texto": "Con todo montado, vende cuatro pedidos el primer mes. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Hablar con esos cuatro clientes para entender qué falta",
+          "siguiente_nodo": "senal",
+          "consecuencia": "Aprende, aunque el dinero de aprender ya se gastó.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Invertir en publicidad para vender más",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Publicitar algo que aún no funciona solo acelera la pérdida.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-todo.webp"
+    },
+    "senal": {
+      "id": "senal",
+      "texto": "Antes de la primera venta, ¿qué define Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Qué quiere aprender y qué señal lo confirmaría: que al menos seis de diez repitan",
+          "siguiente_nodo": "resultado",
+          "consecuencia": "Ahora cualquier resultado significa algo concreto.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: ya verá cómo va saliendo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin métrica definida, cualquier resultado se interpreta como se quiera.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-senal.webp"
+    },
+    "resultado": {
+      "id": "resultado",
+      "texto": "De diez clientes, siete repitieron y dos recomendaron. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ampliar poco a poco, reinvirtiendo lo que el propio negocio genera",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Crece sobre una señal confirmada y sin comprometer sus ahorros.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 22000
+        },
+        {
+          "id": "o2",
+          "texto": "Invertir de golpe los $30,000 para escalar rápido",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Diez clientes son una señal, no una garantía de demanda a gran escala.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-resultado.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny validó con $1,500, confirmó su señal y creció reinvirtiendo lo que el negocio generaba.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Un MVP no es un producto barato: es la versión más pequeña que ya entrega valor y responde una pregunta concreta. El objetivo no es vender: es aprender antes de gastar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio arrancó, pero sin una lectura clara de lo que estaba funcionando.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Un MVP sin pregunta definida es solo un producto pequeño. La métrica se decide antes de lanzar, no después de ver los resultados.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny gastó todo antes de saber si alguien pagaría, y luego gastó más en publicitarlo.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Publicitar algo que todavía no funciona acelera la pérdida en lugar de corregirla. Primero se confirma que el producto sirve; después se le pone gasolina.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-4-7-a-portada.webp"
+}

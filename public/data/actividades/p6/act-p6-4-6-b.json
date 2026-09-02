@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-4-6-B",
+  "unit_code": "P6-4-6",
+  "unit_title": "Validar antes de gastar: la prueba de los 10 clientes",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Validación",
+  "descripcion": "Responde rápido sobre cómo validar antes de invertir.",
+  "objetivo": "Consolidar el método de validación previa",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El error más caro al emprender es:",
+      "respuesta_correcta": "Invertir sin haber preguntado a nadie",
+      "incorrectas": [
+        "Empezar pequeño",
+        "Tener una idea rara",
+        "Cobrar mucho"
+      ],
+      "dato_extra": "El problema es el orden, no la idea."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Con cuántas personas conviene hablar antes de invertir?",
+      "respuesta_correcta": "Diez del público objetivo real",
+      "incorrectas": [
+        "Una",
+        "Cien",
+        "Ninguna"
+      ],
+      "dato_extra": "Suficientes para ver patrones, pocas para hacerlo en días."
+    },
+    {
+      "id": "q3",
+      "pregunta": "No sirve validar con familiares porque:",
+      "respuesta_correcta": "Van a decir que les gusta",
+      "incorrectas": [
+        "No tienen dinero",
+        "No entienden",
+        "Son pocos"
+      ],
+      "dato_extra": "La amabilidad contamina toda la muestra."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Las preguntas útiles son sobre:",
+      "respuesta_correcta": "Lo que ya hacen y ya pagan",
+      "incorrectas": [
+        "Lo que les gustaría",
+        "Lo que comprarían",
+        "Lo que opinan"
+      ],
+      "dato_extra": "El comportamiento pasado predice mejor que la intención declarada."
+    },
+    {
+      "id": "q5",
+      "pregunta": "\"Qué buena idea\" vale:",
+      "respuesta_correcta": "Nada",
+      "incorrectas": [
+        "Mucho",
+        "Todo",
+        "Depende del tono"
+      ],
+      "dato_extra": "Es un cumplido, no una señal de mercado."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La validación más fuerte es:",
+      "respuesta_correcta": "Un anticipo o una compra inmediata",
+      "incorrectas": [
+        "Un cumplido",
+        "Un me gusta",
+        "Una recomendación"
+      ],
+      "dato_extra": "El dinero comprometido es el único dato que no miente."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La regla de la validación es:",
+      "respuesta_correcta": "Opiniones no validan, compromisos sí",
+      "incorrectas": [
+        "Todo dato sirve",
+        "Basta con que les guste",
+        "Solo importa el precio"
+      ],
+      "dato_extra": "Diez conversaciones cuestan días; equivocarse cuesta ahorros."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-6-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-6-b-escena.webp"
+}

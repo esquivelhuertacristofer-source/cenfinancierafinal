@@ -1,0 +1,94 @@
+{
+  "code": "ACT-P6-3-8-B",
+  "unit_code": "P6-3-8",
+  "unit_title": "Inflación e interés real: cuánto gano de verdad",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Nominal contra Real",
+  "descripcion": "Clasifica cada caso según su resultado en poder de compra.",
+  "objetivo": "Verificar el cálculo e interpretación del interés real",
+  "xp": 480,
+  "instruccion": "Con 5% de inflación, arrastra cada caso al resultado que le corresponde.",
+  "categorias": [
+    {
+      "id": "gana",
+      "label": "Gana poder de compra",
+      "emoji": "📈",
+      "color": "#10B981"
+    },
+    {
+      "id": "empata",
+      "label": "Queda igual",
+      "emoji": "➖",
+      "color": "#64748B"
+    },
+    {
+      "id": "pierde",
+      "label": "Pierde poder de compra",
+      "emoji": "📉",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Instrumento que paga 9% nominal",
+      "emoji": "🏛️",
+      "categoria_correcta": "gana",
+      "feedback": "9 menos 5: interés real de +4%."
+    },
+    {
+      "id": "i2",
+      "label": "Efectivo guardado en casa",
+      "emoji": "💵",
+      "categoria_correcta": "pierde",
+      "feedback": "0 menos 5: pérdida real garantizada del 5%."
+    },
+    {
+      "id": "i3",
+      "label": "Cuenta que paga 5% nominal",
+      "emoji": "🏦",
+      "categoria_correcta": "empata",
+      "feedback": "El poder de compra se mantiene, no crece."
+    },
+    {
+      "id": "i4",
+      "label": "Cuenta que paga 2% nominal",
+      "emoji": "🐌",
+      "categoria_correcta": "pierde",
+      "feedback": "2 menos 5: interés real de -3%."
+    },
+    {
+      "id": "i5",
+      "label": "Instrumento al 11% con 1% de comisión",
+      "emoji": "📊",
+      "categoria_correcta": "gana",
+      "feedback": "11 menos 1 de comisión menos 5 de inflación: +5%."
+    },
+    {
+      "id": "i6",
+      "label": "Dinero en una cuenta sin rendimiento",
+      "emoji": "🕳️",
+      "categoria_correcta": "pierde",
+      "feedback": "Igual que el efectivo: pierde toda la inflación."
+    },
+    {
+      "id": "i7",
+      "label": "Instrumento al 7% con 2% de comisión",
+      "emoji": "⚖️",
+      "categoria_correcta": "empata",
+      "feedback": "7 menos 2 menos 5: exactamente cero."
+    },
+    {
+      "id": "i8",
+      "label": "Instrumento al 12% nominal",
+      "emoji": "🚀",
+      "categoria_correcta": "gana",
+      "feedback": "Interés real de +7% antes de impuestos."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-8-b-escena.webp"
+}

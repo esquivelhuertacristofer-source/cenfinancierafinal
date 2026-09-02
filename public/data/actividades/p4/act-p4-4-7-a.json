@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-4-7-A",
+  "unit_code": "P4-4-7",
+  "unit_title": "Mi propuesta de valor en una sola frase",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Arma tu Propuesta",
+  "descripcion": "Clasifica cada elemento según a qué parte de la propuesta de valor pertenece.",
+  "objetivo": "Distinguir las tres partes de una propuesta de valor y los errores comunes",
+  "xp": 400,
+  "instruccion": "Arrastra cada elemento a la parte de la propuesta que le corresponde.",
+  "categorias": [
+    {
+      "id": "quien",
+      "label": "Para quién es",
+      "emoji": "🎯",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "problema",
+      "label": "Qué problema resuelve",
+      "emoji": "🔧",
+      "color": "#10B981"
+    },
+    {
+      "id": "diferencia",
+      "label": "Por qué es mejor",
+      "emoji": "⭐",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Para estudiantes que olvidan material en casa",
+      "emoji": "🎒",
+      "categoria_correcta": "quien",
+      "feedback": "Específico: esa persona se reconoce de inmediato."
+    },
+    {
+      "id": "i2",
+      "label": "Evita tener que comprar de emergencia en la papelería",
+      "emoji": "🚫",
+      "categoria_correcta": "problema",
+      "feedback": "Describe la molestia concreta, no el producto."
+    },
+    {
+      "id": "i3",
+      "label": "Cuesta la mitad que la papelería de la esquina",
+      "emoji": "💰",
+      "categoria_correcta": "diferencia",
+      "feedback": "Ventaja clara en algo que al cliente le importa."
+    },
+    {
+      "id": "i4",
+      "label": "Para vecinos que trabajan y no tienen tiempo de cocinar",
+      "emoji": "🏠",
+      "categoria_correcta": "quien",
+      "feedback": "El destinatario definido por su situación, no por su edad."
+    },
+    {
+      "id": "i5",
+      "label": "Resuelve la comida del día sin salir de casa",
+      "emoji": "🍲",
+      "categoria_correcta": "problema",
+      "feedback": "La necesidad real que se está atendiendo."
+    },
+    {
+      "id": "i6",
+      "label": "Llega en quince minutos, la competencia tarda una hora",
+      "emoji": "⚡",
+      "categoria_correcta": "diferencia",
+      "feedback": "Comparación explícita con lo que ya existe."
+    },
+    {
+      "id": "i7",
+      "label": "Para compañeros de primaria que juegan futbol en el recreo",
+      "emoji": "⚽",
+      "categoria_correcta": "quien",
+      "feedback": "Entre más específico, más fácil dirigirle el mensaje."
+    },
+    {
+      "id": "i8",
+      "label": "Quita la sed sin tener que hacer la fila del bebedero",
+      "emoji": "💧",
+      "categoria_correcta": "problema",
+      "feedback": "Conecta con algo que la persona ya siente todos los días."
+    },
+    {
+      "id": "i9",
+      "label": "Es el único que se puede pedir con anticipación",
+      "emoji": "🥇",
+      "categoria_correcta": "diferencia",
+      "feedback": "Ser mejor en una sola cosa relevante es suficiente."
+    },
+    {
+      "id": "i10",
+      "label": "Está hecho con material de mejor calidad que el resto",
+      "emoji": "✨",
+      "categoria_correcta": "diferencia",
+      "feedback": "Diferencia válida si al cliente le importa la durabilidad."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-4-7-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-7-a-escena.webp"
+}

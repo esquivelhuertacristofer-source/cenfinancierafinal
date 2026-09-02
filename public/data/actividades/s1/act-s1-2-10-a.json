@@ -1,0 +1,172 @@
+{
+  "code": "ACT-S1-2-10-A",
+  "unit_code": "S1-2-10",
+  "unit_title": "Rentar mi primer cuarto: depósito, aval y contrato",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Primera Renta",
+  "descripcion": "Ceny va a rentar su primer cuarto. Cada decisión define si recupera su depósito.",
+  "objetivo": "Aplicar los elementos del arrendamiento a una renta real",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny encontró un cuarto por $4,000 al mes. Le piden mes adelantado, un mes de depósito y un aval.",
+  "nodo_inicial": "entrada",
+  "nodos": {
+    "entrada": {
+      "id": "entrada",
+      "texto": "El arrendador le dice que el contrato es \"de confianza, sin papeles\". ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir contrato por escrito con plazo, monto y responsabilidades",
+          "siguiente_nodo": "inventario",
+          "consecuencia": "El arrendador accede: lo que no está escrito no existe en un desacuerdo.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptar sin contrato: le urge mudarse",
+          "siguiente_nodo": "sin_papel",
+          "consecuencia": "Sin contrato no hay plazo, ni tope de aumento, ni reglas claras.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-entrada.webp"
+    },
+    "sin_papel": {
+      "id": "sin_papel",
+      "texto": "A los cuatro meses le suben la renta a $5,200 de un mes a otro. ¿Qué puede hacer?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Poco: sin contrato no hay plazo ni tope pactado, y aprende para la próxima",
+          "siguiente_nodo": "inventario",
+          "consecuencia": "El contrato existe justo para prevenir esto.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": -4800
+        },
+        {
+          "id": "o2",
+          "texto": "Dejar de pagar en protesta",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Dejar de pagar la deja en la peor posición posible.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-sin_papel.webp"
+    },
+    "inventario": {
+      "id": "inventario",
+      "texto": "El día de la mudanza, ¿qué hace antes de meter sus cosas?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Fotografiar todo con fecha y firmar un inventario de estado con el arrendador",
+          "siguiente_nodo": "salida",
+          "consecuencia": "Queda registrado que la mancha del techo y la ventana rota ya existían.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada, el cuarto se ve bien",
+          "siguiente_nodo": "reclamo",
+          "consecuencia": "Sin registro, cualquier daño previo puede atribuírsele después.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-inventario.webp"
+    },
+    "reclamo": {
+      "id": "reclamo",
+      "texto": "Al salir, el arrendador quiere retener el depósito por la mancha del techo. ¿Qué puede hacer Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Poco: sin evidencia de entrada, no puede demostrar que ya existía",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Pierde $4,000 por no haber dedicado treinta minutos el primer día.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        },
+        {
+          "id": "o2",
+          "texto": "Buscar cualquier foto o mensaje de esos días que sirva de evidencia",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Recupera una parte, aunque con mucha más dificultad.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-reclamo.webp"
+    },
+    "salida": {
+      "id": "salida",
+      "texto": "Al terminar el contrato, el arrendador menciona la mancha del techo. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Mostrar el inventario firmado y las fotos con fecha de entrada",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "El depósito se devuelve completo sin discusión.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "o2",
+          "texto": "Discutir de memoria sin mostrar nada",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Tenía la evidencia y no la usó.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-salida.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny rentó con contrato, documentó el estado y recuperó su depósito completo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El contrato previene los conflictos del camino y el inventario de entrada previene el del final. Treinta minutos el primer día protegen el equivalente a un mes de renta.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny recuperó solo una parte de su depósito.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El conflicto por daños preexistentes es el más común al rentar, y el más fácil de evitar: fotos con fecha e inventario firmado el día de entrada.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Sin contrato y sin pagar, Ceny quedó en la peor posición y perdió depósito y estabilidad.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Un arrendamiento sin contrato deja al inquilino sin plazo, sin tope de aumento y sin argumentos. Y dejar de pagar nunca mejora la posición de nadie.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-2-10-a-portada.webp"
+}

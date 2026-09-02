@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-3-7-A",
+  "unit_code": "P3-3-7",
+  "unit_title": "Pagar a tiempo: el poder de la fecha límite",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "A Tiempo o Tarde",
+  "descripcion": "Clasifica cada situación según si el pago quedó puntual, atrasado o en riesgo.",
+  "objetivo": "Distinguir pagos puntuales, atrasados y en riesgo, y sus consecuencias",
+  "xp": 200,
+  "instruccion": "Arrastra cada situación a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "puntual",
+      "label": "Puntual",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "riesgo",
+      "label": "En riesgo",
+      "emoji": "⚠️",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "atrasado",
+      "label": "Atrasado",
+      "emoji": "🔴",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Paga el día 12; la fecha límite es el 15",
+      "emoji": "📅",
+      "categoria_correcta": "puntual",
+      "feedback": "Con margen. Así se paga cuando hay organización."
+    },
+    {
+      "id": "i2",
+      "label": "Paga el día 16; la fecha límite era el 15",
+      "emoji": "⏰",
+      "categoria_correcta": "atrasado",
+      "feedback": "Un solo día ya genera recargo e interés moratorio."
+    },
+    {
+      "id": "i3",
+      "label": "Piensa pagar el mismo día 15, en la noche",
+      "emoji": "🌙",
+      "categoria_correcta": "riesgo",
+      "feedback": "Si algo falla ese día, no queda margen para reaccionar."
+    },
+    {
+      "id": "i4",
+      "label": "Puso recordatorio tres días antes",
+      "emoji": "🔔",
+      "categoria_correcta": "puntual",
+      "feedback": "El recordatorio anticipado es lo que evita la mayoría de los atrasos."
+    },
+    {
+      "id": "i5",
+      "label": "Tiene el dinero pero olvidó la fecha y ya pasó",
+      "emoji": "🤦",
+      "categoria_correcta": "atrasado",
+      "feedback": "Muchísimos atrasos ocurren teniendo el dinero. Es puro olvido."
+    },
+    {
+      "id": "i6",
+      "label": "No anotó la fecha en ningún lado",
+      "emoji": "❓",
+      "categoria_correcta": "riesgo",
+      "feedback": "Sin registro, el atraso es cuestión de tiempo."
+    },
+    {
+      "id": "i7",
+      "label": "Pagó completo y guardó el comprobante",
+      "emoji": "🧾",
+      "categoria_correcta": "puntual",
+      "feedback": "Pagar y poder demostrarlo: el compromiso queda cerrado de verdad."
+    },
+    {
+      "id": "i8",
+      "label": "Lleva tres meses pagando después de la fecha",
+      "emoji": "📉",
+      "categoria_correcta": "atrasado",
+      "feedback": "Atrasos repetidos dejan marca en el historial durante años."
+    },
+    {
+      "id": "i9",
+      "label": "Dejó el pago para el último minuto de la fecha límite",
+      "emoji": "⌛",
+      "categoria_correcta": "riesgo",
+      "feedback": "Técnicamente a tiempo, pero sin margen ante cualquier imprevisto."
+    },
+    {
+      "id": "i10",
+      "label": "Anotó la fecha el mismo día que adquirió el compromiso",
+      "emoji": "📝",
+      "categoria_correcta": "puntual",
+      "feedback": "El hábito correcto: anotar en el momento, no después."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-7-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-7-a-escena.webp"
+}

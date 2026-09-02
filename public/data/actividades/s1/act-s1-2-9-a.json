@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S1-2-9-A",
+  "unit_code": "S1-2-9",
+  "unit_title": "Mi primer presupuesto independiente: vivir con lo que gano",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Vivir Por Mi Cuenta",
+  "descripcion": "Ajusta ingreso y gastos y observa si tu independencia es viable.",
+  "objetivo": "Evaluar la viabilidad de un presupuesto independiente",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "ingreso_neto",
+      "label": "Mi ingreso neto mensual",
+      "type": "slider",
+      "min": 3000,
+      "max": 60000,
+      "step": 500,
+      "default": 12000,
+      "unit": "$",
+      "referencia": "El depósito real, no el sueldo pactado."
+    },
+    {
+      "id": "renta",
+      "label": "Renta mensual",
+      "type": "slider",
+      "min": 1000,
+      "max": 30000,
+      "step": 250,
+      "default": 4500,
+      "unit": "$",
+      "referencia": "No debería pasar de un tercio del ingreso neto."
+    },
+    {
+      "id": "compartida",
+      "label": "¿Comparto la vivienda?",
+      "type": "slider",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 1,
+      "unit": "personas",
+      "referencia": "La palanca que más rápido cambia la viabilidad."
+    },
+    {
+      "id": "gastos_resto",
+      "label": "Todos los demás gastos del mes",
+      "type": "slider",
+      "min": 1000,
+      "max": 40000,
+      "step": 250,
+      "default": 6500,
+      "unit": "$",
+      "referencia": "Servicios, comida, transporte, salud, comunicación y ropa."
+    }
+  ],
+  "formula": "Math.round(ingreso_neto - renta / compartida - gastos_resto)",
+  "descripcion_formula": "Lo que queda al mes después de la parte de renta que te toca y del resto de los gastos. Ese sobrante es lo que puede ir a imprevistos y ahorro.",
+  "output_label": "Disponible para imprevistos y ahorro",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "renta / compartida > ingreso_neto / 3",
+      "mensaje": "Tu vivienda consume más de un tercio de tu ingreso. Todo lo demás queda comprimido y cualquier imprevisto se convierte en crisis.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ingreso_neto - renta / compartida - gastos_resto < 0",
+      "mensaje": "Este plan no cierra: gastas más de lo que ingresas. Compartir vivienda o ajustar categorías es indispensable antes de mudarte.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ingreso_neto - renta / compartida - gastos_resto >= ingreso_neto * 0.2",
+      "mensaje": "Te queda más del 20% del ingreso libre. Con imprevistos y ahorro cubiertos, tu independencia es sólida.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "compartida >= 2 && renta / compartida <= ingreso_neto / 4",
+      "mensaje": "Compartir vivienda bajó tu costo habitacional por debajo de un cuarto del ingreso. Es la decisión que más margen libera al empezar.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "ingreso_neto - renta / compartida - gastos_resto >= 0 && ingreso_neto - renta / compartida - gastos_resto < ingreso_neto * 0.1",
+      "mensaje": "Cierra por poco. Con menos del 10% libre no hay espacio para imprevistos: un solo gasto inesperado te llevaría al crédito.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-9-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-9-a-escena.webp"
+}

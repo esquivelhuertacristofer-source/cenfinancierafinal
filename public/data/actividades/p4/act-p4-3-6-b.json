@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-3-6-B",
+  "unit_code": "P4-3-6",
+  "unit_title": "El fondo de emergencia: tres meses de tranquilidad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Tres Meses de Tranquilidad",
+  "descripcion": "Comprueba que sabes construir y usar bien un fondo de emergencia.",
+  "objetivo": "Verificar la comprensión del monto, ubicación y uso del fondo",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El fondo de emergencia sirve para:",
+      "opciones": [
+        "Cubrir imprevistos",
+        "Un viaje",
+        "Invertir",
+        "Comprar en ofertas"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el colchón que evita que un problema se convierta en una deuda cara."
+    },
+    {
+      "id": "q2",
+      "texto": "Debe cubrir:",
+      "opciones": [
+        "Una semana",
+        "De tres a seis meses de gastos esenciales",
+        "Un año completo de todo",
+        "Un día"
+      ],
+      "correcta": 1,
+      "explicacion": "Solo los gastos indispensables, no el presupuesto completo."
+    },
+    {
+      "id": "q3",
+      "texto": "Para calcularlo se suman:",
+      "opciones": [
+        "Todos los gastos",
+        "Solo los lujos",
+        "Solo los esenciales",
+        "Los ingresos"
+      ],
+      "correcta": 2,
+      "explicacion": "Vivienda, comida, servicios, transporte y salud."
+    },
+    {
+      "id": "q4",
+      "texto": "El fondo debe estar:",
+      "opciones": [
+        "En una inversión a diez años",
+        "En la cuenta de diario",
+        "En efectivo bajo el colchón",
+        "Disponible de inmediato y separado"
+      ],
+      "correcta": 3,
+      "explicacion": "Disponible porque la emergencia no espera; separado para no gastarlo sin notarlo."
+    },
+    {
+      "id": "q5",
+      "texto": "Las tres preguntas antes de usarlo son:",
+      "opciones": [
+        "¿Es inesperado, necesario y urgente?",
+        "¿Es barato, bonito y nuevo?",
+        "¿Lo quiero, lo veo, lo compro?",
+        "¿Cuánto, cuándo y dónde?"
+      ],
+      "correcta": 0,
+      "explicacion": "Las tres deben responderse que sí para justificar el uso."
+    },
+    {
+      "id": "q6",
+      "texto": "Una oferta por tiempo limitado:",
+      "opciones": [
+        "Es emergencia",
+        "No es emergencia",
+        "Depende del descuento",
+        "Siempre justifica"
+      ],
+      "correcta": 1,
+      "explicacion": "La prisa la fabrica la tienda, no la necesidad."
+    },
+    {
+      "id": "q7",
+      "texto": "Sin fondo de emergencia, ante un imprevisto:",
+      "opciones": [
+        "No pasa nada",
+        "El banco regala dinero",
+        "Solo queda pedir prestado o dejar de pagar algo",
+        "Se resuelve solo"
+      ],
+      "correcta": 2,
+      "explicacion": "Y ambas salidas son mucho más caras que haber ahorrado antes."
+    },
+    {
+      "id": "q8",
+      "texto": "El fondo se construye:",
+      "opciones": [
+        "De golpe",
+        "Con un préstamo",
+        "Solo si sobra mucho",
+        "Poco a poco"
+      ],
+      "correcta": 3,
+      "explicacion": "Aportaciones pequeñas y constantes llegan; esperar a que sobre nunca llega."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-6-b-escena.webp"
+}

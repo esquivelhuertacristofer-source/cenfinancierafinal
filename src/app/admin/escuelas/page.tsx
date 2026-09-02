@@ -190,6 +190,7 @@ export default function AdminEscuelasPage() {
   const [rows, setRows] = useState<ParsedRow[]>([]);
   const [manualText, setManualText] = useState("");
   const [inputMode, setInputMode] = useState<"csv" | "manual">("csv");
+  const [duplicateNames, setDuplicateNames] = useState<string[]>([]);
 
   // Estado
   const [processing, setProcessing] = useState(false);
@@ -267,6 +268,24 @@ export default function AdminEscuelasPage() {
       return { _idx: idx, _valid: errors.length === 0, _error: errors.join(", "), nombre, grupo, grado, rol };
     });
 
+    // Detección de nombres duplicados dentro del mismo lote: advertencia no
+    // bloqueante en la previsualización (no impide el envío, ya que un mismo
+    // nombre puede repetirse legítimamente entre distintos grupos, pero suele
+    // ser un indicio de fila pegada dos veces por error).
+    const nameCounts = new Map<string, number>();
+    for (const r of validadas) {
+      const key = r.nombre.trim().toLowerCase();
+      if (!key) continue;
+      nameCounts.set(key, (nameCounts.get(key) ?? 0) + 1);
+    }
+    const dupes = validadas
+      .filter((r) => {
+        const key = r.nombre.trim().toLowerCase();
+        return key && (nameCounts.get(key) ?? 0) > 1;
+      })
+      .map((r) => r.nombre.trim());
+    setDuplicateNames([...new Set(dupes)]);
+
     setRows(validadas);
   }, []);
 
@@ -302,6 +321,7 @@ export default function AdminEscuelasPage() {
       setEscuelaNombre("");
       setPassword("");
       setRows([]);
+      setDuplicateNames([]);
       setManualText("");
       if (fileRef.current) fileRef.current.value = "";
     } catch (err: any) {
@@ -577,6 +597,17 @@ export default function AdminEscuelasPage() {
                     </span>
                   </div>
                 </div>
+
+                {duplicateNames.length > 0 && (
+                  <div className="flex items-start gap-3 px-5 py-4 bg-amber-50 border border-amber-200 rounded-2xl">
+                    <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-amber-700 font-medium">
+                      <span className="font-black uppercase tracking-wide">Nombres repetidos en el lote:</span>{" "}
+                      {duplicateNames.join(", ")}. Puede ser una fila duplicada por error, o dos personas distintas
+                      con el mismo nombre en grupos diferentes. Revísalo antes de continuar (esto no bloquea el envío).
+                    </p>
+                  </div>
+                )}
 
                 <div className="overflow-x-auto rounded-2xl border border-slate-100">
                   <table className="w-full text-sm">

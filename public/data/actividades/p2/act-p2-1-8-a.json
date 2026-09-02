@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P2-1-8-A",
+  "unit_code": "P2-1-8",
+  "unit_title": "Los trabajos de mi comunidad: cómo gana cada quien",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Los Oficios de mi Barrio",
+  "descripcion": "Completa el reporte de Ceny sobre cómo gana dinero cada persona de su cuadra.",
+  "objetivo": "Verbalizar las tres formas de generar ingresos y su relación con el esfuerzo",
+  "xp": 250,
+  "contexto": "Ceny recorrió su cuadra preguntando a qué se dedica cada quien. Ayúdale a escribir su reporte.",
+  "texto": "En mi cuadra todos trabajan de formas distintas. La maestra recibe una cantidad fija cada quincena: ella gana por __blank1__. El plomero cobra por cada arreglo que termina: él gana por __blank2__. La señora de la tiendita gana la __blank3__ entre lo que le cuesta y lo que cobra. Todos ellos ganan dinero porque su trabajo __blank4__ un problema de alguien más. La ventaja del sueldo es que puedo __blank5__ mis gastos, porque sé cuánto entra. La desventaja de cobrar por obra es que si una semana no sale trabajo, __blank6__ gano. Ningún trabajo honesto vale __blank7__ que otro, aunque lo que se paga sí sea distinto. Por eso en mi casa el dinero no aparece solo: viene del __blank8__ de alguien.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "sueldo",
+        "venta",
+        "suerte"
+      ],
+      "respuesta": "sueldo"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "obra",
+        "sueldo",
+        "regalo"
+      ],
+      "respuesta": "obra"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "diferencia",
+        "suma",
+        "mitad"
+      ],
+      "respuesta": "diferencia"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "resuelve",
+        "crea",
+        "ignora"
+      ],
+      "respuesta": "resuelve"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "planear",
+        "olvidar",
+        "esconder"
+      ],
+      "respuesta": "planear"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "no",
+        "sí",
+        "siempre"
+      ],
+      "respuesta": "no"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "menos",
+        "más",
+        "igual"
+      ],
+      "respuesta": "menos"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "esfuerzo",
+        "banco",
+        "azar"
+      ],
+      "respuesta": "esfuerzo"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-8-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-8-a-escena.webp"
+}

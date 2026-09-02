@@ -5,109 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Lenguaje de la Bolsa",
-  "descripcion": "¿Sabes qué pasa en el piso de remates? Pon a prueba tu conocimiento sobre el mercado de capitales.",
-  "objetivo": "Identificar los conceptos básicos del mercado de valores y el rol de los accionistas",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Las Cicatrices del Peso",
+  "descripcion": "México ha vivido devaluaciones, hiperinflación, quiebra bancaria y rescates. Todo eso no está en los libros de historia por gusto: explica por qué tus abuelos desconfían de los bancos y por qué hoy existen las reglas que existen.",
+  "objetivo": "Comprender la evolución económica de México y cómo las grandes crisis y tratados han afectado la vida diaria de las familias.",
+  "xp": 550,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "bol1",
-      "texto": "¿Qué representas cuando compras una acción?",
+      "id": "q1",
+      "texto": "En 1993 México le quitó tres ceros al peso. Esa medida se llamó…",
       "opciones": [
-        "Que le prestaste dinero al banco",
-        "Que eres dueño de una parte proporcional de la empresa",
-        "Que eres un cliente especial",
-        "Que puedes usar sus productos gratis"
+        "Devaluación",
+        "Nuevos pesos: una reconversión monetaria",
+        "Inflación",
+        "Rescate bancario"
       ],
       "correcta": 1,
-      "explicacion": "Una acción es un título de propiedad sobre una parte de la empresa."
+      "explicacion": "Después de años de inflación altísima, los precios tenían tantos ceros que se volvió impráctico. $1,000 viejos pasaron a ser $1 nuevo."
     },
     {
-      "id": "bol2",
-      "texto": "¿Qué es un 'Dividendo'?",
+      "id": "q2",
+      "texto": "La crisis de 1994-1995, conocida como \"el error de diciembre\", provocó…",
       "opciones": [
-        "Una operación matemática",
-        "La parte de las ganancias de la empresa que se reparte entre los accionistas",
-        "Un impuesto nuevo",
-        "La deuda de la empresa"
+        "Que el peso se desplomara y las tasas se dispararan",
+        "Que bajaran los precios",
+        "Que subieran los sueldos",
+        "Nada importante"
       ],
-      "correcta": 1,
-      "explicacion": "Es tu premio en efectivo por ser socio de una empresa que gana dinero."
+      "correcta": 0,
+      "explicacion": "Miles de familias perdieron su casa porque su hipoteca se volvió impagable de un mes a otro."
     },
     {
-      "id": "bol3",
-      "texto": "¿Cómo se le llama al símbolo de 3 o 4 letras que identifica a una empresa en la bolsa (Ej: AAPL para Apple)?",
+      "id": "q3",
+      "texto": "¿Por qué muchas personas mayores en México prefieren guardar efectivo en casa?",
       "opciones": [
-        "Código Secreto",
-        "Ticker",
-        "Nombre Corto",
-        "Sello Postal"
+        "Porque es más rentable",
+        "Porque vivieron crisis en las que perdieron confianza en los bancos",
+        "Porque no saben usar cajeros",
+        "Porque el gobierno lo pide"
       ],
       "correcta": 1,
-      "explicacion": "El Ticker sirve para encontrar y comprar acciones rápidamente en el sistema."
+      "explicacion": "La desconfianza no es irracional: es memoria. Hoy existe el IPAB, que protege los depósitos hasta cierto monto."
     },
     {
-      "id": "bol4",
-      "texto": "¿Qué significa que el mercado esté en tendencia 'Bull' (Toro)?",
+      "id": "q4",
+      "texto": "El TLCAN (hoy T-MEC), firmado en 1994, cambió la economía mexicana porque…",
       "opciones": [
-        "Que los precios están bajando",
-        "Que los precios están subiendo y hay optimismo",
-        "Que el mercado está cerrado",
-        "Que hay mucha violencia"
+        "Cerró las fronteras",
+        "Integró a México al comercio con Estados Unidos y Canadá",
+        "Eliminó los impuestos",
+        "Creó el peso"
       ],
       "correcta": 1,
-      "explicacion": "El toro ataca de abajo hacia arriba, simbolizando el crecimiento de los precios."
+      "explicacion": "Hoy más del 80% de las exportaciones mexicanas van a Estados Unidos. Eso da empleo y también dependencia."
     },
     {
-      "id": "bol5",
-      "texto": "¿Qué es la 'Capitalización de Mercado' (Market Cap)?",
+      "id": "q5",
+      "texto": "Que Banxico se volviera autónomo en 1994 sirvió para…",
       "opciones": [
-        "El dinero que la empresa tiene en el banco",
-        "El valor total de la empresa en la bolsa (Precio acción x Total de acciones)",
-        "El número de empleados",
-        "La ciudad donde está la empresa"
+        "Que el gobierno ya no pudiera imprimir dinero por conveniencia política",
+        "Que hubiera más billetes",
+        "Bajar los impuestos",
+        "Crear las AFOREs"
       ],
-      "correcta": 1,
-      "explicacion": "Es el tamaño 'real' de la empresa según lo que vale en el mercado."
+      "correcta": 0,
+      "explicacion": "Imprimir dinero para pagar gastos fue la causa de las hiperinflaciones. La autonomía cortó esa puerta."
     },
     {
-      "id": "bol6",
-      "texto": "¿Qué es un 'Bear Market' (Oso)?",
+      "id": "q6",
+      "texto": "Cuando el peso se devalúa frente al dólar, en tu vida diaria…",
       "opciones": [
-        "Un mercado de animales",
-        "Cuando los precios bajan y hay miedo en los inversionistas",
-        "Cuando el mercado abre en invierno",
-        "Cuando las acciones son baratas"
+        "Todo se abarata",
+        "Lo importado sube de precio: gasolina, electrónicos, algunos alimentos",
+        "No cambia nada",
+        "Bajan los sueldos al instante"
       ],
       "correcta": 1,
-      "explicacion": "El oso ataca de arriba hacia abajo con sus garras, simbolizando la caída de los precios."
+      "explicacion": "México importa mucho de lo que consume. Por eso el tipo de cambio termina en el precio del súper."
     },
     {
-      "id": "bol7",
-      "texto": "¿Cuál es la función de una Bolsa de Valores (como la BMV o el NYSE)?",
+      "id": "q7",
+      "texto": "El sistema de pensiones cambió en 1997 de reparto a cuentas individuales porque…",
       "opciones": [
-        "Guardar el dinero de la gente",
-        "Ser el lugar (digital o físico) donde compradores y vendedores intercambian acciones de forma segura",
-        "Imprimir los billetes",
-        "Vender seguros"
+        "El anterior era insostenible con una población que envejece",
+        "Los trabajadores lo pidieron",
+        "Lo exigió Estados Unidos",
+        "Era más caro"
       ],
-      "correcta": 1,
-      "explicacion": "Es el mercado organizado donde se encuentran los inversionistas."
+      "correcta": 0,
+      "explicacion": "Antes los que trabajaban pagaban las pensiones de los jubilados. Con menos jóvenes por cada jubilado, esa cuenta ya no cerraba."
     },
     {
-      "id": "bol8",
-      "texto": "¿Por qué las empresas salen a la bolsa?",
+      "id": "q8",
+      "texto": "La lección financiera personal más útil de las crisis mexicanas es…",
       "opciones": [
-        "Para hacerse famosas",
-        "Para conseguir capital (dinero) y poder crecer, construir fábricas o investigar tecnología",
-        "Para pagar menos impuestos",
-        "Porque es obligatorio"
+        "Nunca ahorrar",
+        "Diversificar y no tener todo tu patrimonio en un solo lugar o moneda",
+        "Guardar todo en efectivo",
+        "Endeudarse siempre"
       ],
       "correcta": 1,
-      "explicacion": "La bolsa es una fuente de financiamiento masiva para que las empresas escalen sus ideas."
+      "explicacion": "Quienes tenían todo en una sola cosa lo perdieron todo. Quienes repartieron, sobrevivieron."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

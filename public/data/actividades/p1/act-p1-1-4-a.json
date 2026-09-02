@@ -4,49 +4,138 @@
   "unit_title": "Mi primer cochinito: ¿cómo y dónde guardo mi dinero?",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "RADAR",
-  "complejidad": "MAESTRÍA",
-  "titulo": "Radar de Prioridades Vitales",
-  "descripcion": "Ceny está en el mercado central. Solo tiene $100 y debe comprar lo vital antes de que se agote el tiempo. ¿Podrás ayudarle a ignorar los dulces y juguetes para comprar lo que realmente importa?",
-  "objetivo": "Diferenciar en tiempo real entre necesidades (vitales) y deseos (gustos), practicando la toma de decisiones presupuestaria.",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Escondite del Cochinito",
+  "descripcion": "La abuela le regaló $50 a Ceny por su cumpleaños. Es el dinero más grande que ha tenido. Ahora viene lo difícil: ¿dónde lo guarda para que no se pierda?",
+  "objetivo": "Descubrir que la alcancía es la primera herramienta para guardar el dinero de forma segura, y que el ahorro necesita un lugar fijo y la disciplina de no abrirlo antes de tiempo.",
   "xp": 500,
-  "instruccion": "¡Escanea! Haz clic solo en los objetos que Ceny NECESITA para vivir y estudiar. Evita los DESEOS para no gastar de más.",
-  "items": [
-    {
-      "label": "Comida Sana",
-      "type": "need",
-      "icon_key": "comida"
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny sale de la fiesta con $50 en la mano. Su abuela le dio un abrazo y le dijo: \"Cuídalo bien, mi niña\". Pero Ceny no sabe dónde ponerlo.",
+  "nodo_inicial": "donde_lo_guardo",
+  "nodos": {
+    "donde_lo_guardo": {
+      "id": "donde_lo_guardo",
+      "texto": "Ceny llega a su casa con los $50. ¿Dónde los guarda?",
+      "opciones": [
+        {
+          "id": "bolsillo",
+          "texto": "En el bolsillo del pantalón",
+          "siguiente_nodo": "se_perdio",
+          "consecuencia": "Ceny se guarda el dinero en el pantalón y se va a jugar.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "mochila",
+          "texto": "En la mochila abierta, sobre la cama",
+          "siguiente_nodo": "lo_tomaron",
+          "consecuencia": "Ceny deja el dinero en su mochila y baja a comer.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "cochinito",
+          "texto": "En su cochinito, que tiene tapa",
+          "siguiente_nodo": "una_semana_despues",
+          "consecuencia": "¡Clonc! Las monedas caen dentro del cochinito. Ahí tienen su lugar.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
     },
-    {
-      "label": "Medicinas",
-      "type": "need",
-      "icon_key": "salud"
+    "se_perdio": {
+      "id": "se_perdio",
+      "texto": "Cuando Ceny llega del parque, mete la mano al bolsillo… ¡tiene un hoyito! Solo le quedan $30. Perdió $20 sin darse cuenta.",
+      "opciones": [
+        {
+          "id": "ahora_si",
+          "texto": "Guardar los $30 en el cochinito",
+          "siguiente_nodo": "una_semana_despues",
+          "consecuencia": "Ceny aprendió: el dinero necesita un lugar seguro, no un bolsillo.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 30
+        },
+        {
+          "id": "otra_vez",
+          "texto": "Volver a meterlos al bolsillo",
+          "siguiente_nodo": "final_sin_nada",
+          "consecuencia": "El hoyito sigue ahí…",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -30
+        }
+      ]
     },
-    {
-      "label": "Libros de Clase",
-      "type": "need",
-      "icon_key": "escuela"
+    "lo_tomaron": {
+      "id": "lo_tomaron",
+      "texto": "Al volver, la mochila está abierta y solo hay $35. Su hermanito tomó $15 para dulces porque el dinero estaba a la vista de todos.",
+      "opciones": [
+        {
+          "id": "guardar_bien",
+          "texto": "Poner los $35 en el cochinito y taparlo",
+          "siguiente_nodo": "una_semana_despues",
+          "consecuencia": "El dinero guardado y fuera de la vista está mucho más seguro.",
+          "xp_bonus": 100,
+          "es_optima": true,
+          "impacto_patrimonio": 35
+        },
+        {
+          "id": "dejarlo",
+          "texto": "Dejarlo otra vez en la mochila",
+          "siguiente_nodo": "final_sin_nada",
+          "consecuencia": "La mochila sigue abierta sobre la cama…",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -35
+        }
+      ]
     },
-    {
-      "label": "Ropa de Abrigo",
-      "type": "need",
-      "icon_key": "ropa"
+    "una_semana_despues": {
+      "id": "una_semana_despues",
+      "texto": "Pasa una semana. El cochinito está guardado y el dinero completo. Pero hoy pasó el carrito de los dulces y Ceny se acordó de que ahí adentro hay dinero. ¿Abre el cochinito?",
+      "opciones": [
+        {
+          "id": "abrir",
+          "texto": "Abrirlo y comprar dulces",
+          "siguiente_nodo": "final_vacio",
+          "consecuencia": "Los dulces se acaban en cinco minutos y el cochinito queda vacío.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -40
+        },
+        {
+          "id": "esperar",
+          "texto": "Dejarlo cerrado y seguir juntando",
+          "siguiente_nodo": "final_lleno",
+          "consecuencia": "Ceny cierra el cochinito y lo vuelve a guardar. Su dinero sigue creciendo.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 50
+        }
+      ]
     },
-    {
-      "label": "Videojuegos",
-      "type": "want",
-      "icon_key": "diversion"
+    "final_lleno": {
+      "id": "final_lleno",
+      "texto": "¡El cochinito de Ceny está cada vez más pesado! Guardó el dinero en un lugar seguro y tuvo la paciencia de no abrirlo. Así es como un cochinito se convierte en tu primera herramienta para ahorrar.",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "reflexion_final": "Un cochinito no es solo un adorno: es el lugar donde tu dinero está seguro y donde tú decides cuándo sacarlo. Guardar bien y esperar es lo que hace crecer el ahorro."
     },
-    {
-      "label": "Dulces Gigantes",
-      "type": "want",
-      "icon_key": "dulces"
+    "final_vacio": {
+      "id": "final_vacio",
+      "texto": "El cochinito quedó vacío. El dinero estaba seguro, pero Ceny lo sacó antes de tiempo. Guardarlo bien es la mitad del trabajo; la otra mitad es no abrirlo a cada rato.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Tener un buen escondite no sirve de nada si lo abres cada vez que ves algo que te gusta. El ahorro necesita un lugar seguro Y paciencia."
     },
-    {
-      "label": "Juguete de Moda",
-      "type": "want",
-      "icon_key": "diversion"
+    "final_sin_nada": {
+      "id": "final_sin_nada",
+      "texto": "El dinero de la abuela se perdió poquito a poquito. No porque Ceny lo gastara, sino porque nunca tuvo un lugar seguro donde vivir.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El dinero suelto se pierde solo. Por eso lo primero que necesita quien quiere ahorrar es un lugar fijo y seguro donde guardarlo."
     }
-  ],
-  "versión": "2026.Diamond.Radar"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

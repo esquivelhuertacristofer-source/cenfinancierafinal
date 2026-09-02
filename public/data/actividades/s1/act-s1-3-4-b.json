@@ -4,96 +4,153 @@
   "unit_title": "Bienes raíces como inversión: pros y contras",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Las Capas de Protección",
-  "descripcion": "Un castillo es más seguro cuando tiene murallas, fosos y torres. ¡Construye tu blindaje financiero!",
-  "objetivo": "Categorizar las herramientas de protección financiera según el tipo de riesgo que mitigan",
-  "xp": 400,
-  "instruccion": "Arrastra cada herramienta a la categoría de protección correcta.",
-  "items": [
-    {
-      "id": "bl1",
-      "label": "Testamento",
-      "emoji": "📝",
-      "categoria_correcta": "legal",
-      "feedback": "Asegura que tu riqueza pase a quien tú decidas sin peleas legales."
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "El Departamento de la Tía Sofía",
+  "descripcion": "La tía Sofía heredó $1,600,000. Todos en la familia le dicen lo mismo: \"compra un departamento y rentálo, el ladrillo nunca baja\". Ella quiere entender antes de firmar.",
+  "objetivo": "Evaluar la inversión inmobiliaria frente a alternativas, considerando rendimiento neto, liquidez, concentración de riesgo y costos ocultos.",
+  "xp": 750,
+  "personaje_principal": "Sofía",
+  "contexto_inicial": "El departamento cuesta $1,600,000 y se renta en $9,000 al mes. Los CETES pagan 9% anual. Sofía tiene 58 años y necesita ingresos estables.",
+  "nodo_inicial": "la_recomendacion",
+  "nodos": {
+    "la_recomendacion": {
+      "id": "la_recomendacion",
+      "texto": "\"El ladrillo nunca baja\", dicen todos. ¿Qué hace Sofía primero?",
+      "opciones": [
+        {
+          "id": "calcular",
+          "texto": "Calcular el rendimiento neto por rentas y compararlo con los CETES",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "Nadie en la familia había hecho esa cuenta nunca.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "comprar",
+          "texto": "Comprar: todos coinciden y el ladrillo es seguro",
+          "siguiente_nodo": "la_realidad",
+          "consecuencia": "Firma la escritura sin haber hecho una sola operación.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -95000
+        }
+      ]
     },
-    {
-      "id": "bl2",
-      "label": "Fideicomiso",
-      "emoji": "🏰",
-      "categoria_correcta": "legal",
-      "feedback": "La protección más avanzada contra demandas y embargos."
+    "los_numeros": {
+      "id": "los_numeros",
+      "texto": "Renta anual: $108,000. Menos predial $6,000, mantenimiento $24,000, seguro $4,500 y un mes de vacancia $9,000. Quedan $64,500: un 4% neto. Los CETES pagan 9% sobre los mismos $1,600,000: $144,000 al año.",
+      "opciones": [
+        {
+          "id": "plusvalia",
+          "texto": "Preguntar si la plusvalía compensa esa diferencia",
+          "siguiente_nodo": "la_plusvalia",
+          "consecuencia": "Buena pregunta: la respuesta depende de la zona y del plazo.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "cetes_todo",
+          "texto": "Poner todo en CETES y olvidarse del ladrillo",
+          "siguiente_nodo": "la_concentracion",
+          "consecuencia": "Más ingreso y cero trabajo... pero todo en un solo lugar otra vez.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "comprar_igual",
+          "texto": "Comprar de todas formas, el ladrillo se ve y se toca",
+          "siguiente_nodo": "la_realidad",
+          "consecuencia": "La tranquilidad de lo tangible también es un factor. Y cuesta $79,500 al año.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -79500
+        }
+      ]
     },
-    {
-      "id": "bl3",
-      "label": "Diversificación en ETFs",
-      "emoji": "📊",
-      "categoria_correcta": "inversion",
-      "feedback": "Protege tu dinero de la caída de una sola empresa."
+    "la_plusvalia": {
+      "id": "la_plusvalia",
+      "texto": "Investiga la zona: los precios han subido cerca de 4% anual, apenas por encima de la inflación. Sumando renta neta y plusvalía, el departamento rinde alrededor de 8%: parecido a los CETES, pero con inquilinos, reparaciones y sin poder vender rápido.",
+      "opciones": [
+        {
+          "id": "mixto",
+          "texto": "Repartir: una parte en CETES, otra en una FIBRA que invierte en inmuebles",
+          "siguiente_nodo": "final_diversificado",
+          "consecuencia": "Consigue exposición a bienes raíces sin comprar un solo ladrillo.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 148000
+        },
+        {
+          "id": "depa",
+          "texto": "Comprar el departamento: le gusta tener algo físico",
+          "siguiente_nodo": "la_realidad",
+          "consecuencia": "Decisión informada, con sus costos entendidos.",
+          "xp_bonus": 140,
+          "impacto_patrimonio": 64500
+        }
+      ]
     },
-    {
-      "id": "bl4",
-      "label": "Comprar Oro u Onzas de Plata",
-      "emoji": "🪙",
-      "categoria_correcta": "crisis",
-      "feedback": "Refugio seguro si el sistema financiero o la moneda de tu país fallan."
+    "la_concentracion": {
+      "id": "la_concentracion",
+      "texto": "Poner $1,600,000 en un solo instrumento —aunque sea el más seguro— también es concentrar. Y las tasas de CETES bajan cuando baja la inflación.",
+      "opciones": [
+        {
+          "id": "repartir",
+          "texto": "Repartir entre CETES, un fondo indexado y una FIBRA",
+          "siguiente_nodo": "final_diversificado",
+          "consecuencia": "Tres fuentes distintas de rendimiento y liquidez inmediata.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 148000
+        }
+      ]
     },
-    {
-      "id": "bl5",
-      "label": "Seguro de Gastos Médicos",
-      "emoji": "🏥",
-      "categoria_correcta": "basico",
-      "feedback": "Evita que una enfermedad agote todos tus ahorros."
+    "la_realidad": {
+      "id": "la_realidad",
+      "texto": "Año dos: el inquilino se va y el departamento queda tres meses vacío. Una fuga daña el piso: $38,000. El nuevo inquilino deja de pagar cuatro meses y desalojarlo toma casi un año.",
+      "opciones": [
+        {
+          "id": "aprender",
+          "texto": "Reconocer que un inmueble en renta es un negocio con trabajo, no un ingreso pasivo",
+          "siguiente_nodo": "final_aprendizaje",
+          "consecuencia": "Contrata una administradora que cobra el 10% de la renta.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": -60000
+        },
+        {
+          "id": "vender",
+          "texto": "Venderlo de inmediato",
+          "siguiente_nodo": "final_iliquidez",
+          "consecuencia": "Descubre que vender toma meses y cuesta 5% de comisión.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": -125000
+        }
+      ]
     },
-    {
-      "id": "bl6",
-      "label": "Ahorrar en Monedas Fuertes (USD/EUR)",
-      "emoji": "💵",
-      "categoria_correcta": "crisis",
-      "feedback": "Protección contra la devaluación de tu moneda local."
+    "final_diversificado": {
+      "id": "final_diversificado",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Repartió su herencia en tres instrumentos. Cobra rendimientos mensuales sin inquilinos ni fugas, y puede vender cualquier parte en 48 horas si lo necesita. Cinco años después su patrimonio creció más que el de sus primos con departamentos.",
+      "reflexion_final": "Los bienes raíces pueden ser una gran inversión, pero no son magia. Sus contras reales: rendimiento neto bajo una vez descontado todo, iliquidez (vender toma meses), concentración enorme en un solo activo y trabajo constante. Las FIBRAs permiten invertir en inmuebles con liquidez y desde montos pequeños."
     },
-    {
-      "id": "bl7",
-      "label": "Contraseñas 2FA y Biometría",
-      "emoji": "🆔",
-      "categoria_correcta": "basico",
-      "feedback": "La primera línea de defensa contra robos digitales."
+    "final_aprendizaje": {
+      "id": "final_aprendizaje",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Con administradora profesional el departamento se estabilizó, rindiendo cerca de 3% neto más plusvalía. Funciona, pero le costó dos años de sustos aprenderlo.",
+      "reflexion_final": "Rentar un inmueble no es ingreso pasivo: es un negocio con clientes, mantenimiento y riesgo legal. Contarlo así desde el principio evita la decepción y permite decidir con los números correctos."
     },
-    {
-      "id": "bl8",
-      "label": "Seguro de Responsabilidad Civil",
-      "emoji": "⚖️",
-      "categoria_correcta": "inversion",
-      "feedback": "Protege tu patrimonio si accidentalmente causas un daño a otros."
+    "final_iliquidez": {
+      "id": "final_iliquidez",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Tardó siete meses en vender y pagó $80,000 de comisión más gastos notariales. Recuperó menos de lo que puso, después de tres años de dolores de cabeza.",
+      "reflexion_final": "La iliquidez es el riesgo más subestimado del ladrillo: cuando necesitas el dinero, no está disponible. Un activo que no puedes vender cuando lo necesitas te obliga a aceptar el precio que te ofrezcan."
     }
-  ],
-  "categorias": [
-    {
-      "id": "basico",
-      "label": "PROTECCIÓN INMEDIATA",
-      "emoji": "🛡️",
-      "color": "#1e40af"
-    },
-    {
-      "id": "inversion",
-      "label": "BLINDAJE DE ACTIVOS",
-      "emoji": "📈",
-      "color": "#166534"
-    },
-    {
-      "id": "legal",
-      "label": "ESTRUCTURA LEGAL",
-      "emoji": "📜",
-      "color": "#6b21a8"
-    },
-    {
-      "id": "crisis",
-      "label": "REFUGIO ANTE CRISIS",
-      "emoji": "🌍",
-      "color": "#b45309"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

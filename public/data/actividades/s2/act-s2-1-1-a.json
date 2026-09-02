@@ -108,11 +108,41 @@
   "datos_reales_mexico": {
     "titulo": "Datos reales de México (INEGI / Banxico)",
     "tabla": [
-      { "año": "2020", "pib": "-8.5%", "inflacion": "3.2%", "desempleo": "4.6%", "banxico": "4.25%" },
-      { "año": "2021", "pib": "+4.7%", "inflacion": "7.4%", "desempleo": "3.8%", "banxico": "5.50%" },
-      { "año": "2022", "pib": "+3.0%", "inflacion": "8.7%", "desempleo": "3.3%", "banxico": "10.50%" },
-      { "año": "2023", "pib": "+3.2%", "inflacion": "4.7%", "desempleo": "2.9%", "banxico": "11.25%" },
-      { "año": "2024", "pib": "+1.5%", "inflacion": "4.5%", "desempleo": "2.8%", "banxico": "10.00%" }
+      {
+        "año": "2020",
+        "pib": "-8.5%",
+        "inflacion": "3.2%",
+        "desempleo": "4.6%",
+        "banxico": "4.25%"
+      },
+      {
+        "año": "2021",
+        "pib": "+4.7%",
+        "inflacion": "7.4%",
+        "desempleo": "3.8%",
+        "banxico": "5.50%"
+      },
+      {
+        "año": "2022",
+        "pib": "+3.0%",
+        "inflacion": "8.7%",
+        "desempleo": "3.3%",
+        "banxico": "10.50%"
+      },
+      {
+        "año": "2023",
+        "pib": "+3.2%",
+        "inflacion": "4.7%",
+        "desempleo": "2.9%",
+        "banxico": "11.25%"
+      },
+      {
+        "año": "2024",
+        "pib": "+1.5%",
+        "inflacion": "4.5%",
+        "desempleo": "2.8%",
+        "banxico": "10.00%"
+      }
     ]
   },
   "chart_type": "line",
@@ -136,6 +166,11 @@
     }
   ],
   "escenarios": [
+    {
+      "condicion": "anos_proyeccion >= 6 && tasa_inflacion > 6",
+      "mensaje": "Inflación arriba del 6% sostenida durante años destruye el poder de compra de los salarios. Es lo que vivió México en los ochenta, y de ahí tardó una década en salir.",
+      "tipo": "peligro"
+    },
     {
       "condicion": "tasa_inflacion > 7 && crecimiento_pib < 1",
       "mensaje": "🔥 Estanflación: lo peor de ambos mundos. Alta inflación + bajo crecimiento + desempleo en alza. Los salarios reales caen y el banco central tiene pocas opciones.",

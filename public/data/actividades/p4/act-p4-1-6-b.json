@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P4-1-6-B",
+  "unit_code": "P4-1-6",
+  "unit_title": "Tipos de cuenta: nómina, ahorro y digital",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de las Cuentas",
+  "descripcion": "Responde rápido: ¿qué cuenta para qué necesidad?",
+  "objetivo": "Consolidar la distinción entre tipos de cuenta bancaria",
+  "xp": 320,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Quién abre la cuenta de nómina?",
+      "respuesta_correcta": "La empresa donde se trabaja",
+      "incorrectas": [
+        "El trabajador",
+        "El gobierno",
+        "El banco por su cuenta"
+      ],
+      "dato_extra": "Por eso sus condiciones dependen del convenio de esa empresa."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La cuenta digital se abre:",
+      "respuesta_correcta": "Desde el celular",
+      "incorrectas": [
+        "Solo en ventanilla",
+        "Con un notario",
+        "En la escuela"
+      ],
+      "dato_extra": "Es la puerta de entrada más rápida al sistema financiero formal."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La cuenta de ahorro está pensada para:",
+      "respuesta_correcta": "Guardar sin mover el dinero a diario",
+      "incorrectas": [
+        "Gastar todos los días",
+        "Recibir la nómina",
+        "Pagar servicios"
+      ],
+      "dato_extra": "Algunas cobran comisión si haces demasiados retiros al mes."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Las cuentas digitales básicas tienen:",
+      "respuesta_correcta": "Tope de saldo y movimientos",
+      "incorrectas": [
+        "Interés altísimo",
+        "Comisiones enormes",
+        "Sucursal exclusiva"
+      ],
+      "dato_extra": "Se pueden ampliar presentando documentos y subiendo de nivel."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La nómina casi no cobra manejo porque:",
+      "respuesta_correcta": "El banco gana con el flujo del sueldo",
+      "incorrectas": [
+        "Es obligatorio por ley",
+        "No tiene servicios",
+        "Es de prueba"
+      ],
+      "dato_extra": "Recibir dinero cada quincena es valioso para el banco."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Si cambio de trabajo, la cuenta de nómina:",
+      "respuesta_correcta": "Puede perder sus condiciones",
+      "incorrectas": [
+        "Mejora",
+        "Se cierra sola",
+        "No cambia nunca"
+      ],
+      "dato_extra": "Conviene revisarla en cuanto cambias de empleo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Las cuatro preguntas para elegir cuenta son:",
+      "respuesta_correcta": "Para qué, cuánto cobra, qué pide y qué límites tiene",
+      "incorrectas": [
+        "Color, tamaño, logo y horario",
+        "Nombre y dirección",
+        "Solo el interés"
+      ],
+      "dato_extra": "Con esas cuatro respuestas la comparación deja de ser subjetiva."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-6-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-6-b-escena.webp"
+}

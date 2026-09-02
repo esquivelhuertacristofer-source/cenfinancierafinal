@@ -26,45 +26,15 @@
       "id": "eficiencia_cambio",
       "label": "Tipo de Casa de Cambio",
       "type": "select",
-      "default": "Banco Oficial",
+      "default": "Banco Oficial (3% comisión)",
       "opciones": [
         "Banco Oficial (3% comisión)",
         "Aeropuerto (7% comisión)",
         "App Digital (1% comisión)"
       ]
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
-        {
-          "label": "Conservador",
-          "value": 0.8
-        },
-        {
-          "label": "Moderado",
-          "value": 1
-        },
-        {
-          "label": "Optimista",
-          "value": 1.2
-        }
-      ],
-      "default": 1
     }
   ],
-  "formula": "pesos_iniciales * Math.pow(1 - (eficiencia_cambio === 'Banco Oficial' ? 0.03 : eficiencia_cambio === 'Aeropuerto' ? 0.07 : 0.01), 4)",
+  "formula": "Math.round(pesos_iniciales * Math.pow(1 - (eficiencia_cambio === 'Banco Oficial (3% comisión)' ? 0.03 : eficiencia_cambio === 'Aeropuerto (7% comisión)' ? 0.07 : 0.01), 4))",
   "output_label": "Pesos restantes al volver a casa",
   "output_prefix": "$",
   "output_suffix": " MXN",
@@ -72,17 +42,22 @@
   "escenarios": [
     {
       "condicion": "eficiencia_cambio === 'App Digital (1% comisión)'",
-      "mensaje": "📱 ¡Viajero Inteligente! Usar apps digitales te ahorró mucho dinero en comisiones.",
-      "tipo": "success"
+      "mensaje": "La mejor opción. Cuatro cambios de divisa al 1% te cuestan menos de la mitad que al 3%, y una cuarta parte que en el aeropuerto.",
+      "tipo": "exito"
     },
     {
-      "condicion": "eficiencia_cambio === 'Aeropuerto'",
-      "mensaje": "💸 ¡Cuidado! Cambiar en el aeropuerto es lo más caro. Perdiste casi el 25% de tu dinero solo en comisiones.",
-      "tipo": "danger"
+      "condicion": "eficiencia_cambio === 'Aeropuerto (7% comisión)'",
+      "mensaje": "La más cara de todas. El aeropuerto cobra por la urgencia: es el lugar donde no puedes comparar ni irte a otro lado.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "eficiencia_cambio === 'Banco Oficial (3% comisión)'",
+      "mensaje": "Opción intermedia y segura. Fíjate cuánto se pierde solo en comisiones cuando cambias dinero varias veces en un mismo viaje.",
+      "tipo": "advertencia"
     },
     {
       "condicion": "true",
-      "mensaje": "🌍 Nota: Cada vez que cambias de moneda, el intermediario se queda con un poco. ¡Planea bien tus cambios!",
+      "mensaje": "Cambiar divisas siempre cuesta. La diferencia entre hacerlo bien y hacerlo mal son días de viaje.",
       "tipo": "info"
     }
   ],

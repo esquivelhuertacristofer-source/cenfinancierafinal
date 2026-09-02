@@ -4,123 +4,110 @@
   "unit_title": "Blindaje financiero: seguros y protección de riqueza",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "Seguridad en la Era Digital",
-  "descripcion": "¿Eres un blanco fácil para los ciberdelincuentes o eres una fortaleza digital? ¡Descúbrelo!",
-  "objetivo": "Conocer los protocolos de seguridad digital y los mecanismos de protección contra fraudes tecnológicos",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Estructuras de Protección",
+  "descripcion": "¿Sabes cómo se blinda una fortuna contra el tiempo y los problemas legales? ¡Ponte a prueba!",
+  "objetivo": "Identificar las herramientas legales y financieras utilizadas para la protección de activos y la sucesión patrimonial",
   "xp": 300,
+  "aprobacion_minima": 0.8,
   "preguntas": [
     {
-      "id": "sec1",
-      "pregunta": "¿Qué es el '2FA' (Segundo Factor de Autenticación)?",
-      "respuesta_correcta": "Un nivel extra de seguridad que pide un código enviado a tu celular o App después de poner tu contraseña",
-      "incorrectas": [
-        "Una contraseña muy larga",
-        "Tener dos cuentas de banco",
-        "Un virus"
+      "id": "leg1",
+      "texto": "¿Qué es un 'Fideicomiso' (Trust)?",
+      "opciones": [
+        "Un préstamo de honor",
+        "Un contrato legal donde entregas bienes a una institución para que los administre bajo reglas estrictas en beneficio de alguien más",
+        "Un tipo de cuenta bancaria compartida",
+        "Un seguro de vida"
       ],
-      "dato_extra": "Activar el 2FA detiene el 99% de los intentos de hackeo de cuentas."
+      "correcta": 1,
+      "explicacion": "Es la herramienta más poderosa para proteger activos de demandas y asegurar que se usen como tú quieras."
     },
     {
-      "id": "sec2",
-      "pregunta": "¿Qué es la 'Ingeniería Social'?",
-      "respuesta_correcta": "Manipular psicológicamente a las personas para que revelen información confidencial o cometan errores de seguridad",
-      "incorrectas": [
-        "Construir puentes digitales",
-        "Estudiar sociología",
-        "Hacer amigos en el banco"
+      "id": "leg2",
+      "texto": "¿Quién es el 'Fideicomisario' (Beneficiario)?",
+      "opciones": [
+        "La persona que entrega el dinero",
+        "La persona que recibe los beneficios o bienes del fideicomiso",
+        "El banco que lo administra",
+        "El juez que lo autoriza"
       ],
-      "dato_extra": "Los hackers prefieren engañarte a ti que intentar hackear un sistema de seguridad complejo."
+      "correcta": 1,
+      "explicacion": "Suelen ser los hijos, nietos o fundaciones benéficas."
     },
     {
-      "id": "sec3",
-      "pregunta": "¿Qué es una 'Cold Wallet' (Billetera Fría) en criptomonedas?",
-      "respuesta_correcta": "Un dispositivo físico (como una USB especial) que guarda tus llaves privadas fuera de internet",
-      "incorrectas": [
-        "Una billetera que se guarda en el refrigerador",
-        "Una cuenta de banco sin dinero",
-        "Una App gratuita"
+      "id": "leg3",
+      "texto": "¿Qué es un 'Testamento'?",
+      "opciones": [
+        "Un contrato de trabajo",
+        "Un documento legal donde una persona expresa su voluntad sobre el destino de sus bienes tras su muerte",
+        "Una deuda pendiente",
+        "Un tipo de inversión"
       ],
-      "dato_extra": "Es la forma más segura de guardar grandes cantidades de criptomonedas a largo plazo."
+      "correcta": 1,
+      "explicacion": "Es esencial para evitar que el estado decida qué pasa con tus cosas."
     },
     {
-      "id": "sec4",
-      "pregunta": "¿Qué es la 'Frase Semilla' (Seed Phrase)?",
-      "respuesta_correcta": "Una serie de 12 o 24 palabras que es la LLAVE MAESTRA de tu billetera digital; si la pierdes o te la roban, pierdes todo",
-      "incorrectas": [
-        "Tu nombre de usuario",
-        "Una contraseña para el WiFi",
-        "Una técnica de ahorro"
+      "id": "leg4",
+      "texto": "¿Cuál es la función de una empresa 'Holding'?",
+      "opciones": [
+        "Vender productos de limpieza",
+        "Una empresa cuya única función es ser dueña de las acciones de otras empresas para centralizar el control y proteger el patrimonio",
+        "Un banco internacional",
+        "Una tienda de ropa"
       ],
-      "dato_extra": "NUNCA la compartas con nadie, ni la guardes en una foto en tu celular."
+      "correcta": 1,
+      "explicacion": "Permite organizar imperios empresariales de forma eficiente y segura."
     },
     {
-      "id": "sec5",
-      "pregunta": "¿Cómo funciona un 'Esquema Ponzi'?",
-      "respuesta_correcta": "Se paga a los inversionistas viejos con el dinero de los inversionistas nuevos, hasta que el sistema colapsa",
-      "incorrectas": [
-        "Es una estrategia de venta legal",
-        "Es una forma de inversión en oro",
-        "Es un tipo de banco internacional"
+      "id": "leg5",
+      "texto": "¿Qué significa 'Blindaje de Activos'?",
+      "opciones": [
+        "Ponerles una armadura de metal",
+        "Estructurar la propiedad de tal forma que los bienes personales estén protegidos contra riesgos del negocio o demandas legales",
+        "No pagar deudas",
+        "Esconder el dinero"
       ],
-      "dato_extra": "Si te ofrecen rendimientos garantizados muy altos, huye. Es un Ponzi."
+      "correcta": 1,
+      "explicacion": "Separa tu vida personal de los riesgos de tu empresa."
     },
     {
-      "id": "sec6",
-      "pregunta": "¿Qué es el 'Ransomware'?",
-      "respuesta_correcta": "Un virus que secuestra (encripta) todos los archivos de tu empresa y pide dinero a cambio de devolverlos",
-      "incorrectas": [
-        "Un software de contabilidad",
-        "Un tipo de seguro",
-        "Una red social"
+      "id": "leg6",
+      "texto": "¿Qué es la 'Planeación Sucesoria'?",
+      "opciones": [
+        "Saber quién sigue en la fila",
+        "El proceso de diseñar cómo se transferirá el liderazgo y la riqueza de una generación a otra",
+        "Hacer ejercicio",
+        "Planear las vacaciones familiares"
       ],
-      "dato_extra": "Tener respaldos (backups) frecuentes y fuera de línea es la única defensa real."
+      "correcta": 1,
+      "explicacion": "Evita conflictos familiares y asegura que el negocio continúe."
     },
     {
-      "id": "sec7",
-      "pregunta": "¿Qué es el 'Vishing'?",
-      "respuesta_correcta": "Fraude realizado a través de llamadas telefónicas donde el estafador finge ser una autoridad o el banco",
-      "incorrectas": [
-        "Pescar en el mar",
-        "Ver videos en internet",
-        "Visitar el banco"
+      "id": "leg7",
+      "texto": "¿Qué es un 'Albacea'?",
+      "opciones": [
+        "Un tipo de ave",
+        "La persona encargada de cumplir la voluntad del fallecido y administrar los bienes durante el proceso de herencia",
+        "El dueño de la funeraria",
+        "Un abogado del gobierno"
       ],
-      "dato_extra": "Hoy usan IA para clonar voces de familiares o jefes. ¡Sé precavido!"
+      "correcta": 1,
+      "explicacion": "Es una posición de gran confianza y responsabilidad."
     },
     {
-      "id": "sec8",
-      "pregunta": "¿Qué significa que un sitio web use 'HTTPS' y tenga un candado verde?",
-      "respuesta_correcta": "Que la información enviada entre tu computadora y el sitio está encriptada y es privada",
-      "incorrectas": [
-        "Que el sitio es 100% legal",
-        "Que no tiene virus",
-        "Que el dueño es rico"
+      "id": "leg8",
+      "texto": "¿Por qué se dice que el patrimonio debe estar 'Diversificado' incluso geográficamente?",
+      "opciones": [
+        "Para viajar más",
+        "Para reducir el riesgo de que una crisis en un solo país afecte toda tu riqueza",
+        "Para pagar menos impuestos ilegalmente",
+        "Porque es divertido"
       ],
-      "dato_extra": "Ayuda a proteger tus datos, pero recuerda: un sitio de estafas también puede tener candado."
-    },
-    {
-      "id": "sec9",
-      "pregunta": "¿Cuál es la mejor práctica al usar aplicaciones financieras?",
-      "respuesta_correcta": "Usar contraseñas únicas, biométricos (huella/cara) y nunca compartir códigos de acceso",
-      "incorrectas": [
-        "Anotar la contraseña detrás del celular",
-        "Usar la misma clave para todo",
-        "No ponerles clave"
-      ],
-      "dato_extra": "Tu seguridad financiera digital es tu responsabilidad primaria."
-    },
-    {
-      "id": "sec10",
-      "pregunta": "¿Qué debes hacer si sospechas que fuiste víctima de un hackeo?",
-      "respuesta_correcta": "Bloquear cuentas de inmediato, cambiar todas las contraseñas y avisar a las autoridades financieras",
-      "incorrectas": [
-        "Esperar a ver qué pasa",
-        "No decirle a nadie por vergüenza",
-        "Borrar el historial"
-      ],
-      "dato_extra": "¡Felicidades! Estás blindado para navegar las finanzas digitales con seguridad."
+      "correcta": 1,
+      "explicacion": "¡Felicidades! Has completado el análisis de blindaje patrimonial de alto nivel."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

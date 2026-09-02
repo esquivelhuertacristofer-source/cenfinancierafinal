@@ -4,96 +4,171 @@
   "unit_title": "Planificación ante imprevistos: escenarios y soluciones",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Activos de Refugio",
-  "descripcion": "Cuando el sistema financiero tiembla, los inversionistas buscan refugio en lo tangible. ¿Sabes qué elegir?",
-  "objetivo": "Identificar las características de los activos refugio y su papel en la preservación del patrimonio",
-  "xp": 400,
-  "instruccion": "Arrastra cada activo a la categoría de refugio que le corresponde.",
-  "items": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Análisis de Escenarios",
+  "descripcion": "Nadie puede predecir qué saldrá mal. Pero sí se puede listar qué podría salir mal, calcular cuánto costaría y decidir hoy qué se haría. Eso es análisis de escenarios y es lo que hacen las empresas serias.",
+  "objetivo": "Desarrollar un plan de contingencia financiero mediante análisis de escenarios para mitigar el impacto de eventos inesperados.",
+  "xp": 700,
+  "output_type": "plan_contingencia",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "ref1",
-      "label": "Lingotes de Oro",
-      "emoji": "🧱",
-      "categoria_correcta": "metales",
-      "feedback": "El refugio definitivo. No depende de ningún gobierno y mantiene su valor por milenios."
+      "id": "base",
+      "titulo": "📍 Tu escenario base",
+      "descripcion": "Empieza por la situación normal: así de lejos está tu punto de partida de cada escenario.",
+      "campos": [
+        {
+          "id": "ingreso",
+          "label": "Ingreso mensual del hogar ($)",
+          "type": "number",
+          "placeholder": "Ej: 28000",
+          "requerido": true
+        },
+        {
+          "id": "gastos",
+          "label": "Gastos mensuales ($)",
+          "type": "number",
+          "placeholder": "Ej: 21000",
+          "requerido": true
+        },
+        {
+          "id": "fondo",
+          "label": "Fondo de emergencia actual ($)",
+          "type": "number",
+          "placeholder": "Ej: 45000",
+          "requerido": true
+        }
+      ]
     },
     {
-      "id": "ref2",
-      "label": "Cuadros de Grandes Maestros",
-      "emoji": "🖼️",
-      "categoria_correcta": "arte",
-      "feedback": "Reserva de valor histórica. Su precio sube por la escasez absoluta (solo hay un original)."
+      "id": "escenario1",
+      "titulo": "🩺 Escenario 1: emergencia médica",
+      "descripcion": "El imprevisto más común y el más caro. Una hospitalización de tres días en el sector privado puede costar más que un coche usado.",
+      "campos": [
+        {
+          "id": "costo_medico",
+          "label": "¿Cuánto costaría una emergencia médica grave? ($)",
+          "type": "number",
+          "placeholder": "Ej: 120000",
+          "requerido": true
+        },
+        {
+          "id": "cobertura",
+          "label": "¿Cuánto cubriría tu seguro o el IMSS? ($)",
+          "type": "number",
+          "placeholder": "Ej: 100000",
+          "requerido": true
+        },
+        {
+          "id": "hueco_medico",
+          "label": "Lo que saldría de tu bolsillo",
+          "type": "calculated",
+          "formula": "Math.max(0, costo_medico - cobertura)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si el hueco supera tu fondo, ese escenario te empuja a la deuda. Ahí es donde entra un seguro de gastos médicos."
+        }
+      ]
     },
     {
-      "id": "ref3",
-      "label": "Relojes de Alta Relojería",
-      "emoji": "⌚",
-      "categoria_correcta": "lujo",
-      "feedback": "Riqueza concentrada y transportable. Algunos modelos suben de precio con los años."
+      "id": "escenario2",
+      "titulo": "💼 Escenario 2: pérdida de ingreso",
+      "descripcion": "Desempleo, cierre del negocio o enfermedad larga: el ingreso se detiene y los gastos no.",
+      "campos": [
+        {
+          "id": "meses_sin_ingreso",
+          "label": "¿Cuántos meses podrías estar sin ingresos?",
+          "type": "number",
+          "placeholder": "Ej: 6",
+          "requerido": true
+        },
+        {
+          "id": "necesidad_total",
+          "label": "Dinero necesario para cubrir ese periodo",
+          "type": "calculated",
+          "formula": "gastos * meses_sin_ingreso",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "brecha_ingreso",
+          "label": "Brecha frente a tu fondo actual",
+          "type": "calculated",
+          "formula": "Math.max(0, gastos * meses_sin_ingreso - fondo)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "ref4",
-      "label": "Vinos de Colección",
-      "emoji": "🍷",
-      "categoria_correcta": "lujo",
-      "feedback": "Activos que literalmente mejoran (y escasean) con el paso del tiempo."
+      "id": "escenario3",
+      "titulo": "🏠 Escenario 3: daño patrimonial",
+      "descripcion": "Un choque, un incendio, un robo, una inundación. Baja probabilidad y costo altísimo: es exactamente para lo que existen los seguros.",
+      "campos": [
+        {
+          "id": "valor_bienes",
+          "label": "Valor de los bienes que podrías perder ($)",
+          "type": "number",
+          "placeholder": "Ej: 250000",
+          "requerido": true
+        },
+        {
+          "id": "costo_seguro",
+          "label": "Costo anual de asegurarlos ($)",
+          "type": "number",
+          "placeholder": "Ej: 6000",
+          "requerido": true
+        },
+        {
+          "id": "razon_seguro",
+          "label": "Cuánto proteges por cada peso de prima",
+          "type": "calculated",
+          "formula": "Math.round(valor_bienes / Math.max(1, costo_seguro))",
+          "unit": "x",
+          "requerido": false,
+          "ayuda": "La regla del seguro: asegura lo que no podrías reponer de tu bolsillo; no asegures lo que sí."
+        }
+      ]
     },
     {
-      "id": "ref5",
-      "label": "Monedas de Plata (Onzas)",
-      "emoji": "🪙",
-      "categoria_correcta": "metales",
-      "feedback": "Una forma accesible de ahorrar en metal precioso con valor industrial y monetario."
-    },
-    {
-      "id": "ref6",
-      "label": "Coches Clásicos",
-      "emoji": "🏎️",
-      "categoria_correcta": "coleccionables",
-      "feedback": "Combinan pasión con plusvalía. Su valor depende de su estado y rareza."
-    },
-    {
-      "id": "ref7",
-      "label": "Cartas de Pokémon Raras",
-      "emoji": "🃏",
-      "categoria_correcta": "coleccionables",
-      "feedback": "Un mercado moderno donde la nostalgia y la escasez crean valores altísimos."
-    },
-    {
-      "id": "ref8",
-      "label": "Diamantes Certificados",
-      "emoji": "💎",
-      "categoria_correcta": "lujo",
-      "feedback": "Valor máximo en el espacio más pequeño posible. Muy usados para transportar riqueza."
+      "id": "plan",
+      "titulo": "🧭 Tu plan integrado",
+      "descripcion": "Con los tres escenarios sobre la mesa, ya sabes exactamente qué te falta.",
+      "campos": [
+        {
+          "id": "peor_escenario",
+          "label": "Tu brecha más grande",
+          "type": "calculated",
+          "formula": "Math.max(Math.max(0, costo_medico - cobertura), Math.max(0, gastos * meses_sin_ingreso - fondo))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Ese es el número que define tu plan: no hay que prepararse para todo, hay que prepararse para lo que te tumbaría."
+        },
+        {
+          "id": "aporte",
+          "label": "¿Cuánto puedes destinar al mes? ($)",
+          "type": "number",
+          "placeholder": "Ej: 3500",
+          "requerido": true
+        },
+        {
+          "id": "meses_cerrar",
+          "label": "Meses para cerrar la brecha",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(Math.max(0, costo_medico - cobertura), Math.max(0, gastos * meses_sin_ingreso - fondo)) / Math.max(1, aporte))",
+          "unit": "meses",
+          "requerido": false
+        },
+        {
+          "id": "accion_hoy",
+          "label": "¿Qué vas a hacer esta semana?",
+          "type": "text",
+          "placeholder": "Ej: cotizar seguro de gastos médicos mayores",
+          "requerido": true
+        }
+      ]
     }
   ],
-  "categorias": [
-    {
-      "id": "metales",
-      "label": "METALES PRECIOSOS",
-      "emoji": "🟡",
-      "color": "#fbbf24"
-    },
-    {
-      "id": "arte",
-      "label": "ARTE Y CULTURA",
-      "emoji": "🎨",
-      "color": "#db2777"
-    },
-    {
-      "id": "lujo",
-      "label": "LUJO Y TIEMPO",
-      "emoji": "👑",
-      "color": "#1e40af"
-    },
-    {
-      "id": "coleccionables",
-      "label": "COLECCIONABLES",
-      "emoji": "🧩",
-      "color": "#059669"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

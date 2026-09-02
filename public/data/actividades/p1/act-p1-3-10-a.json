@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-3-10-A",
+  "unit_code": "P1-3-10",
+  "unit_title": "Dos metas a la vez: ¿cuál va primero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "¿Cuál Va Primero?",
+  "descripcion": "Ceny quiere dos cosas y solo tiene un domingo. Cada decisión define cuál llega y cuándo.",
+  "objetivo": "Aplicar criterios de urgencia, precio y utilidad para priorizar entre metas simultáneas",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny quiere dos cosas: unos tenis de $400 que usaría todos los días, y un juego de mesa de $150 que le encanta. Ahorra $25 por semana. Además, el cumpleaños de su mamá es en cuatro semanas.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "Ceny se sienta a decidir. ¿Cómo empieza?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Revisar primero si alguna meta tiene fecha",
+          "siguiente_nodo": "fecha",
+          "consecuencia": "El criterio más fuerte va primero. Buen orden.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Repartir sus $25 entre las dos metas",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "Cada meta recibe $12.50 y las dos avanzan a media velocidad.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Elegir la más cara porque es la que más quiere",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "Sin criterios, la decisión es solo el antojo más fuerte del día.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-inicio.webp"
+    },
+    "reparto": {
+      "id": "reparto",
+      "texto": "Pasan seis semanas. Ceny tiene $75 en cada meta y no ha logrado ninguna. Está desanimado. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Juntar todo en una sola meta y terminarla",
+          "siguiente_nodo": "fecha",
+          "consecuencia": "Con $150 juntos, el juego de mesa se logra de inmediato.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir repartiendo, ya lleva la mitad de cada una",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Dos metas a media velocidad tardan el doble y desaniman el doble.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-reparto.webp"
+    },
+    "fecha": {
+      "id": "fecha",
+      "texto": "Ceny se acuerda: el cumpleaños de mamá es en cuatro semanas y quiere regalarle algo de $80. Ahora tiene tres metas. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El regalo primero: es el único con fecha",
+          "siguiente_nodo": "despues_regalo",
+          "consecuencia": "Lo que tiene fecha no se pospone. Los tenis y el juego sí pueden esperar.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Los tenis primero, el regalo se verá luego",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La fecha del cumpleaños no se mueve. Los tenis sí podían esperar.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-fecha.webp"
+    },
+    "despues_regalo": {
+      "id": "despues_regalo",
+      "texto": "Ceny compró el regalo a tiempo. Quedan los tenis de $400 y el juego de $150. Ninguno tiene fecha. ¿Cuál va primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El juego de $150: lo termina en seis semanas y eso lo anima",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Una victoria rápida entrena el hábito para la meta grande.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": -150
+        },
+        {
+          "id": "o2",
+          "texto": "Los tenis de $400: los usaría todos los días",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "También es válido: gana el criterio de utilidad. Tarda más, pero rinde más.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": -400
+        },
+        {
+          "id": "o3",
+          "texto": "Los dos al mismo tiempo otra vez",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ya sabe lo que pasa cuando reparte, y aun así lo repite.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-despues_regalo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny logró el regalo a tiempo y después su segunda meta. Sigue ahorrando para la tercera.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny no adivinó: usó criterios. Primero lo que tenía fecha, después lo que podía terminar o lo que más iba a usar. Eso es planear.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny sigue con dos termómetros a medias y ninguna meta lograda.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El dinero está ahí, no se perdió nada. Pero repartir entre dos metas hace que ninguna se sienta cerca, y eso es lo que hace abandonar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Llegó el cumpleaños de mamá y Ceny no tenía regalo. Los tenis todavía están a la mitad.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La urgencia es el criterio más fuerte por una razón: las fechas no se mueven. Lo que no tiene fecha siempre puede esperar; lo que sí la tiene, no.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-3-10-a-portada.webp"
+}

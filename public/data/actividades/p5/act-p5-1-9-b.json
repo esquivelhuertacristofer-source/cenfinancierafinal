@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-1-9-B",
+  "unit_code": "P5-1-9",
+  "unit_title": "Del efectivo al pago con celular: la evolución de los pagos",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Medios de Pago",
+  "descripcion": "Comprueba que sabes elegir el medio adecuado para cada situación.",
+  "objetivo": "Verificar la comparación de medios de pago y su uso contextual",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La moneda resolvió del trueque:",
+      "opciones": [
+        "El peso del metal",
+        "La distancia",
+        "Que ambos quisieran justo lo del otro",
+        "El color"
+      ],
+      "correcta": 2,
+      "explicacion": "Con un valor común, ya no hacía falta coincidir en el deseo."
+    },
+    {
+      "id": "q2",
+      "texto": "Los medios de pago nuevos:",
+      "opciones": [
+        "Eliminaron a los anteriores",
+        "Solo eliminaron el trueque",
+        "No cambiaron nada",
+        "Se sumaron a los anteriores"
+      ],
+      "correcta": 3,
+      "explicacion": "Hoy conviven todos, y cada uno sirve mejor en cierto contexto."
+    },
+    {
+      "id": "q3",
+      "texto": "En México, el efectivo:",
+      "opciones": [
+        "Sigue siendo mayoritario en muchas transacciones",
+        "Ya no se usa",
+        "Está prohibido",
+        "Solo se usa en bancos"
+      ],
+      "correcta": 0,
+      "explicacion": "Falta de cuenta, falta de señal y comisiones explican buena parte."
+    },
+    {
+      "id": "q4",
+      "texto": "La trazabilidad significa:",
+      "opciones": [
+        "Que sea rápido",
+        "Que quede registro del movimiento",
+        "Que sea barato",
+        "Que sea aceptado"
+      ],
+      "correcta": 1,
+      "explicacion": "Es lo que permite aclarar, reclamar y controlar el gasto."
+    },
+    {
+      "id": "q5",
+      "texto": "Que el efectivo no deje rastro:",
+      "opciones": [
+        "Es solo ventaja",
+        "Es solo desventaja",
+        "Da privacidad pero impide probar nada",
+        "No importa"
+      ],
+      "correcta": 2,
+      "explicacion": "Si se pierde o hay desacuerdo, no hay comprobante que valga."
+    },
+    {
+      "id": "q6",
+      "texto": "El efectivo gana en:",
+      "opciones": [
+        "Registro",
+        "Seguridad ante robo",
+        "Control del gasto",
+        "Aceptación y funcionar sin señal"
+      ],
+      "correcta": 3,
+      "explicacion": "Sigue siendo el único aceptado literalmente en todas partes."
+    },
+    {
+      "id": "q7",
+      "texto": "El pago con celular gana en:",
+      "opciones": [
+        "Velocidad y registro",
+        "Aceptación universal",
+        "Funcionar sin internet",
+        "Privacidad"
+      ],
+      "correcta": 0,
+      "explicacion": "Y con CoDi, además sin comisión para quien cobra."
+    },
+    {
+      "id": "q8",
+      "texto": "La habilidad útil es:",
+      "opciones": [
+        "Usar solo efectivo",
+        "Saber cuál conviene en cada contexto",
+        "Usar solo celular",
+        "Evitar los bancos"
+      ],
+      "correcta": 1,
+      "explicacion": "Tener acceso a más de un medio es lo que da flexibilidad real."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-9-b-escena.webp"
+}

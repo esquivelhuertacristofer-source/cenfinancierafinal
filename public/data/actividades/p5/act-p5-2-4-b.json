@@ -6,136 +6,144 @@
   "edad": "10-11 años",
   "tipo": "DECIDE",
   "complejidad": "MEDIO",
-  "titulo": "Alerta de Hackeo",
-  "descripcion": "Te llega un mensaje: 'Se ha realizado una compra por $2,000 en una tienda de otro país'. Tú no hiciste esa compra. ¡Rápido! ¿Qué haces?",
-  "objetivo": "Aprender el protocolo de respuesta ante cargos no reconocidos y posible robo de identidad",
-  "xp": 450,
+  "titulo": "El Tenis del Video",
+  "descripcion": "Ceny lleva 40 minutos en su celular. Aparece por quinta vez el mismo video: unos tenis blancos que \"todos\" están usando. Cuestan $2,400. Ceny tiene $2,600 ahorrados para su bici.",
+  "objetivo": "Reconocer cómo las redes sociales fabrican deseo mediante repetición, presión social y urgencia, y practicar la pausa antes de comprar.",
+  "xp": 600,
   "personaje_principal": "Ceny",
-  "contexto_inicial": "Ceny está cenando cuando su celular vibra con una alerta bancaria. Alguien está usando sus datos en el extranjero.",
-  "nodo_inicial": "primer_paso_crisis",
+  "contexto_inicial": "El video dice: \"ÚLTIMO DÍA con 20% de descuento. Link en la bio\". Debajo, 40 mil comentarios diciendo \"los amo\".",
+  "nodo_inicial": "el_video",
   "nodos": {
-    "primer_paso_crisis": {
-      "id": "primer_paso_crisis",
-      "texto": "El pánico te invade. ¿Cuál es la primera acción inteligente?",
+    "el_video": {
+      "id": "el_video",
+      "texto": "Ceny siente unas ganas enormes de comprarlos. Hace una hora ni sabía que existían. ¿Qué hace?",
       "opciones": [
         {
-          "id": "bloquear_tarjeta",
-          "texto": "Entrar a la App y bloquear/apagar la tarjeta de inmediato",
-          "siguiente_nodo": "denuncia_banco",
-          "consecuencia": "¡Perfecto! Detuviste cualquier otro intento de compra al instante.",
-          "xp_bonus": 250,
+          "id": "pausa",
+          "texto": "Cerrar la app y esperar 48 horas antes de decidir",
+          "siguiente_nodo": "la_pausa",
+          "consecuencia": "Ceny apaga el teléfono. El corazón le late menos rápido.",
+          "xp_bonus": 180,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "esperar_ver",
-          "texto": "Esperar a mañana para ir al banco físicamente",
-          "siguiente_nodo": "mas_cargos",
-          "consecuencia": "¡Cuidado! Los ladrones digitales son rápidos y harán más compras mientras esperas.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "mas_cargos": {
-      "id": "mas_cargos",
-      "texto": "¡Oh no! Llega otra alerta por $1,500. Siguen gastando tu dinero.",
-      "opciones": [
-        {
-          "id": "reaccionar_tarde",
-          "texto": "¡Ya basta! Bloquear la tarjeta ahora mismo",
-          "siguiente_nodo": "denuncia_banco",
-          "consecuencia": "Por fin reaccionaste, pero ya perdiste más dinero del necesario.",
-          "xp_bonus": 50,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "denuncia_banco": {
-      "id": "denuncia_banco",
-      "texto": "Con la tarjeta bloqueada, ahora debes formalizar la queja. ¿A quién llamas?",
-      "opciones": [
-        {
-          "id": "llamar_banco_oficial",
-          "texto": "Llamar al número oficial del banco (detrás de la tarjeta)",
-          "siguiente_nodo": "prevencion_final",
-          "consecuencia": "El banco toma tu reporte e inicia la investigación para devolverte el dinero.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "buscar_ayuda_fb",
-          "texto": "Poner un post en Facebook preguntando qué hacer",
-          "siguiente_nodo": "estafadores_extra",
-          "consecuencia": "Mucha gente te da consejos contradictorios y pierdes tiempo valioso.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "estafadores_extra": {
-      "id": "estafadores_extra",
-      "texto": "Alguien te escribe por privado diciendo que él puede 'hackear' al ladrón si le das tu contraseña.",
-      "opciones": [
-        {
-          "id": "bloquear_nuevo_estafador",
-          "texto": "Bloquear a esa persona; es otro estafador aprovechando tu miedo",
-          "siguiente_nodo": "prevencion_final",
-          "consecuencia": "¡Bien hecho! Tienes la mente fría para detectar buitres digitales.",
-          "xp_bonus": 100,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "prevencion_final": {
-      "id": "prevencion_final",
-      "texto": "Lograste salvar tu cuenta. Pero ¿cómo evitar que pase de nuevo?",
-      "opciones": [
-        {
-          "id": "mejorar_seguridad",
-          "texto": "Cambiar todas las contraseñas y activar el Doble Factor (2FA)",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Ahora tu identidad digital es un búnker impenetrable.",
+          "id": "preguntar",
+          "texto": "Preguntarse por qué le apareció ese video cinco veces",
+          "siguiente_nodo": "algoritmo",
+          "consecuencia": "Ceny se da cuenta de que no fue casualidad.",
           "xp_bonus": 150,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "comprar",
+          "texto": "Comprarlos ya, antes de que se acabe el descuento",
+          "siguiente_nodo": "la_compra",
+          "consecuencia": "Ceny gasta $2,400 de sus $2,600.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -2400
         }
       ]
     },
-    "final_recuperado": {
-      "id": "final_recuperado",
-      "texto": "¡Felicidades! Recuperaste tu seguridad. Aprendiste que la rapidez y el uso de canales oficiales son tus mejores armas.",
+    "algoritmo": {
+      "id": "algoritmo",
+      "texto": "Ceny investiga: la app registra qué videos ve más tiempo y le muestra más de lo mismo. La marca además pagó para que su video apareciera justo a niñas de su edad. El \"descuento de último día\" lleva tres semanas activo.",
+      "opciones": [
+        {
+          "id": "pausa2",
+          "texto": "Con eso claro, dejarlo reposar 48 horas",
+          "siguiente_nodo": "la_pausa",
+          "consecuencia": "Saber cómo funciona el truco le quita casi toda la fuerza.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "igual",
+          "texto": "Aun sabiéndolo, comprarlos: le siguen gustando",
+          "siguiente_nodo": "la_compra",
+          "consecuencia": "Ceny compra. Al menos ahora sabe que lo eligió ella.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -2400
+        }
+      ]
+    },
+    "la_pausa": {
+      "id": "la_pausa",
+      "texto": "Pasan dos días. Ceny vuelve a mirar los tenis. Las ganas ya no son urgentes: ahora puede pensar. Se acuerda de la bici que lleva ocho meses ahorrando.",
+      "opciones": [
+        {
+          "id": "bici",
+          "texto": "Seguir con la bici: es lo que de verdad quería",
+          "siguiente_nodo": "final_dueña",
+          "consecuencia": "Ceny cierra la app y guarda su dinero.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "tenis_pensado",
+          "texto": "Comprar los tenis, pero ahora decidido con calma",
+          "siguiente_nodo": "final_consciente",
+          "consecuencia": "Ceny los compra sabiendo exactamente a qué renuncia.",
+          "xp_bonus": 120,
+          "impacto_patrimonio": -2400
+        }
+      ]
+    },
+    "la_compra": {
+      "id": "la_compra",
+      "texto": "Llegan los tenis. Los usa dos semanas seguidas. Al mes ya casi no se los pone: apareció otra tendencia. La bici sigue sin comprarse y volver a juntar $2,400 le tomará otros siete meses.",
+      "opciones": [
+        {
+          "id": "aprender",
+          "texto": "Reconocer qué pasó y ponerse una regla para la próxima",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "Ceny escribe en su cuaderno: \"48 horas antes de cualquier compra grande\".",
+          "xp_bonus": 140,
+          "es_optima": true,
+          "impacto_patrimonio": -2400
+        },
+        {
+          "id": "nada",
+          "texto": "No pensarlo más y seguir viendo videos",
+          "siguiente_nodo": "final_rueda",
+          "consecuencia": "A los tres días ya hay otro producto imperdible.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -2400
+        }
+      ]
+    },
+    "final_dueña": {
+      "id": "final_dueña",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Tres semanas después Ceny compró su bici. La usa todos los días desde hace dos años. Los tenis del video, mientras tanto, ya nadie los menciona.",
+      "reflexion_final": "La publicidad en redes no te informa: te fabrica un deseo que no tenías hace una hora. La defensa más poderosa es gratis y se llama tiempo. Un deseo real sobrevive 48 horas; un deseo fabricado, casi nunca."
+    },
+    "final_consciente": {
+      "id": "final_consciente",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "Ante un fraude, la calma es tu aliada y la rapidez tu escudo. ¡Nunca compartas tus claves!"
+      "texto": "Ceny compró los tenis después de pensarlo dos días. Le gustaron y los usó mucho, aunque la bici tuvo que esperar medio año más.",
+      "reflexion_final": "No se trata de nunca comprar lo que se ve en redes. Se trata de que la decisión sea tuya y no del algoritmo. Elegir con calma, sabiendo a qué renuncias, es consumo consciente."
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+    "final_leccion": {
+      "id": "final_leccion",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "Ceny perdió siete meses de ahorro, pero ganó una regla que usará toda la vida: ninguna compra grande el mismo día que se le antoja.",
+      "reflexion_final": "Las tiendas en línea invierten millones en que compres en los primeros 10 minutos, porque saben que después de un día lo pensarías mejor. Esa prisa es la señal más clara de que te están empujando."
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+    "final_rueda": {
+      "id": "final_rueda",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "Seis meses después Ceny tiene tres pares de tenis de moda, ningún ahorro y ninguna bici. Cada compra le emocionó unos días.",
+      "reflexion_final": "Comprar por impulso no llena: solo hace espacio para el siguiente impulso. Mientras tanto, las metas que sí importaban se quedan sin dinero."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

@@ -4,154 +4,144 @@
   "unit_title": "Bienes raíces como inversión: pros y contras",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "SIMULADOR",
+  "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "¿Comprar o Rentar?",
-  "descripcion": "La discusión financiera más importante de cualquier adulto joven: ¿compro mi casa o sigo rentando? Ni una ni otra es siempre mejor. Depende del precio, la tasa hipotecaria, cuánto tiempo te quedas y cuánto se valoriza la zona. Simula ambas opciones con números reales.",
-  "objetivo": "Comparar el costo total de comprar una propiedad (hipoteca + mantenimiento) vs. rentar (renta + inversión de diferencia), y calcular cuándo es mejor comprar",
-  "xp": 600,
-  "descripcion_formula": "Costo total compra = cuota_hipoteca × meses + enganche + mantenimiento. Valor propiedad = precio × (1+apreciacion)^n. Costo total renta = renta_mensual × meses. Patrimonio compra vs renta = comparación de riqueza neta final.",
-  "inputs": [
+  "titulo": "¿Cuánto Rinde un Departamento?",
+  "descripcion": "Comprar para rentar suena a dinero fácil. La pregunta que casi nadie hace es: ¿cuánto rinde realmente, después de descontar todo? Muchos departamentos rinden menos que un CETE, con muchísimo más trabajo.",
+  "objetivo": "Analizar la inversión inmobiliaria calculando el rendimiento neto por rentas y comparándolo con alternativas financieras.",
+  "xp": 700,
+  "output_type": "analisis_inmobiliario",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "precio_propiedad",
-      "label": "Precio de la Propiedad ($)",
-      "type": "slider",
-      "min": 500000,
-      "max": 5000000,
-      "step": 100000,
-      "default": 1800000,
-      "unit": "$",
-      "referencia": "Precio promedio depto. 2 recámaras CDMX: $1.5-$2.5M (2024)"
+      "id": "propiedad",
+      "titulo": "🏢 La propiedad",
+      "descripcion": "Toma un departamento real de tu ciudad, con su precio y su renta de mercado.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio de compra ($)",
+          "type": "number",
+          "placeholder": "Ej: 1600000",
+          "requerido": true
+        },
+        {
+          "id": "renta",
+          "label": "Renta mensual que podrías cobrar ($)",
+          "type": "number",
+          "placeholder": "Ej: 9500",
+          "requerido": true
+        },
+        {
+          "id": "bruto",
+          "label": "Rendimiento BRUTO anual",
+          "type": "calculated",
+          "formula": "Math.round(renta * 12 / precio * 1000) / 10",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Es el número que usan los vendedores. Todavía no descuenta nada."
+        }
+      ]
     },
     {
-      "id": "enganche_pct",
-      "label": "Enganche (%)",
-      "type": "slider",
-      "min": 10,
-      "max": 40,
-      "step": 5,
-      "default": 20,
-      "unit": "%",
-      "referencia": "Mínimo típico Infonavit/bancos: 10-20%"
+      "id": "costos",
+      "titulo": "📉 Lo que casi nadie descuenta",
+      "descripcion": "Una propiedad en renta tiene gastos fijos todos los años, se rente o no.",
+      "campos": [
+        {
+          "id": "predial",
+          "label": "Predial anual ($)",
+          "type": "number",
+          "placeholder": "Ej: 6000",
+          "requerido": true
+        },
+        {
+          "id": "mantenimiento",
+          "label": "Mantenimiento y cuotas al año ($)",
+          "type": "number",
+          "placeholder": "Ej: 24000",
+          "requerido": true
+        },
+        {
+          "id": "seguro",
+          "label": "Seguro anual ($)",
+          "type": "number",
+          "placeholder": "Ej: 4500",
+          "requerido": true
+        },
+        {
+          "id": "vacancia",
+          "label": "Meses al año que esperas tenerlo vacío",
+          "type": "number",
+          "placeholder": "Ej: 1",
+          "requerido": true,
+          "ayuda": "La vacancia es el gasto olvidado: entre inquilinos casi siempre pasan semanas o meses."
+        }
+      ]
     },
     {
-      "id": "tasa_hipoteca_anual",
-      "label": "Tasa Hipotecaria Anual (%)",
-      "type": "slider",
-      "min": 8,
-      "max": 18,
-      "step": 0.5,
-      "default": 11.5,
-      "unit": "%",
-      "referencia": "Tasa fija promedio hipotecas México 2024: 10-13%"
+      "id": "neto",
+      "titulo": "🎯 El rendimiento de verdad",
+      "descripcion": "Ahora sí: lo que queda en tu bolsillo cada año, dividido entre lo que invertiste.",
+      "campos": [
+        {
+          "id": "ingreso_real",
+          "label": "Ingreso anual real por rentas",
+          "type": "calculated",
+          "formula": "renta * (12 - vacancia)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "utilidad",
+          "label": "Utilidad anual después de gastos",
+          "type": "calculated",
+          "formula": "renta * (12 - vacancia) - predial - mantenimiento - seguro",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "neto_pct",
+          "label": "Rendimiento NETO anual",
+          "type": "calculated",
+          "formula": "Math.round((renta * (12 - vacancia) - predial - mantenimiento - seguro) / precio * 1000) / 10",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Compáralo con los CETES. Si un CETE paga más sin inquilinos, sin fugas de agua y sin trámites, la pregunta se responde sola."
+        }
+      ]
     },
     {
-      "id": "renta_mensual",
-      "label": "Renta Mensual de Propiedad Equivalente ($)",
-      "type": "slider",
-      "min": 5000,
-      "max": 50000,
-      "step": 1000,
-      "default": 14000,
-      "unit": "$"
-    },
-    {
-      "id": "anos_proyeccion_bi",
-      "label": "Años de Análisis",
-      "type": "slider",
-      "min": 5,
-      "max": 30,
-      "step": 5,
-      "default": 15,
-      "unit": "años"
-    },
-    {
-      "id": "apreciacion_anual",
-      "label": "Apreciación Anual de la Propiedad (%)",
-      "type": "slider",
-      "min": 3,
-      "max": 15,
-      "step": 0.5,
-      "default": 7,
-      "unit": "%",
-      "referencia": "CDMX promedio: 7-10% anual últimos 10 años"
+      "id": "comparacion",
+      "titulo": "⚖️ Contra la alternativa",
+      "descripcion": "Toda inversión se juzga contra lo que habrías ganado haciendo otra cosa con ese dinero.",
+      "campos": [
+        {
+          "id": "tasa_cetes",
+          "label": "Rendimiento de CETES hoy (%)",
+          "type": "number",
+          "placeholder": "Ej: 9",
+          "requerido": true
+        },
+        {
+          "id": "ganancia_cetes",
+          "label": "Lo que ganarías al año en CETES",
+          "type": "calculated",
+          "formula": "Math.round(precio * tasa_cetes / 100)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "diferencia",
+          "label": "Ventaja anual del departamento frente a CETES",
+          "type": "calculated",
+          "formula": "Math.round(renta * (12 - vacancia) - predial - mantenimiento - seguro - precio * tasa_cetes / 100)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si sale negativo, el departamento pierde por rentas. Aun así puede convenir si esperas plusvalía, pero eso ya no es ingreso: es una apuesta al precio futuro."
+        }
+      ]
     }
   ],
-  "formula": "Math.round(((precio_propiedad * (1 - enganche_pct/100)) * (tasa_hipoteca_anual/100/12)) / (1 - Math.pow(1 + tasa_hipoteca_anual/100/12, -anos_proyeccion_bi*12)))",
-  "output_label": "Cuota Hipotecaria Mensual",
-  "output_prefix": "$",
-  "output_suffix": "/mes",
-  "outputs_multiples": [
-    {
-      "id": "cuota_hipoteca",
-      "label": "Cuota Hipotecaria Mensual",
-      "formula": "Math.round(((precio_propiedad * (1 - enganche_pct/100)) * (tasa_hipoteca_anual/100/12)) / (1 - Math.pow(1 + tasa_hipoteca_anual/100/12, -anos_proyeccion_bi*12)))",
-      "prefix": "$",
-      "suffix": "/mes",
-      "descripcion": "El pago mensual de la hipoteca (solo capital e intereses)"
-    },
-    {
-      "id": "valor_propiedad_futuro",
-      "label": "Valor de la Propiedad en el Futuro",
-      "formula": "Math.round(precio_propiedad * Math.pow(1 + apreciacion_anual/100, anos_proyeccion_bi))",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Cuánto vale la propiedad después del período de análisis"
-    },
-    {
-      "id": "costo_total_compra",
-      "label": "Costo Total de Comprar",
-      "formula": "Math.round(precio_propiedad * enganche_pct/100 + ((precio_propiedad * (1 - enganche_pct/100)) * (tasa_hipoteca_anual/100/12)) / (1 - Math.pow(1 + tasa_hipoteca_anual/100/12, -anos_proyeccion_bi*12)) * anos_proyeccion_bi * 12 + precio_propiedad * 0.01 * anos_proyeccion_bi)",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Enganche + todas las cuotas + mantenimiento (1% anual) en el período"
-    },
-    {
-      "id": "patrimonio_neto_compra",
-      "label": "Patrimonio Neto si Compras",
-      "formula": "Math.round(precio_propiedad * Math.pow(1 + apreciacion_anual/100, anos_proyeccion_bi) - (precio_propiedad * enganche_pct/100 + ((precio_propiedad * (1 - enganche_pct/100)) * (tasa_hipoteca_anual/100/12)) / (1 - Math.pow(1 + tasa_hipoteca_anual/100/12, -anos_proyeccion_bi*12)) * anos_proyeccion_bi * 12))",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Valor de la propiedad menos todo lo que pagaste de hipoteca"
-    }
-  ],
-  "regla_practica": {
-    "titulo": "Regla del 5% para decidir comprar vs. rentar",
-    "descripcion": "Si la renta anual / precio de la propiedad < 5%, rentar es más caro que comprar. Si > 5%, rentar puede ser más eficiente.",
-    "formula_pct": "renta_mensual × 12 / precio_propiedad × 100",
-    "ejemplo": "Renta $14,000/mes en casa de $1.8M = 9.3% anual → Puede convenir rentar e invertir la diferencia"
-  },
-  "chart_type": "line",
-  "chart_series": [
-    {
-      "id": "valor_propiedad_futuro",
-      "label": "Valor Propiedad ($)",
-      "color": "#22c55e"
-    },
-    {
-      "id": "costo_total_compra",
-      "label": "Costo Total Acumulado ($)",
-      "color": "#ef4444"
-    }
-  ],
-  "escenarios": [
-    {
-      "condicion": "cuota_hipoteca > renta_mensual * 1.5",
-      "mensaje": "🏠 Hipoteca muy cara vs. renta. Tu cuota hipotecaria es más del 150% de la renta equivalente. Rentar e invertir la diferencia puede generar más riqueza a corto plazo.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "apreciacion_anual >= 8 && anos_proyeccion_bi >= 15",
-      "mensaje": "🏆 Comprar gana a largo plazo. Con alta apreciación y horizonte largo, la propiedad se convierte en un activo poderoso. La clave es aguantar los primeros años cuando la hipoteca duele más.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "enganche_pct < 15",
-      "mensaje": "⚠️ Enganche bajo. Con menos del 15% de enganche, tu cuota mensual es alta y pagas más intereses totales. Ahorra más antes de comprar si puedes.",
-      "tipo": "warning"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "pregunta_reflexion": "¿Por qué comprar un departamento puede ser mejor inversión a largo plazo que rentar? ¿Qué factores harían que una propiedad en cierta zona valga más en 10 años?",
-  "comparativa_espera": "Las propiedades en CDMX se han valorizado en promedio 8% anual en los últimos 10 años. Una inversión de $1,500,000 en 2014 vale aproximadamente $3,200,000 hoy — más del doble en una década."
+  "versión": "2026.Alineada.1"
 }

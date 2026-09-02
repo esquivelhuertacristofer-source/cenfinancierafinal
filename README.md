@@ -13,7 +13,7 @@ Plataforma web para educación financiera dirigida a estudiantes de Primaria (P1
 | Animaciones | Framer Motion |
 | Iconos | Lucide React |
 | Backend | Supabase v2 (PostgreSQL + RLS + Auth) |
-| Deploy | Vercel (auto-deploy en push a `main`) |
+| Deploy | Cloudflare Workers vía OpenNext (`@opennextjs/cloudflare` + `wrangler`) |
 
 ---
 
@@ -27,6 +27,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=[tu-anon-key]
 ```
 
 **Importante:** Nunca versionar `.env.local`. Está en `.gitignore`.
+
+Para desarrollo local contra el runtime de Cloudflare (`npm run cf:preview`), las variables/secretos se leen desde un archivo `.dev.vars` en la raíz (también gitignored) en vez de `.env.local`. En producción, los secretos (`SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_JWT_SECRET`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, etc.) se cargan con `wrangler secret put <NOMBRE>` — nunca se escriben en `wrangler.jsonc`. Ver `docs/SEGURIDAD-PENDIENTES.md` para el procedimiento completo de rotación de secretos.
 
 ---
 
@@ -50,15 +52,30 @@ npm start
 
 ## Cómo Deployar
 
-El proyecto usa **Vercel** con auto-deploy desde GitHub:
+> **Migración:** el proyecto se movió de Vercel a **Cloudflare Workers** el 2026-07-08 (se perdió el acceso a la cuenta de Vercel). El build usa [OpenNext](https://opennext.js.org/cloudflare) para adaptar Next.js al runtime de Cloudflare Workers, y `wrangler` para publicar. No hay auto-deploy desde GitHub configurado todavía — el deploy es manual vía CLI.
 
-1. Push a rama `main` → Vercel hace el deploy automáticamente
-2. Verificar que las env vars estén configuradas en Vercel Dashboard → Settings → Environment Variables
+1. Verificar que las variables de entorno estén configuradas (ver sección siguiente).
+2. Build + deploy en un solo paso:
+   ```bash
+   npm run cf:deploy
+   ```
+   Esto ejecuta `opennextjs-cloudflare build` (compila Next.js y genera el Worker) seguido de `opennextjs-cloudflare deploy` (publica con `wrangler`).
+3. Otros comandos útiles:
+   ```bash
+   # Solo build (sin publicar), útil para inspeccionar el Worker generado
+   npm run cf:build
 
-Para deploy manual:
-```bash
-npx vercel --prod
-```
+   # Build + servidor local que simula el runtime de Cloudflare
+   npm run cf:preview
+   ```
+4. Configuración del Worker (nombre, rutas de dominio custom, bindings de KV, etc.) vive en `wrangler.jsonc`.
+5. **Rollback:** si un deploy introduce un problema en producción, revertir a la versión anterior con:
+   ```bash
+   npx wrangler rollback
+   ```
+   Este comando vuelve al último deployment estable sin necesidad de rehacer el build. Ver también `docs/SEGURIDAD-PENDIENTES.md` para el procedimiento detallado de rollback y rotación de secretos.
+
+**Nota histórica:** el `vercel.json` que pueda seguir presente en el repo es un remanente de la configuración anterior en Vercel y ya no tiene efecto en el flujo de deploy actual.
 
 ---
 
@@ -80,6 +97,11 @@ src/
 │   │   ├── teacher/        # Dashboard del profesor (requiere rol teacher)
 │   │   ├── primary/        # Redirect al hub
 │   │   └── secondary/      # Redirect al hub
+│   ├── admin/               # Administración multi-escuela (ver sección propia abajo)
+│   │   ├── escuelas/        # Onboarding de escuelas nuevas
+│   │   └── usuarios/        # Gestión de usuarios y grupos por escuela
+│   ├── actions/
+│   │   └── adminActions.ts  # Server Actions de administración (validan rol server-side)
 │   └── api/
 │       ├── curriculum/[levelGrade]/ # GET currículum por grado
 │       └── activity/[activityId]/  # GET actividad por ID
@@ -117,6 +139,17 @@ Cada tipo tiene un componente renderer en `src/components/activities/`.
    - `student` → `/hub`
 3. **Hub** → `/hub` — 4 pilares temáticos con actividades
 4. **Actividad** → `/hub/actividad/[id]`
+
+---
+
+## Administración Multi-Escuela
+
+La plataforma incluye un panel de administración institucional en `src/app/admin/`, orientado a operar varias escuelas desde una sola instancia:
+
+- **`/admin/escuelas`** — Onboarding de escuelas nuevas: alta de la escuela, carga masiva de alumnos/profesores vía CSV (plantilla descargable), creación automática de cuentas y generación de un PDF de credenciales (usuario/contraseña) listo para repartir por grupo. También muestra estadísticas por escuela (alumnos, profesores, grupos).
+- **`/admin/usuarios`** — Gestión de usuarios y grupos dentro de una escuela: alta individual o masiva (CSV) de alumnos/profesores, creación de grupos por grado, y exportación de credenciales en PDF.
+
+Las acciones sensibles (`onboardInstitutionalUsers`, `createGrupo`, `getGrupos`, `getEscuelas`, `onboardEscuela`) están implementadas como Server Actions en `src/app/actions/adminActions.ts` y validan la sesión y el rol del usuario en el servidor (`requireAdminSession()`, ver `src/lib/supabase-server.ts`) antes de tocar la `service_role key` de Supabase — el cliente nunca recibe esa key.
 
 ---
 

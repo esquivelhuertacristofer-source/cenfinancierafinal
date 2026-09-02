@@ -4,105 +4,71 @@
   "unit_title": "Oro y Plata: dinero de verdad por milenios",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "SIMULADOR",
   "complejidad": "MEDIO",
-  "titulo": "Emprendimiento con Causa",
-  "descripcion": "Las mejores empresas del futuro no solo ganan dinero, ¡cambian el mundo! Diseña tu propio negocio con impacto social.",
-  "objetivo": "Integrar conceptos de rentabilidad económica con responsabilidad social y ambiental",
-  "xp": 400,
-  "output_type": "Plan de Empresa Social",
-  "exportable": true,
-  "pasos": [
+  "titulo": "El Oro Contra el Tiempo",
+  "descripcion": "Hace 100 años, con una moneda de oro comprabas un buen traje. Hoy, con esa misma moneda de oro, también compras un buen traje. Con billetes de hace 100 años no compras ni un café. Compruébalo.",
+  "objetivo": "Comprender por qué los metales preciosos conservan poder de compra frente a la inflación y qué papel juegan como protección en un patrimonio.",
+  "xp": 500,
+  "descripcion_formula": "Poder de compra restante = monto ÷ (1 + inflación)^años. Muestra cuánto vale realmente tu dinero guardado después de N años de inflación.",
+  "inputs": [
     {
-      "id": "la_causa_social",
-      "titulo": "🌍 El Problema",
-      "descripcion": "¿Qué cosa del mundo te gustaría arreglar con tu empresa?",
-      "campos": [
-        {
-          "id": "problema_elegido",
-          "label": "Elige tu causa",
-          "type": "select",
-          "opciones": [
-            "Contaminación por plásticos",
-            "Falta de agua limpia",
-            "Educación para todos",
-            "Hambre y desperdicio de comida"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "por_que_causa",
-          "label": "¿Por qué elegiste este problema?",
-          "type": "textarea",
-          "placeholder": "Ej: Porque me pone triste ver basura en la playa...",
-          "requerido": true
-        }
-      ]
+      "id": "monto",
+      "label": "Dinero que guardas hoy ($)",
+      "type": "slider",
+      "min": 1000,
+      "max": 200000,
+      "step": 1000,
+      "default": 20000,
+      "unit": "$"
     },
     {
-      "id": "el_modelo_negocio",
-      "titulo": "💰 El Negocio",
-      "descripcion": "¿Cómo vas a ganar dinero para que tu empresa pueda seguir ayudando?",
-      "campos": [
-        {
-          "id": "que_vendes",
-          "label": "¿Qué producto o servicio ofreces?",
-          "type": "text",
-          "placeholder": "Ej: Tenis hechos de botellas recicladas...",
-          "requerido": true
-        },
-        {
-          "id": "modelo_ingreso",
-          "label": "¿Quién te va a pagar?",
-          "type": "select",
-          "opciones": [
-            "Clientes individuales",
-            "Otras empresas",
-            "El gobierno"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "meta_clientes_anio_1",
-          "label": "Meta de Clientes Primer Año",
-          "type": "slider",
-          "min": 10,
-          "max": 1000,
-          "step": 10,
-          "default": 100,
-          "requerido": false
-        },
-        {
-          "id": "impacto_proyectado",
-          "label": "Personas Impactadas Directamente",
-          "type": "calculated",
-          "formula": "Math.round(meta_clientes_anio_1 * 1.5)",
-          "unit": " personas",
-          "ayuda": "Cada cliente impacta en promedio 1.5 personas en su comunidad"
-        }
-      ]
+      "id": "inflacion",
+      "label": "Inflación anual promedio (%)",
+      "type": "slider",
+      "min": 2,
+      "max": 20,
+      "step": 0.5,
+      "default": 5,
+      "unit": "%",
+      "referencia": "México ha promediado cerca de 4-5% en las últimas décadas"
     },
     {
-      "id": "el_impacto_real",
-      "titulo": "📈 El Impacto",
-      "descripcion": "¿Cómo sabremos que estás ayudando de verdad?",
-      "campos": [
-        {
-          "id": "metrica_exito",
-          "label": "¿Qué medirás para saber si vas bien?",
-          "type": "text",
-          "placeholder": "Ej: Kilos de basura recogidos, niños inscritos...",
-          "requerido": true
-        },
-        {
-          "id": "promesa_social",
-          "label": "Tu compromiso como empresario social",
-          "type": "textarea",
-          "placeholder": "Yo me comprometo a que mi empresa siempre...",
-          "requerido": true
-        }
-      ]
+      "id": "anios",
+      "label": "Años que lo dejas guardado",
+      "type": "slider",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "unit": "años"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "formula": "Math.round(monto / Math.pow(1 + inflacion/100, anios))",
+  "output_label": "Lo que realmente comprarán esos billetes",
+  "output_prefix": "$",
+  "output_suffix": " de hoy",
+  "escenarios": [
+    {
+      "condicion": "resultado < monto * 0.35",
+      "mensaje": "Tus billetes perdieron más de dos terceras partes de su poder de compra. El oro y la plata existen justo para esto: son escasos, no se pueden imprimir, y por eso han conservado valor durante milenios.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "resultado >= monto * 0.35 && resultado < monto * 0.7",
+      "mensaje": "Perdiste entre un tercio y dos tercios del valor. Guardar dinero en efectivo mucho tiempo siempre cuesta: por eso conviene tener una parte en activos que la inflación no puede diluir.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "resultado >= monto * 0.7",
+      "mensaje": "Poca pérdida, porque el plazo o la inflación son bajos. Prueba subir los años a 30 o 40 y observa lo que pasa: así es como se ve el ahorro de toda una vida sin proteger.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "anios >= 30 && inflacion >= 8",
+      "mensaje": "Este es el escenario de las crisis reales: alta inflación durante décadas. Es exactamente cuando el oro protegió el patrimonio de las familias que tenían algo de él.",
+      "tipo": "peligro"
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

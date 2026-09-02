@@ -4,96 +4,110 @@
   "unit_title": "Exportar desde México: el mundo es tu mercado",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Organigrama de la Fortuna",
-  "descripcion": "En una empresa familiar, cada quien debe tener un lugar claro para evitar el caos. ¿Sabes dónde va cada uno?",
-  "objetivo": "Diferenciar los roles de gestión, gobierno y propiedad dentro de una estructura corporativa familiar",
-  "xp": 400,
-  "instruccion": "Arrastra cada rol a la categoría que le corresponde según su función en el negocio.",
-  "items": [
+  "tipo": "QUIZ",
+  "complejidad": "ALTO",
+  "titulo": "Primeros Pasos para Exportar",
+  "descripcion": "México tiene tratados con más de 50 países. Aprovecharlos requiere trámites concretos que casi nadie conoce hasta que los necesita.",
+  "objetivo": "Identificar los pasos logísticos, legales y financieros para exportar productos mexicanos aprovechando los tratados comerciales.",
+  "xp": 700,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "rol1",
-      "label": "Director General (CEO)",
-      "emoji": "👔",
-      "categoria_correcta": "gestion",
-      "feedback": "Encargado de que la empresa gane dinero y funcione todos los días. Debe ser el más capaz, sea familiar o no."
+      "id": "q1",
+      "texto": "Para exportar formalmente desde México se necesita, entre otras cosas…",
+      "opciones": [
+        "Solo una cuenta bancaria",
+        "Estar inscrito en el padrón de exportadores y contar con RFC activo",
+        "Un permiso presidencial",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "La formalidad fiscal es el requisito de entrada a cualquier operación internacional."
     },
     {
-      "id": "rol2",
-      "label": "Consejo de Familia",
-      "emoji": "🏠",
-      "categoria_correcta": "gobierno",
-      "feedback": "Vigila la armonía familiar y que se respeten los valores del fundador."
+      "id": "q2",
+      "texto": "El \"certificado de origen\" sirve para…",
+      "opciones": [
+        "Probar que el producto es mexicano y acceder a aranceles preferenciales",
+        "Pagar impuestos",
+        "Registrar tu marca",
+        "Contratar transporte"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin él, tu producto paga el arancel general aunque exista un tratado."
     },
     {
-      "id": "rol3",
-      "label": "Accionista Pasivo",
-      "emoji": "💸",
-      "categoria_correcta": "propiedad",
-      "feedback": "Es dueño de una parte pero no trabaja ahí. Solo recibe su parte de las ganancias (dividendos)."
+      "id": "q3",
+      "texto": "Los \"Incoterms\" definen…",
+      "opciones": [
+        "El precio del producto",
+        "Quién paga y quién asume el riesgo en cada tramo del envío",
+        "El tipo de cambio",
+        "Los impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "Confundirlos es la causa más común de pérdidas en una primera exportación."
     },
     {
-      "id": "rol4",
-      "label": "Sucesor en Entrenamiento",
-      "emoji": "🎓",
-      "categoria_correcta": "sucesion",
-      "feedback": "Familiar que está rotando por todas las áreas para conocer el negocio desde abajo."
+      "id": "q4",
+      "texto": "Cobrar en dólares y tener costos en pesos significa que…",
+      "opciones": [
+        "No hay riesgo",
+        "Si el peso se aprecia, tu margen baja sin que cambie tu operación",
+        "Siempre ganas más",
+        "Es ilegal"
+      ],
+      "correcta": 1,
+      "explicacion": "Es riesgo cambiario: hay que considerarlo en el precio o cubrirlo."
     },
     {
-      "id": "rol5",
-      "label": "Asamblea de Accionistas",
-      "emoji": "🤝",
-      "categoria_correcta": "propiedad",
-      "feedback": "El máximo órgano donde se toman las decisiones de cuánto vale la empresa y si se vende o no."
+      "id": "q5",
+      "texto": "Antes de exportar a un país conviene verificar…",
+      "opciones": [
+        "Solo el precio",
+        "Requisitos sanitarios, etiquetado y certificaciones de ese mercado",
+        "Nada más",
+        "El clima"
+      ],
+      "correcta": 1,
+      "explicacion": "Un embarque rechazado en aduana por etiquetado incorrecto se paga completo y regresa."
     },
     {
-      "id": "rol6",
-      "label": "Jefe de Producción",
-      "emoji": "🏭",
-      "categoria_correcta": "gestion",
-      "feedback": "Rol operativo enfocado en la eficiencia de la fábrica o el servicio."
+      "id": "q6",
+      "texto": "La forma de pago más segura para una primera exportación suele ser…",
+      "opciones": [
+        "Confiar y enviar",
+        "Carta de crédito o pago anticipado",
+        "Pago a 180 días",
+        "Efectivo"
+      ],
+      "correcta": 1,
+      "explicacion": "Cobrar una deuda internacional a un cliente desconocido es carísimo y lento."
     },
     {
-      "id": "rol7",
-      "label": "Fiduciario",
-      "emoji": "📑",
-      "categoria_correcta": "sucesion",
-      "feedback": "Institución o persona que protege legalmente los bienes para que lleguen a los nietos."
+      "id": "q7",
+      "texto": "Empezar exportando a Estados Unidos tiene la ventaja de…",
+      "opciones": [
+        "Cercanía, tratado vigente y costos logísticos menores",
+        "Que no piden requisitos",
+        "Que no hay competencia",
+        "Que se paga en pesos"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el destino natural de más del 80% de las exportaciones mexicanas."
     },
     {
-      "id": "rol8",
-      "label": "Comité de Inversiones",
-      "emoji": "📈",
-      "categoria_correcta": "gobierno",
-      "feedback": "Decide qué nuevos negocios comprar para que el patrimonio siga creciendo."
+      "id": "q8",
+      "texto": "El error más común al exportar por primera vez es…",
+      "opciones": [
+        "Cobrar muy caro",
+        "Subestimar los costos logísticos y de cumplimiento",
+        "Exportar demasiado",
+        "Usar tratados"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso conviene calcular el margen real por unidad antes de aceptar el primer pedido grande."
     }
   ],
-  "categorias": [
-    {
-      "id": "gestion",
-      "label": "GESTIÓN (Día a día)",
-      "emoji": "⚙️",
-      "color": "#1e40af"
-    },
-    {
-      "id": "gobierno",
-      "label": "GOBIERNO (Reglas)",
-      "emoji": "⚖️",
-      "color": "#6b21a8"
-    },
-    {
-      "id": "propiedad",
-      "label": "PROPIEDAD (Dueños)",
-      "emoji": "💎",
-      "color": "#166534"
-    },
-    {
-      "id": "sucesion",
-      "label": "SUCESIÓN (Futuro)",
-      "emoji": "⏳",
-      "color": "#475569"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

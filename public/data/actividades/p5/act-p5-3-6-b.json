@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-3-6-B",
+  "unit_code": "P5-3-6",
+  "unit_title": "Riesgo y rendimiento: la regla que nunca falla",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Riesgo y Rendimiento",
+  "descripcion": "Comprueba que dominas la regla que nunca falla.",
+  "objetivo": "Verificar la comprensión de la relación entre riesgo y rendimiento",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La regla que nunca falla dice:",
+      "opciones": [
+        "A mayor riesgo, menor rendimiento",
+        "El rendimiento es fijo",
+        "El riesgo no existe",
+        "A mayor rendimiento, mayor riesgo"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin excepciones, en cualquier mercado real."
+    },
+    {
+      "id": "q2",
+      "texto": "Alto rendimiento sin riesgo no existe porque:",
+      "opciones": [
+        "Todos lo tomarían y el rendimiento bajaría",
+        "Lo prohíbe la ley",
+        "Nadie lo querría",
+        "Es muy caro"
+      ],
+      "correcta": 0,
+      "explicacion": "La demanda haría innecesario pagar tanto para atraer dinero."
+    },
+    {
+      "id": "q3",
+      "texto": "Riesgo significa:",
+      "opciones": [
+        "Perderlo todo seguro",
+        "Que el resultado puede variar",
+        "Que no hay ganancia",
+        "Que es ilegal"
+      ],
+      "correcta": 1,
+      "explicacion": "Se mide en variación, no solo en pérdida."
+    },
+    {
+      "id": "q4",
+      "texto": "El instrumento de menor riesgo de la escala es:",
+      "opciones": [
+        "Acciones individuales",
+        "Un fondo de acciones",
+        "La cuenta de ahorro bancaria",
+        "Una criptomoneda"
+      ],
+      "correcta": 2,
+      "explicacion": "Casi no varía, y por eso casi no rinde."
+    },
+    {
+      "id": "q5",
+      "texto": "El rendimiento esperado sigue:",
+      "opciones": [
+        "El orden inverso",
+        "Ningún orden",
+        "El orden alfabético",
+        "El mismo orden que el riesgo"
+      ],
+      "correcta": 3,
+      "explicacion": "Y eso no es coincidencia: es la regla en acción."
+    },
+    {
+      "id": "q6",
+      "texto": "Aceptar riesgo es:",
+      "opciones": [
+        "Una decisión válida si corresponde a ese dinero",
+        "Siempre imprudente",
+        "Obligatorio",
+        "Imposible"
+      ],
+      "correcta": 0,
+      "explicacion": "Es lo que permite que el largo plazo supere a la inflación."
+    },
+    {
+      "id": "q7",
+      "texto": "El fondo de emergencia:",
+      "opciones": [
+        "Debe ir en alto riesgo",
+        "No admite riesgo alto",
+        "Debe ir en acciones",
+        "No importa dónde esté"
+      ],
+      "correcta": 1,
+      "explicacion": "Necesita estar disponible y estable cuando haga falta."
+    },
+    {
+      "id": "q8",
+      "texto": "La pregunta correcta al invertir es:",
+      "opciones": [
+        "Cuál paga más",
+        "Cómo evitar todo riesgo",
+        "Cuánto riesgo tiene sentido para este dinero",
+        "Quién lo recomienda"
+      ],
+      "correcta": 2,
+      "explicacion": "El riesgo adecuado depende del plazo y del propósito del dinero."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-6-b-escena.webp"
+}

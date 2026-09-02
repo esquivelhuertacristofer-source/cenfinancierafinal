@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-2-6-A",
+  "unit_code": "S1-2-6",
+  "unit_title": "Aguinaldo, prima vacacional y PTU: mis derechos en pesos",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Derecho o Cortesía",
+  "descripcion": "Clasifica cada concepto según si la ley lo obliga o el patrón lo decide.",
+  "objetivo": "Distinguir prestaciones obligatorias de beneficios voluntarios",
+  "xp": 500,
+  "instruccion": "Arrastra cada concepto según su naturaleza legal.",
+  "categorias": [
+    {
+      "id": "obligatorio",
+      "label": "Obligatorio por ley",
+      "emoji": "⚖️",
+      "color": "#10B981"
+    },
+    {
+      "id": "voluntario",
+      "label": "Lo decide el patrón",
+      "emoji": "🎁",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "condicional",
+      "label": "Obligatorio solo si aplica",
+      "emoji": "🔀",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Aguinaldo de al menos 15 días",
+      "emoji": "🎄",
+      "categoria_correcta": "obligatorio",
+      "feedback": "Piso mínimo de ley con fecha límite de pago."
+    },
+    {
+      "id": "i2",
+      "label": "Vale de despensa mensual",
+      "emoji": "🛒",
+      "categoria_correcta": "voluntario",
+      "feedback": "Prestación adicional que algunas empresas ofrecen."
+    },
+    {
+      "id": "i3",
+      "label": "Prima vacacional del 25%",
+      "emoji": "🏝️",
+      "categoria_correcta": "obligatorio",
+      "feedback": "La prestación más olvidada y perfectamente obligatoria."
+    },
+    {
+      "id": "i4",
+      "label": "Reparto de utilidades",
+      "emoji": "📈",
+      "categoria_correcta": "condicional",
+      "feedback": "Obligatorio cuando la empresa genera utilidades."
+    },
+    {
+      "id": "i5",
+      "label": "Aguinaldo de 30 días",
+      "emoji": "💝",
+      "categoria_correcta": "voluntario",
+      "feedback": "Todo lo que exceda los 15 días es decisión del patrón."
+    },
+    {
+      "id": "i6",
+      "label": "Registro ante la seguridad social",
+      "emoji": "🏥",
+      "categoria_correcta": "obligatorio",
+      "feedback": "No es opcional para ninguna relación laboral."
+    },
+    {
+      "id": "i7",
+      "label": "Seguro de gastos médicos privado",
+      "emoji": "🩺",
+      "categoria_correcta": "voluntario",
+      "feedback": "Se suma a la seguridad social, no la sustituye."
+    },
+    {
+      "id": "i8",
+      "label": "Días de vacaciones pagados",
+      "emoji": "📅",
+      "categoria_correcta": "obligatorio",
+      "feedback": "Aumentan con la antigüedad, y con ellos la prima."
+    },
+    {
+      "id": "i9",
+      "label": "Bono por resultados del área",
+      "emoji": "🎯",
+      "categoria_correcta": "voluntario",
+      "feedback": "Depende de lo que la empresa establezca."
+    },
+    {
+      "id": "i10",
+      "label": "Pago proporcional si trabajaste medio año",
+      "emoji": "➗",
+      "categoria_correcta": "obligatorio",
+      "feedback": "La proporcionalidad también está en la ley."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-6-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-6-a-escena.webp"
+}

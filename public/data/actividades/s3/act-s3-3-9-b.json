@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-3-9-B",
+  "unit_code": "S3-3-9",
+  "unit_title": "Invertir en el extranjero: SIC, dólares y riesgo cambiario",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Invertir en el Extranjero",
+  "descripcion": "Comprueba que entiendes el riesgo cambiario.",
+  "objetivo": "Verificar la comprensión de la inversión internacional",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Tener todo el patrimonio en un país significa:",
+      "opciones": [
+        "Más seguridad",
+        "Que sus riesgos te afectan todos a la vez",
+        "Nada especial",
+        "Menos impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "Empleo, moneda, inversiones y bienes se mueven juntos."
+    },
+    {
+      "id": "q2",
+      "texto": "En una inversión internacional se mueven:",
+      "opciones": [
+        "Solo el activo",
+        "Solo el tipo de cambio",
+        "El activo en su moneda y el tipo de cambio",
+        "Nada"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dos efectos se combinan en el resultado final."
+    },
+    {
+      "id": "q3",
+      "texto": "Un activo que sube 10% con un peso que se apreció 10%:",
+      "opciones": [
+        "Deja 20%",
+        "Deja 10%",
+        "Deja pérdida siempre",
+        "Puede dejar cero en pesos"
+      ],
+      "correcta": 3,
+      "explicacion": "Los efectos se cancelan."
+    },
+    {
+      "id": "q4",
+      "texto": "Un activo plano puede dar buen resultado:",
+      "opciones": [
+        "Si el peso se depreció",
+        "Nunca",
+        "Solo con comisiones bajas",
+        "Solo a largo plazo"
+      ],
+      "correcta": 0,
+      "explicacion": "El tipo de cambio puede aportar todo el rendimiento."
+    },
+    {
+      "id": "q5",
+      "texto": "El tipo de cambio:",
+      "opciones": [
+        "Es solo un riesgo",
+        "Es riesgo y también cobertura",
+        "No afecta",
+        "Se puede eliminar"
+      ],
+      "correcta": 1,
+      "explicacion": "Protege cuando el peso se deprecia y lo importado se encarece."
+    },
+    {
+      "id": "q6",
+      "texto": "La pregunta útil es:",
+      "opciones": [
+        "Si exponerse o no",
+        "Cuándo vender",
+        "En qué proporción exponerse",
+        "Qué banco elegir"
+      ],
+      "correcta": 2,
+      "explicacion": "La exposición se calibra, no se decide en blanco o negro."
+    },
+    {
+      "id": "q7",
+      "texto": "La proporción depende de:",
+      "opciones": [
+        "La moda",
+        "El banco",
+        "El monto",
+        "En qué moneda serán los gastos futuros"
+      ],
+      "correcta": 3,
+      "explicacion": "Alinear patrimonio y gastos futuros evita desajustes."
+    },
+    {
+      "id": "q8",
+      "texto": "Quien gastará toda su vida en pesos:",
+      "opciones": [
+        "No debería tener todo su patrimonio en otra moneda",
+        "Debería tener todo en otra moneda",
+        "No debe invertir fuera",
+        "Debe invertir la mitad exacta"
+      ],
+      "correcta": 0,
+      "explicacion": "Quedaría expuesto a que el peso se aprecie."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-9-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-9-b-escena.webp"
+}

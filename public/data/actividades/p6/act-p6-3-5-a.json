@@ -4,120 +4,115 @@
   "unit_title": "Perfil de inversor: conócete a ti mismo",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "Mi Número de Libertad",
-  "descripcion": "¿Sabías que hay un número exacto que te permite dejar de trabajar y vivir de tus inversiones? ¡Vamos a calcular el tuyo!",
-  "objetivo": "Comprender la regla del 4% y proyectar metas de independencia financiera a largo plazo",
-  "xp": 1000,
-  "output_type": "Plan Maestro de Libertad",
-  "exportable": true,
-  "pasos": [
-    {
-      "id": "estilo_vida_futuro",
-      "titulo": "🏠 Mi Vida Ideal",
-      "descripcion": "Imagina cuánto dinero necesitarías al mes para vivir feliz en el futuro.",
-      "campos": [
+  "titulo": "El Día que Todo Cayó 32%",
+  "descripcion": "Tres primos invirtieron $100,000 cada uno hace cinco años, cada quien según su perfil. Hoy amaneció una crisis mundial y los mercados cayeron 32% en dos semanas. Lo que hagan HOY decide todo.",
+  "objetivo": "Comprender que el perfil de inversor no se define por lo que uno dice, sino por cómo se comporta en una caída, y qué asignación de activos corresponde a cada perfil.",
+  "xp": 700,
+  "personaje_principal": "Diego",
+  "contexto_inicial": "Diego (conservador) tenía casi todo en CETES. Ana (moderada) mitad deuda y mitad fondos. Luis (agresivo) todo en acciones de una sola empresa tecnológica.",
+  "nodo_inicial": "la_caida",
+  "nodos": {
+    "la_caida": {
+      "id": "la_caida",
+      "texto": "Las noticias son catastróficas. Luis ve su cuenta: de $180,000 pasó a $122,000. Le escribe a Diego: \"¿vendo todo antes de perder más?\".",
+      "opciones": [
         {
-          "id": "gasto_mensual_ideal",
-          "label": "Gasto mensual proyectado ($)",
-          "type": "text",
-          "placeholder": "Ej: 30000",
-          "requerido": true
+          "id": "preguntar_plazo",
+          "texto": "Preguntarle primero cuándo necesita ese dinero",
+          "siguiente_nodo": "el_plazo_de_luis",
+          "consecuencia": "Diego hace la única pregunta que de verdad importa.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "id": "descripcion_estilo",
-          "label": "¿Cómo sería un día en tu vida libre?",
-          "type": "textarea",
-          "placeholder": "Ej: Me levantaría a leer, viajaría y ayudaría en un refugio...",
-          "requerido": true
+          "id": "decir_vende",
+          "texto": "Decirle que venda ya, antes de perder más",
+          "siguiente_nodo": "final_luis_vendio",
+          "consecuencia": "Luis vende en $122,000 y convierte una caída en una pérdida definitiva.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -58000
+        },
+        {
+          "id": "decir_aguanta",
+          "texto": "Decirle que aguante sin preguntar nada",
+          "siguiente_nodo": "el_plazo_de_luis",
+          "consecuencia": "\"Aguanta\" es buen consejo... salvo si necesita el dinero en tres meses.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
         }
       ]
     },
-    {
-      "id": "calculo_libertad",
-      "titulo": "📈 El Cálculo Mágico",
-      "descripcion": "Para vivir de tus rentas, necesitas tener invertido 25 veces tu gasto anual.",
-      "campos": [
+    "el_plazo_de_luis": {
+      "id": "el_plazo_de_luis",
+      "texto": "Luis responde: \"Lo iba a usar el año que viene para el enganche de un depa\". Ahí está el problema real: no fue la crisis, fue haber puesto dinero de corto plazo en el instrumento de más riesgo.",
+      "opciones": [
         {
-          "id": "numero_libertad",
-          "label": "Tu Número de Libertad (Gasto Mensual x 300)",
-          "type": "text",
-          "placeholder": "Calcula: Gasto Mensual * 300",
-          "requerido": true
+          "id": "diagnostico",
+          "texto": "Señalar el error de origen: ese dinero nunca debió estar ahí",
+          "siguiente_nodo": "la_reasignacion",
+          "consecuencia": "Luis lo entiende: su perfil real no era agresivo, era impaciente.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "id": "edad_meta",
-          "label": "¿A qué edad quieres alcanzar este número?",
-          "type": "slider",
-          "min": 30,
-          "max": 65,
-          "step": 1,
-          "default": 45,
-          "unit": "años"
-        },
-        {
-          "id": "gasto_mensual_num",
-          "label": "Tu Gasto Mensual Ideal ($)",
-          "type": "slider",
-          "min": 5000,
-          "max": 150000,
-          "step": 1000,
-          "default": 30000,
-          "unit": "$",
-          "requerido": false
-        },
-        {
-          "id": "numero_fire_calculado",
-          "label": "Tu Número de Libertad Financiera",
-          "type": "calculated",
-          "formula": "gasto_mensual_num * 300",
-          "unit": "$",
-          "ayuda": "Gasto mensual × 300 = el patrimonio para no trabajar nunca (Regla del 4% anual)"
-        },
-        {
-          "id": "anos_para_lograrlo",
-          "label": "Años de Inversión Necesarios",
-          "type": "calculated",
-          "formula": "Math.max(1, edad_meta - 18)",
-          "unit": " años ahorrando desde los 18",
-          "ayuda": "El tiempo que tienes para construir tu número de libertad"
+          "id": "culpar",
+          "texto": "Culpar a la crisis y a los mercados",
+          "siguiente_nodo": "final_luis_vendio",
+          "consecuencia": "Luis vende convencido de que el mercado está amañado.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -58000
         }
       ]
     },
-    {
-      "id": "plan_accion_p6",
-      "titulo": "🚀 Mi Plan de Acción",
-      "descripcion": "¿Cómo vas a construir esa montaña de dinero?",
-      "campos": [
+    "la_reasignacion": {
+      "id": "la_reasignacion",
+      "texto": "Ana, la moderada, revisa su cuenta: bajó de $165,000 a $138,000. Su plan es de 20 años. ¿Qué hace?",
+      "opciones": [
         {
-          "id": "inversion_mensual",
-          "label": "¿Cuánto invertirás cada mes desde tu primer trabajo?",
-          "type": "text",
-          "placeholder": "Ej: 2000",
-          "requerido": true
+          "id": "seguir_aportando",
+          "texto": "No tocar nada y seguir aportando cada mes, ahora comprando más barato",
+          "siguiente_nodo": "final_ana",
+          "consecuencia": "Ana compra con descuento mientras todos venden asustados.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 96000
         },
         {
-          "id": "estrategia_activos",
-          "label": "Mis activos favoritos serán...",
-          "type": "select",
-          "opciones": [
-            "Bolsa de Valores (Acciones)",
-            "Bienes Raíces (Rentas)",
-            "Negocios Propios",
-            "Criptomonedas"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "promesa_libertad",
-          "label": "Escribe tu compromiso final",
-          "type": "textarea",
-          "placeholder": "Yo me comprometo a ser disciplinado y nunca dejar de aprender...",
-          "requerido": true
+          "id": "pausar",
+          "texto": "Dejar de aportar hasta que \"todo se calme\"",
+          "siguiente_nodo": "final_pausa",
+          "consecuencia": "Se pierde justo los meses de precios más bajos.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 22000
         }
       ]
+    },
+    "final_ana": {
+      "id": "final_ana",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Tres años después el mercado recuperó y superó su nivel previo. Ana, que siguió aportando durante la caída, tiene $312,000. Su perfil moderado no la salvó de la caída: la salvó de reaccionar mal.",
+      "reflexion_final": "Tu perfil de inversor no es lo que contestas en un cuestionario tranquilo: es lo que haces el día que tu cuenta cae 30%. La regla que resuelve casi todo: el dinero que necesitas en menos de 3 años NUNCA va en instrumentos de riesgo, y el de más de 10 años no debería estar todo en instrumentos seguros."
+    },
+    "final_pausa": {
+      "id": "final_pausa",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Ana volvió a aportar cuando el mercado ya se había recuperado. Terminó con $238,000 en vez de $312,000: se perdió precisamente las compras más baratas.",
+      "reflexion_final": "Esperar a que \"todo se calme\" significa comprar cuando ya subió. Las caídas son incómodas y también son los momentos en que un inversionista con plan compra más barato."
+    },
+    "final_luis_vendio": {
+      "id": "final_luis_vendio",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Luis vendió en $122,000. Ocho meses después esa misma acción había recuperado todo y más. Su pérdida de $58,000 se volvió permanente en el momento exacto en que apretó \"vender\".",
+      "reflexion_final": "Dos errores encadenados: poner en riesgo dinero que necesitaba pronto, y vender por pánico. Una caída solo se convierte en pérdida cuando vendes. Elegir bien el instrumento según CUÁNDO necesitas el dinero evita casi todo el problema."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

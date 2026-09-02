@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P1-3-9-B",
+  "unit_code": "P1-3-9",
+  "unit_title": "Si saco de mi ahorro, mi meta se aleja",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Avanza o Retrocede?",
+  "descripcion": "Clasifica cada movimiento de dinero según lo que le hace a la meta de Ceny.",
+  "objetivo": "Distinguir movimientos que acercan la meta de los que la retrasan",
+  "xp": 200,
+  "instruccion": "La meta de Ceny es una bicicleta y ahorra $20 por semana. Arrastra cada movimiento según su efecto.",
+  "categorias": [
+    {
+      "id": "acerca",
+      "label": "Acerca la meta",
+      "emoji": "🚴",
+      "color": "#10B981"
+    },
+    {
+      "id": "retrasa",
+      "label": "Retrasa la meta",
+      "emoji": "🐢",
+      "color": "#EF4444"
+    },
+    {
+      "id": "neutro",
+      "label": "Ni acerca ni retrasa",
+      "emoji": "➖",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Guardar el domingo completo",
+      "emoji": "🪙",
+      "categoria_correcta": "acerca",
+      "feedback": "Una semana entera de avance según lo planeado."
+    },
+    {
+      "id": "i2",
+      "label": "Sacar $40 para dulces",
+      "emoji": "🍬",
+      "categoria_correcta": "retrasa",
+      "feedback": "Dos semanas de espera. Ese es el precio real del antojo."
+    },
+    {
+      "id": "i3",
+      "label": "Contar el ahorro los viernes",
+      "emoji": "🔢",
+      "categoria_correcta": "neutro",
+      "feedback": "Contar informa pero no mueve el dinero."
+    },
+    {
+      "id": "i4",
+      "label": "Lavar el coche por $30 extra",
+      "emoji": "🚗",
+      "categoria_correcta": "acerca",
+      "feedback": "Un ingreso extra vale semana y media de avance de golpe."
+    },
+    {
+      "id": "i5",
+      "label": "Sacar $100 y prometer reponerlos",
+      "emoji": "🤞",
+      "categoria_correcta": "retrasa",
+      "feedback": "Cinco semanas. Y reponer casi nunca ocurre, así que trátalo como definitivo."
+    },
+    {
+      "id": "i6",
+      "label": "Cambiar la alcancía de lugar",
+      "emoji": "📦",
+      "categoria_correcta": "neutro",
+      "feedback": "El dinero sigue siendo el mismo, solo cambió de repisa."
+    },
+    {
+      "id": "i7",
+      "label": "Recibir $60 de regalo y guardarlos",
+      "emoji": "🎁",
+      "categoria_correcta": "acerca",
+      "feedback": "Tres semanas de avance sin haber tenido que esperar tres semanas."
+    },
+    {
+      "id": "i8",
+      "label": "Rotular la alcancía con el nombre de la meta",
+      "emoji": "🏷️",
+      "categoria_correcta": "neutro",
+      "feedback": "No mueve el dinero, pero hace mucho más difícil sacarlo. Protege sin sumar."
+    },
+    {
+      "id": "i9",
+      "label": "Comprar una figura de $80 con el ahorro",
+      "emoji": "🧸",
+      "categoria_correcta": "retrasa",
+      "feedback": "Cuatro semanas. En pesos suena poco; en tiempo es casi un mes."
+    },
+    {
+      "id": "i10",
+      "label": "Guardar $15 del cambio del mandado",
+      "emoji": "💵",
+      "categoria_correcta": "acerca",
+      "feedback": "Casi una semana entera con dinero que ni siquiera esperabas."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-9-b-escena.webp"
+}

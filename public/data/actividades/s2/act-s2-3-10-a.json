@@ -1,0 +1,138 @@
+{
+  "code": "ACT-S2-3-10-A",
+  "unit_code": "S2-3-10",
+  "unit_title": "Impuestos sobre inversiones: ISR y retención en México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Del Bruto al Neto",
+  "descripcion": "Ceny compara tres instrumentos. Solo uno gana cuando se descuenta todo.",
+  "objetivo": "Aplicar el análisis fiscal completo a la comparación de inversiones",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene $150,000 para invertir un año. Le ofrecen tres opciones con tasas de 11%, 9.5% y 8%, y le dicen que la primera es obviamente la mejor.",
+  "nodo_inicial": "comparar",
+  "nodos": {
+    "comparar": {
+      "id": "comparar",
+      "texto": "¿Cómo empieza Ceny la comparación?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preguntando la comisión, el tratamiento fiscal y la inflación esperada",
+          "siguiente_nodo": "retencion",
+          "consecuencia": "Reúne los cuatro datos que definen el resultado real.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Eligiendo la de 11% porque es la tasa más alta",
+          "siguiente_nodo": "sorpresa",
+          "consecuencia": "La tasa bruta no dice nada por sí sola.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-comparar.webp"
+    },
+    "sorpresa": {
+      "id": "sorpresa",
+      "texto": "Al recibir su estado de cuenta, el rendimiento abonado es bastante menor al esperado. ¿Qué descubre?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que hubo una retención de impuesto y una comisión anual que no consideró",
+          "siguiente_nodo": "retencion",
+          "consecuencia": "Entiende de dónde salió la diferencia.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que la institución le cobró de más y reclama",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La retención no es un cobro de la institución: es un anticipo de impuesto.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -1500
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-sorpresa.webp"
+    },
+    "retencion": {
+      "id": "retencion",
+      "texto": "Al cierre del año recibe su constancia de retención. ¿Qué hace con ella?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Conservarla para la declaración anual: puede resultar un saldo a favor",
+          "siguiente_nodo": "neta",
+          "consecuencia": "Recupera parte de lo retenido en exceso.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 3500
+        },
+        {
+          "id": "o2",
+          "texto": "Archivarla sin más: ya le retuvieron, no hay nada que hacer",
+          "siguiente_nodo": "neta",
+          "consecuencia": "Deja de reclamar un posible saldo a favor.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -3500
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-retencion.webp"
+    },
+    "neta": {
+      "id": "neta",
+      "texto": "Con todos los datos, ¿cómo ordena las tres opciones?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Por rendimiento neto: tasa menos comisiones, impuestos e inflación",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "La de 9.5% resulta mejor por menor comisión y mejor tratamiento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 7000
+        },
+        {
+          "id": "o2",
+          "texto": "Por la tasa anunciada, que es lo más fácil de comparar",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Fácil de comparar y prácticamente inútil para decidir.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-neta.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny eligió por rendimiento neto real y recuperó su saldo a favor.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La secuencia completa es tasa bruta, menos comisiones, menos impuestos, menos inflación. Lo que queda al final es lo único que aumentó su poder de compra.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny invirtió, aunque comparando con una cifra incompleta.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La tasa anunciada es la más fácil de comparar y la que menos dice. Un instrumento con tasa menor puede ganar por comisión baja o mejor tratamiento fiscal.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-3-10-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-3-10-a-portada.webp"
+}

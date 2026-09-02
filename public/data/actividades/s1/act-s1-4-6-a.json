@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-4-6-A",
+  "unit_code": "S1-4-6",
+  "unit_title": "El problema antes que la solución: entrevistas de descubrimiento",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Preguntas que Descubren",
+  "descripcion": "Clasifica cada pregunta según qué tan útil es para descubrir un problema real.",
+  "objetivo": "Distinguir preguntas de descubrimiento de preguntas que sesgan",
+  "xp": 500,
+  "instruccion": "Arrastra cada pregunta según su calidad para descubrir.",
+  "categorias": [
+    {
+      "id": "buena",
+      "label": "Descubre información real",
+      "emoji": "🔍",
+      "color": "#10B981"
+    },
+    {
+      "id": "sesgada",
+      "label": "Sesga la respuesta",
+      "emoji": "🎣",
+      "color": "#EF4444"
+    },
+    {
+      "id": "inutil",
+      "label": "No aporta nada",
+      "emoji": "🫧",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "\"Cuéntame la última vez que te pasó esto\"",
+      "emoji": "📖",
+      "categoria_correcta": "buena",
+      "feedback": "Pide un hecho concreto del pasado."
+    },
+    {
+      "id": "i2",
+      "label": "\"¿Te gustaría una app que lo resuelva?\"",
+      "emoji": "📱",
+      "categoria_correcta": "sesgada",
+      "feedback": "Menciona la solución y provoca un sí amable."
+    },
+    {
+      "id": "i3",
+      "label": "\"¿Qué te parece mi idea?\"",
+      "emoji": "💡",
+      "categoria_correcta": "inutil",
+      "feedback": "Pide una opinión sobre algo que aún no existe."
+    },
+    {
+      "id": "i4",
+      "label": "\"¿Cómo lo resuelves hoy?\"",
+      "emoji": "🔧",
+      "categoria_correcta": "buena",
+      "feedback": "Revela la alternativa real contra la que compites."
+    },
+    {
+      "id": "i5",
+      "label": "\"¿No crees que sería súper útil?\"",
+      "emoji": "🎯",
+      "categoria_correcta": "sesgada",
+      "feedback": "Arrastra a la persona hacia la respuesta esperada."
+    },
+    {
+      "id": "i6",
+      "label": "\"¿Cuánto te costó la última vez?\"",
+      "emoji": "💰",
+      "categoria_correcta": "buena",
+      "feedback": "Un gasto real es la señal más confiable que existe."
+    },
+    {
+      "id": "i7",
+      "label": "\"¿Comprarías esto si existiera?\"",
+      "emoji": "🔮",
+      "categoria_correcta": "sesgada",
+      "feedback": "Pregunta por un futuro hipotético: la gente responde con amabilidad."
+    },
+    {
+      "id": "i8",
+      "label": "\"¿Qué es lo que más te molesta de cómo lo haces?\"",
+      "emoji": "😤",
+      "categoria_correcta": "buena",
+      "feedback": "Identifica el dolor concreto sin sugerir solución."
+    },
+    {
+      "id": "i9",
+      "label": "\"¿Verdad que es un problemón?\"",
+      "emoji": "📢",
+      "categoria_correcta": "sesgada",
+      "feedback": "Le pone las palabras en la boca al entrevistado."
+    },
+    {
+      "id": "i10",
+      "label": "\"¿Te gusta mi logotipo?\"",
+      "emoji": "🎨",
+      "categoria_correcta": "inutil",
+      "feedback": "No dice nada sobre el problema ni sobre el mercado."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-6-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-6-a-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-1-7-B",
+  "unit_code": "P6-1-7",
+  "unit_title": "Comparar productos financieros: la letra chiquita",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Leer la Letra Chiquita",
+  "descripcion": "Comprueba que sabes qué buscar en un contrato financiero.",
+  "objetivo": "Verificar la identificación de cláusulas críticas y la comparación por tabla",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los contratos son difíciles de leer porque:",
+      "opciones": [
+        "Es un error de imprenta",
+        "Lo exige la ley",
+        "Es tradición",
+        "Un contrato difícil reduce la comparación"
+      ],
+      "correcta": 3,
+      "explicacion": "Y comparar es justo lo que presiona los costos a la baja."
+    },
+    {
+      "id": "q2",
+      "texto": "Las seis cláusulas críticas son:",
+      "opciones": [
+        "Tasa, comisiones, saldo mínimo, cancelación, penalizaciones y vigencia",
+        "Color, tamaño, logo y fecha",
+        "Nombre y dirección",
+        "Solo la tasa"
+      ],
+      "correcta": 0,
+      "explicacion": "Con esas seis se puede comparar cualquier producto."
+    },
+    {
+      "id": "q3",
+      "texto": "La cláusula que más sorpresas causa es:",
+      "opciones": [
+        "El nombre del banco",
+        "La vigencia de la promoción",
+        "La fecha de firma",
+        "El domicilio"
+      ],
+      "correcta": 1,
+      "explicacion": "Las ofertas terminan y el costo real aparece después."
+    },
+    {
+      "id": "q4",
+      "texto": "Una tarjeta \"sin anualidad el primer año\":",
+      "opciones": [
+        "Nunca cobra",
+        "Cobra desde el inicio",
+        "Cobra a partir del segundo año",
+        "Es gratuita siempre"
+      ],
+      "correcta": 2,
+      "explicacion": "Conviene anotar la fecha en que cambia la condición."
+    },
+    {
+      "id": "q5",
+      "texto": "Comparar productos por su publicidad:",
+      "opciones": [
+        "Es lo más práctico",
+        "Es obligatorio",
+        "Es lo más exacto",
+        "No funciona: cada una destaca lo que le conviene"
+      ],
+      "correcta": 3,
+      "explicacion": "Solo la tabla con las mismas filas permite comparar de verdad."
+    },
+    {
+      "id": "q6",
+      "texto": "El producto con mejor tasa anunciada:",
+      "opciones": [
+        "Puede salir más caro por comisiones o penalizaciones",
+        "Siempre es el mejor",
+        "Nunca conviene",
+        "No existe"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso el costo se calcula completo, no por la cifra del anuncio."
+    },
+    {
+      "id": "q7",
+      "texto": "Para evaluar un contrato:",
+      "opciones": [
+        "Hay que leerlo palabra por palabra",
+        "Basta con buscar las seis cláusulas críticas",
+        "No hace falta leer nada",
+        "Con preguntar al ejecutivo basta"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una estrategia realista que sí se aplica en la vida diaria."
+    },
+    {
+      "id": "q8",
+      "texto": "La penalización por saldo mínimo:",
+      "opciones": [
+        "Se cobra una sola vez",
+        "No existe",
+        "Se cobra cada vez que el saldo baja del mínimo",
+        "Es voluntaria"
+      ],
+      "correcta": 2,
+      "explicacion": "Repetida varias veces al año puede superar a la anualidad."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-7-b-escena.webp"
+}

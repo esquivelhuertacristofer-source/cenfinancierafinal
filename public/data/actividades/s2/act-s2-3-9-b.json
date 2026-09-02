@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-3-9-B",
+  "unit_code": "S2-3-9",
+  "unit_title": "Sesgos del inversionista: pánico, euforia y anclaje",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Sesgos del Inversionista",
+  "descripcion": "Comprueba que reconoces tus propios sesgos.",
+  "objetivo": "Verificar la identificación de sesgos y sus contramedidas",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El obstáculo principal del inversionista suele ser:",
+      "opciones": [
+        "El mercado",
+        "Los impuestos",
+        "Sus propias reacciones",
+        "Las comisiones"
+      ],
+      "correcta": 2,
+      "explicacion": "La gente entra en máximos y sale en caídas."
+    },
+    {
+      "id": "q2",
+      "texto": "El pánico:",
+      "opciones": [
+        "Hace comprar barato",
+        "Mejora las decisiones",
+        "No existe",
+        "Hace vender durante las caídas"
+      ],
+      "correcta": 3,
+      "explicacion": "Convierte una pérdida temporal en definitiva."
+    },
+    {
+      "id": "q3",
+      "texto": "La euforia:",
+      "opciones": [
+        "Hace comprar en los máximos",
+        "Hace vender caro",
+        "Protege el capital",
+        "Diversifica"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuando todo el mundo habla de algo, ya subió mucho."
+    },
+    {
+      "id": "q4",
+      "texto": "El anclaje es:",
+      "opciones": [
+        "Diversificar",
+        "Fijarse en el precio de compra como si importara al futuro",
+        "Rebalancear",
+        "Aportar cada mes"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo único relevante es qué se espera de aquí en adelante."
+    },
+    {
+      "id": "q5",
+      "texto": "La aversión a realizar pérdidas hace:",
+      "opciones": [
+        "Vender lo malo",
+        "Diversificar",
+        "Conservar lo malo y vender lo bueno",
+        "Rebalancear"
+      ],
+      "correcta": 2,
+      "explicacion": "Se conserva el error solo para no admitirlo."
+    },
+    {
+      "id": "q6",
+      "texto": "El exceso de confianza:",
+      "opciones": [
+        "Es señal de experiencia",
+        "Protege",
+        "No afecta",
+        "Lleva a concentrar, operar y arriesgar más"
+      ],
+      "correcta": 3,
+      "explicacion": "Llega disfrazado de experiencia justo antes de un error grande."
+    },
+    {
+      "id": "q7",
+      "texto": "Los sesgos se neutralizan:",
+      "opciones": [
+        "Con reglas decididas antes, en frío",
+        "Con fuerza de voluntad en el momento",
+        "Ignorándolos",
+        "Revisando a diario"
+      ],
+      "correcta": 0,
+      "explicacion": "En el momento manda la emoción, no la voluntad."
+    },
+    {
+      "id": "q8",
+      "texto": "Una regla anti-sesgo útil es:",
+      "opciones": [
+        "Revisar el portafolio a diario",
+        "Aportación automática y plan escrito ante caídas",
+        "Seguir a influencers",
+        "Operar por corazonada"
+      ],
+      "correcta": 1,
+      "explicacion": "Decidir antes lo que harás cuando llegue la caída."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-9-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-9-b-escena.webp"
+}

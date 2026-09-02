@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P5-1-8-A",
+  "unit_code": "P5-1-8",
+  "unit_title": "La tasa de interés: por qué Banxico la sube o la baja",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Decisión de Banxico",
+  "descripcion": "La tasa acaba de subir y la familia de Ceny tiene decisiones que tomar.",
+  "objetivo": "Aplicar el efecto de la tasa de interés a decisiones familiares concretas",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La inflación llegó a niveles altos y el Banco de México subió la tasa de referencia. La familia de Ceny tenía dos planes: comprar un coche a crédito y guardar unos ahorros.",
+  "nodo_inicial": "noticia",
+  "nodos": {
+    "noticia": {
+      "id": "noticia",
+      "texto": "La tasa subió y los créditos se encarecieron. ¿Qué hacen con el plan del coche a crédito?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Calcular cuánto más costaría ahora y comparar con esperar",
+          "siguiente_nodo": "ahorro",
+          "consecuencia": "El mismo crédito cuesta bastante más al mes que hace seis meses.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Tomarlo de todas formas, ya estaba decidido",
+          "siguiente_nodo": "credito_caro",
+          "consecuencia": "Se comprometieron con una mensualidad muy superior a la planeada.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        },
+        {
+          "id": "o3",
+          "texto": "Cancelar todo plan futuro por miedo",
+          "siguiente_nodo": "ahorro",
+          "consecuencia": "Reaccionar con miedo tampoco es decidir: hay que ver los números.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-noticia.webp"
+    },
+    "credito_caro": {
+      "id": "credito_caro",
+      "texto": "La mensualidad resultó 30% más alta de lo previsto. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ajustar el presupuesto familiar y buscar liquidar antes",
+          "siguiente_nodo": "ahorro",
+          "consecuencia": "Adelantar pagos reduce los intereses totales del crédito.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir igual y esperar que se arregle",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Un compromiso que no cabe en el presupuesto se convierte en atraso.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-credito_caro.webp"
+    },
+    "ahorro": {
+      "id": "ahorro",
+      "texto": "Tienen $50,000 ahorrados en una cuenta que casi no paga interés. Con las tasas altas, ¿qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Moverlos a un instrumento de tasa que aproveche el momento",
+          "siguiente_nodo": "plazo",
+          "consecuencia": "Cuando la tasa de referencia sube, los instrumentos de tasa pagan más.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlos donde están, es más cómodo",
+          "siguiente_nodo": "plazo",
+          "consecuencia": "La comodidad cuesta: con inflación alta, el dinero quieto pierde valor.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2500
+        },
+        {
+          "id": "o3",
+          "texto": "Sacarlos en efectivo para tenerlos a la mano",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "En efectivo no ganan nada y la inflación les quita valor cada mes.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-ahorro.webp"
+    },
+    "plazo": {
+      "id": "plazo",
+      "texto": "Al elegir el instrumento, ¿qué consideran?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que el plazo coincida con cuándo van a necesitar el dinero",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Un plazo mal elegido obliga a sacar antes y perder rendimiento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1500
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el que pague la tasa más alta",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La tasa más alta suele venir con el plazo más largo, y ahí puede no caber su necesidad.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -500
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-plazo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia postergó el crédito caro y aprovechó las tasas altas para su ahorro.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Tasas altas encarecen el crédito y mejoran el ahorro. Entender esa doble cara permite decidir en la dirección correcta sin necesidad de predecir nada.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Aprovecharon las tasas, aunque con un plazo que no encajaba del todo con sus planes.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Buscar la tasa más alta sin ver el plazo es media decisión. El instrumento debe coincidir con cuándo vas a necesitar el dinero.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia quedó con un crédito caro y con ahorros perdiendo valor frente a la inflación.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Con tasas altas hicieron exactamente lo contrario de lo conveniente: se endeudaron caro y dejaron el ahorro sin rendimiento.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-1-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-1-8-a-portada.webp"
+}

@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-1-7-B",
+  "unit_code": "P3-1-7",
+  "unit_title": "El semáforo del gasto: verde, amarillo y rojo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Semáforo",
+  "descripcion": "Clasifica rápido cada gasto en su color correcto.",
+  "objetivo": "Consolidar la clasificación de gastos por prioridad",
+  "xp": 160,
+  "tiempo_por_pregunta": 18,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El pasaje para llegar a la escuela es:",
+      "respuesta_correcta": "Luz verde",
+      "incorrectas": [
+        "Luz amarilla",
+        "Luz roja",
+        "No es gasto"
+      ],
+      "dato_extra": "Sin él no llegas a clases: no se puede eliminar, solo abaratar."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El dulce que tomaste en la fila de la caja es:",
+      "respuesta_correcta": "Luz roja",
+      "incorrectas": [
+        "Luz verde",
+        "Luz amarilla",
+        "Ahorro"
+      ],
+      "dato_extra": "Si a los tres días no lo recuerdas, era rojo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Un cuaderno que sí necesitas pero puedes comparar precios es:",
+      "respuesta_correcta": "Luz amarilla",
+      "incorrectas": [
+        "Luz verde",
+        "Luz roja",
+        "No es gasto"
+      ],
+      "dato_extra": "El amarillo es donde más se ahorra sin sacrificar nada."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Debe ser cero la luz roja?",
+      "respuesta_correcta": "No, pero debe ser decidida",
+      "incorrectas": [
+        "Sí, siempre",
+        "Sí, si ahorro",
+        "Sí, en la escuela"
+      ],
+      "dato_extra": "Un presupuesto sin nada de gusto se abandona en dos semanas."
+    },
+    {
+      "id": "q5",
+      "pregunta": "De $200 asigno $90 verde, $60 amarillo y $30 rojo. Para ahorro quedan:",
+      "respuesta_correcta": "$20",
+      "incorrectas": [
+        "$0",
+        "$50",
+        "$110"
+      ],
+      "dato_extra": "200 − 180 = 20. Todo lo que no asignas antes, se gasta solo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Qué es un presupuesto?",
+      "respuesta_correcta": "Asignar destino al dinero antes de recibirlo",
+      "incorrectas": [
+        "Contar lo que gasté",
+        "Ahorrar todo",
+        "Pedir prestado"
+      ],
+      "dato_extra": "Registrar mira hacia atrás; presupuestar mira hacia adelante."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Qué se puede hacer con un gasto verde?",
+      "respuesta_correcta": "Buscar que cueste menos, no eliminarlo",
+      "incorrectas": [
+        "Eliminarlo",
+        "Ignorarlo",
+        "Duplicarlo"
+      ],
+      "dato_extra": "Llevar lunch de casa baja el gasto sin dejar de comer."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-7-b-escena.webp"
+}

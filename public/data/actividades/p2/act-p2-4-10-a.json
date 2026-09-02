@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-4-10-A",
+  "unit_code": "P2-4-10",
+  "unit_title": "Repartir la ganancia: ahorro, reinversión y gusto",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Reparte tu Ganancia",
+  "descripcion": "Ceny ganó $90. Clasifica cada decisión según a qué frasco corresponde y si el negocio lo agradece.",
+  "objetivo": "Asociar decisiones concretas con los tres destinos de la ganancia",
+  "xp": 250,
+  "instruccion": "Arrastra cada decisión de Ceny al frasco al que corresponde.",
+  "categorias": [
+    {
+      "id": "crecer",
+      "label": "Frasco de crecer",
+      "emoji": "🌱",
+      "color": "#10B981"
+    },
+    {
+      "id": "guardar",
+      "label": "Frasco de guardar",
+      "emoji": "🏦",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "disfrutar",
+      "label": "Frasco de disfrutar",
+      "emoji": "🎉",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Comprar el doble de harina para la próxima venta",
+      "emoji": "🌾",
+      "categoria_correcta": "crecer",
+      "feedback": "Más materiales significa más producción y más ganancia la próxima vez."
+    },
+    {
+      "id": "i2",
+      "label": "Apartar dinero por si se derrama la jarra",
+      "emoji": "💧",
+      "categoria_correcta": "guardar",
+      "feedback": "La reserva del negocio: para el susto que va a llegar aunque no sepas cuándo."
+    },
+    {
+      "id": "i3",
+      "label": "Comprarse un helado por el trabajo de la semana",
+      "emoji": "🍦",
+      "categoria_correcta": "disfrutar",
+      "feedback": "Un negocio sin recompensa se abandona. Esta parte también es necesaria."
+    },
+    {
+      "id": "i4",
+      "label": "Comprar más bolsitas y etiquetas",
+      "emoji": "🏷️",
+      "categoria_correcta": "crecer",
+      "feedback": "También es materia prima: sin empaque no se puede vender más."
+    },
+    {
+      "id": "i5",
+      "label": "Guardar para reponer el molde si se rompe",
+      "emoji": "🔧",
+      "categoria_correcta": "guardar",
+      "feedback": "Las herramientas se descomponen. Tener con qué reponerlas mantiene el negocio vivo."
+    },
+    {
+      "id": "i6",
+      "label": "Ir al cine con lo ganado en la feria",
+      "emoji": "🎬",
+      "categoria_correcta": "disfrutar",
+      "feedback": "Válido si sale de su parte y no se come los otros dos frascos."
+    },
+    {
+      "id": "i7",
+      "label": "Comprar un mantel para que el puesto se vea mejor",
+      "emoji": "🎪",
+      "categoria_correcta": "crecer",
+      "feedback": "Mejora el puesto y atrae más clientes: es inversión, no gasto."
+    },
+    {
+      "id": "i8",
+      "label": "Dejar dinero por si un día no vende nada",
+      "emoji": "🌧️",
+      "categoria_correcta": "guardar",
+      "feedback": "Un día de lluvia sin ventas no debería detener el negocio."
+    },
+    {
+      "id": "i9",
+      "label": "Invitar una galleta a quien lo ayudó a vender",
+      "emoji": "🤝",
+      "categoria_correcta": "disfrutar",
+      "feedback": "Reconocer a quien ayudó es parte de disfrutar el resultado en equipo."
+    },
+    {
+      "id": "i10",
+      "label": "Comprar un recipiente más grande para producir más",
+      "emoji": "🥣",
+      "categoria_correcta": "crecer",
+      "feedback": "Herramienta que aumenta la capacidad: inversión clásica de crecimiento."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-10-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-10-a-escena.webp"
+}

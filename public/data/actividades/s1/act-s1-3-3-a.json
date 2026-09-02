@@ -4,123 +4,104 @@
   "unit_title": "La inflación y su impacto en el ahorro e inversión",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "JUEGO",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Hacker vs Búnker",
-  "descripcion": "Los ciberdelincuentes no usan armas, usan palabras y trucos digitales. ¿Podrás detectar sus trampas antes de que roben tu cuenta?",
-  "objetivo": "Identificar y prevenir las principales técnicas de ingeniería social y ataques digitales financieros",
-  "xp": 500,
-  "mecanica": "Analiza cada mensaje y decide si es una AMENAZA o es SEGURO.",
-  "escenarios": [
+  "titulo": "¿Le Gana a la Inflación?",
+  "descripcion": "Si la inflación es 5% y tu dinero rinde 3%, estás perdiendo aunque el saldo crezca. Clasifica dónde el dinero gana, empata o pierde poder de compra.",
+  "objetivo": "Calcular el efecto de la inflación acumulada sobre el poder adquisitivo y distinguir el rendimiento nominal del real.",
+  "xp": 600,
+  "instruccion": "Con una inflación del 5% anual, arrastra cada lugar donde puedes tener tu dinero.",
+  "categorias": [
     {
-      "id": "hck1",
-      "texto": "Recibes un correo de 'Servicio_Al_Cliente_Banco@gmail.com' diciendo que tu cuenta está bloqueada y debes hacer clic en un link para reactivarla.",
-      "imagen": "📧",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Bien hecho! Un banco real nunca usa cuentas de @gmail y nunca te manda links para poner tus claves.",
-      "feedback_error": "❌ ¡Caíste! Eso es Phishing. Acabas de entregarle tu clave al hacker.",
-      "tipo_ataque": "Phishing"
+      "id": "gana",
+      "label": "GANA PODER DE COMPRA",
+      "emoji": "📈",
+      "color": "#22c55e"
     },
     {
-      "id": "hck2",
-      "texto": "Recibes una llamada. Una voz grabada dice que ganaste un premio de $10,000 y debes presionar 1 para dar tu NIP y confirmar el depósito.",
-      "imagen": "📞",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Correcto! Los bancos nunca piden tu NIP o claves por teléfono. Esto es Vishing.",
-      "feedback_error": "❌ ¡Error! Nunca des información sensible por teléfono. Han vaciado tu cuenta.",
-      "tipo_ataque": "Vishing"
+      "id": "empata",
+      "label": "APENAS EMPATA",
+      "emoji": "➖",
+      "color": "#f59e0b"
     },
     {
-      "id": "hck3",
-      "texto": "Llega un SMS: 'ALERTA BANCO: Compra por $5,000 en Amazon no reconocida. Si no fuiste tú, entra aquí: bit.ly/bancofalso'.",
-      "imagen": "📱",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Excelente! El link acortado (bit.ly) es una señal clara de Smishing. Buscan asustarte para que actúes sin pensar.",
-      "feedback_error": "❌ ¡Caíste! El miedo es la herramienta favorita de los hackers. Siempre revisa tu app oficial directamente.",
-      "tipo_ataque": "Smishing"
-    },
-    {
-      "id": "hck4",
-      "texto": "La app oficial de tu banco te manda una notificación push diciendo que se inició sesión en un dispositivo nuevo. No hay links, solo te avisa.",
-      "imagen": "🔔",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Exacto! Las notificaciones informativas dentro de la app oficial son la forma segura en que el banco se comunica.",
-      "feedback_error": "❌ ¡Cuidado! Si bloqueas los avisos reales, no sabrás cuando alguien realmente entre a tu cuenta.",
-      "tipo_ataque": "Comunicación Real"
-    },
-    {
-      "id": "hck5",
-      "texto": "Encuentras un código QR pegado en un cajero automático que dice: 'Escanea aquí para ganar meses sin intereses'.",
-      "imagen": "🔳",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Muy bien! Eso es Quishing. Los hackers pegan QR falsos sobre los reales para llevarte a páginas infectadas.",
-      "feedback_error": "❌ ¡Peligro! Escanear QR desconocidos en lugares públicos puede instalar malware en tu celular.",
-      "tipo_ataque": "Quishing"
+      "id": "pierde",
+      "label": "PIERDE PODER DE COMPRA",
+      "emoji": "📉",
+      "color": "#ef4444"
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Analiza cada mensaje y decide: ¿es una AMENAZA o es SEGURO?",
-  "duracion": 120,
-  "opciones_clasificacion": [
-    "AMENAZA",
-    "SEGURO"
   ],
   "items": [
     {
-      "id": "hck1",
-      "label": "Recibes un correo de 'Servicio_Al_Cliente_Banco@gmail.com' diciendo que tu cuenta está bloqueada y d...",
-      "emoji": "📧",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Bien hecho! Un banco real nunca usa cuentas de @gmail y nunca te manda links para poner tus claves.",
-      "feedback_error": "❌ ¡Caíste! Eso es Phishing. Acabas de entregarle tu clave al hacker.",
-      "puntos": 100
+      "id": "i1",
+      "label": "Billetes guardados debajo del colchón",
+      "emoji": "🛏️",
+      "categoria_correcta": "pierde",
+      "feedback": "Rinde 0%. Con 5% de inflación, cada año compra 5% menos. En 10 años pierde cerca de 40%."
     },
     {
-      "id": "hck2",
-      "label": "Recibes una llamada. Una voz grabada dice que ganaste un premio de $10,000 y debes presionar 1 para ...",
-      "emoji": "📞",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Correcto! Los bancos nunca piden tu NIP o claves por teléfono. Esto es Vishing.",
-      "feedback_error": "❌ ¡Error! Nunca des información sensible por teléfono. Han vaciado tu cuenta.",
-      "puntos": 100
+      "id": "i2",
+      "label": "Cuenta de nómina que no paga intereses",
+      "emoji": "💳",
+      "categoria_correcta": "pierde",
+      "feedback": "Es lo mismo que el colchón, con la comodidad de la tarjeta y a veces con comisiones encima."
     },
     {
-      "id": "hck3",
-      "label": "Llega un SMS: 'ALERTA BANCO: Compra por $5,000 en Amazon no reconocida. Si no fuiste tú, entra aquí:...",
-      "emoji": "📱",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Excelente! El link acortado (bit.ly) es una señal clara de Smishing. Buscan asustarte para que actúes sin pensar.",
-      "feedback_error": "❌ ¡Caíste! El miedo es la herramienta favorita de los hackers. Siempre revisa tu app oficial directamente.",
-      "puntos": 100
+      "id": "i3",
+      "label": "CETES a 28 días al 9% anual",
+      "emoji": "🇲🇽",
+      "categoria_correcta": "gana",
+      "feedback": "9% contra 5% de inflación: gana 4% real. Es el instrumento más seguro del país."
     },
     {
-      "id": "hck4",
-      "label": "La app oficial de tu banco te manda una notificación push diciendo que se inició sesión en un dispos...",
-      "emoji": "🔔",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Exacto! Las notificaciones informativas dentro de la app oficial son la forma segura en que el banco se comunica.",
-      "feedback_error": "❌ ¡Cuidado! Si bloqueas los avisos reales, no sabrás cuando alguien realmente entre a tu cuenta.",
-      "puntos": 100
+      "id": "i4",
+      "label": "Pagaré bancario al 5% anual",
+      "emoji": "🏦",
+      "categoria_correcta": "empata",
+      "feedback": "Empata con la inflación, y tras el impuesto sobre los intereses queda ligeramente abajo."
     },
     {
-      "id": "hck5",
-      "label": "Encuentras un código QR pegado en un cajero automático que dice: 'Escanea aquí para ganar meses sin ...",
-      "emoji": "🔳",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Muy bien! Eso es Quishing. Los hackers pegan QR falsos sobre los reales para llevarte a páginas infectadas.",
-      "feedback_error": "❌ ¡Peligro! Escanear QR desconocidos en lugares públicos puede instalar malware en tu celular.",
-      "puntos": 100
+      "id": "i5",
+      "label": "Un fondo de inversión diversificado al 11% promedio",
+      "emoji": "📊",
+      "categoria_correcta": "gana",
+      "feedback": "Gana en el largo plazo, con años malos de por medio. Ese es el precio del rendimiento real."
+    },
+    {
+      "id": "i6",
+      "label": "Cuenta de ahorro al 1% anual",
+      "emoji": "🐷",
+      "categoria_correcta": "pierde",
+      "feedback": "Crece el saldo y encoge lo que ese saldo compra. Es la trampa más común del ahorro."
+    },
+    {
+      "id": "i7",
+      "label": "Una AFORE con rendimiento del 8% anual",
+      "emoji": "👴",
+      "categoria_correcta": "gana",
+      "feedback": "Le gana a la inflación durante 40 años seguidos: por eso las aportaciones voluntarias valen tanto."
+    },
+    {
+      "id": "i8",
+      "label": "Prestarle a un amigo sin intereses",
+      "emoji": "🤝",
+      "categoria_correcta": "pierde",
+      "feedback": "Te devuelve la misma cantidad, que para entonces compra menos. Y a veces ni eso."
+    },
+    {
+      "id": "i9",
+      "label": "Un depósito a plazo fijo al 5.5% anual",
+      "emoji": "🔒",
+      "categoria_correcta": "empata",
+      "feedback": "Apenas medio punto arriba de la inflación: casi todo el rendimiento se lo lleva mantener el valor."
+    },
+    {
+      "id": "i10",
+      "label": "Una tanda con los vecinos",
+      "emoji": "👥",
+      "categoria_correcta": "pierde",
+      "feedback": "No paga rendimiento y además tiene riesgo de que alguien no complete. Sirve para disciplinarse, no para crecer."
     }
   ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  "versión": "2026.Alineada.2"
 }

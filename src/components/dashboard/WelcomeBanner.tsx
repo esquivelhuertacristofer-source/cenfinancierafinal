@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
+import { useHasMounted } from "@/lib/useHasMounted";
 import { Sparkles, ArrowRight, Zap, Target, Star, Shield } from "lucide-react";
 
 export default function WelcomeBanner({
@@ -19,12 +20,11 @@ export default function WelcomeBanner({
   teacherGroupIds?: string[],
 }) {
   const [completionRate, setCompletionRate] = useState<number | null>(null);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const [aiInsight, setAiInsight] = useState("");
   const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
-    setMounted(true);
     if (idsLoading) return;
     const fetchCompletionRate = async () => {
       try {

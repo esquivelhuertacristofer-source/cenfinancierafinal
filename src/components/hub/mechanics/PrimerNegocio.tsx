@@ -68,6 +68,37 @@ function clamp(val: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, val));
 }
 
+function PhaseIndicator({ phase }: { phase: Phase }) {
+  return (
+    <div className="flex gap-2 justify-center mb-4">
+      {(['plan_inventory', 'plan_price', 'plan_location', 'operation', 'results'] as Phase[]).map(
+        (p, i) => {
+          const isDone =
+            (p === 'plan_inventory' &&
+              ['plan_price', 'plan_location', 'operation', 'results'].includes(phase)) ||
+            (p === 'plan_price' &&
+              ['plan_location', 'operation', 'results'].includes(phase)) ||
+            (p === 'plan_location' && ['operation', 'results'].includes(phase)) ||
+            (p === 'operation' && phase === 'results');
+          const isCurrent = phase === p;
+          return (
+            <div
+              key={p}
+              className={`h-2 rounded-full transition-all duration-500 ${
+                isDone
+                  ? 'bg-emerald-400 w-8'
+                  : isCurrent
+                  ? 'bg-purple-400 w-8 animate-pulse'
+                  : 'bg-white/20 w-4'
+              }`}
+            />
+          );
+        }
+      )}
+    </div>
+  );
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function PrimerNegocio({
@@ -255,37 +286,6 @@ export default function PrimerNegocio({
       ? Math.round(((plan.inventory.units - unitsRemaining) / plan.inventory.units) * 100)
       : 0;
 
-  // ─── Render helpers ───────────────────────────────────────────────────────
-
-  const PhaseIndicator = () => (
-    <div className="flex gap-2 justify-center mb-4">
-      {(['plan_inventory', 'plan_price', 'plan_location', 'operation', 'results'] as Phase[]).map(
-        (p, i) => {
-          const isDone =
-            (p === 'plan_inventory' &&
-              ['plan_price', 'plan_location', 'operation', 'results'].includes(phase)) ||
-            (p === 'plan_price' &&
-              ['plan_location', 'operation', 'results'].includes(phase)) ||
-            (p === 'plan_location' && ['operation', 'results'].includes(phase)) ||
-            (p === 'operation' && phase === 'results');
-          const isCurrent = phase === p;
-          return (
-            <div
-              key={p}
-              className={`h-2 rounded-full transition-all duration-500 ${
-                isDone
-                  ? 'bg-emerald-400 w-8'
-                  : isCurrent
-                  ? 'bg-purple-400 w-8 animate-pulse'
-                  : 'bg-white/20 w-4'
-              }`}
-            />
-          );
-        }
-      )}
-    </div>
-  );
-
   // ─── START SCREEN ─────────────────────────────────────────────────────────
 
   if (phase === 'start') {
@@ -348,7 +348,7 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-6 pt-8">
         <div className="max-w-lg w-full">
-          <PhaseIndicator />
+          <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
             <div className="text-5xl mb-2">📦</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
@@ -425,7 +425,7 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-6 pt-8">
         <div className="max-w-lg w-full">
-          <PhaseIndicator />
+          <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
             <div className="text-5xl mb-2">🏷️</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
@@ -495,7 +495,7 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-6 pt-8">
         <div className="max-w-lg w-full">
-          <PhaseIndicator />
+          <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
             <div className="text-5xl mb-2">📍</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
@@ -580,7 +580,7 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-6 pt-8">
         <div className="max-w-lg w-full">
-          <PhaseIndicator />
+          <PhaseIndicator phase={phase} />
 
           {/* Day counter */}
           <div className="flex items-center justify-between mb-4">
@@ -795,7 +795,7 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-6 pt-8 pb-16">
         <div className="max-w-lg w-full">
-          <PhaseIndicator />
+          <PhaseIndicator phase={phase} />
 
           {/* Header */}
           <div className="text-center mb-6">

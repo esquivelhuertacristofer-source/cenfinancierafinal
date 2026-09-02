@@ -4,96 +4,92 @@
   "unit_title": "Elevator Pitch: vendiendo mi idea en 60 segundos",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Logística Global",
-  "descripcion": "Exportar tus productos requiere orden y estrategia. ¿Puedes organizar los pasos para llegar al otro lado del océano?",
-  "objetivo": "Identificar los procesos operativos, legales y culturales necesarios para el comercio internacional",
-  "xp": 250,
-  "instruccion": "Arrastra cada acción a la fase de exportación correcta.",
-  "items": [
+  "tipo": "TRIVIA",
+  "complejidad": "ALTO",
+  "titulo": "Sesenta Segundos",
+  "descripcion": "Un elevator pitch se llama así porque debe caber en lo que dura un viaje en elevador. Si no logras interesar a alguien en un minuto, no lo lograrás en veinte.",
+  "objetivo": "Dominar la estructura del elevator pitch: problema, solución, mercado, diferencia y petición concreta.",
+  "xp": 500,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
+  "preguntas": [
     {
-      "id": "log1",
-      "label": "Registrar la marca en el país destino",
-      "emoji": "⚖️",
-      "categoria_correcta": "legal",
-      "feedback": "Protección legal antes de vender."
+      "id": "t1",
+      "pregunta": "¿Con qué debe EMPEZAR un buen pitch?",
+      "respuesta_correcta": "Con el problema que resuelves",
+      "incorrectas": [
+        "Con tu currículum",
+        "Con el nombre de la empresa",
+        "Con cuánto dinero quieres"
+      ],
+      "dato_extra": "Si el que escucha no siente el problema, nada de lo que digas después importa."
     },
     {
-      "id": "log2",
-      "label": "Obtener certificados de salud internacional",
-      "emoji": "📋",
-      "categoria_correcta": "legal",
-      "feedback": "Cumpliendo con las normas de calidad."
+      "id": "t2",
+      "pregunta": "La duración ideal de un elevator pitch es…",
+      "respuesta_correcta": "Entre 30 y 60 segundos",
+      "incorrectas": [
+        "10 minutos",
+        "5 segundos",
+        "Media hora"
+      ],
+      "dato_extra": "Un inversionista decide si sigue escuchando en los primeros 20 segundos."
     },
     {
-      "id": "log3",
-      "label": "Contratar un Agente Aduanal",
-      "emoji": "🛂",
-      "categoria_correcta": "logistica",
-      "feedback": "El experto que ayuda a pasar la frontera."
+      "id": "t3",
+      "pregunta": "Decir \"somos los mejores del mercado\" en un pitch es…",
+      "respuesta_correcta": "Una afirmación vacía: hay que mostrar en qué eres distinto",
+      "incorrectas": [
+        "La mejor forma de empezar",
+        "Obligatorio",
+        "Muy convincente"
+      ],
+      "dato_extra": "Sustituye adjetivos por hechos: \"entregamos en 2 horas, la competencia en 2 días\"."
     },
     {
-      "id": "log4",
-      "label": "Elegir el puerto y tipo de barco (Incoterms)",
-      "emoji": "🚢",
-      "categoria_correcta": "logistica",
-      "feedback": "Definiendo quién paga el transporte y seguro."
+      "id": "t4",
+      "pregunta": "Todo pitch debe cerrar con…",
+      "respuesta_correcta": "Una petición concreta: qué quieres de esa persona",
+      "incorrectas": [
+        "Un chiste",
+        "Un agradecimiento largo",
+        "Nada, mejor esperar"
+      ],
+      "dato_extra": "Sin petición clara, el que escucha asiente amablemente y no pasa nada."
     },
     {
-      "id": "log5",
-      "label": "Traducir etiquetas al idioma local",
-      "emoji": "🗣️",
-      "categoria_correcta": "cultura",
-      "feedback": "¡Que el cliente entienda qué está comprando!"
+      "id": "t5",
+      "pregunta": "Si te preguntan \"¿cuánto vale tu empresa?\" y no sabes…",
+      "respuesta_correcta": "Lo mejor es reconocerlo y decir cómo lo vas a averiguar",
+      "incorrectas": [
+        "Inventar una cifra",
+        "Cambiar de tema",
+        "Decir que es secreto"
+      ],
+      "dato_extra": "Inventar un número que no sostienes destruye la credibilidad en un segundo."
     },
     {
-      "id": "log6",
-      "label": "Adaptar los sabores a los gustos locales",
-      "emoji": "🍕",
-      "categoria_correcta": "cultura",
-      "feedback": "La cultura influye en lo que la gente consume."
+      "id": "t6",
+      "pregunta": "Un pitch lleno de palabras técnicas que nadie entiende…",
+      "respuesta_correcta": "Suena impresionante y no convence a nadie",
+      "incorrectas": [
+        "Demuestra que eres experto",
+        "Es lo recomendable",
+        "Ayuda a conseguir dinero"
+      ],
+      "dato_extra": "La regla: si tu abuela no entiende qué haces, tu pitch necesita trabajo."
     },
     {
-      "id": "log7",
-      "label": "Contratar vendedores y distribuidores locales",
-      "emoji": "🤝",
-      "categoria_correcta": "ventas",
-      "feedback": "Necesitas gente que conozca el mercado real."
-    },
-    {
-      "id": "log8",
-      "label": "Gestionar el cobro en moneda extranjera",
-      "emoji": "💱",
-      "categoria_correcta": "ventas",
-      "feedback": "Manejando el riesgo del tipo de cambio."
+      "id": "t7",
+      "pregunta": "Practicar tu pitch en voz alta antes de darlo…",
+      "respuesta_correcta": "Es imprescindible: el que suena natural es el que ensayó mucho",
+      "incorrectas": [
+        "Es innecesario",
+        "Quita espontaneidad",
+        "Solo lo hacen los principiantes"
+      ],
+      "dato_extra": "Los pitchs que parecen improvisados suelen tener 50 ensayos detrás."
     }
   ],
-  "categorias": [
-    {
-      "id": "legal",
-      "label": "1. LEGAL Y CUMPLIMIENTO",
-      "emoji": "🏛️",
-      "color": "#1e3a8a"
-    },
-    {
-      "id": "logistica",
-      "label": "2. ADUANAS Y TRANSPORTE",
-      "emoji": "📦",
-      "color": "#b45309"
-    },
-    {
-      "id": "cultura",
-      "label": "3. ADAPTACIÓN CULTURAL",
-      "emoji": "🌎",
-      "color": "#047857"
-    },
-    {
-      "id": "ventas",
-      "label": "4. VENTA Y COBRO",
-      "emoji": "💰",
-      "color": "#7c3aed"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

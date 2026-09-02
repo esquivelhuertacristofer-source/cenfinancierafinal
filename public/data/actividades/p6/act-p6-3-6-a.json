@@ -1,0 +1,182 @@
+{
+  "code": "ACT-P6-3-6-A",
+  "unit_code": "P6-3-6",
+  "unit_title": "La regla del 4%: cuánto necesito para vivir de mis inversiones",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Número de Libertad",
+  "descripcion": "Calcula cuánto capital necesitarías para vivir de tus rendimientos.",
+  "objetivo": "Aplicar la regla del 4% a un perfil de gasto propio y traducirlo en un ahorro mensual",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi gasto mensual",
+      "descripcion": "Cuánto cuesta sostener el estilo de vida que quiero.",
+      "campos": [
+        {
+          "id": "vivienda",
+          "label": "Vivienda y servicios",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 8000,
+          "unit": "$",
+          "placeholder": "8000",
+          "requerido": true
+        },
+        {
+          "id": "comida",
+          "label": "Comida",
+          "type": "number",
+          "min": 0,
+          "max": 60000,
+          "default": 5000,
+          "unit": "$",
+          "placeholder": "5000",
+          "requerido": true
+        },
+        {
+          "id": "transporte",
+          "label": "Transporte",
+          "type": "number",
+          "min": 0,
+          "max": 40000,
+          "default": 2000,
+          "unit": "$",
+          "placeholder": "2000",
+          "requerido": true
+        },
+        {
+          "id": "otros",
+          "label": "Salud, ocio y otros",
+          "type": "number",
+          "min": 0,
+          "max": 60000,
+          "default": 4000,
+          "unit": "$",
+          "placeholder": "4000",
+          "requerido": true
+        },
+        {
+          "id": "gasto_mensual",
+          "label": "Gasto mensual total",
+          "type": "calculated",
+          "formula": "vivienda + comida + transporte + otros",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi capital objetivo",
+      "descripcion": "El gasto anual multiplicado por 25.",
+      "campos": [
+        {
+          "id": "gasto_anual",
+          "label": "Gasto anual",
+          "type": "calculated",
+          "formula": "(vivienda + comida + transporte + otros) * 12",
+          "unit": "$"
+        },
+        {
+          "id": "capital_objetivo",
+          "label": "Capital necesario (regla del 4%)",
+          "type": "calculated",
+          "formula": "(vivienda + comida + transporte + otros) * 12 * 25",
+          "unit": "$"
+        },
+        {
+          "id": "retiro_anual",
+          "label": "Lo que podría retirar cada año",
+          "type": "calculated",
+          "formula": "Math.round((vivienda + comida + transporte + otros) * 12 * 25 * 0.04)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El efecto de gastar menos",
+      "descripcion": "Cada peso recurrente que eliminas baja la meta 25 veces.",
+      "campos": [
+        {
+          "id": "recorte_mensual",
+          "label": "Gasto mensual que podría eliminar",
+          "type": "slider",
+          "min": 0,
+          "max": 10000,
+          "step": 250,
+          "default": 1500,
+          "unit": "$",
+          "ayuda": "Un gasto recurrente, no uno de una sola vez.",
+          "requerido": true
+        },
+        {
+          "id": "baja_meta",
+          "label": "Cuánto baja mi capital objetivo",
+          "type": "calculated",
+          "formula": "recorte_mensual * 12 * 25",
+          "unit": "$"
+        },
+        {
+          "id": "nueva_meta",
+          "label": "Capital objetivo ajustado",
+          "type": "calculated",
+          "formula": "(vivienda + comida + transporte + otros - recorte_mensual) * 12 * 25",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Cuánto ahorrar desde hoy",
+      "descripcion": "Traducir la meta a una cifra mensual concreta.",
+      "campos": [
+        {
+          "id": "anos",
+          "label": "Años que me doy para lograrlo",
+          "type": "slider",
+          "min": 5,
+          "max": 45,
+          "step": 1,
+          "default": 30,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "rendimiento",
+          "label": "Rendimiento anual que asumo",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 7,
+          "unit": "%",
+          "ayuda": "Un supuesto, no una promesa. Sea conservador.",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_simple",
+          "label": "Ahorro mensual si no hubiera rendimientos",
+          "type": "calculated",
+          "formula": "Math.round((vivienda + comida + transporte + otros - recorte_mensual) * 12 * 25 / (anos * 12))",
+          "unit": "$"
+        },
+        {
+          "id": "ahorro_con_rendimiento",
+          "label": "Ahorro mensual estimado con rendimientos",
+          "type": "calculated",
+          "formula": "Math.round((vivienda + comida + transporte + otros - recorte_mensual) * 12 * 25 * (rendimiento / 100 / 12) / (Math.pow(1 + rendimiento / 100 / 12, anos * 12) - 1))",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_libertad_financiera",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-6-a-escena.webp"
+}

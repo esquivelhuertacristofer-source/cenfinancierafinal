@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-2-7-A",
+  "unit_code": "P1-2-7",
+  "unit_title": "La lista del mandado: ayudo a comprar en casa",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Mandado de Ceny",
+  "descripcion": "Mamá le dio a Ceny $200 y una lista de seis cosas. Adentro del súper todo intenta distraerlo.",
+  "objetivo": "Sostener una lista y un presupuesto frente a tentaciones dentro de la tienda",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Mamá le dio a Ceny $200 y una lista: leche, huevo, frijol, jitomate, jabón y pan. Le dijo que el cambio es para él si sobra algo. Adentro del súper, todo brilla.",
+  "nodo_inicial": "entrada",
+  "nodos": {
+    "entrada": {
+      "id": "entrada",
+      "texto": "Ceny entra al súper. En la primera góndola hay unas galletas de chocolate a $45 que le encantan. La lista no las incluye. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Seguir de largo y empezar por la lista",
+          "siguiente_nodo": "ofertas",
+          "consecuencia": "La lista primero. Si al final sobra dinero, ya se verá.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Meterlas al carrito, luego ajusta",
+          "siguiente_nodo": "sin_dinero",
+          "consecuencia": "Quedan $155 para seis productos. Se va a poner difícil.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -45
+        },
+        {
+          "id": "o3",
+          "texto": "Anotarlas para preguntarle a mamá otro día",
+          "siguiente_nodo": "ofertas",
+          "consecuencia": "No dijo que no para siempre: lo pospuso. Eso también funciona.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-entrada.webp"
+    },
+    "ofertas": {
+      "id": "ofertas",
+      "texto": "En el pasillo hay dos marcas de frijol: una a $32 y otra a $24. Se ven casi iguales y pesan lo mismo. ¿Cuál toma?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "La de $24, después de revisar que pese lo mismo",
+          "siguiente_nodo": "caja",
+          "consecuencia": "Ocho pesos ahorrados solo por comparar dos etiquetas.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 8
+        },
+        {
+          "id": "o2",
+          "texto": "La de $32 porque el empaque es más bonito",
+          "siguiente_nodo": "caja",
+          "consecuencia": "El empaque no se come. Ocho pesos por un dibujo.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -8
+        },
+        {
+          "id": "o3",
+          "texto": "Las dos, por si acaso",
+          "siguiente_nodo": "sin_dinero",
+          "consecuencia": "Ahora hay frijol de sobra y falta presupuesto para el resto.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -32
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-ofertas.webp"
+    },
+    "sin_dinero": {
+      "id": "sin_dinero",
+      "texto": "Ceny llega a la caja y la cuenta da $212. Solo trae $200. La cajera espera. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Devolver lo que no estaba en la lista",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La lista vuelve a mandar. Incómodo, pero correcto.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 12
+        },
+        {
+          "id": "o2",
+          "texto": "Devolver el jabón, que sí estaba en la lista",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Se sacrificó algo necesario para conservar un antojo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-sin_dinero.webp"
+    },
+    "caja": {
+      "id": "caja",
+      "texto": "En la fila de la caja hay dulces a la altura de la mano de Ceny, a $12. La cuenta va en $178, así que sí le alcanzaría. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No tomarlos: el cambio es suyo y prefiere ahorrarlo",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Ceny entiende que ese cambio ya es su dinero, no dinero libre.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 22
+        },
+        {
+          "id": "o2",
+          "texto": "Tomarlos: total, alcanza",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Los dulces de la caja están ahí justo para eso: para que no lo pienses.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 10
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-caja.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny paga $178 y regresa con $22 de cambio, la lista completa y el ticket en la mano. Mamá revisa: todo correcto.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny cumplió la lista, comparó marcas y no cayó en la caja. Los $22 que le sobraron no aparecieron por suerte: son el resultado de tres decisiones pequeñas.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny vuelve con la lista completa pero sin cambio. Nada salió mal, pero nada sobró.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La lista se cumplió, que es lo principal. Pero el dinero que se fue en antojos era el que hubiera terminado en la alcancía de Ceny.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny llega a casa sin jabón pero con galletas. Mamá tendrá que volver al súper mañana.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Cada cosa fuera de la lista se paga con algo de la lista. Aquí el antojo costó un producto necesario y un viaje extra.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-2-7-a-portada.webp"
+}

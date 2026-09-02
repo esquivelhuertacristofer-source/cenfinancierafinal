@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-2-10-B",
+  "unit_code": "S1-2-10",
+  "unit_title": "Rentar mi primer cuarto: depósito, aval y contrato",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Rentar Bien",
+  "descripcion": "Comprueba que sabes qué revisar al rentar.",
+  "objetivo": "Verificar el conocimiento de los elementos del arrendamiento",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El desembolso inicial para rentar puede equivaler a:",
+      "opciones": [
+        "Media renta",
+        "Nada",
+        "Hasta tres rentas",
+        "Diez rentas"
+      ],
+      "correcta": 2,
+      "explicacion": "Mes adelantado, depósito y a veces más."
+    },
+    {
+      "id": "q2",
+      "texto": "El depósito es:",
+      "opciones": [
+        "Un mes adelantado",
+        "Una comisión",
+        "Un impuesto",
+        "Una garantía reembolsable"
+      ],
+      "correcta": 3,
+      "explicacion": "Es dinero del inquilino en manos del arrendador."
+    },
+    {
+      "id": "q3",
+      "texto": "Usar el depósito para no pagar el último mes:",
+      "opciones": [
+        "Suele estar prohibido en el contrato",
+        "Es lo normal",
+        "Siempre se permite",
+        "Lo exige la ley"
+      ],
+      "correcta": 0,
+      "explicacion": "Y genera conflictos al terminar."
+    },
+    {
+      "id": "q4",
+      "texto": "El aval:",
+      "opciones": [
+        "Paga la renta siempre",
+        "Responde si el inquilino no paga",
+        "No tiene obligaciones",
+        "Solo firma"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una responsabilidad seria para quien acepta serlo."
+    },
+    {
+      "id": "q5",
+      "texto": "El contrato debe establecer:",
+      "opciones": [
+        "Solo el monto",
+        "Solo el plazo",
+        "Plazo, monto, aumentos, servicios, reparaciones y terminación",
+        "Nada específico"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo que no está escrito no existe cuando hay desacuerdo."
+    },
+    {
+      "id": "q6",
+      "texto": "El conflicto más común al salir es:",
+      "opciones": [
+        "El horario",
+        "El color de las paredes",
+        "La mudanza",
+        "La retención del depósito por daños preexistentes"
+      ],
+      "correcta": 3,
+      "explicacion": "Y es el más fácil de prevenir."
+    },
+    {
+      "id": "q7",
+      "texto": "Se previene con:",
+      "opciones": [
+        "Inventario firmado y fotos fechadas al entrar",
+        "Confianza",
+        "Pagar más",
+        "Un abogado"
+      ],
+      "correcta": 0,
+      "explicacion": "Treinta minutos el primer día."
+    },
+    {
+      "id": "q8",
+      "texto": "Ante un aumento repentino sin contrato:",
+      "opciones": [
+        "Hay tope legal automático",
+        "Hay poco margen porque nada se pactó",
+        "Se puede ignorar",
+        "Se anula solo"
+      ],
+      "correcta": 1,
+      "explicacion": "El contrato existe justamente para prevenir eso."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-10-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-10-b-escena.webp"
+}

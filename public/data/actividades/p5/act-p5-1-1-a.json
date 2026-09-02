@@ -7,13 +7,13 @@
   "tipo": "SIMULADOR",
   "complejidad": "ALTO",
   "titulo": "Gobernador de Banxico",
-  "descripcion": "Acabas de ser nombrado Gobernador del Banco de México. Tu única misión: mantener la inflación entre 2% y 4% durante 4 trimestres. Cada decisión sobre la tasa de interés afecta a 130 millones de mexicanos. ¿Estás listo para la presión?",
+  "descripcion": "Banxico tiene una sola herramienta principal: la tasa de interés. Súbela y frenas la inflación pero también la economía; bájala y pasa lo contrario. Encuentra el punto.",
   "objetivo": "Entender cómo la tasa de interés de Banxico controla la inflación y su impacto en empleo, crecimiento y tipo de cambio",
   "xp": 300,
-  "formula": "tasa",
+  "formula": "Math.round((inflacion_actual - (tasa - inflacion_actual) * 0.35) * 10) / 10",
   "modo": "multi_trimestre",
   "trimestres_total": 4,
-  "descripcion_formula": "Modelo macroeconómico simplificado: tasa alta → crédito más caro → menos consumo → inflación baja (pero más desempleo). Tasa baja → crédito barato → más consumo → inflación sube (pero más empleo).",
+  "descripcion_formula": "Al subir la tasa por encima de la inflación, el crédito se encarece, la gente gasta menos y los precios suben más despacio. El modelo proyecta la inflación a 12 meses según la tasa real (tasa menos inflación actual) que decidas.",
   "variables_estado_inicial": {
     "inflacion": 5.5,
     "desempleo": 3.8,
@@ -23,55 +23,26 @@
   },
   "inputs": [
     {
+      "id": "inflacion_actual",
+      "label": "Inflación actual (%)",
+      "type": "slider",
+      "min": 2,
+      "max": 14,
+      "step": 0.5,
+      "default": 8,
+      "unit": "%",
+      "referencia": "México cerró 2022 en 7.8% y 2016 en 3.4%"
+    },
+    {
       "id": "tasa",
-      "label": "Tasa de interés objetivo — Junta de Gobierno Banxico",
+      "label": "Tasa de referencia que decides (%)",
       "type": "slider",
       "min": 3,
-      "max": 15,
+      "max": 16,
       "step": 0.25,
       "default": 11.25,
       "unit": "%",
-      "referencia": "Tasa real de Banxico en 2024: 11.00%"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "aportacion_mensual",
-      "label": "Aportación Mensual ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 5000,
-      "step": 100,
-      "default": 500,
-      "unit": "$"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
-        {
-          "label": "Conservador",
-          "value": 0.8
-        },
-        {
-          "label": "Moderado",
-          "value": 1
-        },
-        {
-          "label": "Optimista",
-          "value": 1.2
-        }
-      ],
-      "default": 1
+      "referencia": "La tasa de Banxico llegó a 11.25% en 2023"
     }
   ],
   "efectos_por_trimestre": {
@@ -106,7 +77,7 @@
       }
     }
   },
-  "output_label": "Indicadores económicos de México",
+  "output_label": "Inflación proyectada a 12 meses",
   "chart_type": "line",
   "chart_series": [
     {
@@ -128,29 +99,29 @@
   ],
   "escenarios": [
     {
-      "condicion": "inflacion_promedio < 4 && inflacion_promedio > 2 && desempleo_promedio < 5",
-      "mensaje": "🏆 Mandato cumplido. Inflación en objetivo y empleo estable. Eres el mejor Gobernador que ha tenido Banxico.",
-      "tipo": "success"
+      "condicion": "resultado >= 2 && resultado <= 4 && tasa < 14",
+      "mensaje": "Objetivo cumplido. Banxico busca 3% con un margen de más o menos un punto, y lo lograste sin ahogar a la economía con crédito impagable.",
+      "tipo": "exito"
     },
     {
-      "condicion": "inflacion_promedio > 7",
-      "mensaje": "🔥 Hiperinflación. Los mexicanos no pueden pagar el carrito del súper. Debiste subir la tasa antes.",
-      "tipo": "danger"
+      "condicion": "tasa >= 14",
+      "mensaje": "Tasa demasiado alta: sí frena la inflación, y también encarece hipotecas, créditos de auto y préstamos a empresas. Frenar la economía de más provoca desempleo.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "desempleo_promedio > 7",
-      "mensaje": "📉 Millones sin trabajo. La tasa estaba demasiado alta — congelaste el crédito y la economía.",
-      "tipo": "danger"
+      "condicion": "tasa <= inflacion_actual",
+      "mensaje": "Tasa por debajo de la inflación: la tasa real es negativa. Guardar dinero pierde poder de compra y el crédito barato empuja los precios todavía más arriba.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "crecimiento_pib_promedio < 0",
-      "mensaje": "⚠️ Recesión técnica. La economía se contrajo. Política monetaria demasiado restrictiva.",
-      "tipo": "warning"
+      "condicion": "resultado > 6",
+      "mensaje": "La inflación sigue muy alta. Con tasas apenas por encima de la inflación, los precios tardan años en ceder y el salario alcanza cada vez para menos.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "inflacion_promedio < 4 && inflacion_promedio > 2",
-      "mensaje": "✅ Inflación dentro del objetivo. El poder adquisitivo de los mexicanos está protegido.",
-      "tipo": "success"
+      "condicion": "true",
+      "mensaje": "Vas en la dirección correcta, pero todavía lejos del objetivo de 3%. Prueba subir la tasa un poco más y observa el efecto.",
+      "tipo": "info"
     }
   ],
   "calificacion_final": {
@@ -213,5 +184,7 @@
       "suffix": "/mes por $1M",
       "descripcion": "Mensualidad de una hipoteca de $1M pesos a 20 años a esta tasa"
     }
-  ]
+  ],
+  "output_prefix": "",
+  "output_suffix": "%"
 }

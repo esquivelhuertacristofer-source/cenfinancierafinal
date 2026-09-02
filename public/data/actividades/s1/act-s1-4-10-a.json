@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-4-10-A",
+  "unit_code": "S1-4-10",
+  "unit_title": "Darme de alta en el SAT: persona física con actividad empresarial",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Formalizar el Negocio",
+  "descripcion": "El negocio de Ceny crece y aparece la decisión de darse de alta. Cada paso cuenta.",
+  "objetivo": "Aplicar el conocimiento sobre formalización fiscal a un negocio en crecimiento",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El negocio de Ceny factura $28,000 al mes. Una empresa quiere hacerle un pedido grande, pero le pide comprobante fiscal.",
+  "nodo_inicial": "pedido",
+  "nodos": {
+    "pedido": {
+      "id": "pedido",
+      "texto": "El pedido vale $90,000 pero requiere comprobante. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Iniciar el trámite de alta para poder emitir comprobantes",
+          "siguiente_nodo": "regimen",
+          "consecuencia": "Abre la puerta a todo un segmento de clientes que antes no podía atender.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 90000
+        },
+        {
+          "id": "o2",
+          "texto": "Rechazar el pedido: los trámites son complicados",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "Perdió el equivalente a tres meses de facturación.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -90000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-pedido.webp"
+    },
+    "perdida": {
+      "id": "perdida",
+      "texto": "En los meses siguientes pierde dos clientes más por lo mismo. ¿Qué concluye?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que operar sin comprobantes le cierra una parte enorme del mercado",
+          "siguiente_nodo": "regimen",
+          "consecuencia": "Decide formalizarse, aunque con clientes ya perdidos.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que solo puede vender a particulares y así está bien",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Se autolimita a una fracción del mercado disponible.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-perdida.webp"
+    },
+    "regimen": {
+      "id": "regimen",
+      "texto": "Le ofrecen varios regímenes. ¿Cómo elige?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Consultar la orientación oficial gratuita según su nivel de ingresos y actividad",
+          "siguiente_nodo": "gastos",
+          "consecuencia": "Encuentra un régimen simplificado adecuado a su tamaño.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 14000
+        },
+        {
+          "id": "o2",
+          "texto": "Elegir el primero que le mencionan",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Termina con obligaciones más complejas de las que le corresponderían.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -9000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-regimen.webp"
+    },
+    "gastos": {
+      "id": "gastos",
+      "texto": "Compra material, paga transporte y renta un espacio. ¿Qué hace con esos gastos?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir comprobante de cada uno para poder deducirlos",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Reduce la base sobre la que se calcula su impuesto.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 18000
+        },
+        {
+          "id": "o2",
+          "texto": "Pagar en efectivo sin pedir nada: es más rápido",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Paga impuesto sobre ingresos que en realidad ya gastó en operar.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -15000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-gastos.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny se formalizó, eligió el régimen adecuado y deduce sus gastos ordenadamente.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Formalizarse implica obligaciones previsibles y abre un mercado entero. Y guardar comprobantes de los gastos del negocio es lo que evita pagar impuesto sobre dinero que ya se gastó en operar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny se formalizó, pero sin aprovechar el régimen adecuado ni las deducciones.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Darse de alta es solo el primer paso. Elegir bien el régimen y guardar los comprobantes de gastos es lo que hace que la formalidad cueste lo que debe costar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny siguió sin poder emitir comprobantes y su negocio quedó limitado a una fracción del mercado.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No poder facturar no es solo un tema administrativo: cierra el acceso a empresas y a todo cliente que necesita comprobar sus gastos, que es una parte enorme de la economía.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-4-10-a-portada.webp"
+}

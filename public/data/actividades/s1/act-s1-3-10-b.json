@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-3-10-B",
+  "unit_code": "S1-3-10",
+  "unit_title": "Mi estado patrimonial: activos menos pasivos",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto Patrimonial",
+  "descripcion": "Responde rápido sobre activos, pasivos y patrimonio.",
+  "objetivo": "Consolidar la elaboración e interpretación del estado patrimonial",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El patrimonio neto se calcula:",
+      "respuesta_correcta": "Activos menos pasivos",
+      "incorrectas": [
+        "Ingresos menos gastos",
+        "Sueldo por doce",
+        "Activos más pasivos"
+      ],
+      "dato_extra": "Mide dónde estás parado, no cuánto entra."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Puede alguien ganar mucho y tener patrimonio negativo?",
+      "respuesta_correcta": "Sí",
+      "incorrectas": [
+        "No",
+        "Solo si es joven",
+        "Solo con hipoteca"
+      ],
+      "dato_extra": "Ingreso alto con deudas mayores da patrimonio negativo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Los activos se valoran:",
+      "respuesta_correcta": "Por lo que se venderían hoy",
+      "incorrectas": [
+        "Por lo que costaron",
+        "Por el doble",
+        "Por lo que valdrán"
+      ],
+      "dato_extra": "Un auto de hace cinco años no vale lo que se pagó por él."
+    },
+    {
+      "id": "q4",
+      "pregunta": "De una deuda se registra:",
+      "respuesta_correcta": "El saldo actual completo",
+      "incorrectas": [
+        "La mensualidad",
+        "El interés",
+        "El plazo"
+      ],
+      "dato_extra": "Confundir mensualidad con saldo distorsiona todo el balance."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El saldo de AFORE:",
+      "respuesta_correcta": "Es un activo y va en el balance",
+      "incorrectas": [
+        "No cuenta",
+        "Es un pasivo",
+        "Solo cuenta al jubilarse"
+      ],
+      "dato_extra": "Es dinero tuyo, aunque no puedas usarlo ahora."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Lo que más importa del patrimonio es:",
+      "respuesta_correcta": "Su evolución en el tiempo",
+      "incorrectas": [
+        "Su tamaño",
+        "Compararlo con otros",
+        "Que sea redondo"
+      ],
+      "dato_extra": "Si cada trimestre mejora, las decisiones están funcionando."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un patrimonio negativo al inicio de la vida laboral:",
+      "respuesta_correcta": "Es común y lo importante es la dirección",
+      "incorrectas": [
+        "Es una condena",
+        "Es imposible",
+        "Significa mal manejo siempre"
+      ],
+      "dato_extra": "Sobre todo con un crédito de vivienda reciente."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-10-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-10-b-escena.webp"
+}

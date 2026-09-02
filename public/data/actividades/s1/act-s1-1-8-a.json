@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-1-8-A",
+  "unit_code": "S1-1-8",
+  "unit_title": "Informalidad laboral: la mitad de México sin prestaciones",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Formal o Informal",
+  "descripcion": "Clasifica cada elemento según a qué tipo de trabajo corresponde.",
+  "objetivo": "Distinguir derechos y condiciones del empleo formal e informal",
+  "xp": 500,
+  "instruccion": "Arrastra cada elemento según dónde existe.",
+  "categorias": [
+    {
+      "id": "formal",
+      "label": "Solo en el empleo formal",
+      "emoji": "📋",
+      "color": "#10B981"
+    },
+    {
+      "id": "ambos",
+      "label": "En los dos",
+      "emoji": "⚖️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "informal",
+      "label": "Característico del informal",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Aguinaldo de al menos 15 días",
+      "emoji": "🎁",
+      "categoria_correcta": "formal",
+      "feedback": "Es una prestación de ley que solo existe con registro."
+    },
+    {
+      "id": "i2",
+      "label": "Recibir un ingreso por trabajar",
+      "emoji": "💵",
+      "categoria_correcta": "ambos",
+      "feedback": "En los dos casos hay trabajo real y hay ingreso."
+    },
+    {
+      "id": "i3",
+      "label": "Pagar de tu bolsillo toda atención médica",
+      "emoji": "🏥",
+      "categoria_correcta": "informal",
+      "feedback": "Sin seguridad social, cada consulta sale del ingreso."
+    },
+    {
+      "id": "i4",
+      "label": "Aportación a una cuenta de retiro",
+      "emoji": "🏦",
+      "categoria_correcta": "formal",
+      "feedback": "Sin ella no se acumula nada para la vejez."
+    },
+    {
+      "id": "i5",
+      "label": "Esfuerzo y horas de trabajo",
+      "emoji": "💪",
+      "categoria_correcta": "ambos",
+      "feedback": "La informalidad no significa trabajar menos."
+    },
+    {
+      "id": "i6",
+      "label": "Quedarse sin ingreso al enfermarse",
+      "emoji": "🤒",
+      "categoria_correcta": "informal",
+      "feedback": "No hay incapacidad pagada: el día que no trabajas no ganas."
+    },
+    {
+      "id": "i7",
+      "label": "Vacaciones pagadas y prima vacacional",
+      "emoji": "🏖️",
+      "categoria_correcta": "formal",
+      "feedback": "Días de descanso que sí se cobran."
+    },
+    {
+      "id": "i8",
+      "label": "Acceso a crédito de vivienda por vía laboral",
+      "emoji": "🏠",
+      "categoria_correcta": "formal",
+      "feedback": "Se construye con las aportaciones patronales."
+    },
+    {
+      "id": "i9",
+      "label": "Terminar sin indemnización ni aviso",
+      "emoji": "🚪",
+      "categoria_correcta": "informal",
+      "feedback": "Sin relación registrada no hay protección ante el despido."
+    },
+    {
+      "id": "i10",
+      "label": "Generar valor para clientes o empleadores",
+      "emoji": "🛠️",
+      "categoria_correcta": "ambos",
+      "feedback": "El trabajo informal produce valor real para la economía."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-8-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-8-a-escena.webp"
+}

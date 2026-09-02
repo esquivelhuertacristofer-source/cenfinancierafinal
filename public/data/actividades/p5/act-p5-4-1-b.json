@@ -4,110 +4,110 @@
   "unit_title": "El Equipo Ideal: roles para el éxito",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "ARRASTRA",
+  "tipo": "QUIZ",
   "complejidad": "MEDIO",
-  "titulo": "De la Idea a la Mesa",
-  "descripcion": "¿Sabes qué paso va primero en una Pizzería? ¡Ordena los procesos para que tu negocio sea el mejor!",
-  "objetivo": "Identificar la secuencia lógica de una cadena de valor empresarial",
-  "xp": 250,
-  "instruccion": "Arrastra los pasos en el orden correcto (del 1 al 10).",
-  "items": [
+  "titulo": "Armando el Equipo",
+  "descripcion": "Elegir con quién emprendes importa tanto como qué vendes. Comprueba tu criterio.",
+  "objetivo": "Comprender que un equipo emprendedor necesita talentos complementarios, acuerdos claros y responsabilidades definidas.",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "p1",
-      "label": "1. Estudio de mercado (¿Qué pizza quieren?)",
-      "emoji": "📋",
-      "categoria_correcta": "inicio",
-      "feedback": "Primero investigamos qué quiere el cliente."
+      "id": "q1",
+      "texto": "Un buen equipo emprendedor se forma con personas que…",
+      "opciones": [
+        "Piensan y saben exactamente lo mismo",
+        "Tienen habilidades distintas que se complementan",
+        "Son todas amigas",
+        "Nunca discuten"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuatro personas que saben lo mismo dejan tres huecos sin cubrir."
     },
     {
-      "id": "p2",
-      "label": "2. Compra de ingredientes frescos",
-      "emoji": "🛒",
-      "categoria_correcta": "inicio",
-      "feedback": "Sin materia prima no hay producto."
+      "id": "q2",
+      "texto": "Si nadie se encarga del dinero en un negocio…",
+      "opciones": [
+        "No pasa nada",
+        "Nadie sabrá si están ganando o perdiendo hasta que sea tarde",
+        "El banco lo hace por ti",
+        "Se gana más"
+      ],
+      "correcta": 1,
+      "explicacion": "Muchos negocios pequeños quiebran sin darse cuenta de que llevaban meses perdiendo."
     },
     {
-      "id": "p3",
-      "label": "3. Preparación de la masa secreta",
-      "emoji": "🍞",
-      "categoria_correcta": "produccion",
-      "feedback": "La base de la calidad."
+      "id": "q3",
+      "texto": "Lo mejor para repartir las ganancias entre socios es…",
+      "opciones": [
+        "Acordarlo por escrito ANTES de empezar",
+        "Decidirlo cuando ya haya dinero",
+        "Que se lo quede el que tuvo la idea",
+        "No repartir nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Casi todas las sociedades que se rompen, se rompen por dinero que nunca se acordó antes."
     },
     {
-      "id": "p4",
-      "label": "4. Armado de la pizza con ingredientes",
-      "emoji": "🍕",
-      "categoria_correcta": "produccion",
-      "feedback": "Poniendo el valor agregado."
+      "id": "q4",
+      "texto": "Alguien del equipo no cumple con lo suyo. Lo correcto es…",
+      "opciones": [
+        "Hablarlo pronto y ajustar responsabilidades",
+        "Hacer su trabajo en silencio y guardar el enojo",
+        "Expulsarlo sin avisar",
+        "Ignorarlo"
+      ],
+      "correcta": 0,
+      "explicacion": "Los problemas de equipo crecen callados. Hablarlos a tiempo es una habilidad de negocio."
     },
     {
-      "id": "p5",
-      "label": "5. Horneado a temperatura perfecta",
-      "emoji": "🔥",
-      "categoria_correcta": "produccion",
-      "feedback": "Transformación final del producto."
+      "id": "q5",
+      "texto": "El rol de coordinación sirve para…",
+      "opciones": [
+        "Mandar a los demás",
+        "Que las decisiones se tomen y el plan avance",
+        "No trabajar",
+        "Quedarse con más dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Coordinar no es mandar: es asegurarse de que las cosas pasen."
     },
     {
-      "id": "p6",
-      "label": "6. Empaque en cajas ecológicas",
-      "emoji": "📦",
-      "categoria_correcta": "entrega",
-      "feedback": "Protegiendo el producto para el viaje."
+      "id": "q6",
+      "texto": "Dos socios quieren hacer exactamente la misma tarea y nadie quiere vender. Lo más probable es que…",
+      "opciones": [
+        "El negocio venda poco y fracase",
+        "Todo salga perfecto",
+        "Los clientes lleguen solos",
+        "Se dupliquen las ganancias"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin nadie vendiendo, hasta el mejor producto se queda en la bodega."
     },
     {
-      "id": "p7",
-      "label": "7. Publicidad en redes sociales",
-      "emoji": "📱",
-      "categoria_correcta": "entrega",
-      "feedback": "¡Que todos sepan que estamos listos!"
+      "id": "q7",
+      "texto": "Aportar dinero a un negocio sin trabajar en él te vuelve…",
+      "opciones": [
+        "Empleado",
+        "Socio inversionista",
+        "Cliente",
+        "Proveedor"
+      ],
+      "correcta": 1,
+      "explicacion": "Hay socios que ponen trabajo y socios que ponen capital. Ambos aportes valen y deben acordarse."
     },
     {
-      "id": "p8",
-      "label": "8. Venta y Cobro al cliente",
-      "emoji": "💰",
-      "categoria_correcta": "final",
-      "feedback": "Aquí es donde recuperas tu inversión."
-    },
-    {
-      "id": "p9",
-      "label": "9. Entrega rápida a domicilio",
-      "emoji": "🛵",
-      "categoria_correcta": "final",
-      "feedback": "Cumpliendo la promesa al cliente."
-    },
-    {
-      "id": "p10",
-      "label": "10. Encuesta de satisfacción",
-      "emoji": "⭐",
-      "categoria_correcta": "final",
-      "feedback": "¿Les gustó? ¡Esto nos ayuda a mejorar!"
+      "id": "q8",
+      "texto": "La señal más clara de un equipo sano es…",
+      "opciones": [
+        "Que nadie hable de problemas",
+        "Que cada quien sabe qué le toca y todos ven las cuentas",
+        "Que solo uno decide todo",
+        "Que nunca cambian nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Responsabilidades claras y cuentas transparentes: eso sostiene a los equipos."
     }
   ],
-  "categorias": [
-    {
-      "id": "inicio",
-      "label": "PLANEAR Y PREPARAR",
-      "emoji": "🧠",
-      "color": "#1e3a8a"
-    },
-    {
-      "id": "produccion",
-      "label": "CREAR EL PRODUCTO",
-      "emoji": "🛠️",
-      "color": "#b45309"
-    },
-    {
-      "id": "entrega",
-      "label": "MARKETING Y EMPAQUE",
-      "emoji": "📢",
-      "color": "#047857"
-    },
-    {
-      "id": "final",
-      "label": "VENTA Y SERVICIO",
-      "emoji": "🤝",
-      "color": "#7c3aed"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

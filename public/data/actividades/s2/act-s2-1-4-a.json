@@ -4,115 +4,104 @@
   "unit_title": "El sistema financiero internacional: FMI y Banco Mundial",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "Mantener la Calma",
-  "descripcion": "El mercado está colapsando. Las noticias dicen que es el fin del sistema financiero. Tu dinero está desapareciendo en la pantalla. ¿Qué harás?",
-  "objetivo": "Experimentar la presión emocional de una crisis de mercado y evaluar la capacidad de mantener una estrategia racional",
-  "xp": 450,
-  "personaje_principal": "Inversionista",
-  "contexto_inicial": "Tienes un portafolio diversificado. De pronto, una noticia sobre una crisis bancaria hace que la bolsa caiga 15% en una mañana. El pánico es total.",
-  "nodo_inicial": "el_colapso",
-  "nodos": {
-    "el_colapso": {
-      "id": "el_colapso",
-      "texto": "Todo el mundo está vendiendo. Tus amigos te dicen que saques tu dinero ya. ¿Cuál es tu decisión?",
-      "opciones": [
-        {
-          "id": "venta_panico",
-          "texto": "Vender todo ahora mismo para salvar lo que queda",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Vendiste en el punto más bajo. Perdiste dinero real por miedo.",
-          "xp_bonus": 50,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        },
-        {
-          "id": "mantener_estrategia",
-          "texto": "Mantener la calma, apagar las noticias y esperar",
-          "siguiente_nodo": "recuperacion_lenta",
-          "consecuencia": "Fue difícil ver los números rojos, pero confiaste en tu análisis a largo plazo.",
-          "xp_bonus": 300,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "Quién es Quién en el Mundo",
+  "descripcion": "FMI, Banco Mundial, OMC, BID: se confunden todo el tiempo y hacen cosas muy distintas. Uno apaga incendios, otro construye, otro pone las reglas del comercio.",
+  "objetivo": "Identificar el rol de los organismos financieros internacionales en la estabilidad económica global y el desarrollo de los países.",
+  "xp": 600,
+  "instruccion": "Arrastra cada función al organismo que le corresponde.",
+  "categorias": [
+    {
+      "id": "fmi",
+      "label": "FMI",
+      "emoji": "🚑",
+      "color": "#ef4444"
     },
-    "recuperacion_lenta": {
-      "id": "recuperacion_lenta",
-      "texto": "3 meses después. El mercado se recuperó y superó su máximo anterior. Los que vendieron perdieron todo; tú sigues en el juego.",
-      "opciones": [
-        {
-          "id": "final_temple_acero",
-          "texto": "Ver el resultado de tu disciplina",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "Tu portafolio vale más que antes de la crisis.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
+    {
+      "id": "bm",
+      "label": "BANCO MUNDIAL",
+      "emoji": "🏗️",
+      "color": "#10b981"
     },
-    "final_maestro_emocional": {
-      "id": "final_maestro_emocional",
-      "texto": "¡Felicidades! Tienes temple de acero. En la bolsa, el dinero pasa de los impacientes a los pacientes.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El mercado es un dispositivo para transferir dinero de los activos emocionalmente a los estables."
-    },
-    "perdida_realizada": {
-      "id": "perdida_realizada",
-      "texto": "Meses después ves cómo el mercado sube, pero tú ya no tienes acciones. Te quedaste fuera por miedo.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "Nunca tomes decisiones permanentes basadas en emociones temporales."
-    },
-    "reto_inesperado": {
-      "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
-    },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    {
+      "id": "omc",
+      "label": "OMC",
+      "emoji": "⚖️",
+      "color": "#3b82f6"
     }
-  },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Prestar de emergencia a un país en crisis de balanza de pagos",
+      "emoji": "🆘",
+      "categoria_correcta": "fmi",
+      "feedback": "Es el \"bombero\" del sistema: presta cuando a un país se le acaban las divisas."
+    },
+    {
+      "id": "i2",
+      "label": "Financiar carreteras, escuelas y agua potable en países en desarrollo",
+      "emoji": "🚰",
+      "categoria_correcta": "bm",
+      "feedback": "Su misión es el desarrollo de largo plazo, no la emergencia."
+    },
+    {
+      "id": "i3",
+      "label": "Resolver disputas comerciales entre países",
+      "emoji": "📜",
+      "categoria_correcta": "omc",
+      "feedback": "Es el árbitro del comercio internacional."
+    },
+    {
+      "id": "i4",
+      "label": "Exigir reformas económicas a cambio de un rescate",
+      "emoji": "📋",
+      "categoria_correcta": "fmi",
+      "feedback": "La condicionalidad es su parte más criticada: a veces las reformas exigidas agravan la recesión."
+    },
+    {
+      "id": "i5",
+      "label": "Vigilar la salud económica de sus países miembros",
+      "emoji": "🩺",
+      "categoria_correcta": "fmi",
+      "feedback": "Publica informes periódicos sobre cada economía, México incluido."
+    },
+    {
+      "id": "i6",
+      "label": "Otorgar créditos de largo plazo para reducir la pobreza",
+      "emoji": "🌾",
+      "categoria_correcta": "bm",
+      "feedback": "Con plazos largos y tasas bajas, orientados a proyectos concretos."
+    },
+    {
+      "id": "i7",
+      "label": "Negociar la reducción de aranceles entre naciones",
+      "emoji": "🤝",
+      "categoria_correcta": "omc",
+      "feedback": "Su objetivo declarado es un comercio más abierto y predecible."
+    },
+    {
+      "id": "i8",
+      "label": "Apoyar a México durante la crisis de 1995 con una línea de crédito",
+      "emoji": "🇲🇽",
+      "categoria_correcta": "fmi",
+      "feedback": "Junto con el Tesoro de Estados Unidos: fue uno de los rescates más grandes de su historia."
+    },
+    {
+      "id": "i9",
+      "label": "Asesorar técnicamente proyectos de infraestructura",
+      "emoji": "📐",
+      "categoria_correcta": "bm",
+      "feedback": "Aporta conocimiento además de dinero."
+    },
+    {
+      "id": "i10",
+      "label": "Sancionar a un país que impone aranceles ilegales",
+      "emoji": "🚫",
+      "categoria_correcta": "omc",
+      "feedback": "Puede autorizar represalias comerciales al país afectado."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

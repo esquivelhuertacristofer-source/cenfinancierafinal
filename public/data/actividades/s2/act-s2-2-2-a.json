@@ -4,101 +4,118 @@
   "unit_title": "Ciberseguridad financiera: protegiendo tu patrimonio digital",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "CONSTRUCTOR",
-  "complejidad": "MEDIO",
-  "titulo": "Mi Portafolio Inmobiliario",
-  "descripcion": "No necesitas comprar un edificio entero para ganar rentas. ¡Diseña tu estrategia inmobiliaria inteligente!",
-  "objetivo": "Diferenciar entre la inversión inmobiliaria directa y la inversión a través de FIBRAS, evaluando sus beneficios",
-  "xp": 400,
-  "output_type": "Estrategia de Inversión Inmobiliaria",
-  "exportable": true,
-  "pasos": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "¿Fraude o Legítimo?",
+  "descripcion": "Los fraudes financieros digitales ya no se ven como fraudes: se ven como tu banco. Aprende a detectar las señales que siempre están ahí.",
+  "objetivo": "Identificar las principales ciberamenazas financieras y las prácticas de seguridad que protegen cuentas y datos personales.",
+  "xp": 600,
+  "instruccion": "Arrastra cada situación según sea un intento de fraude, una práctica segura o una señal de alerta que exige verificar.",
+  "categorias": [
     {
-      "id": "modelo_inversion_s2",
-      "titulo": "🏢 Elige tu Modelo",
-      "descripcion": "¿Cómo quieres ser dueño de ladrillos?",
-      "campos": [
-        {
-          "id": "tipo_inversion_inm",
-          "label": "Modelo de Inversión",
-          "type": "select",
-          "opciones": [
-            "Inversión Directa (Comprar propiedad física)",
-            "FIBRAS (Invertir en bolsa desde $100)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "monto_inicial_inm",
-          "label": "Capital Inicial ($)",
-          "type": "slider",
-          "min": 100,
-          "max": 1000000,
-          "step": 500,
-          "default": 5000,
-          "unit": "$"
-        }
-      ]
+      "id": "fraude",
+      "label": "FRAUDE SEGURO",
+      "emoji": "🚨",
+      "color": "#ef4444"
     },
     {
-      "id": "seleccion_activos_inm",
-      "titulo": "🏗️ Selección de Activos",
-      "descripcion": "¿En qué tipo de edificios quieres invertir?",
-      "campos": [
-        {
-          "id": "sector_inm",
-          "label": "Sector Inmobiliario",
-          "type": "select",
-          "opciones": [
-            "Centros Comerciales",
-            "Naves Industriales (Logística)",
-            "Oficinas Corporativas",
-            "Hoteles y Turismo"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "diversificacion_inm",
-          "label": "¿Quieres diversificar en varios sectores?",
-          "type": "select",
-          "opciones": [
-            "Sí (Más seguro)",
-            "No (Concentrar riesgo)"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "seguro",
+      "label": "PRÁCTICA SEGURA",
+      "emoji": "🛡️",
+      "color": "#10b981"
     },
     {
-      "id": "analisis_beneficio",
-      "titulo": "💰 Proyección de Rentas",
-      "descripcion": "¿Por qué elegiste esta estrategia?",
-      "campos": [
-        {
-          "id": "justificacion_inm",
-          "label": "Escribe tu estrategia",
-          "type": "textarea",
-          "placeholder": "Ej: Elegí FIBRAS industriales porque el comercio electrónico hace que se necesiten más bodegas y es más líquido que una casa...",
-          "requerido": true
-        },
-        {
-          "id": "dividendo_anual_est",
-          "label": "Dividendo Anual Estimado (FIBRA 7%)",
-          "type": "calculated",
-          "formula": "Math.round(monto_inicial_inm * 0.07)",
-          "unit": "$",
-          "ayuda": "Los FIBRAs mexicanos pagan dividendos promedio del 6-8% anual"
-        },
-        {
-          "id": "valor_5_anios",
-          "label": "Valor en 5 Años (plusvalía 5%/año)",
-          "type": "calculated",
-          "formula": "Math.round(monto_inicial_inm * Math.pow(1.05, 5))",
-          "unit": "$",
-          "ayuda": "La plusvalía inmobiliaria en México promedió ~5% anual en la última década"
-        }
-      ]
+      "id": "verificar",
+      "label": "VERIFICAR ANTES",
+      "emoji": "🔍",
+      "color": "#f59e0b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Un SMS del \"banco\" con un link para \"reactivar tu cuenta\"",
+      "emoji": "📩",
+      "categoria_correcta": "fraude",
+      "feedback": "Phishing clásico. Ningún banco manda links para capturar tus datos."
+    },
+    {
+      "id": "i2",
+      "label": "Activar el segundo factor de autenticación",
+      "emoji": "🔐",
+      "categoria_correcta": "seguro",
+      "feedback": "La medida más efectiva que existe: una contraseña robada deja de bastar."
+    },
+    {
+      "id": "i3",
+      "label": "Te llaman diciendo que eres del banco y te piden tu NIP",
+      "emoji": "☎️",
+      "categoria_correcta": "fraude",
+      "feedback": "Ningún banco pide NIP, CVV ni códigos por teléfono. Nunca. Cuelga."
+    },
+    {
+      "id": "i4",
+      "label": "Una oferta de trabajo que te pide \"pagar la capacitación\"",
+      "emoji": "💼",
+      "categoria_correcta": "fraude",
+      "feedback": "Un empleo real nunca te cobra por contratarte."
+    },
+    {
+      "id": "i5",
+      "label": "Un correo del banco con tu nombre completo y saldo correcto",
+      "emoji": "📧",
+      "categoria_correcta": "verificar",
+      "feedback": "Puede ser real o puede ser una filtración. Nunca uses el link: entra por la app."
+    },
+    {
+      "id": "i6",
+      "label": "Usar contraseñas distintas para cada servicio financiero",
+      "emoji": "🔑",
+      "categoria_correcta": "seguro",
+      "feedback": "Si roban una, no caen todas. Un gestor de contraseñas lo hace manejable."
+    },
+    {
+      "id": "i7",
+      "label": "Un vendedor en marketplace que pide pago por transferencia antes de enviar",
+      "emoji": "📦",
+      "categoria_correcta": "verificar",
+      "feedback": "Puede ser legítimo, pero pierdes toda protección. Usa métodos con garantía de compra."
+    },
+    {
+      "id": "i8",
+      "label": "Revisar tus movimientos bancarios cada semana",
+      "emoji": "📊",
+      "categoria_correcta": "seguro",
+      "feedback": "Tienes plazos limitados para aclarar cargos: detectarlos pronto lo es todo."
+    },
+    {
+      "id": "i9",
+      "label": "\"Inversión garantizada del 25% mensual, cupo limitado\"",
+      "emoji": "💰",
+      "categoria_correcta": "fraude",
+      "feedback": "Rendimiento imposible más urgencia más \"garantizado\": las tres señales juntas."
+    },
+    {
+      "id": "i10",
+      "label": "Una app financiera con muchas descargas pero sin registro CNBV",
+      "emoji": "📱",
+      "categoria_correcta": "verificar",
+      "feedback": "La popularidad no es autorización. Revisa el padrón oficial antes de conectar tu cuenta."
+    },
+    {
+      "id": "i11",
+      "label": "Que un familiar te pida dinero urgente por mensaje sin poder hablar",
+      "emoji": "👤",
+      "categoria_correcta": "fraude",
+      "feedback": "Suplantación de identidad. Llama tú directamente al número que ya tienes guardado."
+    },
+    {
+      "id": "i12",
+      "label": "Congelar tu tarjeta desde la app en cuanto notas algo raro",
+      "emoji": "❄️",
+      "categoria_correcta": "seguro",
+      "feedback": "Toma tres segundos y detiene el daño de inmediato. Se puede reactivar después."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

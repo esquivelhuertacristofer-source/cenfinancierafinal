@@ -31,16 +31,6 @@
       "step": 1,
       "default": 6,
       "unit": "meses"
-    },
-    {
-      "id": "aportacion_mensual",
-      "label": "Aportación Mensual ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 5000,
-      "step": 100,
-      "default": 500,
-      "unit": "$"
     }
   ],
   "formula": "monto_mensual * plazo_meses",

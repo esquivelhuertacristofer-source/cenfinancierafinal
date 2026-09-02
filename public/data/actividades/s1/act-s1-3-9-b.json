@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-3-9-B",
+  "unit_code": "S1-3-9",
+  "unit_title": "Comisiones de inversión: el enemigo silencioso",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Las Comisiones",
+  "descripcion": "A Ceny le ofrecen dos fondos casi idénticos. Cada decisión define cuánto conserva.",
+  "objetivo": "Aplicar el análisis de comisiones a la elección de un producto de inversión",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "A Ceny le ofrecen dos fondos con la misma estrategia. Uno cobra 0.6% anual y otro 2.3%. El segundo tiene mejor rendimiento histórico.",
+  "nodo_inicial": "eleccion",
+  "nodos": {
+    "eleccion": {
+      "id": "eleccion",
+      "texto": "¿En qué se fija Ceny para elegir?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "En la comisión: el rendimiento pasado no se repite pero la comisión sí se cobra siempre",
+          "siguiente_nodo": "otras",
+          "consecuencia": "Elige con el único dato que sí es seguro hacia adelante.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "En el rendimiento histórico: el segundo rindió más el año pasado",
+          "siguiente_nodo": "treinta",
+          "consecuencia": "Elige por un dato del pasado y paga una comisión del futuro.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-eleccion.webp"
+    },
+    "treinta": {
+      "id": "treinta",
+      "texto": "Treinta años después, el fondo caro le cobró casi una cuarta parte de lo que habría acumulado. ¿Qué concluye?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que la comisión se cobra sobre el saldo total cada año y compone en su contra",
+          "siguiente_nodo": "otras",
+          "consecuencia": "Entiende el mecanismo, aunque tarde.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que fue mala suerte del mercado",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "No fue el mercado: fue un costo perfectamente predecible desde el día uno.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-treinta.webp"
+    },
+    "otras": {
+      "id": "otras",
+      "texto": "El fondo barato en administración cobra 3% de comisión de entrada. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Sumar todas las comisiones del horizonte completo antes de decidir",
+          "siguiente_nodo": "documento",
+          "consecuencia": "Con aportaciones a treinta años, la anual sigue pesando más que la de entrada.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 25000
+        },
+        {
+          "id": "o2",
+          "texto": "Descartarlo: la entrada del 3% suena alta",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Una comisión de entrada se paga una vez; la anual se paga treinta veces.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -18000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-otras.webp"
+    },
+    "documento": {
+      "id": "documento",
+      "texto": "Antes de firmar, ¿qué revisa Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El documento del producto, buscando todas las comisiones publicadas",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Diez minutos de lectura que definen décadas de resultados.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 8000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: confía en lo que le explicaron",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Aparece después una comisión por operación que nadie mencionó.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-documento.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny comparó comisiones totales, no rendimientos pasados, y conservó una parte enorme de su dinero.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El rendimiento pasado no se repite; la comisión sí se cobra siempre. Es el único dato del futuro que conoces con certeza al contratar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny prestó atención a las comisiones, pero no las sumó todas antes de decidir.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Hay comisiones que se pagan una vez y otras que se pagan cada año. Comparar bien significa sumarlas todas sobre el horizonte completo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny eligió por rendimiento histórico y una comisión alta se llevó buena parte de su esfuerzo.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "No fue el mercado. Una comisión de 2.3% anual durante treinta años es un costo predecible desde el primer día, y estaba publicado en el documento.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-9-b-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-3-9-b-portada.webp"
+}

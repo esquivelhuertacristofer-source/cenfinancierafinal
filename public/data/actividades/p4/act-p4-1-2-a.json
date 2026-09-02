@@ -10,68 +10,63 @@
   "descripcion": "Elige el mejor banco para tu ahorro. Algunos te dan más 'premio' (intereses), pero otros te cobran más por manejar tu dinero.",
   "objetivo": "Comparar el impacto de las tasas de interés y las comisiones en el ahorro a largo plazo",
   "xp": 400,
-  "descripcion_formula": "Calculamos el saldo final proyectado a 12 meses considerando: (Ahorro Total * Interés) - Comisiones Anuales.",
+  "descripcion_formula": "Se proyecta cuánto tendrías ahorrado según el banco elegido: uno paga más interés pero cobra comisión anual, el otro paga menos y no cobra nada. Con montos pequeños, la comisión se come el interés extra.",
   "inputs": [
     {
-      "id": "ahorro_mensual",
-      "label": "Ahorro al mes",
+      "id": "aportacion_mensual",
+      "label": "Cuánto ahorras al mes ($)",
       "type": "slider",
       "min": 100,
-      "max": 2000,
+      "max": 3000,
       "step": 100,
       "default": 500,
       "unit": "$"
     },
     {
-      "id": "banco_tipo",
-      "label": "Tipo de Banco",
-      "type": "select",
-      "default": "Banco A",
-      "opciones": [
-        "Banco A (Alto interés, alta comisión)",
-        "Banco B (Bajo interés, sin comisión)"
-      ]
-    },
-    {
       "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "label": "Años que lo dejas guardado",
       "type": "slider",
       "min": 1,
-      "max": 30,
+      "max": 20,
       "step": 1,
       "default": 5,
       "unit": "años"
     },
     {
-      "id": "aportacion_mensual",
-      "label": "Aportación Mensual ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 5000,
-      "step": 100,
-      "default": 500,
-      "unit": "$"
+      "id": "banco_tipo",
+      "label": "Tipo de Banco",
+      "type": "select",
+      "default": "Banco A (Alto interés, alta comisión)",
+      "opciones": [
+        "Banco A (Alto interés, alta comisión)",
+        "Banco B (Bajo interés, sin comisión)"
+      ]
     }
   ],
-  "formula": "banco_tipo === 'Banco A (Alto interés, alta comisión)' ? (ahorro_mensual * 12 * 1.08) - 300 : (ahorro_mensual * 12 * 1.02)",
-  "output_label": "Tu Dinero después de 1 año",
+  "formula": "Math.round(banco_tipo === 'Banco A (Alto interés, alta comisión)' ? aportacion_mensual * 12 * anios_sim * (1 + 0.08 * anios_sim / 2) - 300 * anios_sim : aportacion_mensual * 12 * anios_sim * (1 + 0.02 * anios_sim / 2))",
+  "output_label": "Tu dinero al final",
   "output_prefix": "$",
   "output_suffix": " pesos",
   "chart_type": "bar",
   "escenarios": [
     {
-      "condicion": "ahorro_mensual < 300 && banco_tipo === 'Banco A (Alto interés, alta comisión)'",
-      "mensaje": "⚠️ ¡Cuidado! Si ahorras poco, la comisión del Banco A se 'come' tus ganancias. Te conviene el Banco B.",
-      "tipo": "warning"
+      "condicion": "banco_tipo === 'Banco A (Alto interés, alta comisión)' && aportacion_mensual < 400",
+      "mensaje": "Con aportaciones pequeñas, los $300 de comisión anual se comen el interés extra del Banco A. Aquí el banco \"malo\" te deja más dinero.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "ahorro_mensual >= 1000 && banco_tipo === 'Banco A (Alto interés, alta comisión)'",
-      "mensaje": "💰 ¡Excelente elección! Como ahorras mucho, el alto interés compensa la comisión y ganas más dinero.",
-      "tipo": "success"
+      "condicion": "banco_tipo === 'Banco A (Alto interés, alta comisión)' && aportacion_mensual >= 1000",
+      "mensaje": "Con aportaciones grandes sí conviene: el 8% sobre un saldo alto supera de sobra los $300 anuales de comisión.",
+      "tipo": "exito"
     },
     {
       "condicion": "banco_tipo === 'Banco B (Bajo interés, sin comisión)'",
-      "mensaje": "🛡️ Elección Segura. No ganas mucho interés, pero tu dinero está a salvo de cobros extras.",
+      "mensaje": "Sin comisiones tu saldo nunca baja por cargos, aunque crece despacio. Es la opción segura mientras ahorras poco. Prueba subir la aportación y compara.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "La lección: no existe el mejor banco en abstracto. Depende de cuánto ahorras y por cuánto tiempo.",
       "tipo": "info"
     }
   ],

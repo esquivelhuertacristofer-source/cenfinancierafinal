@@ -71,16 +71,6 @@
       "step": 5000,
       "default": 0,
       "unit": "$"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
     }
   ],
   "formula_fire_number": "gastos_retiro * 12 * 25",
@@ -193,6 +183,11 @@
     }
   ],
   "escenarios": [
+    {
+      "condicion": "edad <= 20 && tasa_ahorro >= 30",
+      "mensaje": "Empezar antes de los 20 ahorrando 30% es la combinación más poderosa que existe en finanzas personales: te da más duplicaciones que cualquier rendimiento extra.",
+      "tipo": "exito"
+    },
     {
       "condicion": "resultado > 0 && (Math.log(1+(resultado-patrimonio_actual)*(rendimiento/100)/(ingreso*tasa_ahorro/100*12))/Math.log(1+rendimiento/100)) < 15",
       "mensaje": "🔥 ¡FIRE antes de los 30! Eres una máquina de ahorro. El 0.1% de las personas logra esto.",

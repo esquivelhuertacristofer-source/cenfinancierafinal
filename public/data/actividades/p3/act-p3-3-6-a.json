@@ -1,0 +1,99 @@
+{
+  "code": "ACT-P3-3-6-A",
+  "unit_code": "P3-3-6",
+  "unit_title": "El historial crediticio: la reputación de mi dinero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Construye tu Historial",
+  "descripcion": "Arma el historial de un año y descubre qué reputación financiera resulta.",
+  "objetivo": "Construir un historial de cumplimiento y observar su efecto acumulado",
+  "xp": 200,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mis compromisos del año",
+      "descripcion": "Cuántas veces me comprometí a pagar algo en fecha.",
+      "campos": [
+        {
+          "id": "compromisos",
+          "label": "Compromisos de pago en el año",
+          "type": "slider",
+          "min": 6,
+          "max": 48,
+          "step": 1,
+          "default": 24,
+          "unit": "pagos",
+          "ayuda": "Pueden ser mensualidades, préstamos devueltos o cuotas.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Cómo cumplí",
+      "descripcion": "De todos esos compromisos, cuántos pagué puntual y cuántos se me pasaron.",
+      "campos": [
+        {
+          "id": "atrasos",
+          "label": "Pagos con atraso",
+          "type": "slider",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 3,
+          "unit": "pagos",
+          "ayuda": "Un atraso es pagar después de la fecha límite, aunque sea un día.",
+          "requerido": true
+        },
+        {
+          "id": "puntuales",
+          "label": "Pagos puntuales",
+          "type": "calculated",
+          "formula": "Math.max(0, compromisos - atrasos)",
+          "unit": "pagos"
+        },
+        {
+          "id": "porcentaje_puntual",
+          "label": "Porcentaje de cumplimiento",
+          "type": "calculated",
+          "formula": "Math.round(Math.max(0, compromisos - atrasos) * 100 / Math.max(1, compromisos))",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi reputación",
+      "descripcion": "El puntaje que resulta de mi comportamiento y lo que abre o cierra.",
+      "campos": [
+        {
+          "id": "puntaje",
+          "label": "Puntaje de reputación (de 0 a 100)",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.round(Math.max(0, compromisos - atrasos) * 100 / Math.max(1, compromisos)) - atrasos * 2)",
+          "unit": "pts"
+        },
+        {
+          "id": "anios_para_limpiar",
+          "label": "Años de cumplimiento para compensar los atrasos",
+          "type": "calculated",
+          "formula": "Math.ceil(atrasos / 4)",
+          "unit": "años"
+        },
+        {
+          "id": "meses_sin_atraso",
+          "label": "Meses seguidos sin atraso que necesito",
+          "type": "calculated",
+          "formula": "Math.ceil(atrasos / 4) * 12",
+          "unit": "meses"
+        }
+      ]
+    }
+  ],
+  "output_type": "historial_crediticio",
+  "exportable": true,
+  "portada": "/assets/misiones/p3/p3-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-6-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-1-9-A",
+  "unit_code": "S3-1-9",
+  "unit_title": "Freelance: cobrar, facturar y no morir en el intento",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Las Reglas del Independiente",
+  "descripcion": "Clasifica cada práctica según si protege, perjudica o es indiferente.",
+  "objetivo": "Distinguir prácticas profesionales de riesgos en el trabajo independiente",
+  "xp": 1000,
+  "instruccion": "Arrastra cada práctica a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "protege",
+      "label": "Te protege",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    },
+    {
+      "id": "perjudica",
+      "label": "Te perjudica",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "neutral",
+      "label": "Depende del caso",
+      "emoji": "🤷",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Cobrar un anticipo antes de empezar",
+      "emoji": "💵",
+      "categoria_correcta": "protege",
+      "feedback": "Filtra a quien no iba a pagar y financia el arranque."
+    },
+    {
+      "id": "i2",
+      "label": "Empezar sin cotización por escrito",
+      "emoji": "🗣️",
+      "categoria_correcta": "perjudica",
+      "feedback": "Sin alcance definido, el trabajo crece y el precio no."
+    },
+    {
+      "id": "i3",
+      "label": "Especificar qué NO incluye el trabajo",
+      "emoji": "🚫",
+      "categoria_correcta": "protege",
+      "feedback": "Evita la mayoría de los conflictos por extras."
+    },
+    {
+      "id": "i4",
+      "label": "Cotizar dividiendo un sueldo de empleado entre las horas",
+      "emoji": "➗",
+      "categoria_correcta": "perjudica",
+      "feedback": "Ignora herramientas, impuestos, seguro y meses sin trabajo."
+    },
+    {
+      "id": "i5",
+      "label": "Aceptar un proyecto grande de un cliente nuevo",
+      "emoji": "🎲",
+      "categoria_correcta": "neutral",
+      "feedback": "Depende del anticipo y del contrato que lo respalde."
+    },
+    {
+      "id": "i6",
+      "label": "Asignarse un sueldo mensual fijo",
+      "emoji": "📅",
+      "categoria_correcta": "protege",
+      "feedback": "Convierte un ingreso caótico en uno manejable."
+    },
+    {
+      "id": "i7",
+      "label": "Gastar todo lo que entra en un mes bueno",
+      "emoji": "🎉",
+      "categoria_correcta": "perjudica",
+      "feedback": "Los meses buenos financian a los malos, si se guardan."
+    },
+    {
+      "id": "i8",
+      "label": "Facturar solo las horas de producción",
+      "emoji": "⏱️",
+      "categoria_correcta": "perjudica",
+      "feedback": "Cotizar, coordinar, revisar y cobrar también es tiempo."
+    },
+    {
+      "id": "i9",
+      "label": "Acordar el plazo de pago desde el inicio",
+      "emoji": "🗓️",
+      "categoria_correcta": "protege",
+      "feedback": "Y qué pasa si se retrasa, definido antes de empezar."
+    },
+    {
+      "id": "i10",
+      "label": "Bajar la tarifa para ganar un cliente",
+      "emoji": "📉",
+      "categoria_correcta": "neutral",
+      "feedback": "Puede abrir una relación o fijar un precio del que no podrás salir."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-9-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-9-a-escena.webp"
+}

@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-2-9-A",
+  "unit_code": "P6-2-9",
+  "unit_title": "El Buró de Crédito: mitos y realidades",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Reconstruir el Historial",
+  "descripcion": "Ajusta el comportamiento de pago y observa cómo evoluciona la reputación crediticia.",
+  "objetivo": "Visualizar cómo se construye y se recupera un historial crediticio",
+  "xp": 600,
+  "inputs": [
+    {
+      "id": "atrasos_pasados",
+      "label": "Atrasos que tuve en el pasado",
+      "type": "slider",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "unit": "atrasos",
+      "referencia": "Cada atraso queda registrado con su plazo de permanencia."
+    },
+    {
+      "id": "meses_puntual",
+      "label": "Meses seguidos pagando puntual desde entonces",
+      "type": "slider",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 12,
+      "unit": "meses",
+      "referencia": "El comportamiento reciente pesa más que el antiguo."
+    },
+    {
+      "id": "creditos_activos",
+      "label": "Créditos activos que manejo",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 2,
+      "unit": "créditos",
+      "referencia": "Tener alguno bien manejado es mejor que no tener ninguno."
+    },
+    {
+      "id": "uso_credito",
+      "label": "Porcentaje de mi línea de crédito que uso",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40,
+      "unit": "%",
+      "referencia": "Usar casi toda la línea disponible se lee como señal de presión."
+    }
+  ],
+  "formula": "Math.max(0, Math.min(100, Math.round(60 - atrasos_pasados * 8 + meses_puntual * 1.2 + Math.min(creditos_activos, 3) * 4 - uso_credito / 4)))",
+  "descripcion_formula": "Puntaje aproximado de reputación crediticia: parte de una base, resta por atrasos y uso alto de la línea, y suma por pagos puntuales sostenidos e historial activo.",
+  "output_label": "Puntaje aproximado de reputación",
+  "output_suffix": " pts",
+  "escenarios": [
+    {
+      "condicion": "atrasos_pasados == 0 && meses_puntual >= 24",
+      "mensaje": "Historial limpio y largo: la mejor carta de presentación posible. Esto se traduce en mejores tasas y montos disponibles.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "atrasos_pasados >= 3 && meses_puntual >= 24",
+      "mensaje": "Hubo tropiezos, pero dos años de pagos puntuales pesan mucho. El comportamiento reciente es el que más cuenta: vas por buen camino.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "atrasos_pasados >= 3 && meses_puntual <= 6",
+      "mensaje": "Atrasos recientes sin suficiente historial positivo que los compense. Reconstruir toma tiempo: la clave es sostener pagos puntuales mes tras mes.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "creditos_activos == 0",
+      "mensaje": "Sin ningún crédito activo eres un desconocido para las instituciones. Un historial pequeño y bien manejado abre más puertas que la ausencia total.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "uso_credito >= 80",
+      "mensaje": "Estás usando casi toda tu línea disponible. Eso se interpreta como señal de presión financiera, aunque pagues puntual.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-9-a-escena.webp"
+}

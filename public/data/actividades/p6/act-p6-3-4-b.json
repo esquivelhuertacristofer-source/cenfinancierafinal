@@ -4,110 +4,118 @@
   "unit_title": "Impuestos: contribuyendo al bien común",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Escudo del Patrimonio",
-  "descripcion": "¿Sabes qué significan las palabras de una póliza de seguros? ¡Prepárate para proteger tu futuro!",
-  "objetivo": "Identificar y comprender los términos básicos de los contratos de seguros",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "Legal, Ilegal y Lo Que Recibes",
+  "descripcion": "Pagar menos impuestos siguiendo la ley se llama planeación fiscal y es perfectamente válido. Pagar menos escondiendo ingresos es evasión y es un delito. La frontera es exacta.",
+  "objetivo": "Distinguir planeación fiscal legal de evasión fiscal, e identificar los servicios que se financian con la recaudación.",
+  "xp": 500,
+  "instruccion": "Arrastra cada situación a la categoría que le corresponde.",
+  "categorias": [
     {
-      "id": "seg1",
-      "texto": "¿Qué es la 'Prima' en un seguro?",
-      "opciones": [
-        "La hija de tu tía",
-        "El costo periódico que pagas por tener la protección del seguro",
-        "El dinero que te devuelven",
-        "Un tipo de premio"
-      ],
-      "correcta": 1,
-      "explicacion": "La prima es el 'boleto' que pagas para estar protegido."
+      "id": "legal",
+      "label": "PLANEACIÓN LEGAL",
+      "emoji": "✅",
+      "color": "#10b981"
     },
     {
-      "id": "seg2",
-      "texto": "¿Qué es el 'Deducible'?",
-      "opciones": [
-        "Lo que el seguro no te quiere pagar",
-        "La cantidad fija de dinero que tú debes pagar antes de que el seguro empiece a cubrir los gastos",
-        "Un descuento en la tienda",
-        "Dinero que se pierde para siempre"
-      ],
-      "correcta": 1,
-      "explicacion": "Es tu participación en el gasto. Entre mayor sea el deducible, más barata suele ser la prima."
+      "id": "ilegal",
+      "label": "EVASIÓN (DELITO)",
+      "emoji": "⛔",
+      "color": "#ef4444"
     },
     {
-      "id": "seg3",
-      "texto": "¿A quién se le llama 'Beneficiario'?",
-      "opciones": [
-        "Al dueño de la aseguradora",
-        "A la persona que recibirá el dinero del seguro en caso de que algo pase (ej: tus hijos)",
-        "Al doctor del hospital",
-        "Al vendedor de seguros"
-      ],
-      "correcta": 1,
-      "explicacion": "Es la persona protegida por el contrato."
-    },
-    {
-      "id": "seg4",
-      "texto": "¿Qué es la 'Suma Asegurada'?",
-      "opciones": [
-        "La suma de todos tus ahorros",
-        "El monto máximo que la aseguradora pagará por un evento (ej: 10 millones de pesos)",
-        "Lo que pagas cada mes",
-        "El número de personas en el seguro"
-      ],
-      "correcta": 1,
-      "explicacion": "Es el límite del escudo. Siempre busca sumas aseguradas altas para enfermedades graves."
-    },
-    {
-      "id": "seg5",
-      "texto": "¿Por qué es importante contratar un seguro de vida cuando eres joven y sano?",
-      "opciones": [
-        "Porque es más caro",
-        "Porque te sale mucho más barato y es más fácil que te acepten",
-        "Porque no lo necesitas",
-        "Porque te dan regalos"
-      ],
-      "correcta": 1,
-      "explicacion": "El riesgo es menor para la aseguradora, por lo que te cobran menos."
-    },
-    {
-      "id": "seg6",
-      "texto": "¿Qué cubre un Seguro de Responsabilidad Civil?",
-      "opciones": [
-        "Tus propios gastos",
-        "Los daños que tú le causes a otras personas o a su propiedad (ej: en un choque)",
-        "Tus vacaciones",
-        "Tus estudios"
-      ],
-      "correcta": 1,
-      "explicacion": "Te protege de tener que pagar fortunas por errores accidentales."
-    },
-    {
-      "id": "seg7",
-      "texto": "¿Qué es el 'Coaseguro'?",
-      "opciones": [
-        "Tener dos seguros iguales",
-        "Un porcentaje del gasto total que tú pagas después del deducible",
-        "Un descuento por pronto pago",
-        "Un seguro compartido con amigos"
-      ],
-      "correcta": 1,
-      "explicacion": "Suele ser un 10% del total. Ayuda a que las personas no gasten de más en el hospital sin necesidad."
-    },
-    {
-      "id": "seg8",
-      "texto": "¿Cuál es la función social de los seguros?",
-      "opciones": [
-        "Hacer ricos a los bancos",
-        "Repartir el riesgo de unos pocos entre muchas personas para que nadie caiga en la pobreza por un accidente",
-        "Cobrar mucho dinero",
-        "Dar empleo a vendedores"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora entiendes que los seguros son una red de apoyo mutuo organizada."
+      "id": "recibes",
+      "label": "LO QUE RECIBES A CAMBIO",
+      "emoji": "🏛️",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Deducir tus gastos médicos en la declaración anual",
+      "emoji": "🩺",
+      "categoria_correcta": "legal",
+      "feedback": "La ley permite deducir salud, colegiaturas, intereses hipotecarios y aportaciones al retiro."
+    },
+    {
+      "id": "i2",
+      "label": "No dar factura para no reportar la venta",
+      "emoji": "🚫",
+      "categoria_correcta": "ilegal",
+      "feedback": "Es evasión fiscal. Además deja al negocio fuera del sistema formal."
+    },
+    {
+      "id": "i3",
+      "label": "Atención médica en el IMSS",
+      "emoji": "🏥",
+      "categoria_correcta": "recibes",
+      "feedback": "Financiada con cuotas y aportaciones. Una cirugía privada cuesta cientos de miles."
+    },
+    {
+      "id": "i4",
+      "label": "Aportar a tu AFORE para pagar menos ISR",
+      "emoji": "🌱",
+      "categoria_correcta": "legal",
+      "feedback": "El Estado premia el ahorro de largo plazo con un beneficio fiscal."
+    },
+    {
+      "id": "i5",
+      "label": "Registrar gastos personales como si fueran del negocio",
+      "emoji": "🎭",
+      "categoria_correcta": "ilegal",
+      "feedback": "Deducir lo que no corresponde es defraudación fiscal, con sanciones graves."
+    },
+    {
+      "id": "i6",
+      "label": "Educación pública desde preescolar hasta universidad",
+      "emoji": "🎓",
+      "categoria_correcta": "recibes",
+      "feedback": "Es el mayor rubro del gasto público en México."
+    },
+    {
+      "id": "i7",
+      "label": "Tributar en el régimen simplificado si calificas",
+      "emoji": "📋",
+      "categoria_correcta": "legal",
+      "feedback": "Elegir el régimen fiscal que te corresponde y te conviene es tu derecho."
+    },
+    {
+      "id": "i8",
+      "label": "Cobrar en efectivo para que \"no quede registro\"",
+      "emoji": "💵",
+      "categoria_correcta": "ilegal",
+      "feedback": "Cobrar en efectivo es legal; ocultar el ingreso al declarar, no."
+    },
+    {
+      "id": "i9",
+      "label": "Carreteras, agua potable y drenaje",
+      "emoji": "🛣️",
+      "categoria_correcta": "recibes",
+      "feedback": "Infraestructura que ninguna familia podría construir por su cuenta."
+    },
+    {
+      "id": "i10",
+      "label": "Pedir factura de tus lentes para deducirlos",
+      "emoji": "👓",
+      "categoria_correcta": "legal",
+      "feedback": "Los lentes graduados son deducibles con receta. Muchos no lo saben y pierden ese dinero."
+    },
+    {
+      "id": "i11",
+      "label": "Usar el RFC de otra persona para facturar",
+      "emoji": "🆔",
+      "categoria_correcta": "ilegal",
+      "feedback": "Es un delito grave: suplantación de identidad fiscal."
+    },
+    {
+      "id": "i12",
+      "label": "Bomberos, policía y protección civil",
+      "emoji": "🚒",
+      "categoria_correcta": "recibes",
+      "feedback": "Servicios que ya están pagados cuando los necesitas."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

@@ -173,6 +173,16 @@
   },
   "escenarios": [
     {
+      "condicion": "resultado >= meta_fire",
+      "mensaje": "Tu portafolio proyectado alcanza tu número FIRE. A partir de ese punto, el rendimiento de tus inversiones cubre tus gastos sin que tengas que trabajar.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "resultado < meta_fire * 0.5",
+      "mensaje": "Vas a la mitad o menos de tu meta. Tienes tres palancas: aportar más, alargar el plazo o bajar el gasto del retiro. La tercera es la que más rápido mueve el número.",
+      "tipo": "peligro"
+    },
+    {
       "condicion": "pct_acciones + pct_bonos > 100",
       "mensaje": "⚠️ La suma de acciones + bonos no puede superar 100%. El resto va a efectivo/liquidez.",
       "tipo": "warning"

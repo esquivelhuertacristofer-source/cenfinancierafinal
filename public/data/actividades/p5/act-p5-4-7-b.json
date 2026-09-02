@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P5-4-7-B",
+  "unit_code": "P5-4-7",
+  "unit_title": "Prototipar rápido y barato",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Prototipo",
+  "descripcion": "Responde rápido sobre cómo probar una idea sin gastar de más.",
+  "objetivo": "Consolidar la elección del prototipo según la pregunta clave",
+  "xp": 240,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Antes de prototipar hay que definir:",
+      "respuesta_correcta": "La pregunta clave",
+      "incorrectas": [
+        "El color",
+        "El nombre",
+        "El logo"
+      ],
+      "dato_extra": "Un prototipo sin pregunta es una manualidad."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Qué prueba si alguien pagaría?",
+      "respuesta_correcta": "La preventa",
+      "incorrectas": [
+        "El dibujo",
+        "La encuesta",
+        "El logo"
+      ],
+      "dato_extra": "Es la prueba más dura y la más honesta de todas."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El dibujo o maqueta prueba:",
+      "respuesta_correcta": "Si la gente entiende la idea",
+      "incorrectas": [
+        "Si pagarían",
+        "Si funciona",
+        "Si es rentable"
+      ],
+      "dato_extra": "Es el prototipo más barato de todos."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El servicio hecho a mano sirve para:",
+      "respuesta_correcta": "Probar la experiencia sin construir sistemas",
+      "incorrectas": [
+        "Ahorrar material",
+        "Vender más",
+        "Hacer publicidad"
+      ],
+      "dato_extra": "Entregas manualmente lo que después automatizarías."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Las encuestas de intención miden:",
+      "respuesta_correcta": "Cortesía más que demanda",
+      "incorrectas": [
+        "Demanda real",
+        "Rentabilidad",
+        "Calidad"
+      ],
+      "dato_extra": "Todos dicen que sí cuando no hay dinero de por medio."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El criterio de éxito se define:",
+      "respuesta_correcta": "Antes de hacer la prueba",
+      "incorrectas": [
+        "Después de ver resultados",
+        "Nunca",
+        "Al final del proyecto"
+      ],
+      "dato_extra": "Sin él, cualquier resultado confirma lo que ya se creía."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Si nadie aparta el producto en preventa:",
+      "respuesta_correcta": "Esa información vale más que cien opiniones",
+      "incorrectas": [
+        "Hay que insistir",
+        "No significa nada",
+        "Hay que bajar el precio"
+      ],
+      "dato_extra": "Y llega antes de haber gastado en producir."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-7-b-escena.webp"
+}

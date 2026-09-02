@@ -102,19 +102,6 @@ function pickWorstChoice(stage: Stage): StageChoice | null {
   );
 }
 
-function computeBestWorst(stages: Stage[]): { best: number; worst: number } {
-  const bestChoices = stages.map(pickBestChoice);
-  const worstChoices = stages.map(pickWorstChoice);
-
-  const bestPoints = projectNetWorth(bestChoices, stages, 80);
-  const worstPoints = projectNetWorth(worstChoices, stages, 10);
-
-  return {
-    best: bestPoints[bestPoints.length - 1]?.netWorth ?? 0,
-    worst: worstPoints[worstPoints.length - 1]?.netWorth ?? 0,
-  };
-}
-
 // ─── MINI LINE CHART (pure SVG, no d3) ───────────────────────────────────────
 
 interface LineChartProps {
@@ -395,7 +382,6 @@ export default function PortfolioBuilder({
   // Pre-compute best/worst for the chart reference lines
   useEffect(() => {
     if (stages.length === 0) return;
-    const { best, worst } = computeBestWorst(stages);
 
     // Fill best/worst full trajectories for reference
     const bestChoicesFull = stages.map(pickBestChoice);

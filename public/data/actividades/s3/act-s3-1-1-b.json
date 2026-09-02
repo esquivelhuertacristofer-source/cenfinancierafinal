@@ -5,109 +5,109 @@
   "level": "Secundaria 3",
   "edad": "14-15 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Detectives de Ciclos",
-  "descripcion": "¿Sabes identificar si la economía está enferma o en su mejor momento? ¡Demuestra que eres un analista macro!",
-  "objetivo": "Identificar las fases del ciclo económico y comprender los indicadores de salud de un país",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Todo Está Conectado",
+  "descripcion": "Nueve años de conceptos y una sola idea de fondo: cada decisión financiera afecta a todas las demás. Comprueba que ves el cuadro completo.",
+  "objetivo": "Integrar los conceptos financieros aprendidos visualizando la interconexión entre ahorro, gasto, deuda, inversión y protección.",
+  "xp": 700,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "mac1",
-      "texto": "¿Qué significa que el PIB de un país sea positivo?",
+      "id": "q1",
+      "texto": "El orden correcto de prioridades financieras para alguien que empieza es…",
       "opciones": [
-        "Que el gobierno tiene mucho dinero",
-        "Que la suma de todos los bienes y servicios producidos en el país aumentó respecto al año anterior",
-        "Que los precios bajaron",
-        "Que no hay deudas"
+        "Invertir, ahorrar, pagar deudas",
+        "Fondo de emergencia, liquidar deuda cara, invertir",
+        "Comprar casa, invertir, ahorrar",
+        "Invertir todo desde el primer sueldo"
       ],
       "correcta": 1,
-      "explicacion": "El PIB es como el 'sueldo' de un país; si sube, hay más actividad económica."
+      "explicacion": "Sin fondo de emergencia, el primer imprevisto destruye lo demás. Y ninguna inversión rinde como pagar una deuda al 70%."
     },
     {
-      "id": "mac2",
-      "texto": "¿Qué es la 'Recesión' técnica?",
+      "id": "q2",
+      "texto": "Comprar un coche a crédito afecta tu jubilación porque…",
       "opciones": [
-        "Cuando la gente deja de comprar dulces",
-        "Cuando el PIB cae durante dos trimestres (6 meses) consecutivos",
-        "Cuando el banco cierra un día",
-        "Cuando sube el precio del dólar"
+        "No la afecta",
+        "Cada peso en intereses es un peso que no se invierte durante décadas",
+        "Los coches no cuentan",
+        "Solo afecta si es nuevo"
       ],
       "correcta": 1,
-      "explicacion": "Es el síntoma claro de que la economía se está contrayendo."
+      "explicacion": "El costo real de una compra no es su precio: es lo que ese dinero habría llegado a ser."
     },
     {
-      "id": "mac3",
-      "texto": "¿Cómo afecta la INFLACIÓN a tu poder de compra?",
+      "id": "q3",
+      "texto": "Un seguro de gastos médicos protege tu inversión porque…",
       "opciones": [
-        "Te permite comprar más cosas",
-        "Hace que tu dinero valga menos, por lo que necesitas más billetes para comprar lo mismo que antes",
-        "No le afecta",
-        "Hace que el banco te regale intereses"
+        "Aumenta el rendimiento",
+        "Evita que tengas que vender tus inversiones en el peor momento",
+        "Paga impuestos",
+        "No tiene relación"
       ],
       "correcta": 1,
-      "explicacion": "La inflación es el aumento generalizado de los precios."
+      "explicacion": "La protección y la inversión no son temas separados: la primera hace posible la segunda."
     },
     {
-      "id": "mac4",
-      "texto": "¿Cuál es la fase del ciclo económico donde hay máximo empleo y mucho optimismo?",
+      "id": "q4",
+      "texto": "La variable que más determina tu patrimonio a 30 años es…",
       "opciones": [
-        "Valle",
-        "Pico (Cresta)",
-        "Recesión",
-        "Depresión"
+        "Cuánto ganas",
+        "La diferencia entre lo que ganas y lo que gastas, invertida con constancia",
+        "Qué acción elijas",
+        "La suerte"
       ],
       "correcta": 1,
-      "explicacion": "En el pico, la economía está a su máxima capacidad, pero suele ser la señal de que pronto vendrá una caída."
+      "explicacion": "Hay quien gana mucho y no tiene nada, y quien gana poco y construye patrimonio. La tasa de ahorro decide."
     },
     {
-      "id": "mac5",
-      "texto": "¿Qué suele pasar con el Desempleo durante una expansión económica?",
+      "id": "q5",
+      "texto": "Elegir empleo formal en vez de informal, aun ganando algo menos, afecta…",
       "opciones": [
-        "Aumenta",
-        "Disminuye, ya que las empresas necesitan más gente para producir más",
-        "Se queda igual",
-        "No existe el desempleo"
+        "Solo tu sueldo",
+        "Tu salud, tu vivienda, tu pensión y tu acceso a crédito, todo a la vez",
+        "Nada relevante",
+        "Solo tus vacaciones"
       ],
       "correcta": 1,
-      "explicacion": "Más crecimiento suele significar más trabajo para todos."
+      "explicacion": "IMSS, INFONAVIT, AFORE e historial crediticio: cuatro sistemas conectados a una sola decisión."
     },
     {
-      "id": "mac6",
-      "texto": "¿Qué es el 'IPC' (Índice de Precios al Consumidor)?",
+      "id": "q6",
+      "texto": "La inflación conecta tu ahorro con la política monetaria porque…",
       "opciones": [
-        "Un impuesto nuevo",
-        "La herramienta que se usa para medir la inflación analizando el costo de una 'canasta básica'",
-        "El precio de las acciones",
-        "Un tipo de ahorro"
+        "No hay conexión",
+        "Si tu rendimiento no le gana a la inflación, pierdes poder de compra aunque veas más pesos",
+        "La inflación no afecta el ahorro",
+        "Solo afecta a las empresas"
       ],
       "correcta": 1,
-      "explicacion": "Mide cuánto ha subido el costo de la vida para una familia promedio."
+      "explicacion": "Por eso guardar en efectivo o en cuentas que pagan casi nada es una pérdida silenciosa."
     },
     {
-      "id": "mac7",
-      "texto": "¿Qué es el 'PIB per cápita'?",
+      "id": "q7",
+      "texto": "Un testamento se relaciona con tu plan de inversión porque…",
       "opciones": [
-        "El PIB total dividido entre el número de habitantes",
-        "Lo que gana el presidente",
-        "El dinero que hay en los bancos",
-        "Un tipo de moneda"
-      ],
-      "correcta": 0,
-      "explicacion": "Sirve para comparar la riqueza promedio entre diferentes países."
-    },
-    {
-      "id": "mac8",
-      "texto": "¿Cuál es la diferencia entre PIB Real y PIB Nominal?",
-      "opciones": [
-        "No hay diferencia",
-        "El PIB Real elimina el efecto de la inflación para ver el crecimiento verdadero de la producción",
-        "El PIB Nominal es más importante",
-        "Uno es en dólares y otro en pesos"
+        "No se relaciona",
+        "Sin él, el patrimonio que construiste puede quedar congelado años en un juicio",
+        "Aumenta el rendimiento",
+        "Reduce comisiones"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Has completado el análisis de salud económica nacional."
+      "explicacion": "Construir patrimonio sin planear su transmisión deja el trabajo a medias."
+    },
+    {
+      "id": "q8",
+      "texto": "La razón por la que todo esto se enseña a los 15 y no a los 30 es…",
+      "opciones": [
+        "Es más fácil de entender joven",
+        "Porque el tiempo es el único factor que no se puede recuperar después",
+        "Por requisito escolar",
+        "Porque a los 30 ya no importa"
+      ],
+      "correcta": 1,
+      "explicacion": "Todas las demás variables se pueden mejorar más tarde. Los años perdidos de interés compuesto, no."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

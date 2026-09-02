@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-4-7-B",
+  "unit_code": "P6-4-7",
+  "unit_title": "Costos ocultos de emprender: permisos, tiempo y desgaste",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Costos Ocultos",
+  "descripcion": "Comprueba que sabes costear un negocio completo.",
+  "objetivo": "Verificar la identificación y el tratamiento de costos ocultos",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los presupuestos iniciales suelen contar:",
+      "opciones": [
+        "Solo los visibles",
+        "Todos los costos",
+        "Solo el tiempo",
+        "Solo los permisos"
+      ],
+      "correcta": 0,
+      "explicacion": "Materia prima, empaque y publicidad, y nada más."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres costos ocultos son:",
+      "opciones": [
+        "Renta, luz y agua",
+        "Administrativos, tiempo propio y desgaste",
+        "Empaque, envío y publicidad",
+        "Impuestos, renta y sueldos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los tres se pagan aunque no aparezcan anotados."
+    },
+    {
+      "id": "q3",
+      "texto": "El tiempo propio cuesta porque:",
+      "opciones": [
+        "Se factura",
+        "Lo exige la ley",
+        "Esas horas tienen un valor alternativo",
+        "No cuesta"
+      ],
+      "correcta": 2,
+      "explicacion": "Es lo que podrías estar ganando o haciendo con ellas."
+    },
+    {
+      "id": "q4",
+      "texto": "Un negocio que deja $4,000 por 60 horas:",
+      "opciones": [
+        "Siempre es excelente",
+        "No se puede evaluar",
+        "Es ilegal",
+        "Puede pagar menos que un empleo"
+      ],
+      "correcta": 3,
+      "explicacion": "No lo hace malo, pero hay que decidir sabiéndolo."
+    },
+    {
+      "id": "q5",
+      "texto": "El desgaste:",
+      "opciones": [
+        "No aparece pero se cobra igual",
+        "Aparece en los estados financieros",
+        "No existe",
+        "Solo afecta a empleados"
+      ],
+      "correcta": 0,
+      "explicacion": "Energía, sueño y tiempo con la familia."
+    },
+    {
+      "id": "q6",
+      "texto": "Un negocio con intensidad insostenible:",
+      "opciones": [
+        "Crece más rápido",
+        "Termina cerrando aunque sea rentable",
+        "Se vuelve más eficiente",
+        "No pasa nada"
+      ],
+      "correcta": 1,
+      "explicacion": "La persona no aguanta, aunque los números den."
+    },
+    {
+      "id": "q7",
+      "texto": "Al costear completo, lo correcto suele ser:",
+      "opciones": [
+        "Abandonar",
+        "Ignorarlo",
+        "Ajustar precio, modelo o volumen",
+        "Trabajar más horas"
+      ],
+      "correcta": 2,
+      "explicacion": "Costear completo corrige negocios, no los mata."
+    },
+    {
+      "id": "q8",
+      "texto": "Los costos administrativos salen más caros cuando:",
+      "opciones": [
+        "Se prevén",
+        "Se anotan",
+        "Se consultan antes",
+        "Se resuelven con prisa ya operando"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo previsible sale barato; lo urgente sale caro."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-7-b-escena.webp"
+}

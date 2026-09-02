@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P1-1-9-A",
+  "unit_code": "P1-1-9",
+  "unit_title": "Una moneda cada día: mi calendario del ahorro",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Calendario del Ahorro",
+  "descripcion": "Mueve las barritas y descubre cuánto juntas según cuánto guardes al día y cuántos días cumplas.",
+  "objetivo": "Visualizar la relación entre aportación diaria, días cumplidos y total acumulado",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "monedas_dia",
+      "label": "Pesos que guardo cada día",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 2,
+      "unit": "$",
+      "referencia": "Elige una cantidad que sí puedas cumplir todos los días."
+    },
+    {
+      "id": "dias",
+      "label": "Días que cumplo sin fallar",
+      "type": "slider",
+      "min": 7,
+      "max": 365,
+      "step": 1,
+      "default": 30,
+      "unit": "días",
+      "referencia": "Un mes son 30 días. Un año son 365."
+    },
+    {
+      "id": "dias_olvido",
+      "label": "Días que se me olvidó guardar",
+      "type": "slider",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "default": 0,
+      "unit": "días",
+      "referencia": "Cada día que se te olvida es una moneda que no llega al cochinito."
+    }
+  ],
+  "formula": "monedas_dia * Math.max(0, dias - dias_olvido)",
+  "descripcion_formula": "Cuánto juntas: los pesos que guardas cada día por los días que sí cumpliste (los días olvidados no cuentan).",
+  "output_label": "Total acumulado",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "monedas_dia * dias < 50",
+      "mensaje": "Apenas empiezas. Sigue moviendo los días y verás cómo la cantidad crece sola.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "monedas_dia * dias >= 50 && monedas_dia * dias < 300",
+      "mensaje": "Ya juntaste lo suficiente para un juguete pequeño. Y solo pusiste una moneda al día.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "monedas_dia * dias >= 300 && monedas_dia * dias < 1000",
+      "mensaje": "Con esto ya alcanza para una meta de verdad, como un balón bueno o unos tenis.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "monedas_dia * dias >= 1000",
+      "mensaje": "Mira bien ese número: nació de monedas pequeñas repetidas muchas veces. Eso es la constancia.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "dias < 15",
+      "mensaje": "Cuidado: menos de dos semanas todavía no es un hábito. Sube los días y mira la diferencia.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "dias_olvido >= 5",
+      "mensaje": "Se te olvidó guardar 5 días o más. Cada olvido se resta del total: por eso la constancia importa más que la cantidad.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "dias_olvido == 0 && dias >= 30",
+      "mensaje": "¡Un mes entero sin fallar ni un día! Esa constancia es la que hace crecer el ahorro.",
+      "tipo": "exito"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-9-a-escena.webp"
+}

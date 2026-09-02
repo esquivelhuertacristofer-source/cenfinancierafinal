@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-3-6-A",
+  "unit_code": "S3-3-6",
+  "unit_title": "Asignación de activos por edad: la regla de los 110",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Asignación por Edad",
+  "descripcion": "Clasifica cada perfil según qué asignación de activos le corresponde.",
+  "objetivo": "Aplicar la asignación por horizonte a perfiles concretos",
+  "xp": 1000,
+  "instruccion": "Arrastra cada perfil a la asignación que tendría más sentido para él.",
+  "categorias": [
+    {
+      "id": "agresiva",
+      "label": "Predominio de renta variable",
+      "emoji": "🚀",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": "balanceada",
+      "label": "Mezcla equilibrada",
+      "emoji": "⚖️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "conservadora",
+      "label": "Predominio de renta fija",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Persona de 22 años con empleo estable e ingreso fijo",
+      "emoji": "🌱",
+      "categoria_correcta": "agresiva",
+      "feedback": "Cuarenta años de horizonte permiten atravesar varias caídas."
+    },
+    {
+      "id": "i2",
+      "label": "Persona de 58 años cerca del retiro",
+      "emoji": "🌇",
+      "categoria_correcta": "conservadora",
+      "feedback": "Poco tiempo para recuperarse de una caída fuerte."
+    },
+    {
+      "id": "i3",
+      "label": "Persona de 40 años con ingreso estable",
+      "emoji": "🏢",
+      "categoria_correcta": "balanceada",
+      "feedback": "Horizonte medio: la regla sugiere una mezcla cercana al equilibrio."
+    },
+    {
+      "id": "i4",
+      "label": "Persona de 26 años con ingreso muy irregular y sin fondo",
+      "emoji": "🎲",
+      "categoria_correcta": "conservadora",
+      "feedback": "La edad sugiere agresividad, pero la falta de fondo manda."
+    },
+    {
+      "id": "i5",
+      "label": "Dinero que se necesitará en dieciocho meses",
+      "emoji": "⏱️",
+      "categoria_correcta": "conservadora",
+      "feedback": "El horizonte corto elimina la tolerancia al riesgo."
+    },
+    {
+      "id": "i6",
+      "label": "Persona de 30 años con fondo de emergencia completo",
+      "emoji": "💪",
+      "categoria_correcta": "agresiva",
+      "feedback": "Con el fondo resuelto puede tomar el riesgo que su edad permite."
+    },
+    {
+      "id": "i7",
+      "label": "Aportación al retiro de alguien de 35 años",
+      "emoji": "🏦",
+      "categoria_correcta": "agresiva",
+      "feedback": "El horizonte de retiro es de los más largos que existen."
+    },
+    {
+      "id": "i8",
+      "label": "Persona de 50 años con metas a mediano plazo",
+      "emoji": "🎯",
+      "categoria_correcta": "balanceada",
+      "feedback": "Ni tanto horizonte como para arriesgar todo, ni tan poco como para huir."
+    },
+    {
+      "id": "i9",
+      "label": "Ahorro para un enganche en dos años",
+      "emoji": "🏠",
+      "categoria_correcta": "conservadora",
+      "feedback": "Una caída justo antes de la compra arruinaría la meta."
+    },
+    {
+      "id": "i10",
+      "label": "Persona de 45 años con ingreso estable y buen colchón",
+      "emoji": "📊",
+      "categoria_correcta": "balanceada",
+      "feedback": "La regla da una proporción cercana a dos tercios variable."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-6-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-6-a-escena.webp"
+}

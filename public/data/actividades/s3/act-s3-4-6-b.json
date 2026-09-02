@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-4-6-B",
+  "unit_code": "S3-4-6",
+  "unit_title": "SA, SAPI o SAS: qué figura le conviene a mi empresa",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Cada Figura su Caso",
+  "descripcion": "Clasifica cada empresa según la figura que le conviene.",
+  "objetivo": "Verificar el criterio de elección de figura societaria",
+  "xp": 800,
+  "instruccion": "Arrastra cada caso a la figura que mejor le corresponde.",
+  "categorias": [
+    {
+      "id": "sas",
+      "label": "Figura simplificada",
+      "emoji": "⚡",
+      "color": "#10B981"
+    },
+    {
+      "id": "sa",
+      "label": "Sociedad anónima",
+      "emoji": "🏛️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "sapi",
+      "label": "Promotora de inversión",
+      "emoji": "🚀",
+      "color": "#8B5CF6"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Un negocio de una sola persona que quiere formalizarse rápido y barato",
+      "emoji": "🌱",
+      "categoria_correcta": "sas",
+      "feedback": "Fue creada exactamente para bajar esa barrera de entrada."
+    },
+    {
+      "id": "i2",
+      "label": "Una empresa que levantará una ronda con un fondo de inversión",
+      "emoji": "💼",
+      "categoria_correcta": "sapi",
+      "feedback": "Permite las cláusulas de derechos y salida que pide un fondo."
+    },
+    {
+      "id": "i3",
+      "label": "Una empresa familiar con cinco socios y operación tradicional",
+      "emoji": "👨‍👩‍👧",
+      "categoria_correcta": "sa",
+      "feedback": "La estructura tradicional con acciones y asambleas le ajusta."
+    },
+    {
+      "id": "i4",
+      "label": "Un proyecto que supera el tope de ingresos de la figura simplificada",
+      "emoji": "📈",
+      "categoria_correcta": "sa",
+      "feedback": "Al superar el tope debe transformarse en otra figura."
+    },
+    {
+      "id": "i5",
+      "label": "Una startup que negociará derechos especiales para sus inversionistas",
+      "emoji": "🤝",
+      "categoria_correcta": "sapi",
+      "feedback": "La flexibilidad en derechos de accionistas es su razón de ser."
+    },
+    {
+      "id": "i6",
+      "label": "Un emprendimiento escolar que quiere emitir facturas cuanto antes",
+      "emoji": "🧾",
+      "categoria_correcta": "sas",
+      "feedback": "Constitución en línea, rápida y de bajo costo."
+    },
+    {
+      "id": "i7",
+      "label": "Una empresa que necesita gobierno corporativo formal ante grandes clientes",
+      "emoji": "🏢",
+      "categoria_correcta": "sa",
+      "feedback": "Es la figura que casi ninguna contraparte cuestiona."
+    },
+    {
+      "id": "i8",
+      "label": "Una empresa que pactará mecanismos de salida entre socios",
+      "emoji": "🚪",
+      "categoria_correcta": "sapi",
+      "feedback": "Los mecanismos de salida son parte de su diseño."
+    },
+    {
+      "id": "i9",
+      "label": "Un negocio pequeño con un solo dueño y pocos ingresos",
+      "emoji": "🛒",
+      "categoria_correcta": "sas",
+      "feedback": "Puede constituirse incluso con un único accionista."
+    },
+    {
+      "id": "i10",
+      "label": "Una empresa consolidada con asambleas anuales y libros corporativos",
+      "emoji": "📚",
+      "categoria_correcta": "sa",
+      "feedback": "Es la operación formal característica de esta figura."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-6-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-6-b-escena.webp"
+}

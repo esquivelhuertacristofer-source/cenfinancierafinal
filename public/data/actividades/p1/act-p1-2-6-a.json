@@ -1,0 +1,122 @@
+{
+  "code": "ACT-P1-2-6-A",
+  "unit_code": "P1-2-6",
+  "unit_title": "Preguntar el precio antes de pedir",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Antes de Pedir, Pregunta",
+  "descripcion": "Ceny va al mercado con $20. Clasifica cada acción según si le ayuda a decidir bien o lo empuja a gastar de más.",
+  "objetivo": "Distinguir conductas que informan la decisión de compra de las que la precipitan",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción a su caja: ¿ayuda a decidir bien, empuja a gastar de más, o no cambia nada?",
+  "categorias": [
+    {
+      "id": "ayuda",
+      "label": "Me ayuda a decidir",
+      "emoji": "🧠",
+      "color": "#10B981"
+    },
+    {
+      "id": "empuja",
+      "label": "Me empuja a gastar",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "neutro",
+      "label": "No cambia nada",
+      "emoji": "➖",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Preguntar cuánto cuesta antes de tocarlo",
+      "emoji": "❓",
+      "categoria_correcta": "ayuda",
+      "feedback": "El precio es información. Sin ella decides a ciegas."
+    },
+    {
+      "id": "i2",
+      "label": "Decir \"gracias, lo voy a pensar\" y salir",
+      "emoji": "🚶",
+      "categoria_correcta": "ayuda",
+      "feedback": "Preguntar no obliga a comprar. Esa frase te salva de mil arrepentimientos."
+    },
+    {
+      "id": "i3",
+      "label": "Agarrar el producto y llevarlo a la caja sin ver el precio",
+      "emoji": "🏃",
+      "categoria_correcta": "empuja",
+      "feedback": "Cuando ya lo traes en la mano, es muchísimo más difícil soltarlo."
+    },
+    {
+      "id": "i4",
+      "label": "Comparar el precio en dos tiendas distintas",
+      "emoji": "⚖️",
+      "categoria_correcta": "ayuda",
+      "feedback": "La misma cosa puede costar muy distinto a dos cuadras de diferencia."
+    },
+    {
+      "id": "i5",
+      "label": "Comprarlo porque un amigo dijo \"cómpralo ya\"",
+      "emoji": "👥",
+      "categoria_correcta": "empuja",
+      "feedback": "La prisa de otro no es tu prisa. Tu dinero, tu tiempo para decidir."
+    },
+    {
+      "id": "i6",
+      "label": "Contar cuánto dinero traigo antes de entrar",
+      "emoji": "🪙",
+      "categoria_correcta": "ayuda",
+      "feedback": "Saber tu límite antes de ver la vitrina es la mejor protección."
+    },
+    {
+      "id": "i7",
+      "label": "Ver el color del empaque",
+      "emoji": "🎨",
+      "categoria_correcta": "neutro",
+      "feedback": "El empaque no te dice ni el precio ni si lo necesitas."
+    },
+    {
+      "id": "i8",
+      "label": "Pensar \"solo por hoy\" y comprarlo",
+      "emoji": "⏰",
+      "categoria_correcta": "empuja",
+      "feedback": "La urgencia inventada es el truco más viejo para que no pienses."
+    },
+    {
+      "id": "i9",
+      "label": "Decirle a mis papás cuánto cuesta al pedirlo",
+      "emoji": "💬",
+      "categoria_correcta": "ayuda",
+      "feedback": "Cuando llegas con el dato, la conversación cambia y te toman en serio."
+    },
+    {
+      "id": "i10",
+      "label": "Fijarme en el tamaño de la caja",
+      "emoji": "📦",
+      "categoria_correcta": "neutro",
+      "feedback": "Una caja grande puede traer poquito. El tamaño no dice el valor."
+    },
+    {
+      "id": "i11",
+      "label": "Volver mañana si sigo queriéndolo igual",
+      "emoji": "📅",
+      "categoria_correcta": "ayuda",
+      "feedback": "Un día de espera apaga la mayoría de los antojos. Los que sobreviven sí valían la pena."
+    },
+    {
+      "id": "i12",
+      "label": "Comprarlo porque quedan pocos",
+      "emoji": "🔥",
+      "categoria_correcta": "empuja",
+      "feedback": "La escasez apurada casi siempre es de mentira, y siempre te hace decidir rápido."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-6-a-escena.webp"
+}

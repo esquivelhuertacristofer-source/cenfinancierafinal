@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-3-10-B",
+  "unit_code": "P6-3-10",
+  "unit_title": "Testamento y sucesión: proteger a quien quiero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Sucesión",
+  "descripcion": "Responde rápido sobre testamento y beneficiarios.",
+  "objetivo": "Consolidar el conocimiento sobre planeación sucesoria",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La función principal del testamento es:",
+      "respuesta_correcta": "Evitar un proceso largo y costoso a la familia",
+      "incorrectas": [
+        "Repartir riqueza",
+        "Pagar impuestos",
+        "Abrir cuentas"
+      ],
+      "dato_extra": "Cuanto más modesto el patrimonio, más pesa ese costo."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El AFORE y los seguros de vida se transmiten:",
+      "respuesta_correcta": "Por designación de beneficiarios",
+      "incorrectas": [
+        "Por testamento",
+        "Por sorteo",
+        "Por antigüedad"
+      ],
+      "dato_extra": "Quien está designado recibe, aunque el testamento diga otra cosa."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Las designaciones de beneficiarios hay que:",
+      "respuesta_correcta": "Revisarlas cada cierto tiempo",
+      "incorrectas": [
+        "Olvidarlas",
+        "Nunca tocarlas",
+        "Cambiarlas cada mes"
+      ],
+      "dato_extra": "Sobre todo después de cambios familiares importantes."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Sin testamento:",
+      "respuesta_correcta": "La ley define el orden y hay un proceso largo",
+      "incorrectas": [
+        "No pasa nada",
+        "El Estado se queda todo",
+        "Se reparte solo"
+      ],
+      "dato_extra": "Toma tiempo, cuesta dinero y genera conflictos familiares."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Muchas cuentas nunca se reclaman porque:",
+      "respuesta_correcta": "Nadie sabía que existían",
+      "incorrectas": [
+        "La ley lo prohíbe",
+        "Son muy pequeñas",
+        "Se pierden solas"
+      ],
+      "dato_extra": "Un inventario simple resuelve lo que ningún trámite puede después."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Un inventario patrimonial debe incluir:",
+      "respuesta_correcta": "Tipo de bien, institución y dónde está el documento",
+      "incorrectas": [
+        "Solo el monto",
+        "Solo el banco",
+        "Nada por escrito"
+      ],
+      "dato_extra": "Y una persona de confianza que sepa dónde encontrarlo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Hacer testamento es un tema:",
+      "respuesta_correcta": "De proteger a quien uno quiere",
+      "incorrectas": [
+        "Solo para gente mayor",
+        "Solo para ricos",
+        "Innecesario"
+      ],
+      "dato_extra": "El enfoque cambia por completo cuando se ve así."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-10-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-10-b-escena.webp"
+}

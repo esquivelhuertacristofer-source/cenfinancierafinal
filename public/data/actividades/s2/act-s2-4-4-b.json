@@ -1,67 +1,127 @@
 {
-  "id": "ACT-S2-4-4-B",
-  "tipo": "QUIZ",
-  "titulo": "Certificación: Estrategias de Negociación",
-  "descripcion": "Negociar bien es una habilidad clave en los negocios. Demuestra que dominas los conceptos de acuerdo mutuo, MAAN y comunicación asertiva.",
-  "aprobacion_minima": 0.7,
-  "preguntas": [
+  "code": "ACT-S2-4-4-B",
+  "unit_code": "S2-4-4",
+  "unit_title": "Liderazgo en startups: cultura y equipos de alto impacto",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "El Manual de tu Equipo",
+  "descripcion": "Toda empresa tiene cultura: la diferencia es si la eligió o si le pasó. Escribe el manual del equipo que te gustaría dirigir, con reglas concretas y no con adjetivos bonitos.",
+  "objetivo": "Diseñar principios de cultura organizacional operativos y verificables para un equipo en entorno de alta incertidumbre.",
+  "xp": 750,
+  "output_type": "manual_cultura",
+  "exportable": true,
+  "pasos": [
     {
-      "texto": "¿Qué es la negociación ganar-ganar?",
-      "opciones": [
-        "Ceder en todo para evitar conflicto",
-        "Buscar un acuerdo que beneficie a ambas partes",
-        "Tratar de obtener la mayor ventaja posible sin importar el otro",
-        "Los costos no importan si el producto es muy bonito"
-      ],
-      "correcta": 1,
-      "explicacion": "La negociación ganar-ganar busca beneficios mutuos y relaciones a largo plazo."
+      "id": "contexto",
+      "titulo": "🏢 Tu equipo",
+      "descripcion": "Imagina el equipo que vas a dirigir en tu proyecto.",
+      "campos": [
+        {
+          "id": "proyecto",
+          "label": "¿Qué hace tu equipo?",
+          "type": "text",
+          "placeholder": "Ej: app de reciclaje escolar",
+          "requerido": true
+        },
+        {
+          "id": "personas",
+          "label": "¿Cuántas personas serían?",
+          "type": "number",
+          "placeholder": "Ej: 5",
+          "requerido": true
+        }
+      ]
     },
     {
-      "texto": "¿Cuál es un elemento clave de la comunicación asertiva en una negociación?",
-      "opciones": [
-        "Hablar más fuerte que el otro",
-        "Escucha activa y empatía",
-        "Interrumpir constantemente",
-        "Los niños nunca tendrán que pagar impuestos"
-      ],
-      "correcta": 1,
-      "explicacion": "Escuchar y entender la posición del otro es fundamental para llegar a acuerdos."
+      "id": "decisiones",
+      "titulo": "🧭 Cómo se decide",
+      "descripcion": "La mayoría de los conflictos de equipo no son sobre el qué: son sobre quién decide.",
+      "campos": [
+        {
+          "id": "decide_producto",
+          "label": "¿Quién tiene la última palabra en el producto?",
+          "type": "text",
+          "placeholder": "Ej: la responsable de producto",
+          "requerido": true
+        },
+        {
+          "id": "decide_dinero",
+          "label": "¿Quién decide los gastos y hasta qué monto sin consultar?",
+          "type": "text",
+          "placeholder": "Ej: cada quien hasta $2,000",
+          "requerido": true
+        },
+        {
+          "id": "desempate",
+          "label": "¿Cómo se resuelve un empate?",
+          "type": "text",
+          "placeholder": "Ej: decide quien sea dueño del área",
+          "requerido": true,
+          "ayuda": "Votar todo paraliza. Definir dueños de decisión desbloquea."
+        }
+      ]
     },
     {
-      "texto": "En una negociación, el MAAN se refiere a:",
-      "opciones": [
-        "Mejor Alternativa a un Acuerdo Negociado",
-        "Máximo Ahorro de Activos Nacionales",
-        "Método de Análisis de Acciones Nuevas",
-        "Solo aplica a negocios con más de 10 empleados"
-      ],
-      "correcta": 0,
-      "explicacion": "El MAAN es tu plan B si la negociación actual no llega a un acuerdo."
+      "id": "errores",
+      "titulo": "🛡️ Cómo se tratan los errores",
+      "descripcion": "Este es el punto que define de verdad una cultura.",
+      "campos": [
+        {
+          "id": "regla_error",
+          "label": "Tu regla escrita ante un error",
+          "type": "text",
+          "placeholder": "Ej: se reporta de inmediato y no se busca culpable",
+          "requerido": true
+        },
+        {
+          "id": "retro",
+          "label": "¿Cada cuánto harán retrospectivas?",
+          "type": "text",
+          "placeholder": "Ej: cada dos semanas, 30 minutos",
+          "requerido": true
+        }
+      ]
     },
     {
-      "texto": "¿Por qué es importante investigar antes de una negociación comercial?",
-      "opciones": [
-        "Para intimidar a la contraparte",
-        "Para conocer el valor de mercado y los intereses del otro",
-        "No es importante, lo mejor es improvisar",
-        "El crédito es siempre gratuito y sin intereses"
-      ],
-      "correcta": 1,
-      "explicacion": "La información es poder en cualquier proceso de negociación."
-    },
-    {
-      "texto": "Un cierre de negociación exitoso debe incluir:",
-      "opciones": [
-        "Un apretón de manos solamente",
-        "Un resumen claro de los acuerdos y próximos pasos",
-        "Promesas verbales que no se anotan",
-        "Es necesario pedir prestado para cualquier negocio"
-      ],
-      "correcta": 1,
-      "explicacion": "La claridad en los acuerdos evita conflictos futuros."
+      "id": "compromisos",
+      "titulo": "🤝 Compromisos concretos",
+      "descripcion": "Una cultura solo existe si se puede verificar. Escribe compromisos que alguien pueda decir si se cumplieron o no.",
+      "campos": [
+        {
+          "id": "compromiso1",
+          "label": "Compromiso 1 (verificable)",
+          "type": "text",
+          "placeholder": "Ej: nadie trabaja después de las 8 pm salvo emergencia real",
+          "requerido": true
+        },
+        {
+          "id": "compromiso2",
+          "label": "Compromiso 2 (verificable)",
+          "type": "text",
+          "placeholder": "Ej: toda decisión importante se escribe en un documento",
+          "requerido": true
+        },
+        {
+          "id": "reparto",
+          "label": "¿Cómo se reparten los resultados si el proyecto gana dinero?",
+          "type": "text",
+          "placeholder": "Ej: 40/30/30 acordado por escrito antes de empezar",
+          "requerido": true,
+          "ayuda": "Acordar el reparto ANTES de que haya dinero evita casi todas las rupturas de sociedad."
+        },
+        {
+          "id": "carga_por_persona",
+          "label": "Personas por cada decisión clave definida",
+          "type": "calculated",
+          "formula": "Math.round(personas / 3 * 10) / 10",
+          "unit": "pers.",
+          "requerido": false,
+          "ayuda": "Si una sola persona decide todo, el equipo se vuelve un cuello de botella."
+        }
+      ]
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "xp": 300,
-  "level": "Secundaria 2"
+  "versión": "2026.Alineada.1"
 }

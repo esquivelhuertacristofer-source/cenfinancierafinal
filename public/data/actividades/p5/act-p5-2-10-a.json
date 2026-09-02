@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P5-2-10-A",
+  "unit_code": "P5-2-10",
+  "unit_title": "PROFECO: cómo y cuándo presentar una queja",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Queja Paso a Paso",
+  "descripcion": "A Ceny le vendieron un producto defectuoso y la tienda no responde. Cada decisión define si logra solución.",
+  "objetivo": "Recorrer el proceso completo de una reclamación escalada a la autoridad",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny compró una licuadora de $1,800 que dejó de funcionar a las tres semanas. Tiene un año de garantía y conservan el ticket.",
+  "nodo_inicial": "tienda",
+  "nodos": {
+    "tienda": {
+      "id": "tienda",
+      "texto": "En la tienda les dicen que \"así vienen\" y que no pueden hacer nada. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir la respuesta por escrito y anotar fecha y nombre de quien atendió",
+          "siguiente_nodo": "queja",
+          "consecuencia": "Esa documentación se vuelve la base de todo lo que sigue.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Presentar la queja de inmediato ante la autoridad",
+          "siguiente_nodo": "sin_documentar",
+          "consecuencia": "Sin constancia del reclamo previo, el trámite se devuelve al inicio.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Discutir fuerte hasta que alguien ceda",
+          "siguiente_nodo": "sin_documentar",
+          "consecuencia": "Sube el tono, no la probabilidad de solución, y no queda evidencia.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-tienda.webp"
+    },
+    "sin_documentar": {
+      "id": "sin_documentar",
+      "texto": "Les piden constancia del reclamo previo y no la tienen. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Volver a la tienda, dejar el reclamo por escrito y conservar copia",
+          "siguiente_nodo": "queja",
+          "consecuencia": "Un paso atrás que endereza todo el proceso.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Abandonar el asunto",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La garantía existía y estaba vigente: se perdió por un trámite.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -1800
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-sin_documentar.webp"
+    },
+    "queja": {
+      "id": "queja",
+      "texto": "Van a presentar la queja. ¿Qué llevan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ticket, póliza de garantía, constancia del reclamo y descripción cronológica",
+          "siguiente_nodo": "conciliacion",
+          "consecuencia": "Expediente completo: el caso puede avanzar sin retrasos.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el producto descompuesto",
+          "siguiente_nodo": "sin_documentar",
+          "consecuencia": "Sin ticket ni póliza no se puede acreditar la compra ni el plazo.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-queja.webp"
+    },
+    "conciliacion": {
+      "id": "conciliacion",
+      "texto": "En la audiencia de conciliación la tienda ofrece reparar el producto, no cambiarlo. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aceptar si la reparación deja el producto como nuevo y con garantía extendida",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Una conciliación razonable resuelve más rápido que insistir en el máximo.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 1800
+        },
+        {
+          "id": "o2",
+          "texto": "Rechazar todo y exigir devolución completa sin negociar",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Es su derecho pedirlo, pero alarga el proceso varios meses.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 900
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-conciliacion.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La licuadora quedó reparada, con garantía extendida y sin costo para la familia.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Reclamar primero al proveedor, documentar todo y llegar con expediente completo: ese orden es lo que hace que un derecho se convierta en solución.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El caso sigue abierto varios meses más, aunque con posibilidades de resolverse a su favor.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Tenían la razón y la documentación. Lo que faltó fue valorar si una solución razonable ahora valía más que la solución máxima dentro de medio año.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia perdió $1,800 en un producto con garantía vigente.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El derecho existía, el plazo estaba vigente y el ticket estaba guardado. Solo faltó documentar el reclamo previo y no abandonar el trámite.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-2-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-2-10-a-portada.webp"
+}

@@ -1,0 +1,151 @@
+{
+  "code": "ACT-S1-1-6-A",
+  "unit_code": "S1-1-6",
+  "unit_title": "Salario mínimo y UMA: dos referencias que no son lo mismo",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Calculadora de Referencias",
+  "descripcion": "Convierte montos entre UMA, salario mínimo y pesos.",
+  "objetivo": "Aplicar ambas referencias a cálculos reales de ingreso y obligaciones",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Los valores vigentes",
+      "descripcion": "Antes de cualquier cálculo hay que verificar el año.",
+      "campos": [
+        {
+          "id": "sm_diario",
+          "label": "Salario mínimo general diario",
+          "type": "number",
+          "min": 50,
+          "max": 2000,
+          "default": 280,
+          "unit": "$",
+          "placeholder": "280",
+          "ayuda": "Consulta el valor vigente del año en curso.",
+          "requerido": true
+        },
+        {
+          "id": "uma_diaria",
+          "label": "Valor diario de la UMA",
+          "type": "number",
+          "min": 50,
+          "max": 2000,
+          "default": 114,
+          "unit": "$",
+          "placeholder": "114",
+          "requerido": true
+        },
+        {
+          "id": "sm_mensual",
+          "label": "Salario mínimo mensual aproximado",
+          "type": "calculated",
+          "formula": "Math.round(sm_diario * 30.4)",
+          "unit": "$"
+        },
+        {
+          "id": "uma_mensual",
+          "label": "UMA mensual",
+          "type": "calculated",
+          "formula": "Math.round(uma_diaria * 30.4)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Convertir una obligación",
+      "descripcion": "Multas y trámites suelen expresarse en UMA.",
+      "campos": [
+        {
+          "id": "multa_umas",
+          "label": "Multa expresada en UMA",
+          "type": "slider",
+          "min": 1,
+          "max": 500,
+          "step": 1,
+          "default": 20,
+          "unit": "UMA",
+          "requerido": true
+        },
+        {
+          "id": "multa_pesos",
+          "label": "Multa en pesos",
+          "type": "calculated",
+          "formula": "Math.round(multa_umas * uma_diaria)",
+          "unit": "$"
+        },
+        {
+          "id": "dias_sm",
+          "label": "Días de salario mínimo que representa",
+          "type": "calculated",
+          "formula": "Math.round(multa_umas * uma_diaria / Math.max(1, sm_diario))",
+          "unit": "días"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Un ingreso mínimo al año",
+      "descripcion": "Qué significa el salario mínimo en cifras anuales.",
+      "campos": [
+        {
+          "id": "ingreso_anual",
+          "label": "Ingreso anual con salario mínimo",
+          "type": "calculated",
+          "formula": "Math.round(sm_diario * 365)",
+          "unit": "$"
+        },
+        {
+          "id": "aguinaldo",
+          "label": "Aguinaldo mínimo de ley (15 días)",
+          "type": "calculated",
+          "formula": "Math.round(sm_diario * 15)",
+          "unit": "$"
+        },
+        {
+          "id": "total_anual",
+          "label": "Total anual incluyendo aguinaldo",
+          "type": "calculated",
+          "formula": "Math.round(sm_diario * 365 + sm_diario * 15)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Comparar las dos referencias",
+      "descripcion": "Ver la brecha entre una y otra.",
+      "campos": [
+        {
+          "id": "brecha",
+          "label": "Diferencia diaria entre ambas",
+          "type": "calculated",
+          "formula": "Math.round(sm_diario - uma_diaria)",
+          "unit": "$"
+        },
+        {
+          "id": "proporcion",
+          "label": "La UMA representa este porcentaje del salario mínimo",
+          "type": "calculated",
+          "formula": "Math.round(uma_diaria / Math.max(1, sm_diario) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "conclusion",
+          "label": "¿Por qué conviene que sean distintas?",
+          "type": "textarea",
+          "placeholder": "Explica con tus palabras",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "calculo_referencias",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-1-6-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-6-a-escena.webp"
+}

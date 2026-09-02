@@ -6,147 +6,88 @@
   "edad": "14-15 años",
   "tipo": "SIMULADOR",
   "complejidad": "ALTO",
-  "titulo": "Viajero e Inversionista",
-  "descripcion": "¿Por qué el dólar sube y baja? Simula cómo los eventos del mundo cambian el valor de tu dinero.",
-  "objetivo": "Comprender los factores que determinan el tipo de cambio y el impacto de la fluctuación de divisas en la economía personal",
-  "xp": 500,
-  "descripcion_formula": "Nuevo Tipo de Cambio = Base * (1 + FactorEvento).",
+  "titulo": "El Crédito Educativo bajo la Lupa",
+  "descripcion": "Un crédito educativo parece inofensivo porque \"se paga al graduarte\". Ahí está la trampa: los intereses corren desde el primer día. Calcula lo que realmente firmas.",
+  "objetivo": "Evaluar las opciones de financiamiento de la educación superior en México calculando el costo total del crédito y su peso sobre el primer salario.",
+  "xp": 800,
+  "descripcion_formula": "Durante los años de estudio el saldo crece con intereses capitalizados aunque no pagues nada. Al graduarte, ese saldo se amortiza en el plazo elegido. La mensualidad resultante se compara con tu salario esperado.",
   "inputs": [
     {
-      "id": "monto_pesos_s3",
-      "label": "Cantidad de Pesos ($)",
+      "id": "monto",
+      "label": "Monto del crédito ($)",
       "type": "slider",
-      "min": 1000,
-      "max": 100000,
-      "step": 1000,
-      "default": 20000,
-      "unit": "MXN"
+      "min": 50000,
+      "max": 900000,
+      "step": 10000,
+      "default": 380000,
+      "unit": "$"
     },
     {
-      "id": "evento_forex_s3",
-      "label": "Evento Mundial",
-      "type": "select",
-      "default": "Estabilidad",
-      "opciones": [
-        "Suben tasas en EE.UU.",
-        "Sube el precio del Petróleo",
-        "Inestabilidad Política Local",
-        "Estabilidad"
-      ]
+      "id": "tasa",
+      "label": "Tasa anual (%)",
+      "type": "slider",
+      "min": 6,
+      "max": 24,
+      "step": 0.5,
+      "default": 13,
+      "unit": "%"
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "id": "anios_estudio",
+      "label": "Años de estudio (con intereses corriendo)",
       "type": "slider",
-      "min": 1,
-      "max": 30,
+      "min": 2,
+      "max": 7,
       "step": 1,
-      "default": 5,
+      "default": 4,
       "unit": "años"
     },
     {
-      "id": "aportacion_mensual",
-      "label": "Aportación Mensual ($)",
+      "id": "plazo_pago",
+      "label": "Años para pagarlo tras graduarte",
       "type": "slider",
-      "min": 0,
-      "max": 5000,
-      "step": 100,
-      "default": 500,
+      "min": 2,
+      "max": 15,
+      "step": 1,
+      "default": 7,
+      "unit": "años"
+    },
+    {
+      "id": "sueldo_esperado",
+      "label": "Sueldo mensual esperado al graduarte ($)",
+      "type": "slider",
+      "min": 8000,
+      "max": 60000,
+      "step": 1000,
+      "default": 18000,
       "unit": "$"
     }
   ],
-  "formula": "monto_pesos_s3 / (18 * (evento_forex_s3 === 'Suben tasas en EE.UU.' ? 1.15 : evento_forex_s3 === 'Sube el precio del Petróleo' ? 0.90 : evento_forex_s3 === 'Inestabilidad Política Local' ? 1.25 : 1))",
-  "output_label": "Valor en Dólares (USD)",
-  "output_prefix": "$",
-  "output_suffix": " USD",
-  "chart_type": "line",
+  "formula": "Math.round((monto * Math.pow(1 + tasa/100, anios_estudio) * (tasa/100/12)) / (1 - Math.pow(1 + tasa/100/12, -plazo_pago*12)) / Math.max(1, sueldo_esperado) * 100)",
+  "output_label": "Porcentaje de tu primer sueldo que se irá al crédito",
+  "output_prefix": "",
+  "output_suffix": " %",
   "escenarios": [
     {
-      "condicion": "evento_forex_s3 === 'Suben tasas en EE.UU.'",
-      "mensaje": "📉 Depreciación del Peso. Cuando EE.UU. sube tasas, el dinero sale de otros países hacia allá. Ahora tus pesos compran menos dólares.",
-      "tipo": "warning"
+      "condicion": "resultado > 30",
+      "mensaje": "Zona de peligro: más del 30% de tu primer sueldo comprometido durante años. Eso significa no poder rechazar un mal trabajo, no poder mudarte y no poder ahorrar. Busca beca, universidad pública o un monto menor.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "evento_forex_s3 === 'Sube el precio del Petróleo'",
-      "mensaje": "🚀 Apreciación del Peso. Como México exporta petróleo, la entrada de dólares fortalece la moneda local. ¡Tus vacaciones en el extranjero son más baratas!",
-      "tipo": "success"
+      "condicion": "resultado > 15 && resultado <= 30",
+      "mensaje": "Manejable pero apretado. Antes de firmar, verifica el CAT (no solo la tasa), si hay comisión por apertura y si puedes hacer pagos anticipados sin penalización.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "evento_forex_s3 === 'Inestabilidad Política Local'",
-      "mensaje": "🚨 Fuga de Capitales. El miedo hace que los inversionistas vendan pesos y compren dólares. El tipo de cambio se dispara.",
-      "tipo": "danger"
+      "condicion": "resultado <= 15",
+      "mensaje": "Carga razonable. Aun así compara siempre con la opción de universidad pública: el mismo título sin deuda te da libertad para elegir tu primer trabajo por aprendizaje y no por sueldo.",
+      "tipo": "exito"
     },
     {
-      "condicion": "true",
-      "mensaje": "💡 El tipo de cambio es el precio de una moneda expresado en términos de otra. Es el mercado más grande y líquido del mundo.",
-      "tipo": "info"
+      "condicion": "anios_estudio >= 5 && tasa >= 15",
+      "mensaje": "Ojo con la capitalización: con esa tasa y esos años de estudio, la deuda casi se duplica ANTES de que pagues el primer peso. Es la letra pequeña más cara de estos créditos.",
+      "tipo": "peligro"
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Cuánto costaría una universidad privada en México durante 4 años? ¿Cómo financiarías los estudios combinando FINAE, becas, ahorro propio y trabajo parcial?",
-  "comparativa_espera": "La gestión pasiva de portafolios (ETFs de índice) supera a más del 80% de los fondos activos a 15 años en México y el mundo. El inversionista promedio paga más en comisiones de fondos activos de lo que recibe en rendimientos extra.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "por_trimestre",
-      "label": "Por Trimestre",
-      "formula": "Math.round(resultado_principal / 4)",
-      "prefix": "$",
-      "suffix": "/trimestre",
-      "descripcion": "El resultado distribuido trimestralmente"
-    },
-    {
-      "id": "en_horizonte_largo",
-      "label": "A 15 Años",
-      "formula": "Math.round(resultado_principal * Math.pow(1.09, 15))",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Con reinversión al 9% compuesto por 15 años"
-    },
-    {
-      "id": "impacto_inflacion",
-      "label": "Después de Inflación (4.5%)",
-      "formula": "Math.round(resultado_principal * Math.pow(1 - 0.045/1.09, 15))",
-      "prefix": "$",
-      "suffix": " valor real",
-      "descripcion": "El poder de compra real descontando inflación del 4.5%"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "por_trimestre",
-      "label": "Por Trimestre",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

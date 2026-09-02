@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P4-4-8-B",
+  "unit_code": "P4-4-8",
+  "unit_title": "Proveedores: comprar barato sin bajar la calidad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Proveedor",
+  "descripcion": "Responde rápido sobre cómo se elige bien a quién comprar.",
+  "objetivo": "Consolidar los criterios de selección de proveedores",
+  "xp": 320,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Los cuatro criterios para elegir proveedor son:",
+      "respuesta_correcta": "Precio, calidad, tiempo y confiabilidad",
+      "incorrectas": [
+        "Precio, color, tamaño y marca",
+        "Cercanía y amistad",
+        "Solo el precio"
+      ],
+      "dato_extra": "El precio es apenas uno de los cuatro."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El error más común al elegir proveedor es:",
+      "respuesta_correcta": "Elegir solo por precio",
+      "incorrectas": [
+        "Comparar demasiado",
+        "Pedir descuento",
+        "Revisar la calidad"
+      ],
+      "dato_extra": "El barato que falla en los otros tres criterios sale más caro."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Si de 10 piezas 2 salen mal, el precio real por pieza usable:",
+      "respuesta_correcta": "Es mayor al de lista",
+      "incorrectas": [
+        "Es el mismo",
+        "Es menor",
+        "No se puede calcular"
+      ],
+      "dato_extra": "Pagaste 10 y solo puedes usar 8."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Un proveedor lento genera:",
+      "respuesta_correcta": "Más inventario y ventas perdidas",
+      "incorrectas": [
+        "Ningún costo",
+        "Solo espera",
+        "Más ganancia"
+      ],
+      "dato_extra": "Costos reales que no aparecen en ninguna factura."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La confiabilidad es:",
+      "respuesta_correcta": "Qué tan seguro es que cumpla lo prometido",
+      "incorrectas": [
+        "Qué tan barato es",
+        "Qué tan cerca está",
+        "Qué tan grande es"
+      ],
+      "dato_extra": "Un proveedor que a veces falla obliga a tener plan B siempre."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Suele haber descuento por:",
+      "respuesta_correcta": "Volumen, contado o ser cliente frecuente",
+      "incorrectas": [
+        "Insistir mucho",
+        "Ser amigo",
+        "Comprar poco"
+      ],
+      "dato_extra": "Preguntar con respeto casi siempre abre alguna puerta."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Si un proveedor se molesta porque comparas:",
+      "respuesta_correcta": "Ya te dijo algo importante de él",
+      "incorrectas": [
+        "Hay que disculparse",
+        "Hay que comprarle igual",
+        "Es normal"
+      ],
+      "dato_extra": "Comparar es parte de comprar bien, no una ofensa."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-8-b-escena.webp"
+}

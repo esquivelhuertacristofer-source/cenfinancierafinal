@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-2-6-B",
+  "unit_code": "P1-2-6",
+  "unit_title": "Preguntar el precio antes de pedir",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "El Precio Primero",
+  "descripcion": "Demuestra que sabes preguntar, comparar y decidir sin que el antojo mande.",
+  "objetivo": "Verificar el hábito de consultar el precio y comparar antes de comprar",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué hago antes de pedir algo que quiero?",
+      "opciones": [
+        "Preguntar cuánto cuesta",
+        "Insistir mucho",
+        "Agarrarlo",
+        "Llorar"
+      ],
+      "correcta": 0,
+      "explicacion": "El precio es la información que convierte un capricho en una decisión."
+    },
+    {
+      "id": "q2",
+      "texto": "Preguntar el precio me obliga a comprar.",
+      "opciones": [
+        "Verdadero",
+        "Falso, preguntar es gratis",
+        "Solo en el mercado",
+        "Solo si es barato"
+      ],
+      "correcta": 1,
+      "explicacion": "Nadie puede molestarse porque preguntes. \"Gracias, lo voy a pensar\" siempre funciona."
+    },
+    {
+      "id": "q3",
+      "texto": "El mismo cuaderno cuesta $25 aquí y $18 allá. ¿Cuánto ahorro comprando el de allá?",
+      "opciones": [
+        "$18",
+        "$25",
+        "$7",
+        "$43"
+      ],
+      "correcta": 2,
+      "explicacion": "25 − 18 = 7. Casi un tercio del precio, solo por caminar dos cuadras."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuál de estas acciones me empuja a gastar de más?",
+      "opciones": [
+        "Contar mi dinero antes de entrar",
+        "Comparar dos tiendas",
+        "Volver mañana",
+        "Comprarlo porque \"quedan pocos\""
+      ],
+      "correcta": 3,
+      "explicacion": "La escasez apurada te obliga a decidir rápido, que es justo lo contrario de decidir bien."
+    },
+    {
+      "id": "q5",
+      "texto": "Le pido algo a mis papás. ¿Qué dato ayuda más?",
+      "opciones": [
+        "Cuánto cuesta exactamente",
+        "Que todos lo tienen",
+        "Que es bonito",
+        "Que lo quiero mucho"
+      ],
+      "correcta": 0,
+      "explicacion": "Llegar con el precio demuestra que ya pensaste y que respetas el dinero de la casa."
+    },
+    {
+      "id": "q6",
+      "texto": "Tengo $20 y el juguete cuesta $35.",
+      "opciones": [
+        "Me alcanza",
+        "Me faltan $15",
+        "Me sobran $15",
+        "Me faltan $55"
+      ],
+      "correcta": 1,
+      "explicacion": "35 − 20 = 15. Saberlo antes de la caja evita la pena de no poder pagar."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Por qué mucha gente no pregunta el precio?",
+      "opciones": [
+        "Porque no importa",
+        "Porque está prohibido",
+        "Por pena",
+        "Porque cuesta dinero"
+      ],
+      "correcta": 2,
+      "explicacion": "La pena es el obstáculo real. Se quita practicando la frase en voz alta."
+    },
+    {
+      "id": "q8",
+      "texto": "Volver al día siguiente si sigo queriendo algo sirve para:",
+      "opciones": [
+        "Que suba de precio",
+        "Perder tiempo",
+        "Que se acabe",
+        "Saber si era antojo o algo que sí quiero"
+      ],
+      "correcta": 3,
+      "explicacion": "Un día de espera apaga casi todos los antojos. Los que sobreviven sí valían la pena."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-6-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-6-b-escena.webp"
+}

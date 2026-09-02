@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S1-1-9-A",
+  "unit_code": "S1-1-9",
+  "unit_title": "PIB, inflación y poder adquisitivo explicados con el súper",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "El Termómetro del Súper",
+  "descripcion": "Ajusta ingreso e inflación y observa cuántos productos alcanzas a comprar.",
+  "objetivo": "Visualizar el efecto de la inflación sobre el poder adquisitivo real",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "ingreso",
+      "label": "Mi ingreso mensual",
+      "type": "slider",
+      "min": 2000,
+      "max": 60000,
+      "step": 500,
+      "default": 12000,
+      "unit": "$",
+      "referencia": "El punto de partida antes de cualquier aumento."
+    },
+    {
+      "id": "aumento",
+      "label": "Aumento que recibí este año",
+      "type": "slider",
+      "min": 0,
+      "max": 25,
+      "step": 0.5,
+      "default": 4,
+      "unit": "%",
+      "referencia": "Un aumento solo mejora si supera a la inflación."
+    },
+    {
+      "id": "inflacion",
+      "label": "Inflación del año",
+      "type": "slider",
+      "min": 0,
+      "max": 25,
+      "step": 0.5,
+      "default": 6,
+      "unit": "%",
+      "referencia": "El aumento promedio de los precios."
+    },
+    {
+      "id": "precio_canasta",
+      "label": "Precio de mi canasta semanal antes",
+      "type": "slider",
+      "min": 200,
+      "max": 5000,
+      "step": 50,
+      "default": 1200,
+      "unit": "$",
+      "referencia": "Lo que gastabas en despensa cada semana."
+    }
+  ],
+  "formula": "Math.round((ingreso * (1 + aumento / 100)) / (precio_canasta * (1 + inflacion / 100)) * 10) / 10",
+  "descripcion_formula": "Cuántas canastas semanales alcanza a comprar tu ingreso después del aumento, con los precios ya ajustados por inflación.",
+  "output_label": "Canastas que alcanzo ahora",
+  "output_suffix": " canastas",
+  "escenarios": [
+    {
+      "condicion": "aumento > inflacion",
+      "mensaje": "Tu aumento superó a la inflación: tu poder adquisitivo creció de verdad. Esta es la única situación en la que un aumento mejora tu vida.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "aumento < inflacion",
+      "mensaje": "Tienes más pesos pero compras menos. Un aumento por debajo de la inflación es un retroceso disfrazado de mejora.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "aumento == inflacion",
+      "mensaje": "Empataste con la inflación: conservas tu poder de compra pero no avanzaste. En términos reales ganas exactamente lo mismo que antes.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "aumento == 0 && inflacion >= 5",
+      "mensaje": "Sin aumento y con inflación alta, tu ingreso perdió capacidad de compra directamente. Es la situación más común y la menos percibida.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "inflacion >= 15",
+      "mensaje": "Con inflación de dos dígitos el poder adquisitivo se erosiona muy rápido, y los ingresos fijos son los más golpeados.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-9-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-9-a-escena.webp"
+}

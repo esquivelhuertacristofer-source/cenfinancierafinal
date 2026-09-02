@@ -1,0 +1,183 @@
+{
+  "code": "ACT-P5-1-10-A",
+  "unit_code": "P5-1-10",
+  "unit_title": "Inclusión financiera: los mexicanos que no tienen banco",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Costo de Estar Fuera",
+  "descripcion": "Calcula cuánto le cuesta al año a una familia no tener acceso al sistema financiero.",
+  "objetivo": "Cuantificar el costo económico de la exclusión financiera",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La situación",
+      "descripcion": "Los datos de una familia sin cuenta bancaria.",
+      "campos": [
+        {
+          "id": "ingreso_mensual",
+          "label": "Ingreso mensual de la familia",
+          "type": "number",
+          "min": 1000,
+          "max": 50000,
+          "default": 8000,
+          "unit": "$",
+          "placeholder": "8000",
+          "requerido": true
+        },
+        {
+          "id": "distancia_km",
+          "label": "Distancia a la sucursal más cercana",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 35,
+          "unit": "km",
+          "ayuda": "Hay municipios en México sin ninguna sucursal.",
+          "requerido": true
+        },
+        {
+          "id": "costo_viaje",
+          "label": "Costo del transporte de ida y vuelta",
+          "type": "slider",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 120,
+          "unit": "$",
+          "ayuda": "Incluye el pasaje y el tiempo que se deja de trabajar.",
+          "requerido": true
+        },
+        {
+          "id": "viajes_ano",
+          "label": "Viajes necesarios al año",
+          "type": "slider",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 8,
+          "unit": "viajes",
+          "ayuda": "Cobrar apoyos, recibir dinero, hacer trámites.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Los costos de estar fuera",
+      "descripcion": "Lo que se paga de más por no tener cuenta.",
+      "campos": [
+        {
+          "id": "costo_transporte_anual",
+          "label": "Costo anual de transporte a la sucursal",
+          "type": "calculated",
+          "formula": "costo_viaje * viajes_ano",
+          "unit": "$"
+        },
+        {
+          "id": "envios_mes",
+          "label": "Dinero que recibe o envía al mes",
+          "type": "slider",
+          "min": 0,
+          "max": 20000,
+          "step": 500,
+          "default": 3000,
+          "unit": "$",
+          "ayuda": "Remesas, apoyos o pagos de clientes.",
+          "requerido": true
+        },
+        {
+          "id": "comision_envio",
+          "label": "Porcentaje que le cobran por moverlo sin cuenta",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 1,
+          "default": 5,
+          "unit": "%",
+          "ayuda": "Sin cuenta se depende de intermediarios que cobran más.",
+          "requerido": true
+        },
+        {
+          "id": "costo_envios_anual",
+          "label": "Costo anual por mover dinero sin cuenta",
+          "type": "calculated",
+          "formula": "Math.round(envios_mes * comision_envio / 100 * 12)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El ahorro sin protección",
+      "descripcion": "Lo que la inflación le quita al dinero guardado en casa.",
+      "campos": [
+        {
+          "id": "ahorro_efectivo",
+          "label": "Dinero que guarda en efectivo en casa",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 12000,
+          "unit": "$",
+          "placeholder": "12000",
+          "requerido": true
+        },
+        {
+          "id": "inflacion",
+          "label": "Inflación anual",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 4.5,
+          "unit": "%",
+          "ayuda": "El dinero quieto pierde poder de compra cada año.",
+          "requerido": true
+        },
+        {
+          "id": "perdida_inflacion",
+          "label": "Poder de compra perdido en un año",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_efectivo * inflacion / 100)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "El total",
+      "descripcion": "Cuánto cuesta al año estar fuera del sistema.",
+      "campos": [
+        {
+          "id": "costo_total",
+          "label": "Costo total anual de la exclusión",
+          "type": "calculated",
+          "formula": "Math.round(costo_viaje * viajes_ano + envios_mes * comision_envio / 100 * 12 + ahorro_efectivo * inflacion / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "pct_ingreso",
+          "label": "Porcentaje del ingreso anual que representa",
+          "type": "calculated",
+          "formula": "Math.round((costo_viaje * viajes_ano + envios_mes * comision_envio / 100 * 12 + ahorro_efectivo * inflacion / 100) * 100 / Math.max(1, ingreso_mensual * 12))",
+          "unit": "%"
+        },
+        {
+          "id": "meses_equivalentes",
+          "label": "Equivale a este número de meses de ingreso",
+          "type": "calculated",
+          "formula": "Math.round((costo_viaje * viajes_ano + envios_mes * comision_envio / 100 * 12 + ahorro_efectivo * inflacion / 100) / Math.max(1, ingreso_mensual) * 10) / 10",
+          "unit": "meses"
+        }
+      ]
+    }
+  ],
+  "output_type": "costo_exclusion",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-1-10-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-10-a-escena.webp"
+}

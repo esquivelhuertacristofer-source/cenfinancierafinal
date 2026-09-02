@@ -3,147 +3,156 @@
   "unit_code": "P6-4-5",
   "unit_title": "KPIs: Midiendo el éxito de mi negocio",
   "level": "Primaria 6",
-  "tipo": "SIMULADOR",
-  "complejidad": "MEDIO",
-  "titulo": "El Simulador de Graduación",
-  "descripcion": "¡Felicidades! Estás por terminar la primaria. Es hora de ver si puedes manejar tu propio negocio de verano.",
-  "objetivo": "Aplicar conceptos de presupuesto, ahorro e inversión en un escenario de emprendimiento básico",
-  "xp": 500,
-  "inputs": [
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "El Tablero de tu Negocio",
+  "descripcion": "\"Voy bien\" no es un dato. Un KPI es un indicador clave: un número que te dice la verdad aunque no te guste. Arma el tablero con el que sabrás si tu negocio está sano o enfermo.",
+  "objetivo": "Construir un tablero de indicadores clave de desempeño para evaluar objetivamente la salud y el crecimiento de un emprendimiento.",
+  "xp": 700,
+  "output_type": "tablero_kpi",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "ahorro_inicial",
-      "label": "Dinero para empezar ($)",
-      "type": "slider",
-      "min": 500,
-      "max": 5000,
-      "step": 100,
-      "default": 1000,
-      "unit": "$"
-    },
-    {
-      "id": "tipo_negocio",
-      "label": "Tu Negocio",
-      "type": "select",
-      "default": "Venta de Limonada",
-      "opciones": [
-        "Venta de Limonada",
-        "Cuidado de Mascotas",
-        "Venta de Manualidades"
+      "id": "negocio",
+      "titulo": "🏪 Tu negocio",
+      "descripcion": "Usa números de un mes real o del negocio que estás planeando.",
+      "campos": [
+        {
+          "id": "nombre",
+          "label": "Nombre del negocio",
+          "type": "text",
+          "placeholder": "Ej: Playeras Regina",
+          "requerido": true
+        },
+        {
+          "id": "ventas_mes",
+          "label": "Ventas totales del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 45000",
+          "requerido": true
+        },
+        {
+          "id": "clientes",
+          "label": "Número de clientes que compraron",
+          "type": "number",
+          "placeholder": "Ej: 120",
+          "requerido": true
+        }
       ]
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
+      "id": "rentabilidad",
+      "titulo": "💰 ¿Estás ganando de verdad?",
+      "descripcion": "Vender mucho no es ganar. El margen es lo que queda después de pagar todo.",
+      "campos": [
         {
-          "label": "Conservador",
-          "value": 0.8
+          "id": "costos_variables",
+          "label": "Costos variables del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 22000",
+          "requerido": true
         },
         {
-          "label": "Moderado",
-          "value": 1
+          "id": "costos_fijos",
+          "label": "Costos fijos del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 9000",
+          "requerido": true
         },
         {
-          "label": "Optimista",
-          "value": 1.2
+          "id": "utilidad",
+          "label": "KPI 1 · Utilidad del mes",
+          "type": "calculated",
+          "formula": "ventas_mes - costos_variables - costos_fijos",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si es negativa, el negocio está consumiendo dinero aunque las ventas se vean bien."
+        },
+        {
+          "id": "margen",
+          "label": "KPI 2 · Margen de utilidad",
+          "type": "calculated",
+          "formula": "Math.round((ventas_mes - costos_variables - costos_fijos) / ventas_mes * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Debajo del 10% cualquier imprevisto te deja en pérdida. Arriba del 25% hay margen para crecer."
         }
-      ],
-      "default": 1
+      ]
+    },
+    {
+      "id": "clientes_kpi",
+      "titulo": "🧑‍🤝‍🧑 ¿Qué vale cada cliente?",
+      "descripcion": "Los negocios no se hunden por falta de ventas: se hunden por conseguir clientes que cuestan más de lo que dejan.",
+      "campos": [
+        {
+          "id": "gasto_publicidad",
+          "label": "Gasto en publicidad del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        },
+        {
+          "id": "clientes_nuevos",
+          "label": "Clientes NUEVOS del mes",
+          "type": "number",
+          "placeholder": "Ej: 30",
+          "requerido": true
+        },
+        {
+          "id": "ticket",
+          "label": "KPI 3 · Ticket promedio",
+          "type": "calculated",
+          "formula": "Math.round(ventas_mes / clientes)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Subir el ticket promedio suele ser más fácil y barato que conseguir clientes nuevos."
+        },
+        {
+          "id": "costo_cliente",
+          "label": "KPI 4 · Costo de adquirir un cliente",
+          "type": "calculated",
+          "formula": "Math.round(gasto_publicidad / Math.max(1, clientes_nuevos))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si este número supera lo que te deja el cliente, cada cliente nuevo te empobrece."
+        }
+      ]
+    },
+    {
+      "id": "salud",
+      "titulo": "🩺 El diagnóstico",
+      "descripcion": "Tres números que resumen si el negocio va bien.",
+      "campos": [
+        {
+          "id": "punto_equilibrio",
+          "label": "KPI 5 · Ventas mínimas para no perder",
+          "type": "calculated",
+          "formula": "Math.round(costos_fijos / Math.max(0.01, (ventas_mes - costos_variables) / ventas_mes))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Debajo de esta cifra de ventas, el mes cierra en pérdida."
+        },
+        {
+          "id": "colchon",
+          "label": "KPI 6 · Margen de seguridad",
+          "type": "calculated",
+          "formula": "Math.round((ventas_mes - (costos_fijos / Math.max(0.01, (ventas_mes - costos_variables) / ventas_mes))) / ventas_mes * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Cuánto pueden caer tus ventas antes de entrar en pérdida. Debajo del 20% el negocio es frágil."
+        },
+        {
+          "id": "salud_total",
+          "label": "Salud general del negocio (0 a 100)",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.min(100, Math.round((ventas_mes - costos_variables - costos_fijos) / ventas_mes * 200 + (Math.round(ventas_mes / clientes) > Math.round(gasto_publicidad / Math.max(1, clientes_nuevos)) ? 30 : 0))))",
+          "unit": "pts",
+          "requerido": false,
+          "ayuda": "Sube con buen margen y cuando cada cliente deja más de lo que costó conseguirlo."
+        }
+      ]
     }
   ],
-  "formula": "ahorro_inicial * (tipo_negocio === 'Venta de Limonada' ? 1.5 : tipo_negocio === 'Cuidado de Mascotas' ? 2 : 1.8)",
-  "output_label": "Ganancia Estimada",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "bar",
-  "escenarios": [
-    {
-      "condicion": "resultado > 2000",
-      "mensaje": "🌟 ¡Eres un gran emprendedor! Has duplicado tu dinero. Estás listo para la secundaria.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "Lo más importante es aprender a manejar tu dinero con responsabilidad.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "Si tus ventas crecen 20% pero tus costos crecen 30%, ¿tu negocio va bien? ¿Qué KPI específico te habría alertado de este problema antes de que fuera crítico?",
-  "comparativa_espera": "La libertad financiera no es un número fijo — es la proporción entre tus activos productivos y tus gastos. En México, alcanzarla requiere acumular aproximadamente 25 veces tus gastos anuales en activos que generen rendimiento.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "impacto_anual",
-      "label": "Impacto Anual",
-      "formula": "resultado_principal * 12",
-      "prefix": "$",
-      "suffix": "/año",
-      "descripcion": "El resultado anualizado"
-    },
-    {
-      "id": "patrimonio_10a",
-      "label": "Patrimonio en 10 Años",
-      "formula": "Math.round(resultado_principal * 12 * 10 * 1.08)",
-      "prefix": "$",
-      "suffix": " a 10 años",
-      "descripcion": "Reinvirtiendo el resultado al 8% anual durante 10 años"
-    },
-    {
-      "id": "libertad_financiera",
-      "label": "Años para Libertad Financiera",
-      "formula": "Math.ceil(resultado_principal * 12 * 25 / (resultado_principal * 12 * 12))",
-      "prefix": "",
-      "suffix": " años",
-      "descripcion": "Usando la Regla FIRE (25× gastos anuales)"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "impacto_anual",
-      "label": "Impacto Anual",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

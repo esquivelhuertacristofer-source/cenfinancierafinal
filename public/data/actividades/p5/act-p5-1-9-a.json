@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P5-1-9-A",
+  "unit_code": "P5-1-9",
+  "unit_title": "Del efectivo al pago con celular: la evolución de los pagos",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Qué Medio Me Conviene",
+  "descripcion": "Ajusta tu perfil de compras y descubre cuánto ahorras eligiendo bien el medio de pago.",
+  "objetivo": "Cuantificar el efecto de elegir medios de pago según el contexto",
+  "xp": 300,
+  "inputs": [
+    {
+      "id": "compras_mes",
+      "label": "Compras que hago al mes",
+      "type": "slider",
+      "min": 5,
+      "max": 120,
+      "step": 5,
+      "default": 40,
+      "unit": "compras",
+      "referencia": "Cuenta todas, incluidas las pequeñas del día a día."
+    },
+    {
+      "id": "retiros_mes",
+      "label": "Retiros de efectivo al mes",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 6,
+      "unit": "retiros",
+      "referencia": "Cada retiro puede tener comisión si es en cajero ajeno."
+    },
+    {
+      "id": "comision_retiro",
+      "label": "Comisión por retiro en cajero ajeno",
+      "type": "slider",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "default": 30,
+      "unit": "$",
+      "referencia": "En cajeros de tu propio banco suele ser cero."
+    },
+    {
+      "id": "pct_electronico",
+      "label": "Porcentaje de compras que podría pagar sin efectivo",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 60,
+      "unit": "%",
+      "referencia": "Depende de dónde compras: no todos los lugares aceptan."
+    }
+  ],
+  "formula": "Math.round(retiros_mes * comision_retiro * (pct_electronico / 100) * 12)",
+  "descripcion_formula": "Comisiones de retiro que podrías evitar al año pagando de forma electrónica la parte de tus compras que lo permite.",
+  "output_label": "Comisiones evitables al año",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "comision_retiro == 0",
+      "mensaje": "Sin comisión por retiro no hay ahorro por este lado. Aun así, los medios electrónicos te dan registro de cada gasto, que vale por sí mismo.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "retiros_mes >= 8 && comision_retiro >= 25",
+      "mensaje": "Estás pagando mucho por sacar tu propio dinero. Retirar menos veces cantidades mayores, o usar cajeros de tu banco, reduce esto de inmediato.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "pct_electronico >= 70",
+      "mensaje": "La mayoría de tus compras admite pago electrónico: además de ahorrar comisiones, tendrías registro de casi todo tu gasto.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "pct_electronico <= 30",
+      "mensaje": "Compras sobre todo donde solo se acepta efectivo. Es una realidad común en México: ahí conviene planear los retiros para minimizar comisiones.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "retiros_mes * comision_retiro * 12 >= 2000",
+      "mensaje": "Más de $2,000 al año solo en comisiones de retiro. Es dinero que se recupera únicamente cambiando dónde y cuántas veces sacas efectivo.",
+      "tipo": "peligro"
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-9-a-escena.webp"
+}

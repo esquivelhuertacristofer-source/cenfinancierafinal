@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-1-10-B",
+  "unit_code": "S2-1-10",
+  "unit_title": "Indicadores que sí debo seguir: INPC, IGAE y desempleo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Tablero de Indicadores",
+  "descripcion": "Comprueba que sabes qué decide cada indicador.",
+  "objetivo": "Verificar la selección e interpretación de indicadores económicos",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Seguir todos los indicadores:",
+      "opciones": [
+        "Es lo ideal",
+        "Es obligatorio",
+        "Es imposible y contraproducente",
+        "Da mejores resultados"
+      ],
+      "correcta": 2,
+      "explicacion": "Conviene elegir pocos y saber qué decide cada uno."
+    },
+    {
+      "id": "q2",
+      "texto": "El índice de precios informa:",
+      "opciones": [
+        "El empleo",
+        "La producción",
+        "El tipo de cambio",
+        "Si tu ahorro pierde poder de compra"
+      ],
+      "correcta": 3,
+      "explicacion": "Y si un aumento de sueldo realmente mejora tu situación."
+    },
+    {
+      "id": "q3",
+      "texto": "El indicador de actividad económica sirve para:",
+      "opciones": [
+        "Anticipar el ambiente laboral",
+        "Elegir banco",
+        "Calcular impuestos",
+        "Medir precios"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una lectura más frecuente que el PIB."
+    },
+    {
+      "id": "q4",
+      "texto": "La tasa de desempleo mide:",
+      "opciones": [
+        "A quienes trabajan",
+        "A quienes buscan trabajo y no lo encuentran",
+        "A los estudiantes",
+        "A los jubilados"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuenta solo una parte de la historia laboral."
+    },
+    {
+      "id": "q5",
+      "texto": "En México la informalidad es reveladora porque:",
+      "opciones": [
+        "Es muy pequeña",
+        "No se mide",
+        "Describe cuántos trabajan sin protección",
+        "Solo aplica al campo"
+      ],
+      "correcta": 2,
+      "explicacion": "Junto al desempleo da un retrato mucho más honesto."
+    },
+    {
+      "id": "q6",
+      "texto": "Estos indicadores se publican:",
+      "opciones": [
+        "Cada hora",
+        "Cada año",
+        "Cuando alguien pregunta",
+        "Generalmente mensual o trimestral"
+      ],
+      "correcta": 3,
+      "explicacion": "Revisarlos a diario no aporta información nueva."
+    },
+    {
+      "id": "q7",
+      "texto": "Revisar datos mensuales todos los días:",
+      "opciones": [
+        "Genera ruido y ansiedad",
+        "Mejora tus decisiones",
+        "Es necesario",
+        "Aumenta rendimientos"
+      ],
+      "correcta": 0,
+      "explicacion": "El dato no cambió, pero la ansiedad sí crece."
+    },
+    {
+      "id": "q8",
+      "texto": "La pregunta que ordena la selección es:",
+      "opciones": [
+        "¿Cuál es más famoso?",
+        "¿Qué decisión cambia este dato?",
+        "¿Cuál sale más en noticias?",
+        "¿Cuál es más grande?"
+      ],
+      "correcta": 1,
+      "explicacion": "Si no cambia ninguna decisión, no vale la pena seguirlo."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-10-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-10-b-escena.webp"
+}

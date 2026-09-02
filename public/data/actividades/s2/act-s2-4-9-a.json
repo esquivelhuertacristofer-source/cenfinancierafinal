@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-4-9-A",
+  "unit_code": "S2-4-9",
+  "unit_title": "Operaciones y proveedores: la cadena que sostiene la promesa",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "La Cadena que Sostiene",
+  "descripcion": "Clasifica cada elemento según su papel en la operación del negocio.",
+  "objetivo": "Distinguir fortalezas, riesgos y medidas de contingencia en la cadena operativa",
+  "xp": 500,
+  "instruccion": "Arrastra cada elemento a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "fortaleza",
+      "label": "Fortalece la operación",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    },
+    {
+      "id": "riesgo",
+      "label": "Es un riesgo",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "contingencia",
+      "label": "Es plan de contingencia",
+      "emoji": "🔀",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Un solo proveedor para el insumo principal",
+      "emoji": "🎲",
+      "categoria_correcta": "riesgo",
+      "feedback": "Si falla, el negocio entero se detiene."
+    },
+    {
+      "id": "i2",
+      "label": "Un proveedor alterno con el que ya compraste",
+      "emoji": "🔁",
+      "categoria_correcta": "contingencia",
+      "feedback": "Probado, no solo anotado en una lista."
+    },
+    {
+      "id": "i3",
+      "label": "Proceso interno documentado paso a paso",
+      "emoji": "📋",
+      "categoria_correcta": "fortaleza",
+      "feedback": "Permite que el negocio no dependa de una sola persona."
+    },
+    {
+      "id": "i4",
+      "label": "Inventario de seguridad de lo esencial",
+      "emoji": "📦",
+      "categoria_correcta": "contingencia",
+      "feedback": "Da margen mientras se resuelve una falla."
+    },
+    {
+      "id": "i5",
+      "label": "Elegir siempre al proveedor más barato",
+      "emoji": "🏷️",
+      "categoria_correcta": "riesgo",
+      "feedback": "El precio es un criterio, no el criterio."
+    },
+    {
+      "id": "i6",
+      "label": "Acuerdo por escrito de qué pasa ante incumplimiento",
+      "emoji": "📝",
+      "categoria_correcta": "contingencia",
+      "feedback": "Se define en frío, antes de que ocurra."
+    },
+    {
+      "id": "i7",
+      "label": "Relación estable con un proveedor que cumple",
+      "emoji": "🤝",
+      "categoria_correcta": "fortaleza",
+      "feedback": "La confiabilidad vale más de lo que se cree."
+    },
+    {
+      "id": "i8",
+      "label": "Prometer plazos que la operación no puede cumplir",
+      "emoji": "📢",
+      "categoria_correcta": "riesgo",
+      "feedback": "La promesa la sostiene la operación, no la publicidad."
+    },
+    {
+      "id": "i9",
+      "label": "Medir el porcentaje de entregas a tiempo",
+      "emoji": "📊",
+      "categoria_correcta": "fortaleza",
+      "feedback": "Lo que no se mide no se puede corregir."
+    },
+    {
+      "id": "i10",
+      "label": "Un proveedor alterno que solo está en una lista",
+      "emoji": "🗒️",
+      "categoria_correcta": "riesgo",
+      "feedback": "Sin haber operado con él, no sabes si funciona."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-9-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-9-a-escena.webp"
+}

@@ -4,123 +4,153 @@
   "unit_title": "Estrategia de precios: cómo definir el precio ideal",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "El SAT y Yo",
-  "descripcion": "¿Sabes a dónde va el dinero de los impuestos y cómo cumplir con tus obligaciones sin miedo? ¡Ponte a prueba!",
-  "objetivo": "Identificar los conceptos básicos del sistema tributario y el impacto de los impuestos en la economía personal y nacional",
-  "xp": 300,
-  "preguntas": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Los Tres Precios",
+  "descripcion": "Hay tres formas de poner precio: por costos, por competencia y por valor. Casi todos usan solo la primera, que es la que menos dinero deja. Vas a calcular las tres para el mismo producto y ver la diferencia.",
+  "objetivo": "Aplicar tres métodos de fijación de precios (costos, competencia y valor) y calcular el margen de ganancia resultante.",
+  "xp": 700,
+  "output_type": "estrategia_precio",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "tax1",
-      "pregunta": "¿Qué es el SAT?",
-      "incorrectas": [
-        "Un banco de ahorro",
-        "Una red social",
-        "El servicio de agua"
-      ],
-      "dato_extra": "Es el 'cobrador' oficial del gobierno.",
-      "respuesta_correcta": "Servicio de Administración Tributaria (la oficina que recauda los impuestos)"
+      "id": "producto",
+      "titulo": "📦 Tu producto",
+      "descripcion": "Piensa en algo concreto que podrías vender.",
+      "campos": [
+        {
+          "id": "producto",
+          "label": "¿Qué vendes?",
+          "type": "text",
+          "placeholder": "Ej: pastel de zanahoria",
+          "requerido": true
+        },
+        {
+          "id": "unidades_mes",
+          "label": "¿Cuántas piezas al mes?",
+          "type": "number",
+          "placeholder": "Ej: 60",
+          "requerido": true
+        }
+      ]
     },
     {
-      "id": "tax2",
-      "pregunta": "¿Qué es el RFC?",
-      "incorrectas": [
-        "Tu número de celular",
-        "La clave de tu internet",
-        "Un código de descuento"
-      ],
-      "dato_extra": "Cualquier persona que gane dinero legalmente debe tener uno.",
-      "respuesta_correcta": "Registro Federal de Contribuyentes (tu identificación oficial ante el SAT)"
+      "id": "metodo1",
+      "titulo": "1️⃣ Precio por COSTOS",
+      "descripcion": "El más usado: sumas lo que te cuesta y le pones un margen encima. Es seguro y suele dejar dinero sobre la mesa.",
+      "campos": [
+        {
+          "id": "costo_variable",
+          "label": "Materiales por pieza ($)",
+          "type": "number",
+          "placeholder": "Ej: 95",
+          "requerido": true
+        },
+        {
+          "id": "costos_fijos",
+          "label": "Costos fijos del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 6000",
+          "requerido": true
+        },
+        {
+          "id": "costo_total_unitario",
+          "label": "Costo real por pieza",
+          "type": "calculated",
+          "formula": "Math.round(costo_variable + costos_fijos / unidades_mes)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "precio_costos",
+          "label": "Precio por costos (margen 40%)",
+          "type": "calculated",
+          "formula": "Math.ceil((costo_variable + costos_fijos / unidades_mes) * 1.4)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Este método garantiza que no pierdas, pero ignora por completo cuánto vale para el cliente."
+        }
+      ]
     },
     {
-      "id": "tax3",
-      "pregunta": "¿Qué es el IVA?",
-      "incorrectas": [
-        "Impuesto a la Vida Adulta",
-        "Ingreso por Venta Anual",
-        "Inversión Variable Acumulada"
-      ],
-      "dato_extra": "Es un impuesto 'indirecto' porque lo pagas sin darte cuenta al comprar.",
-      "respuesta_correcta": "Impuesto al Valor Agregado (se paga al comprar productos y servicios, en México es del 16%)"
+      "id": "metodo2",
+      "titulo": "2️⃣ Precio por COMPETENCIA",
+      "descripcion": "Miras lo que cobran los demás y te ubicas: más barato, igual, o más caro justificando por qué.",
+      "campos": [
+        {
+          "id": "precio_competencia",
+          "label": "Precio promedio de la competencia ($)",
+          "type": "number",
+          "placeholder": "Ej: 220",
+          "requerido": true
+        },
+        {
+          "id": "margen_competencia",
+          "label": "Ganancia por pieza a ese precio",
+          "type": "calculated",
+          "formula": "Math.round(precio_competencia - costo_variable - costos_fijos / unidades_mes)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si sale negativo, tu estructura de costos no aguanta ese mercado: hay que bajar costos o cambiar de segmento."
+        }
+      ]
     },
     {
-      "id": "tax4",
-      "pregunta": "¿Qué es el ISR?",
-      "incorrectas": [
-        "Impuesto Sobre la Ropa",
-        "Ingreso Sugerido Real",
-        "Inversión Sin Riesgo"
-      ],
-      "dato_extra": "Entre más ganas, un porcentaje mayor se paga de ISR.",
-      "respuesta_correcta": "Impuesto Sobre la Renta (se paga sobre el dinero que GANAS por tu trabajo o inversiones)"
+      "id": "metodo3",
+      "titulo": "3️⃣ Precio por VALOR",
+      "descripcion": "El más rentable y el que casi nadie usa: ¿cuánto vale para el cliente el problema que le resuelves?",
+      "campos": [
+        {
+          "id": "valor_cliente",
+          "label": "¿Cuánto le ahorra o le vale al cliente? ($)",
+          "type": "number",
+          "placeholder": "Ej: 400",
+          "requerido": true,
+          "ayuda": "Un pastel para un cumpleaños importante no compite con el pan: compite con la experiencia que la familia recuerda."
+        },
+        {
+          "id": "precio_valor",
+          "label": "Precio por valor (mitad del valor percibido)",
+          "type": "calculated",
+          "formula": "Math.ceil(valor_cliente * 0.5)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Capturar la mitad del valor que creas deja al cliente ganando también. Ese es el equilibrio sano."
+        },
+        {
+          "id": "ganancia_valor",
+          "label": "Ganancia por pieza con este método",
+          "type": "calculated",
+          "formula": "Math.round(valor_cliente * 0.5 - costo_variable - costos_fijos / unidades_mes)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "tax5",
-      "pregunta": "¿Para qué sirve el dinero de los impuestos?",
-      "incorrectas": [
-        "Para que el banco sea rico",
-        "Para guardarlo en una caja fuerte",
-        "No sirve para nada"
-      ],
-      "dato_extra": "Es la forma en que la sociedad paga por los beneficios comunes.",
-      "respuesta_correcta": "Para financiar servicios públicos como hospitales, escuelas, policía y carreteras"
-    },
-    {
-      "id": "tax6",
-      "pregunta": "¿Qué es una 'Factura' (CFDI)?",
-      "incorrectas": [
-        "Un ticket de papel cualquiera",
-        "Un mensaje de texto",
-        "Un dibujo del producto"
-      ],
-      "dato_extra": "Sin factura oficial, no puedes deducir gastos.",
-      "respuesta_correcta": "Un comprobante digital oficial de una compra que sirve para comprobar gastos ante el SAT"
-    },
-    {
-      "id": "tax7",
-      "pregunta": "¿Qué es la 'E-firma'?",
-      "incorrectas": [
-        "Un correo electrónico",
-        "Tu nombre en Facebook",
-        "Una foto de tu INE"
-      ],
-      "dato_extra": "Es tu llave para hacer trámites en línea ante el gobierno.",
-      "respuesta_correcta": "Tu firma digital oficial que tiene el mismo valor legal que tu firma escrita"
-    },
-    {
-      "id": "tax8",
-      "pregunta": "¿Qué sucede en la 'Declaración Anual'?",
-      "incorrectas": [
-        "Te regalan una tarjeta de crédito",
-        "Te cambian el RFC",
-        "Es un día de fiesta nacional"
-      ],
-      "dato_extra": "Se hace cada abril para las personas físicas.",
-      "respuesta_correcta": "Le informas al SAT cuánto ganaste y cuánto gastaste en el año para ajustar cuentas"
-    },
-    {
-      "id": "tax9",
-      "pregunta": "¿Qué es la 'Evasión Fiscal'?",
-      "incorrectas": [
-        "Pagar menos impuestos de forma legal",
-        "Pedir facturas",
-        "Tener ahorros"
-      ],
-      "dato_extra": "La evasión trae multas graves o incluso cárcel.",
-      "respuesta_correcta": "Es no pagar los impuestos que te corresponden por ley (es un delito)"
-    },
-    {
-      "id": "tax10",
-      "pregunta": "¿Qué es un 'Paraíso Fiscal'?",
-      "incorrectas": [
-        "Una playa de vacaciones",
-        "Un banco muy grande",
-        "La oficina del SAT"
-      ],
-      "dato_extra": "¡Felicidades! Ahora entiendes cómo funciona el sistema tributario.",
-      "respuesta_correcta": "Un país donde se pagan muy pocos impuestos o ninguno, usado para ocultar dinero"
+      "id": "decision",
+      "titulo": "🎯 La decisión",
+      "descripcion": "Compara los tres y elige con criterio, no por costumbre.",
+      "campos": [
+        {
+          "id": "diferencia_anual",
+          "label": "Diferencia anual entre precio por valor y por costos",
+          "type": "calculated",
+          "formula": "Math.round((Math.ceil(valor_cliente * 0.5) - Math.ceil((costo_variable + costos_fijos / unidades_mes) * 1.4)) * unidades_mes * 12)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Esta cifra es lo que cuesta al año poner precio solo mirando los costos."
+        },
+        {
+          "id": "punto_equilibrio",
+          "label": "Piezas mínimas al mes para no perder (precio por costos)",
+          "type": "calculated",
+          "formula": "Math.ceil(costos_fijos / Math.max(1, Math.ceil((costo_variable + costos_fijos / unidades_mes) * 1.4) - costo_variable))",
+          "unit": "piezas",
+          "requerido": false
+        }
+      ]
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

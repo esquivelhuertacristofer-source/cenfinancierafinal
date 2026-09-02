@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-3-10-A",
+  "unit_code": "S3-3-10",
+  "unit_title": "Blindaje legal: fideicomisos, seguros y separación de patrimonio",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Cada Riesgo su Escudo",
+  "descripcion": "Clasifica cada riesgo según el instrumento que lo protege.",
+  "objetivo": "Asociar riesgos patrimoniales con el instrumento de protección adecuado",
+  "xp": 1000,
+  "instruccion": "Arrastra cada riesgo al instrumento que lo cubre.",
+  "categorias": [
+    {
+      "id": "sociedad",
+      "label": "Separación por sociedad",
+      "emoji": "🏢",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "seguro",
+      "label": "Seguro",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    },
+    {
+      "id": "sucesorio",
+      "label": "Testamento o fideicomiso",
+      "emoji": "📜",
+      "color": "#8B5CF6"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Una deuda del negocio que podría alcanzar la casa familiar",
+      "emoji": "🏠",
+      "categoria_correcta": "sociedad",
+      "feedback": "La sociedad crea un patrimonio distinto del personal."
+    },
+    {
+      "id": "i2",
+      "label": "Una hospitalización de varios cientos de miles",
+      "emoji": "🏥",
+      "categoria_correcta": "seguro",
+      "feedback": "Ningún ahorro razonable absorbe ese golpe."
+    },
+    {
+      "id": "i3",
+      "label": "Que los hijos menores queden sin sustento",
+      "emoji": "👧",
+      "categoria_correcta": "seguro",
+      "feedback": "El seguro de vida protege a quienes dependen de ti."
+    },
+    {
+      "id": "i4",
+      "label": "Que la familia deba un juicio largo para acceder a los bienes",
+      "emoji": "⚖️",
+      "categoria_correcta": "sucesorio",
+      "feedback": "El testamento evita ese proceso costoso y lento."
+    },
+    {
+      "id": "i5",
+      "label": "Una demanda de un cliente contra el negocio",
+      "emoji": "📋",
+      "categoria_correcta": "sociedad",
+      "feedback": "Responde el patrimonio de la sociedad, no el personal."
+    },
+    {
+      "id": "i6",
+      "label": "Un daño que yo causo al patrimonio de un tercero",
+      "emoji": "💥",
+      "categoria_correcta": "seguro",
+      "feedback": "Es exactamente lo que cubre la responsabilidad civil."
+    },
+    {
+      "id": "i7",
+      "label": "Administrar bienes para alguien que aún no puede hacerlo",
+      "emoji": "🤲",
+      "categoria_correcta": "sucesorio",
+      "feedback": "Un fideicomiso permite administrarlos con fines definidos."
+    },
+    {
+      "id": "i8",
+      "label": "Que un socio comprometa bienes personales míos",
+      "emoji": "🤝",
+      "categoria_correcta": "sociedad",
+      "feedback": "La estructura societaria delimita las responsabilidades."
+    },
+    {
+      "id": "i9",
+      "label": "Repartir un patrimonio complejo entre varios beneficiarios",
+      "emoji": "🧩",
+      "categoria_correcta": "sucesorio",
+      "feedback": "Es uno de los usos más frecuentes del fideicomiso."
+    },
+    {
+      "id": "i10",
+      "label": "La pérdida total del vehículo con el que trabajo",
+      "emoji": "🚗",
+      "categoria_correcta": "seguro",
+      "feedback": "Transfiere el costo financiero del evento."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-10-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-10-a-escena.webp"
+}

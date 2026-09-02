@@ -5,109 +5,109 @@
   "level": "Primaria 5",
   "edad": "10-11 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Empatía y Negocios",
-  "descripcion": "¿Sabes leer las emociones de los demás? ¡Descubre cómo el corazón también ayuda a tu billetera!",
-  "objetivo": "Evaluar la comprensión de habilidades interpersonales aplicadas al entorno empresarial",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
+  "complejidad": "MEDIO",
+  "titulo": "Vender Ayudando",
+  "descripcion": "Comprueba si distingues entre interrumpir a un cliente y atraerlo.",
+  "objetivo": "Diferenciar el marketing de contenidos de la publicidad tradicional y reconocer el papel del storytelling y la empatía comercial.",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "eq1",
-      "texto": "¿Qué es la 'Escucha Activa'?",
+      "id": "q1",
+      "texto": "El marketing de contenidos consiste en…",
       "opciones": [
-        "Oír lo que dicen mientras ves tu celular",
-        "Prestar atención total, sin interrumpir y tratando de entender el sentimiento del otro",
-        "Escuchar música mientras trabajas",
-        "Anotar todo lo que dicen palabra por palabra"
+        "Interrumpir a la gente con anuncios",
+        "Crear algo útil que atraiga clientes por sí solo",
+        "Bajar los precios",
+        "Repartir volantes"
       ],
       "correcta": 1,
-      "explicacion": "Escuchar con el corazón y la mente abierta es la base de todo trato exitoso."
+      "explicacion": "Enseñas, resuelves o entretienes; la venta llega después, por confianza."
     },
     {
-      "id": "eq2",
-      "texto": "¿Qué significa una negociación 'Ganar-Ganar'?",
+      "id": "q2",
+      "texto": "Una veterinaria que publica \"5 señales de que tu perro tiene dolor\" está…",
       "opciones": [
-        "Que yo gano dos veces",
-        "Que ambas partes salen beneficiadas y felices con el acuerdo",
-        "Que convenzo al otro de hacer lo que yo quiero",
-        "Que nadie gana nada"
+        "Perdiendo el tiempo",
+        "Haciendo marketing de contenidos",
+        "Regalando su negocio",
+        "Haciendo publicidad engañosa"
       ],
       "correcta": 1,
-      "explicacion": "Los mejores negocios son los que duran mucho tiempo porque todos están felices."
+      "explicacion": "Quien lea eso y necesite un veterinario, ya sabe a quién llamar."
     },
     {
-      "id": "eq3",
-      "texto": "¿Por qué es importante la Inteligencia Emocional en un líder?",
+      "id": "q3",
+      "texto": "¿Por qué funciona regalar conocimiento?",
       "opciones": [
-        "Para saber actuar con calma cuando algo sale mal",
-        "Para que todos le tengan miedo",
-        "Para no tener sentimientos",
-        "Para ser el más divertido"
+        "Porque genera confianza y la confianza vende",
+        "Porque a la gente le gusta lo gratis",
+        "Porque es más barato",
+        "Porque lo dice la ley"
       ],
       "correcta": 0,
-      "explicacion": "Un líder que no controla su enojo o miedo asusta a su equipo y toma malas decisiones."
+      "explicacion": "La gente compra de quien siente que sabe y que no la quiere engañar."
     },
     {
-      "id": "eq4",
-      "texto": "¿Qué es la 'Empatía'?",
+      "id": "q4",
+      "texto": "La diferencia principal entre un anuncio y un contenido es que…",
       "opciones": [
-        "Saber mucho de números",
-        "Ponerse en los zapatos del otro para entender su situación",
-        "Darle la razón a todos siempre",
-        "Ser muy simpático"
-      ],
-      "correcta": 1,
-      "explicacion": "La empatía te ayuda a crear productos que la gente realmente necesita."
-    },
-    {
-      "id": "eq5",
-      "texto": "Si un socio te da una 'Crítica Constructiva', ¿cómo debes reaccionar?",
-      "opciones": [
-        "Enojándote y dejando de hablarle",
-        "Escuchando con humildad y viendo cómo puedes mejorar",
-        "Diciéndole que él está peor",
-        "Cerrando el negocio"
-      ],
-      "correcta": 1,
-      "explicacion": "La crítica constructiva es un regalo para que tu negocio crezca."
-    },
-    {
-      "id": "eq6",
-      "texto": "¿Cómo se maneja el estrés antes de una presentación importante?",
-      "opciones": [
-        "Tomando mucho refresco",
-        "Respirando profundo y visualizando el éxito",
-        "Gritándole a alguien",
-        "Huyendo del lugar"
-      ],
-      "correcta": 1,
-      "explicacion": "Controlar tu cuerpo ayuda a calmar tu mente."
-    },
-    {
-      "id": "eq7",
-      "texto": "¿Qué es la 'Asertividad'?",
-      "opciones": [
-        "Decir lo que piensas de forma clara y respetuosa, sin agredir ni callarte",
-        "Estar siempre de acuerdo con el jefe",
-        "Ser muy tímido",
-        "Gritar para que te escuchen"
+        "El anuncio interrumpe; el contenido da algo antes de pedir",
+        "El anuncio es más largo",
+        "El contenido es siempre gratis",
+        "No hay diferencia"
       ],
       "correcta": 0,
-      "explicacion": "Ser asertivo permite que tus ideas se escuchen sin crear conflictos."
+      "explicacion": "Uno te encuentra a ti; al otro lo buscas tú."
     },
     {
-      "id": "eq8",
-      "texto": "¿Por qué las empresas buscan gente con buena Inteligencia Emocional?",
+      "id": "q5",
+      "texto": "El \"storytelling\" en un negocio sirve para…",
       "opciones": [
-        "Porque son más baratos",
-        "Porque trabajan mejor en equipo y resuelven problemas sin pelear",
-        "Porque no se cansan",
-        "Porque saben mucho de computadoras"
+        "Contar historias que hagan memorable tu producto",
+        "Inventar mentiras sobre el producto",
+        "Alargar los anuncios",
+        "Bajar los costos"
+      ],
+      "correcta": 0,
+      "explicacion": "Las personas olvidan datos y recuerdan historias. Contar cómo nació tu negocio vende más que decir \"somos los mejores\"."
+    },
+    {
+      "id": "q6",
+      "texto": "Un contenido que solo dice \"COMPRA YA, EL MEJOR PRECIO\"…",
+      "opciones": [
+        "Es marketing de contenidos",
+        "Es publicidad, y la gente lo ignora rápido",
+        "Genera mucha confianza",
+        "Es lo más efectivo"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora sabes que el éxito financiero también se construye con emociones sanas."
+      "explicacion": "Si no da nada útil, es un anuncio, aunque esté en redes sociales."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuál es la mayor ventaja del marketing de contenidos para un negocio pequeño?",
+      "opciones": [
+        "Cuesta poco dinero y mucho conocimiento",
+        "Es instantáneo",
+        "No requiere esfuerzo",
+        "Garantiza ventas el primer día"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la forma más justa de competir: no necesitas presupuesto, necesitas saber algo y compartirlo. Eso sí, tarda meses en dar frutos."
+    },
+    {
+      "id": "q8",
+      "texto": "La empatía comercial significa…",
+      "opciones": [
+        "Pensar primero en qué necesita el cliente, no en qué quieres vender",
+        "Ser amable solo al cobrar",
+        "Regalar productos",
+        "Bajar siempre el precio"
+      ],
+      "correcta": 0,
+      "explicacion": "Los mejores contenidos nacen de una pregunta real que tienen tus clientes."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

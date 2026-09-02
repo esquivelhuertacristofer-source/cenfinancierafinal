@@ -130,5 +130,6 @@
   "titulo": "Cuestionario: Mi Reporte de Éxito",
   "descripcion": "El reporte de resultados dice si tu negocio ganó o perdió. ¡Demuestra que sabes leer los números de tu empresa y tomar decisiones con ellos!",
   "xp": 300,
-  "level": "Primaria 2"
+  "level": "Primaria 2",
+  "objetivo": "Repasar lo aprendido en el año: ahorro, presupuesto, gasto responsable y primeras ideas de negocio."
 }

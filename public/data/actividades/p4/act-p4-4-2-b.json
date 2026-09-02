@@ -4,101 +4,104 @@
   "unit_title": "El costo de mi idea: materia prima y mano de obra",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Mi Ficha Técnica",
-  "descripcion": "Un profesional siempre sabe sus números. ¡Crea la ficha técnica de tu producto y define el precio de éxito!",
-  "objetivo": "Documentar el proceso productivo y establecer una estrategia de precios rentable",
-  "xp": 350,
-  "output_type": "Ficha Técnica de Producto",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Los Costos de las Galletas",
+  "descripcion": "Para saber a cuánto vender tus galletas, primero tienes que saber qué te costaron. Y no todos los costos son iguales.",
+  "objetivo": "Clasificar los costos de un producto en materia prima, mano de obra y gastos fijos para calcular su costo real.",
+  "xp": 450,
+  "instruccion": "Arrastra cada gasto del negocio de galletas al tipo de costo que le corresponde.",
+  "categorias": [
     {
-      "id": "definicion",
-      "titulo": "📦 Mi Producto",
-      "descripcion": "¿Qué vas a crear para tus clientes?",
-      "campos": [
-        {
-          "id": "nombre_producto_p4",
-          "label": "Nombre del Producto",
-          "type": "text",
-          "placeholder": "Ej: Llaveros de Superpoderes",
-          "requerido": true
-        },
-        {
-          "id": "descripcion_uso",
-          "label": "¿Para qué sirve?",
-          "type": "textarea",
-          "placeholder": "Ej: Para que nunca pierdas tus llaves y se vean geniales...",
-          "requerido": true
-        }
-      ]
+      "id": "materia",
+      "label": "MATERIA PRIMA",
+      "emoji": "🥚",
+      "color": "#f59e0b"
     },
     {
-      "id": "insumos_detalle",
-      "titulo": "🧪 Insumos y Materiales",
-      "descripcion": "Haz una lista de todo lo que necesitas comprar.",
-      "campos": [
-        {
-          "id": "lista_materiales",
-          "label": "Materiales necesarios",
-          "type": "textarea",
-          "placeholder": "Ej: Resina, argollas, pintura, bolsitas...",
-          "requerido": true
-        },
-        {
-          "id": "costo_total_estimado",
-          "label": "Costo total de materiales",
-          "type": "number",
-          "unit": "$",
-          "requerido": true
-        }
-      ]
+      "id": "mano",
+      "label": "MANO DE OBRA",
+      "emoji": "👩‍🍳",
+      "color": "#3b82f6"
     },
     {
-      "id": "estrategia_precio",
-      "titulo": "💰 Estrategia de Precio",
-      "descripcion": "Calcula cuánto vas a cobrar.",
-      "campos": [
-        {
-          "id": "costo_por_pieza",
-          "label": "Costo por cada pieza (Costo Total / Cantidad)",
-          "type": "number",
-          "unit": "$",
-          "requerido": true
-        },
-        {
-          "id": "precio_venta_p4",
-          "label": "Precio de Venta Sugerido",
-          "type": "number",
-          "unit": "$",
-          "requerido": true
-        },
-        {
-          "id": "margen_ganancia",
-          "label": "¿Por qué elegiste ese precio?",
-          "type": "text",
-          "placeholder": "Ej: Porque me deja ganar el doble de lo que gasté...",
-          "requerido": true
-        },
-        {
-          "id": "ganancia_unitaria",
-          "label": "Ganancia por Pieza",
-          "type": "calculated",
-          "formula": "precio_venta_p4 - costo_por_pieza",
-          "unit": "$",
-          "ayuda": "Lo que ganas neto cada vez que vendes una unidad"
-        },
-        {
-          "id": "margen_porcentaje",
-          "label": "Margen de Ganancia (%)",
-          "type": "calculated",
-          "formula": "Math.round((precio_venta_p4 - costo_por_pieza) / Math.max(1, precio_venta_p4) * 100)",
-          "unit": "%",
-          "ayuda": "Un negocio sano tiene margen de al menos 30%"
-        }
-      ]
+      "id": "fijo",
+      "label": "GASTOS FIJOS",
+      "emoji": "🏠",
+      "color": "#8b5cf6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Harina, huevos y mantequilla",
+      "emoji": "🧈",
+      "categoria_correcta": "materia",
+      "feedback": "Todo lo que se convierte en el producto es materia prima."
+    },
+    {
+      "id": "i2",
+      "label": "Las 3 horas que pasas horneando",
+      "emoji": "⏰",
+      "categoria_correcta": "mano",
+      "feedback": "Tu tiempo vale. Si no lo cuentas, estás trabajando gratis sin saberlo."
+    },
+    {
+      "id": "i3",
+      "label": "La luz del horno cada mes",
+      "emoji": "💡",
+      "categoria_correcta": "fijo",
+      "feedback": "Se paga hagas 10 galletas o 500: por eso es un gasto fijo."
+    },
+    {
+      "id": "i4",
+      "label": "Chispas de chocolate",
+      "emoji": "🍫",
+      "categoria_correcta": "materia",
+      "feedback": "Va dentro de la galleta: es materia prima."
+    },
+    {
+      "id": "i5",
+      "label": "Lo que le pagas a tu hermana por ayudarte a empacar",
+      "emoji": "📦",
+      "categoria_correcta": "mano",
+      "feedback": "El trabajo de otras personas también es mano de obra."
+    },
+    {
+      "id": "i6",
+      "label": "La renta del local",
+      "emoji": "🏪",
+      "categoria_correcta": "fijo",
+      "feedback": "Se paga aunque no vendas nada ese mes. Es el costo más peligroso al empezar."
+    },
+    {
+      "id": "i7",
+      "label": "Las bolsitas donde vendes cada galleta",
+      "emoji": "🛍️",
+      "categoria_correcta": "materia",
+      "feedback": "El empaque se va con cada producto vendido: cuenta como materia prima."
+    },
+    {
+      "id": "i8",
+      "label": "El sueldo del repartidor",
+      "emoji": "🛵",
+      "categoria_correcta": "mano",
+      "feedback": "Alguien tiene que llevarlas, y ese trabajo cuesta."
+    },
+    {
+      "id": "i9",
+      "label": "El internet para tomar los pedidos",
+      "emoji": "📶",
+      "categoria_correcta": "fijo",
+      "feedback": "Se paga igual cada mes, vendas mucho o poco."
+    },
+    {
+      "id": "i10",
+      "label": "Azúcar y vainilla",
+      "emoji": "🍬",
+      "categoria_correcta": "materia",
+      "feedback": "Ingredientes: materia prima."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

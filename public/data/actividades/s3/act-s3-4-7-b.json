@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-4-7-B",
+  "unit_code": "S3-4-7",
+  "unit_title": "Term sheet: entender la primera oferta de un inversionista",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Leer una Oferta",
+  "descripcion": "Comprueba que sabes interpretar una oferta de inversión.",
+  "objetivo": "Verificar la comprensión de valuación, porcentaje y cláusulas",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La primera oferta de un inversionista es:",
+      "opciones": [
+        "El contrato final",
+        "Un recibo",
+        "Un documento con las condiciones propuestas",
+        "Una factura"
+      ],
+      "correcta": 2,
+      "explicacion": "No es final, pero define casi todo lo que después se firma."
+    },
+    {
+      "id": "q2",
+      "texto": "Las tres cifras ligadas son:",
+      "opciones": [
+        "Precio, costo y margen",
+        "Ingreso, gasto y utilidad",
+        "Activo, pasivo y capital",
+        "Monto, valuación previa y porcentaje"
+      ],
+      "correcta": 3,
+      "explicacion": "Conocidas dos, la tercera se calcula."
+    },
+    {
+      "id": "q3",
+      "texto": "El porcentaje del inversionista se obtiene:",
+      "opciones": [
+        "Dividiendo el monto entre la valuación previa más el monto",
+        "Restando el monto a la valuación",
+        "Multiplicando",
+        "Dividiendo entre doce"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la relación básica de cualquier ronda."
+    },
+    {
+      "id": "q4",
+      "texto": "Con el mismo monto, una valuación previa mayor implica:",
+      "opciones": [
+        "Ceder más porcentaje",
+        "Ceder menos porcentaje",
+        "Lo mismo",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso la valuación es el punto central de la negociación."
+    },
+    {
+      "id": "q5",
+      "texto": "Una valuación se sostiene con:",
+      "opciones": [
+        "Expectativas",
+        "Entusiasmo",
+        "Datos de tracción",
+        "Promesas"
+      ],
+      "correcta": 2,
+      "explicacion": "Los números presentes pesan más que las proyecciones."
+    },
+    {
+      "id": "q6",
+      "texto": "Los derechos de preferencia definen:",
+      "opciones": [
+        "El precio del producto",
+        "Los impuestos",
+        "El sueldo del fundador",
+        "Quién cobra primero si la empresa se vende"
+      ],
+      "correcta": 3,
+      "explicacion": "Pueden cambiar por completo el resultado de una venta."
+    },
+    {
+      "id": "q7",
+      "texto": "La reserva de acciones del equipo:",
+      "opciones": [
+        "Suele salir de la parte del fundador",
+        "Sale del inversionista",
+        "No existe",
+        "La pone el banco"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una de las sorpresas más frecuentes en una primera ronda."
+    },
+    {
+      "id": "q8",
+      "texto": "Una oferta con valuación alta y cláusulas duras:",
+      "opciones": [
+        "Siempre es mejor",
+        "Puede ser peor que una con valuación menor y condiciones limpias",
+        "Es igual",
+        "No existe"
+      ],
+      "correcta": 1,
+      "explicacion": "La comparación honesta mira ambas dimensiones."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-7-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-7-b-escena.webp"
+}

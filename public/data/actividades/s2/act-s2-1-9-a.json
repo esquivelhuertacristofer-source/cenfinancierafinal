@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S2-1-9-A",
+  "unit_code": "S2-1-9",
+  "unit_title": "Las remesas y su peso real en la economía mexicana",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "La Ruta del Envío",
+  "descripcion": "Ajusta comisión y tipo de cambio y observa cuánto llega realmente a casa.",
+  "objetivo": "Cuantificar el costo total del envío de remesas y su acumulado anual",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "envio",
+      "label": "Monto enviado cada vez",
+      "type": "slider",
+      "min": 50,
+      "max": 3000,
+      "step": 50,
+      "default": 400,
+      "unit": "USD",
+      "referencia": "El envío promedio suele estar en este rango."
+    },
+    {
+      "id": "envios_ano",
+      "label": "Envíos al año",
+      "type": "slider",
+      "min": 1,
+      "max": 52,
+      "step": 1,
+      "default": 12,
+      "unit": "envíos",
+      "referencia": "Cada envío tiene su propio costo fijo."
+    },
+    {
+      "id": "comision",
+      "label": "Comisión por envío",
+      "type": "slider",
+      "min": 0,
+      "max": 40,
+      "step": 0.5,
+      "default": 6,
+      "unit": "USD",
+      "referencia": "El costo visible, el que todos comparan."
+    },
+    {
+      "id": "diferencial",
+      "label": "Diferencial cambiario que aplica el operador",
+      "type": "slider",
+      "min": 0,
+      "max": 8,
+      "step": 0.25,
+      "default": 2.5,
+      "unit": "%",
+      "referencia": "El costo invisible: suele ser mayor que la comisión."
+    }
+  ],
+  "formula": "Math.round((comision + envio * diferencial / 100) * envios_ano)",
+  "descripcion_formula": "Costo total anual del envío: la comisión más el diferencial cambiario aplicado sobre el monto, multiplicado por todos los envíos del año.",
+  "output_label": "Lo que cuesta enviar en un año",
+  "output_suffix": " USD",
+  "escenarios": [
+    {
+      "condicion": "diferencial >= 3 && envios_ano >= 12",
+      "mensaje": "El diferencial cambiario te está costando más que la comisión, y eso ocurre cada envío. Comparar cuántos pesos llegan al final es la única comparación válida.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "comision <= 3 && diferencial <= 1",
+      "mensaje": "Comisión baja y diferencial bajo: esta es la combinación que hace que llegue más dinero a casa sin cambiar nada más.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "envios_ano >= 24 && comision >= 8",
+      "mensaje": "Con envíos frecuentes, una comisión fija alta se multiplica. Agrupar envíos puede reducir bastante el costo total del año.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "diferencial == 0 && comision == 0",
+      "mensaje": "Sin comisión ni diferencial llega todo. En la práctica siempre hay algún costo: lo importante es conocerlo y compararlo antes de elegir.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "comision + envio * diferencial / 100 >= envio * 0.06",
+      "mensaje": "Más del 6% de cada envío se queda en el camino. Sobre un año completo, eso equivale a varias semanas de trabajo de quien lo envía.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-9-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-9-a-escena.webp"
+}

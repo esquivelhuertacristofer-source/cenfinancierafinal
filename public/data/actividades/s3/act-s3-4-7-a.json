@@ -1,0 +1,201 @@
+{
+  "code": "ACT-S3-4-7-A",
+  "unit_code": "S3-4-7",
+  "unit_title": "Term sheet: entender la primera oferta de un inversionista",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Primera Oferta",
+  "descripcion": "Arma y evalúa una oferta de inversión con tus propias cifras.",
+  "objetivo": "Calcular las cifras de una oferta de inversión y evaluar sus condiciones",
+  "xp": 1000,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi empresa hoy",
+      "descripcion": "Con qué llego a la mesa.",
+      "campos": [
+        {
+          "id": "empresa",
+          "label": "Nombre de mi empresa",
+          "type": "text",
+          "placeholder": "Ej. Ceny Labs",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_mensual",
+          "label": "Ingreso mensual actual",
+          "type": "number",
+          "min": 0,
+          "max": 5000000,
+          "default": 120000,
+          "unit": "$",
+          "placeholder": "120000",
+          "requerido": true
+        },
+        {
+          "id": "crecimiento_mensual",
+          "label": "Crecimiento mensual promedio",
+          "type": "slider",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "default": 8,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_anualizado",
+          "label": "Ingreso anualizado",
+          "type": "calculated",
+          "formula": "ingreso_mensual * 12",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "La oferta",
+      "descripcion": "Lo que propone el inversionista.",
+      "campos": [
+        {
+          "id": "monto",
+          "label": "Monto que invierte",
+          "type": "number",
+          "min": 50000,
+          "max": 50000000,
+          "default": 2000000,
+          "unit": "$",
+          "placeholder": "2000000",
+          "requerido": true
+        },
+        {
+          "id": "valuacion_previa",
+          "label": "Valuación antes de la inversión",
+          "type": "number",
+          "min": 100000,
+          "max": 300000000,
+          "default": 8000000,
+          "unit": "$",
+          "placeholder": "8000000",
+          "requerido": true
+        },
+        {
+          "id": "valuacion_posterior",
+          "label": "Valuación después de la inversión",
+          "type": "calculated",
+          "formula": "valuacion_previa + monto",
+          "unit": "$"
+        },
+        {
+          "id": "porcentaje_inversionista",
+          "label": "Porcentaje que se lleva el inversionista",
+          "type": "calculated",
+          "formula": "Math.round(monto / Math.max(1, valuacion_previa + monto) * 1000) / 10",
+          "unit": "%"
+        },
+        {
+          "id": "multiplo_ingreso",
+          "label": "Cuántas veces el ingreso anual vale la empresa",
+          "type": "calculated",
+          "formula": "Math.round(valuacion_previa / Math.max(1, ingreso_mensual * 12) * 10) / 10",
+          "unit": "x"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "La reserva del equipo",
+      "descripcion": "Lo que casi nadie ve venir.",
+      "campos": [
+        {
+          "id": "reserva_equipo",
+          "label": "Acciones reservadas para el equipo",
+          "type": "slider",
+          "min": 0,
+          "max": 25,
+          "step": 1,
+          "default": 10,
+          "unit": "%",
+          "ayuda": "Normalmente sale de la parte del fundador.",
+          "requerido": true
+        },
+        {
+          "id": "fundador_antes",
+          "label": "Porcentaje del fundador antes de la ronda",
+          "type": "slider",
+          "min": 20,
+          "max": 100,
+          "step": 1,
+          "default": 100,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "fundador_despues",
+          "label": "Porcentaje del fundador tras inversión y reserva",
+          "type": "calculated",
+          "formula": "Math.round((fundador_antes * (1 - monto / Math.max(1, valuacion_previa + monto)) - reserva_equipo) * 10) / 10",
+          "unit": "%"
+        },
+        {
+          "id": "puntos_cedidos",
+          "label": "Puntos porcentuales que cedo en total",
+          "type": "calculated",
+          "formula": "Math.round((fundador_antes - (fundador_antes * (1 - monto / Math.max(1, valuacion_previa + monto)) - reserva_equipo)) * 10) / 10",
+          "unit": "pts"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Las cláusulas",
+      "descripcion": "Lo que no es dinero pero pesa.",
+      "campos": [
+        {
+          "id": "asientos_consejo",
+          "label": "¿Pide asiento en el consejo?",
+          "type": "select",
+          "opciones": [
+            "Sí, con voto en decisiones clave",
+            "Sí, solo como observador",
+            "No"
+          ],
+          "default": "Sí, con voto en decisiones clave",
+          "requerido": true
+        },
+        {
+          "id": "preferencia",
+          "label": "¿Tiene preferencia de cobro en una venta?",
+          "type": "select",
+          "opciones": [
+            "Sí, cobra primero su inversión",
+            "Sí, con múltiplo mayor a uno",
+            "No, cobra a prorrata"
+          ],
+          "default": "Sí, cobra primero su inversión",
+          "requerido": true
+        },
+        {
+          "id": "valor_no_monetario",
+          "label": "¿Qué aporta además del dinero?",
+          "type": "textarea",
+          "placeholder": "Contactos, experiencia en el sector, acceso a clientes...",
+          "requerido": true
+        },
+        {
+          "id": "decision",
+          "label": "¿Aceptas la oferta? Justifica",
+          "type": "textarea",
+          "placeholder": "Considera valuación, dilución total y cláusulas",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_oferta_inversion",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-4-7-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-7-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-4-9-A",
+  "unit_code": "S3-4-9",
+  "unit_title": "Franquicias: crecer con el capital de otros",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Quién Aporta Qué",
+  "descripcion": "Clasifica cada elemento según a qué parte de la franquicia corresponde.",
+  "objetivo": "Distinguir las aportaciones y obligaciones de cada parte en una franquicia",
+  "xp": 1000,
+  "instruccion": "Arrastra cada elemento a la parte que lo aporta o lo asume.",
+  "categorias": [
+    {
+      "id": "otorga",
+      "label": "Quien otorga la franquicia",
+      "emoji": "🏷️",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": "adquiere",
+      "label": "Quien adquiere la franquicia",
+      "emoji": "🧑‍💼",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "requisito",
+      "label": "Requisito previo para franquiciar",
+      "emoji": "✅",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "La marca y su reputación",
+      "emoji": "⭐",
+      "categoria_correcta": "otorga",
+      "feedback": "Es el activo central que se cede en uso."
+    },
+    {
+      "id": "i2",
+      "label": "El capital de la inversión inicial",
+      "emoji": "💰",
+      "categoria_correcta": "adquiere",
+      "feedback": "Es justo lo que permite crecer sin capital propio."
+    },
+    {
+      "id": "i3",
+      "label": "Los manuales de operación documentados",
+      "emoji": "📘",
+      "categoria_correcta": "otorga",
+      "feedback": "Sin manuales no hay modelo replicable."
+    },
+    {
+      "id": "i4",
+      "label": "La operación diaria del local",
+      "emoji": "🏪",
+      "categoria_correcta": "adquiere",
+      "feedback": "La ejecución cotidiana corre por su cuenta."
+    },
+    {
+      "id": "i5",
+      "label": "Que el modelo ya sea rentable de forma consistente",
+      "emoji": "📈",
+      "categoria_correcta": "requisito",
+      "feedback": "Franquiciar lo que no funciona multiplica el problema."
+    },
+    {
+      "id": "i6",
+      "label": "La capacitación inicial del nuevo operador",
+      "emoji": "🎓",
+      "categoria_correcta": "otorga",
+      "feedback": "Reduce la curva de aprendizaje del franquiciatario."
+    },
+    {
+      "id": "i7",
+      "label": "El pago de regalías sobre ventas",
+      "emoji": "🧾",
+      "categoria_correcta": "adquiere",
+      "feedback": "Es la contraprestación periódica del modelo."
+    },
+    {
+      "id": "i8",
+      "label": "Tener la marca registrada",
+      "emoji": "®️",
+      "categoria_correcta": "requisito",
+      "feedback": "Sin registro no se puede ceder legalmente su uso."
+    },
+    {
+      "id": "i9",
+      "label": "Capacidad real de dar soporte continuo",
+      "emoji": "🛠️",
+      "categoria_correcta": "requisito",
+      "feedback": "Un franquiciatario abandonado daña la marca de todos."
+    },
+    {
+      "id": "i10",
+      "label": "Contratar y dirigir al personal del punto",
+      "emoji": "👥",
+      "categoria_correcta": "adquiere",
+      "feedback": "La gestión del equipo local es suya."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-9-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-9-a-escena.webp"
+}

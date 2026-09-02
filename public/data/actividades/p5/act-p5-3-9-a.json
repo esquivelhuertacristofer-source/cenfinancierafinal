@@ -1,0 +1,181 @@
+{
+  "code": "ACT-P5-3-9-A",
+  "unit_code": "P5-3-9",
+  "unit_title": "El horizonte: a qué plazo voy a necesitar el dinero",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Plazo Correcto",
+  "descripcion": "La familia de Ceny va a invertir para tres metas distintas. Cada decisión define si el dinero está cuando se necesita.",
+  "objetivo": "Aplicar la regla de coincidencia entre plazo del instrumento y horizonte de la meta",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny tiene $60,000 y tres metas: el fondo de emergencia, un viaje en dos años y los estudios universitarios en ocho años.",
+  "nodo_inicial": "emergencia",
+  "nodos": {
+    "emergencia": {
+      "id": "emergencia",
+      "texto": "Primero, los $20,000 del fondo de emergencia. ¿Dónde los ponen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "En un instrumento de disponibilidad inmediata, aunque rinda poco",
+          "siguiente_nodo": "viaje",
+          "consecuencia": "Una emergencia no espera a que venza nada.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "En un plazo fijo a tres años que paga más",
+          "siguiente_nodo": "emergencia_mal",
+          "consecuencia": "Más rendimiento, pero inmovilizado justo el dinero que debe estar libre.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -1500
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-emergencia.webp"
+    },
+    "emergencia_mal": {
+      "id": "emergencia_mal",
+      "texto": "A los cuatro meses surge una urgencia médica de $12,000 y el dinero está inmovilizado. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Retirar con penalización y mover el fondo a un instrumento líquido",
+          "siguiente_nodo": "viaje",
+          "consecuencia": "La penalización dolió, pero corrigieron el error de fondo.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -1500
+        },
+        {
+          "id": "o2",
+          "texto": "Pedir un préstamo para no tocar la inversión",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Pagar intereses teniendo el dinero propio inmovilizado es lo peor de ambos mundos.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-emergencia_mal.webp"
+    },
+    "viaje": {
+      "id": "viaje",
+      "texto": "Ahora los $15,000 del viaje en dos años. ¿Qué instrumento eligen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Un instrumento a plazo de 18 meses, con margen antes de la fecha",
+          "siguiente_nodo": "estudios",
+          "consecuencia": "Vence antes de necesitarlo: si el viaje se adelanta, el dinero ya está libre.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 800
+        },
+        {
+          "id": "o2",
+          "texto": "Un fondo de acciones, que a dos años puede rendir más",
+          "siguiente_nodo": "estudios",
+          "consecuencia": "A dos años el mercado puede estar abajo justo en la fecha del viaje.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -1200
+        },
+        {
+          "id": "o3",
+          "texto": "Un plazo de exactamente 24 meses, para el día del viaje",
+          "siguiente_nodo": "estudios",
+          "consecuencia": "Sin margen: si el viaje se adelanta o el trámite tarda, hay problema.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-viaje.webp"
+    },
+    "estudios": {
+      "id": "estudios",
+      "texto": "Quedan $25,000 para los estudios en ocho años. ¿Qué eligen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Un portafolio diversificado con parte en riesgo medio y alto",
+          "siguiente_nodo": "revision",
+          "consecuencia": "Ocho años dan margen para aguantar variaciones y aprovechar el crecimiento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Una cuenta de ahorro, para no arriesgar nada",
+          "siguiente_nodo": "revision",
+          "consecuencia": "Cero riesgo y también cero crecimiento: en ocho años la inflación se lleva buena parte.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-estudios.webp"
+    },
+    "revision": {
+      "id": "revision",
+      "texto": "Faltan dos años para los estudios y el dinero sigue en riesgo medio y alto. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ir moviéndolo gradualmente a instrumentos estables",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "El horizonte se acortó: el riesgo debe acortarse con él.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlo igual, ha rendido muy bien",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Una caída en el último año obligaría a pagar la colegiatura vendiendo abajo.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2500
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-revision.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Cada meta tuvo el instrumento adecuado y el dinero estuvo disponible cuando se necesitó.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El plazo del instrumento nunca superó el horizonte de la meta, y cuando el horizonte se acortó, el riesgo se acortó con él. Esa es la regla completa.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Las metas se cumplieron, aunque con más sobresaltos de los necesarios.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Elegir bien al inicio no basta: el horizonte se acorta cada año que pasa, y la inversión tiene que acompañar ese cambio.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia terminó pagando intereses de un préstamo mientras su propio dinero estaba inmovilizado.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El fondo de emergencia es el caso más claro de la regla: su horizonte es \"en cualquier momento\", así que su instrumento debe ser inmediato.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-3-9-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-3-9-a-portada.webp"
+}

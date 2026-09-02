@@ -4,102 +4,110 @@
   "unit_title": "La economía digital: gig economy, plataformas e ingresos alternativos",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Origen de Todo",
-  "descripcion": "Detrás de cada producto que usas hay una materia prima. ¿Sabes clasificarlas correctamente?",
-  "objetivo": "Identificar los diferentes tipos de commodities y sus aplicaciones en la industria y economía global",
-  "xp": 400,
-  "instruccion": "Arrastra cada materia prima a la categoría que le corresponde.",
-  "items": [
+  "tipo": "QUIZ",
+  "complejidad": "ALTO",
+  "titulo": "Trabajar sin Jefe",
+  "descripcion": "La economía digital abre oportunidades reales y traslada al trabajador riesgos que antes asumía la empresa. Conviene entrar sabiendo cuáles.",
+  "objetivo": "Identificar oportunidades de ingreso en la economía digital y sus implicaciones fiscales, legales y de protección social.",
+  "xp": 700,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "com1",
-      "label": "Barril de Petróleo Crudo",
-      "emoji": "🛢️",
-      "categoria_correcta": "energia",
-      "feedback": "La base del transporte, la energía y la fabricación de plásticos en el mundo."
+      "id": "q1",
+      "texto": "Trabajar en una plataforma digital en México implica que…",
+      "opciones": [
+        "No pagas impuestos",
+        "La plataforma retiene ISR e IVA y te reporta al SAT",
+        "Eres empleado con prestaciones",
+        "Es informal por definición"
+      ],
+      "correcta": 1,
+      "explicacion": "Estás en el radar fiscal desde el primer servicio, aunque no tengas prestaciones laborales."
     },
     {
-      "id": "com2",
-      "label": "Litio para Baterías",
-      "emoji": "🔋",
-      "categoria_correcta": "tecnologicos",
-      "feedback": "El 'oro blanco' del siglo XXI, esencial para los coches eléctricos y celulares."
+      "id": "q2",
+      "texto": "La diferencia principal entre un empleo formal y trabajar por plataforma es…",
+      "opciones": [
+        "El horario",
+        "Que los costos y los riesgos los asumes tú",
+        "El tipo de trabajo",
+        "Ninguna"
+      ],
+      "correcta": 1,
+      "explicacion": "Vehículo, equipo, enfermedad, tiempos muertos y retiro corren por tu cuenta."
     },
     {
-      "id": "com3",
-      "label": "Cables de Cobre",
-      "emoji": "🔌",
-      "categoria_correcta": "industriales",
-      "feedback": "El mejor conductor. Si el cobre sube de precio, construir edificios y tecnología es más caro."
+      "id": "q3",
+      "texto": "La \"depreciación\" de tu vehículo o equipo es…",
+      "opciones": [
+        "Un gasto imaginario",
+        "Un costo real: pierde valor con el uso y habrá que reponerlo",
+        "Un impuesto",
+        "Una ganancia"
+      ],
+      "correcta": 1,
+      "explicacion": "Ignorarla es el error más común: parece que ganas más de lo que ganas hasta que toca reponer."
     },
     {
-      "id": "com4",
-      "label": "Lingotes de Oro",
-      "emoji": "🟡",
-      "categoria_correcta": "preciosos",
-      "feedback": "El activo de refugio por excelencia cuando hay crisis financieras."
+      "id": "q4",
+      "texto": "Un ingreso \"alternativo\" verdaderamente valioso a largo plazo es aquel que…",
+      "opciones": [
+        "Paga más por hora",
+        "Construye un activo que sigue produciendo sin ti",
+        "No paga impuestos",
+        "Es más divertido"
+      ],
+      "correcta": 1,
+      "explicacion": "Un curso grabado, un canal o una herramienta siguen generando; una hora de reparto se cobra una vez."
     },
     {
-      "id": "com5",
-      "label": "Trigo y Maíz",
-      "emoji": "🌽",
-      "categoria_correcta": "agricolas",
-      "feedback": "Llamados 'Soft Commodities'. Son la base de la alimentación de miles de millones de personas."
+      "id": "q5",
+      "texto": "La mayor vulnerabilidad de quien vive solo de plataformas es…",
+      "opciones": [
+        "El clima",
+        "Que la plataforma cambie sus tarifas o su algoritmo de un día para otro",
+        "Los clientes",
+        "El tráfico"
+      ],
+      "correcta": 1,
+      "explicacion": "Depender de un solo canal que no controlas es riesgo de concentración, igual que invertir todo en una empresa."
     },
     {
-      "id": "com6",
-      "label": "Gas Natural",
-      "emoji": "🔥",
-      "categoria_correcta": "energia",
-      "feedback": "Fuente clave para la calefacción y la generación de electricidad en las ciudades."
+      "id": "q6",
+      "texto": "Si trabajas por plataforma, tu retiro…",
+      "opciones": [
+        "Lo cubre la plataforma",
+        "Depende de que tú aportes voluntariamente a una AFORE",
+        "No existe",
+        "Lo paga el gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "Cualquier persona puede abrir una AFORE y hacer aportaciones voluntarias, incluso sin patrón."
     },
     {
-      "id": "com7",
-      "label": "Plata Industrial",
-      "emoji": "🥈",
-      "categoria_correcta": "preciosos",
-      "feedback": "Metal con doble función: es reserva de valor y se usa mucho en paneles solares y electrónica."
+      "id": "q7",
+      "texto": "Emitir facturas por tus servicios digitales te permite…",
+      "opciones": [
+        "Pagar más impuestos sin beneficio",
+        "Comprobar ingresos y acceder a crédito, vivienda y clientes grandes",
+        "Nada",
+        "Evitar el SAT"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin comprobantes de ingreso, ningún banco te presta para crecer o comprar casa."
     },
     {
-      "id": "com8",
-      "label": "Ganado en Pie",
-      "emoji": "🐄",
-      "categoria_correcta": "agricolas",
-      "feedback": "Un commodity vital para la industria alimentaria de proteínas a nivel mundial."
+      "id": "q8",
+      "texto": "La estrategia más sólida para alguien en la economía digital es…",
+      "opciones": [
+        "Trabajar más horas",
+        "Diversificar fuentes de ingreso y construir su propia red de protección",
+        "Depender de una sola app",
+        "No declarar"
+      ],
+      "correcta": 1,
+      "explicacion": "Varios canales, fondo de emergencia propio, seguro médico y AFORE voluntaria: eso reemplaza lo que un empleo formal da automáticamente."
     }
   ],
-  "categorias": [
-    {
-      "id": "energia",
-      "label": "ENERGÍA",
-      "emoji": "⚡",
-      "color": "#1e293b"
-    },
-    {
-      "id": "tecnologicos",
-      "label": "METALES TECNOLÓGICOS",
-      "emoji": "📱",
-      "color": "#1e40af"
-    },
-    {
-      "id": "industriales",
-      "label": "METALES INDUSTRIALES",
-      "emoji": "🏗️",
-      "color": "#94a3b8"
-    },
-    {
-      "id": "preciosos",
-      "label": "METALES PRECIOSOS",
-      "emoji": "✨",
-      "color": "#fbbf24"
-    },
-    {
-      "id": "agricolas",
-      "label": "AGRÍCOLAS (SOFTS)",
-      "emoji": "🚜",
-      "color": "#166534"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

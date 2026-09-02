@@ -147,58 +147,52 @@
       "texto": "Último dilema: Hay un helado de edición limitada que Ceny ama. Cuesta $30. Pero Ceny prometió invitar a su mejor amigo a un jugo porque él le ayudó con la tarea. Solo tiene $30. ¿Qué hace?",
       "opciones": [
         {
-          "id": "comer_helado",
-          "texto": "Comer el helado solo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "El helado está rico, pero su amigo se siente un poco olvidado.",
-          "xp_bonus": 20,
-          "impacto_patrimonio": 10
-        },
-        {
           "id": "invitar_amigo",
-          "texto": "Cumplir su promesa e invitarlo",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Ceny renuncia al helado, pero fortalece su amistad.",
+          "texto": "Cumplir su promesa e invitar a su amigo",
+          "siguiente_nodo": "final_estratega",
+          "consecuencia": "Comparte el helado y cumple lo que había prometido.",
           "xp_bonus": 300,
           "es_optima": true,
-          "impacto_patrimonio": 50
+          "impacto_patrimonio": -30
+        },
+        {
+          "id": "comer_helado",
+          "texto": "Comerse el helado ella sola",
+          "siguiente_nodo": "final_impulsivo",
+          "consecuencia": "Disfruta el helado, y su amigo se queda esperando.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -30
+        },
+        {
+          "id": "romper_promesa",
+          "texto": "Gastar el helado Y sus ahorros de la bici en un videojuego nuevo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Se lleva el videojuego. La alcancía queda vacía.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -130
         }
       ]
     },
     "final_estratega": {
       "id": "final_estratega",
-      "texto": "¡ERES UN ESTRATEGA DIAMANTE! Ceny aprendió que el Costo de Oportunidad no es perder, es elegir lo que TIENE MÁS VALOR REAL (amistad, metas, futuro).",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "Has demostrado que entiendes que renunciar a algo pequeño hoy te da algo GIGANTE mañana. ¡Ceny está orgullosa de tu guía!"
+      "texto": "¡ERES UNA ESTRATEGA! Ceny entendió que cada vez que elige algo, está dejando ir otra cosa: eso se llama costo de oportunidad. Y aprendió que una promesa cumplida vale más que cualquier juguete.",
+      "reflexion_final": "Elegir siempre cuesta, aunque no gastes dinero. La pregunta no es \"¿lo quiero?\", sino \"¿qué estoy dejando ir si digo que sí?\"."
     },
     "final_impulsivo": {
       "id": "final_impulsivo",
-      "texto": "Has completado la misión, pero Ceny descubrió que elegir solo lo que brilla hoy puede dejarte vacío mañana. ¡Es hora de practicar más la paciencia!",
-      "es_final": true,
-      "tipo_final": "neutral",
-      "reflexion_final": "El costo de oportunidad de tu helado fue la confianza de un amigo. ¿Valió la pena el sabor por unos minutos?"
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "Ceny se comió el helado y estuvo rico. Al día siguiente su amigo no le dijo nada, pero tampoco la buscó en el recreo.",
+      "reflexion_final": "Elegir solo lo que brilla hoy tiene un costo que no se ve en la alcancía. Las promesas también son una forma de compromiso, y romperlas cuesta."
     },
     "final_malo": {
       "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "El videojuego se volvió aburrido en dos semanas. La bici sigue en la tienda y la alcancía está vacía. Ceny tiene que empezar de nuevo.",
+      "reflexion_final": "Cuando una decisión se lleva de golpe todo lo que habías juntado, el costo de oportunidad es enorme: perdiste el juguete, la bici y el tiempo que tardaste en ahorrar."
     }
   },
   "versión": "2026.Diamond.Mastery",

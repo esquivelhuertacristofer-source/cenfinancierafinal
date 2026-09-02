@@ -20,6 +20,38 @@ function withOpTimeout<T>(promise: PromiseLike<T>, label: string): Promise<T> {
   return withServerTimeout(promise, OP_TIMEOUT_MS, `SUPABASE_UNAVAILABLE: tiempo de espera agotado (${label})`);
 }
 
+// Límite duro de filas por carga de onboarding institucional. Protege contra
+// CSVs desproporcionados que saturen la API de Auth (sin endpoint de bulk) y
+// contra timeouts largos sin retroalimentación para el admin.
+const MAX_ONBOARD_ROWS = 300;
+
+// Cuántas cuentas se crean en paralelo dentro de un lote. La API
+// admin.auth.admin.createUser no tiene endpoint de bulk, así que se procesa
+// en mini-lotes concurrentes en vez de una llamada secuencial a la vez.
+const ONBOARD_CONCURRENCY = 5;
+
+// Helper genérico de "pool" de concurrencia acotada: procesa `items` con a lo
+// sumo `limit` llamadas a `worker` en vuelo al mismo tiempo, preservando en el
+// arreglo de resultados el mismo orden que `items` (independientemente del
+// orden real de finalización de cada promesa).
+async function runWithConcurrency<T, R>(
+  items: T[],
+  limit: number,
+  worker: (item: T, index: number) => Promise<R>
+): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let cursor = 0;
+  async function runner() {
+    while (cursor < items.length) {
+      const idx = cursor++;
+      results[idx] = await worker(items[idx], idx);
+    }
+  }
+  const workerCount = Math.min(limit, items.length);
+  await Promise.all(Array.from({ length: workerCount }, () => runner()));
+  return results;
+}
+
 // Mapa de grado a school_level legible
 const GRADO_A_SCHOOL_LEVEL: Record<string, string> = {
   P1: "Primaria 1", P2: "Primaria 2", P3: "Primaria 3",
@@ -84,16 +116,55 @@ export async function onboardInstitutionalUsers(
   groupId: string | null,
   role: "student" | "teacher",
   grado: string,
-  password: string
+  password: string,
+  targetEscuelaId?: string | null
 ): Promise<OnboardResult> {
-  await requireAdminSession();
+  const session = await requireAdminSession();
 
   if (!password || password.trim().length < 8) {
     throw new Error("La contraseña debe tener al menos 8 caracteres.");
   }
 
-  const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
+  // Un admin de escuela SIEMPRE usa su propia escuela_id de sesión — nunca la
+  // que mande el cliente, para que no pueda dar de alta usuarios en una
+  // escuela ajena. Un super_admin no tiene escuela_id propia (su profile no
+  // pertenece a ninguna escuela), así que debe indicar explícitamente a cuál
+  // escuela pertenece este lote; sin este requisito, `escuelaId` quedaba en
+  // NULL y las cuentas creadas (o sus vínculos a alumnos_grupos) quedaban
+  // huérfanas de cualquier escuela.
+  const escuelaId = session.isSuperAdmin
+    ? (targetEscuelaId ?? null)
+    : session.profile.escuela_id ?? null;
+  if (!escuelaId) {
+    throw new Error(
+      session.isSuperAdmin
+        ? "Como super_admin debes indicar a qué escuela pertenece este lote."
+        : "Tu cuenta de administrador no está vinculada a ninguna escuela."
+    );
+  }
+
   const admin = getAdminClient();
+
+  // Fix MEDIO: getGrupos() no acota por escuela para un super_admin (ve los
+  // grupos de TODAS las escuelas), así que sin este chequeo un super_admin
+  // podría enviar un `groupId` de una escuela distinta a `escuelaId` —
+  // dejando profiles.escuela_id apuntando a una escuela y
+  // alumnos_grupos/grupos.id_profesor a un grupo de otra. Se valida una sola
+  // vez porque groupId/escuelaId son constantes para todo el lote.
+  if (groupId) {
+    const { data: grupo, error: grupoErr } = await withOpTimeout(
+      admin.from("grupos").select("escuela_id").eq("id", groupId).single(),
+      "verificar grupo destino del lote"
+    );
+    if (grupoErr || !grupo) {
+      throw new Error("El grupo seleccionado no existe.");
+    }
+    if (grupo.escuela_id !== escuelaId) {
+      throw new Error("El grupo seleccionado pertenece a otra escuela.");
+    }
+  }
+
+  const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
   const pw = password.trim();
   const schoolLevel = GRADO_A_SCHOOL_LEVEL[grado] ?? grado;
   const usedEmails = new Set<string>();
@@ -106,7 +177,7 @@ export async function onboardInstitutionalUsers(
     const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
 
     try {
-      const { error: authError } = await withOpTimeout(
+      const { data: authData, error: authError } = await withOpTimeout(
         admin.auth.admin.createUser({
           email,
           password: pw,
@@ -121,9 +192,61 @@ export async function onboardInstitutionalUsers(
         `crear cuenta de ${name}`
       );
 
-      if (authError) {
-        results.errors.push({ name, message: authError.message });
+      if (authError || !authData.user) {
+        results.errors.push({ name, message: authError?.message ?? "Error desconocido" });
         continue;
+      }
+
+      // El trigger handle_new_user() solo llena profiles.group_id a partir del
+      // metadata de auth — NUNCA inserta en alumnos_grupos. getScopedStudentIds()
+      // (src/lib/teacherScope.ts) resuelve el roster de un profesor con esquema
+      // institucional (grupos.id_profesor) EXCLUSIVAMENTE desde alumnos_grupos,
+      // ignorando profiles.group_id por completo. Sin vincular también aquí, un
+      // alumno dado de alta con un grupo existente queda invisible para su
+      // profesor aunque su perfil luzca correcto (mismo patrón de reparación
+      // que repairUserProfile en adminUserActions.ts:301-334).
+      if (role === "student" && groupId) {
+        // Vincula perfil (escuela_id) y alumnos_grupos en una sola transacción
+        // — ver link_student_to_group() en 2026-07-14_link_student_to_group.sql.
+        // Evita que un fallo en el segundo paso deje al alumno a medio
+        // vincular tras el primero. `escuelaId` ya está garantizado no-nulo
+        // (ver validación arriba), así que esta rama cubre siempre el caso
+        // de alumno-con-grupo, incluyendo el de super_admin con escuela
+        // explícita.
+        const { error: linkError } = await withOpTimeout(
+          admin.rpc("link_student_to_group", { p_user_id: authData.user.id, p_grupo_id: groupId, p_escuela_id: escuelaId }),
+          `vincular ${name} a la escuela y al grupo`
+        );
+        if (linkError) {
+          results.errors.push({ name, message: linkError.message });
+          continue;
+        }
+      } else if (role === "teacher" && groupId) {
+        // Mismo problema que tenía onboardEscuela antes de su fix CRÍTICO: si
+        // aquí solo se vinculara profiles.escuela_id, el profesor quedaría
+        // creado pero grupos.id_profesor nunca se asignaría — invisible para
+        // sí mismo en /dashboard/teacher/alumnos, que resuelve el roster
+        // exclusivamente a partir de grupos.id_profesor. Usa el mismo RPC
+        // atómico (ver 2026-07-14_assign_teacher_to_group.sql).
+        const { error: assignError } = await withOpTimeout(
+          admin.rpc("assign_teacher_to_group", { p_user_id: authData.user.id, p_grupo_id: groupId, p_escuela_id: escuelaId }),
+          `vincular ${name} a la escuela y al grupo`
+        );
+        if (assignError) {
+          results.errors.push({ name, message: assignError.message });
+          continue;
+        }
+      } else {
+        // Profesor sin grupo, o alumno sin grupo (bloqueado normalmente por
+        // la UI): solo vincula la escuela al perfil.
+        const { error: updateError } = await withOpTimeout(
+          admin.from("profiles").update({ escuela_id: escuelaId }).eq("id", authData.user.id),
+          `vincular escuela de ${name}`
+        );
+        if (updateError) {
+          results.errors.push({ name, message: updateError.message });
+          continue;
+        }
       }
 
       results.success.push({ name, email });
@@ -138,20 +261,42 @@ export async function onboardInstitutionalUsers(
 export async function createGrupo(
   nombre: string,
   grado: string,
-  idProfesor: string | null
+  idProfesor: string | null,
+  targetEscuelaId?: string | null
 ): Promise<{ id: string; nombre: string } | null> {
-  await requireAdminSession();
+  const session = await requireAdminSession();
+
+  // Un admin de escuela SIEMPRE usa su propia escuela_id de sesión — nunca la
+  // que mande el cliente, para no poder crear grupos en una escuela ajena. Un
+  // super_admin no tiene escuela_id propia, así que debe indicar
+  // explícitamente a qué escuela pertenece el grupo; sin este requisito, el
+  // grupo se insertaba con escuela_id=NULL — huérfano, invisible para
+  // cualquier escuela real.
+  const escuelaId = session.isSuperAdmin
+    ? (targetEscuelaId ?? null)
+    : session.profile.escuela_id ?? null;
+  if (!escuelaId) {
+    throw new Error(
+      session.isSuperAdmin
+        ? "Como super_admin debes indicar a qué escuela pertenece el grupo."
+        : "Tu cuenta de administrador no está vinculada a ninguna escuela."
+    );
+  }
 
   const admin = getAdminClient();
   let data, error;
   try {
     ({ data, error } = await withOpTimeout(
-      admin.from("grupos").insert({ nombre, grado, id_profesor: idProfesor ?? null }).select("id, nombre").single(),
+      admin.from("grupos").insert({ nombre, grado, id_profesor: idProfesor ?? null, escuela_id: escuelaId }).select("id, nombre").single(),
       "crear grupo"
     ));
   } catch (err: any) {
     console.error('[adminActions] createGrupo timeout/conexión:', err?.message);
     throw new Error("No se pudo crear el grupo: falla de conexión con la base de datos. Intente de nuevo.");
+  }
+
+  if (error?.code === "23505") {
+    throw new Error(`Ya existe un grupo llamado "${nombre}" en tu escuela. Usa otro nombre o selecciona el existente.`);
   }
 
   if (error) {
@@ -162,13 +307,19 @@ export async function createGrupo(
 }
 
 export async function getGrupos(): Promise<{ id: string; nombre: string; grado: string }[]> {
-  await requireAdminSession();
+  const session = await requireAdminSession();
 
   const admin = getAdminClient();
   let data, error;
   try {
+    let query = admin.from("grupos").select("id, nombre, grado");
+    // Un admin de escuela solo ve los grupos de su propia escuela;
+    // super_admin ve la plataforma completa.
+    if (!session.isSuperAdmin) {
+      query = query.eq("escuela_id", session.profile.escuela_id);
+    }
     ({ data, error } = await withOpTimeout(
-      admin.from("grupos").select("id, nombre, grado").order("nombre"),
+      query.order("nombre"),
       "cargar grupos"
     ));
   } catch (err: any) {
@@ -185,13 +336,18 @@ export async function getGrupos(): Promise<{ id: string; nombre: string; grado: 
 // ─── Nuevas acciones: Escuelas ────────────────────────────────────────────────
 
 export async function getEscuelas(): Promise<EscuelaStats[]> {
-  await requireAdminSession();
+  const session = await requireAdminSession();
   const admin = getAdminClient();
 
   let data, error;
   try {
+    let query = admin.from("escuelas").select("id, nombre, created_at, grupos(id)");
+    // Un admin de escuela solo ve su propia escuela; super_admin ve todas.
+    if (!session.isSuperAdmin) {
+      query = query.eq("id", session.profile.escuela_id);
+    }
     ({ data, error } = await withOpTimeout(
-      admin.from("escuelas").select("id, nombre, created_at, grupos(id)").order("created_at", { ascending: false }),
+      query.order("created_at", { ascending: false }),
       "cargar escuelas"
     ));
   } catch (err: any) {
@@ -240,31 +396,90 @@ export async function onboardEscuela(
 
   if (!escuelaNombre.trim()) throw new Error("El nombre de la escuela es requerido.");
   if (!password || password.trim().length < 8) throw new Error("La contraseña debe tener al menos 8 caracteres.");
+  if (entries.length > MAX_ONBOARD_ROWS) {
+    throw new Error(
+      `El lote tiene ${entries.length} registros y excede el máximo permitido de ${MAX_ONBOARD_ROWS} por carga. ` +
+      `Divide el archivo en lotes más pequeños e inténtalo de nuevo.`
+    );
+  }
 
   const EMAIL_DOMAIN = process.env.INSTITUTIONAL_EMAIL_DOMAIN ?? "cenfinanciera.com";
   const admin = getAdminClient();
   const pw = password.trim();
   const usedEmails = new Set<string>();
+  const nombreTrim = escuelaNombre.trim();
   const result: EscuelaOnboardResult = {
     escuelaId: "",
-    escuelaNombre: escuelaNombre.trim(),
+    escuelaNombre: nombreTrim,
     results: [],
     errors: [],
   };
 
-  // 1. Crear escuela
-  let escuela, escuelaErr;
+  console.info(`[adminActions] onboardEscuela: iniciando procesamiento de ${entries.length} registro(s) para la escuela '${nombreTrim}'.`);
+
+  // 1. Idempotencia: si ya existe una escuela con este nombre exacto, se
+  // reutiliza su id en vez de insertar una fila duplicada. Esto permite que
+  // un reintento tras un fallo parcial (p. ej. el navegador se cerró a medio
+  // procesar el CSV) complete lo que faltó sin duplicar la escuela.
+  let escuela: { id: string; nombre: string } | null | undefined;
+  let escuelaErr: any;
   try {
     ({ data: escuela, error: escuelaErr } = await withOpTimeout(
-      admin.from("escuelas").insert({ nombre: escuelaNombre.trim() }).select("id, nombre").single(),
-      "crear escuela"
+      admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),
+      "buscar escuela existente"
     ));
   } catch (err: any) {
-    throw new Error(`No se pudo crear la escuela: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+    console.error(`[adminActions] onboardEscuela: falla de conexión al buscar escuela existente '${nombreTrim}':`, err?.message);
+    throw new Error(`No se pudo verificar si la escuela ya existe: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+  }
+  if (escuelaErr) {
+    console.error(`[adminActions] onboardEscuela: error al buscar escuela existente '${nombreTrim}':`, escuelaErr.message);
+    throw new Error(`No se pudo verificar si la escuela ya existe: ${escuelaErr.message}`);
   }
 
-  if (escuelaErr || !escuela) {
-    throw new Error(`No se pudo crear la escuela: ${escuelaErr?.message}`);
+  if (escuela) {
+    console.info(`[adminActions] onboardEscuela: se reutiliza la escuela existente '${escuela.nombre}' (id=${escuela.id}) — no se crea una fila duplicada.`);
+  } else {
+    let created: { id: string; nombre: string } | null | undefined;
+    let createErr: any;
+    try {
+      ({ data: created, error: createErr } = await withOpTimeout(
+        admin.from("escuelas").insert({ nombre: nombreTrim }).select("id, nombre").single(),
+        "crear escuela"
+      ));
+    } catch (err: any) {
+      console.error(`[adminActions] onboardEscuela: falla de conexión al crear escuela '${nombreTrim}':`, err?.message);
+      throw new Error(`No se pudo crear la escuela: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+    }
+
+    // 23505 = unique_violation: otra llamada concurrente ganó la carrera y ya
+    // insertó esta escuela entre nuestro SELECT y este INSERT (ver
+    // 2026-07-14_add_unique_escuelas_nombre.sql). No es un error real — se
+    // recupera la fila que la otra llamada acaba de crear y se continúa.
+    if (createErr?.code === "23505") {
+      console.info(`[adminActions] onboardEscuela: colisión de creación concurrente para '${nombreTrim}' — se reutiliza la escuela creada por la otra llamada.`);
+      let raced: { id: string; nombre: string } | null | undefined;
+      let racedErr: any;
+      try {
+        ({ data: raced, error: racedErr } = await withOpTimeout(
+          admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),
+          "recuperar escuela tras colisión de creación"
+        ));
+      } catch (err: any) {
+        throw new Error(`No se pudo recuperar la escuela tras una colisión de creación concurrente: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+      }
+      if (racedErr || !raced) {
+        throw new Error(`No se pudo recuperar la escuela tras una colisión de creación concurrente: ${racedErr?.message ?? "no se encontró la fila"}.`);
+      }
+      created = raced;
+      createErr = null;
+    }
+
+    if (createErr || !created) {
+      console.error(`[adminActions] onboardEscuela: error al crear escuela '${nombreTrim}':`, createErr?.message);
+      throw new Error(`No se pudo crear la escuela: ${createErr?.message}`);
+    }
+    escuela = created;
   }
   result.escuelaId = escuela.id;
 
@@ -281,35 +496,104 @@ export async function onboardEscuela(
     const [grupoNombre, grado] = key.split("||");
     const schoolLevel = GRADO_A_SCHOOL_LEVEL[grado] ?? grado;
 
-    // Crear grupo
+    // Crear grupo — idempotente: si ya existe uno con este nombre en esta
+    // escuela (p. ej. reintento tras una falla parcial de un CSV previo), se
+    // reutiliza en vez de crear un duplicado (ver
+    // 2026-07-14_add_unique_grupos_nombre_escuela.sql).
     let grupo, grupoErr;
     try {
       ({ data: grupo, error: grupoErr } = await withOpTimeout(
-        admin.from("grupos").insert({ nombre: grupoNombre, grado, escuela_id: escuela.id }).select("id").single(),
-        `crear grupo ${grupoNombre}`
+        admin.from("grupos").select("id").eq("nombre", grupoNombre).eq("escuela_id", escuela.id).maybeSingle(),
+        `buscar grupo existente ${grupoNombre}`
       ));
     } catch (err: any) {
+      console.error(`[adminActions] onboardEscuela: falla de conexión al buscar grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, err?.message);
       for (const m of members) {
         result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).` });
       }
       continue;
     }
-
-    if (grupoErr || !grupo) {
+    if (grupoErr) {
+      console.error(`[adminActions] onboardEscuela: error al buscar grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, grupoErr?.message);
       for (const m of members) {
         result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': ${grupoErr?.message ?? "error"}` });
       }
       continue;
+    }
+
+    if (!grupo) {
+      let created, createErr;
+      try {
+        ({ data: created, error: createErr } = await withOpTimeout(
+          admin.from("grupos").insert({ nombre: grupoNombre, grado, escuela_id: escuela.id }).select("id").single(),
+          `crear grupo ${grupoNombre}`
+        ));
+      } catch (err: any) {
+        console.error(`[adminActions] onboardEscuela: falla de conexión al crear grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, err?.message);
+        for (const m of members) {
+          result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).` });
+        }
+        continue;
+      }
+
+      // 23505 = unique_violation: otra llamada concurrente ganó la carrera y
+      // ya creó este grupo entre nuestro SELECT y este INSERT — se recupera
+      // la fila que la otra llamada acaba de crear (mismo patrón que
+      // onboardEscuela usa para la propia escuela más arriba).
+      if (createErr?.code === "23505") {
+        console.info(`[adminActions] onboardEscuela: colisión de creación concurrente para el grupo '${grupoNombre}' — se reutiliza el grupo creado por la otra llamada.`);
+        let raced, racedErr;
+        try {
+          ({ data: raced, error: racedErr } = await withOpTimeout(
+            admin.from("grupos").select("id").eq("nombre", grupoNombre).eq("escuela_id", escuela.id).maybeSingle(),
+            `recuperar grupo tras colisión ${grupoNombre}`
+          ));
+        } catch (err: any) {
+          for (const m of members) {
+            result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': no se pudo recuperar tras una colisión de creación concurrente (${err?.message ?? "sin detalle"}).` });
+          }
+          continue;
+        }
+        if (racedErr || !raced) {
+          for (const m of members) {
+            result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': no se pudo recuperar tras una colisión de creación concurrente.` });
+          }
+          continue;
+        }
+        created = raced;
+        createErr = null;
+      }
+
+      if (createErr || !created) {
+        console.error(`[adminActions] onboardEscuela: error al crear grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, createErr?.message);
+        for (const m of members) {
+          result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': ${createErr?.message ?? "error"}` });
+        }
+        continue;
+      }
+      grupo = created;
     }
     const grupoId = grupo.id;
 
     const teachers = members.filter((m) => m.rol === "teacher");
     const students = members.filter((m) => m.rol === "student");
 
-    // Crear profesores primero (su ID se asigna como id_profesor del grupo)
-    for (const t of teachers) {
+    // ── Profesores ────────────────────────────────────────────────────────
+    // Las cuentas de Auth se crean con concurrencia acotada (no hay endpoint
+    // de bulk). La asignación de "primer profesor del grupo" se procesa
+    // después, en un segundo paso, en el orden original de `teachers` — ya no
+    // depende de un check-then-set en JS para evitar condiciones de carrera
+    // (assign_teacher_to_group() hace ese check-then-set atómico a nivel de
+    // fila), pero se mantiene secuencial para que el orden final de
+    // result.results/result.errors coincida con el orden del CSV.
+    type TeacherCreation =
+      | { ok: true; name: string; email: string; userId: string }
+      | { ok: false; name: string; mensaje: string }
+      | { ok: "skip" };
+
+    const teacherCreations = await runWithConcurrency(teachers, ONBOARD_CONCURRENCY, async (t): Promise<TeacherCreation> => {
       const name = t.nombre.trim();
-      if (!name) continue;
+      if (!name) return { ok: "skip" };
       const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
       try {
         const { data: authData, error: authErr } = await withOpTimeout(
@@ -322,36 +606,54 @@ export async function onboardEscuela(
           `crear cuenta de ${name}`
         );
         if (authErr || !authData?.user) {
-          result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
-          continue;
+          console.error(`[adminActions] onboardEscuela: error al crear cuenta de profesor '${name}' (grupo='${grupoNombre}'):`, authErr?.message);
+          return { ok: false, name, mensaje: authErr?.message ?? "Error al crear cuenta" };
         }
-        const tid = authData.user.id;
-        // Asignar como profesor del grupo (primer profesor del grupo gana)
-        const { data: g } = await withOpTimeout(
-          admin.from("grupos").select("id_profesor").eq("id", grupoId).single(),
-          `verificar profesor del grupo ${grupoNombre}`
+        return { ok: true, name, email, userId: authData.user.id };
+      } catch (err: any) {
+        console.error(`[adminActions] onboardEscuela: excepción al crear cuenta de profesor '${name}' (grupo='${grupoNombre}'):`, err?.message);
+        return { ok: false, name, mensaje: err?.message ?? "Error desconocido" };
+      }
+    });
+
+    for (const outcome of teacherCreations) {
+      if (outcome.ok === "skip") continue;
+      if (!outcome.ok) {
+        result.errors.push({ name: outcome.name, mensaje: outcome.mensaje });
+        continue;
+      }
+      const { name, email, userId: tid } = outcome;
+      try {
+        // Asigna id_profesor (primer profesor del grupo gana, check-then-set
+        // atómico) y promueve el profile a role='teacher'/escuela_id en una
+        // sola transacción — ver assign_teacher_to_group() en
+        // 2026-07-14_assign_teacher_to_group.sql.
+        const { error: assignErr } = await withOpTimeout(
+          admin.rpc("assign_teacher_to_group", { p_user_id: tid, p_grupo_id: grupoId, p_escuela_id: escuela.id }),
+          `vincular profesor ${name} al grupo ${grupoNombre}`
         );
-        if (!g?.id_profesor) {
-          await withOpTimeout(
-            admin.from("grupos").update({ id_profesor: tid }).eq("id", grupoId),
-            `asignar profesor al grupo ${grupoNombre}`
-          );
-        }
-        // Vincular a la escuela (el trigger handle_new_user siempre crea el profile con role='student')
-        await withOpTimeout(
-          admin.from("profiles").update({ escuela_id: escuela.id, role: "teacher" }).eq("id", tid),
-          `vincular perfil de ${name}`
-        );
+        if (assignErr) throw assignErr;
         result.results.push({ name, email, grupo: grupoNombre, grado, rol: "teacher" });
       } catch (err: any) {
+        console.error(`[adminActions] onboardEscuela: error al vincular profesor '${name}' al grupo '${grupoNombre}':`, err?.message);
         result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
       }
     }
 
-    // Crear alumnos
-    for (const s of students) {
+    // ── Alumnos ───────────────────────────────────────────────────────────
+    // Sin estado compartido entre alumnos, por lo que la creación de cuenta y
+    // su vinculación a escuela/grupo se procesan juntas dentro del mismo
+    // worker concurrente. El resultado se agrega en un segundo paso
+    // secuencial, en el orden original de `students`, para que el orden final
+    // de result.results/result.errors no dependa del orden de finalización.
+    type StudentCreation =
+      | { ok: true; name: string; email: string }
+      | { ok: false; name: string; mensaje: string }
+      | { ok: "skip" };
+
+    const studentCreations = await runWithConcurrency(students, ONBOARD_CONCURRENCY, async (s): Promise<StudentCreation> => {
       const name = s.nombre.trim();
-      if (!name) continue;
+      if (!name) return { ok: "skip" };
       const email = generateEmail(name, usedEmails, EMAIL_DOMAIN);
       try {
         const { data: authData, error: authErr } = await withOpTimeout(
@@ -364,24 +666,43 @@ export async function onboardEscuela(
           `crear cuenta de ${name}`
         );
         if (authErr || !authData?.user) {
-          result.errors.push({ name, mensaje: authErr?.message ?? "Error al crear cuenta" });
-          continue;
+          console.error(`[adminActions] onboardEscuela: error al crear cuenta de alumno '${name}' (grupo='${grupoNombre}'):`, authErr?.message);
+          return { ok: false, name, mensaje: authErr?.message ?? "Error al crear cuenta" };
         }
-        // Vincular a la escuela y al grupo (el trigger handle_new_user NO inserta en alumnos_grupos)
-        await withOpTimeout(
-          admin.from("profiles").update({ escuela_id: escuela.id }).eq("id", authData.user.id),
-          `vincular perfil de ${name}`
+        // Vincula perfil (escuela_id) y alumnos_grupos en una sola transacción
+        // — ver link_student_to_group() en 2026-07-14_link_student_to_group.sql.
+        // Reemplaza dos escrituras separadas sin chequeo de error, donde un
+        // fallo silencioso en la segunda dejaba al alumno invisible para su
+        // profesor pese a reportarse como éxito.
+        const { error: linkErr } = await withOpTimeout(
+          admin.rpc("link_student_to_group", { p_user_id: authData.user.id, p_grupo_id: grupoId, p_escuela_id: escuela.id }),
+          `vincular ${name} a la escuela y al grupo ${grupoNombre}`
         );
-        await withOpTimeout(
-          admin.from("alumnos_grupos").insert({ id_alumno: authData.user.id, id_grupo: grupoId }),
-          `vincular ${name} al grupo ${grupoNombre}`
-        );
-        result.results.push({ name, email, grupo: grupoNombre, grado, rol: "student" });
+        if (linkErr) {
+          console.error(`[adminActions] onboardEscuela: error al vincular alumno '${name}' (grupo='${grupoNombre}'):`, linkErr.message);
+          return { ok: false, name, mensaje: linkErr.message };
+        }
+        return { ok: true, name, email };
       } catch (err: any) {
-        result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
+        console.error(`[adminActions] onboardEscuela: excepción al procesar alumno '${name}' (grupo='${grupoNombre}'):`, err?.message);
+        return { ok: false, name, mensaje: err?.message ?? "Error desconocido" };
       }
+    });
+
+    for (const outcome of studentCreations) {
+      if (outcome.ok === "skip") continue;
+      if (!outcome.ok) {
+        result.errors.push({ name: outcome.name, mensaje: outcome.mensaje });
+        continue;
+      }
+      result.results.push({ name: outcome.name, email: outcome.email, grupo: grupoNombre, grado, rol: "student" });
     }
   }
+
+  console.info(
+    `[adminActions] onboardEscuela: finalizado para '${result.escuelaNombre}' (id=${result.escuelaId}). ` +
+    `Éxitos=${result.results.length}, Errores=${result.errors.length}.`
+  );
 
   return result;
 }

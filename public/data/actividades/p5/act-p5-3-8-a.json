@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P5-3-8-A",
+  "unit_code": "P5-3-8",
+  "unit_title": "Fondos de inversión: invertir en equipo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Peso de la Comisión",
+  "descripcion": "Mueve las barritas y descubre cuánto se lleva la comisión de tu fondo con los años.",
+  "objetivo": "Cuantificar el impacto acumulado de las comisiones de un fondo",
+  "xp": 300,
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Dinero que invierto",
+      "type": "slider",
+      "min": 1000,
+      "max": 300000,
+      "step": 1000,
+      "default": 30000,
+      "unit": "$",
+      "referencia": "Muchos fondos permiten empezar con montos accesibles."
+    },
+    {
+      "id": "rendimiento",
+      "label": "Rendimiento anual antes de comisiones",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 0.5,
+      "default": 9,
+      "unit": "%",
+      "referencia": "Lo que genera la cartera antes de descontar lo del administrador."
+    },
+    {
+      "id": "comision",
+      "label": "Comisión anual del fondo",
+      "type": "slider",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 2,
+      "unit": "%",
+      "referencia": "Se cobra sobre todo el saldo, cada año, incluidos los rendimientos."
+    },
+    {
+      "id": "anios",
+      "label": "Años que mantengo la inversión",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 15,
+      "unit": "años",
+      "referencia": "El efecto de la comisión crece con el tiempo."
+    }
+  ],
+  "formula": "Math.round(capital * Math.pow(1 + rendimiento / 100, anios) - capital * Math.pow(1 + (rendimiento - comision) / 100, anios))",
+  "descripcion_formula": "Diferencia entre lo que tendrías sin comisión y lo que tendrás con ella: eso es lo que se lleva el administrador en total.",
+  "output_label": "Lo que se lleva la comisión en total",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "comision == 0",
+      "mensaje": "Sin comisión, todo el rendimiento se queda contigo. En la práctica siempre hay algún costo: lo importante es conocerlo y compararlo.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "comision >= 2.5 && anios >= 10",
+      "mensaje": "Comisión alta y horizonte largo: la peor combinación. Compara con fondos de comisión menor antes de comprometerte.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "comision <= 1 && anios >= 10",
+      "mensaje": "Comisión baja en un plazo largo: la mayor parte del rendimiento se queda contigo, que es exactamente el objetivo.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "comision >= rendimiento",
+      "mensaje": "La comisión iguala o supera al rendimiento esperado. Con estos números el fondo te haría perder dinero de forma sistemática.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "anios >= 20 && comision >= 1.5",
+      "mensaje": "A veinte años, cada punto de comisión pesa muchísimo. Aquí es donde comparar comisiones vale más que perseguir rendimientos pasados.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-8-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-8-a-escena.webp"
+}

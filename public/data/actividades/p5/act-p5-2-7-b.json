@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-2-7-B",
+  "unit_code": "P5-2-7",
+  "unit_title": "El precio ancla y otras trampas del marketing",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Trampas del Marketing",
+  "descripcion": "Comprueba que reconoces las técnicas y sabes defenderte.",
+  "objetivo": "Verificar la identificación de técnicas de persuasión y sus defensas",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El precio ancla es:",
+      "opciones": [
+        "El costo de producción",
+        "El precio más barato",
+        "El precio con IVA",
+        "Un número alto que hace parecer bajo al precio real"
+      ],
+      "correcta": 3,
+      "explicacion": "Muchas veces es un precio que nadie pagó nunca."
+    },
+    {
+      "id": "q2",
+      "texto": "El ancla funciona porque:",
+      "opciones": [
+        "El cerebro juzga por comparación",
+        "Los precios son fijos",
+        "Nadie sabe restar",
+        "Es obligatorio"
+      ],
+      "correcta": 0,
+      "explicacion": "Juzgamos caro o barato contra lo que acabamos de ver."
+    },
+    {
+      "id": "q3",
+      "texto": "La defensa contra el ancla es:",
+      "opciones": [
+        "Comprar rápido",
+        "Comparar en otras tiendas",
+        "Confiar en el descuento",
+        "Pedir descuento extra"
+      ],
+      "correcta": 1,
+      "explicacion": "El precio de mercado real es el único referente válido."
+    },
+    {
+      "id": "q4",
+      "texto": "$199 se percibe cercano a $100 porque:",
+      "opciones": [
+        "Es más barato",
+        "Incluye descuento",
+        "Domina el primer dígito",
+        "Es número impar"
+      ],
+      "correcta": 2,
+      "explicacion": "Leemos de izquierda a derecha y el primer dígito marca la impresión."
+    },
+    {
+      "id": "q5",
+      "texto": "La opción señuelo sirve para:",
+      "opciones": [
+        "Venderse mucho",
+        "Llenar el catálogo",
+        "Bajar precios",
+        "Hacer que otra opción parezca excelente"
+      ],
+      "correcta": 3,
+      "explicacion": "La opción mala no está para venderse: está para comparar."
+    },
+    {
+      "id": "q6",
+      "texto": "La defensa contra el señuelo es:",
+      "opciones": [
+        "Decidir qué necesito antes de ver las opciones",
+        "Elegir la de en medio",
+        "Elegir la más barata",
+        "Elegir la más cara"
+      ],
+      "correcta": 0,
+      "explicacion": "Así la comparación no se limita a lo que te ofrecieron."
+    },
+    {
+      "id": "q7",
+      "texto": "La escasez artificial busca:",
+      "opciones": [
+        "Bajar el precio",
+        "Activar urgencia e impedir comparar",
+        "Mejorar el producto",
+        "Informar al cliente"
+      ],
+      "correcta": 1,
+      "explicacion": "Muchos contadores de \"últimas piezas\" se reinician a diario."
+    },
+    {
+      "id": "q8",
+      "texto": "Estas técnicas:",
+      "opciones": [
+        "Son ilegales",
+        "Mejoran la calidad",
+        "Trabajan sobre la percepción sin cambiar el producto",
+        "Solo existen en línea"
+      ],
+      "correcta": 2,
+      "explicacion": "Son legítimas: por eso la defensa es conocerlas, no denunciarlas."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-7-b-escena.webp"
+}

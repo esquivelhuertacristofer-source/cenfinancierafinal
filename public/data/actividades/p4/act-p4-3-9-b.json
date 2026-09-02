@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-3-9-B",
+  "unit_code": "P4-3-9",
+  "unit_title": "El costo de oportunidad: lo que dejo de hacer al elegir",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Costo de Oportunidad",
+  "descripcion": "Identifica qué se deja fuera en cada decisión.",
+  "objetivo": "Reconocer el costo de oportunidad en decisiones de dinero y de tiempo",
+  "xp": 320,
+  "instruccion": "Arrastra cada situación según qué tipo de costo de oportunidad implica.",
+  "categorias": [
+    {
+      "id": "dinero",
+      "label": "Costo en dinero",
+      "emoji": "💵",
+      "color": "#10B981"
+    },
+    {
+      "id": "tiempo",
+      "label": "Costo en tiempo",
+      "emoji": "⏳",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "ambos",
+      "label": "Cuesta dinero y tiempo",
+      "emoji": "⚖️",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Gastar $6,000 en una consola en vez de invertirlos",
+      "emoji": "🎮",
+      "categoria_correcta": "dinero",
+      "feedback": "Lo que dejas fuera es lo que ese dinero podría haber llegado a ser."
+    },
+    {
+      "id": "i2",
+      "label": "Dedicar dos horas diarias a una serie en vez de a un curso",
+      "emoji": "📺",
+      "categoria_correcta": "tiempo",
+      "feedback": "Dos horas diarias son más de setecientas al año."
+    },
+    {
+      "id": "i3",
+      "label": "Tomar un curso de seis meses que además cuesta $6,000",
+      "emoji": "🎓",
+      "categoria_correcta": "ambos",
+      "feedback": "Consume dinero y horas: se comparan las dos cosas."
+    },
+    {
+      "id": "i4",
+      "label": "Comprar de contado en vez de dejar el dinero rindiendo",
+      "emoji": "🏷️",
+      "categoria_correcta": "dinero",
+      "feedback": "El rendimiento que no se obtuvo también cuenta."
+    },
+    {
+      "id": "i5",
+      "label": "Hacer fila una hora para ahorrar $30",
+      "emoji": "🚶",
+      "categoria_correcta": "tiempo",
+      "feedback": "La pregunta es si esa hora valía más que los $30 ahorrados."
+    },
+    {
+      "id": "i6",
+      "label": "Trabajar los sábados y dejar de estudiar",
+      "emoji": "💼",
+      "categoria_correcta": "ambos",
+      "feedback": "Ganas dinero hoy y dejas fuera una capacidad futura."
+    },
+    {
+      "id": "i7",
+      "label": "Elegir el transporte barato que tarda el doble",
+      "emoji": "🚌",
+      "categoria_correcta": "tiempo",
+      "feedback": "Se ahorra dinero, se gasta tiempo: hay que comparar los dos."
+    },
+    {
+      "id": "i8",
+      "label": "Usar el fondo de emergencia para una oferta",
+      "emoji": "🚨",
+      "categoria_correcta": "dinero",
+      "feedback": "Lo que se deja fuera es la protección ante el próximo imprevisto."
+    },
+    {
+      "id": "i9",
+      "label": "Aprender un oficio dedicándole las tardes de un año",
+      "emoji": "🔧",
+      "categoria_correcta": "tiempo",
+      "feedback": "El costo son las tardes; el beneficio, una capacidad que se queda."
+    },
+    {
+      "id": "i10",
+      "label": "Viajar un mes gastando los ahorros y faltando a clases",
+      "emoji": "✈️",
+      "categoria_correcta": "ambos",
+      "feedback": "Dinero y tiempo a la vez: la comparación tiene que incluir los dos."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-9-b-escena.webp"
+}

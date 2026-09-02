@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-1-10-B",
+  "unit_code": "P6-1-10",
+  "unit_title": "Mi identidad financiera: CURP, RFC y NSS",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Identidad",
+  "descripcion": "Responde rápido sobre tus claves de identidad financiera.",
+  "objetivo": "Consolidar la función de CURP, RFC y NSS",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La CURP identifica:",
+      "respuesta_correcta": "A cada persona con una clave única",
+      "incorrectas": [
+        "A las empresas",
+        "A los bancos",
+        "A las escuelas"
+      ],
+      "dato_extra": "Se construye a partir de los datos de nacimiento."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El RFC identifica a la persona ante:",
+      "respuesta_correcta": "La autoridad fiscal",
+      "incorrectas": [
+        "El banco",
+        "La escuela",
+        "El hospital"
+      ],
+      "dato_extra": "Hace falta para trabajar formalmente y para facturar."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Tener RFC significa:",
+      "respuesta_correcta": "Estar identificado, no necesariamente pagar impuestos",
+      "incorrectas": [
+        "Pagar impuestos siempre",
+        "Tener negocio",
+        "Ser mayor de edad"
+      ],
+      "dato_extra": "Es una confusión muy extendida que genera miedo innecesario."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El NSS vincula a la persona con:",
+      "respuesta_correcta": "La seguridad social y sus servicios",
+      "incorrectas": [
+        "El banco",
+        "El SAT",
+        "La escuela"
+      ],
+      "dato_extra": "Atención médica, incapacidades y la cuenta de retiro."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Si cambio de trabajo, mi NSS:",
+      "respuesta_correcta": "Sigue siendo el mismo",
+      "incorrectas": [
+        "Cambia",
+        "Se pierde",
+        "Se duplica"
+      ],
+      "dato_extra": "Acompaña a la persona durante toda su vida laboral."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Estos datos hay que cuidarlos porque:",
+      "respuesta_correcta": "Sirven para suplantar identidades",
+      "incorrectas": [
+        "Son caros",
+        "Se vencen",
+        "Son secretos de Estado"
+      ],
+      "dato_extra": "Con ellos se pueden contratar productos a nombre de otra persona."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Estos datos se entregan:",
+      "respuesta_correcta": "Solo a la institución que los pide en un trámite legítimo",
+      "incorrectas": [
+        "A quien los pida",
+        "En redes sociales",
+        "A cualquier app"
+      ],
+      "dato_extra": "Ninguna promoción legítima pide tu RFC por mensaje."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-10-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-10-b-escena.webp"
+}

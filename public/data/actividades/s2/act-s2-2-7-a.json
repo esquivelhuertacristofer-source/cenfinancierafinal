@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S2-2-7-A",
+  "unit_code": "S2-2-7",
+  "unit_title": "Robo de identidad: prevención y qué hacer si ya ocurrió",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Suplantaron mi Identidad",
+  "descripcion": "A Ceny le aparece un crédito que nunca pidió. Cada decisión define cuánto pierde.",
+  "objetivo": "Aplicar la secuencia de respuesta ante un robo de identidad",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny recibe un mensaje de cobranza por un crédito de $70,000 que nunca solicitó. El mensaje llega de un número desconocido.",
+  "nodo_inicial": "mensaje",
+  "nodos": {
+    "mensaje": {
+      "id": "mensaje",
+      "texto": "El mensaje pide sus datos para \"aclarar la situación de inmediato\". ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No responder y verificar directamente con la institución por su canal oficial",
+          "siguiente_nodo": "reporte",
+          "consecuencia": "Evita entregar más datos a quien podría ser el mismo defraudador.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Responder con sus datos para que lo resuelvan rápido",
+          "siguiente_nodo": "peor",
+          "consecuencia": "Acaba de entregar información adicional a un desconocido.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -25000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-mensaje.webp"
+    },
+    "peor": {
+      "id": "peor",
+      "texto": "A los pocos días aparecen dos créditos más a su nombre. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Bloquear todos sus accesos y presentar la reclamación formal de inmediato",
+          "siguiente_nodo": "reporte",
+          "consecuencia": "Detiene el daño, aunque ya creció.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -10000
+        },
+        {
+          "id": "o2",
+          "texto": "Esperar a ver si se resuelve solo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Los registros no se corrigen solos y el daño sigue creciendo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -45000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-peor.webp"
+    },
+    "reporte": {
+      "id": "reporte",
+      "texto": "Para dimensionar el alcance, ¿qué solicita Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Su reporte de crédito completo, para ver todo lo abierto a su nombre",
+          "siguiente_nodo": "reclamacion",
+          "consecuencia": "Descubre un crédito adicional que no había detectado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 20000
+        },
+        {
+          "id": "o2",
+          "texto": "Solo pregunta en su banco de siempre",
+          "siguiente_nodo": "reclamacion",
+          "consecuencia": "Su banco no ve lo que abrieron en otras instituciones.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-reporte.webp"
+    },
+    "reclamacion": {
+      "id": "reclamacion",
+      "texto": "Al presentar la reclamación, ¿qué cuida especialmente?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Conservar comprobante de cada gestión, con folio y fecha",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "La documentación es lo que sostiene toda la reclamación.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 50000
+        },
+        {
+          "id": "o2",
+          "texto": "Hacer todo por teléfono sin guardar nada",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin comprobantes, cada llamada empieza desde cero.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -15000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-reclamacion.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny actuó rápido, dimensionó el daño con su reporte y documentó cada paso.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Las primeras horas deciden el resultado: bloquear, notificar, reclamar formalmente, revisar el reporte completo y guardar comprobante de todo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny hizo la reclamación, pero sin documentación que la respaldara.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Una reclamación sin comprobantes es muy difícil de sostener. Folio y fecha de cada gestión valen más que cualquier explicación.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny entregó más datos, esperó y terminó con varios créditos y su historial dañado.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Ninguna institución legítima pide datos ni claves por mensaje. Y los registros de crédito no se corrigen solos: hay que impugnarlos formalmente.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-2-7-a-portada.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-2-8-B",
+  "unit_code": "P5-2-8",
+  "unit_title": "Influencers y publicidad encubierta",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Anuncio u Opinión",
+  "descripcion": "Clasifica cada elemento según qué tan confiable hace a una recomendación.",
+  "objetivo": "Distinguir señales de contenido pagado, buenas prácticas y verificaciones propias",
+  "xp": 240,
+  "instruccion": "Arrastra cada elemento a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "senal",
+      "label": "Señal de contenido pagado",
+      "emoji": "🚩",
+      "color": "#EF4444"
+    },
+    {
+      "id": "confiable",
+      "label": "Hace más confiable",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "verificacion",
+      "label": "Verificación que hago yo",
+      "emoji": "🔍",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Incluye un código de descuento personalizado",
+      "emoji": "🏷️",
+      "categoria_correcta": "senal",
+      "feedback": "Implica comisión por cada venta generada."
+    },
+    {
+      "id": "i2",
+      "label": "Declara abiertamente que es contenido pagado",
+      "emoji": "📢",
+      "categoria_correcta": "confiable",
+      "feedback": "Declararlo es lo correcto: te permite ponderar la opinión."
+    },
+    {
+      "id": "i3",
+      "label": "Buscar dos opiniones de personas sin relación con la marca",
+      "emoji": "👥",
+      "categoria_correcta": "verificacion",
+      "feedback": "La segunda fuente independiente es la defensa más sólida."
+    },
+    {
+      "id": "i4",
+      "label": "Elogios sin mencionar una sola desventaja",
+      "emoji": "🌟",
+      "categoria_correcta": "senal",
+      "feedback": "Ningún producto es perfecto: la ausencia de críticas es señal."
+    },
+    {
+      "id": "i5",
+      "label": "Menciona para quién no sirve el producto",
+      "emoji": "⚠️",
+      "categoria_correcta": "confiable",
+      "feedback": "Decir a quién no le conviene es señal de honestidad."
+    },
+    {
+      "id": "i6",
+      "label": "Comparar el precio en tres tiendas distintas",
+      "emoji": "🛒",
+      "categoria_correcta": "verificacion",
+      "feedback": "La recomendación no dice nada sobre si el precio es bueno."
+    },
+    {
+      "id": "i7",
+      "label": "El mismo producto en muchas cuentas la misma semana",
+      "emoji": "📣",
+      "categoria_correcta": "senal",
+      "feedback": "Suele indicar una campaña pagada coordinada."
+    },
+    {
+      "id": "i8",
+      "label": "Compara el producto con dos alternativas reales",
+      "emoji": "⚖️",
+      "categoria_correcta": "confiable",
+      "feedback": "La comparación es lo que convierte una opinión en información útil."
+    },
+    {
+      "id": "i9",
+      "label": "Esperar una semana antes de decidir",
+      "emoji": "⏳",
+      "categoria_correcta": "verificacion",
+      "feedback": "Separa el deseo real del impulso que provocó el contenido."
+    },
+    {
+      "id": "i10",
+      "label": "No menciona ninguna alternativa al producto",
+      "emoji": "🕳️",
+      "categoria_correcta": "senal",
+      "feedback": "Sin alternativas, no hay forma de saber si es la mejor opción."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-8-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-8-b-escena.webp"
+}

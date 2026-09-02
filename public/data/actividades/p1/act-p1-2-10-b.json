@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-2-10-B",
+  "unit_code": "P1-2-10",
+  "unit_title": "Cuidar mis cosas también es ahorrar",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cuidar es Ahorrar",
+  "descripcion": "Demuestra que entendiste por qué el dinero que no sale vale igual que el que se guarda.",
+  "objetivo": "Verificar la comprensión del ahorro indirecto y del valor de reparar",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Las dos formas de ahorrar son:",
+      "opciones": [
+        "Comprar y vender",
+        "Guardar dinero y evitar que salga",
+        "Pedir y prestar",
+        "Contar y esconder"
+      ],
+      "correcta": 1,
+      "explicacion": "El dinero que no gastas en reponer algo cuenta igual que el que guardas."
+    },
+    {
+      "id": "q2",
+      "texto": "Mi mochila dura 3 años en vez de 1. Mi familia ahorró:",
+      "opciones": [
+        "Nada",
+        "Una mochila",
+        "Dos mochilas",
+        "Tres mochilas"
+      ],
+      "correcta": 2,
+      "explicacion": "Dos compras que simplemente no hubo que hacer."
+    },
+    {
+      "id": "q3",
+      "texto": "Una costura abierta el primer día:",
+      "opciones": [
+        "Hay que tirar la mochila",
+        "Se arregla sola",
+        "No importa",
+        "Se arregla en dos minutos"
+      ],
+      "correcta": 3,
+      "explicacion": "Reparar a tiempo cuesta minutos. Reponer cuesta el precio completo."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuidar mis cosas significa no usarlas?",
+      "opciones": [
+        "No: significa usarlas con cuidado",
+        "Sí",
+        "Solo los domingos",
+        "Sí, guardarlas siempre"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuidar es cerrar la mochila y guardar los colores, no tenerles miedo."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuál de estas acciones es cuidado?",
+      "opciones": [
+        "Usar la mochila de portería",
+        "Cerrarla antes de correr",
+        "Dejarla abierta en el pasto",
+        "Aventarla"
+      ],
+      "correcta": 1,
+      "explicacion": "Cinco segundos que evitan que se salga y se pierda todo lo de adentro."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Por qué existen zapateros y costureras?",
+      "opciones": [
+        "Porque no hay tiendas",
+        "Por diversión",
+        "Porque arreglar sale más barato que comprar nuevo",
+        "Porque lo pide la ley"
+      ],
+      "correcta": 2,
+      "explicacion": "En México reparar siempre ha sido parte de administrar bien el dinero."
+    },
+    {
+      "id": "q7",
+      "texto": "Sumar el precio de mis útiles sirve para:",
+      "opciones": [
+        "Presumir",
+        "Venderlos",
+        "Nada",
+        "Saber lo que valen y cuidarlos"
+      ],
+      "correcta": 3,
+      "explicacion": "Casi todos traemos varios cientos de pesos encima sin darnos cuenta."
+    },
+    {
+      "id": "q8",
+      "texto": "El dinero que no se gasta en reponer cosas:",
+      "opciones": [
+        "Queda disponible para otra cosa",
+        "Se pierde",
+        "Se lo queda la tienda",
+        "Desaparece"
+      ],
+      "correcta": 0,
+      "explicacion": "Ese dinero puede ir directo a la meta grande de la familia o a tu alcancía."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-10-b-escena.webp"
+}

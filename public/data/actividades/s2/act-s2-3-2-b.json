@@ -5,95 +5,103 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Cuidado con la Palanca",
-  "descripcion": "El apalancamiento puede construir puentes o derribar edificios. ¡Aprende a identificar sus riesgos!",
-  "objetivo": "Clasificar las situaciones de riesgo asociadas al uso excesivo de deuda y apalancamiento",
-  "xp": 400,
-  "instruccion": "Arrastra cada situación a la categoría que mejor describa su impacto financiero.",
-  "items": [
-    {
-      "id": "apa1",
-      "label": "Crédito para comprar equipo de producción",
-      "emoji": "🏗️",
-      "categoria_correcta": "pro",
-      "feedback": "Excelente. Usas dinero ajeno para ganar más dinero."
-    },
-    {
-      "id": "apa2",
-      "label": "Tu deuda mensual es el 50% de lo que ganas",
-      "emoji": "🛑",
-      "categoria_correcta": "alarmas",
-      "feedback": "¡Zona Roja! Estás al borde del colapso financiero."
-    },
-    {
-      "id": "apa3",
-      "label": "El banco te obliga a vender activos (Margin Call)",
-      "emoji": "📞",
-      "categoria_correcta": "alarmas",
-      "feedback": "El riesgo del apalancamiento se hizo real. El banco protege su dinero, no el tuyo."
-    },
-    {
-      "id": "apa4",
-      "label": "Debes más de lo que valen tus cosas",
-      "emoji": "📉",
-      "categoria_correcta": "impacto",
-      "feedback": "Esto se llama Insolvencia. Tu riqueza es negativa."
-    },
-    {
-      "id": "apa5",
-      "label": "Pedir prestado para comprar ropa de marca",
-      "emoji": "👗",
-      "categoria_correcta": "trampas",
-      "feedback": "Deuda destructiva. Pagas intereses por algo que pierde valor rápido."
-    },
-    {
-      "id": "apa6",
-      "label": "Vivir solo para pagar intereses",
-      "emoji": "⛓️",
-      "categoria_correcta": "impacto",
-      "feedback": "Esclavitud financiera. Ya no trabajas para ti, trabajas para el banco."
-    },
-    {
-      "id": "apa7",
-      "label": "Usar un crédito hipotecario para inversión",
-      "emoji": "🏠",
-      "categoria_correcta": "pro",
-      "feedback": "El inmueble se paga solo con la renta. Es el uso clásico del apalancamiento pro."
-    },
-    {
-      "id": "apa8",
-      "label": "Pagar el mínimo de la tarjeta por 10 años",
-      "emoji": "♾️",
-      "categoria_correcta": "trampas",
-      "feedback": "La trampa de la deuda eterna. El interés compuesto juega en tu contra."
-    }
-  ],
+  "complejidad": "ALTO",
+  "titulo": "Qué Mide Cada Número",
+  "descripcion": "Un reporte financiero tiene decenas de cifras. Solo unas cuantas responden las tres preguntas que importan: ¿gana dinero?, ¿debe mucho?, ¿está cara?",
+  "objetivo": "Clasificar los indicadores del análisis fundamental según midan rentabilidad, endeudamiento o valuación.",
+  "xp": 650,
+  "instruccion": "Arrastra cada indicador según qué pregunta responde.",
   "categorias": [
     {
-      "id": "pro",
-      "label": "USO ESTRATÉGICO (PRO)",
-      "emoji": "🚀",
-      "color": "#166534"
+      "id": "rentabilidad",
+      "label": "¿GANA DINERO?",
+      "emoji": "💰",
+      "color": "#10b981"
     },
     {
-      "id": "trampas",
-      "label": "TRAMPAS DE CONSUMO",
-      "emoji": "🪤",
-      "color": "#991b1b"
+      "id": "deuda",
+      "label": "¿DEBE MUCHO?",
+      "emoji": "⚠️",
+      "color": "#ef4444"
     },
     {
-      "id": "alarmas",
-      "label": "ALARMAS DEL BANCO",
-      "emoji": "🚨",
-      "color": "#b45309"
-    },
-    {
-      "id": "impacto",
-      "label": "IMPACTO EN TU VIDA",
-      "emoji": "🥀",
-      "color": "#6b21a8"
+      "id": "valuacion",
+      "label": "¿ESTÁ CARA?",
+      "emoji": "🏷️",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Margen neto",
+      "emoji": "📊",
+      "categoria_correcta": "rentabilidad",
+      "feedback": "De cada peso vendido, cuánto queda como utilidad."
+    },
+    {
+      "id": "i2",
+      "label": "Deuda / Capital",
+      "emoji": "⚖️",
+      "categoria_correcta": "deuda",
+      "feedback": "Cuánto debe la empresa por cada peso que pusieron sus dueños."
+    },
+    {
+      "id": "i3",
+      "label": "Precio / Utilidad (P/U)",
+      "emoji": "🔢",
+      "categoria_correcta": "valuacion",
+      "feedback": "Cuántos años de utilidades estás pagando por la acción."
+    },
+    {
+      "id": "i4",
+      "label": "ROE (rendimiento sobre capital)",
+      "emoji": "🎯",
+      "categoria_correcta": "rentabilidad",
+      "feedback": "Qué tan bien usa la empresa el dinero de sus dueños."
+    },
+    {
+      "id": "i5",
+      "label": "Cobertura de intereses",
+      "emoji": "🛡️",
+      "categoria_correcta": "deuda",
+      "feedback": "Cuántas veces alcanza su utilidad para pagar los intereses. Debajo de 2 es peligroso."
+    },
+    {
+      "id": "i6",
+      "label": "Precio / Valor en libros",
+      "emoji": "📚",
+      "categoria_correcta": "valuacion",
+      "feedback": "Compara el precio de mercado con el valor contable de la empresa."
+    },
+    {
+      "id": "i7",
+      "label": "Crecimiento de ventas",
+      "emoji": "📈",
+      "categoria_correcta": "rentabilidad",
+      "feedback": "Una empresa que no crece en ventas difícilmente crecerá en utilidades."
+    },
+    {
+      "id": "i8",
+      "label": "Deuda neta / EBITDA",
+      "emoji": "🧮",
+      "categoria_correcta": "deuda",
+      "feedback": "Cuántos años de flujo operativo necesitaría para pagar toda su deuda."
+    },
+    {
+      "id": "i9",
+      "label": "Rendimiento por dividendo",
+      "emoji": "💵",
+      "categoria_correcta": "valuacion",
+      "feedback": "Cuánto te paga en dividendos por cada peso invertido al precio actual."
+    },
+    {
+      "id": "i10",
+      "label": "Margen operativo",
+      "emoji": "⚙️",
+      "categoria_correcta": "rentabilidad",
+      "feedback": "Mide el negocio en sí, antes de intereses e impuestos."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

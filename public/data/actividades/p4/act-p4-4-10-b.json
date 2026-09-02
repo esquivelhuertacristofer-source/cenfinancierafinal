@@ -1,0 +1,169 @@
+{
+  "code": "ACT-P4-4-10-B",
+  "unit_code": "P4-4-10",
+  "unit_title": "Reinvertir o repartir: qué hago con la ganancia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Reparto de Ganancias",
+  "descripcion": "Arma tu distribución de utilidades y proyecta su efecto.",
+  "objetivo": "Distribuir la ganancia entre reinversión, reserva y retiro con proyección",
+  "xp": 320,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi ganancia",
+      "descripcion": "Cuánto dejó el negocio en el periodo.",
+      "campos": [
+        {
+          "id": "ganancia",
+          "label": "Ganancia del periodo",
+          "type": "number",
+          "min": 100,
+          "max": 100000,
+          "default": 3000,
+          "unit": "$",
+          "placeholder": "3000",
+          "requerido": true,
+          "ayuda": "Lo que quedó después de restar todos los costos."
+        },
+        {
+          "id": "etapa",
+          "label": "Etapa de mi negocio",
+          "type": "select",
+          "opciones": [
+            "Apenas empieza",
+            "En crecimiento",
+            "Ya consolidado"
+          ],
+          "default": "Apenas empieza",
+          "requerido": true,
+          "ayuda": "La etapa determina qué mezcla tiene sentido."
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi distribución",
+      "descripcion": "Los tres porcentajes deben sumar 100.",
+      "campos": [
+        {
+          "id": "pct_reinvertir",
+          "label": "Porcentaje a reinvertir",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "ayuda": "Un negocio que empieza suele necesitar reinvertir la mayor parte.",
+          "requerido": true
+        },
+        {
+          "id": "pct_reserva",
+          "label": "Porcentaje a reserva",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "%",
+          "ayuda": "Nunca debe ser cero: los imprevistos del negocio existen.",
+          "requerido": true
+        },
+        {
+          "id": "pct_retiro",
+          "label": "Porcentaje a retiro personal",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Legítimo y necesario: sostiene el esfuerzo en el tiempo.",
+          "requerido": true
+        },
+        {
+          "id": "suma",
+          "label": "Suma de porcentajes (debe dar 100)",
+          "type": "calculated",
+          "formula": "pct_reinvertir + pct_reserva + pct_retiro",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Los montos",
+      "descripcion": "Cuánto va a cada destino en pesos.",
+      "campos": [
+        {
+          "id": "monto_reinvertir",
+          "label": "A reinversión",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_reinvertir / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "monto_reserva",
+          "label": "A reserva",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_reserva / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "monto_retiro",
+          "label": "A retiro personal",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_retiro / 100)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La proyección",
+      "descripcion": "Qué pasa si mantengo esta distribución cuatro periodos.",
+      "campos": [
+        {
+          "id": "crecimiento",
+          "label": "Crecimiento de ventas por cada peso reinvertido",
+          "type": "slider",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1.2,
+          "unit": "veces",
+          "ayuda": "Cuánta venta adicional genera cada peso que metes de vuelta.",
+          "requerido": true
+        },
+        {
+          "id": "reserva_acumulada",
+          "label": "Reserva acumulada en cuatro periodos",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_reserva / 100 * 4)",
+          "unit": "$"
+        },
+        {
+          "id": "retiro_acumulado",
+          "label": "Retiro acumulado en cuatro periodos",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_retiro / 100 * 4)",
+          "unit": "$"
+        },
+        {
+          "id": "venta_adicional",
+          "label": "Venta adicional generada por la reinversión",
+          "type": "calculated",
+          "formula": "Math.round(ganancia * pct_reinvertir / 100 * crecimiento * 4)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "distribucion_utilidades",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-10-b-escena.webp"
+}

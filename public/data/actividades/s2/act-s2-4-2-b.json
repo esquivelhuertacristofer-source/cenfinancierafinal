@@ -5,109 +5,109 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Pensiones y AFOREs",
-  "descripcion": "¿Sabes quién pagará tus cuentas cuando dejes de trabajar? ¡Aprende cómo funciona el sistema de retiro!",
-  "objetivo": "Comprender los mecanismos de ahorro para el retiro, cuentas individuales y aportaciones voluntarias",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Escalar de Verdad",
+  "descripcion": "Muchos negocios que \"crecen\" están en realidad trabajando más para ganar lo mismo. Aprende a notar la diferencia.",
+  "objetivo": "Identificar las condiciones que permiten escalar un negocio y los errores que hacen que el crecimiento destruya rentabilidad.",
+  "xp": 650,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "ret1",
-      "texto": "¿Qué es una 'AFORE'?",
+      "id": "q1",
+      "texto": "Un negocio \"escalable\" es aquel en el que…",
       "opciones": [
-        "Un banco que te presta dinero",
-        "Instituciones que administran los ahorros para el retiro de los trabajadores en cuentas individuales",
-        "Un seguro de auto",
-        "Una cuenta de ahorros del gobierno"
+        "Los costos crecen igual que las ventas",
+        "Puedes atender muchos más clientes sin que los costos crezcan proporcionalmente",
+        "Se contrata más gente cada mes",
+        "Se abren más locales"
       ],
       "correcta": 1,
-      "explicacion": "Cada trabajador tiene su propia cuenta donde se guarda dinero para su vejez."
+      "explicacion": "Software, contenido y franquicias bien diseñadas escalan; un consultorio individual no."
     },
     {
-      "id": "ret2",
-      "texto": "¿De dónde viene el dinero que se guarda en tu AFORE?",
+      "id": "q2",
+      "texto": "Escalar antes de validar el producto suele terminar en…",
       "opciones": [
-        "Solo de tu sueldo",
-        "De una aportación tripartita: Patrón, Gobierno y Tú (el trabajador)",
-        "Es un regalo del banco",
-        "De los impuestos generales"
+        "Éxito garantizado",
+        "Multiplicar los errores y quemar el dinero más rápido",
+        "Ahorro de costos",
+        "Mejor calidad"
       ],
       "correcta": 1,
-      "explicacion": "Es un esfuerzo conjunto para asegurar tu futuro."
+      "explicacion": "Escalar amplifica lo que ya tienes: si el modelo pierde dinero, escalar acelera la quiebra."
     },
     {
-      "id": "ret3",
-      "texto": "¿Qué es el 'Ahorro Voluntario'?",
+      "id": "q3",
+      "texto": "El \"cuello de botella\" de un negocio es…",
       "opciones": [
-        "Ahorrar solo si quieres",
-        "Dinero extra que tú decides aportar a tu cuenta de retiro para aumentar tu pensión final",
-        "Guardar dinero en una alcancía",
-        "No pagar impuestos"
+        "Su mejor producto",
+        "El punto que limita cuánto puede crecer todo lo demás",
+        "Su mayor gasto",
+        "El competidor"
       ],
       "correcta": 1,
-      "explicacion": "El ahorro voluntario es la forma más rápida de asegurar un retiro digno."
+      "explicacion": "Ampliar cualquier otra cosa antes de resolverlo no aumenta la capacidad ni un poco."
     },
     {
-      "id": "ret4",
-      "texto": "¿Qué son las 'SIEFORES'?",
+      "id": "q4",
+      "texto": "Documentar procesos sirve para escalar porque…",
       "opciones": [
-        "Los dueños de las AFOREs",
-        "Fondos de inversión donde las AFOREs invierten tu dinero según tu edad (más riesgo si eres joven, menos si eres mayor)",
-        "Tipos de tarjetas",
-        "Bancos internacionales"
+        "Es un requisito legal",
+        "Permite que otros hagan el trabajo con la misma calidad sin ti",
+        "Reduce impuestos",
+        "Impresiona a los clientes"
       ],
       "correcta": 1,
-      "explicacion": "Buscan maximizar tu dinero según el tiempo que te falta para retirarte."
+      "explicacion": "Un negocio que solo funciona si tú estás presente no es un negocio: es un empleo que además te da problemas."
     },
     {
-      "id": "ret5",
-      "texto": "¿Por qué es peligroso depender solo de la pensión mínima?",
+      "id": "q5",
+      "texto": "Crecer en ventas mientras el margen se reduce significa que…",
       "opciones": [
-        "Porque no te la dan",
-        "Porque suele ser muy baja y no alcanza para cubrir todos los gastos de salud y vida en la vejez",
-        "Porque es ilegal",
-        "Porque te la quitan"
+        "Vas muy bien",
+        "Puedes estar creciendo hacia la quiebra",
+        "Es normal y no importa",
+        "Los impuestos bajarán"
       ],
       "correcta": 1,
-      "explicacion": "Debes construir tu propio fondo de inversión complementario."
+      "explicacion": "Es un patrón clásico: más ventas, más operación, más costos y menos utilidad que al principio."
     },
     {
-      "id": "ret6",
-      "texto": "¿Qué efecto tiene la Inflación en tu ahorro para el retiro?",
+      "id": "q6",
+      "texto": "El indicador clave antes de escalar es…",
       "opciones": [
-        "Hace que tu dinero crezca",
-        "Reduce el poder de compra de tus ahorros si no están invertidos a una tasa mayor que la inflación",
-        "No le afecta",
-        "Hace que el banco te pague más"
+        "El número de seguidores",
+        "Que el valor de un cliente supere claramente lo que cuesta conseguirlo",
+        "El tamaño de la oficina",
+        "La antigüedad"
       ],
       "correcta": 1,
-      "explicacion": "Por eso tu dinero DEBE estar invertido, no solo guardado."
+      "explicacion": "Si conseguir un cliente cuesta más de lo que deja, escalar solo multiplica la pérdida."
     },
     {
-      "id": "ret7",
-      "texto": "¿A qué edad es la jubilación estándar en la mayoría de los sistemas actuales?",
+      "id": "q7",
+      "texto": "Un negocio de servicios personales puede escalar si…",
       "opciones": [
-        "50 años",
-        "65 años",
-        "80 años",
-        "40 años"
+        "Trabaja más horas",
+        "Estandariza, capacita y usa tecnología para no depender de una sola persona",
+        "Sube el precio infinitamente",
+        "No puede escalar nunca"
       ],
       "correcta": 1,
-      "explicacion": "Aunque muchos buscan el 'Retiro Temprano' ahorrando más e invirtiendo mejor."
+      "explicacion": "De ahí nacen las franquicias, los cursos grabados y las plataformas."
     },
     {
-      "id": "ret8",
-      "texto": "¿Cuál es la mayor ventaja de ser un trabajador joven respecto al retiro?",
+      "id": "q8",
+      "texto": "La tecnología ayuda a escalar principalmente porque…",
       "opciones": [
-        "Que tienes mucha energía",
-        "Que tienes el factor TIEMPO a tu favor para que el interés compuesto multiplique tu dinero",
-        "Que no pagas impuestos",
-        "Que no tienes deudas"
+        "Es moderna",
+        "Convierte costos variables en costos fijos que se reparten entre más clientes",
+        "Elimina impuestos",
+        "Reduce la competencia"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Tienes el activo más valioso: tiempo. ¡Aprovéchalo!"
+      "explicacion": "Ese es el mecanismo exacto: pagas una vez y sirve para uno o para diez mil."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

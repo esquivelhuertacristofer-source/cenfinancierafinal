@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-2-8-B",
+  "unit_code": "P4-2-8",
+  "unit_title": "Phishing: el mensaje que parece de mi banco",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Detector de Phishing",
+  "descripcion": "Comprueba que sabes reconocer y responder a un intento de fraude.",
+  "objetivo": "Verificar el dominio de señales de phishing y del protocolo de verificación",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El phishing consiste en:",
+      "opciones": [
+        "Un virus que entra solo",
+        "Un tipo de cuenta",
+        "Un cobro indebido",
+        "Hacerse pasar por una institución para obtener tus datos"
+      ],
+      "correcta": 3,
+      "explicacion": "No hackea nada: logra que tú entregues la información."
+    },
+    {
+      "id": "q2",
+      "texto": "La herramienta principal del phishing es:",
+      "opciones": [
+        "La urgencia",
+        "La cortesía",
+        "El descuento",
+        "El silencio"
+      ],
+      "correcta": 0,
+      "explicacion": "Una persona apurada no verifica, y eso es exactamente lo que buscan."
+    },
+    {
+      "id": "q3",
+      "texto": "Un banco pide tu contraseña completa por mensaje:",
+      "opciones": [
+        "A veces",
+        "Nunca",
+        "Solo en emergencias",
+        "Si lo pides tú"
+      ],
+      "correcta": 1,
+      "explicacion": "El banco ya tiene tus datos: no necesita que se los mandes."
+    },
+    {
+      "id": "q4",
+      "texto": "El código de seis dígitos que llega por SMS:",
+      "opciones": [
+        "Se comparte con el ejecutivo",
+        "Se publica",
+        "No se comparte con nadie",
+        "Se reenvía al banco"
+      ],
+      "correcta": 2,
+      "explicacion": "Ese código es justamente lo que le falta al estafador para completar la operación."
+    },
+    {
+      "id": "q5",
+      "texto": "El paso uno del protocolo es:",
+      "opciones": [
+        "Responder rápido",
+        "Llamar al número del mensaje",
+        "Reenviarlo",
+        "No dar clic en ningún enlace del mensaje"
+      ],
+      "correcta": 3,
+      "explicacion": "Ni el enlace ni el teléfono del mensaje son confiables."
+    },
+    {
+      "id": "q6",
+      "texto": "Para verificar hay que entrar:",
+      "opciones": [
+        "Por la app oficial o el número del reverso de la tarjeta",
+        "Por el enlace del mensaje",
+        "Por redes sociales",
+        "Por el buscador"
+      ],
+      "correcta": 0,
+      "explicacion": "Son los únicos dos canales que el estafador no puede controlar."
+    },
+    {
+      "id": "q7",
+      "texto": "Si el mensaje resultara real, aplicar el protocolo:",
+      "opciones": [
+        "Causa problemas",
+        "Funciona igual y no cuesta nada",
+        "Bloquea la cuenta",
+        "Anula el aviso"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso se aplica siempre, sin evaluar si el mensaje parece confiable."
+    },
+    {
+      "id": "q8",
+      "texto": "Si un mensaje me hace sentir que debo actuar de inmediato:",
+      "opciones": [
+        "Hay que obedecer",
+        "Significa que es real",
+        "Esa sensación ya es la señal de alerta",
+        "Hay que reenviarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "La prisa es fabricada; ningún trámite real se resuelve en dos horas o nunca."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-8-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-8-b-escena.webp"
+}

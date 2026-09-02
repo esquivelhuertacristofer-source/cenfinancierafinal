@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-4-8-B",
+  "unit_code": "S1-4-8",
+  "unit_title": "Canales de venta: dónde encuentro a mi cliente",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Elegir el Canal",
+  "descripcion": "Clasifica cada canal según su característica dominante.",
+  "objetivo": "Verificar la comprensión de las características de cada canal de venta",
+  "xp": 400,
+  "instruccion": "Arrastra cada afirmación al canal que describe.",
+  "categorias": [
+    {
+      "id": "directa",
+      "label": "Venta directa y recomendación",
+      "emoji": "🤝",
+      "color": "#10B981"
+    },
+    {
+      "id": "digital",
+      "label": "Redes y plataformas",
+      "emoji": "📱",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "fisico",
+      "label": "Punto físico e intermediarios",
+      "emoji": "🏪",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Mucho control sobre la relación, poco alcance",
+      "emoji": "🎯",
+      "categoria_correcta": "directa",
+      "feedback": "Conoces a cada cliente, pero llegas a pocos."
+    },
+    {
+      "id": "i2",
+      "label": "Cobra comisión y se queda con los datos del cliente",
+      "emoji": "🔗",
+      "categoria_correcta": "digital",
+      "feedback": "Ganas visibilidad y pierdes la relación directa."
+    },
+    {
+      "id": "i3",
+      "label": "Costo fijo alto que se paga vendas o no",
+      "emoji": "🏬",
+      "categoria_correcta": "fisico",
+      "feedback": "La renta corre aunque no entre nadie."
+    },
+    {
+      "id": "i4",
+      "label": "El canal más barato y el más lento de construir",
+      "emoji": "🗣️",
+      "categoria_correcta": "directa",
+      "feedback": "La recomendación se gana con años de cumplir."
+    },
+    {
+      "id": "i5",
+      "label": "Alcance amplio con costo variable según la inversión",
+      "emoji": "📢",
+      "categoria_correcta": "digital",
+      "feedback": "Puedes subir o bajar el gasto cada mes."
+    },
+    {
+      "id": "i6",
+      "label": "Da volumen a cambio de una parte del margen",
+      "emoji": "📦",
+      "categoria_correcta": "fisico",
+      "feedback": "Vendes más unidades ganando menos por cada una."
+    },
+    {
+      "id": "i7",
+      "label": "Genera confianza por el contacto presencial",
+      "emoji": "👀",
+      "categoria_correcta": "fisico",
+      "feedback": "Ver y tocar el producto sigue vendiendo mucho."
+    },
+    {
+      "id": "i8",
+      "label": "Permite medir con precisión el costo por cliente",
+      "emoji": "📊",
+      "categoria_correcta": "digital",
+      "feedback": "Inversión entre clientes conseguidos, mes a mes."
+    },
+    {
+      "id": "i9",
+      "label": "Los primeros clientes suelen llegar por aquí",
+      "emoji": "🌱",
+      "categoria_correcta": "directa",
+      "feedback": "Casi todo negocio pequeño empieza así."
+    },
+    {
+      "id": "i10",
+      "label": "Conviene si el cliente compra de forma recurrente",
+      "emoji": "🔁",
+      "categoria_correcta": "digital",
+      "feedback": "Un costo de adquisición alto se justifica con recurrencia."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-8-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-8-b-escena.webp"
+}

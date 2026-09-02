@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-2-7-B",
+  "unit_code": "P2-2-7",
+  "unit_title": "El tamaño engaña: cantidad contra precio",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Mira la Cantidad",
+  "descripcion": "Demuestra que el tamaño del empaque ya no te engaña.",
+  "objetivo": "Verificar la comparación cantidad-precio y la evaluación del consumo real",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Dos cereales a $45: uno de 300 g y otro de 500 g. ¿Cuál conviene?",
+      "opciones": [
+        "El de 300 g",
+        "El de caja más grande",
+        "El de 500 g",
+        "Da igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Mismo precio, más producto. Lo que pagas es el contenido."
+    },
+    {
+      "id": "q2",
+      "texto": "Jugo de 1 L a $20 y de 2 L a $34. ¿Cuál sale más barato por litro?",
+      "opciones": [
+        "El de 1 L",
+        "Cuestan igual",
+        "No se puede saber",
+        "El de 2 L"
+      ],
+      "correcta": 3,
+      "explicacion": "34 entre 2 son $17 por litro, contra $20. El total engaña; el precio por litro no."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Dónde encuentro la cantidad real del producto?",
+      "opciones": [
+        "Escrita en el empaque, en letra pequeña",
+        "En el tamaño de la caja",
+        "En el color",
+        "En la publicidad"
+      ],
+      "correcta": 0,
+      "explicacion": "Gramos, mililitros o piezas. Buscar ese dato toma tres segundos."
+    },
+    {
+      "id": "q4",
+      "texto": "Compro un paquete gigante y la mitad caduca sin abrirse. ¿Ahorré?",
+      "opciones": [
+        "Sí, era más barato por kilo",
+        "No, lo que se tira es dinero completo",
+        "Sí, siempre",
+        "Depende de la marca"
+      ],
+      "correcta": 1,
+      "explicacion": "El precio por kilo solo cuenta si el producto se consume."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué muchos empaques son más grandes de lo necesario?",
+      "opciones": [
+        "Por accidente",
+        "Porque el producto crece",
+        "Porque el ojo asocia tamaño con cantidad",
+        "Por seguridad"
+      ],
+      "correcta": 2,
+      "explicacion": "No es un error de diseño: es una decisión de venta."
+    },
+    {
+      "id": "q6",
+      "texto": "Dos productos traen la misma cantidad. Conviene:",
+      "opciones": [
+        "El de caja más grande",
+        "El de marca conocida",
+        "El de color llamativo",
+        "El más barato"
+      ],
+      "correcta": 3,
+      "explicacion": "Misma cantidad, menos dinero: la comparación más fácil que existe."
+    },
+    {
+      "id": "q7",
+      "texto": "Cuando cambian precio y cantidad a la vez, me fijo en:",
+      "opciones": [
+        "El precio por kilo o por litro",
+        "El color",
+        "El peso de la caja",
+        "La marca"
+      ],
+      "correcta": 0,
+      "explicacion": "Ese número permite comparar cualquier par de productos, aunque sean de tamaños distintos."
+    },
+    {
+      "id": "q8",
+      "texto": "La pregunta final antes de llevar el paquete grande es:",
+      "opciones": [
+        "¿Se ve bonito?",
+        "¿Nos lo vamos a acabar?",
+        "¿Cabe en la bolsa?",
+        "¿Está de oferta?"
+      ],
+      "correcta": 1,
+      "explicacion": "La conveniencia depende del consumo real, no solo del precio por unidad."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-7-b-escena.webp"
+}

@@ -1,0 +1,147 @@
+{
+  "code": "ACT-P6-3-8-A",
+  "unit_code": "P6-3-8",
+  "unit_title": "Inflación e interés real: cuánto gano de verdad",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "La Ganancia Que No Fue",
+  "descripcion": "Ceny debe decidir dónde poner el dinero de un premio familiar. Cada opción se ve distinta al descontar la inflación.",
+  "objetivo": "Aplicar el criterio de interés real a decisiones de inversión concretas",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny recibió $60,000 de un premio. La inflación del año es 5%. Tienen que decidir dónde ponerlos.",
+  "nodo_inicial": "primera",
+  "nodos": {
+    "primera": {
+      "id": "primera",
+      "texto": "La primera opción que aparece es guardarlos en casa \"para tenerlos a la mano\". ¿Qué opinan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Con 0% nominal y 5% de inflación pierden poder de compra garantizado",
+          "siguiente_nodo": "opciones",
+          "consecuencia": "En un año esos $60,000 comprarían como $57,000.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Está bien: no hay riesgo de perder nada",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "No hay riesgo de perder billetes, pero sí una pérdida segura de poder de compra.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-primera.webp"
+    },
+    "perdida": {
+      "id": "perdida",
+      "texto": "Pasó un año y los precios subieron. Con los mismos $60,000 compran menos que antes. ¿Qué aprendieron?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que el dinero parado pierde aunque el número no cambie",
+          "siguiente_nodo": "opciones",
+          "consecuencia": "La pérdida no se ve en el saldo: se ve en lo que alcanza a comprar.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que fue mala suerte con los precios",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "No fue suerte: la inflación es constante y previsible en su efecto.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-perdida.webp"
+    },
+    "opciones": {
+      "id": "opciones",
+      "texto": "Aparecen tres opciones: cuenta al 3%, instrumento gubernamental al 9% y una promesa de \"20% garantizado\" de un conocido. ¿Cuál analizan primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Descartar el 20% garantizado: nadie garantiza esos rendimientos",
+          "siguiente_nodo": "comparar",
+          "consecuencia": "Un rendimiento muy por encima del mercado y \"garantizado\" es la señal clásica de fraude.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 60000
+        },
+        {
+          "id": "o2",
+          "texto": "Ir por el 20%: es el número más alto",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El conocido dejó de contestar tres meses después.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-opciones.webp"
+    },
+    "comparar": {
+      "id": "comparar",
+      "texto": "Quedan la cuenta al 3% y el instrumento al 9%, con 5% de inflación. ¿Cómo comparan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Calcular el interés real: -2% contra +4%",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "La cuenta al 3% pierde poder de compra; el instrumento al 9% lo gana.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 2400
+        },
+        {
+          "id": "o2",
+          "texto": "Elegir la cuenta al 3% porque es de su banco de siempre",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La comodidad costó una pérdida real del 2% anual.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -1200
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-comparar.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia eligió el instrumento con interés real positivo y evitó la promesa fraudulenta.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La única cifra que dice si ganaste es la que queda después de restar inflación, comisiones e impuestos. Todo lo demás es apariencia.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El dinero quedó en un lugar seguro, pero con interés real negativo.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "No perdieron pesos, perdieron poder de compra. Es la pérdida más silenciosa y la que más gente ignora.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "El \"20% garantizado\" resultó ser un fraude y los $60,000 no se recuperaron.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Un rendimiento muy por encima del mercado y presentado como garantizado no es una oportunidad: es la señal de alarma más confiable que existe.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-3-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-3-8-a-portada.webp"
+}

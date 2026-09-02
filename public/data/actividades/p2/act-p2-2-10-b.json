@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-2-10-B",
+  "unit_code": "P2-2-10",
+  "unit_title": "Cuidar el agua y la luz: el ahorro que no se ve",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Qué Gasta Más?",
+  "descripcion": "Ordena los hábitos de la casa según cuánto pesan en el recibo.",
+  "objetivo": "Jerarquizar hábitos de consumo doméstico según su impacto económico",
+  "xp": 200,
+  "instruccion": "Arrastra cada hábito según cuánto ahorra de verdad en el recibo de la casa.",
+  "categorias": [
+    {
+      "id": "mucho",
+      "label": "Ahorra mucho",
+      "emoji": "💰",
+      "color": "#10B981"
+    },
+    {
+      "id": "poco",
+      "label": "Ahorra poquito",
+      "emoji": "🪙",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "nada",
+      "label": "No ahorra nada",
+      "emoji": "🚫",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Arreglar una llave que gotea todo el día",
+      "emoji": "💧",
+      "categoria_correcta": "mucho",
+      "feedback": "Una gota constante suma una cantidad sorprendente al mes."
+    },
+    {
+      "id": "i2",
+      "label": "Bañarse en menos tiempo",
+      "emoji": "🚿",
+      "categoria_correcta": "mucho",
+      "feedback": "La regadera es por donde se va la mayor parte del agua de una casa."
+    },
+    {
+      "id": "i3",
+      "label": "Cambiar focos viejos por LED",
+      "emoji": "💡",
+      "categoria_correcta": "mucho",
+      "feedback": "Un LED consume una fracción de lo que consume un foco incandescente."
+    },
+    {
+      "id": "i4",
+      "label": "Cerrar la llave mientras me cepillo",
+      "emoji": "🪥",
+      "categoria_correcta": "mucho",
+      "feedback": "Dos minutos de llave abierta, dos veces al día, todos los días del año."
+    },
+    {
+      "id": "i5",
+      "label": "Apagar un reloj digital de pared",
+      "emoji": "🕐",
+      "categoria_correcta": "nada",
+      "feedback": "Consume tan poco que no se nota en el recibo. Mejor enfocarse en lo grande."
+    },
+    {
+      "id": "i6",
+      "label": "Desconectar el cargador cuando no se usa",
+      "emoji": "🔌",
+      "categoria_correcta": "poco",
+      "feedback": "Ayuda un poco y es buen hábito, pero no es lo que mueve el recibo."
+    },
+    {
+      "id": "i7",
+      "label": "Apagar el calentador después del baño",
+      "emoji": "🔥",
+      "categoria_correcta": "mucho",
+      "feedback": "Lo que calienta agua es de los mayores consumidores de la casa."
+    },
+    {
+      "id": "i8",
+      "label": "Apagar la luz al salir del cuarto",
+      "emoji": "🚪",
+      "categoria_correcta": "poco",
+      "feedback": "Buen hábito y fácil, aunque su peso en el recibo es menor que el de los aparatos grandes."
+    },
+    {
+      "id": "i9",
+      "label": "Lavar el coche con manguera abierta",
+      "emoji": "🚗",
+      "categoria_correcta": "nada",
+      "feedback": "Esto no ahorra: gasta. Con cubeta se usa una fracción del agua."
+    },
+    {
+      "id": "i10",
+      "label": "Regañar a la familia todos los días",
+      "emoji": "😤",
+      "categoria_correcta": "nada",
+      "feedback": "Genera tensión y no cambia hábitos. El ejemplo funciona mucho mejor."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-10-b-escena.webp"
+}

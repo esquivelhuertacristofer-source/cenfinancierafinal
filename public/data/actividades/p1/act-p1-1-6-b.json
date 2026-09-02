@@ -1,0 +1,107 @@
+{
+  "code": "ACT-P1-1-6-B",
+  "unit_code": "P1-1-6",
+  "unit_title": "Contar mis monedas: sumar de 1, 2, 5 y 10 pesos",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "ALTA",
+  "titulo": "Reto Relámpago del Conteo",
+  "descripcion": "Suma rápido antes de que se acabe el tiempo. ¡Cada respuesta seguida vale más!",
+  "objetivo": "Consolidar la suma con monedas mexicanas bajo presión de tiempo",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Cuánto suman tres monedas de $2?",
+      "respuesta_correcta": "$6",
+      "incorrectas": [
+        "$5",
+        "$8",
+        "$4"
+      ],
+      "dato_extra": "Sumar de dos en dos: 2, 4, 6. ¡Así de fácil!"
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Cuánto suman una de $10 y una de $5?",
+      "respuesta_correcta": "$15",
+      "incorrectas": [
+        "$10",
+        "$20",
+        "$5"
+      ],
+      "dato_extra": "Empieza siempre por la moneda más grande y ve sumando."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Cuántas monedas de $1 necesito para hacer $5?",
+      "respuesta_correcta": "5 monedas",
+      "incorrectas": [
+        "2 monedas",
+        "10 monedas",
+        "3 monedas"
+      ],
+      "dato_extra": "Cinco piezas de un peso valen igual que una sola de cinco."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Cuánto suman dos de $10 y una de $2?",
+      "respuesta_correcta": "$22",
+      "incorrectas": [
+        "$12",
+        "$20",
+        "$25"
+      ],
+      "dato_extra": "10 + 10 = 20, y luego +2 = 22."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Tengo $20. Gasto $8. ¿Cuánto me queda?",
+      "respuesta_correcta": "$12",
+      "incorrectas": [
+        "$8",
+        "$28",
+        "$10"
+      ],
+      "dato_extra": "Restar también es contar dinero: es contar hacia atrás."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Cuál pesa más en valor: cuatro monedas de $5 o una de $10?",
+      "respuesta_correcta": "Las cuatro de $5",
+      "incorrectas": [
+        "La de $10",
+        "Valen igual",
+        "Ninguna vale"
+      ],
+      "dato_extra": "5 x 4 = 20, contra 10. Más piezas aquí sí significan más valor."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Cuánto suman $5 + $2 + $2?",
+      "respuesta_correcta": "$9",
+      "incorrectas": [
+        "$10",
+        "$7",
+        "$12"
+      ],
+      "dato_extra": "Le falta un peso para llegar a diez."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El dulce cuesta $7 y pago con $10. ¿Cuánto cambio recibo?",
+      "respuesta_correcta": "$3",
+      "incorrectas": [
+        "$7",
+        "$17",
+        "$2"
+      ],
+      "dato_extra": "Siempre cuenta tu cambio antes de irte del mostrador."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-6-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-6-b-escena.webp"
+}

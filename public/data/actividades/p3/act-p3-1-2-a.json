@@ -4,116 +4,131 @@
   "unit_title": "Presupuesto: Ingresos y Egresos",
   "level": "Primaria 3",
   "edad": "8-9 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "DECIDE",
   "complejidad": "MEDIO",
-  "titulo": "El Presupuesto Maestro Familiar",
-  "descripcion": "Ayuda a organizar los gastos de una familia. Debes asignar montos a las 8 categorías principales para que el dinero alcance para todo.",
-  "objetivo": "Identificar y clasificar los gastos reales de un hogar para crear un presupuesto equilibrado",
+  "titulo": "El Mes de los Ramírez",
+  "descripcion": "Entran $12,000 al mes en casa de los Ramírez. Todo lo que sale tiene que caber en esos $12,000. Ayúdales a repartirlos.",
+  "objetivo": "Comprender que un presupuesto reparte un ingreso limitado entre gastos fijos, variables y ahorro, y que cada decisión reduce lo disponible para las demás.",
   "xp": 400,
-  "output_type": "Presupuesto Familiar",
-  "exportable": true,
-  "pasos": [
-    {
-      "id": "ingresos",
-      "titulo": "💰 El Dinero que Entra",
-      "descripcion": "Primero, definamos cuánto dinero gana la familia al mes (Sueldos, ventas, etc).",
-      "campos": [
+  "personaje_principal": "Familia Ramírez",
+  "contexto_inicial": "Ingreso del mes: $12,000. Gastos fijos que no se pueden mover: renta $5,000 y servicios $1,200. Quedan $5,800 para decidir.",
+  "nodo_inicial": "la_despensa",
+  "nodos": {
+    "la_despensa": {
+      "id": "la_despensa",
+      "texto": "Primero, la despensa del mes. En el mercado sale en $2,500; en el súper con marcas conocidas, $3,800. ¿Qué hacen?",
+      "opciones": [
         {
-          "id": "ingreso_total",
-          "label": "Ingreso Mensual Total",
-          "type": "number",
-          "placeholder": "Ej: 15000",
-          "requerido": true,
-          "ayuda": "La suma de todo el dinero que llega a casa."
+          "id": "mercado",
+          "texto": "Comprar en el mercado y guardar la diferencia",
+          "siguiente_nodo": "el_recibo",
+          "consecuencia": "Ahorran $1,300 comprando lo mismo en otro lado.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": -2500
+        },
+        {
+          "id": "super",
+          "texto": "Ir al súper porque es más cómodo",
+          "siguiente_nodo": "el_recibo",
+          "consecuencia": "Gastan $3,800. Quedan $2,000 para todo lo demás del mes.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": -3800
         }
       ]
     },
-    {
-      "id": "gastos_basicos",
-      "titulo": "🏠 Gastos Básicos (Necesidades)",
-      "descripcion": "Cosas que no pueden faltar para vivir bien.",
-      "campos": [
+    "el_recibo": {
+      "id": "el_recibo",
+      "texto": "Llega el recibo de la luz: $900, más alto de lo normal. Es un gasto variable: cambia cada mes según cuánto se use.",
+      "opciones": [
         {
-          "id": "g_vivienda",
-          "label": "Renta o Casa",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
+          "id": "pagar_y_ajustar",
+          "texto": "Pagarlo y acordar apagar aparatos que nadie usa",
+          "siguiente_nodo": "el_antojo",
+          "consecuencia": "Pagan hoy y bajan el recibo del mes siguiente.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": -900
         },
         {
-          "id": "g_comida",
-          "label": "Alimentación",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
-        },
-        {
-          "id": "g_servicios",
-          "label": "Luz, Agua e Internet",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
-        },
-        {
-          "id": "g_transporte",
-          "label": "Gasolina o Camión",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
+          "id": "pagar_tarde",
+          "texto": "Pagarlo el mes que viene junto con el otro",
+          "siguiente_nodo": "el_antojo",
+          "consecuencia": "Este mes alcanza mejor. El siguiente habrá que pagar el doble más recargos.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -900
         }
       ]
     },
-    {
-      "id": "gastos_estilo",
-      "titulo": "🎒 Educación y Bienestar",
-      "descripcion": "Inversiones en el futuro y salud.",
-      "campos": [
+    "el_antojo": {
+      "id": "el_antojo",
+      "texto": "Los niños quieren ir al cine y comer fuera: $800. No es una necesidad, es un gusto. ¿Cabe en el presupuesto?",
+      "opciones": [
         {
-          "id": "g_educacion",
-          "label": "Escuela y Útiles",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
+          "id": "si_cabe",
+          "texto": "Sí, y solo si después de eso todavía queda para el ahorro",
+          "siguiente_nodo": "el_ahorro",
+          "consecuencia": "Salen al cine con el gasto ya contemplado.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": -800
         },
         {
-          "id": "g_salud",
-          "label": "Medicinas y Doctor",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
+          "id": "sin_pensar",
+          "texto": "Sí, ya veremos cómo alcanza para lo demás",
+          "siguiente_nodo": "el_ahorro",
+          "consecuencia": "Se divierten sin saber cuánto queda.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -800
+        },
+        {
+          "id": "nunca",
+          "texto": "No, en esta casa no se gasta en gustos",
+          "siguiente_nodo": "el_ahorro",
+          "consecuencia": "Ahorran más y todos terminan el mes de malas.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
         }
       ]
     },
-    {
-      "id": "gastos_finales",
-      "titulo": "🎉 Diversión y Ahorro",
-      "descripcion": "El equilibrio entre disfrutar hoy y cuidar el mañana.",
-      "campos": [
+    "el_ahorro": {
+      "id": "el_ahorro",
+      "texto": "Fin de mes. Sea lo que sea que haya quedado, hay que decidir qué hacer con ello.",
+      "opciones": [
         {
-          "id": "g_diversion",
-          "label": "Paseos y Cine",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
+          "id": "guardar",
+          "texto": "Guardar lo que sobró en el bote de emergencias",
+          "siguiente_nodo": "final_presupuesto_sano",
+          "consecuencia": "El bote crece un poco más cada mes.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "id": "g_ahorro",
-          "label": "Fondo de Ahorro",
-          "type": "number",
-          "placeholder": "0",
-          "requerido": true
-        },
-        {
-          "id": "balance_final",
-          "label": "Balance Restante",
-          "type": "calculated",
-          "formula": "ingreso_total - (g_vivienda + g_comida + g_servicios + g_transporte + g_educacion + g_salud + g_diversion + g_ahorro)",
-          "unit": "$",
-          "requerido": false,
-          "ayuda": "Si este número es NEGATIVO, ¡debes ajustar tus gastos!"
+          "id": "gastar_resto",
+          "texto": "Gastarlo: al fin y al cabo ya se pagó todo",
+          "siguiente_nodo": "final_al_dia",
+          "consecuencia": "El mes cierra en ceros, otra vez.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
         }
       ]
+    },
+    "final_presupuesto_sano": {
+      "id": "final_presupuesto_sano",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Los Ramírez cerraron el mes con todo pagado, una salida al cine y dinero guardado. No ganaron más: repartieron mejor.",
+      "reflexion_final": "Un presupuesto es repartir antes de gastar. Primero los gastos fijos, luego los variables, luego el ahorro, y los gustos caben solo si después de todo eso todavía queda."
+    },
+    "final_al_dia": {
+      "id": "final_al_dia",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Todo quedó pagado y no sobró nada. Si el mes que viene se descompone el refrigerador, no hay de dónde sacar.",
+      "reflexion_final": "Terminar el mes en ceros no es fracasar, y sí deja a la familia sin defensa. El ahorro no es lo que sobra: es una parte que se aparta antes de que sobre."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

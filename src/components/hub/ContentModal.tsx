@@ -62,6 +62,7 @@ import dynamic from 'next/dynamic';
 // crashearía con imports vacíos.
 const SimulatorActivity = dynamic(() => import('../activities/SimulatorActivity'), { ssr: false });
 const BuilderActivity = dynamic(() => import('../activities/BuilderActivity'), { ssr: false });
+const JornadaActivity = dynamic(() => import('../activities/JornadaActivity'), { ssr: false });
 
 const SupremoLoading = () => (
   <div className="flex items-center justify-center py-40 gap-4">
@@ -126,9 +127,31 @@ function getActivityId(unitCode: string, type: ContentType) {
   return `ACT-${unitCode}-${suffix}`;
 }
 
+// Posiciones aleatorias para partículas decorativas (estrellas/confeti).
+// Se calculan una sola vez vía useMemo, nunca inline en el JSX de render.
+function generateSparklePositions(count: number) {
+  return Array.from({ length: count }, () => ({
+    top: Math.random() * 100,
+    left: Math.random() * 100,
+    width: Math.random() * 2 + 0.5,
+    height: Math.random() * 2 + 0.5,
+    delay: Math.random() * 5,
+  }));
+}
+
+function generateConfettiPositions(count: number) {
+  return Array.from({ length: count }, () => ({
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    delay: Math.random() * 2,
+  }));
+}
+
 // ─── Componentes Optimizados con Memo ─────────────────────────────────────────
 
-const AdventureBackground = memo(({ color, theme }: { color: string, theme: ThemeType }) => (
+const AdventureBackground = memo(({ color, theme }: { color: string, theme: ThemeType }) => {
+  const sparkles = useMemo(() => generateSparklePositions(30), []);
+  return (
   <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-[#0F0225] via-[#0A0118] to-[#120526]">
     <div 
       className="absolute -top-[20%] -right-[10%] w-[100%] h-[100%] blur-[150px] rounded-full opacity-20 animate-pulse"
@@ -160,22 +183,24 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
        />
     </div>
     <div className="absolute inset-0 opacity-30">
-      {[...Array(30)].map((_, i) => ( // Reducido de 60 a 30 para performance
-        <div 
+      {sparkles.map((s, i) => (
+        <div
           key={i}
           className="absolute rounded-full bg-white animate-twinkle shadow-[0_0_10px_white]"
           style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            width: `${Math.random() * 2 + 0.5}px`,
-            height: `${Math.random() * 2 + 0.5}px`,
-            animationDelay: `${Math.random() * 5}s`
+            top: `${s.top}%`,
+            left: `${s.left}%`,
+            width: `${s.width}px`,
+            height: `${s.height}px`,
+            animationDelay: `${s.delay}s`
           }}
         />
       ))}
     </div>
   </div>
-));
+  );
+});
+AdventureBackground.displayName = 'AdventureBackground';
 
 const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
   <div className="fixed top-0 left-0 w-full z-[2100]">
@@ -201,6 +226,7 @@ const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
      </div>
   </div>
 ));
+ProgressEnergyBar.displayName = 'ProgressEnergyBar';
 
 const FiscalSummaryCard = memo(({ unitCode }: { unitCode: string }) => {
   if (!unitCode.startsWith('S3')) return null;
@@ -232,6 +258,7 @@ const FiscalSummaryCard = memo(({ unitCode }: { unitCode: string }) => {
     </div>
   );
 });
+FiscalSummaryCard.displayName = 'FiscalSummaryCard';
 
 // ─── Pestañas Optimizadas ─────────────────────────────────────────────────────
 
@@ -368,6 +395,7 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
     </div>
   );
 });
+TheoryTab.displayName = 'TheoryTab';
 
 // Función de normalización universal para evitar errores de carga por inconsistencias en JSONs
 const normalizeActivityData = (data: any) => {
@@ -410,6 +438,46 @@ const normalizeActivityData = (data: any) => {
 
   return d;
 };
+
+// ─── Portada y escena de la actividad (imagenes del flujo Krea2) ─────────────
+// Ambas son opcionales: si la actividad no las trae, no se renderiza nada.
+const PortadaActividad = memo(({ data }: { data: any }) => {
+  if (!data?.portada) return null;
+  return (
+    <div className="relative w-full h-[200px] md:h-[280px] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl mb-10">
+      <img src={data.portada} alt="" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0118] via-[#0A0118]/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+        <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.4em] italic">
+          {data.complejidad || 'Misión'}
+        </span>
+        <h3 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter mt-2 drop-shadow-2xl">
+          {data.titulo}
+        </h3>
+      </div>
+    </div>
+  );
+});
+PortadaActividad.displayName = 'PortadaActividad';
+
+const EscenaActividad = memo(({ data }: { data: any }) => {
+  if (!data?.escena) return null;
+  return (
+    <div className="hidden md:block relative w-full rounded-[32px] overflow-hidden border border-white/10 mb-10">
+      <img src={data.escena} alt="" className="w-full h-[190px] lg:h-[220px] object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0118] via-[#0A0118]/70 to-transparent" />
+      <div className="absolute inset-0 flex flex-col justify-center gap-2 p-8 max-w-2xl">
+        {data.objetivo && (
+          <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.4em] italic">{data.objetivo}</span>
+        )}
+        {data.descripcion && (
+          <p className="text-base lg:text-lg font-medium text-white/80 leading-snug">{data.descripcion}</p>
+        )}
+      </div>
+    </div>
+  );
+});
+EscenaActividad.displayName = 'EscenaActividad';
 
 const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: any; isSupremoUnit?: boolean }) => {
   const [data, setData] = useState<any>(null);
@@ -475,7 +543,10 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   const isBalance = ['BALANCE', 'EQUILIBRIO', 'CALIBRADOR', 'SINCRONIZA'].includes(activityType);
   const isRadar = ['RADAR', 'ESCANEO', 'PRIORIDAD', 'CAZA'].includes(activityType);
   const isGrowth = ['GROWTH', 'CRECIMIENTO', 'BOVEDA', 'SIMULADOR_AHORRO'].includes(activityType);
-  const isServiceControl = ['SERVICE_CONTROL', 'CONSOLA', 'SERVICIOS', 'CONTROL_GASTOS'].includes(activityType);
+  const isServiceControl = ['SERVICE_CONTROL', 'CONSOLA', 'SERVICIOS', 'CONTROL_GASTOS', 'CONTROL'].includes(activityType);
+  const isTrivia = ['TRIVIA', 'RAPIDO'].includes(activityType);
+  const isJornada = ['JORNADA', 'DIA_DE_TRABAJO', 'OFICIOS'].includes(activityType);
+  const isQuizType = ['QUIZ', 'CUESTIONARIO', 'EXAMEN', 'EVALUACION'].includes(activityType);
 
   // ─── Mecánicas Supremo ────────────────────────────────────────────────────
   const rawTipo = (data.tipo || data.type || '').toLowerCase().trim();
@@ -491,15 +562,17 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   const isSupremo = isCochintoVivo || isSupermercadoCaos || isFamiliaRamirez || isBancoDelTiempo ||
                     isInversorA10 || isPrimerNegocio || isNegociaSueldo || isCrisisRoom || isPortfolioBuilder;
 
-  const isKnown = isSimulator || isBuilder || isStory || isGame || isDragDrop || isMatching || isFillBlanks || isRoulette || isBalance || isRadar || isGrowth || isServiceControl || isSupremo;
+  const isKnown = isSimulator || isBuilder || isStory || isGame || isDragDrop || isMatching || isFillBlanks || isRoulette || isBalance || isRadar || isGrowth || isServiceControl || isTrivia || isQuizType || isJornada || isSupremo;
 
   return (
     <div className="animate-in fade-in duration-1000">
-      {isSimulator && <SimulatorActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBuilder && <BuilderActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      <PortadaActividad data={data} />
+      <EscenaActividad data={data} />
+      {isSimulator && <SimulatorActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBuilder && <BuilderActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isStory && <StoryActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isGame && <GameActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isDragDrop && <DragDropActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isDragDrop && <DragDropActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isMatching && <MatchingActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isFillBlanks && <FillBlanksActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isRoulette && <RouletteActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
@@ -507,6 +580,9 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
       {isRadar && <RadarActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isGrowth && <GrowthActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
       {isServiceControl && <ServiceControlActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isJornada && <JornadaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isTrivia && <TriviaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} onClose={() => {}} />}
+      {isQuizType && <QuizActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {/* ─── Mecánicas Supremo ─── */}
       {isCochintoVivo     && <CochintoVivo     activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
@@ -529,11 +605,17 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
     </div>
   );
 });
+SimulatorTab.displayName = 'SimulatorTab';
 
-const QuizTab = memo(({ unitCode, onComplete, isDone, theme }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: any }) => {
+const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: any; color?: string }) => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
+  // Reintento de la evaluación. `intentoEval` remonta el motor desde cero;
+  // `puntajeFallido` guarda el resultado que no alcanzó el mínimo para poder
+  // explicárselo al alumno en vez de ignorarlo.
+  const [intentoEval, setIntentoEval] = useState(0);
+  const [puntajeFallido, setPuntajeFallido] = useState<number | null>(null);
 
   useEffect(() => {
     const loadData = async () => {
@@ -586,97 +668,133 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme }: { unitCode: strin
   const isDragDrop = ['ARRASTRA', 'DRAG_DROP', 'ARRASTRE', 'CLASIFICA'].includes(activityType);
   const isMatching = ['MEMORIA', 'MATCHING', 'PAREJAS', 'RELACIONA'].includes(activityType);
   const isRoulette = ['RULETA', 'ROULETTE', 'GIRA'].includes(activityType);
+  const isBuilder = ['CONSTRUCTOR', 'BUILDER', 'PLANIFICADOR', 'CONSTRUYE', 'PLANIFICA'].includes(activityType);
+  const isSimulator = ['SIMULADOR', 'SIMULATOR', 'CALCULADORA', 'CALCULA'].includes(activityType);
+
+  const minimoAprobacion = Math.round((data.aprobacion_minima ?? 0.6) * 100);
+  // Un puntaje bajo ya no se descarta: se le dice al alumno qué pasó y se le
+  // ofrece repetir. Sin esto, la pestaña quedaba muerta tras el primer intento.
+  const evaluar = (score: number) => {
+    if (score >= minimoAprobacion) {
+      setIsFinishedLocal(true);
+      onComplete(score);
+      return;
+    }
+    setPuntajeFallido(score);
+  };
 
   return (
-    <div className="animate-in fade-in duration-1000">
+    <>
+    <div key={intentoEval} className="animate-in fade-in duration-1000">
+      <PortadaActividad data={data} />
+      <EscenaActividad data={data} />
       {isTrivia && (
         <TriviaActivity
           data={data}
-          onComplete={(score) => { if (score >= 60) { setIsFinishedLocal(true); onComplete(score); } }}
+          onComplete={evaluar}
           onClose={() => {}}
         />
       )}
       {isGame && (
         <GameActivity
           data={data}
-          onComplete={(score) => { if (score >= 50) { setIsFinishedLocal(true); onComplete(score); } }}
+          onComplete={evaluar}
         />
       )}
       {isQuiz && (
         <QuizActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          onComplete={evaluar}
         />
       )}
       {isFillBlanks && (
         <FillBlanksActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          onComplete={evaluar}
         />
       )}
       {isStory && (
         <StoryActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          onComplete={evaluar}
         />
       )}
       {isDragDrop && (
         <DragDropActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          accent={color}
+          onComplete={evaluar}
         />
       )}
       {isMatching && (
         <MatchingActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          onComplete={evaluar}
         />
       )}
       {isRoulette && (
         <RouletteActivity
           data={data}
-          onComplete={(score) => {
-            if (score >= ((data.aprobacion_minima ?? 0.6) * 100)) {
-              setIsFinishedLocal(true);
-              onComplete(score);
-            }
-          }}
+          onComplete={evaluar}
         />
       )}
-      {!isTrivia && !isGame && !isQuiz && !isFillBlanks && !isStory && !isDragDrop && !isMatching && !isRoulette && (
+      {isBuilder && (
+        <BuilderActivity
+          data={data}
+          accent={color}
+          onComplete={evaluar}
+        />
+      )}
+      {isSimulator && (
+        <SimulatorActivity
+          data={data}
+          accent={color}
+          onComplete={evaluar}
+        />
+      )}
+      {!isTrivia && !isGame && !isQuiz && !isFillBlanks && !isStory && !isDragDrop && !isMatching && !isRoulette && !isBuilder && !isSimulator && (
         <div className="text-center py-20 space-y-6">
            <p className="text-white/20 text-xl font-black italic">Formato de Evaluación no reconocido: {activityType}</p>
            <button onClick={() => onComplete(100)} className="px-10 py-4 bg-white/10 text-white rounded-full font-black uppercase text-xs tracking-widest">Omitir Evaluación</button>
         </div>
       )}
     </div>
+
+    {puntajeFallido !== null && (
+      <div className="fixed inset-0 z-[3000] bg-black/80 backdrop-blur-2xl flex items-center justify-center p-8" role="dialog" aria-modal="true" aria-labelledby="titulo-reintento">
+        <div className="max-w-lg w-full bg-[#0a0a0a] border border-white/10 rounded-[48px] p-12 text-center space-y-8 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
+          <div className="text-6xl" aria-hidden="true">🎯</div>
+          <div className="space-y-3">
+            <h2 id="titulo-reintento" className="text-4xl font-black italic uppercase tracking-tighter text-white">Casi lo logras</h2>
+            <p className="text-white/50 text-lg font-medium leading-relaxed">
+              Obtuviste <span className="text-[#FF8C00] font-black">{puntajeFallido}%</span> y para aprobar esta misión
+              necesitas <span className="text-white font-black">{minimoAprobacion}%</span>.
+            </p>
+            <p className="text-white/30 text-sm">Repasa la teoría y vuelve a intentarlo: no se guarda ningún castigo.</p>
+          </div>
+          <div className="space-y-3">
+            <button
+              onClick={() => { setPuntajeFallido(null); setIntentoEval((n) => n + 1); }}
+              className="w-full py-6 bg-white text-black rounded-[32px] font-black text-xs uppercase tracking-[0.4em] hover:scale-[1.02] transition-transform"
+            >
+              Reintentar
+            </button>
+            {intentoEval >= 1 && (
+              <button
+                onClick={() => { const s = puntajeFallido; setPuntajeFallido(null); setIsFinishedLocal(true); onComplete(s); }}
+                className="w-full py-4 text-white/30 hover:text-white/70 font-bold text-[11px] uppercase tracking-[0.3em] transition-colors"
+              >
+                Continuar de todos modos
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   );
 });
+QuizTab.displayName = 'QuizTab';
 
 // ─── Componente Principal de la Misión ────────────────────────────────────────
 
@@ -746,6 +864,8 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
     return (done / total) * 100;
   }, [unit.contents, completed]);
 
+  const confettiPositions = useMemo(() => generateConfettiPositions(20), [showSuccess]);
+
   // Flujo pedagógico: teoria → práctica → quiz (sin marcar completa hasta pasar el quiz)
   const nextAfterTheory = unit.contents.find(c => c.type !== 'theory');
   const theoryNextLabel = nextAfterTheory?.type === 'simulator' ? 'Ir a la Práctica' : 'Ir al Cuestionario';
@@ -792,14 +912,14 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
           
           {/* Confeti Visual (Simple) */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
-             {[...Array(20)].map((_, i) => (
-               <div 
+             {confettiPositions.map((p, i) => (
+               <div
                  key={i}
                  className="absolute w-4 h-4 bg-[#FF8C00] rounded-sm animate-bounce"
-                 style={{ 
-                   left: `${Math.random() * 100}%`, 
-                   top: `${Math.random() * 100}%`,
-                   animationDelay: `${Math.random() * 2}s`,
+                 style={{
+                   left: `${p.left}%`,
+                   top: `${p.top}%`,
+                   animationDelay: `${p.delay}s`,
                    opacity: 0.3
                  }}
                />
@@ -877,6 +997,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               isDone={isDone('quiz')}
               onComplete={(score) => handleComplete('quiz', score)}
               theme={theme}
+              color={pillar.color}
             />
           )}
         </div>

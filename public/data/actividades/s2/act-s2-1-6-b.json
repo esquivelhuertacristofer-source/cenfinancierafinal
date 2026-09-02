@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-1-6-B",
+  "unit_code": "S2-1-6",
+  "unit_title": "La tasa objetivo: el termostato de la economía",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "El Termostato",
+  "descripcion": "Comprueba que entiendes la política monetaria.",
+  "objetivo": "Verificar la comprensión de la tasa objetivo y sus efectos",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La tasa objetivo es:",
+      "opciones": [
+        "La tasa de tu tarjeta",
+        "La inflación",
+        "Un impuesto",
+        "La tasa de referencia del banco central"
+      ],
+      "correcta": 3,
+      "explicacion": "Desde ahí se construyen casi todas las demás tasas."
+    },
+    {
+      "id": "q2",
+      "texto": "Su objetivo principal es:",
+      "opciones": [
+        "Mantener la inflación bajo control",
+        "Que los bancos ganen",
+        "Bajar impuestos",
+        "Subir el empleo"
+      ],
+      "correcta": 0,
+      "explicacion": "De ahí la analogía con un termostato."
+    },
+    {
+      "id": "q3",
+      "texto": "Si los precios suben demasiado:",
+      "opciones": [
+        "Se baja la tasa",
+        "Se sube la tasa para enfriar la economía",
+        "No se hace nada",
+        "Se imprime dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "El crédito se encarece y el gasto se desalienta."
+    },
+    {
+      "id": "q4",
+      "texto": "Los créditos que se ajustan rápido son:",
+      "opciones": [
+        "Los de tasa fija",
+        "Ninguno",
+        "Los de tasa variable",
+        "Solo los hipotecarios"
+      ],
+      "correcta": 2,
+      "explicacion": "Un crédito de tasa fija ya pactado no cambia."
+    },
+    {
+      "id": "q5",
+      "texto": "El efecto sobre los precios:",
+      "opciones": [
+        "Es inmediato",
+        "No existe",
+        "Es de un año exacto",
+        "Tarda meses"
+      ],
+      "correcta": 3,
+      "explicacion": "La economía no reacciona de un día para otro."
+    },
+    {
+      "id": "q6",
+      "texto": "Con tasas altas conviene:",
+      "opciones": [
+        "Revisar deudas variables y aprovechar el ahorro",
+        "Endeudarse más",
+        "Ignorarlo",
+        "Gastar todo"
+      ],
+      "correcta": 0,
+      "explicacion": "El ahorro rinde más justo cuando el crédito cuesta más."
+    },
+    {
+      "id": "q7",
+      "texto": "Con tasas bajas:",
+      "opciones": [
+        "Todo rinde más",
+        "El crédito es accesible y el ahorro rinde menos",
+        "Nada cambia",
+        "Sube la inflación siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada escenario tiene su cara favorable y su costo."
+    },
+    {
+      "id": "q8",
+      "texto": "La tasa objetivo afecta:",
+      "opciones": [
+        "Solo a los bancos",
+        "A nadie",
+        "A cualquiera con crédito, ahorro o que compre cosas",
+        "Solo a las empresas"
+      ],
+      "correcta": 2,
+      "explicacion": "Es decir, prácticamente a todos."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-6-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-6-b-escena.webp"
+}

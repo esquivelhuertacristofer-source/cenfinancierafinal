@@ -4,152 +4,118 @@
   "unit_title": "Los bancos: ¿qué son y para qué sirven?",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "SIMULADOR",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "El Banco Virtual",
-  "descripcion": "Bienvenido a tu primer banca digital. Aprende a gestionar tus depósitos, retiros y pagos de servicios de forma segura.",
-  "objetivo": "Comprender la dinámica de ingresos y egresos dentro de una cuenta bancaria digital",
+  "titulo": "¿Qué Hace un Banco con tu Dinero?",
+  "descripcion": "Cuando guardas dinero en el banco, no lo meten en una caja con tu nombre. Descubre qué hace el banco de verdad.",
+  "objetivo": "Comprender qué es un banco, qué servicios ofrece y qué hace con el dinero que la gente le confía.",
   "xp": 400,
-  "descripcion_formula": "Calculamos el saldo final: Saldo Inicial + Depósitos - Retiros - Pagos de Servicios.",
-  "inputs": [
+  "instruccion": "Arrastra cada frase a su lugar: qué SÍ hace un banco, qué NO hace, y en qué te ayuda a ti.",
+  "categorias": [
     {
-      "id": "saldo_inicial",
-      "label": "Tu saldo inicial",
-      "type": "slider",
-      "min": 1000,
-      "max": 10000,
-      "step": 500,
-      "default": 2000,
-      "unit": "$"
-    },
-    {
-      "id": "depositos",
-      "label": "Depósitos (Ahorro o Regalos)",
-      "type": "slider",
-      "min": 0,
-      "max": 5000,
-      "step": 100,
-      "default": 500,
-      "unit": "$"
-    },
-    {
-      "id": "retiros",
-      "label": "Retiros en efectivo",
-      "type": "slider",
-      "min": 0,
-      "max": 2000,
-      "step": 100,
-      "default": 200,
-      "unit": "$"
-    },
-    {
-      "id": "pagos",
-      "label": "Pago de servicios (Luz/Internet)",
-      "type": "slider",
-      "min": 0,
-      "max": 3000,
-      "step": 100,
-      "default": 800,
-      "unit": "$"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    }
-  ],
-  "formula": "saldo_inicial + depositos - retiros - pagos",
-  "output_label": "Tu Saldo Disponible",
-  "output_prefix": "$",
-  "output_suffix": " pesos",
-  "chart_type": "pie",
-  "escenarios": [
-    {
-      "condicion": "resultado >= 1000",
-      "mensaje": "✅ ¡Excelente gestión! Tienes un saldo saludable para imprevistos.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "resultado < 1000 && resultado > 0",
-      "mensaje": "⚠️ ¡Atención! Tu saldo es bajo. Intenta reducir los retiros para ahorrar más.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "resultado <= 0",
-      "mensaje": "🚨 ¡Cuenta en Rojo! Gastaste más de lo que tenías. Revisa tus gastos urgentemente.",
-      "tipo": "danger"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Por qué es más seguro guardar dinero en un banco que debajo del colchón? ¿Qué servicios te da el banco que no puedes darte solo?",
-  "comparativa_espera": "Los bancos en México procesan más de 1 millón de transacciones por hora. Revisar tu estado de cuenta mensualmente, aunque sea 5 minutos, puede ayudarte a detectar cargos no reconocidos y mejorar tu presupuesto.",
-  "outputs_multiples": [
-    {
-      "id": "saldo_disponible",
-      "label": "Saldo Disponible",
-      "formula": "Math.max(0, saldo_inicial + depositos - retiros - pagos)",
-      "prefix": "$",
-      "suffix": " pesos",
-      "descripcion": "Lo que tienes disponible en tu cuenta"
-    },
-    {
-      "id": "total_salidas",
-      "label": "Total de Salidas",
-      "formula": "retiros + pagos",
-      "prefix": "$",
-      "suffix": " pesos",
-      "descripcion": "Todo lo que salió de tu cuenta"
-    },
-    {
-      "id": "porcentaje_usado",
-      "label": "Porcentaje del Saldo Usado",
-      "formula": "Math.round((retiros + pagos) / (saldo_inicial + depositos) * 100)",
-      "prefix": "",
-      "suffix": "% utilizado",
-      "descripcion": "Qué tan eficientemente estás usando tu dinero"
-    },
-    {
-      "id": "estado_cuenta",
-      "label": "Estado de la Cuenta",
-      "formula": "(saldo_inicial + depositos - retiros - pagos) >= 0 ? 1 : 0",
-      "prefix": "",
-      "suffix": " (1=sano, 0=negativo)",
-      "descripcion": "Si es negativo, gastaste más de lo que tenías"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "saldo_disponible",
-      "label": "Saldo Disponible",
-      "color": "#6366f1"
-    },
-    {
-      "id": "total_salidas",
-      "label": "Total de Salidas",
+      "id": "si",
+      "label": "ESO SÍ HACE",
+      "emoji": "✅",
       "color": "#22c55e"
+    },
+    {
+      "id": "no",
+      "label": "ESO NO HACE",
+      "emoji": "❌",
+      "color": "#ef4444"
+    },
+    {
+      "id": "ayuda",
+      "label": "ASÍ TE AYUDA A TI",
+      "emoji": "🤝",
+      "color": "#3b82f6"
     }
-  ]
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Presta tu dinero a otras personas y cobra intereses",
+      "emoji": "🔄",
+      "categoria_correcta": "si",
+      "feedback": "Así gana el banco: presta el dinero que la gente guarda y cobra más de lo que paga."
+    },
+    {
+      "id": "i2",
+      "label": "Guarda tus billetes exactos en una cajita con tu nombre",
+      "emoji": "📦",
+      "categoria_correcta": "no",
+      "feedback": "Tu dinero es un número en un sistema. Puedes sacarlo cuando quieras, y no son los mismos billetes."
+    },
+    {
+      "id": "i3",
+      "label": "Te paga un poco de interés por dejar ahí tu dinero",
+      "emoji": "💰",
+      "categoria_correcta": "si",
+      "feedback": "Te paga por prestarle tu dinero, aunque casi siempre te paga menos de lo que él cobra."
+    },
+    {
+      "id": "i4",
+      "label": "Te regala dinero cuando lo necesitas",
+      "emoji": "🎁",
+      "categoria_correcta": "no",
+      "feedback": "Un banco puede prestarte, y prestar no es regalar: siempre se devuelve con intereses."
+    },
+    {
+      "id": "i5",
+      "label": "Te cuida el dinero para que no se pierda ni te lo roben",
+      "emoji": "🔒",
+      "categoria_correcta": "ayuda",
+      "feedback": "Es más seguro que debajo del colchón, y además está protegido por el IPAB."
+    },
+    {
+      "id": "i6",
+      "label": "Te deja pagar sin traer efectivo",
+      "emoji": "💳",
+      "categoria_correcta": "ayuda",
+      "feedback": "Con tarjeta o transferencia pagas sin cargar billetes."
+    },
+    {
+      "id": "i7",
+      "label": "Decide en qué puedes gastar tu dinero",
+      "emoji": "🚫",
+      "categoria_correcta": "no",
+      "feedback": "El dinero es tuyo y tú decides. El banco solo lo guarda y lo mueve cuando tú se lo pides."
+    },
+    {
+      "id": "i8",
+      "label": "Cobra comisiones por algunos servicios",
+      "emoji": "✂️",
+      "categoria_correcta": "si",
+      "feedback": "Por eso conviene comparar: hay cuentas sin comisión y otras que te cobran cada mes."
+    },
+    {
+      "id": "i9",
+      "label": "Te ayuda a juntar para algo grande sin gastártelo antes",
+      "emoji": "🎯",
+      "categoria_correcta": "ayuda",
+      "feedback": "Lo que no traes en la bolsa es más difícil de gastar sin pensar."
+    },
+    {
+      "id": "i10",
+      "label": "Te avisa cada vez que quieres comprar algo caro",
+      "emoji": "📢",
+      "categoria_correcta": "no",
+      "feedback": "Eso te toca a ti: el banco no decide por ti ni te detiene."
+    },
+    {
+      "id": "i11",
+      "label": "Guarda un registro de todo lo que entra y sale",
+      "emoji": "📋",
+      "categoria_correcta": "ayuda",
+      "feedback": "Tu estado de cuenta te muestra en qué se te fue el dinero. Es la mejor forma de descubrirlo."
+    },
+    {
+      "id": "i12",
+      "label": "Presta a empresas para que construyan cosas",
+      "emoji": "🏗️",
+      "categoria_correcta": "si",
+      "feedback": "Con el ahorro de muchos se financian casas, escuelas y negocios."
+    }
+  ],
+  "versión": "2026.Alineada.2"
 }

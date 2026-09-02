@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-4-6-A",
+  "unit_code": "P5-4-6",
+  "unit_title": "Modelo de negocio: cómo gana dinero mi idea",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Arma el Modelo",
+  "descripcion": "Clasifica cada elemento según a qué pieza del modelo de negocio pertenece.",
+  "objetivo": "Identificar los componentes de un modelo de negocio en casos concretos",
+  "xp": 300,
+  "instruccion": "Arrastra cada elemento a la pieza del modelo que le corresponde.",
+  "categorias": [
+    {
+      "id": "cliente",
+      "label": "Cliente y problema",
+      "emoji": "🎯",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "ingreso",
+      "label": "Cómo cobro",
+      "emoji": "💰",
+      "color": "#10B981"
+    },
+    {
+      "id": "costo",
+      "label": "Qué me cuesta",
+      "emoji": "📉",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Estudiantes que olvidan su material en casa",
+      "emoji": "🎒",
+      "categoria_correcta": "cliente",
+      "feedback": "El cliente definido por su situación, no por su edad."
+    },
+    {
+      "id": "i2",
+      "label": "Cobro una cuota mensual fija",
+      "emoji": "📅",
+      "categoria_correcta": "ingreso",
+      "feedback": "Modelo de suscripción: ingreso predecible mes a mes."
+    },
+    {
+      "id": "i3",
+      "label": "El material que uso en cada pieza",
+      "emoji": "📦",
+      "categoria_correcta": "costo",
+      "feedback": "Costo variable: crece con cada unidad vendida."
+    },
+    {
+      "id": "i4",
+      "label": "Vecinos que no tienen tiempo de cocinar",
+      "emoji": "🏠",
+      "categoria_correcta": "cliente",
+      "feedback": "Identificado por la necesidad concreta que tiene."
+    },
+    {
+      "id": "i5",
+      "label": "Cobro por cada pieza vendida",
+      "emoji": "🏷️",
+      "categoria_correcta": "ingreso",
+      "feedback": "Venta unitaria: el modelo más directo de todos."
+    },
+    {
+      "id": "i6",
+      "label": "El transporte para entregar los pedidos",
+      "emoji": "🛵",
+      "categoria_correcta": "costo",
+      "feedback": "Un costo que muchos olvidan al calcular el margen."
+    },
+    {
+      "id": "i7",
+      "label": "Los anunciantes pagan por aparecer",
+      "emoji": "📢",
+      "categoria_correcta": "ingreso",
+      "feedback": "El usuario no paga; el modelo se financia por publicidad."
+    },
+    {
+      "id": "i8",
+      "label": "Personas que necesitan resolver la comida del día",
+      "emoji": "🍲",
+      "categoria_correcta": "cliente",
+      "feedback": "El problema concreto que se está resolviendo."
+    },
+    {
+      "id": "i9",
+      "label": "El permiso para poner el puesto",
+      "emoji": "📋",
+      "categoria_correcta": "costo",
+      "feedback": "Costo fijo: se paga aunque no vendas nada."
+    },
+    {
+      "id": "i10",
+      "label": "La versión básica es gratis y la avanzada se paga",
+      "emoji": "⭐",
+      "categoria_correcta": "ingreso",
+      "feedback": "Modelo mixto: atrae con lo gratuito y cobra por lo adicional."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-6-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-6-a-escena.webp"
+}

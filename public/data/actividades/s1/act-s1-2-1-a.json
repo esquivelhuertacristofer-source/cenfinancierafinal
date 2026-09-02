@@ -36,12 +36,21 @@
       "id": "tipo_trabajador",
       "label": "Tipo de Empleo",
       "type": "select",
-      "options": [
-        { "label": "Trabajador IMSS (empresa privada)", "value": "imss" },
-        { "label": "Trabajador ISSSTE (gobierno)", "value": "issste" },
-        { "label": "Trabajador Informal (sin seguridad social)", "value": "informal" }
-      ],
-      "default": "imss"
+      "default": "imss",
+      "opciones": [
+        {
+          "label": "Trabajador IMSS (empresa privada)",
+          "value": "imss"
+        },
+        {
+          "label": "Trabajador ISSSTE (gobierno)",
+          "value": "issste"
+        },
+        {
+          "label": "Trabajador Informal (sin seguridad social)",
+          "value": "informal"
+        }
+      ]
     },
     {
       "id": "edad_actual_imss",
@@ -95,12 +104,36 @@
   "tabla_beneficios": {
     "titulo": "IMSS vs Informal: lo que pierdes sin seguridad social",
     "beneficios": [
-      { "prestacion": "Atención médica", "imss": "Gratis ilimitada", "informal": "$500-$3,000 por consulta" },
-      { "prestacion": "Hospitalización", "imss": "Sin costo", "informal": "$50,000-$500,000" },
-      { "prestacion": "Maternidad", "imss": "Subsidio 100% + semanas de descanso", "informal": "Ninguno" },
-      { "prestacion": "Incapacidad por enfermedad", "imss": "60% del salario", "informal": "Ninguno" },
-      { "prestacion": "Pensión por vejez", "imss": "Hasta 40% del salario último", "informal": "Ninguna" },
-      { "prestacion": "AFORE (ahorro retiro)", "imss": "6.5% del salario mensual", "informal": "Ninguno" }
+      {
+        "prestacion": "Atención médica",
+        "imss": "Gratis ilimitada",
+        "informal": "$500-$3,000 por consulta"
+      },
+      {
+        "prestacion": "Hospitalización",
+        "imss": "Sin costo",
+        "informal": "$50,000-$500,000"
+      },
+      {
+        "prestacion": "Maternidad",
+        "imss": "Subsidio 100% + semanas de descanso",
+        "informal": "Ninguno"
+      },
+      {
+        "prestacion": "Incapacidad por enfermedad",
+        "imss": "60% del salario",
+        "informal": "Ninguno"
+      },
+      {
+        "prestacion": "Pensión por vejez",
+        "imss": "Hasta 40% del salario último",
+        "informal": "Ninguna"
+      },
+      {
+        "prestacion": "AFORE (ahorro retiro)",
+        "imss": "6.5% del salario mensual",
+        "informal": "Ninguno"
+      }
     ]
   },
   "chart_type": "bar",
@@ -119,17 +152,27 @@
   "escenarios": [
     {
       "condicion": "tipo_trabajador === 'informal'",
-      "mensaje": "⚠️ Sin seguridad social. El 55% de México trabaja así. Un accidente o enfermedad grave puede destruir décadas de ahorro. El costo invisible de la informalidad es enorme.",
-      "tipo": "danger"
+      "mensaje": "Sin cotizar no hay pensión, ni incapacidad pagada, ni atención médica, ni crédito de vivienda. El ahorro de no aportar se paga completo más adelante.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "65 - edad_actual_imss < anos_cotizados",
+      "mensaje": "Revisa las cuentas: no te alcanza la vida laboral para acumular esos años antes de los 65. La pensión exige 1,000 semanas cotizadas, es decir, cerca de 19 años.",
+      "tipo": "advertencia"
     },
     {
       "condicion": "anos_cotizados >= 30 && tipo_trabajador !== 'informal'",
-      "mensaje": "🏆 Cotización completa. Con 30+ años cotizados tienes derecho a la pensión máxima. Tu seguridad social es un activo financiero significativo que muchos mexicanos no valoran.",
-      "tipo": "success"
+      "mensaje": "Con 30 años cotizados alcanzas la tasa de reemplazo alta. Cotizar sobre tu salario real (no sobre el mínimo) es lo que decide el monto final.",
+      "tipo": "exito"
     },
     {
       "condicion": "anos_cotizados < 10 && tipo_trabajador !== 'informal'",
-      "mensaje": "⏰ Apenas empiezas. Cada año que trabajas en la formalidad suma a tu historial de cotización. Interrumpir el trabajo formal tiene un costo a largo plazo en tu pensión.",
+      "mensaje": "Menos de 10 años: aún no alcanzas las 1,000 semanas mínimas. Sin ellas no hay pensión, solo la devolución del saldo de tu AFORE.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "Tu aportación al IMSS no es un impuesto: es salario diferido que compra pensión, salud y crédito de vivienda.",
       "tipo": "info"
     }
   ],

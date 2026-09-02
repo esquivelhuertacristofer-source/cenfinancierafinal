@@ -4,88 +4,199 @@
   "unit_title": "Negociar una deuda: cómo hablar con un acreedor",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "JUEGO",
-  "complejidad": "MEDIO",
-  "titulo": "Algoritmos al Poder",
-  "descripcion": "La IA toma miles de decisiones financieras por segundo. ¿Sabrás distinguir cuando está ayudando o cuando está cometiendo un error?",
-  "objetivo": "Identificar los beneficios y riesgos éticos del uso de IA en servicios financieros",
-  "xp": 400,
-  "game_type": "click",
-  "duracion": 60,
-  "velocidad_inicial": "media",
-  "velocidad_incremento": true,
-  "instruccion": "Haz clic en las ACCIONES POSITIVAS DE IA (✅) y evita los ERRORES O SESGOS (🚫).",
-  "items": [
-    {
-      "id": "ia1",
-      "label": "Detección de compra fraudulenta en 0.1 segundos",
-      "emoji": "🛡️",
-      "tipo": "correcto",
-      "puntos": 100
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "La Llamada Difícil",
+  "descripcion": "El papá de Sofía perdió su trabajo. Debe $48,000 en una tarjeta y este mes no puede pagar. Suena el teléfono: es el banco. Sofía está aprendiendo que hay una forma correcta de tener esta conversación.",
+  "objetivo": "Aprender a negociar una deuda con comunicación asertiva: reconocerla, proponer un plan realista y documentar el acuerdo.",
+  "xp": 700,
+  "personaje_principal": "Sofía",
+  "contexto_inicial": "La deuda es real, el ingreso cayó a la mitad y el banco quiere cobrar. Ninguna de esas tres cosas se arregla ignorándolas.",
+  "nodo_inicial": "suena_el_telefono",
+  "nodos": {
+    "suena_el_telefono": {
+      "id": "suena_el_telefono",
+      "texto": "El banco llama por tercera vez esta semana. ¿Qué hace la familia?",
+      "opciones": [
+        {
+          "id": "contestar",
+          "texto": "Contestar y explicar la situación con honestidad",
+          "siguiente_nodo": "la_preparacion",
+          "consecuencia": "El ejecutivo escucha y ofrece pasar el caso al área de reestructura.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "ignorar",
+          "texto": "No contestar hasta tener el dinero completo",
+          "siguiente_nodo": "se_agrava",
+          "consecuencia": "Pasan dos meses. La deuda crece con intereses moratorios.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -6000
+        },
+        {
+          "id": "prometer",
+          "texto": "Contestar y prometer pagar todo la próxima semana",
+          "siguiente_nodo": "promesa_rota",
+          "consecuencia": "Prometen algo que no pueden cumplir para salir del momento incómodo.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ia_e1",
-      "label": "Algoritmo que rechaza crédito por prejuicios (Sesgo)",
-      "emoji": "❌",
-      "tipo": "incorrecto",
-      "puntos": -200
+    "se_agrava": {
+      "id": "se_agrava",
+      "texto": "La deuda ya es $54,000. Llegó una carta de un despacho de cobranza y el reporte al buró de crédito ya está hecho. Ahora negociar será más difícil, pero sigue siendo posible.",
+      "opciones": [
+        {
+          "id": "llamar_ellos",
+          "texto": "Llamar ellos al banco antes de que la cosa empeore",
+          "siguiente_nodo": "la_preparacion",
+          "consecuencia": "Tomar la iniciativa cambia el tono de toda la conversación.",
+          "xp_bonus": 140,
+          "es_optima": true,
+          "impacto_patrimonio": -6000
+        }
+      ]
     },
-    {
-      "id": "ia2",
-      "label": "Predicción de tendencias de mercado con Big Data",
-      "emoji": "📈",
-      "tipo": "correcto",
-      "puntos": 150
+    "promesa_rota": {
+      "id": "promesa_rota",
+      "texto": "Pasó la semana y no pudieron pagar. Ahora el ejecutivo desconfía: \"Ya me habían dicho eso\". Una promesa rota vale menos que no haber prometido nada.",
+      "opciones": [
+        {
+          "id": "honestidad",
+          "texto": "Llamar y decir la verdad: cuánto pueden pagar realmente",
+          "siguiente_nodo": "la_preparacion",
+          "consecuencia": "Cuesta más ahora, pero es el único camino que funciona.",
+          "xp_bonus": 120,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ia_e2",
-      "label": "Robot que vende todo por un error de conexión",
-      "emoji": "🔌",
-      "tipo": "incorrecto",
-      "puntos": -250
+    "la_preparacion": {
+      "id": "la_preparacion",
+      "texto": "Antes de la llamada de negociación, ¿qué necesitan tener listo?",
+      "opciones": [
+        {
+          "id": "numeros",
+          "texto": "Un número concreto: exactamente cuánto SÍ pueden pagar al mes",
+          "siguiente_nodo": "la_negociacion",
+          "consecuencia": "Hacen cuentas: pueden sostener $2,500 mensuales sin dejar de comer.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "suplicar",
+          "texto": "Un discurso emotivo sobre lo difícil que ha sido todo",
+          "siguiente_nodo": "la_negociacion",
+          "consecuencia": "El ejecutivo se solidariza, pero necesita una cifra para poder ayudar.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ia3",
-      "label": "Asistente financiero personalizado 24/7",
-      "emoji": "🤖",
-      "tipo": "correcto",
-      "puntos": 100
+    "la_negociacion": {
+      "id": "la_negociacion",
+      "texto": "El banco ofrece tres opciones: (1) reestructura a 36 meses con tasa reducida, (2) quita del 40% pagando $28,800 de contado, (3) seguir igual. La familia tiene $12,000 ahorrados y puede pagar $2,500 al mes.",
+      "opciones": [
+        {
+          "id": "reestructura",
+          "texto": "Reestructurar a 36 meses: $2,500 al mes es sostenible",
+          "siguiente_nodo": "el_papel",
+          "consecuencia": "Encaja exactamente con lo que sí pueden pagar.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": -42000
+        },
+        {
+          "id": "quita",
+          "texto": "Aceptar la quita, aunque no tengan los $28,800",
+          "siguiente_nodo": "quita_imposible",
+          "consecuencia": "Suena a gran descuento... pero no tienen ese dinero.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "nada",
+          "texto": "No aceptar nada y seguir como están",
+          "siguiente_nodo": "final_espiral",
+          "consecuencia": "La deuda sigue creciendo al 70% anual.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -25000
+        }
+      ]
     },
-    {
-      "id": "ia_e3",
-      "label": "Deepfake pidiendo dinero con voz de un familiar",
-      "emoji": "🎭",
-      "tipo": "incorrecto",
-      "puntos": -300
+    "quita_imposible": {
+      "id": "quita_imposible",
+      "texto": "La quita es la mejor oferta en dinero: perdonan $19,200. Pero exige pagar de contado y solo tienen $12,000. Aceptar un acuerdo que no puedes cumplir es peor que no aceptarlo.",
+      "opciones": [
+        {
+          "id": "contraoferta",
+          "texto": "Contraofertar: $12,000 ahora y el resto en 6 mensualidades",
+          "siguiente_nodo": "el_papel",
+          "consecuencia": "El banco acepta una versión intermedia. Negociar sí se puede.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": -32000
+        },
+        {
+          "id": "aceptar_igual",
+          "texto": "Aceptar de todas formas y ver qué pasa",
+          "siguiente_nodo": "final_espiral",
+          "consecuencia": "Al no cumplir, la quita se cancela y vuelve la deuda completa.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -25000
+        }
+      ]
     },
-    {
-      "id": "ia4",
-      "label": "Optimización automática de impuestos",
-      "emoji": "📑",
-      "tipo": "correcto",
-      "puntos": 150
+    "el_papel": {
+      "id": "el_papel",
+      "texto": "El ejecutivo dice: \"Listo, ya quedó, yo lo registro\". ¿Qué hace la familia antes de colgar?",
+      "opciones": [
+        {
+          "id": "documentar",
+          "texto": "Pedir el acuerdo por escrito y el número de folio de la llamada",
+          "siguiente_nodo": "final_negociado",
+          "consecuencia": "Reciben un correo con las condiciones firmadas.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "confiar",
+          "texto": "Confiar en la palabra del ejecutivo",
+          "siguiente_nodo": "final_sin_papel",
+          "consecuencia": "Cuelgan sin ningún respaldo del acuerdo.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -8000
+        }
+      ]
     },
-    {
-      "id": "ia_e4",
-      "label": "IA que ignora a personas de ciertos países",
-      "emoji": "🌍",
-      "tipo": "incorrecto",
-      "puntos": -200
+    "final_negociado": {
+      "id": "final_negociado",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Tres años después la deuda quedó saldada. Pagaron $2,500 cada mes sin fallar uno solo, con el acuerdo por escrito guardado. Su historial se recuperó y hoy pueden volver a pedir crédito.",
+      "reflexion_final": "Negociar una deuda no es pedir un favor: los bancos prefieren cobrar poco a no cobrar nada. Las cuatro claves son: llamar tú antes de que te llamen, llegar con una cifra realista que sí puedas pagar, no aceptar jamás un acuerdo que no podrás cumplir, y exigir todo por escrito."
     },
-    {
-      "id": "ia5",
-      "label": "Traducción instantánea de contratos globales",
-      "emoji": "🗣️",
-      "tipo": "correcto",
-      "puntos": 100
+    "final_sin_papel": {
+      "id": "final_sin_papel",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "A los cuatro meses cambió el ejecutivo y el nuevo dijo que no había ningún acuerdo registrado. Tuvieron que renegociar desde cero, y perdieron $8,000 en intereses del tiempo perdido.",
+      "reflexion_final": "Un acuerdo que no está por escrito no existe. Siempre: correo de confirmación, folio de la llamada y copia del convenio. Es la diferencia entre un trato y una buena intención."
     },
-    {
-      "id": "ia_e5",
-      "label": "Alucinación de IA inventando datos financieros",
-      "emoji": "🌀",
-      "tipo": "incorrecto",
-      "puntos": -150
+    "final_espiral": {
+      "id": "final_espiral",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Dos años después la deuda es de $73,000, hay una demanda en curso y el buró está cerrado por seis años. Todo por no tener una conversación de veinte minutos.",
+      "reflexion_final": "La deuda no negociada solo crece. Esconderse es la reacción natural y la más cara: cada mes de silencio suma intereses moratorios, comisiones y una mancha más larga en tu historial."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

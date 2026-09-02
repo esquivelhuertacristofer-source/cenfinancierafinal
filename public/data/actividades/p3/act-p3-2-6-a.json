@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-2-6-A",
+  "unit_code": "P3-2-6",
+  "unit_title": "Sucursal, cajero y app: las tres puertas del banco",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Elige la Puerta Correcta",
+  "descripcion": "Ceny tiene varios trámites bancarios. Ayúdale a elegir el canal adecuado para cada uno.",
+  "objetivo": "Asignar trámites bancarios al canal más adecuado según su naturaleza",
+  "xp": 200,
+  "instruccion": "Arrastra cada trámite al canal donde conviene hacerlo.",
+  "categorias": [
+    {
+      "id": "sucursal",
+      "label": "Sucursal",
+      "emoji": "🏦",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "cajero",
+      "label": "Cajero automático",
+      "emoji": "🏧",
+      "color": "#10B981"
+    },
+    {
+      "id": "app",
+      "label": "App del celular",
+      "emoji": "📱",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Abrir una cuenta nueva por primera vez",
+      "emoji": "📝",
+      "categoria_correcta": "sucursal",
+      "feedback": "Requiere documentos, firma y atención de una persona."
+    },
+    {
+      "id": "i2",
+      "label": "Sacar $500 en efectivo un domingo",
+      "emoji": "💵",
+      "categoria_correcta": "cajero",
+      "feedback": "El cajero funciona cuando la sucursal está cerrada."
+    },
+    {
+      "id": "i3",
+      "label": "Revisar el saldo antes de comprar algo",
+      "emoji": "👀",
+      "categoria_correcta": "app",
+      "feedback": "Consulta instantánea sin salir de casa ni hacer fila."
+    },
+    {
+      "id": "i4",
+      "label": "Aclarar un cobro que nadie reconoce",
+      "emoji": "❓",
+      "categoria_correcta": "sucursal",
+      "feedback": "Un problema que necesita explicación va con una persona."
+    },
+    {
+      "id": "i5",
+      "label": "Transferir dinero a un familiar",
+      "emoji": "🔁",
+      "categoria_correcta": "app",
+      "feedback": "Transferencia inmediata desde el celular, a cualquier hora."
+    },
+    {
+      "id": "i6",
+      "label": "Consultar el saldo estando en la calle sin datos",
+      "emoji": "📶",
+      "categoria_correcta": "cajero",
+      "feedback": "Sin internet, el cajero sigue funcionando."
+    },
+    {
+      "id": "i7",
+      "label": "Reportar una tarjeta robada y firmar el reporte",
+      "emoji": "🚨",
+      "categoria_correcta": "sucursal",
+      "feedback": "El bloqueo se puede pedir por teléfono, pero el trámite formal se firma."
+    },
+    {
+      "id": "i8",
+      "label": "Pagar el recibo de la luz desde casa",
+      "emoji": "💡",
+      "categoria_correcta": "app",
+      "feedback": "Pago de servicios sin fila y sin salir. Es de lo más usado hoy."
+    },
+    {
+      "id": "i9",
+      "label": "Retirar efectivo a las 11 de la noche",
+      "emoji": "🌙",
+      "categoria_correcta": "cajero",
+      "feedback": "Disponibilidad casi total: esa es su gran ventaja."
+    },
+    {
+      "id": "i10",
+      "label": "Actualizar mi domicilio con comprobante",
+      "emoji": "🏠",
+      "categoria_correcta": "sucursal",
+      "feedback": "Requiere entregar un documento físico y verificarlo."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-6-a-escena.webp"
+}

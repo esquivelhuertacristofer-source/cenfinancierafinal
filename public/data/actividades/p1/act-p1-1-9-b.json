@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-1-9-B",
+  "unit_code": "P1-1-9",
+  "unit_title": "Una moneda cada día: mi calendario del ahorro",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "La Prueba de la Constancia",
+  "descripcion": "Demuestra que entendiste por qué las monedas pequeñas ganan la carrera larga.",
+  "objetivo": "Verificar el cálculo de acumulación diaria y la comprensión del hábito",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Guardo $3 diarios. ¿Cuánto tengo en 10 días?",
+      "opciones": [
+        "$13",
+        "$3",
+        "$30",
+        "$33"
+      ],
+      "correcta": 2,
+      "explicacion": "3 x 10 = 30. La multiplicación es la fórmula del ahorro constante."
+    },
+    {
+      "id": "q2",
+      "texto": "Guardo $2 diarios durante 30 días. ¿Cuánto junté?",
+      "opciones": [
+        "$32",
+        "$20",
+        "$120",
+        "$60"
+      ],
+      "correcta": 3,
+      "explicacion": "2 x 30 = 60. Una moneda pequeña repetida treinta veces."
+    },
+    {
+      "id": "q3",
+      "texto": "$2 diarios durante todo un año dan aproximadamente:",
+      "opciones": [
+        "$720",
+        "$24",
+        "$200",
+        "$60"
+      ],
+      "correcta": 0,
+      "explicacion": "2 x 365 = 730. Casi mil pesos con la moneda más pequeña."
+    },
+    {
+      "id": "q4",
+      "texto": "De 30 días fallé 10. Guardaba $2 diarios. ¿Cuánto tengo?",
+      "opciones": [
+        "$60",
+        "$40",
+        "$20",
+        "$50"
+      ],
+      "correcta": 1,
+      "explicacion": "Solo cumplí 20 días: 2 x 20 = 40. Los días fallados no se recuperan solos."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué es lo más importante del ahorro diario?",
+      "opciones": [
+        "Que la cantidad sea grande",
+        "Contarlo cada hora",
+        "No romper la cadena de días",
+        "Que nadie lo sepa"
+      ],
+      "correcta": 2,
+      "explicacion": "La cantidad importa menos que la repetición. La constancia es el motor."
+    },
+    {
+      "id": "q6",
+      "texto": "Fallé un día. Lo correcto es:",
+      "opciones": [
+        "Abandonar todo",
+        "Guardar el triple para siempre",
+        "Sacar lo ahorrado",
+        "Volver a empezar mañana"
+      ],
+      "correcta": 3,
+      "explicacion": "Los buenos ahorradores no son los que nunca fallan: son los que siempre regresan."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Qué cantidad diaria debo elegir?",
+      "opciones": [
+        "Una que sí pueda cumplir siempre",
+        "La máxima posible",
+        "Cero para no fallar",
+        "Una distinta cada día"
+      ],
+      "correcta": 0,
+      "explicacion": "Un peso cumplido vale más que diez prometidos. El objetivo es el hábito."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Para qué sirve marcar el calendario?",
+      "opciones": [
+        "Para adornar el cuarto",
+        "Para no olvidar y ver mi racha crecer",
+        "Para saber la fecha",
+        "Para gastar más rápido"
+      ],
+      "correcta": 1,
+      "explicacion": "Ver la fila de marcas da ganas de no romperla. El calendario es tu aliado."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-9-b-escena.webp"
+}

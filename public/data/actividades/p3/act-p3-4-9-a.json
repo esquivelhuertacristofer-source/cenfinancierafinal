@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-4-9-A",
+  "unit_code": "P3-4-9",
+  "unit_title": "Vender en equipo: los roles del puesto",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Los Roles del Puesto",
+  "descripcion": "Reparte cada tarea entre los cuatro roles del puesto de venta.",
+  "objetivo": "Asignar tareas concretas a los roles correspondientes de un puesto",
+  "xp": 200,
+  "instruccion": "Arrastra cada tarea al rol que debe hacerse cargo de ella.",
+  "categorias": [
+    {
+      "id": "atiende",
+      "label": "Atiende",
+      "emoji": "🙋",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "cobra",
+      "label": "Cobra",
+      "emoji": "💰",
+      "color": "#10B981"
+    },
+    {
+      "id": "registra",
+      "label": "Registra",
+      "emoji": "📋",
+      "color": "#A855F7"
+    },
+    {
+      "id": "repone",
+      "label": "Repone",
+      "emoji": "📦",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Explicar de qué está hecho el producto",
+      "emoji": "💬",
+      "categoria_correcta": "atiende",
+      "feedback": "Quien atiende es la voz del puesto frente al cliente."
+    },
+    {
+      "id": "i2",
+      "label": "Dar el cambio correcto",
+      "emoji": "🪙",
+      "categoria_correcta": "cobra",
+      "feedback": "Una sola persona maneja la caja para que las cuentas cuadren."
+    },
+    {
+      "id": "i3",
+      "label": "Anotar cada venta en la hoja",
+      "emoji": "✍️",
+      "categoria_correcta": "registra",
+      "feedback": "Sin registro no se puede saber al final qué funcionó."
+    },
+    {
+      "id": "i4",
+      "label": "Acomodar el producto que quedó desordenado",
+      "emoji": "🧹",
+      "categoria_correcta": "repone",
+      "feedback": "Un puesto desordenado vende menos, aunque tenga el mismo producto."
+    },
+    {
+      "id": "i5",
+      "label": "Responder cuánto cuesta y qué tamaños hay",
+      "emoji": "❓",
+      "categoria_correcta": "atiende",
+      "feedback": "Las preguntas del cliente las contesta quien lo está atendiendo."
+    },
+    {
+      "id": "i6",
+      "label": "Guardar los billetes grandes en un lugar seguro",
+      "emoji": "🔒",
+      "categoria_correcta": "cobra",
+      "feedback": "El responsable de la caja también responde por su seguridad."
+    },
+    {
+      "id": "i7",
+      "label": "Contar cuántas unidades quedan a media feria",
+      "emoji": "🔢",
+      "categoria_correcta": "registra",
+      "feedback": "Ese conteo es el que avisa si hay que producir el segundo lote."
+    },
+    {
+      "id": "i8",
+      "label": "Traer más producto de la caja de reserva",
+      "emoji": "🚚",
+      "categoria_correcta": "repone",
+      "feedback": "El puesto nunca debe verse vacío mientras haya inventario."
+    },
+    {
+      "id": "i9",
+      "label": "Sumar el total vendido al terminar",
+      "emoji": "➕",
+      "categoria_correcta": "registra",
+      "feedback": "El cierre de cuentas se compara con lo que hay en la caja."
+    },
+    {
+      "id": "i10",
+      "label": "Recibir al cliente que se acerca al puesto",
+      "emoji": "👋",
+      "categoria_correcta": "atiende",
+      "feedback": "Un cliente que llega y nadie lo saluda casi siempre se va."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-9-a-escena.webp"
+}

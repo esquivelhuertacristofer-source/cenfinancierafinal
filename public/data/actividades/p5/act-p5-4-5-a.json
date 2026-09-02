@@ -158,49 +158,6 @@
           "unit": "$",
           "ayuda": "Si ofreces X% por $Y, la empresa vale Y/X×100"
         }
-      ],
-      "calculos_automaticos": [
-        {
-          "id": "margen_bruto_unitario",
-          "label": "Margen bruto por unidad",
-          "formula": "precio_unitario - costo_unitario",
-          "prefix": "$",
-          "alerta_si": "margen < precio * 0.4",
-          "alerta_mensaje": "⚠️ Margen menor al 40%. Los tiburones lo van a cuestionar."
-        },
-        {
-          "id": "margen_pct",
-          "label": "Margen bruto %",
-          "formula": "((precio_unitario - costo_unitario) / precio_unitario) * 100",
-          "suffix": "%"
-        },
-        {
-          "id": "revenue_anual_y1",
-          "label": "Ingresos proyectados Año 1",
-          "formula": "precio_unitario * clientes_meta_y1",
-          "prefix": "$"
-        },
-        {
-          "id": "utilidad_bruta_y1",
-          "label": "Utilidad bruta Año 1",
-          "formula": "(precio_unitario - costo_unitario) * clientes_meta_y1",
-          "prefix": "$"
-        },
-        {
-          "id": "valuacion_implicita",
-          "label": "Valuación implícita de tu empresa",
-          "formula": "inversion_pedida / (porcentaje_ofrecido / 100)",
-          "prefix": "$",
-          "ayuda": "Esto es lo que dices que vale toda tu empresa. Los tiburones lo comparan con tus ingresos."
-        },
-        {
-          "id": "multiplo_ventas",
-          "label": "Múltiplo de valuación (Valuación ÷ Ingresos Y1)",
-          "formula": "(inversion_pedida / (porcentaje_ofrecido/100)) / (precio_unitario * clientes_meta_y1)",
-          "suffix": "x",
-          "alerta_si": "multiplo > 20",
-          "alerta_mensaje": "⚠️ Múltiplo mayor a 20x. Los tiburones dirán que está inflado para una empresa sin historial."
-        }
       ]
     },
     {
@@ -244,6 +201,49 @@
           "requerido": true
         }
       ]
+    }
+  ],
+  "calculos_automaticos": [
+    {
+      "id": "margen_bruto_unitario",
+      "label": "Margen bruto por unidad",
+      "formula": "precio_unitario - costo_unitario",
+      "prefix": "$",
+      "alerta_si": "margen < precio * 0.4",
+      "alerta_mensaje": "⚠️ Margen menor al 40%. Los tiburones lo van a cuestionar."
+    },
+    {
+      "id": "margen_pct",
+      "label": "Margen bruto %",
+      "formula": "((precio_unitario - costo_unitario) / precio_unitario) * 100",
+      "suffix": "%"
+    },
+    {
+      "id": "revenue_anual_y1",
+      "label": "Ingresos proyectados Año 1",
+      "formula": "precio_unitario * clientes_meta_y1",
+      "prefix": "$"
+    },
+    {
+      "id": "utilidad_bruta_y1",
+      "label": "Utilidad bruta Año 1",
+      "formula": "(precio_unitario - costo_unitario) * clientes_meta_y1",
+      "prefix": "$"
+    },
+    {
+      "id": "valuacion_implicita",
+      "label": "Valuación implícita de tu empresa",
+      "formula": "inversion_pedida / (porcentaje_ofrecido / 100)",
+      "prefix": "$",
+      "ayuda": "Esto es lo que dices que vale toda tu empresa. Los tiburones lo comparan con tus ingresos."
+    },
+    {
+      "id": "multiplo_ventas",
+      "label": "Múltiplo de valuación (Valuación ÷ Ingresos Y1)",
+      "formula": "(inversion_pedida / (porcentaje_ofrecido/100)) / (precio_unitario * clientes_meta_y1)",
+      "suffix": "x",
+      "alerta_si": "multiplo > 20",
+      "alerta_mensaje": "⚠️ Múltiplo mayor a 20x. Los tiburones dirán que está inflado para una empresa sin historial."
     }
   ],
   "evaluacion_tiburones_automatica": [

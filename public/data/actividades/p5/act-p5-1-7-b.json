@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-1-7-B",
+  "unit_code": "P5-1-7",
+  "unit_title": "SPEI y CoDi: cómo viaja el dinero en México",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "SPEI, CoDi y CLABE",
+  "descripcion": "Comprueba que sabes mover dinero electrónico sin errores.",
+  "objetivo": "Verificar la comprensión de los sistemas de pago electrónico mexicanos",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El SPEI es:",
+      "opciones": [
+        "El sistema que transfiere dinero entre bancos",
+        "Un banco",
+        "Una tarjeta",
+        "Una app"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo opera el Banco de México y funciona en segundos."
+    },
+    {
+      "id": "q2",
+      "texto": "En una transferencia electrónica:",
+      "opciones": [
+        "Viajan billetes",
+        "Viaja información",
+        "Se imprime dinero",
+        "Se mueve oro"
+      ],
+      "correcta": 1,
+      "explicacion": "Un banco instruye, el otro abona: nunca se mueve efectivo."
+    },
+    {
+      "id": "q3",
+      "texto": "La CLABE tiene:",
+      "opciones": [
+        "16 dígitos",
+        "10 dígitos",
+        "18 dígitos",
+        "22 dígitos"
+      ],
+      "correcta": 2,
+      "explicacion": "Y un solo dígito equivocado manda el dinero a otra cuenta."
+    },
+    {
+      "id": "q4",
+      "texto": "CoDi permite:",
+      "opciones": [
+        "Prestar dinero",
+        "Cambiar divisas",
+        "Invertir",
+        "Cobrar con un código QR que ya trae los datos"
+      ],
+      "correcta": 3,
+      "explicacion": "Elimina el riesgo de teclear mal cuenta o monto."
+    },
+    {
+      "id": "q5",
+      "texto": "La ventaja de CoDi para un negocio pequeño es:",
+      "opciones": [
+        "Que no requiere terminal ni cobra por recibir",
+        "Que da crédito",
+        "Que aumenta precios",
+        "Que evita impuestos"
+      ],
+      "correcta": 0,
+      "explicacion": "Permite aceptar pagos electrónicos sin infraestructura costosa."
+    },
+    {
+      "id": "q6",
+      "texto": "Antes de confirmar una transferencia hay que verificar:",
+      "opciones": [
+        "Solo el monto",
+        "El nombre del beneficiario",
+        "La hora",
+        "El color de la app"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el nombre no coincide, hay un error en la CLABE."
+    },
+    {
+      "id": "q7",
+      "texto": "Si envío a la cuenta equivocada:",
+      "opciones": [
+        "El banco lo revierte al instante",
+        "Se pierde siempre",
+        "Depende de que la otra persona lo devuelva",
+        "Se duplica"
+      ],
+      "correcta": 2,
+      "explicacion": "No es fraude, y justamente por eso el trámite es lento e incierto."
+    },
+    {
+      "id": "q8",
+      "texto": "El efectivo tiene como desventaja que:",
+      "opciones": [
+        "Es rápido",
+        "Funciona sin señal",
+        "Es aceptado en todas partes",
+        "Si se pierde no hay forma de recuperarlo"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin registro no hay reclamación posible."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-7-b-escena.webp"
+}

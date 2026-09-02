@@ -7,14 +7,7 @@ import { X, Medal } from 'lucide-react';
 export default function JuegoPage() {
   const router = useRouter();
   const [completed, setCompleted] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-
-  useEffect(() => {
-    const profile = localStorage.getItem('cen_test_profile');
-    if (profile) {
-      try { setUserId(JSON.parse(profile).id); } catch {}
-    }
-  }, []);
+  const [userId] = useState<string | null>(null);
 
   const handleComplete = () => {
     if (completed) return;

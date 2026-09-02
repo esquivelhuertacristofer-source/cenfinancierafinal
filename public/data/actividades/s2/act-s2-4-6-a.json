@@ -1,0 +1,179 @@
+{
+  "code": "ACT-S2-4-6-A",
+  "unit_code": "S2-4-6",
+  "unit_title": "Unit economics: cuánto cuesta y cuánto deja cada cliente",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "La Economía de una Venta",
+  "descripcion": "Calcula si cada venta te hace ganar o perder, y cuántas necesitas.",
+  "objetivo": "Construir la economía unitaria completa de un negocio",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "El precio",
+      "descripcion": "Lo que entra por cada venta.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio de venta por unidad",
+          "type": "number",
+          "min": 1,
+          "max": 500000,
+          "default": 380,
+          "unit": "$",
+          "placeholder": "380",
+          "requerido": true
+        },
+        {
+          "id": "descuento_promedio",
+          "label": "Descuento promedio que aplico",
+          "type": "slider",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 8,
+          "unit": "%",
+          "ayuda": "Los descuentos habituales bajan el precio real.",
+          "requerido": true
+        },
+        {
+          "id": "precio_real",
+          "label": "Precio real promedio",
+          "type": "calculated",
+          "formula": "Math.round(precio * (1 - descuento_promedio / 100))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Los costos variables",
+      "descripcion": "Lo que sale por cada venta.",
+      "campos": [
+        {
+          "id": "materiales",
+          "label": "Materiales por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 120,
+          "unit": "$",
+          "placeholder": "120",
+          "requerido": true
+        },
+        {
+          "id": "empaque",
+          "label": "Empaque por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 50000,
+          "default": 15,
+          "unit": "$",
+          "placeholder": "15",
+          "requerido": true
+        },
+        {
+          "id": "envio",
+          "label": "Envío por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 50000,
+          "default": 45,
+          "unit": "$",
+          "placeholder": "45",
+          "requerido": true
+        },
+        {
+          "id": "comision_plataforma",
+          "label": "Comisión de plataforma",
+          "type": "slider",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "default": 12,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "variables_total",
+          "label": "Costo variable total por unidad",
+          "type": "calculated",
+          "formula": "Math.round(materiales + empaque + envio + precio * (1 - descuento_promedio / 100) * comision_plataforma / 100)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "La contribución",
+      "descripcion": "La cifra que decide si el negocio funciona.",
+      "campos": [
+        {
+          "id": "contribucion",
+          "label": "Contribución por unidad",
+          "type": "calculated",
+          "formula": "Math.round(precio * (1 - descuento_promedio / 100) - (materiales + empaque + envio + precio * (1 - descuento_promedio / 100) * comision_plataforma / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "margen_pct",
+          "label": "Contribución como porcentaje del precio",
+          "type": "calculated",
+          "formula": "Math.round((precio * (1 - descuento_promedio / 100) - (materiales + empaque + envio + precio * (1 - descuento_promedio / 100) * comision_plataforma / 100)) / Math.max(1, precio * (1 - descuento_promedio / 100)) * 100)",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "El punto de equilibrio",
+      "descripcion": "Cuántas ventas necesito para no perder.",
+      "campos": [
+        {
+          "id": "fijos",
+          "label": "Costos fijos mensuales",
+          "type": "number",
+          "min": 0,
+          "max": 2000000,
+          "default": 12000,
+          "unit": "$",
+          "placeholder": "12000",
+          "ayuda": "Renta, sueldos base, suscripciones: existen vendas o no.",
+          "requerido": true
+        },
+        {
+          "id": "equilibrio",
+          "label": "Unidades para alcanzar el equilibrio",
+          "type": "calculated",
+          "formula": "Math.ceil(fijos / Math.max(1, precio * (1 - descuento_promedio / 100) - (materiales + empaque + envio + precio * (1 - descuento_promedio / 100) * comision_plataforma / 100)))",
+          "unit": "uds"
+        },
+        {
+          "id": "ventas_actuales",
+          "label": "Unidades que vendo hoy al mes",
+          "type": "slider",
+          "min": 0,
+          "max": 2000,
+          "step": 5,
+          "default": 60,
+          "unit": "uds",
+          "requerido": true
+        },
+        {
+          "id": "utilidad",
+          "label": "Utilidad mensual actual",
+          "type": "calculated",
+          "formula": "Math.round(ventas_actuales * (precio * (1 - descuento_promedio / 100) - (materiales + empaque + envio + precio * (1 - descuento_promedio / 100) * comision_plataforma / 100)) - fijos)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "economia_unitaria",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-4-6-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-6-a-escena.webp"
+}

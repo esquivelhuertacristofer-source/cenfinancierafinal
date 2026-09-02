@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-1-8-B",
+  "unit_code": "P2-1-8",
+  "unit_title": "Los trabajos de mi comunidad: cómo gana cada quien",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cómo Gana Cada Quien",
+  "descripcion": "Demuestra que entendiste las tres formas de ganarse la vida.",
+  "objetivo": "Verificar la clasificación de oficios por forma de ingreso",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Las tres formas básicas de ganar dinero trabajando son:",
+      "opciones": [
+        "Ahorrando, gastando y prestando",
+        "Pidiendo, esperando y buscando",
+        "Por sueldo, por obra y por venta",
+        "Comprando, guardando y vendiendo"
+      ],
+      "correcta": 2,
+      "explicacion": "Casi cualquier oficio entra en una de las tres, y muchas personas combinan dos."
+    },
+    {
+      "id": "q2",
+      "texto": "Quien recibe cantidad fija cada quincena gana:",
+      "opciones": [
+        "Por obra",
+        "Por venta",
+        "Por suerte",
+        "Por sueldo"
+      ],
+      "correcta": 3,
+      "explicacion": "La ventaja es la certeza: sabes cuánto entra y cuándo, así que puedes planear."
+    },
+    {
+      "id": "q3",
+      "texto": "Una costurera que cobra por cada prenda gana:",
+      "opciones": [
+        "Por obra",
+        "Por sueldo",
+        "Por venta",
+        "Por comisión fija"
+      ],
+      "correcta": 0,
+      "explicacion": "Si hace más prendas gana más; si no le llega trabajo, no gana esa semana."
+    },
+    {
+      "id": "q4",
+      "texto": "Quien tiene una tiendita gana:",
+      "opciones": [
+        "Un sueldo del gobierno",
+        "La diferencia entre lo que compra y lo que vende",
+        "Por cada hora abierta",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "A esa diferencia se le llama ganancia, y de ahí salen todos sus gastos."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué alguien paga por un trabajo?",
+      "opciones": [
+        "Por obligación",
+        "Por costumbre",
+        "Porque resuelve un problema suyo",
+        "Por regalar"
+      ],
+      "correcta": 2,
+      "explicacion": "El dinero existe justo para intercambiar esfuerzos distintos entre personas."
+    },
+    {
+      "id": "q6",
+      "texto": "La desventaja de cobrar por obra es:",
+      "opciones": [
+        "Que siempre se gana poco",
+        "Que es aburrido",
+        "Que no se puede ahorrar",
+        "Que si no sale trabajo, no hay ingreso"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso quienes cobran por obra necesitan más disciplina para guardar en los buenos meses."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Hay trabajos honestos que valgan menos que otros?",
+      "opciones": [
+        "No, todos merecen respeto",
+        "Sí, los que ensucian",
+        "Sí, los que pagan poco",
+        "Sí, los del campo"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo que cambia es cuánto se paga, no el valor de la persona ni de su esfuerzo."
+    },
+    {
+      "id": "q8",
+      "texto": "¿De qué depende cuánto se paga por un trabajo?",
+      "opciones": [
+        "Del color del uniforme",
+        "De la preparación que exige y cuánta gente puede hacerlo",
+        "De la suerte",
+        "Del día de la semana"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre menos personas puedan hacer algo que se necesita mucho, más suele pagarse."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-8-b-escena.webp"
+}

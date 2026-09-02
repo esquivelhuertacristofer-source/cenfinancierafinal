@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-1-8-B",
+  "unit_code": "S2-1-8",
+  "unit_title": "Deuda pública y calificadoras: por qué importa el rating de México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Deuda y Calificación",
+  "descripcion": "Comprueba que entiendes cómo se juzga la deuda de un país.",
+  "objetivo": "Verificar la comprensión de la deuda pública y las calificaciones",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los acreedores de un gobierno son principalmente:",
+      "opciones": [
+        "Otros países",
+        "Inversionistas, fondos e instituciones que compraron sus títulos",
+        "Bancos centrales extranjeros",
+        "Nadie"
+      ],
+      "correcta": 1,
+      "explicacion": "Incluso una persona que invierte en deuda gubernamental lo es."
+    },
+    {
+      "id": "q2",
+      "texto": "La deuda pública se mide:",
+      "opciones": [
+        "En monto absoluto",
+        "Por habitante únicamente",
+        "Como porcentaje del PIB",
+        "En dólares siempre"
+      ],
+      "correcta": 2,
+      "explicacion": "Solo cobra sentido frente al tamaño de la economía que la sostiene."
+    },
+    {
+      "id": "q3",
+      "texto": "Las calificadoras miden:",
+      "opciones": [
+        "Si el gobierno es bueno",
+        "La inflación",
+        "El empleo",
+        "La probabilidad de que el emisor cumpla sus pagos"
+      ],
+      "correcta": 3,
+      "explicacion": "Capacidad y disposición de pago, nada más."
+    },
+    {
+      "id": "q4",
+      "texto": "Una nota más alta significa:",
+      "opciones": [
+        "Financiamiento a menor costo",
+        "Menos impuestos",
+        "Más empleo",
+        "Menos inflación"
+      ],
+      "correcta": 0,
+      "explicacion": "Y una nota más baja encarece el financiamiento."
+    },
+    {
+      "id": "q5",
+      "texto": "Si la calificación baja:",
+      "opciones": [
+        "El país paga menos",
+        "El país paga más por financiarse",
+        "No cambia nada",
+        "Baja la inflación"
+      ],
+      "correcta": 1,
+      "explicacion": "Eso presiona tasas internas y tipo de cambio."
+    },
+    {
+      "id": "q6",
+      "texto": "Eso llega a las personas:",
+      "opciones": [
+        "Encareciendo créditos y lo importado",
+        "No llega",
+        "Bajando precios",
+        "Solo afecta a empresas"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una cadena, no un efecto directo e inmediato."
+    },
+    {
+      "id": "q7",
+      "texto": "Más importante que el monto de la deuda es:",
+      "opciones": [
+        "Su antigüedad",
+        "Quién la firmó",
+        "Su moneda",
+        "El costo de servirla"
+      ],
+      "correcta": 3,
+      "explicacion": "Los intereses son lo que compite con el resto del gasto público."
+    },
+    {
+      "id": "q8",
+      "texto": "Un país grande con deuda absoluta alta:",
+      "opciones": [
+        "Puede sostenerla si su economía es grande",
+        "Siempre está en crisis",
+        "No puede endeudarse",
+        "Debe pagarla de inmediato"
+      ],
+      "correcta": 0,
+      "explicacion": "Igual que una persona con ingreso alto sostiene un crédito mayor."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-8-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-8-b-escena.webp"
+}

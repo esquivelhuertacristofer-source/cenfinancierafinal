@@ -904,6 +904,926 @@
       "Aclare que 'cripto' no es lo mismo que 'estafa', pero que hay muchas estafas que usan el nombre de las criptomonedas."
     ]
   },
+  "P6-1-6": {
+    "code": "P6-1-6",
+    "title": "Neobancos y billeteras digitales en México",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Distinguir neobancos, billeteras digitales y bancos tradicionales, y evaluar cuál conviene según seguridad, costo y funciones.",
+      "competencies": [
+        "Comparación de Instituciones Digitales",
+        "Evaluación de Respaldo",
+        "Análisis de Costos",
+        "Elección Informada"
+      ],
+      "materials": [
+        "Fichas de tres tipos de institución digital",
+        "Tabla comparativa de cuatro criterios",
+        "Capturas de apps financieras",
+        "Casos de uso distintos",
+        "Cartel de la pregunta del respaldo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Banco sin Sucursal",
+          "duration": "15 min",
+          "label": "¿Es un banco de verdad?"
+        },
+        {
+          "phase": "Desarrollo: Tres Categorías",
+          "duration": "30 min",
+          "label": "Qué es cada uno"
+        },
+        {
+          "phase": "Cierre: Cuál Elijo",
+          "duration": "15 min",
+          "label": "Según el uso"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: UN BANCO QUE NO TIENE SUCURSALES (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una app financiera muy usada y pregunte si es un banco. La respuesta correcta depende de su licencia, no de su apariencia. Explique que hoy conviven instituciones con licencia bancaria, instituciones de fondos de pago electrónico y aplicaciones que solo son intermediarias, y que la diferencia importa sobre todo cuando algo sale mal.",
+          "activity": "Dinámica \"¿Es Banco?\": el grupo clasifica tres apps conocidas y descubre que no todas tienen la misma figura legal."
+        },
+        {
+          "title": "FASE II: TRES CATEGORÍAS DISTINTAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las tres: los bancos tradicionales, con sucursales y licencia bancaria; los neobancos, que operan solo por app pero pueden tener licencia bancaria o aliarse con un banco; y las billeteras digitales, que guardan saldo para pagos pero no son bancos. Los alumnos llenan una tabla con cuatro criterios: respaldo, comisiones, funciones y atención.",
+          "activity": "Dinámica \"Cuatro Criterios\": cada equipo compara los tres tipos y marca cuál gana en cada criterio."
+        },
+        {
+          "title": "FASE III: CUÁL CONVIENE PARA QUÉ (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos asignan el tipo adecuado a cuatro situaciones: guardar el ahorro grande, pagar el día a día, recibir dinero de otra persona, y hacer un trámite complejo. Insista en la pregunta clave: quién responde si la institución quiebra, y con qué cobertura.",
+          "activity": "Dinámica \"Situación y Elección\": cada equipo asigna un tipo de institución a cuatro situaciones y justifica."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hoy puedes abrir una cuenta en cinco minutos desde el celular con una empresa que no tiene ni una sola sucursal. Algunas de esas empresas son bancos con licencia y otras no lo son, aunque se parezcan mucho. Esa diferencia importa poco todos los días y muchísimo el día que algo falla.",
+      "sections": [
+        {
+          "subtitle": "Bancos tradicionales",
+          "content": "Tienen licencia bancaria, sucursales físicas y están sujetos a la supervisión más estricta. Sus depósitos están protegidos por el seguro de depósito hasta el límite que marca la ley. A cambio suelen cobrar más comisiones y ofrecer apps menos ágiles. Siguen siendo la opción más sólida para montos importantes y para trámites que requieren atención personal."
+        },
+        {
+          "subtitle": "Neobancos",
+          "content": "Operan solo por aplicación, sin sucursales. Su ventaja es la agilidad: apertura en minutos, comisiones bajas y buena experiencia de uso. La pregunta clave es su figura legal: algunos tienen licencia bancaria propia y otros operan aliados con un banco que respalda los depósitos. Esa información viene en sus términos y conviene leerla antes de mover dinero importante."
+        },
+        {
+          "subtitle": "Billeteras digitales",
+          "content": "Guardan saldo para hacer pagos y transferencias, pero no son bancos. En México muchas operan como instituciones de fondos de pago electrónico, con reglas propias distintas a las bancarias. Son excelentes para el gasto cotidiano y para recibir dinero rápido, pero no son el lugar adecuado para el ahorro de largo plazo ni para montos grandes."
+        },
+        {
+          "subtitle": "La pregunta que resuelve todo",
+          "content": "Ante cualquier app financiera hay una pregunta que ordena la decisión: si esta empresa desapareciera mañana, ¿quién responde por mi dinero y hasta cuánto? Si la respuesta está clara y respaldada por una institución supervisada, se puede usar con confianza. Si no está clara, esa app sirve para el gasto diario, no para guardar lo que importa."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué define si una app es un banco?",
+          "options": [
+            "Su licencia, no su apariencia",
+            "Que tenga muchos usuarios",
+            "Que tenga buena app"
+          ],
+          "correct": "Su licencia, no su apariencia"
+        },
+        {
+          "question": "¿Qué caracteriza a un neobanco?",
+          "options": [
+            "Tiene muchas sucursales",
+            "Opera solo por app, sin sucursales",
+            "No maneja dinero"
+          ],
+          "correct": "Opera solo por app, sin sucursales"
+        },
+        {
+          "question": "¿Todos los neobancos tienen licencia bancaria?",
+          "options": [
+            "Sí, todos",
+            "Ninguno la tiene",
+            "No, algunos operan aliados con un banco"
+          ],
+          "correct": "No, algunos operan aliados con un banco"
+        },
+        {
+          "question": "¿Qué es una billetera digital?",
+          "options": [
+            "Guarda saldo para pagos, pero no es un banco",
+            "Un banco con app",
+            "Una tarjeta de crédito"
+          ],
+          "correct": "Guarda saldo para pagos, pero no es un banco"
+        },
+        {
+          "question": "¿Para qué sirven mejor las billeteras digitales?",
+          "options": [
+            "Para el ahorro de largo plazo",
+            "Para el gasto cotidiano y recibir dinero rápido",
+            "Para créditos grandes"
+          ],
+          "correct": "Para el gasto cotidiano y recibir dinero rápido"
+        },
+        {
+          "question": "¿Qué ventaja tienen los bancos tradicionales?",
+          "options": [
+            "Apps más ágiles",
+            "Comisiones más bajas",
+            "Supervisión estricta y protección del seguro de depósito"
+          ],
+          "correct": "Supervisión estricta y protección del seguro de depósito"
+        },
+        {
+          "question": "¿Qué ventaja tienen los neobancos?",
+          "options": [
+            "Agilidad y comisiones bajas",
+            "Sucursales en todo el país",
+            "Trámites presenciales"
+          ],
+          "correct": "Agilidad y comisiones bajas"
+        },
+        {
+          "question": "¿Cuál es la pregunta clave ante cualquier app?",
+          "options": [
+            "Cuántos usuarios tiene",
+            "Quién responde por mi dinero y hasta cuánto",
+            "Qué colores usa"
+          ],
+          "correct": "Quién responde por mi dinero y hasta cuánto"
+        },
+        {
+          "question": "Si esa respuesta no está clara:",
+          "options": [
+            "Hay que meter todo el ahorro",
+            "Da igual",
+            "Sirve para el gasto diario, no para guardar lo importante"
+          ],
+          "correct": "Sirve para el gasto diario, no para guardar lo importante"
+        },
+        {
+          "question": "¿Dónde se consulta la figura legal de una app?",
+          "options": [
+            "En sus términos y condiciones",
+            "En la publicidad",
+            "En redes sociales"
+          ],
+          "correct": "En sus términos y condiciones"
+        }
+      ],
+      "rubric": "Logrado: distingue las tres figuras, compara con cuatro criterios y aplica la pregunta del respaldo. En proceso: identifica las categorías sin evaluar el respaldo. Inicial: reconoce que existen bancos sin sucursal."
+    },
+    "teacher_tips": [
+      "Evite nombrar empresas concretas: el mercado cambia rápido y el objetivo es el criterio, no la marca.",
+      "La pregunta del respaldo es lo que hay que fijar. Todo lo demás cambia; esa pregunta sigue sirviendo.",
+      "Muchos alumnos de sexto ya usan billeteras digitales. Aproveche esa experiencia para anclar el tema."
+    ]
+  },
+  "P6-1-7": {
+    "code": "P6-1-7",
+    "title": "Comparar productos financieros: la letra chiquita",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Leer y comparar las condiciones reales de productos financieros identificando las cláusulas que cambian el costo total.",
+      "competencies": [
+        "Lectura de Contratos",
+        "Detección de Cláusulas Críticas",
+        "Comparación Objetiva",
+        "Prevención de Sorpresas"
+      ],
+      "materials": [
+        "Contratos simulados de dos productos",
+        "Lupa y marcadores",
+        "Tabla comparativa de cláusulas",
+        "Calculadora",
+        "Cartel de las seis cláusulas críticas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Letra Chiquita",
+          "duration": "15 min",
+          "label": "Lo que nadie lee"
+        },
+        {
+          "phase": "Desarrollo: Seis Cláusulas",
+          "duration": "30 min",
+          "label": "Qué buscar"
+        },
+        {
+          "phase": "Cierre: Comparar",
+          "duration": "15 min",
+          "label": "Dos productos lado a lado"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LO QUE NADIE LEE (APERTURA)",
+          "duration": "15 min",
+          "description": "Reparta un contrato simulado con una cláusula costosa escondida en el texto. Pida que en dos minutos digan cuánto costaría el producto al año. Nadie lo logrará. Explique que esa dificultad no es accidental y que existe una forma de leer estos documentos sin leerlos completos: buscar solo seis cosas.",
+          "activity": "Dinámica \"Dos Minutos\": el grupo intenta calcular el costo anual con el contrato en la mano y compara resultados."
+        },
+        {
+          "title": "FASE II: LAS SEIS CLÁUSULAS CRÍTICAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe qué buscar: la tasa o el costo anual total, las comisiones y en qué casos aplican, el saldo mínimo requerido, las condiciones de cancelación, las penalizaciones y la vigencia de cualquier promoción. Los alumnos marcan esas seis cosas en dos contratos distintos y llenan la tabla comparativa.",
+          "activity": "Dinámica \"Caza de Cláusulas\": cada equipo marca las seis cláusulas en dos contratos y las vacía en la tabla."
+        },
+        {
+          "title": "FASE III: COMPARAR CON LA TABLA (CIERRE)",
+          "duration": "15 min",
+          "description": "Con las tablas llenas, los alumnos deciden qué producto conviene y descubren que a veces el que anunciaba mejor tasa resulta más caro por comisiones o penalizaciones. Insista en la regla: comparar productos por la publicidad es imposible; por la tabla, es sencillo.",
+          "activity": "Dinámica \"Cuál Gana\": cada equipo elige un producto con la tabla en la mano y explica qué cláusula decidió la elección."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Los contratos financieros están escritos para no ser leídos: letra chica, muchas páginas y las condiciones importantes repartidas. Pero no hace falta leerlos completos. Basta con buscar seis cosas, y en esta clase vas a aprender exactamente cuáles.",
+      "sections": [
+        {
+          "subtitle": "La letra chica no es un accidente",
+          "content": "Que las condiciones importantes estén dispersas en un documento largo no es casualidad. Un contrato difícil de leer reduce la probabilidad de que alguien compare, y comparar es lo que presiona a la baja los costos. Entender esto quita la culpa de no haberlo leído completo y la reemplaza por una estrategia: buscar solo lo que decide."
+        },
+        {
+          "subtitle": "Las seis cosas que hay que encontrar",
+          "content": "Tasa o costo anual total, que resume el precio del producto. Comisiones y cuándo aplican. Saldo mínimo requerido. Condiciones para cancelar. Penalizaciones por incumplimiento o retiro anticipado. Y la vigencia de cualquier promoción, porque muchas ofertas son buenas los primeros meses y después cambian. Con esas seis se puede comparar cualquier producto."
+        },
+        {
+          "subtitle": "La vigencia de la promoción",
+          "content": "Es la cláusula que más sorpresas causa. Una tarjeta sin anualidad el primer año, una tasa preferencial por seis meses, una cuenta sin comisión mientras se mantenga cierta nómina. Todas son ofertas reales que terminan en una fecha. Si al contratar no se anota cuándo cambia la condición, la sorpresa llega en el estado de cuenta."
+        },
+        {
+          "subtitle": "Comparar por tabla, no por publicidad",
+          "content": "La publicidad de dos productos nunca es comparable, porque cada una destaca la cláusula que le conviene. La tabla sí lo es: seis filas iguales para ambos productos. Muchas veces el que anunciaba mejor tasa resulta más caro por comisiones o penalizaciones, y eso solo se ve cuando los dos están puestos lado a lado."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué los contratos son difíciles de leer?",
+          "options": [
+            "Por error de imprenta",
+            "Porque un contrato difícil reduce la comparación",
+            "Porque lo exige la ley"
+          ],
+          "correct": "Porque un contrato difícil reduce la comparación"
+        },
+        {
+          "question": "¿Cuáles son las seis cláusulas críticas?",
+          "options": [
+            "Color, tamaño, logo, banco, fecha y firma",
+            "Nombre, dirección, teléfono, correo, edad y sexo",
+            "Tasa, comisiones, saldo mínimo, cancelación, penalizaciones y vigencia"
+          ],
+          "correct": "Tasa, comisiones, saldo mínimo, cancelación, penalizaciones y vigencia"
+        },
+        {
+          "question": "¿Qué resume la tasa o costo anual total?",
+          "options": [
+            "El precio del producto",
+            "El plazo",
+            "El saldo"
+          ],
+          "correct": "El precio del producto"
+        },
+        {
+          "question": "¿Cuál es la cláusula que más sorpresas causa?",
+          "options": [
+            "El nombre del banco",
+            "La vigencia de la promoción",
+            "La fecha de firma"
+          ],
+          "correct": "La vigencia de la promoción"
+        },
+        {
+          "question": "Una tarjeta sin anualidad el primer año:",
+          "options": [
+            "Nunca cobra",
+            "Cobra desde el inicio",
+            "Cobra a partir del segundo, salvo que diga otra cosa"
+          ],
+          "correct": "Cobra a partir del segundo, salvo que diga otra cosa"
+        },
+        {
+          "question": "¿Qué hay que anotar al contratar?",
+          "options": [
+            "Cuándo cambia cada condición promocional",
+            "El color del contrato",
+            "El nombre del ejecutivo solamente"
+          ],
+          "correct": "Cuándo cambia cada condición promocional"
+        },
+        {
+          "question": "¿Se pueden comparar dos productos por su publicidad?",
+          "options": [
+            "Sí, es lo más práctico",
+            "No, cada una destaca lo que le conviene",
+            "Sí, si son del mismo banco"
+          ],
+          "correct": "No, cada una destaca lo que le conviene"
+        },
+        {
+          "question": "¿Cómo sí se comparan?",
+          "options": [
+            "Preguntando al ejecutivo",
+            "Por el tamaño del anuncio",
+            "Con una tabla de las mismas seis filas"
+          ],
+          "correct": "Con una tabla de las mismas seis filas"
+        },
+        {
+          "question": "El que anuncia mejor tasa:",
+          "options": [
+            "Puede resultar más caro por comisiones o penalizaciones",
+            "Siempre es el mejor",
+            "Nunca conviene"
+          ],
+          "correct": "Puede resultar más caro por comisiones o penalizaciones"
+        },
+        {
+          "question": "¿Hay que leer el contrato completo?",
+          "options": [
+            "Sí, palabra por palabra",
+            "Basta con buscar las seis cláusulas críticas",
+            "No hace falta leer nada"
+          ],
+          "correct": "Basta con buscar las seis cláusulas críticas"
+        }
+      ],
+      "rubric": "Logrado: localiza las seis cláusulas en un contrato y compara dos productos con la tabla. En proceso: identifica algunas cláusulas sin comparar. Inicial: reconoce que hay condiciones ocultas."
+    },
+    "teacher_tips": [
+      "Use contratos simulados con formato realista, incluida la letra pequeña. La dificultad es parte de la lección.",
+      "El caso donde el de mejor tasa resulta más caro es el más formativo. Diséñelo así a propósito.",
+      "La estrategia de buscar seis cosas en vez de leer todo es lo que hace la habilidad aplicable en la vida real."
+    ]
+  },
+  "P6-1-8": {
+    "code": "P6-1-8",
+    "title": "Ahorro voluntario en el AFORE desde joven",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender el ahorro voluntario en el AFORE y calcular el efecto de empezar joven frente a empezar tarde.",
+      "competencies": [
+        "Planeación de Retiro",
+        "Cálculo de Interés Compuesto",
+        "Aportación Voluntaria",
+        "Visión de Largo Plazo"
+      ],
+      "materials": [
+        "Gráfica comparativa de dos ahorradores",
+        "Calculadora",
+        "Estado de cuenta de AFORE simulado",
+        "Casos con distintas edades de inicio",
+        "Cartel del efecto del tiempo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Falta Mucho",
+          "duration": "15 min",
+          "label": "¿Por qué pensarlo hoy?"
+        },
+        {
+          "phase": "Desarrollo: Dos Ahorradores",
+          "duration": "30 min",
+          "label": "El efecto del tiempo"
+        },
+        {
+          "phase": "Cierre: Aportar Voluntario",
+          "duration": "15 min",
+          "label": "Cómo se hace"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"TODAVÍA FALTA MUCHÍSIMO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte a qué edad creen que hay que empezar a pensar en el retiro. Las respuestas irán a los cuarenta o cincuenta. Explique que precisamente por eso el retiro es un problema en México: el factor más poderoso no es cuánto se aporta, sino desde cuándo, y ese factor solo se puede aprovechar siendo joven.",
+          "activity": "Dinámica \"¿A Qué Edad?\": el grupo estima la edad ideal para empezar y después ve el efecto de cada década perdida."
+        },
+        {
+          "title": "FASE II: DOS AHORRADORES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Comparen dos casos: uno que aporta poco desde los veinte años y otro que aporta el doble a partir de los cuarenta. Los alumnos calculan ambos resultados a la edad de retiro y descubren que el primero termina con más, habiendo aportado menos dinero total. El tiempo hace más trabajo que el monto.",
+          "activity": "Dinámica \"Quién Junta Más\": cada equipo calcula ambos escenarios y compara el total aportado contra el total acumulado."
+        },
+        {
+          "title": "FASE III: EL AHORRO VOLUNTARIO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que además de la aportación obligatoria por trabajar formalmente, se puede aportar voluntariamente a la cuenta de AFORE desde montos pequeños, incluso en tiendas de conveniencia. Aclare que ese dinero tiene reglas de disponibilidad y que hay modalidades de corto y largo plazo con condiciones distintas.",
+          "activity": "Dinámica \"Mi Aportación\": cada alumno define un monto mensual simbólico y calcula su efecto a cuarenta años."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "A los once años el retiro suena a algo lejanísimo, y precisamente por eso es el mejor momento para entenderlo. En el ahorro para el retiro, el tiempo hace más trabajo que el dinero, y el tiempo es lo único que no se puede recuperar después.",
+      "sections": [
+        {
+          "subtitle": "Qué es el AFORE",
+          "content": "Es la administradora que gestiona la cuenta individual de retiro de cada trabajador en México. Ahí se acumulan las aportaciones que se hacen durante la vida laboral y los rendimientos que generan. La cuenta es de cada persona, se puede consultar y se puede cambiar de administradora si otra ofrece mejores rendimientos o menores comisiones."
+        },
+        {
+          "subtitle": "El tiempo pesa más que el monto",
+          "content": "Una persona que aporta una cantidad modesta desde los veinte años suele terminar con más dinero que otra que aporta el doble a partir de los cuarenta, aunque la segunda haya puesto más dinero en total. La razón es el interés compuesto: los rendimientos generan rendimientos, y ese efecto necesita décadas para desplegarse por completo."
+        },
+        {
+          "subtitle": "La aportación voluntaria",
+          "content": "Además de lo que se aporta obligatoriamente al trabajar formalmente, cualquier persona puede hacer aportaciones voluntarias a su cuenta, desde montos muy pequeños y por varios canales, incluidas tiendas de conveniencia. Existen modalidades de corto y de largo plazo, con reglas distintas sobre cuándo se puede retirar el dinero."
+        },
+        {
+          "subtitle": "Revisar la cuenta también cuenta",
+          "content": "Muchas personas nunca revisan su estado de cuenta de AFORE. Ahí aparece cuánto se ha acumulado, qué rendimiento se está obteniendo y qué comisión se está pagando. Como en cualquier producto de largo plazo, una diferencia de comisión sostenida durante décadas representa una cantidad enorme, y cambiar de administradora es un derecho."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el AFORE?",
+          "options": [
+            "Un banco",
+            "Un impuesto",
+            "La administradora de la cuenta individual de retiro"
+          ],
+          "correct": "La administradora de la cuenta individual de retiro"
+        },
+        {
+          "question": "¿De quién es la cuenta?",
+          "options": [
+            "De cada persona",
+            "De la empresa",
+            "Del gobierno"
+          ],
+          "correct": "De cada persona"
+        },
+        {
+          "question": "¿Se puede cambiar de administradora?",
+          "options": [
+            "No, nunca",
+            "Sí, es un derecho",
+            "Solo al jubilarse"
+          ],
+          "correct": "Sí, es un derecho"
+        },
+        {
+          "question": "¿Qué pesa más en el ahorro para el retiro?",
+          "options": [
+            "El monto",
+            "La suerte",
+            "El tiempo"
+          ],
+          "correct": "El tiempo"
+        },
+        {
+          "question": "¿Por qué el tiempo pesa tanto?",
+          "options": [
+            "Porque los rendimientos generan rendimientos",
+            "Porque las tasas suben",
+            "Porque baja la inflación"
+          ],
+          "correct": "Porque los rendimientos generan rendimientos"
+        },
+        {
+          "question": "Quien aporta poco desde los veinte:",
+          "options": [
+            "Siempre junta menos",
+            "Puede terminar con más que quien aporta el doble desde los cuarenta",
+            "Junta lo mismo"
+          ],
+          "correct": "Puede terminar con más que quien aporta el doble desde los cuarenta"
+        },
+        {
+          "question": "¿Qué es la aportación voluntaria?",
+          "options": [
+            "Un impuesto extra",
+            "Un préstamo",
+            "Dinero adicional que uno decide poner en su cuenta"
+          ],
+          "correct": "Dinero adicional que uno decide poner en su cuenta"
+        },
+        {
+          "question": "¿Desde qué montos se puede aportar voluntariamente?",
+          "options": [
+            "Desde montos muy pequeños",
+            "Solo desde miles de pesos",
+            "No se puede"
+          ],
+          "correct": "Desde montos muy pequeños"
+        },
+        {
+          "question": "¿Qué aparece en el estado de cuenta del AFORE?",
+          "options": [
+            "Solo el nombre",
+            "Lo acumulado, el rendimiento y la comisión",
+            "Nada útil"
+          ],
+          "correct": "Lo acumulado, el rendimiento y la comisión"
+        },
+        {
+          "question": "Una diferencia de comisión durante décadas:",
+          "options": [
+            "Es irrelevante",
+            "Se compensa sola",
+            "Representa una cantidad enorme"
+          ],
+          "correct": "Representa una cantidad enorme"
+        }
+      ],
+      "rubric": "Logrado: calcula el efecto del tiempo, explica la aportación voluntaria y reconoce el peso de la comisión. En proceso: entiende el AFORE sin cuantificar el tiempo. Inicial: sabe que existe una cuenta de retiro."
+    },
+    "teacher_tips": [
+      "El cálculo comparativo de dos ahorradores es el corazón de la clase. El resultado sorprende siempre.",
+      "No entre en detalles regulatorios que cambian. Enseñe el principio del tiempo y el derecho a revisar y cambiar.",
+      "Conecte con el interés compuesto que ya estudiaron: aquí es donde ese concepto tiene su aplicación más potente."
+    ]
+  },
+  "P6-1-9": {
+    "code": "P6-1-9",
+    "title": "Riesgos reales de las criptomonedas: volatilidad y fraude",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Evaluar los riesgos reales de las criptomonedas: volatilidad, ausencia de protección institucional y fraudes asociados.",
+      "competencies": [
+        "Evaluación de Activos Volátiles",
+        "Análisis de Riesgo",
+        "Detección de Fraude Cripto",
+        "Decisión Prudente"
+      ],
+      "materials": [
+        "Gráfica histórica de volatilidad",
+        "Casos de fraudes cripto adaptados",
+        "Calculadora",
+        "Comparativo con instrumentos regulados",
+        "Cartel de los cuatro riesgos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Subió 300%",
+          "duration": "15 min",
+          "label": "La historia que se cuenta"
+        },
+        {
+          "phase": "Desarrollo: Cuatro Riesgos",
+          "duration": "30 min",
+          "label": "Lo que no se cuenta"
+        },
+        {
+          "phase": "Cierre: Regla Prudente",
+          "duration": "15 min",
+          "label": "Si se participa, cómo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA HISTORIA QUE SIEMPRE SE CUENTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que las historias que circulan son siempre de ganancias enormes, nunca de pérdidas. Eso no es porque no existan pérdidas: es porque nadie las publica. Ese sesgo hace que la percepción del riesgo sea completamente distinta a la realidad, y es el punto de partida de la clase.",
+          "activity": "Dinámica \"¿Quién Cuenta las Pérdidas?\": el grupo reflexiona sobre por qué solo circulan las historias de ganancia."
+        },
+        {
+          "title": "FASE II: LOS CUATRO RIESGOS REALES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los cuatro: volatilidad extrema, con caídas de más de la mitad del valor en periodos cortos; ausencia de protección institucional, porque no hay seguro de depósito que responda; riesgo de custodia, porque perder la clave significa perder el acceso para siempre; y fraudes, que abundan en un entorno con poca regulación. Los alumnos analizan casos de cada uno.",
+          "activity": "Dinámica \"Identifica el Riesgo\": cada equipo analiza cuatro casos y nombra cuál de los riesgos operó en cada uno."
+        },
+        {
+          "title": "FASE III: SI SE PARTICIPA, CÓMO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique la regla que aplican quienes participan con prudencia: solo con dinero que se puede perder por completo sin afectar la vida, nunca con el fondo de emergencia ni con dinero prestado, y nunca por presión de alguien que insiste. Aclare que la decisión de no participar es igual de válida.",
+          "activity": "Dinámica \"La Regla Prudente\": el grupo formula las tres condiciones y evalúa tres casos con ellas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "De las criptomonedas siempre se cuentan las historias de quien ganó mucho. Nunca las de quien perdió, aunque sean muchísimas más. En esta clase vas a ver los cuatro riesgos reales, sin exageración y sin publicidad.",
+      "sections": [
+        {
+          "subtitle": "Volatilidad extrema",
+          "content": "El precio de estos activos puede subir o caer de forma brutal en periodos muy cortos. Caídas de más de la mitad del valor en pocos meses no son excepcionales: son parte del comportamiento normal de este mercado. Eso significa que el dinero que se ponga ahí puede necesitarse justo cuando el precio está en su punto más bajo."
+        },
+        {
+          "subtitle": "Sin protección institucional",
+          "content": "A diferencia de un depósito bancario, aquí no hay seguro de depósito que responda si la plataforma quiebra o si el activo pierde su valor. Si algo sale mal, no hay institución a la cual reclamar la devolución del dinero. Esa ausencia de red de protección es la diferencia más importante frente a cualquier instrumento regulado."
+        },
+        {
+          "subtitle": "El riesgo de custodia",
+          "content": "Existe un riesgo que no tiene equivalente en el sistema tradicional: si se pierde la clave de acceso, el dinero se pierde de forma definitiva. No hay ventanilla donde recuperar una contraseña ni proceso de identificación que devuelva el acceso. Cantidades enormes se han perdido exactamente así, sin ningún fraude de por medio."
+        },
+        {
+          "subtitle": "Fraudes y la regla prudente",
+          "content": "La poca regulación y la promesa de ganancias rápidas atraen una enorme cantidad de fraudes: plataformas falsas, esquemas piramidales disfrazados y supuestos gestores que prometen rendimientos garantizados. Quienes participan con prudencia siguen tres reglas: solo dinero que puedan perder por completo, nunca el fondo de emergencia ni dinero prestado, y nunca por presión de nadie."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué solo circulan historias de ganancia?",
+          "options": [
+            "Porque nadie publica sus pérdidas",
+            "Porque no hay pérdidas",
+            "Porque está prohibido"
+          ],
+          "correct": "Porque nadie publica sus pérdidas"
+        },
+        {
+          "question": "¿Qué es la volatilidad extrema?",
+          "options": [
+            "Un crecimiento constante",
+            "Subidas y caídas muy grandes en poco tiempo",
+            "Una comisión"
+          ],
+          "correct": "Subidas y caídas muy grandes en poco tiempo"
+        },
+        {
+          "question": "¿Hay seguro de depósito para las criptomonedas?",
+          "options": [
+            "Sí, igual que en bancos",
+            "Solo para montos grandes",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "Si la plataforma quiebra:",
+          "options": [
+            "No hay institución a la cual reclamar",
+            "Responde el IPAB",
+            "Responde el gobierno"
+          ],
+          "correct": "No hay institución a la cual reclamar"
+        },
+        {
+          "question": "¿Qué es el riesgo de custodia?",
+          "options": [
+            "Que suba el precio",
+            "Si se pierde la clave, el dinero se pierde para siempre",
+            "Que baje la comisión"
+          ],
+          "correct": "Si se pierde la clave, el dinero se pierde para siempre"
+        },
+        {
+          "question": "¿Hay forma de recuperar una clave perdida?",
+          "options": [
+            "Sí, en ventanilla",
+            "Sí, con identificación",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Por qué abundan los fraudes en este entorno?",
+          "options": [
+            "Por la poca regulación y la promesa de ganancias rápidas",
+            "Porque es muy técnico",
+            "Porque es nuevo"
+          ],
+          "correct": "Por la poca regulación y la promesa de ganancias rápidas"
+        },
+        {
+          "question": "¿Cuál es la primera regla prudente?",
+          "options": [
+            "Invertir todo el ahorro",
+            "Solo con dinero que se pueda perder por completo",
+            "Pedir prestado para invertir"
+          ],
+          "correct": "Solo con dinero que se pueda perder por completo"
+        },
+        {
+          "question": "¿Qué nunca debe usarse?",
+          "options": [
+            "El dinero del domingo",
+            "Los ahorros pequeños",
+            "El fondo de emergencia ni dinero prestado"
+          ],
+          "correct": "El fondo de emergencia ni dinero prestado"
+        },
+        {
+          "question": "La decisión de no participar:",
+          "options": [
+            "Es igual de válida",
+            "Es cobardía",
+            "Es un error"
+          ],
+          "correct": "Es igual de válida"
+        }
+      ],
+      "rubric": "Logrado: nombra los cuatro riesgos, explica el sesgo de las historias y formula la regla prudente. En proceso: identifica la volatilidad sin los demás riesgos. Inicial: reconoce que hay riesgo."
+    },
+    "teacher_tips": [
+      "Evite tanto la promoción como la demonización. Ambas posturas cierran la conversación y dejan al alumno sin criterio.",
+      "El sesgo de las historias publicadas es el aprendizaje más transferible: aplica a inversiones, apuestas y negocios.",
+      "El riesgo de custodia es el menos conocido y el más específico. Vale la pena detenerse en él."
+    ]
+  },
+  "P6-1-10": {
+    "code": "P6-1-10",
+    "title": "Mi identidad financiera: CURP, RFC y NSS",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Identificar los documentos que conforman la identidad financiera en México (CURP, RFC y NSS) y su función en trámites y derechos.",
+      "competencies": [
+        "Gestión de Identidad Financiera",
+        "Comprensión de Trámites",
+        "Protección de Datos",
+        "Preparación para la Vida Adulta"
+      ],
+      "materials": [
+        "Ejemplos de documentos con datos ficticios",
+        "Tabla de para qué sirve cada uno",
+        "Casos de trámites reales",
+        "Formato de carpeta de documentos",
+        "Cartel de los tres identificadores"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Tres Claves",
+          "duration": "15 min",
+          "label": "¿Para qué sirve cada una?"
+        },
+        {
+          "phase": "Desarrollo: Sus Funciones",
+          "duration": "30 min",
+          "label": "Qué abre cada documento"
+        },
+        {
+          "phase": "Cierre: Mi Carpeta",
+          "duration": "15 min",
+          "label": "Organizarlos y protegerlos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TRES CLAVES QUE TE ACOMPAÑAN TODA LA VIDA (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente los tres identificadores y pregunte para qué sirve cada uno. La mayoría conocerá la CURP y poco más. Explique que estas tres claves acompañan a una persona toda su vida y que sin ellas no se puede trabajar formalmente, cobrar, cotizar ni acceder a servicios de salud.",
+          "activity": "Dinámica \"¿Qué Es Cada Una?\": el grupo intenta describir la función de las tres claves y descubre cuánto falta."
+        },
+        {
+          "title": "FASE II: QUÉ ABRE CADA DOCUMENTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las funciones: la CURP identifica a la persona ante cualquier trámite; el RFC la identifica ante la autoridad fiscal y hace falta para facturar, trabajar formalmente o abrir ciertos productos; y el NSS vincula a la persona con la seguridad social y sus servicios médicos y de retiro. Los alumnos asignan cada documento a diez trámites.",
+          "activity": "Dinámica \"Qué Documento Necesito\": cada equipo asigna la clave correspondiente a diez trámites distintos."
+        },
+        {
+          "title": "FASE III: ORGANIZAR Y PROTEGER (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a armar una carpeta con acta de nacimiento, CURP, comprobante de domicilio y, cuando corresponda, RFC y NSS. Explique que estos datos también sirven para suplantar identidades, así que no se comparten en redes ni con quien no sea la institución que los solicita en un trámite legítimo.",
+          "activity": "Dinámica \"Mi Carpeta\": cada alumno lista qué documentos tiene, cuáles faltan y dónde los va a resguardar."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay tres claves que te van a acompañar toda la vida y que abren o cierran puertas: la CURP, el RFC y el NSS. Sin ellas no se puede trabajar formalmente, cobrar ni acceder a servicios de salud. En esta clase vas a entender para qué sirve cada una.",
+      "sections": [
+        {
+          "subtitle": "La CURP: quién eres",
+          "content": "La Clave Única de Registro de Población identifica a cada persona en México con una clave única construida a partir de sus datos de nacimiento. Se usa prácticamente en cualquier trámite: escolar, de salud, bancario o gubernamental. Es el documento base y el primero que hay que tener a la mano en una carpeta personal."
+        },
+        {
+          "subtitle": "El RFC: tu identidad fiscal",
+          "content": "El Registro Federal de Contribuyentes identifica a una persona ante la autoridad fiscal. Hace falta para trabajar formalmente, para emitir facturas si se tiene un negocio y para contratar ciertos productos financieros. Tener RFC no significa necesariamente pagar impuestos: significa estar identificado ante la autoridad, que es distinto."
+        },
+        {
+          "subtitle": "El NSS: tu vínculo con la seguridad social",
+          "content": "El Número de Seguridad Social vincula a la persona con las instituciones de seguridad social y sus servicios: atención médica, incapacidades, guarderías y la cuenta de retiro. Se asigna al darse de alta en un empleo formal y acompaña a la persona aunque cambie de trabajo. Es la puerta a derechos que muchas personas desconocen tener."
+        },
+        {
+          "subtitle": "Cuidarlos es parte de tenerlos",
+          "content": "Estos datos también sirven para suplantar identidades y contratar productos a nombre de otra persona. Por eso no se publican en redes, no se comparten con desconocidos y solo se entregan a la institución que los solicita dentro de un trámite legítimo. Tener los documentos organizados en un lugar seguro es tan importante como tenerlos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué identifica la CURP?",
+          "options": [
+            "A las empresas",
+            "A cada persona en México con una clave única",
+            "A los bancos"
+          ],
+          "correct": "A cada persona en México con una clave única"
+        },
+        {
+          "question": "¿Dónde se usa la CURP?",
+          "options": [
+            "Solo en la escuela",
+            "Solo en el banco",
+            "En prácticamente cualquier trámite"
+          ],
+          "correct": "En prácticamente cualquier trámite"
+        },
+        {
+          "question": "¿Qué es el RFC?",
+          "options": [
+            "La identificación ante la autoridad fiscal",
+            "Un número de teléfono",
+            "Una cuenta bancaria"
+          ],
+          "correct": "La identificación ante la autoridad fiscal"
+        },
+        {
+          "question": "¿Para qué hace falta el RFC?",
+          "options": [
+            "Para ir a la escuela",
+            "Para trabajar formalmente y emitir facturas",
+            "Para viajar"
+          ],
+          "correct": "Para trabajar formalmente y emitir facturas"
+        },
+        {
+          "question": "¿Tener RFC significa pagar impuestos?",
+          "options": [
+            "Sí, siempre",
+            "Solo si tienes negocio",
+            "No necesariamente; significa estar identificado"
+          ],
+          "correct": "No necesariamente; significa estar identificado"
+        },
+        {
+          "question": "¿Qué vincula el NSS?",
+          "options": [
+            "A la persona con la seguridad social y sus servicios",
+            "A la persona con el banco",
+            "A la empresa con el SAT"
+          ],
+          "correct": "A la persona con la seguridad social y sus servicios"
+        },
+        {
+          "question": "¿Cuándo se asigna el NSS?",
+          "options": [
+            "Al nacer siempre",
+            "Al darse de alta en un empleo formal",
+            "Al cumplir 18"
+          ],
+          "correct": "Al darse de alta en un empleo formal"
+        },
+        {
+          "question": "Si cambio de trabajo, el NSS:",
+          "options": [
+            "Cambia cada vez",
+            "Se pierde",
+            "Sigue siendo el mismo"
+          ],
+          "correct": "Sigue siendo el mismo"
+        },
+        {
+          "question": "¿Por qué hay que cuidar estos datos?",
+          "options": [
+            "Porque sirven para suplantar identidades",
+            "Porque son caros",
+            "Porque se vencen"
+          ],
+          "correct": "Porque sirven para suplantar identidades"
+        },
+        {
+          "question": "¿A quién se entregan estos datos?",
+          "options": [
+            "A quien los pida",
+            "Solo a la institución que los pide en un trámite legítimo",
+            "A cualquier app"
+          ],
+          "correct": "Solo a la institución que los pide en un trámite legítimo"
+        }
+      ],
+      "rubric": "Logrado: distingue la función de los tres identificadores, los asigna a trámites y aplica criterios de protección. En proceso: conoce la CURP sin distinguir RFC y NSS. Inicial: reconoce que existen claves de identidad."
+    },
+    "teacher_tips": [
+      "Use siempre documentos de ejemplo con datos ficticios. Nunca pida a los alumnos que muestren los suyos.",
+      "La aclaración de que tener RFC no equivale a pagar impuestos elimina un miedo muy extendido.",
+      "La carpeta de documentos es un entregable útil de verdad. Muchas familias agradecen el ejercicio."
+    ]
+  },
   "P6-2-1": {
     "code": "P6-2-1",
     "title": "La trampa del crédito al consumo: cómo evitarla",
@@ -1735,7 +2655,7 @@
             "Una persona que usa sus conocimientos para mejorar la situación económica de su entorno",
             "Un cajero de banco"
           ],
-          "correct": "Una persona que con sus conocimientos para mejorar la situación económica de su entorno"
+          "correct": "Una persona que usa sus conocimientos para mejorar la situación económica de su entorno"
         },
         {
           "question": "¿Por qué es importante involucrar a los niños en las metas de ahorro familiares?",
@@ -1816,6 +2736,926 @@
       "Sea muy respetuoso con las diferentes situaciones económicas de los alumnos.",
       "Enfatice que el ahorro familiar es un equipo donde todos cuentan.",
       "Invite a los alumnos a compartir historias de éxito (con permiso) en la siguiente clase."
+    ]
+  },
+  "P6-2-6": {
+    "code": "P6-2-6",
+    "title": "Presupuesto base cero: justificar cada peso",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Aplicar el presupuesto base cero, justificando cada gasto desde cero en lugar de heredar el del mes anterior.",
+      "competencies": [
+        "Presupuesto Base Cero",
+        "Justificación del Gasto",
+        "Revisión Crítica",
+        "Reasignación de Recursos"
+      ],
+      "materials": [
+        "Presupuesto del mes anterior de ejemplo",
+        "Formato base cero en blanco",
+        "Calculadora",
+        "Tarjetas de gastos para justificar",
+        "Cartel de la pregunta de justificación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Siempre lo Mismo",
+          "duration": "15 min",
+          "label": "El presupuesto heredado"
+        },
+        {
+          "phase": "Desarrollo: Desde Cero",
+          "duration": "30 min",
+          "label": "Justificar cada peso"
+        },
+        {
+          "phase": "Cierre: Reasignar",
+          "duration": "15 min",
+          "label": "Qué hago con lo liberado"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL PRESUPUESTO QUE SE HEREDA (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un presupuesto que repite las mismas cifras mes tras mes. Pregunte por qué cada categoría tiene ese monto. La respuesta será que así estaba antes. Explique que ese es el problema: los gastos se heredan sin volver a evaluarse, y algunos siguen ahí años después de haber dejado de tener sentido.",
+          "activity": "Dinámica \"¿Por Qué Esa Cifra?\": el grupo intenta justificar cada línea de un presupuesto de ejemplo y descubre cuántas no se pueden."
+        },
+        {
+          "title": "FASE II: EMPEZAR EN CERO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el método: en lugar de partir del mes anterior, se empieza con todas las categorías en cero y cada peso tiene que justificarse desde el principio. La pregunta para cada gasto es qué pasaría si no lo hiciera este mes. Los alumnos rehacen un presupuesto completo con este método.",
+          "activity": "Dinámica \"Todo en Cero\": cada equipo justifica gasto por gasto y anota los que no logra sostener."
+        },
+        {
+          "title": "FASE III: REASIGNAR LO LIBERADO (CIERRE)",
+          "duration": "15 min",
+          "description": "Con los recursos liberados, los alumnos deciden a dónde van: fondo de emergencia, pago de deuda o una meta concreta. Insista en que si no se asigna un destino explícito, el dinero liberado se reabsorbe en el gasto en pocas semanas y el ejercicio no sirvió de nada.",
+          "activity": "Dinámica \"A Dónde Va\": cada equipo asigna un destino específico a cada peso liberado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "La mayoría de los presupuestos se hacen copiando el del mes pasado y ajustando un poco. El resultado es que hay gastos que llevan años ahí sin que nadie los cuestione. El presupuesto base cero hace lo contrario: obliga a justificar cada peso desde el principio.",
+      "sections": [
+        {
+          "subtitle": "El problema del presupuesto heredado",
+          "content": "Cuando un presupuesto se construye a partir del anterior, cada categoría arrastra su monto sin que nadie vuelva a preguntarse si sigue siendo necesario. Suscripciones que ya no se usan, montos que se fijaron para una situación que cambió, gastos que empezaron como excepción y se volvieron rutina. Nada de eso se detecta ajustando el mes pasado."
+        },
+        {
+          "subtitle": "Cómo funciona el base cero",
+          "content": "El método consiste en empezar con todas las categorías en cero y agregar cada gasto solo si se puede justificar. La pregunta para cada línea es directa: qué pasaría si no hiciera este gasto este mes. Si la respuesta es que no pasaría nada relevante, esa línea no debería estar ahí, o al menos no con ese monto."
+        },
+        {
+          "subtitle": "No es recortar por recortar",
+          "content": "Base cero no significa gastar lo mínimo posible. Significa que cada gasto esté ahí por una razón vigente y no por inercia. Un gasto grande perfectamente justificado se queda; uno pequeño sin justificación se va. El criterio no es el tamaño sino la razón, y por eso el método a veces aumenta categorías en lugar de reducirlas."
+        },
+        {
+          "subtitle": "Asignar lo liberado o desaparece",
+          "content": "El paso que más se omite es decidir a dónde va el dinero que quedó libre. Si no se le da un destino explícito, en pocas semanas se reabsorbe en gastos pequeños y el ejercicio completo se pierde. El destino tiene que ser concreto: al fondo de emergencia, al pago de una deuda específica o a una meta con nombre."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es el problema del presupuesto heredado?",
+          "options": [
+            "Que es muy largo",
+            "Los gastos arrastran su monto sin volver a evaluarse",
+            "Que es difícil de hacer"
+          ],
+          "correct": "Los gastos arrastran su monto sin volver a evaluarse"
+        },
+        {
+          "question": "¿Cómo empieza un presupuesto base cero?",
+          "options": [
+            "Con el del mes pasado",
+            "Con el ingreso",
+            "Con todas las categorías en cero"
+          ],
+          "correct": "Con todas las categorías en cero"
+        },
+        {
+          "question": "¿Cuál es la pregunta para cada gasto?",
+          "options": [
+            "Qué pasaría si no lo hiciera este mes",
+            "Cuánto cuesta",
+            "Quién lo pidió"
+          ],
+          "correct": "Qué pasaría si no lo hiciera este mes"
+        },
+        {
+          "question": "Si no pasaría nada relevante:",
+          "options": [
+            "Hay que aumentarla",
+            "Esa línea no debería estar o no con ese monto",
+            "Hay que dejarla igual"
+          ],
+          "correct": "Esa línea no debería estar o no con ese monto"
+        },
+        {
+          "question": "¿Base cero significa gastar lo mínimo?",
+          "options": [
+            "Sí, siempre",
+            "Solo en crisis",
+            "No, significa que cada gasto tenga una razón vigente"
+          ],
+          "correct": "No, significa que cada gasto tenga una razón vigente"
+        },
+        {
+          "question": "¿Cuál es el criterio?",
+          "options": [
+            "La razón, no el tamaño del gasto",
+            "El tamaño",
+            "La antigüedad"
+          ],
+          "correct": "La razón, no el tamaño del gasto"
+        },
+        {
+          "question": "¿Puede el método aumentar una categoría?",
+          "options": [
+            "No, solo reduce",
+            "Sí, si está justificada",
+            "Nunca"
+          ],
+          "correct": "Sí, si está justificada"
+        },
+        {
+          "question": "¿Cuál es el paso que más se omite?",
+          "options": [
+            "Sumar los gastos",
+            "Anotar el ingreso",
+            "Asignar destino al dinero liberado"
+          ],
+          "correct": "Asignar destino al dinero liberado"
+        },
+        {
+          "question": "Si no se asigna destino:",
+          "options": [
+            "El dinero se reabsorbe en gastos pequeños",
+            "Se guarda solo",
+            "Crece"
+          ],
+          "correct": "El dinero se reabsorbe en gastos pequeños"
+        },
+        {
+          "question": "¿Cómo debe ser el destino?",
+          "options": [
+            "Vago pero optimista",
+            "Concreto: fondo, deuda o meta con nombre",
+            "Sin definir"
+          ],
+          "correct": "Concreto: fondo, deuda o meta con nombre"
+        }
+      ],
+      "rubric": "Logrado: rehace un presupuesto justificando cada línea y asigna destino a lo liberado. En proceso: justifica gastos sin reasignar. Inicial: reconoce el problema del presupuesto heredado."
+    },
+    "teacher_tips": [
+      "Use un presupuesto de ejemplo con al menos dos gastos claramente injustificables. Encontrarlos es el momento clave.",
+      "Aclare que no es un ejercicio de austeridad. Presentarlo como recorte genera resistencia y pierde el punto.",
+      "La asignación del dinero liberado es lo que convierte el ejercicio en resultado. No lo deje para después."
+    ]
+  },
+  "P6-2-7": {
+    "code": "P6-2-7",
+    "title": "Deuda buena y deuda mala: el criterio definitivo",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Distinguir deuda buena de deuda mala aplicando un criterio verificable, y evaluar decisiones de endeudamiento con ese criterio.",
+      "competencies": [
+        "Evaluación de Deuda",
+        "Análisis Costo-Beneficio",
+        "Decisión de Financiamiento",
+        "Pensamiento Crítico"
+      ],
+      "materials": [
+        "Tarjetas de casos de deuda",
+        "Calculadora",
+        "Formato del criterio de tres preguntas",
+        "Casos ambiguos para discutir",
+        "Cartel del criterio definitivo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Toda Deuda es Mala?",
+          "duration": "15 min",
+          "label": "La creencia común"
+        },
+        {
+          "phase": "Desarrollo: El Criterio",
+          "duration": "30 min",
+          "label": "Tres preguntas"
+        },
+        {
+          "phase": "Cierre: Casos Difíciles",
+          "duration": "15 min",
+          "label": "Aplicarlo a lo ambiguo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿TODA DEUDA ES MALA? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte si endeudarse siempre está mal. Muchos dirán que sí. Presente dos casos: alguien que se endeuda para un curso que le permitirá ganar más, y alguien que se endeuda para una fiesta. Ambos deben dinero, pero no es lo mismo. Explique que hace falta un criterio para distinguirlos.",
+          "activity": "Dinámica \"Dos Deudas\": el grupo compara dos casos con el mismo monto y explica por qué no son equivalentes."
+        },
+        {
+          "title": "FASE II: EL CRITERIO DE TRES PREGUNTAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el criterio: ¿lo que compro con esta deuda va a valer más o generar más de lo que cuesta el crédito?, ¿la mensualidad cabe en mi presupuesto sin sacrificar lo esencial?, ¿tengo un plan concreto para pagarla completa? Solo si las tres respuestas son sí, la deuda tiene sentido. Los alumnos aplican el criterio a seis casos.",
+          "activity": "Dinámica \"Pasa las Tres\": cada equipo evalúa seis casos con las tres preguntas y clasifica cada uno."
+        },
+        {
+          "title": "FASE III: LOS CASOS DIFÍCILES (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente casos ambiguos: endeudarse para una emergencia médica, para una herramienta de trabajo, para reparar un vehículo del que depende el ingreso. Los alumnos discuten y descubren que el criterio no siempre da una respuesta cómoda, pero siempre da una respuesta razonada, que es lo que se busca.",
+          "activity": "Dinámica \"Zona Gris\": cada equipo defiende su clasificación de dos casos ambiguos aplicando el criterio."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Mucha gente cree que toda deuda es mala. Otros creen que endeudarse es normal y no pasa nada. Las dos posturas fallan porque no distinguen. En esta clase vas a aprender el criterio que separa una deuda que construye de una que destruye.",
+      "sections": [
+        {
+          "subtitle": "La deuda es una herramienta, no un pecado",
+          "content": "Endeudarse significa usar hoy dinero que no tienes y devolverlo con un costo. Eso puede ser una decisión inteligente o desastrosa según para qué se use. Las dos posturas extremas fallan: quien nunca se endeuda puede dejar pasar oportunidades reales, y quien se endeuda sin criterio termina trabajando para pagar intereses."
+        },
+        {
+          "subtitle": "Pregunta uno: ¿genera más de lo que cuesta?",
+          "content": "La primera prueba es si aquello que financias va a producir o conservar más valor que el costo del crédito. Un curso que aumenta tus ingresos, una herramienta que te permite trabajar, una reparación que evita un daño mayor. Si lo que compras pierde valor rápido y no genera nada, el crédito solo suma costo a algo que ya se iba a desvalorizar."
+        },
+        {
+          "subtitle": "Pregunta dos: ¿cabe en el presupuesto?",
+          "content": "Aunque la primera respuesta sea sí, la deuda tiene que ser pagable. Si la mensualidad obliga a sacrificar comida, salud o el fondo de emergencia, la respuesta es no, por buena que sea la oportunidad. Una deuda que no cabe termina en atraso, y el atraso convierte una buena decisión en una mala rápidamente."
+        },
+        {
+          "subtitle": "Pregunta tres: ¿hay plan para pagarla completa?",
+          "content": "La tercera es la más olvidada. No basta con poder pagar la primera mensualidad: hace falta un plan que llegue hasta la última. Eso incluye qué pasaría si el ingreso baja o si aparece un imprevisto. Una deuda sin plan de salida se paga con otra deuda, y así empieza la espiral que tanto cuesta romper."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es toda deuda mala?",
+          "options": [
+            "Sí, siempre",
+            "No, nunca",
+            "No, depende de para qué se use"
+          ],
+          "correct": "No, depende de para qué se use"
+        },
+        {
+          "question": "¿Cuál es la pregunta uno del criterio?",
+          "options": [
+            "¿Genera o conserva más valor que el costo del crédito?",
+            "¿Es barato?",
+            "¿Lo tienen mis amigos?"
+          ],
+          "correct": "¿Genera o conserva más valor que el costo del crédito?"
+        },
+        {
+          "question": "Si lo que compro pierde valor rápido y no genera nada:",
+          "options": [
+            "Sigue siendo buena deuda",
+            "El crédito solo suma costo",
+            "Da igual"
+          ],
+          "correct": "El crédito solo suma costo"
+        },
+        {
+          "question": "¿Cuál es la pregunta dos?",
+          "options": [
+            "¿Cuánto cuesta el producto?",
+            "¿Cuántos meses son?",
+            "¿La mensualidad cabe sin sacrificar lo esencial?"
+          ],
+          "correct": "¿La mensualidad cabe sin sacrificar lo esencial?"
+        },
+        {
+          "question": "Si la mensualidad obliga a sacrificar lo esencial:",
+          "options": [
+            "La respuesta es no, por buena que sea la oportunidad",
+            "Se toma igual",
+            "Se pide más plazo"
+          ],
+          "correct": "La respuesta es no, por buena que sea la oportunidad"
+        },
+        {
+          "question": "¿Cuál es la pregunta tres?",
+          "options": [
+            "¿Cuál banco es?",
+            "¿Hay plan concreto para pagarla completa?",
+            "¿Cuándo empieza?"
+          ],
+          "correct": "¿Hay plan concreto para pagarla completa?"
+        },
+        {
+          "question": "¿Qué debe incluir ese plan?",
+          "options": [
+            "Solo la primera mensualidad",
+            "El nombre del banco",
+            "Qué pasaría si el ingreso baja o hay imprevistos"
+          ],
+          "correct": "Qué pasaría si el ingreso baja o hay imprevistos"
+        },
+        {
+          "question": "Una deuda sin plan de salida:",
+          "options": [
+            "Se paga con otra deuda",
+            "Se paga sola",
+            "No existe"
+          ],
+          "correct": "Se paga con otra deuda"
+        },
+        {
+          "question": "¿Cuántas respuestas deben ser sí?",
+          "options": [
+            "Al menos una",
+            "Las tres",
+            "Ninguna"
+          ],
+          "correct": "Las tres"
+        },
+        {
+          "question": "Quien nunca se endeuda:",
+          "options": [
+            "Siempre acierta",
+            "Es más rico",
+            "Puede dejar pasar oportunidades reales"
+          ],
+          "correct": "Puede dejar pasar oportunidades reales"
+        }
+      ],
+      "rubric": "Logrado: aplica las tres preguntas y sostiene una clasificación razonada en casos ambiguos. En proceso: distingue casos evidentes sin criterio explícito. Inicial: reconoce que hay deudas distintas."
+    },
+    "teacher_tips": [
+      "Los casos ambiguos son los más valiosos. Un ejercicio con solo casos evidentes no forma criterio.",
+      "La tercera pregunta se olvida siempre. Insista en que el plan llegue hasta la última mensualidad.",
+      "Evite el discurso de que toda deuda es mala: deja al alumno sin herramientas para decidir en la vida real."
+    ]
+  },
+  "P6-2-8": {
+    "code": "P6-2-8",
+    "title": "Reestructurar: cuando la deuda ya no se puede pagar",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender qué es una reestructura de deuda, cuándo conviene solicitarla y cómo prepararse para negociarla.",
+      "competencies": [
+        "Negociación de Deuda",
+        "Preparación de Propuesta",
+        "Análisis de Capacidad de Pago",
+        "Comunicación con Acreedores"
+      ],
+      "materials": [
+        "Formato de propuesta de pago",
+        "Calculadora",
+        "Casos de deudas impagables",
+        "Comparativo de escenarios de reestructura",
+        "Cartel de los tres momentos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Ya No Alcanza",
+          "duration": "15 min",
+          "label": "Qué hacer entonces"
+        },
+        {
+          "phase": "Desarrollo: La Reestructura",
+          "duration": "30 min",
+          "label": "Qué es y qué cuesta"
+        },
+        {
+          "phase": "Cierre: Preparar la Propuesta",
+          "duration": "15 min",
+          "label": "Llegar con números"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CUANDO YA NO ALCANZA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la situación: una persona ya no puede pagar sus mensualidades. Pregunte qué haría. Aparecerán respuestas como dejar de pagar o esconderse. Explique que existe una tercera salida, que es hablar antes de dejar de pagar, y que es la que mejor resultado da en la práctica.",
+          "activity": "Dinámica \"Tres Salidas\": el grupo compara las consecuencias de esconderse, dejar de pagar o negociar."
+        },
+        {
+          "title": "FASE II: QUÉ ES UNA REESTRUCTURA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que reestructurar es acordar nuevas condiciones: alargar el plazo, reducir la mensualidad, cambiar la tasa o unificar varias deudas en una. Aclare el costo: alargar el plazo casi siempre aumenta el total pagado, y algunas reestructuras dejan una marca en el historial. Los alumnos comparan tres escenarios.",
+          "activity": "Dinámica \"Tres Escenarios\": cada equipo calcula el total pagado en tres reestructuras distintas."
+        },
+        {
+          "title": "FASE III: LLEGAR CON UNA PROPUESTA (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe cómo prepararse: calcular cuánto se puede pagar realmente cada mes, llevar esa cifra por escrito y proponer un plan concreto en lugar de pedir ayuda genérica. Explique que un acreedor prefiere cobrar menos que no cobrar nada, y que quien llega con números tiene mucha más probabilidad de lograr un acuerdo.",
+          "activity": "Dinámica \"Mi Propuesta\": cada alumno redacta una propuesta con monto mensual, plazo y fecha de inicio."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Llega un punto en que las mensualidades ya no caben y la reacción natural es esconderse. Es exactamente lo peor que se puede hacer. Existe una salida que funciona mucho mejor: hablar antes de dejar de pagar y llegar con una propuesta.",
+      "sections": [
+        {
+          "subtitle": "Hablar antes de dejar de pagar",
+          "content": "La diferencia entre quien negocia a tiempo y quien se esconde es enorme. Quien avisa antes del primer atraso conserva credibilidad y suele obtener mejores condiciones. Quien desaparece acumula recargos, daña su historial y llega a la negociación en una posición mucho más débil. El momento de hablar es cuando se ve venir el problema, no cuando ya explotó."
+        },
+        {
+          "subtitle": "Qué se puede reestructurar",
+          "content": "Reestructurar significa acordar condiciones nuevas: alargar el plazo para bajar la mensualidad, reducir la tasa, aplicar un periodo de gracia, o unificar varias deudas en un solo pago. No todas las opciones están disponibles siempre, y dependen del tipo de crédito y de la institución. Lo que casi siempre existe es alguna disposición a conversar."
+        },
+        {
+          "subtitle": "Lo que cuesta reestructurar",
+          "content": "Reestructurar no es gratis. Alargar el plazo baja la mensualidad pero casi siempre aumenta el total que se termina pagando, porque hay más meses generando intereses. Algunas reestructuras también quedan registradas en el historial. Es una solución para un problema real, no una forma de pagar menos por conveniencia."
+        },
+        {
+          "subtitle": "Llegar con números, no con explicaciones",
+          "content": "Una negociación funciona cuando se llega con una propuesta concreta: puedo pagar tanto al mes, empezando en tal fecha, durante tantos meses. Eso es mucho más eficaz que explicar la situación y esperar una oferta. Un acreedor prefiere cobrar menos que no cobrar nada, y una propuesta realista le da una salida que puede aceptar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuándo conviene hablar con el acreedor?",
+          "options": [
+            "Antes de dejar de pagar",
+            "Después de varios atrasos",
+            "Nunca"
+          ],
+          "correct": "Antes de dejar de pagar"
+        },
+        {
+          "question": "¿Qué logra quien avisa a tiempo?",
+          "options": [
+            "Nada distinto",
+            "Conserva credibilidad y obtiene mejores condiciones",
+            "Empeora su situación"
+          ],
+          "correct": "Conserva credibilidad y obtiene mejores condiciones"
+        },
+        {
+          "question": "¿Qué pasa con quien se esconde?",
+          "options": [
+            "La deuda desaparece",
+            "Le perdonan el saldo",
+            "Acumula recargos y daña su historial"
+          ],
+          "correct": "Acumula recargos y daña su historial"
+        },
+        {
+          "question": "¿Qué es reestructurar?",
+          "options": [
+            "Acordar condiciones nuevas para la deuda",
+            "Dejar de pagar",
+            "Cambiar de banco"
+          ],
+          "correct": "Acordar condiciones nuevas para la deuda"
+        },
+        {
+          "question": "¿Qué se puede acordar?",
+          "options": [
+            "Solo el color del contrato",
+            "Plazo, tasa, periodo de gracia o unificar deudas",
+            "Nada"
+          ],
+          "correct": "Plazo, tasa, periodo de gracia o unificar deudas"
+        },
+        {
+          "question": "Alargar el plazo:",
+          "options": [
+            "Baja todo",
+            "No cambia nada",
+            "Baja la mensualidad pero sube el total pagado"
+          ],
+          "correct": "Baja la mensualidad pero sube el total pagado"
+        },
+        {
+          "question": "¿Es gratis reestructurar?",
+          "options": [
+            "No, tiene costos y a veces queda en el historial",
+            "Sí, siempre",
+            "Solo la primera vez"
+          ],
+          "correct": "No, tiene costos y a veces queda en el historial"
+        },
+        {
+          "question": "¿Cómo hay que llegar a negociar?",
+          "options": [
+            "Con explicaciones",
+            "Con una propuesta concreta de monto, fecha y plazo",
+            "Sin decir nada"
+          ],
+          "correct": "Con una propuesta concreta de monto, fecha y plazo"
+        },
+        {
+          "question": "¿Por qué un acreedor acepta menos?",
+          "options": [
+            "Por caridad",
+            "Porque lo obliga la ley",
+            "Porque prefiere cobrar menos que no cobrar nada"
+          ],
+          "correct": "Porque prefiere cobrar menos que no cobrar nada"
+        },
+        {
+          "question": "La reestructura es:",
+          "options": [
+            "Una solución para un problema real",
+            "Una forma de pagar menos por conveniencia",
+            "Un premio"
+          ],
+          "correct": "Una solución para un problema real"
+        }
+      ],
+      "rubric": "Logrado: explica qué es reestructurar, calcula su costo y prepara una propuesta con números. En proceso: sabe que se puede negociar sin preparar propuesta. Inicial: reconoce que esconderse empeora la situación."
+    },
+    "teacher_tips": [
+      "El contraste entre esconderse y avisar a tiempo es el aprendizaje principal. Cuantifíquelo con recargos concretos.",
+      "Sea honesto sobre el costo: alargar el plazo aumenta el total. Presentar la reestructura como solución mágica sería engañoso.",
+      "La redacción de la propuesta es un entregable concreto y muy aplicable. Dedíquele el tiempo del cierre."
+    ]
+  },
+  "P6-2-9": {
+    "code": "P6-2-9",
+    "title": "El Buró de Crédito: mitos y realidades",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Distinguir los mitos de las realidades sobre el Buró de Crédito y comprender cómo se construye y se consulta el historial.",
+      "competencies": [
+        "Comprensión del Historial Crediticio",
+        "Desmitificación",
+        "Consulta de Reportes",
+        "Gestión de Reputación Financiera"
+      ],
+      "materials": [
+        "Reporte de crédito simulado",
+        "Lista de mitos comunes",
+        "Casos con distintos historiales",
+        "Formato de revisión de reporte",
+        "Cartel de mitos y realidades"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Lista Negra",
+          "duration": "15 min",
+          "label": "El mito más grande"
+        },
+        {
+          "phase": "Desarrollo: Mitos y Datos",
+          "duration": "30 min",
+          "label": "Qué es cierto"
+        },
+        {
+          "phase": "Cierre: Mi Reporte",
+          "duration": "15 min",
+          "label": "Cómo consultarlo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"ESTOY EN EL BURÓ\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte qué significa estar en el Buró de Crédito. Casi todos dirán que es estar en una lista negra. Explique que todo el que ha tenido un crédito aparece ahí, incluidas las personas con historial impecable, y que confundir esto lleva a decisiones equivocadas como evitar todo crédito por miedo.",
+          "activity": "Dinámica \"¿Quién Aparece?\": el grupo estima quiénes están en el registro y descubre que prácticamente todos los adultos con crédito."
+        },
+        {
+          "title": "FASE II: MITOS Y REALIDADES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los mitos más comunes y su corrección: que se puede borrar el historial pagando a alguien, que un atraso dura para siempre, que consultar el propio reporte lo daña, que no tener historial es mejor que tener uno con algún tropiezo. Los alumnos clasifican diez afirmaciones como mito o realidad.",
+          "activity": "Dinámica \"Mito o Realidad\": cada equipo clasifica diez afirmaciones y corrige las falsas."
+        },
+        {
+          "title": "FASE III: CONSULTAR EL PROPIO REPORTE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que cada persona tiene derecho a consultar su propio reporte de crédito de forma gratuita con cierta periodicidad, y que hacerlo no lo perjudica. Enseñe qué revisar: que los créditos listados sean propios, que los saldos coincidan y que no haya registros de deudas desconocidas, que pueden indicar suplantación de identidad.",
+          "activity": "Dinámica \"Revisa el Reporte\": los alumnos analizan un reporte simulado y detectan un crédito que no corresponde."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todo el mundo dice \"estoy en el Buró\" como si fuera una condena. La realidad es que todo el que ha tenido un crédito aparece ahí, incluida la gente con historial perfecto. En esta clase vas a separar los mitos de lo que realmente ocurre.",
+      "sections": [
+        {
+          "subtitle": "El mito de la lista negra",
+          "content": "El registro de historial crediticio no es una lista de morosos: es un registro de comportamiento de pago de todas las personas que han tenido algún crédito. Estar ahí con pagos puntuales es una ventaja enorme, porque permite acceder a mejores condiciones. El problema nunca fue aparecer: el problema es aparecer con incumplimientos."
+        },
+        {
+          "subtitle": "No se puede borrar pagando a alguien",
+          "content": "Circulan ofertas de personas que aseguran poder borrar el historial a cambio de dinero. Es un fraude. El historial se actualiza con el comportamiento real de pago, y la única forma legítima de mejorarlo es pagar y sostener pagos puntuales durante un tiempo. Quien ofrece borrarlo está cobrando por algo que no puede entregar."
+        },
+        {
+          "subtitle": "Los atrasos no duran para siempre",
+          "content": "Un registro negativo tiene un plazo de permanencia establecido, que depende del monto de la deuda, y después deja de aparecer. Además, su peso disminuye conforme se acumula comportamiento reciente positivo. Eso significa que un tropiezo no cierra las puertas de forma permanente: se puede reconstruir, aunque toma tiempo."
+        },
+        {
+          "subtitle": "No tener historial también complica",
+          "content": "Existe la idea de que lo mejor es no tener ningún crédito. En la práctica, quien no tiene historial es un desconocido para las instituciones, y eso dificulta obtener financiamiento cuando de verdad se necesita. Un historial pequeño y bien manejado es mucho mejor carta de presentación que la ausencia total de información."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es el Buró una lista negra?",
+          "options": [
+            "Sí, solo morosos",
+            "No, aparecen todos los que han tenido crédito",
+            "Sí, es una lista de deudores"
+          ],
+          "correct": "No, aparecen todos los que han tenido crédito"
+        },
+        {
+          "question": "Estar ahí con pagos puntuales:",
+          "options": [
+            "Es malo igual",
+            "Da lo mismo",
+            "Es una ventaja"
+          ],
+          "correct": "Es una ventaja"
+        },
+        {
+          "question": "¿Se puede borrar el historial pagando a alguien?",
+          "options": [
+            "No, eso es un fraude",
+            "Sí, hay gestores",
+            "Sí, pagando al banco"
+          ],
+          "correct": "No, eso es un fraude"
+        },
+        {
+          "question": "¿Cómo se mejora legítimamente?",
+          "options": [
+            "Cambiando de nombre",
+            "Pagando y sosteniendo pagos puntuales",
+            "Cerrando cuentas"
+          ],
+          "correct": "Pagando y sosteniendo pagos puntuales"
+        },
+        {
+          "question": "¿Los atrasos duran para siempre?",
+          "options": [
+            "Sí, de por vida",
+            "Solo un mes",
+            "No, tienen plazo de permanencia"
+          ],
+          "correct": "No, tienen plazo de permanencia"
+        },
+        {
+          "question": "¿Qué disminuye el peso de un registro negativo?",
+          "options": [
+            "Acumular comportamiento reciente positivo",
+            "Esperar sin hacer nada",
+            "Abrir muchas cuentas"
+          ],
+          "correct": "Acumular comportamiento reciente positivo"
+        },
+        {
+          "question": "¿Consultar mi propio reporte lo daña?",
+          "options": [
+            "Sí, mucho",
+            "No",
+            "Solo si lo hago seguido"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Tengo derecho a consultarlo gratis?",
+          "options": [
+            "No, siempre se paga",
+            "Solo si tengo crédito",
+            "Sí, con cierta periodicidad"
+          ],
+          "correct": "Sí, con cierta periodicidad"
+        },
+        {
+          "question": "¿Qué hay que revisar en el reporte?",
+          "options": [
+            "Que los créditos sean propios y los saldos coincidan",
+            "Solo el nombre",
+            "La fecha de impresión"
+          ],
+          "correct": "Que los créditos sean propios y los saldos coincidan"
+        },
+        {
+          "question": "No tener ningún historial:",
+          "options": [
+            "Es lo mejor",
+            "Dificulta obtener financiamiento cuando se necesita",
+            "Da la mejor tasa"
+          ],
+          "correct": "Dificulta obtener financiamiento cuando se necesita"
+        }
+      ],
+      "rubric": "Logrado: distingue mitos de realidades, sabe consultar su reporte y qué revisar en él. En proceso: corrige el mito de la lista negra sin dominar el resto. Inicial: sabe que existe un registro."
+    },
+    "teacher_tips": [
+      "El mito de la lista negra es el más dañino y el más extendido. Corríjalo de forma explícita y repetida.",
+      "Advierta sobre los gestores que ofrecen borrar el historial: es un fraude común que afecta a familias vulnerables.",
+      "La detección de un crédito ajeno en el reporte enseña además a identificar suplantación de identidad."
+    ]
+  },
+  "P6-2-10": {
+    "code": "P6-2-10",
+    "title": "Finanzas y salud mental: el estrés del dinero",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Reconocer la relación entre problemas financieros y bienestar emocional, e identificar estrategias concretas para reducir el estrés del dinero.",
+      "competencies": [
+        "Bienestar Financiero",
+        "Manejo del Estrés",
+        "Búsqueda de Apoyo",
+        "Acción sobre lo Controlable"
+      ],
+      "materials": [
+        "Tarjetas de señales de estrés financiero",
+        "Formato de lo controlable y lo no controlable",
+        "Casos de situaciones de presión",
+        "Lista de recursos de apoyo",
+        "Cartel de los tres pasos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: No Solo Números",
+          "duration": "15 min",
+          "label": "El dinero y cómo nos sentimos"
+        },
+        {
+          "phase": "Desarrollo: Lo Controlable",
+          "duration": "30 min",
+          "label": "Separar dos columnas"
+        },
+        {
+          "phase": "Cierre: Pedir Ayuda",
+          "duration": "15 min",
+          "label": "No hacerlo solo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL DINERO NO ES SOLO NÚMEROS (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que los problemas de dinero afectan el sueño, la concentración, el ánimo y las relaciones familiares. Reconocerlo no es debilidad: es información. Muchas personas toman malas decisiones financieras precisamente porque el estrés reduce la capacidad de pensar con claridad.",
+          "activity": "Dinámica \"Señales\": el grupo identifica señales de que una preocupación financiera está afectando otras áreas de la vida."
+        },
+        {
+          "title": "FASE II: DOS COLUMNAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe a separar lo que se puede controlar de lo que no. No se controla la inflación, el desempleo de un familiar o una emergencia médica. Sí se controla revisar los números, hacer un plan, hablar con un acreedor, pedir ayuda. Los alumnos clasifican diez situaciones en las dos columnas.",
+          "activity": "Dinámica \"Controlo o No Controlo\": cada equipo clasifica diez elementos y elige una acción para cada uno de la columna controlable."
+        },
+        {
+          "title": "FASE III: NO HACERLO SOLO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que aislarse empeora todo: la persona deja de pedir ayuda justo cuando más la necesita. Presente los tres pasos: nombrar el problema con números en vez de con angustia, buscar apoyo en la familia o en instituciones que orientan gratuitamente, y actuar sobre una sola cosa controlable para recuperar sensación de avance.",
+          "activity": "Dinámica \"Un Solo Paso\": cada alumno identifica una acción concreta que reduciría la presión en un caso dado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Los problemas de dinero no se quedan en la cartera: quitan el sueño, ponen de mal humor y hacen que la gente tome peores decisiones justo cuando más necesita pensar claro. En esta clase vas a aprender cómo separar lo que puedes controlar de lo que no.",
+      "sections": [
+        {
+          "subtitle": "El estrés financiero es real y tiene efectos",
+          "content": "Las preocupaciones por dinero afectan el sueño, la concentración, el estado de ánimo y las relaciones familiares. Además tienen un efecto circular: el estrés reduce la capacidad de tomar buenas decisiones, y las malas decisiones aumentan el problema financiero, que a su vez aumenta el estrés. Romper ese ciclo empieza por reconocerlo."
+        },
+        {
+          "subtitle": "Separar lo controlable de lo que no",
+          "content": "Buena parte de la angustia viene de preocuparse por cosas sobre las que no se puede hacer nada: la inflación, una crisis económica, la decisión de un empleador. Escribir dos columnas ayuda enormemente. En la de lo controlable siempre hay algo: revisar los números, hacer un plan, hablar con un acreedor, ajustar un gasto, pedir orientación."
+        },
+        {
+          "subtitle": "Nombrar el problema con números",
+          "content": "Una preocupación difusa se siente enorme e inabarcable. La misma preocupación expresada en números se vuelve manejable: no es \"estamos ahogados\", es \"faltan $2,300 este mes\". Los números no resuelven el problema por sí solos, pero lo convierten en algo con tamaño definido, y algo con tamaño definido se puede atacar."
+        },
+        {
+          "subtitle": "Pedir ayuda no es fracasar",
+          "content": "El aislamiento es la reacción más común y la más dañina: la persona deja de hablar del tema justo cuando más apoyo necesita. Hablarlo en familia, buscar orientación en instituciones que la ofrecen gratuitamente, o acudir a apoyo emocional cuando el malestar es grande, no son señales de fracaso. Son parte de resolver el problema, igual que hacer las cuentas."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué afecta el estrés financiero?",
+          "options": [
+            "Solo la cartera",
+            "Nada más",
+            "Sueño, concentración, ánimo y relaciones"
+          ],
+          "correct": "Sueño, concentración, ánimo y relaciones"
+        },
+        {
+          "question": "¿Cuál es el efecto circular?",
+          "options": [
+            "El estrés lleva a peores decisiones y estas aumentan el problema",
+            "El estrés mejora las decisiones",
+            "No hay relación"
+          ],
+          "correct": "El estrés lleva a peores decisiones y estas aumentan el problema"
+        },
+        {
+          "question": "¿Por dónde empieza romper ese ciclo?",
+          "options": [
+            "Por ignorarlo",
+            "Por reconocerlo",
+            "Por gastar más"
+          ],
+          "correct": "Por reconocerlo"
+        },
+        {
+          "question": "¿Qué no se puede controlar?",
+          "options": [
+            "Revisar mis números",
+            "Hacer un plan",
+            "La inflación o una crisis económica"
+          ],
+          "correct": "La inflación o una crisis económica"
+        },
+        {
+          "question": "¿Qué sí se puede controlar?",
+          "options": [
+            "Revisar números, hacer un plan, hablar con un acreedor",
+            "El desempleo general",
+            "Los precios"
+          ],
+          "correct": "Revisar números, hacer un plan, hablar con un acreedor"
+        },
+        {
+          "question": "¿Para qué sirven las dos columnas?",
+          "options": [
+            "Para llenar una hoja",
+            "Para dejar de gastar energía en lo incontrolable",
+            "Para nada"
+          ],
+          "correct": "Para dejar de gastar energía en lo incontrolable"
+        },
+        {
+          "question": "¿Qué logra nombrar el problema con números?",
+          "options": [
+            "Lo hace desaparecer",
+            "Lo agranda",
+            "Lo convierte en algo con tamaño definido"
+          ],
+          "correct": "Lo convierte en algo con tamaño definido"
+        },
+        {
+          "question": "¿Cuál es la reacción más común y más dañina?",
+          "options": [
+            "Aislarse y dejar de hablar del tema",
+            "Pedir ayuda",
+            "Hacer cuentas"
+          ],
+          "correct": "Aislarse y dejar de hablar del tema"
+        },
+        {
+          "question": "Pedir ayuda es:",
+          "options": [
+            "Señal de fracaso",
+            "Parte de resolver el problema",
+            "Innecesario"
+          ],
+          "correct": "Parte de resolver el problema"
+        },
+        {
+          "question": "¿Qué recupera la sensación de avance?",
+          "options": [
+            "Esperar",
+            "Preocuparse más",
+            "Actuar sobre una sola cosa controlable"
+          ],
+          "correct": "Actuar sobre una sola cosa controlable"
+        }
+      ],
+      "rubric": "Logrado: reconoce efectos del estrés financiero, separa lo controlable y define una acción concreta. En proceso: identifica el problema sin distinguir columnas. Inicial: reconoce que el dinero afecta el ánimo."
+    },
+    "teacher_tips": [
+      "Trate el tema con cuidado: en cualquier grupo habrá alumnos cuya familia atraviesa dificultades reales.",
+      "Nunca pida detalles personales. Trabaje con casos ficticios y con reflexión individual privada.",
+      "Si detecta señales de que un alumno atraviesa una situación grave, canalice con la persona responsable de orientación en la escuela."
     ]
   },
   "P6-3-1": {
@@ -2722,6 +4562,926 @@
       "Muestre gráficas históricas de la bolsa para que vean la volatilidad real."
     ]
   },
+  "P6-3-6": {
+    "code": "P6-3-6",
+    "title": "La regla del 4%: cuánto necesito para vivir de mis inversiones",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender la regla del 4% como forma de estimar cuánto capital se necesita para vivir de los rendimientos.",
+      "competencies": [
+        "Planeación de Largo Plazo",
+        "Cálculo de Capital Objetivo",
+        "Comprensión de Rendimientos",
+        "Proyección Financiera"
+      ],
+      "materials": [
+        "Calculadora",
+        "Formato de cálculo de capital objetivo",
+        "Tabla de gastos mensuales de ejemplo",
+        "Gráfico de acumulación",
+        "Cartel de la regla del 4%"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Vivir Sin Trabajar",
+          "duration": "15 min",
+          "label": "¿Cuánto haría falta?"
+        },
+        {
+          "phase": "Desarrollo: La Regla",
+          "duration": "30 min",
+          "label": "Multiplicar por 25"
+        },
+        {
+          "phase": "Cierre: Sus Límites",
+          "duration": "15 min",
+          "label": "Qué supone y qué ignora"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CUÁNTO HARÍA FALTA? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto dinero haría falta para vivir sin depender de un sueldo. Las respuestas serán muy dispares. Explique que existe una forma sencilla de estimarlo y que la respuesta depende de una sola cosa: cuánto se gasta al año.",
+          "activity": "Dinámica \"Adivina la Cifra\": el grupo estima el capital necesario antes de conocer la regla y compara al final."
+        },
+        {
+          "title": "FASE II: MULTIPLICAR POR 25 (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la regla: si se retira el 4% del capital cada año, ese capital tiende a durar mucho tiempo porque los rendimientos reponen parte de lo retirado. Retirar 4% equivale a necesitar 25 veces el gasto anual. Los alumnos calculan el capital objetivo de tres estilos de vida distintos.",
+          "activity": "Dinámica \"Por 25\": cada equipo calcula el capital objetivo de tres perfiles de gasto y compara resultados."
+        },
+        {
+          "title": "FASE III: LO QUE LA REGLA SUPONE (CIERRE)",
+          "duration": "15 min",
+          "description": "Sea explícito sobre los límites: la regla asume rendimientos razonables, considera la inflación de forma simplificada y no contempla emergencias grandes ni cambios de vida. Es una brújula para dimensionar la meta, no una garantía. Los alumnos identifican qué supuestos podrían fallar.",
+          "activity": "Dinámica \"¿Y Si...?\": cada equipo plantea un escenario que rompería el supuesto y propone un ajuste."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Vivir de tus inversiones suena a fantasía, pero es un número que se puede calcular. La regla del 4% da una estimación rápida y sirve sobre todo para una cosa: convertir una meta vaga en una cifra concreta hacia la que apuntar.",
+      "sections": [
+        {
+          "subtitle": "De dónde sale el 4%",
+          "content": "La idea es que si un capital está invertido y genera rendimientos, se puede retirar una parte cada año sin agotarlo rápidamente. El 4% surge de estudios sobre cuánto se puede retirar anualmente manteniendo el capital durante décadas. No es una ley física: es una referencia que resultó razonablemente robusta en periodos largos."
+        },
+        {
+          "subtitle": "Multiplicar el gasto anual por 25",
+          "content": "Retirar el 4% al año es lo mismo que decir que el capital debe ser 25 veces el gasto anual, porque 100 dividido entre 4 da 25. Si alguien gasta $180,000 al año, necesitaría alrededor de $4,500,000. La cifra impresiona, pero tiene una lectura útil: reducir el gasto anual reduce la meta mucho más rápido que aumentar el ahorro."
+        },
+        {
+          "subtitle": "El gasto manda más que el ingreso",
+          "content": "Una consecuencia poco intuitiva es que cada peso de gasto anual recurrente que se elimina reduce la meta en 25 pesos. Reducir $1,000 mensuales de gasto baja la meta en $300,000. Por eso quienes persiguen esta meta trabajan tanto en el nivel de gasto como en el de ingreso: el primero tiene un efecto multiplicado."
+        },
+        {
+          "subtitle": "Lo que la regla no dice",
+          "content": "La regla asume rendimientos históricos que pueden no repetirse, trata la inflación de forma simplificada y no contempla gastos médicos mayores, cambios familiares o periodos largos de mercados malos. Sirve para dimensionar una meta y decidir cuánto ahorrar hoy, no para garantizar un resultado. Cualquiera que la presente como certeza está exagerando."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué estima la regla del 4%?",
+          "options": [
+            "Cuánto cobra un banco",
+            "El interés de un préstamo",
+            "Cuánto capital se necesita para vivir de los rendimientos"
+          ],
+          "correct": "Cuánto capital se necesita para vivir de los rendimientos"
+        },
+        {
+          "question": "¿Por cuánto se multiplica el gasto anual?",
+          "options": [
+            "Por 25",
+            "Por 4",
+            "Por 10"
+          ],
+          "correct": "Por 25"
+        },
+        {
+          "question": "¿Por qué 25?",
+          "options": [
+            "Porque son 25 años",
+            "Porque 100 entre 4 da 25",
+            "Es arbitrario"
+          ],
+          "correct": "Porque 100 entre 4 da 25"
+        },
+        {
+          "question": "Si alguien gasta $180,000 al año necesita cerca de:",
+          "options": [
+            "$180,000",
+            "$720,000",
+            "$4,500,000"
+          ],
+          "correct": "$4,500,000"
+        },
+        {
+          "question": "Eliminar $1,000 mensuales de gasto baja la meta en:",
+          "options": [
+            "$300,000",
+            "$12,000",
+            "$1,000"
+          ],
+          "correct": "$300,000"
+        },
+        {
+          "question": "¿Qué tiene efecto multiplicado?",
+          "options": [
+            "Aumentar el ingreso una vez",
+            "Reducir el gasto recurrente",
+            "Cambiar de banco"
+          ],
+          "correct": "Reducir el gasto recurrente"
+        },
+        {
+          "question": "¿La regla es una garantía?",
+          "options": [
+            "Sí, siempre funciona",
+            "Sí, está en la ley",
+            "No, es una referencia"
+          ],
+          "correct": "No, es una referencia"
+        },
+        {
+          "question": "¿Qué no contempla?",
+          "options": [
+            "Emergencias grandes y cambios de vida",
+            "El gasto anual",
+            "El capital"
+          ],
+          "correct": "Emergencias grandes y cambios de vida"
+        },
+        {
+          "question": "¿De dónde viene el 4%?",
+          "options": [
+            "De una ley bancaria",
+            "De estudios sobre retiros sostenibles en periodos largos",
+            "De la inflación"
+          ],
+          "correct": "De estudios sobre retiros sostenibles en periodos largos"
+        },
+        {
+          "question": "¿Para qué sirve principalmente?",
+          "options": [
+            "Para predecir el mercado",
+            "Para elegir banco",
+            "Para dimensionar la meta y decidir cuánto ahorrar hoy"
+          ],
+          "correct": "Para dimensionar la meta y decidir cuánto ahorrar hoy"
+        }
+      ],
+      "rubric": "Logrado: calcula su capital objetivo, explica el efecto del gasto y reconoce los límites de la regla. En proceso: aplica la multiplicación sin interpretar el resultado. Inicial: identifica que la meta depende del gasto."
+    },
+    "teacher_tips": [
+      "El efecto de multiplicar por 25 cada peso de gasto recurrente es el hallazgo más potente. Hágalo explícito con números.",
+      "Sea honesto con los límites de la regla. Presentarla como certeza sería irresponsable.",
+      "Aterrice la meta a un plazo: la pregunta útil no es la cifra final sino cuánto ahorrar al mes desde hoy."
+    ]
+  },
+  "P6-3-7": {
+    "code": "P6-3-7",
+    "title": "Seguros: gastos médicos, vida y auto",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Identificar los principales tipos de seguro, qué protege cada uno y cómo se relacionan con el fondo de emergencia.",
+      "competencies": [
+        "Gestión de Riesgos",
+        "Comprensión de Seguros",
+        "Evaluación de Coberturas",
+        "Protección Patrimonial"
+      ],
+      "materials": [
+        "Tarjetas de tipos de seguro",
+        "Casos de siniestros",
+        "Comparativo de coberturas",
+        "Formato de análisis de riesgo",
+        "Cartel de deducible y suma asegurada"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Golpe Grande",
+          "duration": "15 min",
+          "label": "Lo que el ahorro no cubre"
+        },
+        {
+          "phase": "Desarrollo: Tipos de Seguro",
+          "duration": "30 min",
+          "label": "Qué protege cada uno"
+        },
+        {
+          "phase": "Cierre: Leer la Póliza",
+          "duration": "15 min",
+          "label": "Deducible y exclusiones"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LO QUE EL AHORRO NO ALCANZA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee un gasto médico de $400,000 o un choque grave. Pregunte si un fondo de emergencia lo cubre. La respuesta es que no. Explique que existe una diferencia clave: el fondo de emergencia cubre golpes medianos y frecuentes; el seguro cubre golpes raros pero devastadores.",
+          "activity": "Dinámica \"¿Alcanza el Fondo?\": el grupo clasifica seis imprevistos según si los cubre el ahorro o hace falta un seguro."
+        },
+        {
+          "title": "FASE II: QUÉ PROTEGE CADA SEGURO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los tipos principales: gastos médicos mayores, vida, auto, hogar y responsabilidad civil. Explique qué cubre cada uno y a quién protege. Aclare que el seguro de vida no protege a quien lo contrata sino a quien depende de él, que es la confusión más común.",
+          "activity": "Dinámica \"Cada Riesgo con su Seguro\": cada equipo asocia siniestros con la cobertura correspondiente."
+        },
+        {
+          "title": "FASE III: LO QUE DICE LA PÓLIZA (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique deducible, coaseguro, suma asegurada y exclusiones. Insista en que las exclusiones son la parte que casi nadie lee y la que decide si el seguro sirve el día del siniestro. Los alumnos revisan una póliza simulada y localizan estos cuatro elementos.",
+          "activity": "Dinámica \"Busca la Letra Chiquita\": los alumnos encuentran el deducible y una exclusión relevante en una póliza de ejemplo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un fondo de emergencia resuelve el refrigerador descompuesto o dos meses sin trabajo. No resuelve una hospitalización de medio millón de pesos. Para eso existen los seguros, y entenderlos es entender cuándo el ahorro no basta.",
+      "sections": [
+        {
+          "subtitle": "Seguro y fondo de emergencia no son lo mismo",
+          "content": "El fondo de emergencia cubre eventos medianos y relativamente frecuentes, y se usa varias veces en la vida. El seguro cubre eventos poco probables pero de un tamaño que ningún ahorro razonable podría absorber. Los dos son necesarios y ninguno sustituye al otro: quien solo tiene fondo queda expuesto al golpe grande, y quien solo tiene seguro no puede cubrir el deducible."
+        },
+        {
+          "subtitle": "Los tipos principales",
+          "content": "El de gastos médicos mayores cubre hospitalizaciones y tratamientos costosos. El de vida entrega una suma a los beneficiarios si la persona fallece, y por eso protege a quienes dependen de ella, no a quien lo contrata. El de auto cubre daños al vehículo y, sobre todo, daños a terceros. El de hogar cubre la vivienda y su contenido. La responsabilidad civil cubre el daño que uno causa a otros."
+        },
+        {
+          "subtitle": "Deducible, coaseguro y suma asegurada",
+          "content": "El deducible es la parte que paga el asegurado antes de que la aseguradora empiece a pagar. El coaseguro es el porcentaje que sigue pagando después. La suma asegurada es el máximo que cubre la póliza. Una prima muy barata casi siempre significa deducible alto o suma asegurada baja: el precio no se puede evaluar sin mirar estos tres números juntos."
+        },
+        {
+          "subtitle": "Las exclusiones deciden todo",
+          "content": "Las exclusiones son las situaciones que la póliza no cubre, y es la sección que casi nadie lee. Condiciones preexistentes no declaradas, ciertos usos del vehículo, determinados eventos. El día del siniestro, esa sección es la que determina si el seguro responde o no. Leerla antes de contratar vale más que comparar precios."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué cubre el fondo de emergencia?",
+          "options": [
+            "Eventos medianos y frecuentes",
+            "Solo hospitalizaciones",
+            "Todo"
+          ],
+          "correct": "Eventos medianos y frecuentes"
+        },
+        {
+          "question": "¿Qué cubre un seguro?",
+          "options": [
+            "Gastos diarios",
+            "Eventos poco probables pero muy grandes",
+            "El súper"
+          ],
+          "correct": "Eventos poco probables pero muy grandes"
+        },
+        {
+          "question": "¿Uno sustituye al otro?",
+          "options": [
+            "Sí, el seguro sustituye al fondo",
+            "Sí, el fondo sustituye al seguro",
+            "No, los dos son necesarios"
+          ],
+          "correct": "No, los dos son necesarios"
+        },
+        {
+          "question": "¿A quién protege el seguro de vida?",
+          "options": [
+            "A quienes dependen del asegurado",
+            "Al asegurado",
+            "Al banco"
+          ],
+          "correct": "A quienes dependen del asegurado"
+        },
+        {
+          "question": "¿Qué cubre principalmente el seguro de auto?",
+          "options": [
+            "Solo la gasolina",
+            "Daños al vehículo y a terceros",
+            "El estacionamiento"
+          ],
+          "correct": "Daños al vehículo y a terceros"
+        },
+        {
+          "question": "¿Qué es el deducible?",
+          "options": [
+            "La prima mensual",
+            "El máximo cubierto",
+            "Lo que paga el asegurado antes de que la aseguradora pague"
+          ],
+          "correct": "Lo que paga el asegurado antes de que la aseguradora pague"
+        },
+        {
+          "question": "¿Qué es la suma asegurada?",
+          "options": [
+            "El máximo que cubre la póliza",
+            "Lo que cuesta la póliza",
+            "El deducible"
+          ],
+          "correct": "El máximo que cubre la póliza"
+        },
+        {
+          "question": "Una prima muy barata suele significar:",
+          "options": [
+            "Mejor cobertura",
+            "Deducible alto o suma asegurada baja",
+            "Nada en particular"
+          ],
+          "correct": "Deducible alto o suma asegurada baja"
+        },
+        {
+          "question": "¿Qué son las exclusiones?",
+          "options": [
+            "Los descuentos",
+            "Los beneficiarios",
+            "Lo que la póliza no cubre"
+          ],
+          "correct": "Lo que la póliza no cubre"
+        },
+        {
+          "question": "¿Cuándo importan las exclusiones?",
+          "options": [
+            "El día del siniestro deciden si el seguro responde",
+            "Nunca",
+            "Solo al contratar"
+          ],
+          "correct": "El día del siniestro deciden si el seguro responde"
+        }
+      ],
+      "rubric": "Logrado: distingue tipos de seguro, explica deducible y suma asegurada y localiza exclusiones. En proceso: asocia seguros con riesgos sin dominar los términos. Inicial: distingue seguro de fondo de emergencia."
+    },
+    "teacher_tips": [
+      "La confusión sobre el seguro de vida es casi universal. Corríjala de forma explícita.",
+      "Lleve una póliza real anonimizada. Ver las exclusiones impresas impacta más que explicarlas.",
+      "Insista en que fondo y seguro se complementan: sin fondo no se puede pagar el deducible."
+    ]
+  },
+  "P6-3-8": {
+    "code": "P6-3-8",
+    "title": "Inflación e interés real: cuánto gano de verdad",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Calcular el interés real descontando la inflación y evaluar si un rendimiento realmente aumenta el poder de compra.",
+      "competencies": [
+        "Cálculo de Interés Real",
+        "Comprensión de Inflación",
+        "Evaluación de Rendimientos",
+        "Decisión de Inversión"
+      ],
+      "materials": [
+        "Tabla de tasas nominales de ejemplo",
+        "Datos de inflación anual",
+        "Calculadora",
+        "Casos de instrumentos con distintos rendimientos",
+        "Cartel de la fórmula del interés real"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Rendimiento Engañoso",
+          "duration": "15 min",
+          "label": "Ganar y perder a la vez"
+        },
+        {
+          "phase": "Desarrollo: Interés Real",
+          "duration": "30 min",
+          "label": "Restar la inflación"
+        },
+        {
+          "phase": "Cierre: Decidir con el Real",
+          "duration": "15 min",
+          "label": "Comparar opciones"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: GANAR Y PERDER A LA VEZ (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee una cuenta que paga 4% anual en un año con 6% de inflación. Pregunte si esa persona ganó dinero. Dirán que sí porque tiene más pesos. Muestre que con esos pesos compra menos que antes: ganó en pesos y perdió en poder de compra.",
+          "activity": "Dinámica \"Más Pesos, Menos Cosas\": el grupo calcula cuántos productos se compraban antes y después con el saldo."
+        },
+        {
+          "title": "FASE II: EL INTERÉS REAL (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el interés real es aproximadamente la tasa nominal menos la inflación. Es la única cifra que dice si el poder de compra creció. Los alumnos calculan el interés real de cinco instrumentos con distintas tasas bajo un mismo escenario de inflación.",
+          "activity": "Dinámica \"Tasa Real\": cada equipo calcula el interés real de cinco opciones y las ordena."
+        },
+        {
+          "title": "FASE III: DECIDIR CON LA CIFRA CORRECTA (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos comparan opciones donde la que tiene la tasa nominal más alta no siempre es la mejor una vez consideradas comisiones e impuestos. Insista en que el orden correcto es: tasa nominal, menos inflación, menos comisiones, menos impuestos. Lo que queda es lo que realmente se ganó.",
+          "activity": "Dinámica \"El Ganador Real\": cada equipo elige la mejor opción aplicando los cuatro descuentos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Una cuenta que paga 4% suena bien hasta que la inflación fue 6%. Tienes más pesos y compras menos cosas. El interés real es la cifra que separa la ganancia aparente de la ganancia verdadera.",
+      "sections": [
+        {
+          "subtitle": "Interés nominal contra interés real",
+          "content": "El interés nominal es el número que anuncia la institución. El interés real es lo que queda después de descontar la inflación, y es la única cifra que indica si tu poder de compra aumentó. Con 4% nominal y 6% de inflación, el interés real es negativo: tienes más pesos y menos capacidad de compra que al inicio."
+        },
+        {
+          "subtitle": "Cómo se calcula",
+          "content": "La forma aproximada es restar: tasa nominal menos inflación. Con 9% nominal y 5% de inflación, el interés real ronda el 4%. Existe una fórmula más exacta que divide en lugar de restar, pero para tasas moderadas la resta da una aproximación suficiente para tomar decisiones cotidianas."
+        },
+        {
+          "subtitle": "El dinero parado pierde siempre",
+          "content": "Guardar efectivo en casa da 0% nominal, así que su interés real es exactamente la inflación en negativo. Con 5% de inflación, $10,000 guardados un año compran lo que antes compraban $9,500. No hay riesgo de perder los billetes, pero hay una pérdida garantizada de poder de compra, y es la que más gente ignora."
+        },
+        {
+          "subtitle": "Comisiones e impuestos también restan",
+          "content": "Después de descontar la inflación quedan dos restas más: las comisiones del instrumento y los impuestos sobre los rendimientos. Una opción con tasa nominal más alta pero comisión elevada puede terminar por debajo de otra más modesta. El orden correcto es nominal, menos inflación, menos comisiones, menos impuestos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el interés nominal?",
+          "options": [
+            "Lo que queda tras la inflación",
+            "El número que anuncia la institución",
+            "La comisión"
+          ],
+          "correct": "El número que anuncia la institución"
+        },
+        {
+          "question": "¿Qué es el interés real?",
+          "options": [
+            "La tasa anunciada",
+            "El impuesto",
+            "Lo que queda al descontar la inflación"
+          ],
+          "correct": "Lo que queda al descontar la inflación"
+        },
+        {
+          "question": "Con 4% nominal y 6% de inflación:",
+          "options": [
+            "El interés real es negativo",
+            "Se ganó poder de compra",
+            "No cambia nada"
+          ],
+          "correct": "El interés real es negativo"
+        },
+        {
+          "question": "Con 9% nominal y 5% de inflación el real ronda:",
+          "options": [
+            "14%",
+            "4%",
+            "9%"
+          ],
+          "correct": "4%"
+        },
+        {
+          "question": "¿Qué interés real tiene el efectivo guardado?",
+          "options": [
+            "Cero",
+            "Positivo",
+            "La inflación en negativo"
+          ],
+          "correct": "La inflación en negativo"
+        },
+        {
+          "question": "$10,000 con 5% de inflación al año compran como:",
+          "options": [
+            "$9,500",
+            "$10,500",
+            "$10,000"
+          ],
+          "correct": "$9,500"
+        },
+        {
+          "question": "¿Qué más hay que restar después de la inflación?",
+          "options": [
+            "Nada",
+            "Comisiones e impuestos",
+            "Solo el IVA"
+          ],
+          "correct": "Comisiones e impuestos"
+        },
+        {
+          "question": "¿La tasa nominal más alta siempre gana?",
+          "options": [
+            "Sí, siempre",
+            "Sí, por ley",
+            "No, depende de comisiones e impuestos"
+          ],
+          "correct": "No, depende de comisiones e impuestos"
+        },
+        {
+          "question": "¿Cuál es el orden correcto?",
+          "options": [
+            "Nominal, menos inflación, menos comisiones, menos impuestos",
+            "Solo nominal",
+            "Nominal más inflación"
+          ],
+          "correct": "Nominal, menos inflación, menos comisiones, menos impuestos"
+        },
+        {
+          "question": "¿Qué cifra indica si creció el poder de compra?",
+          "options": [
+            "El interés nominal",
+            "El interés real",
+            "La comisión"
+          ],
+          "correct": "El interés real"
+        }
+      ],
+      "rubric": "Logrado: calcula interés real, aplica los cuatro descuentos y elige la mejor opción. En proceso: resta la inflación sin considerar comisiones. Inicial: distingue nominal de real."
+    },
+    "teacher_tips": [
+      "El caso del efectivo guardado en casa es el más revelador: pérdida garantizada que casi nadie percibe.",
+      "Use datos de inflación reales del año en curso para que el ejercicio no se sienta hipotético.",
+      "La resta simple basta a este nivel. Mencione la fórmula exacta sin exigirla."
+    ]
+  },
+  "P6-3-9": {
+    "code": "P6-3-9",
+    "title": "Invertir con poco: los montos mínimos reales en México",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Reconocer que se puede empezar a invertir con montos pequeños e identificar los instrumentos accesibles en México.",
+      "competencies": [
+        "Acceso a Inversión",
+        "Comparación de Instrumentos",
+        "Constancia en el Aporte",
+        "Superación de Barreras"
+      ],
+      "materials": [
+        "Tabla de montos mínimos por instrumento",
+        "Calculadora",
+        "Casos de aportaciones pequeñas sostenidas",
+        "Comparativo de plataformas",
+        "Cartel de \"empezar es lo difícil\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Mito del Millón",
+          "duration": "15 min",
+          "label": "Creer que no alcanza"
+        },
+        {
+          "phase": "Desarrollo: Montos Reales",
+          "duration": "30 min",
+          "label": "Qué se puede con poco"
+        },
+        {
+          "phase": "Cierre: La Constancia",
+          "duration": "15 min",
+          "label": "Aportar cada mes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"ESO ES PARA RICOS\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto creen que hace falta para empezar a invertir. Las respuestas serán cifras altas. Explique que existen instrumentos que aceptan montos de cien pesos, y que la barrera real casi nunca es el dinero: es no saber que existen y no dar el primer paso.",
+          "activity": "Dinámica \"¿Cuánto Creías?\": cada alumno escribe su estimación y la compara con los montos mínimos reales."
+        },
+        {
+          "title": "FASE II: LOS MONTOS REALES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los instrumentos accesibles en México: la plataforma gubernamental de valores que permite empezar con montos muy bajos, los fondos de inversión de las casas de bolsa, las aportaciones voluntarias al AFORE y los pagarés bancarios. Compare montos mínimos, liquidez y riesgo de cada uno.",
+          "activity": "Dinámica \"Compara Cuatro\": cada equipo llena una tabla con monto mínimo, liquidez y riesgo de cuatro instrumentos."
+        },
+        {
+          "title": "FASE III: LA CONSTANCIA GANA (CIERRE)",
+          "duration": "15 min",
+          "description": "Muestre que aportar poco cada mes durante muchos años supera con claridad a esperar a tener una cantidad grande. Quien espera suele no empezar nunca. La combinación de constancia y tiempo hace más que el monto inicial, y esa es la conclusión que hay que dejar clara.",
+          "activity": "Dinámica \"El Que Empezó Antes\": comparan a quien aportó $300 mensuales desde joven con quien aportó $1,000 empezando diez años después."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Mucha gente cree que invertir es para quien ya tiene mucho dinero. En México hay instrumentos que aceptan aportaciones de cien pesos. La barrera casi nunca es el monto: es no saber que existen y no dar el primer paso.",
+      "sections": [
+        {
+          "subtitle": "Se puede empezar con muy poco",
+          "content": "Existen plataformas donde se puede comprar un instrumento gubernamental con montos muy bajos, fondos de inversión que aceptan aportaciones modestas y aportaciones voluntarias al AFORE que se pueden hacer incluso en tiendas de conveniencia. El requisito real no es dinero: es identificación, una cuenta bancaria y decidirse a abrir la primera."
+        },
+        {
+          "subtitle": "Qué comparar entre instrumentos",
+          "content": "Al elegir hay tres cosas que mirar: el monto mínimo para entrar, la liquidez, que es qué tan rápido se puede recuperar el dinero, y el riesgo, que es qué tanto puede variar el valor. Un instrumento gubernamental tiene riesgo bajo y liquidez media; un fondo de renta variable tiene más riesgo y más potencial. No hay uno mejor: hay uno adecuado a cada objetivo."
+        },
+        {
+          "subtitle": "La constancia importa más que el monto",
+          "content": "Aportar $300 cada mes durante veinte años produce un resultado muy superior al de aportar $1,000 durante ocho. El tiempo es el ingrediente que no se puede comprar después, y la constancia es lo que lo activa. Por eso empezar pequeño hoy vence a empezar grande dentro de varios años."
+        },
+        {
+          "subtitle": "Cuidado con lo que promete demasiado",
+          "content": "Junto a los instrumentos legítimos aparecen esquemas que prometen rendimientos muy por encima del mercado y los presentan como garantizados. Ninguna inversión real garantiza rendimientos altos. Antes de entregar dinero conviene verificar que la institución esté registrada ante las autoridades financieras, y desconfiar de la presión para decidir rápido."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Hace falta mucho dinero para empezar?",
+          "options": [
+            "Sí, cientos de miles",
+            "Sí, un millón",
+            "No, hay instrumentos desde montos muy bajos"
+          ],
+          "correct": "No, hay instrumentos desde montos muy bajos"
+        },
+        {
+          "question": "¿Cuál es la barrera real?",
+          "options": [
+            "No saber que existen y no dar el primer paso",
+            "El monto mínimo",
+            "La edad"
+          ],
+          "correct": "No saber que existen y no dar el primer paso"
+        },
+        {
+          "question": "¿Qué se necesita para abrir?",
+          "options": [
+            "Un aval",
+            "Identificación y una cuenta bancaria",
+            "Ser empresario"
+          ],
+          "correct": "Identificación y una cuenta bancaria"
+        },
+        {
+          "question": "¿Qué es la liquidez?",
+          "options": [
+            "El rendimiento",
+            "La comisión",
+            "Qué tan rápido se recupera el dinero"
+          ],
+          "correct": "Qué tan rápido se recupera el dinero"
+        },
+        {
+          "question": "¿Qué es el riesgo en este contexto?",
+          "options": [
+            "Qué tanto puede variar el valor",
+            "El monto mínimo",
+            "El plazo"
+          ],
+          "correct": "Qué tanto puede variar el valor"
+        },
+        {
+          "question": "¿Hay un instrumento mejor que todos?",
+          "options": [
+            "Sí, el de mayor tasa",
+            "No, hay uno adecuado a cada objetivo",
+            "Sí, el bancario"
+          ],
+          "correct": "No, hay uno adecuado a cada objetivo"
+        },
+        {
+          "question": "¿Qué importa más, monto o constancia?",
+          "options": [
+            "El monto inicial",
+            "Ninguno",
+            "La constancia sostenida en el tiempo"
+          ],
+          "correct": "La constancia sostenida en el tiempo"
+        },
+        {
+          "question": "¿Qué no se puede comprar después?",
+          "options": [
+            "El tiempo",
+            "El dinero",
+            "La cuenta"
+          ],
+          "correct": "El tiempo"
+        },
+        {
+          "question": "¿Qué promete un esquema fraudulento?",
+          "options": [
+            "Rendimientos moderados",
+            "Rendimientos altos y garantizados",
+            "Nada"
+          ],
+          "correct": "Rendimientos altos y garantizados"
+        },
+        {
+          "question": "¿Qué conviene verificar?",
+          "options": [
+            "Que tenga oficina bonita",
+            "Que la recomiende un amigo",
+            "Que la institución esté registrada ante las autoridades"
+          ],
+          "correct": "Que la institución esté registrada ante las autoridades"
+        }
+      ],
+      "rubric": "Logrado: identifica instrumentos accesibles, compara por liquidez y riesgo y explica el valor de la constancia. En proceso: sabe que se puede con poco sin distinguir instrumentos. Inicial: reconoce que invertir no es solo para ricos."
+    },
+    "teacher_tips": [
+      "La comparación entre quien empezó pequeño y temprano contra quien empezó grande y tarde es lo más convincente de la clase.",
+      "Mencione instrumentos por tipo, no por marca comercial, para que la clase no envejezca ni parezca publicidad.",
+      "Incluya siempre la advertencia sobre esquemas fraudulentos: este tema es el que más los atrae."
+    ]
+  },
+  "P6-3-10": {
+    "code": "P6-3-10",
+    "title": "Testamento y sucesión: proteger a quien quiero",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué es un testamento, por qué importa a cualquier edad y qué ocurre cuando no existe.",
+      "competencies": [
+        "Planeación Sucesoria",
+        "Designación de Beneficiarios",
+        "Protección Familiar",
+        "Organización Documental"
+      ],
+      "materials": [
+        "Formato de inventario patrimonial",
+        "Caso de sucesión sin testamento",
+        "Lista de productos con beneficiarios",
+        "Guía de trámite",
+        "Cartel de los tres documentos clave"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Lo Que Nadie Habla",
+          "duration": "15 min",
+          "label": "El tema incómodo"
+        },
+        {
+          "phase": "Desarrollo: Qué Es y Qué Cubre",
+          "duration": "30 min",
+          "label": "Testamento y beneficiarios"
+        },
+        {
+          "phase": "Cierre: Dejar Todo Ubicable",
+          "duration": "15 min",
+          "label": "Que se pueda encontrar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL TEMA QUE NADIE TOCA (APERTURA)",
+          "duration": "15 min",
+          "description": "Reconozca que el tema es incómodo y trátelo con naturalidad y respeto. Explique que no hacer testamento no evita el problema: lo traslada a la familia en el peor momento posible, convertido en un trámite largo y costoso.",
+          "activity": "Dinámica \"¿Qué Pasaría?\": el grupo describe qué ocurriría con las cuentas de una persona si nadie sabe que existen."
+        },
+        {
+          "title": "FASE II: TESTAMENTO Y BENEFICIARIOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el testamento es un documento donde se establece qué pasa con los bienes. Aclare que algunos productos, como el AFORE o los seguros de vida, se transmiten por designación de beneficiarios y no por testamento, y que esa designación hay que mantenerla actualizada. Los alumnos clasifican bienes según el mecanismo que aplica.",
+          "activity": "Dinámica \"¿Testamento o Beneficiario?\": cada equipo clasifica ocho bienes según el mecanismo que los transmite."
+        },
+        {
+          "title": "FASE III: QUE SE PUEDA ENCONTRAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique un problema muy común: existen cuentas, seguros y saldos que la familia nunca reclama porque nadie sabía que existían. Enseñe a hacer un inventario simple de dónde está cada cosa y a decirle a una persona de confianza dónde encontrarlo.",
+          "activity": "Dinámica \"Mi Inventario\": cada alumno arma un inventario de ejemplo con tipo de bien, institución y ubicación del documento."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Es un tema que nadie quiere tocar, y justamente por eso deja tantos problemas. No hacer testamento no evita nada: convierte lo que pudo ser un trámite simple en un proceso largo y caro para la familia, en el peor momento posible.",
+      "sections": [
+        {
+          "subtitle": "Qué es un testamento y qué resuelve",
+          "content": "Es un documento donde una persona establece qué pasa con sus bienes. Su función principal no es repartir riqueza, porque muchas personas no tienen grandes bienes: es evitar que la familia tenga que atravesar un proceso legal largo y costoso para acceder a lo que quedó. Cuanto más modesto es el patrimonio, más pesa proporcionalmente ese costo."
+        },
+        {
+          "subtitle": "Lo que no pasa por testamento",
+          "content": "Algunos productos se transmiten por designación de beneficiarios y no por testamento: el AFORE, los seguros de vida y ciertas cuentas. Eso significa que quien esté designado ahí recibe el recurso, aunque el testamento diga otra cosa. Por eso hay que revisar esas designaciones cada cierto tiempo, sobre todo después de cambios familiares importantes."
+        },
+        {
+          "subtitle": "Lo que ocurre sin testamento",
+          "content": "Cuando no hay testamento, la ley define un orden de herederos y la familia debe seguir un procedimiento para acreditarlo. Ese proceso toma tiempo, cuesta dinero y suele generar conflictos entre familiares que hasta entonces se llevaban bien. Todo eso se evita con un documento que se hace en una sola gestión."
+        },
+        {
+          "subtitle": "Que se pueda encontrar",
+          "content": "Existe una cantidad enorme de cuentas, seguros y saldos de AFORE que nunca se reclaman porque nadie supo que existían. Un inventario simple, con el tipo de bien, la institución y dónde está el documento, entregado a una persona de confianza, resuelve un problema que ningún trámite legal puede resolver después."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un testamento?",
+          "options": [
+            "Un documento que establece qué pasa con los bienes",
+            "Un préstamo",
+            "Un seguro"
+          ],
+          "correct": "Un documento que establece qué pasa con los bienes"
+        },
+        {
+          "question": "¿Cuál es su función principal?",
+          "options": [
+            "Repartir riqueza",
+            "Evitar un proceso legal largo y costoso a la familia",
+            "Pagar impuestos"
+          ],
+          "correct": "Evitar un proceso legal largo y costoso a la familia"
+        },
+        {
+          "question": "¿A quién le pesa más ese costo?",
+          "options": [
+            "A quien tiene mucho",
+            "A nadie",
+            "A quien tiene un patrimonio modesto"
+          ],
+          "correct": "A quien tiene un patrimonio modesto"
+        },
+        {
+          "question": "¿Qué no pasa por testamento?",
+          "options": [
+            "AFORE y seguros de vida",
+            "Una casa",
+            "Un terreno"
+          ],
+          "correct": "AFORE y seguros de vida"
+        },
+        {
+          "question": "¿Cómo se transmiten esos productos?",
+          "options": [
+            "Por sorteo",
+            "Por designación de beneficiarios",
+            "Por antigüedad"
+          ],
+          "correct": "Por designación de beneficiarios"
+        },
+        {
+          "question": "¿Qué hay que hacer con esas designaciones?",
+          "options": [
+            "Olvidarlas",
+            "Nunca tocarlas",
+            "Revisarlas cada cierto tiempo"
+          ],
+          "correct": "Revisarlas cada cierto tiempo"
+        },
+        {
+          "question": "¿Qué pasa sin testamento?",
+          "options": [
+            "La ley define el orden y hay un procedimiento largo",
+            "Nada",
+            "El Estado se queda todo"
+          ],
+          "correct": "La ley define el orden y hay un procedimiento largo"
+        },
+        {
+          "question": "¿Qué suele generar ese proceso?",
+          "options": [
+            "Beneficios",
+            "Costo, tiempo y conflictos familiares",
+            "Rendimientos"
+          ],
+          "correct": "Costo, tiempo y conflictos familiares"
+        },
+        {
+          "question": "¿Por qué no se reclaman muchas cuentas?",
+          "options": [
+            "Porque la ley lo prohíbe",
+            "Porque son pequeñas",
+            "Porque nadie sabía que existían"
+          ],
+          "correct": "Porque nadie sabía que existían"
+        },
+        {
+          "question": "¿Qué resuelve ese problema?",
+          "options": [
+            "Un inventario entregado a alguien de confianza",
+            "Un préstamo",
+            "Una cuenta nueva"
+          ],
+          "correct": "Un inventario entregado a alguien de confianza"
+        }
+      ],
+      "rubric": "Logrado: explica qué resuelve un testamento, distingue lo que va por beneficiarios y arma un inventario. En proceso: sabe qué es un testamento sin distinguir mecanismos. Inicial: reconoce que no hacerlo genera problemas."
+    },
+    "teacher_tips": [
+      "Trate el tema con respeto: puede haber alumnos que hayan perdido a alguien recientemente.",
+      "Enfoque el mensaje en proteger a quien uno quiere, no en la muerte. Cambia por completo la recepción.",
+      "La distinción entre testamento y designación de beneficiarios es el contenido más útil y el menos conocido."
+    ]
+  },
   "P6-4-1": {
     "code": "P6-4-1",
     "title": "Elevator Pitch: vendiendo mi idea en 60 segundos",
@@ -3558,7 +6318,7 @@
             "Para medir numéricamente el éxito y progreso hacia los objetivos",
             "Para pagar menos impuestos"
           ],
-          "correct": "Key Performance Indicator (Indicador Clave de Desempeño)"
+          "correct": "Para medir numéricamente el éxito y progreso hacia los objetivos"
         },
         {
           "question": "Si un negocio vende mucho pero su 'Utilidad' es negativa, ¿qué significa?",
@@ -3640,8 +6400,927 @@
       "Termine el año escolar con una 'Feria de Emprendimiento' donde midan sus propios KPIs.",
       "Felicite a los alumnos por completar el nivel de Primaria en CEN Academy."
     ]
-  }
-,
+  },
+  "P6-4-6": {
+    "code": "P6-4-6",
+    "title": "Validar antes de gastar: la prueba de los 10 clientes",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Aplicar la validación previa de una idea de negocio hablando con clientes potenciales antes de invertir dinero.",
+      "competencies": [
+        "Validación de Ideas",
+        "Investigación de Mercado",
+        "Escucha Activa",
+        "Reducción de Riesgo"
+      ],
+      "materials": [
+        "Guion de entrevista de validación",
+        "Formato de registro de respuestas",
+        "Casos de negocios que no validaron",
+        "Tarjetas de preguntas buenas y malas",
+        "Cartel de la prueba de los 10 clientes"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Idea Genial",
+          "duration": "15 min",
+          "label": "Enamorarse de la idea"
+        },
+        {
+          "phase": "Desarrollo: Los 10 Clientes",
+          "duration": "30 min",
+          "label": "Preguntar antes de gastar"
+        },
+        {
+          "phase": "Cierre: Interpretar",
+          "duration": "15 min",
+          "label": "Qué respuesta vale"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA IDEA GENIAL (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente el patrón más común de fracaso: alguien tiene una idea, invierte sus ahorros en producto e imagen, y descubre después que nadie la quería. Explique que el error no fue la idea sino el orden: primero se gastó y después se preguntó.",
+          "activity": "Dinámica \"Primero Gastó\": el grupo reconstruye un caso y señala el momento exacto en que debió preguntar."
+        },
+        {
+          "title": "FASE II: LA PRUEBA DE LOS 10 CLIENTES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el método: antes de invertir, hablar con diez personas del público objetivo real. Las preguntas deben ser sobre lo que ya hacen y lo que ya pagan, no sobre si les gusta la idea. Los alumnos redactan cinco preguntas de validación y descartan las que solo buscan aprobación.",
+          "activity": "Dinámica \"Buenas y Malas Preguntas\": cada equipo clasifica ocho preguntas y reescribe las malas."
+        },
+        {
+          "title": "FASE III: QUÉ RESPUESTA VALE (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a interpretar: \"qué buena idea\" no vale nada; \"yo ya pago X por esto\" vale mucho; \"te lo compro ahora\" vale todavía más. Insista en que la única validación fuerte es que alguien esté dispuesto a pagar o a comprometerse, no que alguien opine bien.",
+          "activity": "Dinámica \"¿Cuánto Vale Esa Respuesta?\": los alumnos ordenan diez respuestas de menor a mayor valor de validación."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El error más caro al emprender no es tener una mala idea: es invertir en una idea sin haber preguntado a nadie. Diez conversaciones antes de gastar el primer peso te dan más información que cualquier presentación bonita.",
+      "sections": [
+        {
+          "subtitle": "Enamorarse de la idea sale caro",
+          "content": "El patrón se repite: alguien tiene una idea, la desarrolla en su cabeza, invierte sus ahorros en producto, empaque e imagen, y hasta entonces sale a vender. Si el mercado no la quería, el dinero ya se fue. El problema no fue la idea, fue el orden. Validar cuesta conversaciones; equivocarse después cuesta ahorros."
+        },
+        {
+          "subtitle": "Diez conversaciones antes del primer peso",
+          "content": "La prueba consiste en hablar con diez personas del público objetivo real antes de invertir. No amigos ni familiares, porque ellos van a decir que les gusta. Personas que efectivamente enfrentan el problema que tu producto resuelve. Diez es suficiente para detectar patrones y lo bastante pocas para hacerlo en unos días."
+        },
+        {
+          "subtitle": "Preguntar por lo que ya hacen, no por la idea",
+          "content": "Las preguntas útiles son sobre comportamiento pasado: cómo resuelves esto hoy, cuánto pagas, qué te molesta de la solución actual, cuándo fue la última vez que lo necesitaste. Las preguntas inútiles son sobre el futuro hipotético: te gustaría, comprarías, usarías. La gente responde con amabilidad a esas y con la verdad a las primeras."
+        },
+        {
+          "subtitle": "Solo el compromiso valida",
+          "content": "Hay una escala de valor en las respuestas. \"Qué buena idea\" no vale nada. \"Yo ya pago $200 al mes por algo parecido\" vale mucho, porque describe un gasto real. \"Te lo compro ahora, aquí está el anticipo\" es la validación más fuerte que existe. La regla es simple: opiniones no validan, compromisos sí."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es el error más caro al emprender?",
+          "options": [
+            "Invertir sin haber preguntado a nadie",
+            "Tener una idea rara",
+            "Empezar pequeño"
+          ],
+          "correct": "Invertir sin haber preguntado a nadie"
+        },
+        {
+          "question": "¿Cuál es el problema del patrón común?",
+          "options": [
+            "La idea",
+            "El orden: primero se gasta y después se pregunta",
+            "El precio"
+          ],
+          "correct": "El orden: primero se gasta y después se pregunta"
+        },
+        {
+          "question": "¿Con cuántas personas hay que hablar?",
+          "options": [
+            "Una",
+            "Cien",
+            "Diez del público objetivo real"
+          ],
+          "correct": "Diez del público objetivo real"
+        },
+        {
+          "question": "¿Por qué no sirven amigos y familiares?",
+          "options": [
+            "Porque van a decir que les gusta",
+            "Porque no tienen dinero",
+            "Porque no entienden"
+          ],
+          "correct": "Porque van a decir que les gusta"
+        },
+        {
+          "question": "¿Qué preguntas son útiles?",
+          "options": [
+            "Sobre si les gustaría",
+            "Sobre lo que ya hacen y ya pagan",
+            "Sobre si comprarían"
+          ],
+          "correct": "Sobre lo que ya hacen y ya pagan"
+        },
+        {
+          "question": "¿Qué preguntas son inútiles?",
+          "options": [
+            "Las del pasado",
+            "Las de precio actual",
+            "Las del futuro hipotético"
+          ],
+          "correct": "Las del futuro hipotético"
+        },
+        {
+          "question": "\"Qué buena idea\" vale:",
+          "options": [
+            "Nada",
+            "Mucho",
+            "Todo"
+          ],
+          "correct": "Nada"
+        },
+        {
+          "question": "\"Ya pago $200 al mes por esto\" vale:",
+          "options": [
+            "Nada",
+            "Mucho, describe un gasto real",
+            "Poco"
+          ],
+          "correct": "Mucho, describe un gasto real"
+        },
+        {
+          "question": "¿Cuál es la validación más fuerte?",
+          "options": [
+            "Un cumplido",
+            "Un me gusta",
+            "Un anticipo o compra inmediata"
+          ],
+          "correct": "Un anticipo o compra inmediata"
+        },
+        {
+          "question": "¿Cuál es la regla?",
+          "options": [
+            "Opiniones no validan, compromisos sí",
+            "Todo lo que digan sirve",
+            "Basta con que les guste"
+          ],
+          "correct": "Opiniones no validan, compromisos sí"
+        }
+      ],
+      "rubric": "Logrado: redacta preguntas de comportamiento y jerarquiza respuestas por valor de validación. En proceso: entiende validar sin distinguir preguntas útiles. Inicial: reconoce que hay que preguntar antes de gastar."
+    },
+    "teacher_tips": [
+      "La distinción entre preguntar por el pasado y por el futuro hipotético es el contenido más transferible de la clase.",
+      "Prohíba validar con familiares en el ejercicio. Es el atajo que arruina el método.",
+      "Si hay tiempo, pida que hagan tres entrevistas reales fuera del aula. El impacto se multiplica."
+    ]
+  },
+  "P6-4-7": {
+    "code": "P6-4-7",
+    "title": "Costos ocultos de emprender: permisos, tiempo y desgaste",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Identificar los costos que no aparecen en el plan inicial de un negocio: permisos, tiempo propio y desgaste personal.",
+      "competencies": [
+        "Análisis de Costos",
+        "Planeación Realista",
+        "Valoración del Tiempo",
+        "Sostenibilidad Personal"
+      ],
+      "materials": [
+        "Lista de costos visibles y ocultos",
+        "Calculadora",
+        "Caso de un negocio con presupuesto incompleto",
+        "Formato de costeo ampliado",
+        "Cartel de los tres costos ocultos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Presupuesto Optimista",
+          "duration": "15 min",
+          "label": "Lo que sí se contó"
+        },
+        {
+          "phase": "Desarrollo: Lo que Falta",
+          "duration": "30 min",
+          "label": "Permisos, tiempo, desgaste"
+        },
+        {
+          "phase": "Cierre: Costear Completo",
+          "duration": "15 min",
+          "label": "El número real"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL PRESUPUESTO OPTIMISTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente el presupuesto de un negocio pequeño con solo los costos visibles: materia prima, empaque y publicidad. Pregunte si está completo. Faltan permisos, transporte, mermas, el tiempo del emprendedor y el desgaste. Explique que estos son los que hunden negocios que \"iban bien en el papel\".",
+          "activity": "Dinámica \"¿Qué Falta?\": el grupo enumera todo lo que el presupuesto de ejemplo no contempló."
+        },
+        {
+          "title": "FASE II: LOS TRES COSTOS OCULTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Desarrolle los tres: los administrativos (permisos, registros, contabilidad), el tiempo propio, que tiene valor aunque no se facture, y el desgaste, que incluye salud y relaciones. Los alumnos recalculan la utilidad del negocio de ejemplo incorporando los tres.",
+          "activity": "Dinámica \"El Número Real\": cada equipo recalcula la utilidad y compara con la cifra optimista."
+        },
+        {
+          "title": "FASE III: DECIDIR CON EL NÚMERO COMPLETO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos descubren que muchos negocios que parecían rentables dejan de serlo cuando se valora el tiempo propio. Aclare que eso no significa no emprender: significa decidir sabiendo, ajustar el precio o el modelo, y no descubrirlo agotado un año después.",
+          "activity": "Dinámica \"¿Sigo o Ajusto?\": cada equipo decide qué haría con el negocio ya costeado completo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todos los presupuestos de un negocio nuevo cuentan la materia prima y olvidan tres cosas: los permisos, el tiempo del emprendedor y el desgaste. Son justamente los que hunden negocios que en el papel iban muy bien.",
+      "sections": [
+        {
+          "subtitle": "Los costos administrativos",
+          "content": "Un negocio formal implica registros, permisos según el giro, obligaciones fiscales y a veces apoyo contable. Cada uno tiene un costo en dinero y en trámites. Muchos emprendedores los descubren cuando ya operan y tienen que resolverlos con prisa, lo que sale más caro que haberlos previsto desde el principio."
+        },
+        {
+          "subtitle": "El tiempo propio sí cuesta",
+          "content": "Es el costo más ignorado. Si dedicas veinte horas semanales al negocio, esas horas tienen un valor: es lo que podrías estar ganando o haciendo con ellas. Un negocio que deja $4,000 al mes por sesenta horas de trabajo está pagando menos que muchos empleos. Eso no lo hace malo, pero hay que saberlo para decidir con los ojos abiertos."
+        },
+        {
+          "subtitle": "El desgaste también se paga",
+          "content": "Emprender consume energía, sueño y tiempo con la familia. No aparece en ningún estado financiero pero se cobra igual. Un negocio que exige una intensidad insostenible termina cerrando aunque sea rentable, porque la persona no aguanta. Prever el desgaste es parte de planear, no una debilidad."
+        },
+        {
+          "subtitle": "Saber no es desistir",
+          "content": "Costear completo suele revelar que la utilidad real es mucho menor que la calculada. La respuesta correcta casi nunca es abandonar: es ajustar el precio, simplificar el modelo, delegar o cambiar el volumen. Lo grave no es que un negocio deje poco: es descubrirlo agotado un año después sin haber ajustado nada."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué suelen contar los presupuestos iniciales?",
+          "options": [
+            "Todos los costos",
+            "Solo los costos visibles",
+            "Solo el tiempo"
+          ],
+          "correct": "Solo los costos visibles"
+        },
+        {
+          "question": "¿Cuáles son los tres costos ocultos?",
+          "options": [
+            "Materia prima, empaque y publicidad",
+            "Renta, luz y agua",
+            "Administrativos, tiempo propio y desgaste"
+          ],
+          "correct": "Administrativos, tiempo propio y desgaste"
+        },
+        {
+          "question": "¿Qué incluyen los administrativos?",
+          "options": [
+            "Permisos, registros y obligaciones fiscales",
+            "Solo la publicidad",
+            "Solo el empaque"
+          ],
+          "correct": "Permisos, registros y obligaciones fiscales"
+        },
+        {
+          "question": "¿Por qué el tiempo propio cuesta?",
+          "options": [
+            "Porque se factura",
+            "Porque esas horas tienen un valor alternativo",
+            "No cuesta"
+          ],
+          "correct": "Porque esas horas tienen un valor alternativo"
+        },
+        {
+          "question": "Un negocio que deja $4,000 por 60 horas:",
+          "options": [
+            "Siempre es excelente",
+            "No se puede evaluar",
+            "Puede pagar menos que un empleo"
+          ],
+          "correct": "Puede pagar menos que un empleo"
+        },
+        {
+          "question": "¿Qué incluye el desgaste?",
+          "options": [
+            "Energía, sueño y tiempo con la familia",
+            "Solo dinero",
+            "Solo permisos"
+          ],
+          "correct": "Energía, sueño y tiempo con la familia"
+        },
+        {
+          "question": "¿Aparece el desgaste en los estados financieros?",
+          "options": [
+            "Sí, siempre",
+            "No, pero se cobra igual",
+            "Sí, como gasto"
+          ],
+          "correct": "No, pero se cobra igual"
+        },
+        {
+          "question": "Un negocio con intensidad insostenible:",
+          "options": [
+            "Siempre sobrevive",
+            "Crece más rápido",
+            "Termina cerrando aunque sea rentable"
+          ],
+          "correct": "Termina cerrando aunque sea rentable"
+        },
+        {
+          "question": "Al costear completo la respuesta correcta suele ser:",
+          "options": [
+            "Ajustar precio, modelo o volumen",
+            "Abandonar",
+            "Ignorarlo"
+          ],
+          "correct": "Ajustar precio, modelo o volumen"
+        },
+        {
+          "question": "¿Qué es lo grave?",
+          "options": [
+            "Que deje poco",
+            "Descubrirlo agotado un año después",
+            "Costear completo"
+          ],
+          "correct": "Descubrirlo agotado un año después"
+        }
+      ],
+      "rubric": "Logrado: incorpora los tres costos ocultos al costeo y propone un ajuste concreto. En proceso: identifica costos ocultos sin cuantificarlos. Inicial: reconoce que el presupuesto inicial está incompleto."
+    },
+    "teacher_tips": [
+      "Valorar el tiempo propio es el cálculo que más cambia la percepción. Hágalo con números explícitos.",
+      "Evite que la clase concluya que emprender no vale la pena. El mensaje es decidir informado, no desistir.",
+      "Si algún alumno tiene un negocio familiar, el ejercicio con sus cifras reales es muy potente."
+    ]
+  },
+  "P6-4-8": {
+    "code": "P6-4-8",
+    "title": "Precio por valor, no por costo",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Fijar precios a partir del valor que percibe el cliente y no únicamente del costo de producción.",
+      "competencies": [
+        "Estrategia de Precios",
+        "Percepción de Valor",
+        "Análisis de Márgenes",
+        "Diferenciación"
+      ],
+      "materials": [
+        "Formato de costeo y precio",
+        "Calculadora",
+        "Casos de productos con distinto valor percibido",
+        "Comparativo de competidores",
+        "Cartel de las tres fuentes de precio"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Costo Más Poquito",
+          "duration": "15 min",
+          "label": "El método común"
+        },
+        {
+          "phase": "Desarrollo: El Valor Percibido",
+          "duration": "30 min",
+          "label": "Qué resuelve para el cliente"
+        },
+        {
+          "phase": "Cierre: Fijar el Precio",
+          "duration": "15 min",
+          "label": "Los tres límites"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"COSTO MÁS POQUITO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo pondrían precio a un producto. Casi todos dirán costo más un porcentaje. Muestre dos productos con el mismo costo y precios muy distintos en el mercado, y pregunte por qué. La respuesta es el valor que percibe el cliente, no el costo del fabricante.",
+          "activity": "Dinámica \"Mismo Costo, Otro Precio\": el grupo explica por qué dos productos con costo igual se venden a precios muy distintos."
+        },
+        {
+          "title": "FASE II: EL VALOR PERCIBIDO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el cliente no paga por lo que costó producir: paga por el problema que le resuelve, el tiempo que le ahorra o cómo lo hace sentir. Los alumnos analizan tres productos e identifican qué valor entregan más allá del objeto físico.",
+          "activity": "Dinámica \"¿Qué Compra en Realidad?\": cada equipo escribe qué está comprando el cliente además del producto."
+        },
+        {
+          "title": "FASE III: LOS TRES LÍMITES DEL PRECIO (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe que todo precio se mueve entre tres referencias: el costo, que es el piso absoluto; el valor percibido, que es el techo; y la competencia, que ubica el rango. Los alumnos fijan el precio de un producto propio justificando dónde lo colocan entre esos tres.",
+          "activity": "Dinámica \"Mi Precio Justificado\": cada alumno define un precio y explica su posición respecto a los tres límites."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "La mayoría fija precios sumando un porcentaje al costo. Es el método más común y el que deja más dinero sobre la mesa, porque el cliente no paga por lo que te costó: paga por lo que le resuelve.",
+      "sections": [
+        {
+          "subtitle": "El costo solo marca el piso",
+          "content": "Conocer el costo es indispensable, pero solo sirve para saber por debajo de qué precio pierdes dinero. No dice cuánto está dispuesto a pagar el cliente. Fijar el precio como costo más un porcentaje fijo trata todos los productos igual, cuando algunos entregan mucho más valor que otros."
+        },
+        {
+          "subtitle": "El cliente compra un resultado",
+          "content": "Nadie compra un pastel: compra una celebración que salga bien. Nadie compra una reparación: compra volver a usar su coche. Cuando entiendes qué resultado está comprando el cliente, entiendes por qué está dispuesto a pagar más por una entrega puntual, una garantía o una atención que le quite preocupaciones."
+        },
+        {
+          "subtitle": "Qué aumenta el valor percibido",
+          "content": "La rapidez, la confiabilidad, la garantía, la presentación, la atención y la conveniencia aumentan lo que el cliente está dispuesto a pagar sin aumentar mucho el costo. Ahí está el margen. Un producto igual al de la competencia pero con entrega garantizada y respuesta rápida puede sostener un precio notablemente mayor."
+        },
+        {
+          "subtitle": "Los tres límites",
+          "content": "Todo precio se ubica entre tres referencias: el costo es el piso, por debajo se pierde; el valor percibido es el techo, por encima nadie compra; y la competencia define el rango en el que el cliente compara. Precio por valor significa acercarse al techo justificando la diferencia, no adivinar un número."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es el método más común de precio?",
+          "options": [
+            "Valor percibido",
+            "Precio de la competencia",
+            "Costo más un porcentaje"
+          ],
+          "correct": "Costo más un porcentaje"
+        },
+        {
+          "question": "¿Para qué sirve conocer el costo?",
+          "options": [
+            "Para saber el piso por debajo del cual se pierde",
+            "Para fijar el precio final",
+            "Para nada"
+          ],
+          "correct": "Para saber el piso por debajo del cual se pierde"
+        },
+        {
+          "question": "¿Por qué paga el cliente?",
+          "options": [
+            "Por lo que costó producirlo",
+            "Por el resultado que le resuelve",
+            "Por el empaque"
+          ],
+          "correct": "Por el resultado que le resuelve"
+        },
+        {
+          "question": "Quien compra un pastel compra:",
+          "options": [
+            "Harina y azúcar",
+            "Una caja",
+            "Una celebración que salga bien"
+          ],
+          "correct": "Una celebración que salga bien"
+        },
+        {
+          "question": "¿Qué aumenta el valor percibido?",
+          "options": [
+            "Rapidez, garantía, atención y conveniencia",
+            "Más costo",
+            "Menos calidad"
+          ],
+          "correct": "Rapidez, garantía, atención y conveniencia"
+        },
+        {
+          "question": "¿Aumentan mucho el costo esos elementos?",
+          "options": [
+            "Sí, siempre",
+            "No, y ahí está el margen",
+            "Lo duplican"
+          ],
+          "correct": "No, y ahí está el margen"
+        },
+        {
+          "question": "¿Cuál es el piso del precio?",
+          "options": [
+            "El valor percibido",
+            "La competencia",
+            "El costo"
+          ],
+          "correct": "El costo"
+        },
+        {
+          "question": "¿Cuál es el techo?",
+          "options": [
+            "El valor percibido",
+            "El costo",
+            "El impuesto"
+          ],
+          "correct": "El valor percibido"
+        },
+        {
+          "question": "¿Qué define la competencia?",
+          "options": [
+            "El costo",
+            "El rango en el que el cliente compara",
+            "El impuesto"
+          ],
+          "correct": "El rango en el que el cliente compara"
+        },
+        {
+          "question": "Precio por valor significa:",
+          "options": [
+            "Cobrar lo más barato",
+            "Adivinar un número",
+            "Acercarse al techo justificando la diferencia"
+          ],
+          "correct": "Acercarse al techo justificando la diferencia"
+        }
+      ],
+      "rubric": "Logrado: fija un precio ubicándolo entre los tres límites y justifica el valor percibido. En proceso: identifica valor percibido sin traducirlo a precio. Inicial: distingue costo de precio."
+    },
+    "teacher_tips": [
+      "La pregunta \"qué está comprando en realidad\" es la que desbloquea el concepto. Insista en ella.",
+      "Aclare que precio por valor no es abusar: es cobrar lo que el valor entregado justifica.",
+      "Compare dos productos reales de costo similar y precio distinto. El ejemplo concreto convence más que la teoría."
+    ]
+  },
+  "P6-4-9": {
+    "code": "P6-4-9",
+    "title": "Contratos básicos: por qué todo se pone por escrito",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Reconocer los elementos mínimos de un acuerdo por escrito y el riesgo de operar sin ellos.",
+      "competencies": [
+        "Formalización de Acuerdos",
+        "Prevención de Conflictos",
+        "Redacción Básica",
+        "Gestión de Riesgo"
+      ],
+      "materials": [
+        "Modelo de acuerdo simple",
+        "Casos de conflictos por acuerdos verbales",
+        "Lista de los seis elementos mínimos",
+        "Formato de acuerdo en blanco",
+        "Cartel de \"por escrito y firmado\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Quedamos de Palabra",
+          "duration": "15 min",
+          "label": "Cuando todo va bien"
+        },
+        {
+          "phase": "Desarrollo: Seis Elementos",
+          "duration": "30 min",
+          "label": "Qué debe decir"
+        },
+        {
+          "phase": "Cierre: Redactar",
+          "duration": "15 min",
+          "label": "Un acuerdo simple"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"QUEDAMOS DE PALABRA\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee un trabajo acordado de palabra que termina en conflicto: cada parte recuerda algo distinto sobre el precio, el plazo o lo incluido. Explique que ninguna de las dos está mintiendo necesariamente: simplemente nunca quedó claro, y el papel existe justamente para eso.",
+          "activity": "Dinámica \"Cada Quien Recuerda\": dos equipos representan las dos versiones del mismo acuerdo verbal."
+        },
+        {
+          "title": "FASE II: LOS SEIS ELEMENTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente lo mínimo que debe contener un acuerdo: quiénes son las partes, qué se entrega exactamente, cuánto cuesta y cómo se paga, para cuándo, qué pasa si algo falla y las firmas con fecha. Los alumnos revisan un acuerdo incompleto y detectan qué falta.",
+          "activity": "Dinámica \"Detecta lo que Falta\": cada equipo encuentra los elementos ausentes en tres acuerdos de ejemplo."
+        },
+        {
+          "title": "FASE III: REDACTAR UNO SIMPLE (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos redactan un acuerdo de una página para un trabajo pequeño. Aclare que un acuerdo simple y claro protege más que uno largo y confuso, y que pedir algo por escrito no es desconfianza: es la práctica normal entre profesionales.",
+          "activity": "Dinámica \"Mi Acuerdo de Una Página\": cada alumno redacta un acuerdo completo con los seis elementos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todos los conflictos de un negocio pequeño empiezan igual: quedaron de palabra y después cada quien recordaba algo distinto. Un acuerdo de una página escrito antes de empezar previene la mayoría de esos problemas.",
+      "sections": [
+        {
+          "subtitle": "La memoria no es un contrato",
+          "content": "Cuando un acuerdo es verbal, cada parte guarda su versión, y ambas suelen ser sinceras. Con el tiempo los detalles se difuminan y las expectativas se acomodan a lo que a cada quien le convenía entender. No hace falta mala fe para terminar en conflicto: basta con que nunca haya quedado claro."
+        },
+        {
+          "subtitle": "Los seis elementos mínimos",
+          "content": "Un acuerdo útil dice quiénes son las partes, qué se entrega exactamente y qué no, cuánto cuesta y en qué momentos se paga, para cuándo debe estar listo, qué ocurre si alguna parte no cumple, y lleva firma y fecha de ambos. Con esos seis puntos en una página se previene la enorme mayoría de los conflictos."
+        },
+        {
+          "subtitle": "Lo que más se olvida",
+          "content": "Dos elementos se olvidan casi siempre. El primero es qué no incluye el trabajo, que evita discusiones sobre extras que el cliente daba por hechos. El segundo es qué pasa si algo falla: si hay anticipo devuelto, si se reagenda, si hay penalización. Definir el mal escenario cuando todos están de buen humor es mucho más fácil que hacerlo después."
+        },
+        {
+          "subtitle": "Pedirlo no es desconfiar",
+          "content": "Mucha gente evita pedir un acuerdo escrito por temor a incomodar. En la práctica ocurre lo contrario: proponer un documento claro transmite profesionalismo y protege a las dos partes por igual. Quien se molesta porque le pides poner las cosas por escrito está dando una señal que conviene tomar en cuenta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cómo empiezan casi todos los conflictos de un negocio pequeño?",
+          "options": [
+            "Quedaron de palabra",
+            "Firmaron demasiado",
+            "Cobraron poco"
+          ],
+          "correct": "Quedaron de palabra"
+        },
+        {
+          "question": "¿Hace falta mala fe para terminar en conflicto?",
+          "options": [
+            "Sí, siempre",
+            "No, basta con que nunca quedara claro",
+            "Sí, de una parte"
+          ],
+          "correct": "No, basta con que nunca quedara claro"
+        },
+        {
+          "question": "¿Cuántos elementos mínimos tiene un acuerdo útil?",
+          "options": [
+            "Dos",
+            "Veinte",
+            "Seis"
+          ],
+          "correct": "Seis"
+        },
+        {
+          "question": "¿Cuál es uno de ellos?",
+          "options": [
+            "Qué se entrega exactamente y qué no",
+            "El color del papel",
+            "La marca del bolígrafo"
+          ],
+          "correct": "Qué se entrega exactamente y qué no"
+        },
+        {
+          "question": "¿Qué elemento evita discusiones sobre extras?",
+          "options": [
+            "El precio",
+            "Especificar qué NO incluye",
+            "La fecha"
+          ],
+          "correct": "Especificar qué NO incluye"
+        },
+        {
+          "question": "¿Qué otro se olvida siempre?",
+          "options": [
+            "El nombre",
+            "La firma",
+            "Qué pasa si algo falla"
+          ],
+          "correct": "Qué pasa si algo falla"
+        },
+        {
+          "question": "¿Cuándo es más fácil definir el mal escenario?",
+          "options": [
+            "Cuando todos están de buen humor",
+            "Durante el conflicto",
+            "Nunca"
+          ],
+          "correct": "Cuando todos están de buen humor"
+        },
+        {
+          "question": "¿Qué protege más?",
+          "options": [
+            "Uno largo y confuso",
+            "Un acuerdo simple y claro",
+            "Ninguno"
+          ],
+          "correct": "Un acuerdo simple y claro"
+        },
+        {
+          "question": "Pedir algo por escrito:",
+          "options": [
+            "Es desconfianza",
+            "Es ofensivo",
+            "Transmite profesionalismo"
+          ],
+          "correct": "Transmite profesionalismo"
+        },
+        {
+          "question": "Si alguien se molesta porque pides ponerlo por escrito:",
+          "options": [
+            "Es una señal a tomar en cuenta",
+            "Hay que disculparse",
+            "Hay que aceptar verbal"
+          ],
+          "correct": "Es una señal a tomar en cuenta"
+        }
+      ],
+      "rubric": "Logrado: redacta un acuerdo con los seis elementos incluyendo exclusiones e incumplimiento. En proceso: incluye los elementos evidentes. Inicial: reconoce el riesgo del acuerdo verbal."
+    },
+    "teacher_tips": [
+      "Los dos elementos olvidados (qué no incluye y qué pasa si falla) son los que más conflictos previenen. Insista ahí.",
+      "Trabaje con un caso pequeño y realista: un trabajo de $2,000, no un contrato empresarial.",
+      "Aclare que un acuerdo simple firmado vale más que uno complejo que nadie leyó."
+    ]
+  },
+  "P6-4-10": {
+    "code": "P6-4-10",
+    "title": "Fracasar bien: cerrar un negocio y aprender",
+    "level": "Primaria 6",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender cómo cerrar ordenadamente un negocio que no funcionó y extraer aprendizajes aplicables al siguiente.",
+      "competencies": [
+        "Cierre Ordenado",
+        "Análisis de Fracaso",
+        "Resiliencia",
+        "Aprendizaje Aplicado"
+      ],
+      "materials": [
+        "Checklist de cierre ordenado",
+        "Formato de análisis post-cierre",
+        "Casos de emprendedores que cerraron y volvieron",
+        "Lista de obligaciones pendientes",
+        "Cartel de las tres preguntas del cierre"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Cerrar No Es Fallar",
+          "duration": "15 min",
+          "label": "Quitar el estigma"
+        },
+        {
+          "phase": "Desarrollo: Cerrar Bien",
+          "duration": "30 min",
+          "label": "El orden importa"
+        },
+        {
+          "phase": "Cierre: Qué Me Llevo",
+          "duration": "15 min",
+          "label": "Tres preguntas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CERRAR NO ES FALLAR (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que la mayoría de los negocios pequeños cierran, y que muchos emprendedores exitosos cerraron uno o dos antes. Lo que distingue a quien vuelve de quien no es cómo cerró: sin deudas ocultas, sin relaciones rotas y con aprendizajes claros.",
+          "activity": "Dinámica \"Los Que Volvieron\": el grupo analiza qué hicieron distinto los emprendedores que cerraron y volvieron a empezar."
+        },
+        {
+          "title": "FASE II: CERRAR EN ORDEN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el checklist: avisar a clientes con pedidos pendientes, liquidar o acordar deudas con proveedores, cerrar obligaciones fiscales y registros, recuperar lo que se pueda del inventario y equipo, y cerrar cuentas. Explique que dejar cabos sueltos genera problemas que aparecen años después.",
+          "activity": "Dinámica \"Checklist de Cierre\": cada equipo ordena las acciones de cierre de un caso y detecta las que faltan."
+        },
+        {
+          "title": "FASE III: TRES PREGUNTAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe las tres preguntas del cierre: qué supuesto resultó falso, qué señal ignoré y qué haría distinto la próxima vez. Insista en que las respuestas deben ser concretas y sin culpa, porque un análisis honesto es lo único que convierte una pérdida en experiencia utilizable.",
+          "activity": "Dinámica \"Mi Análisis\": cada alumno responde las tres preguntas sobre un caso dado."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "La mayoría de los negocios pequeños cierran, y muchos emprendedores exitosos cerraron uno antes. Lo que hace la diferencia no es evitar el cierre: es cerrar sin deudas ocultas, sin relaciones rotas y con aprendizajes claros.",
+      "sections": [
+        {
+          "subtitle": "Cerrar es parte del oficio",
+          "content": "Un negocio que cierra no convierte a nadie en fracasado. Casi todos los emprendedores con trayectoria larga cerraron algo antes. La diferencia entre quien vuelve y quien no está en cómo cerró: si dejó deudas ocultas, si rompió relaciones o si simplemente desapareció, el siguiente intento arranca con un lastre enorme."
+        },
+        {
+          "subtitle": "El cierre ordenado",
+          "content": "Cerrar bien implica avisar a clientes con pedidos pendientes y resolverlos, acordar o liquidar lo que se debe a proveedores, cumplir con las obligaciones fiscales y dar de baja los registros, recuperar valor del inventario y el equipo, y cerrar cuentas. Cada punto que se salta reaparece meses o años después, generalmente más caro."
+        },
+        {
+          "subtitle": "Lo que más pesa es la reputación",
+          "content": "En un negocio pequeño el activo más valioso suele ser la relación con clientes y proveedores. Quien cierra dando la cara y cumpliendo lo que puede conserva ese activo y lo lleva al siguiente proyecto. Quien desaparece lo pierde por completo, y en comunidades pequeñas esa reputación tarda años en reconstruirse."
+        },
+        {
+          "subtitle": "Las tres preguntas",
+          "content": "Después del cierre valen tres preguntas: qué supuesto resultó falso, qué señal ignoré y qué haría distinto. Las respuestas deben ser concretas: no \"no funcionó\", sino \"supuse que comprarían cada semana y compraban cada mes\". Sin ese análisis honesto, la pérdida queda como pérdida; con él, se convierte en experiencia utilizable."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cerrar un negocio convierte a alguien en fracasado?",
+          "options": [
+            "Sí, siempre",
+            "No, es parte del oficio",
+            "Sí, si fue pequeño"
+          ],
+          "correct": "No, es parte del oficio"
+        },
+        {
+          "question": "¿Qué distingue a quien vuelve a emprender?",
+          "options": [
+            "Cuánto ganó",
+            "Cuánto duró",
+            "Cómo cerró"
+          ],
+          "correct": "Cómo cerró"
+        },
+        {
+          "question": "¿Qué implica cerrar en orden?",
+          "options": [
+            "Avisar, liquidar, cumplir obligaciones y cerrar registros",
+            "Desaparecer",
+            "Cambiar de nombre"
+          ],
+          "correct": "Avisar, liquidar, cumplir obligaciones y cerrar registros"
+        },
+        {
+          "question": "¿Qué pasa con lo que se salta?",
+          "options": [
+            "Se olvida",
+            "Reaparece después y más caro",
+            "Se perdona"
+          ],
+          "correct": "Reaparece después y más caro"
+        },
+        {
+          "question": "¿Cuál es el activo más valioso de un negocio pequeño?",
+          "options": [
+            "El local",
+            "El logotipo",
+            "La relación con clientes y proveedores"
+          ],
+          "correct": "La relación con clientes y proveedores"
+        },
+        {
+          "question": "¿Qué conserva quien cierra dando la cara?",
+          "options": [
+            "Su reputación para el siguiente proyecto",
+            "Nada",
+            "Solo el inventario"
+          ],
+          "correct": "Su reputación para el siguiente proyecto"
+        },
+        {
+          "question": "¿Cuál es la primera pregunta del análisis?",
+          "options": [
+            "A quién culpo",
+            "Qué supuesto resultó falso",
+            "Cuánto perdí"
+          ],
+          "correct": "Qué supuesto resultó falso"
+        },
+        {
+          "question": "¿Cuál es la segunda?",
+          "options": [
+            "Quién tuvo la culpa",
+            "Cuándo empezó",
+            "Qué señal ignoré"
+          ],
+          "correct": "Qué señal ignoré"
+        },
+        {
+          "question": "¿Cómo deben ser las respuestas?",
+          "options": [
+            "Concretas y sin culpa",
+            "Generales",
+            "Emocionales"
+          ],
+          "correct": "Concretas y sin culpa"
+        },
+        {
+          "question": "¿Qué convierte la pérdida en experiencia?",
+          "options": [
+            "El tiempo",
+            "El análisis honesto",
+            "Olvidarlo"
+          ],
+          "correct": "El análisis honesto"
+        }
+      ],
+      "rubric": "Logrado: ordena un cierre completo y responde las tres preguntas con respuestas concretas. En proceso: reconoce la importancia del cierre ordenado sin detallarlo. Inicial: entiende que cerrar no es fracasar."
+    },
+    "teacher_tips": [
+      "El estigma del fracaso es el mayor obstáculo para emprender. Desactivarlo con datos reales tiene un efecto duradero.",
+      "Exija concreción en las tres preguntas. \"No funcionó\" no es una respuesta utilizable.",
+      "Vincule el cierre ordenado con la reputación: es el argumento que más convence a esta edad."
+    ]
+  },
   "P6-SUPREMO-NEGOCIO": {
     "code": "P6-SUPREMO-NEGOCIO",
     "title": "Mi Primer Negocio",

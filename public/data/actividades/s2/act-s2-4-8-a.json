@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S2-4-8-A",
+  "unit_code": "S2-4-8",
+  "unit_title": "Suscripción: el poder del ingreso recurrente",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "El Techo de la Suscripción",
+  "descripcion": "Ajusta clientes nuevos y cancelación y descubre dónde se estanca tu negocio.",
+  "objetivo": "Calcular el techo de crecimiento impuesto por la tasa de cancelación",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "nuevos",
+      "label": "Clientes nuevos por mes",
+      "type": "slider",
+      "min": 1,
+      "max": 500,
+      "step": 1,
+      "default": 30,
+      "unit": "clientes",
+      "referencia": "Lo que tu esfuerzo comercial consigue cada mes."
+    },
+    {
+      "id": "cancelacion",
+      "label": "Cancelación mensual",
+      "type": "slider",
+      "min": 0.5,
+      "max": 30,
+      "step": 0.5,
+      "default": 6,
+      "unit": "%",
+      "referencia": "El porcentaje de tu base que se va cada mes."
+    },
+    {
+      "id": "precio",
+      "label": "Precio mensual de la suscripción",
+      "type": "slider",
+      "min": 50,
+      "max": 20000,
+      "step": 50,
+      "default": 250,
+      "unit": "$",
+      "referencia": "Lo que paga cada cliente cada mes."
+    },
+    {
+      "id": "meses",
+      "label": "Meses de operación",
+      "type": "slider",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "default": 24,
+      "unit": "meses",
+      "referencia": "El techo se alcanza asintóticamente con el tiempo."
+    }
+  ],
+  "formula": "Math.round(nuevos / (cancelacion / 100) * (1 - Math.pow(1 - cancelacion / 100, meses)) * precio)",
+  "descripcion_formula": "Ingreso mensual acumulado tras el periodo indicado, considerando los clientes nuevos que entran y el porcentaje de la base que se cancela cada mes.",
+  "output_label": "Ingreso mensual alcanzado",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "cancelacion <= 2",
+      "mensaje": "Cancelación muy baja: tu base crece casi sin fugas y el techo queda muy alto. Esta es la característica que más valor da a un negocio recurrente.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "cancelacion >= 10",
+      "mensaje": "Con esta cancelación, gran parte de tu esfuerzo comercial solo reemplaza a quienes se van. El techo llega pronto por más clientes nuevos que consigas.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "cancelacion >= 15",
+      "mensaje": "Tu base se renueva casi por completo en pocos meses. Antes de invertir en atraer más clientes, hay que averiguar por qué se van.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "meses >= 36 && cancelacion <= 4",
+      "mensaje": "Tres años con cancelación baja: aquí es donde el ingreso recurrente muestra su verdadera ventaja sobre la venta única.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "meses <= 6",
+      "mensaje": "Todavía es pronto para ver el efecto acumulado. La ventaja del modelo recurrente aparece con claridad después del primer año.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-8-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-8-a-escena.webp"
+}

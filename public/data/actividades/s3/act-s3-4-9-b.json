@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-4-9-B",
+  "unit_code": "S3-4-9",
+  "unit_title": "Franquicias: crecer con el capital de otros",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "El Modelo de Franquicia",
+  "descripcion": "Comprueba que entiendes ambos lados del modelo.",
+  "objetivo": "Verificar la comprensión del modelo de franquicias",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una franquicia permite:",
+      "opciones": [
+        "Crecer con el capital de otros bajo tu marca y sistema",
+        "Pedir un préstamo",
+        "Vender la empresa",
+        "Evitar impuestos"
+      ],
+      "correcta": 0,
+      "explicacion": "El capital de cada punto lo pone el franquiciatario."
+    },
+    {
+      "id": "q2",
+      "texto": "Quien otorga la franquicia aporta:",
+      "opciones": [
+        "El capital del local",
+        "Marca, modelo probado, manuales y soporte",
+        "El inventario",
+        "El personal"
+      ],
+      "correcta": 1,
+      "explicacion": "Aporta el sistema, no el capital."
+    },
+    {
+      "id": "q3",
+      "texto": "Las regalías se calculan normalmente:",
+      "opciones": [
+        "Como monto fijo único",
+        "Como porcentaje del capital",
+        "Como porcentaje de las ventas",
+        "No existen"
+      ],
+      "correcta": 2,
+      "explicacion": "Ligan el ingreso del franquiciante al desempeño del punto."
+    },
+    {
+      "id": "q4",
+      "texto": "Quien adquiere la franquicia recibe:",
+      "opciones": [
+        "Ganancias garantizadas",
+        "Capital",
+        "Exención de impuestos",
+        "Un modelo probado, marca reconocida y acompañamiento"
+      ],
+      "correcta": 3,
+      "explicacion": "Su riesgo baja, pero no desaparece."
+    },
+    {
+      "id": "q5",
+      "texto": "Para poder franquiciar, el modelo debe:",
+      "opciones": [
+        "Estar probado y ser rentable de forma consistente",
+        "Ser nuevo",
+        "Ser barato",
+        "Ser digital"
+      ],
+      "correcta": 0,
+      "explicacion": "Un solo local afortunado no es un modelo probado."
+    },
+    {
+      "id": "q6",
+      "texto": "También se requiere:",
+      "opciones": [
+        "Solo la marca",
+        "Procesos documentados, marca registrada y capacidad de soporte",
+        "Solo capital",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin documentación no hay nada replicable."
+    },
+    {
+      "id": "q7",
+      "texto": "El riesgo de quien otorga es:",
+      "opciones": [
+        "Poner capital",
+        "Pagar regalías",
+        "Que un mal franquiciatario dañe a toda la red",
+        "Perder la marca"
+      ],
+      "correcta": 2,
+      "explicacion": "Pierde control directo sobre la operación."
+    },
+    {
+      "id": "q8",
+      "texto": "El riesgo de quien adquiere es:",
+      "opciones": [
+        "Ninguno",
+        "No tener modelo",
+        "No tener manuales",
+        "Quedar atado a un contrato y depender del valor de la marca"
+      ],
+      "correcta": 3,
+      "explicacion": "Las obligaciones y estándares se sostienen por contrato."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-9-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-9-b-escena.webp"
+}

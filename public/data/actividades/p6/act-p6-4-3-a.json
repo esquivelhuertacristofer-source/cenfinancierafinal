@@ -4,152 +4,199 @@
   "unit_title": "Ventas y Negociación: El arte del 'SÍ'",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "SIMULADOR",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "El Gran Salto",
-  "descripcion": "Eres el dueño de una empresa de videojuegos. Tienes la oportunidad de comprar a un pequeño estudio que hace apps geniales. ¡Calcula si la unión los hará más fuertes!",
-  "objetivo": "Comprender el concepto de Fusiones y Adquisiciones (M&A) y el valor de las sinergias operativas",
-  "xp": 500,
-  "descripcion_formula": "Calculamos la Ganancia por Sinergia. NuevaGanancia = (VentasA + VentasB) * (1 + Sinergia) - CostoAdquisicion.",
-  "inputs": [
-    {
-      "id": "costo_compra",
-      "label": "Precio a pagar por la otra empresa ($)",
-      "type": "slider",
-      "min": 10000,
-      "max": 100000,
-      "step": 5000,
-      "default": 50000,
-      "unit": "$"
-    },
-    {
-      "id": "nivel_sinergia",
-      "label": "Nivel de Sinergia (Eficiencia)",
-      "type": "slider",
-      "min": 1,
-      "max": 1.5,
-      "step": 0.1,
-      "default": 1.2,
-      "unit": "X"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
+  "titulo": "La Venta Más Difícil",
+  "descripcion": "Regina hace playeras estampadas. La papelería más grande de la colonia podría comprarle 200 piezas al mes. Es la venta que cambiaría su negocio, y tiene una sola reunión para conseguirla.",
+  "objetivo": "Practicar técnicas de venta y negociación basadas en escucha activa, creación de valor mutuo y manejo de objeciones.",
+  "xp": 700,
+  "personaje_principal": "Regina",
+  "contexto_inicial": "A Regina cada playera le cuesta $85 producirla. Su precio normal es $150. La dueña de la papelería, doña Marta, tiene 15 minutos.",
+  "nodo_inicial": "la_reunion",
+  "nodos": {
+    "la_reunion": {
+      "id": "la_reunion",
+      "texto": "Doña Marta se sienta y dice: \"Tú dirás\". ¿Cómo abre Regina?",
+      "opciones": [
         {
-          "label": "Conservador",
-          "value": 0.8
+          "id": "preguntar",
+          "texto": "Preguntar primero: \"¿qué es lo que más le cuesta trabajo de su proveedor actual?\"",
+          "siguiente_nodo": "la_escucha",
+          "consecuencia": "Doña Marta se sorprende: nadie le había preguntado eso.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "label": "Moderado",
-          "value": 1
+          "id": "presentar",
+          "texto": "Presentar todo su catálogo y sus 14 diseños",
+          "siguiente_nodo": "el_monologo",
+          "consecuencia": "Regina habla ocho minutos seguidos. Doña Marta revisa su teléfono.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": 0
         },
         {
-          "label": "Optimista",
-          "value": 1.2
+          "id": "precio",
+          "texto": "Empezar con el precio: \"se las dejo a $120\"",
+          "siguiente_nodo": "guerra_precio",
+          "consecuencia": "Regina bajó su precio antes de que nadie se lo pidiera.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
         }
-      ],
-      "default": 1
+      ]
+    },
+    "el_monologo": {
+      "id": "el_monologo",
+      "texto": "Doña Marta la interrumpe: \"Mira, todo se ve bonito, pero yo tengo un problema muy específico y no sé si tú lo resuelves\". Aún hay tiempo de corregir.",
+      "opciones": [
+        {
+          "id": "callar",
+          "texto": "Dejar de vender y preguntar cuál es ese problema",
+          "siguiente_nodo": "la_escucha",
+          "consecuencia": "Regina cierra el catálogo y escucha.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "seguir",
+          "texto": "Seguir con la presentación, casi termina",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "\"Déjame tu número y yo te llamo\".",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "guerra_precio": {
+      "id": "guerra_precio",
+      "texto": "Doña Marta responde de inmediato: \"Mi proveedor me las da a $95\". Regina se metió sola en una competencia de precios que no puede ganar: a $95 perdería dinero en cada playera.",
+      "opciones": [
+        {
+          "id": "cambiar_terreno",
+          "texto": "Cambiar la conversación: \"¿y le cumple con los tiempos?\"",
+          "siguiente_nodo": "la_escucha",
+          "consecuencia": "Doña Marta suspira. Ahí estaba el verdadero problema.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "igualar",
+          "texto": "Igualar el precio: \"se las dejo a $95\"",
+          "siguiente_nodo": "final_perdida",
+          "consecuencia": "Consigue el pedido y pierde $10 en cada playera.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -24000
+        }
+      ]
+    },
+    "la_escucha": {
+      "id": "la_escucha",
+      "texto": "Doña Marta se abre: \"Mi proveedor es barato pero tarda tres semanas y una de cada diez playeras sale con el estampado torcido. He perdido clientes por eso\". Regina entrega en 5 días y revisa pieza por pieza.",
+      "opciones": [
+        {
+          "id": "valor",
+          "texto": "Vender la solución al problema real, no el precio: entrega en 5 días y garantía de reposición",
+          "siguiente_nodo": "la_objecion",
+          "consecuencia": "Doña Marta se endereza en la silla por primera vez.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "bajar",
+          "texto": "Ofrecer el precio más bajo que pueda",
+          "siguiente_nodo": "final_perdida",
+          "consecuencia": "Regina compite en lo único donde no puede ganar.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -24000
+        }
+      ]
+    },
+    "la_objecion": {
+      "id": "la_objecion",
+      "texto": "Doña Marta objeta: \"Todo eso está muy bien, pero $150 contra $95 es mucha diferencia\". ¿Cómo responde Regina?",
+      "opciones": [
+        {
+          "id": "numeros",
+          "texto": "Poner números: \"una de cada diez torcidas son 20 playeras perdidas al mes, $1,900. Y tres semanas de espera le cuestan ventas\"",
+          "siguiente_nodo": "el_cierre",
+          "consecuencia": "Doña Marta saca su calculadora. Los números le dan la razón a Regina.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "insistir",
+          "texto": "Insistir en que su calidad es mejor, sin números",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "\"Todos me dicen lo mismo\".",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "ceder",
+          "texto": "Ceder a $110 para cerrar ya",
+          "siguiente_nodo": "final_medio",
+          "consecuencia": "Cierra el trato con un margen apretado.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 60000
+        }
+      ]
+    },
+    "el_cierre": {
+      "id": "el_cierre",
+      "texto": "Doña Marta está convencida pero duda del riesgo de cambiar. ¿Qué propone Regina?",
+      "opciones": [
+        {
+          "id": "piloto",
+          "texto": "Proponer un pedido de prueba de 50 piezas el primer mes",
+          "siguiente_nodo": "final_socia",
+          "consecuencia": "Bajar el riesgo de decir que sí es lo que cierra la venta.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 156000
+        },
+        {
+          "id": "presionar",
+          "texto": "Presionar: \"necesito su respuesta hoy\"",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "La prisa impuesta genera desconfianza.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "final_socia": {
+      "id": "final_socia",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Las 50 de prueba salieron perfectas y a tiempo. Al segundo mes el pedido subió a 200 piezas a $150. Regina factura $30,000 mensuales de ese solo cliente, y doña Marta la recomendó con otras dos papelerías.",
+      "reflexion_final": "Vender no es convencer: es entender. Quien pregunta primero descubre el problema real, y el problema real casi nunca es el precio. Cuando compites en precio siempre hay alguien más barato; cuando compites resolviendo un problema, eres el único."
+    },
+    "final_medio": {
+      "id": "final_medio",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Cerró a $110. Gana $25 por playera en vez de $65. Es un buen cliente, pero dejó $96,000 al año sobre la mesa por ceder antes de argumentar.",
+      "reflexion_final": "Bajar el precio es la respuesta más fácil a una objeción y casi siempre la peor. Antes de ceder, prueba a convertir tu ventaja en números que el cliente pueda comparar con lo que hoy pierde."
+    },
+    "final_perdida": {
+      "id": "final_perdida",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Consiguió el pedido a $95. Con costo de $85 y gastos de entrega, pierde dinero en cada playera. Mientras más vende, peor le va.",
+      "reflexion_final": "Ganar una venta perdiendo dinero no es ganar. Si el único argumento es el precio, el negocio está condenado a competir contra quien pueda aguantar más pérdidas."
+    },
+    "final_no": {
+      "id": "final_no",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "\"Déjame tu número y yo te llamo\". Nunca llamó.",
+      "reflexion_final": "Hablar mucho no es vender. La regla del buen vendedor: el cliente debe hablar el doble que tú. Solo así descubres qué le duele y puedes ofrecerle exactamente eso."
     }
-  ],
-  "formula": "(100000 + 50000) * nivel_sinergia - costo_compra",
-  "output_label": "Valor Estimado de la Nueva Empresa",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "pie",
-  "escenarios": [
-    {
-      "condicion": "resultado > 150000",
-      "mensaje": "🚀 ¡Fusión Exitosa! Al unir fuerzas, lograron reducir costos y vender mucho más. ¡Son los nuevos líderes!",
-      "tipo": "success"
-    },
-    {
-      "condicion": "costo_compra > 80000",
-      "mensaje": "⚠️ Pagaste demasiado. Aunque la empresa es buena, tardarás muchos años en recuperar tu inversión. ¡Cuidado con el precio!",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 M&A significa 'Mergers and Acquisitions'. Es la forma en que las empresas crecen comprando a otros.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Cuál es la diferencia entre negociar precio y negociar valor? ¿Cómo convencerías a alguien de pagar más por tu producto si la competencia vende algo parecido más barato?",
-  "comparativa_espera": "Las empresas que alinean sus decisiones financieras con sus valores éticos tienen en promedio 23% mayor retención de talento y 18% más rentabilidad a largo plazo. Las finanzas y los valores no son opuestos — son complementarios.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "por_persona",
-      "label": "Por Integrante del Equipo",
-      "formula": "Math.round(resultado_principal / 3)",
-      "prefix": "$",
-      "suffix": "/persona",
-      "descripcion": "Distribuido equitativamente en un equipo de 3"
-    },
-    {
-      "id": "valor_acumulado",
-      "label": "Valor Acumulado 5 Años",
-      "formula": "resultado_principal * 5",
-      "prefix": "$",
-      "suffix": " en 5 años",
-      "descripcion": "Si este resultado se repite durante 5 años"
-    },
-    {
-      "id": "retorno_sobre_inversion",
-      "label": "ROI de la Decisión",
-      "formula": "Math.round(resultado_principal / resultado_principal * 100 * 0.25)",
-      "prefix": "",
-      "suffix": "% de retorno",
-      "descripcion": "El retorno porcentual de esta estrategia"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "por_persona",
-      "label": "Por Integrante del Equipo",
-      "color": "#22c55e"
-    }
-  ]
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

@@ -1,0 +1,199 @@
+{
+  "code": "ACT-P3-4-7-A",
+  "unit_code": "P3-4-7",
+  "unit_title": "Probar con clientes reales: escuchar antes de producir",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Cinco Clientes de Prueba",
+  "descripcion": "Ceny quiere vender pulseras en la feria. Antes de producir cien, decide probar. Cada decisión cambia el resultado.",
+  "objetivo": "Aplicar el proceso de validación con clientes antes de producir",
+  "xp": 200,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene $400 para materiales y una idea: pulseras tejidas para la feria escolar. Puede producir cien de golpe o probar primero.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "¿Qué hace Ceny con sus $400?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Hacer diez pulseras y probarlas con compañeros antes de producir más",
+          "siguiente_nodo": "preguntas",
+          "consecuencia": "Gasta $40 y conserva $360 para decidir con información.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Producir cien de una vez para aprovechar el material",
+          "siguiente_nodo": "sin_probar",
+          "consecuencia": "Gasta los $400 completos sin saber si alguien las quiere.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -400
+        },
+        {
+          "id": "o3",
+          "texto": "Preguntar primero a sus compañeros si les gustaría comprarlas",
+          "siguiente_nodo": "pregunta_mala",
+          "consecuencia": "Todos dicen que sí. Nadie quiere ser grosero.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-inicio.webp"
+    },
+    "pregunta_mala": {
+      "id": "pregunta_mala",
+      "texto": "Veinte compañeros dijeron que sí les gustaría. ¿Qué concluye Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que esa respuesta no significa nada y hay que preguntar mejor",
+          "siguiente_nodo": "preguntas",
+          "consecuencia": "Buena corrección: la pregunta de opinión no mide nada.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que ya está validado y puede producir cien",
+          "siguiente_nodo": "sin_probar",
+          "consecuencia": "Los \"sí\" por amabilidad no se convierten en ventas.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -400
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-pregunta_mala.webp"
+    },
+    "preguntas": {
+      "id": "preguntas",
+      "texto": "Ceny va a entrevistar a cinco compañeros con las pulseras en la mano. ¿Qué les pregunta?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "¿Cuándo compraste algo así por última vez y cuánto pagaste?",
+          "siguiente_nodo": "respuestas",
+          "consecuencia": "Preguntas sobre hechos pasados: nadie inventa un recuerdo por amabilidad.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "¿Verdad que están bonitas?",
+          "siguiente_nodo": "pregunta_mala",
+          "consecuencia": "Otra vez la pregunta amable. Todos dirán que sí.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "¿Cuánto pagarías por una?",
+          "siguiente_nodo": "respuestas",
+          "consecuencia": "Sirve algo, aunque la gente predice mal lo que hará en el futuro.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-preguntas.webp"
+    },
+    "respuestas": {
+      "id": "respuestas",
+      "texto": "Cuatro de cinco dicen que el nudo se afloja y se les cae. Uno dice que el color no le gusta. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Arreglar el nudo antes de producir, que es lo que dijeron cuatro de cinco",
+          "siguiente_nodo": "produccion",
+          "consecuencia": "Atiende el problema repetido, no el comentario aislado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 300
+        },
+        {
+          "id": "o2",
+          "texto": "Cambiar el color, porque fue la crítica que más le dolió",
+          "siguiente_nodo": "produccion",
+          "consecuencia": "Atendió a una persona e ignoró a cuatro. Las pulseras se seguirán cayendo.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -150
+        },
+        {
+          "id": "o3",
+          "texto": "Anotar todo y no cambiar nada, ya preguntó",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Escuchar sin actuar da la ilusión de haber validado.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -300
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-respuestas.webp"
+    },
+    "produccion": {
+      "id": "produccion",
+      "texto": "Con el ajuste hecho, ¿cuántas produce Ceny para la feria?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Treinta primero, y más si se venden",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Producción por partes: si se agotan produce más, si no, no le sobran.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 250
+        },
+        {
+          "id": "o2",
+          "texto": "Cien, ahora sí está seguro",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Validar reduce el riesgo, no lo elimina. Producir todo de golpe sigue siendo apuesta.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -200
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-produccion.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Las treinta pulseras se agotaron y Ceny alcanzó a producir veinte más durante la feria.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Probó con diez, preguntó por hechos, atendió el problema que se repitió y produjo por partes. Cuatro decisiones, cero material desperdiciado.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny vendió algunas pulseras, pero le sobró bastante material convertido en producto.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Preguntar es solo la mitad. La otra mitad es cambiar algo por lo que se escuchó y producir de a poco.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-final_regular.webp"
+    },
+    "sin_probar": {
+      "id": "sin_probar",
+      "texto": "Ceny produjo cien pulseras. En la feria vendió doce: a las demás se les aflojaba el nudo y la gente las devolvía.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El problema del nudo se habría detectado con cinco preguntas y diez pulseras. Se detectó con $400 gastados y ochenta y ocho sin vender.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-7-a-n-sin_probar.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p3/p3-4-7-a-portada.webp"
+}

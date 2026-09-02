@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-3-10-B",
+  "unit_code": "P3-3-10",
+  "unit_title": "Salir de una deuda: el plan bola de nieve",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Salir de Deudas",
+  "descripcion": "Demuestra que dominas el método y sus condiciones.",
+  "objetivo": "Verificar la aplicación correcta del método bola de nieve",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "En el método bola de nieve, las deudas se ordenan:",
+      "opciones": [
+        "De la más pequeña a la más grande",
+        "De mayor a menor interés",
+        "Por antigüedad",
+        "Al azar"
+      ],
+      "correcta": 0,
+      "explicacion": "La más chica es la que cae primero, y esa victoria es la que sostiene el plan."
+    },
+    {
+      "id": "q2",
+      "texto": "En todas las deudas se paga:",
+      "opciones": [
+        "Nada",
+        "El mínimo, para no atrasarse",
+        "El total",
+        "El doble"
+      ],
+      "correcta": 1,
+      "explicacion": "Atrasarse mientras pagas arruina el plan con recargos e historial."
+    },
+    {
+      "id": "q3",
+      "texto": "El dinero extra se destina a:",
+      "opciones": [
+        "La más grande",
+        "Ahorro",
+        "La deuda más pequeña",
+        "Todas por igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Concentrar en una sola es lo que permite liquidarla pronto."
+    },
+    {
+      "id": "q4",
+      "texto": "Al liquidar una deuda, su pago:",
+      "opciones": [
+        "Se gasta",
+        "Se guarda",
+        "Se devuelve",
+        "Se suma al de la siguiente"
+      ],
+      "correcta": 3,
+      "explicacion": "Ahí está el efecto bola de nieve: cada ronda avanza más rápido."
+    },
+    {
+      "id": "q5",
+      "texto": "El método que ahorra más dinero en teoría es:",
+      "opciones": [
+        "El que empieza por la de mayor interés",
+        "La bola de nieve",
+        "No pagar",
+        "Pedir otro préstamo"
+      ],
+      "correcta": 0,
+      "explicacion": "Es matemáticamente superior, pero mucha gente lo abandona a medio camino."
+    },
+    {
+      "id": "q6",
+      "texto": "La bola de nieve gana en:",
+      "opciones": [
+        "Ahorro de intereses",
+        "Tasa de finalización",
+        "Rapidez matemática",
+        "Comisiones"
+      ],
+      "correcta": 1,
+      "explicacion": "Las victorias tempranas hacen que la gente termine. Y el que se termina es el que sirve."
+    },
+    {
+      "id": "q7",
+      "texto": "Además de pagar, hay que:",
+      "opciones": [
+        "Pedir otro préstamo",
+        "Cerrar la cuenta",
+        "Dejar de adquirir deudas nuevas",
+        "Cambiar de banco"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin esta segunda parte, la bola rueda pero nunca llega."
+    },
+    {
+      "id": "q8",
+      "texto": "El mejor método para salir de deudas es:",
+      "opciones": [
+        "El más rápido en teoría",
+        "El más caro",
+        "El que recomienda el banco",
+        "El que la persona logra terminar"
+      ],
+      "correcta": 3,
+      "explicacion": "Un plan perfecto abandonado vale menos que un plan bueno completado."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-10-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-10-b-escena.webp"
+}

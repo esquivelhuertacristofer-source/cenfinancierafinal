@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-3-6-A",
+  "unit_code": "P5-3-6",
+  "unit_title": "Riesgo y rendimiento: la regla que nunca falla",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "La Escala del Riesgo",
+  "descripcion": "Ordena cada instrumento y afirmación según el nivel de riesgo que implica.",
+  "objetivo": "Clasificar instrumentos y afirmaciones según su nivel de riesgo",
+  "xp": 300,
+  "instruccion": "Arrastra cada elemento al nivel de riesgo que le corresponde.",
+  "categorias": [
+    {
+      "id": "bajo",
+      "label": "Riesgo bajo",
+      "emoji": "🟢",
+      "color": "#10B981"
+    },
+    {
+      "id": "medio",
+      "label": "Riesgo medio",
+      "emoji": "🟡",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "imposible",
+      "label": "Promesa imposible",
+      "emoji": "🔴",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Cuenta de ahorro en banco autorizado",
+      "emoji": "🏦",
+      "categoria_correcta": "bajo",
+      "feedback": "Casi no varía y casi no rinde: es la base de la escala."
+    },
+    {
+      "id": "i2",
+      "label": "Instrumento gubernamental a plazo fijo",
+      "emoji": "📜",
+      "categoria_correcta": "bajo",
+      "feedback": "De los más seguros del país, con rendimiento moderado."
+    },
+    {
+      "id": "i3",
+      "label": "Fondo que invierte en muchas empresas distintas",
+      "emoji": "📊",
+      "categoria_correcta": "medio",
+      "feedback": "Diversificado, pero el valor sube y baja con el mercado."
+    },
+    {
+      "id": "i4",
+      "label": "\"20% mensual garantizado, sin ningún riesgo\"",
+      "emoji": "🚩",
+      "categoria_correcta": "imposible",
+      "feedback": "Alto rendimiento y cero riesgo no pueden coexistir."
+    },
+    {
+      "id": "i5",
+      "label": "Acciones de una sola empresa",
+      "emoji": "📈",
+      "categoria_correcta": "medio",
+      "feedback": "Puede subir mucho o caer mucho: todo depende de una empresa."
+    },
+    {
+      "id": "i6",
+      "label": "\"Recuperas tu dinero seguro y además ganas el triple\"",
+      "emoji": "🎰",
+      "categoria_correcta": "imposible",
+      "feedback": "Si existiera, todo el mundo estaría ahí y dejaría de pagar tanto."
+    },
+    {
+      "id": "i7",
+      "label": "Depósito a plazo en institución supervisada",
+      "emoji": "🔒",
+      "categoria_correcta": "bajo",
+      "feedback": "Rendimiento conocido de antemano y protección aplicable."
+    },
+    {
+      "id": "i8",
+      "label": "Fondo que sigue a un índice de la bolsa",
+      "emoji": "🧺",
+      "categoria_correcta": "medio",
+      "feedback": "Diversificación amplia, pero sigue expuesto a las caídas del mercado."
+    },
+    {
+      "id": "i9",
+      "label": "\"Gana mientras duermes, sin conocimientos ni riesgo\"",
+      "emoji": "💤",
+      "categoria_correcta": "imposible",
+      "feedback": "La promesa de rendimiento sin esfuerzo ni riesgo es la marca del fraude."
+    },
+    {
+      "id": "i10",
+      "label": "Fondo de deuda con vencimientos cortos",
+      "emoji": "📋",
+      "categoria_correcta": "bajo",
+      "feedback": "Baja variación, ideal para dinero que se puede necesitar pronto."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-6-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-1-6-A",
+  "unit_code": "S2-1-6",
+  "unit_title": "La tasa objetivo: el termostato de la economía",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Sube o Baja la Tasa",
+  "descripcion": "Clasifica cada efecto según ocurra al subir la tasa, al bajarla o en ambos casos.",
+  "objetivo": "Trazar los efectos de la política monetaria sobre la economía cotidiana",
+  "xp": 500,
+  "instruccion": "Arrastra cada efecto al escenario que le corresponde.",
+  "categorias": [
+    {
+      "id": "sube",
+      "label": "Ocurre cuando SUBE la tasa",
+      "emoji": "📈",
+      "color": "#EF4444"
+    },
+    {
+      "id": "baja",
+      "label": "Ocurre cuando BAJA la tasa",
+      "emoji": "📉",
+      "color": "#10B981"
+    },
+    {
+      "id": "ninguno",
+      "label": "No lo afecta directamente",
+      "emoji": "➖",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Los instrumentos de ahorro rinden más",
+      "emoji": "🏦",
+      "categoria_correcta": "sube",
+      "feedback": "Es la cara amable de las tasas altas."
+    },
+    {
+      "id": "i2",
+      "label": "Los créditos nuevos se abaratan",
+      "emoji": "💳",
+      "categoria_correcta": "baja",
+      "feedback": "Estimula el gasto y la inversión."
+    },
+    {
+      "id": "i3",
+      "label": "Un crédito de tasa fija ya firmado",
+      "emoji": "🔒",
+      "categoria_correcta": "ninguno",
+      "feedback": "La tasa pactada no cambia con los movimientos posteriores."
+    },
+    {
+      "id": "i4",
+      "label": "La presión sobre los precios disminuye",
+      "emoji": "🧊",
+      "categoria_correcta": "sube",
+      "feedback": "Es el objetivo principal del alza, aunque tarda meses."
+    },
+    {
+      "id": "i5",
+      "label": "Las empresas invierten y contratan más",
+      "emoji": "🏭",
+      "categoria_correcta": "baja",
+      "feedback": "Financiarse cuesta menos y los proyectos se vuelven viables."
+    },
+    {
+      "id": "i6",
+      "label": "La mensualidad de un crédito variable aumenta",
+      "emoji": "⬆️",
+      "categoria_correcta": "sube",
+      "feedback": "Los créditos variables se ajustan con rapidez."
+    },
+    {
+      "id": "i7",
+      "label": "El precio del jitomate esta semana",
+      "emoji": "🍅",
+      "categoria_correcta": "ninguno",
+      "feedback": "Los precios de alimentos dependen sobre todo de clima y cosecha."
+    },
+    {
+      "id": "i8",
+      "label": "Conviene aplazar deudas nuevas",
+      "emoji": "⏸️",
+      "categoria_correcta": "sube",
+      "feedback": "Endeudarse cuesta más que unos meses antes."
+    },
+    {
+      "id": "i9",
+      "label": "El ahorro pierde atractivo frente al consumo",
+      "emoji": "🛍️",
+      "categoria_correcta": "baja",
+      "feedback": "Con rendimientos bajos, guardar dinero compensa menos."
+    },
+    {
+      "id": "i10",
+      "label": "Tu sueldo nominal de este mes",
+      "emoji": "💼",
+      "categoria_correcta": "ninguno",
+      "feedback": "La tasa no cambia tu recibo, aunque sí lo que ese dinero alcanza."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-6-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-6-a-escena.webp"
+}

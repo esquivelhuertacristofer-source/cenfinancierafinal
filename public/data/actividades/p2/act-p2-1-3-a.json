@@ -14,7 +14,7 @@
   "texto": "Todo el dinero que entra a mi casa se llama __BLANK1__. Mi mamá trabaja en una empresa y recibe un __BLANK2__ cada quincena como pago. Mi tío tiene su propio negocio de pasteles, él es un __BLANK3__ valiente. Mis abuelitos reciben una __BLANK4__ porque ya trabajaron muchos años y ahora descansan. Este dinero no es un regalo, es el resultado del __BLANK5__ y del __BLANK6__ de mi familia. Cuando cuido mis útiles y mi ropa, ayudo a que el __BLANK7__ de mi casa rinda más. ¡Soy un __BLANK8__ financiero que agradece el trabajo!",
   "blanks": [
     {
-      "id": "BLANK1",
+      "id": "blank1",
       "opciones": [
         "ingreso",
         "gasto",
@@ -23,7 +23,7 @@
       "respuesta": "ingreso"
     },
     {
-      "id": "BLANK2",
+      "id": "blank2",
       "opciones": [
         "sueldo",
         "premio",
@@ -32,7 +32,7 @@
       "respuesta": "sueldo"
     },
     {
-      "id": "BLANK3",
+      "id": "blank3",
       "opciones": [
         "emprendedor",
         "empleado",
@@ -41,7 +41,7 @@
       "respuesta": "emprendedor"
     },
     {
-      "id": "BLANK4",
+      "id": "blank4",
       "opciones": [
         "pensión",
         "propina",
@@ -50,7 +50,7 @@
       "respuesta": "pensión"
     },
     {
-      "id": "BLANK5",
+      "id": "blank5",
       "opciones": [
         "esfuerzo",
         "suerte",
@@ -59,7 +59,7 @@
       "respuesta": "esfuerzo"
     },
     {
-      "id": "BLANK6",
+      "id": "blank6",
       "opciones": [
         "tiempo",
         "juego",
@@ -68,7 +68,7 @@
       "respuesta": "tiempo"
     },
     {
-      "id": "BLANK7",
+      "id": "blank7",
       "opciones": [
         "dinero",
         "agua",
@@ -77,7 +77,7 @@
       "respuesta": "dinero"
     },
     {
-      "id": "BLANK8",
+      "id": "blank8",
       "opciones": [
         "genio",
         "niño",

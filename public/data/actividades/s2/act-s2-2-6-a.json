@@ -1,0 +1,192 @@
+{
+  "code": "ACT-S2-2-6-A",
+  "unit_code": "S2-2-6",
+  "unit_title": "Gastos médicos mayores: deducible, coaseguro y suma asegurada",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Calculadora de Siniestro",
+  "descripcion": "Aplica la secuencia completa y descubre cuánto pagarías tú.",
+  "objetivo": "Calcular la responsabilidad del asegurado en distintos escenarios de siniestro",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi póliza",
+      "descripcion": "Las condiciones que definen todo.",
+      "campos": [
+        {
+          "id": "deducible",
+          "label": "Deducible",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 20000,
+          "unit": "$",
+          "placeholder": "20000",
+          "requerido": true
+        },
+        {
+          "id": "coaseguro",
+          "label": "Coaseguro",
+          "type": "slider",
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "default": 10,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "tope",
+          "label": "Tope de coaseguro",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "default": 50000,
+          "unit": "$",
+          "placeholder": "50000",
+          "ayuda": "Después de este monto la aseguradora cubre el 100%.",
+          "requerido": true
+        },
+        {
+          "id": "suma_asegurada",
+          "label": "Suma asegurada",
+          "type": "number",
+          "min": 100000,
+          "max": 50000000,
+          "default": 2000000,
+          "unit": "$",
+          "placeholder": "2000000",
+          "requerido": true
+        },
+        {
+          "id": "prima_anual",
+          "label": "Prima anual",
+          "type": "number",
+          "min": 1000,
+          "max": 300000,
+          "default": 18000,
+          "unit": "$",
+          "placeholder": "18000",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Un siniestro pequeño",
+      "descripcion": "Cuando la cuenta no llega al deducible.",
+      "campos": [
+        {
+          "id": "siniestro_chico",
+          "label": "Monto de la cuenta médica",
+          "type": "slider",
+          "min": 1000,
+          "max": 100000,
+          "step": 1000,
+          "default": 15000,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "pago_chico",
+          "label": "Lo que pagas tú",
+          "type": "calculated",
+          "formula": "Math.min(siniestro_chico, deducible) + Math.min(Math.max(0, siniestro_chico - deducible) * coaseguro / 100, tope)",
+          "unit": "$"
+        },
+        {
+          "id": "pago_aseg_chico",
+          "label": "Lo que paga la aseguradora",
+          "type": "calculated",
+          "formula": "Math.max(0, siniestro_chico - (Math.min(siniestro_chico, deducible) + Math.min(Math.max(0, siniestro_chico - deducible) * coaseguro / 100, tope)))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Un siniestro grande",
+      "descripcion": "Donde el tope de coaseguro se vuelve la protección clave.",
+      "campos": [
+        {
+          "id": "siniestro_grande",
+          "label": "Monto de la cuenta médica",
+          "type": "slider",
+          "min": 50000,
+          "max": 3000000,
+          "step": 10000,
+          "default": 800000,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "pago_grande",
+          "label": "Lo que pagas tú",
+          "type": "calculated",
+          "formula": "Math.round(Math.min(siniestro_grande, deducible) + Math.min(Math.max(0, siniestro_grande - deducible) * coaseguro / 100, tope) + Math.max(0, siniestro_grande - suma_asegurada))",
+          "unit": "$"
+        },
+        {
+          "id": "pago_aseg_grande",
+          "label": "Lo que paga la aseguradora",
+          "type": "calculated",
+          "formula": "Math.round(siniestro_grande - (Math.min(siniestro_grande, deducible) + Math.min(Math.max(0, siniestro_grande - deducible) * coaseguro / 100, tope) + Math.max(0, siniestro_grande - suma_asegurada)))",
+          "unit": "$"
+        },
+        {
+          "id": "pct_cubierto",
+          "label": "Porcentaje que cubre la aseguradora",
+          "type": "calculated",
+          "formula": "Math.round((siniestro_grande - (Math.min(siniestro_grande, deducible) + Math.min(Math.max(0, siniestro_grande - deducible) * coaseguro / 100, tope) + Math.max(0, siniestro_grande - suma_asegurada))) / Math.max(1, siniestro_grande) * 100)",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi exposición máxima",
+      "descripcion": "Lo que debo tener disponible.",
+      "campos": [
+        {
+          "id": "exposicion",
+          "label": "Máximo que tendría que poner de mi bolsillo",
+          "type": "calculated",
+          "formula": "deducible + tope",
+          "unit": "$"
+        },
+        {
+          "id": "fondo",
+          "label": "Lo que tengo en fondo de emergencia",
+          "type": "number",
+          "min": 0,
+          "max": 2000000,
+          "default": 30000,
+          "unit": "$",
+          "placeholder": "30000",
+          "requerido": true
+        },
+        {
+          "id": "faltante",
+          "label": "Cuánto me faltaría en el peor escenario",
+          "type": "calculated",
+          "formula": "Math.max(0, deducible + tope - fondo)",
+          "unit": "$"
+        },
+        {
+          "id": "costo_anual_total",
+          "label": "Prima más exposición máxima",
+          "type": "calculated",
+          "formula": "prima_anual + deducible + tope",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_poliza_medica",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-2-6-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-6-a-escena.webp"
+}

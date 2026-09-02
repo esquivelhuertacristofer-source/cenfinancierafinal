@@ -4,123 +4,162 @@
   "unit_title": "El seguro de desempleo y otros seguros laborales",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "El Mundo del Venture Capital",
-  "descripcion": "¿Podrás convencer a los tiburones o te quedarás sin inversión? ¡Demuestra que conoces las reglas del juego de las Startups!",
-  "objetivo": "Identificar los términos técnicos y las etapas de inversión en empresas de alto crecimiento",
-  "xp": 300,
-  "preguntas": [
-    {
-      "id": "vc1",
-      "pregunta": "¿Qué es un 'Unicornio' en el mundo de los negocios?",
-      "respuesta_correcta": "Una empresa tecnológica privada que alcanza un valor de más de $1,000 millones de dólares",
-      "incorrectas": [
-        "Un animal mitológico",
-        "Una empresa que no tiene competencia",
-        "Un banco muy antiguo"
-      ],
-      "dato_extra": "Ejemplos famosos fueron Uber, Airbnb o Kavak antes de salir a bolsa."
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "El Día del Despido",
+  "descripcion": "A la mamá de Karla la despidieron esta mañana después de siete años. Le ofrecen firmar \"un acuerdo\" hoy mismo, en efectivo, para que \"todo sea más rápido\".",
+  "objetivo": "Aplicar los derechos laborales ante un despido y evaluar el uso responsable de los mecanismos de protección disponibles.",
+  "xp": 800,
+  "personaje_principal": "Karla",
+  "contexto_inicial": "Ganaba $22,000 al mes, siete años de antigüedad, despido sin causa justificada. Recursos Humanos le ofrece $30,000 \"para cerrar hoy\".",
+  "nodo_inicial": "la_oferta",
+  "nodos": {
+    "la_oferta": {
+      "id": "la_oferta",
+      "texto": "\"Firma aquí y te damos $30,000 hoy mismo, en efectivo\". ¿Qué le aconseja Karla a su mamá?",
+      "opciones": [
+        {
+          "id": "calcular",
+          "texto": "Calcular primero cuánto le corresponde por ley antes de firmar nada",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "Karla busca la Ley Federal del Trabajo y hace las cuentas.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "firmar",
+          "texto": "Firmar: $30,000 en efectivo hoy es mejor que un juicio largo",
+          "siguiente_nodo": "final_renuncia",
+          "consecuencia": "Firma sin leer que el documento dice \"renuncia voluntaria\".",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -132000
+        }
+      ]
     },
-    {
-      "id": "vc2",
-      "pregunta": "¿Qué significa el 'Burn Rate'?",
-      "respuesta_correcta": "La velocidad a la que una startup gasta su dinero para crecer antes de ser rentable",
-      "incorrectas": [
-        "La tasa de incendios en la oficina",
-        "La velocidad del internet",
-        "El precio de las acciones"
-      ],
-      "dato_extra": "Si el burn rate es muy alto y no hay nueva inversión, la empresa quiebra."
+    "los_numeros": {
+      "id": "los_numeros",
+      "texto": "Por despido injustificado le corresponden: 3 meses de salario ($66,000), 20 días por año trabajado ($102,600), más aguinaldo, vacaciones y prima proporcionales (unos $14,000). Total aproximado: $182,600. Le están ofreciendo $30,000.",
+      "opciones": [
+        {
+          "id": "negociar",
+          "texto": "Rechazar la oferta y negociar el finiquito de ley por escrito",
+          "siguiente_nodo": "la_negociacion",
+          "consecuencia": "La empresa cambia de tono al ver que conoce sus derechos.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "aceptar",
+          "texto": "Aceptar los $30,000: al menos es dinero seguro",
+          "siguiente_nodo": "final_renuncia",
+          "consecuencia": "Pierde alrededor de $152,000 por no reclamar.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -152000
+        }
+      ]
     },
-    {
-      "id": "vc3",
-      "pregunta": "¿Qué es el 'Equity'?",
-      "respuesta_correcta": "El porcentaje de propiedad o acciones que tienes en una empresa",
-      "incorrectas": [
-        "Un préstamo que debes pagar",
-        "El nombre de la marca",
-        "Un tipo de impuesto"
-      ],
-      "dato_extra": "Los fundadores dan 'equity' a cambio de dinero para hacer crecer el negocio."
+    "la_negociacion": {
+      "id": "la_negociacion",
+      "texto": "La empresa ofrece $120,000 para cerrar sin ir a la autoridad laboral. Ir a juicio podría dar los $182,600 pero tardaría entre uno y dos años.",
+      "opciones": [
+        {
+          "id": "aceptar_bueno",
+          "texto": "Aceptar los $120,000 por escrito, con finiquito formal",
+          "siguiente_nodo": "el_dinero",
+          "consecuencia": "Recibe el dinero en dos semanas, con documentación en regla.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 120000
+        },
+        {
+          "id": "juicio",
+          "texto": "Ir a la autoridad laboral por el total",
+          "siguiente_nodo": "el_dinero",
+          "consecuencia": "Gana el caso 16 meses después: $182,600, pero con año y medio sin ese dinero.",
+          "xp_bonus": 180,
+          "impacto_patrimonio": 182600
+        }
+      ]
     },
-    {
-      "id": "vc4",
-      "pregunta": "¿Qué es un 'Ángel Inversionista'?",
-      "respuesta_correcta": "Una persona que invierte su propio dinero en startups que están empezando a cambio de acciones",
-      "incorrectas": [
-        "Una persona que dona dinero",
-        "Un empleado del banco",
-        "Un cura"
-      ],
-      "dato_extra": "Suelen ser los primeros en creer en una idea cuando solo es un prototipo."
+    "el_dinero": {
+      "id": "el_dinero",
+      "texto": "Con el finiquito en mano, ¿qué hace con ese dinero mientras busca trabajo?",
+      "opciones": [
+        {
+          "id": "colchon",
+          "texto": "Ponerlo en CETES a 28 días y vivir de él con presupuesto ajustado",
+          "siguiente_nodo": "la_afore",
+          "consecuencia": "Disponible cada mes, protegido de la inflación y fuera del alcance del impulso.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "liquidar_deuda",
+          "texto": "Liquidar la deuda de tarjeta al 75% anual con una parte",
+          "siguiente_nodo": "la_afore",
+          "consecuencia": "Deja de pagar intereses altísimos justo cuando no hay ingreso.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 18000
+        },
+        {
+          "id": "gastar",
+          "texto": "Darse un respiro: unas vacaciones cortas para despejarse",
+          "siguiente_nodo": "final_apurada",
+          "consecuencia": "Se van $35,000 en dos semanas.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -35000
+        }
+      ]
     },
-    {
-      "id": "vc5",
-      "pregunta": "¿Qué significa 'Crowdfunding'?",
-      "respuesta_correcta": "Conseguir financiamiento de muchas personas a través de internet, en lugar de un solo gran banco",
-      "incorrectas": [
-        "Vender productos en la calle",
-        "Pedir dinero al gobierno",
-        "Un tipo de ahorro grupal"
-      ],
-      "dato_extra": "Permite que cualquier persona sea inversionista con montos pequeños."
+    "la_afore": {
+      "id": "la_afore",
+      "texto": "Pasan cuatro meses sin trabajo. Puede retirar dinero de su AFORE por desempleo. ¿Lo hace?",
+      "opciones": [
+        {
+          "id": "no_retirar",
+          "texto": "No: todavía tiene colchón y ese retiro le costaría semanas cotizadas",
+          "siguiente_nodo": "final_recuperada",
+          "consecuencia": "Aguanta dos meses más y consigue un mejor empleo.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "retirar",
+          "texto": "Sí: es su dinero y lo necesita",
+          "siguiente_nodo": "final_recuperada",
+          "consecuencia": "Resuelve el corto plazo y pierde semanas cotizadas de su pensión.",
+          "xp_bonus": 120,
+          "impacto_patrimonio": -25000
+        }
+      ]
     },
-    {
-      "id": "vc6",
-      "pregunta": "¿Qué es un 'Exit' (Salida)?",
-      "respuesta_correcta": "Cuando los inversionistas venden sus acciones (en una IPO o a otra empresa) para cobrar sus ganancias",
-      "incorrectas": [
-        "Cuando la empresa quiebra",
-        "Salir de la oficina",
-        "Cerrar la página web"
-      ],
-      "dato_extra": "Es el momento en que el riesgo se convierte en riqueza real."
+    "final_recuperada": {
+      "id": "final_recuperada",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Seis meses después entró a un trabajo mejor pagado. Nunca aceptó una mala oferta por desesperación, porque tenía con qué esperar.",
+      "reflexion_final": "En México no hay seguro de desempleo universal: tu protección son tus derechos laborales y tu fondo de emergencia. Las reglas: nunca firmes nada el día del despido, calcula lo que te corresponde por ley (3 meses más 20 días por año), exige todo por escrito, y usa el retiro de la AFORE solo como último recurso, porque te cuesta pensión."
     },
-    {
-      "id": "vc7",
-      "pregunta": "¿Cuál es la diferencia entre una Startup y una PyME (Pequeña Empresa)?",
-      "respuesta_correcta": "La Startup busca un crecimiento masivo y rápido usando tecnología; la PyME busca estabilidad y rentabilidad local",
-      "incorrectas": [
-        "La Startup es más grande",
-        "La PyME usa computadoras",
-        "No hay diferencia"
-      ],
-      "dato_extra": "Una panadería es una PyME; una app que entrega pan en todo el mundo es una Startup."
+    "final_apurada": {
+      "id": "final_apurada",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "El dinero se acabó al tercer mes. Aceptó un trabajo peor pagado que el anterior porque ya no podía esperar.",
+      "reflexion_final": "Un finiquito no es un premio: es el tiempo que compras para encontrar el trabajo correcto. Gastarlo rápido convierte esa libertad en presión, y la presión hace aceptar malas ofertas."
     },
-    {
-      "id": "vc8",
-      "pregunta": "¿Qué es el 'Pitch Deck'?",
-      "respuesta_correcta": "Una presentación breve y visual que usan los emprendedores para convencer a los inversionistas",
-      "incorrectas": [
-        "Un contrato legal",
-        "El logo de la empresa",
-        "Una tarjeta de crédito"
-      ],
-      "dato_extra": "Debe ser claro, emocionante y mostrar cómo se ganará dinero."
-    },
-    {
-      "id": "vc9",
-      "pregunta": "¿Qué es el Capital de Riesgo (Venture Capital)?",
-      "respuesta_correcta": "Fondos de inversión que manejan dinero de terceros para invertirlo en startups de alto potencial",
-      "incorrectas": [
-        "Dinero que el banco te presta para tu casa",
-        "Dinero que se guarda bajo el colchón",
-        "Un seguro de vida"
-      ],
-      "dato_extra": "Es el combustible que ha creado gigantes como Google o Facebook."
-    },
-    {
-      "id": "vc10",
-      "pregunta": "¿Cuál es la regla de oro al invertir en capital privado?",
-      "respuesta_correcta": "Solo invertir dinero que estés dispuesto a perder al 100%, ya que el riesgo es altísimo",
-      "incorrectas": [
-        "Invertir todos tus ahorros",
-        "Pedir prestado para invertir",
-        "No investigar antes"
-      ],
-      "dato_extra": "¡Felicidades! Tienes la mentalidad de un inversionista de Silicon Valley."
+    "final_renuncia": {
+      "id": "final_renuncia",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "El documento que firmó decía \"renuncia voluntaria\". Al renunciar, legalmente no hay indemnización. Recibió $30,000 en lugar de los $182,600 que le correspondían, y ya no había nada que reclamar.",
+      "reflexion_final": "Es la trampa laboral más común de México: presión, prisa y un documento sin leer. Nunca firmes el día del despido. Tienes derecho a llevarte el documento, calcular tu finiquito y asesorarte gratis en la Procuraduría de la Defensa del Trabajo."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

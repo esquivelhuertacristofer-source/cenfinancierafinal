@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P5-2-9-A",
+  "unit_code": "P5-2-9",
+  "unit_title": "Garantías y devoluciones: mis derechos como consumidor",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Garantía Vale",
+  "descripcion": "Ajusta los datos de tu compra y descubre qué tan protegido estás.",
+  "objetivo": "Evaluar la cobertura efectiva de una garantía según documentación y plazos",
+  "xp": 300,
+  "inputs": [
+    {
+      "id": "precio_producto",
+      "label": "Precio del producto",
+      "type": "slider",
+      "min": 100,
+      "max": 30000,
+      "step": 100,
+      "default": 4000,
+      "unit": "$",
+      "referencia": "Entre más caro, más importa conservar la documentación."
+    },
+    {
+      "id": "meses_garantia",
+      "label": "Meses de garantía que ofrece",
+      "type": "slider",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "default": 12,
+      "unit": "meses",
+      "referencia": "Viene indicado en la póliza por escrito."
+    },
+    {
+      "id": "meses_transcurridos",
+      "label": "Meses transcurridos desde la compra",
+      "type": "slider",
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "default": 4,
+      "unit": "meses",
+      "referencia": "La fecha del ticket es la que cuenta."
+    },
+    {
+      "id": "costo_reparacion",
+      "label": "Costo de reparar el producto por fuera",
+      "type": "slider",
+      "min": 0,
+      "max": 15000,
+      "step": 100,
+      "default": 1500,
+      "unit": "$",
+      "referencia": "Lo que pagarías si la garantía no aplicara."
+    }
+  ],
+  "formula": "Math.round(costo_reparacion * (meses_transcurridos <= meses_garantia ? 1 : 0))",
+  "descripcion_formula": "Lo que la garantía te ahorra si el defecto ocurre dentro del plazo vigente, y cero si el plazo ya venció.",
+  "output_label": "Ahorro por garantía vigente",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "meses_transcurridos <= meses_garantia",
+      "mensaje": "La garantía sigue vigente: si el defecto es de fabricación, la reparación no debería costarte nada. Necesitas el ticket y la póliza.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "meses_transcurridos > meses_garantia",
+      "mensaje": "El plazo ya venció. Aun así, vale la pena preguntar: algunas marcas atienden fallas conocidas fuera de plazo.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "meses_garantia == 0",
+      "mensaje": "Un producto sin garantía escrita traslada todo el riesgo a ti. Compararlo contra uno con garantía cambia por completo su costo real.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "costo_reparacion >= precio_producto * 0.5",
+      "mensaje": "Reparar cuesta más de la mitad del producto. Ahí la garantía vale casi tanto como el producto mismo.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "meses_garantia >= 24 && meses_transcurridos <= meses_garantia",
+      "mensaje": "Garantía larga y vigente. Guarda el ticket y la póliza juntos: sin comprobante, la cobertura no se puede hacer valer.",
+      "tipo": "exito"
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-9-a-escena.webp"
+}

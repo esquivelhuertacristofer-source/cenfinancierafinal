@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P4-4-9-A",
+  "unit_code": "P4-4-9",
+  "unit_title": "Llevar cuentas del negocio: registro diario de ventas",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Las Cuentas del Negocio",
+  "descripcion": "Mueve las barritas con los datos de tu negocio y descubre cuánto ganas de verdad.",
+  "objetivo": "Calcular la utilidad real de un negocio a partir de su registro diario",
+  "xp": 400,
+  "inputs": [
+    {
+      "id": "ventas_dia",
+      "label": "Ventas promedio por día",
+      "type": "slider",
+      "min": 0,
+      "max": 3000,
+      "step": 50,
+      "default": 400,
+      "unit": "$",
+      "referencia": "El total que cobras en un día normal."
+    },
+    {
+      "id": "dias_operacion",
+      "label": "Días que opero al mes",
+      "type": "slider",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "default": 20,
+      "unit": "días",
+      "referencia": "Solo los días que realmente vendes."
+    },
+    {
+      "id": "costo_producto",
+      "label": "Porcentaje de la venta que es costo del producto",
+      "type": "slider",
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "default": 45,
+      "unit": "%",
+      "referencia": "Lo que te cuesta el material de lo que vendes."
+    },
+    {
+      "id": "gastos_fijos",
+      "label": "Gastos fijos del mes (permiso, transporte, empaque)",
+      "type": "slider",
+      "min": 0,
+      "max": 5000,
+      "step": 100,
+      "default": 800,
+      "unit": "$",
+      "referencia": "Los que pagas aunque no vendas nada."
+    }
+  ],
+  "formula": "Math.round(ventas_dia * dias_operacion * (1 - costo_producto / 100) - gastos_fijos)",
+  "descripcion_formula": "Ventas del mes menos el costo del producto vendido y menos los gastos fijos: esa es la utilidad real.",
+  "output_label": "Utilidad mensual real",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "ventas_dia * dias_operacion * (1 - costo_producto / 100) - gastos_fijos < 0",
+      "mensaje": "El negocio está perdiendo dinero. Con estos números, cada mes de operación consume capital en lugar de generarlo.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "costo_producto >= 70",
+      "mensaje": "El costo del producto se lleva 70% o más de cada venta. Ahí está el margen: revisa proveedores o el precio de venta.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ventas_dia * dias_operacion * (1 - costo_producto / 100) - gastos_fijos > 0 && gastos_fijos > ventas_dia * dias_operacion * (1 - costo_producto / 100) * 0.5",
+      "mensaje": "Los gastos fijos se llevan más de la mitad de tu margen. Cualquier baja en ventas te deja en negativo.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "costo_producto <= 40 && ventas_dia * dias_operacion * (1 - costo_producto / 100) - gastos_fijos > 2000",
+      "mensaje": "Buen margen y utilidad sólida. Es el momento de decidir cuánto reinvertir para crecer.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "dias_operacion <= 8",
+      "mensaje": "Operas pocos días al mes. Si los gastos fijos se pagan igual, cada día que no vendes encarece el resultado.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-9-a-escena.webp"
+}

@@ -5,15 +5,22 @@
  */
 
 // requireAdminSession mock — jest.fn() inside factory avoids TDZ hoisting issues
+// withServerTimeout: passthrough mock — adminActions.ts wraps every Supabase
+// call with this (real impl in supabase-server.ts), no test here exercises the
+// timeout-rejection path itself, so forwarding the promise unchanged is enough.
 jest.mock('@/lib/supabase-server', () => ({
   requireAdminSession: jest.fn(),
+  withServerTimeout: jest.fn((promise: Promise<unknown>) => promise),
 }));
 
 // Supabase admin client mock
 const mockCreateUser = jest.fn();
 const mockInsert = jest.fn();
 const mockSelect = jest.fn();
+const mockEq = jest.fn();
 const mockOrder = jest.fn();
+const mockUpdate = jest.fn();
+const mockUpdateEq = jest.fn();
 
 jest.mock('@supabase/supabase-js', () => ({
   createClient: jest.fn(() => ({
@@ -25,7 +32,9 @@ jest.mock('@supabase/supabase-js', () => ({
     from: jest.fn(() => ({
       insert: mockInsert,
       select: mockSelect,
+      eq: mockEq,
       order: mockOrder,
+      update: mockUpdate,
     })),
   })),
 }));
@@ -106,6 +115,8 @@ describe('onboardInstitutionalUsers', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockRequireAdminSession.mockResolvedValue(ADMIN_SESSION);
+    mockUpdate.mockReturnValue({ eq: mockUpdateEq });
+    mockUpdateEq.mockResolvedValue({ error: null });
   });
 
   it('throws when password is too short', async () => {
@@ -114,8 +125,19 @@ describe('onboardInstitutionalUsers', () => {
     ).rejects.toThrow('al menos 8 caracteres');
   });
 
+  it('throws when caller admin has no escuela_id (huérfano)', async () => {
+    mockRequireAdminSession.mockResolvedValue({
+      ...ADMIN_SESSION,
+      profile: { ...ADMIN_SESSION.profile, escuela_id: null },
+    });
+
+    await expect(
+      onboardInstitutionalUsers(['Ana López'], null, 'student', 'P1', 'password123')
+    ).rejects.toThrow('no está vinculada a ninguna escuela');
+  });
+
   it('creates 10 users with unique emails', async () => {
-    mockCreateUser.mockResolvedValue({ error: null });
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
 
     const names = Array.from({ length: 10 }, (_, i) => `Alumno Test ${i + 1}`);
     const result = await onboardInstitutionalUsers(names, 'grupo-1', 'student', 'P1', 'password123');
@@ -133,7 +155,7 @@ describe('onboardInstitutionalUsers', () => {
   });
 
   it('handles duplicate names with numeric suffix', async () => {
-    mockCreateUser.mockResolvedValue({ error: null });
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
 
     const result = await onboardInstitutionalUsers(
       ['Ana López', 'Ana López'],
@@ -167,8 +189,25 @@ describe('onboardInstitutionalUsers', () => {
     expect(result.errors[0].message).toBe('User already registered');
   });
 
+  it('records error when the escuela_id linking update fails', async () => {
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
+    mockUpdateEq.mockResolvedValue({ error: { message: 'connection failed' } });
+
+    const result = await onboardInstitutionalUsers(
+      ['Juan Pérez'],
+      null,
+      'student',
+      'P3',
+      'password123'
+    );
+
+    expect(result.success.length).toBe(0);
+    expect(result.errors.length).toBe(1);
+    expect(result.errors[0].message).toBe('connection failed');
+  });
+
   it('skips empty names', async () => {
-    mockCreateUser.mockResolvedValue({ error: null });
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
 
     const result = await onboardInstitutionalUsers(
       ['', '   ', 'María García'],
@@ -183,7 +222,7 @@ describe('onboardInstitutionalUsers', () => {
   });
 
   it('uses correct school_level for each grado', async () => {
-    mockCreateUser.mockResolvedValue({ error: null });
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
 
     await onboardInstitutionalUsers(['Test User'], null, 'student', 'S1', 'password123');
 
@@ -194,6 +233,17 @@ describe('onboardInstitutionalUsers', () => {
         }),
       })
     );
+  });
+
+  it('links the new account to the caller admin\'s own escuela_id', async () => {
+    mockCreateUser.mockResolvedValue({ error: null, data: { user: { id: 'new-uid' } } });
+
+    await onboardInstitutionalUsers(['Test User'], null, 'student', 'P1', 'password123');
+
+    expect(mockUpdate).toHaveBeenCalledWith(
+      expect.objectContaining({ escuela_id: 'esc-1' })
+    );
+    expect(mockUpdateEq).toHaveBeenCalledWith('id', 'new-uid');
   });
 });
 
@@ -217,6 +267,22 @@ describe('createGrupo', () => {
     expect(result).toEqual({ id: 'uuid-123', nombre: 'Grupo 1A' });
   });
 
+  it('scopes the new group to the caller\'s escuela_id', async () => {
+    mockInsert.mockReturnValue({
+      select: jest.fn().mockReturnValue({
+        single: jest.fn().mockResolvedValue({
+          data: { id: 'uuid-123', nombre: 'Grupo 1A' },
+          error: null,
+        }),
+      }),
+    });
+
+    await createGrupo('Grupo 1A', 'P1', null);
+    expect(mockInsert).toHaveBeenCalledWith(
+      expect.objectContaining({ escuela_id: 'esc-1' })
+    );
+  });
+
   it('throws on database error', async () => {
     mockInsert.mockReturnValue({
       select: jest.fn().mockReturnValue({
@@ -227,7 +293,9 @@ describe('createGrupo', () => {
       }),
     });
 
-    await expect(createGrupo('Grupo 1A', 'P1', null)).rejects.toThrow('duplicate key');
+    await expect(createGrupo('Grupo 1A', 'P1', null)).rejects.toThrow(
+      'No se pudo crear el grupo. Intente de nuevo.'
+    );
   });
 });
 
@@ -235,33 +303,54 @@ describe('getGrupos', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockRequireAdminSession.mockResolvedValue(ADMIN_SESSION);
+    mockEq.mockReturnValue({
+      order: mockOrder,
+    });
+    mockSelect.mockReturnValue({
+      eq: mockEq,
+    });
   });
 
-  it('returns sorted list of groups', async () => {
-    mockSelect.mockReturnValue({
-      order: jest.fn().mockResolvedValue({
-        data: [
-          { id: '1', nombre: 'Grupo A', grado: 'P1' },
-          { id: '2', nombre: 'Grupo B', grado: 'P2' },
-        ],
-        error: null,
-      }),
+  it('returns sorted list of groups scoped to the caller\'s escuela', async () => {
+    mockOrder.mockResolvedValue({
+      data: [
+        { id: '1', nombre: 'Grupo A', grado: 'P1' },
+        { id: '2', nombre: 'Grupo B', grado: 'P2' },
+      ],
+      error: null,
     });
 
     const result = await getGrupos();
     expect(result.length).toBe(2);
     expect(result[0].nombre).toBe('Grupo A');
+    expect(mockEq).toHaveBeenCalledWith('escuela_id', 'esc-1');
   });
 
-  it('returns empty array on error', async () => {
+  it('does not scope by escuela_id for super_admin', async () => {
+    mockRequireAdminSession.mockResolvedValue({
+      ...ADMIN_SESSION,
+      isSuperAdmin: true,
+    });
+    // super_admin skips .eq() entirely — select() resolves straight from .order()
     mockSelect.mockReturnValue({
-      order: jest.fn().mockResolvedValue({
-        data: null,
-        error: { message: 'connection failed' },
-      }),
+      order: mockOrder,
+    });
+    mockOrder.mockResolvedValue({
+      data: [{ id: '1', nombre: 'Grupo A', grado: 'P1' }],
+      error: null,
     });
 
     const result = await getGrupos();
-    expect(result).toEqual([]);
+    expect(result.length).toBe(1);
+    expect(mockEq).not.toHaveBeenCalled();
+  });
+
+  it('throws on database error', async () => {
+    mockOrder.mockResolvedValue({
+      data: null,
+      error: { message: 'connection failed' },
+    });
+
+    await expect(getGrupos()).rejects.toThrow('No se pudieron cargar los grupos.');
   });
 });

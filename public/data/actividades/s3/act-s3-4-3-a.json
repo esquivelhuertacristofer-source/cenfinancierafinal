@@ -4,123 +4,110 @@
   "unit_title": "Propiedad intelectual: protege tus ideas y marcas",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "TRIVIA",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "El Mundo de los Bancos",
-  "descripcion": "El dinero tiene diferentes reglas según el país. ¿Puedes dominar el tablero financiero global?",
-  "objetivo": "Identificar las funciones de los organismos financieros internacionales y las características de diferentes sistemas económicos",
-  "xp": 300,
-  "preguntas": [
+  "titulo": "Cada Idea, su Protección",
+  "descripcion": "No todo se protege igual. Confundir marca con patente o creer que \"la idea es mía porque se me ocurrió\" ha costado empresas enteras.",
+  "objetivo": "Comprender el marco de la propiedad intelectual en México distinguiendo marca, patente, derecho de autor y secreto industrial.",
+  "xp": 700,
+  "instruccion": "Arrastra cada activo a la figura legal que lo protege.",
+  "categorias": [
     {
-      "id": "glob1",
-      "pregunta": "¿Qué es el 'FMI' (Fondo Monetario Internacional)?",
-      "respuesta_correcta": "Una organización que busca la estabilidad financiera mundial y presta dinero a países en crisis a cambio de reformas",
-      "incorrectas": [
-        "Un banco privado para millonarios",
-        "La empresa que imprime dólares",
-        "Un club de comercio"
-      ],
-      "dato_extra": "Es como el 'bombero' que acude cuando un país se queda sin dinero para pagar sus deudas."
+      "id": "marca",
+      "label": "MARCA (IMPI)",
+      "emoji": "™️",
+      "color": "#f59e0b"
     },
     {
-      "id": "glob2",
-      "pregunta": "¿Cuál es la principal característica de las 'Finanzas Islámicas'?",
-      "respuesta_correcta": "Prohíben el cobro de intereses (Riba) y las inversiones en negocios no éticos o de azar",
-      "incorrectas": [
-        "No permiten usar billetes",
-        "Solo se puede invertir en petróleo",
-        "Son gratis"
-      ],
-      "dato_extra": "En lugar de intereses, el banco y el cliente comparten las ganancias y pérdidas del negocio."
+      "id": "patente",
+      "label": "PATENTE (IMPI)",
+      "emoji": "⚗️",
+      "color": "#3b82f6"
     },
     {
-      "id": "glob3",
-      "pregunta": "¿Por qué el Dólar (USD) es la 'Moneda de Reserva' mundial?",
-      "respuesta_correcta": "Porque es la moneda más aceptada para el comercio internacional (como el petróleo) y se considera la más segura",
-      "incorrectas": [
-        "Porque es la más bonita",
-        "Porque Estados Unidos lo obliga por ley",
-        "Porque el oro ya no existe"
-      ],
-      "dato_extra": "Casi todos los países guardan una gran parte de sus ahorros en dólares."
+      "id": "autor",
+      "label": "DERECHO DE AUTOR",
+      "emoji": "✍️",
+      "color": "#8b5cf6"
     },
     {
-      "id": "glob4",
-      "pregunta": "¿Qué hace el 'Banco Mundial'?",
-      "respuesta_correcta": "Financia proyectos de desarrollo a largo plazo, como escuelas, hospitales y puentes en países pobres",
-      "incorrectas": [
-        "Prestar dinero para comprar casas",
-        "Imprimir dinero para todo el mundo",
-        "Cobrar impuestos globales"
-      ],
-      "dato_extra": "Su objetivo principal es reducir la pobreza extrema en el planeta."
-    },
-    {
-      "id": "glob5",
-      "pregunta": "¿Qué es un 'Paraíso Fiscal' (Tax Haven)?",
-      "respuesta_correcta": "Países o territorios que cobran impuestos muy bajos o nulos para atraer capitales extranjeros",
-      "incorrectas": [
-        "Una playa para millonarios",
-        "Un banco que regala dinero",
-        "Donde se guarda el oro del mundo"
-      ],
-      "dato_extra": "Aunque es legal en muchos casos, el uso de estos lugares es muy vigilado para evitar el lavado de dinero."
-    },
-    {
-      "id": "glob6",
-      "pregunta": "¿Qué es la 'Reserva Federal' (FED)?",
-      "respuesta_correcta": "El Banco Central de EE.UU., cuya política de tasas de interés afecta a toda la economía mundial",
-      "incorrectas": [
-        "La policía de los bancos",
-        "El tesoro nacional",
-        "Una reserva de petróleo"
-      ],
-      "dato_extra": "Cuando la FED sube tasas, el dinero suele regresar a EE.UU., afectando a las monedas de otros países."
-    },
-    {
-      "id": "glob7",
-      "pregunta": "¿Cuál es la función de los 'Bancos de Desarrollo' regionales (como el BID)?",
-      "respuesta_correcta": "Apoyar el crecimiento económico y social específicamente en regiones como América Latina",
-      "incorrectas": [
-        "Competir con los bancos comerciales",
-        "Vender acciones en la bolsa",
-        "Dar préstamos personales"
-      ],
-      "dato_extra": "Ayudan a que los países de una región progresen juntos."
-    },
-    {
-      "id": "glob8",
-      "pregunta": "¿Qué es un 'Mercado Emergente'?",
-      "respuesta_correcta": "Países con economías en rápido crecimiento pero con mayor riesgo que los países desarrollados (ej: India, Brasil, México)",
-      "incorrectas": [
-        "Un mercado donde venden fruta",
-        "Países que acaban de inventar el dinero",
-        "Países que no tienen deuda"
-      ],
-      "dato_extra": "Ofrecen grandes oportunidades de ganancia pero con mucha volatilidad."
-    },
-    {
-      "id": "glob9",
-      "pregunta": "¿Qué significa que un sistema financiero sea 'Bancocéntrico'?",
-      "respuesta_correcta": "Que las empresas se financian principalmente a través de préstamos bancarios en lugar de la bolsa de valores",
-      "incorrectas": [
-        "Que los bancos están en el centro de la ciudad",
-        "Que solo existen los bancos",
-        "Que el banco central manda a todos"
-      ],
-      "dato_extra": "Muchos países europeos y latinoamericanos funcionan así, a diferencia de EE.UU."
-    },
-    {
-      "id": "glob10",
-      "pregunta": "¿Cuál es la tendencia actual de las 'CBDC' (Monedas Digitales de Bancos Centrales)?",
-      "respuesta_correcta": "Crear versiones digitales oficiales de monedas nacionales (como un 'Cripto-Peso' o 'E-Yuan')",
-      "incorrectas": [
-        "Prohibir el internet en los bancos",
-        "Regalar Bitcoins a todos",
-        "Eliminar los bancos centrales"
-      ],
-      "dato_extra": "¡Felicidades! Has completado el tour por las grandes ligas financieras mundos."
+      "id": "secreto",
+      "label": "SECRETO INDUSTRIAL",
+      "emoji": "🤐",
+      "color": "#10b981"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "El nombre y logotipo de tu negocio",
+      "emoji": "🏷️",
+      "categoria_correcta": "marca",
+      "feedback": "Se registra ante el IMPI y protege por 10 años renovables."
+    },
+    {
+      "id": "i2",
+      "label": "Un mecanismo nuevo que inventaste para regar plantas",
+      "emoji": "🔩",
+      "categoria_correcta": "patente",
+      "feedback": "Protege 20 años y exige que sea nuevo, inventivo y con aplicación industrial."
+    },
+    {
+      "id": "i3",
+      "label": "Una canción que compusiste",
+      "emoji": "🎵",
+      "categoria_correcta": "autor",
+      "feedback": "La protección nace con la obra; registrarla facilita probar la autoría."
+    },
+    {
+      "id": "i4",
+      "label": "La receta secreta de tu salsa",
+      "emoji": "🌶️",
+      "categoria_correcta": "secreto",
+      "feedback": "Si la patentas, se publica. Muchas empresas prefieren guardarla para siempre."
+    },
+    {
+      "id": "i5",
+      "label": "El eslogan de tu campaña",
+      "emoji": "💬",
+      "categoria_correcta": "marca",
+      "feedback": "Los avisos comerciales también se registran ante el IMPI."
+    },
+    {
+      "id": "i6",
+      "label": "El código fuente de tu aplicación",
+      "emoji": "💻",
+      "categoria_correcta": "autor",
+      "feedback": "El software se protege como obra, no como patente."
+    },
+    {
+      "id": "i7",
+      "label": "Un proceso químico industrial original",
+      "emoji": "🧪",
+      "categoria_correcta": "patente",
+      "feedback": "A cambio de la protección exclusiva, tienes que revelar cómo funciona."
+    },
+    {
+      "id": "i8",
+      "label": "Tu lista de proveedores y sus precios negociados",
+      "emoji": "📇",
+      "categoria_correcta": "secreto",
+      "feedback": "Se protege con acuerdos de confidencialidad con quien tenga acceso."
+    },
+    {
+      "id": "i9",
+      "label": "El diseño gráfico del empaque",
+      "emoji": "🎨",
+      "categoria_correcta": "autor",
+      "feedback": "Y si además identifica tu producto, conviene registrarlo también como marca."
+    },
+    {
+      "id": "i10",
+      "label": "El nombre de dominio y la identidad de tu tienda en línea",
+      "emoji": "🌐",
+      "categoria_correcta": "marca",
+      "feedback": "Registrar la marca antes de crecer evita que alguien más se adelante y te obligue a cambiar de nombre."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

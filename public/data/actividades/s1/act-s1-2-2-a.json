@@ -4,152 +4,125 @@
   "unit_title": "La pensión y el AFORE: cuánto tendré cuando me retire",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "SIMULADOR",
+  "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "El Viaje en el Tiempo del Dinero",
-  "descripcion": "El dinero no vale por el número impreso, sino por lo que puedes comprar con él. ¡Mira cómo la inflación reduce el tamaño de tus ahorros si no los proteges!",
-  "objetivo": "Calcular la pérdida de poder adquisitivo a través del tiempo debido a la inflación acumulada",
-  "xp": 500,
-  "descripcion_formula": "Calculamos el Poder de Compra Real (PCR). PCR = Capital / (1 + Inflación)^Años.",
-  "inputs": [
+  "titulo": "Las Semanas que Deciden tu Vejez",
+  "descripcion": "Tu pensión no depende solo de cuánto ahorraste: depende de cuántas SEMANAS COTIZASTE. Miles de mexicanos llegan a los 65 con dinero en su AFORE y sin derecho a pensión, porque les faltaron semanas. Calcula las tuyas.",
+  "objetivo": "Comprender la mecánica de las cuentas individuales de retiro: semanas cotizadas, edad de retiro, saldo acumulado y tasa de reemplazo.",
+  "xp": 700,
+  "output_type": "proyeccion_pension",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "ahorro_colchon",
-      "label": "Dinero guardado ($)",
-      "type": "slider",
-      "min": 1000,
-      "max": 100000,
-      "step": 5000,
-      "default": 50000,
-      "unit": "$"
-    },
-    {
-      "id": "tasa_inflacion_anual",
-      "label": "Tasa de Inflación Anual (%)",
-      "type": "slider",
-      "min": 1,
-      "max": 20,
-      "step": 1,
-      "default": 5,
-      "unit": "%"
-    },
-    {
-      "id": "años_pasados",
-      "label": "Años que pasaron",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 10,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
+      "id": "trayectoria",
+      "titulo": "📅 Tu vida laboral",
+      "descripcion": "Cada semana que trabajas formalmente se registra. Las que trabajas en la informalidad no cuentan para nada.",
+      "campos": [
         {
-          "label": "Conservador",
-          "value": 0.8
+          "id": "edad_inicio",
+          "label": "¿A qué edad empezarás a cotizar formalmente?",
+          "type": "number",
+          "placeholder": "Ej: 23",
+          "requerido": true
         },
         {
-          "label": "Moderado",
-          "value": 1
+          "id": "anios_formales",
+          "label": "¿Cuántos años trabajarás EN FORMALIDAD?",
+          "type": "number",
+          "placeholder": "Ej: 35",
+          "requerido": true,
+          "ayuda": "Sé realista: casi todo el mundo pasa temporadas en la informalidad o desempleado."
         },
         {
-          "label": "Optimista",
-          "value": 1.2
+          "id": "semanas",
+          "label": "Semanas cotizadas acumuladas",
+          "type": "calculated",
+          "formula": "anios_formales * 52",
+          "unit": "semanas",
+          "requerido": false,
+          "ayuda": "La Ley 97 exige un mínimo que va subiendo hasta 1,000 semanas (unos 19 años) para tener derecho a pensión garantizada."
         }
-      ],
-      "default": 1
+      ]
+    },
+    {
+      "id": "requisito",
+      "titulo": "🚪 ¿Alcanzas el mínimo?",
+      "descripcion": "Sin las semanas mínimas no hay pensión: solo te devuelven el saldo de tu cuenta en una sola exhibición y se acabó.",
+      "campos": [
+        {
+          "id": "faltan_semanas",
+          "label": "Semanas que te sobran (o faltan) frente a las 1,000",
+          "type": "calculated",
+          "formula": "anios_formales * 52 - 1000",
+          "unit": "semanas",
+          "requerido": false,
+          "ayuda": "Si el número es negativo, no tendrías derecho a pensión. Se puede corregir cotizando más años o con Modalidad 40."
+        }
+      ]
+    },
+    {
+      "id": "saldo",
+      "titulo": "💰 Tu saldo acumulado",
+      "descripcion": "Aportación obligatoria (~6.5%, subiendo hasta ~15% con la reforma de 2020) más lo que tú decidas aportar de más.",
+      "campos": [
+        {
+          "id": "sueldo",
+          "label": "Sueldo mensual promedio de tu vida laboral ($)",
+          "type": "number",
+          "placeholder": "Ej: 22000",
+          "requerido": true
+        },
+        {
+          "id": "voluntaria",
+          "label": "Aportación voluntaria mensual ($)",
+          "type": "number",
+          "placeholder": "Ej: 1500",
+          "requerido": true
+        },
+        {
+          "id": "saldo_final",
+          "label": "Saldo estimado al retirarte",
+          "type": "calculated",
+          "formula": "Math.round((sueldo * 0.10 + voluntaria) * ((Math.pow(1 + 0.04/12, anios_formales*12) - 1) / (0.04/12)))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Calculado con rendimiento real del 4% anual, ya descontada la inflación."
+        }
+      ]
+    },
+    {
+      "id": "pension",
+      "titulo": "🌅 Tu pensión real",
+      "descripcion": "El saldo se convierte en un pago mensual de por vida. Aquí se ve si vas a vivir bien o a depender de tus hijos.",
+      "campos": [
+        {
+          "id": "pension_mensual",
+          "label": "Pensión mensual estimada",
+          "type": "calculated",
+          "formula": "Math.round((sueldo * 0.10 + voluntaria) * ((Math.pow(1 + 0.04/12, anios_formales*12) - 1) / (0.04/12)) * 0.045 / 12)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "reemplazo",
+          "label": "Tasa de reemplazo",
+          "type": "calculated",
+          "formula": "Math.round((sueldo * 0.10 + voluntaria) * ((Math.pow(1 + 0.04/12, anios_formales*12) - 1) / (0.04/12)) * 0.045 / 12 / sueldo * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "El porcentaje de tu sueldo que conservarás. En México el promedio ronda el 30%. La OCDE recomienda 70%."
+        },
+        {
+          "id": "brecha",
+          "label": "Lo que te faltaría cada mes para conservar tu nivel de vida",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.round(sueldo * 0.7 - (sueldo * 0.10 + voluntaria) * ((Math.pow(1 + 0.04/12, anios_formales*12) - 1) / (0.04/12)) * 0.045 / 12))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Esa brecha es exactamente lo que hay que cubrir con ahorro propio fuera de la AFORE."
+        }
+      ]
     }
   ],
-  "formula": "ahorro_colchon / Math.pow(1 + (tasa_inflacion_anual / 100), años_pasados)",
-  "output_label": "Tu Poder de Compra Real en el Futuro",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "line",
-  "escenarios": [
-    {
-      "condicion": "tasa_inflacion_anual > 10",
-      "mensaje": "🧨 ¡Hiperinflación! Tu dinero está desapareciendo a toda velocidad. Es urgente invertir en activos reales como oro, acciones o inmuebles.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "ahorro_colchon / Math.pow(1 + (tasa_inflacion_anual / 100), años_pasados) < (ahorro_colchon / 2)",
-      "mensaje": "📉 ¡Mitad de Valor! En este tiempo, tus ahorros solo alcanzan para comprar la mitad de lo que comprabas antes. ¡El ahorro estático es peligroso!",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 Para que tu riqueza crezca, tus inversiones deben rendir más que el número de la inflación. A eso se le llama Rendimiento Real.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Cuánto dinero necesitarías acumular en tu AFORE para recibir $20,000 al mes de pensión? ¿Qué cambios en tus hábitos de hoy mejorarían tu pensión en 40 años?",
-  "comparativa_espera": "Los trabajadores con IMSS que también hacen aportaciones voluntarias a su AFORE aumentan su pensión estimada en promedio un 35-60%. El gobierno iguala parte de las aportaciones voluntarias — es dinero gratis que pocos aprovechan.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "por_semana",
-      "label": "Equivalente Semanal",
-      "formula": "Math.round(resultado_principal / 52)",
-      "prefix": "$",
-      "suffix": "/semana",
-      "descripcion": "El resultado distribuido en semanas"
-    },
-    {
-      "id": "valor_10a",
-      "label": "Valor en 10 Años",
-      "formula": "Math.round(resultado_principal * Math.pow(1.08, 10))",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Con reinversión al 8% anual durante 10 años"
-    },
-    {
-      "id": "impacto_retiro",
-      "label": "Impacto en tu Retiro",
-      "formula": "Math.round(resultado_principal * 40)",
-      "prefix": "$",
-      "suffix": " efecto vida laboral",
-      "descripcion": "Si mantienes este resultado durante 40 años de vida laboral"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "por_semana",
-      "label": "Equivalente Semanal",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

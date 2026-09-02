@@ -147,7 +147,11 @@
         },
         {
           "question": "Verdadero o Falso: Banxico también se encarga de que los otros bancos funcionen correctamente.",
-          "options": ["Verdadero", "Falso", "Solo los lunes"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo los lunes"
+          ],
           "correct": "Verdadero"
         },
         {
@@ -270,7 +274,11 @@
         },
         {
           "question": "¿A qué edad aproximadamente se retira una persona en México?",
-          "options": ["A los 30 años", "A los 60 o 65 años", "A los 100 años"],
+          "options": [
+            "A los 30 años",
+            "A los 60 o 65 años",
+            "A los 100 años"
+          ],
           "correct": "A los 60 o 65 años"
         },
         {
@@ -302,7 +310,11 @@
         },
         {
           "question": "¿Quién vigila que las AFOREs cuiden bien tu dinero?",
-          "options": ["La policía de tránsito", "La CONSAR", "Nadie"],
+          "options": [
+            "La policía de tránsito",
+            "La CONSAR",
+            "Nadie"
+          ],
           "correct": "La CONSAR"
         },
         {
@@ -316,7 +328,11 @@
         },
         {
           "question": "Verdadero o Falso: Puedes sacar todo el dinero de tu AFORE en cualquier momento para comprar un juguete.",
-          "options": ["Verdadero", "Falso", "Solo en Navidad"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo en Navidad"
+          ],
           "correct": "Falso"
         },
         {
@@ -449,7 +465,11 @@
         },
         {
           "question": "Si el dólar está a $20 pesos y quieres comprar algo de $5 dólares, ¿cuántos pesos necesitas?",
-          "options": ["$25 pesos", "$100 pesos", "$50 pesos"],
+          "options": [
+            "$25 pesos",
+            "$100 pesos",
+            "$50 pesos"
+          ],
           "correct": "$100 pesos"
         },
         {
@@ -463,7 +483,11 @@
         },
         {
           "question": "¿Qué moneda se usa principalmente en la mayoría de los países de Europa?",
-          "options": ["Dólar", "Euro", "Libra"],
+          "options": [
+            "Dólar",
+            "Euro",
+            "Libra"
+          ],
           "correct": "Euro"
         },
         {
@@ -486,12 +510,20 @@
         },
         {
           "question": "Verdadero o Falso: Cuando el dólar sube, los productos importados suelen subir de precio en pesos.",
-          "options": ["Verdadero", "Falso", "Solo los fines de semana"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo los fines de semana"
+          ],
           "correct": "Verdadero"
         },
         {
           "question": "¿Cuál es la moneda de Japón?",
-          "options": ["Yuan", "Yen", "Won"],
+          "options": [
+            "Yuan",
+            "Yen",
+            "Won"
+          ],
           "correct": "Yen"
         },
         {
@@ -615,12 +647,20 @@
         },
         {
           "question": "¿Cómo se llama la persona que te ayuda a comprar acciones?",
-          "options": ["Cajero", "Broker (Casa de Bolsa)", "Policía"],
+          "options": [
+            "Cajero",
+            "Broker (Casa de Bolsa)",
+            "Policía"
+          ],
           "correct": "Broker (Casa de Bolsa)"
         },
         {
           "question": "Si una empresa vende mucho y tiene mucho éxito, ¿qué pasa normalmente con el precio de sus acciones?",
-          "options": ["Baja de precio", "Sube de precio", "Se queda igual"],
+          "options": [
+            "Baja de precio",
+            "Sube de precio",
+            "Se queda igual"
+          ],
           "correct": "Sube de precio"
         },
         {
@@ -634,7 +674,11 @@
         },
         {
           "question": "Verdadero o Falso: Invertir en la bolsa siempre garantiza que ganarás dinero el mismo día.",
-          "options": ["Verdadero", "Falso", "Solo si eres muy inteligente"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo si eres muy inteligente"
+          ],
           "correct": "Falso"
         },
         {
@@ -785,7 +829,11 @@
         },
         {
           "question": "¿Qué impuesto pagas casi siempre que compras algo en una tienda (como un refresco o juguete)?",
-          "options": ["IVA", "ISR", "Tenencia"],
+          "options": [
+            "IVA",
+            "ISR",
+            "Tenencia"
+          ],
           "correct": "IVA"
         },
         {
@@ -799,7 +847,11 @@
         },
         {
           "question": "Verdadero o Falso: Los impuestos son voluntarios; solo los paga quien quiere.",
-          "options": ["Verdadero", "Falso", "Solo los adultos mayores"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo los adultos mayores"
+          ],
           "correct": "Falso"
         },
         {
@@ -854,6 +906,926 @@
       "Use un tono positivo: contribuir es construir, no un castigo.",
       "Mencione que la transparencia es el derecho de saber en qué se gastó cada peso.",
       "Relacione el cuidado de la escuela pública con el valor de los impuestos de sus padres."
+    ]
+  },
+  "P5-1-6": {
+    "code": "P5-1-6",
+    "title": "CONDUSEF y el Buró de Entidades Financieras",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Sistema Financiero",
+    "metadata": {
+      "objective": "Conocer las funciones de la CONDUSEF y usar el Buró de Entidades Financieras para comparar instituciones antes de contratar un producto.",
+      "competencies": [
+        "Defensa del Usuario Financiero",
+        "Consulta de Fuentes Oficiales",
+        "Comparación de Instituciones",
+        "Ejercicio de Derechos"
+      ],
+      "materials": [
+        "Fichas de casos de reclamación",
+        "Capturas del Buró de Entidades Financieras",
+        "Formato de queja simulado",
+        "Tabla comparativa de instituciones",
+        "Cartel del proceso de reclamación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Banco No Responde",
+          "duration": "15 min",
+          "label": "¿A quién acudo?"
+        },
+        {
+          "phase": "Desarrollo: Dos Herramientas",
+          "duration": "30 min",
+          "label": "CONDUSEF y el Buró"
+        },
+        {
+          "phase": "Cierre: Comparar Antes",
+          "duration": "15 min",
+          "label": "Revisar antes de firmar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CUANDO EL BANCO NO RESPONDE (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un caso: una persona reclamó un cargo indebido, el banco lo rechazó y ella sigue convencida de tener razón. Pregunte qué puede hacer. Explique que en México existe una institución creada exactamente para eso, y que no conocerla deja al usuario indefenso frente a una institución mucho más grande.",
+          "activity": "Dinámica \"¿Y Ahora Qué?\": el grupo propone salidas para el caso y descubre cuáles existen realmente."
+        },
+        {
+          "title": "FASE II: DOS HERRAMIENTAS DISTINTAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las dos funciones: la CONDUSEF atiende y defiende al usuario cuando hay un conflicto, y el Buró de Entidades Financieras publica información sobre cada institución, incluidas sus reclamaciones y sanciones. Una sirve para reclamar después; la otra para elegir antes. Los alumnos comparan dos instituciones ficticias con datos del Buró.",
+          "activity": "Dinámica \"Antes y Después\": cada equipo clasifica seis situaciones según si corresponden a CONDUSEF o al Buró."
+        },
+        {
+          "title": "FASE III: REVISAR ANTES DE FIRMAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el hábito de consultar el Buró antes de contratar un producto: ver cuántas reclamaciones tiene la institución, cuántas resolvió a favor del usuario y si tiene sanciones. Explique que una institución con muchas reclamaciones no es necesariamente mala si tiene muchos clientes, y que por eso se comparan proporciones, no números absolutos.",
+          "activity": "Dinámica \"Lee el Buró\": el grupo interpreta datos de dos instituciones y decide con cuál contrataría, justificando."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando un banco te dice que no y tú crees que tienes razón, no se acabó ahí. En México existe una institución que defiende al usuario financiero y una base de datos pública para revisar a cualquier institución antes de contratarla. En esta clase vas a aprender a usar las dos.",
+      "sections": [
+        {
+          "subtitle": "Qué hace la CONDUSEF",
+          "content": "La Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros atiende a las personas que tienen un problema con un banco, una aseguradora, una afore u otra entidad financiera. Orienta, recibe quejas, y puede intervenir para buscar una conciliación entre el usuario y la institución. Su servicio es gratuito y no se necesita abogado para acudir."
+        },
+        {
+          "subtitle": "El proceso: primero con la institución",
+          "content": "El camino tiene un orden. Primero se presenta la reclamación directamente ante la institución y se guarda el número de folio. Si la respuesta no llega o no satisface, entonces se acude a la CONDUSEF con toda la documentación: contrato, estados de cuenta, folios y respuestas recibidas. Llegar con documentos completos es lo que hace que un caso avance."
+        },
+        {
+          "subtitle": "El Buró de Entidades Financieras",
+          "content": "Es una herramienta distinta y menos conocida: una base pública que muestra información de cada institución financiera, incluidas las reclamaciones que recibe, cómo se resuelven y las sanciones que ha tenido. No sirve para reclamar: sirve para elegir. Consultarlo antes de contratar es de las cosas más útiles y menos hechas del sistema financiero mexicano."
+        },
+        {
+          "subtitle": "Leer los datos con proporción",
+          "content": "Una institución con diez mil reclamaciones no es necesariamente peor que una con cien: puede tener cien veces más clientes. Lo que hay que mirar es la proporción de reclamaciones respecto al tamaño, el porcentaje que se resuelve a favor del usuario y el tiempo que tardan. Comparar números absolutos sin considerar el tamaño lleva a conclusiones equivocadas."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué hace la CONDUSEF?",
+          "options": [
+            "Presta dinero",
+            "Cobra impuestos",
+            "Atiende y defiende a usuarios de servicios financieros"
+          ],
+          "correct": "Atiende y defiende a usuarios de servicios financieros"
+        },
+        {
+          "question": "¿Cuesta acudir a la CONDUSEF?",
+          "options": [
+            "No, el servicio es gratuito",
+            "Sí, cobra una cuota",
+            "Solo si se gana el caso"
+          ],
+          "correct": "No, el servicio es gratuito"
+        },
+        {
+          "question": "¿Se necesita abogado?",
+          "options": [
+            "Sí, siempre",
+            "No",
+            "Solo para bancos"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Cuál es el primer paso de una reclamación?",
+          "options": [
+            "Ir directo a la CONDUSEF",
+            "Publicarlo en redes",
+            "Presentarla ante la propia institución"
+          ],
+          "correct": "Presentarla ante la propia institución"
+        },
+        {
+          "question": "¿Qué hay que guardar de esa primera reclamación?",
+          "options": [
+            "El número de folio",
+            "Nada",
+            "Solo la fecha"
+          ],
+          "correct": "El número de folio"
+        },
+        {
+          "question": "¿Qué es el Buró de Entidades Financieras?",
+          "options": [
+            "Una lista de deudores",
+            "Una base pública con información de cada institución",
+            "Un banco"
+          ],
+          "correct": "Una base pública con información de cada institución"
+        },
+        {
+          "question": "¿Para qué sirve el Buró de Entidades?",
+          "options": [
+            "Para reclamar",
+            "Para pedir crédito",
+            "Para elegir antes de contratar"
+          ],
+          "correct": "Para elegir antes de contratar"
+        },
+        {
+          "question": "Una institución con muchas reclamaciones:",
+          "options": [
+            "Puede tener también muchos clientes; hay que ver la proporción",
+            "Es siempre la peor",
+            "Es siempre la mejor"
+          ],
+          "correct": "Puede tener también muchos clientes; hay que ver la proporción"
+        },
+        {
+          "question": "¿Qué más hay que revisar además del número?",
+          "options": [
+            "El logo",
+            "El porcentaje resuelto a favor del usuario y el tiempo",
+            "La cantidad de sucursales"
+          ],
+          "correct": "El porcentaje resuelto a favor del usuario y el tiempo"
+        },
+        {
+          "question": "¿Qué documentación conviene llevar?",
+          "options": [
+            "Solo la queja verbal",
+            "Nada",
+            "Contrato, estados de cuenta, folios y respuestas"
+          ],
+          "correct": "Contrato, estados de cuenta, folios y respuestas"
+        }
+      ],
+      "rubric": "Logrado: distingue las funciones de CONDUSEF y del Buró, y compara instituciones con criterio de proporción. En proceso: conoce la CONDUSEF sin usar el Buró. Inicial: sabe que existe una instancia de defensa."
+    },
+    "teacher_tips": [
+      "El Buró de Entidades es la parte menos conocida y la más útil. Dedíquele tiempo aunque el foco natural sea la CONDUSEF.",
+      "Insista en el orden del proceso. Muchos usuarios acuden a la comisión sin haber reclamado antes ante la institución y pierden tiempo.",
+      "El punto de la proporción evita conclusiones injustas. Es también una lección de lectura de datos que trasciende el tema."
+    ]
+  },
+  "P5-1-7": {
+    "code": "P5-1-7",
+    "title": "SPEI y CoDi: cómo viaja el dinero en México",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Sistema Financiero",
+    "metadata": {
+      "objective": "Comprender cómo viaja el dinero electrónico en México mediante SPEI y CoDi, y usar correctamente sus datos y sus tiempos.",
+      "competencies": [
+        "Uso de Transferencias Electrónicas",
+        "Manejo de CLABE",
+        "Verificación de Datos",
+        "Elección de Medio de Pago"
+      ],
+      "materials": [
+        "Ejemplos de CLABE y de comprobantes SPEI",
+        "Códigos QR simulados",
+        "Tarjetas de casos de pago",
+        "Tabla comparativa de medios",
+        "Cartel de la verificación de datos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Del Efectivo al Instante",
+          "duration": "15 min",
+          "label": "¿Cómo llega el dinero?"
+        },
+        {
+          "phase": "Desarrollo: SPEI y CoDi",
+          "duration": "30 min",
+          "label": "Cómo funciona cada uno"
+        },
+        {
+          "phase": "Cierre: Verificar",
+          "duration": "15 min",
+          "label": "Antes de dar enviar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CÓMO LLEGA EL DINERO EN SEGUNDOS? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo creen que el dinero llega de un banco a otro en segundos. Explique que no viajan billetes: viaja información a través de un sistema operado por el Banco de México. Ese sistema tiene nombre, se llama SPEI, y es la razón por la que en México las transferencias son inmediatas y prácticamente sin costo.",
+          "activity": "Dinámica \"¿Y los Billetes?\": el grupo explica con sus palabras qué se mueve realmente en una transferencia."
+        },
+        {
+          "title": "FASE II: SPEI Y CODI, DOS COSAS DISTINTAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el SPEI es el sistema que mueve el dinero entre bancos, y que se usa con la CLABE de 18 dígitos o con el número de celular registrado. CoDi es una forma de cobrar generando un código QR que ya trae los datos y el monto, evitando errores de captura. Los alumnos identifican para qué caso conviene cada uno.",
+          "activity": "Dinámica \"Cuál Uso\": cada equipo asigna el medio adecuado a seis situaciones distintas de pago."
+        },
+        {
+          "title": "FASE III: VERIFICAR ANTES DE ENVIAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el paso crítico: antes de confirmar una transferencia hay que verificar el nombre del beneficiario que muestra la app, no solo los números. Una CLABE mal tecleada puede mandar el dinero a otra persona, y recuperarlo es un trámite largo e incierto. Con CoDi ese riesgo se reduce porque los datos vienen en el código.",
+          "activity": "Dinámica \"Revisa el Nombre\": los alumnos simulan tres transferencias y detectan en cuál el beneficiario no coincide."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Mandas dinero desde tu celular y llega en segundos al otro lado del país. No viajan billetes: viaja información por un sistema del Banco de México llamado SPEI. En esta clase vas a entender cómo funciona y cómo usarlo sin equivocarte.",
+      "sections": [
+        {
+          "subtitle": "Qué es el SPEI",
+          "content": "El Sistema de Pagos Electrónicos Interbancarios es la infraestructura que permite transferir dinero entre bancos distintos en cuestión de segundos. Lo opera el Banco de México y funciona prácticamente todos los días. Cuando haces una transferencia desde tu app, tu banco envía una instrucción por ese sistema y el banco receptor abona el monto: nunca se mueve efectivo físico."
+        },
+        {
+          "subtitle": "La CLABE de 18 dígitos",
+          "content": "Para transferir hace falta identificar la cuenta destino, y eso se hace con la CLABE, un número de 18 dígitos que identifica de forma única una cuenta en todo el país. También se puede transferir usando el número de celular si está registrado. Lo importante es que un solo dígito equivocado manda el dinero a otro lugar, y por eso la verificación importa tanto."
+        },
+        {
+          "subtitle": "CoDi: cobrar con un código",
+          "content": "CoDi permite que quien cobra genere un código QR que ya contiene su cuenta y el monto exacto. El que paga solo lo escanea y confirma. Su gran ventaja es que elimina los errores de captura: no hay que teclear dieciocho dígitos ni el monto. Es especialmente útil para pequeños comercios, porque no requiere terminal ni cobra comisión por recibir."
+        },
+        {
+          "subtitle": "Verificar el nombre, no solo los números",
+          "content": "Antes de confirmar cualquier transferencia, la app muestra el nombre del titular de la cuenta destino. Ese es el momento de verificar. Si el nombre no coincide con la persona a la que le quieres pagar, hay un error en la CLABE. Enviar a la cuenta equivocada no es un fraude, pero recuperar ese dinero depende de que la otra persona acepte devolverlo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el SPEI?",
+          "options": [
+            "El sistema que transfiere dinero entre bancos en segundos",
+            "Un banco",
+            "Una tarjeta"
+          ],
+          "correct": "El sistema que transfiere dinero entre bancos en segundos"
+        },
+        {
+          "question": "¿Quién lo opera?",
+          "options": [
+            "El SAT",
+            "El Banco de México",
+            "La CONDUSEF"
+          ],
+          "correct": "El Banco de México"
+        },
+        {
+          "question": "En una transferencia:",
+          "options": [
+            "Viajan billetes en camión",
+            "Se imprime dinero",
+            "Viaja información, no billetes"
+          ],
+          "correct": "Viaja información, no billetes"
+        },
+        {
+          "question": "¿Cuántos dígitos tiene una CLABE?",
+          "options": [
+            "18",
+            "16",
+            "10"
+          ],
+          "correct": "18"
+        },
+        {
+          "question": "¿Qué identifica la CLABE?",
+          "options": [
+            "Al titular",
+            "Una cuenta de forma única en todo el país",
+            "Al banco solamente"
+          ],
+          "correct": "Una cuenta de forma única en todo el país"
+        },
+        {
+          "question": "¿Qué hace CoDi?",
+          "options": [
+            "Presta dinero",
+            "Cobra comisiones altas",
+            "Genera un código QR con cuenta y monto"
+          ],
+          "correct": "Genera un código QR con cuenta y monto"
+        },
+        {
+          "question": "¿Cuál es la ventaja principal de CoDi?",
+          "options": [
+            "Elimina errores de captura",
+            "Da más interés",
+            "Regala dinero"
+          ],
+          "correct": "Elimina errores de captura"
+        },
+        {
+          "question": "¿Qué hay que verificar antes de enviar?",
+          "options": [
+            "Solo el monto",
+            "El nombre del beneficiario que muestra la app",
+            "Nada"
+          ],
+          "correct": "El nombre del beneficiario que muestra la app"
+        },
+        {
+          "question": "Si el nombre no coincide:",
+          "options": [
+            "Es normal",
+            "Hay que enviar igual",
+            "Hay un error en la CLABE"
+          ],
+          "correct": "Hay un error en la CLABE"
+        },
+        {
+          "question": "Si envío a la cuenta equivocada:",
+          "options": [
+            "Recuperarlo depende de que la otra persona lo devuelva",
+            "El banco lo devuelve al instante",
+            "Se pierde siempre"
+          ],
+          "correct": "Recuperarlo depende de que la otra persona lo devuelva"
+        }
+      ],
+      "rubric": "Logrado: explica el funcionamiento del SPEI, usa correctamente CLABE y CoDi, y verifica antes de enviar. En proceso: distingue los sistemas sin aplicar la verificación. Inicial: sabe que las transferencias son inmediatas."
+    },
+    "teacher_tips": [
+      "Muestre una CLABE real de ejemplo (con dígitos alterados). Ver los 18 dígitos hace evidente el riesgo de error.",
+      "CoDi es poco conocido y muy útil para negocios pequeños. Conéctelo con el bloque de emprendimiento.",
+      "La verificación del nombre es el hábito que más dinero salva. Practíquenlo explícitamente."
+    ]
+  },
+  "P5-1-8": {
+    "code": "P5-1-8",
+    "title": "La tasa de interés: por qué Banxico la sube o la baja",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Sistema Financiero",
+    "metadata": {
+      "objective": "Comprender qué es la tasa de interés de referencia, por qué el Banco de México la sube o la baja, y cómo afecta al ahorro y al crédito de las familias.",
+      "competencies": [
+        "Comprensión de Política Monetaria",
+        "Relación Tasa-Inflación",
+        "Análisis de Efectos en el Hogar",
+        "Decisión Financiera Contextual"
+      ],
+      "materials": [
+        "Gráfica de tasa de referencia e inflación",
+        "Tarjetas de efectos sobre ahorro y crédito",
+        "Casos de familias en dos escenarios",
+        "Calculadora",
+        "Cartel del mecanismo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Noticia",
+          "duration": "15 min",
+          "label": "\"Banxico sube la tasa\""
+        },
+        {
+          "phase": "Desarrollo: El Mecanismo",
+          "duration": "30 min",
+          "label": "Por qué la mueve"
+        },
+        {
+          "phase": "Cierre: Qué Me Toca",
+          "duration": "15 min",
+          "label": "Efectos en mi casa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA NOTICIA QUE NADIE ENTIENDE (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un titular real: el Banco de México subió o bajó la tasa de interés. Pregunte qué significa eso para una familia. Casi nadie podrá responder. Explique que esa decisión, que suena lejana y técnica, afecta directamente cuánto cuesta un crédito y cuánto rinde un ahorro en todo el país.",
+          "activity": "Dinámica \"¿Y Eso Qué?\": el grupo intenta explicar el titular y descubre cuánto falta por entender."
+        },
+        {
+          "title": "FASE II: EL MECANISMO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la cadena: cuando la inflación sube demasiado, el banco central sube la tasa; con tasas altas pedir prestado sale caro y ahorrar rinde más, así que la gente gasta menos y los precios dejan de subir tan rápido. Cuando la economía se enfría demasiado, baja la tasa para reactivar el consumo. Los alumnos ordenan la cadena causal.",
+          "activity": "Dinámica \"Ordena la Cadena\": cada equipo arma la secuencia completa desde la inflación hasta el efecto en el consumo."
+        },
+        {
+          "title": "FASE III: QUÉ ME TOCA A MÍ (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos analizan qué le conviene a una familia en cada escenario: con tasas altas conviene ahorrar en instrumentos de tasa y postergar créditos grandes; con tasas bajas el crédito se abarata pero el ahorro rinde menos. Insista en que el objetivo no es predecir la tasa, sino saber qué hacer con la que hay.",
+          "activity": "Dinámica \"Dos Escenarios\": cada equipo decide qué haría una familia con tasas altas y qué con tasas bajas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cada cierto tiempo sale la noticia: el Banco de México subió o bajó la tasa de interés. Suena a algo que solo les importa a los economistas, pero decide cuánto te cuesta un crédito y cuánto rinde tu ahorro. En esta clase vas a entender el mecanismo completo.",
+      "sections": [
+        {
+          "subtitle": "Qué es la tasa de referencia",
+          "content": "Es la tasa que el banco central fija y que sirve de base para casi todas las demás tasas del país. Cuando sube, los bancos cobran más por prestar y pagan un poco más por el ahorro. Cuando baja, ocurre lo contrario. Es una de las herramientas más poderosas que tiene un país para influir en su economía, y se ajusta en fechas programadas."
+        },
+        {
+          "subtitle": "Se sube para frenar la inflación",
+          "content": "Cuando los precios suben demasiado rápido, el banco central sube la tasa. Con tasas altas, pedir prestado se encarece y ahorrar se vuelve más atractivo, así que las personas y las empresas gastan menos. Al bajar la demanda, los precios dejan de subir tan rápido. Es un freno deliberado: enfría la economía para contener la inflación."
+        },
+        {
+          "subtitle": "Se baja para reactivar",
+          "content": "Cuando la economía se desacelera demasiado, el banco central baja la tasa. El crédito se abarata, las empresas invierten más, las familias consumen más y la actividad se reactiva. El riesgo es que si se baja demasiado o por demasiado tiempo, la inflación puede volver a acelerarse. Por eso las decisiones se toman con cuidado y con datos."
+        },
+        {
+          "subtitle": "Qué significa para una familia",
+          "content": "Con tasas altas conviene ahorrar en instrumentos que paguen tasa y pensarlo dos veces antes de tomar un crédito grande, porque saldrá caro. Con tasas bajas el crédito se vuelve accesible pero el ahorro rinde poco, y hay que cuidar que el rendimiento no quede por debajo de la inflación. No se trata de predecir la tasa: se trata de saber qué hacer con la que existe hoy."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la tasa de referencia?",
+          "options": [
+            "El precio del dólar",
+            "La tasa base que fija el banco central",
+            "Un impuesto"
+          ],
+          "correct": "La tasa base que fija el banco central"
+        },
+        {
+          "question": "Si la tasa sube, pedir prestado:",
+          "options": [
+            "Sale más barato",
+            "No cambia",
+            "Sale más caro"
+          ],
+          "correct": "Sale más caro"
+        },
+        {
+          "question": "Si la tasa sube, ahorrar:",
+          "options": [
+            "Rinde más",
+            "Rinde menos",
+            "Es imposible"
+          ],
+          "correct": "Rinde más"
+        },
+        {
+          "question": "¿Por qué se sube la tasa?",
+          "options": [
+            "Para subir los precios",
+            "Para frenar la inflación",
+            "Para cobrar más impuestos"
+          ],
+          "correct": "Para frenar la inflación"
+        },
+        {
+          "question": "Con tasas altas, la gente:",
+          "options": [
+            "Gasta más",
+            "No cambia nada",
+            "Gasta menos y los precios dejan de subir tan rápido"
+          ],
+          "correct": "Gasta menos y los precios dejan de subir tan rápido"
+        },
+        {
+          "question": "¿Por qué se baja la tasa?",
+          "options": [
+            "Para reactivar la economía",
+            "Para frenar el consumo",
+            "Para subir impuestos"
+          ],
+          "correct": "Para reactivar la economía"
+        },
+        {
+          "question": "¿Cuál es el riesgo de bajarla demasiado?",
+          "options": [
+            "Que no pase nada",
+            "Que la inflación se acelere",
+            "Que suban los impuestos"
+          ],
+          "correct": "Que la inflación se acelere"
+        },
+        {
+          "question": "Con tasas altas, a una familia le conviene:",
+          "options": [
+            "Endeudarse mucho",
+            "Gastar todo",
+            "Ahorrar en instrumentos de tasa y postergar créditos grandes"
+          ],
+          "correct": "Ahorrar en instrumentos de tasa y postergar créditos grandes"
+        },
+        {
+          "question": "Con tasas bajas hay que cuidar que:",
+          "options": [
+            "El rendimiento no quede por debajo de la inflación",
+            "El banco no cierre",
+            "La tarjeta no venza"
+          ],
+          "correct": "El rendimiento no quede por debajo de la inflación"
+        },
+        {
+          "question": "El objetivo de entender esto es:",
+          "options": [
+            "Predecir la tasa futura",
+            "Saber qué hacer con la tasa que hay",
+            "Trabajar en el banco central"
+          ],
+          "correct": "Saber qué hacer con la tasa que hay"
+        }
+      ],
+      "rubric": "Logrado: explica la cadena causal completa y decide correctamente en ambos escenarios. En proceso: relaciona tasa con crédito sin explicar la inflación. Inicial: reconoce que la tasa afecta al ahorro."
+    },
+    "teacher_tips": [
+      "Use una gráfica real de tasa e inflación. Ver las dos curvas moverse juntas explica el mecanismo mejor que cualquier definición.",
+      "Ordenar la cadena causal físicamente ayuda mucho. El tema falla cuando se memoriza en lugar de razonarse.",
+      "Aclare que nadie puede predecir la tasa. El objetivo es reaccionar bien, no adivinar."
+    ]
+  },
+  "P5-1-9": {
+    "code": "P5-1-9",
+    "title": "Del efectivo al pago con celular: la evolución de los pagos",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Sistema Financiero",
+    "metadata": {
+      "objective": "Analizar la evolución de los medios de pago en México y comparar efectivo, tarjeta y pago con celular según costo, seguridad y trazabilidad.",
+      "competencies": [
+        "Comparación de Medios de Pago",
+        "Análisis de Trazabilidad",
+        "Evaluación de Costos",
+        "Adaptación Tecnológica"
+      ],
+      "materials": [
+        "Línea del tiempo de medios de pago",
+        "Tabla comparativa de tres medios",
+        "Casos de compra en distintos contextos",
+        "Datos de uso de efectivo en México",
+        "Cartel de los cuatro criterios"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Línea del Tiempo",
+          "duration": "15 min",
+          "label": "Del trueque al QR"
+        },
+        {
+          "phase": "Desarrollo: Comparar",
+          "duration": "30 min",
+          "label": "Cuatro criterios"
+        },
+        {
+          "phase": "Cierre: Cuál Uso",
+          "duration": "15 min",
+          "label": "Depende del contexto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DEL TRUEQUE AL CÓDIGO QR (APERTURA)",
+          "duration": "15 min",
+          "description": "Construyan una línea del tiempo: trueque, monedas, billetes, cheques, tarjetas, transferencias, pago con celular. Pregunte qué problema resolvió cada paso. La conclusión es que cada medio nuevo resolvió una limitación del anterior, pero ninguno eliminó por completo a los previos.",
+          "activity": "Dinámica \"Qué Problema Resolvió\": el grupo asocia cada medio de pago con la limitación que vino a resolver."
+        },
+        {
+          "title": "FASE II: CUATRO CRITERIOS DE COMPARACIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Comparen efectivo, tarjeta y pago con celular en cuatro criterios: costo de usarlo, seguridad ante robo, trazabilidad y aceptación. Los alumnos llenan la tabla y descubren que ninguno gana en los cuatro. El efectivo es aceptado en todas partes pero no deja registro; el celular es rastreable y rápido pero requiere señal.",
+          "activity": "Dinámica \"Ninguno Gana en Todo\": cada equipo llena la tabla de tres medios por cuatro criterios y marca el mejor de cada fila."
+        },
+        {
+          "title": "FASE III: CUÁL USAR EN CADA CONTEXTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos asignan el medio adecuado a distintos contextos: un mercado sin señal, una compra en línea, un pago entre amigos, una compra grande que conviene documentar. Explique que en México el efectivo sigue siendo mayoritario en muchas transacciones, y que saber usar todos los medios es más útil que preferir uno solo.",
+          "activity": "Dinámica \"Contexto y Medio\": cada equipo asigna medio de pago a seis contextos y justifica dos de ellos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Antes se cambiaban cosas por cosas. Después llegaron las monedas, los billetes, las tarjetas y hoy se paga con el celular. Cada paso resolvió un problema del anterior. En esta clase vas a comparar los medios que existen hoy y a saber cuál conviene en cada situación.",
+      "sections": [
+        {
+          "subtitle": "Cada medio resolvió una limitación",
+          "content": "El trueque exigía que las dos personas quisieran justo lo que la otra tenía. Las monedas resolvieron eso. Los billetes resolvieron el peso de cargar metal. Las tarjetas resolvieron el riesgo de traer efectivo. Las transferencias resolvieron la distancia. Y el pago con celular resolvió tener que cargar plástico. Ninguno eliminó al anterior: se sumaron."
+        },
+        {
+          "subtitle": "El efectivo sigue reinando en México",
+          "content": "A pesar de toda la tecnología, en México una gran parte de las transacciones cotidianas se siguen haciendo en efectivo. Las razones son varias: no todos tienen cuenta bancaria, no en todos lados hay señal o terminal, y muchos negocios pequeños prefieren no pagar comisiones. Entender esa realidad evita conclusiones simplistas sobre \"el futuro sin efectivo\"."
+        },
+        {
+          "subtitle": "Trazabilidad: la diferencia clave",
+          "content": "La diferencia más importante entre efectivo y medios electrónicos es el registro. El efectivo no deja rastro: eso da privacidad, pero también significa que si se pierde o si hay un desacuerdo, no hay forma de probar nada. Los medios electrónicos dejan comprobante de cada movimiento, lo que permite aclarar, reclamar y llevar control del gasto."
+        },
+        {
+          "subtitle": "Ninguno gana en todo",
+          "content": "El efectivo gana en aceptación y funciona sin señal. La tarjeta gana en comodidad para compras grandes y en protección ante robo. El celular gana en velocidad y registro, y con CoDi además sin comisiones para quien cobra. La habilidad útil no es preferir uno: es saber cuál conviene en cada contexto y tener acceso a más de uno."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué problema resolvió la moneda frente al trueque?",
+          "options": [
+            "El peso del metal",
+            "La distancia",
+            "Que ambas partes quisieran justo lo del otro"
+          ],
+          "correct": "Que ambas partes quisieran justo lo del otro"
+        },
+        {
+          "question": "¿Qué resolvieron las transferencias?",
+          "options": [
+            "La distancia",
+            "El peso",
+            "El color"
+          ],
+          "correct": "La distancia"
+        },
+        {
+          "question": "¿Los medios nuevos eliminaron a los anteriores?",
+          "options": [
+            "Sí, todos",
+            "No, se sumaron",
+            "Solo al trueque"
+          ],
+          "correct": "No, se sumaron"
+        },
+        {
+          "question": "En México, el efectivo:",
+          "options": [
+            "Ya no se usa",
+            "Está prohibido",
+            "Sigue siendo mayoritario en muchas transacciones"
+          ],
+          "correct": "Sigue siendo mayoritario en muchas transacciones"
+        },
+        {
+          "question": "¿Por qué muchos negocios pequeños prefieren efectivo?",
+          "options": [
+            "Para no pagar comisiones",
+            "Porque es más lento",
+            "Por moda"
+          ],
+          "correct": "Para no pagar comisiones"
+        },
+        {
+          "question": "¿Qué es la trazabilidad?",
+          "options": [
+            "Que sea rápido",
+            "Que quede registro del movimiento",
+            "Que sea barato"
+          ],
+          "correct": "Que quede registro del movimiento"
+        },
+        {
+          "question": "El efectivo no deja rastro. Eso:",
+          "options": [
+            "Es solo ventaja",
+            "Es solo desventaja",
+            "Da privacidad pero impide probar nada"
+          ],
+          "correct": "Da privacidad pero impide probar nada"
+        },
+        {
+          "question": "¿En qué gana el efectivo?",
+          "options": [
+            "En aceptación y funciona sin señal",
+            "En registro",
+            "En seguridad ante robo"
+          ],
+          "correct": "En aceptación y funciona sin señal"
+        },
+        {
+          "question": "¿En qué gana el pago con celular?",
+          "options": [
+            "En aceptación universal",
+            "En velocidad y registro",
+            "En funcionar sin internet"
+          ],
+          "correct": "En velocidad y registro"
+        },
+        {
+          "question": "¿Cuál es la habilidad útil?",
+          "options": [
+            "Usar solo efectivo",
+            "Usar solo celular",
+            "Saber cuál conviene en cada contexto"
+          ],
+          "correct": "Saber cuál conviene en cada contexto"
+        }
+      ],
+      "rubric": "Logrado: compara los tres medios en los cuatro criterios y asigna el adecuado a cada contexto. En proceso: describe los medios sin compararlos. Inicial: reconoce la evolución de los pagos."
+    },
+    "teacher_tips": [
+      "Construya la línea del tiempo con el grupo, no la presente hecha. El razonamiento de qué problema resolvió cada paso es la clase.",
+      "Evite presentar el efectivo como atrasado. En México es una realidad mayoritaria con razones válidas.",
+      "La tabla comparativa deja claro que ninguno gana en todo. Ese es el aprendizaje central."
+    ]
+  },
+  "P5-1-10": {
+    "code": "P5-1-10",
+    "title": "Inclusión financiera: los mexicanos que no tienen banco",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Sistema Financiero",
+    "metadata": {
+      "objective": "Comprender qué es la inclusión financiera, qué barreras enfrentan quienes no tienen acceso al sistema y qué consecuencias tiene esa exclusión.",
+      "competencies": [
+        "Conciencia de Inclusión Financiera",
+        "Análisis de Barreras",
+        "Empatía Social",
+        "Propuesta de Soluciones"
+      ],
+      "materials": [
+        "Datos de inclusión financiera en México",
+        "Mapa de cobertura de sucursales",
+        "Casos de personas sin acceso",
+        "Formato de propuesta de solución",
+        "Cartel de las cuatro barreras"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Sin Cuenta",
+          "duration": "15 min",
+          "label": "Millones de mexicanos"
+        },
+        {
+          "phase": "Desarrollo: Las Barreras",
+          "duration": "30 min",
+          "label": "Por qué no acceden"
+        },
+        {
+          "phase": "Cierre: Qué Cuesta",
+          "duration": "15 min",
+          "label": "El precio de estar fuera"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: MILLONES SIN CUENTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente el dato: una parte importante de la población adulta en México no tiene cuenta bancaria. Pregunte por qué creen que ocurre. Aparecerán respuestas sobre falta de dinero. Explique que esa es solo una de varias razones, y que muchas veces la causa no es la persona sino la falta de oferta donde vive.",
+          "activity": "Dinámica \"¿Por Qué No?\": el grupo lista razones posibles y después las compara con las barreras reales."
+        },
+        {
+          "title": "FASE II: LAS CUATRO BARRERAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las barreras principales: distancia, porque en muchas localidades no hay sucursal ni cajero; requisitos, porque no todos tienen los documentos que se piden; costo, porque las comisiones pesan mucho sobre ingresos pequeños; y desconfianza, muchas veces basada en malas experiencias reales. Los alumnos analizan casos y las identifican.",
+          "activity": "Dinámica \"Identifica la Barrera\": cada equipo analiza cuatro casos y señala cuál barrera está operando en cada uno."
+        },
+        {
+          "title": "FASE III: EL PRECIO DE ESTAR FUERA (CIERRE)",
+          "duration": "15 min",
+          "description": "Analicen qué le cuesta a una persona estar fuera del sistema: no puede ahorrar de forma segura, paga más por enviar y recibir dinero, no accede a crédito formal y queda expuesta a préstamos abusivos. Explique que existen soluciones en marcha como corresponsales bancarios y cuentas de nivel básico, que atacan las barreras de distancia y requisitos.",
+          "activity": "Dinámica \"Mi Propuesta\": cada equipo propone una solución para una barrera concreta y explica a quién beneficiaría."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Millones de personas en México no tienen una cuenta de banco. No siempre es porque no quieran: muchas veces es porque no hay una sucursal cerca, porque no tienen los papeles que piden o porque las comisiones se comen su ingreso. En esta clase vas a entender ese problema y lo que cuesta.",
+      "sections": [
+        {
+          "subtitle": "Qué es la inclusión financiera",
+          "content": "Es que todas las personas tengan acceso real a servicios financieros útiles y a precios accesibles: una cuenta para guardar y recibir dinero, medios de pago, crédito cuando lo necesiten y seguros. No basta con que los servicios existan: tienen que estar disponibles, ser comprensibles y costar poco para quien tiene ingresos pequeños."
+        },
+        {
+          "subtitle": "Distancia y requisitos",
+          "content": "Dos de las barreras más grandes son físicas y burocráticas. Hay municipios en México sin una sola sucursal bancaria, donde acceder implica un viaje de horas y un costo de transporte. Y muchos trámites piden comprobante de domicilio o identificación que no todas las personas tienen a la mano, especialmente quienes viven en zonas rurales o trabajan de manera informal."
+        },
+        {
+          "subtitle": "Costo y desconfianza",
+          "content": "Una comisión de manejo de cien pesos al mes es irrelevante para algunos ingresos y enorme para otros. Cuando las comisiones representan una parte grande del ingreso, la cuenta simplemente no conviene. A eso se suma la desconfianza, que muchas veces no es prejuicio sino experiencia: cobros no explicados, trámites incomprensibles o malas experiencias previas de la familia."
+        },
+        {
+          "subtitle": "Lo que cuesta quedarse fuera",
+          "content": "Estar fuera del sistema tiene un precio alto. El ahorro en efectivo se expone a robo y a la inflación. Enviar o recibir dinero cuesta más. No hay historial, así que el crédito formal queda cerrado y solo quedan los préstamos informales de tasas altísimas. Por eso la inclusión financiera no es un tema técnico: es una condición para que una familia pueda progresar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la inclusión financiera?",
+          "options": [
+            "Que todos tengan acceso real a servicios financieros útiles y accesibles",
+            "Que todos tengan tarjeta de crédito",
+            "Que el gobierno dé dinero"
+          ],
+          "correct": "Que todos tengan acceso real a servicios financieros útiles y accesibles"
+        },
+        {
+          "question": "¿Cuáles son las cuatro barreras?",
+          "options": [
+            "Edad, sexo, altura y peso",
+            "Distancia, requisitos, costo y desconfianza",
+            "Idioma, música, comida y clima"
+          ],
+          "correct": "Distancia, requisitos, costo y desconfianza"
+        },
+        {
+          "question": "La barrera de distancia significa:",
+          "options": [
+            "Que la gente no camina",
+            "Que los bancos cierran temprano",
+            "Que hay lugares sin sucursal ni cajero cerca"
+          ],
+          "correct": "Que hay lugares sin sucursal ni cajero cerca"
+        },
+        {
+          "question": "¿Por qué los requisitos son una barrera?",
+          "options": [
+            "Porque no todos tienen los documentos que se piden",
+            "Porque son muchos papeles bonitos",
+            "Porque cuestan caro"
+          ],
+          "correct": "Porque no todos tienen los documentos que se piden"
+        },
+        {
+          "question": "¿Por qué el costo excluye?",
+          "options": [
+            "Porque los bancos son caros para todos",
+            "Porque las comisiones pesan mucho en ingresos pequeños",
+            "Porque hay que pagar entrada"
+          ],
+          "correct": "Porque las comisiones pesan mucho en ingresos pequeños"
+        },
+        {
+          "question": "La desconfianza muchas veces:",
+          "options": [
+            "Es solo prejuicio",
+            "No existe",
+            "Viene de malas experiencias reales"
+          ],
+          "correct": "Viene de malas experiencias reales"
+        },
+        {
+          "question": "¿Qué le pasa al ahorro fuera del sistema?",
+          "options": [
+            "Se expone a robo y a la inflación",
+            "Crece más",
+            "Está protegido"
+          ],
+          "correct": "Se expone a robo y a la inflación"
+        },
+        {
+          "question": "Sin historial financiero:",
+          "options": [
+            "Se obtienen mejores tasas",
+            "El crédito formal queda cerrado",
+            "No pasa nada"
+          ],
+          "correct": "El crédito formal queda cerrado"
+        },
+        {
+          "question": "Quien queda fuera suele recurrir a:",
+          "options": [
+            "Créditos baratos",
+            "Inversiones seguras",
+            "Préstamos informales de tasas altísimas"
+          ],
+          "correct": "Préstamos informales de tasas altísimas"
+        },
+        {
+          "question": "¿Qué soluciones atacan distancia y requisitos?",
+          "options": [
+            "Corresponsales bancarios y cuentas de nivel básico",
+            "Más publicidad",
+            "Subir comisiones"
+          ],
+          "correct": "Corresponsales bancarios y cuentas de nivel básico"
+        }
+      ],
+      "rubric": "Logrado: identifica las cuatro barreras, explica el costo de la exclusión y propone una solución pertinente. En proceso: nombra barreras sin analizar consecuencias. Inicial: reconoce que hay personas sin acceso."
+    },
+    "teacher_tips": [
+      "Evite atribuir la exclusión a decisiones individuales. En muchos casos la barrera es de oferta, no de voluntad.",
+      "Si hay alumnos de comunidades con poca infraestructura financiera, el tema los toca directamente. Trátelo con respeto.",
+      "La propuesta de solución final funciona muy bien como ejercicio cívico, no solo financiero."
     ]
   },
   "P5-2-1": {
@@ -1004,7 +1976,11 @@
         },
         {
           "question": "Verdadero o Falso: La tarjeta de crédito es dinero extra que te regala el banco.",
-          "options": ["Verdadero", "Falso", "Solo en tu cumpleaños"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo en tu cumpleaños"
+          ],
           "correct": "Falso"
         },
         {
@@ -1155,7 +2131,11 @@
         },
         {
           "question": "Verdadero o Falso: Por ley, todos los bancos en México deben mostrar el CAT en su publicidad.",
-          "options": ["Verdadero", "Falso", "Solo si el cliente pregunta"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo si el cliente pregunta"
+          ],
           "correct": "Verdadero"
         },
         {
@@ -1342,12 +2322,20 @@
         },
         {
           "question": "Si tienes 10 compras diferentes a MSI de $200 cada una, ¿cuánto debes pagar al mes?",
-          "options": ["$200", "$2,000", "$20,000"],
+          "options": [
+            "$200",
+            "$2,000",
+            "$20,000"
+          ],
           "correct": "$2,000"
         },
         {
           "question": "Verdadero o Falso: Los MSI son dinero gratis que el banco me da.",
-          "options": ["Verdadero", "Falso", "Solo en el Buen Fin"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo en el Buen Fin"
+          ],
           "correct": "Falso"
         },
         {
@@ -1525,7 +2513,11 @@
         },
         {
           "question": "Verdadero o Falso: Los filtros de las fotos de productos en internet siempre muestran la realidad.",
-          "options": ["Verdadero", "Falso", "Solo los de marcas caras"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo los de marcas caras"
+          ],
           "correct": "Falso"
         },
         {
@@ -1694,12 +2686,20 @@
         },
         {
           "question": "¿Cuál de las '7 Rs' significa arreglar algo en lugar de tirarlo y comprar uno nuevo?",
-          "options": ["Reciclar", "Reparar", "Reducir"],
+          "options": [
+            "Reciclar",
+            "Reparar",
+            "Reducir"
+          ],
           "correct": "Reparar"
         },
         {
           "question": "Verdadero o Falso: Lo más ecológico suele ser también lo más económico a largo plazo.",
-          "options": ["Verdadero", "Falso", "Solo para los adultos"],
+          "options": [
+            "Verdadero",
+            "Falso",
+            "Solo para los adultos"
+          ],
           "correct": "Verdadero"
         },
         {
@@ -1727,6 +2727,926 @@
       "Traiga productos reales con mucho empaque y pida a los niños que separen el producto de la basura.",
       "Mencione que las empresas ecológicas suelen ahorrar dinero en empaques.",
       "Explique el concepto de 'voto con la cartera'."
+    ]
+  },
+  "P5-2-6": {
+    "code": "P5-2-6",
+    "title": "Necesidad, deseo y capricho: los tres niveles",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Consumo Responsable",
+    "metadata": {
+      "objective": "Distinguir con precisión entre necesidad, deseo y capricho, y usar esa clasificación para priorizar el gasto propio.",
+      "competencies": [
+        "Clasificación del Gasto",
+        "Priorización",
+        "Autoconocimiento del Consumo",
+        "Decisión Reflexiva"
+      ],
+      "materials": [
+        "Tarjetas de productos y servicios",
+        "Tres contenedores etiquetados",
+        "Registro de gastos de una semana",
+        "Cartel de las tres preguntas",
+        "Casos límite para discutir"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Línea Borrosa",
+          "duration": "15 min",
+          "label": "¿Dónde está el límite?"
+        },
+        {
+          "phase": "Desarrollo: Tres Niveles",
+          "duration": "30 min",
+          "label": "Clasificar con criterio"
+        },
+        {
+          "phase": "Cierre: Mi Semana",
+          "duration": "15 min",
+          "label": "Revisar mis gastos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA LÍNEA NO ES OBVIA (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente tres casos límite: unos zapatos cuando los que tienes están rotos, unos zapatos cuando los que tienes están bien pero pasados de moda, y unos zapatos de edición especial. Pregunte cuáles son necesidad. La discusión mostrará que la línea depende del contexto, no del objeto.",
+          "activity": "Dinámica \"El Mismo Objeto\": el grupo debate tres versiones del mismo producto y descubre que la categoría cambia con la situación."
+        },
+        {
+          "title": "FASE II: LOS TRES NIVELES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Defina los tres: necesidad es lo que hace falta para vivir o funcionar; deseo es algo que mejora la vida y se puede planear; capricho es un impulso momentáneo que se apaga rápido. Los alumnos clasifican veinte tarjetas y discuten los casos donde no se ponen de acuerdo, que son los más útiles.",
+          "activity": "Dinámica \"Tres Contenedores\": cada equipo clasifica las tarjetas y defiende las tres que le costaron más trabajo."
+        },
+        {
+          "title": "FASE III: MI SEMANA REAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno revisa sus gastos de la última semana y los clasifica en los tres niveles. Después calcula qué porcentaje fue a cada uno. Explique que el objetivo no es eliminar deseos ni caprichos, sino saber en qué proporción están, porque una proporción que uno no conoce no se puede ajustar.",
+          "activity": "Dinámica \"Mi Proporción\": cada alumno calcula el porcentaje de su gasto semanal en cada nivel."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Todo el mundo sabe que hay necesidades y deseos. Pero entre ellos hay un tercer nivel que casi nadie nombra y que explica muchas compras de las que uno se arrepiente: el capricho. En esta clase vas a aprender a distinguir los tres y a medir tu propia proporción.",
+      "sections": [
+        {
+          "subtitle": "Necesidad: lo que hace falta para funcionar",
+          "content": "Una necesidad es lo que se requiere para vivir o para desempeñarse: comida, un lugar donde vivir, salud, transporte para llegar a la escuela o al trabajo, zapatos cuando los que hay están rotos. No es una categoría de objetos, es una categoría de situaciones: el mismo producto puede ser necesidad para una persona y no serlo para otra."
+        },
+        {
+          "subtitle": "Deseo: mejora la vida y se puede planear",
+          "content": "Un deseo es algo que no hace falta para funcionar pero que mejora la vida de forma real: una bicicleta mejor, un curso, un instrumento. La característica clave del deseo es que sobrevive al tiempo. Si algo sigue queriéndose después de semanas, es deseo. Los deseos no son malos: son la razón por la que vale la pena ahorrar."
+        },
+        {
+          "subtitle": "Capricho: el impulso que se apaga",
+          "content": "Un capricho es un antojo momentáneo, activado casi siempre por algo externo: un anuncio, una oferta, ver a alguien con el producto. Su marca distintiva es que se apaga rápido: en una semana ya no importa. La mayoría de las compras de las que la gente se arrepiente son caprichos que se confundieron con deseos en el momento."
+        },
+        {
+          "subtitle": "La prueba del tiempo",
+          "content": "La forma práctica de distinguir deseo de capricho es una sola: esperar. Si después de una o dos semanas sigues queriéndolo con la misma intensidad, es un deseo y merece un plan de ahorro. Si se te olvidó, era capricho y acabas de ahorrarte ese dinero sin ningún esfuerzo. La espera no prohíbe nada: solo separa."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una necesidad?",
+          "options": [
+            "Lo que hace falta para vivir o funcionar",
+            "Lo más caro",
+            "Lo que todos tienen"
+          ],
+          "correct": "Lo que hace falta para vivir o funcionar"
+        },
+        {
+          "question": "¿La necesidad es una categoría de objetos?",
+          "options": [
+            "Sí, siempre",
+            "No, de situaciones",
+            "Solo de comida"
+          ],
+          "correct": "No, de situaciones"
+        },
+        {
+          "question": "¿Qué caracteriza a un deseo?",
+          "options": [
+            "Que es barato",
+            "Que es urgente",
+            "Que sobrevive al paso del tiempo"
+          ],
+          "correct": "Que sobrevive al paso del tiempo"
+        },
+        {
+          "question": "¿Los deseos son malos?",
+          "options": [
+            "No, son la razón por la que vale la pena ahorrar",
+            "Sí, siempre",
+            "Solo los caros"
+          ],
+          "correct": "No, son la razón por la que vale la pena ahorrar"
+        },
+        {
+          "question": "¿Qué es un capricho?",
+          "options": [
+            "Una necesidad urgente",
+            "Un impulso momentáneo que se apaga rápido",
+            "Un deseo planeado"
+          ],
+          "correct": "Un impulso momentáneo que se apaga rápido"
+        },
+        {
+          "question": "¿Qué activa normalmente un capricho?",
+          "options": [
+            "Una necesidad real",
+            "Un plan",
+            "Algo externo: un anuncio, una oferta, ver a alguien con el producto"
+          ],
+          "correct": "Algo externo: un anuncio, una oferta, ver a alguien con el producto"
+        },
+        {
+          "question": "¿Cómo se distingue deseo de capricho?",
+          "options": [
+            "Esperando una o dos semanas",
+            "Por el precio",
+            "Por el tamaño"
+          ],
+          "correct": "Esperando una o dos semanas"
+        },
+        {
+          "question": "Si a las dos semanas se me olvidó:",
+          "options": [
+            "Era necesidad",
+            "Era capricho",
+            "Era deseo"
+          ],
+          "correct": "Era capricho"
+        },
+        {
+          "question": "¿Cuál es el objetivo de clasificar mis gastos?",
+          "options": [
+            "Eliminar todos los deseos",
+            "Gastar más",
+            "Saber la proporción para poder ajustarla"
+          ],
+          "correct": "Saber la proporción para poder ajustarla"
+        },
+        {
+          "question": "La mayoría de las compras de las que uno se arrepiente son:",
+          "options": [
+            "Caprichos confundidos con deseos",
+            "Necesidades",
+            "Inversiones"
+          ],
+          "correct": "Caprichos confundidos con deseos"
+        }
+      ],
+      "rubric": "Logrado: clasifica correctamente incluyendo casos límite y calcula su propia proporción de gasto. En proceso: distingue necesidad de deseo sin identificar caprichos. Inicial: separa necesidad de lo demás."
+    },
+    "teacher_tips": [
+      "Los casos límite son la parte valiosa. Un ejercicio con clasificaciones obvias no enseña criterio.",
+      "Insista en que la categoría depende de la situación, no del objeto. Es el error conceptual más común.",
+      "No demonice los caprichos. Una proporción pequeña de gasto impulsivo es normal; el problema es no saber cuánta es."
+    ]
+  },
+  "P5-2-7": {
+    "code": "P5-2-7",
+    "title": "El precio ancla y otras trampas del marketing",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Consumo Responsable",
+    "metadata": {
+      "objective": "Identificar el precio ancla y otras técnicas de marketing que alteran la percepción de valor, y aplicar defensas concretas ante ellas.",
+      "competencies": [
+        "Detección de Técnicas de Persuasión",
+        "Evaluación Objetiva de Precios",
+        "Resistencia al Sesgo",
+        "Comparación Independiente"
+      ],
+      "materials": [
+        "Etiquetas con precio tachado y precio nuevo",
+        "Ejemplos de menús y catálogos",
+        "Calculadora",
+        "Comparativo de precios en varias tiendas",
+        "Cartel de las cuatro trampas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Precio Tachado",
+          "duration": "15 min",
+          "label": "¿De verdad es descuento?"
+        },
+        {
+          "phase": "Desarrollo: Cuatro Trampas",
+          "duration": "30 min",
+          "label": "Cómo funcionan"
+        },
+        {
+          "phase": "Cierre: Las Defensas",
+          "duration": "15 min",
+          "label": "Qué hacer ante cada una"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL PRECIO TACHADO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre una etiqueta con $1,200 tachado y $799 en grande. Pregunte si es buena oferta. La mayoría dirá que sí. Después revele que el producto nunca costó $1,200 y que en otra tienda está en $750. Explique que el número tachado se llama precio ancla y que su única función es hacer que el otro parezca bajo.",
+          "activity": "Dinámica \"¿Es Oferta?\": el grupo evalúa tres etiquetas y después descubre los precios reales de mercado."
+        },
+        {
+          "title": "FASE II: LAS CUATRO TRAMPAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente cuatro técnicas: el precio ancla, el precio terminado en nueve, la opción señuelo que hace ver bien a otra, y la escasez artificial. Los alumnos identifican cada una en ejemplos reales de catálogos y menús. Descubren que ninguna es ilegal ni engañosa en sentido estricto: todas trabajan sobre la percepción.",
+          "activity": "Dinámica \"Encuentra la Técnica\": cada equipo analiza cuatro ejemplos y nombra la técnica usada en cada uno."
+        },
+        {
+          "title": "FASE III: LA DEFENSA DE CADA UNA (CIERRE)",
+          "duration": "15 min",
+          "description": "Para cada trampa, una defensa concreta: contra el ancla, comparar en otras tiendas; contra el nueve, redondear mentalmente hacia arriba; contra el señuelo, decidir qué se necesita antes de ver las opciones; contra la escasez, aplicar la espera. Los alumnos practican las cuatro con casos.",
+          "activity": "Dinámica \"Defensa por Trampa\": cada equipo aplica la defensa correspondiente a cuatro situaciones distintas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ves un precio tachado de $1,200 y al lado $799. Parece un ahorro de $401. Pero el producto nunca costó $1,200 y en otra tienda está en $750. Ese número tachado tiene nombre técnico y una sola función: manipular lo que te parece caro o barato.",
+      "sections": [
+        {
+          "subtitle": "El precio ancla",
+          "content": "El precio ancla es un número alto que se muestra antes o junto al precio real para que este parezca bajo por comparación. Puede ser un precio tachado, un \"precio de lista\" que nadie paga, o un producto carísimo puesto al lado. Funciona porque el cerebro juzga los precios por comparación con lo que acaba de ver, no por su valor real."
+        },
+        {
+          "subtitle": "El precio terminado en nueve",
+          "content": "Un producto de $199 se percibe mucho más cercano a $100 que a $200, aunque esté a un peso de los $200. La razón es que leemos de izquierda a derecha y el primer dígito domina la impresión. La defensa es mecánica y funciona: al ver un precio, redondearlo mentalmente hacia arriba antes de decidir."
+        },
+        {
+          "subtitle": "La opción señuelo",
+          "content": "Cuando hay tres opciones y una está claramente peor que otra, esa mala opción no está ahí para venderse: está para hacer que otra parezca excelente. Es común en menús, planes de suscripción y tamaños de producto. La defensa es decidir qué necesitas antes de mirar las opciones, para que la comparación no se haga solo entre lo que te ofrecieron."
+        },
+        {
+          "subtitle": "La escasez artificial",
+          "content": "\"Últimas piezas\", \"solo hoy\", \"quedan 3 disponibles\". La escasez, real o fabricada, activa la urgencia y la urgencia impide comparar. Muchas veces el contador se reinicia todos los días. La defensa es siempre la misma: esperar. Si la oferta era real y se pierde, se pierde poco. Si era fabricada, volverá la semana siguiente."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un precio ancla?",
+          "options": [
+            "El precio más barato",
+            "Un número alto que hace parecer bajo al precio real",
+            "El costo de producción"
+          ],
+          "correct": "Un número alto que hace parecer bajo al precio real"
+        },
+        {
+          "question": "¿Por qué funciona el ancla?",
+          "options": [
+            "Porque los precios son fijos",
+            "Porque nadie sabe restar",
+            "Porque el cerebro juzga por comparación con lo que acaba de ver"
+          ],
+          "correct": "Porque el cerebro juzga por comparación con lo que acaba de ver"
+        },
+        {
+          "question": "¿Cuál es la defensa contra el ancla?",
+          "options": [
+            "Comparar en otras tiendas",
+            "Comprar rápido",
+            "Confiar en el descuento"
+          ],
+          "correct": "Comparar en otras tiendas"
+        },
+        {
+          "question": "¿Por qué funciona el precio terminado en nueve?",
+          "options": [
+            "Porque el nueve da suerte",
+            "Porque leemos de izquierda a derecha y domina el primer dígito",
+            "Porque baja el IVA"
+          ],
+          "correct": "Porque leemos de izquierda a derecha y domina el primer dígito"
+        },
+        {
+          "question": "¿Cuál es la defensa contra el nueve?",
+          "options": [
+            "Ignorar el precio",
+            "Pagar en efectivo",
+            "Redondear mentalmente hacia arriba"
+          ],
+          "correct": "Redondear mentalmente hacia arriba"
+        },
+        {
+          "question": "¿Para qué sirve una opción señuelo?",
+          "options": [
+            "Para hacer que otra opción parezca excelente",
+            "Para venderse mucho",
+            "Para llenar el catálogo"
+          ],
+          "correct": "Para hacer que otra opción parezca excelente"
+        },
+        {
+          "question": "¿Cuál es la defensa contra el señuelo?",
+          "options": [
+            "Elegir siempre la de en medio",
+            "Decidir qué necesito antes de ver las opciones",
+            "Elegir la más barata"
+          ],
+          "correct": "Decidir qué necesito antes de ver las opciones"
+        },
+        {
+          "question": "¿Qué logra la escasez artificial?",
+          "options": [
+            "Bajar el precio",
+            "Mejorar el producto",
+            "Activar urgencia e impedir comparar"
+          ],
+          "correct": "Activar urgencia e impedir comparar"
+        },
+        {
+          "question": "¿Cuál es la defensa contra la escasez?",
+          "options": [
+            "Esperar",
+            "Comprar de inmediato",
+            "Comprar dos"
+          ],
+          "correct": "Esperar"
+        },
+        {
+          "question": "Estas técnicas:",
+          "options": [
+            "Son ilegales",
+            "Trabajan sobre la percepción, no cambian el producto",
+            "Mejoran la calidad"
+          ],
+          "correct": "Trabajan sobre la percepción, no cambian el producto"
+        }
+      ],
+      "rubric": "Logrado: identifica las cuatro técnicas y aplica la defensa correspondiente a cada una. En proceso: reconoce el ancla sin identificar las demás. Inicial: sospecha de los descuentos exagerados."
+    },
+    "teacher_tips": [
+      "Use etiquetas y catálogos reales. Las técnicas están en todos lados y encontrarlas en material auténtico es más impactante.",
+      "Aclare que no son ilegales. Presentarlas como fraude confunde: son técnicas legítimas de venta ante las que hay que estar preparado.",
+      "Las cuatro defensas son concretas y accionables. Insista en que las practiquen, no solo en que las nombren."
+    ]
+  },
+  "P5-2-8": {
+    "code": "P5-2-8",
+    "title": "Influencers y publicidad encubierta",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Consumo Responsable",
+    "metadata": {
+      "objective": "Reconocer la publicidad encubierta en redes sociales, identificar cuándo un contenido es pagado y evaluar recomendaciones con criterio.",
+      "competencies": [
+        "Alfabetización Mediática",
+        "Detección de Publicidad",
+        "Evaluación de Fuentes",
+        "Consumo Crítico de Contenido"
+      ],
+      "materials": [
+        "Ejemplos de publicaciones con y sin declaración",
+        "Lista de señales de contenido pagado",
+        "Casos de recomendaciones sin sustento",
+        "Formato de evaluación de fuente",
+        "Cartel de las tres preguntas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Es Anuncio?",
+          "duration": "15 min",
+          "label": "Recomendación o publicidad"
+        },
+        {
+          "phase": "Desarrollo: Las Señales",
+          "duration": "30 min",
+          "label": "Cómo se detecta"
+        },
+        {
+          "phase": "Cierre: Evaluar",
+          "duration": "15 min",
+          "label": "Tres preguntas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿ESO ES UN ANUNCIO? (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre tres publicaciones que recomiendan productos. Una declara ser publicidad, otra lo insinúa y otra no dice nada. Pregunte cuáles son anuncios. Explique que la publicidad debe declararse, pero que muchas veces no se hace o se hace de forma poco visible, y que aprender a detectarlo es responsabilidad del que consume.",
+          "activity": "Dinámica \"¿Cuál Es Anuncio?\": el grupo clasifica tres publicaciones y compara sus respuestas."
+        },
+        {
+          "title": "FASE II: LAS SEÑALES DE CONTENIDO PAGADO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las señales: enlaces con código de descuento propio, elogios sin ninguna crítica, el mismo producto promovido por muchas cuentas a la vez, y ausencia de comparación con alternativas. Los alumnos analizan ejemplos y marcan las señales que encuentran en cada uno.",
+          "activity": "Dinámica \"Marca las Señales\": cada equipo analiza cuatro publicaciones y cuenta las señales encontradas."
+        },
+        {
+          "title": "FASE III: LAS TRES PREGUNTAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el filtro final: ¿quién le paga a esta persona?, ¿menciona alguna desventaja?, ¿comparó con otras opciones? Explique que recibir dinero por recomendar no invalida automáticamente una opinión, pero sí obliga a buscar una segunda fuente independiente antes de decidir.",
+          "activity": "Dinámica \"Aplica el Filtro\": cada alumno evalúa una recomendación real con las tres preguntas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Alguien que sigues recomienda un producto y suena honesto. Pero si le pagaron por hacerlo y no lo dijo, eso es publicidad disfrazada de opinión. En esta clase vas a aprender a detectarla y a evaluar cualquier recomendación con criterio.",
+      "sections": [
+        {
+          "subtitle": "Publicidad declarada y publicidad encubierta",
+          "content": "Cuando una marca paga por una recomendación, esa relación debería declararse claramente. Publicidad declarada es legítima: sabes de dónde viene y puedes ponderarla. Publicidad encubierta es la que se presenta como opinión personal sin mencionar el pago, y eso sí es problemático, porque te quita información que necesitabas para evaluar."
+        },
+        {
+          "subtitle": "Las señales que la delatan",
+          "content": "Hay señales bastante confiables: un código de descuento personalizado, porque implica una comisión por venta; elogios sin una sola crítica, porque ningún producto es perfecto; el mismo producto apareciendo en muchas cuentas al mismo tiempo, porque suele indicar una campaña coordinada; y ausencia total de comparación con alternativas."
+        },
+        {
+          "subtitle": "Recibir pago no invalida la opinión",
+          "content": "Es importante no caer en el extremo contrario. Que alguien reciba pago por recomendar no significa automáticamente que el producto sea malo ni que la opinión sea falsa. Significa que hay un interés económico en juego y que esa opinión no puede ser tu única fuente. La conclusión correcta no es descartarla: es buscar una segunda opinión independiente."
+        },
+        {
+          "subtitle": "Las tres preguntas",
+          "content": "Ante cualquier recomendación conviene preguntar tres cosas: quién le paga a esta persona, si menciona alguna desventaja del producto y si lo comparó con otras opciones. Una recomendación que responde bien a las tres es valiosa. Una que no responde ninguna es un anuncio, aunque no lo diga, y hay que tratarla como tal."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es publicidad encubierta?",
+          "options": [
+            "La que dice que es publicidad",
+            "Cualquier anuncio",
+            "La que se presenta como opinión sin declarar el pago"
+          ],
+          "correct": "La que se presenta como opinión sin declarar el pago"
+        },
+        {
+          "question": "¿Es legítima la publicidad declarada?",
+          "options": [
+            "Sí, porque sabes de dónde viene",
+            "No, nunca",
+            "Solo en televisión"
+          ],
+          "correct": "Sí, porque sabes de dónde viene"
+        },
+        {
+          "question": "¿Qué indica un código de descuento personalizado?",
+          "options": [
+            "Que el producto es bueno",
+            "Que probablemente hay comisión por venta",
+            "Que la tienda es grande"
+          ],
+          "correct": "Que probablemente hay comisión por venta"
+        },
+        {
+          "question": "¿Qué señal dan los elogios sin ninguna crítica?",
+          "options": [
+            "Que el producto es perfecto",
+            "Que la persona es honesta",
+            "Que puede ser contenido pagado"
+          ],
+          "correct": "Que puede ser contenido pagado"
+        },
+        {
+          "question": "Si el mismo producto aparece en muchas cuentas a la vez:",
+          "options": [
+            "Suele indicar una campaña coordinada",
+            "Es casualidad",
+            "Significa que es el mejor"
+          ],
+          "correct": "Suele indicar una campaña coordinada"
+        },
+        {
+          "question": "¿Recibir pago invalida automáticamente la opinión?",
+          "options": [
+            "Sí, siempre",
+            "No, pero obliga a buscar otra fuente",
+            "Solo si es mucho dinero"
+          ],
+          "correct": "No, pero obliga a buscar otra fuente"
+        },
+        {
+          "question": "¿Cuáles son las tres preguntas?",
+          "options": [
+            "¿Cuánto cuesta, dónde está, cuándo llega?",
+            "¿Es nuevo, bonito y caro?",
+            "¿Quién le paga, menciona desventajas, comparó opciones?"
+          ],
+          "correct": "¿Quién le paga, menciona desventajas, comparó opciones?"
+        },
+        {
+          "question": "Una recomendación que no responde ninguna de las tres:",
+          "options": [
+            "Hay que tratarla como anuncio",
+            "Es la más confiable",
+            "Da igual"
+          ],
+          "correct": "Hay que tratarla como anuncio"
+        },
+        {
+          "question": "¿Qué debería hacer quien recibe pago por recomendar?",
+          "options": [
+            "Ocultarlo",
+            "Declararlo claramente",
+            "Negarlo"
+          ],
+          "correct": "Declararlo claramente"
+        },
+        {
+          "question": "La ausencia de comparación con alternativas:",
+          "options": [
+            "Es normal y correcto",
+            "Indica objetividad",
+            "Es una señal de contenido pagado"
+          ],
+          "correct": "Es una señal de contenido pagado"
+        }
+      ],
+      "rubric": "Logrado: detecta señales de contenido pagado y aplica las tres preguntas sin caer en el descarte automático. En proceso: identifica publicidad evidente. Inicial: reconoce que existe publicidad en redes."
+    },
+    "teacher_tips": [
+      "Evite el extremo cínico. Enseñar que \"todo es mentira\" deja al alumno igual de desprotegido que la credulidad.",
+      "Use ejemplos genéricos y no señale creadores reales por nombre. El objetivo es el criterio, no el señalamiento.",
+      "La señal de los elogios sin crítica es la más útil y la más fácil de aplicar. Ánclela bien."
+    ]
+  },
+  "P5-2-9": {
+    "code": "P5-2-9",
+    "title": "Garantías y devoluciones: mis derechos como consumidor",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Consumo Responsable",
+    "metadata": {
+      "objective": "Conocer los derechos del consumidor en materia de garantías y devoluciones, y ejercerlos con la documentación adecuada.",
+      "competencies": [
+        "Conocimiento de Derechos",
+        "Documentación de Compras",
+        "Reclamación Efectiva",
+        "Lectura de Políticas"
+      ],
+      "materials": [
+        "Tickets y facturas de ejemplo",
+        "Pólizas de garantía simuladas",
+        "Casos de productos defectuosos",
+        "Formato de reclamación",
+        "Cartel de qué guardar y por cuánto tiempo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Se Descompuso",
+          "duration": "15 min",
+          "label": "¿Y ahora?"
+        },
+        {
+          "phase": "Desarrollo: Garantía",
+          "duration": "30 min",
+          "label": "Qué cubre y qué no"
+        },
+        {
+          "phase": "Cierre: Reclamar Bien",
+          "duration": "15 min",
+          "label": "Con qué documentos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SE DESCOMPUSO A LAS DOS SEMANAS (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee el caso: un producto falla a las dos semanas de comprado. Pregunte qué se puede hacer. Muchos dirán que ya no hay nada que hacer. Explique que en México el consumidor tiene derechos claros y que la mayoría de la gente no los ejerce por no conocerlos, no porque no existan.",
+          "activity": "Dinámica \"¿Se Puede o No?\": el grupo estima qué derechos tiene y luego se compara con los reales."
+        },
+        {
+          "title": "FASE II: QUÉ CUBRE UNA GARANTÍA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que la garantía cubre defectos de fabricación, no daños por mal uso, y que debe constar por escrito con su plazo. Distinga garantía de política de devolución, que es una decisión comercial de cada tienda y puede ser más generosa. Los alumnos analizan cinco casos y determinan qué aplica en cada uno.",
+          "activity": "Dinámica \"¿Garantía o Devolución?\": cada equipo clasifica cinco casos y señala qué documento haría falta."
+        },
+        {
+          "title": "FASE III: RECLAMAR CON DOCUMENTOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe qué guardar y por cuánto: ticket o factura, póliza de garantía, empaque cuando la política lo exige, y evidencia del defecto. Explique que el ticket es el documento clave y que se guarda al menos durante todo el plazo de la garantía. Practiquen una reclamación en juego de roles.",
+          "activity": "Dinámica \"En el Mostrador\": por parejas, uno reclama con documentos y el otro atiende, y se evalúa la claridad del planteamiento."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Compras algo, se descompone a las dos semanas y crees que ya no hay nada que hacer. En realidad tienes derechos claros, pero solo sirven si guardaste el ticket y sabes qué pedir. En esta clase vas a aprender exactamente eso.",
+      "sections": [
+        {
+          "subtitle": "Qué es una garantía",
+          "content": "La garantía es el compromiso del fabricante o vendedor de responder si el producto tiene un defecto de fabricación durante un plazo determinado. Debe constar por escrito e indicar qué cubre, por cuánto tiempo y dónde se hace válida. No cubre daños por mal uso, y esa distinción es la que más discusiones genera en el mostrador."
+        },
+        {
+          "subtitle": "Garantía no es lo mismo que devolución",
+          "content": "La garantía responde ante defectos. La política de devolución es una decisión comercial de cada tienda que permite devolver un producto en buen estado, muchas veces por arrepentimiento, dentro de cierto plazo. Una tienda puede tener una política generosa o no tener ninguna, mientras que la garantía por defectos sí es exigible."
+        },
+        {
+          "subtitle": "El ticket es el documento clave",
+          "content": "Sin comprobante de compra, casi cualquier reclamación se complica. El ticket o la factura acreditan qué se compró, cuándo, dónde y por cuánto, que es exactamente lo que hace falta para determinar si el plazo sigue vigente. Por eso se guarda al menos durante todo el periodo de la garantía, junto con la póliza si el producto la trae."
+        },
+        {
+          "subtitle": "Cómo reclamar bien",
+          "content": "Una reclamación efectiva llega con tres cosas: el comprobante, la descripción precisa del defecto y la petición concreta, ya sea reparación, cambio o devolución. Conviene hacerlo con calma y por escrito cuando sea posible. Si la tienda no responde, existe una instancia oficial de protección al consumidor a la que se puede acudir."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué cubre una garantía?",
+          "options": [
+            "Defectos de fabricación",
+            "Cualquier daño",
+            "El arrepentimiento"
+          ],
+          "correct": "Defectos de fabricación"
+        },
+        {
+          "question": "¿Cubre daños por mal uso?",
+          "options": [
+            "Sí, siempre",
+            "No",
+            "Solo el primer mes"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Debe constar por escrito?",
+          "options": [
+            "No, basta la palabra",
+            "Solo en productos caros",
+            "Sí, con plazo y condiciones"
+          ],
+          "correct": "Sí, con plazo y condiciones"
+        },
+        {
+          "question": "¿Qué es la política de devolución?",
+          "options": [
+            "Una decisión comercial de cada tienda",
+            "Una obligación legal igual para todos",
+            "Lo mismo que la garantía"
+          ],
+          "correct": "Una decisión comercial de cada tienda"
+        },
+        {
+          "question": "¿Cuál es el documento clave para reclamar?",
+          "options": [
+            "La bolsa",
+            "El ticket o la factura",
+            "La foto del producto"
+          ],
+          "correct": "El ticket o la factura"
+        },
+        {
+          "question": "¿Por cuánto tiempo se guarda el ticket?",
+          "options": [
+            "Una semana",
+            "No hace falta guardarlo",
+            "Al menos durante todo el plazo de garantía"
+          ],
+          "correct": "Al menos durante todo el plazo de garantía"
+        },
+        {
+          "question": "¿Qué acredita el ticket?",
+          "options": [
+            "Qué, cuándo, dónde y por cuánto se compró",
+            "Solo el precio",
+            "Nada relevante"
+          ],
+          "correct": "Qué, cuándo, dónde y por cuánto se compró"
+        },
+        {
+          "question": "¿Con qué tres cosas se reclama bien?",
+          "options": [
+            "Enojo, prisa y volumen",
+            "Comprobante, descripción del defecto y petición concreta",
+            "Foto, video y testigos"
+          ],
+          "correct": "Comprobante, descripción del defecto y petición concreta"
+        },
+        {
+          "question": "Si la tienda no responde:",
+          "options": [
+            "No hay nada que hacer",
+            "Hay que demandar de inmediato",
+            "Se puede acudir a la instancia de protección al consumidor"
+          ],
+          "correct": "Se puede acudir a la instancia de protección al consumidor"
+        },
+        {
+          "question": "¿Por qué mucha gente no ejerce sus derechos?",
+          "options": [
+            "Por no conocerlos",
+            "Porque no existen",
+            "Porque son caros"
+          ],
+          "correct": "Por no conocerlos"
+        }
+      ],
+      "rubric": "Logrado: distingue garantía de devolución, sabe qué documentos guardar y formula una reclamación completa. En proceso: conoce la garantía sin documentar. Inicial: sabe que existen derechos."
+    },
+    "teacher_tips": [
+      "Traiga pólizas de garantía reales. Leer una de verdad, con su letra pequeña, es parte del aprendizaje.",
+      "La distinción garantía/devolución evita reclamaciones mal planteadas. Es el punto que más confunde.",
+      "El juego de roles enseña el tono: firme, con documentos y sin agresividad. Ese tono es el que funciona."
+    ]
+  },
+  "P5-2-10": {
+    "code": "P5-2-10",
+    "title": "PROFECO: cómo y cuándo presentar una queja",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Consumo Responsable",
+    "metadata": {
+      "objective": "Conocer el proceso de queja ante la autoridad de protección al consumidor y determinar cuándo y cómo presentarla.",
+      "competencies": [
+        "Ejercicio de Derechos",
+        "Preparación de Expedientes",
+        "Escalamiento de Reclamaciones",
+        "Perseverancia Documentada"
+      ],
+      "materials": [
+        "Formato de queja simulado",
+        "Casos con y sin fundamento",
+        "Lista de documentos requeridos",
+        "Línea del tiempo del proceso",
+        "Cartel de los tres momentos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Ya Reclamé y Nada",
+          "duration": "15 min",
+          "label": "¿Qué sigue?"
+        },
+        {
+          "phase": "Desarrollo: El Proceso",
+          "duration": "30 min",
+          "label": "Cómo se presenta"
+        },
+        {
+          "phase": "Cierre: ¿Procede?",
+          "duration": "15 min",
+          "label": "Cuándo sí y cuándo no"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: RECLAMÉ Y NO PASÓ NADA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee el caso: se reclamó en la tienda, no resolvieron y el consumidor tiene razón. Pregunte qué sigue. Explique que en México existe una autoridad de protección al consumidor que recibe quejas, media entre las partes y puede sancionar, y que su servicio está pensado para ser accesible.",
+          "activity": "Dinámica \"¿A Dónde Voy?\": el grupo identifica a qué instancia corresponde cada tipo de problema."
+        },
+        {
+          "title": "FASE II: CÓMO SE PRESENTA UNA QUEJA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el proceso: primero se reclama ante el proveedor y se documenta; si no hay solución, se presenta la queja con datos del proveedor, descripción de los hechos, documentos y la petición concreta. Después viene una audiencia de conciliación. Los alumnos llenan un formato simulado con un caso.",
+          "activity": "Dinámica \"Llena la Queja\": cada equipo completa el formato con un caso y verifica que no falte ningún dato."
+        },
+        {
+          "title": "FASE III: CUÁNDO SÍ Y CUÁNDO NO (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente casos donde la queja procede y otros donde no: un producto defectuoso dentro de garantía procede; arrepentirse de una compra sin política de devolución normalmente no. Explique que presentar quejas sin fundamento resta tiempo a los casos reales, y que conocer los límites es parte de ejercer bien un derecho.",
+          "activity": "Dinámica \"¿Procede?\": cada equipo clasifica seis casos y explica por qué en dos de ellos no procedería."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Reclamaste en la tienda, no te hicieron caso y sabes que tienes razón. Ahí no se acaba: existe una autoridad que recibe quejas de consumidores y media para resolverlas. En esta clase vas a aprender cómo se presenta una y cuándo tiene sentido hacerlo.",
+      "sections": [
+        {
+          "subtitle": "Para qué existe la autoridad del consumidor",
+          "content": "En México hay una institución encargada de proteger los derechos de las personas consumidoras frente a proveedores de bienes y servicios. Recibe quejas, cita a las partes a conciliar, y puede sancionar a quien incumple. Está pensada para ser accesible: no se necesita abogado y el procedimiento está diseñado para que cualquier persona pueda seguirlo."
+        },
+        {
+          "subtitle": "Primero se reclama con el proveedor",
+          "content": "El proceso tiene un orden que conviene respetar. Primero se plantea el problema directamente al proveedor y se documenta esa gestión: fecha, con quién se habló, qué respondieron. Si no hay solución, esa documentación se convierte en la base de la queja. Saltarse este paso debilita el caso y muchas veces lo devuelve al punto de partida."
+        },
+        {
+          "subtitle": "Qué lleva una queja",
+          "content": "Una queja bien presentada incluye los datos del proveedor, una descripción clara y cronológica de los hechos, los documentos que respaldan lo dicho, y una petición concreta: reparación, cambio, devolución del dinero o cumplimiento de lo ofrecido. La claridad importa: una descripción confusa retrasa el trámite tanto como la falta de documentos."
+        },
+        {
+          "subtitle": "Cuándo no procede",
+          "content": "No toda inconformidad es una violación de derechos. Arrepentirse de una compra cuando la tienda no ofrece devoluciones, o un daño causado por mal uso, normalmente no proceden. Conocer esos límites no debilita al consumidor: lo hace más efectivo, porque le permite concentrar el esfuerzo en los casos donde efectivamente tiene la razón."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué hace la autoridad de protección al consumidor?",
+          "options": [
+            "Presta dinero",
+            "Recibe quejas, concilia y puede sancionar",
+            "Vende productos"
+          ],
+          "correct": "Recibe quejas, concilia y puede sancionar"
+        },
+        {
+          "question": "¿Se necesita abogado?",
+          "options": [
+            "Sí, siempre",
+            "Solo para casos grandes",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Cuál es el primer paso?",
+          "options": [
+            "Reclamar ante el proveedor y documentarlo",
+            "Presentar la queja directamente",
+            "Publicarlo en redes"
+          ],
+          "correct": "Reclamar ante el proveedor y documentarlo"
+        },
+        {
+          "question": "¿Qué se documenta de esa primera gestión?",
+          "options": [
+            "Solo el enojo",
+            "Fecha, con quién se habló y qué respondieron",
+            "Nada"
+          ],
+          "correct": "Fecha, con quién se habló y qué respondieron"
+        },
+        {
+          "question": "¿Qué pasa si me salto ese paso?",
+          "options": [
+            "Se resuelve más rápido",
+            "No cambia nada",
+            "Se debilita el caso"
+          ],
+          "correct": "Se debilita el caso"
+        },
+        {
+          "question": "¿Qué incluye una queja bien presentada?",
+          "options": [
+            "Datos del proveedor, hechos, documentos y petición concreta",
+            "Solo la queja verbal",
+            "Una foto"
+          ],
+          "correct": "Datos del proveedor, hechos, documentos y petición concreta"
+        },
+        {
+          "question": "¿Qué viene después de presentar la queja?",
+          "options": [
+            "Un juicio inmediato",
+            "Una audiencia de conciliación",
+            "Nada"
+          ],
+          "correct": "Una audiencia de conciliación"
+        },
+        {
+          "question": "¿Procede una queja por arrepentimiento si no hay política de devolución?",
+          "options": [
+            "Sí, siempre",
+            "Solo si el producto es caro",
+            "Normalmente no"
+          ],
+          "correct": "Normalmente no"
+        },
+        {
+          "question": "¿Procede por daño causado por mal uso?",
+          "options": [
+            "Normalmente no",
+            "Sí",
+            "Depende de la tienda"
+          ],
+          "correct": "Normalmente no"
+        },
+        {
+          "question": "¿Por qué importa conocer los límites?",
+          "options": [
+            "Para no reclamar nunca",
+            "Para concentrar el esfuerzo donde sí se tiene razón",
+            "Para evitar trámites"
+          ],
+          "correct": "Para concentrar el esfuerzo donde sí se tiene razón"
+        }
+      ],
+      "rubric": "Logrado: describe el proceso completo, prepara una queja con todos sus elementos y distingue casos que proceden. En proceso: conoce la instancia sin dominar el proceso. Inicial: sabe que existe una autoridad."
+    },
+    "teacher_tips": [
+      "Insista en el orden del proceso. Muchas quejas se retrasan por haberse presentado sin reclamar antes al proveedor.",
+      "El ejercicio de casos que no proceden es tan formativo como el de los que sí. Evita el uso desgastante del derecho.",
+      "Practique la redacción cronológica de los hechos. Una descripción clara acelera cualquier trámite."
     ]
   },
   "P5-3-1": {
@@ -1823,7 +3743,11 @@
         },
         {
           "question": "Si una persona prefiere inversiones muy seguras aunque ganen poquito dinero, ¿qué perfil tiene?",
-          "options": ["Arriesgado", "Conservador", "Moderado"],
+          "options": [
+            "Arriesgado",
+            "Conservador",
+            "Moderado"
+          ],
           "correct": "Conservador"
         },
         {
@@ -1837,7 +3761,11 @@
         },
         {
           "question": "¿Qué perfil busca ganancias muy altas aceptando que su dinero puede bajar de valor a veces?",
-          "options": ["Moderado", "Conservador", "Arriesgado"],
+          "options": [
+            "Moderado",
+            "Conservador",
+            "Arriesgado"
+          ],
           "correct": "Arriesgado"
         },
         {
@@ -1869,7 +3797,11 @@
         },
         {
           "question": "¿Qué perfil elegiría una combinación de CETES (seguros) y Acciones (riesgo)?",
-          "options": ["Moderado", "Conservador", "Arriesgado"],
+          "options": [
+            "Moderado",
+            "Conservador",
+            "Arriesgado"
+          ],
           "correct": "Moderado"
         },
         {
@@ -2011,7 +3943,11 @@
         },
         {
           "question": "¿Cuál es el monto mínimo para empezar a invertir en cetesdirecto?",
-          "options": ["$10,000 pesos", "$100 pesos", "$1 peso"],
+          "options": [
+            "$10,000 pesos",
+            "$100 pesos",
+            "$1 peso"
+          ],
           "correct": "$100 pesos"
         },
         {
@@ -2171,7 +4107,11 @@
         },
         {
           "question": "¿Cuál es el elemento más importante para que el interés compuesto sea poderoso?",
-          "options": ["La suerte", "El tiempo (años)", "Tener un banco cerca"],
+          "options": [
+            "La suerte",
+            "El tiempo (años)",
+            "Tener un banco cerca"
+          ],
           "correct": "El tiempo (años)"
         },
         {
@@ -2358,12 +4298,20 @@
         },
         {
           "question": "¿Cómo se llama la persona o plataforma que te ayuda a comprar acciones?",
-          "options": ["Cajero", "Broker (Casa de Bolsa)", "Policía"],
+          "options": [
+            "Cajero",
+            "Broker (Casa de Bolsa)",
+            "Policía"
+          ],
           "correct": "Broker (Casa de Bolsa)"
         },
         {
           "question": "Si una empresa vende mucho y tiene mucho éxito, ¿qué pasa normalmente con el precio de sus acciones?",
-          "options": ["Baja de precio", "Sube de precio", "Se queda igual"],
+          "options": [
+            "Baja de precio",
+            "Sube de precio",
+            "Se queda igual"
+          ],
           "correct": "Sube de precio"
         },
         {
@@ -2523,7 +4471,11 @@
         },
         {
           "question": "¿Cómo se llama la moneda de plata más famosa de México?",
-          "options": ["Peso de Plata", "Onza Libertad", "Dólar Mexicano"],
+          "options": [
+            "Peso de Plata",
+            "Onza Libertad",
+            "Dólar Mexicano"
+          ],
           "correct": "Onza Libertad"
         },
         {
@@ -2607,6 +4559,926 @@
       "Hable sobre la 'Fiebre del Oro' como un evento histórico de ambición."
     ]
   },
+  "P5-3-6": {
+    "code": "P5-3-6",
+    "title": "Riesgo y rendimiento: la regla que nunca falla",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Inversión y Patrimonio",
+    "metadata": {
+      "objective": "Comprender la relación entre riesgo y rendimiento, y usarla para evaluar si una oferta de inversión es realista.",
+      "competencies": [
+        "Comprensión de la Relación Riesgo-Rendimiento",
+        "Evaluación de Ofertas",
+        "Detección de Promesas Imposibles",
+        "Decisión Informada"
+      ],
+      "materials": [
+        "Escala visual de riesgo y rendimiento",
+        "Fichas de instrumentos de inversión",
+        "Casos de ofertas reales y falsas",
+        "Calculadora",
+        "Cartel de la regla que nunca falla"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Oferta Perfecta",
+          "duration": "15 min",
+          "label": "Alto rendimiento sin riesgo"
+        },
+        {
+          "phase": "Desarrollo: La Escala",
+          "duration": "30 min",
+          "label": "Ordenar instrumentos"
+        },
+        {
+          "phase": "Cierre: Evaluar Ofertas",
+          "duration": "15 min",
+          "label": "Aplicar la regla"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"ALTO RENDIMIENTO, CERO RIESGO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una oferta que promete rendimiento altísimo garantizado y sin riesgo. Pregunte si existe. Explique que esa combinación es imposible por definición: si algo pagara mucho sin riesgo, todo el mundo lo tomaría y el rendimiento bajaría de inmediato. Esa regla es la defensa más poderosa contra el fraude de inversión.",
+          "activity": "Dinámica \"¿Existe o No?\": el grupo evalúa tres ofertas y explica por qué una de ellas es imposible."
+        },
+        {
+          "title": "FASE II: LA ESCALA DE RIESGO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos ordenan instrumentos de menor a mayor riesgo: una cuenta de ahorro, un instrumento gubernamental, un fondo diversificado, acciones individuales. Al lado colocan el rendimiento esperado de cada uno y comprueban que ambas escalas coinciden. Explique que el riesgo no es solo perder: también es la variación del resultado.",
+          "activity": "Dinámica \"Ordena la Escala\": cada equipo ordena cuatro instrumentos por riesgo y verifica que el rendimiento siga el mismo orden."
+        },
+        {
+          "title": "FASE III: APLICAR LA REGLA (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos evalúan cinco ofertas usando la regla: si el rendimiento prometido es muy superior al de instrumentos seguros, el riesgo tiene que ser mayor, y si dicen que no lo hay, están mintiendo. Explique que la regla no dice que el riesgo sea malo: dice que se debe conocer y elegir a conciencia.",
+          "activity": "Dinámica \"Pasa la Regla\": cada equipo evalúa cinco ofertas y marca cuáles serían imposibles."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Existe una regla en el mundo de las inversiones que nunca falla: a mayor rendimiento, mayor riesgo. Siempre. Sin excepciones. Quien te ofrezca mucho rendimiento sin riesgo no descubrió un secreto: te está mintiendo. En esta clase vas a entender por qué.",
+      "sections": [
+        {
+          "subtitle": "Por qué la regla no tiene excepciones",
+          "content": "Si existiera una inversión que pagara mucho sin ningún riesgo, todo el mundo pondría ahí su dinero. Al haber tanta demanda, quien la ofrece ya no necesitaría pagar tanto para atraer inversionistas, y el rendimiento bajaría hasta el nivel de los instrumentos seguros. Por eso la combinación de alto rendimiento y cero riesgo no puede sostenerse en ningún mercado real."
+        },
+        {
+          "subtitle": "Qué es exactamente el riesgo",
+          "content": "Riesgo no significa solo perderlo todo. Significa que el resultado puede variar y no se sabe de antemano cuál será. Una inversión de bajo riesgo entrega más o menos lo esperado; una de alto riesgo puede entregar mucho más o mucho menos. Por eso el riesgo se mide en variación, y una inversión muy variable no es adecuada para dinero que se necesita pronto."
+        },
+        {
+          "subtitle": "La escala de instrumentos",
+          "content": "De menor a mayor riesgo: una cuenta de ahorro bancaria, que casi no varía y casi no rinde; instrumentos gubernamentales, muy seguros y con rendimiento moderado; fondos diversificados, con riesgo medio; y acciones individuales, que pueden subir mucho o caer mucho. El rendimiento esperado sigue exactamente el mismo orden, y eso no es coincidencia."
+        },
+        {
+          "subtitle": "El riesgo no es malo: es una decisión",
+          "content": "Aceptar riesgo no es imprudente: es lo que permite que el dinero de largo plazo crezca por encima de la inflación. Lo imprudente es aceptarlo sin saber que existe, o ponerlo donde no corresponde, como el fondo de emergencia. La pregunta correcta no es cómo evitar el riesgo, sino cuánto riesgo tiene sentido para este dinero en particular."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la regla que nunca falla?",
+          "options": [
+            "A mayor riesgo, menor rendimiento",
+            "A mayor rendimiento, mayor riesgo",
+            "El rendimiento es siempre fijo"
+          ],
+          "correct": "A mayor rendimiento, mayor riesgo"
+        },
+        {
+          "question": "¿Por qué no puede existir alto rendimiento sin riesgo?",
+          "options": [
+            "Porque lo prohíbe la ley",
+            "Porque nadie lo quiere",
+            "Porque todos lo tomarían y el rendimiento bajaría"
+          ],
+          "correct": "Porque todos lo tomarían y el rendimiento bajaría"
+        },
+        {
+          "question": "¿Qué significa riesgo?",
+          "options": [
+            "Que el resultado puede variar y no se sabe de antemano",
+            "Que se pierde todo seguro",
+            "Que no hay ganancia"
+          ],
+          "correct": "Que el resultado puede variar y no se sabe de antemano"
+        },
+        {
+          "question": "Una inversión de bajo riesgo:",
+          "options": [
+            "Puede multiplicarse",
+            "Entrega más o menos lo esperado",
+            "Siempre pierde"
+          ],
+          "correct": "Entrega más o menos lo esperado"
+        },
+        {
+          "question": "¿Cuál es el instrumento de menor riesgo de la escala?",
+          "options": [
+            "Las acciones individuales",
+            "Un fondo diversificado",
+            "La cuenta de ahorro bancaria"
+          ],
+          "correct": "La cuenta de ahorro bancaria"
+        },
+        {
+          "question": "¿Cuál es el de mayor riesgo?",
+          "options": [
+            "Las acciones individuales",
+            "La cuenta de ahorro",
+            "Los instrumentos gubernamentales"
+          ],
+          "correct": "Las acciones individuales"
+        },
+        {
+          "question": "El rendimiento esperado sigue:",
+          "options": [
+            "El orden inverso",
+            "El mismo orden que el riesgo",
+            "Ningún orden"
+          ],
+          "correct": "El mismo orden que el riesgo"
+        },
+        {
+          "question": "¿Aceptar riesgo es imprudente?",
+          "options": [
+            "Sí, siempre",
+            "Solo con montos grandes",
+            "No, si se sabe y corresponde a ese dinero"
+          ],
+          "correct": "No, si se sabe y corresponde a ese dinero"
+        },
+        {
+          "question": "¿Dónde no debe haber riesgo alto?",
+          "options": [
+            "En el fondo de emergencia",
+            "En el dinero de largo plazo",
+            "En ninguna parte"
+          ],
+          "correct": "En el fondo de emergencia"
+        },
+        {
+          "question": "¿Cuál es la pregunta correcta?",
+          "options": [
+            "Cómo evitar todo riesgo",
+            "Cuánto riesgo tiene sentido para este dinero",
+            "Cuál paga más sin importar nada"
+          ],
+          "correct": "Cuánto riesgo tiene sentido para este dinero"
+        }
+      ],
+      "rubric": "Logrado: explica la relación riesgo-rendimiento, ordena instrumentos y detecta ofertas imposibles. En proceso: enuncia la regla sin aplicarla. Inicial: reconoce que hay inversiones más riesgosas."
+    },
+    "teacher_tips": [
+      "La explicación de por qué la regla no tiene excepciones es lo que la vuelve memorable. No la enuncie solamente: razónela con el grupo.",
+      "Distinga riesgo de pérdida. Muchos alumnos creen que riesgo significa perder todo, cuando significa variación.",
+      "Conecte con el fondo de emergencia: es el ejemplo más claro de dinero que no admite riesgo alto."
+    ]
+  },
+  "P5-3-7": {
+    "code": "P5-3-7",
+    "title": "Diversificación: no poner todo en una canasta",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Inversión y Patrimonio",
+    "metadata": {
+      "objective": "Comprender el principio de diversificación y construir una distribución de inversión que reduzca el riesgo sin renunciar al rendimiento.",
+      "competencies": [
+        "Diversificación",
+        "Distribución de Portafolio",
+        "Reducción de Riesgo",
+        "Pensamiento Sistémico"
+      ],
+      "materials": [
+        "Canastas y fichas de colores",
+        "Casos de portafolios concentrados y diversificados",
+        "Calculadora",
+        "Tabla de escenarios",
+        "Cartel de los tres tipos de diversificación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Una Sola Canasta",
+          "duration": "15 min",
+          "label": "Qué pasa si se cae"
+        },
+        {
+          "phase": "Desarrollo: Repartir",
+          "duration": "30 min",
+          "label": "Tres formas de diversificar"
+        },
+        {
+          "phase": "Cierre: Mi Distribución",
+          "duration": "15 min",
+          "label": "Armar el reparto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TODOS LOS HUEVOS EN UNA CANASTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Con fichas y canastas, simule dos casos: todas las fichas en una canasta y repartidas en cuatro. Tire una canasta. En el primer caso se pierde todo; en el segundo, una cuarta parte. Explique que ese es literalmente el principio de la diversificación y que aplica igual con dinero.",
+          "activity": "Dinámica \"Tira la Canasta\": el grupo compara el resultado de concentrar y de repartir ante el mismo evento."
+        },
+        {
+          "title": "FASE II: TRES FORMAS DE DIVERSIFICAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que se puede diversificar por instrumento, por sector y por plazo. Los alumnos construyen dos portafolios: uno concentrado en un solo instrumento y otro repartido, y calculan qué pasa con cada uno en tres escenarios distintos. El diversificado nunca gana el máximo, pero tampoco pierde el máximo.",
+          "activity": "Dinámica \"Tres Escenarios\": cada equipo calcula el resultado de ambos portafolios en tres escenarios y compara."
+        },
+        {
+          "title": "FASE III: MI DISTRIBUCIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno arma una distribución con porcentajes según su horizonte y su tolerancia. Explique que diversificar tiene un costo: se renuncia a la ganancia máxima a cambio de evitar la pérdida máxima. Para la mayoría de las personas ese intercambio vale la pena, porque una pérdida grande es mucho más difícil de recuperar.",
+          "activity": "Dinámica \"Mi Reparto\": cada alumno define porcentajes por instrumento y justifica por qué esa mezcla."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Si pones todo tu dinero en un solo lugar y ese lugar falla, lo pierdes todo. Si lo repartes en cuatro, pierdes una parte. Esa idea tan simple tiene nombre técnico, es la base de la inversión seria y se llama diversificación.",
+      "sections": [
+        {
+          "subtitle": "El principio en una frase",
+          "content": "Diversificar es repartir el dinero entre varias opciones distintas para que ninguna falla individual sea catastrófica. No elimina el riesgo: lo reparte. Es la única herramienta que reduce el riesgo sin exigir renunciar por completo al rendimiento, y por eso es el consejo más repetido y más ignorado del mundo financiero."
+        },
+        {
+          "subtitle": "Diversificar por instrumento, sector y plazo",
+          "content": "Hay tres formas de repartir. Por instrumento: no poner todo en acciones ni todo en deuda. Por sector: no concentrar todo en un solo tipo de industria, porque los problemas suelen afectar a sectores enteros. Y por plazo: combinar dinero disponible con dinero comprometido a más tiempo, para no verse obligado a vender en mal momento."
+        },
+        {
+          "subtitle": "El costo de diversificar",
+          "content": "Diversificar tiene un precio: nunca vas a obtener el rendimiento máximo, porque parte de tu dinero estará en las opciones que menos rindieron. A cambio, tampoco vas a sufrir la pérdida máxima. Ese intercambio conviene a casi todo el mundo, porque recuperarse de una pérdida grande es mucho más difícil que renunciar a una ganancia extraordinaria."
+        },
+        {
+          "subtitle": "Diversificar no salva de todo",
+          "content": "Hay dos límites importantes. Repartir entre opciones que se mueven igual no diversifica nada: si todas caen juntas, da lo mismo. Y ninguna diversificación protege de invertir en algo fraudulento, porque ahí la pérdida no es del mercado sino del engaño. Diversificar funciona sobre opciones legítimas y distintas entre sí."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es diversificar?",
+          "options": [
+            "Poner todo en lo más seguro",
+            "Invertir solo en una empresa",
+            "Repartir el dinero entre varias opciones distintas"
+          ],
+          "correct": "Repartir el dinero entre varias opciones distintas"
+        },
+        {
+          "question": "¿Diversificar elimina el riesgo?",
+          "options": [
+            "No, lo reparte",
+            "Sí, por completo",
+            "Solo el primer año"
+          ],
+          "correct": "No, lo reparte"
+        },
+        {
+          "question": "¿Cuáles son las tres formas de diversificar?",
+          "options": [
+            "Por color, tamaño y marca",
+            "Por instrumento, por sector y por plazo",
+            "Por banco, tienda y país"
+          ],
+          "correct": "Por instrumento, por sector y por plazo"
+        },
+        {
+          "question": "¿Por qué diversificar por sector?",
+          "options": [
+            "Porque hay muchos sectores",
+            "Por variedad",
+            "Porque los problemas suelen afectar a sectores enteros"
+          ],
+          "correct": "Porque los problemas suelen afectar a sectores enteros"
+        },
+        {
+          "question": "¿Por qué diversificar por plazo?",
+          "options": [
+            "Para no verse obligado a vender en mal momento",
+            "Para ganar más rápido",
+            "Por costumbre"
+          ],
+          "correct": "Para no verse obligado a vender en mal momento"
+        },
+        {
+          "question": "¿Cuál es el costo de diversificar?",
+          "options": [
+            "Pagar comisiones altísimas",
+            "No obtener nunca el rendimiento máximo",
+            "Perder siempre"
+          ],
+          "correct": "No obtener nunca el rendimiento máximo"
+        },
+        {
+          "question": "¿Por qué conviene ese intercambio?",
+          "options": [
+            "Porque siempre se gana más",
+            "Porque lo dice la ley",
+            "Porque recuperarse de una pérdida grande es más difícil"
+          ],
+          "correct": "Porque recuperarse de una pérdida grande es más difícil"
+        },
+        {
+          "question": "Repartir entre opciones que se mueven igual:",
+          "options": [
+            "No diversifica nada",
+            "Diversifica el doble",
+            "Es lo ideal"
+          ],
+          "correct": "No diversifica nada"
+        },
+        {
+          "question": "¿Protege la diversificación contra un fraude?",
+          "options": [
+            "Sí, completamente",
+            "No",
+            "Solo parcialmente si es grande"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "La diversificación funciona sobre:",
+          "options": [
+            "Cualquier cosa",
+            "Solo acciones",
+            "Opciones legítimas y distintas entre sí"
+          ],
+          "correct": "Opciones legítimas y distintas entre sí"
+        }
+      ],
+      "rubric": "Logrado: explica las tres formas de diversificar, su costo y sus límites, y arma una distribución justificada. En proceso: enuncia el principio sin aplicarlo. Inicial: entiende la idea de no concentrar."
+    },
+    "teacher_tips": [
+      "La demostración física con canastas es sencilla y funciona a cualquier edad. Úsela antes de cualquier explicación.",
+      "El costo de diversificar se omite casi siempre. Decirlo con claridad hace la enseñanza honesta y más creíble.",
+      "El límite del fraude es importante: evita que los alumnos crean que diversificar los protege de todo."
+    ]
+  },
+  "P5-3-8": {
+    "code": "P5-3-8",
+    "title": "Fondos de inversión: invertir en equipo",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Inversión y Patrimonio",
+    "metadata": {
+      "objective": "Comprender qué es un fondo de inversión, cómo permite diversificar con montos pequeños y cómo evaluar sus comisiones.",
+      "competencies": [
+        "Comprensión de Fondos",
+        "Evaluación de Comisiones",
+        "Acceso a Diversificación",
+        "Comparación de Productos"
+      ],
+      "materials": [
+        "Esquema de cómo funciona un fondo",
+        "Prospectos simulados de tres fondos",
+        "Calculadora",
+        "Tabla comparativa de comisiones",
+        "Cartel de las cuatro preguntas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Poco Dinero",
+          "duration": "15 min",
+          "label": "¿Cómo diversifico con poco?"
+        },
+        {
+          "phase": "Desarrollo: El Fondo",
+          "duration": "30 min",
+          "label": "Invertir en equipo"
+        },
+        {
+          "phase": "Cierre: Las Comisiones",
+          "duration": "15 min",
+          "label": "Lo que se lleva el fondo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DIVERSIFICAR CON POCO DINERO (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee el problema: para diversificar hay que comprar varias cosas, pero con poco dinero eso no alcanza. Pregunte cómo lo resolverían. Explique que la solución existe desde hace mucho y consiste en juntar el dinero de muchas personas para comprar entre todos lo que ninguno podría comprar solo.",
+          "activity": "Dinámica \"Entre Todos\": el grupo calcula cuánto necesitaría una persona sola para comprar diez instrumentos distintos."
+        },
+        {
+          "title": "FASE II: CÓMO FUNCIONA UN FONDO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el mecanismo: muchas personas aportan, una administradora invierte ese dinero según una estrategia declarada, y cada participante posee una fracción proporcional del total. Los alumnos comparan tres fondos ficticios con estrategias distintas y determinan cuál corresponde a cada perfil.",
+          "activity": "Dinámica \"Cuál Fondo\": cada equipo asigna uno de tres fondos a tres perfiles de inversionista y justifica."
+        },
+        {
+          "title": "FASE III: LAS COMISIONES IMPORTAN (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que un fondo cobra comisión anual sobre el monto administrado, y que una diferencia de un punto porcentual, sostenida durante años, se convierte en una cantidad enorme. Los alumnos calculan el efecto de dos comisiones distintas sobre el mismo capital a diez años.",
+          "activity": "Dinámica \"Un Punto de Diferencia\": cada equipo calcula el efecto acumulado de dos niveles de comisión."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Diversificar suena muy bien hasta que descubres que necesitas mucho dinero para comprar diez cosas distintas. Los fondos de inversión resuelven exactamente ese problema: juntan el dinero de muchas personas para comprar entre todos lo que nadie podría comprar solo.",
+      "sections": [
+        {
+          "subtitle": "Qué es un fondo de inversión",
+          "content": "Un fondo reúne el dinero de muchos participantes y lo invierte de acuerdo con una estrategia declarada de antemano. Cada persona es dueña de una fracción proporcional a lo que aportó. Así, con montos pequeños se accede a una cartera diversificada que sería imposible de armar individualmente, y la administra gente dedicada a eso de tiempo completo."
+        },
+        {
+          "subtitle": "Cada fondo tiene una estrategia declarada",
+          "content": "No todos los fondos son iguales. Los hay de deuda de corto plazo, muy estables; de deuda de largo plazo, algo más variables; de renta variable, que invierten en acciones y fluctúan bastante; y mixtos. La estrategia viene por escrito en el prospecto, y elegir un fondo consiste en elegir la estrategia que corresponde a tu plazo y a tu tolerancia."
+        },
+        {
+          "subtitle": "Las comisiones se comen el rendimiento",
+          "content": "Los fondos cobran una comisión anual calculada sobre el monto administrado. Un 1% al año suena insignificante, pero se cobra cada año sobre todo el saldo, incluidos los rendimientos acumulados. En horizontes largos, la diferencia entre un fondo que cobra 1% y otro que cobra 2.5% puede representar una parte muy sustancial del resultado final."
+        },
+        {
+          "subtitle": "Las cuatro preguntas antes de entrar",
+          "content": "Antes de invertir en un fondo conviene preguntar cuatro cosas: cuál es su estrategia declarada, cuánto cobra de comisión anual, con qué frecuencia se puede retirar el dinero, y quién lo administra y bajo qué supervisión. Un fondo que no responde con claridad esas cuatro no debería recibir tu dinero, por buen rendimiento pasado que muestre."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un fondo de inversión?",
+          "options": [
+            "Un vehículo que reúne dinero de muchos y lo invierte con una estrategia",
+            "Un préstamo",
+            "Una cuenta de ahorro"
+          ],
+          "correct": "Un vehículo que reúne dinero de muchos y lo invierte con una estrategia"
+        },
+        {
+          "question": "¿Qué problema resuelve?",
+          "options": [
+            "Elimina el riesgo",
+            "Permite diversificar con montos pequeños",
+            "Garantiza ganancias"
+          ],
+          "correct": "Permite diversificar con montos pequeños"
+        },
+        {
+          "question": "¿De qué es dueño cada participante?",
+          "options": [
+            "De todo el fondo",
+            "De nada",
+            "De una fracción proporcional a lo que aportó"
+          ],
+          "correct": "De una fracción proporcional a lo que aportó"
+        },
+        {
+          "question": "¿Dónde viene la estrategia del fondo?",
+          "options": [
+            "Por escrito en el prospecto",
+            "En la publicidad",
+            "En ningún lado"
+          ],
+          "correct": "Por escrito en el prospecto"
+        },
+        {
+          "question": "¿Cuál fondo es más estable?",
+          "options": [
+            "El de renta variable",
+            "El de deuda de corto plazo",
+            "El mixto agresivo"
+          ],
+          "correct": "El de deuda de corto plazo"
+        },
+        {
+          "question": "¿Sobre qué se cobra la comisión?",
+          "options": [
+            "Solo sobre la ganancia",
+            "Una sola vez",
+            "Sobre el monto administrado, cada año"
+          ],
+          "correct": "Sobre el monto administrado, cada año"
+        },
+        {
+          "question": "Una diferencia de comisión de 1.5 puntos a diez años:",
+          "options": [
+            "Puede representar una parte sustancial del resultado",
+            "Es irrelevante",
+            "Se compensa sola"
+          ],
+          "correct": "Puede representar una parte sustancial del resultado"
+        },
+        {
+          "question": "¿Cuáles son las cuatro preguntas?",
+          "options": [
+            "Color, tamaño, marca y precio",
+            "Estrategia, comisión, liquidez y quién lo administra",
+            "Cuánto gana, cuándo, dónde y por qué"
+          ],
+          "correct": "Estrategia, comisión, liquidez y quién lo administra"
+        },
+        {
+          "question": "Si un fondo no responde con claridad esas cuatro:",
+          "options": [
+            "Da igual si rindió bien antes",
+            "Hay que invertir más",
+            "No debería recibir tu dinero"
+          ],
+          "correct": "No debería recibir tu dinero"
+        },
+        {
+          "question": "Elegir un fondo es en realidad:",
+          "options": [
+            "Elegir una estrategia acorde a tu plazo y tolerancia",
+            "Elegir el que más rindió el año pasado",
+            "Elegir el más famoso"
+          ],
+          "correct": "Elegir una estrategia acorde a tu plazo y tolerancia"
+        }
+      ],
+      "rubric": "Logrado: explica el mecanismo del fondo, calcula el efecto de las comisiones y aplica las cuatro preguntas. En proceso: entiende el fondo sin evaluar comisiones. Inicial: reconoce que permite invertir con poco."
+    },
+    "teacher_tips": [
+      "El cálculo del efecto de las comisiones a diez años es el momento revelador. Ninguna explicación lo sustituye.",
+      "Insista en que el rendimiento pasado no garantiza nada. Es la trampa más común al elegir fondos.",
+      "Conecte con la clase anterior: el fondo es la forma práctica de acceder a la diversificación con poco dinero."
+    ]
+  },
+  "P5-3-9": {
+    "code": "P5-3-9",
+    "title": "El horizonte: a qué plazo voy a necesitar el dinero",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Inversión y Patrimonio",
+    "metadata": {
+      "objective": "Determinar el horizonte de inversión de cada objetivo y elegir instrumentos cuyo plazo coincida con el momento en que se necesitará el dinero.",
+      "competencies": [
+        "Definición de Horizonte",
+        "Coincidencia Plazo-Instrumento",
+        "Planeación Temporal",
+        "Prevención de Ventas Forzadas"
+      ],
+      "materials": [
+        "Línea del tiempo grande",
+        "Fichas de metas con fechas",
+        "Fichas de instrumentos con plazos",
+        "Casos de ventas forzadas",
+        "Cartel de la regla de coincidencia"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Necesito el Dinero Ya",
+          "duration": "15 min",
+          "label": "Vender en mal momento"
+        },
+        {
+          "phase": "Desarrollo: Emparejar",
+          "duration": "30 min",
+          "label": "Plazo con plazo"
+        },
+        {
+          "phase": "Cierre: Mi Línea",
+          "duration": "15 min",
+          "label": "Colocar mis metas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CUANDO HAY QUE VENDER EN MAL MOMENTO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente el caso: alguien invirtió a largo plazo dinero que necesitaba en seis meses. Cuando llegó el momento, el mercado estaba abajo y tuvo que vender con pérdida. Pregunte cuál fue el error. La respuesta no es haber invertido: es haber elegido un instrumento cuyo plazo no coincidía con su necesidad.",
+          "activity": "Dinámica \"¿Cuál Fue el Error?\": el grupo analiza el caso y descubre que el problema fue el plazo, no el instrumento."
+        },
+        {
+          "title": "FASE II: EMPAREJAR PLAZOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Sobre la línea del tiempo, los alumnos colocan metas con sus fechas y después emparejan instrumentos con plazos compatibles. Explique la regla: el plazo del instrumento nunca debe ser mayor que el momento en que se necesita el dinero. Un instrumento más corto siempre se puede renovar; uno más largo obliga a vender antes.",
+          "activity": "Dinámica \"Empareja la Línea\": cada equipo coloca cinco metas y les asigna instrumentos con plazo compatible."
+        },
+        {
+          "title": "FASE III: MI LÍNEA DEL TIEMPO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno arma su línea con tres metas propias y les asigna un tipo de instrumento. Explique que además del plazo hay que dejar margen: si algo se necesita en un año, conviene un instrumento que libere el dinero antes de ese año, no exactamente ese día.",
+          "activity": "Dinámica \"Mis Tres Metas\": cada alumno ubica sus metas en la línea y les asigna instrumento con margen."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Puedes elegir la mejor inversión del mundo y aun así perder dinero, si la eliges para un plazo que no corresponde. El error más caro no suele ser invertir mal: es necesitar el dinero justo cuando no se puede sacar sin pérdida.",
+      "sections": [
+        {
+          "subtitle": "Qué es el horizonte de inversión",
+          "content": "El horizonte es el tiempo que va a pasar antes de que necesites el dinero. No es cuánto tiempo quieres invertir en abstracto: es cuándo, concretamente, vas a usarlo. Definirlo con fecha convierte una intención vaga en un dato con el que se puede elegir instrumento, y es el primer paso de cualquier decisión de inversión seria."
+        },
+        {
+          "subtitle": "La regla de coincidencia",
+          "content": "El plazo del instrumento nunca debe ser mayor que el horizonte de la meta. Si necesitas el dinero en dos años, no lo comprometas a cinco. La asimetría importa: un instrumento más corto siempre se puede renovar cuando venza, mientras que uno más largo obliga a vender antes de tiempo, muchas veces en el peor momento posible."
+        },
+        {
+          "subtitle": "El costo de vender antes de tiempo",
+          "content": "Vender forzadamente tiene dos costos. El primero es que puedes vender en una caída y realizar una pérdida que era temporal. El segundo es que algunos instrumentos penalizan el retiro anticipado con comisiones o con pérdida de intereses. Ninguno de los dos aparece al invertir: aparecen justo cuando más necesitas el dinero."
+        },
+        {
+          "subtitle": "Dejar margen es parte del plan",
+          "content": "Si algo se necesita dentro de un año, conviene elegir un instrumento que libere el dinero antes de ese año, no exactamente ese día. Los planes se adelantan, las fechas se mueven y los trámites tardan. Ese margen no cuesta casi nada en rendimiento y evita el escenario que se quería evitar desde el principio."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el horizonte de inversión?",
+          "options": [
+            "El rendimiento esperado",
+            "El tiempo que falta para necesitar el dinero",
+            "El monto invertido"
+          ],
+          "correct": "El tiempo que falta para necesitar el dinero"
+        },
+        {
+          "question": "¿Cuál es la regla de coincidencia?",
+          "options": [
+            "El plazo debe ser el doble",
+            "No hay relación",
+            "El plazo del instrumento no debe superar el horizonte"
+          ],
+          "correct": "El plazo del instrumento no debe superar el horizonte"
+        },
+        {
+          "question": "Un instrumento más corto que el horizonte:",
+          "options": [
+            "Se puede renovar al vencer",
+            "Es un error grave",
+            "Está prohibido"
+          ],
+          "correct": "Se puede renovar al vencer"
+        },
+        {
+          "question": "Un instrumento más largo que el horizonte:",
+          "options": [
+            "Es lo ideal",
+            "Obliga a vender antes de tiempo",
+            "Da más seguridad"
+          ],
+          "correct": "Obliga a vender antes de tiempo"
+        },
+        {
+          "question": "¿Cuál es el primer costo de vender forzadamente?",
+          "options": [
+            "Pagar impuestos",
+            "Perder la cuenta",
+            "Realizar una pérdida que era temporal"
+          ],
+          "correct": "Realizar una pérdida que era temporal"
+        },
+        {
+          "question": "¿Cuál es el segundo costo?",
+          "options": [
+            "Penalizaciones por retiro anticipado",
+            "Cerrar el banco",
+            "Cambiar de fondo"
+          ],
+          "correct": "Penalizaciones por retiro anticipado"
+        },
+        {
+          "question": "¿Cuándo aparecen esos costos?",
+          "options": [
+            "Al invertir",
+            "Justo cuando más se necesita el dinero",
+            "Nunca"
+          ],
+          "correct": "Justo cuando más se necesita el dinero"
+        },
+        {
+          "question": "¿Por qué conviene dejar margen?",
+          "options": [
+            "Porque da más rendimiento",
+            "Por costumbre",
+            "Porque los planes se adelantan y los trámites tardan"
+          ],
+          "correct": "Porque los planes se adelantan y los trámites tardan"
+        },
+        {
+          "question": "Definir el horizonte con fecha:",
+          "options": [
+            "Convierte una intención en un dato útil",
+            "Complica todo",
+            "No sirve"
+          ],
+          "correct": "Convierte una intención en un dato útil"
+        },
+        {
+          "question": "El error más caro suele ser:",
+          "options": [
+            "Elegir el instrumento equivocado",
+            "Necesitar el dinero cuando no se puede sacar sin pérdida",
+            "Invertir poco"
+          ],
+          "correct": "Necesitar el dinero cuando no se puede sacar sin pérdida"
+        }
+      ],
+      "rubric": "Logrado: define horizontes con fecha, aplica la regla de coincidencia y deja margen. En proceso: reconoce la importancia del plazo sin emparejar. Inicial: sabe que hay inversiones de distinto plazo."
+    },
+    "teacher_tips": [
+      "La línea del tiempo física ayuda muchísimo. Ver las metas ubicadas hace evidente qué instrumento cabe en cada una.",
+      "Insista en la asimetría: corto se renueva, largo obliga a vender. Es la parte que menos se intuye.",
+      "El margen es un detalle práctico que evita la mayoría de los problemas reales. No lo omita."
+    ]
+  },
+  "P5-3-10": {
+    "code": "P5-3-10",
+    "title": "Fraudes de inversión: pirámides y promesas imposibles",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Inversión y Patrimonio",
+    "metadata": {
+      "objective": "Identificar los fraudes de inversión más comunes, en especial los esquemas piramidales, y aplicar señales de alerta antes de entregar dinero.",
+      "competencies": [
+        "Detección de Fraudes de Inversión",
+        "Análisis de Esquemas Piramidales",
+        "Verificación Institucional",
+        "Protección Patrimonial"
+      ],
+      "materials": [
+        "Esquema visual de una pirámide",
+        "Casos reales adaptados",
+        "Calculadora",
+        "Lista de señales de alerta",
+        "Cartel de las cinco banderas rojas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Funciona al Principio",
+          "duration": "15 min",
+          "label": "Por qué convence"
+        },
+        {
+          "phase": "Desarrollo: La Matemática",
+          "duration": "30 min",
+          "label": "Por qué siempre cae"
+        },
+        {
+          "phase": "Cierre: Las Banderas Rojas",
+          "duration": "15 min",
+          "label": "Detectarlo antes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: AL PRINCIPIO SÍ PAGA (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique por qué estos esquemas convencen: los primeros participantes sí cobran, y su testimonio real atrae a los siguientes. Nadie está mintiendo cuando dice que le pagaron. El problema no es que no paguen al principio: es de dónde sale ese dinero.",
+          "activity": "Dinámica \"Le Pagaron de Verdad\": el grupo analiza por qué un testimonio honesto puede ser la mejor herramienta de un fraude."
+        },
+        {
+          "title": "FASE II: LA MATEMÁTICA QUE NO PERDONA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Calculen juntos el crecimiento: si cada participante debe reclutar a seis, en pocos niveles se requiere más gente que la población del país. Los alumnos hacen la multiplicación nivel por nivel y ven el momento exacto en que se vuelve imposible. Ese cálculo demuestra que el colapso no es un riesgo: es una certeza matemática.",
+          "activity": "Dinámica \"Nivel por Nivel\": cada equipo calcula cuánta gente se necesita en cada nivel y encuentra dónde se rompe."
+        },
+        {
+          "title": "FASE III: LAS CINCO BANDERAS ROJAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente las señales: rendimiento muy superior al mercado, promesa de que no hay riesgo, ganancia por reclutar en vez de por un producto real, presión para entrar rápido, y ausencia de registro oficial. Explique que con dos de estas señales basta para no entregar un peso.",
+          "activity": "Dinámica \"Cuenta las Banderas\": cada equipo evalúa tres ofertas y cuenta cuántas señales de alerta encuentra en cada una."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un esquema piramidal no es un fraude que falla: es un fraude que funciona perfectamente hasta que se acaba la gente. Y siempre se acaba. En esta clase vas a ver la matemática que lo hace inevitable y las cinco señales que lo delatan antes.",
+      "sections": [
+        {
+          "subtitle": "Cómo funciona una pirámide",
+          "content": "En un esquema piramidal, el dinero que reciben los primeros participantes no viene de ninguna inversión productiva: viene de lo que aportan los que entran después. Mientras siga entrando gente nueva, los de arriba cobran y todo parece funcionar. En el momento en que el reclutamiento se detiene, el flujo se corta y los últimos lo pierden todo."
+        },
+        {
+          "subtitle": "Por qué el colapso es matemático",
+          "content": "Si cada participante debe reclutar a seis personas, el primer nivel necesita 6, el segundo 36, el tercero 216, y así sucesivamente. En apenas doce niveles se requiere más gente que la población de un país entero. No es que el esquema pueda fallar: es que no puede sostenerse. El colapso está determinado desde el primer día."
+        },
+        {
+          "subtitle": "Los testimonios reales son la trampa",
+          "content": "La herramienta más eficaz de estos esquemas es que los primeros participantes efectivamente cobran, y lo cuentan de buena fe. No están mintiendo ni son cómplices: recibieron su dinero. Por eso el argumento de \"a mi conocido sí le pagaron\" no prueba absolutamente nada sobre la solidez del esquema, solo que él entró antes."
+        },
+        {
+          "subtitle": "Las cinco banderas rojas",
+          "content": "Rendimiento muy por encima de lo que ofrece el mercado. Promesa de que no existe riesgo. Ganancia que depende de reclutar gente en lugar de vender un producto real. Presión para decidir de inmediato. Y ausencia de registro ante las autoridades financieras. Con dos de estas señales presentes, la respuesta correcta es no entregar un solo peso."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿De dónde sale el dinero en una pirámide?",
+          "options": [
+            "De una inversión productiva",
+            "Del gobierno",
+            "De lo que aportan los que entran después"
+          ],
+          "correct": "De lo que aportan los que entran después"
+        },
+        {
+          "question": "¿Cuándo colapsa el esquema?",
+          "options": [
+            "Cuando deja de entrar gente nueva",
+            "Nunca",
+            "Cuando lo decide el fundador"
+          ],
+          "correct": "Cuando deja de entrar gente nueva"
+        },
+        {
+          "question": "Si cada uno recluta a seis, el tercer nivel necesita:",
+          "options": [
+            "18 personas",
+            "216 personas",
+            "36 personas"
+          ],
+          "correct": "216 personas"
+        },
+        {
+          "question": "¿El colapso es un riesgo o una certeza?",
+          "options": [
+            "Un riesgo pequeño",
+            "Una posibilidad remota",
+            "Una certeza matemática"
+          ],
+          "correct": "Una certeza matemática"
+        },
+        {
+          "question": "¿Los primeros participantes cobran?",
+          "options": [
+            "Sí, y por eso el testimonio convence",
+            "No, nunca",
+            "Solo si reclutan mucho"
+          ],
+          "correct": "Sí, y por eso el testimonio convence"
+        },
+        {
+          "question": "\"A mi conocido sí le pagaron\" prueba:",
+          "options": [
+            "Que el esquema es sólido",
+            "Solo que entró antes",
+            "Que es una buena inversión"
+          ],
+          "correct": "Solo que entró antes"
+        },
+        {
+          "question": "¿Cuál es una bandera roja?",
+          "options": [
+            "Tener oficina",
+            "Tener sitio web",
+            "Ganancia por reclutar en vez de por un producto real"
+          ],
+          "correct": "Ganancia por reclutar en vez de por un producto real"
+        },
+        {
+          "question": "¿Otra bandera roja?",
+          "options": [
+            "Promesa de que no hay riesgo",
+            "Explicar la estrategia",
+            "Dar contrato"
+          ],
+          "correct": "Promesa de que no hay riesgo"
+        },
+        {
+          "question": "¿Cuántas banderas bastan para no entregar dinero?",
+          "options": [
+            "Las cinco",
+            "Dos",
+            "Ninguna"
+          ],
+          "correct": "Dos"
+        },
+        {
+          "question": "¿Qué hay que verificar siempre?",
+          "options": [
+            "Los seguidores en redes",
+            "El tamaño de la oficina",
+            "El registro ante las autoridades financieras"
+          ],
+          "correct": "El registro ante las autoridades financieras"
+        }
+      ],
+      "rubric": "Logrado: explica la matemática del colapso, reconoce las cinco banderas y desmonta el argumento del testimonio. En proceso: identifica el esquema sin explicar por qué colapsa. Inicial: sabe que las pirámides son fraude."
+    },
+    "teacher_tips": [
+      "El cálculo nivel por nivel es lo que convierte la advertencia en demostración. Háganlo completo hasta que supere la población del país.",
+      "El punto de los testimonios de buena fe es crucial. Muchos alumnos conocen a alguien que \"sí cobró\".",
+      "Conecte con la regla riesgo-rendimiento: la primera bandera roja es exactamente esa regla siendo violada."
+    ]
+  },
   "P5-4-1": {
     "code": "P5-4-1",
     "title": "El Equipo Ideal: roles para el éxito",
@@ -2616,7 +5488,11 @@
     "category": "Emprendimiento y Liderazgo",
     "metadata": {
       "objective": "Comprender que las grandes empresas requieren diversos talentos, identificando los roles clave en un equipo emprendedor.",
-      "competencies": ["Trabajo en Equipo", "Liderazgo", "Delegación"],
+      "competencies": [
+        "Trabajo en Equipo",
+        "Liderazgo",
+        "Delegación"
+      ],
       "materials": [
         "Tarjetas de Roles (CEO, Ventas, Producción, Finanzas)",
         "Video: 'La orquesta del éxito'",
@@ -2914,7 +5790,11 @@
         },
         {
           "question": "Si una pizza cuesta $50 hacerla y la vendes en $120, ¿cuánto es tu margen de ganancia por pizza?",
-          "options": ["$120", "$50", "$70"],
+          "options": [
+            "$120",
+            "$50",
+            "$70"
+          ],
           "correct": "$70"
         },
         {
@@ -3056,7 +5936,11 @@
         },
         {
           "question": "Si tu renta es de $50 y ganas $5 por cada dibujo que vendes, ¿cuántos dibujos son tu punto de equilibrio?",
-          "options": ["5 dibujos", "10 dibujos", "50 dibujos"],
+          "options": [
+            "5 dibujos",
+            "10 dibujos",
+            "50 dibujos"
+          ],
           "correct": "10 dibujos"
         },
         {
@@ -3115,7 +5999,11 @@
         },
         {
           "question": "¿Cuál es la 'Utilidad' en el punto de equilibrio?",
-          "options": ["$1,000", "$0", "$100"],
+          "options": [
+            "$1,000",
+            "$0",
+            "$100"
+          ],
           "correct": "$0"
         },
         {
@@ -3275,7 +6163,11 @@
         },
         {
           "question": "Si haces un video de 'Cómo peinarte en 1 minuto' y al final mencionas que vendes ligas para el cabello, ¿qué técnica usas?",
-          "options": ["Marketing de Contenidos", "Venta agresiva", "Ninguna"],
+          "options": [
+            "Marketing de Contenidos",
+            "Venta agresiva",
+            "Ninguna"
+          ],
           "correct": "Marketing de Contenidos"
         },
         {
@@ -3496,8 +6388,927 @@
       "Grabe las presentaciones para que los niños puedan verse y mejorar su oratoria después.",
       "Celebre el proceso, no solo el resultado de la inversión."
     ]
-  }
-,
+  },
+  "P5-4-6": {
+    "code": "P5-4-6",
+    "title": "Modelo de negocio: cómo gana dinero mi idea",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento y Liderazgo",
+    "metadata": {
+      "objective": "Definir el modelo de negocio de una idea identificando quién paga, por qué paga y cómo se entrega el valor.",
+      "competencies": [
+        "Diseño de Modelo de Negocio",
+        "Identificación de Fuentes de Ingreso",
+        "Análisis de Cliente",
+        "Pensamiento Estructurado"
+      ],
+      "materials": [
+        "Lienzo simplificado de modelo de negocio",
+        "Casos de negocios conocidos",
+        "Tarjetas de componentes del modelo",
+        "Ejemplos de modelos distintos para el mismo producto",
+        "Cartel de las tres preguntas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Quién Paga?",
+          "duration": "15 min",
+          "label": "La pregunta olvidada"
+        },
+        {
+          "phase": "Desarrollo: El Lienzo",
+          "duration": "30 min",
+          "label": "Cinco piezas del modelo"
+        },
+        {
+          "phase": "Cierre: Mi Modelo",
+          "duration": "15 min",
+          "label": "Armarlo completo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PREGUNTA QUE NADIE HACE (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una app gratuita muy usada y pregunte cómo gana dinero. Aparecerán respuestas parciales. Explique que muchos negocios exitosos no cobran a quien usa el producto, y que entender quién paga y por qué es la primera pieza de cualquier modelo de negocio.",
+          "activity": "Dinámica \"¿Quién Paga?\": el grupo identifica al que paga en tres negocios conocidos y descubre que no siempre es el usuario."
+        },
+        {
+          "title": "FASE II: LAS CINCO PIEZAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente un lienzo simplificado: quién es el cliente, qué problema le resuelvo, cómo le entrego el valor, cuánto y cómo me paga, y qué me cuesta entregarlo. Los alumnos completan el lienzo para tres negocios conocidos y descubren que el mismo producto puede tener modelos distintos.",
+          "activity": "Dinámica \"Llena el Lienzo\": cada equipo completa las cinco piezas para un negocio conocido y lo presenta en un minuto."
+        },
+        {
+          "title": "FASE III: MI MODELO COMPLETO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno completa el lienzo de su propia idea y verifica una cosa: que el ingreso sea mayor que el costo de entregar. Si no lo es, no hay modelo, hay una actividad. Explique que un modelo puede cambiar sin cambiar el producto, y que muchas veces ahí está la solución.",
+          "activity": "Dinámica \"Mi Lienzo\": cada alumno completa las cinco piezas de su idea y comprueba que el margen sea positivo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Muchas ideas mueren no porque el producto sea malo, sino porque nadie definió quién iba a pagar y por qué. A esa definición se le llama modelo de negocio, y cabe en cinco preguntas. En esta clase vas a armar el de tu idea.",
+      "sections": [
+        {
+          "subtitle": "Quién paga no siempre es quien usa",
+          "content": "En muchos negocios, la persona que usa el producto no es la que paga. Una app gratuita la usa el público y la pagan los anunciantes. Un periódico lo lee el suscriptor y lo financian también los anuncios. Identificar con precisión quién pone el dinero es la primera pieza del modelo, y confundirla es una de las causas más comunes de fracaso."
+        },
+        {
+          "subtitle": "Las cinco piezas del modelo",
+          "content": "Un modelo de negocio responde cinco cosas: quién es el cliente, qué problema le resuelvo, cómo le entrego ese valor, cuánto y de qué forma me paga, y qué me cuesta entregarlo. Con esas cinco respuestas escritas, cualquier idea se vuelve evaluable. Sin ellas, lo que hay es una intención, no un negocio."
+        },
+        {
+          "subtitle": "El mismo producto, modelos distintos",
+          "content": "Un mismo producto admite varios modelos. Un software puede venderse una vez, cobrarse por suscripción mensual, ofrecerse gratis con funciones de pago, o financiarse con publicidad. Ninguno es correcto en abstracto: depende de quién es el cliente y de cómo prefiere pagar. Cambiar de modelo sin cambiar el producto es, muchas veces, lo que salva una idea."
+        },
+        {
+          "subtitle": "La prueba mínima: ingreso mayor que costo",
+          "content": "Todo modelo tiene que pasar una prueba elemental: lo que recibes por cliente debe superar lo que te cuesta atenderlo. Si cada venta te deja pérdida, vender más solo agranda el problema. Esta verificación parece obvia y sin embargo es la que más se omite, sobre todo cuando el entusiasmo por la idea es alto."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Quién paga en un negocio?",
+          "options": [
+            "Siempre el usuario",
+            "Siempre el gobierno",
+            "No siempre es quien usa el producto"
+          ],
+          "correct": "No siempre es quien usa el producto"
+        },
+        {
+          "question": "¿Quién paga una app gratuita?",
+          "options": [
+            "Normalmente los anunciantes",
+            "El usuario",
+            "Nadie"
+          ],
+          "correct": "Normalmente los anunciantes"
+        },
+        {
+          "question": "¿Cuáles son las cinco piezas del modelo?",
+          "options": [
+            "Nombre, logo, color, precio y local",
+            "Cliente, problema, entrega, pago y costo",
+            "Idea, sueño, meta, plan y suerte"
+          ],
+          "correct": "Cliente, problema, entrega, pago y costo"
+        },
+        {
+          "question": "Sin esas cinco respuestas, lo que hay es:",
+          "options": [
+            "Un negocio completo",
+            "Una empresa",
+            "Una intención, no un negocio"
+          ],
+          "correct": "Una intención, no un negocio"
+        },
+        {
+          "question": "¿Un mismo producto admite varios modelos?",
+          "options": [
+            "Sí",
+            "No, solo uno",
+            "Solo si es digital"
+          ],
+          "correct": "Sí"
+        },
+        {
+          "question": "¿Cuál modelo es el correcto?",
+          "options": [
+            "Siempre la suscripción",
+            "Depende de quién es el cliente y cómo prefiere pagar",
+            "Siempre la venta única"
+          ],
+          "correct": "Depende de quién es el cliente y cómo prefiere pagar"
+        },
+        {
+          "question": "Cambiar de modelo sin cambiar el producto:",
+          "options": [
+            "Nunca funciona",
+            "Es hacer trampa",
+            "Muchas veces salva una idea"
+          ],
+          "correct": "Muchas veces salva una idea"
+        },
+        {
+          "question": "¿Cuál es la prueba mínima de todo modelo?",
+          "options": [
+            "Que el ingreso por cliente supere el costo de atenderlo",
+            "Que sea original",
+            "Que guste"
+          ],
+          "correct": "Que el ingreso por cliente supere el costo de atenderlo"
+        },
+        {
+          "question": "Si cada venta deja pérdida:",
+          "options": [
+            "Se compensa con volumen",
+            "Vender más agranda el problema",
+            "No importa"
+          ],
+          "correct": "Vender más agranda el problema"
+        },
+        {
+          "question": "¿Por qué se omite esa verificación?",
+          "options": [
+            "Porque es difícil",
+            "Porque es opcional",
+            "Por entusiasmo con la idea"
+          ],
+          "correct": "Por entusiasmo con la idea"
+        }
+      ],
+      "rubric": "Logrado: completa las cinco piezas de un modelo y verifica que el margen sea positivo. En proceso: identifica cliente y problema sin definir el pago. Inicial: describe la idea sin estructura."
+    },
+    "teacher_tips": [
+      "Empiece con negocios que los alumnos conocen. Descubrir quién paga en una app gratuita es un buen sacudón conceptual.",
+      "El ejercicio de varios modelos para el mismo producto abre mucho la creatividad de los equipos.",
+      "La verificación de margen positivo es innegociable. Sin ella, el lienzo se vuelve un ejercicio decorativo."
+    ]
+  },
+  "P5-4-7": {
+    "code": "P5-4-7",
+    "title": "Prototipar rápido y barato",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento y Liderazgo",
+    "metadata": {
+      "objective": "Elegir el tipo de prototipo más barato que permita responder la pregunta clave de una idea antes de invertir en producirla.",
+      "competencies": [
+        "Prototipado Estratégico",
+        "Formulación de Preguntas Clave",
+        "Minimización de Inversión Inicial",
+        "Aprendizaje Validado"
+      ],
+      "materials": [
+        "Ejemplos de prototipos de distinto tipo",
+        "Formato de pregunta clave",
+        "Materiales de bajo costo",
+        "Casos de preventa y de servicio manual",
+        "Cartel de los tipos de prototipo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Pregunta Clave",
+          "duration": "15 min",
+          "label": "¿Qué necesito saber?"
+        },
+        {
+          "phase": "Desarrollo: Tipos de Prototipo",
+          "duration": "30 min",
+          "label": "El más barato que sirva"
+        },
+        {
+          "phase": "Cierre: Mi Prueba",
+          "duration": "15 min",
+          "label": "Diseñar el experimento"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿QUÉ NECESITO SABER PRIMERO? (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que antes de prototipar hay que definir qué se quiere averiguar. No es lo mismo preguntarse si la gente lo compraría, si funciona técnicamente o si se puede producir a un costo razonable. Cada pregunta se responde con un prototipo distinto, y elegir mal el prototipo desperdicia tiempo y dinero.",
+          "activity": "Dinámica \"Mi Pregunta Clave\": cada alumno escribe la única pregunta que más necesita responder sobre su idea."
+        },
+        {
+          "title": "FASE II: TIPOS DE PROTOTIPO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente cuatro tipos: el dibujo o maqueta, para probar si se entiende la idea; la preventa, para probar si alguien pagaría; el servicio hecho a mano, para probar la experiencia sin construir nada; y el producto mínimo funcional, para probar si sirve. Los alumnos eligen el más barato que responda su pregunta.",
+          "activity": "Dinámica \"El Más Barato que Sirva\": cada equipo empareja cuatro preguntas clave con el tipo de prototipo adecuado."
+        },
+        {
+          "title": "FASE III: DISEÑAR EL EXPERIMENTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno diseña su prueba: qué va a hacer, con cuántas personas, en cuánto tiempo y qué resultado consideraría un sí. Definir el criterio de éxito antes de la prueba es fundamental: sin él, cualquier resultado se interpreta como confirmación de lo que ya se creía.",
+          "activity": "Dinámica \"Mi Criterio de Éxito\": cada alumno define por adelantado qué resultado consideraría una validación."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Prototipar no es hacer una versión chiquita del producto. Es responder la pregunta más importante de tu idea con lo mínimo posible. A veces esa respuesta se consigue con un dibujo, y a veces ni siquiera hace falta construir nada.",
+      "sections": [
+        {
+          "subtitle": "Primero la pregunta, después el prototipo",
+          "content": "El error más común es empezar a construir sin saber qué se quiere averiguar. Antes de cualquier prototipo hay que escribir la pregunta clave: la que, si se responde que no, hace que la idea no tenga sentido. Esa pregunta determina qué tipo de prototipo hace falta, y muchas veces revela que se necesita mucho menos de lo que se pensaba."
+        },
+        {
+          "subtitle": "Cuatro tipos y para qué sirve cada uno",
+          "content": "El dibujo o maqueta responde si la gente entiende la idea. La preventa responde si alguien pagaría, y es la prueba más dura de todas. El servicio hecho a mano permite entregar la experiencia manualmente antes de construir cualquier sistema. Y el producto mínimo funcional responde si realmente resuelve el problema en la práctica."
+        },
+        {
+          "subtitle": "La preventa es la prueba más honesta",
+          "content": "Preguntar si alguien compraría produce respuestas amables. Pedir un anticipo produce respuestas verdaderas. La preventa, incluso simbólica, es la única prueba que distingue interés real de cortesía. Si nadie está dispuesto a apartar el producto, esa información vale más que cien opiniones favorables, y llega antes de gastar en producir."
+        },
+        {
+          "subtitle": "Definir el criterio de éxito antes",
+          "content": "Antes de hacer la prueba hay que escribir qué resultado se consideraría un sí. Por ejemplo: si al menos tres de diez personas apartan el producto, seguimos. Sin ese criterio definido de antemano, cualquier resultado termina interpretándose como confirmación de lo que ya se creía, y la prueba deja de servir para decidir."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué hay que definir antes de prototipar?",
+          "options": [
+            "La pregunta clave que se quiere responder",
+            "El color del producto",
+            "El nombre de la empresa"
+          ],
+          "correct": "La pregunta clave que se quiere responder"
+        },
+        {
+          "question": "¿Qué prototipo responde si la gente entiende la idea?",
+          "options": [
+            "La preventa",
+            "El dibujo o maqueta",
+            "El producto terminado"
+          ],
+          "correct": "El dibujo o maqueta"
+        },
+        {
+          "question": "¿Cuál responde si alguien pagaría?",
+          "options": [
+            "El dibujo",
+            "El servicio manual",
+            "La preventa"
+          ],
+          "correct": "La preventa"
+        },
+        {
+          "question": "¿Para qué sirve el servicio hecho a mano?",
+          "options": [
+            "Para probar la experiencia sin construir sistemas",
+            "Para ahorrar material",
+            "Para vender más"
+          ],
+          "correct": "Para probar la experiencia sin construir sistemas"
+        },
+        {
+          "question": "¿Qué responde el producto mínimo funcional?",
+          "options": [
+            "Si es bonito",
+            "Si realmente resuelve el problema en la práctica",
+            "Si es barato"
+          ],
+          "correct": "Si realmente resuelve el problema en la práctica"
+        },
+        {
+          "question": "¿Cuál es la prueba más dura?",
+          "options": [
+            "El dibujo",
+            "La encuesta",
+            "La preventa"
+          ],
+          "correct": "La preventa"
+        },
+        {
+          "question": "¿Por qué la preventa es más honesta?",
+          "options": [
+            "Porque distingue interés real de cortesía",
+            "Porque es más rápida",
+            "Porque es más barata"
+          ],
+          "correct": "Porque distingue interés real de cortesía"
+        },
+        {
+          "question": "Si nadie aparta el producto:",
+          "options": [
+            "Hay que insistir",
+            "Esa información vale más que cien opiniones favorables",
+            "No significa nada"
+          ],
+          "correct": "Esa información vale más que cien opiniones favorables"
+        },
+        {
+          "question": "¿Qué hay que definir antes de la prueba?",
+          "options": [
+            "El precio final",
+            "El logo",
+            "El criterio de éxito"
+          ],
+          "correct": "El criterio de éxito"
+        },
+        {
+          "question": "Sin criterio definido de antemano:",
+          "options": [
+            "Cualquier resultado se interpreta como confirmación",
+            "La prueba sale mejor",
+            "Da igual"
+          ],
+          "correct": "Cualquier resultado se interpreta como confirmación"
+        }
+      ],
+      "rubric": "Logrado: define su pregunta clave, elige el prototipo más barato que la responde y fija un criterio de éxito. En proceso: prototipa sin pregunta definida. Inicial: reconoce el valor de probar antes."
+    },
+    "teacher_tips": [
+      "La pregunta clave es el corazón de la sesión. Un prototipo sin pregunta es una manualidad.",
+      "La preventa incomoda y por eso enseña. Insista en ella aunque los equipos prefieran las encuestas.",
+      "El criterio de éxito definido antes es lo que evita el autoengaño. No permita que lo definan después de ver resultados."
+    ]
+  },
+  "P5-4-8": {
+    "code": "P5-4-8",
+    "title": "Precios psicológicos y estrategias de descuento",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento y Liderazgo",
+    "metadata": {
+      "objective": "Diseñar una estrategia de precios que cubra costos, deje margen y use descuentos con un propósito claro en vez de por reacción.",
+      "competencies": [
+        "Fijación de Precios",
+        "Cálculo de Margen",
+        "Estrategia de Descuentos",
+        "Análisis de Punto de Equilibrio"
+      ],
+      "materials": [
+        "Tabla de costos por unidad",
+        "Calculadora",
+        "Casos de descuentos bien y mal usados",
+        "Comparativo de precios de mercado",
+        "Cartel de los tres tipos de descuento"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuánto Cobro?",
+          "duration": "15 min",
+          "label": "La pregunta difícil"
+        },
+        {
+          "phase": "Desarrollo: Del Costo al Precio",
+          "duration": "30 min",
+          "label": "Construirlo por partes"
+        },
+        {
+          "phase": "Cierre: Descuentos",
+          "duration": "15 min",
+          "label": "Con propósito, no por miedo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CUÁNTO COBRO? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo pondrían precio a un producto. Aparecerán respuestas como \"lo que cobran los demás\" o \"lo que la gente esté dispuesta a pagar\". Explique que ambas son piezas, pero que ninguna funciona si antes no se conoce el costo, porque un precio por debajo del costo hace perder dinero en cada venta.",
+          "activity": "Dinámica \"Pon el Precio\": el grupo propone precios para un producto y luego descubre su costo real."
+        },
+        {
+          "title": "FASE II: DEL COSTO AL PRECIO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Construyan el precio por capas: costo del material, más la parte proporcional de los costos fijos, más el margen deseado. Después comparen con el precio de mercado. Si el resultado queda muy por encima, hay que revisar costos o diferenciar el producto. Los alumnos calculan el precio de un caso completo.",
+          "activity": "Dinámica \"Precio por Capas\": cada equipo calcula el precio mínimo viable y lo compara con el de mercado."
+        },
+        {
+          "title": "FASE III: DESCUENTOS CON PROPÓSITO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique los tres tipos útiles: por volumen, para vender más por transacción; por temporada, para mover inventario; y por cliente frecuente, para retener. Advierta contra el descuento por miedo, que se da cuando no se vende y solo reduce el margen sin cambiar la razón por la que no se vendía.",
+          "activity": "Dinámica \"¿Descuento o Error?\": el grupo clasifica cinco descuentos según si tienen propósito o son reacción."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Poner precio es de las decisiones más difíciles de un negocio. Muy alto y no vendes; muy bajo y vendes perdiendo. En esta clase vas a construir el precio por capas y a aprender cuándo un descuento ayuda y cuándo solo regala margen.",
+      "sections": [
+        {
+          "subtitle": "El costo es el piso, no el precio",
+          "content": "Lo primero es conocer cuánto cuesta producir una unidad: el material, más la parte proporcional de los costos fijos como permisos, transporte o empaque. Ese número es el piso absoluto: por debajo de él, cada venta genera pérdida. Pero el costo no determina el precio, solo establece el mínimo por debajo del cual no tiene sentido operar."
+        },
+        {
+          "subtitle": "El margen y el mercado",
+          "content": "Sobre el costo se agrega el margen que se quiere ganar. El resultado se compara con lo que cobra el mercado por algo similar. Si tu precio queda muy por encima, hay dos caminos: reducir costos o diferenciar el producto lo suficiente para justificar la diferencia. Si queda muy por debajo, probablemente estás subestimando algún costo."
+        },
+        {
+          "subtitle": "Los tres descuentos que sirven",
+          "content": "Un descuento por volumen aumenta lo que compra cada cliente en una sola transacción. Uno de temporada mueve inventario que de otro modo se quedaría. Y uno para clientes frecuentes retiene a quien ya compra, que suele ser más barato que conseguir clientes nuevos. Los tres tienen un objetivo específico y medible."
+        },
+        {
+          "subtitle": "El descuento por miedo",
+          "content": "Hay un cuarto descuento que aparece solo: el que se da cuando no se está vendiendo y se busca cualquier salida. Ese casi nunca funciona, porque el problema rara vez era el precio. Si nadie compra, suele ser por el producto, por el cliente equivocado o por la comunicación. Bajar el precio sin saber la causa solo reduce el margen sin resolver nada."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué representa el costo por unidad?",
+          "options": [
+            "El precio final",
+            "El piso por debajo del cual se pierde dinero",
+            "La ganancia"
+          ],
+          "correct": "El piso por debajo del cual se pierde dinero"
+        },
+        {
+          "question": "¿Qué incluye el costo por unidad?",
+          "options": [
+            "Solo el material",
+            "Solo el permiso",
+            "Material más parte proporcional de costos fijos"
+          ],
+          "correct": "Material más parte proporcional de costos fijos"
+        },
+        {
+          "question": "¿El costo determina el precio?",
+          "options": [
+            "No, solo establece el mínimo",
+            "Sí, es el precio",
+            "No tiene relación"
+          ],
+          "correct": "No, solo establece el mínimo"
+        },
+        {
+          "question": "Si mi precio queda muy por encima del mercado:",
+          "options": [
+            "Vender igual",
+            "Reducir costos o diferenciar el producto",
+            "Cerrar"
+          ],
+          "correct": "Reducir costos o diferenciar el producto"
+        },
+        {
+          "question": "Si queda muy por debajo del mercado:",
+          "options": [
+            "Es una gran oportunidad",
+            "Hay que bajarlo más",
+            "Probablemente subestimé algún costo"
+          ],
+          "correct": "Probablemente subestimé algún costo"
+        },
+        {
+          "question": "¿Para qué sirve el descuento por volumen?",
+          "options": [
+            "Para que cada cliente compre más en una transacción",
+            "Para vender más barato siempre",
+            "Para nada"
+          ],
+          "correct": "Para que cada cliente compre más en una transacción"
+        },
+        {
+          "question": "¿Para qué sirve el descuento de temporada?",
+          "options": [
+            "Para subir el margen",
+            "Para mover inventario que se quedaría",
+            "Para cambiar de producto"
+          ],
+          "correct": "Para mover inventario que se quedaría"
+        },
+        {
+          "question": "¿Por qué conviene retener clientes frecuentes?",
+          "options": [
+            "Porque compran más caro",
+            "Porque no se quejan",
+            "Porque suele ser más barato que conseguir nuevos"
+          ],
+          "correct": "Porque suele ser más barato que conseguir nuevos"
+        },
+        {
+          "question": "¿Qué es el descuento por miedo?",
+          "options": [
+            "El que se da cuando no se vende, sin saber la causa",
+            "Un descuento por volumen",
+            "Un descuento de temporada"
+          ],
+          "correct": "El que se da cuando no se vende, sin saber la causa"
+        },
+        {
+          "question": "Si nadie compra, la causa suele ser:",
+          "options": [
+            "Siempre el precio",
+            "El producto, el cliente equivocado o la comunicación",
+            "La competencia"
+          ],
+          "correct": "El producto, el cliente equivocado o la comunicación"
+        }
+      ],
+      "rubric": "Logrado: construye el precio por capas, lo compara con el mercado y distingue descuentos con propósito. En proceso: calcula el costo sin fijar margen. Inicial: reconoce que el precio debe cubrir el costo."
+    },
+    "teacher_tips": [
+      "Insista en incluir los costos fijos prorrateados. Omitirlos es el error que hace que un negocio parezca rentable y no lo sea.",
+      "El descuento por miedo aparece en todos los proyectos escolares. Nombrarlo por adelantado ayuda a evitarlo.",
+      "Conecte con el punto de equilibrio que ya vieron: aquí es donde ese concepto se convierte en decisión de precio."
+    ]
+  },
+  "P5-4-9": {
+    "code": "P5-4-9",
+    "title": "Medir el negocio: ventas, margen y clientes",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento y Liderazgo",
+    "metadata": {
+      "objective": "Definir y calcular los indicadores básicos de un negocio (ventas, margen, clientes y recurrencia) para tomar decisiones con datos.",
+      "competencies": [
+        "Definición de Indicadores",
+        "Cálculo de Márgenes",
+        "Análisis de Clientes",
+        "Decisión Basada en Métricas"
+      ],
+      "materials": [
+        "Tablero de indicadores en blanco",
+        "Datos de un negocio de ejemplo",
+        "Calculadora",
+        "Gráficas de evolución mensual",
+        "Cartel de los cuatro indicadores"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cómo Va?",
+          "duration": "15 min",
+          "label": "Responder con números"
+        },
+        {
+          "phase": "Desarrollo: Cuatro Indicadores",
+          "duration": "30 min",
+          "label": "Qué mide cada uno"
+        },
+        {
+          "phase": "Cierre: Mi Tablero",
+          "duration": "15 min",
+          "label": "Decidir con datos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"¿CÓMO VA TU NEGOCIO?\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo responderían a esa pregunta. Aparecerán respuestas cualitativas: bien, más o menos. Explique que un negocio se responde con cuatro números, y que quien no los tiene está administrando por sensación, que es exactamente lo que hace que los problemas se detecten tarde.",
+          "activity": "Dinámica \"Responde con Números\": el grupo intenta describir un negocio sin usar adjetivos, solo cifras."
+        },
+        {
+          "title": "FASE II: LOS CUATRO INDICADORES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los cuatro: ventas totales, margen por unidad y total, número de clientes, y recurrencia o porcentaje de clientes que vuelven. Los alumnos calculan los cuatro para un negocio de ejemplo con dos meses de datos y detectan qué está mejorando y qué no.",
+          "activity": "Dinámica \"Calcula los Cuatro\": cada equipo obtiene los indicadores de dos meses y señala la tendencia de cada uno."
+        },
+        {
+          "title": "FASE III: DECIDIR CON EL TABLERO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que cada indicador sugiere una acción distinta: ventas altas con margen bajo apunta a revisar precios o costos; muchos clientes sin recurrencia apunta a un problema de producto o experiencia; pocas ventas con buen margen apunta a comunicación. Los alumnos diagnostican tres casos.",
+          "activity": "Dinámica \"Diagnóstico\": cada equipo lee tres tableros distintos y propone la acción correspondiente a cada uno."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Si alguien te pregunta cómo va tu negocio y respondes \"bien\", no dijiste nada. Un negocio se responde con cuatro números, y cada uno de ellos apunta a una acción distinta. En esta clase vas a construir tu tablero.",
+      "sections": [
+        {
+          "subtitle": "Ventas: cuánto entró",
+          "content": "Es el indicador más visible y el que primero se mira. Dice cuánto dinero entró en un periodo, pero por sí solo no dice si el negocio va bien. Unas ventas altas con margen negativo significan que el negocio está creciendo hacia la quiebra. Por eso las ventas nunca se leen solas, siempre acompañadas del margen."
+        },
+        {
+          "subtitle": "Margen: cuánto quedó",
+          "content": "El margen es lo que queda de cada venta después de restar lo que costó producirla. Se puede ver por unidad, que dice si el precio está bien puesto, y en total, que dice si el negocio genera lo suficiente. Un margen que baja mes con mes es una señal temprana de que los costos están subiendo sin que el precio los acompañe."
+        },
+        {
+          "subtitle": "Clientes: a cuántos llegué",
+          "content": "El número de clientes distintos dice qué tan lejos llega el negocio. Es distinto vender mucho a pocos que vender poco a muchos, y cada situación implica riesgos diferentes. Depender de tres clientes es frágil: si uno se va, cae un tercio del ingreso. Ese riesgo no aparece en las ventas totales, solo en el conteo de clientes."
+        },
+        {
+          "subtitle": "Recurrencia: cuántos volvieron",
+          "content": "Es el indicador más ignorado y el más revelador. Dice qué porcentaje de los clientes vuelve a comprar. Si muchas personas prueban y ninguna regresa, el problema no es de comunicación sino de producto o de experiencia. Además, conseguir un cliente nuevo casi siempre cuesta más que retener a uno existente."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuáles son los cuatro indicadores?",
+          "options": [
+            "Color, precio, tamaño y marca",
+            "Costo, permiso, local y sueldo",
+            "Ventas, margen, clientes y recurrencia"
+          ],
+          "correct": "Ventas, margen, clientes y recurrencia"
+        },
+        {
+          "question": "¿Por qué las ventas no se leen solas?",
+          "options": [
+            "Porque ventas altas con margen negativo son quiebra",
+            "Porque son difíciles",
+            "Porque no importan"
+          ],
+          "correct": "Porque ventas altas con margen negativo son quiebra"
+        },
+        {
+          "question": "¿Qué es el margen?",
+          "options": [
+            "El total vendido",
+            "Lo que queda de cada venta tras restar el costo",
+            "El número de clientes"
+          ],
+          "correct": "Lo que queda de cada venta tras restar el costo"
+        },
+        {
+          "question": "Un margen que baja cada mes indica:",
+          "options": [
+            "Que se vende más",
+            "Que hay más clientes",
+            "Que los costos suben sin que el precio los siga"
+          ],
+          "correct": "Que los costos suben sin que el precio los siga"
+        },
+        {
+          "question": "¿Qué riesgo tiene depender de pocos clientes?",
+          "options": [
+            "Si uno se va, cae mucho del ingreso",
+            "Ninguno",
+            "Que compran menos"
+          ],
+          "correct": "Si uno se va, cae mucho del ingreso"
+        },
+        {
+          "question": "¿Aparece ese riesgo en las ventas totales?",
+          "options": [
+            "Sí, siempre",
+            "No, solo en el conteo de clientes",
+            "Solo en el margen"
+          ],
+          "correct": "No, solo en el conteo de clientes"
+        },
+        {
+          "question": "¿Qué mide la recurrencia?",
+          "options": [
+            "Cuánto se vende",
+            "Cuánto cuesta",
+            "El porcentaje de clientes que vuelve a comprar"
+          ],
+          "correct": "El porcentaje de clientes que vuelve a comprar"
+        },
+        {
+          "question": "Si muchos prueban y nadie vuelve:",
+          "options": [
+            "El problema es de producto o experiencia",
+            "El problema es de precio",
+            "Todo va bien"
+          ],
+          "correct": "El problema es de producto o experiencia"
+        },
+        {
+          "question": "¿Qué cuesta más normalmente?",
+          "options": [
+            "Retener uno existente",
+            "Conseguir un cliente nuevo",
+            "Ambos igual"
+          ],
+          "correct": "Conseguir un cliente nuevo"
+        },
+        {
+          "question": "Ventas altas con margen bajo sugiere:",
+          "options": [
+            "Vender más",
+            "Cerrar",
+            "Revisar precios o costos"
+          ],
+          "correct": "Revisar precios o costos"
+        }
+      ],
+      "rubric": "Logrado: calcula los cuatro indicadores y propone la acción correcta según el diagnóstico. En proceso: calcula ventas y margen sin analizar clientes. Inicial: reconoce que hacen falta números."
+    },
+    "teacher_tips": [
+      "Prohíba los adjetivos en el diagnóstico. Obligar a responder con cifras cambia por completo la conversación.",
+      "La recurrencia es el indicador que nadie mide en proyectos escolares y el que más enseña.",
+      "El ejercicio de diagnóstico de tres tableros distintos es el que conecta medir con decidir."
+    ]
+  },
+  "P5-4-10": {
+    "code": "P5-4-10",
+    "title": "Ética empresarial: ganar sin dañar",
+    "level": "Primaria 5",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento y Liderazgo",
+    "metadata": {
+      "objective": "Aplicar criterios de ética empresarial a decisiones de negocio, distinguiendo la ganancia legítima del beneficio obtenido a costa de otros.",
+      "competencies": [
+        "Ética Empresarial",
+        "Evaluación de Consecuencias",
+        "Responsabilidad Social",
+        "Decisión con Valores"
+      ],
+      "materials": [
+        "Casos de dilemas empresariales",
+        "Formato de las tres pruebas",
+        "Ejemplos de prácticas legales pero cuestionables",
+        "Casos de empresas con buena y mala reputación",
+        "Cartel de las tres preguntas éticas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Legal pero...",
+          "duration": "15 min",
+          "label": "La zona gris"
+        },
+        {
+          "phase": "Desarrollo: Tres Pruebas",
+          "duration": "30 min",
+          "label": "Cómo se decide"
+        },
+        {
+          "phase": "Cierre: Mis Casos",
+          "duration": "15 min",
+          "label": "Aplicarlo al proyecto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ES LEGAL, PERO... (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente prácticas que son legales pero cuestionables: letra pequeña que oculta condiciones, publicidad técnicamente cierta pero engañosa, reducir el contenido sin bajar el precio. Pregunte si están mal. Explique que la ley marca un mínimo y que la ética empieza donde la ley termina.",
+          "activity": "Dinámica \"¿Está Mal?\": el grupo debate tres prácticas legales y decide cuáles le parecen aceptables."
+        },
+        {
+          "title": "FASE II: LAS TRES PRUEBAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente tres filtros: la prueba de la publicidad, que pregunta si estarías cómodo con que todos supieran lo que hiciste; la prueba del cliente, que pregunta si aceptarías que te lo hicieran a ti; y la prueba de la repetición, que pregunta qué pasaría si todos los negocios lo hicieran. Los alumnos aplican las tres a cinco casos.",
+          "activity": "Dinámica \"Pasa las Tres\": cada equipo evalúa cinco decisiones con los tres filtros y marca cuáles pasan."
+        },
+        {
+          "title": "FASE III: MI PROYECTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno revisa su propio proyecto y busca una decisión donde pudiera aparecer un dilema: exagerar un beneficio, ahorrar en algo que afecta la calidad, cobrar de más a quien no compara. Explique que la reputación se construye lento y se destruye rápido, y que en un negocio pequeño la reputación es casi todo el capital.",
+          "activity": "Dinámica \"Mi Dilema\": cada alumno identifica un posible dilema de su proyecto y escribe cómo lo resolvería."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay cosas que son perfectamente legales y aun así están mal. La letra pequeña que esconde condiciones, la publicidad que dice la verdad para dar una impresión falsa. En esta clase vas a aprender tres pruebas para decidir cuando la ley no alcanza.",
+      "sections": [
+        {
+          "subtitle": "La ley es el mínimo, no el objetivo",
+          "content": "Cumplir la ley es obligatorio, pero es el piso, no la meta. Hay muchas prácticas legales que dañan a clientes, a proveedores o a la comunidad. Un negocio que solo se pregunta si algo es legal está usando el estándar más bajo disponible. La ética empresarial empieza justo donde la ley deja de dar respuestas."
+        },
+        {
+          "subtitle": "La prueba de la publicidad",
+          "content": "Pregúntate si estarías cómodo con que todos tus clientes supieran exactamente lo que hiciste y por qué. Si la respuesta es que preferirías que no se enteraran, esa incomodidad es la señal. Las decisiones que requieren ocultarse rara vez resisten el análisis, y en la práctica casi siempre terminan sabiéndose."
+        },
+        {
+          "subtitle": "La prueba del cliente",
+          "content": "Pregúntate si aceptarías que te lo hicieran a ti en la misma situación. Es una prueba simple y muy exigente. Muchas prácticas que parecen aceptables desde el lado del vendedor se ven completamente distintas desde el lado del comprador, y ese cambio de perspectiva basta para resolver la mayoría de los dilemas."
+        },
+        {
+          "subtitle": "La prueba de la repetición",
+          "content": "Pregúntate qué pasaría si todos los negocios hicieran lo mismo. Si el resultado sería un mercado donde nadie puede confiar en nadie, la práctica es dañina aunque individualmente parezca menor. Además, en un negocio pequeño la reputación es casi todo el capital: se construye durante años y se destruye en una decisión."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué representa la ley para un negocio?",
+          "options": [
+            "El mínimo, no el objetivo",
+            "La meta máxima",
+            "Una sugerencia"
+          ],
+          "correct": "El mínimo, no el objetivo"
+        },
+        {
+          "question": "¿Puede algo legal estar mal?",
+          "options": [
+            "No, si es legal está bien",
+            "Sí",
+            "Solo en otros países"
+          ],
+          "correct": "Sí"
+        },
+        {
+          "question": "¿En qué consiste la prueba de la publicidad?",
+          "options": [
+            "Preguntar cuánto cuesta anunciarse",
+            "Ver si el anuncio funciona",
+            "Preguntarse si estaría cómodo con que todos lo supieran"
+          ],
+          "correct": "Preguntarse si estaría cómodo con que todos lo supieran"
+        },
+        {
+          "question": "Si preferiría que no se enteraran:",
+          "options": [
+            "Esa incomodidad es la señal",
+            "Está bien igual",
+            "No significa nada"
+          ],
+          "correct": "Esa incomodidad es la señal"
+        },
+        {
+          "question": "¿En qué consiste la prueba del cliente?",
+          "options": [
+            "Preguntarle al cliente",
+            "Preguntarse si aceptaría que se lo hicieran a uno",
+            "Hacer una encuesta"
+          ],
+          "correct": "Preguntarse si aceptaría que se lo hicieran a uno"
+        },
+        {
+          "question": "¿Por qué funciona esa prueba?",
+          "options": [
+            "Porque es rápida",
+            "Porque lo dice la ley",
+            "Porque cambiar de perspectiva resuelve la mayoría de los dilemas"
+          ],
+          "correct": "Porque cambiar de perspectiva resuelve la mayoría de los dilemas"
+        },
+        {
+          "question": "¿En qué consiste la prueba de la repetición?",
+          "options": [
+            "Preguntarse qué pasaría si todos lo hicieran",
+            "Hacerlo dos veces",
+            "Repetir la venta"
+          ],
+          "correct": "Preguntarse qué pasaría si todos lo hicieran"
+        },
+        {
+          "question": "Si el resultado sería un mercado sin confianza:",
+          "options": [
+            "Está bien si es pequeña",
+            "La práctica es dañina aunque parezca menor",
+            "No importa"
+          ],
+          "correct": "La práctica es dañina aunque parezca menor"
+        },
+        {
+          "question": "En un negocio pequeño, la reputación:",
+          "options": [
+            "No importa",
+            "Se compra",
+            "Es casi todo el capital"
+          ],
+          "correct": "Es casi todo el capital"
+        },
+        {
+          "question": "La reputación:",
+          "options": [
+            "Se construye lento y se destruye rápido",
+            "Se construye rápido",
+            "No cambia"
+          ],
+          "correct": "Se construye lento y se destruye rápido"
+        }
+      ],
+      "rubric": "Logrado: aplica las tres pruebas a casos y detecta un dilema real en su propio proyecto. En proceso: distingue legal de correcto sin aplicar filtros. Inicial: reconoce que hay decisiones cuestionables."
+    },
+    "teacher_tips": [
+      "Use casos reales pero sin nombrar empresas concretas. El objetivo es el criterio, no el señalamiento.",
+      "La prueba del cliente es la más eficaz con este grupo de edad. Ánclela con ejemplos donde ellos sean los afectados.",
+      "Pedir que encuentren un dilema en su propio proyecto es incómodo y por eso formativo. No lo omita."
+    ]
+  },
   "P5-SUPREMO-INVERSOR": {
     "code": "P5-SUPREMO-INVERSOR",
     "title": "Inversor A-10",

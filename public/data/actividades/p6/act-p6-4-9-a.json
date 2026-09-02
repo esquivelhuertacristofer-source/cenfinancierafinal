@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-4-9-A",
+  "unit_code": "P6-4-9",
+  "unit_title": "Contratos básicos: por qué todo se pone por escrito",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Qué Tan Protegido Estás",
+  "descripcion": "Activa los elementos de tu acuerdo y observa cómo cambia tu nivel de protección.",
+  "objetivo": "Cuantificar el efecto de cada elemento del acuerdo sobre el riesgo",
+  "xp": 600,
+  "inputs": [
+    {
+      "id": "monto",
+      "label": "Monto del trabajo",
+      "type": "slider",
+      "min": 500,
+      "max": 100000,
+      "step": 500,
+      "default": 8000,
+      "unit": "$",
+      "referencia": "A mayor monto, más pesa cada elemento faltante."
+    },
+    {
+      "id": "elementos",
+      "label": "Elementos que incluye mi acuerdo",
+      "type": "slider",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "unit": "de 6",
+      "referencia": "Partes, entregable, precio, plazo, incumplimiento y firmas."
+    },
+    {
+      "id": "exclusiones",
+      "label": "¿Especifica qué NO incluye?",
+      "type": "slider",
+      "min": 0,
+      "max": 1,
+      "step": 1,
+      "default": 0,
+      "unit": "0=no 1=sí",
+      "referencia": "El elemento más olvidado y el que más discusiones evita."
+    },
+    {
+      "id": "anticipo",
+      "label": "Porcentaje cobrado por adelantado",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30,
+      "unit": "%",
+      "referencia": "El anticipo reduce la exposición si el cliente desaparece."
+    }
+  ],
+  "formula": "Math.max(0, Math.min(100, Math.round(elementos * 11 + exclusiones * 14 + anticipo / 5)))",
+  "descripcion_formula": "Nivel aproximado de protección: suma por cada elemento incluido en el acuerdo, por especificar exclusiones y por el anticipo cobrado.",
+  "output_label": "Nivel de protección",
+  "output_suffix": " / 100",
+  "escenarios": [
+    {
+      "condicion": "elementos == 6 && exclusiones == 1 && anticipo >= 30",
+      "mensaje": "Acuerdo completo, exclusiones claras y anticipo cobrado. Es prácticamente todo lo que un negocio pequeño puede hacer para protegerse.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "elementos <= 2",
+      "mensaje": "Tu acuerdo es casi verbal. Con este nivel, cualquier desacuerdo se resuelve por quién recuerda mejor, y eso nunca termina bien.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "exclusiones == 0 && monto >= 10000",
+      "mensaje": "En un trabajo de este monto, no especificar qué NO incluye es la causa más común de extras no pagados y de relaciones rotas.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "anticipo == 0 && monto >= 20000",
+      "mensaje": "Sin anticipo estás financiando todo el trabajo con tu propio dinero. Si el cliente se retira, la pérdida es completa.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "elementos >= 4 && exclusiones == 1",
+      "mensaje": "Buena base. Te faltan detalles, pero los dos elementos que más conflictos causan ya están cubiertos.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-9-a-escena.webp"
+}

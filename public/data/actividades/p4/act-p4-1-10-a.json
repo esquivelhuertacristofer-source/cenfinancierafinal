@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P4-1-10-A",
+  "unit_code": "P4-1-10",
+  "unit_title": "Hablar de dinero en familia: la conversación que nadie tiene",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Conversación del Domingo",
+  "descripcion": "Mueve las barritas y descubre cómo cambia el presupuesto familiar cuando se habla y se acuerda.",
+  "objetivo": "Visualizar el efecto de acordar límites de gasto en familia",
+  "xp": 400,
+  "inputs": [
+    {
+      "id": "ingreso",
+      "label": "Ingreso mensual de la familia",
+      "type": "slider",
+      "min": 4000,
+      "max": 40000,
+      "step": 500,
+      "default": 12000,
+      "unit": "$",
+      "referencia": "Suma de todo lo que entra al hogar en el mes."
+    },
+    {
+      "id": "fijos",
+      "label": "Gastos fijos (renta, servicios, transporte)",
+      "type": "slider",
+      "min": 1000,
+      "max": 30000,
+      "step": 500,
+      "default": 7000,
+      "unit": "$",
+      "referencia": "Los que se pagan sí o sí cada mes."
+    },
+    {
+      "id": "variable_sin_acuerdo",
+      "label": "Gasto variable cuando nadie lleva la cuenta",
+      "type": "slider",
+      "min": 500,
+      "max": 15000,
+      "step": 250,
+      "default": 4000,
+      "unit": "$",
+      "referencia": "Comida fuera, antojos, compras no planeadas."
+    },
+    {
+      "id": "reduccion_acuerdo",
+      "label": "Reducción del gasto variable al acordarlo en familia",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "%",
+      "referencia": "Hablarlo y ponerle un límite suele bajar el gasto sin sacrificar lo esencial."
+    }
+  ],
+  "formula": "Math.round(ingreso - fijos - variable_sin_acuerdo * (1 - reduccion_acuerdo / 100))",
+  "descripcion_formula": "Lo que le queda a la familia al mes después de los gastos fijos y del gasto variable ya ajustado por el acuerdo.",
+  "output_label": "Dinero disponible al mes tras el acuerdo",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "ingreso - fijos - variable_sin_acuerdo * (1 - reduccion_acuerdo / 100) < 0",
+      "mensaje": "Con estos números el mes cierra en negativo. La conversación tendría que empezar por los gastos fijos, que son los más difíciles pero los más pesados.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "reduccion_acuerdo == 0",
+      "mensaje": "Sin acuerdo, el gasto variable queda tal cual. Ponerle un límite en voz alta y con número es lo que lo cambia.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "reduccion_acuerdo >= 20 && ingreso - fijos - variable_sin_acuerdo * (1 - reduccion_acuerdo / 100) > 0",
+      "mensaje": "El acuerdo liberó dinero real sin tocar lo esencial. Ese excedente es el que puede ir al fondo de emergencia.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "fijos > ingreso * 0.7",
+      "mensaje": "Los gastos fijos se llevan más del 70% del ingreso. Ahí el margen es muy estrecho y la conversación importa todavía más.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "variable_sin_acuerdo > fijos",
+      "mensaje": "El gasto variable supera al fijo: es justo el tipo de dato que conviene poner sobre la mesa con números, no con reproches.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-10-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-10-a-escena.webp"
+}

@@ -1,0 +1,203 @@
+{
+  "code": "ACT-S3-2-10-A",
+  "unit_code": "S3-2-10",
+  "unit_title": "Decisiones grandes: auto, viaje o inversión",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Auto, Viaje o Inversión",
+  "descripcion": "Evalúa tres opciones grandes con el mismo dinero y decide con argumentos.",
+  "objetivo": "Aplicar un marco de cuatro preguntas a una decisión financiera grande",
+  "xp": 1000,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "El dinero disponible",
+      "descripcion": "Lo mismo para las tres opciones.",
+      "campos": [
+        {
+          "id": "monto",
+          "label": "Monto disponible",
+          "type": "number",
+          "min": 10000,
+          "max": 3000000,
+          "default": 120000,
+          "unit": "$",
+          "placeholder": "120000",
+          "requerido": true
+        },
+        {
+          "id": "horizonte",
+          "label": "Horizonte de comparación",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "default": 5,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "rendimiento",
+          "label": "Rendimiento anual si lo invirtiera",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 9,
+          "unit": "%",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Opción A: el vehículo",
+      "descripcion": "El precio nunca es el costo.",
+      "campos": [
+        {
+          "id": "precio_auto",
+          "label": "Precio del vehículo",
+          "type": "number",
+          "min": 10000,
+          "max": 3000000,
+          "default": 120000,
+          "unit": "$",
+          "placeholder": "120000",
+          "requerido": true
+        },
+        {
+          "id": "costo_anual_auto",
+          "label": "Seguro, mantenimiento, tenencia y combustible al año",
+          "type": "number",
+          "min": 0,
+          "max": 300000,
+          "default": 32000,
+          "unit": "$",
+          "placeholder": "32000",
+          "requerido": true
+        },
+        {
+          "id": "costo_total_auto",
+          "label": "Costo total en el horizonte",
+          "type": "calculated",
+          "formula": "precio_auto + costo_anual_auto * horizonte",
+          "unit": "$"
+        },
+        {
+          "id": "valor_residual",
+          "label": "Valor estimado al final del horizonte",
+          "type": "calculated",
+          "formula": "Math.round(precio_auto * Math.pow(0.85, horizonte))",
+          "unit": "$"
+        },
+        {
+          "id": "costo_neto_auto",
+          "label": "Costo neto del vehículo",
+          "type": "calculated",
+          "formula": "Math.round(precio_auto + costo_anual_auto * horizonte - precio_auto * Math.pow(0.85, horizonte))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Opción B: el viaje",
+      "descripcion": "Incluye lo que dejas de ganar.",
+      "campos": [
+        {
+          "id": "costo_viaje",
+          "label": "Costo directo del viaje",
+          "type": "number",
+          "min": 5000,
+          "max": 2000000,
+          "default": 90000,
+          "unit": "$",
+          "placeholder": "90000",
+          "requerido": true
+        },
+        {
+          "id": "meses_fuera",
+          "label": "Meses que estaría fuera",
+          "type": "slider",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 4,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_mensual",
+          "label": "Ingreso mensual que dejaría de percibir",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 15000,
+          "unit": "$",
+          "placeholder": "15000",
+          "requerido": true
+        },
+        {
+          "id": "costo_total_viaje",
+          "label": "Costo total del viaje",
+          "type": "calculated",
+          "formula": "costo_viaje + meses_fuera * ingreso_mensual",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Opción C y la decisión",
+      "descripcion": "Qué produce el dinero si no lo gastas.",
+      "campos": [
+        {
+          "id": "valor_invertido",
+          "label": "Valor de la inversión al final del horizonte",
+          "type": "calculated",
+          "formula": "Math.round(monto * Math.pow(1 + rendimiento / 100, horizonte))",
+          "unit": "$"
+        },
+        {
+          "id": "ganancia",
+          "label": "Ganancia generada",
+          "type": "calculated",
+          "formula": "Math.round(monto * Math.pow(1 + rendimiento / 100, horizonte) - monto)",
+          "unit": "$"
+        },
+        {
+          "id": "reversible",
+          "label": "¿Qué tan reversible es tu opción preferida?",
+          "type": "select",
+          "opciones": [
+            "Totalmente reversible",
+            "Reversible con pérdida",
+            "Prácticamente irreversible"
+          ],
+          "default": "Reversible con pérdida",
+          "requerido": true
+        },
+        {
+          "id": "problema",
+          "label": "¿Qué problema real resuelve tu opción?",
+          "type": "textarea",
+          "placeholder": "Sé específico: un problema concreto, no un deseo genérico",
+          "requerido": true
+        },
+        {
+          "id": "renuncia",
+          "label": "¿A qué renuncias y lo aceptas?",
+          "type": "textarea",
+          "placeholder": "Nombrar la renuncia evita el arrepentimiento después",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "marco_decision_grande",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-2-10-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-10-a-escena.webp"
+}

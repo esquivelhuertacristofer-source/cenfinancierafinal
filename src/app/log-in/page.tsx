@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabase-browser";
 import { loginAction } from "@/app/actions/authActions";
 import Link from "next/link";
 import Image from "next/image";
-import { TEST_ACCOUNTS, reclaimGuestProgress } from "../../lib/hub";
+import { reclaimGuestProgress } from "../../lib/hub";
 import FooterLegal from "../../components/FooterLegal";
 import SupabaseStatusBanner from "../../components/SupabaseStatusBanner";
 
@@ -25,9 +25,23 @@ export default function LoginPage() {
     useEffect(() => {
         async function checkSession() {
             const { data } = await supabase.auth.getSession();
-            if (data.session) {
-                router.replace("/hub");
+            if (!data.session) return;
+
+            const { data: profile } = await supabase
+                .from("profiles")
+                .select("role")
+                .eq("id", data.session.user.id)
+                .single();
+
+            if (profile?.role === "teacher") {
+                router.replace("/dashboard/teacher");
+                return;
             }
+            if (profile?.role === "admin" || profile?.role === "super_admin") {
+                router.replace("/admin/escuelas");
+                return;
+            }
+            router.replace("/hub");
         }
         checkSession();
     }, [router]);
@@ -60,9 +74,6 @@ export default function LoginPage() {
                 return;
             }
 
-            // Clear any previous test profile on real successful login
-            localStorage.removeItem('cen_test_profile');
-
             // Reclamo del progreso guardado en Modo Práctica (si lo hay), best-effort
             try {
                 const { data: { user } } = await supabase.auth.getUser();
@@ -76,6 +87,11 @@ export default function LoginPage() {
             // Redirect based on role returned by Server Action
             if (result.role === "teacher") {
                 window.location.href = "/dashboard/teacher";
+                return;
+            }
+
+            if (result.role === "admin" || result.role === "super_admin") {
+                window.location.href = "/admin/escuelas";
                 return;
             }
 

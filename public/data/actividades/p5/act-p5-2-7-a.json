@@ -1,0 +1,147 @@
+{
+  "code": "ACT-P5-2-7-A",
+  "unit_code": "P5-2-7",
+  "unit_title": "El precio ancla y otras trampas del marketing",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Tienda con Trampas",
+  "descripcion": "Ceny entra a una tienda llena de técnicas de marketing. Cada decisión define cuánto gasta de más.",
+  "objetivo": "Reconocer y responder a técnicas de persuasión en una situación de compra",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny va a comprar unos audífonos con $900 que ahorró. Entra a una tienda con muchas promociones.",
+  "nodo_inicial": "ancla",
+  "nodos": {
+    "ancla": {
+      "id": "ancla",
+      "texto": "El primer modelo tiene $1,600 tachado y $899 en grande. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Buscar ese mismo modelo en otras dos tiendas antes de decidir",
+          "siguiente_nodo": "senuelo",
+          "consecuencia": "En otra tienda está en $740 sin ningún descuento anunciado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 159
+        },
+        {
+          "id": "o2",
+          "texto": "Comprarlo: son $700 de descuento",
+          "siguiente_nodo": "sin_comparar",
+          "consecuencia": "El precio tachado no era un precio real: solo un ancla.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -159
+        },
+        {
+          "id": "o3",
+          "texto": "Preguntar al vendedor si es un buen precio",
+          "siguiente_nodo": "senuelo",
+          "consecuencia": "El vendedor dirá que sí. No es mentira ni información: es su trabajo.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-ancla.webp"
+    },
+    "sin_comparar": {
+      "id": "sin_comparar",
+      "texto": "Al salir, Ceny ve el mismo modelo en la tienda de enfrente a $740. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Revisar la política de devolución y cambiarlo si aún puede",
+          "siguiente_nodo": "senuelo",
+          "consecuencia": "Muchas tiendas aceptan devolución en pocos días con ticket.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 159
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlo así, ya lo compró",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Pagó $159 de más por no haber comparado cinco minutos.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -159
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-sin_comparar.webp"
+    },
+    "senuelo": {
+      "id": "senuelo",
+      "texto": "Hay tres modelos: uno malo a $700, uno bueno a $740 y uno excelente a $1,500. ¿Qué nota Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que el de $700 está ahí para hacer ver bien al de $740",
+          "siguiente_nodo": "escasez",
+          "consecuencia": "Detectó la opción señuelo: casi nadie compra la mala.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que el de en medio siempre es la mejor opción",
+          "siguiente_nodo": "escasez",
+          "consecuencia": "Puede coincidir, pero elegir \"el de en medio\" por regla es justo lo que se espera.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-senuelo.webp"
+    },
+    "escasez": {
+      "id": "escasez",
+      "texto": "Un cartel dice \"¡Solo quedan 2! Oferta termina hoy\". ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aplicar la espera: si mañana sigue queriéndolo, vuelve",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Al día siguiente el mismo cartel decía otra vez \"solo quedan 2\".",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 200
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar ya, no vaya a acabarse",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La urgencia impidió comparar, que es exactamente su función.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-escasez.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny compró los audífonos que necesitaba al mejor precio y le sobró dinero.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Comparó contra el ancla, detectó el señuelo y esperó ante la escasez. Ninguna de esas técnicas es ilegal: solo funcionan con quien no las conoce.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny tiene sus audífonos, aunque pagó más de lo necesario.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El producto está bien. Lo que faltó fueron cinco minutos de comparación, que en este caso valían más de cien pesos.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-2-7-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-2-7-a-portada.webp"
+}

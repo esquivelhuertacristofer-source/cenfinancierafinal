@@ -4,152 +4,138 @@
   "unit_title": "Business Model Canvas avanzado: los 9 bloques en práctica",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "MEDIO",
-  "titulo": "Mi Balance General",
-  "descripcion": "No te dejes engañar por las apariencias. Tu riqueza real no es lo que gastas, sino lo que te queda después de pagar tus deudas.",
-  "objetivo": "Calcular el patrimonio neto personal y entender la relación entre activos y pasivos",
-  "xp": 500,
-  "descripcion_formula": "Patrimonio Neto = Suma(Activos) - Suma(Pasivos).",
-  "inputs": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Tu Business Model Canvas",
+  "descripcion": "Un plan de negocios de 80 páginas no lo lee nadie. Un Canvas cabe en una hoja y obliga a responder las nueve preguntas que deciden si un negocio se sostiene. Llénalo.",
+  "objetivo": "Diseñar un modelo de negocio completo con los nueve bloques del Business Model Canvas y verificar su viabilidad económica.",
+  "xp": 800,
+  "output_type": "business_model_canvas",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "total_activos_s2",
-      "label": "Valor de todo lo que tienes (Ahorros, Inversiones, Bienes) ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 1000000,
-      "step": 10000,
-      "default": 100000,
-      "unit": "$"
-    },
-    {
-      "id": "total_pasivos_s2",
-      "label": "Todo lo que debes (Créditos, Tarjetas, Préstamos) ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 1000000,
-      "step": 10000,
-      "default": 20000,
-      "unit": "$"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
+      "id": "cliente",
+      "titulo": "1-2 · Cliente y propuesta de valor",
+      "descripcion": "Los dos bloques que deciden todo lo demás. Si estos dos están mal, los otros siete no importan.",
+      "campos": [
         {
-          "label": "Conservador",
-          "value": 0.8
+          "id": "segmento",
+          "label": "Segmento de clientes (sé específico)",
+          "type": "text",
+          "placeholder": "Ej: estudiantes de secundaria sin tiempo para desayunar",
+          "requerido": true,
+          "ayuda": "\"Todo el mundo\" no es un segmento: es la señal de que aún no lo definiste."
         },
         {
-          "label": "Moderado",
-          "value": 1
-        },
-        {
-          "label": "Optimista",
-          "value": 1.2
+          "id": "propuesta",
+          "label": "Propuesta de valor: qué problema resuelves",
+          "type": "text",
+          "placeholder": "Ej: desayuno nutritivo listo en 2 minutos",
+          "requerido": true
         }
-      ],
-      "default": 1
+      ]
+    },
+    {
+      "id": "entrega",
+      "titulo": "3-4 · Canales y relación con clientes",
+      "descripcion": "Cómo llegas a ellos y cómo los conservas.",
+      "campos": [
+        {
+          "id": "canales",
+          "label": "Canales: ¿cómo llega tu producto al cliente?",
+          "type": "text",
+          "placeholder": "Ej: venta en la cooperativa escolar",
+          "requerido": true
+        },
+        {
+          "id": "relacion",
+          "label": "Relación: ¿cómo logras que regresen?",
+          "type": "text",
+          "placeholder": "Ej: tarjeta de puntos al décimo desayuno",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "motor",
+      "titulo": "5-6-7 · Recursos, actividades y socios",
+      "descripcion": "La maquinaria que hace posible la promesa.",
+      "campos": [
+        {
+          "id": "recursos",
+          "label": "Recursos clave que necesitas",
+          "type": "text",
+          "placeholder": "Ej: cocina, refrigerador, permiso sanitario",
+          "requerido": true
+        },
+        {
+          "id": "actividades",
+          "label": "Actividades clave que haces cada día",
+          "type": "text",
+          "placeholder": "Ej: preparar, empacar y distribuir",
+          "requerido": true
+        },
+        {
+          "id": "socios",
+          "label": "Socios clave sin los que no funcionaría",
+          "type": "text",
+          "placeholder": "Ej: proveedor de fruta, cooperativa escolar",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "dinero",
+      "titulo": "8-9 · Ingresos y costos",
+      "descripcion": "Los dos bloques que convierten una buena idea en un negocio que existe el año que viene.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio por unidad ($)",
+          "type": "number",
+          "placeholder": "Ej: 45",
+          "requerido": true
+        },
+        {
+          "id": "unidades",
+          "label": "Unidades que venderías al mes",
+          "type": "number",
+          "placeholder": "Ej: 600",
+          "requerido": true
+        },
+        {
+          "id": "costo_variable",
+          "label": "Costo variable por unidad ($)",
+          "type": "number",
+          "placeholder": "Ej: 22",
+          "requerido": true
+        },
+        {
+          "id": "costos_fijos",
+          "label": "Costos fijos mensuales ($)",
+          "type": "number",
+          "placeholder": "Ej: 8000",
+          "requerido": true
+        },
+        {
+          "id": "utilidad",
+          "label": "Utilidad mensual estimada",
+          "type": "calculated",
+          "formula": "(precio - costo_variable) * unidades - costos_fijos",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "equilibrio",
+          "label": "Unidades mínimas para no perder",
+          "type": "calculated",
+          "formula": "Math.ceil(costos_fijos / Math.max(1, precio - costo_variable))",
+          "unit": "unidades",
+          "requerido": false,
+          "ayuda": "Si ese número es mayor que lo que realistamente puedes vender, el modelo no cierra: hay que cambiar algo del Canvas."
+        }
+      ]
     }
   ],
-  "formula": "total_activos_s2 - total_pasivos_s2",
-  "output_label": "Tu Patrimonio Neto (Riqueza Real)",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "bar",
-  "escenarios": [
-    {
-      "condicion": "resultado < 0",
-      "mensaje": "🚨 ¡Alerta de Insolvencia! Debes más de lo que tienes. Estás en una posición financiera muy peligrosa. Necesitas un plan urgente de desendeudamiento.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "resultado > 500000",
-      "mensaje": "🌟 ¡Excelente Salud Financiera! Tienes un patrimonio sólido. Estás construyendo verdadera riqueza.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 Muchas personas parecen ricas porque tienen autos y casas (activos), pero están quebradas porque sus deudas (pasivos) son mayores. El Patrimonio Neto es la única verdad.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Cuál es el bloque más importante del Business Model Canvas para un negocio que acaba de empezar? ¿Cómo se veía el Canvas de Netflix comparado con el de Blockbuster?",
-  "comparativa_espera": "Netflix tenía un Canvas radicalmente diferente al de Blockbuster: sin tiendas físicas, sin multas por retraso, con suscripción mensual. Un modelo de negocio diferente destruyó a una empresa de $6,000 millones en menos de 10 años.",
-  "outputs_multiples": [
-    {
-      "id": "patrimonio_neto",
-      "label": "Patrimonio Neto",
-      "formula": "total_activos_s2 - total_pasivos_s2",
-      "prefix": "$",
-      "suffix": " MXN",
-      "descripcion": "Lo que realmente tienes: activos menos lo que debes"
-    },
-    {
-      "id": "razon_endeudamiento",
-      "label": "Razón de Endeudamiento",
-      "formula": "Math.round(total_pasivos_s2 / Math.max(1, total_activos_s2) * 100)",
-      "prefix": "",
-      "suffix": "% de tus activos son deuda",
-      "descripcion": "Menos de 40% es saludable; más de 60% es zona de riesgo"
-    },
-    {
-      "id": "proyeccion_10_anos",
-      "label": "Patrimonio en 10 Años",
-      "formula": "Math.round((total_activos_s2 - total_pasivos_s2) * Math.pow(1.08, Math.min(anios_sim, 10)))",
-      "prefix": "$",
-      "suffix": " proyectado",
-      "descripcion": "Si tu patrimonio neto crece al 8% anual"
-    },
-    {
-      "id": "apalancamiento",
-      "label": "Índice de Apalancamiento",
-      "formula": "Math.round(total_activos_s2 / Math.max(1, total_activos_s2 - total_pasivos_s2) * 10) / 10",
-      "prefix": "×",
-      "suffix": " (ideal <2×)",
-      "descripcion": "Cuántas veces tus activos superan tu patrimonio neto propio"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "patrimonio_neto",
-      "label": "Patrimonio Neto",
-      "color": "#6366f1"
-    },
-    {
-      "id": "razon_endeudamiento",
-      "label": "Razón de Endeudamiento",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

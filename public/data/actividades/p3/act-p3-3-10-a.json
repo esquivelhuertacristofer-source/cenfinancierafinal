@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P3-3-10-A",
+  "unit_code": "P3-3-10",
+  "unit_title": "Salir de una deuda: el plan bola de nieve",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Plan Bola de Nieve",
+  "descripcion": "Completa el plan de salida de deudas de Ceny.",
+  "objetivo": "Verbalizar el método bola de nieve paso a paso",
+  "xp": 200,
+  "contexto": "Ceny le ayuda a su tío a organizar un plan para salir de tres deudas.",
+  "texto": "Lo primero es escribir todas las deudas y ordenarlas de la más __blank1__ a la más grande. Después se paga el __blank2__ de todas, para no caer en atrasos, y todo el dinero __blank3__ se concentra en la deuda más pequeña hasta liquidarla. Cuando esa deuda cae, ese pago no se gasta: se __blank4__ al de la siguiente. Por eso el método se llama bola de __blank5__: la cantidad destinada crece al avanzar. Existe otro método que ordena por __blank6__ y ahorra más dinero, pero mucha gente lo abandona porque tarda en dar resultados visibles. El mejor método es el que se logra __blank7__. Y nada de esto funciona si mientras tanto se siguen adquiriendo deudas __blank8__.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "pequeña",
+        "grande",
+        "antigua"
+      ],
+      "respuesta": "pequeña"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "mínimo",
+        "total",
+        "doble"
+      ],
+      "respuesta": "mínimo"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "extra",
+        "mínimo",
+        "prestado"
+      ],
+      "respuesta": "extra"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "suma",
+        "resta",
+        "divide"
+      ],
+      "respuesta": "suma"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "nieve",
+        "fuego",
+        "papel"
+      ],
+      "respuesta": "nieve"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "interés",
+        "color",
+        "nombre"
+      ],
+      "respuesta": "interés"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "terminar",
+        "empezar",
+        "presumir"
+      ],
+      "respuesta": "terminar"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "nuevas",
+        "viejas",
+        "pequeñas"
+      ],
+      "respuesta": "nuevas"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-10-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-10-a-escena.webp"
+}

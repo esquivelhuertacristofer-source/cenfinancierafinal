@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-1-6-A",
+  "unit_code": "P3-1-6",
+  "unit_title": "Metas SMART: específica, medible y con fecha",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Meta o Deseo?",
+  "descripcion": "Clasifica cada frase según si es una meta bien formulada, una meta incompleta o solo un deseo.",
+  "objetivo": "Distinguir metas verificables de deseos vagos y de metas mal formuladas",
+  "xp": 200,
+  "instruccion": "Arrastra cada frase a su caja según qué tan bien formulada está.",
+  "categorias": [
+    {
+      "id": "meta",
+      "label": "Meta completa",
+      "emoji": "🎯",
+      "color": "#10B981"
+    },
+    {
+      "id": "incompleta",
+      "label": "Le falta algo",
+      "emoji": "🧩",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "deseo",
+      "label": "Solo un deseo",
+      "emoji": "💭",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "\"Juntar $1,500 para una bici antes del 15 de diciembre, guardando $60 por semana\"",
+      "emoji": "🚲",
+      "categoria_correcta": "meta",
+      "feedback": "Tiene los cuatro elementos: qué, cuánto, cuándo y cuota. Se puede verificar."
+    },
+    {
+      "id": "i2",
+      "label": "\"Quiero ahorrar\"",
+      "emoji": "💭",
+      "categoria_correcta": "deseo",
+      "feedback": "No dice qué, ni cuánto, ni cuándo. Es imposible saber si se cumplió."
+    },
+    {
+      "id": "i3",
+      "label": "\"Juntar $800 para unos tenis\"",
+      "emoji": "👟",
+      "categoria_correcta": "incompleta",
+      "feedback": "Tiene qué y cuánto, pero le falta la fecha y la cuota."
+    },
+    {
+      "id": "i4",
+      "label": "\"Ahorrar $200 al mes durante 5 meses para el campamento de julio\"",
+      "emoji": "🏕️",
+      "categoria_correcta": "meta",
+      "feedback": "Monto, plazo, cuota y destino claros. Meta verificable."
+    },
+    {
+      "id": "i5",
+      "label": "\"Me gustaría tener más dinero\"",
+      "emoji": "🤷",
+      "categoria_correcta": "deseo",
+      "feedback": "Un deseo legítimo, pero no se puede planear ni verificar."
+    },
+    {
+      "id": "i6",
+      "label": "\"Comprar algo para la escuela\"",
+      "emoji": "🎒",
+      "categoria_correcta": "deseo",
+      "feedback": "Demasiado vago: no se sabe qué, cuánto ni para cuándo."
+    },
+    {
+      "id": "i7",
+      "label": "\"Juntar para el regalo de mamá antes del 20 de mayo\"",
+      "emoji": "🎁",
+      "categoria_correcta": "incompleta",
+      "feedback": "Tiene fecha y destino, pero falta el monto y la cuota."
+    },
+    {
+      "id": "i8",
+      "label": "\"Guardar $30 cada domingo hasta juntar $360 para la tablet\"",
+      "emoji": "📱",
+      "categoria_correcta": "meta",
+      "feedback": "La fecha se deduce de la cuota y el monto: 12 domingos. Está completa."
+    },
+    {
+      "id": "i9",
+      "label": "\"Ser rico algún día\"",
+      "emoji": "✨",
+      "categoria_correcta": "deseo",
+      "feedback": "Sin cifra ni fecha, no hay forma de saber si se avanza o no."
+    },
+    {
+      "id": "i10",
+      "label": "\"Ahorrar $50 por semana\"",
+      "emoji": "🪙",
+      "categoria_correcta": "incompleta",
+      "feedback": "Buena cuota, pero sin destino ni monto total no se sabe hasta cuándo ni para qué."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-6-a-escena.webp"
+}

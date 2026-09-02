@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-4-6-B",
+  "unit_code": "S1-4-6",
+  "unit_title": "El problema antes que la solución: entrevistas de descubrimiento",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Descubrimiento",
+  "descripcion": "Responde rápido sobre entrevistas de descubrimiento.",
+  "objetivo": "Consolidar el método de entrevistas centradas en el problema",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El error de orden más común es:",
+      "respuesta_correcta": "Enamorarse de la solución antes de confirmar el problema",
+      "incorrectas": [
+        "Investigar demasiado",
+        "Preguntar mucho",
+        "Empezar pequeño"
+      ],
+      "dato_extra": "Un producto excelente para un problema inexistente no tiene mercado."
+    },
+    {
+      "id": "q2",
+      "pregunta": "En la entrevista, la solución propia:",
+      "respuesta_correcta": "No se menciona",
+      "incorrectas": [
+        "Se menciona al inicio",
+        "Se explica en detalle",
+        "Se vende"
+      ],
+      "dato_extra": "Es la regla que más cuesta respetar y la más importante."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Se pregunta sobre:",
+      "respuesta_correcta": "El comportamiento pasado",
+      "incorrectas": [
+        "El futuro hipotético",
+        "Los gustos",
+        "Las opiniones"
+      ],
+      "dato_extra": "\"Cuéntame la última vez que te pasó esto\"."
+    },
+    {
+      "id": "q4",
+      "pregunta": "\"¿Te gustaría una app que haga esto?\" produce:",
+      "respuesta_correcta": "Un sí amable sin valor",
+      "incorrectas": [
+        "Información valiosa",
+        "Una venta",
+        "Un cliente"
+      ],
+      "dato_extra": "La amabilidad contamina toda la investigación."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Al procesar hallazgos se busca:",
+      "respuesta_correcta": "Lo que se repite entre entrevistas",
+      "incorrectas": [
+        "La anécdota más llamativa",
+        "La más emotiva",
+        "La más corta"
+      ],
+      "dato_extra": "Frecuencia vale más que dramatismo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Preguntar cuánto costó la última vez sirve porque:",
+      "respuesta_correcta": "Un gasto real es la señal más confiable",
+      "incorrectas": [
+        "Es curioso",
+        "Da conversación",
+        "Es cortés"
+      ],
+      "dato_extra": "El dinero ya gastado no miente."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Preguntar cómo lo resuelve hoy revela:",
+      "respuesta_correcta": "La alternativa real contra la que competirías",
+      "incorrectas": [
+        "Nada útil",
+        "Su opinión",
+        "Su presupuesto"
+      ],
+      "dato_extra": "Tu competencia no siempre es otra empresa: a veces es una hoja de cálculo."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-6-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-6-b-escena.webp"
+}

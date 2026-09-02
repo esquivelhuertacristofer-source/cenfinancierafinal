@@ -1,0 +1,181 @@
+{
+  "code": "ACT-P3-2-10-A",
+  "unit_code": "P3-2-10",
+  "unit_title": "Abrir mi primera cuenta: requisitos y documentos",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Abriendo mi Primera Cuenta",
+  "descripcion": "Ceny va con su mamá a abrir su primera cuenta de ahorro. Cada decisión define si elige bien.",
+  "objetivo": "Aplicar criterios de comparación y verificación al abrir una cuenta bancaria",
+  "xp": 200,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny juntó $2,000 y su mamá lo va a acompañar al banco para abrir una cuenta de ahorro a su nombre. Es viernes por la tarde.",
+  "nodo_inicial": "preparacion",
+  "nodos": {
+    "preparacion": {
+      "id": "preparacion",
+      "texto": "Antes de salir de casa, ¿qué prepara Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Acta de nacimiento, CURP, identificación de mamá y comprobante de domicilio",
+          "siguiente_nodo": "eleccion",
+          "consecuencia": "Con todo el paquete listo, el trámite se hace en una sola visita.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el dinero, los papeles seguro no hacen falta",
+          "siguiente_nodo": "regreso",
+          "consecuencia": "En la ventanilla piden los documentos y hay que volver otro día.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Su boleta de calificaciones y el dinero",
+          "siguiente_nodo": "regreso",
+          "consecuencia": "La boleta no sirve como identificación oficial para un trámite bancario.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-preparacion.webp"
+    },
+    "regreso": {
+      "id": "regreso",
+      "texto": "Tuvieron que volver a casa. ¿Qué hace Ceny ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preguntar por teléfono la lista exacta antes de regresar",
+          "siguiente_nodo": "eleccion",
+          "consecuencia": "Una llamada de dos minutos evita un tercer viaje.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Volver a intentar con lo que crea que sirve",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Adivinar los requisitos hace perder viajes y ganas.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-regreso.webp"
+    },
+    "eleccion": {
+      "id": "eleccion",
+      "texto": "El ejecutivo ofrece dos cuentas: una sin comisión pero sin interés, y otra que paga 4% pero cobra $60 mensuales de manejo. Ceny va a guardar $2,000.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Calcular: $2,000 al 4% dan $80 al año, y la comisión son $720. Elige la sin comisión",
+          "siguiente_nodo": "preguntas",
+          "consecuencia": "Con ese saldo, la comisión se come el interés nueve veces.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 640
+        },
+        {
+          "id": "o2",
+          "texto": "Elegir la que paga interés, porque \"ganar es mejor\"",
+          "siguiente_nodo": "preguntas",
+          "consecuencia": "Gana $80 al año y paga $720. Pierde $640.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -640
+        },
+        {
+          "id": "o3",
+          "texto": "Elegir la que le recomienden sin hacer cuentas",
+          "siguiente_nodo": "preguntas",
+          "consecuencia": "Decidir sin calcular deja la elección en manos de quien vende.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -300
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-eleccion.webp"
+    },
+    "preguntas": {
+      "id": "preguntas",
+      "texto": "El ejecutivo pone el contrato sobre la mesa para firmar. ¿Qué hace Ceny con su mamá?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Hacer las cinco preguntas y leer antes de firmar",
+          "siguiente_nodo": "copia",
+          "consecuencia": "El ejecutivo responde todo. Aparece una comisión que no habían mencionado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Firmar rápido, ya es tarde y hay fila",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Firmaron sin conocer una comisión por retiro que aparecerá cada mes.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -360
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-preguntas.webp"
+    },
+    "copia": {
+      "id": "copia",
+      "texto": "Ya firmaron. ¿Qué falta antes de irse?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir copia de todo lo firmado",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Sin el documento no hay forma de reclamar después.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Irse, ya quedó todo hablado",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Lo hablado no se puede probar. Solo lo firmado y en tu poder.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-copia.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny salió con su cuenta abierta, la cuenta correcta para su saldo y una carpeta con todos los documentos.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Preparó los papeles, comparó con números en lugar de corazonadas, preguntó antes de firmar y se llevó copia. Ese proceso completo le ahorró más de $600 en el primer año.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La cuenta quedó abierta, pero con condiciones que Ceny no conocía del todo.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Abrir la cuenta es lo fácil. Lo que decide si fue buena decisión es haber comparado, preguntado y leído antes de firmar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-2-10-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p3/p3-2-10-a-portada.webp"
+}

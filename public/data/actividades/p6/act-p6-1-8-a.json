@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P6-1-8-A",
+  "unit_code": "P6-1-8",
+  "unit_title": "Ahorro voluntario en el AFORE desde joven",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Empezar Joven",
+  "descripcion": "Dos personas ahorran para el retiro. Cada decisión define quién termina con más.",
+  "objetivo": "Comprender el efecto del tiempo en el ahorro para el retiro",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene un primo de 20 años que acaba de empezar a trabajar y le pide consejo sobre el ahorro para el retiro.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "El primo dice que empezará a ahorrar para el retiro cuando gane más, como a los 40. ¿Qué le responde Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que empiece ya con poco: el tiempo pesa más que el monto",
+          "siguiente_nodo": "monto",
+          "consecuencia": "Veinte años extra de rendimiento compuesto no se recuperan después.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que tiene razón, mejor esperar a ganar más",
+          "siguiente_nodo": "tarde",
+          "consecuencia": "Cada década que pasa reduce muchísimo el resultado final.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -50000
+        },
+        {
+          "id": "o3",
+          "texto": "Que lo importante es el monto, no la fecha",
+          "siguiente_nodo": "tarde",
+          "consecuencia": "Es al revés: el tiempo hace más trabajo que el monto.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -50000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-inicio.webp"
+    },
+    "tarde": {
+      "id": "tarde",
+      "texto": "Ceny hace las cuentas y le muestra que empezar a los 40 requiere aportar casi el triple para llegar al mismo resultado. ¿Qué hace el primo?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Empezar ya con lo que pueda, aunque sea poco",
+          "siguiente_nodo": "monto",
+          "consecuencia": "Empezar pequeño y temprano supera a empezar grande y tarde.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir esperando",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Cada año que pasa hace más caro alcanzar la misma meta.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -80000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-tarde.webp"
+    },
+    "monto": {
+      "id": "monto",
+      "texto": "El primo pregunta cuánto aportar. Puede destinar $300 al mes sin afectar su presupuesto. ¿Qué le sugiere Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Empezar con esos $300 y subirlos cada vez que aumente su ingreso",
+          "siguiente_nodo": "comision",
+          "consecuencia": "Aportación sostenible que crece con el tiempo: la fórmula que sí se mantiene.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 60000
+        },
+        {
+          "id": "o2",
+          "texto": "Aportar $2,000 aunque le apriete el presupuesto",
+          "siguiente_nodo": "comision",
+          "consecuencia": "Un esfuerzo insostenible se abandona en pocos meses.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 10000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-monto.webp"
+    },
+    "comision": {
+      "id": "comision",
+      "texto": "Al revisar su estado de cuenta, ven que su administradora cobra una comisión bastante mayor que otras. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Comparar rendimiento neto y comisión, y cambiar si conviene",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "En cuarenta años, una diferencia de comisión representa muchísimo dinero.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 40000
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlo así, la diferencia se ve pequeña",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Pequeña cada año, enorme al cabo de cuatro décadas.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -40000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-comision.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El primo empezó a los 20 con una aportación sostenible y en la administradora adecuada.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Empezar temprano, aportar algo sostenible y revisar la comisión. Tres decisiones tomadas a los veinte años que definen el resultado de cuatro décadas.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El primo empezó temprano, aunque pagando más comisión de la necesaria durante décadas.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Lo más importante ya lo hizo: empezar joven. Lo que faltó fue revisar la comisión, que en horizontes tan largos pesa muchísimo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "El primo empezó a los 40 y tuvo que aportar casi el triple para acercarse al mismo resultado.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El dinero se puede recuperar; el tiempo no. Veinte años de rendimiento compuesto son imposibles de reponer con aportaciones mayores.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-1-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-1-8-a-portada.webp"
+}

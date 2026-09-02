@@ -36,13 +36,25 @@
       "id": "escenario_cripto",
       "label": "Escenario del Mercado Cripto",
       "type": "select",
-      "options": [
-        { "label": "Bull Market (+300%)", "value": 3 },
-        { "label": "Mercado Lateral (+10%)", "value": 0.1 },
-        { "label": "Bear Market (-60%)", "value": -0.6 },
-        { "label": "Crash Extremo (-80%)", "value": -0.8 }
-      ],
-      "default": -0.6
+      "default": -0.6,
+      "opciones": [
+        {
+          "label": "Bull Market (+300%)",
+          "value": 3
+        },
+        {
+          "label": "Mercado Lateral (+10%)",
+          "value": 0.1
+        },
+        {
+          "label": "Bear Market (-60%)",
+          "value": -0.6
+        },
+        {
+          "label": "Crash Extremo (-80%)",
+          "value": -0.8
+        }
+      ]
     },
     {
       "id": "anos_hodl",
@@ -96,10 +108,30 @@
   "casos_reales": {
     "titulo": "Lo que pasó en la historia",
     "eventos": [
-      { "año": "2021 (pico)", "btc": "$68,000", "eth": "$4,800", "nota": "El máximo histórico" },
-      { "año": "2022 (fondo)", "btc": "$16,000", "eth": "$1,100", "nota": "Caída de -77% en BTC" },
-      { "año": "2023 (recuperación)", "btc": "$44,000", "eth": "$2,400", "nota": "Parcialmente recuperado" },
-      { "año": "2024", "btc": "$67,000", "eth": "$3,500", "nota": "Cerca del máximo histórico" }
+      {
+        "año": "2021 (pico)",
+        "btc": "$68,000",
+        "eth": "$4,800",
+        "nota": "El máximo histórico"
+      },
+      {
+        "año": "2022 (fondo)",
+        "btc": "$16,000",
+        "eth": "$1,100",
+        "nota": "Caída de -77% en BTC"
+      },
+      {
+        "año": "2023 (recuperación)",
+        "btc": "$44,000",
+        "eth": "$2,400",
+        "nota": "Parcialmente recuperado"
+      },
+      {
+        "año": "2024",
+        "btc": "$67,000",
+        "eth": "$3,500",
+        "nota": "Cerca del máximo histórico"
+      }
     ]
   },
   "chart_type": "bar",
@@ -135,6 +167,11 @@
       "condicion": "pct_en_cripto > 50",
       "mensaje": "⚠️ Concentración alta. La mayoría de los expertos financieros recomienda no superar el 5-10% del portafolio en activos de alto riesgo como cripto.",
       "tipo": "warning"
+    },
+    {
+      "condicion": "anos_hodl >= 5 && pct_en_cripto > 50",
+      "mensaje": "Aguantar cinco años una posición sobreexpuesta no reduce el riesgo: solo alarga la exposición. El tamaño de la posición importa más que el tiempo que la mantengas.",
+      "tipo": "advertencia"
     }
   ],
   "versión": "2026.Diamond.V2",

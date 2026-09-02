@@ -257,7 +257,6 @@ export default function CrisisRoom({ activity, onComplete }: { activity: Activit
   const [lastOption, setLastOption] = useState<PolicyOption | null>(null);
   const [animating, setAnimating] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
-  const [selectedOptionIdx, setSelectedOptionIdx] = useState<number | null>(null);
   const hasCompletedRef = useRef(false);
 
   const totalRounds = safeRounds.length;
@@ -277,15 +276,12 @@ export default function CrisisRoom({ activity, onComplete }: { activity: Activit
     setIndicators({ ...safeStartingIndicators });
     setLastDeltas(null);
     setLastOption(null);
-    setSelectedOptionIdx(null);
   }, [safeStartingIndicators]);
 
   const handleChooseOption = useCallback((optionIdx: number) => {
     if (!currentRound) return;
     const chosen = currentRound.options[optionIdx];
     if (!chosen) return;
-
-    setSelectedOptionIdx(optionIdx);
 
     const deltas: IndicatorDelta = {
       gdp_growth: chosen.effects.gdp_growth_delta,
@@ -310,7 +306,6 @@ export default function CrisisRoom({ activity, onComplete }: { activity: Activit
   const handleNextRound = useCallback(() => {
     setLastDeltas(null);
     setLastOption(null);
-    setSelectedOptionIdx(null);
 
     const next = roundIndex + 1;
     if (next >= totalRounds) {

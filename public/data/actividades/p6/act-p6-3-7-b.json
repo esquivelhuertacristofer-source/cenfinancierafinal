@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-3-7-B",
+  "unit_code": "P6-3-7",
+  "unit_title": "Seguros: gastos médicos, vida y auto",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Entender los Seguros",
+  "descripcion": "Comprueba que dominas coberturas y términos de póliza.",
+  "objetivo": "Verificar la comprensión de tipos de seguro y condiciones de póliza",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El fondo de emergencia cubre:",
+      "opciones": [
+        "Hospitalizaciones enormes",
+        "Eventos medianos y frecuentes",
+        "Todo tipo de riesgo",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Para el golpe grande hace falta un seguro."
+    },
+    {
+      "id": "q2",
+      "texto": "El seguro de vida protege:",
+      "opciones": [
+        "Al asegurado",
+        "Al banco",
+        "A quienes dependen del asegurado",
+        "A la aseguradora"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la confusión más común sobre este producto."
+    },
+    {
+      "id": "q3",
+      "texto": "El deducible es:",
+      "opciones": [
+        "La prima mensual",
+        "El máximo cubierto",
+        "Un descuento",
+        "Lo que paga el asegurado antes de que responda la aseguradora"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso hace falta fondo de emergencia aun teniendo seguro."
+    },
+    {
+      "id": "q4",
+      "texto": "La suma asegurada es:",
+      "opciones": [
+        "El máximo que cubre la póliza",
+        "El costo de la póliza",
+        "El deducible",
+        "El coaseguro"
+      ],
+      "correcta": 0,
+      "explicacion": "Si el siniestro la supera, la diferencia la paga el asegurado."
+    },
+    {
+      "id": "q5",
+      "texto": "Una prima muy barata suele implicar:",
+      "opciones": [
+        "Mejor cobertura",
+        "Deducible alto o suma asegurada baja",
+        "Nada",
+        "Más beneficios"
+      ],
+      "correcta": 1,
+      "explicacion": "El precio no se evalúa sin mirar los tres números juntos."
+    },
+    {
+      "id": "q6",
+      "texto": "Las exclusiones son:",
+      "opciones": [
+        "Los descuentos",
+        "Los beneficiarios",
+        "Lo que la póliza no cubre",
+        "Las oficinas"
+      ],
+      "correcta": 2,
+      "explicacion": "La sección que decide si el seguro responde el día del siniestro."
+    },
+    {
+      "id": "q7",
+      "texto": "El seguro de auto cubre sobre todo:",
+      "opciones": [
+        "La gasolina",
+        "El estacionamiento",
+        "El mantenimiento",
+        "Daños al vehículo y a terceros"
+      ],
+      "correcta": 3,
+      "explicacion": "La cobertura a terceros es la que evita una ruina."
+    },
+    {
+      "id": "q8",
+      "texto": "Fondo y seguro:",
+      "opciones": [
+        "Se complementan",
+        "Son sustitutos",
+        "Son lo mismo",
+        "Son incompatibles"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin fondo no se puede pagar el deducible del seguro."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-7-b-escena.webp"
+}

@@ -4,119 +4,124 @@
   "unit_title": "Psicología del dinero: mentalidad de abundancia vs. escasez",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "Pitch Deck del Futuro",
-  "descripcion": "Tienes la idea que cambiará el mundo. Ahora debes convencer a los inversionistas de que eres el indicado para ejecutarla.",
-  "objetivo": "Diseñar un modelo de negocio escalable y estructurar una propuesta de inversión profesional",
-  "xp": 600,
-  "output_type": "Pitch Deck de Inversión",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Los Sesgos que te Cuestan Dinero",
+  "descripcion": "Las peores decisiones financieras no vienen de no saber matemáticas: vienen de sesgos que todos tenemos y casi nadie reconoce. Identifícalos.",
+  "objetivo": "Identificar los sesgos cognitivos y patrones emocionales que distorsionan las decisiones financieras personales.",
+  "xp": 700,
+  "instruccion": "Arrastra cada situación al sesgo que la explica.",
+  "categorias": [
     {
-      "id": "problema_solucion_s3",
-      "titulo": "💡 El Problema y la Solución",
-      "descripcion": "Si no resuelves un dolor real, no tienes un negocio.",
-      "campos": [
-        {
-          "id": "problema_detectado",
-          "label": "¿Qué problema grande quieres resolver?",
-          "type": "textarea",
-          "placeholder": "Ej: La falta de acceso a educación de calidad en zonas rurales...",
-          "requerido": true
-        },
-        {
-          "id": "solucion_propuesta",
-          "label": "¿Cómo lo resuelve tu producto?",
-          "type": "textarea",
-          "placeholder": "Ej: Una plataforma offline que funciona con energía solar...",
-          "requerido": true
-        }
-      ]
+      "id": "aversion",
+      "label": "AVERSIÓN A LA PÉRDIDA",
+      "emoji": "😰",
+      "color": "#ef4444"
     },
     {
-      "id": "mercado_modelo_s3",
-      "titulo": "📊 Mercado y Modelo de Negocio",
-      "descripcion": "¿A cuánta gente llegarás y cómo ganarás dinero?",
-      "campos": [
-        {
-          "id": "tam_mercado_s3",
-          "label": "Tamaño del mercado (Millones de personas)",
-          "type": "slider",
-          "min": 1,
-          "max": 1000,
-          "step": 10,
-          "default": 100,
-          "unit": "M"
-        },
-        {
-          "id": "modelo_ingresos_s3",
-          "label": "Modelo de Ingresos",
-          "type": "select",
-          "opciones": [
-            "Suscripción (SaaS)",
-            "Venta Directa",
-            "Publicidad",
-            "Freemium (Básico gratis, avanzado de pago)"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "confirmacion",
+      "label": "SESGO DE CONFIRMACIÓN",
+      "emoji": "🔍",
+      "color": "#8b5cf6"
     },
     {
-      "id": "ventaja_competitiva_s3",
-      "titulo": "🏰 Tu Fortaleza (Moat)",
-      "descripcion": "¿Por qué no te pueden copiar fácilmente?",
-      "campos": [
-        {
-          "id": "moat_negocio",
-          "label": "Tu ventaja competitiva",
-          "type": "textarea",
-          "placeholder": "Ej: Tenemos una patente única, efecto de red (muchos usuarios), o costos bajísimos...",
-          "requerido": true
-        }
-      ]
+      "id": "anclaje",
+      "label": "ANCLAJE",
+      "emoji": "⚓",
+      "color": "#3b82f6"
     },
     {
-      "id": "la_propuesta_shark",
-      "titulo": "🦈 La Oferta",
-      "descripcion": "¿Qué pides y qué das?",
-      "campos": [
-        {
-          "id": "capital_solicitado",
-          "label": "Inversión que buscas ($)",
-          "type": "text",
-          "placeholder": "Ej: $5,000,000",
-          "requerido": true
-        },
-        {
-          "id": "equity_ofrecido",
-          "label": "Porcentaje de la empresa que entregas (%)",
-          "type": "slider",
-          "min": 1,
-          "max": 49,
-          "step": 1,
-          "default": 10,
-          "unit": "%"
-        },
-        {
-          "id": "mercado_capturar_5pct",
-          "label": "Ingresos al Capturar 5% del Mercado",
-          "type": "calculated",
-          "formula": "Math.round(tam_mercado_s3 * 0.05)",
-          "unit": "$ anuales",
-          "ayuda": "Capturar el 5% de un mercado grande ya es una empresa exitosa"
-        },
-        {
-          "id": "equity_retenido_s3",
-          "label": "Equity que Conservas como Fundador",
-          "type": "calculated",
-          "formula": "Math.round(100 - equity_ofrecido)",
-          "unit": "% de tu empresa",
-          "ayuda": "Lo que te queda a ti y tu equipo después de esta ronda de financiamiento"
-        }
-      ]
+      "id": "presente",
+      "label": "SESGO DEL PRESENTE",
+      "emoji": "⏱️",
+      "color": "#f59e0b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "No vender una inversión que perdió 40% \"para no realizar la pérdida\"",
+      "emoji": "📉",
+      "categoria_correcta": "aversion",
+      "feedback": "La pérdida ya existe. Negarse a aceptarla suele empeorarla."
+    },
+    {
+      "id": "i2",
+      "label": "Buscar solo opiniones que apoyen la acción que ya compraste",
+      "emoji": "👍",
+      "categoria_correcta": "confirmacion",
+      "feedback": "Buscar confirmación en vez de verdad es lo que sostiene las malas inversiones."
+    },
+    {
+      "id": "i3",
+      "label": "\"Antes $4,000, hoy $1,999\": parece ganga por el primer precio visto",
+      "emoji": "🏷️",
+      "categoria_correcta": "anclaje",
+      "feedback": "El precio tachado es un ancla puesta a propósito para que juzgues mal."
+    },
+    {
+      "id": "i4",
+      "label": "Preferir $1,000 hoy antes que $1,500 en un año",
+      "emoji": "🍬",
+      "categoria_correcta": "presente",
+      "feedback": "Es el sesgo que explica por qué cuesta tanto ahorrar para el retiro."
+    },
+    {
+      "id": "i5",
+      "label": "Sentir el doble de dolor por perder $1,000 que de alegría por ganarlos",
+      "emoji": "⚖️",
+      "categoria_correcta": "aversion",
+      "feedback": "Está medido: perder duele aproximadamente el doble de lo que ganar alegra."
+    },
+    {
+      "id": "i6",
+      "label": "Ignorar las noticias malas sobre la empresa en la que invertiste",
+      "emoji": "🙈",
+      "categoria_correcta": "confirmacion",
+      "feedback": "La información incómoda es justo la que más había que leer."
+    },
+    {
+      "id": "i7",
+      "label": "Negociar tu sueldo a partir de la primera cifra que dijo el reclutador",
+      "emoji": "💬",
+      "categoria_correcta": "anclaje",
+      "feedback": "Por eso conviene llegar con tu propio rango investigado antes de la conversación."
+    },
+    {
+      "id": "i8",
+      "label": "Comprar a 18 MSI algo que no necesitas porque \"son pagos chiquitos\"",
+      "emoji": "💳",
+      "categoria_correcta": "presente",
+      "feedback": "El beneficio es hoy y el costo se reparte en un futuro que se siente irreal."
+    },
+    {
+      "id": "i9",
+      "label": "Vender todo en pánico cuando el mercado cae 30%",
+      "emoji": "😱",
+      "categoria_correcta": "aversion",
+      "feedback": "Convierte una caída temporal en una pérdida permanente."
+    },
+    {
+      "id": "i10",
+      "label": "Ver una casa de $5 millones primero y luego sentir barata la de $3.5",
+      "emoji": "🏠",
+      "categoria_correcta": "anclaje",
+      "feedback": "Los vendedores lo saben: siempre enseñan primero la opción cara."
+    },
+    {
+      "id": "i11",
+      "label": "Posponer abrir tu AFORE \"hasta que gane mejor\"",
+      "emoji": "⏳",
+      "categoria_correcta": "presente",
+      "feedback": "El costo de esperar no se siente hoy y es enorme dentro de 40 años."
+    },
+    {
+      "id": "i12",
+      "label": "Seguir solo a analistas que opinan lo mismo que tú",
+      "emoji": "📢",
+      "categoria_correcta": "confirmacion",
+      "feedback": "Buscar deliberadamente el argumento contrario es la mejor defensa que existe."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

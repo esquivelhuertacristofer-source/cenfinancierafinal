@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-2-10-B",
+  "unit_code": "P3-2-10",
+  "unit_title": "Abrir mi primera cuenta: requisitos y documentos",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Ventanilla",
+  "descripcion": "Responde rápido: ¿estás listo para abrir tu primera cuenta?",
+  "objetivo": "Consolidar requisitos, comparación y precauciones al abrir una cuenta",
+  "xp": 160,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué documento del menor se necesita?",
+      "respuesta_correcta": "Acta de nacimiento o CURP",
+      "incorrectas": [
+        "Boleta de calificaciones",
+        "Credencial de la escuela",
+        "Ninguno"
+      ],
+      "dato_extra": "Y una identificación oficial del adulto que lo acompaña."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Puede un menor abrir una cuenta solo?",
+      "respuesta_correcta": "No, va con un adulto responsable",
+      "incorrectas": [
+        "Sí, desde los 8",
+        "Sí, con permiso de la escuela",
+        "Sí, si trae dinero"
+      ],
+      "dato_extra": "El adulto queda como titular o cotitular según el producto."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Guardo $2,000 al 4%. Gano al año:",
+      "respuesta_correcta": "$80",
+      "incorrectas": [
+        "$800",
+        "$40",
+        "$200"
+      ],
+      "dato_extra": "Si la comisión anual es de $720, esa cuenta te hace perder dinero."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Existe la mejor cuenta para todos?",
+      "respuesta_correcta": "No, depende de cuánto y cómo se usa",
+      "incorrectas": [
+        "Sí, la del banco más grande",
+        "Sí, la que paga más interés",
+        "Sí, la más nueva"
+      ],
+      "dato_extra": "Con saldos pequeños, la comisión pesa más que el interés."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Debo firmar algo que no leí?",
+      "respuesta_correcta": "Nunca",
+      "incorrectas": [
+        "Sí, si hay prisa",
+        "Sí, si el ejecutivo es amable",
+        "Sí, si es corto"
+      ],
+      "dato_extra": "Es una regla que vale para toda la vida, no solo para bancos."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Qué pido siempre después de firmar?",
+      "respuesta_correcta": "Copia de todo lo firmado",
+      "incorrectas": [
+        "Un regalo",
+        "Nada",
+        "Otro contrato"
+      ],
+      "dato_extra": "Lo hablado no se puede probar; lo firmado y en tu poder, sí."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Si el ejecutivo evade mis preguntas:",
+      "respuesta_correcta": "Es información valiosa sobre ese banco",
+      "incorrectas": [
+        "Es normal",
+        "No significa nada",
+        "Hay que firmar rápido"
+      ],
+      "dato_extra": "Un ejecutivo serio responde las cinco preguntas sin molestarse."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-10-b-escena.webp"
+}

@@ -5,123 +5,147 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "El Código del CEO",
-  "descripcion": "Como CEO, eres responsable de la confianza de miles de personas. ¿Tomarás la decisión correcta incluso si cuesta dinero?",
-  "objetivo": "Reflexionar sobre la importancia de la transparencia y la ética en la dirección de empresas públicas",
-  "xp": 450,
-  "personaje_principal": "Alex (CEO)",
-  "contexto_inicial": "Tu empresa de coches eléctricos descubrió un fallo menor en las baterías. Reportarlo ahora bajará el precio de la acción un 10% hoy. No reportarlo podría causar un problema mayor en 1 año.",
-  "nodo_inicial": "dilema_transparencia",
+  "complejidad": "ALTO",
+  "titulo": "El Día que el Dólar Saltó",
+  "descripcion": "El dólar pasó de $17 a $22 en tres semanas. En casa de Camila nadie tiene dólares, y aun así la vida de todos acaba de cambiar. Su papá tiene un taller que importa refacciones; su tía manda dinero desde Chicago.",
+  "objetivo": "Analizar la dinámica del tipo de cambio y su impacto real sobre precios, importaciones, exportaciones, remesas y poder adquisitivo.",
+  "xp": 750,
+  "personaje_principal": "Camila",
+  "contexto_inicial": "El taller compra refacciones en dólares y cobra en pesos. La tía manda 400 dólares al mes desde Estados Unidos. La familia planeaba un viaje a Texas en dos meses.",
+  "nodo_inicial": "la_noticia",
   "nodos": {
-    "dilema_transparencia": {
-      "id": "dilema_transparencia",
-      "texto": "¿Qué camino tomarás como líder de la empresa?",
+    "la_noticia": {
+      "id": "la_noticia",
+      "texto": "El papá dice: \"A nosotros no nos afecta, nosotros no tenemos dólares\". ¿Qué le explica Camila?",
       "opciones": [
         {
-          "id": "reportar_todo",
-          "texto": "Reportar de inmediato y arreglar el fallo (Transparencia)",
-          "siguiente_nodo": "caida_temporal",
-          "consecuencia": "El mercado reaccionó con miedo y la acción bajó hoy, pero los inversionistas valoran tu honestidad.",
-          "xp_bonus": 300,
+          "id": "importaciones",
+          "texto": "\"Sí nos afecta: tus refacciones son importadas y ahora cuestan 29% más en pesos\"",
+          "siguiente_nodo": "el_taller",
+          "consecuencia": "El papá revisa la lista de precios de su proveedor y palidece.",
+          "xp_bonus": 250,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "ocultar_fallo",
-          "texto": "Esperar a arreglarlo en secreto (Ocultar)",
-          "siguiente_nodo": "escandalo_futuro",
-          "consecuencia": "La acción se mantuvo estable por un tiempo, pero alguien filtró la información a la prensa.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "nada",
+          "texto": "\"Tienes razón, esto es cosa de los que viajan\"",
+          "siguiente_nodo": "el_taller",
+          "consecuencia": "Dos semanas después llega la factura del proveedor.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -18000
         }
       ]
     },
-    "caida_temporal": {
-      "id": "caida_temporal",
-      "texto": "Unos meses después, el mercado ve que el problema se arregló rápido. Grandes bancos dicen que 'Alex es un CEO confiable' y la acción sube a niveles récord.",
+    "el_taller": {
+      "id": "el_taller",
+      "texto": "Las refacciones que costaban $3,400 ahora cuestan $4,400. El papá tiene tres opciones para el taller.",
       "opciones": [
         {
-          "id": "final_exito_etico",
-          "texto": "Ver que la integridad paga a largo plazo",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Te has convertido en un referente de ética en los negocios.",
+          "id": "subir_precio",
+          "texto": "Subir sus precios lo necesario y explicárselo a los clientes",
+          "siguiente_nodo": "las_remesas",
+          "consecuencia": "Pierde algunos clientes pero el taller sigue siendo rentable.",
           "xp_bonus": 200,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": -8000
         },
         {
-          "id": "aprovechar_para_beneficio",
-          "texto": "Aprovechar la confusión para hacer operaciones personales favorables",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Te detectaron por \"insider trading\". La SEC te investigó durante años.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -30
+          "id": "absorber",
+          "texto": "No subir precios y absorber el aumento para no perder clientes",
+          "siguiente_nodo": "final_quiebra",
+          "consecuencia": "Cada reparación empieza a dejar pérdida.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -95000
+        },
+        {
+          "id": "nacional",
+          "texto": "Buscar proveedores nacionales de refacciones equivalentes",
+          "siguiente_nodo": "las_remesas",
+          "consecuencia": "Le toma tiempo, pero encuentra dos y reduce su exposición al dólar.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -3000
         }
       ]
     },
-    "escandalo_futuro": {
-      "id": "escandalo_futuro",
-      "texto": "¡Desastre! La empresa es demandada por mentir. La acción cae un 50% y eres despedido. Nadie volverá a confiar en ti para dirigir una empresa.",
+    "las_remesas": {
+      "id": "las_remesas",
+      "texto": "La tía manda sus 400 dólares de siempre. Antes se convertían en $6,800; ahora en $8,800. Para ella no cambió nada; para la familia, sí.",
       "opciones": [
         {
-          "id": "final_fallo_etico",
-          "texto": "Aprender que la mentira destruye el valor",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Perdiste tu carrera por intentar salvar un resultado trimestral.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "entender",
+          "texto": "Entender por qué: la devaluación abarata a México para quien gana en dólares",
+          "siguiente_nodo": "el_viaje",
+          "consecuencia": "Camila comprende que el mismo movimiento perjudica a unos y beneficia a otros.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 24000
         },
         {
-          "id": "culpar_a_otros",
-          "texto": "Culpar a otros directivos y negar toda responsabilidad pública",
-          "siguiente_nodo": "final_malo",
-          "consecuencia": "Los documentos internos te delataron. Enfrentaste cargos penales.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "suerte",
+          "texto": "Pensar que fue suerte de la tía",
+          "siguiente_nodo": "el_viaje",
+          "consecuencia": "No es suerte: es aritmética del tipo de cambio.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 24000
         }
       ]
     },
-    "final_confianza": {
-      "id": "final_confianza",
-      "texto": "¡Felicidades! Entendiste que en la bolsa, la moneda de cambio más importante no es el dólar, sino la confianza.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "Un buen líder cuida el valor de la empresa cuidando su propia palabra."
+    "el_viaje": {
+      "id": "el_viaje",
+      "texto": "Queda el viaje a Texas. El presupuesto era $30,000 pesos, que antes eran 1,760 dólares y ahora son 1,360. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "posponer",
+          "texto": "Posponerlo y usar ese dinero en el taller, que es lo urgente",
+          "siguiente_nodo": "final_ajuste",
+          "consecuencia": "Priorizan la fuente de ingreso sobre el gusto.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 30000
+        },
+        {
+          "id": "ir_igual",
+          "texto": "Ir de todos modos y ajustar allá",
+          "siguiente_nodo": "final_caro",
+          "consecuencia": "El viaje resulta 29% más caro de lo planeado.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -8700
+        },
+        {
+          "id": "nacional_viaje",
+          "texto": "Cambiar el destino a uno dentro de México",
+          "siguiente_nodo": "final_ajuste",
+          "consecuencia": "Mismo presupuesto, sin exposición al dólar, y el dinero se queda en el país.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    "final_descredito": {
-      "id": "final_descredito",
-      "texto": "Aprendiste de la forma más dura. El gobierno corporativo existe para evitar que una persona dañe a todos los socios.",
+    "final_ajuste": {
+      "id": "final_ajuste",
       "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "La ética no es opcional en las finanzas; es la base del sistema."
+      "tipo_final": "excelente",
+      "texto": "El taller sobrevivió con proveedores mixtos y precios ajustados. Las remesas de la tía rindieron más. El viaje se hizo en México. Un año después el dólar volvió a $18 y la familia estaba más fuerte que antes.",
+      "reflexion_final": "El tipo de cambio no es un tema de viajeros: es el precio que conecta a México con el mundo. Cuando el dólar sube, lo importado se encarece (gasolina, electrónicos, insumos) y las exportaciones y remesas se benefician. Nadie queda fuera; lo que cambia es de qué lado te toca."
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+    "final_caro": {
+      "id": "final_caro",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "El viaje costó $38,700 en vez de $30,000. Alcanzó, pero sacrificaron el colchón que el taller iba a necesitar el mes siguiente.",
+      "reflexion_final": "Cuando el tipo de cambio se mueve fuerte, todo lo que se paga en dólares cambia de precio de un día para otro: viajes, suscripciones, electrónicos. Revisar el presupuesto antes de comprometerlo es la reacción correcta."
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+    "final_quiebra": {
+      "id": "final_quiebra",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "El taller aguantó cuatro meses vendiendo bajo costo. Cuando el papá revisó las cuentas, había perdido $95,000 y tuvo que cerrar dos meses para reorganizarse.",
+      "reflexion_final": "Absorber un aumento de costos sin subir precios es una decisión amable que quiebra negocios. Si tus insumos suben 29%, o suben tus precios, o cambias de proveedor, o cierras: no hay cuarta opción."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

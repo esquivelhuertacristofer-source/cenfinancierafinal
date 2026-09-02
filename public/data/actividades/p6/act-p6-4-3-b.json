@@ -5,122 +5,91 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "Gigantes de la Industria",
-  "descripcion": "¿Sabías que muchas de tus marcas favoritas tienen el mismo dueño? ¡Descubre los secretos de las compras más grandes del mundo!",
-  "objetivo": "Identificar casos de éxito de M&A y comprender las motivaciones estratégicas detrás de la consolidación empresarial",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "El Arte del Sí",
+  "descripcion": "Contra el reloj: los principios que separan a un vendedor que insiste de uno que convence.",
+  "objetivo": "Consolidar las técnicas de escucha activa, manejo de objeciones y creación de valor mutuo en una negociación.",
+  "xp": 500,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "ma1",
-      "pregunta": "¿Qué significa 'Fusión' en los negocios?",
-      "respuesta_correcta": "Cuando dos empresas de tamaño similar deciden unirse para crear una nueva empresa más fuerte",
+      "id": "t1",
+      "pregunta": "En una buena venta, ¿quién habla más?",
+      "respuesta_correcta": "El cliente",
       "incorrectas": [
-        "Cuando una empresa quiebra",
-        "Cuando el dueño renuncia",
-        "Cuando cambian de nombre"
+        "El vendedor",
+        "Los dos igual",
+        "Nadie"
       ],
-      "dato_extra": "La fusión busca que ambas empresas ganen al compartir sus secretos y recursos."
+      "dato_extra": "Escuchar el doble de lo que hablas es la técnica más simple y más ignorada."
     },
     {
-      "id": "ma2",
-      "pregunta": "¿Por qué Disney compró Marvel y Pixar?",
-      "respuesta_correcta": "Para tener mejores personajes e historias y atraer a más público",
+      "id": "t2",
+      "pregunta": "Cuando un cliente objeta el precio, casi siempre significa…",
+      "respuesta_correcta": "Que todavía no ve suficiente valor",
       "incorrectas": [
-        "Porque le sobraba el dinero",
-        "Para cerrar la competencia",
-        "Porque no sabía hacer películas"
+        "Que no tiene dinero",
+        "Que ya dijo que no",
+        "Que es grosero"
       ],
-      "dato_extra": "Al comprar estas empresas, Disney se volvió el dueño de los superhéroes más famosos."
+      "dato_extra": "La respuesta no es bajar el precio, es subir el valor percibido."
     },
     {
-      "id": "ma3",
-      "pregunta": "¿Qué gran empresa compró a Instagram y WhatsApp?",
-      "respuesta_correcta": "Facebook (ahora Meta)",
+      "id": "t3",
+      "pregunta": "Competir solo por precio es peligroso porque…",
+      "respuesta_correcta": "Siempre habrá alguien dispuesto a cobrar menos",
       "incorrectas": [
-        "Google",
-        "Apple",
-        "Nintendo"
+        "Es ilegal",
+        "A los clientes no les importa",
+        "Es muy difícil"
       ],
-      "dato_extra": "Meta compró estas apps para dominar el mundo de las redes sociales."
+      "dato_extra": "La guerra de precios la gana quien más aguanta perdiendo, no quien mejor produce."
     },
     {
-      "id": "ma4",
-      "pregunta": "¿Qué es la 'Adquisición'?",
-      "respuesta_correcta": "Cuando una empresa más grande compra a una más pequeña para absorberla",
+      "id": "t4",
+      "pregunta": "Una negociación \"ganar-ganar\" significa que…",
+      "respuesta_correcta": "Las dos partes salen mejor de lo que entraron",
       "incorrectas": [
-        "Cuando una empresa pide un préstamo",
-        "Cuando se cambia de oficina",
-        "Cuando se venden dulces"
+        "Ganas tú y pierde el otro",
+        "Nadie gana",
+        "Se parte todo a la mitad"
       ],
-      "dato_extra": "Las empresas grandes compran a las pequeñas para obtener su tecnología o sus clientes."
+      "dato_extra": "Son las únicas que producen clientes que regresan y te recomiendan."
     },
     {
-      "id": "ma5",
-      "pregunta": "¿Por qué Google compró Android si ellos no hacían celulares?",
-      "respuesta_correcta": "Porque querían que su buscador y apps estuvieran en todos los celulares del mundo",
+      "id": "t5",
+      "pregunta": "Un pedido de prueba pequeño sirve para…",
+      "respuesta_correcta": "Bajarle el riesgo al cliente y facilitarle decir que sí",
       "incorrectas": [
-        "Porque les gustaba el robot verde",
-        "Fue un error",
-        "Para vender cables"
+        "Ganar menos",
+        "Perder tiempo",
+        "Presionar"
       ],
-      "dato_extra": "Hoy Android es el sistema operativo más usado del planeta gracias a esa compra."
+      "dato_extra": "Casi nadie rechaza probar algo pequeño; casi todos dudan de comprometerse a lo grande."
     },
     {
-      "id": "ma6",
-      "pregunta": "¿Qué es una 'Sinergia'?",
-      "respuesta_correcta": "Cuando el resultado de dos empresas unidas es mayor que si trabajaran por separado",
+      "id": "t6",
+      "pregunta": "La mejor pregunta para abrir una venta es…",
+      "respuesta_correcta": "\"¿Qué es lo que más le cuesta trabajo hoy?\"",
       "incorrectas": [
-        "Un tipo de energía solar",
-        "Una pelea entre socios",
-        "Un contrato de renta"
+        "\"¿Cuánto quiere gastar?\"",
+        "\"¿Le gusta mi producto?\"",
+        "\"¿Me compra?\""
       ],
-      "dato_extra": "Es el 'ingrediente secreto' que hace que las fusiones valgan la pena."
+      "dato_extra": "Descubre el problema real, que casi nunca es el que tú imaginabas."
     },
     {
-      "id": "ma7",
-      "pregunta": "¿Cuál es un riesgo de que una empresa compre a otra?",
-      "respuesta_correcta": "Que las culturas de los empleados sean muy distintas y no se lleven bien",
+      "id": "t7",
+      "pregunta": "Presionar con \"necesito su respuesta hoy\" normalmente…",
+      "respuesta_correcta": "Genera desconfianza y aleja al cliente",
       "incorrectas": [
-        "Que tengan demasiado dinero",
-        "Que los clientes se pongan felices",
-        "Que el logo sea muy bonito"
+        "Cierra más ventas",
+        "Es lo profesional",
+        "Da seguridad"
       ],
-      "dato_extra": "Si las personas no se entienden, la fusión puede fallar."
-    },
-    {
-      "id": "ma8",
-      "pregunta": "¿Qué empresa compró a la marca de audífonos Beats?",
-      "respuesta_correcta": "Apple",
-      "incorrectas": [
-        "Sony",
-        "Samsung",
-        "Microsoft"
-      ],
-      "dato_extra": "Apple quería la tecnología de música y el estilo de la marca Beats."
-    },
-    {
-      "id": "ma9",
-      "pregunta": "¿Qué pasa con la competencia cuando muchas empresas se unen?",
-      "respuesta_correcta": "Puede disminuir, por eso existen leyes para evitar que una sola empresa controle todo (Monopolio)",
-      "incorrectas": [
-        "La competencia siempre sube",
-        "La competencia desaparece y es bueno",
-        "Nada"
-      ],
-      "dato_extra": "Los gobiernos vigilan las fusiones para proteger a los consumidores."
-    },
-    {
-      "id": "ma10",
-      "pregunta": "¿Cuál es la lección principal de M&A?",
-      "respuesta_correcta": "Que unidos somos más fuertes si compartimos una visión y valores comunes",
-      "incorrectas": [
-        "Que hay que comprar todo",
-        "Que ser grande es lo único que importa",
-        "Que el dinero lo compra todo"
-      ],
-      "dato_extra": "¡Felicidades! Ahora entiendes cómo se construyen los imperios modernos."
+      "dato_extra": "La urgencia artificial funciona con desconocidos una vez; destruye relaciones de largo plazo."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

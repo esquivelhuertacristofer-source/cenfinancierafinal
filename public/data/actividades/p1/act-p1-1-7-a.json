@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-1-7-A",
+  "unit_code": "P1-1-7",
+  "unit_title": "Cuidar el dinero: por qué no se rompe ni se moja",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Día que Ceny Casi Pierde su Ahorro",
+  "descripcion": "Ceny juntó $85 para su balón. Hoy tiene que llevarlos a la escuela. Cada decisión puede salvarlos o perderlos.",
+  "objetivo": "Aplicar criterios de cuidado del dinero en situaciones cotidianas de un niño de primaria",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny ahorró $85 en monedas durante tres meses. Hoy los lleva a la escuela porque después de clases irá con su mamá a comprar el balón. Todo depende de cómo los cuide durante el día.",
+  "nodo_inicial": "salida",
+  "nodos": {
+    "salida": {
+      "id": "salida",
+      "texto": "Son las 7 de la mañana. Ceny tiene sus $85 en monedas sobre la cama. ¿Dónde los guarda para el camino?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "En el monedero con cierre, dentro de la mochila",
+          "siguiente_nodo": "recreo",
+          "consecuencia": "Cerrado y en un solo lugar. Las monedas ni siquiera suenan al caminar.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Sueltas en el bolsillo del pantalón",
+          "siguiente_nodo": "perdida_camino",
+          "consecuencia": "Las monedas se mueven con cada paso. El bolsillo tiene un agujerito.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -15
+        },
+        {
+          "id": "o3",
+          "texto": "En la mano, para no soltarlos",
+          "siguiente_nodo": "perdida_camino",
+          "consecuencia": "Con las manos ocupadas, Ceny no puede ni ajustarse la mochila.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -10
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-salida.webp"
+    },
+    "perdida_camino": {
+      "id": "perdida_camino",
+      "texto": "A media cuadra Ceny escucha caer algo. Se agacha y encuentra dos monedas de $5, pero no sabe si cayeron más antes. Cuenta: le faltan $15. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Guardar lo que queda en el monedero de la mochila",
+          "siguiente_nodo": "recreo",
+          "consecuencia": "Aprendió a media cuadra. Los $70 restantes ya están seguros.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir con el resto en el bolsillo, ya pasó lo peor",
+          "siguiente_nodo": "recreo_pobre",
+          "consecuencia": "El agujero sigue ahí. El problema no era la mala suerte.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-perdida_camino.webp"
+    },
+    "recreo": {
+      "id": "recreo",
+      "texto": "Llega el recreo. Un compañero le pide a Ceny que le enseñe cuánto trae. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Decirle que sí, pero sin sacar el dinero de la mochila",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Ceny puede platicar de su meta sin exponer sus monedas en el patio.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Sacar todas las monedas y contarlas en la cancha",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Se le cae una moneda entre el pasto y no la encuentra.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -10
+        },
+        {
+          "id": "o3",
+          "texto": "Dejarle el monedero a su compañero mientras va por agua",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El compañero no hizo nada malo, pero Ceny dejó de ser el responsable de su dinero.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -5
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-recreo.webp"
+    },
+    "recreo_pobre": {
+      "id": "recreo_pobre",
+      "texto": "En el recreo Ceny corre a la cancha. Al sentarse, siente el bolsillo vacío. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Avisar a la maestra y buscar con calma",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Recupera algunas monedas del pasto. No todo se salva, pero pidió ayuda a tiempo.",
+          "xp_bonus": 20,
+          "es_optima": true,
+          "impacto_patrimonio": -10
+        },
+        {
+          "id": "o2",
+          "texto": "No decir nada y esperar que aparezcan",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Nadie busca lo que nadie sabe que se perdió.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-recreo_pobre.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "A la salida, Ceny abre su monedero frente a su mamá: los $85 completos. Esa tarde compra su balón.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny no tuvo suerte: tuvo método. Guardó en un lugar cerrado, no cambió de sitio y no expuso su dinero. Tres meses de ahorro se protegen con tres decisiones pequeñas.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny llega a la salida con $75. Le alcanza para el balón, pero tuvo que pedir prestados los $10 que faltaban.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Nada grave pasó, pero perder $10 por descuido significa diez días de ahorro tirados. El dinero perdido duele igual que el dinero mal gastado.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Al llegar a casa, Ceny cuenta $55. Perdió $30 en el camino y en el patio. El balón tendrá que esperar un mes más.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Un mes más de espera por no usar un monedero. La lección más cara de Ceny no fue el dinero, fue el tiempo que tendrá que volver a ahorrar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-1-7-a-portada.webp"
+}

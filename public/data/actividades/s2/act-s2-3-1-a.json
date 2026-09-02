@@ -4,142 +4,136 @@
   "unit_title": "La Bolsa Mexicana de Valores (BMV): cómo invertir",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "MEDIO",
-  "titulo": "La Deuda que Construye",
-  "descripcion": "No todas las deudas son iguales. Aprende a usar el dinero de otros para multiplicar tu riqueza, no para restarla.",
-  "objetivo": "Diferenciar entre deuda productiva (que genera ingresos) y deuda de consumo (que genera gastos)",
-  "xp": 500,
-  "descripcion_formula": "Calculamos la Utilidad Neta después del crédito. Utilidad = (IncrementoIngresos - PagoIntereses).",
-  "inputs": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Tu Primera Orden en la Bolsa",
+  "descripcion": "Invertir en la Bolsa no es adivinar: es un procedimiento con pasos concretos. Vas a recorrerlos todos, desde elegir casa de bolsa hasta calcular cuánto te cuesta realmente cada operación.",
+  "objetivo": "Comprender el proceso para adquirir acciones de empresas mexicanas a través de casas de bolsa reguladas y el efecto de comisiones e impuestos.",
+  "xp": 750,
+  "output_type": "plan_inversion_bmv",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "monto_credito_s2",
-      "label": "Monto del Préstamo ($)",
-      "type": "slider",
-      "min": 5000,
-      "max": 50000,
-      "step": 5000,
-      "default": 20000,
-      "unit": "$"
-    },
-    {
-      "id": "tipo_uso_credito",
-      "label": "¿En qué usarás el dinero?",
-      "type": "select",
-      "default": "Equipo de Trabajo (Inversión)",
-      "opciones": [
-        "Equipo de Trabajo (Inversión)",
-        "Vacaciones/Ropa (Consumo)"
+      "id": "requisitos",
+      "titulo": "1️⃣ Antes de invertir un peso",
+      "descripcion": "Estos requisitos no son burocracia: son la diferencia entre invertir y apostar.",
+      "campos": [
+        {
+          "id": "fondo_emergencia",
+          "label": "¿Cuántos meses de gastos tienes ahorrados?",
+          "type": "number",
+          "placeholder": "Ej: 6",
+          "requerido": true,
+          "ayuda": "Sin fondo de emergencia, la primera urgencia te obliga a vender en el peor momento."
+        },
+        {
+          "id": "deuda_cara",
+          "label": "¿Cuánta deuda con tasa mayor al 20% tienes? ($)",
+          "type": "number",
+          "placeholder": "Ej: 0",
+          "requerido": true,
+          "ayuda": "Pagar una deuda al 70% es un \"rendimiento garantizado\" del 70%. Ninguna acción compite con eso."
+        },
+        {
+          "id": "horizonte",
+          "label": "¿En cuántos años usarás este dinero?",
+          "type": "number",
+          "placeholder": "Ej: 10",
+          "requerido": true,
+          "ayuda": "Menos de 5 años en renta variable es exponerte a vender en una caída."
+        }
       ]
     },
     {
-      "id": "tasa_interes_credito",
-      "label": "Tasa de Interés Anual (%)",
-      "type": "slider",
-      "min": 10,
-      "max": 60,
-      "step": 5,
-      "default": 25,
-      "unit": "%"
+      "id": "cuenta",
+      "titulo": "2️⃣ La casa de bolsa",
+      "descripcion": "Solo una casa de bolsa o institución autorizada por la CNBV puede ejecutar tus órdenes. Verifícalo siempre en el padrón oficial.",
+      "campos": [
+        {
+          "id": "monto_inicial",
+          "label": "Monto con el que empezarías ($)",
+          "type": "number",
+          "placeholder": "Ej: 20000",
+          "requerido": true
+        },
+        {
+          "id": "comision_pct",
+          "label": "Comisión por operación (%)",
+          "type": "number",
+          "placeholder": "Ej: 0.25",
+          "requerido": true,
+          "ayuda": "Varía mucho entre instituciones. En operaciones pequeñas y frecuentes, se come el rendimiento."
+        },
+        {
+          "id": "costo_operacion",
+          "label": "Costo de una compra",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * comision_pct / 100)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+      "id": "orden",
+      "titulo": "3️⃣ Tu orden",
+      "descripcion": "Una orden necesita tres datos: qué compras, cuántos títulos y a qué precio máximo.",
+      "campos": [
+        {
+          "id": "emisora",
+          "label": "Emisora que te interesa (clave de pizarra)",
+          "type": "text",
+          "placeholder": "Ej: WALMEX",
+          "requerido": true
+        },
+        {
+          "id": "precio_accion",
+          "label": "Precio por acción ($)",
+          "type": "number",
+          "placeholder": "Ej: 62",
+          "requerido": true
+        },
+        {
+          "id": "titulos",
+          "label": "Títulos que podrías comprar",
+          "type": "calculated",
+          "formula": "Math.floor((monto_inicial - monto_inicial * comision_pct / 100) / Math.max(1, precio_accion))",
+          "unit": "títulos",
+          "requerido": false
+        }
+      ]
+    },
+    {
+      "id": "realidad",
+      "titulo": "4️⃣ El costo real de operar seguido",
+      "descripcion": "Cada compra y cada venta cuesta. Operar mucho es la forma más silenciosa de perder dinero.",
+      "campos": [
+        {
+          "id": "operaciones_ano",
+          "label": "¿Cuántas operaciones harías al año?",
+          "type": "number",
+          "placeholder": "Ej: 4",
+          "requerido": true
+        },
+        {
+          "id": "costo_anual",
+          "label": "Costo anual en comisiones",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * comision_pct / 100 * operaciones_ano)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "lastre",
+          "label": "Lo que restan las comisiones a tu rendimiento anual",
+          "type": "calculated",
+          "formula": "Math.round(comision_pct * operaciones_ano * 100) / 100",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Si operas 20 veces al año al 0.25%, empiezas cada año perdiendo 5%. Comprar y sostener casi siempre gana."
+        }
+      ]
     }
   ],
-  "formula": "tipo_uso_credito === 'Equipo de Trabajo (Inversión)' ? (monto_credito_s2 * 0.5) - (monto_credito_s2 * (tasa_interes_credito/100)) : 0 - (monto_credito_s2 * (tasa_interes_credito/100))",
-  "output_label": "Impacto en tu Riqueza tras 1 año",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "bar",
-  "escenarios": [
-    {
-      "condicion": "resultado > 0",
-      "mensaje": "🚀 ¡Deuda Inteligente! Estás usando el dinero del banco para producir más. Lo que ganas con tu equipo es mayor a lo que pagas de interés. Esto es progreso.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "tipo_uso_credito === 'Vacaciones/Ropa (Consumo)'",
-      "mensaje": "💸 ¡Trampa de Consumo! Pediste prestado para algo que no produce dinero. Ahora tienes menos riqueza y una deuda que pagar. Estás trabajando para el banco.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 La Deuda Buena es la que alguien más paga por ti (como un inquilino o tus clientes). La Deuda Mala es la que tú pagas con tu sudor.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Por qué las acciones de una empresa pueden subir aunque la economía en general vaya mal? ¿Qué diferencia hay entre comprar acciones individuales vs un ETF del IPC?",
-  "comparativa_espera": "El historial crediticio en México se construye en años pero se destruye en semanas. Un pago tardío puede bajar tu score 50-100 puntos. Un buen score (750+) puede ahorrarte hasta 3% anual en tasas hipotecarias — cientos de miles de pesos en una hipoteca a 20 años.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "comparativa_optima",
-      "label": "Con Estrategia Óptima",
-      "formula": "Math.round(resultado_principal * 1.25)",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Si aplicas la estrategia más eficiente disponible"
-    },
-    {
-      "id": "costo_deuda",
-      "label": "Costo Real de la Deuda",
-      "formula": "Math.round(resultado_principal * 0.15)",
-      "prefix": "$",
-      "suffix": " de costo financiero",
-      "descripcion": "El precio real de usar dinero prestado"
-    },
-    {
-      "id": "tiempo_liquidacion",
-      "label": "Tiempo Estimado de Liquidación",
-      "formula": "Math.ceil(resultado_principal / (resultado_principal * 0.08))",
-      "prefix": "",
-      "suffix": " meses estimados",
-      "descripcion": "Meses para liquidar al ritmo actual"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "comparativa_optima",
-      "label": "Con Estrategia Óptima",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

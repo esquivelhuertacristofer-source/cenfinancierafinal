@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-2-8-B",
+  "unit_code": "P1-2-8",
+  "unit_title": "Los anuncios quieren que yo compre",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cazador de Trucos",
+  "descripcion": "Identifica el truco detrás de cada frase publicitaria.",
+  "objetivo": "Verificar el reconocimiento de las técnicas de persuasión dirigidas a niños",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "\"¡Solo esta semana!\" es el truco de:",
+      "opciones": [
+        "La pertenencia",
+        "La exageración",
+        "La prisa",
+        "El precio"
+      ],
+      "correcta": 2,
+      "explicacion": "La prisa existe para que no tengas tiempo de pensarlo. Casi siempre es inventada."
+    },
+    {
+      "id": "q2",
+      "texto": "\"Todos tus amigos ya lo tienen\" es el truco de:",
+      "opciones": [
+        "La prisa",
+        "La foto",
+        "El regalo",
+        "La pertenencia"
+      ],
+      "correcta": 3,
+      "explicacion": "Te hacen sentir que te quedas fuera del grupo. Es de los que más funcionan a tu edad."
+    },
+    {
+      "id": "q3",
+      "texto": "En el comercial el carrito vuela; en la caja no. Eso es:",
+      "opciones": [
+        "Exageración publicitaria",
+        "Un error de fábrica",
+        "Mala suerte",
+        "Un modelo distinto"
+      ],
+      "correcta": 0,
+      "explicacion": "La exageración no es mentira total, pero te muestra algo que el producto no hace."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Por qué el producto real se ve peor que la foto?",
+      "opciones": [
+        "Porque viene roto",
+        "Porque la foto tiene luces, fotógrafo y retoque",
+        "Porque cambia de color",
+        "Porque es de otra marca"
+      ],
+      "correcta": 1,
+      "explicacion": "No te engañaron con el objeto: te engañaron con la foto."
+    },
+    {
+      "id": "q5",
+      "texto": "La mejor defensa contra un anuncio es:",
+      "opciones": [
+        "Comprarlo rápido",
+        "Verlo muchas veces",
+        "Esperar dos o tres días",
+        "Pedirlo llorando"
+      ],
+      "correcta": 2,
+      "explicacion": "Si a los tres días ya no lo quieres, el deseo era del anuncio y no tuyo."
+    },
+    {
+      "id": "q6",
+      "texto": "Un anuncio te dice:",
+      "opciones": [
+        "Lo bueno y lo malo",
+        "Solo el precio",
+        "La verdad completa",
+        "Solo lo bueno"
+      ],
+      "correcta": 3,
+      "explicacion": "Informar es contar las dos partes. Convencer es enseñar solo la mitad bonita."
+    },
+    {
+      "id": "q7",
+      "texto": "Los cuatro trucos buscan que tú:",
+      "opciones": [
+        "Sientas rápido y pienses poco",
+        "Compares precios",
+        "Ahorres más",
+        "Leas la etiqueta"
+      ],
+      "correcta": 0,
+      "explicacion": "Toda la publicidad apunta a la emoción, porque la emoción decide más rápido que la razón."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Significa esto que todos los productos anunciados son malos?",
+      "opciones": [
+        "Sí, todos",
+        "No: significa que el anuncio no es la fuente para decidir",
+        "Sí, si salen en la tele",
+        "No, todos son buenos"
+      ],
+      "correcta": 1,
+      "explicacion": "Hay productos excelentes con anuncios tramposos. Decide por el producto, no por el comercial."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-8-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-8-b-escena.webp"
+}

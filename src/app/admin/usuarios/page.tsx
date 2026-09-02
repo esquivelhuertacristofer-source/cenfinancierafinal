@@ -8,13 +8,23 @@ import {
   Users, Upload, CheckCircle2, AlertCircle, Loader2,
   Download, ClipboardList, Trash2, ShieldAlert, LogOut,
   PlusCircle, ChevronRight, FileSpreadsheet, X, Eye,
+  Search, KeyRound, Wrench, Link2, Link2Off, RotateCcw, UserCog,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase-browser";
 import {
   onboardInstitutionalUsers,
   createGrupo,
   getGrupos,
+  getEscuelas,
+  type EscuelaStats,
 } from "../../actions/adminActions";
+import {
+  searchUsers,
+  resetUserPassword,
+  repairUserProfile,
+  type AdminUserSearchResult,
+  type ProfileRole,
+} from "../../actions/adminUserActions";
 import { logoutAction } from "../../actions/authActions";
 import jsPDF from "jspdf";
 import Papa from "papaparse";
@@ -28,6 +38,13 @@ interface ImportRow {
   error?: string;
 }
 
+const ROLE_LABELS: Record<string, string> = {
+  student: "Alumno",
+  teacher: "Profesor",
+  admin: "Administrador",
+  super_admin: "Super Admin",
+};
+
 const GRADOS = ["P1","P2","P3","P4","P5","P6","S1","S2","S3"];
 const MAX_IMPORT_ROWS = 200;
 
@@ -38,6 +55,30 @@ export default function AdminUsuariosPage() {
   const [checkError, setCheckError]     = useState(false);
   const [authRetryKey, setAuthRetryKey] = useState(0);
   const [adminName,  setAdminName]      = useState("");
+
+  // Tabs
+  const [activeTab, setActiveTab] = useState<"crear" | "reparar">("crear");
+
+  // Reparar cuenta — búsqueda
+  const [escuelasList,      setEscuelasList]      = useState<EscuelaStats[]>([]);
+  const [escuelasListError, setEscuelasListError] = useState(false);
+  const [searchTerm,        setSearchTerm]        = useState("");
+  const [searching,         setSearching]         = useState(false);
+  const [searchError,       setSearchError]       = useState<string | null>(null);
+  const [searchResults,     setSearchResults]     = useState<AdminUserSearchResult[]>([]);
+  const [selectedUser,      setSelectedUser]      = useState<AdminUserSearchResult | null>(null);
+
+  // Reparar cuenta — formulario de corrección
+  const [repairEscuelaId, setRepairEscuelaId] = useState("");
+  const [repairRole,      setRepairRole]      = useState<ProfileRole>("student");
+  const [repairGroupId,   setRepairGroupId]   = useState("");
+  const [repairSaving,    setRepairSaving]    = useState(false);
+  const [repairMessage,   setRepairMessage]   = useState<{ type: "success" | "error"; text: string } | null>(null);
+
+  // Reparar cuenta — restablecer contraseña
+  const [newPasswordValue,   setNewPasswordValue]   = useState("");
+  const [resettingPassword,  setResettingPassword]  = useState(false);
+  const [resetMessage,       setResetMessage]       = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   // Form state
   const [namesText,       setNamesText]       = useState("");
@@ -67,6 +108,16 @@ export default function AdminUsuariosPage() {
     }
   }, []);
 
+  const refreshEscuelasList = useCallback(async () => {
+    try {
+      const data = await getEscuelas();
+      setEscuelasList(data);
+      setEscuelasListError(false);
+    } catch {
+      setEscuelasListError(true);
+    }
+  }, []);
+
   // ── Guardia de seguridad ──────────────────────────────────────────────────
   useEffect(() => {
     (async () => {
@@ -89,12 +140,13 @@ export default function AdminUsuariosPage() {
         setChecking(false);
 
         await refreshGrupos();
+        await refreshEscuelasList();
       } catch {
         setCheckError(true);
         setChecking(false);
       }
     })();
-  }, [router, authRetryKey, refreshGrupos]);
+  }, [router, authRetryKey, refreshGrupos, refreshEscuelasList]);
 
   const handleCreateGroup = async () => {
     if (!newGroupName.trim()) return;
@@ -107,6 +159,110 @@ export default function AdminUsuariosPage() {
       alert(`Error creando grupo: ${e.message}`);
     } finally {
       setCreatingGroup(false);
+    }
+  };
+
+  // ── Reparar Cuenta: búsqueda y selección ────────────────────────────────────
+
+  const handleSearch = async (e?: React.FormEvent) => {
+    e?.preventDefault();
+    const term = searchTerm.trim();
+    if (term.length < 2) {
+      setSearchError("Escribe al menos 2 caracteres para buscar.");
+      return;
+    }
+    setSearching(true);
+    setSearchError(null);
+    try {
+      const res = await searchUsers(term);
+      setSearchResults(res);
+      if (res.length === 0) setSearchError("No se encontraron usuarios con ese criterio.");
+    } catch (e: any) {
+      setSearchResults([]);
+      setSearchError(e.message);
+    } finally {
+      setSearching(false);
+    }
+  };
+
+  const handleSelectUser = (user: AdminUserSearchResult) => {
+    setSelectedUser(user);
+    setRepairEscuelaId(user.escuela_id ?? "");
+    setRepairRole((user.role as ProfileRole) ?? "student");
+    setRepairGroupId(user.group_id ?? "");
+    setRepairMessage(null);
+    setNewPasswordValue("");
+    setResetMessage(null);
+  };
+
+  const refreshSelectedUserFromSearch = async () => {
+    const term = searchTerm.trim();
+    if (term.length < 2 || !selectedUser) return;
+    try {
+      const res = await searchUsers(term);
+      setSearchResults(res);
+      const updated = res.find((u) => u.id === selectedUser.id);
+      if (updated) setSelectedUser(updated);
+    } catch {
+      // No crítico: la búsqueda ya se muestra actualizada la próxima vez.
+    }
+  };
+
+  const handleSaveRepair = async () => {
+    if (!selectedUser) return;
+    const label = selectedUser.full_name || selectedUser.email || "este usuario";
+    if (!confirm(`¿Confirmas actualizar el perfil de ${label}?`)) return;
+
+    setRepairSaving(true);
+    setRepairMessage(null);
+    try {
+      const res = await repairUserProfile(selectedUser.id, {
+        escuelaId: repairEscuelaId || null,
+        role: repairRole,
+        groupId: repairGroupId || null,
+      });
+      setRepairMessage({
+        type: "success",
+        text: res.vinculoAlumnosGrupos
+          ? "Perfil actualizado y vínculo alumno-grupo confirmado."
+          : res.vinculoProfesorGrupo
+          ? "Perfil actualizado y profesor vinculado al grupo."
+          : "Perfil actualizado correctamente.",
+      });
+      await refreshSelectedUserFromSearch();
+    } catch (e: any) {
+      setRepairMessage({ type: "error", text: e.message });
+    } finally {
+      setRepairSaving(false);
+    }
+  };
+
+  const generateRandomPassword = () => {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789";
+    let pw = "";
+    for (let i = 0; i < 10; i++) pw += chars[Math.floor(Math.random() * chars.length)];
+    setNewPasswordValue(pw);
+  };
+
+  const handleResetPassword = async () => {
+    if (!selectedUser) return;
+    if (newPasswordValue.trim().length < 8) {
+      setResetMessage({ type: "error", text: "La contraseña debe tener al menos 8 caracteres." });
+      return;
+    }
+    const label = selectedUser.full_name || selectedUser.email || "este usuario";
+    if (!confirm(`¿Confirmas restablecer la contraseña de ${label}? La contraseña anterior dejará de funcionar de inmediato.`)) return;
+
+    setResettingPassword(true);
+    setResetMessage(null);
+    try {
+      await resetUserPassword(selectedUser.id, newPasswordValue.trim());
+      setResetMessage({ type: "success", text: "Contraseña restablecida correctamente." });
+      setNewPasswordValue("");
+    } catch (e: any) {
+      setResetMessage({ type: "error", text: e.message });
+    } finally {
+      setResettingPassword(false);
     }
   };
 
@@ -340,11 +496,38 @@ export default function AdminUsuariosPage() {
       <div className="max-w-6xl mx-auto p-8">
 
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-black text-[#011C40] mb-1 tracking-tight">Fábrica de Usuarios</h1>
-          <p className="text-[#011C40]/50 font-medium">Pega una lista de nombres o sube un CSV y el sistema generará las cuentas automáticamente.</p>
+        <div className="mb-6">
+          <h1 className="text-4xl font-black text-[#011C40] mb-1 tracking-tight">
+            {activeTab === "crear" ? "Fábrica de Usuarios" : "Reparar Cuenta"}
+          </h1>
+          <p className="text-[#011C40]/50 font-medium">
+            {activeTab === "crear"
+              ? "Pega una lista de nombres o sube un CSV y el sistema generará las cuentas automáticamente."
+              : "Busca una cuenta existente para restablecer su contraseña o corregir su escuela, rol o grupo."}
+          </p>
         </div>
 
+        {/* Selector de sección */}
+        <div className="flex items-center gap-1 bg-white rounded-2xl p-1 shadow-sm w-fit mb-8">
+          <button
+            onClick={() => setActiveTab("crear")}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${
+              activeTab === "crear" ? "bg-[#011C40] text-white" : "text-[#011C40]/40 hover:text-[#011C40]"
+            }`}
+          >
+            <Users className="w-4 h-4" /> Crear Cuentas
+          </button>
+          <button
+            onClick={() => setActiveTab("reparar")}
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${
+              activeTab === "reparar" ? "bg-[#011C40] text-white" : "text-[#011C40]/40 hover:text-[#011C40]"
+            }`}
+          >
+            <Wrench className="w-4 h-4" /> Reparar Cuenta
+          </button>
+        </div>
+
+        {activeTab === "crear" && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
           {/* Izquierda */}
@@ -631,6 +814,256 @@ export default function AdminUsuariosPage() {
             </div>
           </div>
         </div>
+        )}
+
+        {activeTab === "reparar" && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+          {/* Izquierda: búsqueda y resultados */}
+          <div className="lg:col-span-8 space-y-6">
+
+            {/* Buscador */}
+            <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+              <h2 className="font-black text-[#011C40] text-lg mb-6 flex items-center gap-2">
+                <Search className="w-5 h-5 text-[#FF8C00]" /> Buscar Cuenta
+              </h2>
+              <form onSubmit={handleSearch} className="flex gap-3">
+                <input
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  placeholder="Nombre completo o correo electrónico..."
+                  className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
+                />
+                <button
+                  type="submit"
+                  disabled={searching || searchTerm.trim().length < 2}
+                  className="px-8 py-3 bg-[#FF8C00] hover:bg-[#e07800] text-white font-black rounded-xl transition-all flex items-center gap-2 disabled:opacity-40"
+                >
+                  {searching ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
+                  Buscar
+                </button>
+              </form>
+              {searchError && (
+                <p className="text-xs text-red-500 font-bold mt-3 flex items-center gap-1.5">
+                  <AlertCircle className="w-3.5 h-3.5" /> {searchError}
+                </p>
+              )}
+            </div>
+
+            {/* Resultados */}
+            {searchResults.length > 0 && (
+              <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+                <h2 className="font-black text-[#011C40] text-lg mb-5 flex items-center gap-2">
+                  <ClipboardList className="w-5 h-5 text-[#FF8C00]" /> Resultados ({searchResults.length})
+                </h2>
+                <div className="space-y-2">
+                  {searchResults.map(user => (
+                    <button
+                      key={user.id}
+                      onClick={() => handleSelectUser(user)}
+                      className={`w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
+                        selectedUser?.id === user.id
+                          ? "border-[#FF8C00] bg-[#FF8C00]/5"
+                          : "border-gray-100 bg-gray-50 hover:border-[#011C40]/20"
+                      }`}
+                    >
+                      <div className="min-w-0">
+                        <p className="font-black text-[#011C40] text-sm truncate">{user.full_name || "(sin nombre)"}</p>
+                        <p className="text-xs text-[#011C40]/50 truncate">{user.email}</p>
+                        <div className="flex flex-wrap items-center gap-2 mt-1.5">
+                          <span className="px-2 py-0.5 rounded-lg bg-[#011C40]/10 text-[#011C40] text-[9px] font-black uppercase tracking-wide">
+                            {ROLE_LABELS[user.role] ?? user.role}
+                          </span>
+                          {user.escuela_nombre && (
+                            <span className="text-[9px] text-[#011C40]/40 font-bold">{user.escuela_nombre}</span>
+                          )}
+                          {user.grupo_nombre && (
+                            <span className="text-[9px] text-[#011C40]/40 font-bold">· {user.grupo_nombre}</span>
+                          )}
+                          {user.role === "student" && (
+                            user.vinculo_confirmado ? (
+                              <span className="flex items-center gap-1 text-[9px] text-emerald-600 font-black uppercase">
+                                <Link2 className="w-3 h-3" /> Vínculo OK
+                              </span>
+                            ) : (
+                              <span className="flex items-center gap-1 text-[9px] text-red-500 font-black uppercase">
+                                <Link2Off className="w-3 h-3" /> Sin vínculo
+                              </span>
+                            )
+                          )}
+                        </div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-[#011C40]/20 flex-shrink-0" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Derecha: detalle / reparación */}
+          <div className="lg:col-span-4 space-y-6">
+            {!selectedUser ? (
+              <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+                <h3 className="font-black text-[#011C40] mb-5 flex items-center gap-2">
+                  <ChevronRight className="w-5 h-5 text-[#42E8E0]" /> Instrucciones
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    ["1", "Busca por nombre completo o correo electrónico (mínimo 2 caracteres)."],
+                    ["2", "Selecciona la cuenta de la lista de resultados."],
+                    ["3", "Restablece su contraseña si la olvidó, o corrige escuela, rol y grupo si quedaron mal asignados."],
+                    ["4", "Si el usuario es alumno y falta su vínculo al grupo, se creará automáticamente al guardar."],
+                  ].map(([n, t]) => (
+                    <div key={n} className="flex gap-3">
+                      <div className="h-7 w-7 rounded-full bg-[#FF8C00]/10 text-[#FF8C00] flex items-center justify-center font-black text-xs flex-shrink-0">{n}</div>
+                      <p className="text-xs text-[#011C40]/60 font-medium pt-0.5">{t}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <>
+                {/* Ficha del usuario */}
+                <div className="bg-[#011C40] rounded-[2rem] p-8 text-white shadow-xl relative overflow-hidden">
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="h-12 w-12 bg-[#FF8C00]/20 rounded-2xl flex items-center justify-center border border-[#FF8C00]/30 flex-shrink-0">
+                        <UserCog className="w-6 h-6 text-[#FF8C00]" />
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="font-black text-lg truncate">{selectedUser.full_name || "(sin nombre)"}</h3>
+                        <p className="text-white/50 text-xs truncate">{selectedUser.email}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#FF8C00] opacity-10 blur-3xl rounded-full" />
+                </div>
+
+                {/* Corregir perfil */}
+                <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+                  <h3 className="font-black text-[#011C40] mb-5 flex items-center gap-2">
+                    <Wrench className="w-5 h-5 text-[#FF8C00]" /> Corregir Perfil
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-black uppercase text-[#011C40]/40 mb-2">Rol</label>
+                      <select
+                        value={repairRole}
+                        onChange={e => setRepairRole(e.target.value as ProfileRole)}
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
+                      >
+                        <option value="student">Alumno</option>
+                        <option value="teacher">Profesor</option>
+                        <option value="admin">Administrador</option>
+                        <option value="super_admin">Super Admin</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-black uppercase text-[#011C40]/40 mb-2">Escuela</label>
+                      <select
+                        value={repairEscuelaId}
+                        onChange={e => setRepairEscuelaId(e.target.value)}
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
+                      >
+                        <option value="">-- Sin escuela --</option>
+                        {escuelasList.map(e => (
+                          <option key={e.id} value={e.id}>{e.nombre}</option>
+                        ))}
+                      </select>
+                      {escuelasListError && (
+                        <p className="text-[10px] text-red-500 font-black uppercase tracking-widest mt-2">
+                          No se pudo cargar la lista de escuelas.{" "}
+                          <button type="button" onClick={() => refreshEscuelasList()} className="underline">Reintentar</button>
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-xs font-black uppercase text-[#011C40]/40 mb-2">Grupo</label>
+                      <select
+                        value={repairGroupId}
+                        onChange={e => setRepairGroupId(e.target.value)}
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
+                      >
+                        <option value="">-- Sin grupo --</option>
+                        {grupos.map(g => (
+                          <option key={g.id} value={g.id}>{g.nombre} ({g.grado})</option>
+                        ))}
+                      </select>
+                      {repairRole === "student" && (
+                        <p className="text-[10px] text-[#011C40]/40 font-medium mt-2">
+                          Si el alumno tiene grupo pero le falta el vínculo, se creará automáticamente al guardar.
+                        </p>
+                      )}
+                    </div>
+
+                    {repairMessage && (
+                      <p className={`text-xs font-bold flex items-center gap-1.5 ${repairMessage.type === "success" ? "text-emerald-600" : "text-red-500"}`}>
+                        {repairMessage.type === "success" ? <CheckCircle2 className="w-3.5 h-3.5" /> : <AlertCircle className="w-3.5 h-3.5" />}
+                        {repairMessage.text}
+                      </p>
+                    )}
+
+                    <button
+                      onClick={handleSaveRepair}
+                      disabled={repairSaving}
+                      className="w-full py-3.5 bg-[#011C40] hover:bg-[#042a5e] text-white font-black rounded-xl transition-all flex items-center justify-center gap-2 disabled:opacity-40"
+                    >
+                      {repairSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle2 className="w-4 h-4" />}
+                      Guardar Cambios
+                    </button>
+                  </div>
+                </div>
+
+                {/* Restablecer contraseña */}
+                <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+                  <h3 className="font-black text-[#011C40] mb-5 flex items-center gap-2">
+                    <KeyRound className="w-5 h-5 text-[#FF8C00]" /> Restablecer Contraseña
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={newPasswordValue}
+                        onChange={e => setNewPasswordValue(e.target.value)}
+                        placeholder="Nueva contraseña (mín. 8 caracteres)"
+                        className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
+                      />
+                      <button
+                        type="button"
+                        onClick={generateRandomPassword}
+                        title="Generar contraseña aleatoria"
+                        className="px-4 py-3 bg-gray-100 hover:bg-gray-200 text-[#011C40] rounded-xl transition-all"
+                      >
+                        <RotateCcw className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    {resetMessage && (
+                      <p className={`text-xs font-bold flex items-center gap-1.5 ${resetMessage.type === "success" ? "text-emerald-600" : "text-red-500"}`}>
+                        {resetMessage.type === "success" ? <CheckCircle2 className="w-3.5 h-3.5" /> : <AlertCircle className="w-3.5 h-3.5" />}
+                        {resetMessage.text}
+                      </p>
+                    )}
+
+                    <button
+                      onClick={handleResetPassword}
+                      disabled={resettingPassword || newPasswordValue.trim().length < 8}
+                      className="w-full py-3.5 bg-[#FF8C00] hover:bg-[#e07800] text-white font-black rounded-xl transition-all flex items-center justify-center gap-2 disabled:opacity-40"
+                    >
+                      {resettingPassword ? <Loader2 className="w-4 h-4 animate-spin" /> : <KeyRound className="w-4 h-4" />}
+                      Restablecer Contraseña
+                    </button>
+                    <p className="text-[10px] text-[#011C40]/40 font-medium">
+                      La contraseña anterior deja de funcionar de inmediato. Comparte la nueva de forma segura.
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+        )}
       </div>
     </div>
   );

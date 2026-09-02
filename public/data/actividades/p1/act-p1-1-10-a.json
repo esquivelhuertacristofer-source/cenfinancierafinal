@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-1-10-A",
+  "unit_code": "P1-1-10",
+  "unit_title": "Ahorrar para dar: el regalo que yo compro",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Regalo de Ceny",
+  "descripcion": "Faltan 20 días para el cumpleaños de mamá y Ceny tiene $18 ahorrados. Cada decisión acerca o aleja el regalo.",
+  "objetivo": "Tomar decisiones de ahorro con fecha límite y propósito de dar, sin vaciar el ahorro propio",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Faltan 20 días para el cumpleaños de mamá. Ceny quiere regalarle una maceta con una planta que cuesta $60. Tiene $18 ahorrados y recibe $5 de domingo cada semana, más lo que gane ayudando en casa.",
+  "nodo_inicial": "plan",
+  "nodos": {
+    "plan": {
+      "id": "plan",
+      "texto": "Ceny hace cuentas: le faltan $42 y tiene 20 días. ¿Cómo lo va a lograr?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Guardar $2 diarios y ofrecerse a lavar el coche dos sábados",
+          "siguiente_nodo": "tentacion",
+          "consecuencia": "Plan realista: $40 de ahorro diario más lo que gane. Los números cuadran.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 40
+        },
+        {
+          "id": "o2",
+          "texto": "Guardar $10 diarios para juntarlo rapidísimo",
+          "siguiente_nodo": "fallo_plan",
+          "consecuencia": "Ceny solo recibe $5 a la semana. La meta diaria es imposible de cumplir.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 10
+        },
+        {
+          "id": "o3",
+          "texto": "Esperar al día 19 y pedirle el dinero a papá",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El regalo va a existir, pero no será realmente de Ceny.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-plan.webp"
+    },
+    "fallo_plan": {
+      "id": "fallo_plan",
+      "texto": "Al día 7, Ceny solo ha juntado $12 extra. La meta de $10 diarios era imposible y está desanimado. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Bajar la meta a $2 diarios y buscar un trabajito extra",
+          "siguiente_nodo": "tentacion",
+          "consecuencia": "Ajustar el plan no es rendirse: es hacerlo posible.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 30
+        },
+        {
+          "id": "o2",
+          "texto": "Abandonar la idea del regalo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Un plan mal calculado hizo que Ceny se rindiera con una meta que sí era alcanzable.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-fallo_plan.webp"
+    },
+    "tentacion": {
+      "id": "tentacion",
+      "texto": "Día 14. Ceny lleva $48 juntados. En la tienda hay una figura de acción que siempre quiso, a $45. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No comprarla: ese dinero ya tiene dueño y fecha",
+          "siguiente_nodo": "ultimo_dia",
+          "consecuencia": "El dinero con destino no es dinero disponible. Ceny lo entendió.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Comprarla y volver a empezar el ahorro del regalo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Quedan 6 días y $3 en la alcancía. El regalo ya no es posible.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -45
+        },
+        {
+          "id": "o3",
+          "texto": "Comprarla con la mitad y regalar algo más barato",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El regalo se encoge para que quepa el antojo.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -22
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-tentacion.webp"
+    },
+    "ultimo_dia": {
+      "id": "ultimo_dia",
+      "texto": "Día 20. Ceny tiene $62: le alcanza y le sobran $2. ¿Qué hace con el sobrante y con el resto de su alcancía?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Comprar la maceta y guardar los $2 en su alcancía",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Dio sin quedarse en cero. Generosidad y responsabilidad juntas.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": -60
+        },
+        {
+          "id": "o2",
+          "texto": "Vaciar toda la alcancía para comprar la maceta más grande",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El regalo quedó precioso, pero Ceny se quedó en ceros y su meta del balón se fue al fondo.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -80
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-ultimo_dia.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Mamá abre la maceta y Ceny le entrega una tarjeta que dice: \"ahorré 20 días para esto\". Ella la guarda en su buró.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny planeó, calculó, resistió una tentación y dio sin vaciarse. El regalo costó $60, pero lo que su mamá guardó fue la tarjeta con los 20 días.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El regalo se entregó, pero Ceny sabe que no salió del todo de su esfuerzo.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Entregar un regalo y regalar de verdad no son lo mismo. La próxima vez, empezar antes y proteger el dinero con destino hará toda la diferencia.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Llegó el cumpleaños y Ceny no tiene regalo. Le hace un dibujo a última hora.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El dibujo tiene valor, pero Ceny sabe que sí pudo haberlo logrado. El plan no falló por falta de dinero: falló por un antojo a mitad del camino.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-1-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-1-10-a-portada.webp"
+}

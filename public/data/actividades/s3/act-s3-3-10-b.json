@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S3-3-10-B",
+  "unit_code": "S3-3-10",
+  "unit_title": "Blindaje legal: fideicomisos, seguros y separación de patrimonio",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Blindaje",
+  "descripcion": "Responde rápido sobre protección patrimonial.",
+  "objetivo": "Consolidar el conocimiento sobre instrumentos de blindaje patrimonial",
+  "xp": 800,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Operar un negocio a título personal implica:",
+      "respuesta_correcta": "Que sus deudas pueden alcanzar tu patrimonio personal",
+      "incorrectas": [
+        "Más protección",
+        "Menos impuestos",
+        "Nada relevante"
+      ],
+      "dato_extra": "Es la exposición más común y la que más se pospone resolver."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Constituir una sociedad:",
+      "respuesta_correcta": "Crea una persona jurídica con patrimonio propio",
+      "incorrectas": [
+        "Esconde bienes",
+        "Elimina impuestos",
+        "Evita obligaciones"
+      ],
+      "dato_extra": "Es la protección más básica para quien emprende."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Un fideicomiso:",
+      "respuesta_correcta": "Transfiere bienes a una institución para fines definidos",
+      "incorrectas": [
+        "Es un préstamo",
+        "Es un seguro",
+        "Es una cuenta bancaria"
+      ],
+      "dato_extra": "Es un contrato formal y registrado, no un mecanismo de ocultamiento."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Un seguro:",
+      "respuesta_correcta": "Transfiere el costo financiero de un evento",
+      "incorrectas": [
+        "Evita que ocurra",
+        "Elimina el riesgo",
+        "Devuelve las primas"
+      ],
+      "dato_extra": "El evento puede ocurrir igual; lo que cambia es quién lo paga."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La responsabilidad civil cubre:",
+      "respuesta_correcta": "El daño que causas a terceros",
+      "incorrectas": [
+        "Tu propia salud",
+        "Tu auto",
+        "Tu casa"
+      ],
+      "dato_extra": "Es de las coberturas más subestimadas y más útiles."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El blindaje más accesible es:",
+      "respuesta_correcta": "Un seguro bien elegido",
+      "incorrectas": [
+        "Un fideicomiso",
+        "Una sociedad anónima",
+        "Un fondo internacional"
+      ],
+      "dato_extra": "No requiere estructura legal, solo una póliza adecuada."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Blindar el patrimonio significa:",
+      "respuesta_correcta": "Organizarlo legalmente para separar riesgos",
+      "incorrectas": [
+        "Esconderlo",
+        "Evadir obligaciones",
+        "Sacarlo del país"
+      ],
+      "dato_extra": "Las estructuras para evadir son ilegales y se desmoronan al revisarse."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-10-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-10-b-escena.webp"
+}

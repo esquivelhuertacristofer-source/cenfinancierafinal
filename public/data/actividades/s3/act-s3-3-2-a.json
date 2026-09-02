@@ -4,123 +4,104 @@
   "unit_title": "Inversión inmobiliaria: ladrillos físicos y digitales",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "JUEGO",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "El Apostador vs El Asegurador",
-  "descripcion": "Bienvenido al mundo de los derivados financieros. ¿Usarás estos contratos para proteger tu negocio o para arriesgarlo todo?",
-  "objetivo": "Comprender el funcionamiento básico de los contratos de futuros y opciones como herramientas de cobertura y especulación",
-  "xp": 500,
-  "mecanica": "Toma decisiones de cobertura para tu cosecha de maíz y ve el resultado según la volatilidad del mercado.",
-  "escenarios": [
+  "titulo": "Ladrillo Físico o Digital",
+  "descripcion": "Hay tres formas de invertir en bienes raíces en México y son muy distintas en monto, liquidez y trabajo. Elegir mal es el error más caro del sector.",
+  "objetivo": "Analizar las formas de invertir en inmuebles —propiedad directa, FIBRAs y crowdfunding inmobiliario— comparando accesibilidad, liquidez y riesgo.",
+  "xp": 700,
+  "instruccion": "Arrastra cada característica a la forma de inversión inmobiliaria que le corresponde.",
+  "categorias": [
     {
-      "id": "der1",
-      "texto": "Eres agricultor. El precio del maíz hoy es de $100. Vas a cosechar en 6 meses. Tienes miedo de que el precio caiga.",
-      "imagen": "🌽",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "Firmaste un FUTURO para vender a $95. Si el precio cae a $60, tú seguirás cobrando $95. ¡Protección total!",
-      "feedback_error": "❌ Riesgo total. No hiciste cobertura. Si el precio cae, tu granja podría quebrar.",
-      "tipo_ataque": "Contratos de Futuro"
+      "id": "directa",
+      "label": "PROPIEDAD DIRECTA",
+      "emoji": "🏠",
+      "color": "#f59e0b"
     },
     {
-      "id": "der2",
-      "texto": "¡El precio del maíz cayó a $50 debido a una supercosecha mundial!",
-      "imagen": "📉",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Excelente decisión! Gracias al FUTURO que firmaste, vendiste tu maíz a $95 aunque en el mercado vale $50. Ganaste $45 extra por unidad.",
-      "feedback_error": "❌ ¡Desastre! Estás vendiendo a $50 y tus costos eran de $70. Estás perdiendo dinero.",
-      "tipo_ataque": "Resultado Bajista"
+      "id": "fibra",
+      "label": "FIBRAS",
+      "emoji": "🏢",
+      "color": "#3b82f6"
     },
     {
-      "id": "der3",
-      "texto": "Ahora eres un comprador de Oro. Crees que va a subir, pero no quieres comprarlo hoy. Compras una OPCIÓN 'CALL' (Derecho a comprar).",
-      "imagen": "✨",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Bien! Pagaste una pequeña prima por el derecho a comprar Oro a $1,800. Si sube a $2,500, tú lo compras barato.",
-      "feedback_error": "❌ Comprar el activo directamente te expone a perder mucho dinero si el precio cae de repente.",
-      "tipo_ataque": "Opciones Call"
-    },
-    {
-      "id": "der4",
-      "texto": "¡El precio del Oro subió a $2,200! Tienes tu opción 'Call' con precio de ejercicio (Strike) de $1,800.",
-      "imagen": "🚀",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Ganancia! Ejerces tu derecho, compras a $1,800 y vendes a $2,200. Ganaste la diferencia menos la prima que pagaste.",
-      "feedback_error": "❌ Sin la opción, tendrías que haber comprado el oro caro hoy.",
-      "tipo_ataque": "Ejercicio de Opción"
-    },
-    {
-      "id": "der5",
-      "texto": "Lección final: Los derivados son como un seguro de coche. Pagas la prima para estar protegido, pero esperas no tener que 'chocar' (usarlos).",
-      "imagen": "🛡️",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "Has comprendido el uso profesional de los derivados. ¡Felicidades, estratega!",
-      "feedback_error": "Nunca uses derivados sin entender el riesgo, o podrías perder más de lo que tienes.",
-      "tipo_ataque": "Filosofía de Riesgo"
+      "id": "crowd",
+      "label": "CROWDFUNDING",
+      "emoji": "👥",
+      "color": "#8b5cf6"
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Gestiona el riesgo de tu portafolio. Decide si CUBRIR o ESPECULAR en cada situación.",
-  "duracion": 150,
-  "opciones_clasificacion": [
-    "CUBRIR (Hedging)",
-    "ESPECULAR"
   ],
   "items": [
     {
-      "id": "der1",
-      "label": "Eres agricultor. El precio del maíz hoy es de $100. Vas a cosechar en 6 meses. Tienes miedo de que e...",
-      "emoji": "🌽",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "Firmaste un FUTURO para vender a $95. Si el precio cae a $60, tú seguirás cobrando $95. ¡Protección total!",
-      "feedback_error": "❌ Riesgo total. No hiciste cobertura. Si el precio cae, tu granja podría quebrar.",
-      "puntos": 100
+      "id": "i1",
+      "label": "Requiere cientos de miles de pesos para empezar",
+      "emoji": "💰",
+      "categoria_correcta": "directa",
+      "feedback": "Enganche, escrituración y notario: la barrera de entrada más alta."
     },
     {
-      "id": "der2",
-      "label": "¡El precio del maíz cayó a $50 debido a una supercosecha mundial!",
-      "emoji": "📉",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Excelente decisión! Gracias al FUTURO que firmaste, vendiste tu maíz a $95 aunque en el mercado vale $50. Ganaste $45 extra por unidad.",
-      "feedback_error": "❌ ¡Desastre! Estás vendiendo a $50 y tus costos eran de $70. Estás perdiendo dinero.",
-      "puntos": 100
+      "id": "i2",
+      "label": "Se compra y vende en la Bolsa como una acción",
+      "emoji": "📈",
+      "categoria_correcta": "fibra",
+      "feedback": "Liquidez inmediata: puedes salir en minutos, no en meses."
     },
     {
-      "id": "der3",
-      "label": "Ahora eres un comprador de Oro. Crees que va a subir, pero no quieres comprarlo hoy. Compras una OPC...",
-      "emoji": "✨",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Bien! Pagaste una pequeña prima por el derecho a comprar Oro a $1,800. Si sube a $2,500, tú lo compras barato.",
-      "feedback_error": "❌ Comprar el activo directamente te expone a perder mucho dinero si el precio cae de repente.",
-      "puntos": 100
+      "id": "i3",
+      "label": "Muchas personas financian juntas un proyecto específico",
+      "emoji": "🤝",
+      "categoria_correcta": "crowd",
+      "feedback": "Regulado por la Ley Fintech. Verifica siempre la autorización de la plataforma."
     },
     {
-      "id": "der4",
-      "label": "¡El precio del Oro subió a $2,200! Tienes tu opción 'Call' con precio de ejercicio (Strike) de $1,80...",
-      "emoji": "🚀",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Ganancia! Ejerces tu derecho, compras a $1,800 y vendes a $2,200. Ganaste la diferencia menos la prima que pagaste.",
-      "feedback_error": "❌ Sin la opción, tendrías que haber comprado el oro caro hoy.",
-      "puntos": 100
+      "id": "i4",
+      "label": "Tú resuelves inquilinos, fugas y mantenimiento",
+      "emoji": "🔧",
+      "categoria_correcta": "directa",
+      "feedback": "No es ingreso pasivo: es un negocio con clientes y operación."
     },
     {
-      "id": "der5",
-      "label": "Lección final: Los derivados son como un seguro de coche. Pagas la prima para estar protegido, pero ...",
-      "emoji": "🛡️",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "Has comprendido el uso profesional de los derivados. ¡Felicidades, estratega!",
-      "feedback_error": "Nunca uses derivados sin entender el riesgo, o podrías perder más de lo que tienes.",
-      "puntos": 100
+      "id": "i5",
+      "label": "Reparte obligatoriamente la mayor parte de sus utilidades",
+      "emoji": "💵",
+      "categoria_correcta": "fibra",
+      "feedback": "Por ley deben distribuir al menos el 95% del resultado fiscal."
+    },
+    {
+      "id": "i6",
+      "label": "Se puede empezar desde unos pocos miles de pesos",
+      "emoji": "🪙",
+      "categoria_correcta": "crowd",
+      "feedback": "Abre el sector a quien nunca podría comprar un inmueble completo."
+    },
+    {
+      "id": "i7",
+      "label": "Vender puede tomar meses y cuesta 5% de comisión",
+      "emoji": "⏳",
+      "categoria_correcta": "directa",
+      "feedback": "La iliquidez es su riesgo más subestimado."
+    },
+    {
+      "id": "i8",
+      "label": "Te vuelve dueño de una parte de centros comerciales y naves industriales",
+      "emoji": "🏬",
+      "categoria_correcta": "fibra",
+      "feedback": "Diversificación entre decenas de inmuebles con una sola compra."
+    },
+    {
+      "id": "i9",
+      "label": "Tu dinero queda comprometido hasta que el proyecto termine",
+      "emoji": "🔒",
+      "categoria_correcta": "crowd",
+      "feedback": "No hay mercado secundario: si el proyecto se atrasa, tú también."
+    },
+    {
+      "id": "i10",
+      "label": "Todo tu capital depende de un solo inmueble",
+      "emoji": "🎯",
+      "categoria_correcta": "directa",
+      "feedback": "Concentración máxima: si esa zona se deteriora, no hay nada que compense."
     }
   ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  "versión": "2026.Alineada.1"
 }

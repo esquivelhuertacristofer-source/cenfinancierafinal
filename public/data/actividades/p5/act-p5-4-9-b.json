@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-4-9-B",
+  "unit_code": "P5-4-9",
+  "unit_title": "Medir el negocio: ventas, margen y clientes",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Lee el Tablero",
+  "descripcion": "Relaciona cada señal con el indicador que la revela.",
+  "objetivo": "Asociar situaciones de negocio con el indicador que las detecta",
+  "xp": 240,
+  "instruccion": "Arrastra cada señal al indicador que la revela.",
+  "categorias": [
+    {
+      "id": "margen",
+      "label": "Margen",
+      "emoji": "📉",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "clientes",
+      "label": "Clientes",
+      "emoji": "👥",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "recurrencia",
+      "label": "Recurrencia",
+      "emoji": "🔁",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Vendo más cada mes pero gano menos",
+      "emoji": "📊",
+      "categoria_correcta": "margen",
+      "feedback": "Los costos suben sin que el precio los acompañe."
+    },
+    {
+      "id": "i2",
+      "label": "Tres clientes representan el 80% de mis ventas",
+      "emoji": "⚠️",
+      "categoria_correcta": "clientes",
+      "feedback": "Si uno se va, se cae una parte enorme del ingreso."
+    },
+    {
+      "id": "i3",
+      "label": "Mucha gente prueba y casi nadie regresa",
+      "emoji": "🚪",
+      "categoria_correcta": "recurrencia",
+      "feedback": "El problema está en el producto o en la experiencia."
+    },
+    {
+      "id": "i4",
+      "label": "Subió el precio del material y no cambié mi precio",
+      "emoji": "📦",
+      "categoria_correcta": "margen",
+      "feedback": "Cada venta deja menos aunque las ventas se vean iguales."
+    },
+    {
+      "id": "i5",
+      "label": "Llegué a cien personas nuevas este mes",
+      "emoji": "📣",
+      "categoria_correcta": "clientes",
+      "feedback": "Alcance amplio, aunque falta ver cuántos vuelven."
+    },
+    {
+      "id": "i6",
+      "label": "La mitad de mis compradores ya había comprado antes",
+      "emoji": "💚",
+      "categoria_correcta": "recurrencia",
+      "feedback": "Señal muy sana: retener cuesta menos que conseguir nuevos."
+    },
+    {
+      "id": "i7",
+      "label": "Di 30% de descuento y ahora casi no gano por pieza",
+      "emoji": "🏷️",
+      "categoria_correcta": "margen",
+      "feedback": "El descuento golpea directamente lo que queda de cada venta."
+    },
+    {
+      "id": "i8",
+      "label": "Perdí a mi comprador más grande y cayó todo",
+      "emoji": "💥",
+      "categoria_correcta": "clientes",
+      "feedback": "La concentración es un riesgo que no aparece en las ventas totales."
+    },
+    {
+      "id": "i9",
+      "label": "Los mismos compradores vuelven cada semana",
+      "emoji": "🔄",
+      "categoria_correcta": "recurrencia",
+      "feedback": "Es el indicador de que el producto realmente resuelve algo."
+    },
+    {
+      "id": "i10",
+      "label": "Cada venta me deja solo dos pesos",
+      "emoji": "🪙",
+      "categoria_correcta": "margen",
+      "feedback": "Un margen tan delgado no aguanta ningún imprevisto."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-9-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-9-b-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-3-10-B",
+  "unit_code": "P4-3-10",
+  "unit_title": "Revisar mi plan: ajustar cuando la vida cambia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Ajustar sin Abandonar",
+  "descripcion": "Comprueba que sabes revisar un plan como se debe.",
+  "objetivo": "Verificar la distinción entre ajuste legítimo y abandono",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Que un plan se desactualice con el tiempo es:",
+      "opciones": [
+        "Una falla del plan",
+        "Lo esperado",
+        "Culpa del banco",
+        "Imposible"
+      ],
+      "correcta": 1,
+      "explicacion": "Se hizo con la información de un momento, y esa información cambia."
+    },
+    {
+      "id": "q2",
+      "texto": "La verdadera falla sería:",
+      "opciones": [
+        "Que cambie",
+        "Escribirlo",
+        "No revisarlo nunca",
+        "Compartirlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Seguir usando supuestos que ya no son ciertos."
+    },
+    {
+      "id": "q3",
+      "texto": "Justifican ajustar:",
+      "opciones": [
+        "Que dé flojera",
+        "Que sea lunes",
+        "Que se complique",
+        "Que suba el precio o baje el ingreso"
+      ],
+      "correcta": 3,
+      "explicacion": "Hechos concretos y nombrables, no estados de ánimo."
+    },
+    {
+      "id": "q4",
+      "texto": "Al ajustar se modifica:",
+      "opciones": [
+        "El monto o el plazo",
+        "Se borra la meta",
+        "Nada",
+        "Solo el nombre"
+      ],
+      "correcta": 0,
+      "explicacion": "Una meta postergada sigue viva; una meta borrada desaparece."
+    },
+    {
+      "id": "q5",
+      "texto": "Dejar el plan porque costó trabajo es:",
+      "opciones": [
+        "Un ajuste válido",
+        "Abandono con otro nombre",
+        "Lo recomendable",
+        "Flexibilidad"
+      ],
+      "correcta": 1,
+      "explicacion": "No cambió ninguna circunstancia: cambió el ánimo."
+    },
+    {
+      "id": "q6",
+      "texto": "La señal para distinguir ajuste de abandono es:",
+      "opciones": [
+        "La fecha",
+        "El monto",
+        "Poder nombrar el hecho concreto que cambió",
+        "La opinión de otros"
+      ],
+      "correcta": 2,
+      "explicacion": "Si solo puedes decir \"se me complicó\", no es ajuste."
+    },
+    {
+      "id": "q7",
+      "texto": "La revisión conviene hacerla:",
+      "opciones": [
+        "Cuando algo se complique",
+        "Nunca",
+        "Cada semana",
+        "Cada tres meses en fecha fijada"
+      ],
+      "correcta": 3,
+      "explicacion": "Revisar en calma lleva a ajustes razonados, no emocionales."
+    },
+    {
+      "id": "q8",
+      "texto": "Las tres preguntas de revisión son:",
+      "opciones": [
+        "¿Sigo avanzando, cambió algo real, el monto es realista?",
+        "¿Cuánto, cuándo, dónde?",
+        "¿Quién, cómo, por qué?",
+        "¿Sirve, gusta, conviene?"
+      ],
+      "correcta": 0,
+      "explicacion": "Con esas tres se decide si ajustar, continuar o replantear."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-10-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-10-b-escena.webp"
+}

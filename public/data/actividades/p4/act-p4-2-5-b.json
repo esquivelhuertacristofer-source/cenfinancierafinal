@@ -45,20 +45,28 @@
         {
           "id": "bloquear_reportar",
           "texto": "Bloquear el número y llamar al número real de su primo",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "¡Perfecto! Al llamar al número real, descubres que tu primo está bien y en su casa.",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "El primo contesta tranquilo desde su casa: nunca escribió nada.",
           "xp_bonus": 300,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "avisar_adulto",
+          "texto": "Enseñarle la conversación a un adulto antes de hacer nada",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "El adulto confirma que es una estafa conocida.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
           "id": "sentirse_mal",
           "texto": "Sentirse mal y mandarle el dinero por si acaso",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Mandaste el dinero y el estafador te bloqueó de inmediato.",
+          "siguiente_nodo": "final_robo",
+          "consecuencia": "Transfiere los $200 al número desconocido.",
           "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "impacto_patrimonio": -200
         }
       ]
     },
@@ -69,48 +77,35 @@
         {
           "id": "reaccionar_tarde",
           "texto": "¡Ni loco! Bloquear de inmediato",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Casi caes, pero tu instinto te salvó a tiempo.",
-          "xp_bonus": 100,
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "Bloquea el número antes de dar un solo dato.",
+          "xp_bonus": 150,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "mandar_tarjeta",
+          "texto": "Mandar la foto de la tarjeta: al fin es tu primo",
+          "siguiente_nodo": "final_robo",
+          "consecuencia": "Envía la foto con el número, la fecha y el código de seguridad.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -4800
         }
       ]
     },
     "final_exito": {
       "id": "final_exito",
-      "texto": "¡Felicidades! Salvaste tu dinero y aprendiste que los estafadores usan la urgencia para que no pienses.",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "Antes de ayudar con dinero por mensaje, siempre verifica por una llamada de voz."
+      "texto": "¡Salvaste tu dinero! El primo estaba en su casa sin enterarse de nada. El número era de un estafador que manda el mismo mensaje a cientos de personas esperando que una caiga.",
+      "reflexion_final": "Los estafadores usan la urgencia para que no pienses. La regla es simple: ante cualquier mensaje que pida dinero con prisa, cuelga y marca tú al número que ya tenías guardado."
     },
     "final_robo": {
       "id": "final_robo",
-      "texto": "Te han estafado. Los $200 se perdieron. Que esto te sirva para ser más precavido en el futuro.",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "La ingeniería social funciona porque somos buenas personas, pero hay que ser inteligentes también."
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
-    },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "El dinero se fue y no hubo forma de recuperarlo. El número dejó de existir a los diez minutos. El primo real se enteró por la familia.",
+      "reflexion_final": "Nunca se transfiere dinero ni se comparten datos de tarjeta por un mensaje, aunque venga de alguien conocido: es facilísimo suplantar una identidad. Verificar por otro canal toma un minuto y evita todo."
     }
   },
   "versión": "2026.Diamond.V2",

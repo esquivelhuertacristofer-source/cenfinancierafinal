@@ -1,0 +1,144 @@
+{
+  "code": "ACT-P5-1-6-A",
+  "unit_code": "P5-1-6",
+  "unit_title": "CONDUSEF y el Buró de Entidades Financieras",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Compara Antes de Contratar",
+  "descripcion": "Usa datos tipo Buró para decidir con qué institución conviene contratar.",
+  "objetivo": "Comparar instituciones financieras usando proporciones y no números absolutos",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Institución A",
+      "descripcion": "Los datos públicos de la primera institución.",
+      "campos": [
+        {
+          "id": "clientes_a",
+          "label": "Clientes de la institución A",
+          "type": "number",
+          "min": 1000,
+          "max": 5000000,
+          "default": 500000,
+          "unit": "clientes",
+          "placeholder": "500000",
+          "requerido": true,
+          "ayuda": "El tamaño importa para interpretar las reclamaciones."
+        },
+        {
+          "id": "quejas_a",
+          "label": "Reclamaciones en el año",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 4000,
+          "unit": "quejas",
+          "placeholder": "4000",
+          "requerido": true
+        },
+        {
+          "id": "favor_a",
+          "label": "Porcentaje resuelto a favor del usuario",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 60,
+          "unit": "%",
+          "ayuda": "Qué tan seguido le dan la razón al cliente.",
+          "requerido": true
+        },
+        {
+          "id": "tasa_a",
+          "label": "Reclamaciones por cada 10,000 clientes",
+          "type": "calculated",
+          "formula": "Math.round(quejas_a / Math.max(1, clientes_a) * 10000)",
+          "unit": "quejas"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Institución B",
+      "descripcion": "Los datos públicos de la segunda institución.",
+      "campos": [
+        {
+          "id": "clientes_b",
+          "label": "Clientes de la institución B",
+          "type": "number",
+          "min": 1000,
+          "max": 5000000,
+          "default": 80000,
+          "unit": "clientes",
+          "placeholder": "80000",
+          "requerido": true
+        },
+        {
+          "id": "quejas_b",
+          "label": "Reclamaciones en el año",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 1500,
+          "unit": "quejas",
+          "placeholder": "1500",
+          "requerido": true
+        },
+        {
+          "id": "favor_b",
+          "label": "Porcentaje resuelto a favor del usuario",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 35,
+          "unit": "%",
+          "ayuda": "Un porcentaje bajo puede indicar que resisten las aclaraciones.",
+          "requerido": true
+        },
+        {
+          "id": "tasa_b",
+          "label": "Reclamaciones por cada 10,000 clientes",
+          "type": "calculated",
+          "formula": "Math.round(quejas_b / Math.max(1, clientes_b) * 10000)",
+          "unit": "quejas"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "La comparación",
+      "descripcion": "Qué dicen los datos una vez puestos en proporción.",
+      "campos": [
+        {
+          "id": "diferencia_tasa",
+          "label": "Diferencia en quejas por 10,000 (A menos B)",
+          "type": "calculated",
+          "formula": "Math.round(quejas_a / Math.max(1, clientes_a) * 10000) - Math.round(quejas_b / Math.max(1, clientes_b) * 10000)",
+          "unit": "quejas"
+        },
+        {
+          "id": "diferencia_favor",
+          "label": "Diferencia en resolución a favor (A menos B)",
+          "type": "calculated",
+          "formula": "favor_a - favor_b",
+          "unit": "%"
+        },
+        {
+          "id": "quien_mas_quejas_absolutas",
+          "label": "Quejas absolutas de A menos las de B",
+          "type": "calculated",
+          "formula": "quejas_a - quejas_b",
+          "unit": "quejas"
+        }
+      ]
+    }
+  ],
+  "output_type": "comparacion_instituciones",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-6-a-escena.webp"
+}

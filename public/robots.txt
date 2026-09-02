@@ -1,0 +1,50 @@
+# robots.txt — CEN Academy (Educación Financiera)
+
+User-agent: *
+Allow: /
+
+# --- Rutas de /academia en construcción (no indexar) ---
+#
+# Las páginas listadas abajo bajo /academia/*/bloque* fueron confirmadas por
+# inspección manual de código (2026-07-13) como stubs/placeholders reales,
+# no solo por el patrón del nombre de ruta: contienen secciones marcadas
+# literalmente como "[ JUEGO INTERACTIVO ]", "[ QUIZ INTERACTIVO ]",
+# "[ IMG ... ]", "[ Descargar ... ]", un reproductor de video que solo
+# muestra un ícono estático sin fuente real, botones ("Jugar Ahora",
+# "Guardar Avance", "Evaluar Respuestas", "Calcular Viabilidad") sin
+# onClick/href funcional, y enlaces de navegación rotos (href="#").
+#
+# Excepción parcial: /academia/primeros-pasos/bloque1 sí tiene 3 minijuegos
+# reales incrustados (iframes a /juegos/*.html) y un botón de progreso local
+# (localStorage), pero también conserva una sección placeholder sin terminar
+# ("[ JUEGO GDEVELOP AQUÍ ]") y tarjetas de descarga sin función — se incluye
+# igualmente porque el propio componente de progreso la documenta como
+# "página demo pública, no parte del currículo /hub trackeado".
+#
+# Ver docs/DEUDA-TECNICA.md (ítem #6) y README.md ("Bugs Conocidos" #3).
+# No se bloquean las páginas índice de cada pilar (/academia/<pilar>/) ni
+# ninguna otra ruta de la plataforma: esas sí funcionan.
+
+Disallow: /academia/primeros-pasos/bloque1$
+Disallow: /academia/primeros-pasos/bloque2$
+Disallow: /academia/primeros-pasos/bloque3$
+Disallow: /academia/primeros-pasos/bloque4$
+Disallow: /academia/primeros-pasos/bloque5$
+Disallow: /academia/primeros-pasos/bloque6$
+Disallow: /academia/primeros-pasos/bloque7$
+
+Disallow: /academia/construyendo-independencia/bloque1$
+Disallow: /academia/construyendo-independencia/bloque2$
+Disallow: /academia/construyendo-independencia/bloque3$
+Disallow: /academia/construyendo-independencia/bloque4$
+Disallow: /academia/construyendo-independencia/bloque5$
+
+Disallow: /academia/planificacion/bloque1$
+Disallow: /academia/planificacion/bloque2$
+Disallow: /academia/planificacion/bloque3$
+
+Disallow: /academia/hora-de-emprender/bloque1$
+Disallow: /academia/hora-de-emprender/bloque2$
+Disallow: /academia/hora-de-emprender/bloque3$
+Disallow: /academia/hora-de-emprender/bloque4$
+Disallow: /academia/hora-de-emprender/bloque5$

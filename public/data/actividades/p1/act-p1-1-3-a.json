@@ -4,17 +4,72 @@
   "unit_title": "El trabajo y el dinero: de dónde vienen los pesos",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "BALANCE",
-  "complejidad": "MAESTRÍA",
-  "titulo": "El Calibrador de Sueños",
-  "descripcion": "Ceny tiene un gran sueño: construir una Estación Espacial. Pero para lograrlo, no basta con estudiar mucho ni con trabajar mucho por separado. ¡Necesita ambos en perfecto equilibrio!",
-  "objetivo": "Experimentar físicamente la necesidad de equilibrar la formación personal (estudio) con la ejecución práctica (trabajo).",
+  "tipo": "JORNADA",
+  "complejidad": "MEDIO",
+  "titulo": "El Día de Trabajo de Ceny",
+  "descripcion": "Ceny quiere juntar dinero para su meta, pero el dinero no aparece solo: hay que trabajar para conseguirlo. Hoy tiene 6 horas libres y varios vecinos que necesitan ayuda. ¿En qué oficios va a gastar su día?",
+  "objetivo": "Comprender que los ingresos vienen del esfuerzo y el tiempo dedicado al trabajo, conociendo distintos oficios y descubriendo que no todos pagan igual por la misma hora.",
   "xp": 500,
-  "instruccion": "Mantén presionados los propulsores para cargar tu sueño. ¡Cuidado! Si una barra sube demasiado rápido y la otra se queda atrás, la balanza se desequilibrará.",
+  "instruccion": "Elige los oficios que Ceny va a hacer hoy. Cada uno se lleva unas horas de su día y le paga unos pesos. ¡Cuidado! El día tiene solo 6 horas: si haces un trabajo, ya no podrás hacer otro. Junta $85 para lograr la meta.",
   "metadata": {
-    "knowledge_label": "Sabiduría (Estudio)",
-    "action_label": "Ejecución (Trabajo)",
-    "target_label": "Estación Espacial"
+    "recurso_label": "Horas del día",
+    "moneda_label": "Pesos ganados",
+    "meta_label": "la meta de Ceny"
   },
-  "versión": "2026.Diamond.Balance"
+  "config": {
+    "bloques": 6,
+    "metaMonedas": 85,
+    "permiteRepetir": false
+  },
+  "oficios": [
+    {
+      "id": "cartel",
+      "nombre": "Pintar un cartel para la tienda",
+      "emoji": "🎨",
+      "imagen": "/assets/activities/jornada/oficio-cartel.png",
+      "bloques": 3,
+      "paga": 50
+    },
+    {
+      "id": "panaderia",
+      "nombre": "Ayudar en la panadería",
+      "emoji": "🥐",
+      "imagen": "/assets/activities/jornada/oficio-panaderia.png",
+      "bloques": 2,
+      "paga": 30
+    },
+    {
+      "id": "biblioteca",
+      "nombre": "Acomodar libros en la biblioteca",
+      "emoji": "📚",
+      "imagen": "/assets/activities/jornada/oficio-biblioteca.png",
+      "bloques": 2,
+      "paga": 25
+    },
+    {
+      "id": "perro",
+      "nombre": "Pasear al perro de la vecina",
+      "emoji": "🐕",
+      "imagen": "/assets/activities/jornada/oficio-perro.png",
+      "bloques": 1,
+      "paga": 15
+    },
+    {
+      "id": "vivero",
+      "nombre": "Regar las plantas del vivero",
+      "emoji": "🌱",
+      "imagen": "/assets/activities/jornada/oficio-vivero.png",
+      "bloques": 1,
+      "paga": 10
+    },
+    {
+      "id": "ropa",
+      "nombre": "Doblar la ropa limpia",
+      "emoji": "🧺",
+      "imagen": "/assets/activities/jornada/oficio-ropa.png",
+      "bloques": 1,
+      "paga": 8
+    }
+  ],
+  "versión": "2026.Jornada.1"
 }

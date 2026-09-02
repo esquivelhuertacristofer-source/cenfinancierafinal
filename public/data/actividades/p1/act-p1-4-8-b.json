@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P1-4-8-B",
+  "unit_code": "P1-4-8",
+  "unit_title": "Mi puesto: cómo se ve y cómo invito",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Buen Puesto",
+  "descripcion": "Responde rápido: ¿qué atrae clientes y qué los espanta?",
+  "objetivo": "Consolidar los criterios de presentación e invitación honesta",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué ve la gente antes que tu producto?",
+      "respuesta_correcta": "Tu puesto y tu cartel",
+      "incorrectas": [
+        "El sabor",
+        "Tu alcancía",
+        "Tus cuentas"
+      ],
+      "dato_extra": "Si el puesto no invita, nadie llega a probar lo que vendes."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El error más común en un puesto escolar es:",
+      "respuesta_correcta": "No poner el precio a la vista",
+      "incorrectas": [
+        "Poner mantel",
+        "Saludar",
+        "Ordenar el producto"
+      ],
+      "dato_extra": "Preguntar da pena, y por pena mucha gente sigue de largo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Alguien dice que no. ¿Qué hago?",
+      "respuesta_correcta": "Agradecer y dejarlo ir",
+      "incorrectas": [
+        "Seguirlo",
+        "Insistir tres veces",
+        "Bajarle el precio de golpe"
+      ],
+      "dato_extra": "Quien se va tranquilo puede volver mañana. Quien se va perseguido, no."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Dos puestos iguales, uno ordenado y otro amontonado. ¿Cuál vende más?",
+      "respuesta_correcta": "El ordenado",
+      "incorrectas": [
+        "El amontonado",
+        "Los dos igual",
+        "El más grande"
+      ],
+      "dato_extra": "El producto es el mismo: lo único que cambió fue el trabajo que le pides al cliente."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Decir que el producto es más grande de lo que es:",
+      "respuesta_correcta": "Gana una venta y pierde al cliente",
+      "incorrectas": [
+        "Es buena estrategia",
+        "No importa",
+        "Aumenta la ganancia"
+      ],
+      "dato_extra": "Un negocio pequeño vive de que la gente vuelva."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Los tres pasos para invitar bien son:",
+      "respuesta_correcta": "Saludar, informar y dejar decidir",
+      "incorrectas": [
+        "Gritar, insistir y perseguir",
+        "Callar, esperar y esconderse",
+        "Regalar, rogar y bajar precio"
+      ],
+      "dato_extra": "El cuarto paso, insistir, es el que arruina todo lo anterior."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Para qué sirve contar los clientes que se acercan?",
+      "respuesta_correcta": "Para saber qué está funcionando",
+      "incorrectas": [
+        "Para presumir",
+        "Para nada",
+        "Para cobrar más"
+      ],
+      "dato_extra": "Sin contar, solo tienes opiniones; contando, tienes información."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-8-b-escena.webp"
+}

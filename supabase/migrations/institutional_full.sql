@@ -71,9 +71,29 @@ AS $$
 $$;
 
 -- ============================================================================
--- 5. TRIGGER: handle_new_user — actualizado para alumnos_grupos
---    Reemplaza el anterior: además de crear el perfil, si hay group_id
---    en metadata Y ese grupo existe, vincula al alumno en alumnos_grupos.
+-- 5. TRIGGER: handle_new_user
+--    NOTA (2026-07-14): el cuerpo de abajo ya incluye, desde el origen, los
+--    dos fixes de seguridad/datos que se aplicaron después en producción
+--    mediante migraciones separadas — así ejecutar este archivo solo (p. ej.
+--    para levantar un ambiente nuevo desde cero) no reintroduce ninguno de
+--    los dos problemas:
+--      1) CRÍTICO-001 (escalada de privilegios): la versión original tomaba
+--         "role" de raw_user_meta_data, controlado por el cliente que llama
+--         a signUp(). Aquí se fuerza siempre a 'student'; solo el admin
+--         asigna otros roles manualmente. Ver: fix_handle_new_user_role_escalation.sql
+--      2) "email" faltante: ese primer fix, sin intención, había omitido la
+--         columna email del INSERT (~5 semanas de registros con email NULL
+--         en profiles). Restaurada aquí. El cuerpo de abajo es una copia
+--         exacta de la versión vigente en producción:
+--         Ver: 2026-07-13_fix_handle_new_user_missing_email.sql
+--    Este archivo YA NO inserta en alumnos_grupos desde el trigger: esa
+--    vinculación automática por metadata quedó superada por la lógica
+--    explícita del lado de aplicación (ver onboardEscuela() en
+--    src/app/actions/adminActions.ts, que hace su propio INSERT en
+--    alumnos_grupos tras crear cada cuenta de alumno). Ninguna migración
+--    posterior a este archivo restauró ese bloque — mantenerlo aquí
+--    divergiría de la versión de esta función que en realidad corre en
+--    producción hoy.
 -- ============================================================================
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger
@@ -81,35 +101,25 @@ LANGUAGE plpgsql
 SECURITY DEFINER
 SET search_path = public
 AS $$
-DECLARE
-  v_group_id   text;
-  v_grupo_uuid uuid;
 BEGIN
-  -- Insertar en profiles (igual que antes)
-  INSERT INTO public.profiles (id, email, full_name, role, school_level, group_id)
-  VALUES (
+  INSERT INTO public.profiles (
+    id,
+    email,
+    full_name,
+    role,
+    school_level,
+    group_id,
+    created_at
+  ) VALUES (
     new.id,
     new.email,
-    new.raw_user_meta_data->>'full_name',
-    COALESCE(new.raw_user_meta_data->>'role', 'student'),
+    COALESCE(new.raw_user_meta_data->>'full_name', new.email),
+    'student',  -- siempre student; admin asigna roles manualmente (ver fix_handle_new_user_role_escalation.sql)
     COALESCE(new.raw_user_meta_data->>'school_level', 'primary'),
-    new.raw_user_meta_data->>'group_id'
+    new.raw_user_meta_data->>'group_id',
+    now()
   )
   ON CONFLICT (id) DO NOTHING;
-
-  -- Si hay group_id en metadata, intentar vincular en alumnos_grupos
-  v_group_id := new.raw_user_meta_data->>'group_id';
-  IF v_group_id IS NOT NULL AND v_group_id != '' THEN
-    BEGIN
-      v_grupo_uuid := v_group_id::uuid;
-      INSERT INTO public.alumnos_grupos (id_alumno, id_grupo)
-      VALUES (new.id, v_grupo_uuid)
-      ON CONFLICT DO NOTHING;
-    EXCEPTION WHEN OTHERS THEN
-      -- Si el UUID es inválido o el grupo no existe, no bloquear el registro
-      RAISE LOG 'handle_new_user: no se pudo vincular grupo % para usuario %', v_group_id, new.id;
-    END;
-  END IF;
 
   RETURN new;
 END;
@@ -124,15 +134,48 @@ CREATE TRIGGER on_auth_user_created
 -- ============================================================================
 -- 6. RLS POLICIES — profiles
 -- ============================================================================
--- Alumno ve solo su propio perfil
+-- NOTA (2026-07-14): las dos policies de abajo (student_reads_own_profile y
+-- teacher_reads_assigned_students) ya reflejan el fix de ALTO-003 aplicado
+-- después en producción vía fix_rls_alumno_ve_su_perfil.sql. La policy
+-- original de esta sección ("alumno_ve_su_perfil") tenía un catch-all
+-- (OR get_my_role() IN ('teacher','admin')) que dejaba a CUALQUIER docente o
+-- admin leer el perfil de CUALQUIER usuario de la plataforma completa, sin
+-- importar su escuela o grupo. Ejecutar este archivo solo hoy ya deja el
+-- estado correcto, sin depender de aplicar ese fix aparte.
+
+-- Alumno: solo puede leer su propio perfil
 DROP POLICY IF EXISTS "alumno_ve_su_perfil" ON public.profiles;
-CREATE POLICY "alumno_ve_su_perfil" ON public.profiles
-  FOR SELECT USING (
-    auth.uid() = id
-    OR public.get_my_role() IN ('teacher', 'admin')
+DROP POLICY IF EXISTS "users_read_own_profile" ON public.profiles;
+DROP POLICY IF EXISTS "student_reads_own_profile" ON public.profiles;
+CREATE POLICY "student_reads_own_profile"
+  ON public.profiles
+  FOR SELECT
+  TO authenticated
+  USING (auth.uid() = id);
+
+-- Docente: puede leer perfiles de alumnos asignados a su(s) grupo(s) vía el
+-- campo legado profiles.group_id (string, posiblemente CSV de varios
+-- grupos). Ver: fix_rls_alumno_ve_su_perfil.sql
+DROP POLICY IF EXISTS "teacher_reads_assigned_students" ON public.profiles;
+CREATE POLICY "teacher_reads_assigned_students"
+  ON public.profiles
+  FOR SELECT
+  TO authenticated
+  USING (
+    EXISTS (
+      SELECT 1 FROM public.profiles AS tp
+      WHERE tp.id = auth.uid()
+        AND tp.role = 'teacher'
+        AND tp.group_id IS NOT NULL
+        AND profiles.group_id = ANY(string_to_array(tp.group_id, ','))
+    )
   );
 
--- Profesor ve perfiles de alumnos de sus grupos
+-- Profesor ve perfiles de alumnos de sus grupos (modelo nuevo: tabla
+-- alumnos_grupos + get_my_group_ids()). Coexiste con la policy anterior
+-- (basada en el campo legado profiles.group_id): al ser ambas policies
+-- permissive de SELECT, Postgres las combina con OR — cualquiera de las dos
+-- que aplique concede la lectura.
 DROP POLICY IF EXISTS "profesor_ve_alumnos_de_su_grupo" ON public.profiles;
 CREATE POLICY "profesor_ve_alumnos_de_su_grupo" ON public.profiles
   FOR SELECT USING (

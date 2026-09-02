@@ -6,94 +6,169 @@
   "edad": "14-15 años",
   "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "Mi Estructura de Capital",
-  "descripcion": "Tu empresa necesita dinero para crecer. ¿Qué camino elegirás? ¿Serás el dueño absoluto con deudas o compartirás el éxito con socios?",
-  "objetivo": "Evaluar las ventajas y desventajas de financiar una empresa mediante deuda bancaria o emisión de acciones",
-  "xp": 600,
-  "output_type": "Propuesta de Estructura Financiera",
+  "titulo": "Presupuesto de Estudiante",
+  "descripcion": "La universidad es la primera vez que administras dinero de verdad con muy poco margen. Los hábitos que armes aquí son los que vas a tener a los 40.",
+  "objetivo": "Gestionar recursos limitados durante la etapa estudiantil priorizando gastos y evitando el endeudamiento temprano.",
+  "xp": 750,
+  "output_type": "presupuesto_estudiante",
   "exportable": true,
   "pasos": [
     {
-      "id": "expansion_meta_s3",
-      "titulo": "🚀 El Proyecto de Expansión",
-      "descripcion": "Necesitas $10,000,000 para abrir fábricas en 3 países.",
+      "id": "ingresos",
+      "titulo": "💰 De dónde sale tu dinero",
+      "descripcion": "Suma todo lo que entra en un mes típico. Sé conservador: no cuentes lo que \"podría\" llegar.",
       "campos": [
         {
-          "id": "monto_deuda_s3",
-          "label": "Monto a pedir al Banco (Préstamo) ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 10000000,
-          "step": 1000000,
-          "default": 5000000,
-          "unit": "$"
+          "id": "apoyo_familiar",
+          "label": "Apoyo familiar mensual ($)",
+          "type": "number",
+          "placeholder": "Ej: 4000",
+          "requerido": true
         },
         {
-          "id": "monto_equity_s3",
-          "label": "Monto a pedir a Inversionistas (Venta de acciones) ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 10000000,
-          "step": 1000000,
-          "default": 5000000,
-          "unit": "$"
+          "id": "beca",
+          "label": "Beca mensual ($)",
+          "type": "number",
+          "placeholder": "Ej: 1800",
+          "requerido": true
+        },
+        {
+          "id": "trabajo",
+          "label": "Trabajo o freelance ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        },
+        {
+          "id": "total_ingresos",
+          "label": "Ingreso total mensual",
+          "type": "calculated",
+          "formula": "apoyo_familiar + beca + trabajo",
+          "unit": "$",
+          "requerido": false
         }
       ]
     },
     {
-      "id": "analisis_control_s3",
-      "titulo": "⚖️ Control vs Costo",
-      "descripcion": "Analiza qué estás sacrificando en cada opción.",
+      "id": "fijos",
+      "titulo": "🔒 Gastos que no se negocian",
+      "descripcion": "Los que hay que pagar sí o sí. Estos definen tu piso.",
       "campos": [
         {
-          "id": "porcentaje_venta_s3",
-          "label": "¿Qué porcentaje de tu empresa estás dispuesto a ceder a los socios?",
-          "type": "slider",
-          "min": 0,
-          "max": 49,
-          "step": 1,
-          "default": 20,
-          "unit": "%"
+          "id": "renta",
+          "label": "Renta o aportación de casa ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
         },
         {
-          "id": "razon_financiamiento",
-          "label": "¿Por qué elegiste esta mezcla de dinero?",
-          "type": "textarea",
-          "placeholder": "Ej: Prefiero no deberle tanto al banco para no ahogarme con intereses, aunque tenga que compartir mis ganancias con socios...",
+          "id": "transporte",
+          "label": "Transporte ($)",
+          "type": "number",
+          "placeholder": "Ej: 900",
           "requerido": true
+        },
+        {
+          "id": "comida",
+          "label": "Comida ($)",
+          "type": "number",
+          "placeholder": "Ej: 2500",
+          "requerido": true
+        },
+        {
+          "id": "escuela",
+          "label": "Materiales y cuotas escolares ($)",
+          "type": "number",
+          "placeholder": "Ej: 600",
+          "requerido": true
+        },
+        {
+          "id": "total_fijos",
+          "label": "Total de gastos fijos",
+          "type": "calculated",
+          "formula": "renta + transporte + comida + escuela",
+          "unit": "$",
+          "requerido": false
         }
       ]
     },
     {
-      "id": "escenario_futuro_s3",
-      "titulo": "🔮 El Futuro del Negocio",
-      "descripcion": "Imagina que la empresa vale 10 veces más en 5 años.",
+      "id": "variables",
+      "titulo": "🎉 Lo que sí se negocia",
+      "descripcion": "Aquí es donde se decide si terminas el mes con algo o con deuda.",
       "campos": [
         {
-          "id": "reflexion_final_cap",
-          "label": "¿Preferirías haber pagado el préstamo al 10% o ser dueño de ese 30% que vendiste?",
-          "type": "textarea",
-          "placeholder": "Reflexiona sobre el costo de oportunidad del capital...",
+          "id": "social",
+          "label": "Salidas y vida social ($)",
+          "type": "number",
+          "placeholder": "Ej: 1200",
           "requerido": true
         },
         {
-          "id": "leverage_ratio",
-          "label": "Índice de Apalancamiento (Deuda/Capital)",
-          "type": "calculated",
-          "formula": "Math.round(monto_deuda_s3 / Math.max(1, monto_equity_s3) * 100) / 100",
-          "unit": "× (recomendado <2×)",
-          "ayuda": "Ratio >2× puede ser riesgoso en etapas tempranas"
+          "id": "suscripciones",
+          "label": "Suscripciones y apps ($)",
+          "type": "number",
+          "placeholder": "Ej: 400",
+          "requerido": true
         },
         {
-          "id": "wacc_estimado",
-          "label": "WACC Estimado",
+          "id": "antojos",
+          "label": "Comida fuera, café y antojos ($)",
+          "type": "number",
+          "placeholder": "Ej: 900",
+          "requerido": true,
+          "ayuda": "Este suele ser el rubro más grande y el más invisible. Anótalo una semana y te va a sorprender."
+        },
+        {
+          "id": "total_variables",
+          "label": "Total variable",
           "type": "calculated",
-          "formula": "Math.round((monto_deuda_s3 / Math.max(1, monto_deuda_s3 + monto_equity_s3) * 8 + monto_equity_s3 / Math.max(1, monto_deuda_s3 + monto_equity_s3) * 15) * 10) / 10",
-          "unit": "% costo de capital",
-          "ayuda": "Costo promedio ponderado: deuda ~8%, capital propio ~15%"
+          "formula": "social + suscripciones + antojos",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
+    },
+    {
+      "id": "resultado",
+      "titulo": "📊 Cómo cierras el mes",
+      "descripcion": "El número que decide si estás construyendo o cavando.",
+      "campos": [
+        {
+          "id": "saldo",
+          "label": "Lo que te queda al final del mes",
+          "type": "calculated",
+          "formula": "(apoyo_familiar + beca + trabajo) - (renta + transporte + comida + escuela) - (social + suscripciones + antojos)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Si es negativo, cada mes te endeudas un poco más. Ese patrón, sostenido cuatro años, sale de la universidad contigo."
+        },
+        {
+          "id": "tasa_ahorro",
+          "label": "Tu tasa de ahorro",
+          "type": "calculated",
+          "formula": "Math.round(((apoyo_familiar + beca + trabajo) - (renta + transporte + comida + escuela) - (social + suscripciones + antojos)) / Math.max(1, apoyo_familiar + beca + trabajo) * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Ahorrar 10% con poco dinero entrena el mismo músculo que ahorrar 10% con mucho."
+        },
+        {
+          "id": "fondo_meta",
+          "label": "Fondo de emergencia recomendado (3 meses)",
+          "type": "calculated",
+          "formula": "(renta + transporte + comida + escuela) * 3",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "compromiso",
+          "label": "¿Qué gasto variable recortarías primero?",
+          "type": "text",
+          "placeholder": "Ej: bajar antojos a $400",
+          "requerido": true
         }
       ]
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

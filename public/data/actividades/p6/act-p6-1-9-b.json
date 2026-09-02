@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-1-9-B",
+  "unit_code": "P6-1-9",
+  "unit_title": "Riesgos reales de las criptomonedas: volatilidad y fraude",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Riesgos Reales",
+  "descripcion": "Comprueba que conoces los riesgos sin exageración ni publicidad.",
+  "objetivo": "Verificar la comprensión de los riesgos de activos volátiles no regulados",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Solo circulan historias de ganancia porque:",
+      "opciones": [
+        "No hay pérdidas",
+        "Nadie publica sus pérdidas",
+        "Está prohibido contarlas",
+        "Son más interesantes"
+      ],
+      "correcta": 1,
+      "explicacion": "Ese sesgo distorsiona por completo la percepción del riesgo."
+    },
+    {
+      "id": "q2",
+      "texto": "La volatilidad extrema significa:",
+      "opciones": [
+        "Crecimiento constante",
+        "Que no cambia",
+        "Subidas y caídas muy grandes en poco tiempo",
+        "Que hay comisiones"
+      ],
+      "correcta": 2,
+      "explicacion": "Caídas de más de la mitad no son excepcionales en este mercado."
+    },
+    {
+      "id": "q3",
+      "texto": "Si la plataforma quiebra:",
+      "opciones": [
+        "Responde el seguro de depósito",
+        "Responde el gobierno",
+        "Se devuelve todo",
+        "No hay institución a la cual reclamar"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la diferencia más importante frente a un instrumento regulado."
+    },
+    {
+      "id": "q4",
+      "texto": "El riesgo de custodia consiste en:",
+      "opciones": [
+        "Que perder la clave signifique perder el acceso para siempre",
+        "Que suba el precio",
+        "Que baje la comisión",
+        "Que cierre el banco"
+      ],
+      "correcta": 0,
+      "explicacion": "No hay ventanilla donde recuperar una clave perdida."
+    },
+    {
+      "id": "q5",
+      "texto": "Los fraudes abundan porque:",
+      "opciones": [
+        "Es muy técnico",
+        "Hay poca regulación y promesas de ganancia rápida",
+        "Es nuevo",
+        "Es caro"
+      ],
+      "correcta": 1,
+      "explicacion": "Plataformas falsas y pirámides disfrazadas son las más comunes."
+    },
+    {
+      "id": "q6",
+      "texto": "La primera regla prudente es:",
+      "opciones": [
+        "Invertir todo el ahorro",
+        "Pedir prestado",
+        "Solo dinero que se pueda perder por completo",
+        "Convencer a otros"
+      ],
+      "correcta": 2,
+      "explicacion": "Si perderlo cambiaría tu vida, no es dinero para este uso."
+    },
+    {
+      "id": "q7",
+      "texto": "Nunca debe usarse:",
+      "opciones": [
+        "El dinero que sobra",
+        "Un monto pequeño",
+        "El aguinaldo completo",
+        "El fondo de emergencia ni dinero prestado"
+      ],
+      "correcta": 3,
+      "explicacion": "El fondo de emergencia necesita estar disponible y estable."
+    },
+    {
+      "id": "q8",
+      "texto": "Decidir no participar:",
+      "opciones": [
+        "Es una decisión igual de válida",
+        "Es cobardía",
+        "Es un error",
+        "Es imposible"
+      ],
+      "correcta": 0,
+      "explicacion": "Nadie está obligado a exponerse a un riesgo que no quiere tomar."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-9-b-escena.webp"
+}

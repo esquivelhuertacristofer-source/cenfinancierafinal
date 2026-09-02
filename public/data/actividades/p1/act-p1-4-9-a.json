@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P1-4-9-A",
+  "unit_code": "P1-4-9",
+  "unit_title": "Un negocio entre amigos: repartir el trabajo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Equipo de Ceny",
+  "descripcion": "Ceny y sus amigos van a vender juntos. Clasifica cada decisión de equipo según si construye el negocio o lo rompe.",
+  "objetivo": "Distinguir acuerdos y prácticas de equipo que sostienen un negocio compartido",
+  "xp": 250,
+  "instruccion": "Arrastra cada decisión del equipo a la caja correcta.",
+  "categorias": [
+    {
+      "id": "construye",
+      "label": "Fortalece al equipo",
+      "emoji": "🤝",
+      "color": "#10B981"
+    },
+    {
+      "id": "rompe",
+      "label": "Rompe al equipo",
+      "emoji": "💥",
+      "color": "#EF4444"
+    },
+    {
+      "id": "nada",
+      "label": "Ni ayuda ni estorba",
+      "emoji": "➖",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Escribir quién hace qué antes de empezar",
+      "emoji": "📝",
+      "categoria_correcta": "construye",
+      "feedback": "Lo que se acuerda antes, no se pelea después."
+    },
+    {
+      "id": "i2",
+      "label": "Repartir la ganancia al final, \"como salga\"",
+      "emoji": "🎲",
+      "categoria_correcta": "rompe",
+      "feedback": "Con el dinero ya contado, cada quien recuerda haber trabajado más."
+    },
+    {
+      "id": "i3",
+      "label": "Acordar qué pasa si alguien no cumple",
+      "emoji": "⚖️",
+      "categoria_correcta": "construye",
+      "feedback": "Evita la conversación más incómoda del día."
+    },
+    {
+      "id": "i4",
+      "label": "Que uno solo lleve todas las cuentas y nadie las vea",
+      "emoji": "🙈",
+      "categoria_correcta": "rompe",
+      "feedback": "Las cuentas de un equipo se ven entre todos, aunque las lleve uno."
+    },
+    {
+      "id": "i5",
+      "label": "Turnarse para atender a los clientes",
+      "emoji": "🔄",
+      "categoria_correcta": "construye",
+      "feedback": "Rotar hace que cada quien entienda el trabajo del otro."
+    },
+    {
+      "id": "i6",
+      "label": "Elegir el color del mantel entre todos",
+      "emoji": "🎨",
+      "categoria_correcta": "nada",
+      "feedback": "Es simpático decidirlo juntos, pero no cambia el resultado del negocio."
+    },
+    {
+      "id": "i7",
+      "label": "Que uno cobre y se lleve el dinero a su casa",
+      "emoji": "🏃",
+      "categoria_correcta": "rompe",
+      "feedback": "El dinero del equipo se cuenta frente al equipo. Siempre."
+    },
+    {
+      "id": "i8",
+      "label": "Anotar en una hoja lo que gastó cada quien",
+      "emoji": "🧾",
+      "categoria_correcta": "construye",
+      "feedback": "Quien puso materiales debe recuperarlos antes de repartir ganancias."
+    },
+    {
+      "id": "i9",
+      "label": "Ponerle nombre al puesto",
+      "emoji": "🏷️",
+      "categoria_correcta": "nada",
+      "feedback": "Ayuda a que los recuerden, pero no organiza el trabajo ni el reparto."
+    },
+    {
+      "id": "i10",
+      "label": "Prometer \"ya luego vemos cómo repartimos\"",
+      "emoji": "🤷",
+      "categoria_correcta": "rompe",
+      "feedback": "Esa frase es el inicio de casi todos los pleitos entre socios."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-9-a-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-2-10-B",
+  "unit_code": "S3-2-10",
+  "unit_title": "Decisiones grandes: auto, viaje o inversión",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Decidir con Argumentos",
+  "descripcion": "Comprueba que dominas el marco de decisión.",
+  "objetivo": "Verificar la aplicación del marco de cuatro preguntas",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Ante tres opciones grandes:",
+      "opciones": [
+        "No hay respuesta universal, pero sí un marco para decidir",
+        "Siempre hay que invertir",
+        "Siempre hay que gastar",
+        "Da igual"
+      ],
+      "correcta": 0,
+      "explicacion": "El marco permite decidir con argumentos en lugar de impulso."
+    },
+    {
+      "id": "q2",
+      "texto": "La primera pregunta es:",
+      "opciones": [
+        "Cuánto cuesta",
+        "Qué problema real resuelve",
+        "Qué dirán",
+        "Cuándo lo tendré"
+      ],
+      "correcta": 1,
+      "explicacion": "Nombrar el problema con precisión ya descarta opciones."
+    },
+    {
+      "id": "q3",
+      "texto": "La segunda pregunta es:",
+      "opciones": [
+        "Cuál es el precio",
+        "Quién lo vende",
+        "Cuál es el costo total, incluidos los recurrentes",
+        "De qué color es"
+      ],
+      "correcta": 2,
+      "explicacion": "El precio de compra casi nunca es el costo."
+    },
+    {
+      "id": "q4",
+      "texto": "Un vehículo suma además del precio:",
+      "opciones": [
+        "Nada",
+        "Solo gasolina",
+        "Solo el seguro",
+        "Seguro, mantenimiento, combustible, tenencia y depreciación"
+      ],
+      "correcta": 3,
+      "explicacion": "Todos esos costos corren cada año que lo tengas."
+    },
+    {
+      "id": "q5",
+      "texto": "Un viaje largo suma:",
+      "opciones": [
+        "El ingreso no percibido durante ese tiempo",
+        "Solo los boletos",
+        "Nada más",
+        "Solo el hospedaje"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el mismo costo de oportunidad que en la formación."
+    },
+    {
+      "id": "q6",
+      "texto": "La tercera pregunta es:",
+      "opciones": [
+        "Quién me acompaña",
+        "A qué renuncio al elegirla",
+        "Cuánto tarda",
+        "Dónde se compra"
+      ],
+      "correcta": 1,
+      "explicacion": "El costo de oportunidad hecho explícito."
+    },
+    {
+      "id": "q7",
+      "texto": "El costo de oportunidad sirve para:",
+      "opciones": [
+        "Descartar todo consumo",
+        "Nada",
+        "Elegir sabiendo qué se deja del otro lado",
+        "Justificar cualquier gasto"
+      ],
+      "correcta": 2,
+      "explicacion": "Hace la decisión consciente, no la prohíbe."
+    },
+    {
+      "id": "q8",
+      "texto": "Las decisiones irreversibles:",
+      "opciones": [
+        "Se toman rápido",
+        "Da igual",
+        "Se evitan siempre",
+        "Merecen mucho más análisis"
+      ],
+      "correcta": 3,
+      "explicacion": "Las reversibles se pueden corregir; las otras se quedan."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-10-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-10-b-escena.webp"
+}

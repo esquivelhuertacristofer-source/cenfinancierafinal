@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-2-9-A",
+  "unit_code": "P4-2-9",
+  "unit_title": "Qué hacer si me roban la tarjeta",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Los Seis Pasos",
+  "descripcion": "Ordena las acciones ante el robo de una tarjeta según el momento en que van.",
+  "objetivo": "Clasificar acciones por prioridad ante el robo o extravío de una tarjeta",
+  "xp": 400,
+  "instruccion": "Arrastra cada acción al momento en que corresponde hacerla.",
+  "categorias": [
+    {
+      "id": "inmediato",
+      "label": "Primeros minutos",
+      "emoji": "🚨",
+      "color": "#EF4444"
+    },
+    {
+      "id": "mismo_dia",
+      "label": "El mismo día",
+      "emoji": "📋",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "nunca",
+      "label": "Nunca hacer",
+      "emoji": "🚫",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Bloquear la tarjeta llamando al banco",
+      "emoji": "🔒",
+      "categoria_correcta": "inmediato",
+      "feedback": "Antes que cualquier otra cosa. Cada minuto activa es riesgo."
+    },
+    {
+      "id": "i2",
+      "label": "Anotar el folio del reporte con fecha y hora",
+      "emoji": "🧾",
+      "categoria_correcta": "inmediato",
+      "feedback": "Es la prueba que separa los cargos antes y después del bloqueo."
+    },
+    {
+      "id": "i3",
+      "label": "Buscar la tarjeta un rato antes de reportar",
+      "emoji": "🔎",
+      "categoria_correcta": "nunca",
+      "feedback": "Buscar primero es el error más caro: se bloquea y luego se busca."
+    },
+    {
+      "id": "i4",
+      "label": "Revisar los movimientos recientes de la cuenta",
+      "emoji": "📱",
+      "categoria_correcta": "mismo_dia",
+      "feedback": "Con la tarjeta ya bloqueada, toca ver qué alcanzaron a hacer."
+    },
+    {
+      "id": "i5",
+      "label": "Desconocer por escrito los cargos no reconocidos",
+      "emoji": "✍️",
+      "categoria_correcta": "mismo_dia",
+      "feedback": "Dentro del plazo legal y por escrito, no de palabra."
+    },
+    {
+      "id": "i6",
+      "label": "Publicar en redes que te robaron la tarjeta",
+      "emoji": "📢",
+      "categoria_correcta": "nunca",
+      "feedback": "No resuelve nada y expone información personal."
+    },
+    {
+      "id": "i7",
+      "label": "Solicitar la reposición de la tarjeta",
+      "emoji": "💳",
+      "categoria_correcta": "mismo_dia",
+      "feedback": "Puede tener costo según el contrato de cada banco."
+    },
+    {
+      "id": "i8",
+      "label": "Levantar denuncia si hubo robo",
+      "emoji": "⚖️",
+      "categoria_correcta": "mismo_dia",
+      "feedback": "Respalda la aclaración y a veces es requisito para que proceda."
+    },
+    {
+      "id": "i9",
+      "label": "Esperar a mañana por si aparece",
+      "emoji": "😴",
+      "categoria_correcta": "nunca",
+      "feedback": "Una noche entera con la tarjeta activa en manos de alguien más."
+    },
+    {
+      "id": "i10",
+      "label": "Guardar el número de atención en el celular desde antes",
+      "emoji": "📞",
+      "categoria_correcta": "inmediato",
+      "feedback": "Si la tarjeta no está, el número impreso en el reverso tampoco."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-9-a-escena.webp"
+}

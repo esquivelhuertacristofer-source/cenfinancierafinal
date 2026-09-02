@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
+import { useHasMounted } from "@/lib/useHasMounted";
 import { Trophy, Star, ArrowRight, Zap, AlertCircle } from "lucide-react";
 import { notify } from "@/lib/toast";
 
@@ -25,11 +26,10 @@ export default function TopAlumnos({
   const [topList, setTopList] = useState<TopAlumnoReal[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const { studentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
-    setMounted(true);
     if (idsLoading) return;
     async function fetchTop() {
       setLoading(true);

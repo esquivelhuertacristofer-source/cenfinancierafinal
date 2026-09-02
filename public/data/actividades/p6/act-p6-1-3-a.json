@@ -4,88 +4,91 @@
   "unit_title": "Prepararse para la universidad: costos y opciones",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "JUEGO",
-  "complejidad": "MEDIO",
-  "titulo": "El Inversionista Ético",
-  "descripcion": "El mercado está lleno de trampas y oportunidades. ¿Sabrás elegir las acciones que construyen riqueza real?",
-  "objetivo": "Diferenciar las conductas de inversión responsable de la especulación de alto riesgo",
-  "xp": 400,
-  "game_type": "click",
-  "duracion": 60,
-  "velocidad_inicial": "media",
-  "velocidad_incremento": true,
-  "instruccion": "Haz clic en las ACCIONES DE INVERSIÓN (✅) y evita las ESPECULACIONES (🚫).",
-  "items": [
+  "tipo": "SIMULADOR",
+  "complejidad": "ALTO",
+  "titulo": "La Carrera que Sí se Paga Sola",
+  "descripcion": "Estudiar es una inversión: pones dinero y tiempo hoy para ganar más después. Como toda inversión, se puede calcular. Mueve los controles y descubre en cuántos años se recupera una carrera.",
+  "objetivo": "Entender la educación superior como inversión de capital humano, calculando su costo total y el tiempo de recuperación frente al ingreso adicional que genera.",
+  "xp": 600,
+  "descripcion_formula": "Años para recuperar = costo total de la carrera ÷ (ingreso extra mensual × 12). El costo total incluye colegiaturas, materiales y lo que dejas de ganar por estudiar en vez de trabajar (costo de oportunidad).",
+  "inputs": [
     {
-      "id": "i1",
-      "label": "Analizar el reporte de ventas de la empresa",
-      "emoji": "📊",
-      "tipo": "correcto",
-      "puntos": 100
+      "id": "colegiatura",
+      "label": "Colegiatura mensual ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 20000,
+      "step": 500,
+      "default": 3000,
+      "unit": "$",
+      "referencia": "Universidad pública: 0. Privada media: $6,000-$12,000"
     },
     {
-      "id": "e1",
-      "label": "Comprar porque un influencer dijo '¡A la luna!'",
-      "emoji": "🚀",
-      "tipo": "incorrecto",
-      "puntos": -200
+      "id": "anios_carrera",
+      "label": "Duración de la carrera (años)",
+      "type": "slider",
+      "min": 3,
+      "max": 7,
+      "step": 1,
+      "default": 4,
+      "unit": "años"
     },
     {
-      "id": "i2",
-      "label": "Diversificar en 10 empresas diferentes",
-      "emoji": "🍎",
-      "tipo": "correcto",
-      "puntos": 150
+      "id": "gastos_mes",
+      "label": "Transporte, libros y materiales ($ al mes)",
+      "type": "slider",
+      "min": 500,
+      "max": 6000,
+      "step": 250,
+      "default": 1500,
+      "unit": "$"
     },
     {
-      "id": "e2",
-      "label": "Usar todos tus ahorros en una sola 'apuesta'",
-      "emoji": "🎰",
-      "tipo": "incorrecto",
-      "puntos": -250
+      "id": "sueldo_sin_carrera",
+      "label": "Sueldo mensual SIN carrera ($)",
+      "type": "slider",
+      "min": 5000,
+      "max": 20000,
+      "step": 500,
+      "default": 9000,
+      "unit": "$"
     },
     {
-      "id": "i3",
-      "label": "Reinvertir las ganancias (Dividendos)",
-      "emoji": "♻️",
-      "tipo": "correcto",
-      "puntos": 200
-    },
-    {
-      "id": "e3",
-      "label": "Vender por pánico cuando el precio baja un poquito",
-      "emoji": "😱",
-      "tipo": "incorrecto",
-      "puntos": -150
-    },
-    {
-      "id": "i4",
-      "label": "Invertir pensando en los próximos 10 años",
-      "emoji": "⏳",
-      "tipo": "correcto",
-      "puntos": 200
-    },
-    {
-      "id": "e4",
-      "label": "Entrar en un grupo de 'señales mágicas' de Telegram",
-      "emoji": "📱",
-      "tipo": "incorrecto",
-      "puntos": -300
-    },
-    {
-      "id": "i5",
-      "label": "Invertir una cantidad fija cada mes",
-      "emoji": "📅",
-      "tipo": "correcto",
-      "puntos": 100
-    },
-    {
-      "id": "e5",
-      "label": "Pedir prestado para comprar una moneda desconocida",
-      "emoji": "💸",
-      "tipo": "incorrecto",
-      "puntos": -400
+      "id": "sueldo_con_carrera",
+      "label": "Sueldo mensual CON carrera ($)",
+      "type": "slider",
+      "min": 8000,
+      "max": 60000,
+      "step": 1000,
+      "default": 20000,
+      "unit": "$"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "formula": "Math.round(((colegiatura + gastos_mes) * 12 * anios_carrera) / Math.max(1, (sueldo_con_carrera - sueldo_sin_carrera) * 12) * 10) / 10",
+  "output_label": "Años para recuperar lo invertido",
+  "output_prefix": "",
+  "output_suffix": " años",
+  "escenarios": [
+    {
+      "condicion": "sueldo_con_carrera <= sueldo_sin_carrera",
+      "mensaje": "Con estos números la carrera no aumenta tu ingreso: no se recupera nunca. Antes de elegir, investiga los sueldos reales de esa profesión, no los que imaginas.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "resultado > 10 && sueldo_con_carrera > sueldo_sin_carrera",
+      "mensaje": "Más de una década para recuperarla. Sigue teniendo valor (aprendizaje, red de contactos, opciones), pero conviene buscar beca, universidad pública o una modalidad más barata.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "resultado <= 4 && sueldo_con_carrera > sueldo_sin_carrera",
+      "mensaje": "¡Excelente inversión! Se paga sola en pocos años y después ese ingreso extra te acompaña durante 40 años de vida laboral.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "colegiatura === 0",
+      "mensaje": "Universidad pública: tu único costo real son materiales y el tiempo que no trabajas. Es de las mejores inversiones disponibles en México.",
+      "tipo": "exito"
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

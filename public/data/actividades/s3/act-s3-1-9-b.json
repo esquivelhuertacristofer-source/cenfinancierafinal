@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S3-1-9-B",
+  "unit_code": "S3-1-9",
+  "unit_title": "Freelance: cobrar, facturar y no morir en el intento",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Freelance",
+  "descripcion": "Responde rápido sobre cobrar y trabajar por tu cuenta.",
+  "objetivo": "Consolidar las prácticas del trabajo independiente",
+  "xp": 800,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Lo difícil del trabajo independiente es:",
+      "respuesta_correcta": "Cotizar, cobrar y sobrevivir a los meses malos",
+      "incorrectas": [
+        "Hacer el trabajo",
+        "Encontrar oficina",
+        "Comprar equipo"
+      ],
+      "dato_extra": "Son justo las tres cosas que nadie enseña."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Una tarifa correcta incluye:",
+      "respuesta_correcta": "Herramientas, seguro, impuestos, vacaciones y meses sin trabajo",
+      "incorrectas": [
+        "Solo el tiempo",
+        "Solo el material",
+        "Solo el transporte"
+      ],
+      "dato_extra": "Por eso siempre es mayor que el equivalente por hora de un empleo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Facturar solo las horas de producción:",
+      "respuesta_correcta": "Significa trabajar gratis buena parte de la semana",
+      "incorrectas": [
+        "Es lo correcto",
+        "Aumenta las ganancias",
+        "Es lo profesional"
+      ],
+      "dato_extra": "Cotizar, coordinar, revisar y cobrar también consume horas."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Cobrar un anticipo:",
+      "respuesta_correcta": "Filtra a quienes no iban a pagar",
+      "incorrectas": [
+        "Espanta a los buenos clientes",
+        "Es de mala educación",
+        "Está prohibido"
+      ],
+      "dato_extra": "Es una práctica profesional estándar, no desconfianza."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La cotización debe:",
+      "respuesta_correcta": "Ser escrita y especificar qué NO incluye",
+      "incorrectas": [
+        "Ser verbal",
+        "Solo tener el precio",
+        "Ser aproximada"
+      ],
+      "dato_extra": "Las exclusiones evitan la mayoría de los conflictos."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Con ingreso irregular conviene:",
+      "respuesta_correcta": "Asignarse un sueldo fijo por debajo del promedio",
+      "incorrectas": [
+        "Gastar lo que entre",
+        "No planear",
+        "Endeudarse en meses malos"
+      ],
+      "dato_extra": "El gasto deja de depender de si este mes hubo trabajo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Los excedentes de los meses buenos:",
+      "respuesta_correcta": "Se guardan en una reserva para los malos",
+      "incorrectas": [
+        "Se gastan",
+        "Se ignoran",
+        "Se reparten"
+      ],
+      "dato_extra": "Ese mecanismo convierte el caos en un ingreso manejable."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-9-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-9-b-escena.webp"
+}

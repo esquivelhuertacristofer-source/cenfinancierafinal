@@ -4,113 +4,110 @@
   "unit_title": "Criptoactivos y blockchain: el futuro del valor",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "QUIZ",
   "complejidad": "ALTO",
-  "titulo": "Mi Estrategia de Cobertura",
-  "descripcion": "No dejes el éxito de tu empresa a la suerte. ¡Diseña un plan profesional para enfrentar la volatilidad del mercado!",
-  "objetivo": "Desarrollar un plan de gestión de riesgos financieros utilizando herramientas de cobertura para asegurar la rentabilidad",
-  "xp": 600,
-  "output_type": "Plan Maestro de Gestión de Riesgos",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Blockchain sin Humo",
+  "descripcion": "Separar la tecnología de la especulación es lo más útil que puedes aprender sobre este tema.",
+  "objetivo": "Comprender la tecnología blockchain y evaluar críticamente los criptoactivos como inversión especulativa.",
+  "xp": 700,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "diagnostico_riesgo_s3",
-      "titulo": "🔍 Identificación del Riesgo",
-      "descripcion": "¿Cuál es el mayor peligro externo para tu negocio hoy?",
-      "campos": [
-        {
-          "id": "tipo_riesgo_s3",
-          "label": "Factor de Riesgo",
-          "type": "select",
-          "opciones": [
-            "Tipo de Cambio (Dólar)",
-            "Precio de Materia Prima (ej: Trigo, Acero)",
-            "Tasas de Interés (Deuda)",
-            "Precio de Energía (Gasolina/Luz)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "exposicion_riesgo",
-          "label": "¿Por qué este factor es peligroso para ti?",
-          "type": "textarea",
-          "placeholder": "Ej: Si el precio del trigo sube 20%, el costo de mi panadería será mayor que mis ventas...",
-          "requerido": true
-        }
-      ]
+      "id": "q1",
+      "texto": "Blockchain es, en esencia…",
+      "opciones": [
+        "Una criptomoneda",
+        "Un registro compartido y verificable que nadie puede alterar retroactivamente",
+        "Un banco digital",
+        "Una app de pagos"
+      ],
+      "correcta": 1,
+      "explicacion": "Su valor real está en registrar acuerdos sin necesidad de un intermediario de confianza."
     },
     {
-      "id": "seleccion_herramienta_s3",
-      "titulo": "🛠️ Selección de Herramientas",
-      "descripcion": "¿Qué instrumento usarás para protegerte?",
-      "campos": [
-        {
-          "id": "herramienta_cobertura",
-          "label": "Instrumento Financiero",
-          "type": "select",
-          "opciones": [
-            "Contrato de Futuros (Fijar precio)",
-            "Opción (Derecho a comprar/vender)",
-            "Seguro Tradicional",
-            "Diversificación de Proveedores"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "justificacion_herramienta",
-          "label": "¿Por qué elegiste esta herramienta?",
-          "type": "textarea",
-          "placeholder": "Ej: Prefiero una opción porque si el precio baja me beneficio, pero si sube estoy protegido...",
-          "requerido": true
-        }
-      ]
+      "id": "q2",
+      "texto": "La diferencia entre Bitcoin y una \"stablecoin\" es que…",
+      "opciones": [
+        "No hay diferencia",
+        "La stablecoin busca mantener un valor fijo, normalmente atado al dólar",
+        "Bitcoin es estable",
+        "Las stablecoins no existen"
+      ],
+      "correcta": 1,
+      "explicacion": "Su estabilidad depende de que quien la emite tenga realmente las reservas que dice tener."
     },
     {
-      "id": "presupuesto_cobertura_s3",
-      "titulo": "💰 El Costo de la Certeza",
-      "descripcion": "Nada es gratis. ¿Cuánto invertirás en tu protección?",
-      "campos": [
-        {
-          "id": "prima_presupuesto",
-          "label": "Presupuesto para la Prima de Cobertura ($)",
-          "type": "slider",
-          "min": 1000,
-          "max": 50000,
-          "step": 1000,
-          "default": 5000,
-          "unit": "$"
-        },
-        {
-          "id": "punto_quiebre_s3",
-          "label": "Precio crítico (¿A qué precio tu negocio deja de ser rentable?)",
-          "type": "text",
-          "placeholder": "Ej: Si el dólar llega a $24",
-          "requerido": true
-        },
-        {
-          "id": "costo_anual_cobertura",
-          "label": "Costo Anual de la Cobertura",
-          "type": "calculated",
-          "formula": "prima_presupuesto * 12",
-          "unit": "$/año",
-          "ayuda": "El costo total de mantener tu estrategia de cobertura durante un año"
-        }
-      ]
+      "id": "q3",
+      "texto": "En México, los criptoactivos…",
+      "opciones": [
+        "Son moneda de curso legal",
+        "No lo son, y ningún negocio está obligado a aceptarlos",
+        "Están prohibidos",
+        "Los emite Banxico"
+      ],
+      "correcta": 1,
+      "explicacion": "Banxico ha sido explícito y los bancos tienen restricciones para operarlos."
     },
     {
-      "id": "resumen_estrategia_s3",
-      "titulo": "📋 Resumen del Plan",
-      "descripcion": "Define tu postura ante el riesgo.",
-      "campos": [
-        {
-          "id": "postura_riesgo",
-          "label": "Mi filosofía de riesgo",
-          "type": "textarea",
-          "placeholder": "Ej: Mi prioridad es la estabilidad de los empleos de mi empresa, por lo que siempre cubriré el 50% de mis costos...",
-          "requerido": true
-        }
-      ]
+      "id": "q4",
+      "texto": "A diferencia de una acción, un criptoactivo…",
+      "opciones": [
+        "Genera dividendos",
+        "No representa propiedad de un negocio que produzca flujo",
+        "Tiene garantía estatal",
+        "Paga intereses fijos"
+      ],
+      "correcta": 1,
+      "explicacion": "Su precio depende únicamente de la oferta y la demanda, no de utilidades subyacentes."
+    },
+    {
+      "id": "q5",
+      "texto": "Si pierdes las llaves privadas de tu billetera…",
+      "opciones": [
+        "Puedes recuperarlas con soporte técnico",
+        "Pierdes el acceso de forma definitiva",
+        "El gobierno te ayuda",
+        "Se restablecen solas"
+      ],
+      "correcta": 1,
+      "explicacion": "No existe \"olvidé mi contraseña\". Es la contrapartida de no tener intermediario."
+    },
+    {
+      "id": "q6",
+      "texto": "Una plataforma cripto que ofrece \"12% mensual garantizado\" es…",
+      "opciones": [
+        "Una gran oportunidad",
+        "Una señal casi segura de fraude o esquema Ponzi",
+        "Un banco",
+        "Legal en México"
+      ],
+      "correcta": 1,
+      "explicacion": "Varias de las mayores quiebras del sector prometían exactamente eso."
+    },
+    {
+      "id": "q7",
+      "texto": "Los usos de blockchain con mayor utilidad demostrada están en…",
+      "opciones": [
+        "Solo especulación",
+        "Trazabilidad, contratos automatizados y transferencias internacionales",
+        "Nada, no sirve",
+        "Reemplazar bancos centrales"
+      ],
+      "correcta": 1,
+      "explicacion": "La tecnología puede ser valiosa aunque un criptoactivo concreto no lo sea."
+    },
+    {
+      "id": "q8",
+      "texto": "La regla prudente para cualquier persona ante los criptoactivos es…",
+      "opciones": [
+        "Invertir todos los ahorros",
+        "No poner más de lo que puedes perder por completo, y solo después del fondo de emergencia",
+        "Pedir prestado para invertir",
+        "Evitarlos por ley"
+      ],
+      "correcta": 1,
+      "explicacion": "Ni fanatismo ni prohibición: dimensionar la exposición al riesgo real que representa."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

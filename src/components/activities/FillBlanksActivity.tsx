@@ -18,7 +18,6 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
   // Procesar el texto para encontrar los marcadores __ID__
   const textParts = useMemo(() => {
     const parts: { type: 'text' | 'blank', content: string, id?: string }[] = [];
-    let remainingText = data.texto;
 
     // Buscar patrones tipo __blank_1__
     const regex = /__(.*?)__/g;

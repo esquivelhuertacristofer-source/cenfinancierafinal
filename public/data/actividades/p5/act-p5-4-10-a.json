@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P5-4-10-A",
+  "unit_code": "P5-4-10",
+  "unit_title": "Ética empresarial: ganar sin dañar",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Dilema del Negocio",
+  "descripcion": "El negocio de Ceny crece y aparecen decisiones difíciles. Cada una define su reputación.",
+  "objetivo": "Aplicar las tres pruebas éticas a decisiones reales de negocio",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El negocio de kits escolares de Ceny está creciendo. Ahora tiene clientes que no conoce y decisiones que antes no existían.",
+  "nodo_inicial": "proveedor",
+  "nodos": {
+    "proveedor": {
+      "id": "proveedor",
+      "texto": "Un proveedor le ofrece material mucho más barato pero de menor calidad, que se notaría solo después de un mes de uso. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Rechazarlo: el cliente lo notaría y no lo sabría al comprar",
+          "siguiente_nodo": "publicidad",
+          "consecuencia": "Aplicó la prueba del cliente: no aceptaría que se lo hicieran a él.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptarlo: es legal y nadie se daría cuenta al momento",
+          "siguiente_nodo": "consecuencia",
+          "consecuencia": "Ganancia inmediata mayor, con un problema que llegará después.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 800
+        },
+        {
+          "id": "o3",
+          "texto": "Usarlo pero avisando que es una versión económica más barata",
+          "siguiente_nodo": "publicidad",
+          "consecuencia": "Con información completa, el cliente decide: eso sí pasa las tres pruebas.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 400
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-proveedor.webp"
+    },
+    "consecuencia": {
+      "id": "consecuencia",
+      "texto": "Al mes, seis clientes reclaman que el material se deshizo. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reponer sin discutir y volver al proveedor anterior",
+          "siguiente_nodo": "publicidad",
+          "consecuencia": "Cuesta dinero, pero salva la reputación, que vale mucho más.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": -800
+        },
+        {
+          "id": "o2",
+          "texto": "Decir que el material era así y que no hay garantía",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Seis clientes molestos hablando con otros treinta.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-consecuencia.webp"
+    },
+    "publicidad": {
+      "id": "publicidad",
+      "texto": "Para promocionarse, Ceny podría decir que sus kits son \"los mejores de la escuela\", aunque nunca los comparó con otros. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Decir algo cierto y verificable, como qué incluye y cuánto dura",
+          "siguiente_nodo": "precio",
+          "consecuencia": "Una afirmación que puede sostener vale más que un superlativo vacío.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Usar la frase: es publicidad, todos exageran",
+          "siguiente_nodo": "precio",
+          "consecuencia": "No es ilegal, pero no pasa la prueba de la repetición.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -200
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-publicidad.webp"
+    },
+    "precio": {
+      "id": "precio",
+      "texto": "Ceny nota que unos clientes nunca comparan precios y podría cobrarles más sin que se den cuenta. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Mantener el mismo precio para todos",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Cobrar de más a quien confía es exactamente lo que la prueba del cliente descarta.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 500
+        },
+        {
+          "id": "o2",
+          "texto": "Cobrarles un poco más, total no se dan cuenta",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ganancia extra hoy a costa de la confianza que sostiene el negocio.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -1000
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-precio.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El negocio de Ceny creció por recomendación de sus propios clientes.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Las tres pruebas coinciden en algo simple: si tuvieras que ocultarlo, si no lo aceptarías para ti, o si el mercado se rompería si todos lo hicieran, no lo hagas. En un negocio pequeño la reputación es casi todo el capital.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio sigue funcionando, aunque algunos clientes dejaron de volver sin explicar por qué.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Las decisiones cuestionables rara vez provocan un escándalo: provocan que la gente deje de volver, que es más difícil de detectar y más caro de revertir.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La reputación del negocio se dañó y las ventas cayeron a la mitad.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Ahorrar en calidad sin avisar dio una ganancia de $800 y costó mucho más en clientes perdidos. La reputación se construye durante años y se destruye en una decisión.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-4-10-a-portada.webp"
+}

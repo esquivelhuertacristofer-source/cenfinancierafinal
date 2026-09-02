@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-3-8-B",
+  "unit_code": "P1-3-8",
+  "unit_title": "Mi meta subió de precio: ajustar el plan",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cuando el Precio Sube",
+  "descripcion": "Demuestra que sabes recalcular y responder sin rendirte.",
+  "objetivo": "Verificar el recálculo del faltante y el conocimiento de las tres salidas",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Tenía $150 y la meta subió a $220. ¿Cuánto me falta?",
+      "opciones": [
+        "$150",
+        "$70",
+        "$220",
+        "$370"
+      ],
+      "correcta": 1,
+      "explicacion": "220 − 150 = 70. El ahorro sigue completo, solo cambió la distancia."
+    },
+    {
+      "id": "q2",
+      "texto": "Al subir el precio, mi ahorro:",
+      "opciones": [
+        "Se borra",
+        "Se reduce a la mitad",
+        "Sigue exactamente igual",
+        "Vale menos"
+      ],
+      "correcta": 2,
+      "explicacion": "Ni un peso desapareció. Lo que se movió fue la meta, no lo caminado."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cuál NO es una salida válida?",
+      "opciones": [
+        "Esperar más semanas",
+        "Ahorrar más por semana",
+        "Cambiar a una meta más barata",
+        "Gastarme todo por enojo"
+      ],
+      "correcta": 3,
+      "explicacion": "Las tres primeras conservan lo avanzado. La cuarta lo destruye."
+    },
+    {
+      "id": "q4",
+      "texto": "Me faltan $70 y ahorro $10 por semana. ¿Cuántas semanas?",
+      "opciones": [
+        "7",
+        "3",
+        "10",
+        "70"
+      ],
+      "correcta": 0,
+      "explicacion": "Contando de diez en diez hasta 70 son siete semanas."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué suben los precios con el tiempo?",
+      "opciones": [
+        "Porque me tardé",
+        "Porque así funciona la economía",
+        "Por castigo",
+        "Porque el producto mejoró"
+      ],
+      "correcta": 1,
+      "explicacion": "Los adultos lo llaman inflación. Le pasa a todos y no es culpa de nadie."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cambiar de meta es rendirse?",
+      "opciones": [
+        "Sí, siempre",
+        "Solo si es más barata",
+        "No, es una salida válida",
+        "Solo si es más cara"
+      ],
+      "correcta": 2,
+      "explicacion": "Rendirse es gastarse el ahorro. Cambiar de meta conserva todo lo avanzado."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuándo se escribe el plan B?",
+      "opciones": [
+        "Cuando ya pasó el problema",
+        "Nunca",
+        "En medio del enojo",
+        "Antes, estando tranquilo"
+      ],
+      "correcta": 3,
+      "explicacion": "El enojo decide muy mal. Tu yo tranquilo escribe mejores planes."
+    },
+    {
+      "id": "q8",
+      "texto": "Ahorro $20 semanales y me faltan $60. Si el precio sube $40, ahora me faltan:",
+      "opciones": [
+        "$100, o sea 5 semanas",
+        "$60, o sea 3 semanas",
+        "$40, o sea 2 semanas",
+        "Nada"
+      ],
+      "correcta": 0,
+      "explicacion": "60 + 40 = 100, y 100 entre 20 son cinco semanas. Dos semanas más de espera."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-8-b-escena.webp"
+}

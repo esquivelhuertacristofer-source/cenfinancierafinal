@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-2-7-A",
+  "unit_code": "S3-2-7",
+  "unit_title": "Facturas, deducciones y devolución de impuestos",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "¿Deduce o No Deduce?",
+  "descripcion": "Clasifica cada gasto según si es deducible, no lo es o depende de cómo se pagó.",
+  "objetivo": "Aplicar los criterios y requisitos de las deducciones personales",
+  "xp": 1000,
+  "instruccion": "Arrastra cada gasto a la categoría correcta.",
+  "categorias": [
+    {
+      "id": "deduce",
+      "label": "Deducible si cumple requisitos",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "no_deduce",
+      "label": "No es deducible",
+      "emoji": "❌",
+      "color": "#EF4444"
+    },
+    {
+      "id": "depende",
+      "label": "Se pierde por la forma de pago",
+      "emoji": "💵",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Consulta médica con factura a mi nombre, pagada con tarjeta",
+      "emoji": "🩺",
+      "categoria_correcta": "deduce",
+      "feedback": "Cumple los dos requisitos: comprobante correcto y pago bancario."
+    },
+    {
+      "id": "i2",
+      "label": "Cena en un restaurante",
+      "emoji": "🍽️",
+      "categoria_correcta": "no_deduce",
+      "feedback": "No está entre las deducciones personales."
+    },
+    {
+      "id": "i3",
+      "label": "Tratamiento dental pagado en efectivo",
+      "emoji": "🦷",
+      "categoria_correcta": "depende",
+      "feedback": "Es un gasto deducible que se pierde por pagarse en efectivo."
+    },
+    {
+      "id": "i4",
+      "label": "Aportación voluntaria a mi cuenta de retiro",
+      "emoji": "🏦",
+      "categoria_correcta": "deduce",
+      "feedback": "Deducible dentro de los límites establecidos."
+    },
+    {
+      "id": "i5",
+      "label": "Ropa y calzado",
+      "emoji": "👕",
+      "categoria_correcta": "no_deduce",
+      "feedback": "No forma parte de las deducciones personales."
+    },
+    {
+      "id": "i6",
+      "label": "Colegiatura con factura a nombre de otra persona",
+      "emoji": "🎓",
+      "categoria_correcta": "depende",
+      "feedback": "El comprobante debe estar a nombre de quien deduce."
+    },
+    {
+      "id": "i7",
+      "label": "Prima de seguro de gastos médicos pagada por transferencia",
+      "emoji": "🛡️",
+      "categoria_correcta": "deduce",
+      "feedback": "Cumple con comprobante y medio de pago."
+    },
+    {
+      "id": "i8",
+      "label": "Suscripción a una plataforma de video",
+      "emoji": "📺",
+      "categoria_correcta": "no_deduce",
+      "feedback": "Ningún gasto de entretenimiento es deducción personal."
+    },
+    {
+      "id": "i9",
+      "label": "Intereses de crédito hipotecario",
+      "emoji": "🏠",
+      "categoria_correcta": "deduce",
+      "feedback": "La parte de intereses reales, dentro de los límites."
+    },
+    {
+      "id": "i10",
+      "label": "Análisis de laboratorio pagado en efectivo sin factura",
+      "emoji": "🧪",
+      "categoria_correcta": "depende",
+      "feedback": "Falla en los dos requisitos a la vez."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-7-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-7-a-escena.webp"
+}

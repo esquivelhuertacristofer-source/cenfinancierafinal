@@ -1,0 +1,149 @@
+{
+  "code": "ACT-P5-2-8-A",
+  "unit_code": "P5-2-8",
+  "unit_title": "Influencers y publicidad encubierta",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Evalúa la Recomendación",
+  "descripcion": "Arma tu evaluación de una recomendación en redes y decide qué tanto confiar.",
+  "objetivo": "Construir un puntaje de confiabilidad para una recomendación en redes",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La recomendación",
+      "descripcion": "Datos básicos de lo que estás evaluando.",
+      "campos": [
+        {
+          "id": "producto",
+          "label": "Producto recomendado",
+          "type": "text",
+          "placeholder": "Unos audífonos",
+          "requerido": true,
+          "ayuda": "Escribe qué se está recomendando."
+        },
+        {
+          "id": "precio",
+          "label": "Precio del producto",
+          "type": "number",
+          "min": 1,
+          "max": 100000,
+          "default": 900,
+          "unit": "$",
+          "placeholder": "900",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Señales de contenido pagado",
+      "descripcion": "Cuántas de las señales aparecen.",
+      "campos": [
+        {
+          "id": "codigo_descuento",
+          "label": "¿Incluye código de descuento propio?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "Sí",
+          "requerido": true,
+          "ayuda": "Un código personalizado suele implicar comisión por venta."
+        },
+        {
+          "id": "menciona_desventajas",
+          "label": "¿Menciona alguna desventaja?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "No",
+          "requerido": true,
+          "ayuda": "Ningún producto es perfecto: no mencionar nada es señal."
+        },
+        {
+          "id": "compara_opciones",
+          "label": "¿Compara con otras opciones?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "No",
+          "requerido": true,
+          "ayuda": "Una recomendación sin comparación es difícil de evaluar."
+        },
+        {
+          "id": "declara_patrocinio",
+          "label": "¿Declara que es contenido pagado?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "No",
+          "requerido": true,
+          "ayuda": "Declararlo es lo correcto y hace la recomendación más confiable, no menos."
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi verificación",
+      "descripcion": "Qué hiciste antes de decidir.",
+      "campos": [
+        {
+          "id": "fuentes_independientes",
+          "label": "Fuentes independientes que consulté",
+          "type": "slider",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 0,
+          "unit": "fuentes",
+          "ayuda": "Opiniones de personas sin relación económica con la marca.",
+          "requerido": true
+        },
+        {
+          "id": "dias_espera",
+          "label": "Días que esperé antes de comprar",
+          "type": "slider",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 0,
+          "unit": "días",
+          "ayuda": "La espera separa el deseo real del impulso provocado.",
+          "requerido": true
+        },
+        {
+          "id": "precio_comparado",
+          "label": "Precio más bajo que encontré en otro lado",
+          "type": "number",
+          "min": 1,
+          "max": 100000,
+          "default": 780,
+          "unit": "$",
+          "placeholder": "780",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_por_comparar",
+          "label": "Ahorro por haber comparado",
+          "type": "calculated",
+          "formula": "Math.max(0, precio - precio_comparado)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "evaluacion_recomendacion",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-2-8-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-8-a-escena.webp"
+}

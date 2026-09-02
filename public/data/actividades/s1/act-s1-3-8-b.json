@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-3-8-B",
+  "unit_code": "S1-3-8",
+  "unit_title": "Costo promedio en pesos: invertir poco a poco",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Aportar Poco a Poco",
+  "descripcion": "Comprueba que entiendes la estrategia y sus límites.",
+  "objetivo": "Verificar la comprensión de la aportación periódica",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Elegir el mejor momento para invertir:",
+      "opciones": [
+        "Es muy difícil incluso para profesionales",
+        "Es fácil con práctica",
+        "Es automático",
+        "Lo hace el banco"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso existe una estrategia que no lo requiere."
+    },
+    {
+      "id": "q2",
+      "texto": "La estrategia consiste en:",
+      "opciones": [
+        "Invertir todo de golpe",
+        "Invertir un monto fijo en intervalos regulares",
+        "Esperar la caída",
+        "Comprar y vender seguido"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin importar el precio de cada periodo."
+    },
+    {
+      "id": "q3",
+      "texto": "Cuando el precio está bajo, el monto fijo:",
+      "opciones": [
+        "Compra menos unidades",
+        "No compra",
+        "Compra más unidades",
+        "Compra igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Eso es lo que mejora el costo promedio."
+    },
+    {
+      "id": "q4",
+      "texto": "La estrategia:",
+      "opciones": [
+        "Garantiza ganancias",
+        "Elimina todo riesgo",
+        "Duplica el rendimiento",
+        "No garantiza ganancias"
+      ],
+      "correcta": 3,
+      "explicacion": "Reduce un riesgo específico, no todos."
+    },
+    {
+      "id": "q5",
+      "texto": "El riesgo que reduce es:",
+      "opciones": [
+        "El de entrar todo en el peor momento",
+        "El de perder dinero",
+        "El de la inflación",
+        "El de comisiones"
+      ],
+      "correcta": 0,
+      "explicacion": "El error de sincronización, no el riesgo de mercado."
+    },
+    {
+      "id": "q6",
+      "texto": "En un mercado que sube sostenidamente:",
+      "opciones": [
+        "La estrategia rinde más",
+        "Invertir todo al inicio habría rendido más",
+        "Da lo mismo",
+        "Se pierde dinero"
+      ],
+      "correcta": 1,
+      "explicacion": "Su ventaja no es el rendimiento máximo."
+    },
+    {
+      "id": "q7",
+      "texto": "Su beneficio más grande es:",
+      "opciones": [
+        "El rendimiento máximo",
+        "La velocidad",
+        "Convertir la inversión en hábito sin emoción",
+        "La exención fiscal"
+      ],
+      "correcta": 2,
+      "explicacion": "La disciplina es lo que produce resultados con el tiempo."
+    },
+    {
+      "id": "q8",
+      "texto": "Quien invierte por impulso suele:",
+      "opciones": [
+        "Comprar barato",
+        "Acertar",
+        "Diversificar",
+        "Comprar cuando sube y vender cuando baja"
+      ],
+      "correcta": 3,
+      "explicacion": "Exactamente lo contrario de lo que conviene."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-8-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-8-b-escena.webp"
+}

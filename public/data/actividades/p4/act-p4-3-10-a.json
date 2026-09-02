@@ -1,0 +1,148 @@
+{
+  "code": "ACT-P4-3-10-A",
+  "unit_code": "P4-3-10",
+  "unit_title": "Revisar mi plan: ajustar cuando la vida cambia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Plan, Versión Dos",
+  "descripcion": "Revisa tu plan de ahorro y calcula el ajuste que necesita.",
+  "objetivo": "Recalcular una meta de ahorro cuando cambian las circunstancias",
+  "xp": 400,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi plan original",
+      "descripcion": "Lo que había planeado cuando hice el plan.",
+      "campos": [
+        {
+          "id": "meta_original",
+          "label": "Monto de la meta cuando la planeé",
+          "type": "number",
+          "min": 100,
+          "max": 200000,
+          "default": 9000,
+          "unit": "$",
+          "placeholder": "9000",
+          "requerido": true,
+          "ayuda": "El precio que tenía en el momento de planearlo."
+        },
+        {
+          "id": "aporte_original",
+          "label": "Lo que planeaba ahorrar al mes",
+          "type": "slider",
+          "min": 50,
+          "max": 3000,
+          "step": 50,
+          "default": 300,
+          "unit": "$",
+          "ayuda": "El monto mensual del plan original.",
+          "requerido": true
+        },
+        {
+          "id": "meses_original",
+          "label": "Meses que calculé al planear",
+          "type": "calculated",
+          "formula": "Math.ceil(meta_original / Math.max(1, aporte_original))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Qué cambió",
+      "descripcion": "El hecho concreto que obliga a revisar el plan.",
+      "campos": [
+        {
+          "id": "cambio",
+          "label": "Qué cambió realmente",
+          "type": "select",
+          "opciones": [
+            "Subió el precio de la meta",
+            "Bajó lo que puedo ahorrar",
+            "Apareció una prioridad más urgente",
+            "Nada cambió, solo se complicó"
+          ],
+          "default": "Subió el precio de la meta",
+          "requerido": true,
+          "ayuda": "Si no puedes nombrar un hecho concreto, no es ajuste: es abandono."
+        },
+        {
+          "id": "meta_nueva",
+          "label": "Monto actual de la meta",
+          "type": "number",
+          "min": 100,
+          "max": 200000,
+          "default": 10500,
+          "unit": "$",
+          "placeholder": "10500",
+          "requerido": true,
+          "ayuda": "El precio de hoy, no el de cuando planeaste."
+        },
+        {
+          "id": "ahorrado",
+          "label": "Lo que ya llevo ahorrado",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 2400,
+          "unit": "$",
+          "placeholder": "2400",
+          "requerido": true
+        },
+        {
+          "id": "falta",
+          "label": "Lo que me falta juntar",
+          "type": "calculated",
+          "formula": "Math.max(0, meta_nueva - ahorrado)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi ajuste",
+      "descripcion": "Cómo queda el plan actualizado.",
+      "campos": [
+        {
+          "id": "aporte_nuevo",
+          "label": "Lo que puedo ahorrar al mes ahora",
+          "type": "slider",
+          "min": 50,
+          "max": 3000,
+          "step": 50,
+          "default": 350,
+          "unit": "$",
+          "ayuda": "Sé realista: un monto que no puedas sostener no es un plan.",
+          "requerido": true
+        },
+        {
+          "id": "meses_restantes",
+          "label": "Meses que me faltan con el nuevo aporte",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, meta_nueva - ahorrado) / Math.max(1, aporte_nuevo))",
+          "unit": "meses"
+        },
+        {
+          "id": "diferencia_meses",
+          "label": "Meses de diferencia contra el plan original",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, meta_nueva - ahorrado) / Math.max(1, aporte_nuevo)) - Math.ceil(meta_original / Math.max(1, aporte_original))",
+          "unit": "meses"
+        },
+        {
+          "id": "aporte_para_fecha_original",
+          "label": "Aporte necesario para no retrasar la fecha",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, meta_nueva - ahorrado) / Math.max(1, Math.ceil(meta_original / Math.max(1, aporte_original))))",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "revision_plan",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-3-10-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-10-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-1-9-B",
+  "unit_code": "P3-1-9",
+  "unit_title": "Dinero que no esperaba: qué hacer con un ingreso extraordinario",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Reparte el Extra",
+  "descripcion": "Clasifica cada decisión sobre dinero inesperado según qué tan bien pensada está.",
+  "objetivo": "Distinguir decisiones informadas sobre ingresos extraordinarios de las impulsivas",
+  "xp": 160,
+  "instruccion": "A Ceny le llegaron $600 de sorpresa. Arrastra cada decisión según qué tan buena es.",
+  "categorias": [
+    {
+      "id": "buena",
+      "label": "Decisión sólida",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "regular",
+      "label": "Se puede mejorar",
+      "emoji": "🤔",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "mala",
+      "label": "Decisión impulsiva",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Aplicar la regla 50-30-20 que ya tenía escrita",
+      "emoji": "📋",
+      "categoria_correcta": "buena",
+      "feedback": "La regla escrita antes hace el trabajo sin discutir contigo mismo."
+    },
+    {
+      "id": "i2",
+      "label": "Gastarlos todos el mismo día en la tienda",
+      "emoji": "💸",
+      "categoria_correcta": "mala",
+      "feedback": "Decisión de diez segundos para seiscientos pesos."
+    },
+    {
+      "id": "i3",
+      "label": "Mandar los $600 completos a la meta",
+      "emoji": "🎯",
+      "categoria_correcta": "regular",
+      "feedback": "Avanza mucho, pero sin nada de gusto los planes tienden a abandonarse."
+    },
+    {
+      "id": "i4",
+      "label": "Guardarlos sin decidir nada, \"por ahora\"",
+      "emoji": "🤷",
+      "categoria_correcta": "regular",
+      "feedback": "Mejor que gastarlos, pero el dinero sin destino termina encontrando uno solo."
+    },
+    {
+      "id": "i5",
+      "label": "Calcular el 10% para armar cualquier porcentaje",
+      "emoji": "🧮",
+      "categoria_correcta": "buena",
+      "feedback": "Dividir entre diez desbloquea todo el cálculo mental de porcentajes."
+    },
+    {
+      "id": "i6",
+      "label": "Comprar algo caro porque \"de todos modos era regalado\"",
+      "emoji": "🎰",
+      "categoria_correcta": "mala",
+      "feedback": "$600 de regalo compran exactamente lo mismo que $600 trabajados."
+    },
+    {
+      "id": "i7",
+      "label": "Apartar $120 para un gusto y el resto repartido",
+      "emoji": "🍿",
+      "categoria_correcta": "buena",
+      "feedback": "El 20% de gusto es lo que hace que la regla se sostenga en el tiempo."
+    },
+    {
+      "id": "i8",
+      "label": "Prestarlos completos sin fecha de devolución",
+      "emoji": "🫤",
+      "categoria_correcta": "mala",
+      "feedback": "Prestar sin fecha es regalar sin decirlo, y aquí se va todo el extra."
+    },
+    {
+      "id": "i9",
+      "label": "Decidir el reparto con el sobre ya abierto en la mano",
+      "emoji": "✋",
+      "categoria_correcta": "regular",
+      "feedback": "Se puede, pero es cuando peor decide la cabeza. Mejor tener la regla antes."
+    },
+    {
+      "id": "i10",
+      "label": "Verificar que los tres porcentajes sumen 100",
+      "emoji": "➗",
+      "categoria_correcta": "buena",
+      "feedback": "Si no suman cien, sobra o falta dinero sin asignar."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-9-b-escena.webp"
+}

@@ -1,0 +1,103 @@
+{
+  "code": "ACT-P3-1-10-A",
+  "unit_code": "P3-1-10",
+  "unit_title": "Mi presupuesto mensual completo: armarlo de principio a fin",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Presupuesto del Mes",
+  "descripcion": "Mueve las barritas y descubre en cuántos meses alcanzarás tu meta con tu presupuesto actual.",
+  "objetivo": "Proyectar el logro de una meta a partir de un presupuesto mensual completo",
+  "xp": 200,
+  "inputs": [
+    {
+      "id": "ingresos",
+      "label": "Lo que recibo al mes",
+      "type": "slider",
+      "min": 100,
+      "max": 2000,
+      "step": 50,
+      "default": 800,
+      "unit": "$",
+      "referencia": "Mesada, domingos sumados y trabajitos seguros."
+    },
+    {
+      "id": "verde",
+      "label": "Gastos de luz verde (obligatorios)",
+      "type": "slider",
+      "min": 0,
+      "max": 1000,
+      "step": 50,
+      "default": 350,
+      "unit": "$",
+      "referencia": "Pasaje, comida y lo que no se puede evitar."
+    },
+    {
+      "id": "amarillo",
+      "label": "Gastos de luz amarilla (ajustables)",
+      "type": "slider",
+      "min": 0,
+      "max": 800,
+      "step": 50,
+      "default": 200,
+      "unit": "$",
+      "referencia": "Material escolar y actividades. Aquí se ahorra comparando."
+    },
+    {
+      "id": "rojo",
+      "label": "Gastos de luz roja (gustos)",
+      "type": "slider",
+      "min": 0,
+      "max": 600,
+      "step": 25,
+      "default": 150,
+      "unit": "$",
+      "referencia": "No debe ser cero, pero sí debe ser una decisión."
+    },
+    {
+      "id": "meta",
+      "label": "Precio de mi meta",
+      "type": "slider",
+      "min": 200,
+      "max": 5000,
+      "step": 100,
+      "default": 1200,
+      "unit": "$",
+      "referencia": "Investígalo, no lo supongas."
+    }
+  ],
+  "formula": "Math.ceil(meta / Math.max(1, ingresos - verde - amarillo - rojo))",
+  "descripcion_formula": "El precio de tu meta dividido entre lo que te queda cada mes después de todos los gastos.",
+  "output_label": "Meses para alcanzar tu meta",
+  "output_suffix": " meses",
+  "escenarios": [
+    {
+      "condicion": "ingresos - verde - amarillo - rojo <= 0",
+      "mensaje": "Tu presupuesto no cuadra: gastas todo o más de lo que recibes. Recorta primero el rojo y luego ajusta el amarillo.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "ingresos - verde - amarillo - rojo > 0 && meta / (ingresos - verde - amarillo - rojo) > 24",
+      "mensaje": "Más de dos años. Conviene reducir la meta, aumentar el ingreso o recortar el rojo.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ingresos - verde - amarillo - rojo > 0 && meta / (ingresos - verde - amarillo - rojo) <= 24 && meta / (ingresos - verde - amarillo - rojo) > 6",
+      "mensaje": "Plazo largo pero razonable. Marca la fecha en tu calendario y revisa cada mes.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "ingresos - verde - amarillo - rojo > 0 && meta / (ingresos - verde - amarillo - rojo) <= 6",
+      "mensaje": "Meta cercana. Un presupuesto que cuadra convierte un deseo en una fecha del calendario.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "rojo > ingresos * 0.3",
+      "mensaje": "La luz roja se está llevando más de un tercio de tus ingresos. Ahí está tu mayor margen de ajuste.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-10-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-10-a-escena.webp"
+}

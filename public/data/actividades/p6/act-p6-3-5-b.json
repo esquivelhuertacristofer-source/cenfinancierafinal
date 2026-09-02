@@ -5,109 +5,109 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Mentalidad de Abundancia",
-  "descripcion": "El dinero es solo una herramienta. ¡Descubre si tienes la mentalidad de un verdadero millonario libre!",
-  "objetivo": "Consolidar hábitos psicológicos y éticos para la gestión de la riqueza a largo plazo",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Cada Perfil, su Cartera",
+  "descripcion": "Saber tu perfil no sirve de nada si no sabes qué cartera le corresponde. Aquí se cierra el círculo.",
+  "objetivo": "Relacionar el perfil de riesgo con una asignación de activos coherente y con el horizonte temporal de cada meta.",
+  "xp": 500,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "psy1",
-      "texto": "¿Cuál es la definición real de 'Riqueza' para una persona libre?",
+      "id": "q1",
+      "texto": "Lo que MÁS determina cuánto riesgo puedes tomar es…",
       "opciones": [
-        "Tener muchos coches de lujo",
-        "Tener suficiente dinero invertido para ser dueño de tu propio tiempo",
-        "Ganar más que tus vecinos",
-        "Tener mucho dinero en efectivo"
+        "Tu edad",
+        "Cuándo vas a necesitar ese dinero",
+        "Cuánto dinero tienes",
+        "Tu signo zodiacal"
       ],
       "correcta": 1,
-      "explicacion": "La verdadera riqueza es la libertad de hacer lo que quieras con tu tiempo."
+      "explicacion": "Un joven que necesita el dinero en un año debe invertir como un conservador."
     },
     {
-      "id": "psy2",
-      "texto": "¿Qué es la 'Gratificación Postergada'?",
+      "id": "q2",
+      "texto": "Un perfil CONSERVADOR debería tener sobre todo…",
       "opciones": [
-        "No comprar nada nunca",
-        "Saber esperar y ahorrar hoy para tener una recompensa mucho mayor mañana",
-        "Estar triste por no gastar",
-        "Gastar solo en cosas baratas"
+        "Acciones de empresas nuevas",
+        "CETES, pagarés y fondos de deuda",
+        "Criptomonedas",
+        "Un solo negocio"
       ],
       "correcta": 1,
-      "explicacion": "Es el superpoder que permite que el interés compuesto funcione."
+      "explicacion": "Prioriza no perder por encima de ganar mucho."
     },
     {
-      "id": "psy3",
-      "texto": "¿Por qué los millonarios suelen vivir de forma sencilla?",
+      "id": "q3",
+      "texto": "Dinero para una meta a 2 años debe estar en…",
       "opciones": [
-        "Porque son tacaños",
-        "Porque saben que el dinero que NO gastan es el que les da su libertad",
-        "Porque no les gusta el lujo",
-        "Porque no tienen dinero real"
+        "Acciones",
+        "Instrumentos seguros de corto plazo",
+        "Criptomonedas",
+        "Un negocio propio"
       ],
       "correcta": 1,
-      "explicacion": "La riqueza es lo que no se ve (las inversiones), no lo que se presume (los gastos)."
+      "explicacion": "Con 2 años no hay tiempo de recuperarse de una caída del 30%."
     },
     {
-      "id": "psy4",
-      "texto": "¿Qué papel juega la disciplina en tu plan de libertad?",
+      "id": "q4",
+      "texto": "La diversificación sirve para…",
       "opciones": [
-        "Ninguno, es pura suerte",
-        "Es el motor que te hace invertir mes con mes, pase lo que pase",
-        "Es solo para la escuela",
-        "Solo sirve si ganas mucho"
+        "Eliminar el riesgo por completo",
+        "Que un solo golpe no te tumbe entero",
+        "Ganar siempre",
+        "Pagar menos impuestos"
       ],
       "correcta": 1,
-      "explicacion": "La disciplina vence al talento y a la suerte en las finanzas."
+      "explicacion": "No elimina el riesgo: lo reparte para que sea soportable."
     },
     {
-      "id": "psy5",
-      "texto": "¿Qué es la 'Filantropía'?",
+      "id": "q5",
+      "texto": "Tu perfil REAL se descubre…",
       "opciones": [
-        "Coleccionar monedas",
-        "Usar parte de tu riqueza para ayudar a resolver problemas del mundo",
-        "Un tipo de negocio de ropa",
-        "Saber mucho de filosofía"
+        "En un cuestionario",
+        "El día que tu inversión cae 30% y ves qué haces",
+        "Preguntándole a un amigo",
+        "Por tu edad"
       ],
       "correcta": 1,
-      "explicacion": "Un líder financiero entiende que ayudar a otros es la mejor inversión social."
+      "explicacion": "Casi todo el mundo se declara tolerante al riesgo hasta que ve números rojos."
     },
     {
-      "id": "psy6",
-      "texto": "¿Cuál es el mejor activo que puedes tener?",
+      "id": "q6",
+      "texto": "Un perfil agresivo que invierte TODO en una sola empresa está…",
       "opciones": [
-        "Un coche rápido",
-        "Tu cerebro (tu educación y capacidad de aprender)",
-        "Una casa grande",
-        "Ropa de marca"
+        "Siendo agresivo correctamente",
+        "Sin diversificar: eso es concentración, no perfil agresivo",
+        "Protegido",
+        "Diversificando"
       ],
       "correcta": 1,
-      "explicacion": "Tu mente es lo que genera todas tus otras riquezas. ¡Nunca dejes de aprender!"
+      "explicacion": "Agresivo significa aceptar volatilidad, no apostar todo a una carta."
     },
     {
-      "id": "psy7",
-      "texto": "¿Qué debes hacer si tu inversión baja de precio un día?",
+      "id": "q7",
+      "texto": "Vender durante una caída convierte…",
       "opciones": [
-        "Llorar y vender todo",
-        "Mantener la calma y recordar que tu plan es a largo plazo",
-        "Pedir un préstamo para recuperar",
-        "Echarle la culpa al banco"
+        "Una pérdida temporal en una pérdida permanente",
+        "Una pérdida en ganancia",
+        "El riesgo en seguridad",
+        "Nada"
       ],
-      "correcta": 1,
-      "explicacion": "El mercado tiene ciclos. La paciencia es la clave del éxito."
+      "correcta": 0,
+      "explicacion": "Mientras no vendes, sigue siendo una caída de precio. Al vender, se vuelve definitiva."
     },
     {
-      "id": "psy8",
-      "texto": "¿Cuándo es el mejor momento para empezar a invertir?",
+      "id": "q8",
+      "texto": "Conforme te acercas a la meta o al retiro, lo correcto es…",
       "opciones": [
-        "Cuando sea adulto",
-        "¡Hoy mismo! (o lo antes posible)",
-        "Cuando me sobre mucho dinero",
-        "Nunca"
+        "Aumentar el riesgo para recuperar",
+        "Ir bajando el riesgo poco a poco",
+        "No cambiar nunca nada",
+        "Vender todo de golpe"
       ],
       "correcta": 1,
-      "explicacion": "¡Exacto! El tiempo es el ingrediente más importante del interés compuesto. ¡Felicidades, futuro millonario libre!"
+      "explicacion": "Es lo que hacen automáticamente las SIEFOREs de tu AFORE conforme cumples años."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

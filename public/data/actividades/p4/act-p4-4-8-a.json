@@ -1,0 +1,159 @@
+{
+  "code": "ACT-P4-4-8-A",
+  "unit_code": "P4-4-8",
+  "unit_title": "Proveedores: comprar barato sin bajar la calidad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Elige tu Proveedor",
+  "descripcion": "Compara tres proveedores y descubre cuál sale más barato de verdad.",
+  "objetivo": "Calcular el costo total real de un proveedor considerando calidad y tiempo",
+  "xp": 400,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Lo que necesito",
+      "descripcion": "Cuántas piezas usables necesito para producir.",
+      "campos": [
+        {
+          "id": "piezas_necesarias",
+          "label": "Piezas usables que necesito",
+          "type": "slider",
+          "min": 10,
+          "max": 500,
+          "step": 10,
+          "default": 100,
+          "unit": "piezas",
+          "ayuda": "Las que realmente vas a usar en tu producto.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Proveedor barato",
+      "descripcion": "Precio bajo pero con piezas defectuosas.",
+      "campos": [
+        {
+          "id": "precio_barato",
+          "label": "Precio por pieza",
+          "type": "slider",
+          "min": 1,
+          "max": 200,
+          "step": 1,
+          "default": 8,
+          "unit": "$",
+          "ayuda": "El precio de lista que te da.",
+          "requerido": true
+        },
+        {
+          "id": "defecto_barato",
+          "label": "Porcentaje de piezas que salen mal",
+          "type": "slider",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Las que no sirven y hay que reponer.",
+          "requerido": true
+        },
+        {
+          "id": "costo_barato",
+          "label": "Costo total con este proveedor",
+          "type": "calculated",
+          "formula": "Math.round(piezas_necesarias / Math.max(0.5, 1 - defecto_barato / 100) * precio_barato)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Proveedor confiable",
+      "descripcion": "Precio mayor pero con muy pocos defectos.",
+      "campos": [
+        {
+          "id": "precio_bueno",
+          "label": "Precio por pieza",
+          "type": "slider",
+          "min": 1,
+          "max": 200,
+          "step": 1,
+          "default": 11,
+          "unit": "$",
+          "ayuda": "Más caro de lista, pero hay que ver el total.",
+          "requerido": true
+        },
+        {
+          "id": "defecto_bueno",
+          "label": "Porcentaje de piezas que salen mal",
+          "type": "slider",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "default": 5,
+          "unit": "%",
+          "ayuda": "Menos desperdicio significa menos compras de reposición.",
+          "requerido": true
+        },
+        {
+          "id": "costo_bueno",
+          "label": "Costo total con este proveedor",
+          "type": "calculated",
+          "formula": "Math.round(piezas_necesarias / Math.max(0.5, 1 - defecto_bueno / 100) * precio_bueno)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La decisión",
+      "descripcion": "Cuál conviene de verdad una vez sumado todo.",
+      "campos": [
+        {
+          "id": "dias_espera_barato",
+          "label": "Días que tarda el proveedor barato",
+          "type": "slider",
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "default": 15,
+          "unit": "días",
+          "ayuda": "Esperar obliga a tener más inventario y puede costar ventas.",
+          "requerido": true
+        },
+        {
+          "id": "ventas_perdidas",
+          "label": "Ventas que pierdo por cada día de espera",
+          "type": "slider",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "Lo que dejas de vender mientras esperas material.",
+          "requerido": true
+        },
+        {
+          "id": "costo_espera",
+          "label": "Costo de esperar al proveedor barato",
+          "type": "calculated",
+          "formula": "dias_espera_barato * ventas_perdidas",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia_real",
+          "label": "Diferencia real entre los dos (positivo = conviene el confiable)",
+          "type": "calculated",
+          "formula": "Math.round(piezas_necesarias / Math.max(0.5, 1 - defecto_barato / 100) * precio_barato + dias_espera_barato * ventas_perdidas - piezas_necesarias / Math.max(0.5, 1 - defecto_bueno / 100) * precio_bueno)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "comparacion_proveedores",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-4-8-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-8-a-escena.webp"
+}

@@ -4,89 +4,121 @@
   "unit_title": "Las finanzas personales a lo largo de la vida",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "¿Derecho u Obligación?",
-  "descripcion": "En el mundo de los derivados, no es lo mismo estar obligado que tener el derecho a elegir. ¡Aprende las diferencias!",
-  "objetivo": "Diferenciar entre opciones (CALL/PUT) y futuros, comprendiendo el concepto de prima y ejercicio del derecho",
-  "xp": 250,
-  "instruccion": "Arrastra cada característica a su categoría correcta.",
-  "items": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Tu Línea de Vida Financiera",
+  "descripcion": "El dinero no se maneja igual a los 18 que a los 45 o a los 70. Lo que a una edad es una gran decisión, a otra es un error. Dibuja tu propia línea de vida y descubre en qué etapa estás y qué toca en cada una.",
+  "objetivo": "Visualizar las etapas financieras de una persona y comprender cómo cambian los objetivos, el nivel de riesgo aceptable y las prioridades con la edad.",
+  "xp": 600,
+  "output_type": "linea_vida",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "o1",
-      "label": "Derecho a COMPRAR un activo",
-      "emoji": "🛒",
-      "categoria_correcta": "call",
-      "feedback": "Si el precio sube, usas tu CALL para comprar barato."
+      "id": "hoy",
+      "titulo": "📍 Dónde estás hoy",
+      "descripcion": "Toda planeación empieza por saber en qué punto del camino te encuentras.",
+      "campos": [
+        {
+          "id": "edad_hoy",
+          "label": "¿Cuántos años tienes?",
+          "type": "number",
+          "placeholder": "Ej: 12",
+          "requerido": true
+        },
+        {
+          "id": "meta_corta",
+          "label": "¿Qué quieres lograr en los próximos 2 años?",
+          "type": "text",
+          "placeholder": "Ej: comprar una laptop",
+          "requerido": true
+        }
+      ]
     },
     {
-      "id": "o2",
-      "label": "Derecho a VENDER un activo",
-      "emoji": "💰",
-      "categoria_correcta": "put",
-      "feedback": "Si el precio baja, usas tu PUT para vender caro."
+      "id": "acumular",
+      "titulo": "🌱 Etapa de acumulación (20 a 45)",
+      "descripcion": "Es la etapa de ganar, aprender y arriesgar. Hay muchos años por delante para recuperarse de un error, así que se puede invertir con más riesgo.",
+      "campos": [
+        {
+          "id": "anios_para_trabajar",
+          "label": "¿Cuántos años faltan para tu primer sueldo?",
+          "type": "calculated",
+          "formula": "22 - edad_hoy",
+          "unit": "años",
+          "requerido": false
+        },
+        {
+          "id": "profesion",
+          "label": "¿De qué te imaginas trabajando?",
+          "type": "text",
+          "placeholder": "Ej: ingeniera",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_meta",
+          "label": "¿Qué % de tu sueldo te comprometes a invertir?",
+          "type": "number",
+          "placeholder": "Ej: 20",
+          "requerido": true,
+          "ayuda": "Debajo del 10% es muy difícil construir patrimonio. El 20% es la meta clásica."
+        }
+      ]
     },
     {
-      "id": "o3",
-      "label": "Obligación de cumplir el trato",
-      "emoji": "⚖️",
-      "categoria_correcta": "futuro",
-      "feedback": "En los futuros no hay elección, se debe cumplir."
+      "id": "consolidar",
+      "titulo": "🏔️ Etapa de consolidación (45 a 60)",
+      "descripcion": "Los ingresos son los más altos de la vida, pero también las responsabilidades. Aquí se baja el riesgo poco a poco: ya no hay 40 años para recuperarse.",
+      "campos": [
+        {
+          "id": "anios_acumulando",
+          "label": "Años que pasarás acumulando",
+          "type": "calculated",
+          "formula": "45 - 22",
+          "unit": "años",
+          "requerido": false
+        },
+        {
+          "id": "riesgo_45",
+          "label": "¿Qué % de tu dinero dejarías en inversiones de riesgo a los 45?",
+          "type": "number",
+          "placeholder": "Ej: 50",
+          "requerido": true,
+          "ayuda": "Una regla usada por muchos asesores: el porcentaje en renta variable ronda 100 menos tu edad."
+        }
+      ]
     },
     {
-      "id": "o4",
-      "label": "Se paga una 'Prima' (Costo)",
-      "emoji": "🎟️",
-      "categoria_correcta": "opcion_general",
-      "feedback": "La prima es el precio que pagas por tener el derecho a elegir."
-    },
-    {
-      "id": "o5",
-      "label": "Se puede dejar vencer sin usarlo",
-      "emoji": "⏳",
-      "categoria_correcta": "opcion_general",
-      "feedback": "Si el mercado no te conviene, simplemente no usas la opción."
-    },
-    {
-      "id": "o6",
-      "label": "Protección contra la subida de precios",
-      "emoji": "📈",
-      "categoria_correcta": "call",
-      "feedback": "Ideal para compradores que temen que algo suba."
-    },
-    {
-      "id": "o7",
-      "label": "Protección contra la caída de precios",
-      "emoji": "📉",
-      "categoria_correcta": "put",
-      "feedback": "Ideal para vendedores que temen que su producto valga menos."
+      "id": "retiro",
+      "titulo": "🌅 Etapa de retiro (60 en adelante)",
+      "descripcion": "Ya no entra un sueldo: se vive de lo acumulado. La prioridad deja de ser ganar y pasa a ser NO PERDER.",
+      "campos": [
+        {
+          "id": "anios_hasta_retiro",
+          "label": "Años que faltan para tu retiro",
+          "type": "calculated",
+          "formula": "65 - edad_hoy",
+          "unit": "años",
+          "requerido": false,
+          "ayuda": "Ese es el tiempo que el interés compuesto puede trabajar para ti. Es tu activo más valioso y no se puede recuperar."
+        },
+        {
+          "id": "riesgo_65",
+          "label": "¿Qué % dejarías en riesgo a los 65?",
+          "type": "number",
+          "placeholder": "Ej: 20",
+          "requerido": true
+        },
+        {
+          "id": "coherencia",
+          "label": "Coherencia de tu plan (0 a 100)",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.min(100, Math.round(ahorro_meta * 2 + (riesgo_45 > riesgo_65 ? 40 : 0) + (riesgo_65 <= 30 ? 20 : 0))))",
+          "unit": "pts",
+          "requerido": false,
+          "ayuda": "Sube si ahorras un porcentaje serio y si bajas el riesgo conforme te acercas al retiro. Un plan que arriesga igual a los 65 que a los 25 no es un plan."
+        }
+      ]
     }
   ],
-  "categorias": [
-    {
-      "id": "call",
-      "label": "OPCIÓN CALL",
-      "emoji": "🟢",
-      "color": "#10b981"
-    },
-    {
-      "id": "put",
-      "label": "OPCIÓN PUT",
-      "emoji": "🔴",
-      "color": "#ef4444"
-    },
-    {
-      "id": "futuro",
-      "label": "FUTURO",
-      "emoji": "⛓️",
-      "color": "#1f2937"
-    },
-    {
-      "id": "opcion_general",
-      "label": "REGLA DE OPCIONES",
-      "emoji": "⚙️",
-      "color": "#3b82f6"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

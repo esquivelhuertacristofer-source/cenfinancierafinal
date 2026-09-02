@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-3-6-B",
+  "unit_code": "S1-3-6",
+  "unit_title": "CETES y BONDES: invertir con el gobierno desde $100",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Invertir con el Gobierno",
+  "descripcion": "Comprueba que entiendes cómo funcionan estos instrumentos.",
+  "objetivo": "Verificar la comprensión de la deuda gubernamental como instrumento",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Estos instrumentos son:",
+      "opciones": [
+        "Acciones de empresas",
+        "Cuentas bancarias",
+        "Títulos de deuda que emite el gobierno",
+        "Seguros"
+      ],
+      "correcta": 2,
+      "explicacion": "El gobierno los emite para financiarse."
+    },
+    {
+      "id": "q2",
+      "texto": "Quien los compra:",
+      "opciones": [
+        "Compra parte del gobierno",
+        "Paga impuestos",
+        "No recibe nada",
+        "Le presta dinero y recibe rendimiento"
+      ],
+      "correcta": 3,
+      "explicacion": "Es un préstamo con plazo y rendimiento definidos."
+    },
+    {
+      "id": "q3",
+      "texto": "Los de corto plazo:",
+      "opciones": [
+        "Se compran a descuento y pagan valor completo al vencer",
+        "Pagan cada mes",
+        "No dan rendimiento",
+        "Duran diez años"
+      ],
+      "correcta": 0,
+      "explicacion": "La diferencia entre precio de compra y valor nominal es la ganancia."
+    },
+    {
+      "id": "q4",
+      "texto": "En los de corto plazo, los pagos intermedios:",
+      "opciones": [
+        "Son mensuales",
+        "No existen: todo ocurre al vencimiento",
+        "Son semanales",
+        "Son diarios"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso el rendimiento se recibe completo al final."
+    },
+    {
+      "id": "q5",
+      "texto": "Los de plazo largo:",
+      "opciones": [
+        "No pagan nada",
+        "Solo pagan al inicio",
+        "Pagan intereses periódicos y devuelven capital al final",
+        "Se cobran por adelantado"
+      ],
+      "correcta": 2,
+      "explicacion": "Algunos ajustan su rendimiento a las tasas o a la inflación."
+    },
+    {
+      "id": "q6",
+      "texto": "El error más común es:",
+      "opciones": [
+        "Invertir poco",
+        "Elegir plazo corto",
+        "Diversificar",
+        "Elegir por tasa sin ver cuándo se necesita el dinero"
+      ],
+      "correcta": 3,
+      "explicacion": "Salir antes de tiempo tiene costo."
+    },
+    {
+      "id": "q7",
+      "texto": "La pregunta correcta al elegir plazo es:",
+      "opciones": [
+        "Cuándo necesito este dinero",
+        "Cuál paga más",
+        "Cuál es más conocido",
+        "Cuál es más nuevo"
+      ],
+      "correcta": 0,
+      "explicacion": "El plazo se elige por el objetivo, no por la tasa."
+    },
+    {
+      "id": "q8",
+      "texto": "Se consideran de bajo riesgo porque:",
+      "opciones": [
+        "No dan rendimiento",
+        "El emisor es el gobierno federal",
+        "Son caros",
+        "Los vende un banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el emisor de menor riesgo del mercado nacional."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-6-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-6-b-escena.webp"
+}

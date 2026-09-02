@@ -69,11 +69,6 @@ export const FALLBACK_PROFILE: UserProfile = {
   grade: 4
 };
 
-export const TEST_ACCOUNTS: Record<string, UserProfile> = {
-  'profesor.prueba@cen.edu': { id: '6d1cf7a7-3093-4f11-be52-b61cfaba7702', email: 'profesor.prueba@cen.edu', full_name: 'Profesor de Prueba', role: 'teacher', school_level: 'teacher', group_id: '1A', grade: 4 },
-  'estudiante.prueba@cen.edu': { id: '49279c85-8fd6-464d-b16d-a6c9b4ab3db3', email: 'estudiante.prueba@cen.edu', full_name: 'Estudiante de Prueba', role: 'student', school_level: 'primary', group_id: '1A', grade: 4 },
-};
-
 // ─── Data Access ──────────────────────────────────────────────────────────────
 
 const curriculumCache: Record<string, any> = {};
@@ -511,12 +506,12 @@ export async function markActivityComplete(
 
     // Ambas fallaron → encolar para sync offline
     console.error(`[markActivityComplete] ❌ Ambas escrituras fallaron, encolando offline`);
-    addToSyncQueue(userId, activityId);
+    addToSyncQueue(userId, activityId, { score: opts.score, tiempoSegundos: opts.tiempo_segundos, lastStep: opts.last_step });
     return false;
 
   } catch (e: any) {
     console.error(`[markActivityComplete] ❌ Excepción inesperada — ${e?.message ?? e}`);
-    addToSyncQueue(userId, activityId);
+    addToSyncQueue(userId, activityId, { score: opts.score, tiempoSegundos: opts.tiempo_segundos, lastStep: opts.last_step });
     return false;
   }
 }
@@ -568,7 +563,7 @@ const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12
 
 const SYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
 
-function getSyncQueue(): { userId: string, activityId: string, attempts?: number, timestamp?: number }[] {
+function getSyncQueue(): { userId: string, activityId: string, attempts?: number, timestamp?: number, score?: number, tiempoSegundos?: number, lastStep?: number }[] {
   if (typeof window === 'undefined') return [];
   const saved = localStorage.getItem('cen_sync_queue');
   if (!saved) return [];
@@ -583,6 +578,11 @@ function getSyncQueue(): { userId: string, activityId: string, attempts?: number
       if (!item || typeof item !== 'object') return false;
       if (!item.userId || !UUID_REGEX.test(item.userId)) return false;
       if (!item.activityId || typeof item.activityId !== 'string') return false;
+      // Campos opcionales de score/tiempo/último paso: pueden faltar en items antiguos
+      // de la cola (encolados antes de este fix); solo se rechazan si vienen con un tipo inválido.
+      if (item.score !== undefined && item.score !== null && typeof item.score !== 'number') return false;
+      if (item.tiempoSegundos !== undefined && item.tiempoSegundos !== null && typeof item.tiempoSegundos !== 'number') return false;
+      if (item.lastStep !== undefined && item.lastStep !== null && typeof item.lastStep !== 'number') return false;
       // Descartar items más viejos de 7 días
       if (item.timestamp && (now - item.timestamp) > SYNC_MAX_AGE_MS) {
         console.warn(`[SyncEngine] Descartando item expirado (>7 días): ${item.activityId}`);
@@ -602,7 +602,11 @@ function getSyncQueue(): { userId: string, activityId: string, attempts?: number
   }
 }
 
-function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
+function addToSyncQueue(
+  userId: string,
+  activityId: string,
+  extra: { score?: number; tiempoSegundos?: number; lastStep?: number; attempts?: number } = {}
+) {
   if (typeof window === 'undefined') return;
 
   // Fix C: Validación de UUID para evitar contaminación
@@ -611,10 +615,11 @@ function addToSyncQueue(userId: string, activityId: string, attempts = 0) {
     return;
   }
 
+  const { score, tiempoSegundos, lastStep, attempts = 0 } = extra;
   const queue = getSyncQueue();
   // Evitar duplicados en la cola
   if (!queue.some(item => item.userId === userId && item.activityId === activityId)) {
-    queue.push({ userId, activityId, attempts, timestamp: Date.now() });
+    queue.push({ userId, activityId, attempts, timestamp: Date.now(), score, tiempoSegundos, lastStep });
     localStorage.setItem('cen_sync_queue', JSON.stringify(queue));
     console.info(`[SyncEngine] Actividad encolada offline: ${activityId} (cola total: ${queue.length} items)`);
   }
@@ -643,6 +648,33 @@ export async function processSyncQueue(): Promise<SyncQueueResult> {
     { onConflict: 'user_id,activity_id' }
   );
 
+  // Además del upsert booleano de arriba, replicar cada item hacia la RPC 'record_intento'
+  // para no perder score/tiempo_segundos/last_step al sincronizar (ver bug: la cola offline
+  // guardaba estos datos pero nunca se enviaban a intentos). Concurrencia acotada en lotes
+  // pequeños para no saturar la conexión recién recuperada.
+  const RECORD_INTENTO_BATCH_SIZE = 2;
+  for (let i = 0; i < queue.length; i += RECORD_INTENTO_BATCH_SIZE) {
+    const batch = queue.slice(i, i + RECORD_INTENTO_BATCH_SIZE);
+    await Promise.all(
+      batch.map(async (item) => {
+        const { error: intentoError } = await withTimeout(
+          supabase.rpc('record_intento', {
+            p_user_id: item.userId,
+            p_activity_id: item.activityId,
+            p_score: item.score ?? null,
+            p_tiempo_segundos: item.tiempoSegundos ?? null,
+            p_last_step: item.lastStep ?? null,
+          }) as unknown as Promise<{ error: { message: string; code?: string } | null }>,
+          3000,
+          { error: { message: 'timeout', code: 'TIMEOUT' } }
+        );
+        if (intentoError) {
+          console.warn(`[SyncEngine] record_intento falló al sincronizar ${item.activityId} — código:${intentoError.code} msg:${intentoError.message}`);
+        }
+      })
+    );
+  }
+
   const remaining = error
     ? queue.filter(item => {
         if ((item.attempts || 0) >= 3) {
@@ -662,10 +694,6 @@ export async function processSyncQueue(): Promise<SyncQueueResult> {
 
 export async function getCurrentProfile(): Promise<UserProfile | null> {
   try {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('cen_test_profile');
-      if (saved) return JSON.parse(saved);
-    }
     const { data: { session } } = await withTimeout(supabase.auth.getSession(), 5000, { data: { session: null }, error: null }) as any;
     if (!session) return null;
     const { data, error } = await supabase.from('profiles').select('*').eq('id', session.user.id).single();

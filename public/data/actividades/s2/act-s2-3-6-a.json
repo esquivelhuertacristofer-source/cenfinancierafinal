@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-3-6-A",
+  "unit_code": "S2-3-6",
+  "unit_title": "Análisis técnico y fundamental: qué mira cada uno",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Fundamental o Técnico",
+  "descripcion": "Clasifica cada indicador según a qué escuela de análisis pertenece.",
+  "objetivo": "Distinguir los indicadores y preguntas propias de cada enfoque de análisis",
+  "xp": 500,
+  "instruccion": "Arrastra cada elemento al enfoque que lo utiliza.",
+  "categorias": [
+    {
+      "id": "fundamental",
+      "label": "Análisis fundamental",
+      "emoji": "🏢",
+      "color": "#10B981"
+    },
+    {
+      "id": "tecnico",
+      "label": "Análisis técnico",
+      "emoji": "📈",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "ambos",
+      "label": "Usado por los dos",
+      "emoji": "🔄",
+      "color": "#8B5CF6"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Utilidad neta de los últimos años",
+      "emoji": "💰",
+      "categoria_correcta": "fundamental",
+      "feedback": "Mide si el negocio efectivamente gana dinero."
+    },
+    {
+      "id": "i2",
+      "label": "Niveles donde el precio rebotó antes",
+      "emoji": "📊",
+      "categoria_correcta": "tecnico",
+      "feedback": "Soportes y resistencias son puro comportamiento de precio."
+    },
+    {
+      "id": "i3",
+      "label": "Nivel de deuda de la empresa",
+      "emoji": "⚖️",
+      "categoria_correcta": "fundamental",
+      "feedback": "Una empresa muy endeudada es más frágil ante crisis."
+    },
+    {
+      "id": "i4",
+      "label": "Volumen operado en las últimas sesiones",
+      "emoji": "🔊",
+      "categoria_correcta": "tecnico",
+      "feedback": "Indica cuánta convicción hay detrás de un movimiento."
+    },
+    {
+      "id": "i5",
+      "label": "El horizonte de inversión que tengo",
+      "emoji": "🎯",
+      "categoria_correcta": "ambos",
+      "feedback": "Define qué enfoque tiene sentido usar."
+    },
+    {
+      "id": "i6",
+      "label": "Flujo de efectivo generado por la operación",
+      "emoji": "💧",
+      "categoria_correcta": "fundamental",
+      "feedback": "Una empresa puede reportar utilidad y no generar efectivo."
+    },
+    {
+      "id": "i7",
+      "label": "Media móvil de los últimos 50 días",
+      "emoji": "〰️",
+      "categoria_correcta": "tecnico",
+      "feedback": "Suaviza el precio para identificar la tendencia."
+    },
+    {
+      "id": "i8",
+      "label": "Relación entre precio y utilidad por acción",
+      "emoji": "🔢",
+      "categoria_correcta": "fundamental",
+      "feedback": "Compara lo que cuesta contra lo que gana la empresa."
+    },
+    {
+      "id": "i9",
+      "label": "Las comisiones que voy a pagar",
+      "emoji": "💸",
+      "categoria_correcta": "ambos",
+      "feedback": "Restan igual sin importar el método que uses."
+    },
+    {
+      "id": "i10",
+      "label": "La tendencia general del precio",
+      "emoji": "📉",
+      "categoria_correcta": "tecnico",
+      "feedback": "La dirección dominante del movimiento reciente."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-6-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-6-a-escena.webp"
+}

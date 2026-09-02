@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P1-3-7-B",
+  "unit_code": "P1-3-7",
+  "unit_title": "¿Cuánto me falta? Restar para saberlo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Resta",
+  "descripcion": "Calcula rápido cuánto falta y en cuántas semanas se logra.",
+  "objetivo": "Consolidar la resta aplicada a metas y la conversión de pesos a semanas",
+  "xp": 200,
+  "tiempo_por_pregunta": 22,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La meta cuesta $180 y tengo $120. ¿Cuánto falta?",
+      "respuesta_correcta": "$60",
+      "incorrectas": [
+        "$300",
+        "$120",
+        "$80"
+      ],
+      "dato_extra": "180 − 120 = 60. El precio siempre va primero en la resta."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La meta cuesta $50 y tengo $35. ¿Cuánto falta?",
+      "respuesta_correcta": "$15",
+      "incorrectas": [
+        "$85",
+        "$25",
+        "$5"
+      ],
+      "dato_extra": "Desde 35 cuenta hacia 50: 40, 45, 50. Son 15."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Me faltan $60 y ahorro $20 por semana. ¿Cuántas semanas?",
+      "respuesta_correcta": "3 semanas",
+      "incorrectas": [
+        "6 semanas",
+        "2 semanas",
+        "60 semanas"
+      ],
+      "dato_extra": "20, 40, 60. Tres viernes y la meta está lista."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Me faltan $80 y ahorro $10 por semana. ¿Cuántas semanas?",
+      "respuesta_correcta": "8 semanas",
+      "incorrectas": [
+        "4 semanas",
+        "18 semanas",
+        "80 semanas"
+      ],
+      "dato_extra": "Cuando la cuenta sale muy larga, conviene buscar un ingreso extra."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Qué número va primero al restar?",
+      "respuesta_correcta": "El precio de la meta",
+      "incorrectas": [
+        "Lo que ya tengo",
+        "Da igual",
+        "El más pequeño"
+      ],
+      "dato_extra": "Restar al revés da un número que no significa nada."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Por qué conviene traducir el faltante a semanas?",
+      "respuesta_correcta": "Porque le pone fecha a mi meta",
+      "incorrectas": [
+        "Porque es más difícil",
+        "Porque baja el precio",
+        "Porque suena mejor"
+      ],
+      "dato_extra": "Una meta con fecha se cumple mucho más seguido que una sin fecha."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Mi meta tarda 20 semanas. ¿Qué hago?",
+      "respuesta_correcta": "Ahorro más o elijo una meta más pequeña",
+      "incorrectas": [
+        "Finjo que tarda menos",
+        "Me rindo",
+        "Espero un milagro"
+      ],
+      "dato_extra": "El calendario no negocia: o cambias el ritmo o cambias la meta."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-7-b-escena.webp"
+}

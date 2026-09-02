@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P1-2-9-B",
+  "unit_code": "P1-2-9",
+  "unit_title": "Esperar tantito: la paciencia me ahorra dinero",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Atrapa la Paciencia",
+  "descripcion": "Atrapa las decisiones pacientes y esquiva las compras impulsivas antes de que se acabe el tiempo.",
+  "objetivo": "Reforzar de forma lúdica la distinción entre conductas pacientes e impulsivas",
+  "xp": 200,
+  "game_type": "catch",
+  "duracion": 50,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa todo lo que te ayuda a esperar y decidir bien. ¡Esquiva las trampas del antojo!",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Anotarlo en mi lista",
+      "emoji": "📝",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g2",
+      "label": "Esperar 3 días",
+      "emoji": "⏳",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "g3",
+      "label": "Preguntar el precio",
+      "emoji": "❓",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g4",
+      "label": "Comparar dos tiendas",
+      "emoji": "⚖️",
+      "tipo": "correcto",
+      "puntos": 250
+    },
+    {
+      "id": "g5",
+      "label": "Guardarlo en la alcancía",
+      "emoji": "🐷",
+      "tipo": "correcto",
+      "puntos": 400
+    },
+    {
+      "id": "g6",
+      "label": "Revisar si de verdad me sirve",
+      "emoji": "🧠",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "b1",
+      "label": "\"Solo por hoy\"",
+      "emoji": "🔥",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "b2",
+      "label": "Comprarlo sin pensar",
+      "emoji": "💸",
+      "tipo": "incorrecto",
+      "puntos": -400
+    },
+    {
+      "id": "b3",
+      "label": "\"Todos lo tienen\"",
+      "emoji": "👥",
+      "tipo": "incorrecto",
+      "puntos": -250
+    },
+    {
+      "id": "b4",
+      "label": "Decidir el mismo día del anuncio",
+      "emoji": "📺",
+      "tipo": "incorrecto",
+      "puntos": -350
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-9-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-9-b-escena.webp"
+}

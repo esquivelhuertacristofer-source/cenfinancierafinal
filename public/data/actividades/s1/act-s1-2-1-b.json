@@ -5,109 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Guardián del Valor",
-  "descripcion": "¿Sabes quién cuida que tu dinero no se convierta en papel sin valor? ¡Pon a prueba tu conocimiento sobre el Banco Central!",
-  "objetivo": "Identificar las funciones del Banco Central y el impacto de la política monetaria en la vida cotidiana",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "La Red que No se Ve",
+  "descripcion": "La seguridad social solo se nota el día que la necesitas. Ese día, la diferencia entre tenerla y no tenerla puede ser la diferencia entre un susto y la ruina de una familia.",
+  "objetivo": "Comprender la estructura y los beneficios reales de la seguridad social en México y su impacto en la estabilidad financiera familiar.",
+  "xp": 550,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "mon1",
-      "texto": "¿Cuál es la principal misión del Banco de México (Banxico)?",
+      "id": "q1",
+      "texto": "La diferencia principal entre IMSS e ISSSTE es que…",
       "opciones": [
-        "Prestar dinero a las familias",
-        "Preservar el valor de la moneda nacional (controlar la inflación)",
-        "Pagar el sueldo de los políticos",
-        "Ser el banco más grande del mundo"
+        "Uno es privado y otro público",
+        "El IMSS cubre a trabajadores de empresas y el ISSSTE a los del Estado",
+        "Uno da medicinas y el otro no",
+        "Son lo mismo"
       ],
       "correcta": 1,
-      "explicacion": "Su prioridad es que los precios no suban descontroladamente para proteger tu poder de compra."
+      "explicacion": "Cubren poblaciones distintas con esquemas parecidos: salud, pensión, vivienda y guardería."
     },
     {
-      "id": "mon2",
-      "texto": "¿Qué sucede cuando el Banco Central SUBE las tasas de interés?",
+      "id": "q2",
+      "texto": "Además de atención médica, el IMSS incluye…",
       "opciones": [
-        "El dinero se vuelve más barato",
-        "Pedir préstamos es más caro y el ahorro paga más; esto ayuda a bajar la inflación",
-        "La gente gasta más",
-        "Las empresas contratan más gente"
+        "Solo consultas",
+        "Incapacidades pagadas, guarderías, pensión por invalidez y ayuda para gastos funerarios",
+        "Únicamente urgencias",
+        "Nada más"
       ],
       "correcta": 1,
-      "explicacion": "Al ser más caro pedir prestado, la gente gasta menos y los precios dejan de subir."
+      "explicacion": "Es un paquete completo de protección, no solo un consultorio."
     },
     {
-      "id": "mon3",
-      "texto": "¿Por qué el Banco Central debe ser 'Independiente' del gobierno?",
+      "id": "q3",
+      "texto": "Si te enfermas y no puedes trabajar tres semanas, el IMSS…",
       "opciones": [
-        "Porque no les gusta trabajar juntos",
-        "Para evitar que los políticos impriman dinero para sus proyectos, causando inflación",
-        "Porque es una empresa privada",
-        "Porque así es la tradición"
+        "No hace nada",
+        "Te paga una incapacidad, un porcentaje de tu sueldo",
+        "Te despide",
+        "Te cobra"
       ],
       "correcta": 1,
-      "explicacion": "La independencia asegura que las decisiones financieras se tomen con lógica técnica, no política."
+      "explicacion": "Sin eso, una enfermedad de tres semanas significa tres semanas sin ingresos."
     },
     {
-      "id": "mon4",
-      "texto": "¿Qué pasaría si el gobierno imprimiera billetes infinitos para todos?",
+      "id": "q4",
+      "texto": "Las aportaciones al IMSS las paga…",
       "opciones": [
-        "Todos seríamos ricos",
-        "Habría hiperinflación: el dinero perdería su valor y los precios subirían a las nubes",
-        "La economía crecería mucho",
-        "No pasaría nada"
+        "Solo el trabajador",
+        "Solo el patrón",
+        "El patrón, el trabajador y el gobierno, y el patrón aporta la mayor parte",
+        "Nadie"
       ],
-      "correcta": 1,
-      "explicacion": "El dinero solo tiene valor si hay productos y servicios que lo respalden."
+      "correcta": 2,
+      "explicacion": "Por eso el empleo formal cuesta más al patrón: está pagando tu protección."
     },
     {
-      "id": "mon5",
-      "texto": "¿Cómo afecta una tasa de interés ALTA a alguien que quiere comprar una casa?",
+      "id": "q5",
+      "texto": "Un trabajador informal que se rompe una pierna…",
       "opciones": [
-        "Le ayuda porque paga menos",
-        "Le perjudica porque su crédito hipotecario será más caro cada mes",
-        "No le afecta",
-        "Le regalan el dinero"
+        "Recibe incapacidad",
+        "Paga todo de su bolsillo y además deja de ganar",
+        "Lo cubre el IMSS igual",
+        "Lo cubre su patrón"
       ],
       "correcta": 1,
-      "explicacion": "Las tasas del Banco Central influyen en lo que te cobran los bancos comerciales."
+      "explicacion": "Doble golpe: gasto médico grande y cero ingreso. Es la causa más común de que una familia caiga en deuda grave."
     },
     {
-      "id": "mon6",
-      "texto": "¿Qué es la 'Política Monetaria'?",
+      "id": "q6",
+      "texto": "El INFONAVIT se financia con…",
       "opciones": [
-        "La política de los gobernantes",
-        "Las acciones que toma el Banco Central para gestionar la cantidad de dinero y las tasas en la economía",
-        "Las leyes sobre los bancos",
-        "El diseño de los billetes"
+        "Un 5% del salario que aporta el patrón a tu subcuenta de vivienda",
+        "Tus impuestos",
+        "Donaciones",
+        "El IVA"
       ],
-      "correcta": 1,
-      "explicacion": "Es el conjunto de herramientas para mantener la economía estable."
+      "correcta": 0,
+      "explicacion": "Ese dinero es tuyo: sirve para tu crédito de vivienda y, si no lo usas, se suma a tu retiro."
     },
     {
-      "id": "mon7",
-      "texto": "¿Qué es el 'Encaje Legal'?",
+      "id": "q7",
+      "texto": "Estar dado de alta con un salario menor al real (\"sueldo topado\") te perjudica porque…",
       "opciones": [
-        "Un tipo de ropa",
-        "La reserva de dinero que los bancos deben guardar obligatoriamente en el Banco Central",
-        "Un impuesto al ahorro",
-        "Una ley de comercio"
+        "No pasa nada",
+        "Tu incapacidad, tu crédito de vivienda y tu pensión se calculan sobre ese salario menor",
+        "Pagas más impuestos",
+        "Te dan más vacaciones"
       ],
       "correcta": 1,
-      "explicacion": "Sirve para asegurar que los bancos tengan dinero disponible si los clientes quieren retirarlo."
+      "explicacion": "Es una práctica común y silenciosa: te ahorra impuestos hoy y te recorta protección y pensión toda la vida."
     },
     {
-      "id": "mon8",
-      "texto": "¿Cuál es la meta de inflación ideal para la mayoría de los Bancos Centrales (incluyendo México)?",
+      "id": "q8",
+      "texto": "El valor económico anual de la seguridad social para una familia equivale aproximadamente a…",
       "opciones": [
-        "0%",
-        "Alrededor del 3% (Estabilidad con ligero crecimiento)",
-        "10%",
-        "50%"
+        "Unos cuantos cientos de pesos",
+        "Decenas de miles de pesos entre seguro médico, incapacidades y ahorro para el retiro",
+        "Cero",
+        "Solo el aguinaldo"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora entiendes que el equilibrio es la clave de una economía sana."
+      "explicacion": "Contratar un seguro médico privado equivalente para una familia cuesta decenas de miles de pesos al año."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

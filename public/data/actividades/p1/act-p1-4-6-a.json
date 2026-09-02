@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P1-4-6-A",
+  "unit_code": "P1-4-6",
+  "unit_title": "Preguntar antes de hacer: ¿qué le gusta a la gente?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Preguntar o Adivinar",
+  "descripcion": "Ceny quiere vender algo en el recreo. Clasifica cada acción según si le da información real, lo confunde o no sirve de nada.",
+  "objetivo": "Distinguir prácticas válidas de investigación de cliente de las que producen datos falsos",
+  "xp": 250,
+  "instruccion": "Arrastra cada acción de Ceny a su caja según lo que le aporta antes de producir.",
+  "categorias": [
+    {
+      "id": "sirve",
+      "label": "Me da información real",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "enganya",
+      "label": "Me da información falsa",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "nada",
+      "label": "No aporta nada",
+      "emoji": "➖",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Preguntar a 10 compañeros cuál de tres prefieren",
+      "emoji": "📋",
+      "categoria_correcta": "sirve",
+      "feedback": "Muchas respuestas contadas: eso ya es un dato."
+    },
+    {
+      "id": "i2",
+      "label": "Preguntar \"¿verdad que te gusta la roja?\"",
+      "emoji": "👉",
+      "categoria_correcta": "enganya",
+      "feedback": "Sugerir la respuesta te devuelve un favor, no un dato."
+    },
+    {
+      "id": "i3",
+      "label": "Preguntarle solo a su mejor amigo",
+      "emoji": "👤",
+      "categoria_correcta": "enganya",
+      "feedback": "Tu mejor amigo dirá que sí a todo. Una sola opinión no representa al grupo."
+    },
+    {
+      "id": "i4",
+      "label": "Hacer lo que a Ceny le gusta y ya",
+      "emoji": "🙋",
+      "categoria_correcta": "enganya",
+      "feedback": "El gusto propio se disfraza de dato y hace perder materiales."
+    },
+    {
+      "id": "i5",
+      "label": "Contar los votos en el pizarrón",
+      "emoji": "🔢",
+      "categoria_correcta": "sirve",
+      "feedback": "Sin conteo, las respuestas se olvidan y no sirven para decidir."
+    },
+    {
+      "id": "i6",
+      "label": "Enseñar tres muestras y dejar elegir sin hablar",
+      "emoji": "🤫",
+      "categoria_correcta": "sirve",
+      "feedback": "Quedarse callado después de preguntar es la parte más difícil y la más valiosa."
+    },
+    {
+      "id": "i7",
+      "label": "Pintar el cartel de colores bonitos",
+      "emoji": "🎨",
+      "categoria_correcta": "nada",
+      "feedback": "El cartel sirve después, pero no te dice qué quiere la gente."
+    },
+    {
+      "id": "i8",
+      "label": "Preguntar \"¿te gustaría algo rico?\"",
+      "emoji": "❓",
+      "categoria_correcta": "nada",
+      "feedback": "Todos dirán que sí. Una pregunta tan vaga no permite decidir nada."
+    },
+    {
+      "id": "i9",
+      "label": "Anotar las respuestas en una hoja",
+      "emoji": "📝",
+      "categoria_correcta": "sirve",
+      "feedback": "Lo que no se anota se olvida. La hoja convierte opiniones en información."
+    },
+    {
+      "id": "i10",
+      "label": "Preguntar solo a quienes ya sabe que dirán que sí",
+      "emoji": "🎯",
+      "categoria_correcta": "enganya",
+      "feedback": "Elegir a quién preguntar para oír lo que quieres es engañarte a ti mismo."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-6-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-6-a-escena.webp"
+}

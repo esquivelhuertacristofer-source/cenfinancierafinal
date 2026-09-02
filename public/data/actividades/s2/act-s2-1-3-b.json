@@ -5,122 +5,91 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "La Sangre del Mercado",
-  "descripcion": "¿Sabes por qué los grandes bancos se preocupan tanto por el volumen? ¡Demuestra que conoces el motor secreto de la bolsa!",
-  "objetivo": "Identificar los componentes de la liquidez del mercado y su importancia en la ejecución de inversiones",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "México en el Mundo",
+  "descripcion": "Contra el reloj: qué vende México, a quién, y por qué eso decide millones de empleos.",
+  "objetivo": "Identificar la estructura del comercio exterior mexicano y el papel de los tratados internacionales.",
+  "xp": 600,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "liq1",
-      "pregunta": "¿Qué es el 'Bid-Ask Spread'?",
-      "respuesta_correcta": "La diferencia entre el precio más alto que un comprador ofrece y el precio más bajo que un vendedor acepta",
+      "id": "t1",
+      "pregunta": "¿A qué país va la mayor parte de las exportaciones mexicanas?",
+      "respuesta_correcta": "Estados Unidos",
       "incorrectas": [
-        "Un tipo de sándwich",
-        "La suma de todas las acciones",
-        "La comisión del banco"
+        "China",
+        "España",
+        "Brasil"
       ],
-      "dato_extra": "Entre más pequeño es el spread, más líquido es el mercado."
+      "dato_extra": "Más del 80%. Esa concentración da empleo y también dependencia."
     },
     {
-      "id": "liq2",
-      "pregunta": "¿Cuál es la función de un 'Market Maker' (Creador de Mercado)?",
-      "respuesta_correcta": "Instituciones que siempre están dispuestas a comprar o vender para asegurar que haya liquidez",
+      "id": "t2",
+      "pregunta": "El principal producto de exportación de México hoy es…",
+      "respuesta_correcta": "Vehículos y autopartes",
       "incorrectas": [
-        "Personas que fabrican billetes",
-        "Los que ponen las noticias",
-        "Los dueños de la bolsa"
+        "Petróleo",
+        "Aguacate",
+        "Tequila"
       ],
-      "dato_extra": "Ellos ganan dinero cobrando una pequeña parte del spread."
+      "dato_extra": "México es de los mayores exportadores de autos del mundo; el petróleo dejó de ser lo principal hace décadas."
     },
     {
-      "id": "liq3",
-      "pregunta": "¿Qué indica un aumento repentino en el 'Volumen' de una acción?",
-      "respuesta_correcta": "Que hay un fuerte interés (compra o venta) y que el movimiento del precio tiene fuerza",
+      "id": "t3",
+      "pregunta": "El T-MEC sustituyó al…",
+      "respuesta_correcta": "TLCAN",
       "incorrectas": [
-        "Que la empresa se va a cerrar",
-        "Que es fin de mes",
-        "Que el internet está fallando"
+        "Mercosur",
+        "FMI",
+        "Banco Mundial"
       ],
-      "dato_extra": "El volumen confirma la tendencia. Una subida sin volumen suele ser falsa."
+      "dato_extra": "Entró en vigor en 2020 e incluye reglas laborales y de contenido regional más estrictas."
     },
     {
-      "id": "liq4",
-      "pregunta": "¿Cuál de estos activos tiene MENOR liquidez?",
-      "respuesta_correcta": "Una casa (Bienes Raíces)",
+      "id": "t4",
+      "pregunta": "El \"nearshoring\" es…",
+      "respuesta_correcta": "Que empresas traigan su producción cerca de su mercado, por ejemplo a México",
       "incorrectas": [
-        "Acciones de Apple",
-        "Dólares en efectivo",
-        "Oro"
+        "Exportar a Asia",
+        "Un impuesto",
+        "Vender por internet"
       ],
-      "dato_extra": "Vender una casa puede tardar meses; vender una acción toma segundos."
+      "dato_extra": "Es una de las mayores oportunidades económicas de México en décadas."
     },
     {
-      "id": "liq5",
-      "pregunta": "¿Qué es el 'Slippage' (Deslizamiento)?",
-      "respuesta_correcta": "Cuando el precio al que se ejecuta tu orden es diferente al que viste inicialmente debido a la baja liquidez",
+      "id": "t5",
+      "pregunta": "Un arancel es…",
+      "respuesta_correcta": "Un impuesto a los productos que entran al país",
       "incorrectas": [
-        "Chocar un auto",
-        "Cuando la bolsa cierra",
-        "Un tipo de estafa"
+        "Un subsidio",
+        "Un tipo de cambio",
+        "Una exportación"
       ],
-      "dato_extra": "Es el costo oculto de operar en mercados pequeños."
+      "dato_extra": "Encarece lo importado; lo paga el consumidor final, no el país exportador."
     },
     {
-      "id": "liq6",
-      "pregunta": "¿Por qué es peligroso un mercado 'Iliquido'?",
-      "respuesta_correcta": "Porque si el precio baja rápido, puede que no encuentres a nadie que quiera comprarte tu activo",
+      "id": "t6",
+      "pregunta": "Las remesas que envían los mexicanos desde el extranjero…",
+      "respuesta_correcta": "Son una de las mayores fuentes de dólares del país",
       "incorrectas": [
-        "Porque el precio no se mueve",
-        "Porque es muy barato",
-        "Porque no hay noticias"
+        "Son insignificantes",
+        "Las cobra el gobierno",
+        "Están prohibidas"
       ],
-      "dato_extra": "Es como intentar salir de una habitación en llamas y encontrar la puerta cerrada."
+      "dato_extra": "Superan por mucho a la inversión extranjera directa en varios años recientes."
     },
     {
-      "id": "liq7",
-      "pregunta": "¿Qué es una 'Penny Stock'?",
-      "respuesta_correcta": "Acciones de empresas muy pequeñas con muy bajo precio y muy poca liquidez (altamente riesgosas)",
+      "id": "t7",
+      "pregunta": "Que el peso se deprecie hace que las exportaciones mexicanas…",
+      "respuesta_correcta": "Se vuelvan más baratas y competitivas en el extranjero",
       "incorrectas": [
-        "Acciones de bancos gigantes",
-        "Monedas de colección",
-        "Acciones de tecnología"
+        "Se encarezcan",
+        "Desaparezcan",
+        "No cambien"
       ],
-      "dato_extra": "Son fáciles de manipular por su poco volumen."
-    },
-    {
-      "id": "liq8",
-      "pregunta": "¿A qué se refiere el término 'Profundidad de Mercado'?",
-      "respuesta_correcta": "A la cantidad de órdenes de compra y venta que hay a diferentes precios esperando ser ejecutadas",
-      "incorrectas": [
-        "A qué tan antiguo es el mercado",
-        "A los archivos secretos de la bolsa",
-        "Al valor total del país"
-      ],
-      "dato_extra": "Entre más profundidad, más estable es el precio ante órdenes grandes."
-    },
-    {
-      "id": "liq9",
-      "pregunta": "¿Qué es un 'Flash Crash'?",
-      "respuesta_correcta": "Una caída de precio extremadamente rápida y profunda causada por la desaparición momentánea de la liquidez",
-      "incorrectas": [
-        "Un choque de trenes",
-        "Cuando se va la luz en la bolsa",
-        "Un tipo de computadora"
-      ],
-      "dato_extra": "Suelen durar minutos pero causan pánico total."
-    },
-    {
-      "id": "liq10",
-      "pregunta": "¿Cuál es el activo más líquido del mundo?",
-      "respuesta_correcta": "El Efectivo (Cash)",
-      "incorrectas": [
-        "Bitcoin",
-        "Oro",
-        "Acciones"
-      ],
-      "dato_extra": "¡Felicidades! Ahora entiendes por qué la liquidez es la reina del mercado."
+      "dato_extra": "Por eso una devaluación golpea al consumidor y ayuda al exportador."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

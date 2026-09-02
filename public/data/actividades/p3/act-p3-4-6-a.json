@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-4-6-A",
+  "unit_code": "P3-4-6",
+  "unit_title": "De la idea al prototipo: hacer una primera versión",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Prototipo o Producto Final",
+  "descripcion": "Clasifica cada decisión según si ayuda a prototipar rápido o si es un error clásico.",
+  "objetivo": "Distinguir prácticas de prototipado ágil de errores de sobreproducción",
+  "xp": 200,
+  "instruccion": "Arrastra cada acción a la categoría correcta.",
+  "categorias": [
+    {
+      "id": "prototipo",
+      "label": "Buen prototipo",
+      "emoji": "🧪",
+      "color": "#10B981"
+    },
+    {
+      "id": "error",
+      "label": "Error clásico",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "aprendizaje",
+      "label": "Aprendizaje valioso",
+      "emoji": "💡",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Hacerlo con cartón y material reciclado",
+      "emoji": "📦",
+      "categoria_correcta": "prototipo",
+      "feedback": "Barato y rápido: exactamente lo que debe ser una primera versión."
+    },
+    {
+      "id": "i2",
+      "label": "Gastar $800 en materiales para la primera versión",
+      "emoji": "💸",
+      "categoria_correcta": "error",
+      "feedback": "Un prototipo caro es un prototipo que nadie se atreve a cambiar."
+    },
+    {
+      "id": "i3",
+      "label": "Descubrir que el producto no se sostiene de pie",
+      "emoji": "🔍",
+      "categoria_correcta": "aprendizaje",
+      "feedback": "Ese hallazgo vale más que un prototipo bonito que no se probó."
+    },
+    {
+      "id": "i4",
+      "label": "Construirlo en veinte minutos",
+      "emoji": "⏱️",
+      "categoria_correcta": "prototipo",
+      "feedback": "La restricción de tiempo obliga a resolver lo esencial."
+    },
+    {
+      "id": "i5",
+      "label": "Dedicar tres días a pintarlo antes de probarlo",
+      "emoji": "🎨",
+      "categoria_correcta": "error",
+      "feedback": "La decoración se hace al final, cuando ya se sabe que la idea funciona."
+    },
+    {
+      "id": "i6",
+      "label": "Anotar los cinco problemas que señalaron los compañeros",
+      "emoji": "📝",
+      "categoria_correcta": "aprendizaje",
+      "feedback": "Esa lista es el verdadero producto de la sesión."
+    },
+    {
+      "id": "i7",
+      "label": "Discutir con quien señaló una falla",
+      "emoji": "🗣️",
+      "categoria_correcta": "error",
+      "feedback": "Defender el prototipo impide mejorarlo. Se escucha y se anota."
+    },
+    {
+      "id": "i8",
+      "label": "Aceptar que la versión uno se va a tirar",
+      "emoji": "🗑️",
+      "categoria_correcta": "prototipo",
+      "feedback": "Desechable por diseño: así se puede cambiar sin culpa."
+    },
+    {
+      "id": "i9",
+      "label": "Darse cuenta de que costaría demasiado producirlo",
+      "emoji": "📊",
+      "categoria_correcta": "aprendizaje",
+      "feedback": "Mejor descubrirlo con cartón que después de fabricar cien piezas."
+    },
+    {
+      "id": "i10",
+      "label": "Guardar la idea sin construir nada por miedo a que salga mal",
+      "emoji": "🔒",
+      "categoria_correcta": "error",
+      "feedback": "Es lo único que garantiza que la idea nunca mejore."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-6-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-6-a-escena.webp"
+}

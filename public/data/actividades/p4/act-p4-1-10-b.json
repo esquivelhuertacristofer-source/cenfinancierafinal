@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P4-1-10-B",
+  "unit_code": "P4-1-10",
+  "unit_title": "Hablar de dinero en familia: la conversación que nadie tiene",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Hablar de Dinero",
+  "descripcion": "Responde rápido sobre cómo se tiene bien esta conversación.",
+  "objetivo": "Consolidar las reglas de la conversación financiera familiar",
+  "xp": 320,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Por qué es difícil hablar de dinero en familia?",
+      "respuesta_correcta": "Porque mezcla números con emociones",
+      "incorrectas": [
+        "Porque es aburrido",
+        "Porque es ilegal",
+        "Porque nadie sabe sumar"
+      ],
+      "dato_extra": "Preocupación, culpa y comparación se activan en cuanto sale el tema."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La peor hora para hablar de dinero es:",
+      "respuesta_correcta": "En medio de un problema de dinero",
+      "incorrectas": [
+        "Un domingo tranquilo",
+        "Después de comer",
+        "Al inicio del mes"
+      ],
+      "dato_extra": "Con las emociones al máximo, nadie escucha nada."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Decir \"siempre gastas de más\":",
+      "respuesta_correcta": "Provoca que la otra persona se defienda",
+      "incorrectas": [
+        "Resuelve el problema",
+        "Es lo recomendado",
+        "Abre el diálogo"
+      ],
+      "dato_extra": "La acusación cierra la conversación antes de que empiece."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Los números funcionan porque:",
+      "respuesta_correcta": "Son hechos compartidos, no acusaciones",
+      "incorrectas": [
+        "Asustan",
+        "Son difíciles",
+        "Nadie los entiende"
+      ],
+      "dato_extra": "Un número no se ofende ni se defiende: se revisa junto."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Toda conversación debe terminar con:",
+      "respuesta_correcta": "Un acuerdo concreto",
+      "incorrectas": [
+        "Un abrazo",
+        "Una promesa vaga",
+        "Silencio"
+      ],
+      "dato_extra": "Si no, se repetirá exactamente igual el mes siguiente."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Un acuerdo vago:",
+      "respuesta_correcta": "Es lo mismo que no tener acuerdo",
+      "incorrectas": [
+        "Sirve igual",
+        "Es mejor",
+        "Es más flexible"
+      ],
+      "dato_extra": "Específico y dicho en voz alta por ambas partes: así funciona."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Evitar el tema del dinero hace que:",
+      "respuesta_correcta": "Se vuelva más difícil después",
+      "incorrectas": [
+        "Se resuelva solo",
+        "Mejore la relación",
+        "Desaparezca"
+      ],
+      "dato_extra": "El problema sigue ahí; lo único que falta es la conversación."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-10-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-10-b-escena.webp"
+}

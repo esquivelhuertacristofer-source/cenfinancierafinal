@@ -1,0 +1,122 @@
+{
+  "code": "ACT-P1-3-6-A",
+  "unit_code": "P1-3-6",
+  "unit_title": "El termómetro de mi meta: pintar lo que llevo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Sube el Termómetro",
+  "descripcion": "Ayuda a Ceny a llenar bien su termómetro: clasifica qué acciones lo hacen subir, cuáles lo hacen bajar y cuáles no lo mueven.",
+  "objetivo": "Distinguir las acciones que aumentan el ahorro de las que lo reducen o no lo afectan",
+  "xp": 250,
+  "instruccion": "La meta de Ceny es una bicicleta de $500. Arrastra cada acción según lo que le hace al termómetro.",
+  "categorias": [
+    {
+      "id": "sube",
+      "label": "Sube el termómetro",
+      "emoji": "📈",
+      "color": "#10B981"
+    },
+    {
+      "id": "baja",
+      "label": "Baja el termómetro",
+      "emoji": "📉",
+      "color": "#EF4444"
+    },
+    {
+      "id": "igual",
+      "label": "No lo mueve",
+      "emoji": "➖",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Guardar los $20 del domingo",
+      "emoji": "🪙",
+      "categoria_correcta": "sube",
+      "feedback": "Cada aportación sube el nivel. Así se llenan las casillas."
+    },
+    {
+      "id": "i2",
+      "label": "Sacar $50 para unos dulces",
+      "emoji": "🍬",
+      "categoria_correcta": "baja",
+      "feedback": "Sacar del ahorro es retroceder una casilla entera."
+    },
+    {
+      "id": "i3",
+      "label": "Pintar el termómetro de otro color",
+      "emoji": "🖍️",
+      "categoria_correcta": "igual",
+      "feedback": "El dibujo no cambia el dinero. El nivel es el mismo."
+    },
+    {
+      "id": "i4",
+      "label": "Recibir $100 de regalo y guardarlos",
+      "emoji": "🎁",
+      "categoria_correcta": "sube",
+      "feedback": "Dos casillas de golpe. Los ingresos de sorpresa aceleran mucho."
+    },
+    {
+      "id": "i5",
+      "label": "Contar el ahorro sin gastar nada",
+      "emoji": "🔢",
+      "categoria_correcta": "igual",
+      "feedback": "Contar es bueno para saber dónde estás, pero no agrega dinero."
+    },
+    {
+      "id": "i6",
+      "label": "Comprar un juguete de $150 con el ahorro",
+      "emoji": "🧸",
+      "categoria_correcta": "baja",
+      "feedback": "Tres casillas perdidas. La bicicleta se aleja tres semanas."
+    },
+    {
+      "id": "i7",
+      "label": "Ganar $30 lavando el coche",
+      "emoji": "🚗",
+      "categoria_correcta": "sube",
+      "feedback": "Trabajar por un ingreso extra es la forma más rápida de subir."
+    },
+    {
+      "id": "i8",
+      "label": "Enseñarle el termómetro a un amigo",
+      "emoji": "👀",
+      "categoria_correcta": "igual",
+      "feedback": "Contarlo ayuda a mantener el compromiso, pero no mueve el nivel."
+    },
+    {
+      "id": "i9",
+      "label": "Prestarle $40 a alguien que no devuelve",
+      "emoji": "🫤",
+      "categoria_correcta": "baja",
+      "feedback": "Prestar sin acuerdo claro casi siempre baja el termómetro."
+    },
+    {
+      "id": "i10",
+      "label": "Devolver $40 que me prestaron a mí",
+      "emoji": "🤝",
+      "categoria_correcta": "baja",
+      "feedback": "Pagar lo que debes es correcto, pero sale del ahorro. Por eso conviene no pedir prestado."
+    },
+    {
+      "id": "i11",
+      "label": "Guardar el cambio del mandado que me dieron",
+      "emoji": "💵",
+      "categoria_correcta": "sube",
+      "feedback": "Los pesos sueltos que nadie cuenta son los que llenan las primeras casillas."
+    },
+    {
+      "id": "i12",
+      "label": "Cambiar la meta a algo más caro",
+      "emoji": "🔄",
+      "categoria_correcta": "igual",
+      "feedback": "El dinero no cambia, pero cada casilla ahora vale más: el avance se ve menor."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-6-a-escena.webp"
+}

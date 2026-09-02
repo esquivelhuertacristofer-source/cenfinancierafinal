@@ -14,7 +14,7 @@
   "texto": "Para hacer un presupuesto, primero anoto mis __BLANK1__, que es el dinero que recibo de mi domingo. Luego resto mis __BLANK2__, que es el dinero que sale de mi bolsa. Si quiero un juguete caro, debo separar una parte para el __BLANK3__ antes de gastar en dulces. Un presupuesto me ayuda a que el dinero me __BLANK4__ para toda la semana. Si gasto más de lo que tengo, tendré problemas y tendré que pedir __BLANK5__. Por eso, un genio financiero siempre hace un __BLANK6__ el domingo por la noche. ¡Tener un __BLANK7__ me da libertad para comprar lo que realmente importa!",
   "blanks": [
     {
-      "id": "BLANK1",
+      "id": "blank1",
       "opciones": [
         "ingresos",
         "gastos",
@@ -23,7 +23,7 @@
       "respuesta": "ingresos"
     },
     {
-      "id": "BLANK2",
+      "id": "blank2",
       "opciones": [
         "gastos",
         "regalos",
@@ -32,7 +32,7 @@
       "respuesta": "gastos"
     },
     {
-      "id": "BLANK3",
+      "id": "blank3",
       "opciones": [
         "ahorro",
         "cine",
@@ -41,7 +41,7 @@
       "respuesta": "ahorro"
     },
     {
-      "id": "BLANK4",
+      "id": "blank4",
       "opciones": [
         "alcance",
         "sobre",
@@ -50,7 +50,7 @@
       "respuesta": "alcance"
     },
     {
-      "id": "BLANK5",
+      "id": "blank5",
       "opciones": [
         "prestado",
         "permiso",
@@ -59,7 +59,7 @@
       "respuesta": "prestado"
     },
     {
-      "id": "BLANK6",
+      "id": "blank6",
       "opciones": [
         "plan",
         "dibujo",
@@ -68,7 +68,7 @@
       "respuesta": "plan"
     },
     {
-      "id": "BLANK7",
+      "id": "blank7",
       "opciones": [
         "mapa",
         "tesoro",

@@ -5,122 +5,91 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "El Civismo Fiscal Avanzado",
-  "descripcion": "¿Sabías que los impuestos son como una 'suscripción' a tu país? ¡Aprende cómo funciona el sistema para ser un ciudadano ejemplar!",
-  "objetivo": "Comprender los conceptos avanzados de fiscalidad, derechos del contribuyente y transparencia",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "Experto en Retiro",
+  "descripcion": "Contra el reloj: lo que hay que saber sobre la cuenta que te acompañará 45 años.",
+  "objetivo": "Consolidar el funcionamiento de las AFOREs, el papel de las comisiones y la importancia de empezar joven.",
+  "xp": 500,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "fis1",
-      "pregunta": "¿Qué es la 'Declaración Anual'?",
-      "respuesta_correcta": "El informe que entregas al SAT cada año para calcular si pagaste impuestos de más o de menos",
+      "id": "t1",
+      "pregunta": "¿Cuánto entra por ley a tu AFORE cada mes, aproximadamente?",
+      "respuesta_correcta": "Alrededor del 6.5% de tu sueldo, entre tú, tu patrón y el gobierno",
       "incorrectas": [
-        "Un examen en la escuela",
-        "Una carta al presidente",
-        "Un tipo de ahorro"
+        "El 50% de tu sueldo",
+        "Nada, solo lo que tú deposites",
+        "El 1%"
       ],
-      "dato_extra": "Si pagaste de más, ¡el SAT te devuelve el dinero!"
+      "dato_extra": "La reforma de 2020 lo está subiendo gradualmente hasta cerca del 15% en 2030."
     },
     {
-      "id": "fis2",
-      "pregunta": "¿Qué es un CFDI?",
-      "respuesta_correcta": "Comprobante Fiscal Digital por Internet (la factura electrónica oficial)",
+      "id": "t2",
+      "pregunta": "Las aportaciones voluntarias a la AFORE…",
+      "respuesta_correcta": "Se pueden hacer desde $50 y además son deducibles de impuestos",
       "incorrectas": [
-        "Un tipo de moneda",
-        "Un sistema de seguridad de bancos",
-        "Una app de juegos"
+        "No existen",
+        "Requieren mínimo $50,000",
+        "Solo las hacen las empresas"
       ],
-      "dato_extra": "Sin CFDI, no puedes demostrar tus gastos para deducirlos."
+      "dato_extra": "Se pueden depositar hasta en tiendas de conveniencia."
     },
     {
-      "id": "fis3",
-      "pregunta": "¿Cuál es la diferencia entre 'Evadir' y 'Optimizar' impuestos?",
-      "respuesta_correcta": "Evadir es mentir para no pagar (ilegal). Optimizar es usar los beneficios de la ley para pagar lo justo (legal)",
+      "id": "t3",
+      "pregunta": "La comisión que cobra tu AFORE…",
+      "respuesta_correcta": "Se descuenta cada año de tu saldo y en 40 años pesa muchísimo",
       "incorrectas": [
-        "Es lo mismo",
-        "Optimizar es solo para empresas",
-        "Evadir es una estrategia"
+        "Es igual en todas",
+        "Solo se cobra al final",
+        "No existe"
       ],
-      "dato_extra": "La honestidad fiscal es la base de un país fuerte."
+      "dato_extra": "Puedes comparar comisiones en la CONSAR y cambiarte de AFORE gratis."
     },
     {
-      "id": "fis4",
-      "pregunta": "¿Por qué es importante que los gastos deducibles se paguen con tarjeta o transferencia?",
-      "respuesta_correcta": "Porque así el SAT puede verificar que el dinero realmente salió de tu cuenta (trazabilidad)",
+      "id": "t4",
+      "pregunta": "¿Qué es la \"tasa de reemplazo\"?",
+      "respuesta_correcta": "El porcentaje de tu último sueldo que recibirás como pensión",
       "incorrectas": [
-        "Porque el papel es feo",
-        "Porque no aceptan efectivo",
-        "Porque es más lento"
+        "El interés de la AFORE",
+        "Un impuesto",
+        "La comisión anual"
       ],
-      "dato_extra": "Si pagas en efectivo tus lentes o médico, ¡no los podrás deducir!"
+      "dato_extra": "En México muchas personas se retiran con menos del 40%. El objetivo recomendado es 70%."
     },
     {
-      "id": "fis5",
-      "pregunta": "¿Qué es el 'Buzón Tributario'?",
-      "respuesta_correcta": "El canal de comunicación oficial y seguro entre el SAT y el contribuyente",
+      "id": "t5",
+      "pregunta": "Retirar dinero de tu AFORE por desempleo…",
+      "respuesta_correcta": "Es posible, pero te resta semanas cotizadas y reduce tu pensión futura",
       "incorrectas": [
-        "Un buzón de madera",
-        "El correo spam",
-        "Donde se dejan las quejas"
+        "Es gratis y sin consecuencias",
+        "Está prohibido siempre",
+        "Aumenta tu pensión"
       ],
-      "dato_extra": "Es fundamental revisarlo para estar al día con nuestras obligaciones."
+      "dato_extra": "Es una salida de emergencia real, pero con un costo que casi nadie calcula."
     },
     {
-      "id": "fis6",
-      "pregunta": "¿Qué son los 'Impuestos Indirectos'?",
-      "respuesta_correcta": "Los que ya vienen incluidos en el precio de lo que compras (como el IVA)",
+      "id": "t6",
+      "pregunta": "Dos personas aportan lo mismo; una empieza a los 22 y otra a los 35. Al retirarse…",
+      "respuesta_correcta": "La que empezó a los 22 puede tener más del doble",
       "incorrectas": [
-        "Los que no se pagan",
-        "Los que pagas después",
-        "Los que pagas en secreto"
+        "Terminan casi iguales",
+        "Gana la que empezó después",
+        "Depende del banco"
       ],
-      "dato_extra": "Incluso los niños pagan IVA cuando compran un dulce."
+      "dato_extra": "Esos 13 años extra son los que más rinden, porque el interés se compone sobre todo lo anterior."
     },
     {
-      "id": "fis7",
-      "pregunta": "¿Para qué sirve el presupuesto de egresos del gobierno?",
-      "respuesta_correcta": "Para planear exactamente en qué se gastarán los impuestos de todos (escuelas, calles, etc.)",
+      "id": "t7",
+      "pregunta": "Las SIEFOREs básicas cambian tu inversión según tu edad porque…",
+      "respuesta_correcta": "De joven puedes tomar más riesgo y cerca del retiro conviene proteger",
       "incorrectas": [
-        "Para guardar el dinero",
-        "Para regalarlo a otros países",
-        "No sirve para nada"
+        "Es un capricho de la AFORE",
+        "Para cobrar más comisión",
+        "Para que no puedas sacar dinero"
       ],
-      "dato_extra": "Como contribuyente, tienes derecho a exigir transparencia en este gasto."
-    },
-    {
-      "id": "fis8",
-      "pregunta": "¿Qué es un 'Persona Física' en términos fiscales?",
-      "respuesta_correcta": "Cualquier individuo que realiza una actividad económica (como tú o tus papás)",
-      "incorrectas": [
-        "Alguien que hace mucho ejercicio",
-        "Un robot",
-        "Una empresa grande"
-      ],
-      "dato_extra": "Todos los adultos que trabajan son personas físicas ante el SAT."
-    },
-    {
-      "id": "fis9",
-      "pregunta": "¿Qué es una 'Persona Moral'?",
-      "respuesta_correcta": "Un grupo de personas que se unen para formar una empresa o sociedad",
-      "incorrectas": [
-        "Alguien muy bueno",
-        "Un fantasma",
-        "Un juez"
-      ],
-      "dato_extra": "Las empresas tienen sus propias reglas de impuestos."
-    },
-    {
-      "id": "fis10",
-      "pregunta": "¿Cuál es el beneficio social de que todos paguemos impuestos?",
-      "respuesta_correcta": "Tener una sociedad con mejores servicios, más orden y oportunidades para todos",
-      "incorrectas": [
-        "Ninguno",
-        "Que el gobierno tenga más dinero",
-        "Que los precios suban"
-      ],
-      "dato_extra": "¡Felicidades! Eres un ciudadano con conciencia fiscal avanzada."
+      "dato_extra": "Es asignación de activos automática: el sistema te va moviendo a instrumentos más seguros con los años."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

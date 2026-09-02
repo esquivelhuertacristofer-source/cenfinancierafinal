@@ -4,108 +4,118 @@
   "unit_title": "Análisis básico de estados financieros personales",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "CONSTRUCTOR",
-  "complejidad": "MEDIO",
-  "titulo": "Mi Kit de Emergencia Financiera",
-  "descripcion": "¿Qué harías si pierdes tu celular y tu casa sufre un daño hoy? ¡Diseña tu plan de acción para no perder el control!",
-  "objetivo": "Crear un protocolo práctico de recuperación de información y activos ante situaciones de emergencia",
-  "xp": 450,
-  "output_type": "Manual de Supervivencia Financiera",
-  "exportable": true,
-  "pasos": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "Activo, Pasivo o Ninguno",
+  "descripcion": "La mayoría de las personas cree que su coche es un activo y que su tarjeta es una herramienta. Clasificar bien es el primer paso para leer tu propia situación.",
+  "objetivo": "Clasificar correctamente los elementos de un balance personal en activos, pasivos y gastos, distinguiendo lo que produce de lo que consume.",
+  "xp": 550,
+  "instruccion": "Arrastra cada concepto según sea algo que TE DA dinero, algo que TE QUITA dinero, o un gasto que desaparece al pagarlo.",
+  "categorias": [
     {
-      "id": "contactos_emergencia",
-      "titulo": "📞 Contactos Críticos",
-      "descripcion": "¿A quién llamarías primero en una crisis legal o médica?",
-      "campos": [
-        {
-          "id": "agente_seguros",
-          "label": "Nombre del Agente de Seguros",
-          "type": "text",
-          "placeholder": "Ej: Juan Pérez - Seguros Atlas...",
-          "requerido": true
-        },
-        {
-          "id": "abogado_familia",
-          "label": "Contacto Legal",
-          "type": "text",
-          "placeholder": "Ej: Lic. García - Notaría 5...",
-          "requerido": true
-        }
-      ]
+      "id": "activo",
+      "label": "ACTIVO (te da o conserva valor)",
+      "emoji": "📗",
+      "color": "#10b981"
     },
     {
-      "id": "respaldo_documental",
-      "titulo": "📂 Respaldo de Documentos",
-      "descripcion": "¿Dónde guardas tus pólizas y contratos?",
-      "campos": [
-        {
-          "id": "ubicacion_fisica",
-          "label": "Ubicación de Originales (Ej: Caja fuerte)",
-          "type": "text",
-          "requerido": true
-        },
-        {
-          "id": "respaldo_nube",
-          "label": "¿Tienes copia digital en la nube?",
-          "type": "select",
-          "opciones": [
-            "Sí, en carpeta protegida",
-            "No, necesito hacerlo hoy"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "pasivo",
+      "label": "PASIVO (te quita dinero cada mes)",
+      "emoji": "📕",
+      "color": "#ef4444"
     },
     {
-      "id": "protocolo_digital",
-      "titulo": "🔑 Acceso Digital",
-      "descripcion": "Si pierdes tu celular con el 2FA, ¿cómo entras a tus cuentas?",
-      "campos": [
-        {
-          "id": "llaves_recuperacion",
-          "label": "¿Sabes dónde están tus códigos de recuperación?",
-          "type": "select",
-          "opciones": [
-            "Sí, en lugar seguro no digital",
-            "No sé qué son"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "acceso_banco",
-          "label": "Plan B para entrar al banco",
-          "type": "textarea",
-          "placeholder": "Ej: Tengo una tarjeta de coordenadas física en casa de mis padres...",
-          "requerido": true
-        }
-      ]
-    },
-    {
-      "id": "liquidez_inmediata",
-      "titulo": "💰 Efectivo de Supervivencia",
-      "descripcion": "Si los cajeros no funcionan por 3 días, ¿tienes efectivo?",
-      "campos": [
-        {
-          "id": "monto_emergencia_72h",
-          "label": "Monto guardado para 72 horas",
-          "type": "slider",
-          "min": 0,
-          "max": 10000,
-          "step": 500,
-          "default": 2000,
-          "unit": "$"
-        },
-        {
-          "id": "meses_cobertura_emergencia",
-          "label": "Meses de Gastos que Cubre",
-          "type": "calculated",
-          "formula": "Math.round(monto_emergencia_72h / 15000 * 10) / 10",
-          "unit": " meses cubiertos",
-          "ayuda": "Asumiendo gasto mensual promedio de $15,000 pesos"
-        }
-      ]
+      "id": "gasto",
+      "label": "GASTO (se consume y ya)",
+      "emoji": "💨",
+      "color": "#94a3b8"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Un departamento que rentas a alguien",
+      "emoji": "🏢",
+      "categoria_correcta": "activo",
+      "feedback": "Genera ingreso mensual: activo de manual."
+    },
+    {
+      "id": "i2",
+      "label": "Saldo de tu tarjeta de crédito",
+      "emoji": "💳",
+      "categoria_correcta": "pasivo",
+      "feedback": "Te quita dinero en intereses cada mes que no lo liquidas."
+    },
+    {
+      "id": "i3",
+      "label": "La cena de anoche",
+      "emoji": "🍽️",
+      "categoria_correcta": "gasto",
+      "feedback": "Se consumió: no aparece en ningún balance."
+    },
+    {
+      "id": "i4",
+      "label": "Tu saldo en CETES",
+      "emoji": "🇲🇽",
+      "categoria_correcta": "activo",
+      "feedback": "Produce rendimiento y puedes convertirlo en efectivo."
+    },
+    {
+      "id": "i5",
+      "label": "Un coche financiado que usas para pasear",
+      "emoji": "🚗",
+      "categoria_correcta": "pasivo",
+      "feedback": "Mensualidad, seguro, gasolina, verificación… y pierde valor cada año."
+    },
+    {
+      "id": "i6",
+      "label": "Un coche con el que trabajas repartiendo",
+      "emoji": "🛵",
+      "categoria_correcta": "activo",
+      "feedback": "El mismo objeto puede ser activo o pasivo: lo define si produce ingreso."
+    },
+    {
+      "id": "i7",
+      "label": "El recibo de luz",
+      "emoji": "💡",
+      "categoria_correcta": "gasto",
+      "feedback": "Servicio consumido. Gasto recurrente, no deuda."
+    },
+    {
+      "id": "i8",
+      "label": "Tu saldo acumulado en la AFORE",
+      "emoji": "🌱",
+      "categoria_correcta": "activo",
+      "feedback": "Es tuyo y crece, aunque no puedas usarlo hasta el retiro."
+    },
+    {
+      "id": "i9",
+      "label": "Un crédito personal para unas vacaciones",
+      "emoji": "✈️",
+      "categoria_correcta": "pasivo",
+      "feedback": "El viaje se acabó y la deuda sigue: el peor tipo de pasivo."
+    },
+    {
+      "id": "i10",
+      "label": "Herramientas con las que ofreces un servicio",
+      "emoji": "🧰",
+      "categoria_correcta": "activo",
+      "feedback": "Producen ingreso: son capital de trabajo."
+    },
+    {
+      "id": "i11",
+      "label": "Suscripciones mensuales de streaming",
+      "emoji": "📺",
+      "categoria_correcta": "gasto",
+      "feedback": "Se consumen mes a mes. Revisarlas suele liberar bastante dinero."
+    },
+    {
+      "id": "i12",
+      "label": "Los MSI que aún debes de tu celular",
+      "emoji": "📱",
+      "categoria_correcta": "pasivo",
+      "feedback": "Aunque no cobren intereses, es una obligación de pago futura: cuenta como pasivo."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

@@ -4,124 +4,110 @@
   "unit_title": "Las finanzas personales a lo largo de la vida",
   "level": "Primaria 6",
   "edad": "11-12 años",
-  "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "El Gamer Inteligente",
-  "descripcion": "Quieres la nueva PC Gamer de $20,000. Pero hay rumores de que el precio cambiará pronto. ¿Pagarás por el derecho a congelar el precio?",
-  "objetivo": "Experimentar el uso de opciones de compra (CALL) y entender el costo/beneficio de la prima",
+  "tipo": "QUIZ",
+  "complejidad": "ALTO",
+  "titulo": "Cada Edad, su Estrategia",
+  "descripcion": "La misma decisión puede ser brillante a los 25 y desastrosa a los 64. Demuestra que sabes distinguir.",
+  "objetivo": "Comprender cómo las metas, el horizonte temporal y la tolerancia al riesgo cambian a lo largo de la vida financiera.",
   "xp": 450,
-  "personaje_principal": "Lucas",
-  "contexto_inicial": "Lucas tiene $20,000 ahorrados. La tienda le ofrece una 'Opción Call' por $500: esto le da el derecho a comprar la PC a $20,000 dentro de un mes, pase lo que pase.",
-  "nodo_inicial": "comprar_opcion",
-  "nodos": {
-    "comprar_opcion": {
-      "id": "comprar_opcion",
-      "texto": "¿Vale la pena gastar $500 solo por el derecho a decidir después?",
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La ventaja financiera más grande de tener 20 años es…",
       "opciones": [
-        {
-          "id": "si_opcion",
-          "texto": "Sí, pagar los $500 de prima",
-          "siguiente_nodo": "escenario_mercado_p6",
-          "consecuencia": "Pagaste tu prima. Ahora tienes un 'seguro' de precio.",
-          "xp_bonus": 100,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "no_opcion",
-          "texto": "No, mejor guardo mis $500 y espero",
-          "siguiente_nodo": "escenario_sin_seguro",
-          "consecuencia": "Decidiste arriesgarte al mercado libre.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
+        "Ganar mucho dinero",
+        "Tener 40 años por delante para que el interés compuesto trabaje",
+        "No pagar impuestos",
+        "Poder pedir más créditos"
+      ],
+      "correcta": 1,
+      "explicacion": "El tiempo es el único recurso financiero que no se puede comprar ni recuperar."
     },
-    "escenario_mercado_p6": {
-      "id": "escenario_mercado_p6",
-      "texto": "¡Llegó el día! Hubo escasez de chips y el precio de la PC subió a $25,000 en todas las tiendas. ¿Qué haces?",
+    {
+      "id": "q2",
+      "texto": "Una persona de 63 años que va a retirarse en 2 años debería tener su dinero…",
       "opciones": [
-        {
-          "id": "ejercer_derecho",
-          "texto": "Usar mi opción y comprar a $20,000",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "¡Genial! Ahorraste $4,500 ($5,000 de diferencia menos los $500 de la prima).",
-          "xp_bonus": 300,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "no_ejercer_opcion",
-          "texto": "No ejercer la opción y venderla a otro por lo poco que vale ahora",
-          "siguiente_nodo": "final_triste_gamer",
-          "consecuencia": "Renunciaste a la ganancia. La opción que pagaste apenas recuperó $50.",
-          "xp_bonus": 30,
-          "es_optima": false,
-          "impacto_patrimonio": -40
-        }
-      ]
+        "Todo en acciones de empresas nuevas",
+        "Sobre todo en instrumentos seguros como CETES",
+        "Todo en criptomonedas",
+        "En el colchón"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el mercado cae 30% justo antes de tu retiro, ya no hay tiempo de recuperarlo."
     },
-    "escenario_sin_seguro": {
-      "id": "escenario_sin_seguro",
-      "texto": "El precio subió a $25,000. Como no tienes opción congelada, ahora te falta dinero.",
+    {
+      "id": "q3",
+      "texto": "El primer objetivo financiero al recibir tu primer sueldo debería ser…",
       "opciones": [
-        {
-          "id": "ahorrar_mas",
-          "texto": "Ahorrar otros $5,000 durante meses",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Te quedarás sin jugar mucho tiempo por no haberte protegido.",
-          "xp_bonus": 50,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        },
-        {
-          "id": "endeudarse_para_pc",
-          "texto": "Pedir un crédito a tasa alta para comprar la PC ahora mismo",
-          "siguiente_nodo": "final_malo",
-          "consecuencia": "Compraste la PC, pero ahora debes mucho más que el valor original.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
+        "Comprar un coche",
+        "Armar un fondo de emergencia de 3 a 6 meses de gastos",
+        "Invertir todo en la Bolsa",
+        "Pedir una tarjeta de crédito"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin fondo de emergencia, cualquier imprevisto te obliga a endeudarte y borra años de avance."
     },
-    "final_exito_opcion": {
-      "id": "final_exito_opcion",
-      "texto": "¡Felicidades! Entendiste que pagar una pequeña prima te protege de grandes sorpresas. ¡A jugar!",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "Las opciones son la mejor forma de manejar la incertidumbre en los negocios."
+    {
+      "id": "q4",
+      "texto": "\"A mayor horizonte de tiempo, mayor riesgo aceptable\" significa que…",
+      "opciones": [
+        "Si vas a usar el dinero en 30 años puedes soportar caídas temporales",
+        "Los jóvenes deben apostar",
+        "El riesgo desaparece con el tiempo",
+        "Hay que invertir siempre igual"
+      ],
+      "correcta": 0,
+      "explicacion": "No es que el riesgo desaparezca: es que tienes tiempo para que se recupere."
     },
-    "final_triste_gamer": {
-      "id": "final_triste_gamer",
-      "texto": "Aprendiste que el mercado no siempre te favorece. A veces, pagar por seguridad es la mejor inversión.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "Ignorar los riesgos suele salir más caro que protegerse de ellos."
+    {
+      "id": "q5",
+      "texto": "La etapa entre los 45 y los 60 suele ser aquella en la que…",
+      "opciones": [
+        "Se gana menos que nunca",
+        "Se alcanzan los ingresos más altos y también las mayores responsabilidades",
+        "No hay que ahorrar",
+        "Se deja de trabajar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la etapa donde más se puede acumular, y donde más fácil es gastarlo todo en estilo de vida."
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    {
+      "id": "q6",
+      "texto": "Alguien de 30 años con todo su dinero en cuentas de ahorro al 1%…",
+      "opciones": [
+        "Está perfectamente protegido",
+        "Está perdiendo poder de compra frente a la inflación",
+        "Va a hacerse rico",
+        "Hace lo correcto"
+      ],
+      "correcta": 1,
+      "explicacion": "A los 30 el riesgo real no es la volatilidad, es la inflación durante 35 años."
     },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    {
+      "id": "q7",
+      "texto": "Comprar una casa a crédito a 20 años a los 58 tiene el problema de que…",
+      "opciones": [
+        "Las mensualidades seguirán cuando ya no haya sueldo",
+        "Las casas no sirven",
+        "Está prohibido",
+        "Los intereses son gratis"
+      ],
+      "correcta": 0,
+      "explicacion": "Toda deuda larga debe terminar antes de que termine tu vida laboral."
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    {
+      "id": "q8",
+      "texto": "La razón principal para planear el retiro a los 20 y no a los 55 es…",
+      "opciones": [
+        "Que las AFOREs lo exigen",
+        "Que 40 años de interés compuesto multiplican el ahorro varias veces",
+        "Que después ya no se puede ahorrar",
+        "Que a los 55 no dan créditos"
+      ],
+      "correcta": 1,
+      "explicacion": "Quien empieza a los 20 aporta mucho menos dinero total y termina con mucho más."
     }
-  },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  ],
+  "versión": "2026.Alineada.1"
 }

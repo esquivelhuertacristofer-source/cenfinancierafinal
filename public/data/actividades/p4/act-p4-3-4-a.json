@@ -4,142 +4,75 @@
   "unit_title": "Inflación: por qué los precios suben y cómo protegernos",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "ALTO",
-  "titulo": "La Carrera del Valor",
-  "descripcion": "En 10 años, los precios van a subir. Si dejas tu dinero quieto, el 'Monstruo de la Inflación' se lo comerá. ¡Aprende a ganarle la carrera!",
-  "objetivo": "Entender el concepto de tasa de interés real y la necesidad de invertir para superar la inflación",
-  "xp": 500,
-  "descripcion_formula": "Comparamos el Valor Real de tu dinero: (Capital * (1 + Tasa Inversión)^10) / (1 + Tasa Inflación)^10.",
-  "inputs": [
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "El Ahorro que se Achica",
+  "descripcion": "Mateo guardó $1,000 en su alcancía hace tres años. El billete sigue ahí, completito. Entonces, ¿por qué ya no le alcanza para lo mismo?",
+  "objetivo": "Entender la tasa de interés real y por qué hay que invertir para que el ahorro no pierda valor frente a la inflación.",
+  "xp": 450,
+  "contexto": "La inflación es cuando los precios suben con el tiempo. En México, los precios suben alrededor de 4 o 5 de cada 100 pesos cada año.",
+  "texto": "Hace tres años, la torta de la esquina costaba $30 y con sus $1,000 Mateo podía comprar 33 tortas. Hoy la torta cuesta $40 y con los mismos $1,000 solo compra 25. Mateo no perdió dinero: perdió __blank1__. A eso se le llama __blank2__. Su hermana Ana hizo algo distinto: en vez de guardar sus $1,000 en la alcancía, los puso en una cuenta que le pagaba __blank3__ cada año. Como los precios subían 5% al año y su cuenta le pagaba 9%, Ana le ganó a la inflación por __blank4__ puntos. Si a Mateo le hubieran pagado solo 2% mientras los precios subían 5%, su dinero habría __blank5__ de todas formas, aunque el número de su cuenta fuera más grande. Por eso guardar no es suficiente: para que el dinero no se achique hay que ponerlo a __blank6__.",
+  "blanks": [
     {
-      "id": "capital_inicial",
-      "label": "Tu ahorro hoy",
-      "type": "slider",
-      "min": 1000,
-      "max": 10000,
-      "step": 1000,
-      "default": 5000,
-      "unit": "$"
+      "id": "blank1",
+      "respuesta": "poder de compra",
+      "opciones": [
+        "poder de compra",
+        "billetes",
+        "monedas",
+        "su alcancía"
+      ]
     },
     {
-      "id": "tasa_inflacion",
-      "label": "Inflación anual estimada (%)",
-      "type": "slider",
-      "min": 3,
-      "max": 10,
-      "step": 1,
-      "default": 5,
-      "unit": "%"
+      "id": "blank2",
+      "respuesta": "inflación",
+      "opciones": [
+        "inflación",
+        "comisión",
+        "impuesto",
+        "descuento"
+      ]
     },
     {
-      "id": "tasa_rendimiento",
-      "label": "Tu tasa de inversión (%)",
-      "type": "slider",
-      "min": 0,
-      "max": 15,
-      "step": 1,
-      "default": 10,
-      "unit": "%"
+      "id": "blank3",
+      "respuesta": "intereses",
+      "opciones": [
+        "intereses",
+        "comisiones",
+        "multas",
+        "propinas"
+      ]
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+      "id": "blank4",
+      "respuesta": "4",
+      "opciones": [
+        "4",
+        "9",
+        "14",
+        "2"
+      ]
+    },
+    {
+      "id": "blank5",
+      "respuesta": "perdido valor",
+      "opciones": [
+        "perdido valor",
+        "ganado valor",
+        "desaparecido",
+        "duplicado"
+      ]
+    },
+    {
+      "id": "blank6",
+      "respuesta": "crecer",
+      "opciones": [
+        "crecer",
+        "dormir",
+        "esconderse",
+        "gastarse"
+      ]
     }
   ],
-  "formula": "capital_inicial * Math.pow((1 + tasa_rendimiento/100) / (1 + tasa_inflacion/100), 10)",
-  "output_label": "Poder de Compra Real en 10 años",
-  "output_prefix": "$",
-  "output_suffix": " pesos",
-  "chart_type": "bar",
-  "escenarios": [
-    {
-      "condicion": "tasa_rendimiento > tasa_inflacion",
-      "mensaje": "🏆 ¡Ganaste! Tu inversión creció más que los precios. Tu dinero ahora vale MÁS que hoy.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "tasa_rendimiento == tasa_inflacion",
-      "mensaje": "⚖️ ¡Empate! Tu dinero mantuvo su valor, pero no creció. Al menos el monstruo no se lo comió.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "tasa_rendimiento < tasa_inflacion",
-      "mensaje": "📉 ¡Perdiste! Los precios subieron más que tu dinero. Aunque tengas 'más billetes', te alcanza para MENOS cosas.",
-      "tipo": "danger"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Qué producto de uso diario ha subido más de precio en el último año en tu ciudad? ¿Cómo protegerías tus ahorros si la inflación llegara al 10% anual?",
-  "comparativa_espera": "Las pequeñas decisiones financieras repetidas a lo largo del tiempo son las que más impactan el patrimonio. Un hábito de ahorro de $500 mensuales durante 30 años puede generar más de $1,000,000 con inversión inteligente.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado de la simulación"
-    },
-    {
-      "id": "impacto_mensual",
-      "label": "Impacto Mensual",
-      "formula": "resultado_principal / 12",
-      "prefix": "$",
-      "suffix": "/mes",
-      "descripcion": "El efecto mensual de esta decisión"
-    },
-    {
-      "id": "impacto_anual",
-      "label": "Impacto Anual",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "/año",
-      "descripcion": "El impacto total en un año"
-    },
-    {
-      "id": "en_5_anios",
-      "label": "En 5 Años",
-      "formula": "resultado_principal * 5",
-      "prefix": "$",
-      "suffix": " acumulado",
-      "descripcion": "El valor de mantener este hábito por 5 años"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "impacto_mensual",
-      "label": "Impacto Mensual",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.2"
 }

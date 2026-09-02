@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Trophy,
   Book,
@@ -39,6 +39,7 @@ import MissionFicha from '../../components/hub/MissionFicha';
 import ContentModal from '../../components/hub/ContentModal';
 import OnboardingTour from '../../components/hub/OnboardingTour';
 import ArenaMastery from '../../components/hub/ArenaMastery';
+import { useSFX } from '../../lib/hooks/useSFX';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -49,13 +50,6 @@ const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string 
   ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
   consumo_inteligente: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
   inversion: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
-};
-
-// SFX System
-const SOUNDS = {
-  hover: 'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3',
-  click: 'https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3',
-  complete: 'https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3',
 };
 
 export default function StudentHubV19() {
@@ -83,15 +77,7 @@ export default function StudentHubV19() {
   const [showGame, setShowGame] = useState(false);
   const [gameCompleted, setGameCompleted] = useState(false);
 
-  const playSFX = useCallback((key: keyof typeof SOUNDS) => {
-    try {
-      const audio = new Audio(SOUNDS[key]);
-      audio.volume = 0.2;
-      audio.play().catch(() => {});
-    } catch {
-      // silent
-    }
-  }, []);
+  const playSFX = useSFX();
 
   useEffect(() => {
     const rescue = setTimeout(() => {
@@ -519,10 +505,11 @@ export default function StudentHubV19() {
       </div>
 
       {/* THEME TOGGLE */}
-      <button 
-        className="theme-toggle" 
+      <button
+        className="theme-toggle"
         onClick={() => { setIsDark(!isDark); playSFX('click'); }}
         onMouseEnter={() => playSFX('hover')}
+        aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
       >
          {isDark ? <Sun size={28} /> : <Moon size={28} />}
       </button>
@@ -575,7 +562,6 @@ export default function StudentHubV19() {
           onClick={async () => {
             try {
               playSFX('click');
-              localStorage.removeItem('cen_test_profile');
               await logoutAction();
               window.location.href = '/log-in';
             } catch(e){
@@ -613,10 +599,11 @@ export default function StudentHubV19() {
                    
                    {/* OBJETO 3D / PORTAL DEL GRADO */}
                    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.3)] bg-[#011126]">
-                      <img 
-                        src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"} 
+                      <img
+                        src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"}
+                        alt={gradeMeta?.title ? `Portal del grado: ${gradeMeta.title}` : 'Portal del grado actual'}
                         className="w-full h-full object-cover scale-110"
-                        style={{ 
+                        style={{
                           maskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)',
                           WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)'
                         }}
@@ -705,29 +692,6 @@ export default function StudentHubV19() {
               <div className="gb-grade-level" style={{ color: isDark ? 'var(--grade-accent)' : '#011C40' }}>
                 {profile?.school_level?.toLowerCase().includes('secundar') ? 'Secundaria' : 'Primaria'}
               </div>
-             
-             {/* GRADE SWITCHER - MODERNO Y VISIBLE */}
-             <div className="absolute top-full left-0 mt-6 z-[1000]">
-                <div className="flex flex-col gap-2">
-                   <div className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-2">Simulador de Grado</div>
-                   <div className="flex flex-wrap gap-2 max-w-[240px]">
-                      {[1,2,3,4,5,6].map(g => (
-                        <button key={`p${g}`} onClick={() => {
-                          const p = { id: `test_p${g}`, email: `primaria${g}@cen.edu`, full_name: `Test P${g}`, role: 'student', school_level: `Primaria ${g}`, group_id: 'test', grade: g };
-                          localStorage.setItem('cen_test_profile', JSON.stringify(p));
-                          window.location.reload();
-                        }} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-[var(--grade-accent)] hover:text-white transition-all text-xs font-bold">P{g}</button>
-                      ))}
-                      {[1,2,3].map(g => (
-                        <button key={`s${g}`} onClick={() => {
-                          const p = { id: `test_s${g}`, email: `secundaria${g}@cen.edu`, full_name: `Test S${g}`, role: 'student', school_level: `Secundaria ${g}`, group_id: 'test', grade: g };
-                          localStorage.setItem('cen_test_profile', JSON.stringify(p));
-                          window.location.reload();
-                        }} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-[var(--grade-accent)] hover:text-white transition-all text-xs font-bold">S{g}</button>
-                      ))}
-                   </div>
-                </div>
-             </div>
           </div>
         </header>
 
@@ -904,6 +868,7 @@ export default function StudentHubV19() {
               <button
                 onClick={() => setShowGame(false)}
                 className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-500 transition-all text-white"
+                aria-label="Cerrar Juego Financiero"
               >
                 <X size={22} />
               </button>
@@ -933,7 +898,7 @@ export default function StudentHubV19() {
                   <h2 className="text-5xl lg:text-7xl font-black tracking-tighter mb-4 text-white">Objetivos de Aprendizaje • Aprendizajes Esperados</h2>
                   <div className="text-sm font-black uppercase tracking-[0.4em] text-[#FF8C00]">Grado {profile?.grade} • CEN Educación Financiera</div>
                 </div>
-                <button onClick={() => setShowCurriculum(false)} className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FF8C00] transition-all group">
+                <button onClick={() => setShowCurriculum(false)} className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FF8C00] transition-all group" aria-label="Cerrar objetivos de aprendizaje">
                    <X size={32} className="text-white group-hover:rotate-90 transition-transform" />
                 </button>
             </div>
@@ -1214,9 +1179,10 @@ export default function StudentHubV19() {
 
              {/* Columna Derecha: Resumen del Ciclo */}
              <div className="w-full lg:w-[450px] bg-white/[0.03] border-l border-white/5 p-12 lg:p-20 flex flex-col">
-                <button 
+                <button
                   onClick={() => setShowPresentation(false)}
                   className="self-end w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-500 transition-all group mb-12"
+                  aria-label="Cerrar presentación del ciclo"
                 >
                    <X size={24} className="text-white group-hover:rotate-90 transition-transform" />
                 </button>
@@ -1311,9 +1277,10 @@ export default function StudentHubV19() {
           </div>
 
           {/* BOTÓN CERRAR PREMIUM */}
-          <button 
+          <button
             onClick={() => setActiveVideo(null)}
             className="absolute top-12 right-12 z-[7010] w-20 h-20 bg-white/5 hover:bg-red-500/20 border border-white/10 hover:border-red-500/50 rounded-[24px] flex items-center justify-center text-white/40 hover:text-red-500 transition-all duration-500 group"
+            aria-label="Cerrar video"
           >
             <X size={32} className="group-hover:rotate-90 transition-transform duration-700" />
           </button>

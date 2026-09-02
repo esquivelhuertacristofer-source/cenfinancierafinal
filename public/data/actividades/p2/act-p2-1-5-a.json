@@ -88,48 +88,55 @@
     },
     "reto_inesperado": {
       "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
+      "texto": "Falta una semana para el viaje y se acaba el gas de la casa antes de tiempo. Reponerlo cuesta dinero que no estaba en el plan. ¿Qué propone Ceny?",
       "opciones": [
         {
           "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
+          "texto": "Usar una parte del bote de emergencias, no el del viaje",
           "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
+          "consecuencia": "El gas se repone y el bote del viaje queda intacto.",
+          "xp_bonus": 150,
           "es_optima": true,
-          "impacto_patrimonio": 50
+          "impacto_patrimonio": -400
         },
         {
           "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
+          "texto": "Pedirle prestado a un tío y pagarle después",
           "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
+          "consecuencia": "Se resuelve hoy y queda una deuda pendiente.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": -400
+        },
+        {
+          "id": "cancelar",
+          "texto": "Sacar el dinero del bote del viaje",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El bote del viaje se queda corto.",
           "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -40
+          "impacto_patrimonio": -400
         }
       ]
     },
     "final_excelente": {
       "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "texto": "¡La familia se fue de viaje! Todo lo que Ceny cuidó durante semanas —apagar la luz, cuidar el uniforme, aguantarse el chocolate— cabía en ese bote. Y el imprevisto no lo tocó porque había otro bote para eso.",
+      "reflexion_final": "Una meta familiar se logra con muchas decisiones pequeñas, no con una grande. Y se protege teniendo un bote aparte para los imprevistos, porque los imprevistos siempre llegan."
     },
     "final_regular": {
       "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "La familia se fue de viaje, y al volver había que pagarle al tío. El viaje se disfrutó con un pendiente encima.",
+      "reflexion_final": "Pedir prestado resuelve el momento y traslada el problema al futuro. Funciona, pero cuesta: por eso conviene tener ahorrado antes de necesitarlo."
     },
     "final_malo": {
       "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "El bote del viaje se quedó corto y hubo que posponerlo. Todo lo que Ceny cuidó durante semanas se fue en un gasto de un solo día.",
+      "reflexion_final": "Cuando el dinero de una meta se usa para tapar emergencias, la meta nunca llega. Por eso el ahorro de emergencia y el ahorro de meta se guardan por separado."
     }
   },
   "versión": "2026.Diamond.V2",

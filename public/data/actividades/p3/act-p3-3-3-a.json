@@ -31,16 +31,6 @@
       "step": 50000,
       "default": 200000,
       "unit": "$"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
     }
   ],
   "formula": "((precio_casa - enganche) * 1.5) / 180",

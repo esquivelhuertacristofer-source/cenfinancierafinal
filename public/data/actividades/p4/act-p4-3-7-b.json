@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P4-3-7-B",
+  "unit_code": "P4-3-7",
+  "unit_title": "Corto, mediano y largo plazo: separar mis ahorros",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de los Plazos",
+  "descripcion": "Responde rápido sobre cómo repartir el ahorro.",
+  "objetivo": "Consolidar la clasificación de metas por horizonte temporal",
+  "xp": 320,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El corto plazo abarca:",
+      "respuesta_correcta": "Hasta un año",
+      "incorrectas": [
+        "Cinco años",
+        "Diez años",
+        "Un mes"
+      ],
+      "dato_extra": "Ahí va el fondo de emergencia y las metas de este año."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El mediano plazo abarca:",
+      "respuesta_correcta": "De uno a cinco años",
+      "incorrectas": [
+        "Un mes",
+        "Veinte años",
+        "Una semana"
+      ],
+      "dato_extra": "Metas grandes con algunos años de margen para juntarlas."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El dinero de corto plazo debe:",
+      "respuesta_correcta": "Estar disponible y no arriesgado",
+      "incorrectas": [
+        "Buscar máximo rendimiento",
+        "Estar bloqueado años",
+        "Estar invertido en bolsa"
+      ],
+      "dato_extra": "No busca crecer: busca estar ahí cuando se necesite."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El fondo de emergencia va en:",
+      "respuesta_correcta": "Corto plazo",
+      "incorrectas": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Ninguno"
+      ],
+      "dato_extra": "Una emergencia no espera a que venza una inversión."
+    },
+    {
+      "id": "q5",
+      "pregunta": "En el largo plazo se puede buscar:",
+      "respuesta_correcta": "Mayor rendimiento",
+      "incorrectas": [
+        "Solo efectivo",
+        "Cero rendimiento",
+        "Máxima liquidez"
+      ],
+      "dato_extra": "Hay tiempo para aguantar variaciones temporales."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Separar el ahorro sirve porque:",
+      "respuesta_correcta": "Le pone nombre a cada peso",
+      "incorrectas": [
+        "Se ve más bonito",
+        "Lo pide el banco",
+        "Da más interés"
+      ],
+      "dato_extra": "El dinero sin destino asignado se lo lleva lo primero que aparece."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El interés compuesto trabaja mejor:",
+      "respuesta_correcta": "En el largo plazo",
+      "incorrectas": [
+        "En el corto plazo",
+        "En una semana",
+        "En efectivo"
+      ],
+      "dato_extra": "Por eso empezar joven pesa más que aportar mucho después."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-7-b-escena.webp"
+}

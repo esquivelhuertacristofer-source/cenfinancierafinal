@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P2-3-9-B",
+  "unit_code": "P2-3-9",
+  "unit_title": "Ahorrar para el regreso a clases",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Plan de Regreso a Clases",
+  "descripcion": "Completa el plan de Ceny para preparar el gasto con tiempo.",
+  "objetivo": "Redactar un plan de ahorro para un gasto anunciado con fecha",
+  "xp": 200,
+  "contexto": "Faltan 20 semanas para el regreso a clases y la lista de Ceny suma $600.",
+  "texto": "El regreso a clases es un gasto __blank1__: sé que viene y sé en qué fecha. Mi lista suma $600 y faltan 20 semanas, así que necesito guardar __blank2__ pesos cada semana. Si dejo pasar semanas sin guardar, la cuota __blank3__ y se vuelve más difícil. Comprar con tiempo también me deja __blank4__ precios y aprovechar ofertas, mientras que comprar el día antes casi siempre sale más __blank5__. Antes de comprar todo, voy a revisar qué puedo __blank6__ del año pasado, como la mochila y la regla. En cuadernos y lápices voy a llevar marca __blank7__, porque ahí no cambia nada. Si aun así la cuota me sale imposible, puedo empezar __blank8__ el próximo año.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "anunciado",
+        "sorpresa",
+        "imposible"
+      ],
+      "respuesta": "anunciado"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "30",
+        "60",
+        "600"
+      ],
+      "respuesta": "30"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "sube",
+        "baja",
+        "desaparece"
+      ],
+      "respuesta": "sube"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "comparar",
+        "ignorar",
+        "subir"
+      ],
+      "respuesta": "comparar"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "caro",
+        "barato",
+        "rápido"
+      ],
+      "respuesta": "caro"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "reutilizar",
+        "tirar",
+        "vender"
+      ],
+      "respuesta": "reutilizar"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "genérica",
+        "cara",
+        "importada"
+      ],
+      "respuesta": "genérica"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "antes",
+        "después",
+        "nunca"
+      ],
+      "respuesta": "antes"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-9-b-escena.webp"
+}

@@ -26,6 +26,26 @@ const RadarActivity = dynamic(() => import('@/components/activities/RadarActivit
 const GrowthActivity = dynamic(() => import('@/components/activities/GrowthActivity'), { loading: () => <ActivityLoader /> });
 const ServiceControlActivity = dynamic(() => import('@/components/activities/ServiceControlActivity'), { loading: () => <ActivityLoader /> });
 
+// Escena contextual de la actividad (imagen generada con el flujo Krea2).
+// Solo se muestra si la actividad trae el campo `escena`; retrocompatible.
+const EscenaActividad = memo(({ src, titulo, texto }: { src: string; titulo?: string; texto?: string }) => (
+  <div className="hidden md:block max-w-5xl mx-auto mb-8">
+    <div className="relative rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+      <img src={src} alt="" className="w-full h-[190px] lg:h-[230px] object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0118] via-[#0A0118]/70 to-transparent" />
+      <div className="absolute inset-0 flex flex-col justify-center gap-2 p-8 max-w-2xl">
+        {titulo && (
+          <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.4em] italic">{titulo}</span>
+        )}
+        {texto && (
+          <p className="text-base lg:text-lg font-medium text-white/80 leading-snug">{texto}</p>
+        )}
+      </div>
+    </div>
+  </div>
+));
+EscenaActividad.displayName = 'EscenaActividad';
+
 const AdventureBackground = memo(({ color }: { color: string }) => (
   <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-gradient-to-br from-[#0F0225] via-[#0A0118] to-[#120526]">
     <div className={`absolute -top-[20%] -right-[10%] w-[100%] h-[100%] ${color} blur-[150px] rounded-full opacity-20 animate-pulse`} />
@@ -147,8 +167,14 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
        <AdventureBackground color="bg-[#FF8C00]" />
        
        <div className="relative z-10 flex flex-col h-screen">
-        <header className="p-6 md:p-8 flex items-center justify-between border-b border-white/5 backdrop-blur-md bg-black/10">
-           <div className="flex items-center gap-6">
+        <header className="relative overflow-hidden p-6 md:p-8 flex items-center justify-between border-b border-white/5 backdrop-blur-md bg-black/10">
+           {data.portada && (
+             <>
+               <img src={data.portada} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+               <div className="absolute inset-0 bg-gradient-to-r from-[#0A0118] via-[#0A0118]/80 to-[#0A0118]/40" />
+             </>
+           )}
+           <div className="relative z-10 flex items-center gap-6">
               <button 
                 onClick={() => router.back()}
                 className="p-3 bg-white/5 rounded-2xl hover:bg-white/10 transition-all text-white/40 hover:text-white"
@@ -161,13 +187,16 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
               </div>
            </div>
            
-           <div className="hidden md:flex items-center gap-4 px-6 py-2 bg-white/5 rounded-full border border-white/10">
+           <div className="relative z-10 hidden md:flex items-center gap-4 px-6 py-2 bg-white/5 rounded-full border border-white/10">
               <Zap size={16} className="text-[#FF8C00]" />
               <span className="text-[10px] font-black text-white/60 uppercase tracking-widest">{data.xp} XP EN JUEGO</span>
            </div>
         </header>
 
         <main className="flex-1 overflow-y-auto p-4 md:p-8">
+           {data.escena && (
+             <EscenaActividad src={data.escena} titulo={data.objetivo} texto={data.descripcion} />
+           )}
            {renderActivity()}
         </main>
       </div>

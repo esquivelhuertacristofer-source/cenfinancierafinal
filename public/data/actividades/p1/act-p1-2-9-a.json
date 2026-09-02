@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P1-2-9-A",
+  "unit_code": "P1-2-9",
+  "unit_title": "Esperar tantito: la paciencia me ahorra dinero",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Lista de Espera",
+  "descripcion": "Completa el compromiso de paciencia de Ceny y descubre cómo funciona la regla de los tres días.",
+  "objetivo": "Verbalizar la regla de espera y sus efectos sobre el gasto",
+  "xp": 250,
+  "contexto": "Ceny vio un juguete en la tele y lo quiere ya. Antes de pedirlo, escribe su compromiso.",
+  "texto": "Vi algo que quiero muchísimo, pero antes de comprarlo lo voy a __blank1__ en mi lista de espera. Voy a esperar __blank2__ días completos antes de decidir. Esperar no es lo mismo que __blank3__: solo estoy posponiendo, no diciendo que nunca. La urgencia que siento casi siempre __blank4__ sola en unos días. Si al terminar la espera lo sigo queriendo igual, entonces el deseo era __blank5__. Si ya se me pasó, acabo de __blank6__ ese dinero sin sacrificar nada. Cada deseo que se cae me acerca a mi meta __blank7__. Aplicar esta regla no me cuesta ni un peso: solo me cuesta __blank8__.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "anotar",
+        "comprar",
+        "olvidar"
+      ],
+      "respuesta": "anotar"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "tres",
+        "cero",
+        "cien"
+      ],
+      "respuesta": "tres"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "renunciar",
+        "esperar",
+        "planear"
+      ],
+      "respuesta": "renunciar"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "se va",
+        "crece",
+        "se queda"
+      ],
+      "respuesta": "se va"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "mío",
+        "del anuncio",
+        "de mi amigo"
+      ],
+      "respuesta": "mío"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "ahorrar",
+        "gastar",
+        "perder"
+      ],
+      "respuesta": "ahorrar"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "grande",
+        "imposible",
+        "olvidada"
+      ],
+      "respuesta": "grande"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "tiempo",
+        "dinero",
+        "amigos"
+      ],
+      "respuesta": "tiempo"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-9-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-9-a-escena.webp"
+}

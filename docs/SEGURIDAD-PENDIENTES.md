@@ -1,6 +1,7 @@
 # Deuda de Seguridad — CEN Educación Financiera
 
-**Última actualización:** 2026-05-17 (SEC-001 a SEC-007 resueltos o documentados)
+**Última actualización:** 2026-07-13 (runbook de rotación de secretos y rollback actualizados al flujo Cloudflare; SEC-010 marcado resuelto)
+**Actualización previa:** 2026-05-17 (SEC-001 a SEC-007 resueltos o documentados)
 **Fuente:** Auditoría OWASP Top 10 (2021) — ver `docs/AUDITORIA-OWASP-FINANCIERA.md`
 
 ---
@@ -28,7 +29,7 @@
   - `logoutAction()` centraliza el logout con logging de evento.
   - Validación con Zod: email válido + password no vacío.
   - Eventos `login_success`, `login_failure`, `login_rate_limited`, `logout_success` logueados vía `security-logger.ts`.
-- **Limitación documentada:** Rate limiter in-memory — no persistente entre instancias Vercel serverless. Para entornos multi-instancia, migrar a Upstash Redis.
+- **Limitación documentada (histórica):** en su momento, rate limiter in-memory sin persistir entre instancias Vercel serverless. **Resuelto** en la migración a Cloudflare Workers — ver SEC-010 más abajo (ahora usa Cloudflare KV como store compartido).
 - **Configuración manual recomendada (Supabase Dashboard):** Auth > Rate Limits — revisar umbrales de signups/IP como capa adicional.
 - **Tests:** 8 tests en `src/__tests__/authActions.test.ts` (email inválido, password vacío, credenciales incorrectas, IP rate limit, email rate limit, log failure, log success, retorno de rol).
 - **Archivos:** `src/app/actions/authActions.ts` (NUEVO), `src/lib/rate-limiter.ts` (función `rateLimit` genérica), `src/lib/security-logger.ts` (campos `email`, `action`, tipo `logout_success`), `src/app/log-in/page.tsx` (usa `loginAction`).
@@ -76,17 +77,44 @@
 
 #### Procedimiento de rotación (ejecutar manualmente):
 
+> **Actualizado (2026-07-08) — flujo Cloudflare.** El proyecto migró de Vercel a Cloudflare Workers; el runbook anterior (`vercel env` / Vercel Dashboard) ya no aplica. Los secretos ya no se declaran en `wrangler.jsonc` (ese archivo solo tiene `vars` públicas, no sensibles) — se cargan uno por uno con `wrangler secret put`.
+
 1. Ir a **Supabase Dashboard** → Project Settings → API
 2. Click en **"Rotate anon key"** (o "Regenerate")
 3. Copiar la nueva anon key
-4. Actualizar la variable `NEXT_PUBLIC_SUPABASE_ANON_KEY` en:
-   - **Vercel Dashboard** → Settings → Environment Variables → Production + Preview + Development
-   - `.env.local` (desarrollo local)
-5. Trigger un **re-deploy** en Vercel (o push cualquier commit)
+4. Actualizar la variable en los dos entornos:
+   - **Producción (Cloudflare Workers):**
+     ```bash
+     npx wrangler secret put NEXT_PUBLIC_SUPABASE_ANON_KEY
+     ```
+     El comando pide pegar el valor de forma interactiva (no queda en shell history ni en archivos versionados). Repetir el mismo patrón para cualquier otro secreto rotado (`SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_JWT_SECRET`, etc.):
+     ```bash
+     npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+     npx wrangler secret put SUPABASE_JWT_SECRET
+     ```
+   - **Desarrollo local:** actualizar el archivo `.dev.vars` en la raíz del proyecto (gitignored, usado por `npm run cf:preview` / `wrangler dev`). Para desarrollo con `npm run dev` (Next.js puro, sin runtime de Cloudflare), actualizar `.env.local` (también gitignored).
+5. Publicar el cambio: `wrangler secret put` no requiere un redeploy completo del Worker para tomar efecto, pero si se rotó junto con un cambio de código, hacer `npm run cf:deploy`.
 6. Verificar que login, queries y Supabase Realtime siguen funcionando
 7. La key vieja permanece en git history pero **ya no es funcional** una vez rotada
 
 > **Nota:** Limpiar el historial git (`git filter-repo` / BFG Repo Cleaner) es opcional. La key rotada en el historial no representa riesgo porque ya no funciona.
+
+---
+
+## Procedimiento de Rollback (Cloudflare Workers)
+
+Si un deploy a producción introduce un problema (error 500 generalizado, regresión de seguridad, build corrupto), revertir con:
+
+```bash
+npx wrangler rollback
+```
+
+Notas:
+
+- `wrangler rollback` vuelve al **último deployment previo** del Worker sin necesidad de rehacer el build — es la opción más rápida para mitigar un incidente en producción.
+- No revierte cambios de base de datos (migraciones SQL de Supabase) ni secretos rotados con `wrangler secret put` — solo el código del Worker. Si el incidente involucra una migración de esquema, evaluar también un rollback manual en Supabase Dashboard.
+- Después de un rollback de emergencia, corregir el problema en una rama/commit nuevo y volver a desplegar con `npm run cf:deploy` en vez de dejar el proyecto indefinidamente en el estado revertido.
+- `npx wrangler deployments list` muestra el historial de deployments si se necesita revertir a uno específico distinto del inmediatamente anterior.
 
 ---
 
@@ -105,16 +133,9 @@
 - **Nota:** El fix requiere `npm audit fix --force` que puede actualizar Next.js a una versión con breaking changes. Evaluar si hay una versión 16.1.x o 16.2.x que resuelva estos CVEs sin breaking changes.
 - **Cómo resolver:** `npm install next@latest` o evaluar la versión mínima con los fixes y actualizar específicamente.
 
-### SEC-010 — Rate limiter in-memory no distribuido
+### ~~SEC-010 — Rate limiter in-memory no distribuido~~ ✅ RESUELTO (2026-07-08, migración a Cloudflare)
 - **Categoría:** A04 Insecure Design (deuda residual de SEC-003)
-- **Severidad:** Baja actual / Media si escala a producción real
-- **Descripción:** El rate limiter en `src/lib/rate-limiter.ts` usa un `Map` en memoria de proceso. En Vercel con auto-scaling, cada instancia serverless tiene su propio contador independiente. Un atacante puede multiplicar intentos siendo enrutado a instancias distintas, circunvalando los límites configurados.
-- **Impacto actual:** Bajo — la plataforma tiene tráfico acotado y pocas instancias activas simultáneas.
-- **Cuándo abordar:** Antes de exponer la plataforma a usuarios concurrentes en producción real (>100 usuarios activos simultáneos).
-- **Solución recomendada:** Migrar `rateLimit()` en `authActions.ts` a **Upstash Ratelimit** (Redis distribuido, gratis hasta cierto límite, integración nativa con Vercel Edge/Serverless).
-  ```ts
-  import { Ratelimit } from '@upstash/ratelimit';
-  import { Redis } from '@upstash/redis';
-  const ratelimit = new Ratelimit({ redis: Redis.fromEnv(), limiter: Ratelimit.slidingWindow(5, '60 s') });
-  ```
-- **Esfuerzo estimado:** 2-3 horas incluido setup de Upstash y configuración en Vercel.
+- **Descripción original:** El rate limiter en `src/lib/rate-limiter.ts` usaba un `Map` en memoria de proceso. En Vercel con auto-scaling, cada instancia serverless tenía su propio contador independiente, permitiendo circunvalar los límites siendo enrutado a instancias distintas.
+- **Acción:** Al migrar a Cloudflare Workers, `rate-limiter.ts` se reescribió para usar **Cloudflare KV** (binding `RATE_LIMIT_KV`, declarado en `wrangler.jsonc`) como store compartido entre todos los isolates/regiones del Worker, resolviendo el problema de contadores independientes por instancia sin necesitar un proveedor externo (Upstash ya no es necesario).
+- **Fallback:** en `next dev` (Node, sin contexto de Cloudflare) sigue usando un `Map` en memoria — mismo comportamiento que antes, útil para desarrollo local sin `wrangler dev`.
+- **Archivo:** `src/lib/rate-limiter.ts`.

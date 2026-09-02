@@ -5,109 +5,109 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Cerebro del Dinero",
-  "descripcion": "¿Sabes quién decide cuánto vale tu billete de $20? ¡Pon a prueba tu conocimiento sobre el Banco de México!",
-  "objetivo": "Conocer la misión institucional, autonomía y funciones del Banco de México",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Cripto sin Mitos",
+  "descripcion": "Ni dinero mágico ni estafa automática. Las criptomonedas son una tecnología con usos reales y riesgos reales. Separa los hechos del ruido.",
+  "objetivo": "Comprender qué es una criptomoneda y la tecnología blockchain, y analizar críticamente su volatilidad, su falta de respaldo y los fraudes asociados.",
+  "xp": 500,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "ban1",
-      "texto": "¿Cuál es la misión principal del Banco de México (Banxico)?",
+      "id": "q1",
+      "texto": "Una criptomoneda es…",
       "opciones": [
-        "Hacer que el gobierno sea rico",
-        "Mantener la estabilidad del poder adquisitivo del peso (controlar la inflación)",
-        "Prestar dinero a todas las personas",
-        "Vender seguros"
+        "Dinero emitido por un banco central",
+        "Un registro digital de valor que no depende de ningún gobierno",
+        "Una acción de empresa",
+        "Un tipo de tarjeta"
       ],
       "correcta": 1,
-      "explicacion": "Su trabajo es que con tus $100 de hoy puedas comprar casi lo mismo mañana."
+      "explicacion": "Nadie la emite ni la respalda: su precio depende solo de lo que otros estén dispuestos a pagar."
     },
     {
-      "id": "ban2",
-      "texto": "¿Qué significa que Banxico sea 'Autónomo'?",
+      "id": "q2",
+      "texto": "El \"blockchain\" es…",
       "opciones": [
-        "Que no tiene jefes",
-        "Que toma sus propias decisiones sin que el gobierno le ordene qué hacer",
-        "Que es una empresa privada",
-        "Que solo usa robots"
+        "Un libro de registros compartido que nadie puede borrar",
+        "Un banco digital",
+        "Una app de pagos",
+        "Un tipo de criptomoneda"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la tecnología detrás, y tiene usos más allá del dinero: contratos, cadenas de suministro, registros de propiedad."
+    },
+    {
+      "id": "q3",
+      "texto": "Si tu peso mexicano pierde valor, Banxico responde. Si tu cripto pierde 60% en un mes…",
+      "opciones": [
+        "El gobierno te compensa",
+        "No hay nadie que responda: no está protegida ni asegurada",
+        "La CONDUSEF te lo devuelve",
+        "El IPAB lo cubre"
       ],
       "correcta": 1,
-      "explicacion": "La autonomía evita que los políticos gasten de más o impriman dinero sin control."
+      "explicacion": "Este es el punto que más se ignora: no existe seguro de depósito ni autoridad que te reponga nada."
     },
     {
-      "id": "ban3",
-      "texto": "¿Por qué Banxico no imprime billetes infinitos para que todos seamos ricos?",
+      "id": "q4",
+      "texto": "En México, ¿las criptomonedas son moneda de curso legal?",
       "opciones": [
-        "Porque se acabaría el papel",
-        "Porque si hay demasiado dinero y pocas cosas que comprar, los precios suben muchísimo (Inflación)",
-        "Porque es muy cansado",
-        "Porque no tienen permiso"
+        "Sí, desde 2021",
+        "No: ningún negocio está obligado a aceptarlas",
+        "Solo en la frontera",
+        "Solo para pagar impuestos"
       ],
       "correcta": 1,
-      "explicacion": "El dinero debe tener un respaldo en la producción del país; si no, solo es papel sin valor."
+      "explicacion": "Banxico ha sido claro: no son moneda de curso legal y los bancos no pueden operarlas libremente."
     },
     {
-      "id": "ban4",
-      "texto": "¿Qué es la 'Tasa de Referencia' que decide Banxico?",
+      "id": "q5",
+      "texto": "La característica financiera más marcada de las criptomonedas es…",
       "opciones": [
-        "El precio de la gasolina",
-        "El precio al que le presta dinero a los otros bancos (e influye en todos los préstamos)",
-        "Una calificación escolar",
-        "El precio del dólar"
+        "Su estabilidad",
+        "Su volatilidad extrema: caídas y subidas del 50% o más",
+        "Su rendimiento garantizado",
+        "Su respaldo en oro"
       ],
       "correcta": 1,
-      "explicacion": "Es el 'volante' con el que Banxico acelera o frena la economía."
+      "explicacion": "Por eso jamás debe estar ahí el dinero que necesitarás pronto, ni tu fondo de emergencia."
     },
     {
-      "id": "ban5",
-      "texto": "¿Qué son las 'Reservas Internacionales'?",
+      "id": "q6",
+      "texto": "Si pierdes la contraseña de tu billetera cripto…",
       "opciones": [
-        "Boletos de avión",
-        "Activos (como dólares y oro) que Banxico guarda para dar confianza y usar en emergencias",
-        "Dinero que se le debe a otros países",
-        "Una colección de monedas antiguas"
+        "Llamas a soporte y la recuperas",
+        "Pierdes el acceso para siempre, sin excepción",
+        "El gobierno te ayuda",
+        "Se reinicia sola"
       ],
       "correcta": 1,
-      "explicacion": "Son los ahorros de emergencia del país."
+      "explicacion": "No hay \"olvidé mi contraseña\". Se calcula que millones de bitcoins están perdidos así para siempre."
     },
     {
-      "id": "ban6",
-      "texto": "¿Quién fabrica los billetes y monedas que usas en México?",
+      "id": "q7",
+      "texto": "Un mensaje que dice \"invierte en esta cripto nueva, se va a multiplicar por 100, entra hoy\" es…",
       "opciones": [
-        "Cada banco hace los suyos",
-        "Solo el Banco de México (en su propia fábrica)",
-        "Se compran en otros países",
-        "Los imprimen en las escuelas"
+        "Una oportunidad única",
+        "Un patrón típico de fraude o de esquema para inflar y vender",
+        "Un consejo profesional",
+        "Información pública"
       ],
       "correcta": 1,
-      "explicacion": "Banxico tiene una de las fábricas de billetes más seguras y modernas del mundo."
+      "explicacion": "Se llama pump and dump: unos pocos inflan el precio y venden cuando entra la gente."
     },
     {
-      "id": "ban7",
-      "texto": "Si la inflación es muy alta, ¿qué es lo más probable que haga Banxico?",
+      "id": "q8",
+      "texto": "Una regla prudente sobre criptomonedas para cualquier persona es…",
       "opciones": [
-        "Bajar la tasa de interés",
-        "Subir la tasa de interés para que sea más caro pedir prestado y se gaste menos",
-        "No hacer nada",
-        "Cerrar los bancos"
+        "Poner todos tus ahorros",
+        "Nunca poner más de lo que puedes perder por completo",
+        "Pedir prestado para invertir",
+        "Invertir solo lo del fondo de emergencia"
       ],
       "correcta": 1,
-      "explicacion": "Subir la tasa es como ponerle un freno a los precios."
-    },
-    {
-      "id": "ban8",
-      "texto": "¿Cuál es la moneda oficial de México cuya estabilidad cuida Banxico?",
-      "opciones": [
-        "El Dólar",
-        "El Euro",
-        "El Peso Mexicano",
-        "El Real"
-      ],
-      "correcta": 2,
-      "explicacion": "¡Exacto! El Peso es nuestra moneda y Banxico es su guardián."
+      "explicacion": "Puede formar parte de una cartera diversificada, pero solo con dinero cuya pérdida total no cambiaría tu vida."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

@@ -1,0 +1,106 @@
+{
+  "code": "ACT-P4-2-10-A",
+  "unit_code": "P4-2-10",
+  "unit_title": "Mi huella digital: lo que las apps saben de mis compras",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Atrapa tus Datos",
+  "descripcion": "Atrapa las acciones que protegen tu privacidad y esquiva las que entregan datos de más.",
+  "objetivo": "Reconocer con rapidez qué acciones protegen y cuáles exponen datos personales",
+  "xp": 400,
+  "game_type": "catch",
+  "duracion": 60,
+  "velocidad_inicial": 2,
+  "velocidad_incremento": 0.2,
+  "instruccion": "Atrapa las acciones que protegen tus datos y deja pasar las que los exponen.",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Revisar los permisos de la app",
+      "emoji": "🔍",
+      "tipo": "correcto",
+      "puntos": 10
+    },
+    {
+      "id": "g2",
+      "label": "Aceptar todo sin leer",
+      "emoji": "✅",
+      "tipo": "incorrecto",
+      "puntos": -10
+    },
+    {
+      "id": "g3",
+      "label": "Negar el acceso a contactos a un juego",
+      "emoji": "🚫",
+      "tipo": "correcto",
+      "puntos": 10
+    },
+    {
+      "id": "g4",
+      "label": "Dar permiso de ubicación siempre activa",
+      "emoji": "📍",
+      "tipo": "incorrecto",
+      "puntos": -10
+    },
+    {
+      "id": "g5",
+      "label": "Revisar los ajustes de privacidad",
+      "emoji": "⚙️",
+      "tipo": "correcto",
+      "puntos": 10
+    },
+    {
+      "id": "g6",
+      "label": "Comprar por el anuncio que apareció al instante",
+      "emoji": "⚡",
+      "tipo": "incorrecto",
+      "puntos": -10
+    },
+    {
+      "id": "g7",
+      "label": "Esperar un día antes de comprar",
+      "emoji": "⏳",
+      "tipo": "correcto",
+      "puntos": 15
+    },
+    {
+      "id": "g8",
+      "label": "Guardar la tarjeta en cada tienda que visito",
+      "emoji": "💳",
+      "tipo": "incorrecto",
+      "puntos": -15
+    },
+    {
+      "id": "g9",
+      "label": "Usar contraseñas distintas por sitio",
+      "emoji": "🔑",
+      "tipo": "correcto",
+      "puntos": 15
+    },
+    {
+      "id": "g10",
+      "label": "Publicar lo que compré con foto del recibo",
+      "emoji": "📸",
+      "tipo": "incorrecto",
+      "puntos": -15
+    },
+    {
+      "id": "g11",
+      "label": "Cerrar sesión en equipos compartidos",
+      "emoji": "🚪",
+      "tipo": "correcto",
+      "puntos": 10
+    },
+    {
+      "id": "g12",
+      "label": "Aceptar cookies de todos los sitios sin ver",
+      "emoji": "🍪",
+      "tipo": "incorrecto",
+      "puntos": -10
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-10-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-10-a-escena.webp"
+}

@@ -6,140 +6,78 @@
   "edad": "13-14 años",
   "tipo": "SIMULADOR",
   "complejidad": "ALTO",
-  "titulo": "Angel Investor",
-  "descripcion": "Tienes $100,000 para invertir en el futuro. ¿Podrás elegir a la próxima gran empresa tecnológica o perderás tu capital en el intento?",
-  "objetivo": "Comprender la dinámica de riesgo/recompensa del capital de riesgo y la importancia de la diversificación en startups",
-  "xp": 600,
-  "descripcion_formula": "Calculamos el retorno basado en probabilidades reales de startups. Resultado = Inversion * MultiplicadorEscenario.",
+  "titulo": "Si Mañana te Quedas sin Trabajo",
+  "descripcion": "En México no existe un seguro de desempleo universal como en otros países. Lo que existe son piezas sueltas: finiquito, retiro parcial de la AFORE, seguro de desempleo en algunas entidades. Calcula cuánto tiempo aguantarías realmente.",
+  "objetivo": "Identificar los mecanismos de protección ante la pérdida del empleo en México y cuantificar la autonomía financiera real ante un despido.",
+  "xp": 700,
+  "descripcion_formula": "Suma de recursos disponibles (finiquito o liquidación + ahorro + retiro parcial de AFORE) dividida entre los gastos mensuales del hogar. El resultado son los meses de autonomía.",
   "inputs": [
     {
-      "id": "inversion_startup_1",
-      "label": "Monto en Startup A (Fintech) ($)",
+      "id": "sueldo",
+      "label": "Sueldo mensual ($)",
       "type": "slider",
-      "min": 0,
-      "max": 100000,
-      "step": 10000,
-      "default": 30000,
+      "min": 6000,
+      "max": 80000,
+      "step": 1000,
+      "default": 20000,
       "unit": "$"
     },
     {
-      "id": "inversion_startup_2",
-      "label": "Monto en Startup B (Salud) ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 100000,
-      "step": 10000,
-      "default": 30000,
-      "unit": "$"
-    },
-    {
-      "id": "inversion_startup_3",
-      "label": "Monto en Startup C (Energía) ($)",
-      "type": "slider",
-      "min": 0,
-      "max": 100000,
-      "step": 10000,
-      "default": 40000,
-      "unit": "$"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "id": "antiguedad",
+      "label": "Años de antigüedad",
       "type": "slider",
       "min": 1,
       "max": 30,
       "step": 1,
-      "default": 5,
+      "default": 4,
       "unit": "años"
+    },
+    {
+      "id": "ahorro",
+      "label": "Ahorro líquido disponible ($)",
+      "type": "slider",
+      "min": 0,
+      "max": 400000,
+      "step": 5000,
+      "default": 40000,
+      "unit": "$"
+    },
+    {
+      "id": "gastos",
+      "label": "Gastos mensuales del hogar ($)",
+      "type": "slider",
+      "min": 4000,
+      "max": 70000,
+      "step": 1000,
+      "default": 16000,
+      "unit": "$"
     }
   ],
-  "formula": "inversion_startup_1 * 0 + inversion_startup_2 * 0.5 + inversion_startup_3 * 50",
-  "output_label": "Valor Proyectado de tu Portafolio tras 5 años",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "bar",
+  "formula": "Math.round((sueldo * 3 + sueldo / 30 * 20 * antiguedad + ahorro + sueldo * 0.9) / Math.max(1, gastos) * 10) / 10",
+  "output_label": "Meses que podrías sostenerte",
+  "output_prefix": "",
+  "output_suffix": " meses",
   "escenarios": [
     {
-      "condicion": "resultado > 500000",
-      "mensaje": "🦄 ¡Encontraste un Unicornio! La Startup C fue un éxito total y compensó todas tus pérdidas. Esta es la magia del Capital de Riesgo.",
-      "tipo": "success"
+      "condicion": "resultado < 3",
+      "mensaje": "Menos de 3 meses. Encontrar un buen empleo en México toma en promedio más que eso, y aceptar el primero que aparezca por necesidad suele costar años de carrera. Prioridad absoluta: construir fondo de emergencia.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "resultado < 50000",
-      "mensaje": "📉 El valle de la muerte. La mayoría de las startups fracasan en los primeros 2 años. Has perdido gran parte de tu inversión.",
-      "tipo": "danger"
+      "condicion": "resultado >= 3 && resultado < 6",
+      "mensaje": "Zona aceptable, aún ajustada. Con este margen puedes buscar sin desesperación, pero un imprevisto médico al mismo tiempo te dejaría sin red.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "true",
-      "mensaje": "💡 En Capital Privado, se espera que de cada 10 empresas, 7 fracasen, 2 sobrevivan y 1 sea un éxito masivo que pague todo.",
+      "condicion": "resultado >= 6",
+      "mensaje": "Excelente margen. Poder rechazar una mala oferta es una de las formas más concretas de libertad financiera que existen.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "antiguedad >= 10",
+      "mensaje": "Con esa antigüedad, la indemnización por despido injustificado (3 meses más 20 días por año) es significativa. Es un derecho que solo existe en el empleo formal: en la informalidad, el despido vale cero.",
       "tipo": "info"
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Qué cobertura exacta ofrece el seguro de desempleo en México? ¿Cómo cambia tu protección si eres trabajador formal del IMSS vs si eres freelance o trabajas en la informalidad?",
-  "comparativa_espera": "El seguro de desempleo en México cubre solo 3 meses de beneficios y solo para trabajadores formales del IMSS. El 55% de la fuerza laboral que trabaja informalmente queda sin ninguna red de protección institucional.",
-  "outputs_multiples": [
-    {
-      "id": "portafolio_total",
-      "label": "Capital Total Invertido",
-      "formula": "inversion_startup_1 + inversion_startup_2 + inversion_startup_3",
-      "prefix": "$",
-      "suffix": " MXN",
-      "descripcion": "La suma total de tu portafolio angel"
-    },
-    {
-      "id": "retorno_escenario_base",
-      "label": "Retorno Escenario Base (3×)",
-      "formula": "Math.round((inversion_startup_1 * 10 + inversion_startup_2 * 3 + inversion_startup_3 * 0.5))",
-      "prefix": "$",
-      "suffix": " recuperado",
-      "descripcion": "1 unicornio (×10), 1 bueno (×3), 1 perdida total (×0.5)"
-    },
-    {
-      "id": "roi_portafolio",
-      "label": "ROI del Portafolio",
-      "formula": "Math.round((inversion_startup_1 * 10 + inversion_startup_2 * 3 + inversion_startup_3 * 0.5) / Math.max(1, inversion_startup_1 + inversion_startup_2 + inversion_startup_3) * 100 - 100)",
-      "prefix": "",
-      "suffix": "% de retorno total",
-      "descripcion": "El porcentaje de ganancia sobre tu inversión total"
-    },
-    {
-      "id": "valor_unicornio",
-      "label": "Si Una Se Hace Unicornio (×100)",
-      "formula": "Math.round(inversion_startup_1 * 100)",
-      "prefix": "$",
-      "suffix": " potencial máximo",
-      "descripcion": "El escenario soñado: una startup crece 100× tu inversión"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "portafolio_total",
-      "label": "Capital Total Invertido",
-      "color": "#6366f1"
-    },
-    {
-      "id": "retorno_escenario_base",
-      "label": "Retorno Escenario Base (3×)",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

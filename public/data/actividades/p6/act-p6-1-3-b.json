@@ -5,123 +5,146 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "El Dilema de la Ganancia Rápida",
-  "descripcion": "Un amigo te dice que tiene el 'secreto' para volverte rico mañana. ¿Seguirás a la multitud o confiarás en tu plan?",
-  "objetivo": "Desarrollar pensamiento crítico frente al FOMO (miedo a quedarse fuera) y las burbujas financieras",
-  "xp": 450,
-  "personaje_principal": "Ceny",
-  "contexto_inicial": "Ceny ve que todos sus amigos están comprando 'LunarCoin'. Dicen que ayer valía $1 y hoy vale $10. '¡Compra ya, Ceny, o te quedarás pobre!', le dicen.",
-  "nodo_inicial": "tentacion_fomo",
+  "complejidad": "ALTO",
+  "titulo": "Cómo Pagar la Universidad",
+  "descripcion": "Mateo entra a la universidad en tres años. Su familia no tiene ahorros grandes, y él ya está pensando cómo lo va a lograr sin hipotecar su futuro.",
+  "objetivo": "Conocer las vías de financiamiento de la educación superior —ahorro previo, beca, universidad pública, crédito educativo, trabajar y estudiar— y evaluar sus costos reales.",
+  "xp": 700,
+  "personaje_principal": "Mateo",
+  "contexto_inicial": "La carrera que quiere cuesta $8,000 al mes en una universidad privada. La misma carrera existe en la universidad pública de su estado, sin colegiatura, pero está a dos horas de camino.",
+  "nodo_inicial": "tres_anios_antes",
   "nodos": {
-    "tentacion_fomo": {
-      "id": "tentacion_fomo",
-      "texto": "Tienes $1,000 ahorrados con mucho esfuerzo. ¿Qué harás?",
+    "tres_anios_antes": {
+      "id": "tres_anios_antes",
+      "texto": "Faltan tres años. ¿Qué hace Mateo AHORA?",
       "opciones": [
         {
-          "id": "investigar_primero",
-          "texto": "Investigar qué es LunarCoin y por qué está subiendo",
-          "siguiente_nodo": "descubrimiento_riesgo",
-          "consecuencia": "¡Paso de experto! Nunca inviertas en lo que no entiendes.",
+          "id": "ahorrar",
+          "texto": "Empezar a ahorrar e invertir cada peso que le llega, aunque sea poco",
+          "siguiente_nodo": "las_becas",
+          "consecuencia": "Mateo abre una cuenta en cetesdirecto y aparta lo que gana en trabajos de fin de semana.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "esperar",
+          "texto": "Esperar: ya verá cuando llegue el momento",
+          "siguiente_nodo": "sin_tiempo",
+          "consecuencia": "Tres años después está en el mismo punto, pero sin margen para elegir.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "estudiar",
+          "texto": "Enfocarse en subir su promedio para competir por becas",
+          "siguiente_nodo": "las_becas",
+          "consecuencia": "Mateo entiende que un promedio alto es dinero.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "sin_tiempo": {
+      "id": "sin_tiempo",
+      "texto": "Llegó el momento y no hay ahorro ni promedio para beca. Las opciones se redujeron a dos: crédito educativo caro o universidad pública.",
+      "opciones": [
+        {
+          "id": "publica_forzada",
+          "texto": "Universidad pública, aunque implique dos horas de camino",
+          "siguiente_nodo": "final_publica",
+          "consecuencia": "Termina siendo la mejor decisión disponible.",
+          "xp_bonus": 120,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "credito_ciego",
+          "texto": "Crédito educativo por $384,000 sin leer las condiciones",
+          "siguiente_nodo": "el_credito",
+          "consecuencia": "Firma sin revisar el CAT ni cuándo empiezan los pagos.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -384000
+        }
+      ]
+    },
+    "las_becas": {
+      "id": "las_becas",
+      "texto": "Con buen promedio, Mateo obtiene una beca del 50% en la privada. Aun así tendría que pagar $4,000 al mes durante 4 años: $192,000. Compara sus opciones.",
+      "opciones": [
+        {
+          "id": "publica",
+          "texto": "Universidad pública gratuita, e invertir esos $4,000 mensuales",
+          "siguiente_nodo": "final_publica",
+          "consecuencia": "Mateo hace las cuentas: la misma carrera, y $192,000 invertidos en vez de gastados.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 240000
+        },
+        {
+          "id": "privada_beca",
+          "texto": "Privada con beca, pagando $4,000 al mes con ayuda familiar",
+          "siguiente_nodo": "final_privada",
+          "consecuencia": "La familia hace el esfuerzo. Es viable, pero apretado.",
+          "xp_bonus": 120,
+          "impacto_patrimonio": -192000
+        },
+        {
+          "id": "credito",
+          "texto": "Privada completa con crédito educativo",
+          "siguiente_nodo": "el_credito",
+          "consecuencia": "El asesor le presenta un crédito por $384,000.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "el_credito": {
+      "id": "el_credito",
+      "texto": "El crédito educativo dice: \"Págalo cuando te gradúes\". Pero en letras pequeñas: los intereses corren DESDE HOY. Al graduarse deberá $520,000 y las mensualidades serán de $9,800 durante 7 años. Su primer sueldo esperado es $18,000.",
+      "opciones": [
+        {
+          "id": "recalcular",
+          "texto": "Recalcular: eso es más de la mitad de su primer sueldo",
+          "siguiente_nodo": "final_publica",
+          "consecuencia": "Mateo se echa para atrás a tiempo y elige la pública.",
           "xp_bonus": 200,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "comprar_emocion",
-          "texto": "Comprar de inmediato para no perder la oportunidad",
-          "siguiente_nodo": "subida_falsa",
-          "consecuencia": "Compraste cuando el precio ya estaba muy alto. Estás emocionado, pero preocupado.",
+          "id": "firmar",
+          "texto": "Firmar: \"ya lo pagaré cuando gane bien\"",
+          "siguiente_nodo": "final_endeudado",
+          "consecuencia": "Mateo firma un compromiso de 7 años que aún no entiende.",
           "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "impacto_patrimonio": -520000
         }
       ]
     },
-    "descubrimiento_riesgo": {
-      "id": "descubrimiento_riesgo",
-      "texto": "Descubres que LunarCoin no tiene ninguna utilidad y que el precio sube solo porque mucha gente está comprando por emoción. Es una 'Burbuja'.",
-      "opciones": [
-        {
-          "id": "no_invertir",
-          "texto": "Decidir no invertir y seguir con tu plan de ahorro seguro",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Decisión difícil pero valiente. Verás lo que pasa después.",
-          "xp_bonus": 300,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "invertir_poca_cantidad",
-          "texto": "Invertir solo $100 \"para no perderse si sube\"",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Perdiste los $100, pero aprendiste que el FOMO siempre tiene costo.",
-          "xp_bonus": 30,
-          "es_optima": false,
-          "impacto_patrimonio": -30
-        }
-      ]
+    "final_publica": {
+      "id": "final_publica",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Mateo estudió en la pública, se levantó temprano cuatro años y salió con el mismo título, sin un peso de deuda y con $240,000 invertidos que siguen creciendo. A los 26 años ya tenía patrimonio mientras sus compañeros empezaban a pagar.",
+      "reflexion_final": "La universidad es una inversión, y como toda inversión hay que mirar el precio. En México la educación pública superior es de las mejores decisiones financieras disponibles: mismo título, costo casi cero. Salir sin deudas te da algo impagable a los 22 años: libertad para elegir tu primer trabajo."
     },
-    "subida_falsa": {
-      "id": "subida_falsa",
-      "texto": "Al día siguiente, la moneda cae de $10 a $0.50. Todos tus amigos perdieron su dinero. ¿Qué haces con tus monedas?",
-      "opciones": [
-        {
-          "id": "vender_perdida",
-          "texto": "Vender ahora para salvar lo poquito que queda",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Perdiste casi todo tu ahorro. Fue una lección muy costosa.",
-          "xp_bonus": 50,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "esperar_recuperacion",
-          "texto": "Esperar a que suba de nuevo (el clásico error del inversor novato)",
-          "siguiente_nodo": "final_leccion_cara",
-          "consecuencia": "LunarCoin llegó a $0.01. Esperaste demasiado y perdiste casi todo.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "final_sabiduria": {
-      "id": "final_sabiduria",
-      "texto": "¡Felicidades! Mantuviste la cabeza fría. Mientras tus amigos perdieron todo, tú conservaste tu capital para una inversión real y sólida.",
+    "final_privada": {
+      "id": "final_privada",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "En las finanzas, la tortuga que camina seguro siempre llega más lejos que el conejo que salta sin ver."
+      "texto": "Con beca y apoyo familiar, Mateo terminó su carrera sin deuda. Costó $192,000 de esfuerzo familiar, pero salió limpio.",
+      "reflexion_final": "Beca + apoyo familiar + carrera terminada sin deuda es un resultado sólido. La clave fue conseguir la beca años antes, cuando todavía se podía subir el promedio."
     },
-    "final_leccion_cara": {
-      "id": "final_leccion_cara",
-      "texto": "Perdiste tus $1,000, pero ganaste algo más valioso: la experiencia. Ahora sabes que el dinero 'fácil' no existe.",
+    "final_endeudado": {
+      "id": "final_endeudado",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "Si parece demasiado bueno para ser verdad, probablemente no lo es. ¡Analiza siempre!"
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
-    },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "Mateo se graduó debiendo $520,000. De su sueldo de $18,000 se van $9,800 cada mes durante siete años. No puede rechazar un mal trabajo, no puede mudarse, no puede ahorrar. Tiene título y no tiene opciones.",
+      "reflexion_final": "El crédito educativo no es malo en sí, pero hay que calcularlo antes de firmar: si la mensualidad supera el 20% de tu sueldo esperado, es una trampa. Y ojo con \"págalo al graduarte\": casi siempre los intereses ya están corriendo."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

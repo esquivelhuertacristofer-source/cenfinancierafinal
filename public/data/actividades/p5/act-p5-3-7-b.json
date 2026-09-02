@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P5-3-7-B",
+  "unit_code": "P5-3-7",
+  "unit_title": "Diversificación: no poner todo en una canasta",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Diversificación",
+  "descripcion": "Responde rápido sobre cómo repartir el riesgo.",
+  "objetivo": "Consolidar el principio, formas y límites de la diversificación",
+  "xp": 240,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Diversificar significa:",
+      "respuesta_correcta": "Repartir el dinero entre opciones distintas",
+      "incorrectas": [
+        "Poner todo en lo más seguro",
+        "Invertir en una empresa",
+        "No invertir"
+      ],
+      "dato_extra": "No elimina el riesgo: lo reparte para que ninguna falla sea catastrófica."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Las tres formas de diversificar son:",
+      "respuesta_correcta": "Por instrumento, sector y plazo",
+      "incorrectas": [
+        "Por color, tamaño y marca",
+        "Por banco y tienda",
+        "Solo por instrumento"
+      ],
+      "dato_extra": "Diversificar solo por instrumento deja fuera dos dimensiones."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Diversificar por plazo evita:",
+      "respuesta_correcta": "Verse obligado a vender en mal momento",
+      "incorrectas": [
+        "Pagar comisiones",
+        "Los impuestos",
+        "La inflación"
+      ],
+      "dato_extra": "Necesitar el dinero justo en una caída es el peor escenario."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El costo de diversificar es:",
+      "respuesta_correcta": "No obtener nunca el rendimiento máximo",
+      "incorrectas": [
+        "Perder siempre",
+        "Pagar más comisiones",
+        "No hay costo"
+      ],
+      "dato_extra": "Parte de tu dinero estará en lo que menos rindió. Es el precio de no sufrir lo peor."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Ese intercambio conviene porque:",
+      "respuesta_correcta": "Recuperarse de una pérdida grande es muy difícil",
+      "incorrectas": [
+        "Siempre se gana más",
+        "Lo dice la ley",
+        "Es más divertido"
+      ],
+      "dato_extra": "Una caída del 50% requiere una ganancia del 100% para volver al inicio."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Repartir entre opciones que se mueven igual:",
+      "respuesta_correcta": "No diversifica nada",
+      "incorrectas": [
+        "Diversifica el doble",
+        "Es lo ideal",
+        "Elimina el riesgo"
+      ],
+      "dato_extra": "Si todas caen juntas, tener cinco es lo mismo que tener una."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Contra un fraude, la diversificación:",
+      "respuesta_correcta": "No protege",
+      "incorrectas": [
+        "Protege del todo",
+        "Protege a la mitad",
+        "Lo evita"
+      ],
+      "dato_extra": "Ahí la pérdida no viene del mercado sino del engaño."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-7-b-escena.webp"
+}

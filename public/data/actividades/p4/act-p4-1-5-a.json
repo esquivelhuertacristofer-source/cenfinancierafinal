@@ -58,59 +58,52 @@
       "texto": "El banco te dice que 'no procede' y que tú sí hiciste el gasto. Tú sabes que no fue así. ¿Qué haces ahora?",
       "opciones": [
         {
-          "id": "rendirse",
-          "texto": "Rendirse y pagar el dinero",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "¡No te rindas! Tus derechos como consumidor están protegidos.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        },
-        {
           "id": "queja_condusef",
-          "texto": "Presentar una queja formal en el portal de CONDUSEF",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "¡Excelente! La CONDUSEF citará al banco para revisar tu caso.",
+          "texto": "Presentar una queja formal en el portal de la CONDUSEF",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "La CONDUSEF abre el expediente y el banco tiene que responder por escrito.",
           "xp_bonus": 250,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 500
+        },
+        {
+          "id": "redes",
+          "texto": "Publicar la queja en redes sociales y esperar",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El banco responde por mensaje directo, sin resolver nada formalmente.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "rendirse",
+          "texto": "Rendirse y pagar el dinero",
+          "siguiente_nodo": "final_perder",
+          "consecuencia": "Paga los $500 y el asunto se cierra.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -500
         }
       ]
     },
     "final_exito": {
       "id": "final_exito",
-      "texto": "¡Ganaste! La CONDUSEF demostró que el cargo era falso y el banco te devolvió tu dinero.",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "La CONDUSEF es el árbitro que asegura que los bancos respeten a los clientes."
+      "texto": "¡Ganaste! La CONDUSEF revisó el caso, el banco no pudo comprobar el cargo y tuvo que devolver los $500. El trámite fue gratuito.",
+      "reflexion_final": "La CONDUSEF existe justo para esto: es gratuita, se puede iniciar en línea y el banco está obligado a responderle. Reclamar primero al banco y, si no procede, acudir a la CONDUSEF es el camino completo."
     },
     "final_perder": {
       "id": "final_perder",
-      "texto": "Perdiste $500 pesos por no conocer tus derechos. ¡La próxima vez acude a la CONDUSEF!",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "Conocer a las autoridades financieras es tu mejor escudo contra abusos."
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "texto": "Pagaste los $500 que nunca gastaste. Meses después supiste que decenas de clientes tenían el mismo cargo y que quienes reclamaron recuperaron su dinero.",
+      "reflexion_final": "No conocer tus derechos cuesta dinero. Un cargo no reconocido se reclama primero al banco, y si dice que no procede, en la CONDUSEF: gratis y en línea."
     },
     "final_regular": {
       "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
-    },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "El banco contestó el tuit en dos horas y luego el tema se enfrió. Sin queja formal no hay expediente, y sin expediente no hay obligación de resolver.",
+      "reflexion_final": "La presión pública a veces acelera la respuesta, pero solo un trámite formal obliga legalmente. Usa las redes si quieres, y presenta la queja de todos modos."
     }
   },
   "versión": "2026.Diamond.V2",

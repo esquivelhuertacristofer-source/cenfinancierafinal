@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P2-3-7-B",
+  "unit_code": "P2-3-7",
+  "unit_title": "Sobró dinero: ¿qué hago con lo que quedó?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Sobrante",
+  "descripcion": "Responde rápido: ¿qué hago con el dinero que me sobra?",
+  "objetivo": "Consolidar la asignación de destinos al excedente semanal",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué le pasa al dinero que sobra sin destino?",
+      "respuesta_correcta": "Se gasta solo sin darnos cuenta",
+      "incorrectas": [
+        "Se multiplica",
+        "Se guarda solo",
+        "Se devuelve"
+      ],
+      "dato_extra": "La falta de decisión también es una decisión: la toma el azar por ti."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Los tres destinos del sobrante son:",
+      "respuesta_correcta": "Meta, imprevistos y gusto",
+      "incorrectas": [
+        "Banco, casa y escuela",
+        "Comida, ropa y juego",
+        "Hoy, mañana y ayer"
+      ],
+      "dato_extra": "Es el mismo sistema de los tres frascos, aplicado cada domingo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Sobran $40 y mi regla es mitad y mitad. ¿Cuánto va a la meta?",
+      "respuesta_correcta": "$20",
+      "incorrectas": [
+        "$40",
+        "$10",
+        "$4"
+      ],
+      "dato_extra": "Con la regla escrita, no hay que decidir nada: solo dividir."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Solo sobraron $3. Lo mejor es:",
+      "respuesta_correcta": "Mandarlos completos a un destino",
+      "incorrectas": [
+        "Repartir en tres",
+        "Gastarlos",
+        "Dejarlos sueltos"
+      ],
+      "dato_extra": "Un peso en cada frasco no significa nada. Con poco, conviene concentrar."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Para qué sirve el frasco de imprevistos?",
+      "respuesta_correcta": "Para cuando algo se rompe o falla",
+      "incorrectas": [
+        "Para el viernes",
+        "Para prestar",
+        "Para nada"
+      ],
+      "dato_extra": "Evita que un susto pequeño se coma tu meta grande."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Por qué funciona escribir la regla antes?",
+      "respuesta_correcta": "Porque después solo hay que cumplirla",
+      "incorrectas": [
+        "Porque el dinero rinde más",
+        "Porque es obligatorio",
+        "Porque suena bonito"
+      ],
+      "dato_extra": "Decidir cada semana cansa; cumplir una regla ya escrita, no."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Está mal mandar una parte al gusto?",
+      "respuesta_correcta": "No, un plan sin disfrute no se sostiene",
+      "incorrectas": [
+        "Sí, todo debe ahorrarse",
+        "Sí, es desperdicio",
+        "Solo en diciembre"
+      ],
+      "dato_extra": "Los planes demasiado estrictos se abandonan en pocas semanas."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-7-b-escena.webp"
+}

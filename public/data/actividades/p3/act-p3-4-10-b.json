@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-4-10-B",
+  "unit_code": "P3-4-10",
+  "unit_title": "Después de la feria: qué funcionó y qué no",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cerrar con Números",
+  "descripcion": "Comprueba que sabes cerrar un proyecto de venta como se debe.",
+  "objetivo": "Verificar el cálculo de utilidad y el proceso de cierre con aprendizajes",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Decir \"nos fue bien\" sin números es:",
+      "opciones": [
+        "Una conclusión válida",
+        "Una sensación, no una conclusión",
+        "Un cierre completo",
+        "Suficiente"
+      ],
+      "correcta": 1,
+      "explicacion": "La memoria después de un evento engaña sistemáticamente."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres números del cierre son:",
+      "opciones": [
+        "Ventas, clientes y horas",
+        "Precio, color y tamaño",
+        "Ingresos, costos y utilidad",
+        "Caja, mesa y cartel"
+      ],
+      "correcta": 2,
+      "explicacion": "Con esos tres se sabe qué pasó de verdad."
+    },
+    {
+      "id": "q3",
+      "texto": "La utilidad se calcula:",
+      "opciones": [
+        "Ingresos más costos",
+        "Costos entre ingresos",
+        "Precio por unidades",
+        "Ingresos menos costos"
+      ],
+      "correcta": 3,
+      "explicacion": "Y en los costos entra también lo que se produjo y no se vendió."
+    },
+    {
+      "id": "q4",
+      "texto": "Estimé 40 ventas y hubo 12. Eso significa:",
+      "opciones": [
+        "Que hay que revisar los supuestos",
+        "Que el evento estuvo mal",
+        "Que hay que producir más",
+        "Nada"
+      ],
+      "correcta": 0,
+      "explicacion": "El error medido es la calibración para la próxima vez."
+    },
+    {
+      "id": "q5",
+      "texto": "Si el precio es menor que el costo por unidad:",
+      "opciones": [
+        "Se compensa con volumen",
+        "Cada venta te hace perder dinero",
+        "Da igual",
+        "Es buena estrategia"
+      ],
+      "correcta": 1,
+      "explicacion": "Vender más solo hace crecer la pérdida."
+    },
+    {
+      "id": "q6",
+      "texto": "El sobrante producido:",
+      "opciones": [
+        "No cuesta nada",
+        "Se recupera siempre",
+        "Cuesta el material y el trabajo",
+        "Es ganancia"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso entra en los costos aunque no se haya vendido."
+    },
+    {
+      "id": "q7",
+      "texto": "Las tres preguntas de cierre son:",
+      "opciones": [
+        "Quién ganó, perdió y faltó",
+        "Cuánto, cuándo y dónde",
+        "Precio, costo y utilidad",
+        "Qué repetir, qué cambiar y qué probar"
+      ],
+      "correcta": 3,
+      "explicacion": "Escribirlas es lo que convierte la experiencia en aprendizaje."
+    },
+    {
+      "id": "q8",
+      "texto": "Un equipo que no escribe su cierre:",
+      "opciones": [
+        "Empieza de cero el año siguiente",
+        "Aprende igual",
+        "Mejora solo",
+        "No necesita hacerlo"
+      ],
+      "correcta": 0,
+      "explicacion": "Aunque sean las mismas personas, sin registro se repiten los mismos errores."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-10-b-escena.webp"
+}

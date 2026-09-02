@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-1-7-A",
+  "unit_code": "P5-1-7",
+  "unit_title": "SPEI y CoDi: cómo viaja el dinero en México",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cómo Viaja el Dinero",
+  "descripcion": "Clasifica cada elemento según a qué sistema o concepto pertenece.",
+  "objetivo": "Distinguir los componentes y usos de SPEI, CoDi y efectivo",
+  "xp": 300,
+  "instruccion": "Arrastra cada elemento al sistema al que corresponde.",
+  "categorias": [
+    {
+      "id": "spei",
+      "label": "SPEI (transferencia)",
+      "emoji": "🔁",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "codi",
+      "label": "CoDi (código QR)",
+      "emoji": "📷",
+      "color": "#10B981"
+    },
+    {
+      "id": "efectivo",
+      "label": "Efectivo",
+      "emoji": "💵",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Se usa una CLABE de 18 dígitos",
+      "emoji": "🔢",
+      "categoria_correcta": "spei",
+      "feedback": "Identifica de forma única una cuenta en todo el país."
+    },
+    {
+      "id": "i2",
+      "label": "El que cobra genera un código con el monto ya incluido",
+      "emoji": "🏷️",
+      "categoria_correcta": "codi",
+      "feedback": "Elimina los errores de teclear cuenta y cantidad."
+    },
+    {
+      "id": "i3",
+      "label": "No deja registro de quién pagó a quién",
+      "emoji": "🕶️",
+      "categoria_correcta": "efectivo",
+      "feedback": "Es su ventaja en privacidad y su desventaja en comprobación."
+    },
+    {
+      "id": "i4",
+      "label": "Lo opera el Banco de México",
+      "emoji": "🏛️",
+      "categoria_correcta": "spei",
+      "feedback": "Por eso funciona entre bancos distintos y prácticamente sin costo."
+    },
+    {
+      "id": "i5",
+      "label": "Se escanea con la cámara del celular",
+      "emoji": "📱",
+      "categoria_correcta": "codi",
+      "feedback": "El pago se confirma sin capturar un solo dato."
+    },
+    {
+      "id": "i6",
+      "label": "Si se pierde, no hay forma de recuperarlo",
+      "emoji": "💨",
+      "categoria_correcta": "efectivo",
+      "feedback": "Sin registro no hay reclamación posible."
+    },
+    {
+      "id": "i7",
+      "label": "Se puede enviar usando el número de celular registrado",
+      "emoji": "☎️",
+      "categoria_correcta": "spei",
+      "feedback": "Alternativa a la CLABE cuando el número está dado de alta."
+    },
+    {
+      "id": "i8",
+      "label": "No requiere terminal y no cobra comisión al recibir",
+      "emoji": "🏪",
+      "categoria_correcta": "codi",
+      "feedback": "Por eso es tan útil para comercios pequeños."
+    },
+    {
+      "id": "i9",
+      "label": "Sirve donde no hay internet ni señal",
+      "emoji": "📶",
+      "categoria_correcta": "efectivo",
+      "feedback": "Sigue siendo indispensable en muchas partes del país."
+    },
+    {
+      "id": "i10",
+      "label": "Muestra el nombre del beneficiario antes de confirmar",
+      "emoji": "👤",
+      "categoria_correcta": "spei",
+      "feedback": "Ese es el momento exacto de verificar antes de enviar."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-7-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-7-a-escena.webp"
+}

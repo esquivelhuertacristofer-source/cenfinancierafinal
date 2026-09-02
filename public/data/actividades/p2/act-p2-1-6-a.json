@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-1-6-A",
+  "unit_code": "P2-1-6",
+  "unit_title": "Monedas conmemorativas y billetes que ya no circulan",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Catálogo del Peso",
+  "descripcion": "Ceny encontró una caja con piezas antiguas. Ayúdale a clasificarlas según lo que valen hoy.",
+  "objetivo": "Clasificar piezas monetarias según su valor legal y de colección",
+  "xp": 250,
+  "instruccion": "Arrastra cada pieza a su caja: ¿sirve para comprar hoy, solo vale para coleccionistas, o no es dinero?",
+  "categorias": [
+    {
+      "id": "circula",
+      "label": "Sirve para comprar hoy",
+      "emoji": "🪙",
+      "color": "#10B981"
+    },
+    {
+      "id": "coleccion",
+      "label": "Solo valor de colección",
+      "emoji": "🖼️",
+      "color": "#A855F7"
+    },
+    {
+      "id": "no_dinero",
+      "label": "No es dinero",
+      "emoji": "🚫",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Moneda conmemorativa de $20 actual",
+      "emoji": "🥇",
+      "categoria_correcta": "circula",
+      "feedback": "Es totalmente legal: vale $20 en cualquier tienda, aunque su diseño sea especial."
+    },
+    {
+      "id": "i2",
+      "label": "Billete de la familia actual de $100",
+      "emoji": "💵",
+      "categoria_correcta": "circula",
+      "feedback": "Dinero de curso legal, el que usamos todos los días."
+    },
+    {
+      "id": "i3",
+      "label": "Billete de una familia retirada hace décadas",
+      "emoji": "📜",
+      "categoria_correcta": "coleccion",
+      "feedback": "Ya no se acepta en tiendas, pero un coleccionista podría pagar por él."
+    },
+    {
+      "id": "i4",
+      "label": "Moneda de otro país sin cambiar",
+      "emoji": "🌍",
+      "categoria_correcta": "no_dinero",
+      "feedback": "Aquí no compra nada hasta que se cambie en una casa de cambio."
+    },
+    {
+      "id": "i5",
+      "label": "Ficha de plástico de un juego",
+      "emoji": "🎲",
+      "categoria_correcta": "no_dinero",
+      "feedback": "Parece moneda pero no la emite ningún banco central."
+    },
+    {
+      "id": "i6",
+      "label": "Moneda de $10 muy rayada pero actual",
+      "emoji": "🪙",
+      "categoria_correcta": "circula",
+      "feedback": "El desgaste no le quita valor: sigue valiendo diez pesos completos."
+    },
+    {
+      "id": "i7",
+      "label": "Moneda antigua de plata del siglo pasado",
+      "emoji": "⚪",
+      "categoria_correcta": "coleccion",
+      "feedback": "Su valor viene de la rareza y del metal, no de lo que compra hoy."
+    },
+    {
+      "id": "i8",
+      "label": "Billete de juguete de una tiendita",
+      "emoji": "🧸",
+      "categoria_correcta": "no_dinero",
+      "feedback": "Sirve para jugar, pero ninguna tienda lo acepta."
+    },
+    {
+      "id": "i9",
+      "label": "Moneda de 50 centavos actual",
+      "emoji": "🔸",
+      "categoria_correcta": "circula",
+      "feedback": "Aunque valga poco, es dinero legal y se acepta."
+    },
+    {
+      "id": "i10",
+      "label": "Vale de despensa vencido",
+      "emoji": "🎫",
+      "categoria_correcta": "no_dinero",
+      "feedback": "Nunca fue dinero: era un permiso para canjear, y además ya venció."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-6-a-escena.webp"
+}

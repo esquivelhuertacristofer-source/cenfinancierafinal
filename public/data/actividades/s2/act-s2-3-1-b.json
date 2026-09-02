@@ -5,109 +5,109 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Tipos de Crédito",
-  "descripcion": "En el mundo del dinero, no todos los préstamos son iguales. ¿Sabes cuál elegir según tu meta?",
-  "objetivo": "Identificar los diferentes instrumentos de crédito y sus características principales",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Cómo Funciona la BMV",
+  "descripcion": "Antes de poner un peso en la Bolsa hay que entender qué es exactamente lo que estás comprando y quién lo custodia.",
+  "objetivo": "Comprender el funcionamiento de la Bolsa Mexicana de Valores y el papel de las casas de bolsa reguladas.",
+  "xp": 650,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "cre1",
-      "texto": "¿Qué es el 'Crédito Revolvente' (ej: Tarjeta de Crédito)?",
+      "id": "q1",
+      "texto": "Para comprar acciones en México necesitas…",
       "opciones": [
-        "Un crédito que gira en círculos",
-        "Una línea de dinero que puedes usar, pagar y volver a usar sin pedir permiso de nuevo",
-        "Un préstamo para comprar una casa",
-        "Un dinero que te regala el banco"
+        "Ir directamente a la Bolsa",
+        "Una cuenta en una casa de bolsa autorizada por la CNBV",
+        "Un permiso del SAT",
+        "Ser empresario"
       ],
       "correcta": 1,
-      "explicacion": "Es como una bolsa de dinero siempre disponible, pero si no la pagas mes a mes, los intereses crecen rápido."
+      "explicacion": "La BMV no atiende personas: opera a través de intermediarios autorizados."
     },
     {
-      "id": "cre2",
-      "texto": "¿Qué significa 'CAT' (Costo Anual Total)?",
+      "id": "q2",
+      "texto": "El IPC de la BMV es…",
       "opciones": [
-        "La comida del gato",
-        "El porcentaje real que te cuesta un crédito al año, incluyendo intereses, comisiones y seguros",
-        "El total de dinero que pediste",
-        "Un tipo de ahorro"
+        "Un impuesto",
+        "El índice que sigue a las principales emisoras mexicanas",
+        "Un banco",
+        "Una comisión"
       ],
       "correcta": 1,
-      "explicacion": "¡Ojo! El CAT siempre es mayor que la tasa de interés. Es lo único que debes usar para comparar qué banco es más barato."
+      "explicacion": "Sirve como termómetro del mercado accionario mexicano."
     },
     {
-      "id": "cre3",
-      "texto": "¿Qué es un 'Crédito Hipotecario'?",
+      "id": "q3",
+      "texto": "Si tu casa de bolsa quiebra, tus acciones…",
       "opciones": [
-        "Un préstamo para comprar un auto",
-        "Un préstamo a largo plazo (15-20 años) destinado exclusivamente a comprar una casa o terreno",
-        "Dinero para ir de viaje",
-        "Un seguro de vida"
+        "Se pierden",
+        "Siguen siendo tuyas: están registradas a tu nombre en el depósito central",
+        "Pasan al banco",
+        "Las cobra el gobierno"
       ],
       "correcta": 1,
-      "explicacion": "La propiedad misma sirve como garantía para el banco."
+      "explicacion": "El intermediario custodia, no es dueño. Otra razón para usar solo instituciones reguladas."
     },
     {
-      "id": "cre4",
-      "texto": "¿Qué es el 'Colateral' o Garantía?",
+      "id": "q4",
+      "texto": "El SIC (Sistema Internacional de Cotizaciones) permite…",
       "opciones": [
-        "Un tipo de moneda",
-        "Un bien (como una casa o auto) que el banco puede tomar si tú no pagas el crédito",
-        "Un amigo que te presta dinero",
-        "Un descuento"
+        "Comprar acciones y ETFs extranjeros desde México",
+        "Pagar menos impuestos",
+        "Comprar sin comisión",
+        "Invertir sin riesgo"
       ],
-      "correcta": 1,
-      "explicacion": "Tener colateral baja el riesgo del banco y, por lo tanto, te dan una tasa de interés más baja."
+      "correcta": 0,
+      "explicacion": "Es la vía para diversificar fuera de México sin abrir cuentas en el extranjero."
     },
     {
-      "id": "cre5",
-      "texto": "¿Qué significa ser 'Totalero' con tu tarjeta de crédito?",
+      "id": "q5",
+      "texto": "Los rendimientos por venta de acciones en México…",
       "opciones": [
-        "Tener muchas tarjetas",
-        "Pagar el 100% de lo que gastaste cada mes para no generar ni un peso de intereses",
-        "Pagar solo el mínimo",
-        "No usar la tarjeta"
+        "Están exentos de impuestos",
+        "Pagan un impuesto sobre la ganancia",
+        "Pagan IVA",
+        "No se declaran"
       ],
       "correcta": 1,
-      "explicacion": "Ser totalero es la mejor forma de usar el dinero del banco gratis."
+      "explicacion": "La casa de bolsa retiene y reporta; hay que considerarlo en el rendimiento neto."
     },
     {
-      "id": "cre6",
-      "texto": "¿Qué es un 'Aval' o Fiador?",
+      "id": "q6",
+      "texto": "Operar muchas veces al año normalmente…",
       "opciones": [
-        "Una persona que vende seguros",
-        "Una persona que se compromete legalmente a pagar la deuda si tú no lo haces",
-        "Un empleado del banco",
-        "Un tipo de cuenta"
+        "Aumenta tus ganancias",
+        "Reduce tu rendimiento por comisiones e impuestos",
+        "No tiene costo",
+        "Es lo que hacen los expertos"
       ],
       "correcta": 1,
-      "explicacion": "¡Mucho cuidado! Ser aval de alguien es poner en riesgo tu propio patrimonio."
+      "explicacion": "La evidencia es consistente: los inversionistas que más operan son los que peor rinden."
     },
     {
-      "id": "cre7",
-      "texto": "¿Cuál es la principal diferencia entre un crédito y un préstamo simple?",
+      "id": "q7",
+      "texto": "Un \"dividendo\" es…",
       "opciones": [
-        "Ninguna",
-        "El crédito es una línea disponible; el préstamo te dan todo el dinero de golpe y empiezas a pagar intereses por el total",
-        "Uno es legal y el otro no",
-        "Uno es para niños"
+        "Un préstamo",
+        "La parte de las utilidades que la empresa reparte entre sus accionistas",
+        "Una comisión",
+        "Un impuesto"
       ],
       "correcta": 1,
-      "explicacion": "Los préstamos suelen usarse para proyectos específicos (como comprar maquinaria)."
+      "explicacion": "No todas las empresas lo reparten: algunas reinvierten todo para crecer más rápido."
     },
     {
-      "id": "cre8",
-      "texto": "¿Qué es la 'Capacidad de Pago'?",
+      "id": "q8",
+      "texto": "Invertir en Bolsa dinero que necesitarás en un año es…",
       "opciones": [
-        "Cuánto dinero tienes en total",
-        "El porcentaje de tus ingresos que puedes dedicar a pagar deudas sin poner en riesgo tus gastos básicos (máximo 30%)",
-        "El límite de tu tarjeta",
-        "Lo que ganas en un año"
+        "Buena idea",
+        "Peligroso: en un año el mercado puede estar en caída",
+        "Obligatorio",
+        "Sin riesgo"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora sabes cómo evaluar un crédito como un profesional."
+      "explicacion": "La renta variable necesita horizontes largos para que las caídas tengan tiempo de recuperarse."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

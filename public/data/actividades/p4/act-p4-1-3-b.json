@@ -4,7 +4,7 @@
   "unit_title": "La inflación: por qué las cosas cuestan más cada año",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "TRIVIA",
+  "tipo": "QUIZ",
   "complejidad": "SIMPLE",
   "titulo": "El Monstruo de la Inflación",
   "descripcion": "¿Sabes por qué las cosas cuestan más que antes? ¡Descubre los secretos de la economía y cómo proteger tu dinero!",
@@ -13,114 +13,125 @@
   "preguntas": [
     {
       "id": "inf1",
-      "pregunta": "¿Qué es la inflación?",
-      "respuesta_correcta": "El aumento general y constante de los precios de los productos y servicios",
-      "incorrectas": [
+      "texto": "¿Qué es la inflación?",
+      "opciones": [
+        "El aumento general y constante de los precios de los productos y servicios",
         "Cuando el dinero se moja",
         "Cuando las tiendas cierran",
         "Un tipo de globo"
       ],
-      "dato_extra": "La inflación hace que con la misma cantidad de dinero compres menos cosas."
+      "correcta": 0,
+      "explicacion": "La inflación hace que con la misma cantidad de dinero compres menos cosas."
     },
     {
       "id": "inf2",
-      "pregunta": "¿Cuál es la principal consecuencia de la inflación?",
-      "respuesta_correcta": "La pérdida del poder adquisitivo del dinero",
-      "incorrectas": [
+      "texto": "¿Cuál es la principal consecuencia de la inflación?",
+      "opciones": [
         "Que los billetes cambian de color",
+        "La pérdida del poder adquisitivo del dinero",
         "Que el banco te regala dinero",
         "Que los juguetes son más grandes"
       ],
-      "dato_extra": "Poder adquisitivo es 'cuánto' puedes comprar con tu dinero."
+      "correcta": 1,
+      "explicacion": "Poder adquisitivo es 'cuánto' puedes comprar con tu dinero."
     },
     {
       "id": "inf3",
-      "pregunta": "Si ahorras $100 bajo el colchón por 5 años, ¿qué pasará con ese dinero?",
-      "respuesta_correcta": "Seguirán siendo $100, pero te alcanzará para menos cosas",
-      "incorrectas": [
+      "texto": "Si ahorras $100 bajo el colchón por 5 años, ¿qué pasará con ese dinero?",
+      "opciones": [
         "Se multiplicará por arte de magia",
         "Se convertirá en oro",
+        "Seguirán siendo $100, pero te alcanzará para menos cosas",
         "Seguirá comprando exactamente lo mismo"
       ],
-      "dato_extra": "El dinero 'quieto' pierde valor frente a la inflación."
+      "correcta": 2,
+      "explicacion": "El dinero 'quieto' pierde valor frente a la inflación."
     },
     {
       "id": "inf4",
-      "pregunta": "¿Cuál es una de las causas de la inflación?",
-      "respuesta_correcta": "Cuando hay mucha demanda de productos y poca oferta (escasez)",
-      "incorrectas": [
+      "texto": "¿Cuál es una de las causas de la inflación?",
+      "opciones": [
         "Cuando hay muchos días nublados",
         "Cuando la gente deja de usar carteras",
-        "Cuando los bancos cierran los domingos"
+        "Cuando los bancos cierran los domingos",
+        "Cuando hay mucha demanda de productos y poca oferta (escasez)"
       ],
-      "dato_extra": "Si mucha gente quiere lo mismo y hay poco, el precio sube."
+      "correcta": 3,
+      "explicacion": "Si mucha gente quiere lo mismo y hay poco, el precio sube."
     },
     {
       "id": "inf5",
-      "pregunta": "¿Qué institución en México se encarga de vigilar la inflación?",
-      "respuesta_correcta": "El Banco de México (Banxico)",
-      "incorrectas": [
+      "texto": "¿Qué institución en México se encarga de vigilar la inflación?",
+      "opciones": [
+        "El Banco de México (Banxico)",
         "La Secretaría de Educación",
         "El Correo de México",
         "La Policía"
       ],
-      "dato_extra": "Banxico tiene como misión principal mantener el valor de nuestra moneda."
+      "correcta": 0,
+      "explicacion": "Banxico tiene como misión principal mantener el valor de nuestra moneda."
     },
     {
       "id": "inf6",
-      "pregunta": "¿Qué es la 'Canasta Básica'?",
-      "respuesta_correcta": "El conjunto de productos esenciales que una familia necesita para vivir",
-      "incorrectas": [
+      "texto": "¿Qué es la 'Canasta Básica'?",
+      "opciones": [
         "Una canasta para ir de picnic",
+        "El conjunto de productos esenciales que una familia necesita para vivir",
         "Un equipo de basquetbol",
         "Donde se guardan los billetes"
       ],
-      "dato_extra": "Incluye alimentos como leche, huevo, frijol y tortilla."
+      "correcta": 1,
+      "explicacion": "Incluye alimentos como leche, huevo, frijol y tortilla."
     },
     {
       "id": "inf7",
-      "pregunta": "¿Cómo podemos protegernos de la inflación?",
-      "respuesta_correcta": "Invirtiendo nuestro dinero para que crezca igual o más que los precios",
-      "incorrectas": [
+      "texto": "¿Cómo podemos protegernos de la inflación?",
+      "opciones": [
         "Escondiendo el dinero muy bien",
         "Gastándolo todo rápido",
+        "Invirtiendo nuestro dinero para que crezca igual o más que los precios",
         "No comprando nada nunca"
       ],
-      "dato_extra": "Invertir en CETES es una forma común de protegerse en México."
+      "correcta": 2,
+      "explicacion": "Invertir en CETES es una forma común de protegerse en México."
     },
     {
       "id": "inf8",
-      "pregunta": "¿Por qué sube el precio de la gasolina?",
-      "respuesta_correcta": "Por cambios en el precio del petróleo y costos de transporte",
-      "incorrectas": [
+      "texto": "¿Por qué sube el precio de la gasolina?",
+      "opciones": [
         "Porque el coche tiene hambre",
         "Porque es de color verde",
-        "Porque los conductores son felices"
+        "Porque los conductores son felices",
+        "Por cambios en el precio del petróleo y costos de transporte"
       ],
-      "dato_extra": "Si sube la gasolina, suele subir el precio de todo lo que se transporta en camión."
+      "correcta": 3,
+      "explicacion": "Si sube la gasolina, suele subir el precio de todo lo que se transporta en camión."
     },
     {
       "id": "inf9",
-      "pregunta": "Si la inflación es del 5% anual, significa que...",
-      "respuesta_correcta": "En promedio, las cosas cuestan un 5% más que el año pasado",
-      "incorrectas": [
+      "texto": "Si la inflación es del 5% anual, significa que...",
+      "opciones": [
+        "En promedio, las cosas cuestan un 5% más que el año pasado",
         "El dinero brilla un 5% más",
         "Hay 5 bancos nuevos",
         "Todos ganamos 5 pesos más"
       ],
-      "dato_extra": "Una inflación baja y controlada es normal en la economía."
+      "correcta": 0,
+      "explicacion": "Una inflación baja y controlada es normal en la economía."
     },
     {
       "id": "inf10",
-      "pregunta": "¿Qué pasa si los precios suben pero tu sueldo se queda igual?",
-      "respuesta_correcta": "Te vuelves 'más pobre' porque te alcanza para menos",
-      "incorrectas": [
+      "texto": "¿Qué pasa si los precios suben pero tu sueldo se queda igual?",
+      "opciones": [
         "No pasa nada",
+        "Te vuelves 'más pobre' porque te alcanza para menos",
         "Te vuelves más rico",
         "Tienes más billetes"
       ],
-      "dato_extra": "Por eso es importante que los sueldos también se ajusten con el tiempo."
+      "correcta": 1,
+      "explicacion": "Por eso es importante que los sueldos también se ajusten con el tiempo."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Diamond.V2",
+  "aprobacion_minima": 0.6
 }

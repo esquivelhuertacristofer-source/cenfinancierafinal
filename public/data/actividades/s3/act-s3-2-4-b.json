@@ -4,110 +4,92 @@
   "unit_title": "Independencia financiera acelerada: el concepto FIRE",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Transparencia y Confianza",
-  "descripcion": "¿Sabes qué leyes y reglas protegen a los inversionistas de las malas prácticas? ¡Ponte a prueba!",
-  "objetivo": "Identificar los principios del gobierno corporativo y las prácticas éticas en el entorno empresarial",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "tipo": "TRIVIA",
+  "complejidad": "ALTO",
+  "titulo": "Las Matemáticas de FIRE",
+  "descripcion": "FIRE no es una filosofía de vida: es aritmética. Contra el reloj, comprueba que entiendes los números detrás del retiro anticipado.",
+  "objetivo": "Analizar el movimiento FIRE y las matemáticas de la jubilación anticipada, incluyendo sus supuestos y sus riesgos.",
+  "xp": 700,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "eth1",
-      "texto": "¿Cuál es la función principal del 'Consejo de Administración'?",
-      "opciones": [
-        "Contratar a todos los empleados",
-        "Vigilar y supervisar la gestión del Director General (CEO) para proteger los intereses de los dueños",
-        "Hacer la limpieza",
-        "Vender los productos"
+      "id": "t1",
+      "pregunta": "FIRE significa…",
+      "respuesta_correcta": "Independencia financiera y retiro anticipado",
+      "incorrectas": [
+        "Un tipo de fondo",
+        "Una criptomoneda",
+        "Un impuesto"
       ],
-      "correcta": 1,
-      "explicacion": "Es el órgano que asegura que la empresa se maneje de forma honesta y eficiente."
+      "dato_extra": "Financial Independence, Retire Early. Nació de blogs de ingenieros en los años 2000."
     },
     {
-      "id": "eth2",
-      "texto": "¿Qué es el 'Insider Trading' (Uso de información privilegiada)?",
-      "opciones": [
-        "Intercambiar tarjetas de béisbol",
-        "Usar información secreta de la empresa para ganar dinero comprando o vendiendo acciones antes que los demás",
-        "Hacer publicidad en internet",
-        "Hablar con los compañeros de trabajo"
+      "id": "t2",
+      "pregunta": "La variable que más acelera la fecha FIRE es…",
+      "respuesta_correcta": "La tasa de ahorro, no el ingreso",
+      "incorrectas": [
+        "El ingreso",
+        "El rendimiento",
+        "La suerte"
       ],
-      "correcta": 1,
-      "explicacion": "Es un delito grave porque da una ventaja injusta y destruye la confianza en el mercado."
+      "dato_extra": "Quien ahorra 50% de su ingreso llega en unos 17 años, gane mucho o poco."
     },
     {
-      "id": "eth3",
-      "texto": "¿Qué significa tener una 'Responsabilidad Fiduciaria'?",
-      "opciones": [
-        "Tener que pagar una multa",
-        "La obligación legal y ética de actuar siempre en el mejor interés de los demás (ej: de los accionistas)",
-        "Ser dueño de una fábrica",
-        "Saber usar una computadora"
+      "id": "t3",
+      "pregunta": "El \"número FIRE\" se calcula normalmente como…",
+      "respuesta_correcta": "Tus gastos anuales multiplicados por 25",
+      "incorrectas": [
+        "Tu sueldo por 10",
+        "Tu edad por 1000",
+        "Un millón fijo"
       ],
-      "correcta": 1,
-      "explicacion": "Un administrador debe cuidar el dinero ajeno como si fuera propio, o mejor."
+      "dato_extra": "Viene de la regla del 4%: retirar el 4% anual de una cartera diversificada."
     },
     {
-      "id": "eth4",
-      "texto": "¿Para qué sirve una 'Auditoría' externa?",
-      "opciones": [
-        "Para pedir un préstamo",
-        "Para que expertos independientes revisen que las cuentas y finanzas de la empresa sean reales y verdaderas",
-        "Para despedir gente",
-        "Para diseñar el logo"
+      "id": "t4",
+      "pregunta": "Bajar tus gastos anuales tiene doble efecto porque…",
+      "respuesta_correcta": "Ahorras más Y reduces el número que necesitas alcanzar",
+      "incorrectas": [
+        "Solo ahorras más",
+        "No tiene efecto",
+        "Sube tu meta"
       ],
-      "correcta": 1,
-      "explicacion": "Da garantía a los inversionistas de que la empresa no está inventando números."
+      "dato_extra": "Recortar $1,000 mensuales de gasto baja tu meta en $300,000. Es la palanca más poderosa."
     },
     {
-      "id": "eth5",
-      "texto": "¿Qué son los criterios 'ESG'?",
-      "opciones": [
-        "Tipos de archivos digitales",
-        "Factores Ambientales, Sociales y de Gobierno que miden el impacto positivo de una empresa en el mundo",
-        "Códigos de programación",
-        "Nombres de bancos"
+      "id": "t5",
+      "pregunta": "El mayor riesgo del FIRE es…",
+      "respuesta_correcta": "Una mala secuencia de rendimientos justo al inicio del retiro",
+      "incorrectas": [
+        "Aburrirse",
+        "Los impuestos",
+        "La inflación de los precios de casas"
       ],
-      "correcta": 1,
-      "explicacion": "Hoy en día, los grandes inversionistas solo ponen dinero en empresas que cuidan el planeta y a la sociedad."
+      "dato_extra": "Si el mercado cae 40% en tus primeros años retirando, la cartera puede no recuperarse nunca."
     },
     {
-      "id": "eth6",
-      "texto": "¿Qué es un 'Conflicto de Interés'?",
-      "opciones": [
-        "Cuando dos personas pelean por dinero",
-        "Cuando una persona debe tomar una decisión pero tiene un interés personal que podría nublar su juicio",
-        "No estar de acuerdo con el jefe",
-        "Vender un producto caro"
+      "id": "t6",
+      "pregunta": "En México, un plan FIRE tiene que considerar además…",
+      "respuesta_correcta": "El costo de la salud sin IMSS y una inflación históricamente mayor",
+      "incorrectas": [
+        "Nada distinto",
+        "Que es ilegal",
+        "Que no hay instrumentos"
       ],
-      "correcta": 1,
-      "explicacion": "Por ejemplo, contratar a un familiar menos capaz solo por ser pariente."
+      "dato_extra": "Retirarse joven significa perder la seguridad social del empleo formal: hay que presupuestar el seguro médico."
     },
     {
-      "id": "eth7",
-      "texto": "¿Qué significa que una empresa sea 'Transparente'?",
-      "opciones": [
-        "Que sus oficinas son de vidrio",
-        "Que comparte toda su información financiera y decisiones importantes con el público y sus accionistas",
-        "Que no tiene secretos con sus competidores",
-        "Que regala sus productos"
+      "id": "t7",
+      "pregunta": "La crítica más razonable al movimiento FIRE es que…",
+      "respuesta_correcta": "Ahorrar 60% del ingreso no es viable para la mayoría de los salarios",
+      "incorrectas": [
+        "Las matemáticas están mal",
+        "Es ilegal",
+        "No existe"
       ],
-      "correcta": 1,
-      "explicacion": "La transparencia es la base de la confianza en los negocios."
-    },
-    {
-      "id": "eth8",
-      "texto": "¿Por qué la Ética es rentable a largo plazo?",
-      "opciones": [
-        "Porque no pagas impuestos",
-        "Porque atrae mejores empleados, clientes leales e inversionistas serios que evitan riesgos legales",
-        "No es rentable",
-        "Porque el gobierno te da premios"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Has comprendido que el valor de una empresa reside en su integridad."
+      "dato_extra": "Aun así, su idea central sirve a todos: cuanto mayor sea la brecha entre lo que ganas y lo que gastas, más libertad tienes."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

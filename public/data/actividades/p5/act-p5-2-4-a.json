@@ -4,88 +4,112 @@
   "unit_title": "Publicidad y Redes Sociales: el truco del deseo",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "JUEGO",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Detective de Esquemas Ponzi",
-  "descripcion": "Te ofrecen inversiones 'mágicas'. ¿Podrás distinguir un negocio real de una pirámide fraudulenta?",
-  "objetivo": "Identificar las señales de alerta de esquemas piramidales y fraudes financieros comunes",
+  "titulo": "Rayos X de la Publicidad",
+  "descripcion": "Un anuncio nunca te dice \"compra esto porque quiero tu dinero\". Te dice otra cosa. Aprende a ver el truco detrás de cada frase.",
+  "objetivo": "Identificar las tácticas de persuasión más usadas en publicidad y redes sociales y separarlas de la información real sobre un producto.",
   "xp": 400,
-  "game_type": "click",
-  "duracion": 50,
-  "velocidad_inicial": "media",
-  "velocidad_incremento": true,
-  "instruccion": "Marca como FRAUDE (🚫) las ofertas sospechosas y acepta las REALES (✅).",
-  "items": [
+  "instruccion": "Cada frase es de un anuncio real. Arrástrala según lo que sea: un truco para provocarte o un dato verificable del producto.",
+  "categorias": [
     {
-      "id": "f1",
-      "label": "¡Gana 10% diario sin hacer nada!",
-      "emoji": "🚀",
-      "tipo": "incorrecto",
-      "puntos": -200
+      "id": "truco",
+      "label": "TRUCO PARA PROVOCARTE",
+      "emoji": "🎣",
+      "color": "#ef4444"
     },
     {
-      "id": "s1",
-      "label": "Inversión en CETES (Rendimiento anual del 11%)",
-      "emoji": "🏦",
-      "tipo": "correcto",
-      "puntos": 100
-    },
-    {
-      "id": "f2",
-      "label": "Trae a 3 amigos y quédate con su dinero de inscripción",
-      "emoji": "🏘️",
-      "tipo": "incorrecto",
-      "puntos": -250
-    },
-    {
-      "id": "f3",
-      "label": "App secreta que duplica tus Bitcoins en una hora",
-      "emoji": "₿",
-      "tipo": "incorrecto",
-      "puntos": -200
-    },
-    {
-      "id": "s2",
-      "label": "Ahorro programado en un banco registrado por el gobierno",
-      "emoji": "🛡️",
-      "tipo": "correcto",
-      "puntos": 100
-    },
-    {
-      "id": "f4",
-      "label": "Inversión 'Garantizada' sin ningún riesgo",
-      "emoji": "🤐",
-      "tipo": "incorrecto",
-      "puntos": -150
-    },
-    {
-      "id": "s3",
-      "label": "Invertir en una empresa que cotiza en la Bolsa de Valores",
-      "emoji": "📈",
-      "tipo": "correcto",
-      "puntos": 100
-    },
-    {
-      "id": "f5",
-      "label": "Venta de 'diamantes imaginarios' solo para miembros VIP",
-      "emoji": "💎",
-      "tipo": "incorrecto",
-      "puntos": -200
-    },
-    {
-      "id": "f6",
-      "label": "Te piden dinero urgente para sacar a un pariente de la cárcel",
-      "emoji": "🚔",
-      "tipo": "incorrecto",
-      "puntos": -300
-    },
-    {
-      "id": "s4",
-      "label": "Seguro de vida de una institución financiera oficial",
-      "emoji": "👨‍👩-👧",
-      "tipo": "correcto",
-      "puntos": 100
+      "id": "dato",
+      "label": "DATO REAL DEL PRODUCTO",
+      "emoji": "🔍",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "\"¡Solo quedan 3! ¡Últimas horas!\"",
+      "emoji": "⏰",
+      "categoria_correcta": "truco",
+      "feedback": "Es urgencia artificial: te apura para que no pienses."
+    },
+    {
+      "id": "i2",
+      "label": "\"Batería de 5000 mAh, dura 18 horas\"",
+      "emoji": "🔋",
+      "categoria_correcta": "dato",
+      "feedback": "Un dato medible que puedes comparar con otro modelo."
+    },
+    {
+      "id": "i3",
+      "label": "\"Todos tus amigos ya lo tienen\"",
+      "emoji": "👥",
+      "categoria_correcta": "truco",
+      "feedback": "Presión social: juega con tu miedo a quedarte fuera."
+    },
+    {
+      "id": "i4",
+      "label": "\"Garantía de 2 años por escrito\"",
+      "emoji": "📄",
+      "categoria_correcta": "dato",
+      "feedback": "Es una obligación real y verificable del vendedor."
+    },
+    {
+      "id": "i5",
+      "label": "\"Te lo mereces, date el gusto\"",
+      "emoji": "💫",
+      "categoria_correcta": "truco",
+      "feedback": "Apela a tu emoción, no al producto. No dice nada de lo que compras."
+    },
+    {
+      "id": "i6",
+      "label": "\"Contiene 500 ml\"",
+      "emoji": "📏",
+      "categoria_correcta": "dato",
+      "feedback": "Cantidad exacta: sirve para calcular el precio por mililitro."
+    },
+    {
+      "id": "i7",
+      "label": "\"Mi influencer favorito lo usa\"",
+      "emoji": "📱",
+      "categoria_correcta": "truco",
+      "feedback": "Casi siempre le pagaron por decirlo. Es publicidad disfrazada de recomendación."
+    },
+    {
+      "id": "i8",
+      "label": "\"Precio: $349 IVA incluido\"",
+      "emoji": "🏷️",
+      "categoria_correcta": "dato",
+      "feedback": "El precio final y claro es información honesta."
+    },
+    {
+      "id": "i9",
+      "label": "\"Antes $2,000, HOY $1,999\"",
+      "emoji": "💸",
+      "categoria_correcta": "truco",
+      "feedback": "Descuento falso: el precio anterior estaba inflado para que el de hoy parezca ganga."
+    },
+    {
+      "id": "i10",
+      "label": "\"Hecho de acero inoxidable\"",
+      "emoji": "⚙️",
+      "categoria_correcta": "dato",
+      "feedback": "El material determina cuánto te va a durar."
+    },
+    {
+      "id": "i11",
+      "label": "\"Si no lo compras, te vas a arrepentir\"",
+      "emoji": "😰",
+      "categoria_correcta": "truco",
+      "feedback": "Miedo puro. Ningún objeto decide si eres feliz."
+    },
+    {
+      "id": "i12",
+      "label": "\"Devolución gratuita en 30 días\"",
+      "emoji": "↩️",
+      "categoria_correcta": "dato",
+      "feedback": "Una política concreta que reduce tu riesgo al comprar."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

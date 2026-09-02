@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-2-9-B",
+  "unit_code": "P2-2-9",
+  "unit_title": "Prestar a un amigo: acordar cuándo me lo devuelve",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Prestar sin Perder Amigos",
+  "descripcion": "Demuestra que sabes prestar, cobrar y decir que no.",
+  "objetivo": "Verificar la comprensión de los acuerdos de préstamo y sus límites",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Prestar sin acordar fecha equivale a:",
+      "opciones": [
+        "Regalar sin decirlo",
+        "Ahorrar",
+        "Invertir",
+        "Vender"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin fecha no hay ningún momento en que la otra persona sienta que debe pagar."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres datos de un vale son:",
+      "opciones": [
+        "Nombre, edad y escuela",
+        "Cuánto, para cuándo y las firmas",
+        "Precio, marca y color",
+        "Día, hora y lugar"
+      ],
+      "correcta": 1,
+      "explicacion": "No hace falta un documento formal: un papelito con esos tres datos basta."
+    },
+    {
+      "id": "q3",
+      "texto": "Hacer un vale entre amigos significa:",
+      "opciones": [
+        "Que desconfío",
+        "Que soy tacaño",
+        "Que quiero proteger la amistad",
+        "Que no somos amigos"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo que enfría amistades no es el papel: es la incomodidad de no saber."
+    },
+    {
+      "id": "q4",
+      "texto": "Llegó la fecha y no me pagan. Lo mejor es:",
+      "opciones": [
+        "Callarme y enojarme",
+        "Contarle a todos",
+        "No volver a hablarle",
+        "Recordarlo con calma"
+      ],
+      "correcta": 3,
+      "explicacion": "El enojo callado crece. Recordar con calma resuelve casi siempre."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué me pregunto antes de prestar?",
+      "opciones": [
+        "Si puedo perder ese dinero sin quedarme sin mi meta",
+        "Si mi amigo es simpático",
+        "Si tengo cambio",
+        "Si hace buen clima"
+      ],
+      "correcta": 0,
+      "explicacion": "Nunca prestes lo que ya tiene destino: aunque hagas todo bien, a veces no vuelve."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Cómo digo que no sin pelear?",
+      "opciones": [
+        "No quiero",
+        "No puedo, ese dinero ya tiene destino",
+        "Búscate a otro",
+        "Eres un aprovechado"
+      ],
+      "correcta": 1,
+      "explicacion": "Decir que no con honestidad es mejor que perder el dinero y la amistad."
+    },
+    {
+      "id": "q7",
+      "texto": "Cuando alguien no paga, la razón más común es:",
+      "opciones": [
+        "Maldad",
+        "Nunca quiso pagar",
+        "Se le olvidó",
+        "Cambió de escuela"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso el recordatorio amable funciona: le devuelve la fecha a la memoria."
+    },
+    {
+      "id": "q8",
+      "texto": "Si yo debo dinero, lo correcto es:",
+      "opciones": [
+        "Esperar a que me lo pidan",
+        "Cambiar de tema",
+        "Negar la deuda",
+        "Avisar si no voy a poder y proponer nueva fecha"
+      ],
+      "correcta": 3,
+      "explicacion": "Avisar antes de fallar conserva la confianza mucho mejor que desaparecer."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-9-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-9-b-escena.webp"
+}

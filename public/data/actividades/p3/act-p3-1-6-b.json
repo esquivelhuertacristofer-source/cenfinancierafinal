@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-1-6-B",
+  "unit_code": "P3-1-6",
+  "unit_title": "Metas SMART: específica, medible y con fecha",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Formula tu Meta",
+  "descripcion": "Demuestra que sabes convertir un deseo en una meta que sí se puede cumplir.",
+  "objetivo": "Verificar la formulación de metas y el cálculo de cuota",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Qué distingue a una meta de un deseo?",
+      "opciones": [
+        "Que es más cara",
+        "Que es más bonita",
+        "Que es más rápida",
+        "Que se puede verificar"
+      ],
+      "correcta": 3,
+      "explicacion": "Al llegar la fecha, cualquiera puede decir si la cumpliste o no."
+    },
+    {
+      "id": "q2",
+      "texto": "Los cuatro elementos de una meta son:",
+      "opciones": [
+        "Qué, cuánto, para cuándo y cuota",
+        "Color, tamaño, marca y tienda",
+        "Nombre, edad, grado y grupo",
+        "Inicio, medio, fin y firma"
+      ],
+      "correcta": 0,
+      "explicacion": "Si falta uno, la meta no se puede planear ni verificar."
+    },
+    {
+      "id": "q3",
+      "texto": "Meta de $1,000 en 20 semanas. La cuota semanal es:",
+      "opciones": [
+        "$20",
+        "$50",
+        "$100",
+        "$200"
+      ],
+      "correcta": 1,
+      "explicacion": "1000 entre 20 son 50. Ese número dice si la meta es realista."
+    },
+    {
+      "id": "q4",
+      "texto": "Meta de $600 en 12 semanas. La cuota es:",
+      "opciones": [
+        "$60",
+        "$12",
+        "$50",
+        "$120"
+      ],
+      "correcta": 2,
+      "explicacion": "600 entre 12 son 50. Siempre calcula antes de comprometerte."
+    },
+    {
+      "id": "q5",
+      "texto": "La cuota me sale mayor a lo que recibo. Eso significa:",
+      "opciones": [
+        "Que hay que esforzarse más",
+        "Que debo pedir prestado",
+        "Que no importa",
+        "Que la meta es imposible como está planteada"
+      ],
+      "correcta": 3,
+      "explicacion": "Hay que alargar el plazo, bajar el monto o conseguir un ingreso extra."
+    },
+    {
+      "id": "q6",
+      "texto": "El precio de mi meta debe:",
+      "opciones": [
+        "Investigarse",
+        "Suponerse",
+        "Preguntarse a un amigo",
+        "Adivinarse"
+      ],
+      "correcta": 0,
+      "explicacion": "Una meta construida sobre un precio inventado falla desde el primer día."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Por qué conviene escribir la meta y ponerla a la vista?",
+      "opciones": [
+        "Porque se ve bonito",
+        "Porque lo visible se sostiene y lo invisible se olvida",
+        "Porque lo pide la escuela",
+        "Porque sube de precio"
+      ],
+      "correcta": 1,
+      "explicacion": "Una meta en la cabeza compite cada día con los antojos, y muchas veces pierde."
+    },
+    {
+      "id": "q8",
+      "texto": "\"Comprar algo para la escuela\" es:",
+      "opciones": [
+        "Una meta completa",
+        "Una meta con fecha",
+        "Un deseo demasiado vago",
+        "Una cuota"
+      ],
+      "correcta": 2,
+      "explicacion": "No dice qué, ni cuánto, ni cuándo: no hay forma de verificarla."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-6-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-6-b-escena.webp"
+}

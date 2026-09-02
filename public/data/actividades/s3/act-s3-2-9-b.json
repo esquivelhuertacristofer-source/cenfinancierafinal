@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-2-9-B",
+  "unit_code": "S3-2-9",
+  "unit_title": "El primer crédito: construir historial desde cero",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Primer Crédito",
+  "descripcion": "Clasifica cada práctica según su efecto sobre tu historial.",
+  "objetivo": "Distinguir prácticas que construyen historial de las que lo dañan",
+  "xp": 800,
+  "instruccion": "Arrastra cada práctica según cómo afecta tu historial crediticio.",
+  "categorias": [
+    {
+      "id": "construye",
+      "label": "Construye historial",
+      "emoji": "🧱",
+      "color": "#10B981"
+    },
+    {
+      "id": "dana",
+      "label": "Lo daña",
+      "emoji": "💥",
+      "color": "#EF4444"
+    },
+    {
+      "id": "neutro",
+      "label": "Casi no influye",
+      "emoji": "➖",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Pagar el total de la tarjeta cada mes",
+      "emoji": "✅",
+      "categoria_correcta": "construye",
+      "feedback": "Construye historial sin pagar un peso de intereses."
+    },
+    {
+      "id": "i2",
+      "label": "Atrasarse un mes en el pago",
+      "emoji": "⏰",
+      "categoria_correcta": "dana",
+      "feedback": "Un atraso pesa más que meses de comportamiento correcto."
+    },
+    {
+      "id": "i3",
+      "label": "Usar el 20% de la línea disponible",
+      "emoji": "📉",
+      "categoria_correcta": "construye",
+      "feedback": "Uso bajo comunica solvencia, no presión."
+    },
+    {
+      "id": "i4",
+      "label": "Cambiar de banco de nómina",
+      "emoji": "🏦",
+      "categoria_correcta": "neutro",
+      "feedback": "No afecta directamente el comportamiento de pago registrado."
+    },
+    {
+      "id": "i5",
+      "label": "Usar el 95% de la línea todos los meses",
+      "emoji": "🔥",
+      "categoria_correcta": "dana",
+      "feedback": "Se lee como presión financiera aunque pagues puntual."
+    },
+    {
+      "id": "i6",
+      "label": "Conservar tu primera tarjeta muchos años",
+      "emoji": "🗓️",
+      "categoria_correcta": "construye",
+      "feedback": "La antigüedad es un activo que no se puede comprar."
+    },
+    {
+      "id": "i7",
+      "label": "Cancelar la tarjeta más antigua",
+      "emoji": "✂️",
+      "categoria_correcta": "dana",
+      "feedback": "Borra la antigüedad que costó años construir."
+    },
+    {
+      "id": "i8",
+      "label": "Solicitar cinco créditos en un mes",
+      "emoji": "📨",
+      "categoria_correcta": "dana",
+      "feedback": "Muchas solicitudes seguidas se leen como búsqueda urgente de dinero."
+    },
+    {
+      "id": "i9",
+      "label": "Cambiar de domicilio",
+      "emoji": "📦",
+      "categoria_correcta": "neutro",
+      "feedback": "No forma parte del comportamiento de pago."
+    },
+    {
+      "id": "i10",
+      "label": "Pagar solo el mínimo cada mes",
+      "emoji": "🐌",
+      "categoria_correcta": "dana",
+      "feedback": "El saldo no baja y el uso de la línea se mantiene alto."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-9-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-9-b-escena.webp"
+}

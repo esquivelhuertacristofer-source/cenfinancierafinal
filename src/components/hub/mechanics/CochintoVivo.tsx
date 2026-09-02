@@ -53,6 +53,7 @@ interface ConfettiParticle {
   delay: number;
   duration: number;
   size: number;
+  shape: 'circle' | 'square';
 }
 
 function generateConfetti(count = 40): ConfettiParticle[] {
@@ -64,6 +65,7 @@ function generateConfetti(count = 40): ConfettiParticle[] {
     delay: Math.random() * 1.5,
     duration: 1.5 + Math.random() * 2,
     size: 6 + Math.floor(Math.random() * 10),
+    shape: Math.random() > 0.5 ? 'circle' : 'square',
   }));
 }
 
@@ -237,7 +239,7 @@ export default function CochintoVivo({
               width: p.size,
               height: p.size,
               backgroundColor: p.color,
-              borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+              borderRadius: p.shape === 'circle' ? '50%' : '2px',
               animation: `confettiFall ${p.duration}s ease-in ${p.delay}s forwards`,
             }}
           />

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-4-6-B",
+  "unit_code": "P5-4-6",
+  "unit_title": "Modelo de negocio: cómo gana dinero mi idea",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Modelo de Negocio",
+  "descripcion": "Comprueba que sabes definir cómo gana dinero una idea.",
+  "objetivo": "Verificar la comprensión de los componentes del modelo de negocio",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "En un negocio, quien paga:",
+      "opciones": [
+        "Siempre es el usuario",
+        "Siempre es el gobierno",
+        "No siempre es quien usa el producto",
+        "Nunca se sabe"
+      ],
+      "correcta": 2,
+      "explicacion": "En una app gratuita, quien paga suele ser el anunciante."
+    },
+    {
+      "id": "q2",
+      "texto": "Las cinco piezas del modelo son:",
+      "opciones": [
+        "Nombre, logo, color, precio y local",
+        "Idea, sueño, meta, plan y suerte",
+        "Producto, marca y publicidad",
+        "Cliente, problema, entrega, pago y costo"
+      ],
+      "correcta": 3,
+      "explicacion": "Con esas cinco escritas, cualquier idea se vuelve evaluable."
+    },
+    {
+      "id": "q3",
+      "texto": "Sin esas respuestas hay:",
+      "opciones": [
+        "Una intención, no un negocio",
+        "Un negocio completo",
+        "Una empresa",
+        "Un producto"
+      ],
+      "correcta": 0,
+      "explicacion": "La diferencia entre una idea y un negocio está en esas cinco piezas."
+    },
+    {
+      "id": "q4",
+      "texto": "Un mismo producto:",
+      "opciones": [
+        "Solo admite un modelo",
+        "Admite varios modelos",
+        "No necesita modelo",
+        "Siempre se vende igual"
+      ],
+      "correcta": 1,
+      "explicacion": "Venta única, suscripción, gratuito con extras o publicidad."
+    },
+    {
+      "id": "q5",
+      "texto": "El modelo correcto:",
+      "opciones": [
+        "Siempre es la suscripción",
+        "Siempre es la venta única",
+        "Depende del cliente y de cómo prefiere pagar",
+        "Lo decide el producto"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso conviene probar más de uno antes de fijarlo."
+    },
+    {
+      "id": "q6",
+      "texto": "La prueba mínima de todo modelo es:",
+      "opciones": [
+        "Que sea original",
+        "Que guste mucho",
+        "Que sea barato",
+        "Que el ingreso por cliente supere el costo de atenderlo"
+      ],
+      "correcta": 3,
+      "explicacion": "Si cada venta deja pérdida, vender más agranda el problema."
+    },
+    {
+      "id": "q7",
+      "texto": "Cambiar de modelo sin cambiar el producto:",
+      "opciones": [
+        "Muchas veces salva una idea",
+        "Nunca funciona",
+        "Es hacer trampa",
+        "Es imposible"
+      ],
+      "correcta": 0,
+      "explicacion": "El producto puede estar bien y el modelo ser el equivocado."
+    },
+    {
+      "id": "q8",
+      "texto": "El costo de entregar incluye:",
+      "opciones": [
+        "Solo el material",
+        "Material, transporte y costos fijos",
+        "Solo el permiso",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Omitir el transporte o los fijos infla el margen aparente."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-6-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-6-b-escena.webp"
+}

@@ -1,67 +1,113 @@
 {
-  "id": "ACT-P6-4-5-B",
+  "code": "ACT-P6-4-5-B",
+  "unit_code": "P6-4-5",
+  "unit_title": "KPIs: Midiendo el éxito de mi negocio",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
   "tipo": "QUIZ",
-  "titulo": "Certificación Final: Emprendimiento Social",
-  "descripcion": "El verdadero emprendedor cambia el mundo. Demuestra que entiendes cómo los negocios pueden resolver problemas sociales y ser sustentables.",
+  "complejidad": "ALTO",
+  "titulo": "Los Números No Mienten",
+  "descripcion": "Cierre del año: los indicadores que separan a un negocio que sabe cómo va de uno que se entera cuando ya es tarde.",
+  "objetivo": "Interpretar indicadores clave de desempeño para evaluar objetivamente la salud y el crecimiento de un emprendimiento.",
+  "xp": 500,
   "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "texto": "¿Cuál es el objetivo principal de un emprendimiento social?",
+      "id": "q1",
+      "texto": "Un KPI es…",
       "opciones": [
-        "Ganar mucho dinero solamente",
-        "Resolver un problema de la comunidad o el ambiente",
-        "Ser famoso en redes sociales",
-        "Invertir siempre garantiza ganar dinero"
+        "Un impuesto",
+        "Un indicador clave que mide si tu negocio va bien",
+        "Un tipo de crédito",
+        "Un software"
       ],
       "correcta": 1,
-      "explicacion": "El emprendimiento social busca generar un impacto positivo en la sociedad."
+      "explicacion": "Clave significa que si ese número empeora, tienes un problema real."
     },
     {
-      "texto": "¿Qué significa que un proyecto sea 'sustentable'?",
+      "id": "q2",
+      "texto": "Un negocio con ventas altísimas y utilidad negativa…",
       "opciones": [
-        "Que se puede mantener por sí mismo sin agotar recursos",
-        "Que es muy caro de realizar",
-        "Que solo dura un par de días",
-        "Es lo mismo que regalar el dinero"
+        "Va excelente",
+        "Está perdiendo dinero: mientras más vende, peor",
+        "Va normal",
+        "No importa"
+      ],
+      "correcta": 1,
+      "explicacion": "Vender no es ganar. Es el error que más negocios entusiastas ha quebrado."
+    },
+    {
+      "id": "q3",
+      "texto": "El \"ticket promedio\" es…",
+      "opciones": [
+        "Cuánto gasta en promedio cada cliente por compra",
+        "El precio más alto",
+        "El costo de un boleto",
+        "Las ventas totales"
       ],
       "correcta": 0,
-      "explicacion": "La sustentabilidad permite que los proyectos perduren en el tiempo respetando el entorno."
+      "explicacion": "Subirlo un 20% suele ser más barato que conseguir 20% más clientes."
     },
     {
-      "texto": "Un ejemplo de emprendimiento social es:",
+      "id": "q4",
+      "texto": "Si adquirir un cliente te cuesta $200 y te deja $150 de ganancia…",
       "opciones": [
-        "Una tienda de dulces caros",
-        "Una empresa que limpia océanos y fabrica productos reciclados",
-        "Un banco tradicional",
-        "Solo se puede invertir en bienes raíces"
+        "Ganas $50",
+        "Pierdes $50 con cada cliente nuevo",
+        "Estás en equilibrio",
+        "Es un buen negocio"
       ],
       "correcta": 1,
-      "explicacion": "Resolver problemas ambientales es una forma clave de emprendimiento social."
+      "explicacion": "Muchos negocios digitales quiebran exactamente así, creciendo rapidísimo."
     },
     {
-      "texto": "¿Por qué es importante el trabajo en equipo en estos proyectos?",
+      "id": "q5",
+      "texto": "El \"margen de seguridad\" indica…",
       "opciones": [
-        "Para que uno trabaje y los demás descansen",
-        "Para combinar diferentes talentos y lograr metas más grandes",
-        "Para competir entre los miembros",
-        "Invertir es ilegal para menores de edad"
-      ],
-      "correcta": 1,
-      "explicacion": "La colaboración multiplica el impacto de los proyectos sociales."
-    },
-    {
-      "texto": "Para iniciar un emprendimiento social, lo primero es:",
-      "opciones": [
-        "Identificar una necesidad o problema en tu entorno",
-        "Comprar mucha maquinaria",
-        "Esperar a que alguien más lo haga",
-        "Es una tarea que solo hacen los papás"
+        "Cuánto pueden caer tus ventas antes de perder dinero",
+        "Cuánto seguro contratar",
+        "El dinero en el banco",
+        "El número de empleados"
       ],
       "correcta": 0,
-      "explicacion": "Todo gran cambio comienza detectando dónde se necesita ayuda."
+      "explicacion": "Un margen del 10% significa que un mes flojo te deja en números rojos."
+    },
+    {
+      "id": "q6",
+      "texto": "Medir muchos indicadores a la vez…",
+      "opciones": [
+        "Es lo ideal",
+        "Suele hacer que ninguno se atienda: mejor 4 o 5 clave",
+        "No sirve de nada",
+        "Es obligatorio por ley"
+      ],
+      "correcta": 1,
+      "explicacion": "Si todo es importante, nada lo es. Los mejores tableros caben en una hoja."
+    },
+    {
+      "id": "q7",
+      "texto": "Un negocio que no mide nada…",
+      "opciones": [
+        "Se entera de sus problemas cuando ya no hay dinero",
+        "Ahorra tiempo",
+        "Va igual de bien",
+        "Paga menos impuestos"
+      ],
+      "correcta": 0,
+      "explicacion": "Los problemas de un negocio aparecen en los números meses antes que en la cuenta bancaria."
+    },
+    {
+      "id": "q8",
+      "texto": "El KPI más importante para un negocio que apenas empieza suele ser…",
+      "opciones": [
+        "Los seguidores en redes",
+        "Si la utilidad es positiva y el flujo de efectivo alcanza",
+        "El número de productos",
+        "El tamaño del local"
+      ],
+      "correcta": 1,
+      "explicacion": "Ninguna métrica de vanidad paga la renta. Utilidad y efectivo disponible mandan."
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "xp": 300,
-  "level": "Primaria 6"
+  "versión": "2026.Alineada.1"
 }

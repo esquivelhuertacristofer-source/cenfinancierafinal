@@ -914,6 +914,926 @@
       "Refuerce que ahorrar es también cuidar el planeta (ahorro de agua, luz y recursos)."
     ]
   },
+  "P2-1-6": {
+    "code": "P2-1-6",
+    "title": "Monedas conmemorativas y billetes que ya no circulan",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Reconocer que existen monedas conmemorativas y billetes de familias anteriores, distinguiendo cuáles siguen teniendo valor legal y cuáles solo valor de colección.",
+      "competencies": [
+        "Identificación de Piezas Monetarias",
+        "Distinción Valor Legal / Coleccionable",
+        "Historia Numismática Básica",
+        "Observación Detallada"
+      ],
+      "materials": [
+        "Imágenes de monedas conmemorativas mexicanas",
+        "Reproducciones de billetes de familias anteriores",
+        "Lupa de exploración",
+        "Línea del tiempo del peso mexicano",
+        "Tabla comparativa: circula / ya no circula"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Moneda Rara",
+          "duration": "15 min",
+          "label": "¿Y esta cuánto vale?"
+        },
+        {
+          "phase": "Desarrollo: Dos Valores",
+          "duration": "30 min",
+          "label": "Legal y de colección"
+        },
+        {
+          "phase": "Cierre: Mi Catálogo",
+          "duration": "15 min",
+          "label": "Clasificar piezas"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA MONEDA QUE NADIE HABÍA VISTO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre una moneda conmemorativa de $20 y pregunte cuánto vale. Muchos dirán que más, porque se ve distinta y especial. Revele que vale exactamente veinte pesos en cualquier tienda. Luego muestre un billete de una familia anterior y pregunte lo mismo. Ahí la respuesta cambia: ese ya no se puede usar para comprar, aunque valga algo para un coleccionista. Dos casos, dos reglas distintas.",
+          "activity": "Dinámica \"Adivina el Valor\": los alumnos estiman el valor de cinco piezas distintas. Se revela el valor legal real y se comenta cada sorpresa."
+        },
+        {
+          "title": "FASE II: VALOR LEGAL Y VALOR DE COLECCIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la diferencia con claridad. El valor legal es lo que la pieza vale para comprar cosas hoy, y lo decide el Banco de México. El valor de colección es lo que alguien está dispuesto a pagar por una pieza rara, y lo decide el interés de los coleccionistas. Una moneda conmemorativa de $20 tiene valor legal de $20, aunque su valor de colección pueda ser mayor. Un billete retirado tiene valor legal cero pero puede tener valor de colección.",
+          "activity": "Dinámica \"Dos Columnas\": los alumnos clasifican imágenes de piezas en la tabla legal / colección, argumentando cada colocación."
+        },
+        {
+          "title": "FASE III: MI CATÁLOGO DE PIEZAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno arma una ficha de una pieza: dibujo, denominación, qué conmemora y si circula o no. Se juntan en un catálogo del salón. Cierre con una advertencia práctica y útil: si alguien te ofrece cambiar un billete viejo asegurando que vale mucho, hay que consultarlo con un adulto, porque ese es un engaño frecuente con niños y con personas mayores.",
+          "activity": "Dinámica \"El Catálogo del Salón\": las fichas se encuadernan y quedan en la biblioteca del aula como material de consulta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ya sabes identificar las monedas y billetes que usamos todos los días. Pero de vez en cuando aparece una pieza rara: una moneda conmemorativa que nunca habías visto, o un billete viejo que estaba guardado en un cajón. ¿Valen más? ¿Valen menos? ¿Se pueden usar? En esta clase vas a aprender a distinguirlo.",
+      "sections": [
+        {
+          "subtitle": "Las monedas conmemorativas",
+          "content": "El Banco de México emite de vez en cuando monedas especiales para recordar un acontecimiento importante: un aniversario, un personaje, un estado del país. Se llaman conmemorativas y son totalmente legales: puedes pagar con ellas en cualquier tienda. Una moneda conmemorativa de $20 vale veinte pesos, exactamente igual que cualquier otra de $20. Lo que la hace especial es el diseño, no el valor."
+        },
+        {
+          "subtitle": "Los billetes que ya no circulan",
+          "content": "Con el tiempo, el Banco de México renueva las familias de billetes para mejorar su seguridad. Cuando eso pasa, los billetes viejos se van retirando poco a poco. Algunos siguen siendo válidos durante un tiempo y otros ya no se aceptan en las tiendas. Si encuentras uno guardado, un adulto puede llevarlo al banco para preguntar si todavía se puede canjear. Nunca asumas que ya no sirve, ni que vale una fortuna."
+        },
+        {
+          "subtitle": "Valor legal contra valor de colección",
+          "content": "Aquí está la idea principal de la clase. El valor legal es lo que la pieza compra hoy, y lo determina el banco central. El valor de colección es lo que un coleccionista está dispuesto a pagar por una pieza rara, y depende de qué tan escasa e interesante sea. Los dos valores son independientes: una pieza puede tener valor legal de $20 y valor de colección de $200, o valor legal de cero y valor de colección alto."
+        },
+        {
+          "subtitle": "Cuidado con los engaños",
+          "content": "Existe un engaño común: alguien ofrece \"comprarte\" una moneda o billete asegurando que vale muchísimo, o al revés, te pide cambiar tu dinero bueno por piezas viejas diciendo que son valiosas. Ante cualquier oferta así, la regla es simple y no falla: consúltalo con un adulto de confianza antes de aceptar nada. Las piezas de verdad valiosas se valúan con especialistas, no en la banqueta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuánto vale legalmente una moneda conmemorativa de $20?",
+          "options": [
+            "Mucho más",
+            "Nada",
+            "$20"
+          ],
+          "correct": "$20"
+        },
+        {
+          "question": "¿Quién emite las monedas conmemorativas en México?",
+          "options": [
+            "El Banco de México",
+            "Las tiendas",
+            "Los coleccionistas"
+          ],
+          "correct": "El Banco de México"
+        },
+        {
+          "question": "¿Qué es el valor legal?",
+          "options": [
+            "Lo que pagaría un coleccionista",
+            "Lo que la pieza compra hoy",
+            "Lo que pesa"
+          ],
+          "correct": "Lo que la pieza compra hoy"
+        },
+        {
+          "question": "¿Qué es el valor de colección?",
+          "options": [
+            "Lo mismo que el valor legal",
+            "El precio del metal",
+            "Lo que un coleccionista pagaría por ser rara"
+          ],
+          "correct": "Lo que un coleccionista pagaría por ser rara"
+        },
+        {
+          "question": "¿Pueden ser distintos los dos valores?",
+          "options": [
+            "Sí, son independientes",
+            "No, siempre son iguales",
+            "Solo en billetes"
+          ],
+          "correct": "Sí, son independientes"
+        },
+        {
+          "question": "Encuentro un billete viejo en un cajón. ¿Qué hago?",
+          "options": [
+            "Lo tiro",
+            "Un adulto pregunta en el banco si se puede canjear",
+            "Lo vendo en la calle"
+          ],
+          "correct": "Un adulto pregunta en el banco si se puede canjear"
+        },
+        {
+          "question": "¿Por qué el banco renueva las familias de billetes?",
+          "options": [
+            "Por aburrimiento",
+            "Para que valgan más",
+            "Para mejorar su seguridad"
+          ],
+          "correct": "Para mejorar su seguridad"
+        },
+        {
+          "question": "Alguien me ofrece cambiar mi dinero por monedas \"muy valiosas\". ¿Qué hago?",
+          "options": [
+            "Consultarlo con un adulto antes de aceptar",
+            "Aceptar rápido",
+            "Cambiar la mitad"
+          ],
+          "correct": "Consultarlo con un adulto antes de aceptar"
+        },
+        {
+          "question": "¿Qué hace especial a una moneda conmemorativa?",
+          "options": [
+            "Su valor",
+            "Su diseño, no su valor",
+            "Su peso"
+          ],
+          "correct": "Su diseño, no su valor"
+        },
+        {
+          "question": "Las piezas realmente valiosas se valúan:",
+          "options": [
+            "En la banqueta",
+            "Adivinando",
+            "Con especialistas"
+          ],
+          "correct": "Con especialistas"
+        }
+      ],
+      "rubric": "Logrado: distingue valor legal de valor de colección y clasifica piezas correctamente. En proceso: identifica piezas sin distinguir ambos valores. Inicial: reconoce que existen piezas especiales."
+    },
+    "teacher_tips": [
+      "Si consigue monedas conmemorativas reales, llévelas. El contacto físico con la pieza rara hace memorable la sesión.",
+      "La advertencia sobre engaños es contenido de seguridad, no anécdota. Dedíquele el cierre completo.",
+      "Aproveche a los alumnos cuyas familias guardan piezas antiguas: pídales que traigan una foto, no la pieza."
+    ]
+  },
+  "P2-1-7": {
+    "code": "P2-1-7",
+    "title": "El cambio: cuando pago con más de lo que cuesta",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Calcular y verificar el cambio al pagar con una cantidad mayor al precio, adquiriendo el hábito de contarlo antes de retirarse del mostrador.",
+      "competencies": [
+        "Cálculo de Cambio",
+        "Resta Aplicada",
+        "Verificación de Transacciones",
+        "Comunicación Respetuosa"
+      ],
+      "materials": [
+        "Caja registradora de juguete",
+        "Monedas y billetes didácticos surtidos",
+        "Etiquetas de precio con cifras no redondas",
+        "Tarjetas de situación de compra",
+        "Cartel: \"Cuenta tu cambio antes de irte\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Error",
+          "duration": "15 min",
+          "label": "Me dieron de menos"
+        },
+        {
+          "phase": "Desarrollo: La Cuenta",
+          "duration": "30 min",
+          "label": "Calcular el cambio"
+        },
+        {
+          "phase": "Cierre: Reclamar Bien",
+          "duration": "15 min",
+          "label": "Decirlo con respeto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL CAMBIO EQUIVOCADO (APERTURA)",
+          "duration": "15 min",
+          "description": "Haga una compra frente al grupo: un producto de $37 pagado con $50. Entregue $10 de cambio en lugar de $13, sin decir nada. Pregunte si todo estuvo bien. Muchos no notarán el error. Repita la operación en el pizarrón y descubra el faltante juntos. La lección aparece sola: los errores de cambio existen, casi siempre son involuntarios, y solo los detecta quien cuenta.",
+          "activity": "Dinámica \"El Cajero Distraído\": el docente comete errores en tres compras seguidas. El grupo debe detectarlos contando, no adivinando."
+        },
+        {
+          "title": "FASE II: CALCULAR EL CAMBIO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe los dos métodos. El primero es restar: lo que pagué menos lo que costó. El segundo, más fácil a esta edad, es contar hacia adelante desde el precio hasta lo que entregué, que es exactamente lo que hacen los cajeros al devolver monedas. Practiquen con cifras no redondas como $37, $48 o $64, porque esas son las que aparecen en la vida real y las que más se prestan a error.",
+          "activity": "Dinámica \"Cajero y Cliente\": por parejas, uno cobra y el otro verifica. Se alternan cinco compras cada uno con precios distintos."
+        },
+        {
+          "title": "FASE III: RECLAMAR CON RESPETO (CIERRE)",
+          "duration": "15 min",
+          "description": "Practique la frase para señalar un error sin acusar: \"Disculpe, creo que me faltó cambio, ¿lo revisamos juntos?\". Explique la diferencia entre reclamar y acusar: casi todos los errores de cambio son distracciones, no robos. Un reclamo respetuoso se resuelve en segundos; una acusación genera un conflicto innecesario. Practicar la frase quita la pena que impide reclamar.",
+          "activity": "Dinámica \"El Reclamo Amable\": cada alumno practica la frase ante un compañero que hace de cajero. Se repite hasta que sale sin titubeo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi nunca pagas con la cantidad exacta. Compras algo de $37 y entregas $50, así que te deben devolver dinero. A eso se le llama cambio. Parece simple, pero mucha gente sale de la tienda sin contarlo y no sabe si le dieron bien. En esta clase vas a aprender a calcularlo y, sobre todo, a verificarlo.",
+      "sections": [
+        {
+          "subtitle": "Qué es el cambio",
+          "content": "El cambio es el dinero que te devuelven cuando pagas con más de lo que cuesta el producto. Si algo vale $37 y pagas con un billete de $50, te deben devolver $13. Esa devolución no es un regalo ni un favor: es tu dinero, la parte que no se usó en la compra. Por eso tienes todo el derecho de contarlo, y hacerlo no es desconfiar de nadie."
+        },
+        {
+          "subtitle": "Dos formas de calcularlo",
+          "content": "La primera forma es restar: a lo que pagaste le quitas el precio. 50 menos 37 son 13. La segunda es contar hacia adelante desde el precio: desde 37 subes a 40, luego a 50; contaste 3 y luego 10, que suman 13. Este segundo método es el que usan los cajeros cuando te devuelven las monedas de una en una, y suele ser más fácil de hacer mentalmente."
+        },
+        {
+          "subtitle": "Contar antes de retirarse",
+          "content": "La regla de oro es contar el cambio antes de alejarte del mostrador. Una vez que ya te fuiste, es muchísimo más difícil aclarar cualquier diferencia, porque nadie puede saber qué pasó después. Contar ahí mismo toma diez segundos. Los adultos que lo hacen no son desconfiados: simplemente saben que los errores existen y que el momento de corregirlos es en ese instante."
+        },
+        {
+          "subtitle": "Reclamar sin acusar",
+          "content": "Si el cambio no cuadra, hay una manera de decirlo que resuelve el problema en lugar de crearlo: \"Disculpe, creo que me faltó cambio, ¿lo revisamos juntos?\". Esa frase supone que fue un error, que es lo que casi siempre ocurre, y le da a la otra persona la oportunidad de arreglarlo sin sentirse acusada. Acusar convierte un descuido de diez segundos en una discusión de diez minutos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Compro algo de $37 y pago con $50. ¿Cuánto cambio me toca?",
+          "options": [
+            "$13",
+            "$17",
+            "$23"
+          ],
+          "correct": "$13"
+        },
+        {
+          "question": "¿Qué es el cambio?",
+          "options": [
+            "Un regalo de la tienda",
+            "El dinero que me devuelven porque pagué de más",
+            "Un descuento"
+          ],
+          "correct": "El dinero que me devuelven porque pagué de más"
+        },
+        {
+          "question": "Compro algo de $64 y pago con $100. ¿Cuánto cambio?",
+          "options": [
+            "$46",
+            "$26",
+            "$36"
+          ],
+          "correct": "$36"
+        },
+        {
+          "question": "¿Cuándo debo contar el cambio?",
+          "options": [
+            "Antes de alejarme del mostrador",
+            "Al llegar a casa",
+            "Nunca"
+          ],
+          "correct": "Antes de alejarme del mostrador"
+        },
+        {
+          "question": "¿Por qué es difícil aclarar un error después de irme?",
+          "options": [
+            "Porque cierran la tienda",
+            "Porque nadie puede saber qué pasó después",
+            "Porque el dinero cambia"
+          ],
+          "correct": "Porque nadie puede saber qué pasó después"
+        },
+        {
+          "question": "¿Cuál es la frase correcta para reclamar?",
+          "options": [
+            "Me estás robando",
+            "Deme más dinero",
+            "Disculpe, creo que me faltó cambio, ¿lo revisamos?"
+          ],
+          "correct": "Disculpe, creo que me faltó cambio, ¿lo revisamos?"
+        },
+        {
+          "question": "La mayoría de los errores de cambio son:",
+          "options": [
+            "Distracciones involuntarias",
+            "Robos",
+            "A propósito"
+          ],
+          "correct": "Distracciones involuntarias"
+        },
+        {
+          "question": "Compro algo de $48 y pago con $50. ¿Cuánto cambio?",
+          "options": [
+            "$8",
+            "$2",
+            "$12"
+          ],
+          "correct": "$2"
+        },
+        {
+          "question": "Contar hacia adelante desde $37 hasta $50 significa contar:",
+          "options": [
+            "37 y luego 50",
+            "13 y luego 37",
+            "3 y luego 10"
+          ],
+          "correct": "3 y luego 10"
+        },
+        {
+          "question": "¿Contar el cambio es desconfiar de la persona?",
+          "options": [
+            "No, es cuidar mi dinero",
+            "Sí, es de mala educación",
+            "Sí, siempre"
+          ],
+          "correct": "No, es cuidar mi dinero"
+        }
+      ],
+      "rubric": "Logrado: calcula el cambio con cifras no redondas, lo verifica y formula un reclamo respetuoso. En proceso: calcula con apoyo. Inicial: identifica qué es el cambio."
+    },
+    "teacher_tips": [
+      "Use precios no redondos. Con precios de $50 o $100 el ejercicio pierde toda su dificultad y su utilidad real.",
+      "Cometa errores a propósito varias veces sin avisar. Que el grupo aprenda a detectar es más valioso que que aprenda a calcular.",
+      "Ensaye la frase de reclamo hasta que salga natural. La pena, no el cálculo, es lo que impide reclamar en la vida real."
+    ]
+  },
+  "P2-1-8": {
+    "code": "P2-1-8",
+    "title": "Los trabajos de mi comunidad: cómo gana cada quien",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Reconocer distintos oficios y trabajos de la comunidad y comprender cómo genera ingresos cada uno, valorando todas las formas honestas de ganarse la vida.",
+      "competencies": [
+        "Conocimiento de Oficios",
+        "Valoración del Trabajo",
+        "Relación Trabajo-Ingreso",
+        "Respeto por la Diversidad Laboral"
+      ],
+      "materials": [
+        "Tarjetas de oficios con ilustraciones",
+        "Mapa del barrio dibujado en cartulina",
+        "Herramientas de utilería de distintos oficios",
+        "Cartel: sueldo, por obra, por venta",
+        "Hoja de entrevista para llevar a casa"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Mapa",
+          "duration": "15 min",
+          "label": "Quién trabaja en mi barrio"
+        },
+        {
+          "phase": "Desarrollo: Cómo Cobran",
+          "duration": "30 min",
+          "label": "Tres formas de ganar"
+        },
+        {
+          "phase": "Cierre: La Entrevista",
+          "duration": "15 min",
+          "label": "Preguntar en casa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL MAPA DE MI BARRIO (APERTURA)",
+          "duration": "15 min",
+          "description": "Dibuje entre todos un mapa del barrio en el pizarrón y vayan colocando a las personas que trabajan cerca: la de la tiendita, el que arregla llantas, la maestra, el que recoge la basura, la enfermera del centro de salud, quien vende tamales en la esquina. Pregunte qué pasaría si un día ninguno trabajara. La conclusión es que todos los trabajos sostienen algo, aunque unos se vean más que otros.",
+          "activity": "Dinámica \"El Barrio sin Nadie\": el grupo imagina un día en que falta cada oficio y describe qué se rompería. Cada ausencia se marca en el mapa."
+        },
+        {
+          "title": "FASE II: TRES FORMAS DE GANAR DINERO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las tres formas básicas. Por sueldo: recibes una cantidad fija cada quincena por trabajar en un lugar, como la maestra. Por obra o servicio: cobras por cada trabajo terminado, como el plomero. Por venta: ganas la diferencia entre lo que compras y lo que vendes, como la señora de la tiendita. Los alumnos clasifican las tarjetas de oficios en las tres categorías y descubren que muchas personas combinan dos.",
+          "activity": "Dinámica \"¿Cómo Cobra?\": las tarjetas de oficios se ordenan en tres columnas. Los casos difíciles, como un taxista, se discuten en grupo."
+        },
+        {
+          "title": "FASE III: ENTREVISTA EN CASA (CIERRE)",
+          "duration": "15 min",
+          "description": "Entregue una hoja con tres preguntas para hacer en casa a un adulto que trabaja: qué hace, cómo le pagan y qué es lo más difícil de su trabajo. Insista en el tono: es una entrevista de curiosidad, no un interrogatorio sobre cuánto gana. La cantidad no importa; lo que importa es entender que el dinero de la casa viene de un esfuerzo concreto con nombre y horario.",
+          "activity": "Dinámica \"Mi Reportero\": cada alumno prepara sus preguntas en clase y las lee en voz alta para verificar que sean respetuosas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ya sabes que el dinero viene del trabajo. Pero, ¿de qué trabajo exactamente? En tu barrio hay decenas de personas ganándose la vida de formas muy distintas: unas reciben un sueldo, otras cobran por cada trabajo que terminan y otras venden. En esta clase vas a descubrir cómo funciona cada una y por qué todas son valiosas.",
+      "sections": [
+        {
+          "subtitle": "Todos los trabajos sostienen algo",
+          "content": "Si un día no trabajara quien recoge la basura, las calles se llenarían en una semana. Si no trabajara la enfermera, nadie atendería una urgencia. Si no abriera la tiendita, no habría dónde comprar pan cerca. Cada trabajo resuelve un problema de alguien más, y por eso alguien está dispuesto a pagar por él. Esa es, en el fondo, la razón por la que existe el dinero: para intercambiar esfuerzos distintos."
+        },
+        {
+          "subtitle": "Ganar por sueldo",
+          "content": "Quien trabaja por sueldo recibe una cantidad acordada cada semana, quincena o mes, por cumplir un horario y unas tareas en un lugar. Es el caso de una maestra, un policía o quien atiende en una farmacia. La ventaja es que sabes cuánto va a entrar y cuándo, así que puedes planear. La desventaja es que, aunque trabajes mucho más un mes, normalmente el sueldo no cambia."
+        },
+        {
+          "subtitle": "Ganar por obra o por venta",
+          "content": "Quien cobra por obra recibe dinero por cada trabajo terminado: un plomero, una costurera, quien pinta una casa. Si hace más trabajos gana más, y si no le sale ninguno esa semana, no gana. Quien vive de la venta, como la señora de la tiendita o quien vende tamales, gana la diferencia entre lo que le costó y lo que cobró. Estas formas pueden dar más en un buen mes, pero son menos predecibles."
+        },
+        {
+          "subtitle": "Ningún trabajo honesto vale menos",
+          "content": "A veces se habla de unos trabajos como si fueran más importantes que otros. Eso es un error y además es injusto. Todo trabajo honesto que resuelve un problema real merece respeto, y el país funciona precisamente porque hay gente haciendo de todo. Lo que sí cambia entre trabajos es cuánto se paga, y eso depende de muchas cosas, como cuánta preparación exige o cuántas personas pueden hacerlo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué alguien paga por un trabajo?",
+          "options": [
+            "Por regalar dinero",
+            "Porque resuelve un problema suyo",
+            "Por obligación"
+          ],
+          "correct": "Porque resuelve un problema suyo"
+        },
+        {
+          "question": "¿Cuáles son las tres formas de ganar dinero trabajando?",
+          "options": [
+            "Robando, pidiendo y esperando",
+            "Ahorrando, gastando y prestando",
+            "Por sueldo, por obra y por venta"
+          ],
+          "correct": "Por sueldo, por obra y por venta"
+        },
+        {
+          "question": "Una maestra gana:",
+          "options": [
+            "Por sueldo",
+            "Por venta",
+            "Por obra"
+          ],
+          "correct": "Por sueldo"
+        },
+        {
+          "question": "Un plomero que cobra por cada arreglo gana:",
+          "options": [
+            "Por sueldo",
+            "Por obra",
+            "Por venta"
+          ],
+          "correct": "Por obra"
+        },
+        {
+          "question": "La señora de la tiendita gana:",
+          "options": [
+            "Por sueldo",
+            "Por obra",
+            "Por venta"
+          ],
+          "correct": "Por venta"
+        },
+        {
+          "question": "¿Cuál es la ventaja del sueldo?",
+          "options": [
+            "Sé cuánto entra y cuándo, así puedo planear",
+            "Siempre gano más",
+            "No hay que trabajar"
+          ],
+          "correct": "Sé cuánto entra y cuándo, así puedo planear"
+        },
+        {
+          "question": "¿Cuál es la desventaja de cobrar por obra?",
+          "options": [
+            "Que siempre gano poco",
+            "Si no sale trabajo, no gano esa semana",
+            "Que es aburrido"
+          ],
+          "correct": "Si no sale trabajo, no gano esa semana"
+        },
+        {
+          "question": "¿Hay trabajos honestos que valgan menos que otros?",
+          "options": [
+            "Sí, los que ensucian",
+            "Sí, los que pagan poco",
+            "No, todos merecen respeto"
+          ],
+          "correct": "No, todos merecen respeto"
+        },
+        {
+          "question": "¿Qué pasaría si nadie recogiera la basura?",
+          "options": [
+            "Las calles se llenarían en poco tiempo",
+            "Nada",
+            "Todo mejoraría"
+          ],
+          "correct": "Las calles se llenarían en poco tiempo"
+        },
+        {
+          "question": "¿De qué depende cuánto se paga por un trabajo?",
+          "options": [
+            "Del color del uniforme",
+            "De la preparación que exige y de cuánta gente puede hacerlo",
+            "De la suerte"
+          ],
+          "correct": "De la preparación que exige y de cuánta gente puede hacerlo"
+        }
+      ],
+      "rubric": "Logrado: clasifica oficios según su forma de ingreso y explica la utilidad social de cada trabajo. En proceso: identifica oficios sin clasificar la forma de pago. Inicial: relaciona trabajo con ingreso."
+    },
+    "teacher_tips": [
+      "Cuide profundamente la sensibilidad: en cada grupo hay familias con desempleo o trabajos informales. Hable de oficios, nunca de cantidades.",
+      "La entrevista en casa debe centrarse en qué hace y qué es lo difícil, no en cuánto gana. Deje esa regla muy clara antes de entregar la hoja.",
+      "Incluya trabajos del hogar no remunerados en el mapa. Reconocerlos como trabajo real es parte de la formación financiera."
+    ]
+  },
+  "P2-1-9": {
+    "code": "P2-1-9",
+    "title": "Un peso hoy y un peso mañana: el dinero se acumula",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprobar mediante simulación que el ahorro constante se acumula y comparar el resultado de guardar todos los días contra guardar solo de vez en cuando.",
+      "competencies": [
+        "Acumulación en el Tiempo",
+        "Comparación de Escenarios",
+        "Multiplicación Aplicada",
+        "Constancia"
+      ],
+      "materials": [
+        "Dos frascos transparentes rotulados: constante y a veces",
+        "Monedas didácticas",
+        "Calendario mensual grande",
+        "Tabla de registro semanal",
+        "Regla para medir el nivel de los frascos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dos Frascos",
+          "duration": "15 min",
+          "label": "La carrera del mes"
+        },
+        {
+          "phase": "Desarrollo: La Simulación",
+          "duration": "30 min",
+          "label": "Cuatro semanas"
+        },
+        {
+          "phase": "Cierre: La Diferencia",
+          "duration": "15 min",
+          "label": "Medir el resultado"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA CARRERA DE LOS DOS FRASCOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente dos frascos y dos personajes. Uno guardará $5 todos los días sin falta. El otro guardará $20 pero solo cuando se acuerde, más o menos una vez por semana. Pregunte al grupo quién cree que juntará más en un mes. Muchos apostarán por el segundo, porque su cantidad es mayor. Anote las apuestas y déjelas visibles.",
+          "activity": "Dinámica \"La Apuesta del Mes\": el grupo se divide según a quién le apuesta. Las dos mitades defienden su elección con un argumento."
+        },
+        {
+          "title": "FASE II: CUATRO SEMANAS EN TREINTA MINUTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Simulen el mes día por día en forma acelerada. Cada \"día\" el primer frasco recibe $5 y el segundo solo recibe cuando toca su día. Al terminar, cuenten. El constante junta $150 y el otro $80. La diferencia se ve en los frascos antes de contarse. Refuerce con la multiplicación en el pizarrón: 5 por 30 contra 20 por 4. La cantidad pequeña ganó por repetición.",
+          "activity": "Dinámica \"El Mes Acelerado\": dos alumnos administran cada frasco frente al grupo mientras el resto lleva el registro en la tabla."
+        },
+        {
+          "title": "FASE III: MEDIR Y CONCLUIR (CIERRE)",
+          "duration": "15 min",
+          "description": "Midan con la regla la altura de las monedas en cada frasco y comparen con las apuestas iniciales. Extienda la cuenta a un año: $5 diarios son cerca de $1,800, mientras que $20 semanales son unos $1,040. Cierre con la idea que quedará: no gana quien guarda más de golpe, gana quien no falla. Es la misma lección que la gotera que llena la cubeta, ahora con números propios.",
+          "activity": "Dinámica \"¿Quién Ganó la Apuesta?\": se revisan las apuestas iniciales y se cuenta cuántos acertaron. Casi siempre son minoría."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un peso hoy no hace nada. Un peso mañana tampoco. Pero un peso todos los días, durante un año, sí hace algo grande. En esta clase vas a ver una carrera entre dos formas de ahorrar: poquito todos los días contra mucho de vez en cuando. El resultado sorprende a casi todos.",
+      "sections": [
+        {
+          "subtitle": "Acumular es sumar muchas veces",
+          "content": "Acumular significa que cada aportación se suma a las anteriores y ninguna se pierde. Si guardas $5 hoy y $5 mañana, no tienes $5: tienes $10. Suena obvio, pero mucha gente actúa como si el dinero guardado desapareciera. El ahorro funciona justamente porque se queda: cada peso que metes se queda ahí esperando a los siguientes. Por eso el tiempo es el aliado más poderoso de quien ahorra."
+        },
+        {
+          "subtitle": "Poco constante contra mucho ocasional",
+          "content": "Compara dos formas. La primera: $5 diarios durante 30 días son $150. La segunda: $20 una vez por semana son $80 en el mes. La segunda cantidad es cuatro veces mayor por aportación, y aun así junta casi la mitad. La razón es la frecuencia: la primera aportó treinta veces y la segunda solo cuatro. En el ahorro, cuántas veces suele importar más que cuánto."
+        },
+        {
+          "subtitle": "El problema de \"cuando me acuerde\"",
+          "content": "Guardar cuando uno se acuerda tiene un defecto que no se ve al principio: uno se acuerda cada vez menos. La primera semana sí, la segunda tal vez, la tercera se olvidó. En cambio, guardar todos los días a la misma hora se vuelve automático, como lavarse los dientes. Los hábitos diarios sobreviven; los ocasionales se apagan solos. Por eso conviene una cantidad chica pero fija."
+        },
+        {
+          "subtitle": "Proyectar a un año",
+          "content": "Cuando extiendes la cuenta a doce meses, las diferencias se vuelven enormes. Cinco pesos diarios se convierten en cerca de mil ochocientos pesos al año. Veinte pesos semanales apenas superan los mil. Y si dejas de guardar tres meses, el resultado se desploma. Ver el número anual es lo que convence: el ahorro no es un acto heroico, es una costumbre pequeña sostenida mucho tiempo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "$5 diarios durante 30 días son:",
+          "options": [
+            "$35",
+            "$50",
+            "$150"
+          ],
+          "correct": "$150"
+        },
+        {
+          "question": "$20 semanales durante 4 semanas son:",
+          "options": [
+            "$80",
+            "$150",
+            "$20"
+          ],
+          "correct": "$80"
+        },
+        {
+          "question": "¿Cuál junta más en un mes?",
+          "options": [
+            "$20 semanales",
+            "$5 diarios",
+            "Los dos igual"
+          ],
+          "correct": "$5 diarios"
+        },
+        {
+          "question": "¿Por qué gana la cantidad pequeña?",
+          "options": [
+            "Porque vale más",
+            "Por suerte",
+            "Porque aporta muchas más veces"
+          ],
+          "correct": "Porque aporta muchas más veces"
+        },
+        {
+          "question": "¿Qué significa acumular?",
+          "options": [
+            "Que cada aportación se suma y ninguna se pierde",
+            "Que el dinero se gasta",
+            "Que se divide"
+          ],
+          "correct": "Que cada aportación se suma y ninguna se pierde"
+        },
+        {
+          "question": "¿Cuál es el problema de guardar \"cuando me acuerde\"?",
+          "options": [
+            "Que es muy difícil",
+            "Que cada vez me acuerdo menos",
+            "Que cuesta dinero"
+          ],
+          "correct": "Que cada vez me acuerdo menos"
+        },
+        {
+          "question": "$5 diarios durante un año son aproximadamente:",
+          "options": [
+            "$150",
+            "$500",
+            "$1,800"
+          ],
+          "correct": "$1,800"
+        },
+        {
+          "question": "En el ahorro, ¿qué importa más?",
+          "options": [
+            "Cuántas veces guardo",
+            "Solo cuánto guardo",
+            "El color de la alcancía"
+          ],
+          "correct": "Cuántas veces guardo"
+        },
+        {
+          "question": "¿Qué convierte el ahorro en costumbre?",
+          "options": [
+            "Hacerlo cuando sobra",
+            "Hacerlo todos los días a la misma hora",
+            "Hacerlo una vez al año"
+          ],
+          "correct": "Hacerlo todos los días a la misma hora"
+        },
+        {
+          "question": "El aliado más poderoso de quien ahorra es:",
+          "options": [
+            "La suerte",
+            "El banco",
+            "El tiempo"
+          ],
+          "correct": "El tiempo"
+        }
+      ],
+      "rubric": "Logrado: calcula y compara ambos escenarios y explica por qué gana la frecuencia. En proceso: calcula un escenario con apoyo. Inicial: reconoce que el ahorro se acumula."
+    },
+    "teacher_tips": [
+      "Registre las apuestas iniciales por escrito. Comparar la intuición con el resultado es lo que hace que la lección se recuerde.",
+      "Use frascos transparentes idénticos. La diferencia de nivel comunica más rápido que cualquier tabla.",
+      "Termine siempre con la proyección anual. El número grande es lo que convierte el ejercicio en una decisión personal."
+    ]
+  },
+  "P2-1-10": {
+    "code": "P2-1-10",
+    "title": "El dinero no crece en los árboles: de dónde sale de verdad",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender que el dinero de la familia es limitado y proviene de un esfuerzo concreto, desmontando la idea de que siempre se puede conseguir más.",
+      "competencies": [
+        "Comprensión de la Escasez",
+        "Empatía Familiar",
+        "Diálogo sobre Dinero",
+        "Realismo Económico"
+      ],
+      "materials": [
+        "Frasco con una cantidad limitada de fichas",
+        "Tarjetas de gastos del hogar con montos",
+        "Cartel del presupuesto familiar simplificado",
+        "Hoja \"Lo que sí puedo hacer yo\"",
+        "Calculadora grande"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Frasco",
+          "duration": "15 min",
+          "label": "Esto es todo lo que hay"
+        },
+        {
+          "phase": "Desarrollo: Repartir",
+          "duration": "30 min",
+          "label": "Los gastos del mes"
+        },
+        {
+          "phase": "Cierre: Mi Parte",
+          "duration": "15 min",
+          "label": "Cómo ayudo yo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ESTO ES TODO LO QUE HAY (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un frasco con exactamente cuarenta fichas y diga que representa todo el dinero que entra a una casa en un mes. Reparta las tarjetas de gastos y pida a los niños que vayan poniendo fichas sobre cada una: renta, comida, luz, agua, transporte, escuela. Las fichas se acaban antes de terminar. Ese momento silencioso es la clase completa: el dinero de una casa no es infinito.",
+          "activity": "Dinámica \"Se Acabaron las Fichas\": el grupo decide qué gasto queda sin cubrir y explica por qué eligió ese. Nadie queda contento, y esa es la idea."
+        },
+        {
+          "title": "FASE II: LOS GASTOS DEL MES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Ordenen los gastos por prioridad entre todos: primero lo que no se puede dejar de pagar, luego lo importante, al final lo que se puede posponer. Los niños suelen descubrir con sorpresa cuántas cosas hay que pagar cada mes en una casa. Sin usar cifras reales de nadie, la conversación permite entender por qué a veces la respuesta a una petición es no, y que ese no rara vez significa falta de cariño.",
+          "activity": "Dinámica \"La Fila de Prioridades\": las tarjetas se acomodan en fila del más urgente al más postergable. Cada cambio de orden se debate."
+        },
+        {
+          "title": "FASE III: LO QUE SÍ PUEDO HACER YO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada niño escribe tres cosas concretas con las que puede ayudar a que el dinero de casa rinda más: apagar luces, cuidar sus útiles, no desperdiciar comida, avisar con tiempo de un gasto de la escuela. Cierre con un mensaje importante: no es responsabilidad del niño resolver las finanzas de la casa, pero sí puede aportar. La diferencia entre ayudar y cargar con la preocupación debe quedar clara.",
+          "activity": "Dinámica \"Mis Tres Aportes\": los compromisos se pegan en el cuaderno y se revisan en dos semanas para ver cuáles se cumplieron."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "A veces pides algo y la respuesta es no. Y puede que pienses que es porque no quieren comprártelo. Casi nunca es eso. El dinero que entra a una casa es una cantidad concreta, no un pozo sin fondo, y tiene que alcanzar para muchas cosas. En esta clase vas a ver, con fichas, cómo funciona eso de verdad.",
+      "sections": [
+        {
+          "subtitle": "El dinero de casa es una cantidad concreta",
+          "content": "Cada mes entra a una casa una cantidad determinada, que viene del trabajo de una o varias personas. No es infinita y no aparece sola. De esa cantidad hay que pagar el techo, la comida, la luz, el agua, el transporte, la escuela y todo lo demás. Cuando entiendes eso, muchas cosas que parecían injustas cobran sentido: no es que no quieran, es que hay que repartir lo que hay."
+        },
+        {
+          "subtitle": "Las prioridades del hogar",
+          "content": "No todos los gastos son iguales. Algunos no se pueden dejar de pagar sin consecuencias graves, como el techo y la comida. Otros son importantes pero admiten ajuste, como la ropa. Otros se pueden posponer, como una salida o un juguete. Cuando el dinero no alcanza para todo, se recorta desde abajo de esa lista. Entender ese orden ayuda a saber en qué lugar está lo que uno está pidiendo."
+        },
+        {
+          "subtitle": "Un \"no\" casi nunca es falta de cariño",
+          "content": "Cuando alguien de tu familia te dice que no se puede comprar algo, lo más probable es que esté cuidando algo más importante que ya está comprometido. Muchas veces esa persona quisiera decir que sí y no puede, y eso también le cuesta. Si en lugar de insistir preguntas \"¿en qué puedo ayudar para que sí se pueda algún día?\", la conversación cambia por completo y te van a tomar mucho más en serio."
+        },
+        {
+          "subtitle": "Ayudar sin cargar la preocupación",
+          "content": "Hay una diferencia importante que conviene tener clara: tú puedes ayudar a que el dinero rinda, pero no eres responsable de resolver las finanzas de tu casa. Eso les toca a los adultos. Lo tuyo es aportar con cosas concretas: cuidar tus útiles, apagar lo que no se usa, no desperdiciar comida, avisar con tiempo de los gastos de la escuela. Ayudar sí; preocuparte como si fuera tu obligación, no."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿El dinero de una casa es infinito?",
+          "options": [
+            "No, es una cantidad concreta",
+            "Sí, siempre hay más",
+            "Depende del banco"
+          ],
+          "correct": "No, es una cantidad concreta"
+        },
+        {
+          "question": "¿De dónde viene el dinero de la casa?",
+          "options": [
+            "Del cajero automático",
+            "Del trabajo de una o varias personas",
+            "De la escuela"
+          ],
+          "correct": "Del trabajo de una o varias personas"
+        },
+        {
+          "question": "¿Cuáles gastos no se pueden dejar de pagar?",
+          "options": [
+            "Los juguetes",
+            "Las salidas",
+            "El techo y la comida"
+          ],
+          "correct": "El techo y la comida"
+        },
+        {
+          "question": "Cuando el dinero no alcanza, ¿desde dónde se recorta?",
+          "options": [
+            "Desde lo que se puede posponer",
+            "Desde la comida",
+            "Desde la renta"
+          ],
+          "correct": "Desde lo que se puede posponer"
+        },
+        {
+          "question": "Un \"no\" a una petición casi siempre significa:",
+          "options": [
+            "Que no me quieren",
+            "Que ese dinero ya está comprometido en algo más importante",
+            "Que soy castigado"
+          ],
+          "correct": "Que ese dinero ya está comprometido en algo más importante"
+        },
+        {
+          "question": "¿Cuál es una buena pregunta en vez de insistir?",
+          "options": [
+            "¿Por qué nunca me compran nada?",
+            "¿A poco no hay dinero?",
+            "¿En qué puedo ayudar para que sí se pueda algún día?"
+          ],
+          "correct": "¿En qué puedo ayudar para que sí se pueda algún día?"
+        },
+        {
+          "question": "¿Cómo puede ayudar un niño?",
+          "options": [
+            "Cuidando sus útiles y no desperdiciando",
+            "Consiguiendo trabajo",
+            "Pagando la renta"
+          ],
+          "correct": "Cuidando sus útiles y no desperdiciando"
+        },
+        {
+          "question": "¿Es responsabilidad del niño resolver las finanzas de la casa?",
+          "options": [
+            "Sí, completamente",
+            "No, eso les toca a los adultos",
+            "Sí, desde los 7 años"
+          ],
+          "correct": "No, eso les toca a los adultos"
+        },
+        {
+          "question": "Avisar con tiempo de un gasto de la escuela ayuda porque:",
+          "options": [
+            "No ayuda",
+            "Hace que cueste menos",
+            "Permite planear y no improvisar"
+          ],
+          "correct": "Permite planear y no improvisar"
+        },
+        {
+          "question": "Entender de dónde viene el dinero sirve para:",
+          "options": [
+            "Valorarlo y pedir con más criterio",
+            "Preocuparse todo el día",
+            "Dejar de pedir para siempre"
+          ],
+          "correct": "Valorarlo y pedir con más criterio"
+        }
+      ],
+      "rubric": "Logrado: ordena gastos por prioridad, explica el límite del ingreso familiar y propone aportes concretos. En proceso: reconoce el límite sin priorizar. Inicial: entiende que el dinero viene del trabajo."
+    },
+    "teacher_tips": [
+      "Nunca use cifras reales de familias del grupo. Trabaje siempre con el frasco de fichas y montos genéricos.",
+      "Cierre subrayando que el niño no carga la responsabilidad. Sin ese matiz, la clase puede generar angustia en lugar de comprensión.",
+      "La dinámica de las fichas insuficientes es incómoda a propósito. No la resuelva rápido: el silencio es donde ocurre el aprendizaje."
+    ]
+  },
   "P2-2-1": {
     "code": "P2-2-1",
     "title": "Mi lista de deseos vs. mi lista de necesidades",
@@ -1832,6 +2752,926 @@
       "No fomente los préstamos reales de dinero entre alumnos en el salón para evitar conflictos.",
       "Use el ejemplo de los libros de la biblioteca escolar para explicar el concepto de devolución.",
       "Refuerce que la honestidad es la base de toda buena amistad."
+    ]
+  },
+  "P2-2-6": {
+    "code": "P2-2-6",
+    "title": "Comparar dos tiendas: el mismo producto a distinto precio",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comparar el precio de un mismo producto en dos establecimientos y calcular la diferencia, comprendiendo que el precio no es una propiedad fija del producto.",
+      "competencies": [
+        "Comparación de Precios",
+        "Cálculo de Diferencias",
+        "Investigación de Mercado Básica",
+        "Decisión de Compra"
+      ],
+      "materials": [
+        "Volantes o fotos de precios de dos tiendas",
+        "Productos de utilería con doble etiqueta",
+        "Tabla comparativa de dos columnas",
+        "Monedas didácticas",
+        "Hoja \"Mi caza de precios\" para llevar a casa"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dos Etiquetas",
+          "duration": "15 min",
+          "label": "El mismo, dos precios"
+        },
+        {
+          "phase": "Desarrollo: La Tabla",
+          "duration": "30 min",
+          "label": "Comparar y restar"
+        },
+        {
+          "phase": "Cierre: Cuánto Ahorré",
+          "duration": "15 min",
+          "label": "La diferencia acumulada"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL MISMO PRODUCTO, DOS PRECIOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre dos productos idénticos con etiquetas distintas: uno a $25 y otro a $18. Pregunte cuál es mejor. Los niños buscarán una diferencia que no existe: es el mismo producto, misma marca, mismo tamaño. La única diferencia es dónde se vende. Ahí aparece la idea central: el precio no es una característica del producto, es una decisión de quien lo vende.",
+          "activity": "Dinámica \"Busca la Diferencia\": los alumnos examinan ambos productos buscando qué justifica los $7 extra. No encuentran nada, y esa es la conclusión."
+        },
+        {
+          "title": "FASE II: LA TABLA COMPARATIVA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Cada equipo recibe volantes o fotos de precios de dos tiendas y llena una tabla de dos columnas con cinco productos. Calculan la diferencia de cada uno y luego la suma total. El resultado suele sorprender: comprando en la tienda correcta cada producto, la diferencia acumulada en una compra completa puede ser considerable. Practique la resta con apoyo de monedas.",
+          "activity": "Dinámica \"La Compra Inteligente\": cada equipo arma su canasta eligiendo la tienda más barata para cada producto y calcula el ahorro total."
+        },
+        {
+          "title": "FASE III: LO QUE AHORRÉ EN UN MES (CIERRE)",
+          "duration": "15 min",
+          "description": "Proyecten el ahorro: si en una compra semanal se ahorran $40 comparando, en un mes son $160. Ponga ese número al lado de una meta de ahorro conocida por los niños. Cierre con el matiz honesto: comparar toma tiempo, y a veces caminar treinta minutos por ahorrar tres pesos no vale la pena. La regla práctica es comparar en lo que se compra seguido y en lo caro.",
+          "activity": "Dinámica \"¿Vale la Pena?\": el grupo discute tres casos donde la diferencia es de $2, de $20 y de $200, y decide en cuáles conviene desplazarse."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El mismo cuaderno, de la misma marca y el mismo tamaño, puede costar $25 en una tienda y $18 en otra a dos cuadras. No es magia ni es error: cada tienda pone el precio que quiere. En esta clase vas a aprender a comparar antes de comprar, que es una de las formas más fáciles de que te sobre dinero.",
+      "sections": [
+        {
+          "subtitle": "El precio lo decide quien vende",
+          "content": "Un producto no trae su precio pegado de fábrica. Quien lo vende decide cuánto cobrar, y esa decisión depende de muchas cosas: cuánto le costó, cuánto paga de renta, cuántos clientes tiene, si hay otra tienda cerca. Por eso el mismo producto cuesta distinto en distintos lugares. Entender esto cambia tu forma de comprar: dejas de preguntarte \"¿cuánto cuesta?\" y empiezas a preguntarte \"¿cuánto cuesta aquí?\"."
+        },
+        {
+          "subtitle": "Cómo se compara bien",
+          "content": "Para comparar de verdad hay que asegurarse de que sea el mismo producto: misma marca, mismo tamaño, misma cantidad. Si un paquete trae 500 gramos y el otro 400, no se pueden comparar los precios directamente. Una vez confirmado que es lo mismo, la comparación es una simple resta: al precio mayor le quitas el menor y esa diferencia es lo que te ahorras."
+        },
+        {
+          "subtitle": "La diferencia se acumula",
+          "content": "Ahorrar $7 en un cuaderno parece poco. Pero si en una compra completa ahorras $40 y compras cada semana, en un mes son $160 y en un año casi dos mil pesos. Ese dinero no vino de trabajar más ni de ganar más: vino de fijarte. Esa es la razón por la que la gente que compara suele tener más dinero disponible que quien compra siempre en el primer lugar que ve."
+        },
+        {
+          "subtitle": "Cuándo sí conviene comparar",
+          "content": "Hay un matiz honesto: comparar cuesta tiempo, y el tiempo también vale. No tiene sentido caminar media hora para ahorrar dos pesos. La regla práctica es comparar en dos casos: en lo que compras seguido, porque la diferencia se repite muchas veces, y en lo caro, porque un pequeño porcentaje de mucho dinero sigue siendo mucho dinero. En lo barato y ocasional, compra donde te quede cerca."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "El mismo cuaderno cuesta $25 y $18. ¿Cuánto ahorro comprando el segundo?",
+          "options": [
+            "$7",
+            "$18",
+            "$43"
+          ],
+          "correct": "$7"
+        },
+        {
+          "question": "¿Quién decide el precio de un producto?",
+          "options": [
+            "La fábrica siempre",
+            "Quien lo vende",
+            "El gobierno"
+          ],
+          "correct": "Quien lo vende"
+        },
+        {
+          "question": "Para comparar dos precios necesito que:",
+          "options": [
+            "Sea la misma tienda",
+            "Sea el mismo día",
+            "Sea el mismo producto y el mismo tamaño"
+          ],
+          "correct": "Sea el mismo producto y el mismo tamaño"
+        },
+        {
+          "question": "Un paquete trae 500 g y otro 400 g. ¿Puedo comparar los precios directo?",
+          "options": [
+            "No, traen cantidades distintas",
+            "Sí, siempre",
+            "Sí, si la marca es igual"
+          ],
+          "correct": "No, traen cantidades distintas"
+        },
+        {
+          "question": "Si ahorro $40 por compra semanal, en un mes ahorro:",
+          "options": [
+            "$40",
+            "$160",
+            "$400"
+          ],
+          "correct": "$160"
+        },
+        {
+          "question": "¿En qué casos conviene comparar?",
+          "options": [
+            "En todo siempre",
+            "En nada",
+            "En lo que compro seguido y en lo caro"
+          ],
+          "correct": "En lo que compro seguido y en lo caro"
+        },
+        {
+          "question": "¿Vale la pena caminar 30 minutos por ahorrar $2?",
+          "options": [
+            "No, el tiempo también vale",
+            "Sí, siempre",
+            "Sí, si hace buen clima"
+          ],
+          "correct": "No, el tiempo también vale"
+        },
+        {
+          "question": "¿De dónde vino el dinero que ahorré comparando?",
+          "options": [
+            "De un premio",
+            "De fijarme, no de ganar más",
+            "De la tienda"
+          ],
+          "correct": "De fijarme, no de ganar más"
+        },
+        {
+          "question": "La pregunta correcta al comprar es:",
+          "options": [
+            "¿Cuánto cuesta?",
+            "¿De qué color es?",
+            "¿Cuánto cuesta aquí?"
+          ],
+          "correct": "¿Cuánto cuesta aquí?"
+        },
+        {
+          "question": "¿De qué depende el precio que pone una tienda?",
+          "options": [
+            "De sus costos, su renta y si hay competencia cerca",
+            "Del clima",
+            "Del color del producto"
+          ],
+          "correct": "De sus costos, su renta y si hay competencia cerca"
+        }
+      ],
+      "rubric": "Logrado: compara productos equivalentes, calcula la diferencia y decide cuándo vale la pena comparar. En proceso: compara con apoyo en el cálculo. Inicial: reconoce que el precio varía entre tiendas."
+    },
+    "teacher_tips": [
+      "Consiga volantes reales de dos comercios de la zona. El material auténtico hace que el ejercicio no se sienta escolar.",
+      "Insista en verificar tamaño y cantidad. Comparar precios de paquetes distintos es el error más frecuente y el más costoso.",
+      "Incluya siempre el matiz del tiempo. Sin él, la clase produce alumnos que comparan obsesivamente por dos pesos."
+    ]
+  },
+  "P2-2-7": {
+    "code": "P2-2-7",
+    "title": "El tamaño engaña: cantidad contra precio",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Evaluar si un empaque grande conviene realmente, comparando cantidad contra precio y reconociendo que el tamaño visual puede engañar.",
+      "competencies": [
+        "Relación Cantidad-Precio",
+        "Lectura de Etiquetas",
+        "Pensamiento Crítico ante Empaques",
+        "Cálculo Comparativo"
+      ],
+      "materials": [
+        "Empaques reales de distintos tamaños y contenidos",
+        "Báscula de cocina",
+        "Tabla de comparación cantidad / precio",
+        "Cajas vacías grandes con poco contenido",
+        "Cartel: \"Mira la cantidad, no la caja\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Caja Grande",
+          "duration": "15 min",
+          "label": "Parece más"
+        },
+        {
+          "phase": "Desarrollo: Pesar y Contar",
+          "duration": "30 min",
+          "label": "La cantidad real"
+        },
+        {
+          "phase": "Cierre: ¿Cuál Conviene?",
+          "duration": "15 min",
+          "label": "Decidir con datos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA CAJA QUE PARECE MÁS (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente dos empaques: uno grande y llamativo y otro pequeño y discreto. Pregunte cuál trae más. Casi todos elegirán el grande. Ábralos frente al grupo: el grande está lleno de aire y trae menos contenido que el pequeño. La sorpresa es genuina y abre la puerta al concepto: lo que pagas es el contenido, no la caja.",
+          "activity": "Dinámica \"Abre y Sorpréndete\": los alumnos apuestan antes de abrir y comparan su apuesta con el contenido real de cada empaque."
+        },
+        {
+          "title": "FASE II: PESAR, CONTAR Y COMPARAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Con la báscula y el conteo, los equipos registran cuánto trae realmente cada empaque y a qué precio. Introduzca la comparación simple: si dos productos cuestan lo mismo, conviene el que trae más; si traen lo mismo, conviene el más barato. Cuando ambas cosas cambian, la comparación se complica, y ahí se introduce la idea de fijarse en el precio por unidad de la etiqueta.",
+          "activity": "Dinámica \"El Peso Real\": cada equipo pesa tres empaques, anota la cantidad y el precio, y ordena de mejor a peor conveniencia."
+        },
+        {
+          "title": "FASE III: DECIDIR CON DATOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada equipo elige qué empaque compraría y justifica con su tabla. Introduzca el último matiz: el paquete grande conviene solo si de verdad vas a consumirlo todo. Comprar tres kilos de algo que se echa a perder no ahorra nada, aunque el precio por kilo sea menor. La conveniencia depende también de cuánto vas a usar.",
+          "activity": "Dinámica \"¿Me lo Voy a Acabar?\": el grupo evalúa tres compras grandes y decide en cuáles el tamaño grande sí conviene."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "En la tienda hay una caja enorme de un cereal y una bolsa pequeña de otro. La caja se ve mucho más grande, así que parece que trae más. Pero muchas veces esa caja está llena de aire. En esta clase vas a aprender a mirar la cantidad y no el tamaño, que es una de las trampas más comunes del supermercado.",
+      "sections": [
+        {
+          "subtitle": "Pagas el contenido, no la caja",
+          "content": "Cuando compras algo, lo que te llevas de verdad es lo que hay adentro: los gramos de cereal, los mililitros de jugo, las piezas de galleta. La caja se tira. Sin embargo, los empaques grandes venden más porque nuestro ojo asocia tamaño con cantidad. Por eso muchos productos vienen en cajas más grandes de lo necesario: no es un error de diseño, es una decisión de venta."
+        },
+        {
+          "subtitle": "Dónde mirar la cantidad real",
+          "content": "Todo empaque trae escrita la cantidad que contiene: gramos, mililitros o número de piezas. Suele estar en la parte de abajo o en un costado, en letra pequeña. Ese número es el que importa. Dos cajas del mismo tamaño pueden traer 300 y 500 gramos, y esa diferencia no se ve por fuera. Buscar ese dato toma tres segundos y es lo que separa comparar de adivinar."
+        },
+        {
+          "subtitle": "Comparar cuando todo cambia",
+          "content": "Si dos productos cuestan lo mismo, conviene el que trae más. Si traen lo mismo, conviene el más barato. Pero cuando cambian las dos cosas a la vez, hace falta otro dato: cuánto cuesta cada unidad. Muchas etiquetas de tienda ya lo traen impreso en letra pequeña, como el precio por kilo o por litro. Ese número permite comparar cualquier par de productos aunque tengan tamaños distintos."
+        },
+        {
+          "subtitle": "Grande no siempre conviene",
+          "content": "El paquete familiar suele salir más barato por unidad, y por eso se recomienda. Pero solo conviene si de verdad lo van a consumir. Si compras un paquete enorme de algo que se echa a perder o que nadie en casa termina, el ahorro por unidad no existe: lo que sobra y se tira es dinero desperdiciado. La pregunta final siempre es la misma: ¿nos lo vamos a acabar?"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es lo que realmente pagas al comprar?",
+          "options": [
+            "La caja",
+            "El contenido",
+            "El color"
+          ],
+          "correct": "El contenido"
+        },
+        {
+          "question": "¿Por qué los empaques suelen ser más grandes de lo necesario?",
+          "options": [
+            "Por accidente",
+            "Porque el producto crece",
+            "Porque el ojo asocia tamaño con cantidad"
+          ],
+          "correct": "Porque el ojo asocia tamaño con cantidad"
+        },
+        {
+          "question": "¿Dónde encuentro la cantidad real?",
+          "options": [
+            "Escrita en el empaque, en letra pequeña",
+            "En el color",
+            "No se puede saber"
+          ],
+          "correct": "Escrita en el empaque, en letra pequeña"
+        },
+        {
+          "question": "Dos productos cuestan lo mismo. ¿Cuál conviene?",
+          "options": [
+            "El más grande de caja",
+            "El que trae más cantidad",
+            "El más bonito"
+          ],
+          "correct": "El que trae más cantidad"
+        },
+        {
+          "question": "Dos productos traen lo mismo. ¿Cuál conviene?",
+          "options": [
+            "El de caja más grande",
+            "El de marca conocida",
+            "El más barato"
+          ],
+          "correct": "El más barato"
+        },
+        {
+          "question": "Cuando cambian precio y cantidad, ¿qué dato ayuda?",
+          "options": [
+            "El precio por kilo o por litro",
+            "El color de la caja",
+            "La marca"
+          ],
+          "correct": "El precio por kilo o por litro"
+        },
+        {
+          "question": "¿Siempre conviene el paquete grande?",
+          "options": [
+            "Sí, siempre",
+            "Solo si nos lo vamos a acabar",
+            "No, nunca"
+          ],
+          "correct": "Solo si nos lo vamos a acabar"
+        },
+        {
+          "question": "Compro un paquete enorme y la mitad se echa a perder. ¿Ahorré?",
+          "options": [
+            "Sí, porque era más barato por kilo",
+            "Sí, siempre",
+            "No, lo que se tira es dinero desperdiciado"
+          ],
+          "correct": "No, lo que se tira es dinero desperdiciado"
+        },
+        {
+          "question": "Dos cajas del mismo tamaño pueden traer:",
+          "options": [
+            "Cantidades muy distintas",
+            "Siempre lo mismo",
+            "Siempre el doble"
+          ],
+          "correct": "Cantidades muy distintas"
+        },
+        {
+          "question": "La pregunta final antes de comprar grande es:",
+          "options": [
+            "¿Se ve bonito?",
+            "¿Nos lo vamos a acabar?",
+            "¿Cabe en la bolsa?"
+          ],
+          "correct": "¿Nos lo vamos a acabar?"
+        }
+      ],
+      "rubric": "Logrado: identifica la cantidad en la etiqueta, compara conveniencia y evalúa si el consumo justifica el tamaño. En proceso: lee la cantidad sin comparar. Inicial: reconoce que el empaque puede engañar."
+    },
+    "teacher_tips": [
+      "Use empaques reales vacíos, especialmente cajas con mucho aire. El impacto visual de abrirlas es insustituible.",
+      "Enseñe a localizar el precio por kilo en las etiquetas de tienda. Es una habilidad que usarán toda la vida.",
+      "No demonice los paquetes grandes. El cierre debe dejar claro que conviene cuando el consumo lo justifica."
+    ]
+  },
+  "P2-2-8": {
+    "code": "P2-2-8",
+    "title": "Antojo en la caja: por qué ponen dulces ahí",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar por qué los comercios colocan productos pequeños y atractivos junto a la caja, y desarrollar una estrategia personal para resistir la compra por impulso.",
+      "competencies": [
+        "Reconocimiento de Estrategias Comerciales",
+        "Autocontrol en el Punto de Venta",
+        "Análisis del Entorno",
+        "Planeación Anticipada"
+      ],
+      "materials": [
+        "Simulación de caja registradora con exhibidor de dulces",
+        "Fotos de líneas de caja de distintos comercios",
+        "Cronómetro para medir el tiempo de fila",
+        "Cartel de las tres razones",
+        "Fichas para contar antojos resistidos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Fila",
+          "duration": "15 min",
+          "label": "Qué hay junto a la caja"
+        },
+        {
+          "phase": "Desarrollo: Las Tres Razones",
+          "duration": "30 min",
+          "label": "Por qué funciona"
+        },
+        {
+          "phase": "Cierre: Mi Escudo",
+          "duration": "15 min",
+          "label": "Estrategia personal"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿QUÉ HAY JUNTO A LA CAJA? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pida a los alumnos que recuerden qué productos hay junto a la caja del súper o de la tiendita. Siempre son los mismos: dulces, chicles, pilas, revistas. Pregunte por qué ahí y no en el fondo del pasillo. Deje que propongan. Después muestre fotos de líneas de caja de comercios distintos y comprueben que el patrón se repite en todos, lo que descarta la casualidad.",
+          "activity": "Dinámica \"El Patrón Repetido\": el grupo lista los productos de la caja en cinco fotos distintas y marca los que aparecen en todas."
+        },
+        {
+          "title": "FASE II: LAS TRES RAZONES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique por qué funciona esa colocación. Primera razón: estás esperando y aburrido, así que miras alrededor. Segunda: son productos baratos, y el cerebro no aplica el mismo cuidado a lo barato que a lo caro. Tercera: están a la altura de la mano de un niño, no del adulto. Simulen una fila real con el exhibidor y observen cuántos toman algo sin pensarlo.",
+          "activity": "Dinámica \"La Fila del Salón\": los alumnos hacen fila con dinero didáctico y se registra cuántos toman algo del exhibidor sin haberlo planeado."
+        },
+        {
+          "title": "FASE III: MI ESCUDO PERSONAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada niño diseña su estrategia para la fila: llevar la lista en la mano y revisarla, contar el cambio mientras espera, decidir antes de entrar que no se compra nada en la caja. Explique que no se trata de tener más fuerza de voluntad, sino de tener un plan: la voluntad se cansa, el plan no. Registren durante la semana cuántas veces lo aplicaron.",
+          "activity": "Dinámica \"Mi Plan de Fila\": cada alumno escribe su estrategia en una tarjeta que guarda en el monedero para usarla de verdad."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Fíjate la próxima vez que estés formado para pagar: junto a la caja siempre hay dulces, chicles y cosas pequeñas. En todos los súper del mundo. Eso no es coincidencia ni comodidad: es una estrategia estudiada para que compres algo que no ibas a comprar. En esta clase vas a entender cómo funciona y a diseñar tu defensa.",
+      "sections": [
+        {
+          "subtitle": "La caja es el mejor lugar para vender antojos",
+          "content": "Los comercios estudian mucho dónde poner cada producto. La zona de la caja es especial porque ahí el cliente está detenido, esperando, sin nada que hacer y con la cartera ya en la mano. Es el momento de menor defensa de toda la visita. Por eso ahí no se ponen productos que la gente busca a propósito: se ponen los que se compran sin pensar."
+        },
+        {
+          "subtitle": "Lo barato no se piensa",
+          "content": "Nuestro cerebro decide distinto según el monto. Para algo de $500 hacemos cuentas, comparamos y lo pensamos. Para algo de $12 no hacemos nada de eso: simplemente lo tomamos. El problema es que doce pesos repetidos muchas veces suman igual que una compra grande. Diez antojos de caja al mes son ciento veinte pesos que nunca se decidieron, solo se gastaron."
+        },
+        {
+          "subtitle": "A la altura de tu mano",
+          "content": "Hay un detalle que sorprende cuando te lo dicen: los productos infantiles en la línea de caja están colocados a una altura baja, justo donde alcanza un niño. No es casualidad. Saber esto no es motivo de enojo, es información útil: cuando reconoces que algo está puesto ahí para ti, puedes decidir si aceptas o no. Lo que no se puede decidir es lo que no se ve."
+        },
+        {
+          "subtitle": "El plan vence a la fuerza de voluntad",
+          "content": "Resistir un antojo con pura fuerza de voluntad funciona a veces, pero la voluntad se cansa, sobre todo al final de una compra larga. Lo que sí funciona siempre es tener un plan hecho antes: decidir en casa que no se compra nada en la caja, llevar la lista en la mano, o ponerse a contar el cambio mientras se espera. Un plan no se cansa, solo se cumple."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué ponen dulces junto a la caja?",
+          "options": [
+            "Porque ahí caben",
+            "Porque están fríos",
+            "Porque ahí estás esperando y con menos defensas"
+          ],
+          "correct": "Porque ahí estás esperando y con menos defensas"
+        },
+        {
+          "question": "¿Cómo decide el cerebro en compras baratas?",
+          "options": [
+            "Casi no piensa, solo toma",
+            "Piensa mucho",
+            "Compara siempre"
+          ],
+          "correct": "Casi no piensa, solo toma"
+        },
+        {
+          "question": "Diez antojos de $12 al mes son:",
+          "options": [
+            "$12",
+            "$120",
+            "$22"
+          ],
+          "correct": "$120"
+        },
+        {
+          "question": "¿A qué altura ponen los productos infantiles en la caja?",
+          "options": [
+            "Hasta arriba",
+            "En el piso",
+            "A la altura de la mano de un niño"
+          ],
+          "correct": "A la altura de la mano de un niño"
+        },
+        {
+          "question": "¿Qué funciona mejor que la fuerza de voluntad?",
+          "options": [
+            "Tener un plan hecho antes",
+            "Cerrar los ojos",
+            "No ir a la tienda"
+          ],
+          "correct": "Tener un plan hecho antes"
+        },
+        {
+          "question": "¿Por qué se cansa la fuerza de voluntad?",
+          "options": [
+            "Porque no existe",
+            "Porque se gasta a lo largo de la compra",
+            "Porque da hambre"
+          ],
+          "correct": "Porque se gasta a lo largo de la compra"
+        },
+        {
+          "question": "¿Es coincidencia que todos los súper pongan lo mismo en la caja?",
+          "options": [
+            "Sí, pura casualidad",
+            "Sí, por costumbre",
+            "No, es una estrategia estudiada"
+          ],
+          "correct": "No, es una estrategia estudiada"
+        },
+        {
+          "question": "¿Cuál es una buena estrategia para la fila?",
+          "options": [
+            "Revisar mi lista o contar el cambio",
+            "Ver los dulces",
+            "Pedir dinero"
+          ],
+          "correct": "Revisar mi lista o contar el cambio"
+        },
+        {
+          "question": "Saber que algo está puesto ahí para mí me permite:",
+          "options": [
+            "Enojarme",
+            "Decidir si acepto o no",
+            "Comprar más"
+          ],
+          "correct": "Decidir si acepto o no"
+        },
+        {
+          "question": "El momento de menor defensa en una compra es:",
+          "options": [
+            "La entrada",
+            "El estacionamiento",
+            "La fila de la caja"
+          ],
+          "correct": "La fila de la caja"
+        }
+      ],
+      "rubric": "Logrado: explica las tres razones de la colocación en caja y diseña una estrategia personal aplicable. En proceso: reconoce la estrategia comercial. Inicial: identifica qué productos hay en la caja."
+    },
+    "teacher_tips": [
+      "Monte el exhibidor de la fila y no advierta nada. Que varios alumnos tomen algo sin pensarlo es el dato que da sentido a la clase.",
+      "Evite el tono acusatorio hacia los comercios. Se enseña a reconocer una estrategia, no a desconfiar del tendero de la esquina.",
+      "Pida el registro semanal de antojos resistidos. Convertirlo en juego personal funciona mucho mejor que la prohibición."
+    ]
+  },
+  "P2-2-9": {
+    "code": "P2-2-9",
+    "title": "Prestar a un amigo: acordar cuándo me lo devuelve",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Establecer acuerdos claros al prestar dinero a un amigo, definiendo cantidad y fecha de devolución, y comprendiendo el efecto de prestar sin condiciones.",
+      "competencies": [
+        "Acuerdos de Préstamo",
+        "Comunicación Clara",
+        "Manejo de Relaciones y Dinero",
+        "Responsabilidad Mutua"
+      ],
+      "materials": [
+        "Formatos de \"vale\" con espacios para cantidad y fecha",
+        "Monedas didácticas",
+        "Calendario del salón",
+        "Tarjetas de situación de préstamo",
+        "Cartel: \"Cuánto, para cuándo, por escrito\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Amigo",
+          "duration": "15 min",
+          "label": "Préstame tantito"
+        },
+        {
+          "phase": "Desarrollo: El Vale",
+          "duration": "30 min",
+          "label": "Cuánto y para cuándo"
+        },
+        {
+          "phase": "Cierre: Cobrar Bien",
+          "duration": "15 min",
+          "label": "Recordar sin pelear"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"PRÉSTAME TANTITO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la escena: un amigo te pide $20 en el recreo. Pregunte quién prestaría. La mayoría dirá que sí. Luego pregunte: \"¿Cuándo te los va a devolver?\". Casi nadie lo habrá preguntado. Ahí está el problema. Recoja experiencias reales de préstamos que nunca volvieron y de amistades que se enfriaron por eso. La conversación honesta abre la clase.",
+          "activity": "Dinámica \"¿Y Cuándo Me Pagas?\": los alumnos representan el momento del préstamo y practican hacer esa pregunta en voz alta."
+        },
+        {
+          "title": "FASE II: EL VALE DE TRES DATOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el formato: cuánto, para cuándo y la firma de los dos. Los alumnos llenan vales por parejas simulando préstamos con monedas didácticas y anotan la fecha en el calendario del salón. Explique que un vale entre amigos no es desconfianza: es proteger la amistad, porque lo que rompe las amistades no es el dinero, es la incomodidad de no saber si te van a pagar.",
+          "activity": "Dinámica \"Firma tu Vale\": cada pareja llena un vale real, lo firma y lo pega en el calendario en la fecha acordada."
+        },
+        {
+          "title": "FASE III: COBRAR SIN PELEAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Practique la frase para recordar una deuda sin acusar: \"Oye, ¿te acuerdas de los $20? Quedamos el viernes, ¿te queda bien?\". Explique que recordar no es agresión: la mayoría de las veces la persona simplemente lo olvidó. Cierre con la regla final: nunca prestes lo que no puedes perder, porque a veces, incluso con vale, el dinero no vuelve.",
+          "activity": "Dinámica \"El Recordatorio Amable\": cada alumno practica la frase y también practica la respuesta cuando le recuerdan a él una deuda."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un amigo te pide dinero prestado. Le dices que sí porque es tu amigo, y ahí termina la conversación. Semanas después no te lo ha devuelto, tú no sabes cómo recordárselo y algo se enfría entre ustedes. En esta clase vas a aprender la forma de prestar que evita justamente eso.",
+      "sections": [
+        {
+          "subtitle": "Prestar sin fecha es regalar sin decirlo",
+          "content": "Cuando prestas dinero sin acordar cuándo te lo devuelven, en la práctica estás regalando con la esperanza de que vuelva. La otra persona no está siendo mala: simplemente no tiene una fecha en la cabeza, así que no hay ningún momento en que sienta que debe pagarte. Poner fecha no convierte el préstamo en algo frío: lo convierte en algo claro, que es muy distinto."
+        },
+        {
+          "subtitle": "Los tres datos del vale",
+          "content": "Un buen acuerdo de préstamo tiene tres datos: cuánto se prestó, para cuándo se devuelve y la firma o el nombre de los dos. Con eso basta. No hace falta un documento complicado: un papelito sirve. Lo importante no es el papel en sí, sino la conversación que obliga a tener. Al escribirlo, los dos se ponen de acuerdo desde el principio y nadie recuerda las cosas distinto después."
+        },
+        {
+          "subtitle": "Recordar no es pelear",
+          "content": "Si llega la fecha y no te pagan, recordarlo es lo correcto y no tiene nada de agresivo. La frase funciona así: \"Oye, ¿te acuerdas de los $20? Quedamos el viernes, ¿te queda bien?\". Deja abierta la posibilidad de que se le haya olvidado, que es lo que suele pasar. Lo que sí daña las amistades es callarse y guardar el enojo, porque el enojo callado crece."
+        },
+        {
+          "subtitle": "Nunca prestes lo que no puedes perder",
+          "content": "Esta es la regla más importante y también la más difícil. Aunque hagas todo bien, a veces el dinero no vuelve. Por eso, antes de prestar, pregúntate: si esto no regresa, ¿me quedo sin mi meta? Si la respuesta es sí, no lo prestes, y explícalo con honestidad: \"no puedo, ese dinero ya tiene destino\". Es mucho mejor decir que no que perder el dinero y la amistad."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Prestar sin acordar fecha es casi lo mismo que:",
+          "options": [
+            "Regalar sin decirlo",
+            "Ahorrar",
+            "Invertir"
+          ],
+          "correct": "Regalar sin decirlo"
+        },
+        {
+          "question": "¿Cuáles son los tres datos de un vale?",
+          "options": [
+            "Nombre, color y edad",
+            "Cuánto, para cuándo y las firmas",
+            "Cuánto, dónde y por qué"
+          ],
+          "correct": "Cuánto, para cuándo y las firmas"
+        },
+        {
+          "question": "¿Hacer un vale entre amigos es desconfianza?",
+          "options": [
+            "Sí, mucha",
+            "Sí, un poco",
+            "No, protege la amistad"
+          ],
+          "correct": "No, protege la amistad"
+        },
+        {
+          "question": "¿Qué es lo que suele romper amistades por dinero?",
+          "options": [
+            "La incomodidad de no saber si te van a pagar",
+            "El monto",
+            "Los vales"
+          ],
+          "correct": "La incomodidad de no saber si te van a pagar"
+        },
+        {
+          "question": "¿Cuál es una buena frase para recordar una deuda?",
+          "options": [
+            "¡Págame ya!",
+            "Oye, quedamos el viernes, ¿te queda bien?",
+            "Eres un tramposo"
+          ],
+          "correct": "Oye, quedamos el viernes, ¿te queda bien?"
+        },
+        {
+          "question": "Si no me pagan en la fecha, lo peor que puedo hacer es:",
+          "options": [
+            "Recordarlo con calma",
+            "Preguntar si necesita más tiempo",
+            "Callarme y guardar el enojo"
+          ],
+          "correct": "Callarme y guardar el enojo"
+        },
+        {
+          "question": "¿Qué debo preguntarme antes de prestar?",
+          "options": [
+            "Si puedo perder ese dinero sin quedarme sin mi meta",
+            "Si mi amigo es simpático",
+            "Si hace buen clima"
+          ],
+          "correct": "Si puedo perder ese dinero sin quedarme sin mi meta"
+        },
+        {
+          "question": "¿Cómo digo que no sin pelear?",
+          "options": [
+            "No quiero",
+            "No puedo, ese dinero ya tiene destino",
+            "Búscate a otro"
+          ],
+          "correct": "No puedo, ese dinero ya tiene destino"
+        },
+        {
+          "question": "¿Por qué la gente no paga a veces?",
+          "options": [
+            "Siempre por maldad",
+            "Porque no puede nunca",
+            "Muchas veces solo se le olvidó"
+          ],
+          "correct": "Muchas veces solo se le olvidó"
+        },
+        {
+          "question": "¿Sirve un papelito simple como vale?",
+          "options": [
+            "Sí, lo importante es el acuerdo claro",
+            "No, se necesita abogado",
+            "No, debe ser digital"
+          ],
+          "correct": "Sí, lo importante es el acuerdo claro"
+        }
+      ],
+      "rubric": "Logrado: redacta un vale con los tres datos, formula un recordatorio respetuoso y aplica la regla de no prestar lo comprometido. En proceso: identifica los datos sin aplicarlos. Inicial: reconoce la necesidad de poner fecha."
+    },
+    "teacher_tips": [
+      "Recoja experiencias reales sin nombres. Casi todos los alumnos tienen una historia de préstamo no devuelto y eso engancha la sesión.",
+      "Practique también el lado de quien debe. Aprender a decir \"todavía no puedo, te pago el martes\" es tan valioso como saber cobrar.",
+      "La regla de no prestar lo comprometido es el cierre. Sin ella, la clase puede empujar a prestar más de lo prudente."
+    ]
+  },
+  "P2-2-10": {
+    "code": "P2-2-10",
+    "title": "Cuidar el agua y la luz: el ahorro que no se ve",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Relacionar el consumo de agua y electricidad del hogar con el dinero que se paga, e identificar hábitos concretos que reducen el recibo.",
+      "competencies": [
+        "Consumo Responsable de Servicios",
+        "Relación Uso-Costo",
+        "Hábitos de Ahorro Doméstico",
+        "Corresponsabilidad Ambiental"
+      ],
+      "materials": [
+        "Recibos de luz y agua reales (con datos personales cubiertos)",
+        "Foco incandescente y foco LED",
+        "Cronómetro para medir tiempos de regadera",
+        "Cartel de hábitos con su ahorro aproximado",
+        "Hoja de compromiso familiar"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Recibo",
+          "duration": "15 min",
+          "label": "Esto también se paga"
+        },
+        {
+          "phase": "Desarrollo: Los Hábitos",
+          "duration": "30 min",
+          "label": "Qué gasta más"
+        },
+        {
+          "phase": "Cierre: Mi Compromiso",
+          "duration": "15 min",
+          "label": "Tres cambios en casa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ESTO TAMBIÉN SE PAGA (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un recibo de luz real con los datos personales cubiertos. Muchos niños nunca han visto uno. Señale el monto y explique que eso se paga cada dos meses, salga de donde salga. Pregunte: \"¿De dónde sale ese dinero?\". De lo mismo que la comida y los útiles. Cuando entienden que el recibo compite con lo demás, el cuidado deja de ser una regla arbitraria.",
+          "activity": "Dinámica \"Lee el Recibo\": los alumnos localizan el periodo, el consumo y el monto. Solo eso, sin tecnicismos."
+        },
+        {
+          "title": "FASE II: QUÉ GASTA MÁS Y QUÉ MENOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Ordene con el grupo los hábitos según cuánto pesan. En electricidad, lo que calienta o enfría gasta mucho más que lo que ilumina: la plancha, el calentador y el refrigerador pesan más que un foco. En agua, la regadera larga y la llave abierta al lavarse los dientes son los dos grandes. Compare un foco incandescente y uno LED. La conclusión es que conviene atacar primero lo que más pesa.",
+          "activity": "Dinámica \"La Escalera del Gasto\": las tarjetas de hábitos se ordenan de mayor a menor consumo y se discute cada colocación."
+        },
+        {
+          "title": "FASE III: TRES CAMBIOS EN MI CASA (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada niño elige tres hábitos concretos y medibles para llevar a casa: cerrar la llave mientras se cepilla, apagar la luz al salir del cuarto, no dejar el cargador conectado, avisar de una fuga. Firman el compromiso y lo llevan a casa para compartirlo. Aclare que el objetivo no es que el niño vigile a su familia, sino que aporte con su propia conducta.",
+          "activity": "Dinámica \"Mi Compromiso Firmado\": la hoja se lleva a casa y regresa firmada también por un adulto dos semanas después."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando prendes la luz o abres la llave, no ves salir dinero. Pero sale. Cada dos meses llega un recibo que alguien tiene que pagar, y ese dinero sale del mismo lugar que la comida y tus útiles. En esta clase vas a descubrir qué gasta más en tu casa y qué puedes hacer tú, de verdad, para que el recibo baje.",
+      "sections": [
+        {
+          "subtitle": "El agua y la luz cuestan dinero",
+          "content": "El agua que llega a tu casa y la electricidad que enciende los focos no son gratis. Alguien paga por ellas cada mes o cada dos meses, según el servicio. Ese dinero sale del mismo bolsillo que todo lo demás, así que un recibo más alto significa menos dinero para el resto. Cuidar el agua y la luz no es solo un tema del planeta: es también una forma directa de ahorro familiar."
+        },
+        {
+          "subtitle": "Lo que calienta y lo que enfría es lo que más gasta",
+          "content": "Hay una regla útil para la electricidad: los aparatos que producen calor o frío consumen muchísimo más que los que solo dan luz o sonido. La plancha, el calentador eléctrico, la secadora y el refrigerador pesan mucho en el recibo. Un foco pesa poco, sobre todo si es LED. Por eso, si quieres bajar el recibo, conviene empezar por los aparatos grandes y no solo por apagar focos."
+        },
+        {
+          "subtitle": "El agua se va por dos lugares",
+          "content": "En una casa, la mayor parte del agua se va por la regadera y por las llaves abiertas de más: al lavarse los dientes, al enjabonar los trastes, al lavar el coche con manguera. Una fuga pequeña que gotea todo el día también suma una cantidad sorprendente. Cerrar la llave mientras te cepillas o te enjabonas, y avisar de una fuga en cuanto la ves, son de los cambios más efectivos que existen."
+        },
+        {
+          "subtitle": "Tu parte es tu conducta, no vigilar a los demás",
+          "content": "Hay una diferencia importante. Tú puedes cambiar lo que tú haces: tus tiempos de regadera, las luces de tu cuarto, tu cargador. Eso está en tus manos y suma. Lo que no te corresponde es convertirte en el policía de la casa persiguiendo a todos. Además, el ejemplo funciona mejor que el regaño: cuando alguien de la familia ve que tú lo haces sin que te lo pidan, es más probable que lo imite."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿El agua y la luz son gratis?",
+          "options": [
+            "Sí, son de la naturaleza",
+            "No, se pagan con un recibo",
+            "Solo el agua"
+          ],
+          "correct": "No, se pagan con un recibo"
+        },
+        {
+          "question": "Un recibo más alto significa:",
+          "options": [
+            "Nada",
+            "Más dinero",
+            "Menos dinero para lo demás en la casa"
+          ],
+          "correct": "Menos dinero para lo demás en la casa"
+        },
+        {
+          "question": "¿Qué aparatos consumen más electricidad?",
+          "options": [
+            "Los que calientan o enfrían",
+            "Los focos",
+            "Los relojes"
+          ],
+          "correct": "Los que calientan o enfrían"
+        },
+        {
+          "question": "¿Cuál gasta menos: un foco incandescente o un LED?",
+          "options": [
+            "El incandescente",
+            "El LED",
+            "Gastan igual"
+          ],
+          "correct": "El LED"
+        },
+        {
+          "question": "¿Por dónde se va la mayor parte del agua en casa?",
+          "options": [
+            "Por la ventana",
+            "Por el refrigerador",
+            "Por la regadera y las llaves abiertas de más"
+          ],
+          "correct": "Por la regadera y las llaves abiertas de más"
+        },
+        {
+          "question": "Una fuga que gotea todo el día:",
+          "options": [
+            "Suma una cantidad sorprendente",
+            "No importa",
+            "Se arregla sola"
+          ],
+          "correct": "Suma una cantidad sorprendente"
+        },
+        {
+          "question": "¿Cuál es un cambio efectivo y fácil?",
+          "options": [
+            "Dejar de bañarme",
+            "Cerrar la llave mientras me cepillo",
+            "No usar luz nunca"
+          ],
+          "correct": "Cerrar la llave mientras me cepillo"
+        },
+        {
+          "question": "¿Cuál es mi parte en el ahorro de casa?",
+          "options": [
+            "Vigilar a toda mi familia",
+            "Pagar el recibo",
+            "Cambiar mi propia conducta"
+          ],
+          "correct": "Cambiar mi propia conducta"
+        },
+        {
+          "question": "¿Qué funciona mejor que regañar a la familia?",
+          "options": [
+            "El ejemplo",
+            "Gritar",
+            "Esconder los focos"
+          ],
+          "correct": "El ejemplo"
+        },
+        {
+          "question": "Si quiero bajar el recibo de luz, empiezo por:",
+          "options": [
+            "Los relojes",
+            "Los aparatos grandes que calientan o enfrían",
+            "Las lámparas de noche"
+          ],
+          "correct": "Los aparatos grandes que calientan o enfrían"
+        }
+      ],
+      "rubric": "Logrado: relaciona consumo con costo, jerarquiza hábitos por impacto y asume tres compromisos concretos. En proceso: identifica hábitos sin jerarquizar. Inicial: reconoce que los servicios se pagan."
+    },
+    "teacher_tips": [
+      "Cubra los datos personales de los recibos antes de mostrarlos. Muchos niños nunca han visto uno y el impacto es grande.",
+      "Corrija la idea de que apagar focos resuelve todo. Jerarquizar por impacto real es lo que hace útil esta clase.",
+      "Insista en que el niño no es el policía de la casa. Sin ese matiz, la clase genera conflictos familiares en lugar de ahorro."
     ]
   },
   "P2-3-1": {
@@ -2754,6 +4594,926 @@
       "Invite a los niños a compartir una vez que el ahorro 'les salvó el día' (ej: compraron una goma nueva sin pedirle a mamá)."
     ]
   },
+  "P2-3-6": {
+    "code": "P2-3-6",
+    "title": "Mi semana en pesos: registrar lo que entra y lo que sale",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Registrar durante una semana el dinero que entra y el que sale, comprendiendo que llevar cuentas escritas revela hábitos invisibles.",
+      "competencies": [
+        "Registro de Movimientos",
+        "Clasificación Entrada-Salida",
+        "Suma y Resta Aplicadas",
+        "Autoobservación"
+      ],
+      "materials": [
+        "Libreta de registro semanal por alumno",
+        "Tabla de dos columnas: entra / sale",
+        "Monedas didácticas",
+        "Cartel: \"Lo que no se anota, no se ve\"",
+        "Calendario semanal"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Memoria",
+          "duration": "15 min",
+          "label": "¿En qué gasté?"
+        },
+        {
+          "phase": "Desarrollo: El Registro",
+          "duration": "30 min",
+          "label": "Dos columnas"
+        },
+        {
+          "phase": "Cierre: El Saldo",
+          "duration": "15 min",
+          "label": "¿Sobró o faltó?"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA MEMORIA FALLA (APERTURA)",
+          "duration": "15 min",
+          "description": "Pida a cada alumno que escriba de memoria en qué gastó su dinero la semana pasada y cuánto. Después pregunte cuántos están seguros de que su lista está completa. Casi nadie lo está. Explique que eso le pasa a todos, incluidos los adultos: el dinero pequeño se va sin dejar rastro en la memoria. Escribir es lo único que lo hace visible.",
+          "activity": "Dinámica \"Reconstruye tu Semana\": cada alumno intenta recordar sus gastos y marca con una interrogación los que no está seguro."
+        },
+        {
+          "title": "FASE II: LAS DOS COLUMNAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente la libreta de registro con dos columnas: lo que entra y lo que sale. Cada movimiento se anota el mismo día con su fecha, su concepto y su cantidad. Practiquen con una semana simulada leída en voz alta: los alumnos anotan cada movimiento en la columna correcta. Al final suman cada columna y restan. Ese resultado se llama saldo, y dice si sobró o faltó.",
+          "activity": "Dinámica \"La Semana Dictada\": el docente narra una semana de movimientos y los alumnos registran en tiempo real. Se comparan los resultados."
+        },
+        {
+          "title": "FASE III: ¿QUÉ ME DICE MI REGISTRO? (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos revisan la semana registrada y buscan patrones: qué gasto se repite, cuál fue el más grande, cuál no recordaban. La sorpresa habitual es descubrir que muchos gastos pequeños repetidos suman más que un gasto grande único. Cierre entregando la libreta para llevar el registro real durante la próxima semana.",
+          "activity": "Dinámica \"El Gasto Invisible\": cada alumno identifica el gasto repetido que más suma en su semana y lo marca con color."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Si te pregunto en qué gastaste tu dinero la semana pasada, seguramente recordarás lo grande y olvidarás lo pequeño. Eso no es mala memoria: le pasa a todo el mundo. La solución la inventaron hace siglos y es sencillísima: anotar. En esta clase vas a aprender a llevar tu propio registro.",
+      "sections": [
+        {
+          "subtitle": "Lo que no se anota, no se ve",
+          "content": "El dinero pequeño se va sin hacer ruido. Cinco pesos aquí, ocho allá, y al final de la semana no queda nada y no sabes por qué. Eso ocurre porque la memoria guarda lo llamativo y descarta lo cotidiano. Anotar cada movimiento el mismo día resuelve el problema completo: al final de la semana no tienes que recordar nada, solo leer lo que escribiste."
+        },
+        {
+          "subtitle": "Dos columnas y un saldo",
+          "content": "Un registro simple tiene dos columnas. En una anotas lo que entra: tu domingo, un regalo, lo que ganaste ayudando. En la otra, lo que sale: cada compra, cada préstamo que hiciste. Al final de la semana sumas cada columna por separado y le restas a la primera la segunda. Ese número final se llama saldo: si es positivo sobró dinero, si es negativo gastaste más de lo que entró."
+        },
+        {
+          "subtitle": "Anotar el mismo día",
+          "content": "Hay una regla que hace la diferencia entre un registro útil y uno inservible: anotar el mismo día. Si dejas todo para el domingo, vas a olvidar la mitad y tu registro será tan impreciso como tu memoria. Anotar toma diez segundos por movimiento. Los adultos que llevan bien sus cuentas no son más ordenados por naturaleza: simplemente anotan en el momento, no después."
+        },
+        {
+          "subtitle": "Lo pequeño repetido pesa más de lo que crees",
+          "content": "La sorpresa más común al registrar por primera vez es descubrir que un gasto chico repetido suma más que una compra grande. Diez pesos diarios en la escuela son cincuenta a la semana y doscientos al mes, más que un juguete. Nadie decide gastar doscientos pesos al mes en eso; simplemente pasa. Y solo se ve cuando está escrito en una hoja."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué olvidamos en qué gastamos?",
+          "options": [
+            "Porque no importa",
+            "Porque la memoria guarda lo llamativo y descarta lo pequeño",
+            "Porque el dinero desaparece"
+          ],
+          "correct": "Porque la memoria guarda lo llamativo y descarta lo pequeño"
+        },
+        {
+          "question": "¿Cuáles son las dos columnas del registro?",
+          "options": [
+            "Lo caro y lo barato",
+            "Lunes y martes",
+            "Lo que entra y lo que sale"
+          ],
+          "correct": "Lo que entra y lo que sale"
+        },
+        {
+          "question": "¿Qué es el saldo?",
+          "options": [
+            "Lo que entró menos lo que salió",
+            "Lo que gasté",
+            "Lo que quiero"
+          ],
+          "correct": "Lo que entró menos lo que salió"
+        },
+        {
+          "question": "Entraron $80 y salieron $95. ¿Cuál es mi saldo?",
+          "options": [
+            "Positivo: sobraron $15",
+            "Negativo: gasté $15 de más",
+            "Cero"
+          ],
+          "correct": "Negativo: gasté $15 de más"
+        },
+        {
+          "question": "Entraron $100 y salieron $65. ¿Cuál es mi saldo?",
+          "options": [
+            "Faltaron $35",
+            "Cero",
+            "Sobraron $35"
+          ],
+          "correct": "Sobraron $35"
+        },
+        {
+          "question": "¿Cuándo debo anotar un movimiento?",
+          "options": [
+            "El mismo día",
+            "El domingo todo junto",
+            "A fin de mes"
+          ],
+          "correct": "El mismo día"
+        },
+        {
+          "question": "¿Por qué es mala idea anotar todo el domingo?",
+          "options": [
+            "Porque no hay tiempo",
+            "Porque para entonces ya olvidé la mitad",
+            "Porque es aburrido"
+          ],
+          "correct": "Porque para entonces ya olvidé la mitad"
+        },
+        {
+          "question": "$10 diarios en la escuela son al mes aproximadamente:",
+          "options": [
+            "$10",
+            "$50",
+            "$200"
+          ],
+          "correct": "$200"
+        },
+        {
+          "question": "¿Qué suele pesar más de lo que uno cree?",
+          "options": [
+            "Los gastos pequeños repetidos",
+            "Las compras grandes",
+            "Los regalos"
+          ],
+          "correct": "Los gastos pequeños repetidos"
+        },
+        {
+          "question": "¿Cuánto tiempo toma anotar un movimiento?",
+          "options": [
+            "Media hora",
+            "Unos diez segundos",
+            "Todo el día"
+          ],
+          "correct": "Unos diez segundos"
+        }
+      ],
+      "rubric": "Logrado: registra movimientos en la columna correcta, calcula el saldo e identifica un patrón de gasto. En proceso: registra con apoyo. Inicial: distingue entrada de salida."
+    },
+    "teacher_tips": [
+      "Haga que comparen la lista de memoria con el registro real de la semana siguiente. La brecha es el argumento más contundente.",
+      "Insista en anotar el mismo día. Es la única regla que decide si el hábito sobrevive o no.",
+      "Revise las libretas sin calificar el contenido de los gastos. Se evalúa el registro, nunca las decisiones de consumo del alumno."
+    ]
+  },
+  "P2-3-7": {
+    "code": "P2-3-7",
+    "title": "Sobró dinero: ¿qué hago con lo que quedó?",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Decidir con criterio qué hacer con el dinero que sobra al final de una semana, en lugar de dejar que se gaste solo.",
+      "competencies": [
+        "Decisión sobre Excedentes",
+        "Planeación del Sobrante",
+        "Priorización",
+        "Constancia en el Ahorro"
+      ],
+      "materials": [
+        "Tarjetas de saldos semanales positivos",
+        "Tres frascos: meta, imprevistos y gusto",
+        "Monedas didácticas",
+        "Termómetros de ahorro",
+        "Hoja \"Mi regla del sobrante\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Sobrante",
+          "duration": "15 min",
+          "label": "Me sobraron $40"
+        },
+        {
+          "phase": "Desarrollo: Tres Destinos",
+          "duration": "30 min",
+          "label": "Repartir con criterio"
+        },
+        {
+          "phase": "Cierre: Mi Regla",
+          "duration": "15 min",
+          "label": "Decidido de antemano"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL DINERO QUE SOBRA SE EVAPORA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la situación: terminó la semana y a Ceny le sobraron $40. Pregunte qué suele pasar con ese dinero. Los propios alumnos dirán que se gasta sin darse cuenta. Explique el fenómeno: el dinero que no tiene un destino asignado siempre encuentra uno solo, y casi nunca es el que uno hubiera elegido pensándolo.",
+          "activity": "Dinámica \"¿Dónde Quedó?\": el grupo enumera en qué se suele ir el dinero que sobra. La lista suele ser de cosas que nadie recuerda haber decidido."
+        },
+        {
+          "title": "FASE II: LOS TRES DESTINOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Retome el sistema de tres frascos, ahora aplicado al sobrante semanal: una parte va a la meta que ya tienen, otra al frasco de imprevistos y otra al gusto. Los alumnos reparten físicamente saldos simulados de distintos tamaños. Con sobrantes pequeños discutan si conviene mandarlo todo a un solo frasco, porque repartir tres pesos en tres partes no tiene mucho sentido.",
+          "activity": "Dinámica \"Reparte el Sobrante\": cada alumno recibe una tarjeta con un saldo distinto y decide el reparto, explicando su criterio al grupo."
+        },
+        {
+          "title": "FASE III: MI REGLA DECIDIDA DE ANTEMANO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno escribe su regla personal del sobrante, por ejemplo: \"todo lo que sobre el domingo va a mi meta\" o \"la mitad a la meta y la mitad a un gusto\". Al escribirla antes, no hay que decidir cada semana. Cierre conectando con la idea que ya conocen: decidir de antemano vence al impulso del momento, y funciona igual con el sobrante que con los regalos.",
+          "activity": "Dinámica \"Mi Regla Firmada\": la regla se pega en la alcancía o en la libreta de registro para aplicarla cada domingo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Terminó la semana y te sobraron $40. Es una buena noticia. Pero hay un detalle: el dinero que sobra y no tiene destino se gasta solo, y el lunes ya no está. En esta clase vas a aprender a decidir qué hacer con tu sobrante antes de que llegue, para que no desaparezca.",
+      "sections": [
+        {
+          "subtitle": "El dinero sin destino se gasta solo",
+          "content": "Cuando termina la semana y sobra dinero, se siente como dinero libre, disponible para lo que sea. Y precisamente por eso desaparece: cualquier antojo pequeño lo encuentra. No es que alguien decida gastarlo mal; es que no se decidió nada, y la falta de decisión también es una decisión, solo que la toma el azar en tu lugar."
+        },
+        {
+          "subtitle": "Los tres destinos del sobrante",
+          "content": "El sobrante puede ir a tres lugares. A tu meta, que es lo que más rápido te acerca a lo que quieres. Al frasco de imprevistos, que es dinero guardado para cuando algo salga mal. O a un gusto, que también es válido porque un plan sin nada de disfrute no se sostiene. Repartir entre los tres es lo más equilibrado cuando el sobrante es razonable."
+        },
+        {
+          "subtitle": "Con poco, no conviene repartir",
+          "content": "Si te sobraron tres pesos, repartirlos en tres partes deja un peso en cada frasco y no sirve de mucho. Con sobrantes pequeños conviene mandar todo a un solo destino, normalmente a la meta, porque así al menos avanza algo visible. La regla de repartir es útil cuando el sobrante tiene tamaño suficiente para que cada parte signifique algo."
+        },
+        {
+          "subtitle": "La regla escrita gana",
+          "content": "Lo más eficaz no es tener buena voluntad cada domingo, sino tener una regla escrita de antemano: \"todo lo que sobre va a mi meta\" o \"la mitad a la meta y la mitad al gusto\". Con la regla ya escrita, el domingo no decides nada: solo cumples. Es la misma estrategia que usaste con el dinero de sorpresa y con la fila de la caja, aplicada al sobrante."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué le pasa al dinero que sobra sin destino?",
+          "options": [
+            "Se multiplica",
+            "Se guarda solo",
+            "Se gasta solo sin darnos cuenta"
+          ],
+          "correct": "Se gasta solo sin darnos cuenta"
+        },
+        {
+          "question": "¿Cuáles son los tres destinos del sobrante?",
+          "options": [
+            "Meta, imprevistos y gusto",
+            "Banco, casa y escuela",
+            "Lunes, martes y miércoles"
+          ],
+          "correct": "Meta, imprevistos y gusto"
+        },
+        {
+          "question": "Si me sobran solo $3, ¿conviene repartir en tres?",
+          "options": [
+            "Sí, siempre",
+            "No, mejor todo a un destino",
+            "Sí, en cuatro partes"
+          ],
+          "correct": "No, mejor todo a un destino"
+        },
+        {
+          "question": "¿Para qué sirve el frasco de imprevistos?",
+          "options": [
+            "Para gastar el viernes",
+            "Para prestar",
+            "Para cuando algo salga mal"
+          ],
+          "correct": "Para cuando algo salga mal"
+        },
+        {
+          "question": "¿Está mal mandar una parte al gusto?",
+          "options": [
+            "No, un plan sin disfrute no se sostiene",
+            "Sí, todo debe ahorrarse",
+            "Sí, es desperdicio"
+          ],
+          "correct": "No, un plan sin disfrute no se sostiene"
+        },
+        {
+          "question": "¿Qué es una regla del sobrante?",
+          "options": [
+            "Una prohibición",
+            "Una decisión escrita antes sobre qué haré con lo que sobre",
+            "Un castigo"
+          ],
+          "correct": "Una decisión escrita antes sobre qué haré con lo que sobre"
+        },
+        {
+          "question": "¿Por qué funciona escribir la regla antes?",
+          "options": [
+            "Porque el dinero rinde más",
+            "Porque es obligatorio",
+            "Porque el domingo ya no tengo que decidir, solo cumplir"
+          ],
+          "correct": "Porque el domingo ya no tengo que decidir, solo cumplir"
+        },
+        {
+          "question": "Me sobraron $40 y mi regla es mitad y mitad. ¿Cuánto va a mi meta?",
+          "options": [
+            "$20",
+            "$40",
+            "$10"
+          ],
+          "correct": "$20"
+        },
+        {
+          "question": "No decidir qué hacer con el sobrante:",
+          "options": [
+            "No pasa nada",
+            "También es una decisión, pero la toma el azar",
+            "Ahorra más"
+          ],
+          "correct": "También es una decisión, pero la toma el azar"
+        },
+        {
+          "question": "¿Cuál destino acerca más rápido lo que quiero?",
+          "options": [
+            "El gusto",
+            "Ninguno",
+            "Mi meta"
+          ],
+          "correct": "Mi meta"
+        }
+      ],
+      "rubric": "Logrado: reparte su sobrante entre destinos con criterio y redacta una regla propia aplicable. En proceso: identifica los destinos sin regla. Inicial: reconoce que el sobrante desaparece si no se decide."
+    },
+    "teacher_tips": [
+      "Trabaje con sobrantes de tamaños muy distintos. La discusión sobre qué hacer con tres pesos es tan formativa como la de cuarenta.",
+      "Pida que la regla se pegue físicamente en la alcancía. Una regla guardada en el cajón no se cumple.",
+      "Revise las reglas dos semanas después. Ajustar una regla que no funcionó es parte del aprendizaje, no un fracaso."
+    ]
+  },
+  "P2-3-8": {
+    "code": "P2-3-8",
+    "title": "Faltó dinero: ¿qué recorto primero?",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Priorizar y recortar gastos cuando el dinero disponible no alcanza, distinguiendo lo indispensable de lo postergable.",
+      "competencies": [
+        "Priorización de Gastos",
+        "Ajuste de Presupuesto",
+        "Toma de Decisiones bajo Restricción",
+        "Argumentación"
+      ],
+      "materials": [
+        "Tarjetas de gastos con montos",
+        "Sobre con una cantidad limitada",
+        "Tabla de tres niveles de prioridad",
+        "Monedas didácticas",
+        "Hoja de ajuste de presupuesto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: No Alcanza",
+          "duration": "15 min",
+          "label": "Faltan $40"
+        },
+        {
+          "phase": "Desarrollo: Tres Niveles",
+          "duration": "30 min",
+          "label": "Qué se recorta"
+        },
+        {
+          "phase": "Cierre: Mi Ajuste",
+          "duration": "15 min",
+          "label": "Presupuesto que cuadra"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA CUENTA NO CUADRA (APERTURA)",
+          "duration": "15 min",
+          "description": "Entregue a cada equipo un sobre con $150 simulados y una lista de gastos que suma $190. Pídales que paguen todo. No pueden. Deje que descubran solos que hay que quitar algo. La pregunta clave es \"¿qué quitan y por qué?\", y ahí empieza la discusión que da forma a la clase. No hay respuesta única, pero sí hay criterios.",
+          "activity": "Dinámica \"Faltan Cuarenta\": cada equipo decide qué eliminar y lo defiende ante el grupo. Se anotan en el pizarrón los criterios usados."
+        },
+        {
+          "title": "FASE II: LOS TRES NIVELES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los tres niveles de prioridad. Nivel uno: lo que no se puede dejar de pagar sin consecuencias serias. Nivel dos: lo importante que admite ajuste, es decir, se puede comprar más barato o en menor cantidad. Nivel tres: lo que se puede posponer sin daño. La regla es recortar desde el nivel tres hacia arriba, y solo tocar el uno cuando ya no queda alternativa.",
+          "activity": "Dinámica \"Clasifica y Corta\": las tarjetas de gasto se ordenan por nivel y luego se van eliminando de abajo hacia arriba hasta que la cuenta cuadra."
+        },
+        {
+          "title": "FASE III: MI PRESUPUESTO AJUSTADO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada equipo presenta su presupuesto final ajustado y explica sus dos decisiones más difíciles. Cierre con un matiz importante: recortar no siempre es lo único posible, también se puede buscar aumentar lo que entra. Pero cuando el ingreso no se puede cambiar de inmediato, priorizar bien es lo que evita que falte lo esencial.",
+          "activity": "Dinámica \"Las Dos Difíciles\": cada equipo señala los dos recortes que más le costó decidir y explica su razonamiento."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "A veces haces la lista de todo lo que necesitas, sumas y descubres que el dinero no alcanza. Es un momento incómodo pero muy común, y le pasa a las familias todo el tiempo. Lo importante no es que falte: es saber qué recortar primero. En esta clase vas a aprender a hacer ese ajuste con criterio.",
+      "sections": [
+        {
+          "subtitle": "Cuando la cuenta no cuadra",
+          "content": "Si tienes $150 y tus gastos suman $190, no hay forma de pagar todo. Tienes tres caminos: recortar gastos, conseguir más ingreso, o posponer algo para después. Lo que no funciona es ignorarlo y pagar hasta que se acabe el dinero, porque entonces lo que queda sin pagar lo decide el orden en que fuiste comprando, y ese orden casi nunca es el correcto."
+        },
+        {
+          "subtitle": "Los tres niveles de prioridad",
+          "content": "Nivel uno es lo indispensable: lo que si no pagas trae consecuencias serias, como la comida o el pasaje para llegar a la escuela. Nivel dos es lo importante ajustable: cosas que sí hacen falta pero que se pueden comprar más baratas o en menor cantidad. Nivel tres es lo postergable: cosas que se pueden dejar para el mes siguiente sin que pase nada grave."
+        },
+        {
+          "subtitle": "Se recorta desde abajo",
+          "content": "La regla es simple: se empieza por el nivel tres. Se quita lo postergable hasta que la cuenta cuadre. Si aun así no alcanza, se ajusta el nivel dos comprando marcas más económicas o cantidades menores. El nivel uno se toca al final y solo si no hay más remedio, buscando ayuda o alternativas. Ese orden protege lo que de verdad importa."
+        },
+        {
+          "subtitle": "Recortar no es la única salida",
+          "content": "Junto al recorte existe el otro lado de la cuenta: aumentar lo que entra. A veces se puede hacer un trabajito extra, vender algo que ya no se usa o pedir un adelanto de algo pendiente. No siempre es posible, y por eso el recorte suele ser lo primero. Pero conviene recordar que un presupuesto tiene dos lados, y que a veces el problema no es gastar de más sino que entra muy poco."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Tengo $150 y mis gastos suman $190. ¿Cuánto falta?",
+          "options": [
+            "$40",
+            "$340",
+            "$50"
+          ],
+          "correct": "$40"
+        },
+        {
+          "question": "¿Cuáles son los tres niveles de prioridad?",
+          "options": [
+            "Caro, medio y barato",
+            "Indispensable, importante ajustable y postergable",
+            "Hoy, mañana y nunca"
+          ],
+          "correct": "Indispensable, importante ajustable y postergable"
+        },
+        {
+          "question": "¿Por dónde se empieza a recortar?",
+          "options": [
+            "Por lo indispensable",
+            "Por lo más caro",
+            "Por lo postergable"
+          ],
+          "correct": "Por lo postergable"
+        },
+        {
+          "question": "¿Qué es un gasto de nivel uno?",
+          "options": [
+            "Comida o pasaje a la escuela",
+            "Un juguete",
+            "Una salida"
+          ],
+          "correct": "Comida o pasaje a la escuela"
+        },
+        {
+          "question": "¿Qué significa ajustar un gasto de nivel dos?",
+          "options": [
+            "Eliminarlo por completo",
+            "Comprarlo más barato o en menor cantidad",
+            "Duplicarlo"
+          ],
+          "correct": "Comprarlo más barato o en menor cantidad"
+        },
+        {
+          "question": "¿Qué pasa si pago hasta que se acabe el dinero sin priorizar?",
+          "options": [
+            "Todo sale bien",
+            "Sobra dinero",
+            "Lo que queda sin pagar lo decide el azar"
+          ],
+          "correct": "Lo que queda sin pagar lo decide el azar"
+        },
+        {
+          "question": "Además de recortar, ¿qué otra salida hay?",
+          "options": [
+            "Buscar aumentar lo que entra",
+            "Ignorarlo",
+            "Gastar más"
+          ],
+          "correct": "Buscar aumentar lo que entra"
+        },
+        {
+          "question": "Un presupuesto tiene:",
+          "options": [
+            "Solo gastos",
+            "Dos lados: lo que entra y lo que sale",
+            "Solo ingresos"
+          ],
+          "correct": "Dos lados: lo que entra y lo que sale"
+        },
+        {
+          "question": "¿Cuándo se toca el nivel uno?",
+          "options": [
+            "Primero",
+            "Nunca importa",
+            "Al final y solo si no hay más remedio"
+          ],
+          "correct": "Al final y solo si no hay más remedio"
+        },
+        {
+          "question": "Recortar con criterio sirve para:",
+          "options": [
+            "Que no falte lo esencial",
+            "Gastar más rápido",
+            "Que sobre siempre"
+          ],
+          "correct": "Que no falte lo esencial"
+        }
+      ],
+      "rubric": "Logrado: clasifica gastos en tres niveles, recorta en el orden correcto y justifica sus decisiones. En proceso: recorta sin criterio de nivel. Inicial: identifica que hay que recortar."
+    },
+    "teacher_tips": [
+      "Diseñe la lista para que el faltante obligue a decisiones incómodas. Si el recorte es obvio, no se aprende nada.",
+      "No imponga una respuesta correcta. Evalúe la coherencia del criterio, no la coincidencia con su propia elección.",
+      "Mencione siempre el otro lado del presupuesto. Enseñar solo a recortar deja fuera la mitad de la solución."
+    ]
+  },
+  "P2-3-9": {
+    "code": "P2-3-9",
+    "title": "Ahorrar para el regreso a clases",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Planear con anticipación el ahorro para un gasto conocido y con fecha, como el regreso a clases, calculando cuánto guardar por semana.",
+      "competencies": [
+        "Planeación de Gasto Estacional",
+        "Cálculo de Cuota Periódica",
+        "Anticipación",
+        "Elaboración de Listas"
+      ],
+      "materials": [
+        "Lista de útiles escolares con precios reales",
+        "Calendario anual",
+        "Termómetro de ahorro de largo plazo",
+        "Monedas didácticas",
+        "Hoja de plan de regreso a clases"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Gasto Anunciado",
+          "duration": "15 min",
+          "label": "Ya sabemos que viene"
+        },
+        {
+          "phase": "Desarrollo: La Cuota",
+          "duration": "30 min",
+          "label": "Cuánto por semana"
+        },
+        {
+          "phase": "Cierre: La Lista",
+          "duration": "15 min",
+          "label": "Ajustar el monto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL GASTO QUE NO SORPRENDE A NADIE (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte al grupo cuándo empieza el próximo ciclo escolar. Todos lo saben. Pregunte si en sus casas el gasto de útiles suele sentirse pesado. Casi siempre sí. La contradicción es evidente y es el punto de partida: es un gasto que todos sabemos que viene, con fecha exacta, y aun así casi nadie lo prepara con tiempo.",
+          "activity": "Dinámica \"Gastos Anunciados\": el grupo enumera otros gastos con fecha conocida, como diciembre, cumpleaños o el día del niño."
+        },
+        {
+          "title": "FASE II: DE LA LISTA A LA CUOTA SEMANAL (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Con la lista de útiles y precios reales, cada alumno suma el total aproximado. Luego cuentan cuántas semanas faltan en el calendario y dividen para obtener la cuota semanal. Guíe la división con apoyo de monedas o de conteo repetido. La sorpresa es siempre la misma: repartido en muchas semanas, un gasto que parecía enorme se convierte en una cantidad pequeña.",
+          "activity": "Dinámica \"Divide y Respira\": cada alumno calcula su cuota y la compara con el total. El contraste entre ambos números es el mensaje de la clase."
+        },
+        {
+          "title": "FASE III: AJUSTAR LA LISTA (CIERRE)",
+          "duration": "15 min",
+          "description": "Si la cuota semanal resulta imposible, hay dos ajustes honestos: alargar el plazo empezando antes, o reducir el monto revisando la lista. Enseñe a distinguir en la lista lo que se puede reutilizar del año pasado, lo que se puede comprar genérico y lo que sí debe ser nuevo. Muchas veces la lista se reduce bastante sin perder nada importante.",
+          "activity": "Dinámica \"Revisa tu Lista\": los alumnos marcan con tres colores lo reutilizable, lo genérico y lo que sí debe comprarse nuevo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El regreso a clases llega todos los años en la misma fecha. Nadie se sorprende de que llegue, y sin embargo en muchas casas el gasto de útiles cae como un golpe. Eso pasa porque se prepara la semana anterior en lugar de con meses de anticipación. En esta clase vas a aprender a preparar un gasto anunciado.",
+      "sections": [
+        {
+          "subtitle": "Hay gastos que no son sorpresa",
+          "content": "Algunos gastos llegan sin avisar, como una reparación o una enfermedad. Pero otros están anunciados desde hace meses: el regreso a clases, diciembre, un cumpleaños. Esos no deberían sorprender a nadie. Sin embargo, la mayoría de la gente los enfrenta con las prisas de la última semana, y eso los vuelve mucho más caros y más estresantes de lo necesario."
+        },
+        {
+          "subtitle": "Dividir el gasto entre las semanas",
+          "content": "Si la lista de útiles suma $600 y faltan veinte semanas, la cuota es $30 por semana. Ese es el mismo cálculo que ya hiciste con tus metas de ahorro: total entre semanas disponibles. La diferencia es que aquí la fecha no la elegiste tú, la marca el calendario escolar. Y precisamente por eso conviene empezar con muchas semanas por delante, porque cada semana que dejas pasar sube la cuota."
+        },
+        {
+          "subtitle": "Comprar con tiempo suele salir más barato",
+          "content": "Cuando compras con anticipación puedes comparar precios, aprovechar una promoción o comprar de a poco cuando haya una buena oferta. Cuando compras el día antes, tienes que llevar lo que haya al precio que sea, y además las tiendas suelen subir precios justo en esa temporada. La prisa es cara, y en el regreso a clases eso se nota especialmente."
+        },
+        {
+          "subtitle": "Revisar la lista también ahorra",
+          "content": "Antes de comprar todo nuevo, conviene revisar qué sirve del año pasado: mochilas, colores, reglas, tijeras y muchas cosas duran varios ciclos si se cuidaron. También hay artículos donde la marca no cambia nada, como cuadernos o lápices. Reutilizar lo que sirve y elegir genérico donde da igual puede reducir la lista bastante, sin que el niño llegue peor equipado a clases."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un gasto anunciado?",
+          "options": [
+            "Uno inesperado",
+            "Uno que sabemos que viene y con qué fecha",
+            "Uno que no se paga"
+          ],
+          "correct": "Uno que sabemos que viene y con qué fecha"
+        },
+        {
+          "question": "La lista suma $600 y faltan 20 semanas. ¿Cuánto guardo por semana?",
+          "options": [
+            "$60",
+            "$20",
+            "$30"
+          ],
+          "correct": "$30"
+        },
+        {
+          "question": "La lista suma $600 y faltan 10 semanas. ¿Cuánto por semana?",
+          "options": [
+            "$60",
+            "$30",
+            "$600"
+          ],
+          "correct": "$60"
+        },
+        {
+          "question": "¿Qué pasa con la cuota si dejo pasar semanas?",
+          "options": [
+            "Baja",
+            "Sube",
+            "No cambia"
+          ],
+          "correct": "Sube"
+        },
+        {
+          "question": "¿Por qué comprar con tiempo suele salir más barato?",
+          "options": [
+            "Los precios bajan siempre",
+            "Me regalan cosas",
+            "Puedo comparar y aprovechar ofertas"
+          ],
+          "correct": "Puedo comparar y aprovechar ofertas"
+        },
+        {
+          "question": "¿Qué pasa con los precios en temporada de regreso a clases?",
+          "options": [
+            "Suelen subir",
+            "Siempre bajan",
+            "No cambian"
+          ],
+          "correct": "Suelen subir"
+        },
+        {
+          "question": "¿Qué se puede reutilizar del año pasado?",
+          "options": [
+            "Nada",
+            "Mochila, colores, reglas y tijeras si se cuidaron",
+            "Solo los cuadernos usados"
+          ],
+          "correct": "Mochila, colores, reglas y tijeras si se cuidaron"
+        },
+        {
+          "question": "¿En qué artículos la marca casi no cambia nada?",
+          "options": [
+            "En todos importa mucho",
+            "En ninguno",
+            "Cuadernos y lápices"
+          ],
+          "correct": "Cuadernos y lápices"
+        },
+        {
+          "question": "Si la cuota semanal me resulta imposible, puedo:",
+          "options": [
+            "Empezar antes o reducir la lista",
+            "Ignorarlo",
+            "Pedir prestado siempre"
+          ],
+          "correct": "Empezar antes o reducir la lista"
+        },
+        {
+          "question": "¿Por qué el regreso a clases se siente como un golpe?",
+          "options": [
+            "Porque es carísimo siempre",
+            "Porque se prepara la última semana en vez de con meses",
+            "Porque nadie lo sabe"
+          ],
+          "correct": "Porque se prepara la última semana en vez de con meses"
+        }
+      ],
+      "rubric": "Logrado: calcula la cuota semanal, ajusta la lista distinguiendo reutilizable y genérico, y explica la ventaja de anticipar. En proceso: calcula la cuota con apoyo. Inicial: reconoce que es un gasto previsible."
+    },
+    "teacher_tips": [
+      "Use precios reales del comercio local. La lista genérica no produce el impacto de ver el total verdadero.",
+      "El contraste entre el total y la cuota semanal es el corazón de la clase. Escriba ambos números juntos en el pizarrón.",
+      "Trabaje la revisión de la lista con cuidado: ningún alumno debe sentir que se le pide llegar con menos que sus compañeros."
+    ]
+  },
+  "P2-3-10": {
+    "code": "P2-3-10",
+    "title": "Guardar un poquito para lo inesperado",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Construir un fondo pequeño para gastos inesperados y comprender que su función es proteger las metas de los imprevistos.",
+      "competencies": [
+        "Fondo de Imprevistos",
+        "Prevención",
+        "Distinción entre Ahorro y Reserva",
+        "Tranquilidad Financiera"
+      ],
+      "materials": [
+        "Frasco rotulado \"Imprevistos\" por alumno",
+        "Tarjetas de imprevistos con montos",
+        "Dado o ruleta de eventos",
+        "Termómetros de ahorro",
+        "Cartel: \"El colchón de los sustos\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Susto",
+          "duration": "15 min",
+          "label": "Se rompió, ¿ahora qué?"
+        },
+        {
+          "phase": "Desarrollo: El Colchón",
+          "duration": "30 min",
+          "label": "Dos ahorradores"
+        },
+        {
+          "phase": "Cierre: Mi Fondo",
+          "duration": "15 min",
+          "label": "Cuánto y dónde"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SE ROMPIÓ, ¿AHORA QUÉ? (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee un imprevisto concreto: se rompieron los lentes, se perdió el suéter, hay que pagar una cooperación urgente. Pregunte de dónde sale ese dinero. La respuesta casi siempre es \"del ahorro\" o \"de lo que había para otra cosa\". Ahí aparece el problema: sin una reserva aparte, cada susto se paga con la meta, y las metas nunca avanzan.",
+          "activity": "Dinámica \"La Ruleta del Susto\": se sortean imprevistos y cada alumno dice de dónde saldría ese dinero hoy en su vida real."
+        },
+        {
+          "title": "FASE II: DOS AHORRADORES, UN SUSTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Simulen dos personajes con el mismo ingreso durante seis semanas. Uno guarda todo en su meta; el otro reparte entre meta e imprevistos. En la semana cuatro ocurre un imprevisto de $80 para ambos. El primero retrocede en su meta; el segundo ni la toca. Al final de las seis semanas, el segundo suele terminar más cerca de su objetivo, aunque guardaba menos en la meta cada semana.",
+          "activity": "Dinámica \"La Carrera con Susto\": dos alumnos administran los frascos frente al grupo mientras el resto lleva el registro semanal."
+        },
+        {
+          "title": "FASE III: MI FONDO DE IMPREVISTOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno define cuánto quiere tener en su fondo y cuánto le aportará por semana. Aclare las dos reglas del fondo: se usa solo para lo inesperado, no para antojos, y cuando se usa se vuelve a llenar. Explique que en las familias adultas este fondo se llama fondo de emergencia y es una de las recomendaciones financieras más repetidas del mundo.",
+          "activity": "Dinámica \"Firma tus Dos Reglas\": cada alumno rotula su frasco y escribe las dos reglas de uso en la etiqueta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ahorras con constancia, tu termómetro sube, todo va bien. Y de pronto se rompen tus lentes o se pierde tu suéter. ¿De dónde sale ese dinero? Si no tienes un lugar aparte para eso, sale de tu meta, y tu meta retrocede. En esta clase vas a construir el frasco que protege a los demás frascos.",
+      "sections": [
+        {
+          "subtitle": "Los imprevistos siempre llegan",
+          "content": "Nunca sabes cuál será ni cuándo, pero siempre hay algo: algo que se rompe, algo que se pierde, una cooperación que no estaba prevista. No son mala suerte, son parte normal de la vida. Por eso conviene tratarlos como algo esperado aunque no se sepa la fecha. Quien planea contando con que algo va a salir mal, casi nunca se ve en apuros."
+        },
+        {
+          "subtitle": "El fondo protege a la meta",
+          "content": "La función del fondo de imprevistos no es hacerte rico ni acercarte a nada: es proteger tu meta. Si tienes un frasco aparte, cuando ocurra el susto pagas de ahí y tu termómetro no baja ni una casilla. Sin el frasco, cada susto se come parte de lo que llevas avanzado, y por eso muchas personas ahorran durante meses y sienten que nunca llegan a ningún lado."
+        },
+        {
+          "subtitle": "Las dos reglas del fondo",
+          "content": "Regla uno: el fondo se usa solo para lo inesperado. Un antojo no es un imprevisto, aunque en el momento se sienta urgente. Regla dos: cuando lo usas, se vuelve a llenar en las siguientes semanas antes de seguir con lo demás. Sin estas dos reglas el fondo se convierte en un segundo monedero y deja de cumplir su función por completo."
+        },
+        {
+          "subtitle": "Pequeño pero constante",
+          "content": "El fondo no necesita ser grande para servir. Un frasco con lo suficiente para cubrir un susto típico ya cambia las cosas por completo. Se llena igual que todo lo demás: con aportaciones pequeñas y constantes. En las familias adultas a esto se le llama fondo de emergencia y es la recomendación financiera más repetida en todo el mundo, precisamente porque funciona."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Para qué sirve el fondo de imprevistos?",
+          "options": [
+            "Para gastar los viernes",
+            "Para prestar",
+            "Para proteger mi meta de los sustos"
+          ],
+          "correct": "Para proteger mi meta de los sustos"
+        },
+        {
+          "question": "Si no tengo fondo, ¿de dónde sale el dinero del susto?",
+          "options": [
+            "De mi meta, que retrocede",
+            "De ningún lado",
+            "Del banco"
+          ],
+          "correct": "De mi meta, que retrocede"
+        },
+        {
+          "question": "¿Cuál es la primera regla del fondo?",
+          "options": [
+            "Se usa cuando se antoje",
+            "Se usa solo para lo inesperado",
+            "No se usa nunca"
+          ],
+          "correct": "Se usa solo para lo inesperado"
+        },
+        {
+          "question": "¿Cuál es la segunda regla?",
+          "options": [
+            "Se olvida",
+            "Se cierra",
+            "Cuando se usa, se vuelve a llenar"
+          ],
+          "correct": "Cuando se usa, se vuelve a llenar"
+        },
+        {
+          "question": "¿Un antojo urgente es un imprevisto?",
+          "options": [
+            "No, aunque se sienta urgente",
+            "Sí, siempre",
+            "Sí, si es caro"
+          ],
+          "correct": "No, aunque se sienta urgente"
+        },
+        {
+          "question": "¿Debe ser grande el fondo para servir?",
+          "options": [
+            "Sí, muy grande",
+            "No, basta con cubrir un susto típico",
+            "Sí, el doble de mi meta"
+          ],
+          "correct": "No, basta con cubrir un susto típico"
+        },
+        {
+          "question": "¿Cómo se llena el fondo?",
+          "options": [
+            "De un golpe",
+            "Con préstamos",
+            "Con aportaciones pequeñas y constantes"
+          ],
+          "correct": "Con aportaciones pequeñas y constantes"
+        },
+        {
+          "question": "En las familias adultas, este fondo se llama:",
+          "options": [
+            "Fondo de emergencia",
+            "Fondo de inversión",
+            "Fondo de gastos"
+          ],
+          "correct": "Fondo de emergencia"
+        },
+        {
+          "question": "¿Por qué algunos ahorran meses y sienten que no avanzan?",
+          "options": [
+            "Porque el dinero se encoge",
+            "Porque cada susto se come lo avanzado",
+            "Porque ahorran poco"
+          ],
+          "correct": "Porque cada susto se come lo avanzado"
+        },
+        {
+          "question": "Los imprevistos son:",
+          "options": [
+            "Mala suerte",
+            "Culpa de uno",
+            "Parte normal de la vida"
+          ],
+          "correct": "Parte normal de la vida"
+        }
+      ],
+      "rubric": "Logrado: define un fondo con monto y aportación, aplica las dos reglas y explica su función protectora. En proceso: reconoce la utilidad del fondo sin definirlo. Inicial: identifica qué es un imprevisto."
+    },
+    "teacher_tips": [
+      "La simulación de los dos ahorradores es el argumento central. Sin ella, el fondo suena a una regla más y no se adopta.",
+      "Insista en la distinción entre antojo urgente e imprevisto. Es la confusión que destruye estos fondos en la práctica.",
+      "Recuerde reponer el fondo tras usarlo en las simulaciones. Es la regla que más se olvida, también entre adultos."
+    ]
+  },
   "P2-4-1": {
     "code": "P2-4-1",
     "title": "Ideas de negocio en casa: limonada, manualidades",
@@ -2909,7 +5669,7 @@
             "Alguien que tiene una idea y se esfuerza para convertirla en realidad para ayudar a otros",
             "Alguien que solo gasta dinero"
           ],
-          "correct": "Alguien que tiene una idea y se esfuerza para convertirla en reality para ayudar a otros"
+          "correct": "Alguien que tiene una idea y se esfuerza para convertirla en realidad para ayudar a otros"
         },
         {
           "question": "Si tu negocio es pasear perros, ¿cuál es tu 'servicio'?",
@@ -3673,8 +6433,927 @@
       "Felicite el esfuerzo de ANÁLISIS más que el resultado de ganancia; lo importante es que entiendan POR QUÉ salió ese número.",
       "Haga una pequeña exhibición de los reportes en el salón."
     ]
-  }
-,
+  },
+  "P2-4-6": {
+    "code": "P2-4-6",
+    "title": "Buscar una necesidad en mi salón",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Detectar necesidades reales en el entorno escolar inmediato como punto de partida de una idea de negocio, en lugar de inventar productos sin destinatario.",
+      "competencies": [
+        "Detección de Necesidades",
+        "Observación del Entorno",
+        "Empatía con el Usuario",
+        "Generación de Ideas"
+      ],
+      "materials": [
+        "Libreta de observación del salón",
+        "Tarjetas de \"problemas del salón\"",
+        "Mapa del aula y del patio",
+        "Cartel: \"Problema primero, idea después\"",
+        "Pizarrón para el ranking de problemas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Idea sin Dueño",
+          "duration": "15 min",
+          "label": "Nadie lo necesitaba"
+        },
+        {
+          "phase": "Desarrollo: La Cacería",
+          "duration": "30 min",
+          "label": "Buscar problemas reales"
+        },
+        {
+          "phase": "Cierre: El Ranking",
+          "duration": "15 min",
+          "label": "Cuál vale más"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA IDEA QUE NADIE NECESITABA (APERTURA)",
+          "duration": "15 min",
+          "description": "Proponga un producto absurdo pero atractivo, por ejemplo unos calcetines con bolsillos. Pregunte si lo comprarían. Habrá risas y algún sí. Luego pregunte: \"¿Qué problema resuelve?\". No resuelve ninguno. Explique que muchos negocios empiezan al revés, con una idea bonita buscando a quién le sirve, y que el orden correcto es exactamente el contrario.",
+          "activity": "Dinámica \"¿Qué Problema Resuelve?\": el grupo somete tres ideas divertidas a esa única pregunta. Las que no la superan se descartan."
+        },
+        {
+          "title": "FASE II: CACERÍA DE PROBLEMAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos recorren mentalmente su día escolar y anotan momentos en que algo les falta, les estorba o les cuesta trabajo: se acaba la punta del lápiz y no hay sacapuntas, no encuentran su suéter, no hay dónde poner la basura del recreo, se olvidan las tareas. Cada molestia es un problema, y cada problema es una oportunidad. Se juntan todos en el pizarrón sin filtrar.",
+          "activity": "Dinámica \"Mi Día Molesto\": cada alumno describe tres momentos incómodos de su jornada escolar. Se anotan todos, sin evaluar todavía."
+        },
+        {
+          "title": "FASE III: EL RANKING DE PROBLEMAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Ordenen los problemas por dos criterios: a cuánta gente le pasa y qué tan molesto es. Los que están arriba en ambos son las mejores oportunidades. Solo entonces se piensa en soluciones. Cierre insistiendo en el orden: primero el problema, después la idea. Buscar una solución para un problema que a nadie le importa es el error más caro de un negocio.",
+          "activity": "Dinámica \"Vota el Problema\": cada alumno vota los tres problemas que más le afectan. Los más votados quedan como candidatos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todos empiezan un negocio igual: se les ocurre algo bonito y luego buscan a quién vendérselo. Los que funcionan lo hacen al revés: primero encuentran algo que le molesta a mucha gente, y después inventan la solución. En esta clase vas a salir de cacería de problemas en tu propio salón.",
+      "sections": [
+        {
+          "subtitle": "Primero el problema, después la idea",
+          "content": "Un producto existe para resolver algo. Si no resuelve nada, no hay razón para que alguien pague por él, por bonito que sea. Por eso los negocios que funcionan empiezan mirando qué le falta o qué le molesta a la gente. Cuando encuentras un problema real, la idea aparece casi sola, y además ya sabes quién te la va a comprar: justamente los que tenían ese problema."
+        },
+        {
+          "subtitle": "Los problemas se esconden en las molestias",
+          "content": "Un problema no siempre se ve como un problema grande. Casi siempre es una molestia pequeña que se repite: se te acaba la punta del lápiz y pierdes cinco minutos, olvidas la fecha de un trabajo, no encuentras dónde tirar la basura, tienes sed y no traes agua. Cada una de esas molestias es una oportunidad. La clave es aprender a notarlas en lugar de aguantarlas en automático."
+        },
+        {
+          "subtitle": "Dos preguntas para saber si vale la pena",
+          "content": "No todos los problemas son buenas oportunidades. Hay dos preguntas para filtrarlos. Primera: ¿a cuánta gente le pasa? Si solo te pasa a ti, no hay clientes. Segunda: ¿qué tan molesto es? Si es apenas una incomodidad mínima, nadie va a pagar por resolverla. Los mejores problemas son los que le pasan a mucha gente y además molestan de verdad."
+        },
+        {
+          "subtitle": "Observar sin juzgar primero",
+          "content": "Al buscar problemas conviene anotarlo todo sin evaluar de inmediato. Si empiezas a descartar ideas mientras las escribes, te vas a quedar con muy pocas. Primero se junta la lista completa, aunque haya cosas raras, y después se ordena con las dos preguntas. Ese orden, primero juntar y después filtrar, hace que aparezcan oportunidades que se habrían perdido."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué debe existir antes que la idea de negocio?",
+          "options": [
+            "Un cartel bonito",
+            "Mucho dinero",
+            "Un problema real"
+          ],
+          "correct": "Un problema real"
+        },
+        {
+          "question": "¿Por qué falla un producto que no resuelve nada?",
+          "options": [
+            "Porque nadie tiene razón para pagarlo",
+            "Porque es feo",
+            "Porque es caro"
+          ],
+          "correct": "Porque nadie tiene razón para pagarlo"
+        },
+        {
+          "question": "¿Dónde se esconden los problemas?",
+          "options": [
+            "En los libros",
+            "En las molestias pequeñas que se repiten",
+            "En la televisión"
+          ],
+          "correct": "En las molestias pequeñas que se repiten"
+        },
+        {
+          "question": "¿Cuáles son las dos preguntas para filtrar un problema?",
+          "options": [
+            "¿Es bonito? y ¿es barato?",
+            "¿Es nuevo? y ¿es grande?",
+            "¿A cuánta gente le pasa? y ¿qué tan molesto es?"
+          ],
+          "correct": "¿A cuánta gente le pasa? y ¿qué tan molesto es?"
+        },
+        {
+          "question": "Si un problema solo me pasa a mí:",
+          "options": [
+            "No hay clientes",
+            "Es la mejor oportunidad",
+            "Da igual"
+          ],
+          "correct": "No hay clientes"
+        },
+        {
+          "question": "Si el problema es una molestia mínima:",
+          "options": [
+            "Todos pagarán mucho",
+            "Nadie va a pagar por resolverla",
+            "Es lo mejor"
+          ],
+          "correct": "Nadie va a pagar por resolverla"
+        },
+        {
+          "question": "¿Cuál es el mejor tipo de problema?",
+          "options": [
+            "El que a nadie le importa",
+            "El más raro",
+            "El que le pasa a mucha gente y molesta de verdad"
+          ],
+          "correct": "El que le pasa a mucha gente y molesta de verdad"
+        },
+        {
+          "question": "Al hacer la lista de problemas, primero conviene:",
+          "options": [
+            "Anotar todo sin juzgar",
+            "Descartar rápido",
+            "Elegir uno solo"
+          ],
+          "correct": "Anotar todo sin juzgar"
+        },
+        {
+          "question": "¿Quién será mi cliente si resuelvo un problema real?",
+          "options": [
+            "Nadie",
+            "Justo los que tenían ese problema",
+            "Todos los del mundo"
+          ],
+          "correct": "Justo los que tenían ese problema"
+        },
+        {
+          "question": "El error más caro de un negocio es:",
+          "options": [
+            "Poner precio bajo",
+            "Hacer un cartel feo",
+            "Resolver algo que a nadie le importa"
+          ],
+          "correct": "Resolver algo que a nadie le importa"
+        }
+      ],
+      "rubric": "Logrado: detecta problemas reales del entorno y los filtra con los dos criterios. En proceso: identifica molestias sin filtrarlas. Inicial: comprende que el problema va antes que la idea."
+    },
+    "teacher_tips": [
+      "Deje que la lista inicial sea larga y desordenada. Filtrar demasiado pronto es el error que más ideas mata.",
+      "Use molestias del propio salón, no ejemplos genéricos. La cercanía es lo que hace que los alumnos vean el problema de verdad.",
+      "Las dos preguntas de filtro se usarán en todos los grados siguientes. Vale la pena dejarlas escritas en un cartel permanente."
+    ]
+  },
+  "P2-4-7": {
+    "code": "P2-4-7",
+    "title": "Poner precio: sumar mis costos primero",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Construir el precio de venta de un producto partiendo del costo total, asegurando que cubra los gastos y deje ganancia.",
+      "competencies": [
+        "Cálculo de Costo Unitario",
+        "Fijación de Precio",
+        "Margen de Ganancia",
+        "Construcción de un Presupuesto"
+      ],
+      "materials": [
+        "Materiales reales con precios",
+        "Hoja de costeo por unidad",
+        "Monedas didácticas",
+        "Calculadora grande",
+        "Cartel: \"Precio = costo + ganancia\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Precio al Azar",
+          "duration": "15 min",
+          "label": "¿Cuánto le pongo?"
+        },
+        {
+          "phase": "Desarrollo: El Costeo",
+          "duration": "30 min",
+          "label": "Costo por pieza"
+        },
+        {
+          "phase": "Cierre: El Precio Final",
+          "duration": "15 min",
+          "label": "Sumar la ganancia"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"LE PONGO DIEZ PESOS\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pida a los alumnos que pongan precio a un producto sin darles información de costos. Dirán cifras al azar: cinco, diez, veinte. Pregunte en qué se basaron. En nada. Explique que así se ponen la mayoría de los precios en negocios pequeños, y que por eso muchos venden mucho y no ganan nada: el precio se puso antes de saber cuánto costaba producir.",
+          "activity": "Dinámica \"Precio a Ciegas\": se anotan las cifras propuestas y se guardan para compararlas al final con el precio calculado."
+        },
+        {
+          "title": "FASE II: EL COSTO POR PIEZA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Con materiales reales, calculen el costo total de producción y luego el costo por pieza dividiendo entre cuántas unidades salen. Este paso es el que casi siempre se salta: si con $60 de materiales salen 20 piezas, cada pieza cuesta $3. Ese número es el piso absoluto del precio, porque vender por debajo significa perder en cada venta.",
+          "activity": "Dinámica \"Divide el Costo\": cada equipo calcula su costo por pieza con apoyo de monedas y lo escribe en grande en su hoja."
+        },
+        {
+          "title": "FASE III: SUMAR LA GANANCIA (CIERRE)",
+          "duration": "15 min",
+          "description": "Al costo por pieza se le suma la ganancia deseada para obtener el precio. Discutan cuánta ganancia poner: muy poca no compensa el trabajo, y demasiada aleja a los clientes. Comparen el precio calculado con las cifras al azar del inicio. Casi siempre alguien había propuesto un precio por debajo del costo, y ese es el momento clave de la sesión.",
+          "activity": "Dinámica \"Compara con tu Corazonada\": se revelan los precios al azar del inicio y se marcan los que habrían dado pérdida."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ya sabes que vender no es lo mismo que ganar. Ahora viene la pregunta que decide todo: ¿cuánto le cobro? Si el precio es muy bajo, pierdes en cada venta. Si es muy alto, nadie compra. En esta clase vas a aprender a calcular un precio en lugar de adivinarlo.",
+      "sections": [
+        {
+          "subtitle": "El precio se calcula, no se adivina",
+          "content": "Mucha gente pone precio por corazonada: \"creo que diez pesos está bien\". El problema es que si producir cada pieza costó doce, cada venta pierde dos pesos, y mientras más vendas, peor te va. Por eso el precio se calcula empezando por el costo. Solo cuando sabes cuánto te cuesta producir una pieza puedes decidir cuánto cobrar por ella."
+        },
+        {
+          "subtitle": "Costo por pieza",
+          "content": "El costo total son todos los materiales que compraste. Pero para poner precio necesitas otro número: cuánto costó cada unidad. Se obtiene dividiendo el costo total entre las piezas que salieron. Si gastaste $60 y salieron 20 piezas, cada una costó $3. Ese número es el piso: por debajo de $3 pierdes dinero en cada venta, sin importar cuántas vendas."
+        },
+        {
+          "subtitle": "Precio igual a costo más ganancia",
+          "content": "La fórmula es simple: al costo por pieza le sumas lo que quieres ganar por pieza. Si cada una te costó $3 y quieres ganar $2, tu precio es $5. Esa ganancia no es un abuso: es el pago por tu tiempo, tu trabajo y el riesgo de haber comprado materiales sin saber si venderías. Sin ganancia, un negocio es solo trabajo gratis."
+        },
+        {
+          "subtitle": "Ni muy caro ni muy barato",
+          "content": "Poner mucha ganancia parece buena idea hasta que nadie compra. Poner muy poca vende rápido pero no compensa el esfuerzo. Una guía útil es mirar cuánto cuestan productos parecidos: si todos rondan los $5 y tú pides $15, tendrás que explicar muy bien por qué. Y si pides $2, la gente puede pensar que algo anda mal con tu producto."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cómo se pone el precio correctamente?",
+          "options": [
+            "Calculando desde el costo",
+            "Adivinando",
+            "Copiando al azar"
+          ],
+          "correct": "Calculando desde el costo"
+        },
+        {
+          "question": "Gasté $60 y salieron 20 piezas. ¿Cuánto costó cada una?",
+          "options": [
+            "$60",
+            "$3",
+            "$20"
+          ],
+          "correct": "$3"
+        },
+        {
+          "question": "¿Qué es el piso del precio?",
+          "options": [
+            "La ganancia",
+            "El precio de la competencia",
+            "El costo por pieza"
+          ],
+          "correct": "El costo por pieza"
+        },
+        {
+          "question": "Si vendo por debajo del costo:",
+          "options": [
+            "Pierdo en cada venta",
+            "Gano más",
+            "No pasa nada"
+          ],
+          "correct": "Pierdo en cada venta"
+        },
+        {
+          "question": "¿Cuál es la fórmula del precio?",
+          "options": [
+            "Costo menos ganancia",
+            "Costo por pieza más ganancia",
+            "Solo la ganancia"
+          ],
+          "correct": "Costo por pieza más ganancia"
+        },
+        {
+          "question": "Cada pieza cuesta $3 y quiero ganar $2. Mi precio es:",
+          "options": [
+            "$3",
+            "$1",
+            "$5"
+          ],
+          "correct": "$5"
+        },
+        {
+          "question": "¿Qué representa la ganancia?",
+          "options": [
+            "El pago por mi tiempo, trabajo y riesgo",
+            "Un abuso",
+            "Un error"
+          ],
+          "correct": "El pago por mi tiempo, trabajo y riesgo"
+        },
+        {
+          "question": "Si pongo un precio muy alto:",
+          "options": [
+            "Vendo más",
+            "Puede que nadie compre",
+            "Gano siempre"
+          ],
+          "correct": "Puede que nadie compre"
+        },
+        {
+          "question": "Si pongo un precio muy bajo:",
+          "options": [
+            "Gano mucho",
+            "Es lo ideal",
+            "Vendo rápido pero no compensa el esfuerzo"
+          ],
+          "correct": "Vendo rápido pero no compensa el esfuerzo"
+        },
+        {
+          "question": "Un negocio sin ganancia es:",
+          "options": [
+            "Trabajo gratis",
+            "Un buen negocio",
+            "Un ahorro"
+          ],
+          "correct": "Trabajo gratis"
+        }
+      ],
+      "rubric": "Logrado: calcula costo por pieza, define ganancia y obtiene un precio justificado. En proceso: calcula el costo total sin dividir por unidad. Inicial: reconoce que el precio debe cubrir el costo."
+    },
+    "teacher_tips": [
+      "Guarde los precios al azar del inicio y compárelos al final. Ver que su corazonada daba pérdida es el momento que fija el concepto.",
+      "El paso que más se salta es dividir entre las piezas producidas. Insista en ese cálculo antes de hablar de ganancia.",
+      "Introduzca la comparación con productos parecidos sin convertirla en regla. El precio se calcula desde el costo, no se copia."
+    ]
+  },
+  "P2-4-8": {
+    "code": "P2-4-8",
+    "title": "Un cartel que sí llame la atención",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Diseñar un cartel que comunique con claridad qué se vende y a qué precio, distinguiendo lo que informa de lo que solo adorna.",
+      "competencies": [
+        "Comunicación Visual",
+        "Jerarquía de Información",
+        "Diseño Funcional",
+        "Honestidad en el Mensaje"
+      ],
+      "materials": [
+        "Cartulinas y marcadores gruesos",
+        "Ejemplos de carteles buenos y malos",
+        "Cinta métrica para medir distancia de lectura",
+        "Cartel modelo con las tres partes",
+        "Fichas de evaluación entre pares"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Léelo de Lejos",
+          "duration": "15 min",
+          "label": "¿Se entiende?"
+        },
+        {
+          "phase": "Desarrollo: Las Tres Partes",
+          "duration": "30 min",
+          "label": "Qué, cuánto y por qué"
+        },
+        {
+          "phase": "Cierre: Prueba Real",
+          "duration": "15 min",
+          "label": "A cinco pasos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LÉELO DESDE ALLÁ (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre dos carteles a cinco metros de distancia: uno con letra grande y mensaje corto, otro lleno de dibujos y letra pequeña. Pregunte qué dice cada uno. El segundo no se lee. Explique que un cartel no se mira de cerca y con calma: se lee de lejos, de pasada y en dos segundos. Todo lo que no se entienda en ese tiempo, no sirve.",
+          "activity": "Dinámica \"La Prueba de los Cinco Pasos\": los alumnos se alejan cinco pasos y dicen qué alcanzan a leer de cada cartel."
+        },
+        {
+          "title": "FASE II: LAS TRES PARTES DEL CARTEL (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Un buen cartel de puesto escolar tiene tres partes y en este orden de tamaño: qué vendes, con letra grande; cuánto cuesta, bien visible; y por qué conviene, en una frase corta y honesta. Todo lo demás es decoración. Los equipos diseñan su cartel respetando esa jerarquía. Corrija los casos donde el dibujo es más grande que el precio.",
+          "activity": "Dinámica \"Tres Renglones\": cada equipo escribe primero los tres textos en una hoja y solo después los pasa a la cartulina con el tamaño correcto."
+        },
+        {
+          "title": "FASE III: LA PRUEBA A CINCO PASOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada cartel se somete a la prueba: un compañero se aleja cinco pasos y debe decir qué se vende y a cuánto. Si no lo logra, el cartel se corrige. Cierre recordando la regla de honestidad ya trabajada: el cartel puede ser atractivo, pero no puede prometer algo que el producto no cumple, porque el cliente decepcionado no regresa.",
+          "activity": "Dinámica \"Evaluación entre Pares\": cada equipo evalúa el cartel de otro con la ficha de tres criterios y sugiere una mejora concreta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Tu cartel es lo primero que ve la gente, y tiene menos de dos segundos para hacer su trabajo. En ese tiempo tiene que decir qué vendes y cuánto cuesta. Si en lugar de eso está lleno de dibujos bonitos y letra pequeña, la gente pasa de largo. En esta clase vas a hacer un cartel que sí funcione.",
+      "sections": [
+        {
+          "subtitle": "Un cartel se lee de lejos y de pasada",
+          "content": "Nadie se detiene a estudiar un cartel. La gente camina, mira de reojo y decide en un instante si se acerca. Por eso el enemigo número uno de un cartel es la letra pequeña, y el número dos es tener demasiada información. Si tu cartel necesita que alguien se acerque para entenderlo, ya falló: la persona tenía que acercarse justamente porque lo entendió."
+        },
+        {
+          "subtitle": "Las tres partes, en ese orden",
+          "content": "Un cartel útil tiene tres cosas. Primero, qué vendes, con la letra más grande de todas. Segundo, cuánto cuesta, bien visible, porque el precio escondido hace que la gente ni pregunte. Tercero, por qué conviene, en una frase muy corta. Ese orden importa: si el dibujo es más grande que el precio, tienes un cartel bonito que no vende."
+        },
+        {
+          "subtitle": "La decoración va al final",
+          "content": "Los dibujos y colores no están prohibidos: ayudan a que el cartel se note entre otros. Pero son el último paso, no el primero. Primero se escriben los tres textos con el tamaño correcto y luego se decora el espacio que sobra. Cuando se hace al revés, la decoración se come el lugar del precio y el cartel deja de cumplir su función."
+        },
+        {
+          "subtitle": "Atractivo sí, mentiroso no",
+          "content": "Un cartel puede y debe ser atractivo: colores fuertes, letra clara, una frase que dé ganas. Lo que no puede hacer es prometer lo que el producto no cumple. Si dices \"el mejor pastel de la escuela\" y sabe regular, la persona que lo compró no vuelve y además se lo cuenta a sus amigos. En un negocio pequeño, la reputación se construye o se rompe en un solo recreo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuánto tiempo tiene un cartel para hacer su trabajo?",
+          "options": [
+            "Cinco minutos",
+            "Menos de dos segundos",
+            "Todo el recreo"
+          ],
+          "correct": "Menos de dos segundos"
+        },
+        {
+          "question": "¿Cuál es el enemigo número uno de un cartel?",
+          "options": [
+            "El color",
+            "El papel",
+            "La letra pequeña"
+          ],
+          "correct": "La letra pequeña"
+        },
+        {
+          "question": "¿Cuáles son las tres partes de un buen cartel?",
+          "options": [
+            "Qué vendo, cuánto cuesta y por qué conviene",
+            "Dibujo, color y nombre",
+            "Fecha, hora y lugar"
+          ],
+          "correct": "Qué vendo, cuánto cuesta y por qué conviene"
+        },
+        {
+          "question": "¿Qué debe tener la letra más grande?",
+          "options": [
+            "El dibujo",
+            "Qué vendo",
+            "Mi nombre"
+          ],
+          "correct": "Qué vendo"
+        },
+        {
+          "question": "¿Por qué el precio debe estar visible?",
+          "options": [
+            "Porque se ve bonito",
+            "Porque lo pide la escuela",
+            "Porque si está escondido la gente ni pregunta"
+          ],
+          "correct": "Porque si está escondido la gente ni pregunta"
+        },
+        {
+          "question": "¿Cuándo se decora el cartel?",
+          "options": [
+            "Al final, con el espacio que sobra",
+            "Primero de todo",
+            "Nunca"
+          ],
+          "correct": "Al final, con el espacio que sobra"
+        },
+        {
+          "question": "Si mi cartel necesita que se acerquen para entenderlo:",
+          "options": [
+            "Está perfecto",
+            "Ya falló",
+            "Es original"
+          ],
+          "correct": "Ya falló"
+        },
+        {
+          "question": "¿Puede un cartel prometer algo que el producto no cumple?",
+          "options": [
+            "Sí, para vender",
+            "Sí, si es poquito",
+            "No, el cliente decepcionado no vuelve"
+          ],
+          "correct": "No, el cliente decepcionado no vuelve"
+        },
+        {
+          "question": "¿Para qué sirve la prueba de los cinco pasos?",
+          "options": [
+            "Para comprobar que se lee de lejos",
+            "Para medir el cartel",
+            "Para decorarlo"
+          ],
+          "correct": "Para comprobar que se lee de lejos"
+        },
+        {
+          "question": "En un negocio pequeño, la reputación:",
+          "options": [
+            "No importa",
+            "Se construye o se rompe en un solo recreo",
+            "Tarda años"
+          ],
+          "correct": "Se construye o se rompe en un solo recreo"
+        }
+      ],
+      "rubric": "Logrado: diseña un cartel con las tres partes en jerarquía correcta y supera la prueba de lectura a distancia. En proceso: incluye las tres partes sin jerarquía. Inicial: reconoce la importancia de la letra grande."
+    },
+    "teacher_tips": [
+      "Haga la prueba de los cinco pasos con todos los carteles, sin excepción. Es rápida y corrige más que cualquier explicación.",
+      "Corrija especialmente los carteles donde el dibujo es más grande que el precio. Es el error más frecuente y el más costoso.",
+      "Pida que escriban los tres textos antes de tocar la cartulina. Diseñar primero y escribir después siempre produce carteles ilegibles."
+    ]
+  },
+  "P2-4-9": {
+    "code": "P2-4-9",
+    "title": "Clientes contentos: cumplir lo que prometo",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender que cumplir lo prometido genera clientes que regresan, y que la clientela repetida sostiene un negocio mejor que las ventas de una sola vez.",
+      "competencies": [
+        "Servicio al Cliente",
+        "Cumplimiento de Promesas",
+        "Valor de la Reputación",
+        "Visión de Largo Plazo"
+      ],
+      "materials": [
+        "Tarjetas de \"promesas\" del negocio",
+        "Tabla de clientes que regresan por semana",
+        "Fichas para simular clientes",
+        "Cartel: \"El que vuelve vale más que el que llega\"",
+        "Hoja de compromisos del puesto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Cliente que No Volvió",
+          "duration": "15 min",
+          "label": "Vendió una vez"
+        },
+        {
+          "phase": "Desarrollo: La Cuenta",
+          "duration": "30 min",
+          "label": "Cuánto vale que vuelva"
+        },
+        {
+          "phase": "Cierre: Mis Promesas",
+          "duration": "15 min",
+          "label": "Lo que sí puedo cumplir"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: VENDIÓ UNA VEZ Y NUNCA MÁS (APERTURA)",
+          "duration": "15 min",
+          "description": "Cuente el caso de dos puestos. El primero vendió mucho el primer día prometiendo cosas que no cumplió; el segundo vendió menos pero cumplió todo. Pregunte cuál cree el grupo que vendió más en la semana completa. La respuesta correcta suele sorprender: el segundo, porque sus clientes volvieron cada día mientras que el primero se quedó sin gente.",
+          "activity": "Dinámica \"La Semana de los Dos Puestos\": se dibuja en el pizarrón la venta diaria de ambos y se suma al final de la semana."
+        },
+        {
+          "title": "FASE II: CUÁNTO VALE UN CLIENTE QUE REGRESA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Hagan la cuenta explícita: un cliente que compra $8 una vez deja $8. Un cliente que compra $8 cada día durante la semana deja $40. Es la misma persona, cinco veces más valiosa. Los alumnos calculan con distintos escenarios y descubren que conseguir clientes nuevos cada día es mucho más difícil que conservar los que ya llegaron.",
+          "activity": "Dinámica \"Uno o Cinco\": cada equipo calcula cuánto deja un cliente único contra uno que regresa toda la semana y compara."
+        },
+        {
+          "title": "FASE III: PROMESAS QUE SÍ PUEDO CUMPLIR (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada equipo escribe tres promesas concretas y cumplibles para su puesto: el precio que anuncio es el que cobro, la porción es la misma para todos, si algo sale mal lo repongo. Insista en que una promesa pequeña cumplida vale más que una grande incumplida. Cierre conectando con el cartel: lo que prometes ahí es un compromiso, no un adorno.",
+          "activity": "Dinámica \"Mis Tres Promesas\": las promesas se escriben en el puesto a la vista del cliente y el grupo verifica su cumplimiento."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Vender mucho un día es fácil: basta con prometer lo que sea. Lo difícil es que las mismas personas vuelvan mañana, y pasado. En esta clase vas a descubrir con números por qué un cliente que regresa vale mucho más que uno nuevo, y qué tienes que hacer para conseguirlo.",
+      "sections": [
+        {
+          "subtitle": "El que vuelve vale más que el que llega",
+          "content": "Un cliente que compra una sola vez te deja el precio de una venta. Un cliente que vuelve cada día te deja esa cantidad multiplicada por los días. Es la misma persona, pero vale muchísimo más. Además, conseguir a alguien nuevo cuesta trabajo: hay que llamar su atención y convencerlo. Conservar al que ya llegó solo requiere cumplir lo que prometiste."
+        },
+        {
+          "subtitle": "Cumplir es más importante que prometer",
+          "content": "Prometer algo grande hace que la primera persona compre. Cumplirlo hace que compre otra vez. Si prometes la mejor galleta y das una normal, la persona no se enoja escandalosamente: simplemente no vuelve, y tú ni te enteras de por qué bajaron tus ventas. Por eso conviene prometer poco y cumplirlo siempre, en lugar de prometer mucho y fallar."
+        },
+        {
+          "subtitle": "Las promesas concretas se pueden cumplir",
+          "content": "Hay promesas que son puro humo, como \"el mejor sabor\" o \"calidad insuperable\", porque nadie puede medirlas. Y hay promesas concretas que sí se pueden cumplir y verificar: el precio anunciado es el que cobro, la porción es igual para todos, si algo sale mal lo repongo. Esas son las que construyen confianza, porque el cliente puede comprobar que se cumplieron."
+        },
+        {
+          "subtitle": "Los errores se reparan rápido",
+          "content": "Todos los negocios cometen errores: se acaba algo, se cobra de más por distracción, un producto sale mal. Lo que decide si pierdes al cliente no es el error, es lo que haces después. Reconocerlo de inmediato, disculparse y reponer convierte un mal momento en una razón para confiar. Ignorarlo o discutir, en cambio, garantiza que esa persona no regrese nunca."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "Un cliente compra $8 una vez. ¿Cuánto deja?",
+          "options": [
+            "$40",
+            "$80",
+            "$8"
+          ],
+          "correct": "$8"
+        },
+        {
+          "question": "Un cliente compra $8 cada día durante 5 días. ¿Cuánto deja?",
+          "options": [
+            "$40",
+            "$8",
+            "$13"
+          ],
+          "correct": "$40"
+        },
+        {
+          "question": "¿Qué es más difícil?",
+          "options": [
+            "Conservar al que ya llegó",
+            "Conseguir un cliente nuevo",
+            "Los dos igual"
+          ],
+          "correct": "Conseguir un cliente nuevo"
+        },
+        {
+          "question": "¿Qué hace que un cliente vuelva?",
+          "options": [
+            "Que se prometa mucho",
+            "Que el cartel sea bonito",
+            "Que se cumpla lo prometido"
+          ],
+          "correct": "Que se cumpla lo prometido"
+        },
+        {
+          "question": "Si prometo la mejor galleta y doy una normal:",
+          "options": [
+            "La persona simplemente no vuelve",
+            "Se enoja mucho",
+            "Compra el doble"
+          ],
+          "correct": "La persona simplemente no vuelve"
+        },
+        {
+          "question": "¿Cuál es una promesa concreta?",
+          "options": [
+            "Calidad insuperable",
+            "El precio anunciado es el que cobro",
+            "El mejor sabor"
+          ],
+          "correct": "El precio anunciado es el que cobro"
+        },
+        {
+          "question": "¿Por qué \"el mejor sabor\" es mala promesa?",
+          "options": [
+            "Porque es larga",
+            "Porque es cara",
+            "Porque nadie puede medirla"
+          ],
+          "correct": "Porque nadie puede medirla"
+        },
+        {
+          "question": "Cometí un error con un cliente. Lo que decide todo es:",
+          "options": [
+            "Lo que hago después",
+            "El error mismo",
+            "El precio"
+          ],
+          "correct": "Lo que hago después"
+        },
+        {
+          "question": "¿Qué conviene hacer si me equivoqué?",
+          "options": [
+            "Discutir",
+            "Reconocerlo, disculparme y reponer",
+            "Ignorarlo"
+          ],
+          "correct": "Reconocerlo, disculparme y reponer"
+        },
+        {
+          "question": "¿Qué conviene más?",
+          "options": [
+            "Prometer mucho aunque falle",
+            "No prometer nada nunca",
+            "Prometer poco y cumplirlo siempre"
+          ],
+          "correct": "Prometer poco y cumplirlo siempre"
+        }
+      ],
+      "rubric": "Logrado: calcula el valor de un cliente recurrente y formula promesas concretas y verificables. En proceso: reconoce el valor de que vuelvan sin cuantificarlo. Inicial: entiende que hay que cumplir."
+    },
+    "teacher_tips": [
+      "La cuenta de un cliente único contra uno recurrente es el corazón de la clase. Escríbala en el pizarrón y déjela toda la sesión.",
+      "Corrija las promesas vagas en el momento. \"El mejor sabor\" no se puede cumplir ni verificar, y esa distinción es lo que se enseña.",
+      "Trabaje el manejo del error con juego de roles. Saber decir \"me equivoqué, te lo repongo\" es una habilidad que se practica."
+    ]
+  },
+  "P2-4-10": {
+    "code": "P2-4-10",
+    "title": "Repartir la ganancia: ahorro, reinversión y gusto",
+    "level": "Primaria 2",
+    "duration": "60 min",
+    "difficulty": "Básico",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Repartir la ganancia de un negocio en tres partes usando fracciones simples y comprobar el efecto de cada destino a lo largo de varias ventas.",
+      "competencies": [
+        "Reparto con Fracciones",
+        "Reinversión",
+        "Ahorro del Negocio",
+        "Equilibrio de Decisiones"
+      ],
+      "materials": [
+        "Tres frascos rotulados por equipo",
+        "Monedas didácticas",
+        "Tabla de tres ventas consecutivas",
+        "Círculos de fracciones (mitad, tercios, cuartos)",
+        "Cartel: \"Crecer, guardar, disfrutar\""
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Montón",
+          "duration": "15 min",
+          "label": "¿Y ahora qué?"
+        },
+        {
+          "phase": "Desarrollo: Tres Partes",
+          "duration": "30 min",
+          "label": "Repartir con fracciones"
+        },
+        {
+          "phase": "Cierre: Tres Ventas",
+          "duration": "15 min",
+          "label": "Ver el efecto"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL MONTÓN SOBRE LA MESA (APERTURA)",
+          "duration": "15 min",
+          "description": "Ponga sobre la mesa la ganancia simulada de una venta escolar: $90 en monedas. Pregunte qué hacer con ese dinero. Recoja todas las respuestas. Aparecerán tres tipos: gastarlo, guardarlo y volver a producir. Explique que las tres son válidas y que el error no es elegir una, sino elegir solo una y dejar las otras dos en cero.",
+          "activity": "Dinámica \"Tres Montones\": el grupo agrupa sus propuestas en tres columnas y descubre que todas caben en gastar, guardar o crecer."
+        },
+        {
+          "title": "FASE II: REPARTIR CON FRACCIONES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Con círculos de fracciones y monedas, los equipos reparten los $90 en tres partes. Practiquen repartos distintos: un tercio para cada uno, o la mitad a reinversión y un cuarto a cada uno de los otros. Lo importante es que sepan calcular la parte y justificar por qué eligieron ese reparto. Un tercio de $90 son $30; la mitad, $45; un cuarto, algo más de $22.",
+          "activity": "Dinámica \"Corta el Círculo\": cada equipo elige su reparto con los círculos de fracciones y cuenta físicamente las monedas de cada parte."
+        },
+        {
+          "title": "FASE III: TRES VENTAS SEGUIDAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Simulen tres ventas consecutivas aplicando el reparto elegido. Los equipos que reinvirtieron producen más en la segunda y tercera venta; los que no, producen lo mismo siempre. Los que guardaron reserva sobreviven a un imprevisto que se introduce en la segunda venta. La tabla final compara todos los equipos y muestra que el reparto equilibrado gana a los extremos.",
+          "activity": "Dinámica \"Tabla de Tres Ventas\": el pizarrón registra producción, ganancia y frascos de cada equipo en cada ronda."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Terminó la venta y tienes la ganancia sobre la mesa. Ahora viene la decisión que decide si tu negocio crece, se queda igual o desaparece. No se trata de elegir entre gastar o ahorrar: se trata de repartir. En esta clase vas a hacerlo con fracciones y a ver el resultado en tres ventas seguidas.",
+      "sections": [
+        {
+          "subtitle": "Tres destinos, no uno",
+          "content": "La ganancia de un negocio puede ir a tres lugares. A crecer, comprando más materiales para producir más la próxima vez. A guardar, para los imprevistos del negocio. Y a disfrutar, porque el trabajo merece recompensa. El error no es elegir uno de los tres: el error es poner todo en uno solo y dejar los otros dos vacíos. Cada uno cumple una función que los otros no pueden cubrir."
+        },
+        {
+          "subtitle": "Repartir con fracciones",
+          "content": "Repartir en tres partes iguales significa dar un tercio a cada destino. Un tercio de $90 son $30, porque 90 entre 3 son 30. Pero no tiene que ser en partes iguales: si tu negocio está empezando, puede convenir la mitad a crecer y un cuarto a cada uno de los otros dos. La mitad de $90 son $45, y un cuarto es un poco más de $22. Lo importante es decidirlo y calcularlo, no repartir a ojo."
+        },
+        {
+          "subtitle": "Qué pasa si dejas un frasco vacío",
+          "content": "Si no reinviertes, produces siempre lo mismo y tu negocio nunca crece, por más que trabajes. Si no guardas, el primer imprevisto te deja sin poder producir. Y si nunca disfrutas nada, tarde o temprano dejas de tener ganas y abandonas. Cada frasco vacío tiene una consecuencia distinta, y las tres terminan igual: con el negocio detenido."
+        },
+        {
+          "subtitle": "El reparto se ajusta con el tiempo",
+          "content": "El reparto no tiene que ser el mismo para siempre. Al principio conviene mandar más a crecer, porque el negocio es pequeño y cada peso invertido rinde mucho. Cuando ya produce bien, se puede mandar más a guardar y a disfrutar. Revisar el reparto cada cierto tiempo es parte de administrar, igual que revisar el precio o la lista de materiales."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuáles son los tres destinos de la ganancia?",
+          "options": [
+            "Crecer, guardar y disfrutar",
+            "Gastar, perder y olvidar",
+            "Comprar, vender y cobrar"
+          ],
+          "correct": "Crecer, guardar y disfrutar"
+        },
+        {
+          "question": "Un tercio de $90 es:",
+          "options": [
+            "$45",
+            "$30",
+            "$22"
+          ],
+          "correct": "$30"
+        },
+        {
+          "question": "La mitad de $90 es:",
+          "options": [
+            "$30",
+            "$90",
+            "$45"
+          ],
+          "correct": "$45"
+        },
+        {
+          "question": "Si no reinvierto nada:",
+          "options": [
+            "Produzco siempre lo mismo y no crezco",
+            "Crezco más rápido",
+            "No pasa nada"
+          ],
+          "correct": "Produzco siempre lo mismo y no crezco"
+        },
+        {
+          "question": "Si no guardo nada:",
+          "options": [
+            "Gano más",
+            "El primer imprevisto me deja sin producir",
+            "Es lo mejor"
+          ],
+          "correct": "El primer imprevisto me deja sin producir"
+        },
+        {
+          "question": "Si nunca disfruto nada de la ganancia:",
+          "options": [
+            "Crezco al doble",
+            "No importa",
+            "Tarde o temprano abandono"
+          ],
+          "correct": "Tarde o temprano abandono"
+        },
+        {
+          "question": "¿Cuál es el error más común al repartir?",
+          "options": [
+            "Poner todo en un solo destino",
+            "Repartir en tres",
+            "Calcular la fracción"
+          ],
+          "correct": "Poner todo en un solo destino"
+        },
+        {
+          "question": "Al principio de un negocio conviene mandar más a:",
+          "options": [
+            "Disfrutar",
+            "Crecer",
+            "Nada"
+          ],
+          "correct": "Crecer"
+        },
+        {
+          "question": "¿Debe ser siempre el mismo reparto?",
+          "options": [
+            "Sí, para siempre",
+            "Sí, lo marca la ley",
+            "No, se ajusta con el tiempo"
+          ],
+          "correct": "No, se ajusta con el tiempo"
+        },
+        {
+          "question": "Gané $60 y reparto en tres partes iguales. ¿Cuánto va a cada una?",
+          "options": [
+            "$20",
+            "$30",
+            "$60"
+          ],
+          "correct": "$20"
+        }
+      ],
+      "rubric": "Logrado: calcula fracciones del reparto, justifica su elección y explica la consecuencia de cada frasco vacío. En proceso: reparte sin calcular la fracción. Inicial: identifica los tres destinos."
+    },
+    "teacher_tips": [
+      "Los círculos de fracciones conectan esta clase con matemáticas. Aproveche para reforzar mitad, tercio y cuarto con dinero real.",
+      "Introduzca un imprevisto en la segunda ronda. Es lo único que hace evidente la utilidad del frasco de reserva.",
+      "Cierre el ciclo escolar comparando la tabla de tres ventas. Ver el efecto acumulado es el mejor resumen del bloque completo."
+    ]
+  },
   "P2-SUPREMO-SUPERMERCADO": {
     "code": "P2-SUPREMO-SUPERMERCADO",
     "title": "Supermercado en Caos",

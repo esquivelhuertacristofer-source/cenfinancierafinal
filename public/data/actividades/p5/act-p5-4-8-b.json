@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-4-8-B",
+  "unit_code": "P5-4-8",
+  "unit_title": "Precios psicológicos y estrategias de descuento",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Precio y Descuento",
+  "descripcion": "Comprueba que sabes fijar precios y usar descuentos con criterio.",
+  "objetivo": "Verificar la construcción de precios y el uso estratégico de descuentos",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El costo por unidad representa:",
+      "opciones": [
+        "El piso por debajo del cual se pierde",
+        "El precio final",
+        "La ganancia",
+        "El descuento"
+      ],
+      "correcta": 0,
+      "explicacion": "Por debajo de él, cada venta genera pérdida."
+    },
+    {
+      "id": "q2",
+      "texto": "El costo por unidad incluye:",
+      "opciones": [
+        "Solo el material",
+        "Material más parte proporcional de los fijos",
+        "Solo el permiso",
+        "Solo el transporte"
+      ],
+      "correcta": 1,
+      "explicacion": "Omitir los fijos hace parecer rentable un negocio que no lo es."
+    },
+    {
+      "id": "q3",
+      "texto": "Si mi precio queda muy por encima del mercado:",
+      "opciones": [
+        "Vender igual",
+        "Cerrar",
+        "Reducir costos o diferenciar el producto",
+        "Subirlo más"
+      ],
+      "correcta": 2,
+      "explicacion": "La diferencia hay que justificarla o eliminarla."
+    },
+    {
+      "id": "q4",
+      "texto": "Si queda muy por debajo del mercado:",
+      "opciones": [
+        "Es una gran oportunidad",
+        "Hay que bajarlo más",
+        "No importa",
+        "Probablemente subestimé un costo"
+      ],
+      "correcta": 3,
+      "explicacion": "Un precio sospechosamente bajo suele esconder un costo olvidado."
+    },
+    {
+      "id": "q5",
+      "texto": "El descuento por volumen busca:",
+      "opciones": [
+        "Que cada cliente compre más por transacción",
+        "Vender más barato siempre",
+        "Cerrar el negocio",
+        "Subir el margen"
+      ],
+      "correcta": 0,
+      "explicacion": "Tiene un objetivo específico y medible."
+    },
+    {
+      "id": "q6",
+      "texto": "Retener clientes frecuentes conviene porque:",
+      "opciones": [
+        "Compran más caro",
+        "Suele ser más barato que conseguir nuevos",
+        "No se quejan",
+        "Pagan de contado"
+      ],
+      "correcta": 1,
+      "explicacion": "Conseguir un cliente nuevo casi siempre cuesta más que conservar uno."
+    },
+    {
+      "id": "q7",
+      "texto": "El descuento por miedo es:",
+      "opciones": [
+        "Uno por volumen",
+        "Uno de temporada",
+        "El que se da sin saber por qué no se vende",
+        "Uno para clientes frecuentes"
+      ],
+      "correcta": 2,
+      "explicacion": "Reduce el margen sin resolver la causa real."
+    },
+    {
+      "id": "q8",
+      "texto": "Si nadie compra, la causa suele ser:",
+      "opciones": [
+        "Siempre el precio",
+        "La competencia",
+        "La suerte",
+        "El producto, el cliente o la comunicación"
+      ],
+      "correcta": 3,
+      "explicacion": "Bajar el precio sin diagnóstico solo regala margen."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-8-b-escena.webp"
+}

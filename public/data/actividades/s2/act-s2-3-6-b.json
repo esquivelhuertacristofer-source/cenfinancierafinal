@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-3-6-B",
+  "unit_code": "S2-3-6",
+  "unit_title": "Análisis técnico y fundamental: qué mira cada uno",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Análisis",
+  "descripcion": "Responde rápido sobre los dos enfoques.",
+  "objetivo": "Consolidar la distinción entre análisis fundamental y técnico",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El análisis fundamental mira:",
+      "respuesta_correcta": "El negocio detrás de la acción",
+      "incorrectas": [
+        "La gráfica del precio",
+        "El volumen",
+        "Las noticias del día"
+      ],
+      "dato_extra": "Ingresos, utilidades, deuda, márgenes y flujo de efectivo."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El análisis técnico mira:",
+      "respuesta_correcta": "El comportamiento del precio y el volumen",
+      "incorrectas": [
+        "Los estados financieros",
+        "La deuda",
+        "Los dividendos"
+      ],
+      "dato_extra": "Busca patrones y niveles donde el precio reaccionó antes."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El fundamental responde:",
+      "respuesta_correcta": "Cuánto vale realmente el negocio",
+      "incorrectas": [
+        "Cuándo comprar hoy",
+        "Qué dirá la noticia",
+        "Cuánto sube mañana"
+      ],
+      "dato_extra": "Es el enfoque de quien invierte pensando en años."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Los dos enfoques:",
+      "respuesta_correcta": "Suelen combinarse",
+      "incorrectas": [
+        "Son enemigos",
+        "Son idénticos",
+        "Se excluyen"
+      ],
+      "dato_extra": "Fundamental para qué comprar, técnico para afinar cuándo."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Un error común es:",
+      "respuesta_correcta": "Usar el técnico para justificar largo plazo en un mal negocio",
+      "incorrectas": [
+        "Leer estados financieros",
+        "Diversificar",
+        "Invertir a largo plazo"
+      ],
+      "dato_extra": "Cada enfoque sirve para el horizonte que le corresponde."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Operar en plazos cortos exige:",
+      "respuesta_correcta": "Tiempo, disciplina y tolerancia a perder",
+      "incorrectas": [
+        "Solo suerte",
+        "Nada especial",
+        "Mucho dinero únicamente"
+      ],
+      "dato_extra": "La mayoría de quienes lo intentan sin preparación pierde."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Para quien empieza es más razonable:",
+      "respuesta_correcta": "El enfoque de largo plazo",
+      "incorrectas": [
+        "Operar diario",
+        "Apostar todo",
+        "Seguir rumores"
+      ],
+      "dato_extra": "Sobre negocios sólidos o sobre el mercado completo."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-6-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-6-b-escena.webp"
+}

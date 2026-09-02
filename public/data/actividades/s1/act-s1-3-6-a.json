@@ -1,0 +1,177 @@
+{
+  "code": "ACT-S1-3-6-A",
+  "unit_code": "S1-3-6",
+  "unit_title": "CETES y BONDES: invertir con el gobierno desde $100",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Escalera de Plazos",
+  "descripcion": "Distribuye tu dinero en distintos plazos según cuándo lo vas a necesitar.",
+  "objetivo": "Construir un plan de inversión en deuda gubernamental por horizonte de necesidad",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Lo que tengo",
+      "descripcion": "El punto de partida.",
+      "campos": [
+        {
+          "id": "monto_inicial",
+          "label": "Monto que quiero invertir",
+          "type": "number",
+          "min": 100,
+          "max": 500000,
+          "default": 15000,
+          "unit": "$",
+          "placeholder": "15000",
+          "requerido": true
+        },
+        {
+          "id": "aportacion",
+          "label": "Aportación mensual que puedo sostener",
+          "type": "slider",
+          "min": 0,
+          "max": 20000,
+          "step": 100,
+          "default": 800,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "tasa_corto",
+          "label": "Tasa anual del plazo corto",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 0.25,
+          "default": 9,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "tasa_largo",
+          "label": "Tasa anual del plazo largo",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 0.25,
+          "default": 10.5,
+          "unit": "%",
+          "ayuda": "A mayor plazo suele haber mayor tasa.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Cuándo necesito cada parte",
+      "descripcion": "El criterio real para elegir plazo.",
+      "campos": [
+        {
+          "id": "pct_corto",
+          "label": "Parte que necesitaré en menos de un año",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "monto_corto",
+          "label": "Monto a plazo corto",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * pct_corto / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "monto_largo",
+          "label": "Monto a plazo largo",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * (100 - pct_corto) / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "anos_largo",
+          "label": "Años del plazo largo",
+          "type": "slider",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 3,
+          "unit": "años",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El rendimiento estimado",
+      "descripcion": "Cuánto genera cada parte.",
+      "campos": [
+        {
+          "id": "rend_corto",
+          "label": "Rendimiento del plazo corto en un año",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * pct_corto / 100 * tasa_corto / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "rend_largo",
+          "label": "Rendimiento del plazo largo al vencer",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * (100 - pct_corto) / 100 * (Math.pow(1 + tasa_largo / 100, anos_largo) - 1))",
+          "unit": "$"
+        },
+        {
+          "id": "rend_total",
+          "label": "Rendimiento total estimado",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * pct_corto / 100 * tasa_corto / 100 + monto_inicial * (100 - pct_corto) / 100 * (Math.pow(1 + tasa_largo / 100, anos_largo) - 1))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Con aportaciones constantes",
+      "descripcion": "Qué pasa si además aporto cada mes.",
+      "campos": [
+        {
+          "id": "acumulado",
+          "label": "Acumulado con aportaciones al plazo largo",
+          "type": "calculated",
+          "formula": "Math.round(aportacion * (Math.pow(1 + tasa_largo / 100 / 12, anos_largo * 12) - 1) / (tasa_largo / 100 / 12))",
+          "unit": "$"
+        },
+        {
+          "id": "total_final",
+          "label": "Total estimado al final del periodo",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * Math.pow(1 + tasa_largo / 100, anos_largo) + aportacion * (Math.pow(1 + tasa_largo / 100 / 12, anos_largo * 12) - 1) / (tasa_largo / 100 / 12))",
+          "unit": "$"
+        },
+        {
+          "id": "aportado",
+          "label": "Lo que aporté de mi bolsillo",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial + aportacion * anos_largo * 12)",
+          "unit": "$"
+        },
+        {
+          "id": "ganancia",
+          "label": "Ganancia generada",
+          "type": "calculated",
+          "formula": "Math.round(monto_inicial * Math.pow(1 + tasa_largo / 100, anos_largo) + aportacion * (Math.pow(1 + tasa_largo / 100 / 12, anos_largo * 12) - 1) / (tasa_largo / 100 / 12) - monto_inicial - aportacion * anos_largo * 12)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_deuda_gubernamental",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-3-6-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-6-a-escena.webp"
+}

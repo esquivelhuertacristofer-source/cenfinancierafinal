@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-3-9-B",
+  "unit_code": "P6-3-9",
+  "unit_title": "Invertir con poco: los montos mínimos reales en México",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Invertir Con Poco",
+  "descripcion": "Comprueba que sabes por dónde empezar.",
+  "objetivo": "Verificar el conocimiento de instrumentos accesibles y sus criterios",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Para empezar a invertir hace falta:",
+      "opciones": [
+        "Cientos de miles de pesos",
+        "Un aval",
+        "Ser empresario",
+        "Montos que pueden ser de cien pesos"
+      ],
+      "correcta": 3,
+      "explicacion": "Existen instrumentos con mínimos muy bajos."
+    },
+    {
+      "id": "q2",
+      "texto": "La barrera real suele ser:",
+      "opciones": [
+        "No saber que existen y no dar el primer paso",
+        "El monto mínimo",
+        "La edad",
+        "El banco"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso conocer los instrumentos ya es medio camino."
+    },
+    {
+      "id": "q3",
+      "texto": "La liquidez es:",
+      "opciones": [
+        "El rendimiento",
+        "Qué tan rápido se recupera el dinero",
+        "La comisión",
+        "El plazo forzoso"
+      ],
+      "correcta": 1,
+      "explicacion": "Es uno de los tres criterios de comparación."
+    },
+    {
+      "id": "q4",
+      "texto": "El riesgo es:",
+      "opciones": [
+        "El monto mínimo",
+        "El impuesto",
+        "Qué tanto puede variar el valor",
+        "La institución"
+      ],
+      "correcta": 2,
+      "explicacion": "Más riesgo suele venir con más potencial y más variación."
+    },
+    {
+      "id": "q5",
+      "texto": "Entre monto y constancia pesa más:",
+      "opciones": [
+        "El monto inicial",
+        "Ninguno",
+        "El banco elegido",
+        "La constancia sostenida"
+      ],
+      "correcta": 3,
+      "explicacion": "$300 mensuales durante veinte años vencen a $1,000 durante ocho."
+    },
+    {
+      "id": "q6",
+      "texto": "Lo que no se puede comprar después es:",
+      "opciones": [
+        "El tiempo",
+        "El dinero",
+        "La cuenta",
+        "La comisión"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso empezar pequeño hoy vence a empezar grande más tarde."
+    },
+    {
+      "id": "q7",
+      "texto": "Un esquema fraudulento suele prometer:",
+      "opciones": [
+        "Rendimientos moderados",
+        "Rendimientos altos y garantizados",
+        "Nada",
+        "Plazos largos"
+      ],
+      "correcta": 1,
+      "explicacion": "Ninguna inversión real garantiza rendimientos altos."
+    },
+    {
+      "id": "q8",
+      "texto": "Antes de entregar dinero conviene:",
+      "opciones": [
+        "Confiar en la recomendación",
+        "Decidir rápido",
+        "Verificar que la institución esté registrada",
+        "Firmar sin leer"
+      ],
+      "correcta": 2,
+      "explicacion": "Y desconfiar de cualquier presión para decidir de inmediato."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-9-b-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-2-6-A",
+  "unit_code": "P2-2-6",
+  "unit_title": "Comparar dos tiendas: el mismo producto a distinto precio",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Caza de Precios",
+  "descripcion": "Ceny compara antes de comprar. Clasifica cada comparación según si es válida, si está mal hecha o si no vale la pena.",
+  "objetivo": "Distinguir comparaciones de precio válidas de las mal planteadas o innecesarias",
+  "xp": 250,
+  "instruccion": "Arrastra cada comparación de Ceny a la caja correcta.",
+  "categorias": [
+    {
+      "id": "valida",
+      "label": "Comparación válida",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "malhecha",
+      "label": "Mal comparado",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "novale",
+      "label": "No vale la pena",
+      "emoji": "⏱️",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Mismo cuaderno, misma marca: $25 y $18",
+      "emoji": "📓",
+      "categoria_correcta": "valida",
+      "feedback": "Mismo producto, distinto lugar. Siete pesos de diferencia real."
+    },
+    {
+      "id": "i2",
+      "label": "Paquete de 500 g contra paquete de 400 g",
+      "emoji": "⚖️",
+      "categoria_correcta": "malhecha",
+      "feedback": "Cantidades distintas: hay que ajustar antes de comparar precios."
+    },
+    {
+      "id": "i3",
+      "label": "Caminar 30 minutos para ahorrar $2",
+      "emoji": "🚶",
+      "categoria_correcta": "novale",
+      "feedback": "El tiempo también vale. Comparar tiene sentido en lo caro o lo frecuente."
+    },
+    {
+      "id": "i4",
+      "label": "Comparar el precio del garrafón que compran cada semana",
+      "emoji": "💧",
+      "categoria_correcta": "valida",
+      "feedback": "Lo que se compra seguido multiplica la diferencia muchas veces al año."
+    },
+    {
+      "id": "i5",
+      "label": "Comparar una marca cara con una marca corriente",
+      "emoji": "🏷️",
+      "categoria_correcta": "malhecha",
+      "feedback": "No son el mismo producto. Puede convenir, pero no es una comparación de precio limpia."
+    },
+    {
+      "id": "i6",
+      "label": "Comparar el precio de una mochila de $600 en tres tiendas",
+      "emoji": "🎒",
+      "categoria_correcta": "valida",
+      "feedback": "En lo caro, un porcentaje pequeño ya es bastante dinero."
+    },
+    {
+      "id": "i7",
+      "label": "Comparar el precio de un chicle en cinco tiendas",
+      "emoji": "🍬",
+      "categoria_correcta": "novale",
+      "feedback": "Producto barato y ocasional: el esfuerzo cuesta más que el ahorro."
+    },
+    {
+      "id": "i8",
+      "label": "Comparar el mismo refresco frío contra uno al tiempo",
+      "emoji": "🥤",
+      "categoria_correcta": "malhecha",
+      "feedback": "Enfriarlo es un servicio que cuesta. No es exactamente el mismo producto."
+    },
+    {
+      "id": "i9",
+      "label": "Revisar dos volantes antes de salir de casa",
+      "emoji": "📰",
+      "categoria_correcta": "valida",
+      "feedback": "Comparar antes de salir no cuesta tiempo extra: se hace sentado."
+    },
+    {
+      "id": "i10",
+      "label": "Comparar precios de la despensa completa del mes",
+      "emoji": "🛒",
+      "categoria_correcta": "valida",
+      "feedback": "La compra grande es donde más se nota la diferencia acumulada."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-6-a-escena.webp"
+}

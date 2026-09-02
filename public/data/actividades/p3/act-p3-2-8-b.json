@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-2-8-B",
+  "unit_code": "P3-2-8",
+  "unit_title": "Comisiones bancarias: lo que el banco me cobra",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Comisiones al Descubierto",
+  "descripcion": "Demuestra que sabes cuáles se pagan y cuáles se evitan.",
+  "objetivo": "Verificar el reconocimiento y cálculo de comisiones bancarias",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una comisión bancaria es:",
+      "opciones": [
+        "Un cobro del banco por un servicio",
+        "Un impuesto",
+        "Un regalo",
+        "Un préstamo"
+      ],
+      "correcta": 0,
+      "explicacion": "No es un castigo: es el precio de un servicio, como cualquier otro."
+    },
+    {
+      "id": "q2",
+      "texto": "Una comisión de $30 mensuales cuesta al año:",
+      "opciones": [
+        "$30",
+        "$360",
+        "$300",
+        "$3,600"
+      ],
+      "correcta": 1,
+      "explicacion": "30 × 12 = 360. El costo anual es lo que revela el tamaño real."
+    },
+    {
+      "id": "q3",
+      "texto": "4 retiros al mes en cajero ajeno a $30 cada uno cuestan al año:",
+      "opciones": [
+        "$120",
+        "$360",
+        "$1,440",
+        "$480"
+      ],
+      "correcta": 2,
+      "explicacion": "30 × 4 × 12 = 1,440. Y se evita retirando en cajeros del propio banco."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cómo evito la comisión por cajero ajeno?",
+      "opciones": [
+        "No sacando dinero nunca",
+        "Cambiando de tarjeta",
+        "Sacando de noche",
+        "Retirando en cajeros de mi banco"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la comisión evitable más fácil de eliminar, y de las más caras."
+    },
+    {
+      "id": "q5",
+      "texto": "La comisión por saldo mínimo se cobra cuando:",
+      "opciones": [
+        "Mi cuenta baja de cierta cantidad",
+        "Deposito mucho",
+        "Uso la app",
+        "Consulto el saldo"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso conviene saber cuál es el mínimo de tu cuenta antes de vaciarla."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Existen cuentas sin comisión de manejo en México?",
+      "opciones": [
+        "No, todas cobran",
+        "Sí, las de nivel básico",
+        "Solo para empresas",
+        "Solo para adultos mayores"
+      ],
+      "correcta": 1,
+      "explicacion": "Comparar antes de abrir una cuenta puede ahorrar cientos de pesos al año."
+    },
+    {
+      "id": "q7",
+      "texto": "Las comisiones se parecen a:",
+      "opciones": [
+        "Un préstamo",
+        "Un ahorro",
+        "Los gastos hormiga, del lado del banco",
+        "Una inversión"
+      ],
+      "correcta": 2,
+      "explicacion": "Pequeñas, repetidas y casi invisibles hasta que las multiplicas por doce."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Quién es responsable de conocer las comisiones de una cuenta?",
+      "opciones": [
+        "Solo el banco",
+        "Nadie",
+        "El gobierno",
+        "El titular de la cuenta"
+      ],
+      "correcta": 3,
+      "explicacion": "Están en el contrato y en el estado de cuenta: hay que leerlas antes de firmar."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-8-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-8-b-escena.webp"
+}

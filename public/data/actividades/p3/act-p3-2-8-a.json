@@ -1,0 +1,161 @@
+{
+  "code": "ACT-P3-2-8-A",
+  "unit_code": "P3-2-8",
+  "unit_title": "Comisiones bancarias: lo que el banco me cobra",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Calcula tus Comisiones",
+  "descripcion": "Arma el costo anual de las comisiones de una cuenta y descubre cuánto puedes evitar.",
+  "objetivo": "Calcular el costo anual de comisiones bancarias y el ahorro por cambiar hábitos",
+  "xp": 200,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Comisión de manejo",
+      "descripcion": "Lo que el banco cobra cada mes solo por tener la cuenta abierta.",
+      "campos": [
+        {
+          "id": "manejo_mes",
+          "label": "Comisión de manejo mensual",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "default": 40,
+          "unit": "$",
+          "ayuda": "Las cuentas de nivel básico en México suelen cobrar cero.",
+          "requerido": true
+        },
+        {
+          "id": "manejo_anual",
+          "label": "Costo anual de manejo",
+          "type": "calculated",
+          "formula": "manejo_mes * 12",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Retiros en cajero ajeno",
+      "descripcion": "Sacar dinero en un cajero de otro banco casi siempre tiene costo.",
+      "campos": [
+        {
+          "id": "costo_retiro",
+          "label": "Costo por retiro en cajero ajeno",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "Retirar en cajeros de tu propio banco suele ser gratis.",
+          "requerido": true
+        },
+        {
+          "id": "retiros_mes",
+          "label": "Retiros al mes en cajero ajeno",
+          "type": "slider",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "default": 4,
+          "unit": "retiros",
+          "ayuda": "Cuenta cuántas veces usas un cajero que no es de tu banco.",
+          "requerido": true
+        },
+        {
+          "id": "retiros_anual",
+          "label": "Costo anual por retiros ajenos",
+          "type": "calculated",
+          "formula": "costo_retiro * retiros_mes * 12",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Otras comisiones",
+      "descripcion": "Reposiciones de tarjeta y cobros por saldo mínimo no cubierto.",
+      "campos": [
+        {
+          "id": "reposiciones",
+          "label": "Reposiciones de tarjeta al año",
+          "type": "slider",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 1,
+          "unit": "veces",
+          "ayuda": "Cuidar la tarjeta lleva esta comisión a cero.",
+          "requerido": true
+        },
+        {
+          "id": "costo_reposicion",
+          "label": "Costo de cada reposición",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 10,
+          "default": 150,
+          "unit": "$",
+          "ayuda": "Varía por banco; revísalo en tu contrato.",
+          "requerido": true
+        },
+        {
+          "id": "saldo_minimo_anual",
+          "label": "Cobros por saldo mínimo al año",
+          "type": "slider",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "default": 2,
+          "unit": "veces",
+          "ayuda": "Se evita manteniendo el saldo por encima del mínimo.",
+          "requerido": true
+        },
+        {
+          "id": "costo_otros",
+          "label": "Costo anual de otras comisiones",
+          "type": "calculated",
+          "formula": "reposiciones * costo_reposicion + saldo_minimo_anual * 100",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi total y lo evitable",
+      "descripcion": "Cuánto pagas al año y cuánto podrías dejar de pagar cambiando hábitos.",
+      "campos": [
+        {
+          "id": "total_anual",
+          "label": "Total que pago al año en comisiones",
+          "type": "calculated",
+          "formula": "manejo_mes * 12 + costo_retiro * retiros_mes * 12 + reposiciones * costo_reposicion + saldo_minimo_anual * 100",
+          "unit": "$"
+        },
+        {
+          "id": "evitable",
+          "label": "Lo que podría evitar con hábitos",
+          "type": "calculated",
+          "formula": "costo_retiro * retiros_mes * 12 + reposiciones * costo_reposicion + saldo_minimo_anual * 100",
+          "unit": "$"
+        },
+        {
+          "id": "porcentaje_evitable",
+          "label": "Porcentaje evitable del total",
+          "type": "calculated",
+          "formula": "Math.round((costo_retiro * retiros_mes * 12 + reposiciones * costo_reposicion + saldo_minimo_anual * 100) * 100 / Math.max(1, manejo_mes * 12 + costo_retiro * retiros_mes * 12 + reposiciones * costo_reposicion + saldo_minimo_anual * 100))",
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_comisiones",
+  "exportable": true,
+  "portada": "/assets/misiones/p3/p3-2-8-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-8-a-escena.webp"
+}

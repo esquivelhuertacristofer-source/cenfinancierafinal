@@ -1,0 +1,168 @@
+{
+  "code": "ACT-P3-1-7-A",
+  "unit_code": "P3-1-7",
+  "unit_title": "El semáforo del gasto: verde, amarillo y rojo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Semáforo del Gasto",
+  "descripcion": "Arma tu presupuesto semanal repartiendo tu dinero entre los tres colores del semáforo.",
+  "objetivo": "Construir un presupuesto personal asignando montos por categoría de prioridad",
+  "xp": 200,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Lo que voy a recibir",
+      "descripcion": "Un presupuesto empieza por saber con cuánto vas a contar esta semana.",
+      "campos": [
+        {
+          "id": "domingo",
+          "label": "Mi domingo o mesada semanal",
+          "type": "slider",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 150,
+          "unit": "$",
+          "ayuda": "La cantidad fija que sabes que vas a recibir.",
+          "requerido": true
+        },
+        {
+          "id": "extra",
+          "label": "Ingresos extra que espero",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 10,
+          "default": 50,
+          "unit": "$",
+          "ayuda": "Trabajitos o propinas que ya tienes acordadas. No cuentes lo que no es seguro.",
+          "requerido": true
+        },
+        {
+          "id": "total",
+          "label": "Total disponible",
+          "type": "calculated",
+          "formula": "domingo + extra",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Luz verde",
+      "descripcion": "Gastos que no se pueden evitar. Se presupuestan primero porque no son negociables.",
+      "campos": [
+        {
+          "id": "pasaje",
+          "label": "Pasaje de la semana",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 60,
+          "unit": "$",
+          "ayuda": "Sin esto no llegas a la escuela.",
+          "requerido": true
+        },
+        {
+          "id": "comida",
+          "label": "Comida de la escuela",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 50,
+          "unit": "$",
+          "ayuda": "Se puede bajar llevando lunch de casa, pero no se elimina.",
+          "requerido": true
+        },
+        {
+          "id": "verde",
+          "label": "Total luz verde",
+          "type": "calculated",
+          "formula": "pasaje + comida",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Luz amarilla y luz roja",
+      "descripcion": "El amarillo se ajusta comparando precios. El rojo se decide antes, no se improvisa.",
+      "campos": [
+        {
+          "id": "material",
+          "label": "Material escolar y actividades",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 40,
+          "unit": "$",
+          "ayuda": "Aquí es donde más se puede ahorrar comparando.",
+          "requerido": true
+        },
+        {
+          "id": "gustos",
+          "label": "Gustos y antojos que sí decido",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "No debe ser cero, pero sí debe ser una decisión.",
+          "requerido": true
+        },
+        {
+          "id": "amarillo_rojo",
+          "label": "Total amarillo más rojo",
+          "type": "calculated",
+          "formula": "material + gustos",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi resultado",
+      "descripcion": "Lo que queda después de los tres colores es lo que puede ir a tu meta.",
+      "campos": [
+        {
+          "id": "gasto_total",
+          "label": "Total que voy a gastar",
+          "type": "calculated",
+          "formula": "pasaje + comida + material + gustos",
+          "unit": "$"
+        },
+        {
+          "id": "para_meta",
+          "label": "Lo que puedo mandar a mi meta",
+          "type": "calculated",
+          "formula": "domingo + extra - (pasaje + comida + material + gustos)",
+          "unit": "$"
+        },
+        {
+          "id": "porcentaje_rojo",
+          "label": "Porcentaje que se va en luz roja",
+          "type": "calculated",
+          "formula": "Math.round(gustos * 100 / Math.max(1, domingo + extra))",
+          "unit": "%"
+        },
+        {
+          "id": "semanas_meta",
+          "label": "Semanas para juntar $600 a este ritmo",
+          "type": "calculated",
+          "formula": "Math.ceil(600 / Math.max(1, domingo + extra - (pasaje + comida + material + gustos)))",
+          "unit": "semanas"
+        }
+      ]
+    }
+  ],
+  "output_type": "presupuesto_semaforo",
+  "exportable": true,
+  "portada": "/assets/misiones/p3/p3-1-7-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-7-a-escena.webp"
+}

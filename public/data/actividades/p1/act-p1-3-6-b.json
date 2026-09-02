@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-3-6-B",
+  "unit_code": "P1-3-6",
+  "unit_title": "El termómetro de mi meta: pintar lo que llevo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Lectura del Termómetro",
+  "descripcion": "Lee el avance de Ceny y demuestra que sabes calcular cuánto lleva y cuánto le falta.",
+  "objetivo": "Verificar el cálculo del valor por casilla y la lectura del avance",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Meta de $100 con 10 casillas. Cada casilla vale:",
+      "opciones": [
+        "$1",
+        "$100",
+        "$50",
+        "$10"
+      ],
+      "correcta": 3,
+      "explicacion": "La meta se divide entre las diez casillas: 100 entre 10 son 10."
+    },
+    {
+      "id": "q2",
+      "texto": "Meta de $500 con 10 casillas. Cada casilla vale:",
+      "opciones": [
+        "$50",
+        "$5",
+        "$500",
+        "$100"
+      ],
+      "correcta": 0,
+      "explicacion": "500 entre 10 son 50. Cada casilla pintada son cincuenta pesos ahorrados."
+    },
+    {
+      "id": "q3",
+      "texto": "Meta de $100, llevo 4 casillas. ¿Cuánto tengo?",
+      "opciones": [
+        "$4",
+        "$40",
+        "$60",
+        "$400"
+      ],
+      "correcta": 1,
+      "explicacion": "4 casillas de $10 cada una son $40."
+    },
+    {
+      "id": "q4",
+      "texto": "Meta de $100, llevo 7 casillas. ¿Cuánto me falta?",
+      "opciones": [
+        "$7",
+        "$70",
+        "$30",
+        "$3"
+      ],
+      "correcta": 2,
+      "explicacion": "Faltan 3 casillas de $10: $30."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué motiva más una alcancía transparente?",
+      "opciones": [
+        "Porque es más bonita",
+        "Porque cabe más",
+        "Porque pesa menos",
+        "Porque veo mi avance"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo que no se ve se siente como nada, aunque el dinero sí esté ahí."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Puedo pintar casillas que aún no ahorré?",
+      "opciones": [
+        "No, el termómetro dejaría de decir la verdad",
+        "Sí, para animarme",
+        "Sí, si las ahorro después",
+        "Solo una"
+      ],
+      "correcta": 0,
+      "explicacion": "Un termómetro que miente ya no sirve para saber dónde estás parado."
+    },
+    {
+      "id": "q7",
+      "texto": "Saco $50 de mi ahorro para dulces. Meta de $500. ¿Cuánto retrocedí?",
+      "opciones": [
+        "Nada",
+        "Una casilla completa",
+        "Media casilla",
+        "Cinco casillas"
+      ],
+      "correcta": 1,
+      "explicacion": "Con casillas de $50, gastar $50 borra exactamente una casilla."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cada cuándo conviene actualizar el termómetro?",
+      "opciones": [
+        "Cuando me acuerde",
+        "Una vez al año",
+        "Un día fijo cada semana",
+        "Nunca"
+      ],
+      "correcta": 2,
+      "explicacion": "El día fijo convierte la revisión en costumbre y evita que se abandone."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-6-b-escena.webp"
+}

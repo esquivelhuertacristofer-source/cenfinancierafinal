@@ -1,0 +1,202 @@
+{
+  "code": "ACT-S3-1-6-A",
+  "unit_code": "S3-1-6",
+  "unit_title": "Mi línea de tiempo financiera: 10 hitos de los 15 a los 30",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Línea de Tiempo Financiera",
+  "descripcion": "Ubica tus hitos, ponles monto y descubre cuánto necesitas ahorrar desde hoy.",
+  "objetivo": "Construir una línea de tiempo financiera con hitos costeados y ahorro mensual asociado",
+  "xp": 1000,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi punto de partida",
+      "descripcion": "Desde dónde empiezo a contar.",
+      "campos": [
+        {
+          "id": "edad",
+          "label": "Mi edad actual",
+          "type": "slider",
+          "min": 12,
+          "max": 25,
+          "step": 1,
+          "default": 15,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_actual",
+          "label": "Lo que tengo ahorrado hoy",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "default": 2000,
+          "unit": "$",
+          "placeholder": "2000",
+          "requerido": true
+        },
+        {
+          "id": "capacidad",
+          "label": "Lo que puedo ahorrar al mes hoy",
+          "type": "slider",
+          "min": 0,
+          "max": 10000,
+          "step": 50,
+          "default": 400,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "rendimiento",
+          "label": "Rendimiento anual que asumo",
+          "type": "slider",
+          "min": 0,
+          "max": 14,
+          "step": 0.5,
+          "default": 8,
+          "unit": "%",
+          "ayuda": "Un supuesto conservador vale más que uno optimista.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Hito cercano: fondo de emergencia",
+      "descripcion": "El que habilita a todos los demás.",
+      "campos": [
+        {
+          "id": "gasto_mensual_futuro",
+          "label": "Gasto mensual estimado cuando sea independiente",
+          "type": "number",
+          "min": 2000,
+          "max": 80000,
+          "default": 12000,
+          "unit": "$",
+          "placeholder": "12000",
+          "requerido": true
+        },
+        {
+          "id": "meses_fondo",
+          "label": "Meses de gasto que quiero cubrir",
+          "type": "slider",
+          "min": 3,
+          "max": 12,
+          "step": 1,
+          "default": 6,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "meta_fondo",
+          "label": "Monto del fondo de emergencia",
+          "type": "calculated",
+          "formula": "gasto_mensual_futuro * meses_fondo",
+          "unit": "$"
+        },
+        {
+          "id": "edad_fondo",
+          "label": "Edad a la que quiero tenerlo completo",
+          "type": "slider",
+          "min": 18,
+          "max": 32,
+          "step": 1,
+          "default": 24,
+          "unit": "años",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Hito medio: independencia o formación",
+      "descripcion": "El evento grande de esta etapa.",
+      "campos": [
+        {
+          "id": "hito_medio",
+          "label": "¿Cuál es tu hito medio?",
+          "type": "select",
+          "opciones": [
+            "Independencia habitacional",
+            "Formación adicional",
+            "Vehículo",
+            "Emprendimiento"
+          ],
+          "default": "Independencia habitacional",
+          "requerido": true
+        },
+        {
+          "id": "costo_medio",
+          "label": "Costo estimado del hito",
+          "type": "number",
+          "min": 5000,
+          "max": 2000000,
+          "default": 60000,
+          "unit": "$",
+          "placeholder": "60000",
+          "requerido": true
+        },
+        {
+          "id": "edad_medio",
+          "label": "Edad a la que lo quiero alcanzar",
+          "type": "slider",
+          "min": 18,
+          "max": 35,
+          "step": 1,
+          "default": 26,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "meses_medio",
+          "label": "Meses que tengo para lograrlo",
+          "type": "calculated",
+          "formula": "(edad_medio - edad) * 12",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "El ahorro que implica",
+      "descripcion": "De la meta al monto mensual.",
+      "campos": [
+        {
+          "id": "mensual_fondo",
+          "label": "Ahorro mensual para el fondo de emergencia",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, gasto_mensual_futuro * meses_fondo - ahorro_actual) / Math.max(1, (edad_fondo - edad) * 12))",
+          "unit": "$"
+        },
+        {
+          "id": "mensual_medio",
+          "label": "Ahorro mensual para el hito medio",
+          "type": "calculated",
+          "formula": "Math.ceil(costo_medio * (rendimiento / 100 / 12) / (Math.pow(1 + rendimiento / 100 / 12, Math.max(1, (edad_medio - edad) * 12)) - 1))",
+          "unit": "$"
+        },
+        {
+          "id": "total_mensual",
+          "label": "Total mensual necesario",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, gasto_mensual_futuro * meses_fondo - ahorro_actual) / Math.max(1, (edad_fondo - edad) * 12)) + Math.ceil(costo_medio * (rendimiento / 100 / 12) / (Math.pow(1 + rendimiento / 100 / 12, Math.max(1, (edad_medio - edad) * 12)) - 1))",
+          "unit": "$"
+        },
+        {
+          "id": "brecha",
+          "label": "Diferencia con lo que puedo ahorrar hoy",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, gasto_mensual_futuro * meses_fondo - ahorro_actual) / Math.max(1, (edad_fondo - edad) * 12)) + Math.ceil(costo_medio * (rendimiento / 100 / 12) / (Math.pow(1 + rendimiento / 100 / 12, Math.max(1, (edad_medio - edad) * 12)) - 1)) - capacidad",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "linea_tiempo_financiera",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-1-6-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-6-a-escena.webp"
+}

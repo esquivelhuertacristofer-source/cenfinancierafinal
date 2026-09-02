@@ -47,13 +47,25 @@
       "id": "tipo_compra",
       "label": "¿Qué tipo de compra es?",
       "type": "select",
-      "options": [
-        { "label": "Necesidad básica (comida, medicina)", "value": "necesidad" },
-        { "label": "Inversión (herramienta de trabajo, educación)", "value": "inversion" },
-        { "label": "Capricho (ropa de lujo, electrónico nuevo)", "value": "capricho" },
-        { "label": "Emergencia sin fondo de emergencia", "value": "emergencia" }
-      ],
-      "default": "capricho"
+      "default": "capricho",
+      "opciones": [
+        {
+          "label": "Necesidad básica (comida, medicina)",
+          "value": "necesidad"
+        },
+        {
+          "label": "Inversión (herramienta de trabajo, educación)",
+          "value": "inversion"
+        },
+        {
+          "label": "Capricho (ropa de lujo, electrónico nuevo)",
+          "value": "capricho"
+        },
+        {
+          "label": "Emergencia sin fondo de emergencia",
+          "value": "emergencia"
+        }
+      ]
     }
   ],
   "formula": "Math.round(precio_compra * tasa_tarjeta_anual / 100 / 12)",
@@ -114,8 +126,8 @@
       "tipo": "danger"
     },
     {
-      "condicion": "tipo_compra === 'capricho' && meses_pagando > 12",
-      "mensaje": "🎠 La trampa del capricho. Seguirás pagando estos tenis/ropa mucho después de que estén gastados y olvidados. El placer dura días, la deuda dura años.",
+      "condicion": "tipo_compra === 'capricho' && pago_mensual_electo < precio_compra / 12",
+      "mensaje": "Un capricho que vas a estar pagando más de un año. Cuando termines de pagarlo probablemente ya no lo uses, y habrás pagado bastante más que su precio.",
       "tipo": "warning"
     },
     {

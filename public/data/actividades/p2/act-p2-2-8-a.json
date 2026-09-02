@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P2-2-8-A",
+  "unit_code": "P2-2-8",
+  "unit_title": "Antojo en la caja: por qué ponen dulces ahí",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Medidor de la Fila",
+  "descripcion": "Mueve las barritas y descubre cuánto gastas de más al año en la línea de la caja.",
+  "objetivo": "Cuantificar el gasto anual por compras de impulso en la línea de caja",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "precio_antojo",
+      "label": "Precio del antojo típico",
+      "type": "slider",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "default": 12,
+      "unit": "$",
+      "referencia": "Un dulce o chicle de la caja ronda los $10 a $15."
+    },
+    {
+      "id": "veces_mes",
+      "label": "Veces al mes que caigo",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 8,
+      "unit": "veces",
+      "referencia": "Cuenta las visitas a la tienda, no solo al súper."
+    },
+    {
+      "id": "con_plan",
+      "label": "¿Llevo un plan para la fila?",
+      "type": "select",
+      "opciones": [
+        {
+          "label": "Sí, decido antes de entrar",
+          "value": 20
+        },
+        {
+          "label": "A veces me acuerdo",
+          "value": 60
+        },
+        {
+          "label": "No, improviso",
+          "value": 100
+        }
+      ],
+      "default": 100,
+      "referencia": "Un plan hecho antes reduce muchísimo las compras de impulso."
+    }
+  ],
+  "formula": "Math.round(precio_antojo * veces_mes * 12 * con_plan / 100)",
+  "descripcion_formula": "El antojo típico, por las veces al mes, por doce meses, ajustado por qué tan bien te defiendes.",
+  "output_label": "Gasto en antojos de caja al año",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "veces_mes == 0",
+      "mensaje": "Cero antojos de caja al año. Ese dinero completo se queda para tus metas.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "precio_antojo * veces_mes * 12 * con_plan / 100 >= 1000",
+      "mensaje": "Más de mil pesos al año en cosas que nunca decidiste comprar. Todas se tomaron en la fila.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "precio_antojo * veces_mes * 12 * con_plan / 100 >= 400 && precio_antojo * veces_mes * 12 * con_plan / 100 < 1000",
+      "mensaje": "Ese total alcanzaría para una meta completa. Y salió de decisiones de dos segundos.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "con_plan == 20",
+      "mensaje": "Con un plan hecho antes de entrar, el gasto se desploma. El plan no se cansa; la voluntad sí.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "con_plan == 100 && veces_mes >= 10",
+      "mensaje": "Sin plan y con muchas visitas: es la combinación exacta que buscan los exhibidores de caja.",
+      "tipo": "peligro"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-2-8-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-2-8-a-escena.webp"
+}

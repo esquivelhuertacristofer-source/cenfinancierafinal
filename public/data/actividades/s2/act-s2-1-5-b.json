@@ -4,124 +4,159 @@
   "unit_title": "Crisis económicas: lecciones del 94, 2008 y 2020 en México",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "DECIDE",
+  "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "El Momento de la Verdad",
-  "descripcion": "Tu operación va en rojo. El precio acaba de tocar tu límite de pérdida (Stop Loss). Pero sientes que 'ya casi va a subir'. ¿Respetarás tu plan?",
-  "objetivo": "Validar la importancia de la disciplina operativa y el cumplimiento de las reglas de gestión de riesgo",
-  "xp": 500,
-  "personaje_principal": "Estratega",
-  "contexto_inicial": "Invertiste en una empresa de Inteligencia Artificial. Tu plan decía salir si perdías el 5%. El precio acaba de bajar ese 5%. Estás en el momento crítico.",
-  "nodo_inicial": "la_trampa_esperanza",
-  "nodos": {
-    "la_trampa_esperanza": {
-      "id": "la_trampa_esperanza",
-      "texto": "Tu cerebro te dice: 'Si vendo ahora, la pérdida será real. Si espero un poquito más, seguro recupero'. ¿Qué haces?",
-      "opciones": [
+  "titulo": "Tu Plan Anticrisis",
+  "descripcion": "Habrá otra crisis. No se sabe cuándo ni de qué tipo, pero habrá. Las familias que la atraviesan bien no son las que la predijeron: son las que estaban preparadas. Construye tu plan.",
+  "objetivo": "Desarrollar estrategias de resiliencia financiera personal a partir de las lecciones de las crisis de 1994, 2008 y 2020.",
+  "xp": 700,
+  "output_type": "plan_anticrisis",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "diagnostico",
+      "titulo": "🩺 Tu situación de partida",
+      "descripcion": "Una crisis golpea distinto según de dónde te agarre. Empieza por medir tu punto de partida.",
+      "campos": [
         {
-          "id": "respetar_stop",
-          "texto": "Vender de inmediato (Cerrar pérdida pequeña)",
-          "siguiente_nodo": "capital_salvado",
-          "consecuencia": "Fue difícil apretar el botón, pero perdiste poco y aún tienes el 95% de tu capital para la próxima oportunidad.",
-          "xp_bonus": 400,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "id": "ingreso",
+          "label": "Ingreso mensual de tu hogar ($)",
+          "type": "number",
+          "placeholder": "Ej: 25000",
+          "requerido": true
         },
         {
-          "id": "esperanza_toxica",
-          "texto": "Bajar el Stop Loss y esperar (Esperanza tóxica)",
-          "siguiente_nodo": "caida_libre",
-          "consecuencia": "Te dejaste llevar por la emoción. El precio sigue bajando y ahora la pérdida es del 20%.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "gastos_fijos",
+          "label": "Gastos fijos mensuales ineludibles ($)",
+          "type": "number",
+          "placeholder": "Ej: 18000",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_liquido",
+          "label": "Ahorro disponible hoy mismo ($)",
+          "type": "number",
+          "placeholder": "Ej: 30000",
+          "requerido": true
+        },
+        {
+          "id": "meses_aguante",
+          "label": "Meses que aguantarías sin ingresos",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_liquido / Math.max(1, gastos_fijos) * 10) / 10",
+          "unit": "meses",
+          "requerido": false,
+          "ayuda": "En 2020 muchas familias descubrieron que su respuesta era menos de un mes."
         }
       ]
     },
-    "caida_libre": {
-      "id": "caida_libre",
-      "texto": "La caída se acelera. Estás paralizado por el miedo. ¿Vendes ahora o esperas un milagro?",
-      "opciones": [
+    {
+      "id": "deuda",
+      "titulo": "⚠️ Tu exposición al riesgo",
+      "descripcion": "Lo que hunde a las familias en una crisis casi nunca es la crisis: es la deuda que traían de antes.",
+      "campos": [
         {
-          "id": "venta_tardia",
-          "texto": "Vender ahora (Pérdida gigante)",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Perdiste una gran parte de tus ahorros por no seguir tu propio plan inicial.",
-          "xp_bonus": 50,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "pago_deudas",
+          "label": "Pago mensual de todas tus deudas ($)",
+          "type": "number",
+          "placeholder": "Ej: 5000",
+          "requerido": true
         },
         {
-          "id": "promediar_a_la_baja",
-          "texto": "Comprar más acciones para \"promediar el precio\" y recuperar más rápido",
-          "siguiente_nodo": "final_malo",
-          "consecuencia": "La acción siguió cayendo. Ahora tienes el doble de pérdidas.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "carga",
+          "label": "Porcentaje de tu ingreso comprometido en deuda",
+          "type": "calculated",
+          "formula": "Math.round(pago_deudas / Math.max(1, ingreso) * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "En 1995 las tasas se dispararon y quienes tenían deuda a tasa variable perdieron su casa. Arriba del 30% es zona de peligro."
+        },
+        {
+          "id": "deuda_variable",
+          "label": "¿Cuánto de esa deuda es a tasa variable o en dólares? ($)",
+          "type": "number",
+          "placeholder": "Ej: 0",
+          "requerido": true,
+          "ayuda": "Es el tipo de deuda que explota justo cuando llega la crisis."
         }
       ]
     },
-    "capital_salvado": {
-      "id": "capital_salvado",
-      "texto": "Poco después de vender, sale una noticia pésima y la acción cae otro 40%. ¡Te salvaste por seguir tus reglas!",
-      "opciones": [
+    {
+      "id": "objetivo",
+      "titulo": "🎯 Tu meta de resiliencia",
+      "descripcion": "La regla que resistió las tres crisis: seis meses de gastos en instrumentos líquidos y seguros.",
+      "campos": [
         {
-          "id": "final_disciplina_oro",
-          "texto": "Ver el poder de la disciplina",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "La disciplina te salvó de la ruina.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "id": "fondo_meta",
+          "label": "Fondo de emergencia objetivo (6 meses)",
+          "type": "calculated",
+          "formula": "gastos_fijos * 6",
+          "unit": "$",
+          "requerido": false
         },
         {
-          "id": "reinvertir_emocion",
-          "texto": "Reinvertir inmediatamente en otra acción que \"parece barata ahora\"",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "La segunda acción también cayó. El trading emocional rara vez funciona.",
-          "xp_bonus": 30,
-          "es_optima": false,
-          "impacto_patrimonio": -30
+          "id": "falta",
+          "label": "Cuánto te falta para llegar",
+          "type": "calculated",
+          "formula": "Math.max(0, gastos_fijos * 6 - ahorro_liquido)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "aporte_mensual",
+          "label": "¿Cuánto puedes apartar cada mes? ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        },
+        {
+          "id": "meses_para_meta",
+          "label": "Meses para completar tu fondo",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.max(0, gastos_fijos * 6 - ahorro_liquido) / Math.max(1, aporte_mensual))",
+          "unit": "meses",
+          "requerido": false
         }
       ]
     },
-    "final_trader_exitoso": {
-      "id": "final_trader_exitoso",
-      "texto": "¡Felicidades! Has superado la prueba más difícil: aceptar una pérdida pequeña para evitar una ruina total.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "En el trading, el Stop Loss no es una derrota, es un seguro de vida para tu capital."
-    },
-    "final_cuenta_quemada": {
-      "id": "final_cuenta_quemada",
-      "texto": "Has aprendido una lección costosa. El mercado no tiene piedad con quienes no tienen disciplina.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "Tu esperanza no mueve los precios. Solo tu plan protege tu dinero."
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
-    },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
-    },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    {
+      "id": "protocolo",
+      "titulo": "📋 Tu protocolo del día uno",
+      "descripcion": "Decidir en calma lo que harás en pánico. Eso es lo que separa a quien sobrevive de quien vende en el peor momento.",
+      "campos": [
+        {
+          "id": "recorte",
+          "label": "¿Qué gasto recortarías primero?",
+          "type": "text",
+          "placeholder": "Ej: suscripciones y comidas fuera",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_extra",
+          "label": "¿Qué habilidad tuya podría generar ingreso extra?",
+          "type": "text",
+          "placeholder": "Ej: dar clases de matemáticas",
+          "requerido": true
+        },
+        {
+          "id": "no_hacer",
+          "label": "¿Qué te comprometes a NO hacer?",
+          "type": "text",
+          "placeholder": "Ej: no vender mis inversiones en pánico",
+          "requerido": true,
+          "ayuda": "Quien vendió en marzo de 2020 perdió; quien aguantó recuperó todo en meses. La regla se escribe antes, no durante."
+        },
+        {
+          "id": "resiliencia",
+          "label": "Nota de resiliencia (0 a 100)",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.min(100, Math.round(Math.min(6, ahorro_liquido / Math.max(1, gastos_fijos)) * 12 + Math.max(0, 30 - pago_deudas / Math.max(1, ingreso) * 100))))",
+          "unit": "pts",
+          "requerido": false,
+          "ayuda": "Sube con más meses de colchón y menos carga de deuda. Esas dos variables explican casi todo."
+        }
+      ]
     }
-  },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  ],
+  "versión": "2026.Alineada.1"
 }

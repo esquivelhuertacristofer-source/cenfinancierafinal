@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-3-7-B",
+  "unit_code": "P3-3-7",
+  "unit_title": "Pagar a tiempo: el poder de la fecha límite",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "La Fecha Límite",
+  "descripcion": "Comprueba que entiendes el costo real de atrasarse.",
+  "objetivo": "Verificar la comprensión de consecuencias y hábitos de puntualidad",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La fecha límite de pago es:",
+      "opciones": [
+        "El último día para pagar sin consecuencias",
+        "Una fecha aproximada",
+        "El día que yo elija",
+        "El primer día del mes"
+      ],
+      "correcta": 0,
+      "explicacion": "Pasado ese día, aunque sea por uno, el compromiso está incumplido."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres costos de atrasarse son:",
+      "opciones": [
+        "Solo el recargo",
+        "Recargo, interés moratorio y marca en el historial",
+        "Comisión, IVA y propina",
+        "Ninguno"
+      ],
+      "correcta": 1,
+      "explicacion": "Dos se ven en el recibo; el tercero se cobra durante años."
+    },
+    {
+      "id": "q3",
+      "texto": "El costo más caro a largo plazo es:",
+      "opciones": [
+        "El recargo",
+        "El interés moratorio",
+        "La marca en el historial",
+        "La comisión"
+      ],
+      "correcta": 2,
+      "explicacion": "Encarece todos tus créditos futuros, no solo la deuda actual."
+    },
+    {
+      "id": "q4",
+      "texto": "Una parte enorme de los atrasos ocurre:",
+      "opciones": [
+        "Por falta de dinero siempre",
+        "Por decisión",
+        "Por culpa del banco",
+        "Por olvido, teniendo el dinero"
+      ],
+      "correcta": 3,
+      "explicacion": "Es buena noticia: se resuelven con organización, no ganando más."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Cuándo se anota la fecha límite?",
+      "opciones": [
+        "En cuanto adquiero el compromiso",
+        "El día del pago",
+        "Una semana después",
+        "Nunca"
+      ],
+      "correcta": 0,
+      "explicacion": "En el momento. Después es cuando se olvida."
+    },
+    {
+      "id": "q6",
+      "texto": "El recordatorio conviene ponerlo:",
+      "opciones": [
+        "El mismo día",
+        "Unos días antes",
+        "Un día después",
+        "El mes siguiente"
+      ],
+      "correcta": 1,
+      "explicacion": "Anticiparse deja margen para reaccionar si algo falla."
+    },
+    {
+      "id": "q7",
+      "texto": "Pagar un día tarde:",
+      "opciones": [
+        "No cuenta como atraso",
+        "Cuenta desde la semana",
+        "Ya cuenta como atraso",
+        "Depende del banco"
+      ],
+      "correcta": 2,
+      "explicacion": "La línea es exacta: un día antes o un día después cambian todo."
+    },
+    {
+      "id": "q8",
+      "texto": "Con varios pagos al mes, lo mejor es:",
+      "opciones": [
+        "Pagarlos al azar",
+        "Pagar solo el más grande",
+        "Esperar a que llamen",
+        "Ordenarlos por fecha en un calendario"
+      ],
+      "correcta": 3,
+      "explicacion": "El calendario convierte el olvido en algo prácticamente imposible."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-7-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-7-b-escena.webp"
+}

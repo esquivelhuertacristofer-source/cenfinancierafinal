@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-2-10-B",
+  "unit_code": "P6-2-10",
+  "unit_title": "Finanzas y salud mental: el estrés del dinero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Finanzas y Bienestar",
+  "descripcion": "Comprueba que sabes manejar la presión financiera.",
+  "objetivo": "Verificar la comprensión de la relación entre finanzas y bienestar emocional",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El estrés financiero afecta:",
+      "opciones": [
+        "Solo la cartera",
+        "Nada más",
+        "Sueño, concentración, ánimo y relaciones",
+        "Solo a los adultos"
+      ],
+      "correcta": 2,
+      "explicacion": "Sus efectos van mucho más allá de las cuentas."
+    },
+    {
+      "id": "q2",
+      "texto": "El efecto circular consiste en que:",
+      "opciones": [
+        "El estrés mejora las decisiones",
+        "No hay relación",
+        "Todo se resuelve solo",
+        "El estrés lleva a peores decisiones que agravan el problema"
+      ],
+      "correcta": 3,
+      "explicacion": "Romper ese ciclo empieza por reconocer que existe."
+    },
+    {
+      "id": "q3",
+      "texto": "No se puede controlar:",
+      "opciones": [
+        "La inflación o una crisis económica",
+        "Revisar mis números",
+        "Hacer un plan",
+        "Hablar con un acreedor"
+      ],
+      "correcta": 0,
+      "explicacion": "Gastar energía ahí no cambia nada y agota."
+    },
+    {
+      "id": "q4",
+      "texto": "Sí se puede controlar:",
+      "opciones": [
+        "Los precios",
+        "Revisar números, planear y hablar con acreedores",
+        "El desempleo general",
+        "Las tasas de interés"
+      ],
+      "correcta": 1,
+      "explicacion": "En la columna controlable siempre hay algo que hacer."
+    },
+    {
+      "id": "q5",
+      "texto": "Nombrar el problema con números:",
+      "opciones": [
+        "Lo hace desaparecer",
+        "Lo agranda",
+        "Lo convierte en algo con tamaño definido",
+        "No sirve"
+      ],
+      "correcta": 2,
+      "explicacion": "\"Faltan $2,300\" se puede atacar; \"estamos ahogados\" no."
+    },
+    {
+      "id": "q6",
+      "texto": "La reacción más dañina es:",
+      "opciones": [
+        "Pedir ayuda",
+        "Hacer cuentas",
+        "Planear",
+        "Aislarse y dejar de hablar del tema"
+      ],
+      "correcta": 3,
+      "explicacion": "La persona se aleja del apoyo justo cuando más lo necesita."
+    },
+    {
+      "id": "q7",
+      "texto": "Pedir ayuda:",
+      "opciones": [
+        "Es parte de resolver el problema",
+        "Es señal de fracaso",
+        "Es innecesario",
+        "Empeora todo"
+      ],
+      "correcta": 0,
+      "explicacion": "Tan parte del proceso como hacer las cuentas."
+    },
+    {
+      "id": "q8",
+      "texto": "Para recuperar sensación de avance conviene:",
+      "opciones": [
+        "Esperar a que pase",
+        "Actuar sobre una sola cosa controlable",
+        "Preocuparse más",
+        "Revisar todo a la vez"
+      ],
+      "correcta": 1,
+      "explicacion": "Un paso concreto rompe la parálisis mejor que un plan enorme."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-10-b-escena.webp"
+}

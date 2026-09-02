@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-2-8-A",
+  "unit_code": "S3-2-8",
+  "unit_title": "Mudarme solo: el presupuesto real de la independencia",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "La Mudanza de Ceny",
+  "descripcion": "Ceny quiere mudarse el próximo mes. Cada decisión define si lo logra o regresa.",
+  "objetivo": "Evaluar la preparación financiera para la independencia habitacional",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny gana $16,000 al mes, tiene $22,000 ahorrados y encontró un cuarto por $5,500. Quiere mudarse en cuatro semanas.",
+  "nodo_inicial": "calculo",
+  "nodos": {
+    "calculo": {
+      "id": "calculo",
+      "texto": "Calculó que con $5,500 de renta le alcanza. ¿Qué le falta considerar?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El costo de arranque completo: depósito, mes adelantado, mudanza, muebles y enseres",
+          "siguiente_nodo": "reserva",
+          "consecuencia": "El desembolso inicial resulta ser de casi $25,000.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: la renta es lo importante",
+          "siguiente_nodo": "ahogo",
+          "consecuencia": "Sus $22,000 se consumen en el arranque y queda sin margen.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-calculo.webp"
+    },
+    "ahogo": {
+      "id": "ahogo",
+      "texto": "Al segundo mes se descompuso el calentador y no tiene con qué. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reconocer que se mudó sin reserva y reconstruirla antes de seguir",
+          "siguiente_nodo": "reserva",
+          "consecuencia": "Ajusta gastos y prioriza el fondo antes que cualquier otra cosa.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -4000
+        },
+        {
+          "id": "o2",
+          "texto": "Pagarlo con tarjeta y seguir igual",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Sin reserva, cada imprevisto se convierte en deuda cara.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -14000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-ahogo.webp"
+    },
+    "reserva": {
+      "id": "reserva",
+      "texto": "Con el costo de arranque en $25,000 y solo $22,000 ahorrados, ¿qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Posponer tres meses para juntar el arranque y una reserva de tres meses",
+          "siguiente_nodo": "compartir",
+          "consecuencia": "Llega con las tres condiciones cumplidas.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 18000
+        },
+        {
+          "id": "o2",
+          "texto": "Mudarse igual y pedir prestado la diferencia",
+          "siguiente_nodo": "ahogo",
+          "consecuencia": "Empieza su independencia ya endeudado y sin margen.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -9000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-reserva.webp"
+    },
+    "compartir": {
+      "id": "compartir",
+      "texto": "Le proponen compartir un departamento más grande a la mitad de costo. ¿Qué evalúa?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que bajaría su costo habitacional muy por debajo de un tercio del ingreso",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Con ese margen puede construir reserva mientras vive independiente.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 24000
+        },
+        {
+          "id": "o2",
+          "texto": "Descartarlo: quería vivir solo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Legítimo, aunque con mucho menos margen los primeros años.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-compartir.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny se independizó con arranque cubierto, reserva de tres meses y costo habitacional bajo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Las tres condiciones son ingreso con margen, costo de arranque disponible sin crédito y reserva de tres meses. Cumplidas las tres, la independencia se sostiene aunque algo salga mal.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny se independizó preparado, aunque con poco margen mensual.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Llegar preparado ya es mucho. Compartir vivienda al inicio es una forma legítima de liberar margen mientras se construye la reserva.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny se mudó sin reserva y cada imprevisto se convirtió en deuda de tarjeta.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Irse antes de tiempo suele terminar en regresar con deudas, y eso desanima mucho más que haber esperado tres meses. Esperar no es fracasar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-2-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-2-8-a-portada.webp"
+}

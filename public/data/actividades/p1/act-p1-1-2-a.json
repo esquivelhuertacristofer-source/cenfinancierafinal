@@ -145,45 +145,55 @@
     },
     "balance_final": {
       "id": "balance_final",
-      "texto": "Es hora de llegar a la tienda. El Telescopio cuesta $180. ¿Tendrá Ceny suficiente después de todo su recorrido?",
+      "texto": "Ceny llega a la tienda. Cuenta su dinero sobre el mostrador. El Telescopio cuesta $180 y junto a la caja hay una montaña de dulces de $20. ¿Qué hace?",
       "opciones": [
         {
-          "id": "ver_resultado",
-          "texto": "Ver el balance de mi sabiduría",
+          "id": "comprar_telescopio",
+          "texto": "Comprar el Telescopio, que era la meta",
+          "siguiente_nodo": "final_maestria",
+          "consecuencia": "Ceny pone su dinero en el mostrador y se lleva su telescopio.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": -180
+        },
+        {
+          "id": "dulces_primero",
+          "texto": "Comprar primero unos dulces y ver si todavía alcanza",
           "siguiente_nodo": "final_regular",
-          "consecuencia": "Has guiado a Ceny a través de un día complejo.",
-          "xp_bonus": 100,
-          "impacto_patrimonio": 10
+          "consecuencia": "Se lleva los dulces. Ahora le faltan $20 para el telescopio.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -20
+        },
+        {
+          "id": "gastar_todo",
+          "texto": "Llenarse las manos de dulces y dejar el telescopio para otro día",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Sale de la tienda con una bolsa de dulces y sin telescopio.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -120
         }
       ]
     },
     "final_maestria": {
       "id": "final_maestria",
-      "texto": "Si fuiste disciplinado, Ceny tiene su Telescopio Y la amistad de Ajolín. Si gastaste por impulso, aprendiste que el camino a las estrellas requiere enfoque. ¡Felicidades por completar este maratón de decisiones!",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "Un presupuesto no es una cárcel, es un mapa para llegar a donde realmente quieres estar. ¡Sigue así, estratega!"
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "texto": "¡Ceny tiene su Telescopio! Esa misma noche vio los anillos de Saturno desde su ventana. Cumplió el plan que se había hecho al principio del camino, aunque tuvo que decir que no varias veces.",
+      "reflexion_final": "Un presupuesto no es una lista de prohibiciones: es un plan para conseguir lo que de verdad quieres. Cada vez que Ceny dijo \"hoy no\" a algo pequeño, estaba diciendo \"sí\" a su telescopio."
     },
     "final_regular": {
       "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "Ceny volvió a casa con dulces y sin telescopio. Le faltaron $20, exactamente lo que se gastó en la caja. Los dulces se acabaron esa misma tarde.",
+      "reflexion_final": "Llegar tan cerca y no lograrlo duele más que estar lejos. Los gastos pequeños de último momento son los que más metas arruinan, justo porque parecen pequeños."
     },
     "final_malo": {
       "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "Los dulces duraron una tarde. El Telescopio sigue en la vitrina de la tienda, y Ceny tiene que empezar a juntar otra vez desde cero.",
+      "reflexion_final": "El dinero que se gasta sin plan desaparece sin dejar nada. La próxima vez, escribe tu meta en un papel y llévalo contigo a la tienda: ayuda más de lo que parece."
     }
   },
   "versión": "2026.Diamond.Mastery",

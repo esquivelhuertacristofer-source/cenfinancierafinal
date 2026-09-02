@@ -5,152 +5,79 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "SIMULADOR",
-  "complejidad": "MEDIO",
-  "titulo": "Dueño de Rascacielos",
-  "descripcion": "¿Crees que necesitas millones para comprar un centro comercial? ¡Con las FIBRAs puedes ser dueño de una parte con poco dinero! Simula tu inversión inmobiliaria.",
-  "objetivo": "Comprender el funcionamiento de las FIBRAs (REITs) y la generación de ingresos pasivos a través de rentas",
-  "xp": 500,
-  "descripcion_formula": "Calculamos la Renta Anual (Distribución) y la Plusvalía. Renta = Inversión * Yield. ValorFinal = Inversión * (1 + Plusvalía).",
+  "complejidad": "ALTO",
+  "titulo": "Comprar o Rentar",
+  "descripcion": "\"Rentar es tirar el dinero\" es la frase financiera más repetida y más incompleta de México. La respuesta real depende de números concretos. Calcúlalos.",
+  "objetivo": "Comparar objetivamente comprar frente a rentar una vivienda, considerando enganche, intereses, costo de oportunidad y horizonte de permanencia.",
+  "xp": 700,
+  "descripcion_formula": "Compara el costo total de comprar (enganche + mensualidades del crédito + mantenimiento + predial) contra el costo total de rentar durante los mismos años, sumando lo que rendiría el enganche invertido. El resultado positivo favorece comprar; el negativo, rentar.",
   "inputs": [
     {
-      "id": "monto_fibra",
-      "label": "Monto a invertir ($)",
+      "id": "precio_casa",
+      "label": "Precio de la vivienda ($)",
       "type": "slider",
-      "min": 1000,
-      "max": 50000,
-      "step": 1000,
-      "default": 5000,
+      "min": 500000,
+      "max": 6000000,
+      "step": 100000,
+      "default": 1800000,
       "unit": "$"
     },
     {
-      "id": "tipo_propiedad",
-      "label": "Tipo de Portafolio",
-      "type": "select",
-      "default": "Centros Comerciales",
-      "opciones": [
-        "Centros Comerciales (8% Renta)",
-        "Naves Industriales (6% Renta + Alta Plusvalía)",
-        "Hoteles (Variable - Turismo)"
-      ]
+      "id": "renta_mensual",
+      "label": "Renta mensual de una vivienda igual ($)",
+      "type": "slider",
+      "min": 3000,
+      "max": 40000,
+      "step": 500,
+      "default": 9000,
+      "unit": "$"
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "id": "tasa_credito",
+      "label": "Tasa del crédito hipotecario (%)",
+      "type": "slider",
+      "min": 6,
+      "max": 16,
+      "step": 0.5,
+      "default": 11,
+      "unit": "%"
+    },
+    {
+      "id": "anios_quedarse",
+      "label": "¿Cuántos años vivirás ahí?",
       "type": "slider",
       "min": 1,
       "max": 30,
       "step": 1,
-      "default": 5,
+      "default": 15,
       "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
-        {
-          "label": "Conservador",
-          "value": 0.8
-        },
-        {
-          "label": "Moderado",
-          "value": 1
-        },
-        {
-          "label": "Optimista",
-          "value": 1.2
-        }
-      ],
-      "default": 1
     }
   ],
-  "formula": "monto_fibra * (tipo_propiedad === 'Centros Comerciales (8% Renta)' ? 0.08 : tipo_propiedad === 'Naves Industriales (6% Renta + Alta Plusvalía)' ? 0.06 : 0.04)",
-  "output_label": "Rentas Recibidas al Año",
+  "formula": "Math.round((renta_mensual * 12 * anios_quedarse + precio_casa * 0.2 * (Math.pow(1.04, anios_quedarse) - 1)) - (precio_casa * 0.2 + (precio_casa * 0.8 * (tasa_credito/100/12)) / (1 - Math.pow(1 + tasa_credito/100/12, -240)) * 12 * Math.min(anios_quedarse, 20) + precio_casa * 0.015 * anios_quedarse - precio_casa * (Math.pow(1.045, anios_quedarse) - 1)))",
+  "output_label": "Ventaja de COMPRAR frente a rentar",
   "output_prefix": "$",
   "output_suffix": "",
-  "chart_type": "pie",
   "escenarios": [
     {
-      "condicion": "tipo_propiedad === 'Naves Industriales (6% Renta + Alta Plusvalía)'",
-      "mensaje": "🏭 ¡Crecimiento Industrial! Las bodegas están de moda por el comercio en línea. Tu inversión está subiendo mucho de valor además de las rentas.",
-      "tipo": "success"
+      "condicion": "anios_quedarse <= 4",
+      "mensaje": "Con menos de 5 años, rentar casi siempre gana: los gastos de escrituración, notario y comisiones (entre 5% y 8% del precio) no alcanzan a amortizarse. Comprar para mudarse pronto es un mal negocio.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "tipo_propiedad === 'Centros Comerciales (8% Renta)'",
-      "mensaje": "🛍️ Flujo de Efectivo Constante. Las rentas de los locales te dan un dinero seguro mes con mes.",
-      "tipo": "success"
+      "condicion": "resultado > 0 && anios_quedarse > 8",
+      "mensaje": "Comprar conviene en este escenario. Cada mensualidad va construyendo patrimonio tuyo y, pasados los años, la plusvalía y el fin del crédito juegan a tu favor.",
+      "tipo": "exito"
     },
     {
-      "condicion": "true",
-      "mensaje": "🏢 Las FIBRAs te permiten diversificar: eres dueño de pedacitos de muchos edificios al mismo tiempo.",
+      "condicion": "resultado < 0 && anios_quedarse > 8",
+      "mensaje": "Aquí rentar gana: la renta es barata frente al precio de compra. Ojo, esto solo se cumple si de verdad inviertes la diferencia y el enganche en lugar de gastarlos.",
       "tipo": "info"
+    },
+    {
+      "condicion": "tasa_credito >= 14",
+      "mensaje": "Con una tasa así, los intereses del crédito pueden superar el precio de la casa. En hipotecas, cada punto de tasa vale cientos de miles de pesos: comparar bancos es obligatorio.",
+      "tipo": "peligro"
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "Una casa vale $3,000,000 con hipoteca a 20 años al 11% anual. ¿Cuánto pagarás en total con intereses incluidos? ¿En qué casos concretos conviene más rentar que comprar?",
-  "comparativa_espera": "El 78% de las empresas exitosas mexicanas empezaron como negocios locales pequeños. Clip pasó de una pequeña terminal de cobro a más de 1 millón de comercios en 10 años. El tamaño inicial no limita el potencial de escala.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "por_trimestre",
-      "label": "Resultado por Trimestre",
-      "formula": "Math.round(resultado_principal / 4)",
-      "prefix": "$",
-      "suffix": "/trimestre",
-      "descripcion": "El resultado dividido en cuatro trimestres"
-    },
-    {
-      "id": "crecimiento_5a",
-      "label": "Con Crecimiento Anual del 10%",
-      "formula": "Math.round(resultado_principal * Math.pow(1.1, 5))",
-      "prefix": "$",
-      "suffix": " en 5 años",
-      "descripcion": "Si el resultado crece 10% cada año"
-    },
-    {
-      "id": "escala_vs_local",
-      "label": "Potencial de Escala Nacional",
-      "formula": "resultado_principal * 100",
-      "prefix": "$",
-      "suffix": " si escalas a 100 unidades",
-      "descripcion": "El potencial si replicas el modelo en más ubicaciones"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "por_trimestre",
-      "label": "Resultado por Trimestre",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

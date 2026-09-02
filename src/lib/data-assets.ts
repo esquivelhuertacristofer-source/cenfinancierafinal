@@ -17,9 +17,12 @@ export async function getAssetJson(pathname: string): Promise<unknown | null> {
     // ASSETS.fetch ignora el host de la URL; solo importa el pathname.
     const res = await assets.fetch(new URL(pathname, 'https://assets.local'));
     if (res.ok) return await res.json();
-  } catch {
-    // Sin runtime de Cloudflare Workers disponible (ej. `next dev` / `next start`
-    // en Node plano) — se cae al filesystem debajo.
+  } catch (err) {
+    // Puede ser que no haya runtime de Cloudflare Workers disponible (ej.
+    // `next dev` / `next start` en Node plano) — se cae al filesystem debajo.
+    // Pero también puede ser un error real de red/fetch en producción, así
+    // que se registra para no perder visibilidad silenciosamente.
+    console.error(`[getAssetJson] Falló ASSETS.fetch para "${pathname}":`, err);
   }
 
   try {
@@ -27,7 +30,8 @@ export async function getAssetJson(pathname: string): Promise<unknown | null> {
     const { join } = await import('node:path');
     const filePath = join(process.cwd(), 'public', ...pathname.split('/').filter(Boolean));
     return JSON.parse(await readFile(filePath, 'utf-8'));
-  } catch {
+  } catch (err) {
+    console.error(`[getAssetJson] Falló fallback de filesystem para "${pathname}":`, err);
     return null;
   }
 }

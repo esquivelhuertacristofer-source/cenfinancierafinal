@@ -26,26 +26,53 @@
       "id": "crisis_seleccionada",
       "label": "Crisis Económica",
       "type": "select",
-      "options": [
-        { "label": "1982 — Crisis de la deuda y nacionalización bancaria", "value": "1982" },
-        { "label": "1994 — Error de Diciembre (devaluación 100%)", "value": "1994" },
-        { "label": "2008 — Crisis global (Lehman Brothers)", "value": "2008" },
-        { "label": "2020 — COVID-19 (PIB -8.5%)", "value": "2020" }
-      ],
-      "default": "1994"
+      "default": "1994",
+      "opciones": [
+        {
+          "label": "1982 — Crisis de la deuda y nacionalización bancaria",
+          "value": "1982"
+        },
+        {
+          "label": "1994 — Error de Diciembre (devaluación 100%)",
+          "value": "1994"
+        },
+        {
+          "label": "2008 — Crisis global (Lehman Brothers)",
+          "value": "2008"
+        },
+        {
+          "label": "2020 — COVID-19 (PIB -8.5%)",
+          "value": "2020"
+        }
+      ]
     },
     {
       "id": "instrumento_proteccion",
       "label": "¿Dónde tenías tu dinero?",
       "type": "select",
-      "options": [
-        { "label": "Efectivo en pesos (debajo del colchón)", "value": "efectivo" },
-        { "label": "Dólares / divisas extranjeras", "value": "dolares" },
-        { "label": "CETES (gobierno federal)", "value": "cetes" },
-        { "label": "Acciones en la Bolsa Mexicana (IPC)", "value": "bolsa" },
-        { "label": "Bienes raíces (propiedad)", "value": "bienes_raices" }
-      ],
-      "default": "efectivo"
+      "default": "efectivo",
+      "opciones": [
+        {
+          "label": "Efectivo en pesos (debajo del colchón)",
+          "value": "efectivo"
+        },
+        {
+          "label": "Dólares / divisas extranjeras",
+          "value": "dolares"
+        },
+        {
+          "label": "CETES (gobierno federal)",
+          "value": "cetes"
+        },
+        {
+          "label": "Acciones en la Bolsa Mexicana (IPC)",
+          "value": "bolsa"
+        },
+        {
+          "label": "Bienes raíces (propiedad)",
+          "value": "bienes_raices"
+        }
+      ]
     },
     {
       "id": "anos_recuperacion",
@@ -99,10 +126,30 @@
   "linea_del_tiempo": {
     "titulo": "Las 4 grandes crisis económicas de México moderno",
     "eventos": [
-      { "año": "1982", "crisis": "Crisis de la deuda", "devaluacion": "-70%", "causa": "Caída del petróleo + deuda externa + nacionalización bancos" },
-      { "año": "1994", "crisis": "Error de Diciembre", "devaluacion": "-50%", "causa": "Devaluación abrupta del peso por crisis política + EZLN" },
-      { "año": "2008", "crisis": "Crisis global", "devaluacion": "-25%", "causa": "Colapso hipotecario en EE.UU. contagia a México" },
-      { "año": "2020", "crisis": "COVID-19", "devaluacion": "-20%", "causa": "Pandemia global, caída del turismo y remesas" }
+      {
+        "año": "1982",
+        "crisis": "Crisis de la deuda",
+        "devaluacion": "-70%",
+        "causa": "Caída del petróleo + deuda externa + nacionalización bancos"
+      },
+      {
+        "año": "1994",
+        "crisis": "Error de Diciembre",
+        "devaluacion": "-50%",
+        "causa": "Devaluación abrupta del peso por crisis política + EZLN"
+      },
+      {
+        "año": "2008",
+        "crisis": "Crisis global",
+        "devaluacion": "-25%",
+        "causa": "Colapso hipotecario en EE.UU. contagia a México"
+      },
+      {
+        "año": "2020",
+        "crisis": "COVID-19",
+        "devaluacion": "-20%",
+        "causa": "Pandemia global, caída del turismo y remesas"
+      }
     ]
   },
   "chart_type": "bar",

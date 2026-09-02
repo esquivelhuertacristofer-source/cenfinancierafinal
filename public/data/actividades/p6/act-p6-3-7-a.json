@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-3-7-A",
+  "unit_code": "P6-3-7",
+  "unit_title": "Seguros: gastos médicos, vida y auto",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Cada Riesgo con su Protección",
+  "descripcion": "Clasifica cada situación según qué tipo de protección le corresponde.",
+  "objetivo": "Asociar riesgos concretos con el instrumento de protección adecuado",
+  "xp": 600,
+  "instruccion": "Arrastra cada situación al tipo de protección que le corresponde.",
+  "categorias": [
+    {
+      "id": "fondo",
+      "label": "Fondo de emergencia",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    },
+    {
+      "id": "medicos",
+      "label": "Gastos médicos mayores",
+      "emoji": "🏥",
+      "color": "#EF4444"
+    },
+    {
+      "id": "vida",
+      "label": "Seguro de vida",
+      "emoji": "👨‍👩‍👧",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": "auto",
+      "label": "Seguro de auto",
+      "emoji": "🚗",
+      "color": "#F59E0B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Se descompuso el refrigerador: $6,000",
+      "emoji": "🧊",
+      "categoria_correcta": "fondo",
+      "feedback": "Golpe mediano y frecuente: para eso existe el fondo."
+    },
+    {
+      "id": "i2",
+      "label": "Cirugía de urgencia por $380,000",
+      "emoji": "🩺",
+      "categoria_correcta": "medicos",
+      "feedback": "Ningún ahorro razonable absorbe esa cifra."
+    },
+    {
+      "id": "i3",
+      "label": "El sostén económico de la familia fallece",
+      "emoji": "💔",
+      "categoria_correcta": "vida",
+      "feedback": "Protege a quienes dependían de esa persona."
+    },
+    {
+      "id": "i4",
+      "label": "Choque que daña el coche de otra persona",
+      "emoji": "💥",
+      "categoria_correcta": "auto",
+      "feedback": "La cobertura a terceros es la parte más importante."
+    },
+    {
+      "id": "i5",
+      "label": "Dos meses sin ingreso mientras se busca trabajo",
+      "emoji": "📉",
+      "categoria_correcta": "fondo",
+      "feedback": "El caso clásico para el que se construye el fondo."
+    },
+    {
+      "id": "i6",
+      "label": "Hospitalización de tres semanas por un accidente",
+      "emoji": "🏨",
+      "categoria_correcta": "medicos",
+      "feedback": "Los días de hospital escalan muy rápido."
+    },
+    {
+      "id": "i7",
+      "label": "Los hijos menores quedarían sin sustento",
+      "emoji": "🧒",
+      "categoria_correcta": "vida",
+      "feedback": "La suma asegurada debe cubrir sus años de dependencia."
+    },
+    {
+      "id": "i8",
+      "label": "Robo total del vehículo",
+      "emoji": "🚨",
+      "categoria_correcta": "auto",
+      "feedback": "Solo si la póliza incluye cobertura amplia."
+    },
+    {
+      "id": "i9",
+      "label": "Reparación del calentador: $3,500",
+      "emoji": "🔧",
+      "categoria_correcta": "fondo",
+      "feedback": "Demasiado pequeño para un seguro, perfecto para el fondo."
+    },
+    {
+      "id": "i10",
+      "label": "Tratamiento oncológico prolongado",
+      "emoji": "🎗️",
+      "categoria_correcta": "medicos",
+      "feedback": "De los casos donde la suma asegurada alta importa más."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-7-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-7-a-escena.webp"
+}

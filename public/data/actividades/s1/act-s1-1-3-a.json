@@ -4,130 +4,118 @@
   "unit_title": "El mercado laboral: contratos, salarios y prestaciones",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Construyendo el Índice",
-  "descripcion": "¿Por qué elegir una empresa si puedes comprar todas? Diseña tu propio fondo de inversión (ETF) y mira el poder de la diversificación.",
-  "objetivo": "Comprender el concepto de diversificación sectorial y la estructura de un fondo indexado",
-  "xp": 450,
-  "output_type": "Folleto de Mi Fondo ETF",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Los $18,000 que No Ves",
+  "descripcion": "Dos ofertas: $14,000 en nómina o $16,000 \"libres, sin papeles\". La segunda suena mejor. Clasifica lo que estás ganando o perdiendo en cada una.",
+  "objetivo": "Cuantificar el valor de las prestaciones de ley frente a un empleo informal aparentemente mejor pagado.",
+  "xp": 600,
+  "instruccion": "Arrastra cada cosa a la columna que corresponde: qué te da un empleo formal, qué pierdes en uno informal, y qué es igual en los dos.",
+  "categorias": [
     {
-      "id": "tema_fondo",
-      "titulo": "🎨 El Tema de tu Fondo",
-      "descripcion": "¿En qué se especializará tu inversión?",
-      "campos": [
-        {
-          "id": "nombre_etf",
-          "label": "Nombre de tu ETF",
-          "type": "text",
-          "placeholder": "Ej: GlobalTech 100...",
-          "requerido": true
-        },
-        {
-          "id": "enfoque_sectorial",
-          "label": "Sector Principal",
-          "type": "select",
-          "opciones": [
-            "Tecnología y Chips",
-            "Energías Renovables",
-            "Salud y Biotecnología",
-            "Consumo Masivo",
-            "S&P 500 (Las más grandes)"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "formal",
+      "label": "SOLO EN EL FORMAL",
+      "emoji": "📋",
+      "color": "#22c55e"
     },
     {
-      "id": "seleccion_activos",
-      "titulo": "🏢 Selección de Gigantes",
-      "descripcion": "Elige las empresas que formarán parte de tu canasta (selecciona 3).",
-      "campos": [
-        {
-          "id": "empresa_1",
-          "label": "Empresa 1",
-          "type": "select",
-          "opciones": [
-            "Apple (AAPL)",
-            "Microsoft (MSFT)",
-            "Tesla (TSLA)",
-            "Nvidia (NVDA)",
-            "Amazon (AMZN)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "empresa_2",
-          "label": "Empresa 2",
-          "type": "select",
-          "opciones": [
-            "Google (GOOGL)",
-            "Meta (META)",
-            "Netflix (NFLX)",
-            "Adobe (ADBE)",
-            "Intel (INTC)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "empresa_3",
-          "label": "Empresa 3",
-          "type": "select",
-          "opciones": [
-            "Visa (V)",
-            "Walmart (WMT)",
-            "Coca-Cola (KO)",
-            "Disney (DIS)",
-            "PepsiCo (PEP)"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "pierdes",
+      "label": "LO QUE PIERDES SIN NÓMINA",
+      "emoji": "❌",
+      "color": "#ef4444"
     },
     {
-      "id": "comision_y_estrategia",
-      "titulo": "⚙️ Estrategia y Costos",
-      "descripcion": "Define cómo se manejará el fondo.",
-      "campos": [
-        {
-          "id": "tipo_gestion",
-          "label": "Tipo de Gestión",
-          "type": "select",
-          "opciones": [
-            "Pasiva (Sigue al índice - Barato)",
-            "Activa (Un experto elige - Caro)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "mensaje_inversionista_s1",
-          "label": "¿Por qué deberían invertir en tu fondo?",
-          "type": "textarea",
-          "placeholder": "Ej: Porque combinamos seguridad con las empresas más innovadoras...",
-          "requerido": true
-        },
-        {
-          "id": "capital_etf",
-          "label": "Capital Inicial para tu ETF ($)",
-          "type": "slider",
-          "min": 500,
-          "max": 100000,
-          "step": 500,
-          "default": 10000,
-          "requerido": false
-        },
-        {
-          "id": "valor_10_anos",
-          "label": "Valor en 10 Años (10% anual)",
-          "type": "calculated",
-          "formula": "Math.round(capital_etf * Math.pow(1.10, 10))",
-          "unit": "$",
-          "ayuda": "El IPC mexicano ha rendido ~10-12% anual en los últimos 20 años"
-        }
-      ]
+      "id": "igual",
+      "label": "IGUAL EN LOS DOS",
+      "emoji": "⚖️",
+      "color": "#64748b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Aguinaldo de al menos 15 días cada diciembre",
+      "emoji": "🎁",
+      "categoria_correcta": "formal",
+      "feedback": "Es obligatorio por ley. Equivale a medio mes de sueldo extra al año."
+    },
+    {
+      "id": "i2",
+      "label": "Atención médica para ti y tu familia sin pagar consulta",
+      "emoji": "🏥",
+      "categoria_correcta": "formal",
+      "feedback": "El IMSS cubre consultas, hospital, medicamentos y maternidad. Contratarlo por fuera cuesta miles al mes."
+    },
+    {
+      "id": "i3",
+      "label": "Semanas cotizadas que un día se vuelven pensión",
+      "emoji": "👵",
+      "categoria_correcta": "formal",
+      "feedback": "Se necesitan 1,000 semanas, casi 19 años. Los años sin cotizar no se recuperan después."
+    },
+    {
+      "id": "i4",
+      "label": "Poder comprobar ingresos para un crédito de vivienda",
+      "emoji": "🏠",
+      "categoria_correcta": "pierdes",
+      "feedback": "Sin recibos de nómina no hay INFONAVIT ni hipoteca bancaria, por más que ganes bien."
+    },
+    {
+      "id": "i5",
+      "label": "Indemnización si te despiden sin causa",
+      "emoji": "⚖️",
+      "categoria_correcta": "pierdes",
+      "feedback": "Sin contrato no hay antigüedad que reclamar: un día estás y al siguiente no, sin nada."
+    },
+    {
+      "id": "i6",
+      "label": "Días de vacaciones pagadas",
+      "emoji": "🏖️",
+      "categoria_correcta": "formal",
+      "feedback": "Desde 2023 son 12 días desde el primer año, más la prima vacacional del 25%."
+    },
+    {
+      "id": "i7",
+      "label": "Que te paguen si te incapacitas por un accidente",
+      "emoji": "🩼",
+      "categoria_correcta": "pierdes",
+      "feedback": "En la informalidad, el mes que no trabajas es el mes que no comes."
+    },
+    {
+      "id": "i8",
+      "label": "Las horas que trabajas cada día",
+      "emoji": "⏰",
+      "categoria_correcta": "igual",
+      "feedback": "El esfuerzo es el mismo. Lo que cambia es lo que recibes a cambio."
+    },
+    {
+      "id": "i9",
+      "label": "Aportaciones a tu AFORE que crecen con los años",
+      "emoji": "📈",
+      "categoria_correcta": "formal",
+      "feedback": "Patrón y trabajador aportan juntos. En la informalidad tendrías que ahorrarlo todo tú."
+    },
+    {
+      "id": "i10",
+      "label": "Lo que se te antoja gastar el fin de semana",
+      "emoji": "🛒",
+      "categoria_correcta": "igual",
+      "feedback": "Tus gastos no cambian según el tipo de contrato. Tu red de protección, sí."
+    },
+    {
+      "id": "i11",
+      "label": "Historial que te permite rentar sin aval",
+      "emoji": "🔑",
+      "categoria_correcta": "pierdes",
+      "feedback": "Casi todo trámite serio pide comprobante de ingresos formal."
+    },
+    {
+      "id": "i12",
+      "label": "Guardería para tus hijos sin costo",
+      "emoji": "🧸",
+      "categoria_correcta": "formal",
+      "feedback": "Es una prestación del IMSS que sale carísima si la pagas por tu cuenta."
+    }
+  ],
+  "versión": "2026.Alineada.2"
 }

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../../../components/dashboard/Sidebar";
+import { useHasMounted } from "../../../../lib/useHasMounted";
 import { 
   Search, 
   Clock, 
@@ -24,13 +25,9 @@ export default function PlaneamientoPage() {
   const [selectedGrade, setSelectedGrade] = useState<string>("p1");
   const [activeTab, setActiveTab] = useState<"estrategia" | "teoria" | "evaluacion">("estrategia");
   const [searchQuery, setSearchQuery] = useState("");
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const [currentData, setCurrentData] = useState<any | null>(null);
   const [activeUnit, setActiveUnit] = useState<any>(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Los JSON de pedagogía (~2 MB) ya no se importan en el bundle: se sirven
   // como assets estáticos desde public/data (límite de 3 MiB gzip del Worker).
@@ -53,13 +50,33 @@ export default function PlaneamientoPage() {
   const units = Object.values(currentData).map((u: any) => ({
     code: u.code,
     title: u.title,
-    duration: u.duration
+    duration: u.duration,
+    category: u.category
   }));
 
-  const filteredUnits = units.filter(u => 
-    u.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+  const filteredUnits = units.filter(u =>
+    u.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     u.code.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Con 10 unidades por bloque la lista plana es inmanejable: se agrupa por
+  // bloque conservando el orden de las claves del JSON.
+  const bloques: { id: string; label: string; category: string; units: typeof filteredUnits }[] = [];
+  for (const u of filteredUnits) {
+    const esSupremo = u.code.includes("SUPREMO");
+    const id = esSupremo ? "supremo" : u.code.split("-")[1];
+    let bloque = bloques.find(b => b.id === id);
+    if (!bloque) {
+      bloque = {
+        id,
+        label: esSupremo ? "Reto Supremo" : `Bloque ${id}`,
+        category: u.category || "",
+        units: []
+      };
+      bloques.push(bloque);
+    }
+    bloque.units.push(u);
+  }
 
   return (
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] text-[#011C40]">
@@ -77,7 +94,9 @@ export default function PlaneamientoPage() {
                 </div>
                 <div>
                   <h2 className="font-black text-xs uppercase tracking-widest text-[#011C40]">Plan Maestro</h2>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Diamond State v2.0</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+                    {units.length} clases · {bloques.filter(b => b.id !== "supremo").length} bloques
+                  </p>
                 </div>
               </div>
               <div className="relative">
@@ -109,7 +128,22 @@ export default function PlaneamientoPage() {
           </div>
 
           <div className="flex-1 overflow-y-auto px-6 pb-8 space-y-3 custom-scrollbar">
-            {filteredUnits.map((u) => (
+            {bloques.map((bloque) => (
+              <div key={bloque.id} className="space-y-3 pt-2">
+                <div className="sticky top-0 z-10 -mx-2 px-2 py-2 bg-[#F7F5EF]/95 backdrop-blur-sm flex items-baseline justify-between">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#011C40]">
+                      {bloque.label}
+                    </p>
+                    {bloque.category && (
+                      <p className="text-[9px] font-bold text-slate-400 leading-tight">{bloque.category}</p>
+                    )}
+                  </div>
+                  <span className="text-[9px] font-black text-[#FF8C00] shrink-0">
+                    {bloque.units.length} {bloque.units.length === 1 ? "clase" : "clases"}
+                  </span>
+                </div>
+                {bloque.units.map((u) => (
               <button
                 key={u.code}
                 onClick={() => setActiveUnit((currentData as any)[u.code])}
@@ -140,7 +174,14 @@ export default function PlaneamientoPage() {
                   </div>
                 </div>
               </button>
+                ))}
+              </div>
             ))}
+            {bloques.length === 0 && (
+              <p className="text-xs font-bold text-slate-400 text-center py-10">
+                Ninguna clase coincide con la búsqueda.
+              </p>
+            )}
           </div>
         </div>
 

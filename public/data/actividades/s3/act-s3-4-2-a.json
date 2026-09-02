@@ -6,102 +6,218 @@
   "edad": "14-15 años",
   "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "Mi Constitución Familiar",
-  "descripcion": "El dinero puede unir o destruir a una familia. Crea las reglas para que tu empresa sea un legado y no una fuente de pleitos.",
-  "objetivo": "Diseñar un protocolo familiar básico para regular la relación entre la familia, la propiedad y la gestión de la empresa",
-  "xp": 600,
-  "output_type": "Protocolo Familiar de Sucesión",
+  "titulo": "Tu Primera Cotización de Exportación",
+  "descripcion": "Un cliente de Texas te pide precio por 500 piezas. Aquí es donde la mayoría se equivoca: cotiza su precio local en dólares y pierde dinero en cada caja.",
+  "objetivo": "Identificar los costos logísticos, legales y financieros de exportar y evaluar la rentabilidad real de una operación internacional.",
+  "xp": 800,
+  "output_type": "cotizacion_exportacion",
   "exportable": true,
   "pasos": [
     {
-      "id": "filosofia_familia_s3",
-      "titulo": "🌟 Valores y Filosofía",
-      "descripcion": "¿Qué representa tu familia ante el mundo?",
+      "id": "producto",
+      "titulo": "📦 Tu producto y su costo real",
+      "descripcion": "Empieza por lo que de verdad te cuesta poner una pieza terminada en tu bodega.",
       "campos": [
         {
-          "id": "mision_familiar",
-          "label": "Misión de la Familia",
-          "type": "textarea",
-          "placeholder": "Ej: Crear empleos dignos, innovar con ética y apoyar a la comunidad...",
-          "requerido": true
-        },
-        {
-          "id": "valor_principal",
-          "label": "Valor innegociable",
+          "id": "producto",
+          "label": "¿Qué vas a exportar?",
           "type": "text",
-          "placeholder": "Ej: Honestidad, Excelencia, Austeridad...",
-          "requerido": true
-        }
-      ]
-    },
-    {
-      "id": "reglas_trabajo_s3",
-      "titulo": "💼 Reglas de Trabajo",
-      "descripcion": "Evita el nepotismo. ¿Quién puede entrar a trabajar?",
-      "campos": [
-        {
-          "id": "requisitos_familia",
-          "label": "Requisitos para que un familiar trabaje en la empresa",
-          "type": "textarea",
-          "placeholder": "Ej: Título universitario, hablar 2 idiomas y tener 3 años de experiencia en OTRA empresa...",
+          "placeholder": "Ej: salsa artesanal de 250 ml",
           "requerido": true
         },
         {
-          "id": "politica_sueldos",
-          "label": "¿Cómo se fijan los sueldos de los parientes?",
-          "type": "select",
-          "opciones": [
-            "Sueldo de mercado (lo que ganaría alguien fuera)",
-            "Sueldo igual para todos los hermanos",
-            "Sueldo por necesidad"
-          ],
-          "requerido": true
-        }
-      ]
-    },
-    {
-      "id": "gobierno_salida_s3",
-      "titulo": "🚪 Salida y Conflictos",
-      "descripcion": "¿Qué pasa si alguien ya no quiere estar en el negocio?",
-      "campos": [
-        {
-          "id": "venta_acciones_s3",
-          "label": "Regla para vender acciones",
-          "type": "textarea",
-          "placeholder": "Ej: Primero debe ofrecerlas a los otros hermanos antes que a extraños...",
+          "id": "costo_pieza",
+          "label": "Costo de producir una pieza ($)",
+          "type": "number",
+          "placeholder": "Ej: 42",
+          "unit": "$",
           "requerido": true
         },
         {
-          "id": "resolucion_pleitos",
-          "label": "¿Cómo resolverán una pelea entre socios?",
-          "type": "select",
-          "opciones": [
-            "Mediación de un experto externo",
-            "Votación por mayoría",
-            "Decide el fundador"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "socios_familiares",
-          "label": "Número de Socios/Familiares en la Empresa",
+          "id": "piezas",
+          "label": "Piezas del pedido",
           "type": "slider",
-          "min": 2,
-          "max": 20,
+          "min": 50,
+          "max": 5000,
+          "step": 50,
+          "default": 500,
+          "unit": "pzas",
+          "requerido": true
+        },
+        {
+          "id": "costo_produccion",
+          "label": "Costo de producción del pedido",
+          "type": "calculated",
+          "formula": "Math.round(costo_pieza * piezas)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
+    },
+    {
+      "id": "cumplimiento",
+      "titulo": "🛃 Lo que exige el otro país",
+      "descripcion": "Un embarque rechazado en aduana se paga completo y regresa. Estos costos hay que sumarlos antes de cotizar, no después.",
+      "campos": [
+        {
+          "id": "etiquetado",
+          "label": "Reetiquetado y traducción del pedido ($)",
+          "type": "number",
+          "placeholder": "Ej: 3500",
+          "unit": "$",
+          "requerido": true,
+          "ayuda": "Cada país exige su propio etiquetado: ingredientes, alérgenos, unidades y país de origen."
+        },
+        {
+          "id": "certificaciones",
+          "label": "Certificaciones y permisos ($)",
+          "type": "number",
+          "placeholder": "Ej: 6000",
+          "unit": "$",
+          "requerido": true,
+          "ayuda": "Se pagan una vez y sirven para varios embarques: repártelas entre los pedidos del año."
+        },
+        {
+          "id": "pedidos_anio",
+          "label": "Pedidos que esperas al año",
+          "type": "slider",
+          "min": 1,
+          "max": 24,
           "step": 1,
           "default": 4,
+          "unit": "pedidos",
+          "requerido": true
+        },
+        {
+          "id": "cumplimiento_pedido",
+          "label": "Costo de cumplimiento en este pedido",
+          "type": "calculated",
+          "formula": "Math.round(etiquetado + certificaciones / Math.max(1, pedidos_anio))",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
+    },
+    {
+      "id": "logistica",
+      "titulo": "🚚 Llevarlo hasta allá",
+      "descripcion": "El flete es el costo que más se subestima y el que más margen se come en los primeros envíos.",
+      "campos": [
+        {
+          "id": "flete",
+          "label": "Flete y seguro del embarque ($)",
+          "type": "number",
+          "placeholder": "Ej: 18000",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "agente",
+          "label": "Agente aduanal y trámites ($)",
+          "type": "number",
+          "placeholder": "Ej: 7000",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "arancel",
+          "label": "Arancel en destino (%)",
+          "type": "slider",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 0,
+          "unit": "%",
+          "requerido": true,
+          "ayuda": "Con el T-MEC muchos productos mexicanos entran a Estados Unidos al 0%, siempre que cumplas las reglas de origen y lo acredites."
+        },
+        {
+          "id": "costo_total",
+          "label": "Costo total del pedido puesto allá",
+          "type": "calculated",
+          "formula": "Math.round(costo_pieza * piezas + etiquetado + certificaciones / Math.max(1, pedidos_anio) + flete + agente)",
+          "unit": "$",
           "requerido": false
         },
         {
-          "id": "participacion_minima",
-          "label": "Participación Equitativa por Socio",
+          "id": "costo_unitario_real",
+          "label": "Costo real por pieza exportada",
           "type": "calculated",
-          "formula": "Math.round(100 / Math.max(1, socios_familiares) * 10) / 10",
+          "formula": "Math.round((costo_pieza * piezas + etiquetado + certificaciones / Math.max(1, pedidos_anio) + flete + agente) / Math.max(1, piezas))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Compáralo con tu costo local: casi siempre sorprende cuánto sube."
+        }
+      ]
+    },
+    {
+      "id": "precio",
+      "titulo": "💵 El precio que vas a cotizar",
+      "descripcion": "Ahora sí, el número que le mandas al cliente. Y el riesgo que nadie te va a recordar.",
+      "campos": [
+        {
+          "id": "tipo_cambio",
+          "label": "Tipo de cambio que usarás (pesos por dólar)",
+          "type": "slider",
+          "min": 14,
+          "max": 26,
+          "step": 0.5,
+          "default": 18,
+          "unit": "$",
+          "requerido": true,
+          "ayuda": "Cotiza con un tipo de cambio conservador: si el peso se aprecia, tu margen se encoge sin que cambie nada de tu operación."
+        },
+        {
+          "id": "margen_meta",
+          "label": "Margen que quieres ganar (%)",
+          "type": "slider",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "default": 30,
           "unit": "%",
-          "ayuda": "Si dividieran equitativamente, cada socio tendría este porcentaje"
+          "requerido": true
+        },
+        {
+          "id": "precio_usd",
+          "label": "Precio por pieza a cotizar (USD)",
+          "type": "calculated",
+          "formula": "Math.round((costo_pieza * piezas + etiquetado + certificaciones / Math.max(1, pedidos_anio) + flete + agente) / Math.max(1, piezas) / Math.max(0.1, 1 - margen_meta / 100) / Math.max(0.1, 1 - arancel / 100) / Math.max(1, tipo_cambio) * 100) / 100",
+          "unit": "USD",
+          "requerido": false
+        },
+        {
+          "id": "utilidad_pedido",
+          "label": "Utilidad esperada del pedido",
+          "type": "calculated",
+          "formula": "Math.round((costo_pieza * piezas + etiquetado + certificaciones / Math.max(1, pedidos_anio) + flete + agente) / Math.max(0.1, 1 - margen_meta / 100) - (costo_pieza * piezas + etiquetado + certificaciones / Math.max(1, pedidos_anio) + flete + agente))",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "forma_pago",
+          "label": "¿Cómo vas a cobrar este primer pedido?",
+          "type": "select",
+          "default": "anticipado",
+          "requerido": true,
+          "opciones": [
+            {
+              "label": "50% anticipado y 50% contra embarque",
+              "value": "anticipado"
+            },
+            {
+              "label": "Carta de crédito bancaria",
+              "value": "carta"
+            },
+            {
+              "label": "Crédito a 60 días",
+              "value": "credito"
+            }
+          ],
+          "ayuda": "Cobrarle a un cliente extranjero desconocido que no paga es carísimo y lento. En el primer pedido, cobra por adelantado."
         }
       ]
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.2"
 }

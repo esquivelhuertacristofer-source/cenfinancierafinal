@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-4-10-B",
+  "unit_code": "P6-4-10",
+  "unit_title": "Fracasar bien: cerrar un negocio y aprender",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Cierre",
+  "descripcion": "Responde rápido sobre cómo cerrar bien un negocio.",
+  "objetivo": "Consolidar el conocimiento sobre cierre ordenado y análisis",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Cerrar un negocio:",
+      "respuesta_correcta": "Es parte del oficio de emprender",
+      "incorrectas": [
+        "Convierte en fracasado",
+        "Impide volver a empezar",
+        "Es ilegal"
+      ],
+      "dato_extra": "Muchos emprendedores con trayectoria cerraron uno o dos antes."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Lo que distingue a quien vuelve a emprender es:",
+      "respuesta_correcta": "Cómo cerró",
+      "incorrectas": [
+        "Cuánto ganó",
+        "Cuánto duró",
+        "Qué vendía"
+      ],
+      "dato_extra": "Sin deudas ocultas ni relaciones rotas."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Un cabo suelto en el cierre:",
+      "respuesta_correcta": "Reaparece después y más caro",
+      "incorrectas": [
+        "Se olvida",
+        "Se perdona",
+        "No pasa nada"
+      ],
+      "dato_extra": "Obligaciones y registros abiertos siguen corriendo."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El activo más valioso de un negocio pequeño es:",
+      "respuesta_correcta": "La relación con clientes y proveedores",
+      "incorrectas": [
+        "El local",
+        "El logotipo",
+        "El inventario"
+      ],
+      "dato_extra": "Es el único que no se repone con dinero."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La primera pregunta del análisis es:",
+      "respuesta_correcta": "Qué supuesto resultó falso",
+      "incorrectas": [
+        "A quién culpo",
+        "Cuánto perdí",
+        "Quién me falló"
+      ],
+      "dato_extra": "Concreta: \"supuse que comprarían cada semana\"."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Las respuestas del análisis deben ser:",
+      "respuesta_correcta": "Concretas y sin culpa",
+      "incorrectas": [
+        "Generales",
+        "Emocionales",
+        "Breves y vagas"
+      ],
+      "dato_extra": "\"No funcionó\" no es un aprendizaje utilizable."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Ante una deuda que no puedes cubrir completa, conviene:",
+      "respuesta_correcta": "Abonar lo que puedas y acordar el resto por escrito",
+      "incorrectas": [
+        "Callar hasta tener el total",
+        "Desaparecer",
+        "Negar la deuda"
+      ],
+      "dato_extra": "El proveedor prefiere cobrar en partes que no cobrar."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-10-b-escena.webp"
+}

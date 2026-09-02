@@ -1,0 +1,138 @@
+{
+  "code": "ACT-S2-1-10-A",
+  "unit_code": "S2-1-10",
+  "unit_title": "Indicadores que sí debo seguir: INPC, IGAE y desempleo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Leer los Indicadores",
+  "descripcion": "La familia de Ceny debe tomar tres decisiones. Los indicadores correctos las informan.",
+  "objetivo": "Aplicar indicadores económicos a decisiones familiares concretas",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny debe decidir si aceptar un empleo nuevo, si guardar sus ahorros en efectivo y si pedir un crédito grande. Hay datos disponibles para las tres.",
+  "nodo_inicial": "ahorro",
+  "nodos": {
+    "ahorro": {
+      "id": "ahorro",
+      "texto": "Tienen $80,000 guardados en efectivo en casa. ¿Qué indicador revisan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El índice de precios: si la inflación es alta, ese dinero pierde poder de compra cada mes",
+          "siguiente_nodo": "empleo",
+          "consecuencia": "Deciden moverlo a un instrumento que al menos empate con la inflación.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 7000
+        },
+        {
+          "id": "o2",
+          "texto": "La tasa de desempleo",
+          "siguiente_nodo": "empleo",
+          "consecuencia": "Es un dato interesante, pero no informa esta decisión.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-ahorro.webp"
+    },
+    "empleo": {
+      "id": "empleo",
+      "texto": "Le ofrecen al papá un empleo nuevo con mejor sueldo pero en una empresa más pequeña. ¿Qué revisan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El indicador de actividad económica y la tendencia del empleo del sector",
+          "siguiente_nodo": "aumento",
+          "consecuencia": "Ven que la actividad se desacelera y negocian un contrato con más certidumbre.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 9000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: el sueldo es mayor y con eso basta",
+          "siguiente_nodo": "aumento",
+          "consecuencia": "Un sueldo mayor en un sector que se contrae puede durar poco.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-empleo.webp"
+    },
+    "aumento": {
+      "id": "aumento",
+      "texto": "En su empleo actual le ofrecen 5% de aumento y la inflación anual fue 7%. ¿Qué concluyen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que es un retroceso real y conviene negociar con ese dato",
+          "siguiente_nodo": "credito",
+          "consecuencia": "Presentan la cifra y consiguen mejorar la oferta.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 8000
+        },
+        {
+          "id": "o2",
+          "texto": "Que 5% es mejor que nada y hay que aceptarlo",
+          "siguiente_nodo": "credito",
+          "consecuencia": "Aceptan una pérdida real de poder adquisitivo sin discutirla.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-aumento.webp"
+    },
+    "credito": {
+      "id": "credito",
+      "texto": "Piensan pedir un crédito grande. ¿Qué revisan antes?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "La tasa de referencia y si es fija o variable el crédito que les ofrecen",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Eligen tasa fija en un momento de tasas altas y con expectativa de baja.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 12000
+        },
+        {
+          "id": "o2",
+          "texto": "Solo la mensualidad que les cabe",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Con tasa variable, la mensualidad que cabía hoy puede no caber en un año.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -10000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-credito.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia usó el indicador correcto para cada decisión y las tres salieron bien.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "No hace falta seguir veinte cifras. Hacen falta tres o cuatro y saber exactamente qué decisión informa cada una. El resto es ruido.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Tomaron algunas decisiones con datos y otras por intuición.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La pregunta que ordena todo es qué decisión cambia este dato. Cuando un indicador no cambia ninguna decisión, no vale la pena seguirlo; cuando sí, no vale la pena ignorarlo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-1-10-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-1-10-a-portada.webp"
+}

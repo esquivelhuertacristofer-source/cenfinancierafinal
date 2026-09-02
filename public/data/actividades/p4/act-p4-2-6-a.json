@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-2-6-A",
+  "unit_code": "P4-2-6",
+  "unit_title": "Suscripciones: los cobros que se renuevan solos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cazando Suscripciones",
+  "descripcion": "Clasifica cada cargo según si conviene conservarlo, revisarlo o cancelarlo ya.",
+  "objetivo": "Aplicar criterios de uso y costo para decidir sobre cobros recurrentes",
+  "xp": 400,
+  "instruccion": "Arrastra cada suscripción a la decisión que le corresponde.",
+  "categorias": [
+    {
+      "id": "conservar",
+      "label": "Conservar",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "revisar",
+      "label": "Revisar",
+      "emoji": "🔍",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "cancelar",
+      "label": "Cancelar ya",
+      "emoji": "❌",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "App de música que uso todos los días",
+      "emoji": "🎵",
+      "categoria_correcta": "conservar",
+      "feedback": "Uso diario y precio conocido: cumple su función."
+    },
+    {
+      "id": "i2",
+      "label": "Servicio de video que no abro desde hace ocho meses",
+      "emoji": "📺",
+      "categoria_correcta": "cancelar",
+      "feedback": "Ocho meses de cobro por algo que nadie usó."
+    },
+    {
+      "id": "i3",
+      "label": "Prueba gratis que activé y no anoté cuándo termina",
+      "emoji": "⏳",
+      "categoria_correcta": "revisar",
+      "feedback": "Averigua la fecha hoy: empieza a cobrar sin avisar."
+    },
+    {
+      "id": "i4",
+      "label": "Almacenamiento en la nube donde tengo todas mis fotos",
+      "emoji": "☁️",
+      "categoria_correcta": "conservar",
+      "feedback": "Cancelarlo sin respaldo previo puede costar las fotos."
+    },
+    {
+      "id": "i5",
+      "label": "Cargo de $89 que nadie en casa reconoce",
+      "emoji": "❓",
+      "categoria_correcta": "cancelar",
+      "feedback": "Un cargo que nadie identifica se cancela y se aclara."
+    },
+    {
+      "id": "i6",
+      "label": "Dos apps distintas que hacen exactamente lo mismo",
+      "emoji": "👯",
+      "categoria_correcta": "revisar",
+      "feedback": "Conserva una y cancela la otra: pagar doble por lo mismo."
+    },
+    {
+      "id": "i7",
+      "label": "Servicio de videojuegos que uso solo en vacaciones",
+      "emoji": "🎮",
+      "categoria_correcta": "revisar",
+      "feedback": "Se puede contratar solo esos meses en vez de todo el año."
+    },
+    {
+      "id": "i8",
+      "label": "Suscripción que subió de precio y no me avisaron",
+      "emoji": "📈",
+      "categoria_correcta": "revisar",
+      "feedback": "Compara el nuevo precio contra lo que realmente te aporta."
+    },
+    {
+      "id": "i9",
+      "label": "App educativa que usa toda la familia cada semana",
+      "emoji": "📚",
+      "categoria_correcta": "conservar",
+      "feedback": "Uso constante y compartido: buen valor por el costo."
+    },
+    {
+      "id": "i10",
+      "label": "Servicio contratado hace dos años para un solo viaje",
+      "emoji": "✈️",
+      "categoria_correcta": "cancelar",
+      "feedback": "Cumplió su propósito hace mucho y sigue cobrando."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-6-a-escena.webp"
+}

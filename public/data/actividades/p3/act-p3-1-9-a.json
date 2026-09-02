@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P3-1-9-A",
+  "unit_code": "P3-1-9",
+  "unit_title": "Dinero que no esperaba: qué hacer con un ingreso extraordinario",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Regla del Dinero Extra",
+  "descripcion": "Completa la regla de Ceny para repartir el dinero que llega de sorpresa.",
+  "objetivo": "Redactar una regla de reparto por porcentajes para ingresos extraordinarios",
+  "xp": 200,
+  "contexto": "A Ceny le regalaron $600 de aguinaldo. Antes de tocarlos, escribe su regla de reparto.",
+  "texto": "Este dinero es un ingreso __blank1__: no lo esperaba y por eso se siente distinto. Pero compra exactamente __blank2__ que el dinero que gano trabajando. Voy a repartirlo con porcentajes, porque así la regla funciona igual con $600 que con $6,000. El 50% va a mi meta: de $600, eso son $__blank3__. El 30% va a mi ahorro de largo plazo: $__blank4__. Y el 20% es para un gusto: $__blank5__. Para calcular el 10% solo divido entre __blank6__. Escribo esta regla __blank7__ de que llegue el dinero, porque con el sobre en la mano mi cabeza inventa razones para mandarlo todo al gusto. Ningún destino puede quedarse en __blank8__.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "extraordinario",
+        "ordinario",
+        "prestado"
+      ],
+      "respuesta": "extraordinario"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "lo mismo",
+        "menos",
+        "más"
+      ],
+      "respuesta": "lo mismo"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "300",
+        "180",
+        "120"
+      ],
+      "respuesta": "300"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "180",
+        "300",
+        "60"
+      ],
+      "respuesta": "180"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "120",
+        "300",
+        "20"
+      ],
+      "respuesta": "120"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "diez",
+        "cien",
+        "dos"
+      ],
+      "respuesta": "diez"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "antes",
+        "después",
+        "en lugar"
+      ],
+      "respuesta": "antes"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "cero",
+        "la mitad",
+        "diez"
+      ],
+      "respuesta": "cero"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-9-a-escena.webp"
+}

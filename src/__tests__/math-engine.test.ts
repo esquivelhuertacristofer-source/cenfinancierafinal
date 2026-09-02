@@ -111,3 +111,44 @@ describe('solveFormula — robustez y seguridad', () => {
     expect(result).toBe(8);
   });
 });
+
+describe('solveFormula — operadores de JavaScript que mathjs no entiende', () => {
+  // Las condiciones de los escenarios de los simuladores están escritas en
+  // sintaxis JS. Sin traducirlas, mathjs lanza "Value expected" y solveFormula
+  // devuelve 0, es decir: el escenario nunca se cumple.
+  it('traduce && a and', () => {
+    expect(solveFormula('a > 1 && b > 1', { a: 2, b: 2 })).toBe(1);
+    expect(solveFormula('a > 1 && b > 1', { a: 2, b: 0 })).toBe(0);
+  });
+
+  it('traduce || a or', () => {
+    expect(solveFormula('a > 1 || b > 1', { a: 0, b: 2 })).toBe(1);
+    expect(solveFormula('a > 1 || b > 1', { a: 0, b: 0 })).toBe(0);
+  });
+
+  it('compara cadenas con === sin lanzar', () => {
+    expect(solveFormula("perfil === 'agresivo'", { perfil: 'agresivo' })).toBe(1);
+    expect(solveFormula("perfil === 'agresivo'", { perfil: 'conservador' })).toBe(0);
+  });
+
+  it('soporta !== con cadenas', () => {
+    expect(solveFormula("tipo !== 'informal'", { tipo: 'imss' })).toBe(1);
+    expect(solveFormula("tipo !== 'informal'", { tipo: 'informal' })).toBe(0);
+  });
+
+  it('resuelve el ternario con comparación de cadenas', () => {
+    const f = "banco === 'Banco A' ? 100 : 50";
+    expect(solveFormula(f, { banco: 'Banco A' })).toBe(100);
+    expect(solveFormula(f, { banco: 'Banco B' })).toBe(50);
+  });
+
+  it('combina comparación de cadenas con condiciones numéricas', () => {
+    const f = "tipo === 'capricho' && meses > 12";
+    expect(solveFormula(f, { tipo: 'capricho', meses: 18 })).toBe(1);
+    expect(solveFormula(f, { tipo: 'necesidad', meses: 18 })).toBe(0);
+  });
+
+  it('no rompe cuando la variable comparada llega como número', () => {
+    expect(solveFormula("escenario === 'malo'", { escenario: 3 })).toBe(0);
+  });
+});

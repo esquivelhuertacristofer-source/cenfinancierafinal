@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-1-7-B",
+  "unit_code": "S1-1-7",
+  "unit_title": "Del salario bruto al neto: ISR, IMSS y lo que sí llega",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Recibo",
+  "descripcion": "Responde rápido sobre bruto, neto y deducciones.",
+  "objetivo": "Consolidar la lectura de un recibo de nómina",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El salario bruto es:",
+      "respuesta_correcta": "Lo pactado antes de descuentos",
+      "incorrectas": [
+        "Lo que se deposita",
+        "El aguinaldo",
+        "La prima"
+      ],
+      "dato_extra": "Cuando alguien menciona un sueldo, casi siempre habla del bruto."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El neto es:",
+      "respuesta_correcta": "Lo que efectivamente se deposita",
+      "incorrectas": [
+        "Lo pactado",
+        "El impuesto",
+        "La cuota"
+      ],
+      "dato_extra": "Es la cifra con la que se hace todo presupuesto."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El impuesto sobre la renta es:",
+      "respuesta_correcta": "Progresivo",
+      "incorrectas": [
+        "Un porcentaje fijo igual para todos",
+        "Voluntario",
+        "Anual únicamente"
+      ],
+      "dato_extra": "Quien gana más paga más sobre la parte alta de su ingreso."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Un aumento puede dejarte con menos dinero?",
+      "respuesta_correcta": "No, es un mito",
+      "incorrectas": [
+        "Sí, siempre",
+        "Sí, a veces",
+        "Solo con sueldos altos"
+      ],
+      "dato_extra": "La tasa mayor aplica solo sobre la parte adicional."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Las cuotas de seguridad social financian:",
+      "respuesta_correcta": "Atención médica, incapacidades y pensión",
+      "incorrectas": [
+        "Publicidad",
+        "Nada",
+        "Solo la pensión"
+      ],
+      "dato_extra": "Un trabajador informal no tiene ninguno de esos derechos."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Se presupuesta con:",
+      "respuesta_correcta": "El neto",
+      "incorrectas": [
+        "El bruto",
+        "El promedio",
+        "El aguinaldo"
+      ],
+      "dato_extra": "Planear con el bruto genera un faltante todos los meses."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Conviene revisar el recibo porque:",
+      "respuesta_correcta": "Los errores de nómina existen",
+      "incorrectas": [
+        "Es obligatorio",
+        "Lo pide el banco",
+        "No hace falta"
+      ],
+      "dato_extra": "Solo los detecta quien lee el documento."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-7-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-7-b-escena.webp"
+}

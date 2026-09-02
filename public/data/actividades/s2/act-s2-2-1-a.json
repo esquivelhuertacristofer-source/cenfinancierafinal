@@ -4,143 +4,137 @@
   "unit_title": "Gestión de deuda: CAT, tasas y el costo real del dinero",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "SIMULADOR",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "Destroza Tu Deuda",
-  "descripcion": "Tienes una deuda con tarjeta de crédito. El banco cobra intereses mes a mes, y si solo pagas el mínimo, podrías estar pagando décadas. Elige cuánto pagar cada mes y descubre cuándo quedas libre — y cuánto le regalas al banco en intereses.",
-  "objetivo": "Calcular meses para liquidar una deuda, total de intereses pagados y entender el impacto de pagar más del mínimo",
-  "xp": 500,
-  "descripcion_formula": "Meses para liquidar = -ln(1 - saldo×(CAT/12/100)/pago) / ln(1 + CAT/12/100). El interés mensual se recalcula sobre el saldo pendiente cada mes.",
-  "inputs": [
-    {
-      "id": "monto_deuda",
-      "label": "Saldo de la Deuda ($)",
-      "type": "slider",
-      "min": 1000,
-      "max": 100000,
-      "step": 1000,
-      "default": 15000,
-      "unit": "$"
+  "titulo": "El Pago Mínimo",
+  "descripcion": "Andrea debe $15,000 en una tarjeta con CAT del 55%. El estado de cuenta le sugiere pagar $450 este mes. Parece poco. Ese es justamente el problema.",
+  "objetivo": "Comprender el efecto del pago mínimo, calcular el costo real de una deuda y decidir una estrategia de liquidación.",
+  "xp": 750,
+  "personaje_principal": "Andrea",
+  "contexto_inicial": "Deuda: $15,000. CAT: 55% anual. Intereses del mes: unos $690. Pago mínimo sugerido: $450. Ingreso libre al mes: $2,500.",
+  "nodo_inicial": "el_estado_de_cuenta",
+  "nodos": {
+    "el_estado_de_cuenta": {
+      "id": "el_estado_de_cuenta",
+      "texto": "El banco sugiere pagar $450. Los intereses de este mes son $690. ¿Qué nota Andrea?",
+      "opciones": [
+        {
+          "id": "ve_trampa",
+          "texto": "Que pagando $450 la deuda CRECE $240 este mes",
+          "siguiente_nodo": "la_estrategia",
+          "consecuencia": "El pago mínimo no cubre ni los intereses.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "paga_minimo",
+          "texto": "Que es un pago cómodo y cabe en su presupuesto",
+          "siguiente_nodo": "seis_meses_despues",
+          "consecuencia": "Paga puntual seis meses seguidos.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -2700
+        }
+      ]
     },
-    {
-      "id": "cat_anual",
-      "label": "CAT Anual del Crédito (%)",
-      "type": "slider",
-      "min": 15,
-      "max": 120,
-      "step": 1,
-      "default": 55,
-      "unit": "%",
-      "referencia": "CAT promedio tarjetas México: 74.4% (Banxico 2024)"
+    "seis_meses_despues": {
+      "id": "seis_meses_despues",
+      "texto": "Seis meses después: pagó $2,700 puntualmente. Revisa su saldo y debe $16,400. Debe más que al principio.",
+      "opciones": [
+        {
+          "id": "entiende",
+          "texto": "Entender por fin que el mínimo solo alarga la deuda",
+          "siguiente_nodo": "la_estrategia",
+          "consecuencia": "Seis meses y $2,700 después, arranca de verdad.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "sigue_igual",
+          "texto": "Seguir pagando el mínimo y esperar que se acomode",
+          "siguiente_nodo": "final_bola_de_nieve",
+          "consecuencia": "La deuda sigue creciendo cada mes.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -9800
+        }
+      ]
     },
-    {
-      "id": "pago_mensual",
-      "label": "Pago Mensual que Harás ($)",
-      "type": "slider",
-      "min": 500,
-      "max": 20000,
-      "step": 500,
-      "default": 1500,
-      "unit": "$"
+    "la_estrategia": {
+      "id": "la_estrategia",
+      "texto": "Andrea tiene $2,500 libres al mes. ¿Cuánto destina a la tarjeta?",
+      "opciones": [
+        {
+          "id": "agresivo",
+          "texto": "Pagar $2,000 fijos cada mes hasta liquidarla",
+          "siguiente_nodo": "la_tentacion",
+          "consecuencia": "A ese ritmo la liquida en unos 9 meses.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "medio",
+          "texto": "Pagar $1,000 al mes y guardar el resto",
+          "siguiente_nodo": "la_tentacion",
+          "consecuencia": "Tarda el doble y paga muchos más intereses.",
+          "xp_bonus": 120,
+          "impacto_patrimonio": -3400
+        },
+        {
+          "id": "otra_tarjeta",
+          "texto": "Pedir otra tarjeta para pagar esta",
+          "siguiente_nodo": "final_bola_de_nieve",
+          "consecuencia": "Cambia una deuda cara por dos deudas caras.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -11000
+        }
+      ]
     },
-    {
-      "id": "ingreso_mensual",
-      "label": "Tu Ingreso Mensual ($)",
-      "type": "slider",
-      "min": 5000,
-      "max": 80000,
-      "step": 1000,
-      "default": 18000,
-      "unit": "$"
-    }
-  ],
-  "formula": "Math.round(monto_deuda * cat_anual / 100 / 12)",
-  "output_label": "Interés del Primer Mes ($)",
-  "output_prefix": "$",
-  "output_suffix": " en intereses este mes",
-  "outputs_multiples": [
-    {
-      "id": "interes_primer_mes",
-      "label": "Interés del Primer Mes",
-      "formula": "Math.round(monto_deuda * cat_anual / 100 / 12)",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Lo que el banco cobra el primer mes solo en intereses — antes de reducir un peso de deuda"
+    "la_tentacion": {
+      "id": "la_tentacion",
+      "texto": "Al cuarto mes el saldo bajó bastante y el banco le ofrece \"ampliar su línea de crédito, felicidades por su buen comportamiento\". ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "rechaza",
+          "texto": "Rechazar la ampliación y mantener el pago fijo hasta terminar",
+          "siguiente_nodo": "final_liquidada",
+          "consecuencia": "Sigue pagando la misma cantidad aunque el mínimo baje.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "acepta",
+          "texto": "Aceptar: tener más límite no significa gastarlo",
+          "siguiente_nodo": "final_recaida",
+          "consecuencia": "Tres meses después el saldo volvió a subir.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": -8000
+        }
+      ]
     },
-    {
-      "id": "meses_para_liquidar",
-      "label": "Meses para Quedar Libre",
-      "formula": "pago_mensual > monto_deuda * cat_anual / 100 / 12 ? Math.ceil(-Math.log(1 - monto_deuda*(cat_anual/100/12)/pago_mensual) / Math.log(1 + cat_anual/100/12)) : 999",
-      "prefix": "",
-      "suffix": " meses",
-      "descripcion": "Si pago mensual ≤ interés generado, nunca terminas de pagar (muestra 999)"
+    "final_liquidada": {
+      "id": "final_liquidada",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Andrea liquidó los $15,000 en nueve meses. Pagó cerca de $3,200 de intereses en vez de los más de $20,000 que habría pagado con el mínimo. Al terminar, mantuvo el mismo pago mensual, pero ahora hacia su fondo de emergencia.",
+      "reflexion_final": "Lo único que reduce una deuda es pagar por encima de los intereses. El truco no es tener más ingreso: es mantener el pago fijo aunque el mínimo baje, y no aceptar más crédito mientras estés saliendo."
     },
-    {
-      "id": "total_intereses_pagados",
-      "label": "Total de Intereses Pagados",
-      "formula": "pago_mensual > monto_deuda * cat_anual / 100 / 12 ? Math.round(pago_mensual * Math.ceil(-Math.log(1 - monto_deuda*(cat_anual/100/12)/pago_mensual) / Math.log(1 + cat_anual/100/12)) - monto_deuda) : 0",
-      "prefix": "$",
-      "suffix": " extra",
-      "descripcion": "Dinero extra que le regalas al banco por encima de lo que pediste prestado"
+    "final_recaida": {
+      "id": "final_recaida",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Con más límite disponible, Andrea volvió a usar la tarjeta antes de terminar de pagarla. Un año después seguía debiendo casi lo mismo que al principio.",
+      "reflexion_final": "Un límite más alto no es un premio: es más soga. Mientras estés saliendo de una deuda cara, cualquier crédito nuevo alarga el camino."
     },
-    {
-      "id": "razon_deuda_ingreso",
-      "label": "Razón Deuda-Ingreso",
-      "formula": "Math.round(pago_mensual / ingreso_mensual * 100)",
-      "prefix": "",
-      "suffix": "% de tu ingreso",
-      "descripcion": "Porcentaje de tu sueldo destinado a pagar deuda. Más del 30% es peligroso."
-    }
-  ],
-  "estrategias_pago": {
-    "titulo": "Dos estrategias para salir de deudas",
-    "avalancha": {
-      "nombre": "Avalancha (matemáticamente óptima)",
-      "descripcion": "Paga primero la deuda con mayor CAT. Ahorras más dinero en intereses totales.",
-      "para_quien": "Para quienes son disciplinados y quieren minimizar el costo total."
-    },
-    "bola_de_nieve": {
-      "nombre": "Bola de Nieve (motivacionalmente poderosa)",
-      "descripcion": "Paga primero la deuda más pequeña. Las victorias rápidas dan motivación.",
-      "para_quien": "Para quienes necesitan momentum psicológico para mantenerse."
+    "final_bola_de_nieve": {
+      "id": "final_bola_de_nieve",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Dos años después Andrea debía $24,000 habiendo pagado puntualmente cada mes. Nunca se atrasó, y nunca avanzó.",
+      "reflexion_final": "El pago mínimo está calculado para que la deuda dure el mayor tiempo posible. Si tu pago no supera los intereses del mes, no estás pagando la deuda: estás rentándola."
     }
   },
-  "chart_type": "line",
-  "chart_series": [
-    {
-      "id": "saldo_restante",
-      "label": "Saldo Pendiente ($)",
-      "color": "#ef4444"
-    },
-    {
-      "id": "intereses_acumulados",
-      "label": "Intereses Acumulados ($)",
-      "color": "#f59e0b"
-    }
-  ],
-  "escenarios": [
-    {
-      "condicion": "pago_mensual <= monto_deuda * cat_anual / 100 / 12",
-      "mensaje": "💀 ¡TRAMPA MORTAL! Tu pago mensual no alcanza ni a cubrir los intereses. La deuda crece cada mes aunque pagues. Necesitas pagar al menos el doble del interés mensual.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "razon_deuda_ingreso > 30",
-      "mensaje": "⚠️ Sobreendeudamiento. Destinas más del 30% de tu ingreso a deuda. Los bancos en México consideran insolvente a quien supera este umbral.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "meses_para_liquidar <= 12",
-      "mensaje": "🏆 ¡Estrategia agresiva! Pagarás esta deuda en menos de un año. Excelente decisión — los intereses que ahorrarás son significativos.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 Cada peso extra que pagas hoy ahorra varios pesos en intereses futuros. La urgencia de pagar deuda cara siempre supera la urgencia de ahorrar.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "pregunta_reflexion": "Crédito A: $20,000 al 18% anual en 12 meses. Crédito B: $20,000 al 12% anual en 24 meses. ¿Cuál tiene menor costo total? ¿El plazo o la tasa importa más para el costo final del crédito?",
-  "comparativa_espera": "El CAT más alto en México puede superar el 100% anual en ciertos créditos de nómina. Comparar siempre el CAT completo — no solo la tasa mensual — puede ahorrarte decenas de miles de pesos por crédito."
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.2"
 }

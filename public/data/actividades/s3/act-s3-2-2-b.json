@@ -4,84 +4,177 @@
   "unit_title": "Finanzas en la universidad: vivir con presupuesto limitado",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Dueños vs Acreedores",
-  "descripcion": "En el mundo de los negocios, hay dos formas de estar en una empresa: como el que presta o como el que arriesga. ¿Conoces las reglas?",
-  "objetivo": "Diferenciar los derechos, riesgos y obligaciones de los acreedores frente a los accionistas",
-  "xp": 400,
-  "instruccion": "Arrastra cada concepto a la categoría que le corresponde: ¿Es una característica de la DEUDA o de las ACCIONES?",
-  "items": [
-    {
-      "id": "cap1",
-      "label": "Cobran intereses obligatorios",
-      "emoji": "🏦",
-      "categoria_correcta": "deuda",
-      "feedback": "Los acreedores exigen su pago sin importar si la empresa ganó o perdió dinero."
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Primer Semestre, Primera Tarjeta",
+  "descripcion": "Le aprobaron a Diego su primera tarjeta de crédito con límite de $25,000. Es su primer semestre de universidad, vive con $8,000 al mes y todos sus amigos ya están usando la suya.",
+  "objetivo": "Evitar el endeudamiento temprano comprendiendo el uso constructivo del crédito durante la etapa estudiantil.",
+  "xp": 800,
+  "personaje_principal": "Diego",
+  "contexto_inicial": "Ingreso mensual: $8,000. Gastos fijos: $6,400. Le quedan $1,600 libres al mes. Límite de tarjeta: $25,000 con CAT del 89%.",
+  "nodo_inicial": "la_tarjeta",
+  "nodos": {
+    "la_tarjeta": {
+      "id": "la_tarjeta",
+      "texto": "Llega la tarjeta. ¿Cómo la va a usar?",
+      "opciones": [
+        {
+          "id": "pequeno",
+          "texto": "Solo para un gasto pequeño y fijo que ya tiene, y liquidarla completa cada mes",
+          "siguiente_nodo": "el_semestre",
+          "consecuencia": "Carga ahí sus $400 de transporte mensual y paga el total cada mes.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "emergencias",
+          "texto": "Guardarla sin usar, solo para emergencias reales",
+          "siguiente_nodo": "el_semestre",
+          "consecuencia": "Segura, aunque así no construye historial crediticio.",
+          "xp_bonus": 180,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "usar",
+          "texto": "Usarla normalmente: \"para eso me la dieron\"",
+          "siguiente_nodo": "el_viaje",
+          "consecuencia": "En seis semanas lleva $9,000 gastados.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -9000
+        }
+      ]
     },
-    {
-      "id": "cap2",
-      "label": "Derecho a voto y decisiones",
-      "emoji": "🗳️",
-      "categoria_correcta": "acciones",
-      "feedback": "Como dueño, tienes voz y voto en el rumbo que toma la compañía."
+    "el_semestre": {
+      "id": "el_semestre",
+      "texto": "A mitad de semestre sus amigos organizan un viaje de $12,000. Diego tiene $2,400 ahorrados y $25,000 de límite disponible.",
+      "opciones": [
+        {
+          "id": "no_ir",
+          "texto": "No ir esta vez y proponer algo más barato al grupo",
+          "siguiente_nodo": "la_computadora",
+          "consecuencia": "Es incómodo. Tres amigos se suman a la alternativa barata.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "ahorrar",
+          "texto": "Proponer al grupo la misma idea para el próximo semestre y ahorrar para eso",
+          "siguiente_nodo": "la_computadora",
+          "consecuencia": "Se compromete a $1,200 mensuales durante el semestre.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "tarjetear",
+          "texto": "Pagarlo con la tarjeta: \"luego lo voy pagando\"",
+          "siguiente_nodo": "la_bola",
+          "consecuencia": "$12,000 a un CAT del 89% con $1,600 libres al mes.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -12000
+        }
+      ]
     },
-    {
-      "id": "cap3",
-      "label": "Cobran primero en caso de quiebra",
-      "emoji": "🥇",
-      "categoria_correcta": "deuda",
-      "feedback": "La ley protege primero a los que prestaron dinero antes que a los dueños."
+    "el_viaje": {
+      "id": "el_viaje",
+      "texto": "El estado de cuenta llega con $9,000. El pago mínimo es $450 y Diego tiene $1,600 libres. Paga el mínimo \"por si acaso\".",
+      "opciones": [
+        {
+          "id": "corregir",
+          "texto": "Frenar en seco: dejar de usarla y pagar todo lo que pueda cada mes",
+          "siguiente_nodo": "la_bola",
+          "consecuencia": "Destina $1,600 mensuales a liquidarla.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": -9000
+        },
+        {
+          "id": "seguir",
+          "texto": "Seguir usándola pagando el mínimo",
+          "siguiente_nodo": "final_atrapado",
+          "consecuencia": "El saldo crece cada mes.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -34000
+        }
+      ]
     },
-    {
-      "id": "cap4",
-      "label": "Reciben Dividendos",
-      "emoji": "💰",
-      "categoria_correcta": "acciones",
-      "feedback": "Es la parte de las ganancias que se reparte entre los socios o accionistas."
+    "la_bola": {
+      "id": "la_bola",
+      "texto": "Con $12,000 al 89% anual y solo $1,600 libres al mes, tardará más de 10 meses y pagará cerca de $4,000 de intereses, siempre que no vuelva a usar la tarjeta.",
+      "opciones": [
+        {
+          "id": "plan",
+          "texto": "Hacer un plan de liquidación y no usar la tarjeta hasta llegar a cero",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "Come más en casa, cancela dos suscripciones y liquida en 9 meses.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -3800
+        },
+        {
+          "id": "minimo",
+          "texto": "Pagar solo el mínimo y seguir con su vida",
+          "siguiente_nodo": "final_atrapado",
+          "consecuencia": "A este ritmo, tarda años.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -34000
+        }
+      ]
     },
-    {
-      "id": "cap5",
-      "label": "Tiene una fecha de vencimiento",
-      "emoji": "📅",
-      "categoria_correcta": "deuda",
-      "feedback": "La deuda debe devolverse en un plazo determinado; las acciones son para siempre (o hasta que las vendas)."
+    "la_computadora": {
+      "id": "la_computadora",
+      "texto": "Su laptop se descompone y la necesita para la carrera. Reparación: $3,500. Nueva: $18,000 a 18 MSI. Tiene $2,400 ahorrados.",
+      "opciones": [
+        {
+          "id": "reparar",
+          "texto": "Reparar por $3,500, pagando $2,400 de ahorro y $1,100 con la tarjeta que liquidará el mes siguiente",
+          "siguiente_nodo": "final_solido",
+          "consecuencia": "Resuelve el problema real sin comprometerse 18 meses.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": -3500
+        },
+        {
+          "id": "msi",
+          "texto": "Comprar la nueva a 18 MSI: $1,000 al mes de sus $1,600 libres",
+          "siguiente_nodo": "final_apretado",
+          "consecuencia": "Se compromete a 18 meses con el 62% de su dinero libre.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": -18000
+        }
+      ]
     },
-    {
-      "id": "cap6",
-      "label": "Ganancia ilimitada si la empresa crece",
-      "emoji": "🚀",
-      "categoria_correcta": "acciones",
-      "feedback": "El banco solo gana intereses; el dueño gana todo el crecimiento del valor de la empresa."
+    "final_solido": {
+      "id": "final_solido",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Diego terminó la carrera sin un peso de deuda de consumo, con historial crediticio impecable por cuatro años de pagos puntuales y con un fondo de emergencia de $30,000. A los 22 le aprobaron un crédito hipotecario con la mejor tasa disponible.",
+      "reflexion_final": "La tarjeta de crédito en la universidad es una herramienta excelente o una trampa, y lo decide una sola regla: usarla solo para gastos que ya tenías y liquidarla completa cada mes. Así construyes historial gratis. En el momento en que financia algo que no podías pagar, cambia de bando."
     },
-    {
-      "id": "cap7",
-      "label": "Son los últimos en cobrar (Residuales)",
-      "emoji": "🐢",
-      "categoria_correcta": "acciones",
-      "feedback": "Toman el mayor riesgo: si no queda dinero tras pagar deudas, los dueños no reciben nada."
+    "final_apretado": {
+      "id": "final_apretado",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "La laptop nueva funcionó bien, pero durante 18 meses vivió con $600 libres al mes. Cuando su bicicleta se descompuso no tenía margen y tuvo que usar la tarjeta otra vez.",
+      "reflexion_final": "Los MSI no cobran intereses y sí comprometen tu flujo. Comprometer el 62% de tu dinero libre durante 18 meses te deja sin capacidad de respuesta ante el siguiente imprevisto, y siempre hay un siguiente imprevisto."
     },
-    {
-      "id": "cap8",
-      "label": "Piden garantías o avales",
-      "emoji": "📑",
-      "categoria_correcta": "deuda",
-      "feedback": "Los bancos suelen pedir algo a cambio (propiedades) por si no puedes pagar el préstamo."
+    "final_leccion": {
+      "id": "final_leccion",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Liquidó los $12,000 en nueve meses y pagó $3,800 de intereses: casi tres meses completos de su dinero libre, por un viaje de una semana.",
+      "reflexion_final": "A un CAT del 89%, cada peso que no liquidas al final del mes cuesta muchísimo. La lección más barata es aprenderla con $12,000 a los 19 años y no con $200,000 a los 35."
+    },
+    "final_atrapado": {
+      "id": "final_atrapado",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Al terminar la carrera debía $34,000 de tarjeta y tenía un historial con retrasos. Su primer sueldo se fue durante dos años a pagar gastos que ya no recordaba.",
+      "reflexion_final": "Empezar la vida laboral con deuda de consumo y mal historial es el peor arranque posible: cada crédito futuro te saldrá más caro justo cuando más los necesitas. El pago mínimo a los 19 años se paga a los 25."
     }
-  ],
-  "categorias": [
-    {
-      "id": "deuda",
-      "label": "DEUDA (Acreedores)",
-      "emoji": "📉",
-      "color": "#1e40af"
-    },
-    {
-      "id": "acciones",
-      "label": "ACCIONES (Dueños)",
-      "emoji": "💎",
-      "color": "#166534"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

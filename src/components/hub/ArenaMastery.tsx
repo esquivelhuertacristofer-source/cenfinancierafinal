@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Trophy, 
@@ -45,6 +45,20 @@ export default function ArenaMastery({
   const currentQuestion = quiz[currentIndex];
   const progress = ((currentIndex + 1) / quiz.length) * 100;
 
+  const handleAnswer = useCallback((optionIdx: number) => {
+    if (isAnswered) return;
+
+    setSelectedOption(optionIdx);
+    setIsAnswered(true);
+
+    if (optionIdx === currentQuestion.correct) {
+      setScore(prev => prev + 1);
+      setStreak(prev => prev + 1);
+    } else {
+      setStreak(0);
+    }
+  }, [isAnswered, currentQuestion]);
+
   // Cinematic Timer
   useEffect(() => {
     if (step === 'playing' && !isAnswered && timeLeft > 0) {
@@ -53,21 +67,7 @@ export default function ArenaMastery({
     } else if (timeLeft === 0 && !isAnswered) {
       handleAnswer(-1); // Timeout as wrong answer
     }
-  }, [step, isAnswered, timeLeft]);
-
-  const handleAnswer = (optionIdx: number) => {
-    if (isAnswered) return;
-    
-    setSelectedOption(optionIdx);
-    setIsAnswered(true);
-    
-    if (optionIdx === currentQuestion.correct) {
-      setScore(prev => prev + 1);
-      setStreak(prev => prev + 1);
-    } else {
-      setStreak(0);
-    }
-  };
+  }, [step, isAnswered, timeLeft, handleAnswer]);
 
   const nextQuestion = () => {
     if (currentIndex < quiz.length - 1) {

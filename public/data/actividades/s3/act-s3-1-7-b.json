@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S3-1-7-B",
+  "unit_code": "S3-1-7",
+  "unit_title": "El costo real de una carrera: pública, privada y en línea",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Los Tres Costos",
+  "descripcion": "Clasifica cada concepto según el tipo de costo educativo que representa.",
+  "objetivo": "Distinguir costos directos, indirectos y de oportunidad en la formación",
+  "xp": 800,
+  "instruccion": "Arrastra cada concepto al tipo de costo que le corresponde.",
+  "categorias": [
+    {
+      "id": "directo",
+      "label": "Costo directo",
+      "emoji": "🧾",
+      "color": "#EF4444"
+    },
+    {
+      "id": "indirecto",
+      "label": "Costo indirecto",
+      "emoji": "🚌",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "oportunidad",
+      "label": "Costo de oportunidad",
+      "emoji": "⏳",
+      "color": "#8B5CF6"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Colegiatura semestral",
+      "emoji": "🏫",
+      "categoria_correcta": "directo",
+      "feedback": "El que todos consideran, y solo una parte del total."
+    },
+    {
+      "id": "i2",
+      "label": "Transporte diario durante cuatro años",
+      "emoji": "🚍",
+      "categoria_correcta": "indirecto",
+      "feedback": "Sumado, con frecuencia supera a la colegiatura pública."
+    },
+    {
+      "id": "i3",
+      "label": "El sueldo que no percibiré por estudiar tiempo completo",
+      "emoji": "💼",
+      "categoria_correcta": "oportunidad",
+      "feedback": "No aparece en ningún recibo y suele ser el costo mayor."
+    },
+    {
+      "id": "i4",
+      "label": "Inscripción anual",
+      "emoji": "📝",
+      "categoria_correcta": "directo",
+      "feedback": "Pago explícito a la institución."
+    },
+    {
+      "id": "i5",
+      "label": "Renta por estudiar en otra ciudad",
+      "emoji": "🏠",
+      "categoria_correcta": "indirecto",
+      "feedback": "Un costo enorme que la colegiatura no refleja."
+    },
+    {
+      "id": "i6",
+      "label": "La experiencia laboral que no acumularé esos años",
+      "emoji": "📈",
+      "categoria_correcta": "oportunidad",
+      "feedback": "También es algo que se deja de ganar."
+    },
+    {
+      "id": "i7",
+      "label": "Trámite de titulación",
+      "emoji": "🎓",
+      "categoria_correcta": "directo",
+      "feedback": "Un pago que muchos olvidan presupuestar."
+    },
+    {
+      "id": "i8",
+      "label": "Computadora y conexión a internet",
+      "emoji": "💻",
+      "categoria_correcta": "indirecto",
+      "feedback": "Indispensable y rara vez incluido en el cálculo."
+    },
+    {
+      "id": "i9",
+      "label": "Alimentación fuera de casa cada día de clases",
+      "emoji": "🍱",
+      "categoria_correcta": "indirecto",
+      "feedback": "Un gasto pequeño que se multiplica por cientos de días."
+    },
+    {
+      "id": "i10",
+      "label": "Los años de aportación al retiro que no haré",
+      "emoji": "🏦",
+      "categoria_correcta": "oportunidad",
+      "feedback": "Empezar a aportar más tarde tiene un costo compuesto."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-7-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-7-b-escena.webp"
+}

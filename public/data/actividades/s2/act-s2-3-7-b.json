@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-3-7-B",
+  "unit_code": "S2-3-7",
+  "unit_title": "ETFs y fondos indizados: comprar el mercado completo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Fondos Indizados y ETFs",
+  "descripcion": "Comprueba que entiendes la inversión indizada.",
+  "objetivo": "Verificar la comprensión de instrumentos indizados",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Vencer al promedio del mercado de forma sostenida:",
+      "opciones": [
+        "Es extraordinariamente difícil",
+        "Es fácil con práctica",
+        "Lo logra cualquiera",
+        "Está garantizado"
+      ],
+      "correcta": 0,
+      "explicacion": "La mayoría de los fondos que lo intentan no lo consigue."
+    },
+    {
+      "id": "q2",
+      "texto": "Un índice es:",
+      "opciones": [
+        "Una empresa",
+        "Una canasta que representa un mercado",
+        "Un banco",
+        "Un impuesto"
+      ],
+      "correcta": 1,
+      "explicacion": "Con reglas públicas sobre qué incluye y con qué peso."
+    },
+    {
+      "id": "q3",
+      "texto": "Un fondo indizado o ETF:",
+      "opciones": [
+        "Elige las mejores acciones",
+        "Compra solo bonos",
+        "Replica la canasta del índice",
+        "Garantiza rendimiento"
+      ],
+      "correcta": 2,
+      "explicacion": "Comprarlo equivale a comprar una fracción de todas sus empresas."
+    },
+    {
+      "id": "q4",
+      "texto": "La ventaja más evidente es:",
+      "opciones": [
+        "Ganancia garantizada",
+        "Cero riesgo",
+        "Sin comisiones",
+        "Diversificación instantánea"
+      ],
+      "correcta": 3,
+      "explicacion": "Decenas o cientos de empresas en una sola operación."
+    },
+    {
+      "id": "q5",
+      "texto": "Si una empresa del índice quiebra:",
+      "opciones": [
+        "El efecto sobre el total es limitado",
+        "Se pierde todo",
+        "No pasa nada nunca",
+        "Se cierra el fondo"
+      ],
+      "correcta": 0,
+      "explicacion": "Eso es exactamente lo que compra la diversificación."
+    },
+    {
+      "id": "q6",
+      "texto": "Antes de comprar hay que revisar:",
+      "opciones": [
+        "Solo el nombre",
+        "Índice replicado, comisión, fidelidad y liquidez",
+        "Solo el rendimiento pasado",
+        "La publicidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuatro criterios verificables en minutos."
+    },
+    {
+      "id": "q7",
+      "texto": "La comisión importa porque:",
+      "opciones": [
+        "No importa",
+        "Solo aplica el primer año",
+        "Es lo único que se controla con certeza y se acumula",
+        "La paga el gobierno"
+      ],
+      "correcta": 2,
+      "explicacion": "Su efecto sobre décadas es enorme."
+    },
+    {
+      "id": "q8",
+      "texto": "Diversificar:",
+      "opciones": [
+        "Elimina el riesgo",
+        "Garantiza ganancias",
+        "Aumenta el riesgo",
+        "Reparte el riesgo"
+      ],
+      "correcta": 3,
+      "explicacion": "Evita que una sola decisión defina todo el resultado."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-7-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-7-b-escena.webp"
+}

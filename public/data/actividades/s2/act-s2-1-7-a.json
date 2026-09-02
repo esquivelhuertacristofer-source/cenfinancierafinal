@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S2-1-7-A",
+  "unit_code": "S2-1-7",
+  "unit_title": "Devaluación y depreciación: qué le pasa al peso",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "El Peso se Mueve",
+  "descripcion": "La familia de Ceny reacciona a una noticia sobre el tipo de cambio. Cada decisión cuenta.",
+  "objetivo": "Evaluar decisiones ante movimientos del tipo de cambio",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El peso se depreció 12% en tres semanas. En casa de Ceny todos hablan de comprar dólares. El tío recibe remesas y la mamá tiene un pequeño negocio que importa insumos.",
+  "nodo_inicial": "reaccion",
+  "nodos": {
+    "reaccion": {
+      "id": "reaccion",
+      "texto": "La primera propuesta es meter los ahorros familiares en dólares. ¿Qué observa Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que comprar después del alza es comprar caro, y que primero hay que ver a quién afecta",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "Evitan una compra impulsiva en el peor momento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar dólares de inmediato antes de que suba más",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "Compraron en el punto más alto de las últimas semanas.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -9000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-reaccion.webp"
+    },
+    "perdida": {
+      "id": "perdida",
+      "texto": "Dos meses después el peso se recuperó y sus dólares valen menos en pesos. ¿Qué aprenden?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que especular con divisas sin conocimiento es perder, no protegerse",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "La lección salió cara pero quedó clara.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que hay que esperar a que vuelva a subir y comprar más",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Repetir la apuesta con más dinero es escalar el error.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-perdida.webp"
+    },
+    "analisis": {
+      "id": "analisis",
+      "texto": "Analizan a cada miembro de la familia. ¿Qué concluyen del tío que recibe remesas?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que se beneficia: cada dólar que recibe se convierte en más pesos",
+          "siguiente_nodo": "negocio",
+          "consecuencia": "Identifican correctamente al ganador de la situación.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Que también pierde, porque todos pierden",
+          "siguiente_nodo": "negocio",
+          "consecuencia": "Un mismo movimiento nunca afecta igual a todos.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-analisis.webp"
+    },
+    "negocio": {
+      "id": "negocio",
+      "texto": "La mamá importa insumos que ahora cuestan 12% más en pesos. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ajustar precios de forma gradual y buscar proveedores nacionales para parte del insumo",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Reduce su exposición sin perder clientes de golpe.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 15000
+        },
+        {
+          "id": "o2",
+          "texto": "Absorber el aumento completo para no subir precios",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Su margen se come el golpe hasta desaparecer.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -11000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-negocio.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia entendió quién ganaba, quién perdía y actuó sobre lo que sí controlaba.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El tipo de cambio no es bueno ni malo en abstracto: depende de si vendes fuera, compras fuera o debes fuera. Y comprar divisas después del alza es comprar caro.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Evitaron la compra impulsiva, pero el negocio absorbió todo el golpe cambiario.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Quien depende de insumos importados tiene que ajustar precios o reducir su exposición. Absorber el aumento completo solo traslada el problema al margen.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia especuló con divisas dos veces y perdió en las dos.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Comprar dólares por pánico después de una noticia es la forma más común de comprar caro. Protegerse del tipo de cambio es otra cosa: depende de tus ingresos y deudas reales.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-1-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-1-7-a-portada.webp"
+}

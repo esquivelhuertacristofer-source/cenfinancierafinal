@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-3-10-B",
+  "unit_code": "P5-3-10",
+  "unit_title": "Fraudes de inversión: pirámides y promesas imposibles",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Detector de Fraudes",
+  "descripcion": "Comprueba que reconoces un esquema piramidal antes de entrar.",
+  "objetivo": "Verificar la identificación de fraudes de inversión y sus señales",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "En una pirámide, el dinero de los primeros viene de:",
+      "opciones": [
+        "Una inversión productiva",
+        "El gobierno",
+        "Lo que aportan los que entran después",
+        "Un banco"
+      ],
+      "correcta": 2,
+      "explicacion": "No hay ninguna actividad que genere ese rendimiento."
+    },
+    {
+      "id": "q2",
+      "texto": "El esquema colapsa:",
+      "opciones": [
+        "Nunca",
+        "Cuando lo decide el fundador",
+        "Al año exacto",
+        "Cuando deja de entrar gente nueva"
+      ],
+      "correcta": 3,
+      "explicacion": "Y eso siempre pasa, porque la población es finita."
+    },
+    {
+      "id": "q3",
+      "texto": "Con 6 reclutas por persona, el nivel 3 necesita:",
+      "opciones": [
+        "216 personas",
+        "18 personas",
+        "36 personas",
+        "600 personas"
+      ],
+      "correcta": 0,
+      "explicacion": "6 × 6 × 6. En doce niveles supera la población de un país."
+    },
+    {
+      "id": "q4",
+      "texto": "El colapso de una pirámide es:",
+      "opciones": [
+        "Un riesgo pequeño",
+        "Una certeza matemática",
+        "Una posibilidad remota",
+        "Evitable"
+      ],
+      "correcta": 1,
+      "explicacion": "Está determinado desde el primer día por la aritmética."
+    },
+    {
+      "id": "q5",
+      "texto": "\"A mi conocido sí le pagaron\" prueba:",
+      "opciones": [
+        "Que el esquema es sólido",
+        "Que es buena inversión",
+        "Solo que entró antes",
+        "Que está regulado"
+      ],
+      "correcta": 2,
+      "explicacion": "Los primeros cobran de verdad: por eso el testimonio es tan eficaz."
+    },
+    {
+      "id": "q6",
+      "texto": "Una bandera roja clara es:",
+      "opciones": [
+        "Tener oficina",
+        "Dar contrato",
+        "Explicar la estrategia",
+        "Ganar por reclutar en vez de por un producto"
+      ],
+      "correcta": 3,
+      "explicacion": "Si la ganancia viene de reclutar, no hay negocio real detrás."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Cuántas banderas rojas bastan para no entregar dinero?",
+      "opciones": [
+        "Dos",
+        "Las cinco",
+        "Ninguna",
+        "Cuatro"
+      ],
+      "correcta": 0,
+      "explicacion": "No hace falta esperar a confirmarlas todas para retirarse."
+    },
+    {
+      "id": "q8",
+      "texto": "Antes de entregar dinero hay que verificar:",
+      "opciones": [
+        "Los seguidores en redes",
+        "El registro ante las autoridades financieras",
+        "El tamaño de la oficina",
+        "Los testimonios"
+      ],
+      "correcta": 1,
+      "explicacion": "Es gratuito, toma minutos y es la única verificación que vale."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-10-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-10-b-escena.webp"
+}

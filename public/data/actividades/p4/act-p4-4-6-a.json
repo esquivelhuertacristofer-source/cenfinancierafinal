@@ -1,0 +1,181 @@
+{
+  "code": "ACT-P4-4-6-A",
+  "unit_code": "P4-4-6",
+  "unit_title": "Encontrar un problema que valga la pena resolver",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Buscando el Problema",
+  "descripcion": "Ceny quiere emprender pero no sabe con qué. Cada decisión define si encuentra algo que valga la pena.",
+  "objetivo": "Aplicar el proceso de identificación y filtrado de problemas reales",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny quiere empezar un pequeño negocio en su escuela, pero todavía no sabe de qué.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "¿Por dónde empieza Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Observar una semana qué cosas molestan o tardan en su escuela",
+          "siguiente_nodo": "observacion",
+          "consecuencia": "Anota siete molestias concretas que vio con sus propios ojos.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Pensar una idea genial en su cuarto",
+          "siguiente_nodo": "idea_sola",
+          "consecuencia": "Se le ocurren tres ideas llamativas, ninguna conectada con un problema real.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Copiar lo que vendió bien el año pasado alguien más",
+          "siguiente_nodo": "observacion",
+          "consecuencia": "Puede funcionar, aunque ya hay competencia y el problema quizá ya está resuelto.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-inicio.webp"
+    },
+    "idea_sola": {
+      "id": "idea_sola",
+      "texto": "Su mejor idea es un producto original. Le pregunta a diez compañeros y ninguno lo compraría. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Cambiar de método: salir a observar problemas reales",
+          "siguiente_nodo": "observacion",
+          "consecuencia": "Buscar problemas en lugar de ideas es lo que cambia el resultado.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Insistir: seguro no entendieron la idea",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Cuando diez personas no ven el valor, el problema no está en ellas.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -500
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-idea_sola.webp"
+    },
+    "observacion": {
+      "id": "observacion",
+      "texto": "Ceny detecta tres problemas: la fila del bebedero es larguísima, muchos olvidan material y a la salida nadie encuentra dónde guardar cosas. ¿Cómo elige?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aplicar las tres pruebas: a cuántos les pasa, cuánto molesta y si pagarían",
+          "siguiente_nodo": "prueba_pago",
+          "consecuencia": "El del material olvidado le pasa a muchos y molesta bastante.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Elegir el que le parece más interesante",
+          "siguiente_nodo": "prueba_pago",
+          "consecuencia": "Puede acertar por casualidad, pero está decidiendo sin datos.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-observacion.webp"
+    },
+    "prueba_pago": {
+      "id": "prueba_pago",
+      "texto": "Falta la tercera prueba: ¿pagarían? ¿Cómo lo averigua Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preguntar qué han hecho hasta ahora y cuánto han gastado en resolverlo",
+          "siguiente_nodo": "resultado",
+          "consecuencia": "Seis de diez ya han comprado material de emergencia en la papelería.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 500
+        },
+        {
+          "id": "o2",
+          "texto": "Preguntar si les gustaría que existiera una solución",
+          "siguiente_nodo": "resultado",
+          "consecuencia": "Todos dicen que sí, como siempre. Esa respuesta no mide nada.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-prueba_pago.webp"
+    },
+    "resultado": {
+      "id": "resultado",
+      "texto": "Con la información en la mano, ¿qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Empezar pequeño con el problema que pasó las tres pruebas",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Problema real, gente que ya gasta en resolverlo y arranque de bajo riesgo.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 800
+        },
+        {
+          "id": "o2",
+          "texto": "Intentar resolver los tres problemas a la vez",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Tres frentes al mismo tiempo con recursos de uno.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -300
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-resultado.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny arrancó con un problema real que a mucha gente le importaba lo suficiente para pagar.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "No buscó una idea genial: buscó una molestia real y comprobó que la gente ya gastaba en resolverla. Ese orden es lo que separa un proyecto de una ocurrencia.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny arrancó con tres frentes y no logró atender bien ninguno.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Encontró problemas reales, que es lo difícil. Lo que faltó fue elegir uno: los recursos de un proyecto pequeño no alcanzan para tres.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny produjo su idea original y no vendió prácticamente nada.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La idea era buena en abstracto y no resolvía nada para nadie. Diez personas se lo dijeron antes de gastar el primer peso.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-6-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p4/p4-4-6-a-portada.webp"
+}

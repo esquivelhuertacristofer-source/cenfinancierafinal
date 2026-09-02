@@ -5,109 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Lenguaje de las Pólizas",
-  "descripcion": "¿Sabes qué significa 'Deducible' o 'Coaseguro'? ¡No dejes que la letra pequeña te tome por sorpresa!",
-  "objetivo": "Identificar los conceptos técnicos fundamentales de un contrato de seguro de gastos médicos",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "La Regla del 72",
+  "descripcion": "Existe un truco mental que te dice en cuántos años se duplica tu dinero sin necesidad de calculadora. Se llama la regla del 72 y una vez que la sabes, no la vuelves a olvidar.",
+  "objetivo": "Calcular el impacto del interés compuesto usando la regla del 72 y comprender el costo de posponer el inicio de la inversión.",
+  "xp": 550,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "seg1",
-      "texto": "¿Qué es el 'Coaseguro'?",
+      "id": "q1",
+      "texto": "La regla del 72 dice que tu dinero se duplica en…",
       "opciones": [
-        "Un segundo seguro que compras",
-        "Un porcentaje de los gastos totales (además del deducible) que tú debes pagar",
-        "El dinero que te regala el seguro",
-        "Un descuento por pagar a tiempo"
+        "72 años",
+        "72 dividido entre la tasa de rendimiento anual",
+        "72 meses",
+        "La tasa multiplicada por 72"
       ],
       "correcta": 1,
-      "explicacion": "Suele ser el 10%. Sirve para que el asegurado también cuide los costos del hospital."
+      "explicacion": "Al 8% anual: 72 ÷ 8 = 9 años para duplicar. Es una aproximación excelente y mental."
     },
     {
-      "id": "seg2",
-      "texto": "¿Qué es el 'Tope de Coaseguro'?",
+      "id": "q2",
+      "texto": "A una tasa del 12% anual, tu dinero se duplica cada…",
       "opciones": [
-        "Lo máximo que la aseguradora va a pagar",
-        "La cantidad máxima que TÚ vas a pagar de coaseguro, sin importar qué tan cara sea la cuenta",
-        "Un límite de velocidad",
-        "El precio de la póliza"
+        "12 años",
+        "6 años",
+        "72 años",
+        "2 años"
       ],
       "correcta": 1,
-      "explicacion": "Es vital porque evita que una cuenta de millones de pesos te deje sin ahorros."
+      "explicacion": "72 ÷ 12 = 6 años. En 30 años se duplicaría cinco veces: $10,000 se vuelven $320,000."
     },
     {
-      "id": "seg3",
-      "texto": "¿Qué significa 'Preexistencia'?",
+      "id": "q3",
+      "texto": "La diferencia entre interés simple y compuesto es que el compuesto…",
       "opciones": [
-        "Vivir en el pasado",
-        "Una enfermedad o padecimiento que ya tenías antes de contratar el seguro",
-        "Un beneficio por ser cliente antiguo",
-        "El nombre del hospital"
+        "Paga menos",
+        "Genera intereses sobre los intereses acumulados",
+        "Solo aplica a deudas",
+        "Es ilegal"
       ],
       "correcta": 1,
-      "explicacion": "La mayoría de los seguros no cubren enfermedades que ya sabías que tenías."
+      "explicacion": "Con interés simple el crecimiento es una línea recta; con compuesto, una curva que se dispara."
     },
     {
-      "id": "seg4",
-      "texto": "¿Qué es el 'Periodo de Espera'?",
+      "id": "q4",
+      "texto": "Ana invierte $2,000 al mes desde los 25 y para a los 35. Luis invierte lo mismo desde los 35 hasta los 65. A los 65…",
       "opciones": [
-        "El tiempo que esperas en la sala del hospital",
-        "El tiempo que debe pasar desde que contratas el seguro para que cubra ciertas enfermedades específicas",
-        "El tiempo que tarda en llegar la ambulancia",
-        "La duración del contrato"
+        "Luis tiene más, aportó el triple",
+        "Ana suele terminar con más, pese a aportar mucho menos",
+        "Terminan iguales",
+        "Depende del banco"
       ],
       "correcta": 1,
-      "explicacion": "Sirve para evitar que la gente contrate el seguro solo cuando ya sabe que se va a operar."
+      "explicacion": "Los primeros años son los que más rinden porque tienen más tiempo para componerse. Es el ejemplo más famoso de las finanzas personales."
     },
     {
-      "id": "seg5",
-      "texto": "¿A qué se refiere la 'Red Médica'?",
+      "id": "q5",
+      "texto": "La regla del 72 también sirve para entender…",
       "opciones": [
-        "A los amigos del doctor",
-        "Al grupo de hospitales y doctores que tienen convenio con tu aseguradora",
-        "A una página web de medicina",
-        "A los medicamentos genéricos"
+        "En cuánto tiempo la inflación reduce a la mitad tu poder de compra",
+        "El precio de las casas",
+        "Los impuestos",
+        "Los seguros"
       ],
-      "correcta": 1,
-      "explicacion": "Si vas a un hospital de la red, el pago suele ser directo y más sencillo."
+      "correcta": 0,
+      "explicacion": "Con 6% de inflación: 72 ÷ 6 = 12 años para que tu dinero compre la mitad. Funciona en las dos direcciones."
     },
     {
-      "id": "seg6",
-      "texto": "¿Qué es la 'Suma Asegurada'?",
+      "id": "q6",
+      "texto": "El interés compuesto trabaja EN TU CONTRA cuando…",
       "opciones": [
-        "El total de tus ahorros",
-        "El monto máximo de dinero que la aseguradora pagará por un evento o enfermedad",
-        "Lo que pagas cada mes",
-        "El número de personas aseguradas"
+        "Ahorras",
+        "Tienes una deuda con pago mínimo",
+        "Inviertes en CETES",
+        "Recibes dividendos"
       ],
       "correcta": 1,
-      "explicacion": "Debes asegurarte de que sea lo suficientemente alta para cubrir cirugías costosas."
+      "explicacion": "Es exactamente el mismo mecanismo. Al 70% anual, una deuda se duplica en poco más de un año."
     },
     {
-      "id": "seg7",
-      "texto": "¿Qué es el 'Pago Directo'?",
+      "id": "q7",
+      "texto": "Posponer 10 años el inicio de tu inversión te cuesta…",
       "opciones": [
-        "Pagar en efectivo",
-        "Cuando la aseguradora le paga directamente al hospital sin que tú tengas que desembolsar el dinero (menos tu parte)",
-        "Pagar el seguro cada mes",
-        "Un soborno"
+        "Los 10 años de aportaciones nada más",
+        "Mucho más: pierdes las duplicaciones que esos años habrían generado al final",
+        "Nada",
+        "Solo la inflación"
       ],
       "correcta": 1,
-      "explicacion": "Es el beneficio más cómodo para no descapitalizarte ante una emergencia."
+      "explicacion": "La última duplicación es la que más dinero suma, y es justo la que se pierde al empezar tarde."
     },
     {
-      "id": "seg8",
-      "texto": "¿Cuál es la función del 'Ajustador' en un seguro de auto?",
+      "id": "q8",
+      "texto": "La condición imprescindible para que el interés compuesto funcione es…",
       "opciones": [
-        "Arreglar el motor",
-        "La persona que evalúa el accidente para decidir quién tuvo la culpa y cuánto pagará el seguro",
-        "Vender seguros en la calle",
-        "Limpiar los vidrios"
+        "Tener mucho dinero",
+        "No retirar los rendimientos y dejarlos reinvertir",
+        "Tener suerte",
+        "Cambiar de banco cada año"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora conoces los términos que te darán tranquilidad en momentos difíciles."
+      "explicacion": "Si retiras los intereses cada año, tienes interés simple. La magia está en no tocarlo."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

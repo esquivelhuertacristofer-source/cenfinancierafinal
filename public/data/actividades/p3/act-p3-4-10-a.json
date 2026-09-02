@@ -1,0 +1,103 @@
+{
+  "code": "ACT-P3-4-10-A",
+  "unit_code": "P3-4-10",
+  "unit_title": "Después de la feria: qué funcionó y qué no",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Cierre de la Feria",
+  "descripcion": "Mueve las barritas con tus números reales y descubre cuánto ganaste de verdad.",
+  "objetivo": "Calcular la utilidad real de un evento y compararla con lo estimado",
+  "xp": 200,
+  "inputs": [
+    {
+      "id": "unidades_vendidas",
+      "label": "Unidades que vendí realmente",
+      "type": "slider",
+      "min": 0,
+      "max": 200,
+      "step": 1,
+      "default": 28,
+      "unit": "unidades",
+      "referencia": "Se toma del registro de ventas, no de la memoria."
+    },
+    {
+      "id": "precio",
+      "label": "Precio de venta por unidad",
+      "type": "slider",
+      "min": 1,
+      "max": 300,
+      "step": 1,
+      "default": 30,
+      "unit": "$",
+      "referencia": "Si hubo descuentos, usa el precio promedio."
+    },
+    {
+      "id": "costo_unidad",
+      "label": "Costo de producir cada unidad",
+      "type": "slider",
+      "min": 1,
+      "max": 200,
+      "step": 1,
+      "default": 12,
+      "unit": "$",
+      "referencia": "Material más todo lo que se consumió por pieza."
+    },
+    {
+      "id": "unidades_producidas",
+      "label": "Unidades que produje en total",
+      "type": "slider",
+      "min": 1,
+      "max": 300,
+      "step": 1,
+      "default": 40,
+      "unit": "unidades",
+      "referencia": "Lo que sobró también costó dinero."
+    },
+    {
+      "id": "gastos_fijos",
+      "label": "Gastos del puesto (mesa, cartel, decoración)",
+      "type": "slider",
+      "min": 0,
+      "max": 1000,
+      "step": 10,
+      "default": 80,
+      "unit": "$",
+      "referencia": "No dependen de cuánto vendas, pero se pagan igual."
+    }
+  ],
+  "formula": "Math.round(unidades_vendidas * precio - unidades_producidas * costo_unidad - gastos_fijos)",
+  "descripcion_formula": "Ingresos por las unidades vendidas, menos el costo de todo lo que se produjo (incluido lo que sobró) y menos los gastos del puesto.",
+  "output_label": "Utilidad real de la feria",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "unidades_vendidas * precio - unidades_producidas * costo_unidad - gastos_fijos < 0",
+      "mensaje": "La feria dejó pérdida. Revisa dos cosas: cuánto sobró y si el precio cubría bien el costo por unidad.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "unidades_vendidas >= unidades_producidas",
+      "mensaje": "Se vendió todo lo producido. Tu estimación fue conservadora: el año que viene puedes producir más.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "unidades_producidas > unidades_vendidas * 2",
+      "mensaje": "Produjiste más del doble de lo que vendiste. Ese sobrante es la parte que más se puede mejorar el próximo año.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "precio <= costo_unidad",
+      "mensaje": "El precio no cubre el costo por unidad: cada venta te hace perder dinero. Ningún volumen arregla eso.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "unidades_vendidas * precio - unidades_producidas * costo_unidad - gastos_fijos >= 300",
+      "mensaje": "Buena utilidad. Anota qué funcionó exactamente: ese registro vale tanto como la ganancia.",
+      "tipo": "exito"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-10-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-10-a-escena.webp"
+}

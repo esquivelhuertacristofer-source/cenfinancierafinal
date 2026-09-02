@@ -43,10 +43,16 @@ export default function UnitCard({
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [auraPos, setAuraPos] = useState({ x: 50, y: 50 });
 
-  // Helper for dynamic images based on unitIndex
+  // Portada de la unidad. Las unidades 6-10 de cada bloque (la ampliación de
+  // 2026-09) tienen imagen propia generada para su tema; el resto sigue usando
+  // el banco genérico de 33 imágenes cíclicas.
   const getMissionImage = (index: number) => {
-    // There are 33 images (1.webp to 33.webp)
-    // We use modulo to cycle if there are more than 33 units
+    const m = unit.code?.match(/^([PSps]\d)-(\d)-(\d+)$/);
+    if (m && +m[3] >= 6) {
+      const grado = m[1].toLowerCase();
+      return `/assets/misiones/${grado}/${grado}-${m[2]}-${m[3]}-a-portada.webp`;
+    }
+    // Hay 33 imágenes (1.webp a 33.webp); se cicla con módulo.
     const imgId = (index % 33) + 1;
     return `/assets/units/${imgId}.webp`;
   };

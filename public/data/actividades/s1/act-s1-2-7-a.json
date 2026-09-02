@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-2-7-A",
+  "unit_code": "S1-2-7",
+  "unit_title": "Finiquito y liquidación: qué me toca si me despiden",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "El Día del Despido",
+  "descripcion": "A la tía de Ceny la despiden y le piden firmar el mismo día. Cada decisión define cuánto recibe.",
+  "objetivo": "Aplicar el conocimiento sobre finiquito y liquidación ante un despido real",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "A la tía de Ceny, con seis años de antigüedad, le comunican que ya no la necesitan y le ponen un documento enfrente para firmar en ese momento.",
+  "nodo_inicial": "presion",
+  "nodos": {
+    "presion": {
+      "id": "presion",
+      "texto": "Le dicen que si firma hoy le pagan hoy. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir el documento para revisarlo con calma antes de firmar",
+          "siguiente_nodo": "revisar",
+          "consecuencia": "Nadie está obligado a firmar en el momento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Firmar: mejor asegurar el pago",
+          "siguiente_nodo": "firmo",
+          "consecuencia": "Firmó un documento que solo incluía el finiquito.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -45000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-presion.webp"
+    },
+    "firmo": {
+      "id": "firmo",
+      "texto": "Después descubre que el despido no tenía causa justificada y le correspondía además una indemnización. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Consultar en una instancia pública qué opciones le quedan",
+          "siguiente_nodo": "revisar",
+          "consecuencia": "Hay orientación gratuita, aunque el documento firmado complica todo.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Resignarse: ya firmó",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Firmar sin entender es la forma más común de perder derechos.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-firmo.webp"
+    },
+    "revisar": {
+      "id": "revisar",
+      "texto": "Al revisar el documento, ¿qué busca primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que cada concepto esté desglosado y coincida con su propio cálculo",
+          "siguiente_nodo": "causa",
+          "consecuencia": "Detecta que falta la parte proporcional de aguinaldo y la prima vacacional.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 12000
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el total al final de la hoja",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Un total sin desglose no permite verificar nada.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-revisar.webp"
+    },
+    "causa": {
+      "id": "causa",
+      "texto": "Le dicen que la terminación fue \"por reestructura\". ¿Qué implica eso?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que no hay causa justificada atribuible a ella, así que además del finiquito corresponde indemnización",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Con seis años de antigüedad, la diferencia es de varios meses de salario.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 48000
+        },
+        {
+          "id": "o2",
+          "texto": "Que solo le toca el finiquito",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Confundir ambos conceptos es lo que más dinero cuesta en estos casos.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-causa.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La tía de Ceny revisó, calculó, reclamó lo que faltaba y recibió finiquito más indemnización.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El finiquito corresponde siempre porque es dinero ya ganado. La indemnización corresponde cuando el despido no tiene causa justificada. Distinguirlos puede valer varios meses de salario.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Recibió su finiquito, aunque sin verificar si le correspondía algo más.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Un documento sin desglose no se puede verificar. Pedir el detalle concepto por concepto es lo mínimo antes de firmar cualquier terminación.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Firmó bajo presión y renunció, sin saberlo, a una indemnización que le correspondía.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La prisa por firmar es la herramienta más eficaz para que alguien pierda derechos. Nadie está obligado a firmar en el momento.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-2-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-2-7-a-portada.webp"
+}

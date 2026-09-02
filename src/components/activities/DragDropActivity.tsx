@@ -9,10 +9,14 @@ interface Props {
   data: DragDropActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
+  /** Color del pilar al que pertenece la unidad. */
+  accent?: string;
 }
 
-export default function DragDropActivity({ data, onComplete, onClose }: Props) {
+export default function DragDropActivity({ data, onComplete, onClose, accent }: Props) {
+  const acento = accent || '#FF8C00';
   const [items, setItems] = useState((data.items || []).map(item => ({
+    fallos: 0,
     ...item, 
     assignedCategoryId: null as string | null, 
     status: 'idle' as 'idle' | 'correct' | 'wrong' 
@@ -60,23 +64,33 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
       setFeedback("¡Uh oh! El análisis sugiere que este elemento pertenece a otra categoría. ¡Prueba de nuevo!");
     }
 
+    // Solo un acierto coloca el ítem. Si falla, vuelve a la lista de
+    // pendientes: el mensaje dice "prueba de nuevo" y ahora eso es verdad.
     setItems(prev => prev.map(i => {
-      if (i.id === selectedItemId) {
-        return { ...i, assignedCategoryId: categoryId, status: isCorrect ? 'correct' : 'wrong' };
-      }
-      return i;
+      if (i.id !== selectedItemId) return i;
+      return isCorrect
+        ? { ...i, assignedCategoryId: categoryId, status: 'correct' }
+        : { ...i, fallos: i.fallos + 1, status: 'wrong' };
     }));
 
     setSelectedItemId(null);
-    if (items.filter(i => !i.assignedCategoryId).length === 1) {
-       finishTimeoutRef.current = setTimeout(() => setIsFinished(true), 3000);
-    }
   };
+
+  // Termina cuando todos los ítems están bien colocados. Antes esto se
+  // decidía dentro del manejador con el `items` anterior al setState.
+  useEffect(() => {
+    if (isFinished) return;
+    if (items.length > 0 && items.every(i => i.assignedCategoryId)) {
+      finishTimeoutRef.current = setTimeout(() => setIsFinished(true), 1800);
+    }
+  }, [items, isFinished]);
 
   const finalScore = useMemo(() => {
     if (items.length === 0) return 0;
-    const correct = items.filter(i => i.assignedCategoryId === i.categoria_correcta).length;
-    return Math.round((correct / items.length) * 100);
+    // Todos los ítems acaban en su sitio, así que lo que mide el puntaje es
+    // cuántos se acertaron a la primera. 30 de base por completar la actividad.
+    const aPrimera = items.filter(i => i.fallos === 0 && i.assignedCategoryId).length;
+    return Math.round(30 + 70 * (aPrimera / items.length));
   }, [items]);
 
   const reportCompletion = () => {
@@ -111,7 +125,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                  className="flex justify-center"
                >
-                  <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-[#FF8C00] text-black rounded-[45px] flex items-center justify-center shadow-2xl">
+                  <div style={{ background: acento }} className="w-32 h-32 text-black rounded-[45px] flex items-center justify-center shadow-2xl">
                      <Trophy size={64} />
                   </div>
                </motion.div>
@@ -155,7 +169,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
               className="flex items-center gap-3 mb-2"
             >
                <Sparkles className="text-yellow-400 animate-pulse" size={16} />
-               <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.8em] italic">Diamond Console v2.0</span>
+               <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.5em] italic">{data.instruccion || 'Clasifica cada ficha'}</span>
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -178,7 +192,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
               )}
             </AnimatePresence>
             <div className="flex flex-col items-end gap-2 relative z-10">
-               <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-widest italic flex items-center gap-2">
+               <span style={{ color: acento }} className="text-[10px] font-black uppercase tracking-widest italic flex items-center gap-2">
                   {streak >= 3 && <Flame size={12} className="animate-bounce" />} Multiplicador XP
                </span>
                <div className="flex gap-1.5">
@@ -209,7 +223,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
       <main className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
          <section className="lg:col-span-4 space-y-8">
             <div className="bg-black/20 border border-white/5 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
-               <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/40 italic">Nodos Pendientes ({pendingItems.length})</span>
+               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 italic">Por clasificar ({pendingItems.length})</span>
             </div>
             <div className="grid grid-cols-1 gap-6">
                <AnimatePresence mode="popLayout">
@@ -226,11 +240,11 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
                          className={`w-full p-8 rounded-[40px] border-2 text-left transition-all duration-500 flex items-center gap-6 group relative overflow-hidden
                            ${selectedItemId === item.id 
                               ? 'bg-white border-white text-black scale-105 shadow-[0_40px_100px_rgba(255,255,255,0.2)]' 
-                              : 'bg-white/[0.03] border-white/5 hover:border-[#FF8C00]/40 text-white/80'}`}
+                              : 'bg-white/[0.03] border-white/5 hover:border-white/30 text-white/80'}`}
                        >
                           <div className="text-5xl group-hover:rotate-12 transition-transform">{item.emoji}</div>
                           <div className="flex flex-col">
-                             <span className="text-[10px] font-black opacity-30 uppercase tracking-[0.4em]">ITEM_LOG_{idx + 1}</span>
+                             
                              <span className="text-2xl font-black tracking-tighter italic uppercase leading-tight">{item.label}</span>
                           </div>
                        </button>
@@ -248,7 +262,7 @@ export default function DragDropActivity({ data, onComplete, onClose }: Props) {
                    whileHover={{ scale: selectedItemId ? 1.02 : 1 }}
                    onClick={() => handleCategoryClick(cat.id)}
                    className={`group relative p-12 rounded-[80px] border-2 transition-all duration-500 flex flex-col min-h-[500px] cursor-pointer overflow-hidden backdrop-blur-2xl
-                     ${selectedItemId ? 'border-[#FF8C00]/40 bg-[#FF8C00]/5 animate-pulse' : 'border-white/5 bg-white/[0.01]'}
+                     ${selectedItemId ? 'border-white/25 bg-white/[0.04] animate-pulse' : 'border-white/5 bg-white/[0.01]'}
                    `}
                  >
                     <header className="relative z-10 flex flex-col items-center text-center mb-12">

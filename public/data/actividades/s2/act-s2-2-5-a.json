@@ -5,123 +5,121 @@
   "level": "Secundaria 2",
   "edad": "13-14 años",
   "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "El Dilema de la CBDC",
-  "descripcion": "El gobierno ha lanzado el 'E-Peso'. Es rápido y seguro, pero cada gasto que hagas será rastreado por el Estado. ¿Qué elegirás?",
-  "objetivo": "Evaluar la tensión entre la conveniencia tecnológica y la privacidad financiera en el futuro del dinero",
-  "xp": 450,
-  "personaje_principal": "Ciudadano/a",
-  "contexto_inicial": "El efectivo está desapareciendo. El gobierno te ofrece un bono de $1,000 si pasas todos tus ahorros a la nueva moneda digital oficial. Pero un amigo te advierte que con esto, el gobierno podrá bloquear tus fondos si no les gusta lo que compras.",
-  "nodo_inicial": "la_propuesta_digital",
+  "complejidad": "ALTO",
+  "titulo": "La Casa sin Testamento",
+  "descripcion": "El abuelo de Emilio murió sin dejar testamento. Tenía una casa, una cuenta de banco y tres hijos. Lo que la familia creía que sería simple lleva ya cuatro años sin resolverse.",
+  "objetivo": "Comprender la importancia legal y financiera del testamento para proteger el patrimonio y evitar conflictos familiares.",
+  "xp": 800,
+  "personaje_principal": "Emilio",
+  "contexto_inicial": "La casa vale $2,300,000 y está a nombre del abuelo. Nadie sabe si tenía AFORE ni cuentas en otros bancos. La familia debe decidir cómo proceder.",
+  "nodo_inicial": "el_inicio",
   "nodos": {
-    "la_propuesta_digital": {
-      "id": "la_propuesta_digital",
-      "texto": "¿Aceptarás la moneda digital del gobierno?",
+    "el_inicio": {
+      "id": "el_inicio",
+      "texto": "Un tío dice: \"Repartámonos las cosas entre nosotros y ya, para qué gastar en abogados\". ¿Qué hace Emilio?",
       "opciones": [
         {
-          "id": "aceptar_cbdc",
-          "texto": "Aceptar (Comodidad total y bono de $1,000)",
-          "siguiente_nodo": "mundo_controlado",
-          "consecuencia": "Tus pagos son instantáneos, pero un día recibes una multa automática porque compraste demasiada carne y superaste tu 'huella de carbono' permitida.",
-          "xp_bonus": 100,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        },
-        {
-          "id": "usar_descentralizado",
-          "texto": "Seguir usando efectivo y cripto privado (Privacidad)",
-          "siguiente_nodo": "mundo_soberano",
-          "consecuencia": "Es un poco más difícil pagar en el súper, pero nadie sabe en qué gastas tu dinero y tus fondos no pueden ser bloqueados.",
-          "xp_bonus": 400,
+          "id": "legal",
+          "texto": "Explicar que sin juicio sucesorio nadie puede vender ni escriturar nada",
+          "siguiente_nodo": "el_juicio",
+          "consecuencia": "La casa sigue legalmente a nombre del abuelo: no se puede vender, ni rentar formalmente, ni heredar.",
+          "xp_bonus": 280,
           "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "mundo_controlado": {
-      "id": "mundo_controlado",
-      "texto": "El sistema es eficiente, pero la libertad se siente limitada. El dinero ahora es un software que el gobierno controla a su antojo.",
-      "opciones": [
-        {
-          "id": "final_control",
-          "texto": "Entender el precio de la comodidad",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Aprendiste que el dinero digital centralizado es una herramienta de control social.",
-          "xp_bonus": 50,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "impacto_patrimonio": 0
         },
         {
-          "id": "rechazar_cbdc_tarde",
-          "texto": "Rechazar la CBDC después de adoptar todas las herramientas digitales",
-          "siguiente_nodo": "final_malo",
-          "consecuencia": "Tu historial digital ya existe. Rechazarlo tarde no borra los datos.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "repartir",
+          "texto": "Repartirse las cosas de palabra entre los hermanos",
+          "siguiente_nodo": "el_conflicto",
+          "consecuencia": "Funciona con los muebles. Con la casa, no.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
         }
       ]
     },
-    "mundo_soberano": {
-      "id": "mundo_soberano",
-      "texto": "Eres parte de una economía paralela y libre. Tu privacidad es tu escudo contra el control excesivo.",
+    "el_conflicto": {
+      "id": "el_conflicto",
+      "texto": "Dos años después, un tío quiere vender la casa y otro no. Como nadie es legalmente dueño, no se puede hacer nada. La casa está deshabitada, deteriorándose, y el predial se sigue acumulando.",
       "opciones": [
         {
-          "id": "final_soberania",
-          "texto": "Ver el valor de la privacidad",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "La soberanía financiera es la base de todas las demás libertades.",
-          "xp_bonus": 200,
+          "id": "sucesorio",
+          "texto": "Iniciar por fin el juicio sucesorio intestamentario",
+          "siguiente_nodo": "el_juicio",
+          "consecuencia": "Empieza un proceso que habría costado mucho menos dos años antes.",
+          "xp_bonus": 150,
           "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "volver_sistema_antiguo",
-          "texto": "Regresar al sistema bancario tradicional por comodidad",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Renunciaste a la soberanía por conveniencia. No hay neutralidad tecnológica.",
-          "xp_bonus": 30,
-          "es_optima": false,
-          "impacto_patrimonio": -30
+          "impacto_patrimonio": -60000
         }
       ]
     },
-    "final_libertad_financiera": {
-      "id": "final_libertad_financiera",
-      "texto": "¡Felicidades! Has elegido proteger tu libertad. En el futuro, la privacidad será el activo más escaso y valioso.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El dinero no es solo un medio de cambio, es un sistema de libertad. Quién controla el dinero, controla el comportamiento."
+    "el_juicio": {
+      "id": "el_juicio",
+      "texto": "El juicio sucesorio sin testamento tarda entre 1 y 3 años y cuesta entre 4% y 8% del valor del patrimonio: entre $92,000 y $184,000. Con testamento habría sido un trámite notarial de unas semanas.",
+      "opciones": [
+        {
+          "id": "acuerdo",
+          "texto": "Buscar que los tres hijos acuerden y firmen para acelerarlo",
+          "siguiente_nodo": "la_leccion",
+          "consecuencia": "Cuando todos los herederos están de acuerdo, el proceso se acorta mucho.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -95000
+        },
+        {
+          "id": "pelear",
+          "texto": "Que cada tío contrate su propio abogado y pelee su parte",
+          "siguiente_nodo": "final_pleito",
+          "consecuencia": "El juicio se vuelve contencioso.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -420000
+        }
+      ]
     },
-    "final_sociedad_vigilada": {
-      "id": "final_sociedad_vigilada",
-      "texto": "Tu elección te dio comodidad, pero perdiste autonomía. Ahora entiendes por qué existen las alternativas descentralizadas.",
-      "es_final": true,
-      "tipo_final": "neutral",
-      "reflexion_final": "La tecnología es neutra, pero en manos del poder sin límites, puede ser una jaula de cristal."
+    "la_leccion": {
+      "id": "la_leccion",
+      "texto": "Resuelto el caso, Emilio le pregunta a su mamá si ella tiene testamento. No lo tiene. \"Es que todavía estoy joven y no tengo tanto\".",
+      "opciones": [
+        {
+          "id": "convencer",
+          "texto": "Explicarle que el testamento no depende de la edad ni del monto",
+          "siguiente_nodo": "final_prevenido",
+          "consecuencia": "En septiembre, el mes del testamento, lo hace por menos de $2,000.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "dejarlo",
+          "texto": "Dejarlo así: total, ya se resolvió lo del abuelo",
+          "siguiente_nodo": "final_repite",
+          "consecuencia": "La familia repetirá el mismo problema en la siguiente generación.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+    "final_prevenido": {
+      "id": "final_prevenido",
       "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "tipo_final": "excelente",
+      "texto": "Su mamá hizo testamento, designó beneficiarios en su AFORE y en su seguro, y dejó una lista de sus cuentas en un sobre. Todo ese trámite costó menos de $2,000 y una tarde.",
+      "reflexion_final": "Un testamento no es cosa de ricos ni de viejos: es el documento que evita que tu familia pase años en tribunales por lo que tú querías darles. Además, designar beneficiarios en AFORE y seguros es gratis, se hace en minutos y ese dinero se entrega sin pasar por juicio sucesorio."
     },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+    "final_repite": {
+      "id": "final_repite",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "Se resolvió lo del abuelo pero nadie más hizo testamento. Veinte años después la familia volvió a pasar por lo mismo, esta vez con más propiedades y más herederos.",
+      "reflexion_final": "Ver el problema de cerca y no actuar es lo más común. El testamento es barato, rápido, se puede modificar cuantas veces quieras y solo surte efecto cuando ya no estás."
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+    "final_pleito": {
+      "id": "final_pleito",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "Cuatro años de juicio contencioso, tres abogados y $420,000 en costos. La casa terminó vendiéndose por debajo de su valor y los hermanos dejaron de hablarse.",
+      "reflexion_final": "Morir sin testamento no solo cuesta dinero: cuesta relaciones familiares. La ley reparte según un orden que puede no coincidir con lo que la persona quería, y el proceso se convierte en el terreno donde se pelean rencores viejos."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

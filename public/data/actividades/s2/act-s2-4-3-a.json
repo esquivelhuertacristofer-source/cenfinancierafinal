@@ -4,123 +4,146 @@
   "unit_title": "Fundraising: Series A, B, C — ¿cómo funciona realmente?",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "JUEGO",
-  "complejidad": "MEDIO",
-  "titulo": "El Laberinto de los Impuestos",
-  "descripcion": "Acabas de abrir tu primer negocio. ¡Cuidado! El socio más importante (y estricto) es el SAT. ¿Podrás mantener tus cuentas claras?",
-  "objetivo": "Comprender la responsabilidad fiscal, la gestión del IVA y la importancia de las deducciones legales",
-  "xp": 500,
-  "mecanica": "Toma decisiones fiscales mes a mes. Mantén tu 'Salud Fiscal' alta para evitar auditorías.",
-  "escenarios": [
-    {
-      "id": "tax1",
-      "texto": "Vendes un producto por $1,160. De ese dinero, $160 son de IVA. ¿Qué haces con ese extra?",
-      "imagen": "💰",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Muy bien! Ese dinero no es tuyo, solo lo estás recaudando para el gobierno. Guardarlo te evita deudas fiscales.",
-      "feedback_error": "❌ ¡Error grave! Gastaste el IVA como si fuera utilidad. Cuando llegue el momento de pagarlo, no tendrás dinero. Salud Fiscal -30.",
-      "tipo_ataque": "Gestión de IVA"
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "La Ronda de Inversión",
+  "descripcion": "Renata fundó una app que ya tiene 40,000 usuarios y factura $300,000 al mes. Un fondo le ofrece $12 millones por el 35% de su empresa. Su socio dice que acepte hoy mismo.",
+  "objetivo": "Comprender el ciclo de financiamiento de una startup, el concepto de dilución y el valor del capital inteligente frente al capital sin más.",
+  "xp": 800,
+  "personaje_principal": "Renata",
+  "contexto_inicial": "Renata tiene 60% de la empresa y su socio 40%. El fondo valúa la compañía en $34 millones antes de invertir.",
+  "nodo_inicial": "la_oferta",
+  "nodos": {
+    "la_oferta": {
+      "id": "la_oferta",
+      "texto": "$12 millones por el 35%. ¿Qué hace Renata antes de responder?",
+      "opciones": [
+        {
+          "id": "calcular",
+          "texto": "Calcular cuánto le quedaría a ella después de la dilución",
+          "siguiente_nodo": "la_dilucion",
+          "consecuencia": "De su 60% pasaría a 39%: sigue siendo la mayor accionista, apenas.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "preguntar",
+          "texto": "Preguntar qué aporta el fondo además del dinero",
+          "siguiente_nodo": "capital_inteligente",
+          "consecuencia": "La pregunta que separa un buen inversionista de un cheque.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "firmar",
+          "texto": "Firmar: $12 millones es muchísimo dinero",
+          "siguiente_nodo": "final_diluida",
+          "consecuencia": "Firma sin leer las cláusulas de control.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 12000000
+        }
+      ]
     },
-    {
-      "id": "tax2",
-      "texto": "Necesitas una computadora para trabajar. Si pides FACTURA, puedes restar ese gasto de tus impuestos.",
-      "imagen": "💻",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Inteligente! Esto se llama Deducción. Al ser un gasto necesario para tu negocio, pagas menos impuestos legalmente.",
-      "feedback_error": "❌ Perdiste una oportunidad. Al no pedir factura, pagas el precio total y no recuperas nada en tu declaración.",
-      "tipo_ataque": "Deducciones"
+    "la_dilucion": {
+      "id": "la_dilucion",
+      "texto": "Hace los números: su 39% de una empresa de $46 millones vale $17.9 millones, más que su 60% de $34 millones ($20.4M)... no, menos. Pero con esos $12 millones la empresa podría valer $150 millones en tres años, y su 39% valdría $58 millones.",
+      "opciones": [
+        {
+          "id": "entender",
+          "texto": "Entender el principio: mejor un pedazo menor de un pastel mucho mayor",
+          "siguiente_nodo": "capital_inteligente",
+          "consecuencia": "La dilución solo tiene sentido si el dinero hace crecer el pastel más de lo que te diluye.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "rechazar",
+          "texto": "Rechazar cualquier dilución: quiere conservar su 60%",
+          "siguiente_nodo": "final_sin_capital",
+          "consecuencia": "Conserva el control y crece con lo que genera.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "tax3",
-      "texto": "Es fin de mes y toca declarar tus ingresos. Tuviste ventas en efectivo que nadie vio. ¿Las declaras?",
-      "imagen": "🤫",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Correcto! Ser honesto te protege de auditorías y multas gigantescas en el futuro. Tu reputación fiscal sube.",
-      "feedback_error": "❌ ¡Peligro! Ocultar ingresos es Evasión Fiscal. Si te descubren, las multas serán mayores que todo lo que ganaste.",
-      "tipo_ataque": "Declaración de Ingresos"
+    "capital_inteligente": {
+      "id": "capital_inteligente",
+      "texto": "Investiga a los dos fondos interesados. El fondo A ofrece $12 millones por 35% y solo dinero. El fondo B ofrece $10 millones por 32%, más contactos con distribuidores, un asiento en el consejo y experiencia escalando tres empresas del mismo sector.",
+      "opciones": [
+        {
+          "id": "fondo_b",
+          "texto": "Elegir el fondo B: menos dinero, menos dilución y mucho más valor",
+          "siguiente_nodo": "las_clausulas",
+          "consecuencia": "Capital inteligente: el dinero es lo menos escaso de la ecuación.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 10000000
+        },
+        {
+          "id": "fondo_a",
+          "texto": "Elegir el fondo A: son $2 millones más",
+          "siguiente_nodo": "las_clausulas",
+          "consecuencia": "Más dinero hoy, más dilución y ninguna ayuda para ejecutar.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 12000000
+        }
+      ]
     },
-    {
-      "id": "tax4",
-      "texto": "Llega el momento de la Declaración Anual. Como tuviste gastos médicos facturados, el gobierno te devuelve dinero.",
-      "imagen": "🏥",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades! Por tener tus papeles en orden, recibes un 'Saldo a Favor'. ¡Dinero extra directo a tu cuenta!",
-      "feedback_error": "❌ Por no llevar orden en tus facturas, perdiste el derecho a recuperar ese dinero.",
-      "tipo_ataque": "Saldo a Favor"
+    "las_clausulas": {
+      "id": "las_clausulas",
+      "texto": "El contrato tiene cláusulas que su abogada le señala: liquidación preferente, derecho de veto sobre decisiones clave y antidilución. Su socio dice \"eso es estándar, fírmalo\".",
+      "opciones": [
+        {
+          "id": "negociar",
+          "texto": "Negociar las cláusulas de veto y entender qué implica cada una",
+          "siguiente_nodo": "final_socia_fuerte",
+          "consecuencia": "Logra acotar el veto a decisiones verdaderamente estructurales.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "aceptar",
+          "texto": "Aceptarlas: es lo estándar",
+          "siguiente_nodo": "final_sin_control",
+          "consecuencia": "Con 39% y veto del inversionista, ya no decide sola casi nada.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "tax5",
-      "texto": "Tu negocio creció y ahora tienes empleados. ¿Debes pagar sus cuotas de seguridad social (IMSS)?",
-      "imagen": "👥",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Excelente! Ser un patrón responsable asegura el futuro de tu equipo y evita clausuras legales.",
-      "feedback_error": "❌ ¡Clausura! No cumplir con los derechos de tus trabajadores es la forma más rápida de cerrar tu negocio.",
-      "tipo_ataque": "Responsabilidad Social"
+    "final_socia_fuerte": {
+      "id": "final_socia_fuerte",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Tres años después la empresa vale $180 millones. El 34% de Renata vale $61 millones, y los contactos del fondo abrieron la distribución nacional que ella sola no habría conseguido en una década.",
+      "reflexion_final": "Levantar capital no es ganar dinero: es vender un pedazo de tu empresa para siempre. Solo vale la pena si ese dinero hace crecer el negocio más rápido de lo que te diluye, y si quien entra aporta algo que no puedes comprar. Y las cláusulas importan tanto como el monto: quien controla las decisiones controla la empresa."
+    },
+    "final_sin_control": {
+      "id": "final_sin_control",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "La empresa creció, pero dos años después el consejo vetó su plan de expansión y luego decidió vender la compañía antes de tiempo. Renata cobró bien y perdió el proyecto que había fundado.",
+      "reflexion_final": "Los derechos de veto y la liquidación preferente no son detalles: definen quién manda de verdad. Antes de firmar una ronda, entiende exactamente qué decisiones dejas de poder tomar solo."
+    },
+    "final_sin_capital": {
+      "id": "final_sin_capital",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Conservó el 100% del control y creció con sus propios ingresos. Cinco años después la empresa vale $40 millones y es toda suya. Un competidor que sí levantó capital tomó el mercado nacional.",
+      "reflexion_final": "No levantar capital es una decisión legítima: creces más lento, conservas el control y no le debes nada a nadie. El costo es la velocidad, y en mercados donde el ganador se lleva todo, la velocidad a veces lo es todo."
+    },
+    "final_diluida": {
+      "id": "final_diluida",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Firmó sin leer. Dos rondas después su participación quedó en 11%, sin asiento en el consejo y sin voz en las decisiones. La empresa que fundó ya no era suya en ningún sentido práctico.",
+      "reflexion_final": "Cada ronda diluye. Sin entender la dilución acumulada y sin negociar tu posición desde la primera ronda, un fundador puede terminar como empleado de la empresa que creó."
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Toma decisiones fiscales. ¿Qué harías en cada situación? Mantén tu Salud Fiscal alta.",
-  "duracion": 150,
-  "opciones_clasificacion": [
-    "CORRECTO (Cumplir)",
-    "EVASIÓN (Ilegal)"
-  ],
-  "items": [
-    {
-      "id": "tax1",
-      "label": "Vendes un producto por $1,160. De ese dinero, $160 son de IVA. ¿Qué haces con ese extra?",
-      "emoji": "💰",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Muy bien! Ese dinero no es tuyo, solo lo estás recaudando para el gobierno. Guardarlo te evita deudas fiscales.",
-      "feedback_error": "❌ ¡Error grave! Gastaste el IVA como si fuera utilidad. Cuando llegue el momento de pagarlo, no tendrás dinero. Salud Fiscal -30.",
-      "puntos": 100
-    },
-    {
-      "id": "tax2",
-      "label": "Necesitas una computadora para trabajar. Si pides FACTURA, puedes restar ese gasto de tus impuestos.",
-      "emoji": "💻",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Inteligente! Esto se llama Deducción. Al ser un gasto necesario para tu negocio, pagas menos impuestos legalmente.",
-      "feedback_error": "❌ Perdiste una oportunidad. Al no pedir factura, pagas el precio total y no recuperas nada en tu declaración.",
-      "puntos": 100
-    },
-    {
-      "id": "tax3",
-      "label": "Es fin de mes y toca declarar tus ingresos. Tuviste ventas en efectivo que nadie vio. ¿Las declaras?",
-      "emoji": "🤫",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Correcto! Ser honesto te protege de auditorías y multas gigantescas en el futuro. Tu reputación fiscal sube.",
-      "feedback_error": "❌ ¡Peligro! Ocultar ingresos es Evasión Fiscal. Si te descubren, las multas serán mayores que todo lo que ganaste.",
-      "puntos": 100
-    },
-    {
-      "id": "tax4",
-      "label": "Llega el momento de la Declaración Anual. Como tuviste gastos médicos facturados, el gobierno te dev...",
-      "emoji": "🏥",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades! Por tener tus papeles en orden, recibes un 'Saldo a Favor'. ¡Dinero extra directo a tu cuenta!",
-      "feedback_error": "❌ Por no llevar orden en tus facturas, perdiste el derecho a recuperar ese dinero.",
-      "puntos": 100
-    },
-    {
-      "id": "tax5",
-      "label": "Tu negocio creció y ahora tienes empleados. ¿Debes pagar sus cuotas de seguridad social (IMSS)?",
-      "emoji": "👥",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Excelente! Ser un patrón responsable asegura el futuro de tu equipo y evita clausuras legales.",
-      "feedback_error": "❌ ¡Clausura! No cumplir con los derechos de tus trabajadores es la forma más rápida de cerrar tu negocio.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

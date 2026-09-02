@@ -13,76 +13,76 @@
   "texto": "Hoy descubrí que mi meta cuesta $100. Si en mi alcancía ya tengo $60, entonces me faltan __BLANK1__ pesos para lograrlo. Para saber este número, tuve que hacer una __BLANK2__. Ayer vi que el precio bajó a $90, ¡ahora mi misión es más __BLANK3__! Solo me faltan __BLANK4__ pesos. Saber exactamente cuánto necesito me da mucha __BLANK5__. Cada moneda que ahorro me acerca un __BLANK6__ más a mi sueño. No voy a __BLANK7__ porque soy un Genio Financiero de __BLANK8__.",
   "blanks": [
     {
-      "id": "BLANK1",
+      "id": "blank1",
       "opciones": [
         "40",
         "10",
         "100"
       ],
-      "correcta": "40"
+      "respuesta": "40"
     },
     {
-      "id": "BLANK2",
+      "id": "blank2",
       "opciones": [
         "resta",
         "suma",
         "canción"
       ],
-      "correcta": "resta"
+      "respuesta": "resta"
     },
     {
-      "id": "BLANK3",
+      "id": "blank3",
       "opciones": [
         "fácil",
         "difícil",
         "aburrida"
       ],
-      "correcta": "fácil"
+      "respuesta": "fácil"
     },
     {
-      "id": "BLANK4",
+      "id": "blank4",
       "opciones": [
         "30",
         "50",
         "90"
       ],
-      "correcta": "30"
+      "respuesta": "30"
     },
     {
-      "id": "BLANK5",
+      "id": "blank5",
       "opciones": [
         "seguridad",
         "tristeza",
         "hambre"
       ],
-      "correcta": "seguridad"
+      "respuesta": "seguridad"
     },
     {
-      "id": "BLANK6",
+      "id": "blank6",
       "opciones": [
         "paso",
         "salto",
         "vuelo"
       ],
-      "correcta": "paso"
+      "respuesta": "paso"
     },
     {
-      "id": "BLANK7",
+      "id": "blank7",
       "opciones": [
         "rendirme",
         "gastar",
         "dormir"
       ],
-      "correcta": "rendirme"
+      "respuesta": "rendirme"
     },
     {
-      "id": "BLANK8",
+      "id": "blank8",
       "opciones": [
         "CEN Academy",
         "juguete",
         "papel"
       ],
-      "correcta": "CEN Academy"
+      "respuesta": "CEN Academy"
     }
   ],
   "versión": "2026.Diamond.V2"

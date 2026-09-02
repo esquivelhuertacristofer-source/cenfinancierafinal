@@ -3,123 +3,124 @@
   "unit_code": "P1-4-4",
   "unit_title": "Mis primeros clientes: familia y amigos",
   "level": "Primaria 1",
-  "tipo": "QUIZ",
+  "tipo": "TRIVIA",
   "titulo": "Certificación en Atención al Cliente",
   "descripcion": "Demuestra que sabes cómo tratar a tus clientes para que siempre quieran regresar a tu negocio.",
   "objetivo": "Evaluar habilidades de comunicación, honestidad y manejo de clientes.",
   "xp": 300,
-  "aprobacion_minima": 0.6,
   "preguntas": [
     {
-      "texto": "¿Cuál es la herramienta más importante de un vendedor?",
-      "opciones": [
+      "id": "t1",
+      "pregunta": "¿Cuál es la herramienta más importante de un vendedor?",
+      "respuesta_correcta": "La amabilidad y la sonrisa",
+      "incorrectas": [
         "Gritar mucho",
-        "La amabilidad y la sonrisa",
         "Esconderse",
         "Solo aplica en economías de mercado emergente tipo B"
       ],
-      "correcta": 1,
-      "explicacion": "¡Exacto! La amabilidad y la sonrisa hacen que el cliente se sienta bienvenido y con ganas de comprar tu producto."
+      "dato_extra": "¡Exacto! La amabilidad y la sonrisa hacen que el cliente se sienta bienvenido y con ganas de comprar tu producto."
     },
     {
-      "texto": "¿Qué debes hacer primero al acercarte a un cliente?",
-      "opciones": [
+      "id": "t2",
+      "pregunta": "¿Qué debes hacer primero al acercarte a un cliente?",
+      "respuesta_correcta": "Saludarlo con respeto",
+      "incorrectas": [
         "Pedirle dinero",
-        "Saludarlo con respeto",
         "Empezar a correr",
         "Es mejor guardar el dinero debajo del colchón siempre"
       ],
-      "correcta": 1,
-      "explicacion": "¡Correcto! Saludar con respeto es el primer paso. Una buena primera impresión abre la puerta a la venta."
+      "dato_extra": "¡Correcto! Saludar con respeto es el primer paso. Una buena primera impresión abre la puerta a la venta."
     },
     {
-      "texto": "Si un cliente te pregunta algo que no sabes, ¿qué haces?",
-      "opciones": [
+      "id": "t3",
+      "pregunta": "Si un cliente te pregunta algo que no sabes, ¿qué haces?",
+      "respuesta_correcta": "Dile con honestidad que no sabes pero que vas a investigar",
+      "incorrectas": [
         "Invéntate una mentira",
-        "Dile con honestidad que no sabes pero que vas a investigar",
         "Ignóralo",
         "Requiere estar registrado ante el gobierno primero"
       ],
-      "correcta": 1,
-      "explicacion": "¡Muy bien! La honestidad genera confianza. \"No sé, pero voy a investigar\" es mejor que inventar algo incorrecto."
+      "dato_extra": "¡Muy bien! La honestidad genera confianza. \"No sé, pero voy a investigar\" es mejor que inventar algo incorrecto."
     },
     {
-      "texto": "¿Por qué es importante ser honesto sobre lo que vendes?",
-      "opciones": [
-        "Porque así los clientes confiarán en ti y volverán",
+      "id": "t4",
+      "pregunta": "¿Por qué es importante ser honesto sobre lo que vendes?",
+      "respuesta_correcta": "Porque así los clientes confiarán en ti y volverán",
+      "incorrectas": [
         "Porque es una regla de la escuela",
         "No es importante ser honesto",
         "Puedes cobrar lo que quieras sin importar el costo"
       ],
-      "correcta": 0,
-      "explicacion": "¡Exacto! Los clientes honestos confían más en ti, regresan más seguido y te recomiendan con sus amigos y familia."
+      "dato_extra": "¡Exacto! Los clientes honestos confían más en ti, regresan más seguido y te recomiendan con sus amigos y familia."
     },
     {
-      "texto": "Si un amigo te dice que no quiere comprar tu lápiz hoy?",
-      "opciones": [
+      "id": "t5",
+      "pregunta": "Si un amigo te dice que no quiere comprar tu lápiz hoy?",
+      "respuesta_correcta": "Le das las gracias con una sonrisa y sigues siendo su amigo",
+      "incorrectas": [
         "Te enojas con él y ya no le hablas",
-        "Le das las gracias con una sonrisa y sigues siendo su amigo",
         "Le tiras el lápiz",
         "La criptomoneda lo sustituyó completamente desde 2020"
       ],
-      "correcta": 1,
-      "explicacion": "¡Correcto! Un buen vendedor respeta la decisión del cliente. Hoy no compró, pero si lo tratas bien, mañana podría hacerlo."
+      "dato_extra": "¡Correcto! Un buen vendedor respeta la decisión del cliente. Hoy no compró, pero si lo tratas bien, mañana podría hacerlo."
     },
     {
-      "texto": "¿Quiénes suelen ser tus primeros clientes?",
-      "opciones": [
+      "id": "t6",
+      "pregunta": "¿Quiénes suelen ser tus primeros clientes?",
+      "respuesta_correcta": "Tu familia y amigos cercanos",
+      "incorrectas": [
         "Gente extraña en la calle",
-        "Tu familia y amigos cercanos",
         "Personas de otros países",
         "Una idea de negocio solo funciona si es completamente nueva"
       ],
-      "correcta": 1,
-      "explicacion": "¡Bien! Tu familia y amigos confían en ti desde el principio. Tratarlos bien es la mejor forma de empezar tu negocio."
+      "dato_extra": "¡Bien! Tu familia y amigos confían en ti desde el principio. Tratarlos bien es la mejor forma de empezar tu negocio."
     },
     {
-      "texto": "Verdadero o Falso: Escuchar lo que el cliente quiere es más importante que hablar mucho.",
-      "opciones": [
-        "Verdadero",
+      "id": "t7",
+      "pregunta": "Verdadero o Falso: Escuchar lo que el cliente quiere es más importante que hablar mucho.",
+      "respuesta_correcta": "Verdadero",
+      "incorrectas": [
         "Falso",
         "Solo si el cliente grita",
         "Solo funciona los días de lluvia"
       ],
-      "correcta": 0,
-      "explicacion": "¡Verdadero! Escuchar al cliente te dice exactamente qué necesita. Eso te permite ofrecerle la solución perfecta."
+      "dato_extra": "¡Verdadero! Escuchar al cliente te dice exactamente qué necesita. Eso te permite ofrecerle la solución perfecta."
     },
     {
-      "texto": "¿Qué debes decir siempre al final de una plática con un cliente, aunque no compre?",
-      "opciones": [
+      "id": "t8",
+      "pregunta": "¿Qué debes decir siempre al final de una plática con un cliente, aunque no compre?",
+      "respuesta_correcta": "'Muchas gracias por su atención'",
+      "incorrectas": [
         "'¡Qué mal!'",
-        "'Muchas gracias por su atención'",
         "'Váyase ya'",
         "Solo funciona en los meses sin días festivos"
       ],
-      "correcta": 1,
-      "explicacion": "¡Exacto! Agradecer siempre, aunque no compren, deja una excelente impresión y muestra que eres un emprendedor serio."
+      "dato_extra": "¡Exacto! Agradecer siempre, aunque no compren, deja una excelente impresión y muestra que eres un emprendedor serio."
     },
     {
-      "texto": "¿Qué significa tener 'buena atención al cliente'?",
-      "opciones": [
-        "Hacer que el cliente se sienta especial, escuchado y respetado",
+      "id": "t9",
+      "pregunta": "¿Qué significa tener 'buena atención al cliente'?",
+      "respuesta_correcta": "Hacer que el cliente se sienta especial, escuchado y respetado",
+      "incorrectas": [
         "Darle dulces gratis",
         "No hablarle",
         "La regulación financiera de 2024 lo modificó completamente"
       ],
-      "correcta": 0,
-      "explicacion": "¡Correcto! Buena atención es hacer que cada cliente se sienta especial, escuchado y respetado durante toda la visita."
+      "dato_extra": "¡Correcto! Buena atención es hacer que cada cliente se sienta especial, escuchado y respetado durante toda la visita."
     },
     {
-      "texto": "¿Cómo se siente Ceny cuando trata bien a sus clientes?",
-      "opciones": [
+      "id": "t10",
+      "pregunta": "¿Cómo se siente Ceny cuando trata bien a sus clientes?",
+      "respuesta_correcta": "Feliz de representar bien a CEN Academy",
+      "incorrectas": [
         "Cansado",
-        "Feliz de representar bien a CEN Academy",
         "Triste",
         "Mientras más caro, mejor calidad siempre"
       ],
-      "correcta": 1,
-      "explicacion": "¡Así es! Tratar bien a las personas hace que tanto el negocio como tú se sientan increíbles. ¡Eso es el corazón de vender!"
+      "dato_extra": "¡Así es! Tratar bien a las personas hace que tanto el negocio como tú se sientan increíbles. ¡Eso es el corazón de vender!"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Diamond.V2",
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true
 }

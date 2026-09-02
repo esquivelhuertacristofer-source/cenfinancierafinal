@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-3-8-B",
+  "unit_code": "S2-3-8",
+  "unit_title": "Rebalanceo: mantener el rumbo del portafolio",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Portafolio Desbalanceado",
+  "descripcion": "Clasifica cada acción según si rebalancea, desbalancea o es neutral.",
+  "objetivo": "Verificar la comprensión práctica del rebalanceo",
+  "xp": 400,
+  "instruccion": "Tu objetivo es 50% variable y 50% fija, y hoy estás en 70-30. Arrastra cada acción.",
+  "categorias": [
+    {
+      "id": "rebalancea",
+      "label": "Rebalancea hacia el objetivo",
+      "emoji": "⚖️",
+      "color": "#10B981"
+    },
+    {
+      "id": "desbalancea",
+      "label": "Aleja más del objetivo",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "neutral",
+      "label": "No cambia la proporción",
+      "emoji": "➖",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Vender parte de la renta variable y comprar fija",
+      "emoji": "🔄",
+      "categoria_correcta": "rebalancea",
+      "feedback": "El movimiento clásico de rebalanceo."
+    },
+    {
+      "id": "i2",
+      "label": "Dirigir toda la aportación nueva a renta fija",
+      "emoji": "➡️",
+      "categoria_correcta": "rebalancea",
+      "feedback": "Rebalancea sin generar comisiones ni impuestos."
+    },
+    {
+      "id": "i3",
+      "label": "Comprar más renta variable porque va subiendo",
+      "emoji": "🚀",
+      "categoria_correcta": "desbalancea",
+      "feedback": "Concentra todavía más en lo que ya está sobrerrepresentado."
+    },
+    {
+      "id": "i4",
+      "label": "Aportar la mitad a cada clase",
+      "emoji": "⚗️",
+      "categoria_correcta": "rebalancea",
+      "feedback": "Acerca ligeramente al objetivo, aunque más lento."
+    },
+    {
+      "id": "i5",
+      "label": "No hacer nada este mes",
+      "emoji": "😴",
+      "categoria_correcta": "neutral",
+      "feedback": "La proporción sigue igual hasta que el mercado la mueva."
+    },
+    {
+      "id": "i6",
+      "label": "Vender parte de la renta fija para comprar variable",
+      "emoji": "📛",
+      "categoria_correcta": "desbalancea",
+      "feedback": "Exactamente lo contrario de lo que hace falta."
+    },
+    {
+      "id": "i7",
+      "label": "Revisar el portafolio sin operar",
+      "emoji": "👀",
+      "categoria_correcta": "neutral",
+      "feedback": "Revisar es necesario, pero por sí solo no cambia nada."
+    },
+    {
+      "id": "i8",
+      "label": "Retirar el mismo porcentaje de ambas clases",
+      "emoji": "📤",
+      "categoria_correcta": "neutral",
+      "feedback": "Baja el total pero mantiene la proporción intacta."
+    },
+    {
+      "id": "i9",
+      "label": "Rebalancear cada mes sin importar la desviación",
+      "emoji": "🔁",
+      "categoria_correcta": "desbalancea",
+      "feedback": "Las comisiones acumuladas suelen costar más de lo que aporta."
+    },
+    {
+      "id": "i10",
+      "label": "Fijar un umbral de 5 puntos y actuar solo al superarlo",
+      "emoji": "📏",
+      "categoria_correcta": "rebalancea",
+      "feedback": "Una regla clara vale más que la mejor intuición."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-8-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-8-b-escena.webp"
+}

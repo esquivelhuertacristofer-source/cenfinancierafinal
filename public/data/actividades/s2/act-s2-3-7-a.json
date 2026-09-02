@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S2-3-7-A",
+  "unit_code": "S2-3-7",
+  "unit_title": "ETFs y fondos indizados: comprar el mercado completo",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Comprar el Mercado",
+  "descripcion": "Ceny decide cómo invertir su primer capital. Cada decisión define su diversificación y su costo.",
+  "objetivo": "Aplicar criterios de selección de instrumentos indizados",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene $25,000 para invertir a diez años. Un conocido le recomienda comprar acciones de una sola empresa \"que va a explotar\".",
+  "nodo_inicial": "primera",
+  "nodos": {
+    "primera": {
+      "id": "primera",
+      "texto": "¿Qué hace Ceny con la recomendación de una sola empresa?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Descartarla: concentrar todo en una empresa es apostar, no invertir",
+          "siguiente_nodo": "indice",
+          "consecuencia": "Evita el riesgo de que una sola decisión defina todo su resultado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Poner los $25,000 completos ahí",
+          "siguiente_nodo": "caida",
+          "consecuencia": "Todo su capital depende del desempeño de una sola empresa.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-primera.webp"
+    },
+    "caida": {
+      "id": "caida",
+      "texto": "La empresa tuvo problemas y su acción cayó 48%. ¿Qué aprende?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que la concentración amplifica cualquier error y que hay que diversificar",
+          "siguiente_nodo": "indice",
+          "consecuencia": "La lección salió cara pero quedó clara.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que hay que comprar más de la misma para promediar el precio",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Concentrar aún más en la apuesta que ya falló multiplica el riesgo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -10000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-caida.webp"
+    },
+    "indice": {
+      "id": "indice",
+      "texto": "Considera un instrumento indizado. ¿Qué revisa primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Qué índice replica, su comisión anual y qué tan fiel es al índice",
+          "siguiente_nodo": "comision",
+          "consecuencia": "Los criterios correctos, en el orden correcto.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Cuál subió más el año pasado",
+          "siguiente_nodo": "comision",
+          "consecuencia": "El rendimiento pasado no se repite; la comisión sí se cobra siempre.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-indice.webp"
+    },
+    "comision": {
+      "id": "comision",
+      "texto": "Encuentra dos que replican el mismo índice: uno cobra 0.3% y otro 1.4%. ¿Cuál elige?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El de 0.3%: replican lo mismo, así que la comisión es la única diferencia real",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "En diez años esa diferencia representa una parte importante del resultado.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 9000
+        },
+        {
+          "id": "o2",
+          "texto": "El de 1.4%: será mejor por algo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Si replican el mismo índice, la comisión mayor no compra nada.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -7000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-comision.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny diversificó con un instrumento indizado de bajo costo y mantuvo su plan a diez años.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Con una sola operación obtuvo exposición a decenas de empresas y minimizó lo único que podía controlar con certeza: la comisión.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Diversificó correctamente, pero pagando una comisión que no compraba nada adicional.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cuando dos instrumentos replican el mismo índice, la comisión es prácticamente la única diferencia. Y es la que más se acumula con los años.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny concentró todo en una empresa y después concentró todavía más.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Concentrar todo el capital en una sola empresa es apostar. Diversificar no elimina el riesgo, pero evita que una sola decisión defina todo el resultado.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-3-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-3-7-a-portada.webp"
+}

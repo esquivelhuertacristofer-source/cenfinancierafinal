@@ -1,0 +1,122 @@
+{
+  "code": "ACT-P2-3-6-A",
+  "unit_code": "P2-3-6",
+  "unit_title": "Mi semana en pesos: registrar lo que entra y lo que sale",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Semana en Dos Columnas",
+  "descripcion": "Ceny anotó todos sus movimientos. Ayúdale a clasificarlos correctamente.",
+  "objetivo": "Clasificar movimientos de dinero como entrada, salida o movimiento que no cambia el saldo",
+  "xp": 250,
+  "instruccion": "Arrastra cada movimiento de la semana de Ceny a la columna correcta.",
+  "categorias": [
+    {
+      "id": "entra",
+      "label": "Entra dinero",
+      "emoji": "⬆️",
+      "color": "#10B981"
+    },
+    {
+      "id": "sale",
+      "label": "Sale dinero",
+      "emoji": "⬇️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "igual",
+      "label": "No cambia el saldo",
+      "emoji": "↔️",
+      "color": "#64748B"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Recibe su domingo de $30",
+      "emoji": "📅",
+      "categoria_correcta": "entra",
+      "feedback": "Ingreso ordinario: entra a la primera columna con su fecha."
+    },
+    {
+      "id": "i2",
+      "label": "Compra un jugo de $12",
+      "emoji": "🥤",
+      "categoria_correcta": "sale",
+      "feedback": "Gasto pequeño, pero se anota igual. Los pequeños son los que más se olvidan."
+    },
+    {
+      "id": "i3",
+      "label": "Su abuela le regala $50",
+      "emoji": "🎁",
+      "categoria_correcta": "entra",
+      "feedback": "Ingreso extraordinario. También va en la columna de entradas."
+    },
+    {
+      "id": "i4",
+      "label": "Pasa sus monedas de la alcancía al monedero",
+      "emoji": "🔄",
+      "categoria_correcta": "igual",
+      "feedback": "Cambiar el dinero de lugar no lo aumenta ni lo disminuye."
+    },
+    {
+      "id": "i5",
+      "label": "Le presta $20 a un amigo",
+      "emoji": "🤝",
+      "categoria_correcta": "sale",
+      "feedback": "Aunque espere que vuelva, hoy ese dinero salió de sus manos."
+    },
+    {
+      "id": "i6",
+      "label": "Gana $25 lavando el coche",
+      "emoji": "🚗",
+      "categoria_correcta": "entra",
+      "feedback": "Ingreso por trabajo. Entra y se anota el mismo día."
+    },
+    {
+      "id": "i7",
+      "label": "Cuenta cuánto tiene en la alcancía",
+      "emoji": "🔢",
+      "categoria_correcta": "igual",
+      "feedback": "Contar informa, pero no mueve ni un peso."
+    },
+    {
+      "id": "i8",
+      "label": "Compra un cuaderno de $28",
+      "emoji": "📓",
+      "categoria_correcta": "sale",
+      "feedback": "Salida. Al final de la semana todas se suman para sacar el saldo."
+    },
+    {
+      "id": "i9",
+      "label": "Su amigo le devuelve los $20 prestados",
+      "emoji": "💵",
+      "categoria_correcta": "entra",
+      "feedback": "El dinero que regresa vuelve a entrar. Por eso conviene anotar los préstamos."
+    },
+    {
+      "id": "i10",
+      "label": "Cambia un billete de $50 por cinco monedas de $10",
+      "emoji": "🪙",
+      "categoria_correcta": "igual",
+      "feedback": "Mismo valor, distinta forma. El saldo no se movió."
+    },
+    {
+      "id": "i11",
+      "label": "Compra dulces por $8",
+      "emoji": "🍬",
+      "categoria_correcta": "sale",
+      "feedback": "Ocho pesos parecen nada, pero repetidos toda la semana suman bastante."
+    },
+    {
+      "id": "i12",
+      "label": "Anota todo en su libreta",
+      "emoji": "📝",
+      "categoria_correcta": "igual",
+      "feedback": "Registrar no cambia el dinero, pero es lo único que lo hace visible."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-6-a-escena.webp"
+}

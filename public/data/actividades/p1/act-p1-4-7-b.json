@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-4-7-B",
+  "unit_code": "P1-4-7",
+  "unit_title": "Los materiales cuestan: contar lo que gasté",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Vendí No Es Gané",
+  "descripcion": "Haz las cuentas del negocio y demuestra que sabes distinguir venta de ganancia.",
+  "objetivo": "Verificar el cálculo de costo total y de ganancia",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Vendí $100 y gasté $65 en materiales. Mi ganancia es:",
+      "opciones": [
+        "$100",
+        "$35",
+        "$165",
+        "$65"
+      ],
+      "correcta": 1,
+      "explicacion": "100 − 65 = 35. Solo eso es tuyo de verdad."
+    },
+    {
+      "id": "q2",
+      "texto": "Limones $30, azúcar $15, vasos $20. El costo total es:",
+      "opciones": [
+        "$50",
+        "$35",
+        "$65",
+        "$45"
+      ],
+      "correcta": 2,
+      "explicacion": "Se suman todos los materiales, sin olvidar ninguno."
+    },
+    {
+      "id": "q3",
+      "texto": "Vendí $50 y gasté $70. ¿Qué pasó?",
+      "opciones": [
+        "Gané $20",
+        "Quedé igual",
+        "Gané $120",
+        "Perdí $20"
+      ],
+      "correcta": 3,
+      "explicacion": "Gastar más de lo que se vende se llama pérdida."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Las bolsitas y etiquetas van en la lista de costos?",
+      "opciones": [
+        "Sí, si las compré para el negocio",
+        "No, son baratas",
+        "Solo si cuestan más de $10",
+        "Nunca"
+      ],
+      "correcta": 0,
+      "explicacion": "Olvidar lo pequeño hace que tu cuenta diga que ganaste más de lo real."
+    },
+    {
+      "id": "q5",
+      "texto": "Descubrir que estoy perdiendo dinero es:",
+      "opciones": [
+        "Terrible, mejor no saber",
+        "Bueno, porque puedo corregir a tiempo",
+        "Indiferente",
+        "Motivo para cerrar"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo peligroso no es perder: es perder sin darse cuenta."
+    },
+    {
+      "id": "q6",
+      "texto": "20 vasos a $6 cada uno son:",
+      "opciones": [
+        "$26",
+        "$60",
+        "$120",
+        "$200"
+      ],
+      "correcta": 2,
+      "explicacion": "6 × 20 = 120. Esa es la venta, todavía no la ganancia."
+    },
+    {
+      "id": "q7",
+      "texto": "Costo $68 y venta $120. La ganancia es:",
+      "opciones": [
+        "$188",
+        "$68",
+        "$120",
+        "$52"
+      ],
+      "correcta": 3,
+      "explicacion": "120 − 68 = 52. Ese sí es dinero que puedes ahorrar o reinvertir."
+    },
+    {
+      "id": "q8",
+      "texto": "Si vendo cada vaso a $3 y producirlos cuesta $3.40:",
+      "opciones": [
+        "Pierdo en cada vaso que vendo",
+        "Gano poquito",
+        "Gano al final",
+        "Salgo igual"
+      ],
+      "correcta": 0,
+      "explicacion": "Vender por debajo del costo hace que mientras más vendas, más pierdas."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-7-b-escena.webp"
+}

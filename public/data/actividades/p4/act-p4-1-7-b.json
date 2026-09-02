@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-1-7-B",
+  "unit_code": "P4-1-7",
+  "unit_title": "El GAT: cuánto rinde de verdad mi ahorro",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "El Rendimiento Verdadero",
+  "descripcion": "Comprueba que sabes leer el GAT y elegir con él.",
+  "objetivo": "Verificar la comprensión de GAT nominal, GAT real y su uso comparativo",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "GAT significa:",
+      "opciones": [
+        "Gasto Anual Total",
+        "Ganancia Anual Total",
+        "Garantía Anual Tributaria",
+        "Grupo de Ahorro Total"
+      ],
+      "correcta": 1,
+      "explicacion": "Resume en un porcentaje lo que rinde un ahorro ya descontadas las comisiones."
+    },
+    {
+      "id": "q2",
+      "texto": "El GAT real le resta al nominal:",
+      "opciones": [
+        "Las comisiones",
+        "Los impuestos",
+        "La inflación",
+        "El saldo mínimo"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso es el que dice si tu dinero compra más o menos que antes."
+    },
+    {
+      "id": "q3",
+      "texto": "GAT nominal 5%, inflación 6%. El GAT real es:",
+      "opciones": [
+        "Positivo",
+        "Cero",
+        "Del 11%",
+        "Negativo"
+      ],
+      "correcta": 3,
+      "explicacion": "Tienes más pesos, pero compran menos cosas que el año pasado."
+    },
+    {
+      "id": "q4",
+      "texto": "Con GAT nominal 5%, $1,000 se vuelven en un año:",
+      "opciones": [
+        "$1,050",
+        "$1,005",
+        "$1,500",
+        "$950"
+      ],
+      "correcta": 0,
+      "explicacion": "1,000 × 1.05 = 1,050. Falta ver qué hizo la inflación mientras tanto."
+    },
+    {
+      "id": "q5",
+      "texto": "Un GAT real negativo significa:",
+      "opciones": [
+        "Que perdí pesos",
+        "Que mi dinero compra menos que antes",
+        "Que me robaron",
+        "Que no hay interés"
+      ],
+      "correcta": 1,
+      "explicacion": "No es fraude: es que el rendimiento no alcanzó a cubrir la inflación."
+    },
+    {
+      "id": "q6",
+      "texto": "Publicar el GAT en México es:",
+      "opciones": [
+        "Opcional",
+        "Solo para bancos grandes",
+        "Obligatorio por ley",
+        "Un favor"
+      ],
+      "correcta": 2,
+      "explicacion": "Existe precisamente para que puedas comparar sin depender de la publicidad."
+    },
+    {
+      "id": "q7",
+      "texto": "Para dinero que no tocaré en años, un GAT real negativo:",
+      "opciones": [
+        "Es aceptable",
+        "Es lo mejor",
+        "No importa",
+        "Es regalar poder de compra"
+      ],
+      "correcta": 3,
+      "explicacion": "Ahí sí conviene buscar instrumentos que al menos empaten la inflación."
+    },
+    {
+      "id": "q8",
+      "texto": "Comparar dos productos de ahorro se hace con:",
+      "opciones": [
+        "El GAT real",
+        "El nombre del banco",
+        "La publicidad",
+        "La cercanía de la sucursal"
+      ],
+      "correcta": 0,
+      "explicacion": "Un solo número que ya incluye comisiones e inflación."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-7-b-escena.webp"
+}

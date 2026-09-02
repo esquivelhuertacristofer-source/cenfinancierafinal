@@ -1,0 +1,99 @@
+{
+  "code": "ACT-S1-4-9-A",
+  "unit_code": "S1-4-9",
+  "unit_title": "Flujo de efectivo: por qué un negocio rentable puede quebrar",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "RELLENA",
+  "complejidad": "AVANZADO",
+  "titulo": "Rentable y Sin Dinero",
+  "descripcion": "Completa el análisis del negocio que ganaba dinero y no podía pagar la nómina.",
+  "objetivo": "Comprender el desfase entre utilidad y flujo de efectivo",
+  "xp": 500,
+  "contexto": "El taller de Rubén facturó $180,000 este trimestre y tuvo una utilidad de $40,000. En marzo no pudo pagar la nómina. Los dos datos son ciertos.",
+  "texto": "La utilidad de Rubén se calcula con las ventas __blank1__, aunque el dinero todavía no haya entrado a su cuenta. El flujo de efectivo, en cambio, registra solo lo que __blank2__ de verdad. Su cliente principal le paga a __blank3__ días, pero la nómina y los proveedores vencen cada mes sin esperar. Ese desfase entre pagar antes y cobrar después es lo que agota el efectivo de negocios __blank4__. Para empeorarlo, Rubén aceptó un pedido enorme: más ventas exigieron comprar más material por adelantado, así que crecer le __blank5__ efectivo en lugar de generarlo. Las medidas que puede tomar son pedir un __blank6__ al cliente, negociar plazos más largos con proveedores y mantener un colchón equivalente a varios meses de __blank7__. Lo difícil no es calcularlo: es hacerlo __blank8__ de la crisis y no durante.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "respuesta": "registradas",
+      "opciones": [
+        "registradas",
+        "cobradas",
+        "canceladas",
+        "proyectadas"
+      ]
+    },
+    {
+      "id": "blank2",
+      "respuesta": "entró y salió",
+      "opciones": [
+        "entró y salió",
+        "se facturó",
+        "se prometió",
+        "se planeó"
+      ]
+    },
+    {
+      "id": "blank3",
+      "respuesta": "60",
+      "opciones": [
+        "60",
+        "0",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "blank4",
+      "respuesta": "rentables",
+      "opciones": [
+        "rentables",
+        "quebrados",
+        "informales",
+        "nuevos"
+      ]
+    },
+    {
+      "id": "blank5",
+      "respuesta": "consumió",
+      "opciones": [
+        "consumió",
+        "generó",
+        "duplicó",
+        "ahorró"
+      ]
+    },
+    {
+      "id": "blank6",
+      "respuesta": "anticipo",
+      "opciones": [
+        "anticipo",
+        "descuento",
+        "préstamo",
+        "regalo"
+      ]
+    },
+    {
+      "id": "blank7",
+      "respuesta": "gastos fijos",
+      "opciones": [
+        "gastos fijos",
+        "ventas",
+        "utilidades",
+        "impuestos"
+      ]
+    },
+    {
+      "id": "blank8",
+      "respuesta": "antes",
+      "opciones": [
+        "antes",
+        "después",
+        "durante",
+        "al final"
+      ]
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-9-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-9-a-escena.webp"
+}

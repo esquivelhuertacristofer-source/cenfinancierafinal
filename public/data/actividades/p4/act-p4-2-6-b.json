@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-2-6-B",
+  "unit_code": "P4-2-6",
+  "unit_title": "Suscripciones: los cobros que se renuevan solos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Control de Suscripciones",
+  "descripcion": "Comprueba que sabes detectar y manejar los cobros automáticos.",
+  "objetivo": "Verificar la comprensión del modelo de suscripción y su control",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una suscripción se cobra:",
+      "opciones": [
+        "Una sola vez",
+        "Automáticamente hasta que se cancela",
+        "Cuando uno la autoriza cada mes",
+        "Solo si se usa"
+      ],
+      "correcta": 1,
+      "explicacion": "Ese \"hasta que se cancela\" es el corazón del modelo de negocio."
+    },
+    {
+      "id": "q2",
+      "texto": "Cinco suscripciones de $100 mensuales cuestan al año:",
+      "opciones": [
+        "$500",
+        "$1,200",
+        "$6,000",
+        "$600"
+      ],
+      "correcta": 2,
+      "explicacion": "100 × 5 × 12. Cada una por separado parecía irrelevante."
+    },
+    {
+      "id": "q3",
+      "texto": "Los precios pequeños de las suscripciones:",
+      "opciones": [
+        "Son casualidad",
+        "Reflejan el costo real",
+        "Son obligatorios",
+        "Están diseñados para no doler"
+      ],
+      "correcta": 3,
+      "explicacion": "Es gasto hormiga automatizado: más difícil de detectar todavía."
+    },
+    {
+      "id": "q4",
+      "texto": "Una prueba gratis pide la tarjeta para:",
+      "opciones": [
+        "Empezar a cobrar cuando termine el periodo",
+        "Verificar tu identidad",
+        "No cobrar nunca",
+        "Regalarte el servicio"
+      ],
+      "correcta": 0,
+      "explicacion": "Y el cobro empieza sin ningún aviso previo."
+    },
+    {
+      "id": "q5",
+      "texto": "Al activar una prueba gratis hay que:",
+      "opciones": [
+        "Olvidarla",
+        "Anotar la fecha en que termina",
+        "Compartir la cuenta",
+        "Cancelar de inmediato"
+      ],
+      "correcta": 1,
+      "explicacion": "Y decidir antes de ese día si sigues o cancelas."
+    },
+    {
+      "id": "q6",
+      "texto": "La revisión de suscripciones conviene hacerla:",
+      "opciones": [
+        "Cada diez años",
+        "Nunca",
+        "Cada tres meses",
+        "Solo al contratar"
+      ],
+      "correcta": 2,
+      "explicacion": "Con una sola pregunta: ¿la usé en este periodo?"
+    },
+    {
+      "id": "q7",
+      "texto": "Si tengo dos apps que hacen lo mismo:",
+      "opciones": [
+        "Conservo las dos",
+        "Contrato una tercera",
+        "No importa",
+        "Cancelo una"
+      ],
+      "correcta": 3,
+      "explicacion": "Pagar dos veces por la misma función es puro desperdicio."
+    },
+    {
+      "id": "q8",
+      "texto": "Conservar servicios que no uso \"por si acaso\":",
+      "opciones": [
+        "Cuesta miles de pesos al año",
+        "Es prudente",
+        "No cuesta nada",
+        "Es recomendable"
+      ],
+      "correcta": 0,
+      "explicacion": "Casi siempre se puede volver a contratar cuando de verdad se necesite."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-6-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-6-b-escena.webp"
+}

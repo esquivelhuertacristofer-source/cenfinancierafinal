@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-2-10-A",
+  "unit_code": "P1-2-10",
+  "unit_title": "Cuidar mis cosas también es ahorrar",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Mochila de Ceny",
+  "descripcion": "Es lunes y Ceny estrena mochila. Cada decisión de la semana decide si le dura un año o un mes.",
+  "objetivo": "Relacionar decisiones cotidianas de cuidado con el costo de reponer objetos",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Los papás de Ceny le compraron una mochila de $450 que debe durarle todo el año escolar. Es lunes por la mañana y empieza la semana.",
+  "nodo_inicial": "lunes",
+  "nodos": {
+    "lunes": {
+      "id": "lunes",
+      "texto": "Lunes en el recreo. Ceny quiere jugar futbol y la mochila le estorba. ¿Qué hace con ella?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Dejarla cerrada en la banca de siempre",
+          "siguiente_nodo": "miercoles",
+          "consecuencia": "Cerrada y en un lugar fijo. Nada se cae ni se pierde.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aventarla al pasto abierta, para correr rápido",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "Se salen dos colores y el cuaderno queda en el pasto húmedo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60
+        },
+        {
+          "id": "o3",
+          "texto": "Usarla de portería",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "El cierre se atora y una costura se abre. La mochila nueva ya tiene daño.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -80
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-lunes.webp"
+    },
+    "perdida": {
+      "id": "perdida",
+      "texto": "Ceny revisa la mochila: falta un color, el cuaderno está mojado y hay una costura abierta. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir ayuda para coser la costura hoy mismo",
+          "siguiente_nodo": "miercoles",
+          "consecuencia": "Una costura chica se cose en dos minutos. Una grande ya no.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": -20
+        },
+        {
+          "id": "o2",
+          "texto": "Ignorarlo, total todavía cierra",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La costura abierta crece cada día que pasa.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-perdida.webp"
+    },
+    "miercoles": {
+      "id": "miercoles",
+      "texto": "Miércoles. A Ceny se le rompió la punta del lápiz y el sacapuntas se quedó en casa. Un compañero le ofrece uno nuevo de su estuche.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir prestado el sacapuntas y devolverlo",
+          "siguiente_nodo": "viernes",
+          "consecuencia": "El lápiz corto sigue sirviendo. No se tira nada.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Tirar el lápiz y aceptar el nuevo",
+          "siguiente_nodo": "viernes",
+          "consecuencia": "Un lápiz que tenía media vida terminó en el bote.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -8
+        },
+        {
+          "id": "o3",
+          "texto": "Escribir con el lápiz roto y rayar la hoja",
+          "siguiente_nodo": "viernes",
+          "consecuencia": "La hoja se arruina y hay que arrancarla. El cuaderno se acorta.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -5
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-miercoles.webp"
+    },
+    "viernes": {
+      "id": "viernes",
+      "texto": "Viernes. Llueve a la salida y Ceny trae la mochila con los cuadernos adentro. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Cerrarla bien y cargarla contra el pecho",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Cuadernos secos. Cinco segundos de cuidado salvaron la semana de trabajo.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Correr con la mochila abierta",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Dos cuadernos se mojaron y las hojas se ondularon.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -70
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-viernes.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Fin de la semana: la mochila de $450 sigue como nueva, los cuadernos completos y los colores en su caja.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny no gastó ni un peso extra en toda la semana. Ese dinero que no salió es exactamente igual de valioso que el dinero que se ahorra en la alcancía.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La mochila aguantó, pero hubo que reponer un cuaderno y unos colores.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Nada grave, pero cada reposición sale del mismo bolsillo. Sumadas a lo largo del año, esas compras pequeñas valen más que la mochila.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "A las tres semanas la costura se abrió por completo. Hay que comprar mochila nueva.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Una costura de dos minutos se convirtió en un gasto de $450. Reparar a tiempo casi siempre cuesta cien veces menos que reponer.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-2-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-2-10-a-portada.webp"
+}

@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P1-3-8-A",
+  "unit_code": "P1-3-8",
+  "unit_title": "Mi meta subió de precio: ajustar el plan",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Plan B",
+  "descripcion": "La meta de Ceny subió de precio. Completa su plan para no rendirse.",
+  "objetivo": "Redactar una respuesta planeada ante el aumento de precio de una meta",
+  "xp": 250,
+  "contexto": "El balón que Ceny quería costaba $180 y ahora cuesta $220. Ceny tiene $150 ahorrados.",
+  "texto": "El precio de mi meta __blank1__ y eso me da coraje. Pero antes de hacer nada, reviso una cosa: mi ahorro sigue siendo de __blank2__ pesos, no perdí ni uno. Lo único que cambió es la __blank3__ que me falta. Ahora me faltan __blank4__ pesos. Tengo tres salidas y ninguna es rendirse: puedo esperar más __blank5__, puedo ahorrar más por semana buscando un trabajito, o puedo __blank6__ de meta por algo parecido más barato. Lo que jamás voy a hacer es __blank7__ mi ahorro por enojo, porque ahí sí perdería todo lo avanzado. Escribo esto ahora que estoy __blank8__, para leerlo cuando algo salga mal.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "subió",
+        "bajó",
+        "desapareció"
+      ],
+      "respuesta": "subió"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "150",
+        "220",
+        "0"
+      ],
+      "respuesta": "150"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "distancia",
+        "alcancía",
+        "suerte"
+      ],
+      "respuesta": "distancia"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "70",
+        "150",
+        "370"
+      ],
+      "respuesta": "70"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "semanas",
+        "monedas",
+        "amigos"
+      ],
+      "respuesta": "semanas"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "cambiar",
+        "olvidarme",
+        "quejarme"
+      ],
+      "respuesta": "cambiar"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "gastarme",
+        "contar",
+        "guardar"
+      ],
+      "respuesta": "gastarme"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "tranquilo",
+        "enojado",
+        "dormido"
+      ],
+      "respuesta": "tranquilo"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-8-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-8-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-3-9-A",
+  "unit_code": "P2-3-9",
+  "unit_title": "Ahorrar para el regreso a clases",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Prepara el Regreso a Clases",
+  "descripcion": "Clasifica los útiles de la lista según lo que se puede reutilizar, comprar genérico o sí comprar nuevo.",
+  "objetivo": "Reducir el monto de un gasto anunciado distinguiendo categorías de compra",
+  "xp": 250,
+  "instruccion": "Arrastra cada artículo de la lista según la mejor decisión de compra para el próximo ciclo.",
+  "categorias": [
+    {
+      "id": "reusar",
+      "label": "Puede reutilizarse",
+      "emoji": "♻️",
+      "color": "#10B981"
+    },
+    {
+      "id": "generico",
+      "label": "Comprar genérico",
+      "emoji": "🏷️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "nuevo",
+      "label": "Sí comprar nuevo",
+      "emoji": "🆕",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Mochila del año pasado en buen estado",
+      "emoji": "🎒",
+      "categoria_correcta": "reusar",
+      "feedback": "Una mochila cuidada dura varios ciclos. Es de los artículos más caros de la lista."
+    },
+    {
+      "id": "i2",
+      "label": "Cuadernos",
+      "emoji": "📓",
+      "categoria_correcta": "generico",
+      "feedback": "La marca casi no cambia nada. Aquí se ahorra bastante sin perder calidad útil."
+    },
+    {
+      "id": "i3",
+      "label": "Tijeras que siguen cortando bien",
+      "emoji": "✂️",
+      "categoria_correcta": "reusar",
+      "feedback": "Si funcionan, comprarlas de nuevo es gastar sin necesidad."
+    },
+    {
+      "id": "i4",
+      "label": "Lápices",
+      "emoji": "✏️",
+      "categoria_correcta": "generico",
+      "feedback": "Un lápiz común escribe igual que uno de marca cara."
+    },
+    {
+      "id": "i5",
+      "label": "Colores a los que ya no les queda punta",
+      "emoji": "🖍️",
+      "categoria_correcta": "nuevo",
+      "feedback": "Reutilizar tiene un límite: si ya no sirven, no cumplen su función."
+    },
+    {
+      "id": "i6",
+      "label": "Regla de plástico completa",
+      "emoji": "📏",
+      "categoria_correcta": "reusar",
+      "feedback": "Una regla dura años si no se rompe. No hay razón para reponerla."
+    },
+    {
+      "id": "i7",
+      "label": "Uniforme que ya le quedó chico",
+      "emoji": "👕",
+      "categoria_correcta": "nuevo",
+      "feedback": "La ropa que ya no queda no se puede reutilizar, aunque esté en buen estado."
+    },
+    {
+      "id": "i8",
+      "label": "Gomas y sacapuntas",
+      "emoji": "🧽",
+      "categoria_correcta": "generico",
+      "feedback": "Artículos donde la marca no aporta nada y el precio sí cambia bastante."
+    },
+    {
+      "id": "i9",
+      "label": "Estuche del año pasado sin daños",
+      "emoji": "🖊️",
+      "categoria_correcta": "reusar",
+      "feedback": "Si cierra y guarda, sigue haciendo su trabajo perfectamente."
+    },
+    {
+      "id": "i10",
+      "label": "Libro de texto específico del grado",
+      "emoji": "📚",
+      "categoria_correcta": "nuevo",
+      "feedback": "Cambia con el grado y a veces con la edición. Aquí no hay alternativa."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-9-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-9-a-escena.webp"
+}

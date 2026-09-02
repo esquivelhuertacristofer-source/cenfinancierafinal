@@ -130,5 +130,6 @@
   "titulo": "Cuestionario: Mis Primeras Ideas de Negocio",
   "descripcion": "Pon a prueba lo que aprendiste sobre emprendimiento. ¿Sabes cómo nacen los negocios y qué necesitas para empezar el tuyo?",
   "xp": 300,
-  "level": "Primaria 2"
+  "level": "Primaria 2",
+  "objetivo": "Reconocer las ideas de negocio que resuelven un problema real de otras personas y no solo un gusto propio."
 }

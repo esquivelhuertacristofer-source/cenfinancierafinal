@@ -6,84 +6,153 @@
   "edad": "11-12 años",
   "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "¿Terrenos Digitales?",
-  "descripcion": "Tienes la oportunidad de comprar un terreno al lado del estadio de conciertos en 'LuminarWorld' por $2,000. ¿Es una mina de oro o una trampa?",
-  "objetivo": "Evaluar los riesgos y beneficios de la inversión en activos digitales intangibles",
-  "xp": 500,
-  "personaje_principal": "Dani",
-  "contexto_inicial": "Dani tiene $2,000. Puede invertirlos en una cuenta de ahorro que le da 10% anual, o comprar un terreno virtual donde podrá poner publicidad y cobrar renta a otros jugadores.",
-  "nodo_inicial": "la_decision_virtual",
+  "titulo": "Firma Aquí, Por Favor",
+  "descripcion": "La hermana mayor de Sofía va a firmar su primer crédito para una moto. El vendedor le extiende doce hojas y una pluma: \"Es puro trámite, aquí y aquí\".",
+  "objetivo": "Practicar la lectura crítica de un contrato de crédito antes de firmarlo como herramienta de autoprotección financiera.",
+  "xp": 700,
+  "personaje_principal": "Sofía",
+  "contexto_inicial": "La moto cuesta $52,000. El anuncio decía \"desde $1,400 al mes\". El vendedor tiene prisa y hay dos personas esperando.",
+  "nodo_inicial": "la_pluma",
   "nodos": {
-    "la_decision_virtual": {
-      "id": "la_decision_virtual",
-      "texto": "Comprar el terreno virtual es arriesgado. Si el juego deja de ser popular, tu terreno valdrá $0. ¿Qué eliges?",
+    "la_pluma": {
+      "id": "la_pluma",
+      "texto": "\"Firme aquí y aquí, es puro trámite\". ¿Qué le aconseja Sofía a su hermana?",
       "opciones": [
         {
-          "id": "comprar_terreno",
-          "texto": "Comprar el terreno (Riesgo alto, recompensa alta)",
-          "siguiente_nodo": "exito_metaverso",
-          "consecuencia": "¡Arriesgado! Compraste el terreno. Ahora veamos si el juego crece.",
+          "id": "leer",
+          "texto": "Pedir el contrato para leerlo con calma, aunque incomode",
+          "siguiente_nodo": "la_lectura",
+          "consecuencia": "El vendedor pone mala cara. La hermana se sienta a leer de todos modos.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "llevarselo",
+          "texto": "Pedir una copia para llevársela a casa y decidir mañana",
+          "siguiente_nodo": "la_lectura",
+          "consecuencia": "\"Es que la promoción es solo hoy\", dice él. Ella insiste y él acepta.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "firmar",
+          "texto": "Firmar: el vendedor parece honesto y hay prisa",
+          "siguiente_nodo": "la_sorpresa",
+          "consecuencia": "Firma las doce hojas en dos minutos.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "la_lectura": {
+      "id": "la_lectura",
+      "texto": "Leyendo aparecen tres cosas que el anuncio no decía: el CAT es 89%, hay una comisión de apertura de $3,100 y un seguro obligatorio de $480 al mes. Los \"$1,400 mensuales\" son en realidad $1,880, durante 48 meses.",
+      "opciones": [
+        {
+          "id": "calcular",
+          "texto": "Calcular el total: $1,880 × 48 = $90,240 por una moto de $52,000",
+          "siguiente_nodo": "la_decision",
+          "consecuencia": "La hermana palidece: casi el doble del precio.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "confiar_igual",
+          "texto": "Pensar que es normal y firmar",
+          "siguiente_nodo": "final_caro",
+          "consecuencia": "Firma sabiendo poco y aceptando mucho.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -38240
+        }
+      ]
+    },
+    "la_decision": {
+      "id": "la_decision",
+      "texto": "Con los números claros, ¿qué hace?",
+      "opciones": [
+        {
+          "id": "negociar",
+          "texto": "Negociar: pedir que quiten el seguro obligatorio y bajar el plazo",
+          "siguiente_nodo": "final_negociado",
+          "consecuencia": "El vendedor consulta y ofrece 24 meses sin el seguro atado.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -12000
+        },
+        {
+          "id": "comparar",
+          "texto": "Irse a comparar el CAT de otras tres financieras antes de decidir",
+          "siguiente_nodo": "final_comparado",
+          "consecuencia": "Encuentra la misma moto con CAT de 38% en otra institución.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -9000
+        },
+        {
+          "id": "firmar_igual",
+          "texto": "Firmar de todos modos: ya invirtió tiempo aquí",
+          "siguiente_nodo": "final_caro",
+          "consecuencia": "El tiempo ya gastado no debería decidir nada, pero decide.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -38240
+        }
+      ]
+    },
+    "la_sorpresa": {
+      "id": "la_sorpresa",
+      "texto": "El primer recibo llega por $1,880, no por $1,400. Además le cobraron $3,100 de comisión de apertura que nunca le mencionaron. Todo estaba en el contrato que firmó.",
+      "opciones": [
+        {
+          "id": "condusef",
+          "texto": "Acudir a la CONDUSEF para revisar si algo fue irregular",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "La CONDUSEF revisa: todo estaba escrito y firmado. No hay nada que reclamar.",
           "xp_bonus": 100,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": -38240
         },
         {
-          "id": "ahorro_seguro",
-          "texto": "Invertir en ahorro tradicional (Riesgo bajo, ganancia segura)",
-          "siguiente_nodo": "final_ahorro_p6",
-          "consecuencia": "Elegiste la seguridad. Tu dinero crecerá poco a poco, pero nunca desaparecerá.",
-          "xp_bonus": 200,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "aguantar",
+          "texto": "Aguantarse cuatro años",
+          "siguiente_nodo": "final_caro",
+          "consecuencia": "Paga $90,240 por una moto de $52,000.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -38240
         }
       ]
     },
-    "exito_metaverso": {
-      "id": "exito_metaverso",
-      "texto": "¡Increíble! Un cantante famoso dará un concierto en el estadio de al lado. Marcas de ropa quieren rentar tu terreno para poner sus logos. ¿Cuánto cobrarás?",
-      "opciones": [
-        {
-          "id": "cobro_justo",
-          "texto": "Cobrar una renta mensual moderada para tener clientes fijos",
-          "siguiente_nodo": "final_imperio_virtual",
-          "consecuencia": "¡Excelente! Creaste un flujo de dinero pasivo en el mundo digital.",
-          "xp_bonus": 300,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "cobro_excesivo",
-          "texto": "Cobrar muchísimo dinero ahora mismo",
-          "siguiente_nodo": "final_terreno_vacio",
-          "consecuencia": "Nadie quiso rentarte por caro. El concierto pasó y perdiste la oportunidad.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "final_ahorro_p6": {
-      "id": "final_ahorro_p6",
-      "texto": "Tu dinero está a salvo. Viste cómo algunos se hicieron ricos con terrenos y otros perdieron todo. Tú dormiste tranquilo.",
+    "final_negociado": {
+      "id": "final_negociado",
       "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "La mejor inversión es la que te permite dormir bien por las noches."
+      "tipo_final": "excelente",
+      "texto": "Terminó pagando $64,000 en 24 meses en lugar de $90,240 en 48. Leer doce hojas durante veinte minutos le ahorró $26,000.",
+      "reflexion_final": "Un contrato de crédito no es \"puro trámite\": es un documento legal que te obliga durante años. La prisa del vendedor nunca es tu prisa. Y casi todo es negociable si preguntas antes de firmar, y nada lo es después."
     },
-    "final_imperio_virtual": {
-      "id": "final_imperio_virtual",
-      "texto": "¡Eres un magnate del metaverso! Entendiste que el valor digital depende de la atención y la ubicación.",
+    "final_comparado": {
+      "id": "final_comparado",
       "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "En el mundo digital, donde hay ojos, hay valor. ¡Úsalo con sabiduría!"
+      "tipo_final": "excelente",
+      "texto": "Compró la misma moto financiada con CAT del 38%: $67,000 en total. Comparar tres opciones le costó una tarde y le ahorró más de $23,000.",
+      "reflexion_final": "El CAT existe justo para esto: es el número que permite comparar créditos distintos de forma justa. Nunca aceptes el primer financiamiento que te ofrecen, sobre todo el del propio vendedor del producto."
     },
-    "final_terreno_vacio": {
-      "id": "final_terreno_vacio",
-      "texto": "Tu terreno sigue ahí, pero nadie lo visita. Aprendiste que el valor digital puede ser muy volátil.",
+    "final_leccion": {
+      "id": "final_leccion",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "La CONDUSEF fue clara: la información estaba en el contrato y la firma la hizo válida. No hubo engaño legal, hubo un contrato no leído.",
+      "reflexion_final": "La firma es lo que convierte un papel en una obligación de años. Tienes derecho a llevarte el contrato, leerlo con calma y preguntar todo. Ejercer ese derecho antes de firmar vale más que cualquier queja después."
+    },
+    "final_caro": {
+      "id": "final_caro",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No todo lo que brilla en la pantalla es oro. Investiga la utilidad real antes de invertir."
+      "texto": "Cuatro años pagando $1,880 al mes. Total: $90,240 por una moto que costaba $52,000. Cuando terminó de pagarla, la moto valía $18,000.",
+      "reflexion_final": "Pagar casi el doble por prisa es de los errores financieros más comunes y más evitables. Veinte minutos de lectura valían $38,000."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

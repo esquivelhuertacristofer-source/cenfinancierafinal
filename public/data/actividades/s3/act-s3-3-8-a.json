@@ -1,0 +1,215 @@
+{
+  "code": "ACT-S3-3-8-A",
+  "unit_code": "S3-3-8",
+  "unit_title": "FIBRAs: invertir en bienes raíces desde la bolsa",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Ladrillos o Participaciones",
+  "descripcion": "Compara invertir en un inmueble contra hacerlo desde la bolsa.",
+  "objetivo": "Comparar ambas rutas de inversión inmobiliaria con cifras propias",
+  "xp": 1000,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi capital",
+      "descripcion": "Con lo que realmente cuento.",
+      "campos": [
+        {
+          "id": "capital",
+          "label": "Capital disponible",
+          "type": "number",
+          "min": 1000,
+          "max": 10000000,
+          "default": 250000,
+          "unit": "$",
+          "placeholder": "250000",
+          "requerido": true
+        },
+        {
+          "id": "horizonte",
+          "label": "Horizonte de inversión",
+          "type": "slider",
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "default": 10,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "tiempo_disponible",
+          "label": "Horas al mes que puedo dedicar a gestionar",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "default": 4,
+          "unit": "h",
+          "ayuda": "La compra directa exige tiempo real de gestión.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Ruta A: comprar directo",
+      "descripcion": "Un inmueble, con crédito.",
+      "campos": [
+        {
+          "id": "precio_inmueble",
+          "label": "Precio del inmueble",
+          "type": "number",
+          "min": 100000,
+          "max": 20000000,
+          "default": 1200000,
+          "unit": "$",
+          "placeholder": "1200000",
+          "requerido": true
+        },
+        {
+          "id": "renta_mensual",
+          "label": "Renta mensual esperada",
+          "type": "number",
+          "min": 500,
+          "max": 200000,
+          "default": 8000,
+          "unit": "$",
+          "placeholder": "8000",
+          "requerido": true
+        },
+        {
+          "id": "vacancia",
+          "label": "Meses vacíos esperados al año",
+          "type": "slider",
+          "min": 0,
+          "max": 6,
+          "step": 1,
+          "default": 1,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "gastos_anuales",
+          "label": "Mantenimiento, predial y gestión al año",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "default": 22000,
+          "unit": "$",
+          "placeholder": "22000",
+          "requerido": true
+        },
+        {
+          "id": "renta_neta_anual",
+          "label": "Renta neta anual",
+          "type": "calculated",
+          "formula": "renta_mensual * (12 - vacancia) - gastos_anuales",
+          "unit": "$"
+        },
+        {
+          "id": "rendimiento_directo",
+          "label": "Rendimiento sobre el precio del inmueble",
+          "type": "calculated",
+          "formula": "Math.round((renta_mensual * (12 - vacancia) - gastos_anuales) / Math.max(1, precio_inmueble) * 1000) / 10",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Ruta B: desde la bolsa",
+      "descripcion": "Participaciones en un portafolio inmobiliario.",
+      "campos": [
+        {
+          "id": "precio_titulo",
+          "label": "Precio por participación",
+          "type": "number",
+          "min": 1,
+          "max": 10000,
+          "default": 24,
+          "unit": "$",
+          "placeholder": "24",
+          "requerido": true
+        },
+        {
+          "id": "distribucion_anual",
+          "label": "Distribución anual por participación",
+          "type": "number",
+          "min": 0,
+          "max": 2000,
+          "default": 2.2,
+          "unit": "$",
+          "placeholder": "2.2",
+          "requerido": true
+        },
+        {
+          "id": "titulos",
+          "label": "Participaciones que puedo comprar",
+          "type": "calculated",
+          "formula": "Math.floor(capital / Math.max(1, precio_titulo))",
+          "unit": "títulos"
+        },
+        {
+          "id": "ingreso_anual_bursatil",
+          "label": "Ingreso anual por distribuciones",
+          "type": "calculated",
+          "formula": "Math.round(Math.floor(capital / Math.max(1, precio_titulo)) * distribucion_anual)",
+          "unit": "$"
+        },
+        {
+          "id": "rendimiento_bursatil",
+          "label": "Rendimiento sobre el capital invertido",
+          "type": "calculated",
+          "formula": "Math.round(distribucion_anual / Math.max(0.01, precio_titulo) * 1000) / 10",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La comparación",
+      "descripcion": "Qué exige y qué entrega cada ruta.",
+      "campos": [
+        {
+          "id": "falta_para_inmueble",
+          "label": "Cuánto me falta para el enganche del 20%",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.round(precio_inmueble * 0.2) - capital)",
+          "unit": "$"
+        },
+        {
+          "id": "propiedades",
+          "label": "¿En cuántas propiedades participo por la ruta bursátil?",
+          "type": "select",
+          "opciones": [
+            "Decenas",
+            "Una",
+            "Ninguna"
+          ],
+          "default": "Decenas",
+          "requerido": true
+        },
+        {
+          "id": "diferencia_rendimiento",
+          "label": "Diferencia de rendimiento entre ambas rutas",
+          "type": "calculated",
+          "formula": "Math.round((distribucion_anual / Math.max(0.01, precio_titulo) - (renta_mensual * (12 - vacancia) - gastos_anuales) / Math.max(1, precio_inmueble)) * 1000) / 10",
+          "unit": "pts"
+        },
+        {
+          "id": "decision",
+          "label": "¿Qué ruta eliges y por qué?",
+          "type": "textarea",
+          "placeholder": "Considera capital, liquidez, diversificación, control y tiempo de gestión",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "comparativo_inmobiliario",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-3-8-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-8-a-escena.webp"
+}

@@ -904,6 +904,926 @@
       "Explique que el 'Super Peso' ayuda a bajar la inflación pero afecta a quienes reciben remesas."
     ]
   },
+  "S1-1-6": {
+    "code": "S1-1-6",
+    "title": "Salario mínimo y UMA: dos referencias que no son lo mismo",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Distinguir el salario mínimo de la UMA, comprender para qué sirve cada referencia y calcular montos expresados en ellas.",
+      "competencies": [
+        "Comprensión Normativa",
+        "Cálculo con Referencias",
+        "Lectura de Documentos Oficiales",
+        "Interpretación Económica"
+      ],
+      "materials": [
+        "Tabla de valores vigentes de salario mínimo y UMA",
+        "Calculadora",
+        "Documentos donde aparecen montos en UMA",
+        "Formato de conversión",
+        "Cartel comparativo de las dos referencias"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dos Números Distintos",
+          "duration": "15 min",
+          "label": "La confusión común"
+        },
+        {
+          "phase": "Desarrollo: Para Qué Sirve Cada Uno",
+          "duration": "30 min",
+          "label": "Salario y referencia"
+        },
+        {
+          "phase": "Cierre: Convertir",
+          "duration": "15 min",
+          "label": "Calcular montos reales"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DOS NÚMEROS QUE NO SON LO MISMO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un documento donde una multa o un crédito se expresa en UMA y otro donde se habla de salario mínimo. Pregunte si son lo mismo. La confusión es casi universal. Explique que hasta 2016 se usaba el salario mínimo para todo, y que se separaron precisamente para poder aumentar el salario sin encarecer multas y trámites.",
+          "activity": "Dinámica \"¿Cuál Es Cuál?\": el grupo revisa cinco documentos e identifica cuál referencia usa cada uno."
+        },
+        {
+          "title": "FASE II: PARA QUÉ SIRVE CADA UNO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el salario mínimo es el pago más bajo que legalmente puede recibir un trabajador por jornada, mientras que la UMA es una unidad de referencia para calcular multas, créditos de vivienda, aportaciones y obligaciones. Los alumnos clasifican diez conceptos según qué referencia aplica.",
+          "activity": "Dinámica \"Cada Cosa con su Unidad\": cada equipo asigna a cada concepto la referencia correcta y justifica."
+        },
+        {
+          "title": "FASE III: CONVERTIR A PESOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos convierten montos expresados en UMA a pesos y calculan el ingreso mensual y anual de un salario mínimo. Insista en que ambos valores se actualizan cada año, por lo que siempre hay que verificar el vigente antes de calcular.",
+          "activity": "Dinámica \"De UMA a Pesos\": cada alumno convierte cinco montos y calcula un ingreso mensual mínimo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay dos números que la mayoría de la gente confunde: el salario mínimo y la UMA. Uno define cuánto debe ganar un trabajador; el otro sirve para calcular multas, créditos y trámites. Distinguirlos evita errores que cuestan dinero.",
+      "sections": [
+        {
+          "subtitle": "Qué es el salario mínimo",
+          "content": "Es la cantidad más baja que legalmente puede recibir un trabajador por una jornada de trabajo. Se fija cada año y existe un valor general y uno para la zona fronteriza norte, que es mayor. Su función es proteger el ingreso de quien menos gana, y cuando sube, sube directamente el pago de millones de trabajadores."
+        },
+        {
+          "subtitle": "Qué es la UMA",
+          "content": "La Unidad de Medida y Actualización es una referencia para calcular obligaciones y pagos: multas, algunos créditos de vivienda, aportaciones de seguridad social y determinados trámites. No es un salario ni lo que gana nadie: es una unidad de cuenta que se actualiza cada año conforme a la inflación."
+        },
+        {
+          "subtitle": "Por qué se separaron",
+          "content": "Antes de 2016 casi todo se calculaba en salarios mínimos, así que subir el salario encarecía automáticamente multas, créditos y trámites. Eso frenaba los aumentos. Al crear una unidad aparte, el salario mínimo pudo aumentar sin arrastrar consigo el costo de todas esas obligaciones, que quedaron ancladas a la UMA."
+        },
+        {
+          "subtitle": "Cómo usar cada uno",
+          "content": "Si el tema es cuánto debe pagarse por trabajar, aplica el salario mínimo. Si el tema es cuánto cuesta una multa, cuánto se aporta o cuánto se debe en cierto crédito de vivienda, casi siempre aplica la UMA. Ambos cambian cada año, así que antes de cualquier cálculo hay que verificar el valor vigente."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el salario mínimo?",
+          "options": [
+            "El pago más bajo legal por jornada de trabajo",
+            "Una unidad de cuenta",
+            "Una multa"
+          ],
+          "correct": "El pago más bajo legal por jornada de trabajo"
+        },
+        {
+          "question": "¿Qué es la UMA?",
+          "options": [
+            "Un salario",
+            "Una unidad de referencia para calcular obligaciones",
+            "Un impuesto"
+          ],
+          "correct": "Una unidad de referencia para calcular obligaciones"
+        },
+        {
+          "question": "¿Hay más de un salario mínimo?",
+          "options": [
+            "No, uno solo",
+            "Hay uno por estado",
+            "Sí, uno general y uno de zona fronteriza norte"
+          ],
+          "correct": "Sí, uno general y uno de zona fronteriza norte"
+        },
+        {
+          "question": "¿Para qué se usa la UMA?",
+          "options": [
+            "Multas, créditos de vivienda y aportaciones",
+            "Pagar sueldos",
+            "Comprar en el súper"
+          ],
+          "correct": "Multas, créditos de vivienda y aportaciones"
+        },
+        {
+          "question": "¿Qué pasaba antes de 2016?",
+          "options": [
+            "No existía el salario mínimo",
+            "Casi todo se calculaba en salarios mínimos",
+            "Todo era en UMA"
+          ],
+          "correct": "Casi todo se calculaba en salarios mínimos"
+        },
+        {
+          "question": "¿Por qué se separaron?",
+          "options": [
+            "Por moda",
+            "Por error",
+            "Para poder subir el salario sin encarecer multas y trámites"
+          ],
+          "correct": "Para poder subir el salario sin encarecer multas y trámites"
+        },
+        {
+          "question": "¿Con qué frecuencia se actualizan?",
+          "options": [
+            "Cada año",
+            "Cada mes",
+            "Nunca"
+          ],
+          "correct": "Cada año"
+        },
+        {
+          "question": "Una multa expresada en UMA:",
+          "options": [
+            "Se paga en salarios",
+            "Se convierte multiplicando por el valor vigente",
+            "No se puede calcular"
+          ],
+          "correct": "Se convierte multiplicando por el valor vigente"
+        },
+        {
+          "question": "¿La UMA es lo que gana alguien?",
+          "options": [
+            "Sí, es un sueldo",
+            "Sí, es el mínimo",
+            "No, es una unidad de cuenta"
+          ],
+          "correct": "No, es una unidad de cuenta"
+        },
+        {
+          "question": "¿Qué hay que hacer antes de calcular?",
+          "options": [
+            "Verificar el valor vigente del año",
+            "Usar el del año pasado",
+            "Estimar"
+          ],
+          "correct": "Verificar el valor vigente del año"
+        }
+      ],
+      "rubric": "Logrado: distingue ambas referencias, asigna correctamente cada concepto y convierte montos. En proceso: identifica las definiciones sin aplicarlas. Inicial: reconoce que son cosas distintas."
+    },
+    "teacher_tips": [
+      "Lleve documentos reales donde aparezcan montos en UMA. Verlo impreso elimina la confusión de inmediato.",
+      "Actualice los valores cada ciclo escolar: son cifras que cambian todos los años.",
+      "La razón histórica de la separación explica el concepto mejor que cualquier definición."
+    ]
+  },
+  "S1-1-7": {
+    "code": "S1-1-7",
+    "title": "Del salario bruto al neto: ISR, IMSS y lo que sí llega",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender la diferencia entre salario bruto y neto e identificar las deducciones que se aplican a un recibo de nómina.",
+      "competencies": [
+        "Lectura de Nómina",
+        "Comprensión Fiscal",
+        "Cálculo de Deducciones",
+        "Planeación con Ingreso Real"
+      ],
+      "materials": [
+        "Recibo de nómina de ejemplo",
+        "Calculadora",
+        "Tabla simplificada de deducciones",
+        "Casos con distintos niveles de salario",
+        "Cartel de bruto contra neto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: \"Me Ofrecieron X\"",
+          "duration": "15 min",
+          "label": "Lo que se anuncia"
+        },
+        {
+          "phase": "Desarrollo: Las Deducciones",
+          "duration": "30 min",
+          "label": "Qué se descuenta y por qué"
+        },
+        {
+          "phase": "Cierre: Presupuestar con el Neto",
+          "duration": "15 min",
+          "label": "La cifra que importa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"ME OFRECIERON TANTO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee una oferta de trabajo de $15,000 mensuales. Pregunte cuánto llegaría a la cuenta. Muchos dirán que $15,000. Muestre un recibo real donde el depósito es menor y explique que la diferencia son deducciones que tienen destinos concretos, no un descuento arbitrario.",
+          "activity": "Dinámica \"¿Cuánto Llega?\": el grupo estima el neto de tres ofertas y compara con el cálculo real."
+        },
+        {
+          "title": "FASE II: QUÉ SE DESCUENTA Y POR QUÉ (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las deducciones principales: el impuesto sobre la renta, que es progresivo, y las cuotas de seguridad social, que financian atención médica, incapacidades y la pensión. Aclare que las cuotas no son dinero perdido: compran servicios y derechos concretos. Los alumnos analizan un recibo completo.",
+          "activity": "Dinámica \"Anatomía del Recibo\": cada equipo identifica percepciones, deducciones y neto en un recibo real."
+        },
+        {
+          "title": "FASE III: PRESUPUESTAR CON EL NETO (CIERRE)",
+          "duration": "15 min",
+          "description": "Insista en que todo presupuesto personal se hace con el neto, nunca con el bruto. Planear con el bruto genera un desfase mes tras mes. Los alumnos ajustan un presupuesto hecho con la cifra equivocada y observan el hueco que produce.",
+          "activity": "Dinámica \"El Presupuesto Desfasado\": los alumnos corrigen un presupuesto elaborado con salario bruto."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Te ofrecen $15,000 al mes y a tu cuenta llegan menos. No es un error ni un abuso: son deducciones con destinos concretos. Entender de dónde sale cada una te permite planear con la cifra que de verdad vas a tener.",
+      "sections": [
+        {
+          "subtitle": "Bruto, deducciones y neto",
+          "content": "El salario bruto es lo que se pacta antes de descuentos. Las deducciones son lo que se retiene por ley. El neto es lo que efectivamente se deposita. Cuando alguien menciona un sueldo, casi siempre habla del bruto, así que la primera pregunta al recibir una oferta es cuánto sería el neto."
+        },
+        {
+          "subtitle": "El impuesto sobre la renta",
+          "content": "Es la retención más grande en la mayoría de los recibos y funciona de forma progresiva: quien gana más paga un porcentaje mayor sobre la parte alta de su ingreso, no sobre todo. Eso significa que un aumento nunca hace que alguien termine ganando menos, aunque es una creencia bastante extendida."
+        },
+        {
+          "subtitle": "Las cuotas de seguridad social",
+          "content": "Financian atención médica, incapacidades por enfermedad o maternidad, riesgos de trabajo y la pensión futura. No son dinero perdido: compran derechos concretos que un trabajador informal no tiene. Comparar un empleo formal con uno informal solo por el neto ignora todo ese paquete de protección."
+        },
+        {
+          "subtitle": "Presupuestar siempre con el neto",
+          "content": "Un presupuesto hecho con el bruto genera un faltante todos los meses, porque ese dinero nunca llega. La cifra que se usa para planear renta, comida, ahorro y pagos es el depósito real. Y conviene revisar el recibo con regularidad: los errores en nómina existen y solo los detecta quien lo lee."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el salario bruto?",
+          "options": [
+            "Lo que se deposita",
+            "Lo pactado antes de descuentos",
+            "El aguinaldo"
+          ],
+          "correct": "Lo pactado antes de descuentos"
+        },
+        {
+          "question": "¿Qué es el neto?",
+          "options": [
+            "Lo pactado",
+            "El impuesto",
+            "Lo que efectivamente se deposita"
+          ],
+          "correct": "Lo que efectivamente se deposita"
+        },
+        {
+          "question": "Cuando alguien menciona un sueldo habla del:",
+          "options": [
+            "Bruto",
+            "Neto",
+            "Aguinaldo"
+          ],
+          "correct": "Bruto"
+        },
+        {
+          "question": "¿Cuál es la retención más grande normalmente?",
+          "options": [
+            "La cuota sindical",
+            "El impuesto sobre la renta",
+            "El ahorro"
+          ],
+          "correct": "El impuesto sobre la renta"
+        },
+        {
+          "question": "¿Cómo funciona ese impuesto?",
+          "options": [
+            "Con un porcentaje fijo para todos",
+            "Al azar",
+            "De forma progresiva"
+          ],
+          "correct": "De forma progresiva"
+        },
+        {
+          "question": "¿Un aumento puede hacer que ganes menos?",
+          "options": [
+            "No, es una creencia falsa",
+            "Sí, siempre",
+            "Sí, a veces"
+          ],
+          "correct": "No, es una creencia falsa"
+        },
+        {
+          "question": "¿Qué financian las cuotas de seguridad social?",
+          "options": [
+            "Publicidad",
+            "Atención médica, incapacidades y pensión",
+            "Nada"
+          ],
+          "correct": "Atención médica, incapacidades y pensión"
+        },
+        {
+          "question": "¿Son dinero perdido?",
+          "options": [
+            "Sí, totalmente",
+            "Sí, la mitad",
+            "No, compran derechos concretos"
+          ],
+          "correct": "No, compran derechos concretos"
+        },
+        {
+          "question": "¿Con qué cifra se presupuesta?",
+          "options": [
+            "Con el neto",
+            "Con el bruto",
+            "Con el promedio"
+          ],
+          "correct": "Con el neto"
+        },
+        {
+          "question": "¿Por qué revisar el recibo?",
+          "options": [
+            "Por costumbre",
+            "Porque los errores de nómina existen",
+            "No hace falta"
+          ],
+          "correct": "Porque los errores de nómina existen"
+        }
+      ],
+      "rubric": "Logrado: identifica deducciones en un recibo, explica su destino y presupuesta con el neto. En proceso: distingue bruto de neto sin explicar deducciones. Inicial: sabe que llega menos de lo pactado."
+    },
+    "teacher_tips": [
+      "Un recibo de nómina real anonimizado es el mejor material posible para esta clase.",
+      "Desmienta explícitamente el mito de que un aumento puede reducir el ingreso neto.",
+      "Vincule las cuotas con derechos concretos: cambia por completo la percepción de la deducción."
+    ]
+  },
+  "S1-1-8": {
+    "code": "S1-1-8",
+    "title": "Informalidad laboral: la mitad de México sin prestaciones",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender qué es la informalidad laboral, qué derechos se pierden en ella y cómo evaluar sus costos reales.",
+      "competencies": [
+        "Análisis del Mercado Laboral",
+        "Valoración de Prestaciones",
+        "Conciencia de Derechos",
+        "Evaluación de Riesgos"
+      ],
+      "materials": [
+        "Tarjetas de derechos laborales",
+        "Casos de trabajadores formales e informales",
+        "Calculadora",
+        "Datos sobre informalidad en México",
+        "Cartel de lo que se pierde"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Mitad del País",
+          "duration": "15 min",
+          "label": "El tamaño del fenómeno"
+        },
+        {
+          "phase": "Desarrollo: Qué Se Pierde",
+          "duration": "30 min",
+          "label": "Derechos y protecciones"
+        },
+        {
+          "phase": "Cierre: Por Qué Ocurre",
+          "duration": "15 min",
+          "label": "Sin juzgar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA MITAD DEL PAÍS (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que cerca de la mitad de las personas ocupadas en México trabaja en la informalidad. Pregunte quiénes conocen a alguien en esa situación: prácticamente todos. Aclare que no se trata de juzgar a las personas, sino de entender qué implica y qué se pierde.",
+          "activity": "Dinámica \"¿A Quién Conoces?\": el grupo enumera oficios frecuentes en la informalidad sin mencionar nombres."
+        },
+        {
+          "title": "FASE II: QUÉ SE PIERDE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Desarrolle lo que un trabajador informal no tiene: atención médica institucional, incapacidad pagada, aguinaldo, vacaciones pagadas, aportación al retiro, acceso a crédito de vivienda y protección ante despido. Los alumnos calculan cuánto valen esas prestaciones en pesos al año.",
+          "activity": "Dinámica \"Cuánto Valen\": cada equipo cuantifica el paquete de prestaciones de un salario dado."
+        },
+        {
+          "title": "FASE III: POR QUÉ OCURRE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique las razones sin simplificar: falta de empleos formales disponibles, ingresos inmediatos mayores, trámites complejos, empleadores que evaden. Insista en que quien trabaja en la informalidad rara vez lo elige libremente, y que conocer los derechos es el primer paso para poder exigirlos.",
+          "activity": "Dinámica \"Las Razones\": cada equipo analiza un caso y distingue causas estructurales de decisiones personales."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cerca de la mitad de las personas que trabajan en México lo hace en la informalidad. No es un tema abstracto: es la situación de mucha gente cercana. Entender qué se pierde ahí es entender por qué la formalidad importa.",
+      "sections": [
+        {
+          "subtitle": "Qué significa trabajar en la informalidad",
+          "content": "Significa trabajar sin estar registrado ante las instituciones de seguridad social. Puede ser por cuenta propia o para un patrón que no da de alta a su personal. La persona sí trabaja y sí genera ingresos, pero queda fuera del sistema de protecciones que la ley establece para el trabajo formal."
+        },
+        {
+          "subtitle": "El paquete que se pierde",
+          "content": "Sin formalidad no hay atención médica institucional, ni pago durante una incapacidad, ni aguinaldo, ni vacaciones pagadas, ni aportación a una cuenta de retiro, ni acceso a crédito de vivienda por esa vía, ni indemnización si terminan el trabajo. Sumado en pesos, ese paquete representa una parte importante del valor real de un empleo."
+        },
+        {
+          "subtitle": "El costo aparece de golpe",
+          "content": "Mientras todo va bien, la diferencia parece pequeña o incluso favorable al empleo informal, porque el ingreso en efectivo puede ser mayor. El costo aparece concentrado en un solo momento: una enfermedad, un accidente, un embarazo o un despido. Es exactamente el mismo patrón de los riesgos sin seguro."
+        },
+        {
+          "subtitle": "Por qué ocurre",
+          "content": "Las causas son estructurales más que personales: escasez de empleos formales, ingresos inmediatos mayores, trámites que resultan complejos y empleadores que evaden sus obligaciones. Muy pocas personas eligen la informalidad libremente. Conocer los derechos laborales no resuelve el problema, pero es la condición para poder exigirlos."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué proporción de ocupados en México está en la informalidad?",
+          "options": [
+            "Menos del 5%",
+            "Casi nadie",
+            "Cerca de la mitad"
+          ],
+          "correct": "Cerca de la mitad"
+        },
+        {
+          "question": "¿Qué significa trabajar informalmente?",
+          "options": [
+            "Trabajar sin registro ante la seguridad social",
+            "No trabajar",
+            "Trabajar por horas"
+          ],
+          "correct": "Trabajar sin registro ante la seguridad social"
+        },
+        {
+          "question": "¿Qué NO tiene un trabajador informal?",
+          "options": [
+            "Ingresos",
+            "Atención médica institucional ni incapacidad pagada",
+            "Horario"
+          ],
+          "correct": "Atención médica institucional ni incapacidad pagada"
+        },
+        {
+          "question": "¿Qué otra prestación se pierde?",
+          "options": [
+            "El descanso",
+            "La comida",
+            "Aguinaldo y vacaciones pagadas"
+          ],
+          "correct": "Aguinaldo y vacaciones pagadas"
+        },
+        {
+          "question": "¿Qué pasa con el retiro?",
+          "options": [
+            "No hay aportación a una cuenta de retiro",
+            "Se duplica",
+            "Es igual"
+          ],
+          "correct": "No hay aportación a una cuenta de retiro"
+        },
+        {
+          "question": "¿Cuándo aparece el costo de la informalidad?",
+          "options": [
+            "Cada mes",
+            "Concentrado en un solo momento difícil",
+            "Nunca"
+          ],
+          "correct": "Concentrado en un solo momento difícil"
+        },
+        {
+          "question": "¿A qué se parece ese patrón?",
+          "options": [
+            "Al del ahorro",
+            "Al del crédito",
+            "Al de los riesgos sin seguro"
+          ],
+          "correct": "Al de los riesgos sin seguro"
+        },
+        {
+          "question": "¿Por qué ocurre la informalidad?",
+          "options": [
+            "Por causas estructurales más que personales",
+            "Por flojera",
+            "Por gusto"
+          ],
+          "correct": "Por causas estructurales más que personales"
+        },
+        {
+          "question": "¿La eligen libremente las personas?",
+          "options": [
+            "Todas",
+            "Muy pocas",
+            "La mayoría"
+          ],
+          "correct": "Muy pocas"
+        },
+        {
+          "question": "¿Para qué sirve conocer los derechos laborales?",
+          "options": [
+            "Para nada",
+            "Solo para el examen",
+            "Es la condición para poder exigirlos"
+          ],
+          "correct": "Es la condición para poder exigirlos"
+        }
+      ],
+      "rubric": "Logrado: cuantifica lo que se pierde y explica causas estructurales sin juicio. En proceso: enumera prestaciones perdidas sin cuantificar. Inicial: reconoce qué es la informalidad."
+    },
+    "teacher_tips": [
+      "Trate el tema sin juicio: es muy probable que familiares de sus alumnos trabajen en la informalidad.",
+      "Cuantificar el paquete de prestaciones en pesos es lo que hace tangible el concepto.",
+      "Enfatice las causas estructurales para evitar que la clase concluya que es un problema de actitud individual."
+    ]
+  },
+  "S1-1-9": {
+    "code": "S1-1-9",
+    "title": "PIB, inflación y poder adquisitivo explicados con el súper",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Relacionar los indicadores macroeconómicos con la vida cotidiana, explicando el poder adquisitivo a partir del gasto real.",
+      "competencies": [
+        "Comprensión Macroeconómica",
+        "Análisis de Poder Adquisitivo",
+        "Lectura de Indicadores",
+        "Vinculación Micro-Macro"
+      ],
+      "materials": [
+        "Datos de inflación de los últimos años",
+        "Lista de precios de productos comunes",
+        "Calculadora",
+        "Gráficos de indicadores",
+        "Cartel de PIB, inflación y poder adquisitivo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Las Noticias",
+          "duration": "15 min",
+          "label": "Palabras que no se entienden"
+        },
+        {
+          "phase": "Desarrollo: Tres Indicadores",
+          "duration": "30 min",
+          "label": "Qué mide cada uno"
+        },
+        {
+          "phase": "Cierre: El Súper Como Termómetro",
+          "duration": "15 min",
+          "label": "Lo macro en lo cotidiano"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LAS PALABRAS DE LAS NOTICIAS (APERTURA)",
+          "duration": "15 min",
+          "description": "Escriba PIB, inflación y poder adquisitivo. Pregunte qué significan. Las definiciones serán vagas. Explique que los tres describen algo muy concreto que se puede ver en el gasto de una familia, y que la clase va a traducirlos a esa escala.",
+          "activity": "Dinámica \"¿Qué Significa?\": el grupo intenta definir los tres términos antes de la explicación."
+        },
+        {
+          "title": "FASE II: QUÉ MIDE CADA UNO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el PIB mide todo lo que produce el país en un periodo, la inflación mide cuánto suben los precios en promedio, y el poder adquisitivo mide cuánto alcanza a comprar un ingreso. Aclare la relación clave: si el ingreso sube menos que la inflación, el poder adquisitivo baja aunque el sueldo haya aumentado.",
+          "activity": "Dinámica \"Sube el Sueldo, Baja lo que Alcanza\": cada equipo calcula el poder adquisitivo con distintos aumentos e inflaciones."
+        },
+        {
+          "title": "FASE III: EL SÚPER COMO TERMÓMETRO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos toman una lista de diez productos y calculan cuánto costaba hace cinco años y cuánto hoy, y cuántos productos se compraban con el mismo ingreso. Es el ejercicio que hace visible la macroeconomía en la escala de una familia.",
+          "activity": "Dinámica \"Mi Canasta de Antes\": los alumnos comparan cuántos productos compraba el mismo ingreso hace cinco años."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "PIB, inflación y poder adquisitivo suenan a palabras de noticiero, pero las tres se pueden ver en el súper. En esta clase vas a traducir la economía nacional a la escala de tu propia despensa.",
+      "sections": [
+        {
+          "subtitle": "El PIB: cuánto produce el país",
+          "content": "El Producto Interno Bruto mide el valor de todo lo que se produce en un país durante un periodo. Cuando crece, generalmente hay más actividad, más empleo y más ingresos. Cuando cae, ocurre lo contrario. Es una medida útil pero incompleta: no dice cómo se reparte lo producido, y por eso el PIB puede crecer mientras muchas familias no lo sienten."
+        },
+        {
+          "subtitle": "La inflación: cuánto suben los precios",
+          "content": "Es el aumento promedio de los precios durante un periodo. Se mide con una canasta de bienes y servicios representativa. Un 5% anual no significa que todo suba 5%: algunos productos suben mucho más y otros bajan. Por eso la inflación que siente cada familia depende de qué consume, y suele percibirse más alta que la cifra oficial."
+        },
+        {
+          "subtitle": "El poder adquisitivo: cuánto alcanza",
+          "content": "Es lo que un ingreso puede comprar realmente. Aquí está la relación que más importa: si tu ingreso sube 4% y la inflación fue 6%, tu poder adquisitivo bajó, aunque tengas más pesos. Un aumento solo mejora tu situación si supera a la inflación; de lo contrario es un retroceso disfrazado de mejora."
+        },
+        {
+          "subtitle": "Cómo se ve en el súper",
+          "content": "La forma más clara de percibirlo es contar productos, no pesos. Si con el mismo ingreso comprabas veinte artículos y ahora compras dieciséis, tu poder adquisitivo cayó un veinte por ciento, sin importar lo que digan los indicadores. Ese ejercicio traduce la macroeconomía a algo que cualquiera puede verificar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué mide el PIB?",
+          "options": [
+            "El valor de todo lo que produce un país",
+            "Los precios",
+            "El desempleo"
+          ],
+          "correct": "El valor de todo lo que produce un país"
+        },
+        {
+          "question": "¿Qué limitación tiene el PIB?",
+          "options": [
+            "No se puede medir",
+            "No dice cómo se reparte lo producido",
+            "Solo mide precios"
+          ],
+          "correct": "No dice cómo se reparte lo producido"
+        },
+        {
+          "question": "¿Qué mide la inflación?",
+          "options": [
+            "La producción",
+            "El empleo",
+            "El aumento promedio de los precios"
+          ],
+          "correct": "El aumento promedio de los precios"
+        },
+        {
+          "question": "Un 5% de inflación significa que:",
+          "options": [
+            "El promedio subió 5%, no todo por igual",
+            "Todo subió exactamente 5%",
+            "Nada subió"
+          ],
+          "correct": "El promedio subió 5%, no todo por igual"
+        },
+        {
+          "question": "¿Por qué la inflación se percibe más alta?",
+          "options": [
+            "Porque los datos son falsos",
+            "Porque depende de qué consume cada familia",
+            "Por casualidad"
+          ],
+          "correct": "Porque depende de qué consume cada familia"
+        },
+        {
+          "question": "¿Qué es el poder adquisitivo?",
+          "options": [
+            "El sueldo bruto",
+            "El ahorro",
+            "Lo que un ingreso puede comprar realmente"
+          ],
+          "correct": "Lo que un ingreso puede comprar realmente"
+        },
+        {
+          "question": "Si el ingreso sube 4% y la inflación fue 6%:",
+          "options": [
+            "El poder adquisitivo bajó",
+            "Subió",
+            "Quedó igual"
+          ],
+          "correct": "El poder adquisitivo bajó"
+        },
+        {
+          "question": "¿Cuándo mejora un aumento tu situación?",
+          "options": [
+            "Siempre",
+            "Cuando supera la inflación",
+            "Nunca"
+          ],
+          "correct": "Cuando supera la inflación"
+        },
+        {
+          "question": "¿Cómo se ve el poder adquisitivo en el súper?",
+          "options": [
+            "Mirando el total",
+            "No se ve",
+            "Contando productos, no pesos"
+          ],
+          "correct": "Contando productos, no pesos"
+        },
+        {
+          "question": "Si antes comprabas 20 y ahora 16:",
+          "options": [
+            "Tu poder adquisitivo cayó 20%",
+            "Subió",
+            "No cambió"
+          ],
+          "correct": "Tu poder adquisitivo cayó 20%"
+        }
+      ],
+      "rubric": "Logrado: define los tres indicadores, calcula poder adquisitivo y lo traduce al gasto real. En proceso: define los términos sin relacionarlos. Inicial: reconoce que los precios suben."
+    },
+    "teacher_tips": [
+      "El ejercicio de contar productos en lugar de pesos es el más revelador de toda la unidad.",
+      "Explique por qué la inflación percibida difiere de la oficial: evita la conclusión de que los datos mienten.",
+      "Use precios reales que los alumnos puedan verificar con su familia."
+    ]
+  },
+  "S1-1-10": {
+    "code": "S1-1-10",
+    "title": "La canasta básica: cuánto cuesta vivir en México",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Calcular el costo de la canasta básica para un hogar y compararlo con distintos niveles de ingreso.",
+      "competencies": [
+        "Costeo de Hogar",
+        "Comparación con Referencias",
+        "Análisis de Suficiencia",
+        "Planeación Familiar"
+      ],
+      "materials": [
+        "Lista de productos de la canasta básica",
+        "Precios actuales de referencia",
+        "Calculadora",
+        "Datos de ingreso por nivel",
+        "Formato de costeo familiar"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuánto Cuesta Vivir?",
+          "duration": "15 min",
+          "label": "La pregunta directa"
+        },
+        {
+          "phase": "Desarrollo: Armar la Canasta",
+          "duration": "30 min",
+          "label": "Costear el mes"
+        },
+        {
+          "phase": "Cierre: ¿Alcanza?",
+          "duration": "15 min",
+          "label": "Comparar con ingresos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CUÁNTO CUESTA VIVIR? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto cuesta mantener a una familia de cuatro personas un mes. Las estimaciones serán muy dispares y en general bajas. Explique que van a construir la cifra a partir de precios reales, y que ese número es la base de cualquier decisión sobre empleo, vivienda o presupuesto.",
+          "activity": "Dinámica \"Tu Estimación\": cada alumno anota su cifra y la guarda para compararla al final."
+        },
+        {
+          "title": "FASE II: ARMAR LA CANASTA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos construyen la canasta mensual de una familia: alimentación, vivienda y servicios, transporte, salud, educación y vestido. Usan precios reales. Aclare que la canasta básica alimentaria es solo una parte y que el costo real de vivir incluye todo lo demás.",
+          "activity": "Dinámica \"La Canasta Completa\": cada equipo costea las seis categorías con precios verificables."
+        },
+        {
+          "title": "FASE III: ¿ALCANZA? (CIERRE)",
+          "duration": "15 min",
+          "description": "Comparan el total con distintos escenarios de ingreso: uno, dos y tres salarios mínimos. Muchos descubrirán que un solo salario mínimo no alcanza para una familia, lo que explica por qué en tantos hogares trabajan varias personas. Trate el hallazgo con seriedad y sin dramatismo.",
+          "activity": "Dinámica \"Los Tres Escenarios\": cada equipo evalúa qué se tendría que sacrificar en cada nivel de ingreso."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "¿Cuánto cuesta vivir un mes? Casi nadie sabe la cifra exacta, y sin embargo es el número más importante para decidir sobre empleo, vivienda y presupuesto. En esta clase vas a construirlo con precios reales.",
+      "sections": [
+        {
+          "subtitle": "Qué es la canasta básica",
+          "content": "Es el conjunto de bienes y servicios que una persona o familia necesita para vivir. Existe una versión alimentaria, que incluye solo comida, y una ampliada, que suma vivienda, transporte, salud, educación y vestido. Confundirlas lleva a subestimar seriamente el costo real de sostener un hogar."
+        },
+        {
+          "subtitle": "Las seis categorías",
+          "content": "Alimentación suele ser la más grande en hogares de ingreso bajo. Vivienda y servicios incluye renta o pago de casa, luz, agua y gas. Transporte cubre traslados diarios. Salud incluye medicamentos y consultas. Educación abarca útiles, uniformes e inscripciones. Vestido cierra la lista. Omitir cualquiera produce un presupuesto que falla."
+        },
+        {
+          "subtitle": "El costo varía mucho por región",
+          "content": "Vivir en una zona metropolitana grande cuesta bastante más que en una ciudad pequeña, sobre todo por vivienda y transporte. Por eso las comparaciones nacionales sirven de referencia general pero no sustituyen el cálculo local. La cifra que importa es la del lugar donde efectivamente se vive."
+        },
+        {
+          "subtitle": "Cuando el ingreso no alcanza",
+          "content": "Al comparar el costo con un solo salario mínimo, en muchos casos el resultado no alcanza para una familia. Eso explica por qué en tantos hogares trabajan dos o más personas, por qué hay ingresos complementarios y por qué la informalidad persiste. No es un dato para deprimirse: es información para tomar decisiones sobre formación, empleo y planeación."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la canasta básica?",
+          "options": [
+            "Solo la comida del mes",
+            "El conjunto de bienes y servicios para vivir",
+            "Una promoción"
+          ],
+          "correct": "El conjunto de bienes y servicios para vivir"
+        },
+        {
+          "question": "¿Qué diferencia hay entre alimentaria y ampliada?",
+          "options": [
+            "Ninguna",
+            "La alimentaria es más cara",
+            "La ampliada suma vivienda, transporte, salud, educación y vestido"
+          ],
+          "correct": "La ampliada suma vivienda, transporte, salud, educación y vestido"
+        },
+        {
+          "question": "¿Qué pasa si se confunden?",
+          "options": [
+            "Se subestima el costo real de vivir",
+            "Nada",
+            "Se sobrestima"
+          ],
+          "correct": "Se subestima el costo real de vivir"
+        },
+        {
+          "question": "¿Cuál suele ser la categoría más grande en hogares de ingreso bajo?",
+          "options": [
+            "Vestido",
+            "Alimentación",
+            "Educación"
+          ],
+          "correct": "Alimentación"
+        },
+        {
+          "question": "¿Qué incluye vivienda y servicios?",
+          "options": [
+            "Solo la renta",
+            "Solo la luz",
+            "Renta o pago de casa, luz, agua y gas"
+          ],
+          "correct": "Renta o pago de casa, luz, agua y gas"
+        },
+        {
+          "question": "¿Qué pasa si se omite una categoría?",
+          "options": [
+            "El presupuesto falla",
+            "No pasa nada",
+            "Sobra dinero"
+          ],
+          "correct": "El presupuesto falla"
+        },
+        {
+          "question": "¿Varía el costo por región?",
+          "options": [
+            "No",
+            "Sí, mucho, sobre todo por vivienda y transporte",
+            "Solo por comida"
+          ],
+          "correct": "Sí, mucho, sobre todo por vivienda y transporte"
+        },
+        {
+          "question": "¿Qué cifra importa?",
+          "options": [
+            "La nacional",
+            "La de otro país",
+            "La del lugar donde se vive"
+          ],
+          "correct": "La del lugar donde se vive"
+        },
+        {
+          "question": "¿Alcanza un salario mínimo para una familia?",
+          "options": [
+            "En muchos casos no",
+            "Siempre",
+            "Siempre sobra"
+          ],
+          "correct": "En muchos casos no"
+        },
+        {
+          "question": "¿Qué explica ese dato?",
+          "options": [
+            "Nada",
+            "Que en muchos hogares trabajen varias personas",
+            "Que la gente gaste mal"
+          ],
+          "correct": "Que en muchos hogares trabajen varias personas"
+        }
+      ],
+      "rubric": "Logrado: costea las seis categorías con precios reales y compara con escenarios de ingreso. En proceso: costea alimentación sin el resto. Inicial: distingue canasta alimentaria de ampliada."
+    },
+    "teacher_tips": [
+      "Pida precios reales verificados en casa o en tienda. El ejercicio pierde todo su valor con cifras inventadas.",
+      "Trate el hallazgo de que un salario mínimo no alcanza con seriedad, sin dramatizar ni minimizar.",
+      "Compare la estimación inicial de los alumnos con el resultado final: la brecha suele ser enorme y muy formativa."
+    ]
+  },
   "S1-2-1": {
     "code": "S1-2-1",
     "title": "El IMSS e ISSSTE: seguridad social y sus beneficios reales",
@@ -1542,6 +2462,926 @@
     "teacher_tips": [
       "Enséñeles a investigar salarios en sitios como Glassdoor o LinkedIn.",
       "Hable sobre la importancia de la autoconfianza."
+    ]
+  },
+  "S1-2-6": {
+    "code": "S1-2-6",
+    "title": "Aguinaldo, prima vacacional y PTU: mis derechos en pesos",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar el aguinaldo, la prima vacacional y el reparto de utilidades como derechos laborales y calcular su monto.",
+      "competencies": [
+        "Conocimiento de Prestaciones",
+        "Cálculo de Derechos",
+        "Verificación de Pagos",
+        "Defensa Laboral"
+      ],
+      "materials": [
+        "Tabla de mínimos de ley",
+        "Calculadora",
+        "Recibos de pago de prestaciones",
+        "Casos con distintos salarios y antigüedades",
+        "Cartel de las tres prestaciones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Dinero de Diciembre",
+          "duration": "15 min",
+          "label": "De dónde sale"
+        },
+        {
+          "phase": "Desarrollo: Las Tres Prestaciones",
+          "duration": "30 min",
+          "label": "Cómo se calculan"
+        },
+        {
+          "phase": "Cierre: Verificar",
+          "duration": "15 min",
+          "label": "Si me pagaron bien"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL DINERO DE DICIEMBRE (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte qué es el aguinaldo y si es un regalo del patrón. Muchos creerán que sí. Explique que es un derecho establecido en la ley, con un mínimo obligatorio y una fecha límite de pago, y que lo mismo ocurre con la prima vacacional y el reparto de utilidades.",
+          "activity": "Dinámica \"¿Regalo o Derecho?\": el grupo clasifica seis pagos según si son obligatorios o voluntarios."
+        },
+        {
+          "title": "FASE II: CÓMO SE CALCULAN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique cada una: el aguinaldo equivale a por lo menos quince días de salario y se paga antes del 20 de diciembre; la prima vacacional es al menos el 25% del salario de los días de vacaciones; el reparto de utilidades corresponde a una parte de las ganancias de la empresa. Los alumnos calculan las tres para tres casos.",
+          "activity": "Dinámica \"Calcula las Tres\": cada equipo obtiene los montos de tres trabajadores con distinto salario y antigüedad."
+        },
+        {
+          "title": "FASE III: VERIFICAR SI PAGARON BIEN (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos comparan lo que debía pagarse con lo que aparece en un recibo. Explique que si hay diferencias, existen instancias donde se puede consultar y reclamar, y que la mayoría de los incumplimientos persisten porque nadie los detecta ni los reclama.",
+          "activity": "Dinámica \"¿Pagaron Completo?\": cada equipo detecta el faltante en dos recibos de ejemplo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El aguinaldo no es un regalo: es un derecho con un mínimo establecido y una fecha límite. Lo mismo pasa con la prima vacacional y el reparto de utilidades. Saber calcularlos es la única forma de verificar si te pagaron completo.",
+      "sections": [
+        {
+          "subtitle": "El aguinaldo",
+          "content": "Todo trabajador tiene derecho a recibir al menos quince días de salario como aguinaldo, y debe pagarse antes del 20 de diciembre. Quien trabajó solo una parte del año lo recibe en proporción a los días laborados. Muchos patrones pagan más de quince días, pero ese es el piso: nadie puede pagar menos."
+        },
+        {
+          "subtitle": "La prima vacacional",
+          "content": "Además de los días de vacaciones pagados, la ley establece una prima de al menos el 25% sobre el salario correspondiente a esos días. Es la prestación que más se olvida, porque llega mezclada con otro pago y casi nadie verifica si está incluida. Los días de vacaciones aumentan con la antigüedad, y la prima aumenta con ellos."
+        },
+        {
+          "subtitle": "El reparto de utilidades",
+          "content": "Cuando una empresa genera ganancias, una parte se reparte entre los trabajadores. El monto depende de las utilidades de la empresa, del salario y de los días trabajados en el año, y existe un tope. No todas las empresas lo pagan porque no todas generan utilidades, pero cuando corresponde es obligatorio y tiene fecha límite."
+        },
+        {
+          "subtitle": "Verificar y reclamar",
+          "content": "La mayoría de los incumplimientos persisten porque nadie los detecta. Calcular lo que corresponde y compararlo con el recibo toma unos minutos. Si hay diferencia, existen instancias públicas donde se puede consultar de forma gratuita y presentar una reclamación. El derecho existe aunque no se ejerza, pero solo sirve cuando se ejerce."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es el aguinaldo un regalo del patrón?",
+          "options": [
+            "Sí",
+            "No, es un derecho de ley",
+            "Depende del patrón"
+          ],
+          "correct": "No, es un derecho de ley"
+        },
+        {
+          "question": "¿Cuál es el mínimo de aguinaldo?",
+          "options": [
+            "Un día",
+            "Un mes completo",
+            "Quince días de salario"
+          ],
+          "correct": "Quince días de salario"
+        },
+        {
+          "question": "¿Cuál es la fecha límite de pago?",
+          "options": [
+            "Antes del 20 de diciembre",
+            "El 31 de diciembre",
+            "En enero"
+          ],
+          "correct": "Antes del 20 de diciembre"
+        },
+        {
+          "question": "Quien trabajó solo parte del año:",
+          "options": [
+            "No recibe nada",
+            "Lo recibe en proporción a los días laborados",
+            "Recibe completo"
+          ],
+          "correct": "Lo recibe en proporción a los días laborados"
+        },
+        {
+          "question": "¿Qué es la prima vacacional?",
+          "options": [
+            "Un bono voluntario",
+            "El aguinaldo",
+            "Al menos 25% sobre el salario de los días de vacaciones"
+          ],
+          "correct": "Al menos 25% sobre el salario de los días de vacaciones"
+        },
+        {
+          "question": "¿Por qué se olvida tanto?",
+          "options": [
+            "Porque llega mezclada con otro pago",
+            "Porque no existe",
+            "Porque es opcional"
+          ],
+          "correct": "Porque llega mezclada con otro pago"
+        },
+        {
+          "question": "¿De qué depende el reparto de utilidades?",
+          "options": [
+            "Del humor del jefe",
+            "De las utilidades de la empresa, salario y días trabajados",
+            "De la antigüedad únicamente"
+          ],
+          "correct": "De las utilidades de la empresa, salario y días trabajados"
+        },
+        {
+          "question": "¿Todas las empresas lo pagan?",
+          "options": [
+            "Sí, todas",
+            "Ninguna",
+            "No, solo las que generan utilidades"
+          ],
+          "correct": "No, solo las que generan utilidades"
+        },
+        {
+          "question": "¿Por qué persisten los incumplimientos?",
+          "options": [
+            "Porque nadie los detecta ni los reclama",
+            "Porque son legales",
+            "Porque no hay instancias"
+          ],
+          "correct": "Porque nadie los detecta ni los reclama"
+        },
+        {
+          "question": "¿Dónde se puede consultar y reclamar?",
+          "options": [
+            "En ningún lado",
+            "En instancias públicas de forma gratuita",
+            "Solo con abogado privado"
+          ],
+          "correct": "En instancias públicas de forma gratuita"
+        }
+      ],
+      "rubric": "Logrado: calcula las tres prestaciones y detecta faltantes en un recibo. En proceso: calcula el aguinaldo sin dominar las otras dos. Inicial: reconoce que son derechos y no regalos."
+    },
+    "teacher_tips": [
+      "La prima vacacional es la más desconocida. Dedíquele tiempo específico.",
+      "Practique con recibos donde falte algo: detectar el faltante es la habilidad que se busca.",
+      "Mencione que existen instancias públicas gratuitas de consulta, sin entrar en detalle de procedimientos."
+    ]
+  },
+  "S1-2-7": {
+    "code": "S1-2-7",
+    "title": "Finiquito y liquidación: qué me toca si me despiden",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Distinguir finiquito de liquidación, identificar qué corresponde en cada caso y cómo actuar ante la terminación de un empleo.",
+      "competencies": [
+        "Derechos ante el Despido",
+        "Cálculo de Terminación",
+        "Toma de Decisiones Laborales",
+        "Negociación Informada"
+      ],
+      "materials": [
+        "Formato de cálculo de finiquito",
+        "Casos de terminación de distintas causas",
+        "Calculadora",
+        "Lista de conceptos que integran cada pago",
+        "Cartel de finiquito contra liquidación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Me Corrieron",
+          "duration": "15 min",
+          "label": "La primera reacción"
+        },
+        {
+          "phase": "Desarrollo: Dos Cosas Distintas",
+          "duration": "30 min",
+          "label": "Finiquito y liquidación"
+        },
+        {
+          "phase": "Cierre: Antes de Firmar",
+          "duration": "15 min",
+          "label": "Qué revisar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"ME CORRIERON\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la situación de alguien a quien terminan su empleo y le ofrecen firmar un documento el mismo día. Pregunte qué haría. La reacción común es firmar por nervios. Explique que ese es el momento donde más derechos se pierden, y que entender qué corresponde cambia por completo el resultado.",
+          "activity": "Dinámica \"¿Firmo o No?\": el grupo discute qué haría ante la presión de firmar de inmediato."
+        },
+        {
+          "title": "FASE II: FINIQUITO Y LIQUIDACIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el finiquito corresponde siempre e incluye las partes proporcionales de aguinaldo, vacaciones y prima, más días trabajados. La liquidación, en cambio, aplica cuando el despido es sin causa justificada e incluye una indemnización adicional. Los alumnos calculan ambos escenarios para un mismo caso.",
+          "activity": "Dinámica \"Los Dos Escenarios\": cada equipo calcula finiquito y liquidación del mismo trabajador y compara."
+        },
+        {
+          "title": "FASE III: ANTES DE FIRMAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe qué revisar: que los conceptos estén desglosados, que las cifras coincidan con el cálculo propio y qué se está firmando exactamente. Insista en que nadie está obligado a firmar en el momento, que se puede pedir el documento para revisarlo, y que existen instancias públicas gratuitas de asesoría.",
+          "activity": "Dinámica \"Revisa Antes\": los alumnos detectan tres irregularidades en un documento de terminación."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El día que termina un empleo suele ser confuso y hay prisa por firmar. Es justo el momento donde más derechos se pierden. Saber qué es un finiquito, qué es una liquidación y qué revisar antes de firmar cambia por completo el resultado.",
+      "sections": [
+        {
+          "subtitle": "El finiquito corresponde siempre",
+          "content": "Sin importar por qué termina la relación laboral, corresponde el pago de lo ya generado: días trabajados no pagados, parte proporcional del aguinaldo, vacaciones pendientes y su prima. Eso es el finiquito. Aplica igual si el trabajador renunció, si terminó un contrato o si hubo despido, porque es dinero ya ganado."
+        },
+        {
+          "subtitle": "La liquidación aplica en el despido injustificado",
+          "content": "Cuando el despido ocurre sin una causa justificada, además del finiquito corresponde una indemnización. Su cálculo considera el salario, la antigüedad y los conceptos que la ley establece. La diferencia entre recibir solo finiquito y recibir liquidación puede ser de varios meses de salario, y por eso importa distinguirlos."
+        },
+        {
+          "subtitle": "La prisa por firmar",
+          "content": "Es frecuente que se ofrezca un documento para firmar de inmediato, en un momento de nervios y sin tiempo de revisar. Nadie está obligado a firmar en ese instante. Se puede pedir el documento, revisarlo con calma, hacer los cálculos y consultar. Firmar sin entender es la forma más común de renunciar a derechos sin darse cuenta."
+        },
+        {
+          "subtitle": "Qué revisar y dónde consultar",
+          "content": "El documento debe desglosar cada concepto: días, aguinaldo proporcional, vacaciones, prima e indemnización cuando corresponda. Las cifras deben coincidir con el cálculo propio. Existen instancias públicas que orientan de forma gratuita sobre estos temas, y consultarlas antes de firmar cuesta solo tiempo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuándo corresponde el finiquito?",
+          "options": [
+            "Solo si hay despido",
+            "Solo si renuncias",
+            "Siempre que termina la relación laboral"
+          ],
+          "correct": "Siempre que termina la relación laboral"
+        },
+        {
+          "question": "¿Qué incluye el finiquito?",
+          "options": [
+            "Días trabajados, aguinaldo proporcional, vacaciones y prima",
+            "Solo el último día",
+            "La indemnización"
+          ],
+          "correct": "Días trabajados, aguinaldo proporcional, vacaciones y prima"
+        },
+        {
+          "question": "¿Por qué corresponde siempre?",
+          "options": [
+            "Por cortesía",
+            "Porque es dinero ya ganado",
+            "Por costumbre"
+          ],
+          "correct": "Porque es dinero ya ganado"
+        },
+        {
+          "question": "¿Cuándo aplica la liquidación?",
+          "options": [
+            "Siempre",
+            "Cuando renuncias",
+            "En despido sin causa justificada"
+          ],
+          "correct": "En despido sin causa justificada"
+        },
+        {
+          "question": "¿Qué agrega la liquidación?",
+          "options": [
+            "Una indemnización adicional",
+            "Nada",
+            "Un descuento"
+          ],
+          "correct": "Una indemnización adicional"
+        },
+        {
+          "question": "¿Qué considera su cálculo?",
+          "options": [
+            "Solo el humor del patrón",
+            "Salario, antigüedad y conceptos de ley",
+            "Solo el último sueldo"
+          ],
+          "correct": "Salario, antigüedad y conceptos de ley"
+        },
+        {
+          "question": "¿Hay obligación de firmar de inmediato?",
+          "options": [
+            "Sí, siempre",
+            "Sí, ese día",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Qué se puede hacer?",
+          "options": [
+            "Pedir el documento, revisarlo y consultar",
+            "Firmar rápido",
+            "Irse sin firmar nada"
+          ],
+          "correct": "Pedir el documento, revisarlo y consultar"
+        },
+        {
+          "question": "¿Cómo debe estar el documento?",
+          "options": [
+            "Con un solo total",
+            "Con cada concepto desglosado",
+            "Sin cifras"
+          ],
+          "correct": "Con cada concepto desglosado"
+        },
+        {
+          "question": "¿Existe asesoría gratuita?",
+          "options": [
+            "No",
+            "Solo pagando",
+            "Sí, en instancias públicas"
+          ],
+          "correct": "Sí, en instancias públicas"
+        }
+      ],
+      "rubric": "Logrado: distingue ambos pagos, calcula sus conceptos y sabe qué revisar antes de firmar. En proceso: distingue los términos sin calcular. Inicial: sabe que corresponde un pago al terminar."
+    },
+    "teacher_tips": [
+      "El mensaje central es no firmar bajo presión. Repítalo de forma explícita al cierre.",
+      "Evite dar cifras normativas exactas que puedan cambiar: enseñe la lógica y remita a la consulta oficial.",
+      "El cálculo comparativo entre finiquito solo y liquidación completa hace visible lo que está en juego."
+    ]
+  },
+  "S1-2-8": {
+    "code": "S1-2-8",
+    "title": "Crédito automotriz y arrendamiento: comparar el costo total",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comparar el costo total de adquirir un vehículo mediante crédito automotriz o arrendamiento, más allá de la mensualidad.",
+      "competencies": [
+        "Comparación de Financiamiento",
+        "Cálculo de Costo Total",
+        "Análisis de Alternativas",
+        "Decisión Patrimonial"
+      ],
+      "materials": [
+        "Cotizaciones de crédito y arrendamiento",
+        "Calculadora",
+        "Formato comparativo de costo total",
+        "Datos de depreciación vehicular",
+        "Cartel de los cuatro costos del auto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Solo la Mensualidad",
+          "duration": "15 min",
+          "label": "El número que se compara"
+        },
+        {
+          "phase": "Desarrollo: Costo Total",
+          "duration": "30 min",
+          "label": "Todo lo que suma"
+        },
+        {
+          "phase": "Cierre: Cuál Conviene",
+          "duration": "15 min",
+          "label": "Depende del uso"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SOLO LA MENSUALIDAD (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre dos ofertas para el mismo vehículo con mensualidades parecidas y costos totales muy distintos. Pregunte cuál conviene. Explique que la mensualidad es el número que más se compara y el que menos información aporta, porque depende del plazo, del enganche y de lo que ocurre al final.",
+          "activity": "Dinámica \"Misma Mensualidad, Otro Costo\": el grupo descubre por qué dos ofertas parecidas no lo son."
+        },
+        {
+          "title": "FASE II: EL COSTO TOTAL (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique los componentes: enganche, suma de mensualidades, comisión de apertura, seguro obligatorio, mantenimiento, tenencia y verificación, y el valor final del vehículo. Los alumnos calculan el costo total de un crédito y de un arrendamiento para el mismo auto.",
+          "activity": "Dinámica \"Suma Todo\": cada equipo calcula el costo total de tres años en ambas modalidades."
+        },
+        {
+          "title": "FASE III: CUÁL CONVIENE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique la diferencia clave: con crédito el auto termina siendo del comprador, con arrendamiento se devuelve o se paga un valor residual. Ninguna es mejor en abstracto: depende de si se quiere conservar el vehículo, del kilometraje y de si se puede deducir. Los alumnos justifican una elección para dos perfiles distintos.",
+          "activity": "Dinámica \"Dos Perfiles\": cada equipo recomienda una modalidad a dos personas con necesidades distintas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todo el mundo compara autos por la mensualidad. Es el número que menos dice. Dos ofertas con la misma mensualidad pueden diferir en decenas de miles de pesos de costo total, y la diferencia se ve solo si sumas todo.",
+      "sections": [
+        {
+          "subtitle": "La mensualidad esconde el plazo",
+          "content": "Una mensualidad baja casi siempre significa un plazo más largo, y un plazo más largo significa más meses generando intereses. Comparar dos ofertas por la mensualidad es comparar solo una parte del costo. La cifra que permite decidir es la suma de todo lo que se pagará hasta el final."
+        },
+        {
+          "subtitle": "Todo lo que suma",
+          "content": "El costo total incluye el enganche, la suma de todas las mensualidades, la comisión de apertura, el seguro que suele ser obligatorio mientras hay financiamiento, el mantenimiento, los pagos anuales como tenencia y verificación, y lo que ocurre al final. Omitir cualquiera produce una comparación que no sirve."
+        },
+        {
+          "subtitle": "Crédito contra arrendamiento",
+          "content": "Con un crédito automotriz el vehículo queda a nombre del comprador y al terminar es suyo, con el valor que conserve. Con un arrendamiento se paga por usarlo durante un plazo y al final se devuelve, se renueva o se paga un valor residual para quedárselo. Las mensualidades del arrendamiento suelen ser menores porque no se está pagando el auto completo."
+        },
+        {
+          "subtitle": "Cuál conviene depende del uso",
+          "content": "Si la intención es conservar el vehículo muchos años, el crédito suele salir mejor porque al final queda un bien. Si se renueva cada tres años, se recorren muchos kilómetros o se puede deducir por una actividad, el arrendamiento puede convenir. Y en ambos casos, un auto pierde valor con el tiempo: es un gasto de transporte, no una inversión."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué esconde una mensualidad baja?",
+          "options": [
+            "Un plazo más largo y más intereses",
+            "Un mejor precio",
+            "Nada"
+          ],
+          "correct": "Un plazo más largo y más intereses"
+        },
+        {
+          "question": "¿Qué cifra permite decidir?",
+          "options": [
+            "La mensualidad",
+            "El costo total hasta el final",
+            "El enganche"
+          ],
+          "correct": "El costo total hasta el final"
+        },
+        {
+          "question": "¿Qué incluye el costo total?",
+          "options": [
+            "Solo las mensualidades",
+            "Solo el enganche",
+            "Enganche, mensualidades, comisiones, seguro, mantenimiento y pagos anuales"
+          ],
+          "correct": "Enganche, mensualidades, comisiones, seguro, mantenimiento y pagos anuales"
+        },
+        {
+          "question": "Con crédito automotriz, al final:",
+          "options": [
+            "El vehículo es del comprador",
+            "Se devuelve",
+            "Se pierde"
+          ],
+          "correct": "El vehículo es del comprador"
+        },
+        {
+          "question": "Con arrendamiento, al final:",
+          "options": [
+            "Siempre es tuyo",
+            "Se devuelve, se renueva o se paga un valor residual",
+            "No pasa nada"
+          ],
+          "correct": "Se devuelve, se renueva o se paga un valor residual"
+        },
+        {
+          "question": "¿Por qué las mensualidades de arrendamiento suelen ser menores?",
+          "options": [
+            "Porque no hay intereses",
+            "Por promoción",
+            "Porque no se paga el auto completo"
+          ],
+          "correct": "Porque no se paga el auto completo"
+        },
+        {
+          "question": "¿Cuándo conviene el crédito?",
+          "options": [
+            "Si se quiere conservar el vehículo muchos años",
+            "Si se renueva cada año",
+            "Nunca"
+          ],
+          "correct": "Si se quiere conservar el vehículo muchos años"
+        },
+        {
+          "question": "¿Cuándo puede convenir el arrendamiento?",
+          "options": [
+            "Siempre",
+            "Si se renueva seguido o se puede deducir",
+            "Nunca"
+          ],
+          "correct": "Si se renueva seguido o se puede deducir"
+        },
+        {
+          "question": "¿Es un auto una inversión?",
+          "options": [
+            "Sí, siempre sube",
+            "Sí, como una casa",
+            "No, pierde valor con el tiempo"
+          ],
+          "correct": "No, pierde valor con el tiempo"
+        },
+        {
+          "question": "¿Qué es entonces?",
+          "options": [
+            "Un gasto de transporte",
+            "Un activo que crece",
+            "Un ahorro"
+          ],
+          "correct": "Un gasto de transporte"
+        }
+      ],
+      "rubric": "Logrado: calcula costo total en ambas modalidades y recomienda según el perfil de uso. En proceso: suma componentes sin comparar modalidades. Inicial: sabe que la mensualidad no basta."
+    },
+    "teacher_tips": [
+      "Use cotizaciones reales. La diferencia entre mensualidad y costo total impacta mucho más con cifras verdaderas.",
+      "Insista en que el auto pierde valor: contradice la creencia de que comprar un auto es invertir.",
+      "Evite recomendar una modalidad en abstracto: la respuesta correcta depende del perfil de uso."
+    ]
+  },
+  "S1-2-9": {
+    "code": "S1-2-9",
+    "title": "Mi primer presupuesto independiente: vivir con lo que gano",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Construir un presupuesto para vivir de forma independiente y evaluar qué ingreso lo hace viable.",
+      "competencies": [
+        "Presupuesto Independiente",
+        "Planeación de Vida",
+        "Evaluación de Viabilidad",
+        "Priorización de Gastos"
+      ],
+      "materials": [
+        "Formato de presupuesto independiente",
+        "Precios de renta y servicios de la zona",
+        "Calculadora",
+        "Casos de distintos niveles de ingreso",
+        "Cartel de las categorías obligatorias"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Vivir Solo",
+          "duration": "15 min",
+          "label": "Cuánto cuesta de verdad"
+        },
+        {
+          "phase": "Desarrollo: El Presupuesto",
+          "duration": "30 min",
+          "label": "Categoría por categoría"
+        },
+        {
+          "phase": "Cierre: ¿Es Viable?",
+          "duration": "15 min",
+          "label": "El ingreso necesario"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: VIVIR SOLO (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto costaría vivir de forma independiente. Las estimaciones serán bajas porque olvidan los gastos que en casa no se ven: internet, gas, productos de limpieza, reposición de cosas que se rompen. Explique que van a construir la cifra completa.",
+          "activity": "Dinámica \"Lo Que No Se Ve\": el grupo enumera gastos que existen en un hogar y que normalmente nadie nota."
+        },
+        {
+          "title": "FASE II: CATEGORÍA POR CATEGORÍA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos construyen el presupuesto: vivienda, servicios, alimentación, transporte, salud, comunicación, ropa, imprevistos y ahorro. Insista en que imprevistos y ahorro son categorías obligatorias, no sobrantes: un presupuesto que no los incluye está incompleto por diseño.",
+          "activity": "Dinámica \"Mi Presupuesto Completo\": cada alumno costea las nueve categorías con precios de su zona."
+        },
+        {
+          "title": "FASE III: ¿ES VIABLE? (CIERRE)",
+          "duration": "15 min",
+          "description": "Comparan el total con distintos ingresos y calculan cuánto se necesitaría ganar. Muchos descubrirán que la independencia requiere más de lo que imaginaban, lo que explica por qué compartir vivienda es tan común. La conclusión útil es qué ingreso hay que alcanzar, no que sea imposible.",
+          "activity": "Dinámica \"El Ingreso Necesario\": cada alumno calcula el neto que necesitaría y qué cambiaría al compartir vivienda."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Vivir por tu cuenta cuesta más de lo que casi todos calculan, porque en casa hay gastos que nunca ves: el gas, el internet, los productos de limpieza, lo que se rompe y hay que reponer. Aquí vas a construir la cifra completa.",
+      "sections": [
+        {
+          "subtitle": "Los gastos invisibles",
+          "content": "Al estimar el costo de vivir solo, casi todos cuentan renta y comida y se detienen ahí. Faltan servicios, internet, productos de limpieza, transporte diario, ropa, salud y la reposición constante de cosas pequeñas. Esos gastos invisibles suelen representar una parte considerable del total mensual."
+        },
+        {
+          "subtitle": "Imprevistos y ahorro no son opcionales",
+          "content": "Un presupuesto que solo cubre gastos fijos falla en el primer mes con algo inesperado. Los imprevistos deben tener una línea propia, igual que el ahorro. Tratarlos como lo que sobra al final garantiza que nunca haya nada, porque el gasto siempre se expande hasta llenar el ingreso disponible."
+        },
+        {
+          "subtitle": "La regla de la vivienda",
+          "content": "Una referencia útil es que la vivienda no debería consumir más de una tercera parte del ingreso neto. Cuando pasa de ahí, todo lo demás se comprime y cualquier imprevisto se vuelve una crisis. Por eso compartir vivienda es tan frecuente al empezar: es la palanca que más rápido cambia la viabilidad del presupuesto."
+        },
+        {
+          "subtitle": "Qué ingreso hace viable la independencia",
+          "content": "Una vez construido el presupuesto, la pregunta se invierte: en lugar de preguntar si alcanza, se calcula qué ingreso neto haría viable ese plan. Esa cifra sirve para orientar decisiones de formación, empleo y ubicación. Descubrir que aún no alcanza no es un fracaso: es información con la que se puede trabajar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué olvidan casi todos al estimar?",
+          "options": [
+            "La renta",
+            "Los gastos invisibles del hogar",
+            "La comida"
+          ],
+          "correct": "Los gastos invisibles del hogar"
+        },
+        {
+          "question": "¿Qué son gastos invisibles?",
+          "options": [
+            "La renta",
+            "El sueldo",
+            "Servicios, limpieza, reposición y transporte diario"
+          ],
+          "correct": "Servicios, limpieza, reposición y transporte diario"
+        },
+        {
+          "question": "¿Son opcionales los imprevistos en el presupuesto?",
+          "options": [
+            "No, deben tener línea propia",
+            "Sí",
+            "Solo si sobra"
+          ],
+          "correct": "No, deben tener línea propia"
+        },
+        {
+          "question": "¿Qué pasa si el ahorro es \"lo que sobra\"?",
+          "options": [
+            "Siempre alcanza",
+            "Nunca hay nada",
+            "Crece solo"
+          ],
+          "correct": "Nunca hay nada"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Por mala suerte",
+            "Por los precios",
+            "Porque el gasto se expande hasta llenar el ingreso"
+          ],
+          "correct": "Porque el gasto se expande hasta llenar el ingreso"
+        },
+        {
+          "question": "¿Cuánto debería consumir la vivienda?",
+          "options": [
+            "No más de una tercera parte del ingreso neto",
+            "La mitad",
+            "Todo"
+          ],
+          "correct": "No más de una tercera parte del ingreso neto"
+        },
+        {
+          "question": "¿Qué pasa si la vivienda pasa de ahí?",
+          "options": [
+            "No pasa nada",
+            "Todo lo demás se comprime",
+            "Sobra dinero"
+          ],
+          "correct": "Todo lo demás se comprime"
+        },
+        {
+          "question": "¿Cuál es la palanca más rápida?",
+          "options": [
+            "Dejar de comer",
+            "Trabajar más horas",
+            "Compartir vivienda"
+          ],
+          "correct": "Compartir vivienda"
+        },
+        {
+          "question": "¿Cómo se invierte la pregunta?",
+          "options": [
+            "Se calcula qué ingreso haría viable el plan",
+            "Se ignora el plan",
+            "Se baja el presupuesto"
+          ],
+          "correct": "Se calcula qué ingreso haría viable el plan"
+        },
+        {
+          "question": "Descubrir que aún no alcanza es:",
+          "options": [
+            "Un fracaso",
+            "Información con la que se puede trabajar",
+            "Motivo para no planear"
+          ],
+          "correct": "Información con la que se puede trabajar"
+        }
+      ],
+      "rubric": "Logrado: construye las nueve categorías, incluye imprevistos y ahorro y calcula el ingreso necesario. En proceso: costea lo básico sin imprevistos ni ahorro. Inicial: identifica gastos invisibles."
+    },
+    "teacher_tips": [
+      "Pida precios de renta reales de la zona. Es el dato que más cambia el resultado y el más fácil de verificar.",
+      "Insista en que imprevistos y ahorro sean líneas propias desde el inicio, no un sobrante.",
+      "Cierre con la pregunta invertida: qué ingreso haría viable el plan. Es mucho más útil que un veredicto."
+    ]
+  },
+  "S1-2-10": {
+    "code": "S1-2-10",
+    "title": "Rentar mi primer cuarto: depósito, aval y contrato",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender los elementos de un arrendamiento de vivienda: depósito, aval, contrato y derechos del inquilino.",
+      "competencies": [
+        "Comprensión Contractual",
+        "Negociación de Arrendamiento",
+        "Documentación de Estado",
+        "Prevención de Conflictos"
+      ],
+      "materials": [
+        "Contrato de arrendamiento de ejemplo",
+        "Formato de inventario de estado del inmueble",
+        "Casos de conflictos con depósitos",
+        "Lista de cláusulas a revisar",
+        "Cartel de los cuatro elementos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Primer Cuarto",
+          "duration": "15 min",
+          "label": "Lo que piden"
+        },
+        {
+          "phase": "Desarrollo: Los Cuatro Elementos",
+          "duration": "30 min",
+          "label": "Depósito, aval, contrato, estado"
+        },
+        {
+          "phase": "Cierre: Recuperar el Depósito",
+          "duration": "15 min",
+          "label": "Documentar desde el día uno"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LO QUE TE PIDEN (APERTURA)",
+          "duration": "15 min",
+          "description": "Enumere lo que suelen pedir para rentar: mes adelantado, depósito, comprobante de ingresos y aval o fiador. Pregunte cuánto suma eso el primer día. La cifra sorprende: mudarse cuesta bastante más que la primera renta, y no preverlo es el primer tropiezo.",
+          "activity": "Dinámica \"El Costo del Primer Día\": el grupo suma todo lo que hay que desembolsar para entrar a una vivienda."
+        },
+        {
+          "title": "FASE II: LOS CUATRO ELEMENTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique cada uno: el depósito es una garantía reembolsable, no un pago; el aval responde si el inquilino no paga; el contrato define plazo, monto, aumentos y responsabilidades; y el estado del inmueble debe documentarse al entrar. Los alumnos revisan un contrato y localizan las cláusulas clave.",
+          "activity": "Dinámica \"Encuentra la Cláusula\": cada equipo localiza plazo, aumento, responsabilidades y causas de terminación."
+        },
+        {
+          "title": "FASE III: RECUPERAR EL DEPÓSITO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique el conflicto más común: al salir, el arrendador retiene el depósito por daños que ya existían. La solución es documentar el estado del inmueble el día de entrada, con fotos fechadas y un inventario firmado por ambas partes. Es un trámite de treinta minutos que evita perder un mes de renta.",
+          "activity": "Dinámica \"El Inventario de Entrada\": cada alumno elabora un inventario de estado de un espacio."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Rentar tu primer espacio cuesta bastante más que la primera renta, y el conflicto más común llega al final, cuando quieres recuperar tu depósito. Casi todo eso se previene con lo que hagas el primer día.",
+      "sections": [
+        {
+          "subtitle": "Lo que cuesta entrar",
+          "content": "Para rentar suelen pedirse el primer mes por adelantado, un depósito equivalente a una o dos rentas, comprobantes de ingresos y en muchos casos un aval con propiedad. Sumado, el desembolso inicial puede equivaler a tres rentas. Planear la mudanza sin contemplar esa cifra es el primer tropiezo de mucha gente."
+        },
+        {
+          "subtitle": "El depósito es garantía, no pago",
+          "content": "El depósito no es un mes de renta adelantado: es una garantía que debe devolverse al terminar el contrato si el inmueble se entrega en las condiciones acordadas. Usarlo para no pagar el último mes suele estar prohibido en el contrato y genera conflictos. Es dinero del inquilino en manos del arrendador."
+        },
+        {
+          "subtitle": "El aval y el contrato",
+          "content": "El aval o fiador se compromete a responder si el inquilino no paga, lo que es una responsabilidad seria para quien lo acepta. El contrato debe establecer plazo, monto, cuándo y cuánto puede aumentar, quién paga qué servicios, quién repara qué y en qué casos puede terminarse. Todo lo que no esté escrito, no existe cuando hay desacuerdo."
+        },
+        {
+          "subtitle": "Documentar el estado al entrar",
+          "content": "El conflicto más frecuente es la retención del depósito por daños preexistentes. Se evita con un inventario firmado por ambas partes y fotografías fechadas del estado real el día de entrada: paredes, pisos, instalaciones, ventanas y cualquier desperfecto. Treinta minutos de trabajo que protegen el equivalente a un mes de renta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué suele pedirse para rentar?",
+          "options": [
+            "Solo la primera renta",
+            "Nada",
+            "Mes adelantado, depósito, comprobantes y aval"
+          ],
+          "correct": "Mes adelantado, depósito, comprobantes y aval"
+        },
+        {
+          "question": "¿A cuánto puede equivaler el desembolso inicial?",
+          "options": [
+            "Hasta tres rentas",
+            "Media renta",
+            "Nada"
+          ],
+          "correct": "Hasta tres rentas"
+        },
+        {
+          "question": "¿Qué es el depósito?",
+          "options": [
+            "Un mes adelantado",
+            "Una garantía reembolsable",
+            "Una comisión"
+          ],
+          "correct": "Una garantía reembolsable"
+        },
+        {
+          "question": "¿Se puede usar para no pagar el último mes?",
+          "options": [
+            "Sí, siempre",
+            "Es lo normal",
+            "Suele estar prohibido en el contrato"
+          ],
+          "correct": "Suele estar prohibido en el contrato"
+        },
+        {
+          "question": "¿Qué hace un aval?",
+          "options": [
+            "Responde si el inquilino no paga",
+            "Paga la renta siempre",
+            "Nada"
+          ],
+          "correct": "Responde si el inquilino no paga"
+        },
+        {
+          "question": "¿Qué debe establecer el contrato?",
+          "options": [
+            "Solo el monto",
+            "Plazo, monto, aumentos, servicios, reparaciones y terminación",
+            "Solo el plazo"
+          ],
+          "correct": "Plazo, monto, aumentos, servicios, reparaciones y terminación"
+        },
+        {
+          "question": "Lo que no está escrito:",
+          "options": [
+            "Se sobreentiende",
+            "Vale igual",
+            "No existe cuando hay desacuerdo"
+          ],
+          "correct": "No existe cuando hay desacuerdo"
+        },
+        {
+          "question": "¿Cuál es el conflicto más común?",
+          "options": [
+            "Retención del depósito por daños preexistentes",
+            "El color de las paredes",
+            "El horario"
+          ],
+          "correct": "Retención del depósito por daños preexistentes"
+        },
+        {
+          "question": "¿Cómo se evita?",
+          "options": [
+            "Confiando",
+            "Con inventario firmado y fotos fechadas al entrar",
+            "Pagando más"
+          ],
+          "correct": "Con inventario firmado y fotos fechadas al entrar"
+        },
+        {
+          "question": "¿Cuánto toma ese trámite?",
+          "options": [
+            "Varios días",
+            "Un mes",
+            "Unos treinta minutos"
+          ],
+          "correct": "Unos treinta minutos"
+        }
+      ],
+      "rubric": "Logrado: identifica los cuatro elementos, revisa cláusulas clave y elabora un inventario de entrada. En proceso: distingue depósito de renta sin dominar el contrato. Inicial: sabe qué se pide para rentar."
+    },
+    "teacher_tips": [
+      "Lleve un contrato de arrendamiento real. Ver las cláusulas impresas es mucho más eficaz que describirlas.",
+      "El inventario de entrada es el entregable más aplicable de la clase. Que todos elaboren uno.",
+      "Explique la responsabilidad del aval con seriedad: muchos aceptan serlo sin entender qué implica."
     ]
   },
   "S1-3-1": {
@@ -2293,6 +4133,926 @@
     "teacher_tips": [
       "Use ejemplos de futbolistas que ganan millones pero terminan en quiebra por mal balance.",
       "Mencione que las empresas usan estas mismas herramientas."
+    ]
+  },
+  "S1-3-6": {
+    "code": "S1-3-6",
+    "title": "CETES y BONDES: invertir con el gobierno desde $100",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué son los instrumentos de deuda gubernamental, cómo funcionan sus plazos y cómo se invierte en ellos con montos bajos.",
+      "competencies": [
+        "Inversión en Deuda",
+        "Comprensión de Plazos",
+        "Cálculo de Rendimientos",
+        "Acceso a Instrumentos"
+      ],
+      "materials": [
+        "Tabla de plazos e instrumentos",
+        "Calculadora",
+        "Ejemplos de tasas por plazo",
+        "Formato de plan de inversión",
+        "Cartel de cómo funciona un instrumento a descuento"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Prestarle al Gobierno",
+          "duration": "15 min",
+          "label": "La idea básica"
+        },
+        {
+          "phase": "Desarrollo: Los Instrumentos",
+          "duration": "30 min",
+          "label": "Plazos y funcionamiento"
+        },
+        {
+          "phase": "Cierre: Mi Plan",
+          "duration": "15 min",
+          "label": "Empezar con poco"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: PRESTARLE AL GOBIERNO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique la idea básica: cuando el gobierno necesita financiarse, emite instrumentos de deuda que cualquier persona puede comprar. Al comprarlos, uno le presta dinero y recibe un rendimiento. Pregunte cuánto creen que hace falta: las respuestas serán altas y la realidad es que se puede empezar con montos muy bajos.",
+          "activity": "Dinámica \"¿Cuánto Hace Falta?\": el grupo estima el monto mínimo y lo compara con el real."
+        },
+        {
+          "title": "FASE II: PLAZOS Y FUNCIONAMIENTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique los instrumentos de corto plazo, que se compran a descuento y se pagan a valor nominal al vencer, y los de plazo mayor, que pagan intereses periódicos. Aclare que a mayor plazo suele haber mayor tasa, pero también menor disponibilidad del dinero. Los alumnos calculan el rendimiento de tres plazos distintos.",
+          "activity": "Dinámica \"Compara Plazos\": cada equipo calcula rendimiento y disponibilidad de tres opciones."
+        },
+        {
+          "title": "FASE III: MI PLAN (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos diseñan un plan de aportaciones periódicas eligiendo plazos según sus objetivos. Insista en que el instrumento se elige por el plazo en que se necesitará el dinero, no por la tasa más alta: comprometer a largo plazo dinero que hará falta pronto es el error más común.",
+          "activity": "Dinámica \"Mi Escalera\": cada alumno arma un plan con distintos plazos según cuándo necesita cada monto."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando el gobierno necesita dinero, emite instrumentos que cualquiera puede comprar. Al hacerlo le prestas y recibes un rendimiento. Lo sorprendente es cuánto hace falta para empezar: mucho menos de lo que casi todos creen.",
+      "sections": [
+        {
+          "subtitle": "Qué son y cómo funcionan",
+          "content": "Son títulos de deuda que emite el gobierno para financiarse. Quien los compra le presta dinero durante un plazo determinado y recibe un rendimiento a cambio. Se consideran de los instrumentos de menor riesgo dentro del mercado nacional, porque el emisor es el propio gobierno federal."
+        },
+        {
+          "subtitle": "Corto plazo: comprar a descuento",
+          "content": "Los instrumentos de corto plazo funcionan de una forma particular: se compran por debajo de su valor nominal y al vencer se paga el valor completo. La diferencia es el rendimiento. Si un título de $10 se compra en $9.75 y al vencer paga $10, esos 25 centavos son la ganancia. No hay pagos intermedios: todo ocurre al vencimiento."
+        },
+        {
+          "subtitle": "Plazos mayores: pagos periódicos",
+          "content": "Los instrumentos de plazo largo suelen pagar intereses de forma periódica durante su vida y devolver el capital al final. Algunos ajustan su rendimiento conforme a las tasas del mercado o a la inflación, lo que los hace útiles para proteger el poder adquisitivo en horizontes largos."
+        },
+        {
+          "subtitle": "Elegir por el plazo, no por la tasa",
+          "content": "El error más común es elegir el instrumento de mayor tasa sin considerar cuándo se necesitará el dinero. Comprometer a un año fondos que harán falta en tres meses obliga a salir antes de tiempo, con costo o pérdida. La pregunta correcta es cuándo necesito este dinero, y a partir de ahí se elige el plazo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué son los instrumentos de deuda gubernamental?",
+          "options": [
+            "Acciones de empresas",
+            "Cuentas bancarias",
+            "Títulos que emite el gobierno para financiarse"
+          ],
+          "correct": "Títulos que emite el gobierno para financiarse"
+        },
+        {
+          "question": "¿Qué hace quien los compra?",
+          "options": [
+            "Le presta dinero al gobierno y recibe rendimiento",
+            "Compra parte del gobierno",
+            "Paga impuestos"
+          ],
+          "correct": "Le presta dinero al gobierno y recibe rendimiento"
+        },
+        {
+          "question": "¿Por qué se consideran de bajo riesgo?",
+          "options": [
+            "Porque no dan rendimiento",
+            "Porque el emisor es el gobierno federal",
+            "Porque son caros"
+          ],
+          "correct": "Porque el emisor es el gobierno federal"
+        },
+        {
+          "question": "¿Cómo funcionan los de corto plazo?",
+          "options": [
+            "Pagan cada mes",
+            "No pagan nada",
+            "Se compran a descuento y pagan el valor completo al vencer"
+          ],
+          "correct": "Se compran a descuento y pagan el valor completo al vencer"
+        },
+        {
+          "question": "Si compras en $9.75 un título de $10:",
+          "options": [
+            "Ganas 25 centavos al vencer",
+            "Pierdes 25 centavos",
+            "No ganas nada"
+          ],
+          "correct": "Ganas 25 centavos al vencer"
+        },
+        {
+          "question": "¿Hay pagos intermedios en corto plazo?",
+          "options": [
+            "Sí, cada mes",
+            "No, todo ocurre al vencimiento",
+            "Sí, cada semana"
+          ],
+          "correct": "No, todo ocurre al vencimiento"
+        },
+        {
+          "question": "¿Cómo funcionan los de plazo largo?",
+          "options": [
+            "No pagan nada",
+            "Solo al inicio",
+            "Pagan intereses periódicos y devuelven capital al final"
+          ],
+          "correct": "Pagan intereses periódicos y devuelven capital al final"
+        },
+        {
+          "question": "¿Cuál es el error más común?",
+          "options": [
+            "Elegir por tasa sin considerar cuándo se necesita el dinero",
+            "Elegir plazo corto",
+            "Invertir poco"
+          ],
+          "correct": "Elegir por tasa sin considerar cuándo se necesita el dinero"
+        },
+        {
+          "question": "¿Qué pasa si sales antes de tiempo?",
+          "options": [
+            "No pasa nada",
+            "Puede haber costo o pérdida",
+            "Ganas más"
+          ],
+          "correct": "Puede haber costo o pérdida"
+        },
+        {
+          "question": "¿Cuál es la pregunta correcta?",
+          "options": [
+            "Cuál paga más",
+            "Cuál es más famoso",
+            "Cuándo necesito este dinero"
+          ],
+          "correct": "Cuándo necesito este dinero"
+        }
+      ],
+      "rubric": "Logrado: explica el funcionamiento a descuento, compara plazos y arma un plan según objetivos. En proceso: identifica los instrumentos sin relacionar plazo con necesidad. Inicial: sabe que se le puede prestar al gobierno."
+    },
+    "teacher_tips": [
+      "El mecanismo de compra a descuento es lo que más cuesta entender. Use un ejemplo numérico simple y repítalo.",
+      "Insista en elegir por plazo y no por tasa: es el error que más dinero cuesta a los principiantes.",
+      "Mencione los instrumentos por tipo y plazo, no por marca o plataforma, para que el contenido no envejezca."
+    ]
+  },
+  "S1-3-7": {
+    "code": "S1-3-7",
+    "title": "La curva de rendimiento: por qué el plazo cambia la tasa",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender por qué el plazo modifica la tasa de rendimiento y cómo leer esa relación al elegir una inversión.",
+      "competencies": [
+        "Comprensión de Tasas",
+        "Análisis de Plazo",
+        "Interpretación de Señales",
+        "Decisión de Inversión"
+      ],
+      "materials": [
+        "Tabla de tasas por plazo",
+        "Gráfico de curva de rendimiento",
+        "Calculadora",
+        "Casos de decisión con distintos horizontes",
+        "Cartel de curva normal e invertida"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Por Qué Cambia?",
+          "duration": "15 min",
+          "label": "Misma inversión, otra tasa"
+        },
+        {
+          "phase": "Desarrollo: La Curva",
+          "duration": "30 min",
+          "label": "Qué significa su forma"
+        },
+        {
+          "phase": "Cierre: Decidir",
+          "duration": "15 min",
+          "label": "Elegir con la curva"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: MISMA INVERSIÓN, OTRA TASA (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre las tasas del mismo emisor a distintos plazos. Pregunte por qué no son iguales si el emisor es el mismo. Explique que la diferencia paga algo concreto: la incertidumbre y la inmovilidad del dinero durante más tiempo.",
+          "activity": "Dinámica \"El Mismo Emisor\": el grupo observa tasas a distintos plazos y propone explicaciones."
+        },
+        {
+          "title": "FASE II: LA CURVA Y SU FORMA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que al graficar tasas contra plazos se obtiene una curva. Normalmente sube: más plazo, más tasa. Cuando se aplana o se invierte, es una señal de que el mercado espera cambios importantes en las tasas o en la economía. Los alumnos interpretan tres curvas distintas.",
+          "activity": "Dinámica \"Lee la Curva\": cada equipo interpreta tres formas de curva y explica qué sugiere cada una."
+        },
+        {
+          "title": "FASE III: DECIDIR CON LA CURVA (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos deciden en qué plazo colocar dinero según la forma de la curva y su horizonte de necesidad. Insista en que la curva informa, no adivina, y que el horizonte propio sigue siendo el criterio principal.",
+          "activity": "Dinámica \"¿Corto o Largo?\": cada equipo elige plazo para dos escenarios distintos y lo justifica."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El mismo emisor te ofrece tasas distintas según el plazo. No es capricho: la diferencia paga algo concreto. Entender esa relación te permite leer una señal que los mercados observan todos los días.",
+      "sections": [
+        {
+          "subtitle": "Por qué más plazo suele pagar más",
+          "content": "Comprometer dinero durante más tiempo implica dos cosas: no poder usarlo si aparece una necesidad, y asumir la incertidumbre de lo que pase con las tasas y los precios en ese periodo. La tasa adicional es la compensación por ambas. Por eso, en condiciones normales, un plazo de tres años paga más que uno de tres meses."
+        },
+        {
+          "subtitle": "Qué es la curva de rendimiento",
+          "content": "Si se grafican las tasas de un mismo emisor contra sus plazos, se obtiene una curva. Su forma normal es ascendente. Es una de las representaciones más observadas en los mercados, porque resume en una línea lo que se espera del comportamiento de las tasas en el futuro."
+        },
+        {
+          "subtitle": "Cuando la curva se aplana o se invierte",
+          "content": "A veces los plazos cortos pagan casi lo mismo que los largos, o incluso más. Eso se llama curva plana o invertida, y suele interpretarse como que el mercado espera que las tasas bajen, con frecuencia por una desaceleración económica. No es una predicción infalible, pero históricamente ha sido una señal a la que se le presta mucha atención."
+        },
+        {
+          "subtitle": "Cómo usarla sin sobreinterpretarla",
+          "content": "La curva informa sobre expectativas, no garantiza resultados. Para una persona que invierte, el criterio principal sigue siendo cuándo necesitará el dinero. La curva ayuda a decidir en los márgenes: si la diferencia entre plazos es mínima, conviene el corto por flexibilidad; si es amplia y el horizonte lo permite, el largo compensa."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué más plazo suele pagar más?",
+          "options": [
+            "Compensa inmovilidad e incertidumbre",
+            "Por promoción",
+            "Por error"
+          ],
+          "correct": "Compensa inmovilidad e incertidumbre"
+        },
+        {
+          "question": "¿Qué es la curva de rendimiento?",
+          "options": [
+            "El precio de una acción",
+            "La gráfica de tasas contra plazos de un mismo emisor",
+            "La inflación"
+          ],
+          "correct": "La gráfica de tasas contra plazos de un mismo emisor"
+        },
+        {
+          "question": "¿Cuál es su forma normal?",
+          "options": [
+            "Descendente",
+            "Plana siempre",
+            "Ascendente"
+          ],
+          "correct": "Ascendente"
+        },
+        {
+          "question": "¿Qué significa una curva invertida?",
+          "options": [
+            "El mercado espera que las tasas bajen",
+            "Que todo va bien",
+            "Que suben los precios"
+          ],
+          "correct": "El mercado espera que las tasas bajen"
+        },
+        {
+          "question": "¿Con qué se asocia históricamente?",
+          "options": [
+            "Con crecimiento",
+            "Con una desaceleración económica",
+            "Con nada"
+          ],
+          "correct": "Con una desaceleración económica"
+        },
+        {
+          "question": "¿Es una predicción infalible?",
+          "options": [
+            "Sí, siempre acierta",
+            "Sí, por ley",
+            "No, es una señal observada"
+          ],
+          "correct": "No, es una señal observada"
+        },
+        {
+          "question": "¿Cuál sigue siendo el criterio principal al invertir?",
+          "options": [
+            "Cuándo necesitaré el dinero",
+            "La forma de la curva",
+            "La moda"
+          ],
+          "correct": "Cuándo necesitaré el dinero"
+        },
+        {
+          "question": "Si la diferencia entre plazos es mínima:",
+          "options": [
+            "Conviene el largo siempre",
+            "Conviene el corto por flexibilidad",
+            "Da igual todo"
+          ],
+          "correct": "Conviene el corto por flexibilidad"
+        },
+        {
+          "question": "Si la diferencia es amplia y el horizonte lo permite:",
+          "options": [
+            "El corto compensa",
+            "No invertir",
+            "El largo compensa"
+          ],
+          "correct": "El largo compensa"
+        },
+        {
+          "question": "¿Qué resume la curva?",
+          "options": [
+            "Lo que se espera de las tasas en el futuro",
+            "El pasado",
+            "Los impuestos"
+          ],
+          "correct": "Lo que se espera de las tasas en el futuro"
+        }
+      ],
+      "rubric": "Logrado: interpreta la forma de la curva y decide plazo combinándola con su horizonte. En proceso: explica por qué más plazo paga más. Inicial: reconoce que la tasa cambia con el plazo."
+    },
+    "teacher_tips": [
+      "Grafique la curva en el pizarrón con tasas reales del día. Verla dibujada aclara el concepto de inmediato.",
+      "Insista en que la curva informa pero no adivina: evita que los alumnos la traten como oráculo.",
+      "Mantenga el horizonte de necesidad como criterio principal en todos los ejercicios."
+    ]
+  },
+  "S1-3-8": {
+    "code": "S1-3-8",
+    "title": "Costo promedio en pesos: invertir poco a poco",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender la estrategia de aportaciones periódicas de monto fijo y por qué reduce el riesgo de elegir mal el momento.",
+      "competencies": [
+        "Estrategia de Aportación",
+        "Gestión de Volatilidad",
+        "Constancia",
+        "Disciplina de Inversión"
+      ],
+      "materials": [
+        "Tabla de precios variables por periodo",
+        "Calculadora",
+        "Comparativo de aportar todo de una vez o poco a poco",
+        "Formato de plan de aportaciones",
+        "Cartel de la estrategia"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuándo Entro?",
+          "duration": "15 min",
+          "label": "La pregunta imposible"
+        },
+        {
+          "phase": "Desarrollo: Poco a Poco",
+          "duration": "30 min",
+          "label": "Cómo funciona"
+        },
+        {
+          "phase": "Cierre: Sus Límites",
+          "duration": "15 min",
+          "label": "Cuándo no aplica"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PREGUNTA IMPOSIBLE (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuándo es el mejor momento para invertir. Todos dirán que cuando esté barato. Explique que nadie sabe con certeza cuándo será eso, ni siquiera los profesionales, y que existe una estrategia que resuelve el problema sin necesidad de adivinar.",
+          "activity": "Dinámica \"Adivina el Momento\": el grupo intenta elegir el mejor mes de una serie de precios ocultos."
+        },
+        {
+          "title": "FASE II: CÓMO FUNCIONA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la estrategia: aportar un monto fijo en periodos regulares. Cuando el precio está alto se compran menos unidades, cuando está bajo se compran más. El resultado es un costo promedio favorable sin haber intentado adivinar. Los alumnos comparan aportar todo de una vez contra aportar mes a mes con una serie de precios.",
+          "activity": "Dinámica \"Doce Meses\": cada equipo simula doce aportaciones y compara con la compra única."
+        },
+        {
+          "title": "FASE III: SUS LÍMITES (CIERRE)",
+          "duration": "15 min",
+          "description": "Aclare que la estrategia no garantiza ganancias ni evita pérdidas: reduce el riesgo de elegir mal el momento, que es distinto. En mercados que suben de forma sostenida, invertir todo al inicio habría rendido más. Su valor real es que hace sostenible la disciplina, y la disciplina es lo que produce resultados.",
+          "activity": "Dinámica \"¿Cuándo No Conviene?\": cada equipo identifica un escenario donde la estrategia rinde menos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "¿Cuándo es el mejor momento para invertir? Nadie lo sabe, ni siquiera los profesionales. Existe una estrategia que resuelve el problema de otra forma: dejando de intentar adivinar.",
+      "sections": [
+        {
+          "subtitle": "El problema de elegir el momento",
+          "content": "Todo el mundo quiere comprar barato y vender caro, pero identificar esos momentos por adelantado es extremadamente difícil incluso para quien se dedica a eso. Muchas personas terminan sin invertir nunca, esperando un momento perfecto que nunca reconocen cuando llega."
+        },
+        {
+          "subtitle": "Aportar un monto fijo cada periodo",
+          "content": "La estrategia consiste en invertir la misma cantidad en intervalos regulares, sin importar el precio. Cuando el precio está alto, esa cantidad compra menos unidades; cuando está bajo, compra más. Con el tiempo, eso produce un costo promedio por unidad que suele ser mejor que el de intentar acertar el momento."
+        },
+        {
+          "subtitle": "Lo que sí resuelve y lo que no",
+          "content": "No garantiza ganancias ni protege de una caída general del mercado. Lo que reduce es el riesgo específico de haber entrado justo en el peor momento con todo el dinero. En un mercado que sube de forma sostenida, invertir todo al inicio habría dado más. Su ventaja no es el rendimiento máximo, es la reducción del error de sincronización."
+        },
+        {
+          "subtitle": "Su verdadero valor: la disciplina",
+          "content": "El beneficio más grande no es matemático sino de comportamiento. Aportar una cantidad fija cada mes convierte la inversión en un hábito y elimina la decisión emocional de cada periodo. Quien invierte por impulso suele comprar cuando todo sube y vender cuando todo baja, que es exactamente lo contrario de lo que conviene."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es fácil elegir el mejor momento para invertir?",
+          "options": [
+            "Sí, con práctica",
+            "No, ni siquiera para profesionales",
+            "Sí, siempre"
+          ],
+          "correct": "No, ni siquiera para profesionales"
+        },
+        {
+          "question": "¿Qué le pasa a mucha gente por esperar?",
+          "options": [
+            "Gana más",
+            "Compra barato",
+            "Termina sin invertir nunca"
+          ],
+          "correct": "Termina sin invertir nunca"
+        },
+        {
+          "question": "¿En qué consiste la estrategia?",
+          "options": [
+            "Invertir un monto fijo en intervalos regulares",
+            "Invertir todo de golpe",
+            "Esperar la caída"
+          ],
+          "correct": "Invertir un monto fijo en intervalos regulares"
+        },
+        {
+          "question": "Cuando el precio está alto:",
+          "options": [
+            "Compra más",
+            "Ese monto compra menos unidades",
+            "No compra"
+          ],
+          "correct": "Ese monto compra menos unidades"
+        },
+        {
+          "question": "Cuando el precio está bajo:",
+          "options": [
+            "Compra menos",
+            "No compra",
+            "Compra más unidades"
+          ],
+          "correct": "Compra más unidades"
+        },
+        {
+          "question": "¿Garantiza ganancias?",
+          "options": [
+            "No",
+            "Sí, siempre",
+            "Sí, si es a largo plazo"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Qué riesgo reduce?",
+          "options": [
+            "El de perder dinero",
+            "El de entrar todo en el peor momento",
+            "Ninguno"
+          ],
+          "correct": "El de entrar todo en el peor momento"
+        },
+        {
+          "question": "¿Cuándo habría rendido más invertir todo al inicio?",
+          "options": [
+            "Siempre",
+            "Nunca",
+            "En un mercado que sube de forma sostenida"
+          ],
+          "correct": "En un mercado que sube de forma sostenida"
+        },
+        {
+          "question": "¿Cuál es su beneficio más grande?",
+          "options": [
+            "Convertir la inversión en hábito y quitar la emoción",
+            "El rendimiento máximo",
+            "La velocidad"
+          ],
+          "correct": "Convertir la inversión en hábito y quitar la emoción"
+        },
+        {
+          "question": "¿Qué hace quien invierte por impulso?",
+          "options": [
+            "Compra barato",
+            "Compra cuando sube y vende cuando baja",
+            "Acierta siempre"
+          ],
+          "correct": "Compra cuando sube y vende cuando baja"
+        }
+      ],
+      "rubric": "Logrado: explica la estrategia, la compara con la compra única y reconoce sus límites. En proceso: describe la mecánica sin identificar límites. Inicial: entiende que no se puede adivinar el momento."
+    },
+    "teacher_tips": [
+      "La simulación de doce meses con precios variables es lo que hace evidente el efecto. No la omita.",
+      "Sea honesto con los límites: presentarla como estrategia infalible sería incorrecto.",
+      "Enfatice el componente de comportamiento: es el beneficio más real para una persona común."
+    ]
+  },
+  "S1-3-9": {
+    "code": "S1-3-9",
+    "title": "Comisiones de inversión: el enemigo silencioso",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Calcular el efecto acumulado de las comisiones sobre una inversión de largo plazo y comparar instrumentos por su costo.",
+      "competencies": [
+        "Análisis de Costos",
+        "Comparación de Instrumentos",
+        "Proyección de Largo Plazo",
+        "Lectura de Prospectos"
+      ],
+      "materials": [
+        "Tabla comparativa de comisiones",
+        "Calculadora",
+        "Prospectos simplificados",
+        "Gráfico de efecto acumulado",
+        "Cartel de los tipos de comisión"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Un Uno Por Ciento",
+          "duration": "15 min",
+          "label": "Parece poco"
+        },
+        {
+          "phase": "Desarrollo: El Efecto Acumulado",
+          "duration": "30 min",
+          "label": "Treinta años después"
+        },
+        {
+          "phase": "Cierre: Dónde Buscarlas",
+          "duration": "15 min",
+          "label": "Leer antes de firmar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: UN UNO POR CIENTO PARECE POCO (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte si un 1% anual de comisión suena mucho. Todos dirán que no. Muestre lo que representa en treinta años sobre un capital creciente. La cifra sorprende siempre: es la razón por la que las comisiones se llaman el enemigo silencioso.",
+          "activity": "Dinámica \"¿Cuánto Es 1%?\": el grupo estima el costo total antes de calcularlo."
+        },
+        {
+          "title": "FASE II: EL EFECTO ACUMULADO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique por qué la comisión duele tanto en el largo plazo: se cobra sobre el saldo total cada año, y cada peso cobrado deja además de generar rendimientos futuros. Los alumnos comparan dos fondos idénticos con 0.5% y 2% de comisión a treinta años.",
+          "activity": "Dinámica \"Dos Fondos Iguales\": cada equipo calcula el saldo final de dos fondos que solo difieren en comisión."
+        },
+        {
+          "title": "FASE III: DÓNDE BUSCARLAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe los tipos: comisión de administración anual, de entrada, de salida, por operación y por custodia. Explique que deben estar publicadas y que comparar productos sin comparar comisiones es comparar mal. Los alumnos localizan las comisiones en dos documentos.",
+          "activity": "Dinámica \"Encuentra el Costo\": cada equipo localiza todas las comisiones en dos prospectos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un 1% anual de comisión suena a nada. En treinta años puede costarte una cuarta parte de todo lo que habrías acumulado. Por eso se les llama el enemigo silencioso: no duelen nunca y cobran siempre.",
+      "sections": [
+        {
+          "subtitle": "Por qué duelen tanto a largo plazo",
+          "content": "La comisión de administración se cobra cada año sobre el saldo total, no sobre la ganancia. Y hay un segundo efecto, menos evidente: cada peso cobrado deja de estar ahí generando rendimientos durante todos los años restantes. Esos dos efectos juntos convierten un porcentaje pequeño en una cifra enorme al final."
+        },
+        {
+          "subtitle": "Los tipos de comisión",
+          "content": "La de administración es anual sobre el saldo. La de entrada se cobra al invertir y la de salida al retirar. Las de operación se cobran por cada movimiento. La de custodia se cobra por mantener los títulos. Un producto con administración baja pero entrada alta puede salir más caro que uno aparentemente más costoso."
+        },
+        {
+          "subtitle": "Comparar bien",
+          "content": "Comparar dos productos por su rendimiento histórico sin mirar comisiones es comparar mal, porque el rendimiento pasado no se repite pero la comisión sí se cobra siempre. La comparación útil es rendimiento esperado menos comisiones totales, y ahí es donde productos aparentemente iguales resultan muy distintos."
+        },
+        {
+          "subtitle": "Están publicadas y hay que leerlas",
+          "content": "Las comisiones deben estar publicadas en los documentos del producto. Es información disponible que casi nadie consulta. Dedicar diez minutos a localizarlas antes de contratar es probablemente el uso más rentable del tiempo en toda la vida financiera de una persona."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Sobre qué se cobra la comisión de administración?",
+          "options": [
+            "Sobre la ganancia",
+            "Sobre la aportación",
+            "Sobre el saldo total cada año"
+          ],
+          "correct": "Sobre el saldo total cada año"
+        },
+        {
+          "question": "¿Cuál es el segundo efecto?",
+          "options": [
+            "Cada peso cobrado deja de generar rendimientos futuros",
+            "No hay segundo efecto",
+            "Se recupera después"
+          ],
+          "correct": "Cada peso cobrado deja de generar rendimientos futuros"
+        },
+        {
+          "question": "¿Qué es la comisión de entrada?",
+          "options": [
+            "La anual",
+            "La que se cobra al invertir",
+            "La de retiro"
+          ],
+          "correct": "La que se cobra al invertir"
+        },
+        {
+          "question": "¿Y la de salida?",
+          "options": [
+            "La anual",
+            "La de compra",
+            "La que se cobra al retirar"
+          ],
+          "correct": "La que se cobra al retirar"
+        },
+        {
+          "question": "¿Qué es la comisión de custodia?",
+          "options": [
+            "La que se cobra por mantener los títulos",
+            "La de compra",
+            "La anual de rendimiento"
+          ],
+          "correct": "La que se cobra por mantener los títulos"
+        },
+        {
+          "question": "Un producto con administración baja pero entrada alta:",
+          "options": [
+            "Siempre es mejor",
+            "Puede salir más caro en total",
+            "Es igual"
+          ],
+          "correct": "Puede salir más caro en total"
+        },
+        {
+          "question": "¿Se repite el rendimiento pasado?",
+          "options": [
+            "Sí, siempre",
+            "Sí, si es alto",
+            "No, pero la comisión sí se cobra siempre"
+          ],
+          "correct": "No, pero la comisión sí se cobra siempre"
+        },
+        {
+          "question": "¿Cuál es la comparación útil?",
+          "options": [
+            "Rendimiento esperado menos comisiones totales",
+            "Solo el rendimiento",
+            "Solo el nombre"
+          ],
+          "correct": "Rendimiento esperado menos comisiones totales"
+        },
+        {
+          "question": "¿Dónde están las comisiones?",
+          "options": [
+            "Ocultas por ley",
+            "Publicadas en los documentos del producto",
+            "No existen"
+          ],
+          "correct": "Publicadas en los documentos del producto"
+        },
+        {
+          "question": "¿Cuánto toma localizarlas?",
+          "options": [
+            "Varios días",
+            "Es imposible",
+            "Unos diez minutos"
+          ],
+          "correct": "Unos diez minutos"
+        }
+      ],
+      "rubric": "Logrado: calcula el efecto acumulado, distingue tipos de comisión y compara productos correctamente. En proceso: identifica tipos sin cuantificar el efecto. Inicial: reconoce que las comisiones restan."
+    },
+    "teacher_tips": [
+      "El cálculo a treinta años con dos comisiones distintas es el momento clave de la clase. Hágalo en el pizarrón.",
+      "Muestre que un producto con menor comisión de administración puede ser peor si cobra entrada alta.",
+      "Use prospectos reales anonimizados: localizar la comisión en un documento es una habilidad práctica."
+    ]
+  },
+  "S1-3-10": {
+    "code": "S1-3-10",
+    "title": "Mi estado patrimonial: activos menos pasivos",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Elaborar un estado patrimonial personal restando pasivos de activos e interpretar su evolución.",
+      "competencies": [
+        "Elaboración de Balance",
+        "Valoración de Activos",
+        "Registro de Pasivos",
+        "Seguimiento Patrimonial"
+      ],
+      "materials": [
+        "Formato de estado patrimonial",
+        "Calculadora",
+        "Lista de activos y pasivos comunes",
+        "Casos con patrimonio positivo y negativo",
+        "Cartel de la fórmula patrimonial"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuánto Valgo?",
+          "duration": "15 min",
+          "label": "La pregunta incómoda"
+        },
+        {
+          "phase": "Desarrollo: Activos y Pasivos",
+          "duration": "30 min",
+          "label": "Listar todo"
+        },
+        {
+          "phase": "Cierre: La Evolución",
+          "duration": "15 min",
+          "label": "La cifra que importa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CUÁNTO VALGO FINANCIERAMENTE? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo sabría alguien si su situación financiera mejoró este año. Las respuestas mencionarán el sueldo. Explique que el sueldo mide el flujo, no la posición: alguien puede ganar mucho y tener patrimonio negativo. La medida correcta es activos menos pasivos.",
+          "activity": "Dinámica \"Ingreso o Patrimonio\": el grupo compara dos personas con sueldos opuestos y patrimonios contrarios."
+        },
+        {
+          "title": "FASE II: LISTAR TODO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique qué es un activo y qué es un pasivo, y cómo valorar cada uno de forma realista. Insista en valorar los bienes a lo que realmente se venderían, no a lo que costaron. Los alumnos elaboran un estado patrimonial completo para un caso dado.",
+          "activity": "Dinámica \"Mi Balance\": cada alumno lista activos y pasivos de un caso y calcula el patrimonio neto."
+        },
+        {
+          "title": "FASE III: LA EVOLUCIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que la cifra aislada importa menos que su cambio en el tiempo. Un patrimonio que crece cada trimestre indica que las decisiones van bien, aunque el número absoluto sea modesto. Los alumnos comparan tres cortes trimestrales de una misma persona.",
+          "activity": "Dinámica \"Tres Trimestres\": cada equipo interpreta la evolución patrimonial de un caso y explica qué la causó."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ganar mucho no significa estar bien financieramente. Hay quien gana el doble que otra persona y tiene un patrimonio negativo. La medida que de verdad dice cómo vas es esta: todo lo que tienes menos todo lo que debes.",
+      "sections": [
+        {
+          "subtitle": "Flujo no es posición",
+          "content": "El ingreso mide cuánto entra en un periodo; el patrimonio mide dónde estás parado. Son cosas distintas y se comportan distinto. Alguien con ingreso alto y deudas mayores tiene patrimonio negativo, mientras que alguien con ingreso modesto y hábitos consistentes puede tener patrimonio positivo y creciente."
+        },
+        {
+          "subtitle": "Qué es un activo y cómo valorarlo",
+          "content": "Un activo es todo lo que tienes con valor: dinero en cuentas, inversiones, saldo de AFORE, un vehículo, una propiedad, incluso equipo de trabajo. La clave es valorarlos por lo que realmente se venderían hoy, no por lo que costaron. Un vehículo de $300,000 comprado hace cinco años no vale $300,000 en el balance."
+        },
+        {
+          "subtitle": "Qué es un pasivo",
+          "content": "Un pasivo es todo lo que debes: saldo de tarjetas, créditos personales, automotriz, hipotecario, deudas con familiares y pagos pendientes. Hay que registrar el saldo actual completo, no la mensualidad. Confundir mensualidad con saldo es el error más frecuente y hace que el balance quede muy distorsionado."
+        },
+        {
+          "subtitle": "Lo que importa es la evolución",
+          "content": "Un patrimonio negativo no es una condena, sobre todo al inicio de la vida laboral o con un crédito de vivienda reciente. Lo relevante es la dirección: si cada trimestre la cifra mejora, las decisiones están funcionando. Medirlo cada tres o seis meses convierte una sensación difusa en un dato verificable."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué mide el ingreso?",
+          "options": [
+            "El flujo de un periodo",
+            "La posición",
+            "El patrimonio"
+          ],
+          "correct": "El flujo de un periodo"
+        },
+        {
+          "question": "¿Qué mide el patrimonio?",
+          "options": [
+            "Cuánto entra al mes",
+            "Dónde estás parado",
+            "Cuánto gastas"
+          ],
+          "correct": "Dónde estás parado"
+        },
+        {
+          "question": "¿Puede alguien ganar mucho y tener patrimonio negativo?",
+          "options": [
+            "No",
+            "Solo si es joven",
+            "Sí"
+          ],
+          "correct": "Sí"
+        },
+        {
+          "question": "¿Cuál es la fórmula?",
+          "options": [
+            "Activos menos pasivos",
+            "Ingresos menos gastos",
+            "Sueldo por doce"
+          ],
+          "correct": "Activos menos pasivos"
+        },
+        {
+          "question": "¿Qué es un activo?",
+          "options": [
+            "Todo lo que debes",
+            "Todo lo que tienes con valor",
+            "Tu sueldo"
+          ],
+          "correct": "Todo lo que tienes con valor"
+        },
+        {
+          "question": "¿Cómo se valoran los activos?",
+          "options": [
+            "Por lo que costaron",
+            "Por el doble",
+            "Por lo que se venderían hoy"
+          ],
+          "correct": "Por lo que se venderían hoy"
+        },
+        {
+          "question": "¿Qué es un pasivo?",
+          "options": [
+            "Todo lo que debes",
+            "Todo lo que tienes",
+            "Tu ahorro"
+          ],
+          "correct": "Todo lo que debes"
+        },
+        {
+          "question": "¿Qué se registra de una deuda?",
+          "options": [
+            "La mensualidad",
+            "El saldo actual completo",
+            "El interés"
+          ],
+          "correct": "El saldo actual completo"
+        },
+        {
+          "question": "¿Cuál es el error más frecuente?",
+          "options": [
+            "Sumar bien",
+            "Registrar activos",
+            "Confundir mensualidad con saldo"
+          ],
+          "correct": "Confundir mensualidad con saldo"
+        },
+        {
+          "question": "¿Qué importa más que la cifra?",
+          "options": [
+            "Su evolución en el tiempo",
+            "Su tamaño",
+            "Compararla con otros"
+          ],
+          "correct": "Su evolución en el tiempo"
+        }
+      ],
+      "rubric": "Logrado: elabora un estado patrimonial con valoración realista e interpreta su evolución. En proceso: lista activos y pasivos con errores de valoración. Inicial: distingue ingreso de patrimonio."
+    },
+    "teacher_tips": [
+      "La distinción entre flujo y posición es el concepto central. Ilústrela con dos casos opuestos.",
+      "Corrija de forma explícita el error de anotar la mensualidad en lugar del saldo.",
+      "Enfatice que un patrimonio negativo al inicio es normal: lo que importa es la dirección."
     ]
   },
   "S1-4-1": {
@@ -3181,8 +5941,927 @@
       "Invite a los alumnos a investigar a emprendedores de su propia comunidad.",
       "Enfatice que el éxito es un proceso, no un evento."
     ]
-  }
-,
+  },
+  "S1-4-6": {
+    "code": "S1-4-6",
+    "title": "El problema antes que la solución: entrevistas de descubrimiento",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Aplicar entrevistas de descubrimiento centradas en el problema del cliente antes de proponer cualquier solución.",
+      "competencies": [
+        "Entrevista de Descubrimiento",
+        "Escucha Sin Sesgo",
+        "Identificación de Problemas",
+        "Investigación Cualitativa"
+      ],
+      "materials": [
+        "Guion de entrevista de descubrimiento",
+        "Formato de registro de hallazgos",
+        "Tarjetas de preguntas sesgadas y neutrales",
+        "Casos de negocios que resolvieron el problema equivocado",
+        "Cartel de las reglas de la entrevista"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Solución Primero",
+          "duration": "15 min",
+          "label": "El orden invertido"
+        },
+        {
+          "phase": "Desarrollo: Preguntar Bien",
+          "duration": "30 min",
+          "label": "La entrevista"
+        },
+        {
+          "phase": "Cierre: Encontrar el Patrón",
+          "duration": "15 min",
+          "label": "Qué se repite"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA SOLUCIÓN PRIMERO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un caso donde alguien construyó un producto excelente para un problema que casi nadie tenía. Explique que el error no fue la ejecución sino el orden: se enamoró de una solución antes de confirmar que el problema existiera y doliera.",
+          "activity": "Dinámica \"Solución Buscando Problema\": el grupo identifica productos que resuelven algo que nadie pedía."
+        },
+        {
+          "title": "FASE II: PREGUNTAR SIN SESGAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe las reglas: hablar del pasado y no del futuro, no mencionar la solución propia, no pedir opiniones, pedir historias concretas. Una buena pregunta es cuéntame la última vez que te pasó esto. Una mala es te gustaría una app que lo resuelva. Los alumnos reescriben preguntas sesgadas.",
+          "activity": "Dinámica \"Reescribe la Pregunta\": cada equipo convierte ocho preguntas sesgadas en preguntas de descubrimiento."
+        },
+        {
+          "title": "FASE III: ENCONTRAR EL PATRÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique cómo se procesan los hallazgos: buscar lo que se repite en varias entrevistas, no la anécdota más llamativa. Un problema mencionado por siete de diez personas vale más que uno contado con mucha emoción por una sola. Los alumnos analizan diez respuestas y detectan el patrón.",
+          "activity": "Dinámica \"Lo Que Se Repite\": cada equipo agrupa hallazgos y nombra el problema más frecuente."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Muchos negocios fracasan resolviendo un problema que casi nadie tenía. No fue mala ejecución: fue el orden. Primero se enamoraron de la solución y después buscaron a quién le servía.",
+      "sections": [
+        {
+          "subtitle": "El problema va antes que la solución",
+          "content": "Es tentador empezar por la idea del producto porque es la parte divertida. Pero un producto excelente para un problema inexistente no tiene mercado. La secuencia correcta empieza por confirmar que un grupo de personas tiene un problema real, frecuente y molesto, y solo después se diseña algo para resolverlo."
+        },
+        {
+          "subtitle": "Las reglas de la entrevista",
+          "content": "Una entrevista de descubrimiento sigue reglas estrictas: no se menciona la solución propia, no se piden opiniones, no se pregunta por el futuro. Se pide que cuenten qué hicieron la última vez que enfrentaron esa situación, cómo la resolvieron, cuánto les costó y qué les molestó. El comportamiento pasado es información; la intención declarada casi no lo es."
+        },
+        {
+          "subtitle": "Preguntas que sesgan",
+          "content": "Preguntar te gustaría una app que haga esto genera un sí amable que no significa nada. Preguntar no crees que sería útil arrastra a la persona a la respuesta esperada. En cambio, cuéntame la última vez que tuviste este problema obliga a describir hechos, y de los hechos sí se puede aprender algo."
+        },
+        {
+          "subtitle": "Buscar patrones, no anécdotas",
+          "content": "Después de varias entrevistas hay que buscar lo que se repite, no lo más llamativo. Un problema mencionado por la mayoría, aunque lo cuenten sin emoción, es una señal mucho más fuerte que una historia dramática contada por una sola persona. La emoción de quien escucha no es un criterio de validación."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es el error de orden más común?",
+          "options": [
+            "Enamorarse de la solución antes de confirmar el problema",
+            "Investigar demasiado",
+            "Preguntar mucho"
+          ],
+          "correct": "Enamorarse de la solución antes de confirmar el problema"
+        },
+        {
+          "question": "¿Qué debe confirmarse primero?",
+          "options": [
+            "Que el producto sea bonito",
+            "Que el problema sea real, frecuente y molesto",
+            "Que haya presupuesto"
+          ],
+          "correct": "Que el problema sea real, frecuente y molesto"
+        },
+        {
+          "question": "¿Se menciona la solución propia en la entrevista?",
+          "options": [
+            "Sí, al inicio",
+            "Sí, siempre",
+            "No"
+          ],
+          "correct": "No"
+        },
+        {
+          "question": "¿Sobre qué se pregunta?",
+          "options": [
+            "Sobre el comportamiento pasado",
+            "Sobre el futuro hipotético",
+            "Sobre gustos"
+          ],
+          "correct": "Sobre el comportamiento pasado"
+        },
+        {
+          "question": "¿Qué se pide concretamente?",
+          "options": [
+            "Que opinen",
+            "Que cuenten la última vez que les pasó",
+            "Que imaginen"
+          ],
+          "correct": "Que cuenten la última vez que les pasó"
+        },
+        {
+          "question": "\"¿Te gustaría una app que haga esto?\" produce:",
+          "options": [
+            "Información valiosa",
+            "Una venta",
+            "Un sí amable que no significa nada"
+          ],
+          "correct": "Un sí amable que no significa nada"
+        },
+        {
+          "question": "\"¿No crees que sería útil?\" es mala porque:",
+          "options": [
+            "Arrastra a la respuesta esperada",
+            "Es muy larga",
+            "Es confusa"
+          ],
+          "correct": "Arrastra a la respuesta esperada"
+        },
+        {
+          "question": "¿Qué se busca al procesar los hallazgos?",
+          "options": [
+            "La anécdota más llamativa",
+            "Lo que se repite entre varias entrevistas",
+            "La más emotiva"
+          ],
+          "correct": "Lo que se repite entre varias entrevistas"
+        },
+        {
+          "question": "Un problema mencionado por la mayoría:",
+          "options": [
+            "Vale menos",
+            "Se ignora",
+            "Es una señal más fuerte que una historia dramática"
+          ],
+          "correct": "Es una señal más fuerte que una historia dramática"
+        },
+        {
+          "question": "¿Es la emoción del entrevistador un criterio?",
+          "options": [
+            "No",
+            "Sí, el principal",
+            "Sí, a veces"
+          ],
+          "correct": "No"
+        }
+      ],
+      "rubric": "Logrado: redacta preguntas de descubrimiento sin sesgo y detecta patrones en los hallazgos. En proceso: reconoce preguntas sesgadas sin reescribirlas bien. Inicial: entiende que el problema va antes que la solución."
+    },
+    "teacher_tips": [
+      "El ejercicio de reescribir preguntas sesgadas es el corazón de la clase. Dele el tiempo del desarrollo completo.",
+      "Prohíba mencionar la solución durante las prácticas de entrevista: es la regla que más cuesta respetar.",
+      "Insista en buscar patrones: los alumnos tienden a quedarse con la anécdota más entretenida."
+    ]
+  },
+  "S1-4-7": {
+    "code": "S1-4-7",
+    "title": "MVP: el producto mínimo que ya sirve",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Definir un producto mínimo viable que permita aprender del mercado con la menor inversión posible.",
+      "competencies": [
+        "Diseño de MVP",
+        "Priorización de Funciones",
+        "Aprendizaje Iterativo",
+        "Reducción de Inversión Inicial"
+      ],
+      "materials": [
+        "Formato de definición de MVP",
+        "Casos de MVP conocidos",
+        "Tarjetas de funciones para priorizar",
+        "Lista de métricas de aprendizaje",
+        "Cartel de qué es y qué no es un MVP"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Todo Antes de Vender",
+          "duration": "15 min",
+          "label": "El producto perfecto"
+        },
+        {
+          "phase": "Desarrollo: Lo Mínimo Que Sirve",
+          "duration": "30 min",
+          "label": "Definir el MVP"
+        },
+        {
+          "phase": "Cierre: Qué Voy a Aprender",
+          "duration": "15 min",
+          "label": "La métrica"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TODO ANTES DE VENDER (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien que dedica un año y todos sus ahorros a construir un producto completo antes de mostrarlo a nadie. Pregunte qué puede salir mal. Casi todo. Explique que existe una alternativa: lanzar la versión más pequeña que ya resuelva el problema y aprender del mercado real.",
+          "activity": "Dinámica \"Un Año Encerrado\": el grupo enumera todo lo que puede salir mal en ese escenario."
+        },
+        {
+          "title": "FASE II: LO MÍNIMO QUE YA SIRVE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Defina el MVP: la versión más simple que ya entrega valor real a un cliente y permite aprender. Aclare que mínimo no significa malo ni incompleto: significa enfocado en la función esencial. Los alumnos priorizan diez funciones de un producto y definen su MVP.",
+          "activity": "Dinámica \"Solo Tres Funciones\": cada equipo reduce una lista de diez funciones a las tres imprescindibles."
+        },
+        {
+          "title": "FASE III: QUÉ VOY A APRENDER (CIERRE)",
+          "duration": "15 min",
+          "description": "Insista en que un MVP sin una pregunta que responder es solo un producto pequeño. Antes de lanzarlo hay que definir qué se quiere aprender y con qué señal se sabrá la respuesta. Los alumnos definen la pregunta y la métrica de su MVP.",
+          "activity": "Dinámica \"Mi Pregunta\": cada alumno escribe qué quiere aprender y qué señal lo confirmaría."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Dedicar un año y todos tus ahorros a construir el producto perfecto antes de mostrarlo es la forma más cara de descubrir que nadie lo quería. Existe una alternativa: lanzar lo mínimo que ya sirve y aprender del mercado real.",
+      "sections": [
+        {
+          "subtitle": "Qué es un MVP",
+          "content": "Es la versión más simple de un producto que ya entrega valor real a un cliente y permite aprender algo importante sobre el mercado. No es un prototipo interno ni una maqueta: alguien lo usa de verdad y, en muchos casos, paga por él. Su propósito no es impresionar, es enseñarte algo con la menor inversión posible."
+        },
+        {
+          "subtitle": "Mínimo no es malo",
+          "content": "La confusión más común es pensar que mínimo significa mal hecho o incompleto. Un MVP hace pocas cosas, pero las hace bien. Se reduce el alcance, no la calidad. Un producto con tres funciones sólidas enseña mucho; uno con diez funciones a medias solo genera clientes molestos y ninguna conclusión clara."
+        },
+        {
+          "subtitle": "Cómo se define",
+          "content": "Se listan todas las funciones imaginadas y se hace una pregunta por cada una: sin esto, ¿el cliente todavía resuelve su problema? Si la respuesta es sí, esa función sale de la primera versión. Lo que queda después de aplicar el filtro varias veces es el MVP, y casi siempre es mucho más pequeño de lo que se creía."
+        },
+        {
+          "subtitle": "Un MVP sin pregunta es solo un producto pequeño",
+          "content": "Antes de lanzarlo hay que definir qué se quiere aprender y qué señal lo confirmaría: cuántas personas lo usan más de una vez, cuántas pagan, cuántas lo recomiendan. Sin esa definición previa, cualquier resultado se interpreta como se quiera, y el aprendizaje se pierde por completo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es un MVP?",
+          "options": [
+            "Un prototipo interno",
+            "La versión más simple que ya entrega valor y permite aprender",
+            "Un producto barato"
+          ],
+          "correct": "La versión más simple que ya entrega valor y permite aprender"
+        },
+        {
+          "question": "¿Cuál es su propósito?",
+          "options": [
+            "Impresionar",
+            "Vender mucho",
+            "Enseñarte algo con la menor inversión posible"
+          ],
+          "correct": "Enseñarte algo con la menor inversión posible"
+        },
+        {
+          "question": "¿Significa mínimo mal hecho?",
+          "options": [
+            "No, hace pocas cosas pero las hace bien",
+            "Sí",
+            "Sí, siempre"
+          ],
+          "correct": "No, hace pocas cosas pero las hace bien"
+        },
+        {
+          "question": "¿Qué se reduce?",
+          "options": [
+            "La calidad",
+            "El alcance, no la calidad",
+            "Las dos cosas"
+          ],
+          "correct": "El alcance, no la calidad"
+        },
+        {
+          "question": "Un producto con diez funciones a medias:",
+          "options": [
+            "Enseña mucho",
+            "Es mejor",
+            "Genera clientes molestos y ninguna conclusión"
+          ],
+          "correct": "Genera clientes molestos y ninguna conclusión"
+        },
+        {
+          "question": "¿Cuál es el filtro para cada función?",
+          "options": [
+            "Sin esto, ¿el cliente todavía resuelve su problema?",
+            "¿Es bonita?",
+            "¿Es cara?"
+          ],
+          "correct": "Sin esto, ¿el cliente todavía resuelve su problema?"
+        },
+        {
+          "question": "Si la respuesta es sí:",
+          "options": [
+            "Se queda",
+            "Esa función sale de la primera versión",
+            "Se duplica"
+          ],
+          "correct": "Esa función sale de la primera versión"
+        },
+        {
+          "question": "¿Qué hay que definir antes de lanzar?",
+          "options": [
+            "El logotipo",
+            "El precio final",
+            "Qué se quiere aprender y qué señal lo confirmaría"
+          ],
+          "correct": "Qué se quiere aprender y qué señal lo confirmaría"
+        },
+        {
+          "question": "Un MVP sin pregunta es:",
+          "options": [
+            "Solo un producto pequeño",
+            "Un éxito",
+            "Lo mismo"
+          ],
+          "correct": "Solo un producto pequeño"
+        },
+        {
+          "question": "¿Qué señales sirven?",
+          "options": [
+            "Los cumplidos",
+            "Uso repetido, pago o recomendación",
+            "Los seguidores"
+          ],
+          "correct": "Uso repetido, pago o recomendación"
+        }
+      ],
+      "rubric": "Logrado: define un MVP aplicando el filtro de funciones y establece pregunta y métrica. En proceso: reduce funciones sin definir qué aprender. Inicial: entiende que no hay que construir todo antes de vender."
+    },
+    "teacher_tips": [
+      "Corrija de forma explícita la idea de que mínimo significa mal hecho: es el malentendido más frecuente.",
+      "El filtro función por función funciona mejor si se aplica varias veces seguidas hasta que duela.",
+      "Exija la pregunta de aprendizaje antes de aprobar cualquier MVP en clase."
+    ]
+  },
+  "S1-4-8": {
+    "code": "S1-4-8",
+    "title": "Canales de venta: dónde encuentro a mi cliente",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Identificar los canales de venta disponibles, evaluar su costo y elegir el adecuado según dónde está el cliente.",
+      "competencies": [
+        "Selección de Canales",
+        "Cálculo de Costo de Adquisición",
+        "Análisis de Alcance",
+        "Estrategia Comercial"
+      ],
+      "materials": [
+        "Lista de canales de venta",
+        "Calculadora",
+        "Datos de costo por canal",
+        "Formato de evaluación de canales",
+        "Cartel del costo de adquisición"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Dónde Está mi Cliente?",
+          "duration": "15 min",
+          "label": "La pregunta correcta"
+        },
+        {
+          "phase": "Desarrollo: Los Canales",
+          "duration": "30 min",
+          "label": "Alcance y costo"
+        },
+        {
+          "phase": "Cierre: Cuánto Cuesta un Cliente",
+          "duration": "15 min",
+          "label": "La métrica clave"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿DÓNDE ESTÁ MI CLIENTE? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte por dónde venderían un producto. Casi todos dirán redes sociales. Explique que la pregunta correcta no es qué canal está de moda, sino dónde está y qué hace el cliente al que se quiere llegar, porque no todos los públicos están en el mismo lugar.",
+          "activity": "Dinámica \"¿Dónde Compran?\": el grupo mapea dónde compra cada uno de tres perfiles de cliente distintos."
+        },
+        {
+          "title": "FASE II: ALCANCE Y COSTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los canales: venta directa, redes sociales, plataformas de comercio, punto físico, intermediarios y recomendación. Compare cada uno por alcance, costo, control sobre la relación con el cliente y rapidez para empezar. Los alumnos evalúan cuatro canales para un mismo producto.",
+          "activity": "Dinámica \"Compara Canales\": cada equipo llena una tabla de alcance, costo y control para cuatro canales."
+        },
+        {
+          "title": "FASE III: CUÁNTO CUESTA UN CLIENTE (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a calcular el costo de adquisición: lo invertido en un canal dividido entre los clientes que trajo. Explique que un canal solo sirve si ese costo es menor que lo que deja el cliente. Los alumnos calculan el costo de adquisición de tres canales y descartan el que no cierra.",
+          "activity": "Dinámica \"El Canal Que No Cierra\": cada equipo calcula costo por cliente y descarta el inviable."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todo el mundo responde \"redes sociales\" cuando le preguntan dónde vender. La pregunta correcta es otra: dónde está y qué hace el cliente al que quieres llegar. Un canal no es bueno o malo en abstracto.",
+      "sections": [
+        {
+          "subtitle": "El canal se elige por el cliente",
+          "content": "No todos los públicos están en el mismo lugar ni compran de la misma forma. Un producto para personas mayores puede venderse mucho mejor por recomendación directa que en una plataforma digital. La pregunta que ordena la decisión es dónde busca, dónde pregunta y dónde compra la persona a la que quiero llegar."
+        },
+        {
+          "subtitle": "Los canales y sus diferencias",
+          "content": "La venta directa da mucho control y poco alcance. Las redes sociales dan alcance amplio con costo variable. Las plataformas de comercio dan visibilidad pero cobran comisión y se quedan con la relación con el cliente. El punto físico da confianza y tiene costo fijo alto. Los intermediarios dan volumen a cambio de margen. La recomendación es la más barata y la más lenta de construir."
+        },
+        {
+          "subtitle": "El costo de adquisición",
+          "content": "Es la métrica que ordena todo: cuánto cuesta conseguir un cliente por ese canal. Se calcula dividiendo lo invertido entre los clientes conseguidos. Si un canal costó $3,000 y trajo diez clientes, cada cliente costó $300. Ese número no significa nada por sí solo: cobra sentido al compararlo con lo que deja el cliente."
+        },
+        {
+          "subtitle": "Cuándo un canal sirve",
+          "content": "Un canal funciona cuando el costo de adquisición es claramente menor que lo que ese cliente deja, contando no solo la primera compra sino las siguientes. Un canal caro puede convenir si los clientes compran de forma recurrente, y uno barato puede no servir si los clientes que trae compran una vez y no vuelven."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la pregunta correcta al elegir canal?",
+          "options": [
+            "Qué canal está de moda",
+            "Cuál es más barato",
+            "Dónde está y qué hace mi cliente"
+          ],
+          "correct": "Dónde está y qué hace mi cliente"
+        },
+        {
+          "question": "¿Es un canal bueno o malo en abstracto?",
+          "options": [
+            "No, depende del cliente",
+            "Sí",
+            "Sí, redes siempre"
+          ],
+          "correct": "No, depende del cliente"
+        },
+        {
+          "question": "¿Qué caracteriza a la venta directa?",
+          "options": [
+            "Mucho alcance, poco control",
+            "Mucho control, poco alcance",
+            "Nada"
+          ],
+          "correct": "Mucho control, poco alcance"
+        },
+        {
+          "question": "¿Qué cobran las plataformas de comercio?",
+          "options": [
+            "Nada",
+            "Solo renta",
+            "Comisión, y se quedan con la relación con el cliente"
+          ],
+          "correct": "Comisión, y se quedan con la relación con el cliente"
+        },
+        {
+          "question": "¿Qué caracteriza al punto físico?",
+          "options": [
+            "Da confianza y tiene costo fijo alto",
+            "Es gratis",
+            "No da confianza"
+          ],
+          "correct": "Da confianza y tiene costo fijo alto"
+        },
+        {
+          "question": "¿Qué canal es el más barato y el más lento?",
+          "options": [
+            "Las redes",
+            "La recomendación",
+            "El intermediario"
+          ],
+          "correct": "La recomendación"
+        },
+        {
+          "question": "¿Cómo se calcula el costo de adquisición?",
+          "options": [
+            "El precio del producto",
+            "La comisión",
+            "Lo invertido entre los clientes conseguidos"
+          ],
+          "correct": "Lo invertido entre los clientes conseguidos"
+        },
+        {
+          "question": "$3,000 invertidos y diez clientes dan:",
+          "options": [
+            "$300 por cliente",
+            "$3,000 por cliente",
+            "$30 por cliente"
+          ],
+          "correct": "$300 por cliente"
+        },
+        {
+          "question": "¿Cuándo sirve un canal?",
+          "options": [
+            "Siempre",
+            "Cuando el costo de adquisición es menor que lo que deja el cliente",
+            "Cuando es popular"
+          ],
+          "correct": "Cuando el costo de adquisición es menor que lo que deja el cliente"
+        },
+        {
+          "question": "¿Puede convenir un canal caro?",
+          "options": [
+            "No, nunca",
+            "Solo en diciembre",
+            "Sí, si los clientes compran de forma recurrente"
+          ],
+          "correct": "Sí, si los clientes compran de forma recurrente"
+        }
+      ],
+      "rubric": "Logrado: compara canales por alcance, costo y control, y calcula costo de adquisición contra valor del cliente. En proceso: enumera canales sin cuantificar. Inicial: entiende que el canal se elige por el cliente."
+    },
+    "teacher_tips": [
+      "Corrija de inmediato el reflejo de \"redes sociales\": ancle la decisión en dónde está el cliente.",
+      "El costo de adquisición comparado con lo que deja el cliente es la idea más transferible de la clase.",
+      "Mencione que las plataformas se quedan con la relación con el cliente: es una consecuencia que casi nadie considera."
+    ]
+  },
+  "S1-4-9": {
+    "code": "S1-4-9",
+    "title": "Flujo de efectivo: por qué un negocio rentable puede quebrar",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Distinguir utilidad de flujo de efectivo y comprender por qué un negocio rentable puede quedarse sin dinero.",
+      "competencies": [
+        "Gestión de Flujo",
+        "Análisis de Liquidez",
+        "Planeación de Cobros y Pagos",
+        "Prevención de Insolvencia"
+      ],
+      "materials": [
+        "Formato de flujo de efectivo mensual",
+        "Calculadora",
+        "Caso de negocio rentable sin liquidez",
+        "Calendario de cobros y pagos",
+        "Cartel de utilidad contra flujo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Rentable y Quebrado",
+          "duration": "15 min",
+          "label": "La paradoja"
+        },
+        {
+          "phase": "Desarrollo: Los Tiempos",
+          "duration": "30 min",
+          "label": "Cuándo entra y cuándo sale"
+        },
+        {
+          "phase": "Cierre: Prevenir",
+          "duration": "15 min",
+          "label": "Qué se puede hacer"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: RENTABLE Y QUEBRADO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente un negocio con utilidad positiva que no puede pagar la nómina. Pregunte cómo es posible. Explique que la utilidad se calcula con ventas registradas, no con dinero cobrado, y que un negocio muere por falta de efectivo aunque sea rentable en el papel.",
+          "activity": "Dinámica \"¿Cómo Es Posible?\": el grupo propone explicaciones antes de conocer la respuesta."
+        },
+        {
+          "title": "FASE II: CUÁNDO ENTRA Y CUÁNDO SALE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique el desfase: se compra material hoy, se produce, se entrega, se factura y se cobra a treinta o sesenta días, pero los sueldos y proveedores no esperan. Los alumnos construyen un flujo mensual de un negocio y detectan el mes donde el saldo se vuelve negativo.",
+          "activity": "Dinámica \"El Mes Rojo\": cada equipo arma un flujo de seis meses y localiza el punto de quiebre."
+        },
+        {
+          "title": "FASE III: QUÉ SE PUEDE HACER (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente las soluciones: pedir anticipos, negociar plazos con proveedores, escalonar entregas, mantener un colchón de efectivo y no crecer más rápido de lo que el flujo aguanta. Insista en que crecer sin flujo es una de las formas más comunes de quebrar.",
+          "activity": "Dinámica \"Arregla el Flujo\": cada equipo aplica dos medidas y recalcula el mes crítico."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay negocios que ganan dinero en el papel y no pueden pagar la nómina el viernes. No es un error de cuentas: es la diferencia entre utilidad y flujo de efectivo, y es una de las causas más comunes de quiebra.",
+      "sections": [
+        {
+          "subtitle": "Utilidad no es dinero en la cuenta",
+          "content": "La utilidad se calcula con las ventas registradas del periodo, aunque todavía no se hayan cobrado. El flujo de efectivo registra únicamente lo que entró y salió de verdad. Un negocio puede tener una utilidad excelente y una cuenta bancaria vacía, porque vendió mucho pero le pagan dentro de dos meses."
+        },
+        {
+          "subtitle": "El desfase que mata",
+          "content": "La secuencia típica es esta: se compra material y se paga pronto, se produce, se entrega y se cobra a treinta, sesenta o noventa días. Mientras tanto, la nómina, la renta y los proveedores siguen venciendo cada mes. Ese desfase entre pagar antes y cobrar después es lo que agota el efectivo de negocios perfectamente rentables."
+        },
+        {
+          "subtitle": "Crecer sin flujo es peligroso",
+          "content": "Es contraintuitivo, pero crecer rápido consume efectivo: más ventas significa más material comprado por adelantado y más cobranza pendiente. Muchos negocios quiebran justo cuando más venden, porque el crecimiento exigió efectivo que no tenían. Crecer al ritmo que el flujo aguanta no es falta de ambición: es supervivencia."
+        },
+        {
+          "subtitle": "Qué se puede hacer",
+          "content": "Pedir anticipos al cliente, negociar plazos más largos con proveedores, escalonar entregas para escalonar cobros, mantener un colchón de efectivo equivalente a varios meses de gastos fijos, y proyectar el flujo con anticipación para ver el mes crítico antes de que llegue. Ninguna de esas medidas es complicada: la difícil es hacerlas antes y no durante la crisis."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Con qué se calcula la utilidad?",
+          "options": [
+            "Con las ventas registradas, aunque no se hayan cobrado",
+            "Con el dinero en la cuenta",
+            "Con los gastos"
+          ],
+          "correct": "Con las ventas registradas, aunque no se hayan cobrado"
+        },
+        {
+          "question": "¿Qué registra el flujo de efectivo?",
+          "options": [
+            "Las ventas del periodo",
+            "Lo que entró y salió de verdad",
+            "Los impuestos"
+          ],
+          "correct": "Lo que entró y salió de verdad"
+        },
+        {
+          "question": "¿Puede un negocio rentable quedarse sin dinero?",
+          "options": [
+            "No",
+            "Solo si roba",
+            "Sí"
+          ],
+          "correct": "Sí"
+        },
+        {
+          "question": "¿Cuál es el desfase típico?",
+          "options": [
+            "Se paga antes y se cobra después",
+            "Se cobra antes y se paga después",
+            "Todo es simultáneo"
+          ],
+          "correct": "Se paga antes y se cobra después"
+        },
+        {
+          "question": "¿Qué no espera?",
+          "options": [
+            "Los clientes",
+            "La nómina, la renta y los proveedores",
+            "Nadie"
+          ],
+          "correct": "La nómina, la renta y los proveedores"
+        },
+        {
+          "question": "¿Consume efectivo crecer rápido?",
+          "options": [
+            "No",
+            "Lo genera",
+            "Sí"
+          ],
+          "correct": "Sí"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Más ventas exigen más material pagado por adelantado",
+            "Porque suben los impuestos",
+            "Porque baja el precio"
+          ],
+          "correct": "Más ventas exigen más material pagado por adelantado"
+        },
+        {
+          "question": "¿Qué medida ayuda al flujo?",
+          "options": [
+            "Vender más rápido sin cobrar",
+            "Pedir anticipos y negociar plazos",
+            "Comprar más material"
+          ],
+          "correct": "Pedir anticipos y negociar plazos"
+        },
+        {
+          "question": "¿Qué tan grande debe ser el colchón?",
+          "options": [
+            "Un día",
+            "No hace falta",
+            "Varios meses de gastos fijos"
+          ],
+          "correct": "Varios meses de gastos fijos"
+        },
+        {
+          "question": "¿Cuál es la parte difícil?",
+          "options": [
+            "Hacerlo antes y no durante la crisis",
+            "Calcularlo",
+            "Explicarlo"
+          ],
+          "correct": "Hacerlo antes y no durante la crisis"
+        }
+      ],
+      "rubric": "Logrado: distingue utilidad de flujo, localiza el mes crítico y aplica medidas correctivas. En proceso: entiende la diferencia sin proyectar. Inicial: reconoce que rentable no significa con dinero."
+    },
+    "teacher_tips": [
+      "La proyección de seis meses con un mes en rojo es el ejercicio que hace visible el concepto.",
+      "Insista en que crecer consume efectivo: es contraintuitivo y explica muchas quiebras reales.",
+      "Si algún alumno tiene negocio familiar, el ejercicio con sus plazos reales de cobro es muy potente."
+    ]
+  },
+  "S1-4-10": {
+    "code": "S1-4-10",
+    "title": "Darme de alta en el SAT: persona física con actividad empresarial",
+    "level": "Secundaria 1",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender qué implica darse de alta como persona física con actividad empresarial y qué obligaciones conlleva.",
+      "competencies": [
+        "Formalización Fiscal",
+        "Comprensión de Obligaciones",
+        "Emisión de Comprobantes",
+        "Planeación Tributaria"
+      ],
+      "materials": [
+        "Guía de trámite de alta",
+        "Ejemplo de comprobante fiscal",
+        "Calendario de obligaciones",
+        "Casos de negocios formales e informales",
+        "Cartel de derechos y obligaciones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Por Qué Formalizarme?",
+          "duration": "15 min",
+          "label": "Lo que se gana"
+        },
+        {
+          "phase": "Desarrollo: Qué Implica",
+          "duration": "30 min",
+          "label": "Obligaciones y beneficios"
+        },
+        {
+          "phase": "Cierre: El Primer Paso",
+          "duration": "15 min",
+          "label": "Cómo empezar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿POR QUÉ FORMALIZARME? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte por qué alguien con un negocio pequeño se daría de alta si puede operar sin hacerlo. Enumere lo que se gana: poder emitir comprobantes y así vender a empresas, acceso a crédito, deducción de gastos y respaldo legal. Sin comprobantes, muchos clientes simplemente no pueden comprarte.",
+          "activity": "Dinámica \"El Cliente Que Se Fue\": el grupo analiza un caso donde se pierde una venta por no poder facturar."
+        },
+        {
+          "title": "FASE II: OBLIGACIONES Y BENEFICIOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las obligaciones: emitir comprobantes, presentar declaraciones periódicas, llevar registro de ingresos y gastos, y conservar la documentación. Y los beneficios: deducir gastos del negocio, acreditar ingresos ante instituciones y operar con empresas. Los alumnos ordenan un calendario de obligaciones.",
+          "activity": "Dinámica \"Mi Calendario Fiscal\": cada equipo ubica obligaciones en un calendario anual."
+        },
+        {
+          "title": "FASE III: EL PRIMER PASO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique en términos generales cómo se inicia: identificación, comprobante de domicilio, cita en la autoridad fiscal y elección del régimen adecuado según el nivel de ingresos. Aclare que existen regímenes simplificados para negocios pequeños y que la orientación oficial es gratuita.",
+          "activity": "Dinámica \"Mi Checklist\": cada alumno arma la lista de requisitos y el orden de los pasos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Muchos negocios pequeños operan sin darse de alta hasta que pierden un cliente por no poder facturar. Formalizarse implica obligaciones reales, pero también abre puertas que sin ello permanecen cerradas.",
+      "sections": [
+        {
+          "subtitle": "Lo que se gana al formalizarse",
+          "content": "Poder emitir comprobantes fiscales abre el mercado de empresas y de clientes que necesitan comprobar sus gastos, que es una parte enorme de la economía. Además permite acreditar ingresos ante instituciones financieras para acceder a crédito, deducir los gastos del negocio y operar con respaldo legal en caso de conflicto."
+        },
+        {
+          "subtitle": "Las obligaciones que implica",
+          "content": "Formalizarse conlleva emitir comprobantes por las ventas, presentar declaraciones en los periodos establecidos, llevar un registro ordenado de ingresos y gastos, y conservar la documentación. No son trámites triviales, pero son previsibles y calendarizables, a diferencia de los problemas que genera operar sin estar registrado."
+        },
+        {
+          "subtitle": "Elegir el régimen adecuado",
+          "content": "Existen distintos regímenes según el tipo de actividad y el nivel de ingresos, y algunos están diseñados específicamente para negocios pequeños con obligaciones simplificadas y tasas menores. Elegir el que corresponde desde el inicio evita pagar más de lo necesario y complicaciones posteriores. La orientación oficial sobre esto es gratuita."
+        },
+        {
+          "subtitle": "Deducir es parte del juego",
+          "content": "Una ventaja poco aprovechada es la deducción: los gastos necesarios para la actividad reducen la base sobre la que se calcula el impuesto. Para deducirlos hace falta el comprobante correspondiente, lo que significa pedir factura de las compras del negocio. Quien no guarda comprobantes termina pagando impuesto sobre ingresos que en realidad ya gastó en operar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué permite emitir comprobantes fiscales?",
+          "options": [
+            "Nada",
+            "Vender a empresas y a quien necesita comprobar gastos",
+            "Pagar menos siempre"
+          ],
+          "correct": "Vender a empresas y a quien necesita comprobar gastos"
+        },
+        {
+          "question": "¿Qué otro beneficio hay?",
+          "options": [
+            "Ganar más automáticamente",
+            "No pagar impuestos",
+            "Acreditar ingresos para acceder a crédito"
+          ],
+          "correct": "Acreditar ingresos para acceder a crédito"
+        },
+        {
+          "question": "¿Cuáles son las obligaciones?",
+          "options": [
+            "Emitir comprobantes, declarar, registrar y conservar documentación",
+            "Ninguna",
+            "Solo pagar"
+          ],
+          "correct": "Emitir comprobantes, declarar, registrar y conservar documentación"
+        },
+        {
+          "question": "¿Son imprevisibles esas obligaciones?",
+          "options": [
+            "Sí",
+            "No, son previsibles y calendarizables",
+            "Cambian cada semana"
+          ],
+          "correct": "No, son previsibles y calendarizables"
+        },
+        {
+          "question": "¿Hay un solo régimen?",
+          "options": [
+            "Sí, uno",
+            "Hay dos siempre",
+            "No, hay varios según actividad e ingresos"
+          ],
+          "correct": "No, hay varios según actividad e ingresos"
+        },
+        {
+          "question": "¿Existen regímenes para negocios pequeños?",
+          "options": [
+            "Sí, con obligaciones simplificadas",
+            "No",
+            "Solo para empresas"
+          ],
+          "correct": "Sí, con obligaciones simplificadas"
+        },
+        {
+          "question": "¿Cuesta la orientación oficial?",
+          "options": [
+            "Sí, mucho",
+            "No, es gratuita",
+            "Solo con contador"
+          ],
+          "correct": "No, es gratuita"
+        },
+        {
+          "question": "¿Qué es deducir?",
+          "options": [
+            "No pagar",
+            "Cobrar más",
+            "Restar gastos necesarios de la base del impuesto"
+          ],
+          "correct": "Restar gastos necesarios de la base del impuesto"
+        },
+        {
+          "question": "¿Qué hace falta para deducir?",
+          "options": [
+            "El comprobante correspondiente",
+            "Solo el recibo de nota",
+            "Nada"
+          ],
+          "correct": "El comprobante correspondiente"
+        },
+        {
+          "question": "¿Qué le pasa a quien no guarda comprobantes?",
+          "options": [
+            "Ahorra",
+            "Paga impuesto sobre ingresos que ya gastó en operar",
+            "No pasa nada"
+          ],
+          "correct": "Paga impuesto sobre ingresos que ya gastó en operar"
+        }
+      ],
+      "rubric": "Logrado: explica beneficios y obligaciones, distingue regímenes y arma el checklist del trámite. En proceso: identifica beneficios sin obligaciones. Inicial: reconoce que formalizarse abre mercado."
+    },
+    "teacher_tips": [
+      "Enfoque el tema en lo que se gana, no en lo que se paga: cambia por completo la disposición del grupo.",
+      "Evite dar cifras y tasas exactas que cambian con las reformas: enseñe la lógica y remita a la orientación oficial.",
+      "La deducción es la ventaja menos conocida y la que más motiva a llevar registro ordenado."
+    ]
+  },
   "S1-SUPREMO-SUELDO": {
     "code": "S1-SUPREMO-SUELDO",
     "title": "Negocia Tu Sueldo",

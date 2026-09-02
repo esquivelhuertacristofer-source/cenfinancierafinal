@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P3-2-7-A",
+  "unit_code": "P3-2-7",
+  "unit_title": "El estado de cuenta: aprender a leerlo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Estado de Cuenta de Ceny",
+  "descripcion": "Llegó el estado de cuenta de Ceny y algo no cuadra. Cada decisión define si el problema se resuelve.",
+  "objetivo": "Aplicar el proceso de revisión y aclaración de un estado de cuenta",
+  "xp": 200,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Llegó el estado de cuenta de la cuenta de ahorro que Ceny abrió con su mamá. El saldo final es menor de lo que esperaban.",
+  "nodo_inicial": "revision",
+  "nodos": {
+    "revision": {
+      "id": "revision",
+      "texto": "El saldo final dice $840 pero Ceny calculaba $940. ¿Qué hace primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Verificar la suma: saldo inicial más abonos menos cargos",
+          "siguiente_nodo": "cargo",
+          "consecuencia": "La cuenta del banco cuadra con sus propios movimientos listados. El problema está en uno de ellos.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Suponer que el banco se equivocó y reclamar de inmediato",
+          "siguiente_nodo": "sin_revisar",
+          "consecuencia": "Reclamar sin revisar hace perder tiempo y credibilidad.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "No hacer nada, seguro se equivocó él",
+          "siguiente_nodo": "ignorar",
+          "consecuencia": "Un cargo no reconocido que nadie revisa se queda ahí para siempre.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-revision.webp"
+    },
+    "sin_revisar": {
+      "id": "sin_revisar",
+      "texto": "En el banco le piden que señale exactamente qué movimiento no reconoce. Ceny no lo revisó. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Volver a casa, revisar movimiento por movimiento y regresar",
+          "siguiente_nodo": "cargo",
+          "consecuencia": "Llegar con el dato exacto es lo que hace que una aclaración avance.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Insistir sin datos",
+          "siguiente_nodo": "ignorar",
+          "consecuencia": "Sin señalar el movimiento, no hay nada que investigar.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-sin_revisar.webp"
+    },
+    "cargo": {
+      "id": "cargo",
+      "texto": "Comparando con su registro, Ceny encuentra un cargo de $100 que no reconoce. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preguntar en casa si alguien más usó la cuenta ese día",
+          "siguiente_nodo": "aclaracion",
+          "consecuencia": "Muchos cargos \"raros\" resultan ser de alguien de la familia.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Ir directo al banco a reclamar",
+          "siguiente_nodo": "aclaracion",
+          "consecuencia": "Puede funcionar, pero se ahorraba el viaje preguntando primero en casa.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Dejarlo pasar, son solo $100",
+          "siguiente_nodo": "ignorar",
+          "consecuencia": "Los cargos pequeños no reclamados suelen repetirse cada mes.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-cargo.webp"
+    },
+    "aclaracion": {
+      "id": "aclaracion",
+      "texto": "Nadie en casa reconoce el cargo. En el estado de cuenta dice que hay 90 días para aclarar. ¿Qué hace Ceny con su mamá?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ir a la sucursal esta semana con el estado de cuenta señalado",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Dentro del plazo y con el documento en mano: la aclaración procede.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        },
+        {
+          "id": "o2",
+          "texto": "Esperar al siguiente estado de cuenta a ver si se corrige solo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Los errores no se corrigen solos, y el plazo corre.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-aclaracion.webp"
+    },
+    "ignorar": {
+      "id": "ignorar",
+      "texto": "Pasaron cuatro meses y el mismo cargo apareció cada mes. Ahora son $400 y el plazo del primero ya venció.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Un cargo de $100 sin revisar se convirtió en $400 y en un plazo vencido. El estado de cuenta existe justamente para que eso no pase.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-ignorar.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El banco investigó, confirmó el error y devolvió los $100 en el siguiente periodo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny verificó la suma, comparó con su registro, descartó a la familia y reclamó dentro del plazo con el documento señalado. Ese es el proceso completo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El cargo siguió apareciendo y la aclaración se complicó por el tiempo transcurrido.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Detectar el problema fue lo difícil y Ceny lo logró. Lo que faltó fue actuar dentro del plazo que el propio documento indicaba.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-2-7-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p3/p3-2-7-a-portada.webp"
+}

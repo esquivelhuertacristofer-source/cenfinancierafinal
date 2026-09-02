@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-3-6-A",
+  "unit_code": "P4-3-6",
+  "unit_title": "El fondo de emergencia: tres meses de tranquilidad",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Es Emergencia o No?",
+  "descripcion": "Clasifica cada situación según si justifica usar el fondo de emergencia.",
+  "objetivo": "Aplicar las tres preguntas para distinguir emergencias reales de deseos",
+  "xp": 400,
+  "instruccion": "Arrastra cada situación a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "emergencia",
+      "label": "Sí es emergencia",
+      "emoji": "🚨",
+      "color": "#EF4444"
+    },
+    {
+      "id": "planeable",
+      "label": "Se puede planear",
+      "emoji": "📅",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "deseo",
+      "label": "Es un deseo",
+      "emoji": "✨",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Se descompuso el refrigerador con comida adentro",
+      "emoji": "🧊",
+      "categoria_correcta": "emergencia",
+      "feedback": "Inesperado, necesario y urgente: las tres respuestas son sí."
+    },
+    {
+      "id": "i2",
+      "label": "Salió el modelo nuevo del celular que quiero",
+      "emoji": "📱",
+      "categoria_correcta": "deseo",
+      "feedback": "Ni inesperado, ni necesario, ni urgente. Ninguna de las tres."
+    },
+    {
+      "id": "i3",
+      "label": "Una consulta médica urgente por un accidente",
+      "emoji": "🏥",
+      "categoria_correcta": "emergencia",
+      "feedback": "La salud urgente es el caso más claro de uso del fondo."
+    },
+    {
+      "id": "i4",
+      "label": "Los útiles escolares de agosto",
+      "emoji": "🎒",
+      "categoria_correcta": "planeable",
+      "feedback": "Ocurre cada año en la misma fecha: se ahorra aparte para eso."
+    },
+    {
+      "id": "i5",
+      "label": "Oferta del 70% en una tienda por dos días",
+      "emoji": "🏷️",
+      "categoria_correcta": "deseo",
+      "feedback": "La prisa la fabrica la tienda, no la necesidad."
+    },
+    {
+      "id": "i6",
+      "label": "Se perdió temporalmente el ingreso principal de la casa",
+      "emoji": "💼",
+      "categoria_correcta": "emergencia",
+      "feedback": "Es exactamente el escenario para el que existen los tres a seis meses."
+    },
+    {
+      "id": "i7",
+      "label": "El cumpleaños de un familiar el mes que viene",
+      "emoji": "🎂",
+      "categoria_correcta": "planeable",
+      "feedback": "La fecha se conoce con anticipación: entra en el presupuesto."
+    },
+    {
+      "id": "i8",
+      "label": "Reparación urgente de una fuga de agua en casa",
+      "emoji": "🚿",
+      "categoria_correcta": "emergencia",
+      "feedback": "Esperar la vuelve más cara y daña más: cumple las tres preguntas."
+    },
+    {
+      "id": "i9",
+      "label": "Un viaje con amigos que se organizó de repente",
+      "emoji": "✈️",
+      "categoria_correcta": "deseo",
+      "feedback": "Que sea de repente no lo vuelve necesario ni urgente."
+    },
+    {
+      "id": "i10",
+      "label": "El pago anual del seguro del coche",
+      "emoji": "🚗",
+      "categoria_correcta": "planeable",
+      "feedback": "Tiene fecha conocida: se aparta durante el año, no sale del fondo."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-6-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-6-a-escena.webp"
+}

@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-1-7-A",
+  "unit_code": "S3-1-7",
+  "unit_title": "El costo real de una carrera: pública, privada y en línea",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "El Costo Real de Estudiar",
+  "descripcion": "Ceny debe elegir entre tres formas de estudiar. Cada decisión define su costo total.",
+  "objetivo": "Comparar modalidades formativas por costo total y retorno",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny puede estudiar en una institución pública en otra ciudad, en una privada local o en línea mientras trabaja. Los tres caminos llevan al mismo título.",
+  "nodo_inicial": "primera",
+  "nodos": {
+    "primera": {
+      "id": "primera",
+      "texto": "Su familia dice que la pública es \"gratis\". ¿Qué observa Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que está en otra ciudad: hay renta, transporte y alimentación durante cuatro años",
+          "siguiente_nodo": "oportunidad",
+          "consecuencia": "Los costos indirectos superan por mucho a los directos.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que efectivamente no costaría nada",
+          "siguiente_nodo": "sorpresa",
+          "consecuencia": "La colegiatura baja no significa costo total bajo.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-primera.webp"
+    },
+    "sorpresa": {
+      "id": "sorpresa",
+      "texto": "Al primer semestre, la renta y el transporte consumen más de lo previsto. ¿Qué aprende?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que los costos indirectos son parte del costo real y hay que presupuestarlos",
+          "siguiente_nodo": "oportunidad",
+          "consecuencia": "Ajusta su presupuesto con las cifras completas.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -8000
+        },
+        {
+          "id": "o2",
+          "texto": "Que hay que pedir un crédito para cubrir la diferencia",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Financiar gastos corrientes con crédito durante cuatro años es muy caro.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-sorpresa.webp"
+    },
+    "oportunidad": {
+      "id": "oportunidad",
+      "texto": "Alguien le señala que también está el ingreso que dejaría de percibir. ¿Cómo lo trata?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Como el costo mayor de todos, y lo suma a la comparación",
+          "siguiente_nodo": "retorno",
+          "consecuencia": "Ahora las tres opciones se pueden comparar de verdad.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 15000
+        },
+        {
+          "id": "o2",
+          "texto": "Lo ignora porque no aparece en ningún recibo",
+          "siguiente_nodo": "retorno",
+          "consecuencia": "Es real aunque no se pague: es dinero que no entra.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -10000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-oportunidad.webp"
+    },
+    "retorno": {
+      "id": "retorno",
+      "texto": "Con los costos completos, ¿cómo decide entre las tres?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Comparando costo total contra diferencia de ingreso esperada y tiempo de recuperación",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Elige la modalidad que recupera la inversión en menos años.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 60000
+        },
+        {
+          "id": "o2",
+          "texto": "Por el prestigio de la institución únicamente",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El prestigio importa, pero no sustituye el análisis de costo y retorno.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-retorno.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny eligió con los tres costos calculados y una estimación clara del retorno.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El costo real de estudiar son tres cosas: lo que pagas, lo que gastas por estudiar y lo que dejas de ganar. El tercero suele ser el mayor y el que nadie calcula.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny estudió, aunque sin haber comparado costo total contra retorno esperado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Una decisión formativa no se toma solo con números: vocación y propósito cuentan. Pero tampoco debería tomarse sin haber hecho las cuentas.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny financió cuatro años de gastos corrientes con crédito y terminó con una deuda enorme.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Los costos indirectos no desaparecen por no haberlos presupuestado: se convierten en deuda. Presupuestarlos desde el inicio habría cambiado la elección.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-1-7-a-portada.webp"
+}

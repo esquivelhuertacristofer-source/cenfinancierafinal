@@ -1,0 +1,201 @@
+{
+  "code": "ACT-S2-2-10-A",
+  "unit_code": "S2-2-10",
+  "unit_title": "Negociar con cobranza sin ceder mis derechos",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Expediente de Cobranza",
+  "descripcion": "Prepara tu registro, tu propuesta y tu respuesta ante la cobranza.",
+  "objetivo": "Construir el expediente y la estrategia para gestionar una cobranza",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La deuda real",
+      "descripcion": "Lo primero es saber exactamente qué se debe.",
+      "campos": [
+        {
+          "id": "saldo_original",
+          "label": "Saldo original de la deuda",
+          "type": "number",
+          "min": 500,
+          "max": 1000000,
+          "default": 35000,
+          "unit": "$",
+          "placeholder": "35000",
+          "requerido": true
+        },
+        {
+          "id": "monto_reclamado",
+          "label": "Monto que reclama la cobranza",
+          "type": "number",
+          "min": 500,
+          "max": 2000000,
+          "default": 62000,
+          "unit": "$",
+          "placeholder": "62000",
+          "requerido": true
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia por recargos e intereses",
+          "type": "calculated",
+          "formula": "monto_reclamado - saldo_original",
+          "unit": "$"
+        },
+        {
+          "id": "meses_atraso",
+          "label": "Meses desde el último pago",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "default": 8,
+          "unit": "meses",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi capacidad real",
+      "descripcion": "La base de cualquier propuesta creíble.",
+      "campos": [
+        {
+          "id": "ingreso",
+          "label": "Ingreso mensual",
+          "type": "number",
+          "min": 1000,
+          "max": 200000,
+          "default": 13000,
+          "unit": "$",
+          "placeholder": "13000",
+          "requerido": true
+        },
+        {
+          "id": "esenciales",
+          "label": "Gastos esenciales",
+          "type": "number",
+          "min": 500,
+          "max": 200000,
+          "default": 10000,
+          "unit": "$",
+          "placeholder": "10000",
+          "requerido": true
+        },
+        {
+          "id": "capacidad",
+          "label": "Lo que realmente puedo destinar al mes",
+          "type": "calculated",
+          "formula": "Math.max(0, ingreso - esenciales)",
+          "unit": "$"
+        },
+        {
+          "id": "ahorro_disponible",
+          "label": "Dinero disponible para un pago único",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "default": 8000,
+          "unit": "$",
+          "placeholder": "8000",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi propuesta",
+      "descripcion": "Concreta, realista y por escrito.",
+      "campos": [
+        {
+          "id": "oferta_unica",
+          "label": "Pago único que puedo ofrecer",
+          "type": "slider",
+          "min": 0,
+          "max": 200000,
+          "step": 500,
+          "default": 8000,
+          "unit": "$",
+          "ayuda": "Un pago único suele obtener mejor descuento.",
+          "requerido": true
+        },
+        {
+          "id": "pct_del_reclamado",
+          "label": "Ese pago como porcentaje de lo reclamado",
+          "type": "calculated",
+          "formula": "Math.round(oferta_unica / Math.max(1, monto_reclamado) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "oferta_mensual",
+          "label": "Alternativa: mensualidad que puedo sostener",
+          "type": "slider",
+          "min": 0,
+          "max": 20000,
+          "step": 100,
+          "default": 1500,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "meses_plan",
+          "label": "Meses que tomaría el plan mensual",
+          "type": "calculated",
+          "formula": "Math.ceil(monto_reclamado / Math.max(1, oferta_mensual))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi registro",
+      "descripcion": "Lo que convierte una situación confusa en un expediente.",
+      "campos": [
+        {
+          "id": "contactos",
+          "label": "Contactos recibidos este mes",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "default": 9,
+          "unit": "contactos",
+          "requerido": true
+        },
+        {
+          "id": "conductas",
+          "label": "Conductas indebidas registradas",
+          "type": "slider",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 2,
+          "unit": "casos",
+          "ayuda": "Amenazas, contacto a terceros, hacerse pasar por autoridad.",
+          "requerido": true
+        },
+        {
+          "id": "nombre_gestor",
+          "label": "Nombre y empresa de quien contacta",
+          "type": "text",
+          "placeholder": "Nombre completo y despacho",
+          "requerido": true
+        },
+        {
+          "id": "acuerdo_escrito",
+          "label": "¿Qué exigirás antes de pagar?",
+          "type": "textarea",
+          "placeholder": "El acuerdo por escrito con monto, fecha y liberación de la deuda",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "expediente_cobranza",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-2-10-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-10-a-escena.webp"
+}

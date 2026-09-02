@@ -1,0 +1,175 @@
+{
+  "code": "ACT-P5-4-8-A",
+  "unit_code": "P5-4-8",
+  "unit_title": "Precios psicológicos y estrategias de descuento",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Construye tu Precio",
+  "descripcion": "Arma tu precio por capas y evalúa el efecto de un descuento.",
+  "objetivo": "Calcular precio, margen y el impacto real de un descuento sobre la utilidad",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mis costos",
+      "descripcion": "Lo que me cuesta producir cada unidad.",
+      "campos": [
+        {
+          "id": "material",
+          "label": "Costo de material por unidad",
+          "type": "slider",
+          "min": 1,
+          "max": 500,
+          "step": 1,
+          "default": 18,
+          "unit": "$",
+          "ayuda": "Todo lo que se consume en una sola pieza.",
+          "requerido": true
+        },
+        {
+          "id": "costos_fijos",
+          "label": "Costos fijos del periodo",
+          "type": "slider",
+          "min": 0,
+          "max": 10000,
+          "step": 100,
+          "default": 1200,
+          "unit": "$",
+          "ayuda": "Permiso, transporte, empaque: se pagan aunque no vendas.",
+          "requerido": true
+        },
+        {
+          "id": "unidades",
+          "label": "Unidades que espero vender en el periodo",
+          "type": "slider",
+          "min": 1,
+          "max": 500,
+          "step": 1,
+          "default": 100,
+          "unit": "unidades",
+          "ayuda": "Entre más vendas, menos fijo carga cada unidad.",
+          "requerido": true
+        },
+        {
+          "id": "costo_total_unidad",
+          "label": "Costo real por unidad",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * 100) / 100",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi margen",
+      "descripcion": "Cuánto quiero ganar sobre el costo.",
+      "campos": [
+        {
+          "id": "margen_deseado",
+          "label": "Margen que quiero sobre el costo",
+          "type": "slider",
+          "min": 5,
+          "max": 200,
+          "step": 5,
+          "default": 60,
+          "unit": "%",
+          "ayuda": "Un margen muy bajo no aguanta imprevistos.",
+          "requerido": true
+        },
+        {
+          "id": "precio_calculado",
+          "label": "Precio que resulta",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "precio_mercado",
+          "label": "Precio de productos similares en el mercado",
+          "type": "slider",
+          "min": 1,
+          "max": 1000,
+          "step": 5,
+          "default": 45,
+          "unit": "$",
+          "ayuda": "Lo que cobran otros por algo comparable.",
+          "requerido": true
+        },
+        {
+          "id": "diferencia_mercado",
+          "label": "Diferencia contra el mercado",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100)) - precio_mercado",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El descuento",
+      "descripcion": "Qué pasa con la utilidad si aplico un descuento.",
+      "campos": [
+        {
+          "id": "descuento",
+          "label": "Descuento que pienso aplicar",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Un descuento sobre el precio golpea directo al margen.",
+          "requerido": true
+        },
+        {
+          "id": "precio_con_descuento",
+          "label": "Precio con descuento",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100) * (1 - descuento / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "utilidad_sin_descuento",
+          "label": "Utilidad por unidad sin descuento",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * margen_deseado / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "utilidad_con_descuento",
+          "label": "Utilidad por unidad con descuento",
+          "type": "calculated",
+          "formula": "Math.round((material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100) * (1 - descuento / 100) - (material + costos_fijos / Math.max(1, unidades)))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Cuánto más tendría que vender",
+      "descripcion": "El descuento solo conviene si aumenta lo suficiente el volumen.",
+      "campos": [
+        {
+          "id": "unidades_para_igualar",
+          "label": "Unidades a vender con descuento para igualar la utilidad",
+          "type": "calculated",
+          "formula": "Math.ceil(unidades * ((material + costos_fijos / Math.max(1, unidades)) * margen_deseado / 100) / Math.max(0.01, (material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100) * (1 - descuento / 100) - (material + costos_fijos / Math.max(1, unidades))))",
+          "unit": "unidades"
+        },
+        {
+          "id": "aumento_necesario",
+          "label": "Aumento de ventas necesario",
+          "type": "calculated",
+          "formula": "Math.ceil(unidades * ((material + costos_fijos / Math.max(1, unidades)) * margen_deseado / 100) / Math.max(0.01, (material + costos_fijos / Math.max(1, unidades)) * (1 + margen_deseado / 100) * (1 - descuento / 100) - (material + costos_fijos / Math.max(1, unidades)))) - unidades",
+          "unit": "unidades"
+        }
+      ]
+    }
+  ],
+  "output_type": "estrategia_precio",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-4-8-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-8-a-escena.webp"
+}

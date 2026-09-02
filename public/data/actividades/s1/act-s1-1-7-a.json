@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-1-7-A",
+  "unit_code": "S1-1-7",
+  "unit_title": "Del salario bruto al neto: ISR, IMSS y lo que sí llega",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "La Oferta de Trabajo",
+  "descripcion": "Ceny recibe dos ofertas de empleo. Los números anunciados no cuentan toda la historia.",
+  "objetivo": "Comparar ofertas laborales considerando neto, prestaciones y formalidad",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "A Ceny le ofrecen dos trabajos: uno formal de $15,000 brutos con todas las prestaciones y uno informal de $14,000 en efectivo sin recibo.",
+  "nodo_inicial": "comparar",
+  "nodos": {
+    "comparar": {
+      "id": "comparar",
+      "texto": "A primera vista el informal parece dejar más. ¿Cómo compara Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Calcular el neto del formal y sumarle el valor de las prestaciones",
+          "siguiente_nodo": "prestaciones",
+          "consecuencia": "El formal deja menos en efectivo pero incluye un paquete que vale bastante.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Comparar solo lo que llega a la mano cada mes",
+          "siguiente_nodo": "sin_red",
+          "consecuencia": "Comparar solo el efectivo ignora todo lo que el empleo formal incluye.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-comparar.webp"
+    },
+    "sin_red": {
+      "id": "sin_red",
+      "texto": "Ceny toma el informal. A los cuatro meses se enferma y necesita atención médica. ¿Qué descubre?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que sin seguridad social todo sale de su bolsillo y sin incapacidad pagada",
+          "siguiente_nodo": "prestaciones",
+          "consecuencia": "El ahorro mensual desapareció en una sola semana de gastos médicos.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -14000
+        },
+        {
+          "id": "o2",
+          "texto": "Que fue mala suerte y no tiene que ver con el empleo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Sí tiene que ver: el paquete de protección era exactamente eso.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-sin_red.webp"
+    },
+    "prestaciones": {
+      "id": "prestaciones",
+      "texto": "Ceny revisa qué incluye el empleo formal además del sueldo. ¿Qué encuentra?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aguinaldo, vacaciones pagadas, seguridad social y aportación al retiro",
+          "siguiente_nodo": "recibo",
+          "consecuencia": "Sumadas, esas prestaciones valen varios miles de pesos al año.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 18000
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el sueldo, lo demás es adorno",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Las prestaciones de ley tienen un valor en pesos perfectamente calculable.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-prestaciones.webp"
+    },
+    "recibo": {
+      "id": "recibo",
+      "texto": "En su primer recibo, el depósito es menor al bruto pactado. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Revisar línea por línea qué se descontó y verificar que corresponda",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Detecta que todo está correcto y entiende el destino de cada retención.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o2",
+          "texto": "Suponer que le están descontando de más y molestarse",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin revisar el recibo no se puede saber si hay un error o no.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-recibo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny eligió el empleo formal entendiendo el valor completo y sabe leer su recibo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Comparar empleos por el efectivo mensual es el error más común. El neto más las prestaciones y la protección es la comparación verdadera.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny está en un empleo formal pero sin entender qué recibe ni qué se le descuenta.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Un recibo de nómina es un documento que conviene leer: contiene el valor real de tu trabajo y es donde se detectan los errores.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny quedó sin protección, gastó sus ahorros en atención médica y sin días pagados.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Los $1,000 mensuales de diferencia se perdieron en una sola semana. Las cuotas de seguridad social compran exactamente lo que le faltó.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-1-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-1-7-a-portada.webp"
+}

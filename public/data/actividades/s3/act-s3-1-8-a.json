@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S3-1-8-A",
+  "unit_code": "S3-1-8",
+  "unit_title": "Trabajar y estudiar: el balance que sí funciona",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Trabajar y Estudiar",
+  "descripcion": "Ajusta tus horas de trabajo y observa el efecto en tu semana y en tu carrera.",
+  "objetivo": "Evaluar la viabilidad y el costo real de combinar trabajo y estudio",
+  "xp": 1000,
+  "inputs": [
+    {
+      "id": "horas_clase",
+      "label": "Horas de clase por semana",
+      "type": "slider",
+      "min": 5,
+      "max": 45,
+      "step": 1,
+      "default": 25,
+      "unit": "h",
+      "referencia": "Solo el tiempo dentro del aula."
+    },
+    {
+      "id": "horas_trabajo",
+      "label": "Horas de trabajo por semana",
+      "type": "slider",
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "default": 24,
+      "unit": "h",
+      "referencia": "El factor que decide si la combinación es sostenible."
+    },
+    {
+      "id": "traslado",
+      "label": "Horas de traslado por semana",
+      "type": "slider",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 8,
+      "unit": "h",
+      "referencia": "Escuela y trabajo sumados."
+    },
+    {
+      "id": "sueno",
+      "label": "Horas de sueño por noche",
+      "type": "slider",
+      "min": 4,
+      "max": 10,
+      "step": 0.5,
+      "default": 7,
+      "unit": "h",
+      "referencia": "No es un lujo negociable: es la condición del resto."
+    }
+  ],
+  "formula": "Math.round(168 - horas_clase - horas_clase * 1.5 - horas_trabajo - traslado - sueno * 7 - 14)",
+  "descripcion_formula": "Horas libres a la semana después de clases, estudio fuera del aula (1.5 horas por hora de clase), trabajo, traslados, sueño y dos horas diarias de alimentación.",
+  "output_label": "Horas libres a la semana",
+  "output_suffix": " h",
+  "escenarios": [
+    {
+      "condicion": "168 - horas_clase - horas_clase * 1.5 - horas_trabajo - traslado - sueno * 7 - 14 < 0",
+      "mensaje": "Esta combinación no cabe en una semana. No es cuestión de esfuerzo: las horas sencillamente no existen, y algo va a ceder.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "horas_trabajo <= 15 && 168 - horas_clase - horas_clase * 1.5 - horas_trabajo - traslado - sueno * 7 - 14 >= 20",
+      "mensaje": "Carga laboral moderada con margen razonable. Aquí trabajar aporta ingreso y experiencia sin costar rendimiento académico.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "horas_trabajo >= 30",
+      "mensaje": "Con esta carga laboral es muy probable que el rendimiento académico se resienta. Reprobar materias alarga la carrera y encarece todo el proyecto.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "sueno <= 5.5",
+      "mensaje": "Estás recortando sueño para que la ecuación cierre. Eso funciona unas semanas y falla a lo largo de una carrera completa.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "168 - horas_clase - horas_clase * 1.5 - horas_trabajo - traslado - sueno * 7 - 14 >= 40",
+      "mensaje": "Tienes bastante margen libre. Podrías aumentar horas de trabajo o dedicar más tiempo a estudiar y adelantar materias.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-8-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-8-a-escena.webp"
+}

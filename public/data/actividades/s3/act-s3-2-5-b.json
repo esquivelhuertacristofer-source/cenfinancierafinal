@@ -4,85 +4,147 @@
   "unit_title": "Psicología del dinero: mentalidad de abundancia vs. escasez",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "JUEGO",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "El Shark Tank del Aula",
-  "descripcion": "Tienes 1 millón de dólares para invertir. Tres emprendedores te presentan sus negocios. ¿A quién le darás tu dinero?",
-  "objetivo": "Desarrollar criterio de inversión basado en escalabilidad, riesgo y retorno potencial",
-  "xp": 500,
-  "mecanica": "Evalúa los proyectos y elige dónde invertir tu capital. Ve el resultado de tu inversión en 5 años.",
-  "escenarios": [
-    {
-      "id": "deal1",
-      "texto": "Proyecto A: 'La Panadería de Doña Rosa'. Es un negocio muy querido, con clientes leales y ventas estables. Quieren el $1M para abrir 5 sucursales más.",
-      "imagen": "🥖",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "Invertiste en estabilidad. 5 años después, recuperaste tu inversión y ganaste un 50% extra. Es un negocio seguro pero creció lento.",
-      "feedback_error": "Elegiste el camino seguro. No está mal, pero en el mundo de las inversiones de alto impacto, te perdiste de los grandes multiplicadores.",
-      "tipo_ataque": "Negocio Tradicional"
+  "titulo": "La Mente en la Caída",
+  "descripcion": "Todo lo que aprendiste sobre inversión es teoría hasta el día en que tu cuenta cae 38% y tienes que decidir con miedo. Ese día llega para todos.",
+  "objetivo": "Reconocer los patrones emocionales que dominan las decisiones financieras bajo presión y aplicar mecanismos para neutralizarlos.",
+  "xp": 800,
+  "personaje_principal": "Ximena",
+  "contexto_inicial": "Ximena lleva 6 años invirtiendo $4,000 al mes. Tenía $520,000. Hoy su cuenta marca $322,000. Su horizonte sigue siendo 25 años.",
+  "nodo_inicial": "el_golpe",
+  "nodos": {
+    "el_golpe": {
+      "id": "el_golpe",
+      "texto": "Abre la app y ve $322,000. Perdió $198,000 en siete semanas. Las noticias dicen que puede caer más. ¿Qué hace en ese momento?",
+      "opciones": [
+        {
+          "id": "cerrar",
+          "texto": "Cerrar la app y no tomar ninguna decisión hoy",
+          "siguiente_nodo": "las_reglas",
+          "consecuencia": "La regla más simple y más efectiva: ninguna decisión importante en estado de pánico.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "leer_reglas",
+          "texto": "Releer las reglas que ella misma escribió cuando estaba tranquila",
+          "siguiente_nodo": "las_reglas",
+          "consecuencia": "Su yo de hace seis años dejó instrucciones para exactamente este día.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "vender",
+          "texto": "Vender todo antes de perder más",
+          "siguiente_nodo": "final_vendio",
+          "consecuencia": "Convierte $198,000 de pérdida en papel en una pérdida definitiva.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -198000
+        },
+        {
+          "id": "noticias",
+          "texto": "Pasar el día leyendo noticias y foros para decidir",
+          "siguiente_nodo": "la_espiral",
+          "consecuencia": "Ocho horas de titulares catastróficos.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "deal2",
-      "texto": "Proyecto B: 'EduMind AI'. Una App que usa inteligencia artificial para enseñar matemáticas de forma personalizada. Es muy arriesgado, pero si funciona, llegará a todo el planeta.",
-      "imagen": "🤖",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Gran golpe! 5 años después, la empresa fue comprada por Google. Tu $1M se convirtió en $20M. ¡Eres un tiburón de las inversiones!",
-      "feedback_error": "❌ Perdiste la oportunidad de tu vida. La tecnología escala de forma que los negocios físicos no pueden competir.",
-      "tipo_ataque": "Startup Tecnológica"
+    "la_espiral": {
+      "id": "la_espiral",
+      "texto": "Cada artículo que lee confirma su miedo, porque el miedo es lo que se lee más y por eso es lo que más se publica. A las once de la noche está convencida de que esta vez sí es diferente.",
+      "opciones": [
+        {
+          "id": "detener",
+          "texto": "Reconocer el sesgo de confirmación y detenerse",
+          "siguiente_nodo": "las_reglas",
+          "consecuencia": "No estaba investigando: estaba buscando permiso para vender.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "vender_igual",
+          "texto": "Vender: \"todos los analistas lo dicen\"",
+          "siguiente_nodo": "final_vendio",
+          "consecuencia": "Los mismos analistas dirán lo contrario en seis meses.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -198000
+        }
+      ]
     },
-    {
-      "id": "deal3",
-      "texto": "Proyecto C: 'CleanGlobal'. Una empresa de limpieza industrial que usa robots básicos. Tienen contratos con 10 fábricas. Es un punto medio entre riesgo y seguridad.",
-      "imagen": "🧹",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "Inversión sólida. La empresa creció bien y tu dinero se triplicó. Un retorno muy decente para un riesgo moderado.",
-      "feedback_error": "Buscaste el punto medio. Es una estrategia válida de diversificación.",
-      "tipo_ataque": "Servicios Escalables"
+    "las_reglas": {
+      "id": "las_reglas",
+      "texto": "Sus reglas escritas dicen: \"1) No vender por miedo. 2) Seguir aportando cada mes. 3) Rebalancear si la desviación pasa 10 puntos. 4) Este dinero es para dentro de 25 años.\" ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "obedecer",
+          "texto": "Obedecer sus propias reglas y seguir aportando",
+          "siguiente_nodo": "la_tentacion",
+          "consecuencia": "Sus $4,000 mensuales ahora compran mucho más de lo mismo.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "pausar",
+          "texto": "Pausar las aportaciones hasta que \"se aclare el panorama\"",
+          "siguiente_nodo": "final_pausa",
+          "consecuencia": "Deja de comprar justo cuando todo está más barato.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -110000
+        }
+      ]
+    },
+    "la_tentacion": {
+      "id": "la_tentacion",
+      "texto": "Tres meses después el mercado sigue plano. Un conocido le presume que él vendió a tiempo y ahora está en efectivo. Ximena siente que quedó como tonta.",
+      "opciones": [
+        {
+          "id": "ignorar",
+          "texto": "Ignorar la comparación: nadie presume las veces que se equivocó",
+          "siguiente_nodo": "final_disciplina",
+          "consecuencia": "Sigue aportando en silencio.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 410000
+        },
+        {
+          "id": "imitar",
+          "texto": "Imitarlo y pasarse a efectivo",
+          "siguiente_nodo": "final_vendio",
+          "consecuencia": "Vende cerca del fondo, movida por comparación social.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -198000
+        }
+      ]
+    },
+    "final_disciplina": {
+      "id": "final_disciplina",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Dos años después el mercado recuperó y superó máximos. Las aportaciones que Ximena hizo durante la caída fueron las más rentables de su vida. Su cuenta llegó a $930,000. Su conocido nunca supo cuándo volver a entrar.",
+      "reflexion_final": "La mayor diferencia de rendimiento entre dos inversionistas con la misma cartera es la conducta. Los tres mecanismos que funcionan son simples: escribir tus reglas cuando estás tranquilo, automatizar las aportaciones para que no dependan de tu ánimo, y no revisar la cuenta todos los días. Mentalidad de escasez es decidir desde el miedo; de abundancia, decidir desde el plan."
+    },
+    "final_pausa": {
+      "id": "final_pausa",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "No vendió, pero dejó de aportar durante catorce meses. Cuando volvió, los precios ya habían subido. Terminó con $110,000 menos que si hubiera seguido su plan.",
+      "reflexion_final": "Esperar a que \"se aclare el panorama\" significa, en la práctica, comprar cuando ya subió. El panorama nunca se ve claro en el momento en que conviene comprar: esa es exactamente la razón por la que está barato."
+    },
+    "final_vendio": {
+      "id": "final_vendio",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Vendió en $322,000. El mercado tocó fondo tres semanas después y en dieciocho meses había recuperado todo. Ximena nunca encontró el momento de volver a entrar y su dinero pasó seis años en una cuenta perdiendo contra la inflación.",
+      "reflexion_final": "Vender en pánico tiene un costo doble: realizas la pérdida y además te quedas fuera de la recuperación. Y hay un tercer costo, el peor: casi nadie vuelve a entrar. Por eso las reglas se escriben antes, cuando todavía se puede pensar."
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Evalúa cada proyecto de negocio y decide si INVERTIR o RECHAZAR la propuesta.",
-  "duracion": 120,
-  "opciones_clasificacion": [
-    "INVERTIR",
-    "RECHAZAR"
-  ],
-  "items": [
-    {
-      "id": "deal1",
-      "label": "Proyecto A: 'La Panadería de Doña Rosa'. Es un negocio muy querido, con clientes leales y ventas est...",
-      "emoji": "🥖",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "Invertiste en estabilidad. 5 años después, recuperaste tu inversión y ganaste un 50% extra. Es un negocio seguro pero creció lento.",
-      "feedback_error": "Elegiste el camino seguro. No está mal, pero en el mundo de las inversiones de alto impacto, te perdiste de los grandes multiplicadores.",
-      "puntos": 100
-    },
-    {
-      "id": "deal2",
-      "label": "Proyecto B: 'EduMind AI'. Una App que usa inteligencia artificial para enseñar matemáticas de forma ...",
-      "emoji": "🤖",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Gran golpe! 5 años después, la empresa fue comprada por Google. Tu $1M se convirtió en $20M. ¡Eres un tiburón de las inversiones!",
-      "feedback_error": "❌ Perdiste la oportunidad de tu vida. La tecnología escala de forma que los negocios físicos no pueden competir.",
-      "puntos": 100
-    },
-    {
-      "id": "deal3",
-      "label": "Proyecto C: 'CleanGlobal'. Una empresa de limpieza industrial que usa robots básicos. Tienen contrat...",
-      "emoji": "🧹",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "Inversión sólida. La empresa creció bien y tu dinero se triplicó. Un retorno muy decente para un riesgo moderado.",
-      "feedback_error": "Buscaste el punto medio. Es una estrategia válida de diversificación.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 300
-  }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

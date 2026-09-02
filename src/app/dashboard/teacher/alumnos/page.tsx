@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
+import { useHasMounted } from "../../../../lib/useHasMounted";
 import {
   Users,
   Search,
@@ -57,6 +58,11 @@ interface Grupo {
   nombre: string;
 }
 
+// Clases por grado escolar: 4 bloques x 10 unidades. Se usa como denominador
+// del avance; antes estaba escrito a mano como 20 y quedo desfasado al crecer
+// el temario.
+const CLASES_POR_GRADO = 40;
+
 export default function AlumnosPage() {
   const [teacher, setTeacher] = useState<TeacherProfile | null>(null);
   const [escuelaNombre, setEscuelaNombre] = useState<string>("");
@@ -70,11 +76,10 @@ export default function AlumnosPage() {
   const [retryKey, setRetryKey] = useState(0);
   const [selected, setSelected] = useState<Student | null>(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const router = useRouter();
 
   useEffect(() => {
-    setMounted(true);
     const init = async () => {
       setLoadError(false);
       try {
@@ -293,7 +298,7 @@ export default function AlumnosPage() {
 
     // KPI boxes
     const kpis = [
-      { label: 'ACTIVIDADES', value: `${student.progress_count}/20` },
+      { label: 'ACTIVIDADES', value: `${student.progress_count}/${CLASES_POR_GRADO}` },
       { label: 'PUNTAJE PROM.', value: `${student.avg_score}/100` },
       { label: 'MIN. INVERTIDOS', value: `${student.total_minutes}` },
     ];
@@ -630,12 +635,12 @@ export default function AlumnosPage() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-slate-400">
                       <span>Avance de Actividades</span>
-                      <span className="text-[#011C40]">{student.progress_count}/20</span>
+                      <span className="text-[#011C40]">{student.progress_count}/{CLASES_POR_GRADO}</span>
                     </div>
                     <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden border border-slate-100">
                       <div
                         className="h-full bg-gradient-to-r from-[#011C40] to-[#FF8C00] rounded-full transition-all duration-1000"
-                        style={{ width: `${Math.min((student.progress_count / 20) * 100, 100)}%` }}
+                        style={{ width: `${Math.min((student.progress_count / CLASES_POR_GRADO) * 100, 100)}%` }}
                       />
                     </div>
                   </div>
@@ -750,12 +755,12 @@ export default function AlumnosPage() {
                 <div className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Actividades</p>
                   <p className="text-5xl font-black text-[#011C40]">
-                    {selected.progress_count}<span className="text-slate-200 text-3xl">/20</span>
+                    {selected.progress_count}<span className="text-slate-200 text-3xl">/{CLASES_POR_GRADO}</span>
                   </p>
                   <div className="w-full h-3 bg-slate-50 rounded-full overflow-hidden border border-slate-100">
                     <div
                       className="h-full bg-[#42E8E0] rounded-full transition-all duration-1000"
-                      style={{ width: `${Math.min((selected.progress_count / 20) * 100, 100)}%` }}
+                      style={{ width: `${Math.min((selected.progress_count / CLASES_POR_GRADO) * 100, 100)}%` }}
                     />
                   </div>
                 </div>

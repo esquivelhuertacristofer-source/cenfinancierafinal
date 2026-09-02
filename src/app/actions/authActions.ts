@@ -11,9 +11,38 @@ function maskEmail(email: string): string {
   return `${local.slice(0, 2)}***@${domain ?? '?'}`;
 }
 
+// Traduce los mensajes de error de Supabase Auth (en inglés y a menudo técnicos)
+// a mensajes en español apropiados para usuarios finales (profesores/alumnos).
+// Los mensajes conocidos y "accionables" se traducen de forma específica; el
+// resto cae a un mensaje genérico para no filtrar detalles internos del backend.
+// El mensaje técnico original siempre queda registrado vía logSecurityEvent.
+const KNOWN_AUTH_ERRORS: Record<string, string> = {
+  'Invalid login credentials': 'Credenciales incorrectas',
+  'Email not confirmed': 'Debes confirmar tu correo electrónico antes de iniciar sesión',
+  'User already registered': 'Ya existe una cuenta registrada con este correo electrónico',
+  'Email rate limit exceeded': 'Se han solicitado demasiados correos. Espera unos minutos e inténtalo de nuevo',
+  'Too many requests': 'Demasiadas solicitudes. Espera un momento e inténtalo de nuevo',
+  'Password should be at least 6 characters': 'La contraseña debe tener al menos 6 caracteres',
+  'Signup requires a valid password': 'La contraseña ingresada no es válida',
+  'Unable to validate email address: invalid format': 'El formato del correo electrónico no es válido',
+  'Token has expired or is invalid': 'El enlace ha expirado o no es válido. Solicita uno nuevo',
+  'New password should be different from the old password': 'La nueva contraseña debe ser diferente a la anterior',
+  'User not found': 'No existe una cuenta con este correo electrónico',
+};
+
+function translateAuthError(message: string | undefined): string {
+  if (!message) return 'Error de autenticación. Inténtalo de nuevo.';
+  return KNOWN_AUTH_ERRORS[message] ?? 'Ocurrió un error al procesar tu solicitud. Inténtalo de nuevo más tarde.';
+}
+
 const LoginSchema = z.object({
   email: z.string().email('Correo electrónico inválido'),
-  password: z.string().min(8, 'La contraseña debe tener al menos 8 caracteres'),
+  // Dos checks encadenados: min(1) distingue "campo vacío" de "campo lleno
+  // pero corto" — Zod acumula ambos issues cuando el string está vacío y
+  // loginAction usa issues[0], así que el orden aquí importa.
+  password: z.string()
+    .min(1, 'La contraseña es requerida')
+    .min(8, 'La contraseña debe tener al menos 8 caracteres'),
 });
 
 export type LoginResult =
@@ -28,7 +57,13 @@ export async function loginAction(email: string, password: string): Promise<Logi
   }
 
   const headerStore = await headers();
+  // cf-connecting-ip: header inyectado por el borde de Cloudflare, no
+  // falsificable por el cliente. x-forwarded-for es solo APPEND-eado por
+  // Cloudflare (no reemplazado), así que un cliente puede anteponer una IP
+  // arbitraria para que split(',')[0] devuelva un valor distinto en cada
+  // intento y evada el rate limiting por IP de abajo.
   const ip =
+    headerStore.get('cf-connecting-ip') ??
     headerStore.get('x-forwarded-for')?.split(',')[0].trim() ??
     headerStore.get('x-real-ip') ??
     'unknown';
@@ -64,9 +99,7 @@ export async function loginAction(email: string, password: string): Promise<Logi
     });
     return {
       success: false,
-      error: authError?.message === 'Invalid login credentials'
-        ? 'Credenciales incorrectas'
-        : (authError?.message ?? 'Error de autenticación'),
+      error: translateAuthError(authError?.message),
     };
   }
 

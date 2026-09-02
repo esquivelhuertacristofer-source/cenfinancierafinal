@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-3-8-B",
+  "unit_code": "P2-3-8",
+  "unit_title": "Faltó dinero: ¿qué recorto primero?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Cuando No Alcanza",
+  "descripcion": "Demuestra que sabes recortar en el orden correcto.",
+  "objetivo": "Verificar la clasificación por niveles y el orden de recorte",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Tengo $150 y mis gastos suman $190. Me faltan:",
+      "opciones": [
+        "$40",
+        "$340",
+        "$50",
+        "$30"
+      ],
+      "correcta": 0,
+      "explicacion": "190 − 150 = 40. Ese es el hueco que hay que cerrar recortando o ingresando más."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres niveles de prioridad son:",
+      "opciones": [
+        "Caro, medio y barato",
+        "Indispensable, ajustable y postergable",
+        "Hoy, mañana y nunca",
+        "Casa, escuela y calle"
+      ],
+      "correcta": 1,
+      "explicacion": "Clasificar antes de recortar es lo que evita cortar lo esencial."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por dónde se empieza a recortar?",
+      "opciones": [
+        "Por lo indispensable",
+        "Por lo más caro",
+        "Por lo postergable",
+        "Por lo primero de la lista"
+      ],
+      "correcta": 2,
+      "explicacion": "De abajo hacia arriba: primero lo que puede esperar sin daño."
+    },
+    {
+      "id": "q4",
+      "texto": "El pasaje para llegar a la escuela es de nivel:",
+      "opciones": [
+        "Dos: ajustable",
+        "Tres: postergable",
+        "No es gasto",
+        "Uno: indispensable"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin pasaje no llegas a clases. Las consecuencias son serias e inmediatas."
+    },
+    {
+      "id": "q5",
+      "texto": "Ajustar un gasto de nivel dos significa:",
+      "opciones": [
+        "Comprarlo más barato o en menor cantidad",
+        "Eliminarlo",
+        "Duplicarlo",
+        "Pagarlo doble"
+      ],
+      "correcta": 0,
+      "explicacion": "No desaparece: se reduce. Es el nivel donde hay más margen de maniobra."
+    },
+    {
+      "id": "q6",
+      "texto": "Si pago hasta que se acabe el dinero sin priorizar:",
+      "opciones": [
+        "Todo sale bien",
+        "Lo que queda sin pagar lo decide el azar",
+        "Sobra dinero",
+        "Nadie se entera"
+      ],
+      "correcta": 1,
+      "explicacion": "El orden en que fuiste comprando decide qué falta, y casi nunca es el correcto."
+    },
+    {
+      "id": "q7",
+      "texto": "Además de recortar, la otra salida es:",
+      "opciones": [
+        "Ignorarlo",
+        "Gastar más rápido",
+        "Buscar aumentar lo que entra",
+        "Pedir prestado siempre"
+      ],
+      "correcta": 2,
+      "explicacion": "Un presupuesto tiene dos lados. A veces el problema no es gastar mucho, sino que entra poco."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Cuándo se recorta el nivel uno?",
+      "opciones": [
+        "Primero",
+        "Nunca",
+        "Cuando se antoje",
+        "Al final y solo si no hay más remedio"
+      ],
+      "correcta": 3,
+      "explicacion": "Proteger lo indispensable es justamente el propósito de todo el ejercicio."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-8-b-escena.webp"
+}

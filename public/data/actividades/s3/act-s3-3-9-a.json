@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S3-3-9-A",
+  "unit_code": "S3-3-9",
+  "unit_title": "Invertir en el extranjero: SIC, dólares y riesgo cambiario",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "El Doble Efecto",
+  "descripcion": "Ajusta rendimiento y tipo de cambio y observa el resultado real en pesos.",
+  "objetivo": "Cuantificar el efecto combinado del rendimiento y el tipo de cambio",
+  "xp": 1000,
+  "inputs": [
+    {
+      "id": "monto",
+      "label": "Monto invertido en pesos",
+      "type": "slider",
+      "min": 5000,
+      "max": 2000000,
+      "step": 5000,
+      "default": 150000,
+      "unit": "$",
+      "referencia": "Lo que conviertes a moneda extranjera para invertir."
+    },
+    {
+      "id": "rendimiento_activo",
+      "label": "Rendimiento del activo en su moneda",
+      "type": "slider",
+      "min": -40,
+      "max": 40,
+      "step": 1,
+      "default": 10,
+      "unit": "%",
+      "referencia": "El primero de los dos movimientos."
+    },
+    {
+      "id": "cambio_peso",
+      "label": "Variación del peso frente a esa moneda",
+      "type": "slider",
+      "min": -30,
+      "max": 30,
+      "step": 1,
+      "default": -5,
+      "unit": "%",
+      "referencia": "Negativo si el peso se deprecia, positivo si se aprecia."
+    },
+    {
+      "id": "comision",
+      "label": "Comisiones totales del periodo",
+      "type": "slider",
+      "min": 0,
+      "max": 5,
+      "step": 0.25,
+      "default": 1,
+      "unit": "%",
+      "referencia": "Operación, custodia y conversión de moneda."
+    }
+  ],
+  "formula": "Math.round(monto * (1 + rendimiento_activo / 100) * (1 - cambio_peso / 100) * (1 - comision / 100) - monto)",
+  "descripcion_formula": "Resultado en pesos: el activo se mueve en su moneda, después se convierte al tipo de cambio nuevo y se descuentan las comisiones.",
+  "output_label": "Resultado en pesos",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "rendimiento_activo > 0 && cambio_peso < 0",
+      "mensaje": "Los dos efectos juegan a tu favor: el activo subió y el peso se depreció. Es el escenario más favorable de la inversión internacional.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "rendimiento_activo > 0 && cambio_peso > rendimiento_activo",
+      "mensaje": "El activo subió pero el peso se apreció más: en pesos terminas perdiendo. Este es exactamente el doble efecto que hay que entender antes de invertir fuera.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "rendimiento_activo < 0 && cambio_peso < 0",
+      "mensaje": "El activo cayó pero el peso se depreció: la exposición cambiaria amortiguó parte de la pérdida. Aquí el tipo de cambio actuó como cobertura.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "rendimiento_activo < 0 && cambio_peso > 0",
+      "mensaje": "Los dos efectos en contra: el activo cayó y además el peso se apreció. Es el peor escenario posible y hay que contemplarlo antes de exponerse.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "comision >= 3",
+      "mensaje": "Con comisiones de este nivel, una parte importante del resultado se va antes de contar rendimiento o tipo de cambio. Compara costos de operación y conversión.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-9-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-9-a-escena.webp"
+}

@@ -4,74 +4,84 @@
   "unit_title": "Mi primer cochinito: ¿cómo y dónde guardo mi dinero?",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "JUEGO",
-  "complejidad": "ALTA",
-  "titulo": "¡Tormenta de Monedas!",
-  "descripcion": "¡El cielo está lloviendo tesoros! Atrapa todo lo que puedas para tu alcancía, pero ¡cuidado con los objetos que te hacen gastar!",
-  "objetivo": "Desarrollar agilidad motriz y capacidad de filtrado entre ahorro y gasto",
-  "xp": 300,
-  "game_type": "catch",
-  "duracion": 45,
-  "velocidad_inicial": "media",
-  "velocidad_incremento": true,
-  "instruccion": "Atrapa monedas, billetes y diamantes. ¡Huye de los dulces y los juguetes que te restan puntos!",
-  "items": [
+  "tipo": "ARRASTRA",
+  "complejidad": "BAJO",
+  "titulo": "¿Dónde está seguro mi dinero?",
+  "descripcion": "Ceny quiere guardar sus ahorros, pero no todos los lugares sirven. Ayúdala a separar los escondites seguros de los que hacen que el dinero se pierda.",
+  "objetivo": "Reconocer qué lugares guardan el dinero de forma segura y cuáles lo exponen a perderse, entendiendo por qué la alcancía es una buena herramienta de ahorro.",
+  "xp": 250,
+  "instruccion": "Arrastra cada lugar a su caja. ¿Ahí el dinero está a salvo, o se puede perder?",
+  "categorias": [
     {
-      "id": "g1",
-      "label": "Moneda de $10",
-      "emoji": "🪙",
-      "tipo": "correcto",
-      "puntos": 100
+      "id": "seguro",
+      "label": "A SALVO",
+      "emoji": "🔒",
+      "color": "#059669"
     },
     {
-      "id": "g2",
-      "label": "Billete de $20",
-      "emoji": "💵",
-      "tipo": "correcto",
-      "puntos": 200
-    },
-    {
-      "id": "g3",
-      "label": "Diamante de Disciplina",
-      "emoji": "💎",
-      "tipo": "correcto",
-      "puntos": 500
-    },
-    {
-      "id": "g4",
-      "label": "Saco de Oro",
-      "emoji": "💰",
-      "tipo": "correcto",
-      "puntos": 1000
-    },
-    {
-      "id": "b1",
-      "label": "Paleta de Caramelo",
-      "emoji": "🍭",
-      "tipo": "incorrecto",
-      "puntos": -150
-    },
-    {
-      "id": "b2",
-      "label": "Carrito de Juguete",
-      "emoji": "🏎️",
-      "tipo": "incorrecto",
-      "puntos": -150
-    },
-    {
-      "id": "b3",
-      "label": "Gasto Hormiga",
-      "emoji": "🐜",
-      "tipo": "incorrecto",
-      "puntos": -300
-    },
-    {
-      "id": "b4",
-      "label": "Alcancía Rota",
-      "emoji": "💔",
-      "tipo": "incorrecto",
-      "puntos": -500
+      "id": "se_pierde",
+      "label": "SE PUEDE PERDER",
+      "emoji": "💨",
+      "color": "#dc2626"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Mi cochinito con tapa",
+      "emoji": "🐷",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Sí! El cochinito tiene un solo lugar para meter el dinero y lo mantiene junto."
+    },
+    {
+      "id": "i2",
+      "label": "El bolsillo del pantalón",
+      "emoji": "👖",
+      "categoria_correcta": "se_pierde",
+      "feedback": "Los bolsillos se rompen y las monedas se caen mientras corres."
+    },
+    {
+      "id": "i3",
+      "label": "Una cuenta en el banco",
+      "emoji": "🏦",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Correcto! El banco cuida tu dinero y lo puedes pedir cuando lo necesites."
+    },
+    {
+      "id": "i4",
+      "label": "La banca del parque",
+      "emoji": "🪑",
+      "categoria_correcta": "se_pierde",
+      "feedback": "Si lo dejas ahí, cualquiera se lo lleva. El dinero necesita un lugar tuyo."
+    },
+    {
+      "id": "i5",
+      "label": "Un sobre que guarda mamá",
+      "emoji": "✉️",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Muy bien! Un adulto de confianza también puede cuidar tus ahorros."
+    },
+    {
+      "id": "i6",
+      "label": "La mochila abierta en el patio",
+      "emoji": "🎒",
+      "categoria_correcta": "se_pierde",
+      "feedback": "Con la mochila abierta el dinero está a la vista de todos."
+    },
+    {
+      "id": "i7",
+      "label": "Mi alcancía dentro del clóset",
+      "emoji": "🚪",
+      "categoria_correcta": "seguro",
+      "feedback": "¡Perfecto! Guardado y fuera de la vista: doblemente seguro."
+    },
+    {
+      "id": "i8",
+      "label": "Suelto entre los cuadernos",
+      "emoji": "📓",
+      "categoria_correcta": "se_pierde",
+      "feedback": "Ahí se olvida, se dobla y termina perdiéndose entre las hojas."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

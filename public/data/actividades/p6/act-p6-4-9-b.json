@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-4-9-B",
+  "unit_code": "P6-4-9",
+  "unit_title": "Contratos básicos: por qué todo se pone por escrito",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Todo Por Escrito",
+  "descripcion": "Comprueba que sabes qué debe llevar un acuerdo.",
+  "objetivo": "Verificar el conocimiento de los elementos mínimos de un acuerdo",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los conflictos de negocios pequeños suelen empezar:",
+      "opciones": [
+        "Por firmar demasiado",
+        "Por cobrar poco",
+        "Por quedar de palabra",
+        "Por cobrar mucho"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada parte recuerda una versión distinta del mismo acuerdo."
+    },
+    {
+      "id": "q2",
+      "texto": "Para terminar en conflicto:",
+      "opciones": [
+        "Hace falta mala fe",
+        "Hace falta un abogado",
+        "Hace falta un contrato",
+        "Basta con que nunca quedara claro"
+      ],
+      "correcta": 3,
+      "explicacion": "Las dos versiones pueden ser sinceras."
+    },
+    {
+      "id": "q3",
+      "texto": "Un acuerdo útil incluye:",
+      "opciones": [
+        "Partes, entregable, precio, plazo, incumplimiento y firmas",
+        "Solo el precio",
+        "Solo las firmas",
+        "Solo la fecha"
+      ],
+      "correcta": 0,
+      "explicacion": "Seis elementos que caben en una página."
+    },
+    {
+      "id": "q4",
+      "texto": "El elemento que evita discusiones por extras es:",
+      "opciones": [
+        "El precio",
+        "Especificar qué NO incluye",
+        "La fecha",
+        "El nombre"
+      ],
+      "correcta": 1,
+      "explicacion": "El cliente da por hechas cosas que nunca se acordaron."
+    },
+    {
+      "id": "q5",
+      "texto": "El otro elemento más olvidado es:",
+      "opciones": [
+        "La firma",
+        "El monto",
+        "Qué pasa si algo falla",
+        "El domicilio"
+      ],
+      "correcta": 2,
+      "explicacion": "Anticipo devuelto, reagenda o penalización."
+    },
+    {
+      "id": "q6",
+      "texto": "Definir el mal escenario es más fácil:",
+      "opciones": [
+        "Durante el conflicto",
+        "Nunca",
+        "Después de cobrar",
+        "Cuando todos están de buen humor"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso se acuerda al principio, no cuando ya falló."
+    },
+    {
+      "id": "q7",
+      "texto": "Protege más:",
+      "opciones": [
+        "Un acuerdo simple y claro",
+        "Un documento largo y confuso",
+        "Un acuerdo verbal",
+        "No tener nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Uno firmado y entendido vale más que uno complejo sin leer."
+    },
+    {
+      "id": "q8",
+      "texto": "Pedir algo por escrito:",
+      "opciones": [
+        "Es desconfianza",
+        "Transmite profesionalismo y protege a ambos",
+        "Es ofensivo",
+        "Retrasa todo"
+      ],
+      "correcta": 1,
+      "explicacion": "Quien se molesta por eso está dando una señal."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-9-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-9-b-escena.webp"
+}

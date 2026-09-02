@@ -4,110 +4,153 @@
   "unit_title": "Construir mi portafolio de inversión: paso a paso",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Valor de tu Palabra",
-  "descripcion": "¿Sabes qué dice tu historial financiero de ti? ¡Descubre cómo convertirte en el cliente favorito de los bancos!",
-  "objetivo": "Identificar los factores que componen el puntaje crediticio y desmitificar el funcionamiento de las sociedades de información crediticia",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
-    {
-      "id": "bur1",
-      "texto": "¿Qué es el 'Buró de Crédito'?",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Rebalancear o No",
+  "descripcion": "Andrea armó su portafolio hace tres años: 60% acciones, 40% deuda. Hoy las acciones subieron tanto que ya son el 78% de su cartera. Su plan dice que debe rebalancear. Su instinto dice que no toque lo que está ganando.",
+  "objetivo": "Comprender el rebalanceo de portafolio como disciplina que obliga a vender caro y comprar barato, y el papel de la conducta en el resultado.",
+  "xp": 800,
+  "personaje_principal": "Andrea",
+  "contexto_inicial": "Portafolio objetivo: 60% renta variable, 40% renta fija. Situación actual: 78% variable, 22% fija. Su horizonte sigue siendo 12 años.",
+  "nodo_inicial": "la_desviacion",
+  "nodos": {
+    "la_desviacion": {
+      "id": "la_desviacion",
+      "texto": "Su cartera se desvió 18 puntos del objetivo. ¿Qué hace?",
       "opciones": [
-        "Una lista negra de gente que no paga",
-        "Una empresa que guarda el historial de cómo usas y pagas tus créditos (buenos y malos)",
-        "Una oficina del gobierno que te multa",
-        "Un banco"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Mito derribado! Estar en el buró es necesario para que te presten; lo que importa es si tienes 'palomita' o 'tache'."
+        {
+          "id": "rebalancear",
+          "texto": "Vender parte de las acciones y volver al 60/40",
+          "siguiente_nodo": "la_incomodidad",
+          "consecuencia": "Vende lo que más subió, justo lo que menos ganas tiene de vender.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "dejar",
+          "texto": "Dejarlo: \"no hay que tocar lo que está ganando\"",
+          "siguiente_nodo": "la_caida",
+          "consecuencia": "Su riesgo real ya es mucho mayor del que decidió tolerar.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "aumentar",
+          "texto": "Aumentar todavía más la parte de acciones: van muy bien",
+          "siguiente_nodo": "la_caida",
+          "consecuencia": "Compra más de lo que ya está caro.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "bur2",
-      "texto": "¿Cuál es el factor que MÁS influye en tu puntaje crediticio?",
+    "la_incomodidad": {
+      "id": "la_incomodidad",
+      "texto": "Los seis meses siguientes las acciones siguen subiendo. Andrea siente que se equivocó: si no hubiera rebalanceado tendría más. Su cuñado le presume sus rendimientos.",
       "opciones": [
-        "Tener mucho dinero en el banco",
-        "Tu puntualidad en los pagos (pagar antes o en la fecha límite)",
-        "El color de tu tarjeta",
-        "Tu edad"
-      ],
-      "correcta": 1,
-      "explicacion": "Pagar a tiempo es el 35% de tu calificación."
+        {
+          "id": "sostener",
+          "texto": "Sostener el plan: fue diseñado para plazos largos, no para seis meses",
+          "siguiente_nodo": "la_crisis",
+          "consecuencia": "Andrea aguanta la incomodidad de tener razón demasiado pronto.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "abandonar",
+          "texto": "Abandonar el plan y volver a subir la parte de acciones",
+          "siguiente_nodo": "la_caida",
+          "consecuencia": "Vuelve a concentrarse justo antes del giro.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "bur3",
-      "texto": "¿Qué es la 'Utilización de Crédito'?",
+    "la_crisis": {
+      "id": "la_crisis",
+      "texto": "Llega una corrección: el mercado accionario cae 34% en cuatro meses. Andrea pierde bastante, pero su 40% en renta fija amortigua el golpe. Y ahora su cartera quedó en 48% acciones: por debajo del objetivo.",
       "opciones": [
-        "Cuánto dinero sacas del cajero",
-        "El porcentaje de tu límite que usas (ej: si tienes $10k y debes $9k, usas el 90%)",
-        "Tener muchas tarjetas",
-        "Pagar el total"
-      ],
-      "correcta": 1,
-      "explicacion": "Los expertos recomiendan no usar más del 30% de tu límite para tener un score alto."
+        {
+          "id": "comprar",
+          "texto": "Rebalancear otra vez: vender deuda y comprar acciones baratas",
+          "siguiente_nodo": "final_disciplina",
+          "consecuencia": "Compra en el peor momento emocional y en el mejor momento matemático.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 210000
+        },
+        {
+          "id": "vender_todo",
+          "texto": "Vender todo y esperar a que \"se calme\"",
+          "siguiente_nodo": "final_panico",
+          "consecuencia": "Convierte una caída temporal en una pérdida definitiva.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -180000
+        },
+        {
+          "id": "esperar",
+          "texto": "No hacer nada y esperar",
+          "siguiente_nodo": "final_pasivo",
+          "consecuencia": "No pierde por vender, pero tampoco aprovecha los precios bajos.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 80000
+        }
+      ]
     },
-    {
-      "id": "bur4",
-      "texto": "¿Cuánto tiempo suele tardar en borrarse una mancha negativa en tu historial?",
+    "la_caida": {
+      "id": "la_caida",
+      "texto": "Con 78% (o más) en acciones, la corrección del 34% la golpea de lleno. Su cartera cae mucho más de lo que su plan original habría permitido.",
       "opciones": [
-        "Para siempre",
-        "Entre 1 y 6 años, dependiendo del monto de la deuda",
-        "Un mes",
-        "Diez años"
-      ],
-      "correcta": 1,
-      "explicacion": "La ley establece que la información debe actualizarse y borrarse después de cierto tiempo si ya pagaste."
+        {
+          "id": "aprender",
+          "texto": "Volver al 60/40 y comprometerse a rebalancear cada año",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "Aprende que el riesgo se controla antes, no durante.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": -90000
+        },
+        {
+          "id": "panico",
+          "texto": "Vender todo: \"esto no es para mí\"",
+          "siguiente_nodo": "final_panico",
+          "consecuencia": "Sale del mercado en el punto más bajo.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -180000
+        }
+      ]
     },
-    {
-      "id": "bur5",
-      "texto": "¿Por qué es importante revisar tu historial al menos una vez al año?",
-      "opciones": [
-        "Para ver si tienes premios",
-        "Para detectar errores o robos de identidad (alguien pidiendo créditos a tu nombre)",
-        "Porque el banco te obliga",
-        "Para gastar dinero"
-      ],
-      "correcta": 1,
-      "explicacion": "El robo de identidad puede destruir tu crédito sin que te des cuenta."
+    "final_disciplina": {
+      "id": "final_disciplina",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Dos años después el mercado recuperó y superó máximos. Las acciones que Andrea compró durante la caída fueron las que más rindieron. Su cartera terminó muy por encima de la de su cuñado, que había vendido.",
+      "reflexion_final": "Rebalancear es un mecanismo que te obliga a hacer lo contrario de lo que sientes: vender lo que subió y comprar lo que bajó. Se siente mal siempre, y es lo que convierte la volatilidad en una ventaja. Su verdadero propósito no es ganar más: es que tu riesgo real nunca se aleje del que decidiste tolerar."
     },
-    {
-      "id": "bur6",
-      "texto": "¿Tener muchas deudas pequeñas es mejor que tener una grande?",
-      "opciones": [
-        "Sí, se ve mejor",
-        "No, tener muchas cuentas abiertas y activas puede hacerte ver como un cliente riesgoso",
-        "Es lo mismo",
-        "Depende del banco"
-      ],
-      "correcta": 1,
-      "explicacion": "La simplicidad y el control son mejores para tu puntaje."
+    "final_pasivo": {
+      "id": "final_pasivo",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "No vendió en pánico y recuperó todo con el tiempo. Ganó menos que si hubiera rebalanceado, y muchísimo más que si hubiera vendido.",
+      "reflexion_final": "No hacer nada durante una caída ya es mejor que la mayoría de las reacciones posibles. Rebalancear añade valor, pero la regla número uno sigue siendo: no vender por miedo."
     },
-    {
-      "id": "bur7",
-      "texto": "¿Cuál es un beneficio de tener un puntaje de crédito alto (>750)?",
-      "opciones": [
-        "Que te den una tarjeta de plástico",
-        "Tener acceso a las tasas de interés más bajas del mercado, ahorrando mucho dinero en préstamos",
-        "No pagar impuestos",
-        "Que el banco te regale una casa"
-      ],
-      "correcta": 1,
-      "explicacion": "Un buen score es como tener un descuento de por vida en el costo del dinero."
+    "final_leccion": {
+      "id": "final_leccion",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Perdió más de lo que su plan contemplaba, pero se quedó y volvió a su asignación objetivo. La siguiente vez su cartera resistió mucho mejor.",
+      "reflexion_final": "Dejar correr las ganancias sin rebalancear hace que tu portafolio se vuelva, poco a poco, mucho más riesgoso de lo que decidiste. El riesgo crece en silencio hasta que llega la caída."
     },
-    {
-      "id": "bur8",
-      "texto": "¿Qué pasa si nunca has pedido un crédito y no estás en el Buró?",
-      "opciones": [
-        "Es perfecto, no debes nada",
-        "Eres un 'fantasma financiero' y los bancos no te prestarán porque no saben si eres buena paga",
-        "Eres rico",
-        "No puedes trabajar"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora sabes que construir un buen historial es una tarea que empieza desde joven."
+    "final_panico": {
+      "id": "final_panico",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Vendió todo en el fondo del mercado. Ocho meses después los precios habían recuperado por completo, pero ella ya estaba fuera y nunca encontró \"el momento\" de volver a entrar.",
+      "reflexion_final": "El mayor riesgo de un portafolio no son las acciones que contiene: es la persona que lo administra. Por eso las reglas se escriben antes, cuando no hay emociones, y se obedecen después, cuando sí las hay."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

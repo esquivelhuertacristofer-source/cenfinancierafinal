@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-1-6-B",
+  "unit_code": "P2-1-6",
+  "unit_title": "Monedas conmemorativas y billetes que ya no circulan",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "¿Vale o No Vale?",
+  "descripcion": "Demuestra que sabes distinguir el dinero que circula del que solo se colecciona.",
+  "objetivo": "Verificar la distinción entre valor legal y valor de colección",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una moneda conmemorativa de $20 vale legalmente:",
+      "opciones": [
+        "$20",
+        "$200",
+        "Nada",
+        "Depende de la tienda"
+      ],
+      "correcta": 0,
+      "explicacion": "El diseño la hace especial, pero su denominación sigue siendo veinte pesos."
+    },
+    {
+      "id": "q2",
+      "texto": "El valor legal lo determina:",
+      "opciones": [
+        "Los coleccionistas",
+        "El Banco de México",
+        "Las tiendas",
+        "Los periódicos"
+      ],
+      "correcta": 1,
+      "explicacion": "Banxico es la única autoridad que emite y da curso legal al dinero mexicano."
+    },
+    {
+      "id": "q3",
+      "texto": "Un billete retirado hace décadas:",
+      "opciones": [
+        "Vale más en la tienda",
+        "Vale exactamente igual",
+        "Ya no compra, pero puede tener valor de colección",
+        "Es falso"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dos valores son independientes: uno puede ser cero y el otro alto."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Por qué el banco renueva las familias de billetes?",
+      "opciones": [
+        "Por moda",
+        "Para que valgan más",
+        "Porque se acaban",
+        "Para mejorar la seguridad contra falsificaciones"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada familia nueva incorpora candados más difíciles de copiar."
+    },
+    {
+      "id": "q5",
+      "texto": "Alguien me ofrece monedas \"muy valiosas\" a cambio de mi dinero. Lo correcto es:",
+      "opciones": [
+        "Consultarlo con un adulto antes",
+        "Aceptar rápido",
+        "Cambiar solo la mitad",
+        "Pedir más monedas"
+      ],
+      "correcta": 0,
+      "explicacion": "Es un engaño frecuente. Las piezas valiosas se valúan con especialistas, no en la calle."
+    },
+    {
+      "id": "q6",
+      "texto": "Una moneda de $10 rayada y sucia vale:",
+      "opciones": [
+        "Menos de $10",
+        "$10 completos",
+        "Nada",
+        "Solo para colección"
+      ],
+      "correcta": 1,
+      "explicacion": "El valor está en la denominación, no en el estado de la pieza."
+    },
+    {
+      "id": "q7",
+      "texto": "Encuentro un billete antiguo en un cajón. ¿Qué hago?",
+      "opciones": [
+        "Tirarlo",
+        "Venderlo en la calle",
+        "Que un adulto pregunte en el banco",
+        "Pintarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Algunos billetes retirados todavía se pueden canjear. Vale la pena preguntar."
+    },
+    {
+      "id": "q8",
+      "texto": "Una moneda extranjera sin cambiar:",
+      "opciones": [
+        "Compra igual que un peso",
+        "Vale el doble",
+        "Es ilegal",
+        "No compra nada aquí hasta cambiarla"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada país tiene su moneda de curso legal. La de otro país hay que cambiarla primero."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-6-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-6-b-escena.webp"
+}

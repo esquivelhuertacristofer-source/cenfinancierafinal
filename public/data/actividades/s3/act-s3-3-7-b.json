@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-3-7-B",
+  "unit_code": "S3-3-7",
+  "unit_title": "Ingresos pasivos reales contra promesas de internet",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Ingreso Pasivo Real",
+  "descripcion": "Comprueba que distingues lo real de la promesa.",
+  "objetivo": "Verificar la evaluación crítica de propuestas de ingreso pasivo",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El ingreso pasivo es:",
+      "opciones": [
+        "Dinero que aparece solo",
+        "Un sueldo",
+        "Una herencia",
+        "El que no exige intercambiar tiempo por dinero continuamente"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo pasivo es el cobro, no la construcción."
+    },
+    {
+      "id": "q2",
+      "texto": "Casi siempre viene de:",
+      "opciones": [
+        "Capital previo, trabajo previo o ambos",
+        "La suerte",
+        "La nada",
+        "Reclutar gente"
+      ],
+      "correcta": 0,
+      "explicacion": "Confundir cobro con construcción es lo que hace efectivas las promesas."
+    },
+    {
+      "id": "q3",
+      "texto": "Una renta de inmueble requiere:",
+      "opciones": [
+        "Solo capital",
+        "Capital, gestión, reparaciones y aguantar periodos vacíos",
+        "Nada",
+        "Solo suerte"
+      ],
+      "correcta": 1,
+      "explicacion": "Es bastante menos pasiva de lo que se anuncia."
+    },
+    {
+      "id": "q4",
+      "texto": "Un producto digital:",
+      "opciones": [
+        "Se vende solo para siempre",
+        "No requiere trabajo",
+        "Deja de venderse si nadie lo actualiza",
+        "Es ingreso garantizado"
+      ],
+      "correcta": 2,
+      "explicacion": "Ninguna fuente es completamente pasiva."
+    },
+    {
+      "id": "q5",
+      "texto": "Una señal de alarma es:",
+      "opciones": [
+        "Rendimientos moderados",
+        "Un contrato claro",
+        "Registro oficial",
+        "Rendimientos altos presentados como garantizados"
+      ],
+      "correcta": 3,
+      "explicacion": "Ninguna inversión real garantiza rendimientos altos."
+    },
+    {
+      "id": "q6",
+      "texto": "Si las ganancias dependen de reclutar a otros:",
+      "opciones": [
+        "Es la mecánica típica de un fraude",
+        "Es un buen modelo",
+        "Es normal",
+        "Es más seguro"
+      ],
+      "correcta": 0,
+      "explicacion": "El dinero de los nuevos paga a los antiguos."
+    },
+    {
+      "id": "q7",
+      "texto": "La señal más reveladora es:",
+      "opciones": [
+        "Que tarde en pagar",
+        "Que nadie explique de dónde sale el dinero",
+        "Que sea nueva",
+        "Que sea extranjera"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa pregunta desmonta casi cualquier esquema."
+    },
+    {
+      "id": "q8",
+      "texto": "Las fuentes legítimas:",
+      "opciones": [
+        "Rinden muchísimo y rápido",
+        "No existen",
+        "Rinden menos, tardan más y sí funcionan",
+        "Son secretas"
+      ],
+      "correcta": 2,
+      "explicacion": "Aburrido y real vence a emocionante e inexistente."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-7-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-7-b-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-1-10-B",
+  "unit_code": "S1-1-10",
+  "unit_title": "La canasta básica: cuánto cuesta vivir en México",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "La Canasta Básica",
+  "descripcion": "Comprueba que entiendes cuánto cuesta vivir.",
+  "objetivo": "Verificar la comprensión del costo real de un hogar",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La canasta básica es:",
+      "opciones": [
+        "Solo la comida del mes",
+        "El conjunto de bienes y servicios para vivir",
+        "Una promoción",
+        "Un impuesto"
+      ],
+      "correcta": 1,
+      "explicacion": "Hay una versión alimentaria y una ampliada."
+    },
+    {
+      "id": "q2",
+      "texto": "La canasta ampliada suma:",
+      "opciones": [
+        "Solo más comida",
+        "Nada",
+        "Vivienda, transporte, salud, educación y vestido",
+        "Solo transporte"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la que refleja el costo real de sostener un hogar."
+    },
+    {
+      "id": "q3",
+      "texto": "Confundir ambas lleva a:",
+      "opciones": [
+        "Sobrestimar el costo",
+        "No pasa nada",
+        "Ahorrar más",
+        "Subestimar el costo real de vivir"
+      ],
+      "correcta": 3,
+      "explicacion": "Y a presupuestos que fallan todos los meses."
+    },
+    {
+      "id": "q4",
+      "texto": "En hogares de ingreso bajo, la categoría más grande suele ser:",
+      "opciones": [
+        "Alimentación",
+        "Vestido",
+        "Educación",
+        "Salud"
+      ],
+      "correcta": 0,
+      "explicacion": "Entre más bajo el ingreso, mayor el peso de la comida."
+    },
+    {
+      "id": "q5",
+      "texto": "El costo de vivir varía por región sobre todo por:",
+      "opciones": [
+        "La comida",
+        "Vivienda y transporte",
+        "El vestido",
+        "La salud"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso la referencia nacional no sustituye el cálculo local."
+    },
+    {
+      "id": "q6",
+      "texto": "Omitir una categoría del costeo:",
+      "opciones": [
+        "No afecta",
+        "Mejora el resultado",
+        "Hace que el presupuesto falle",
+        "Es recomendable"
+      ],
+      "correcta": 2,
+      "explicacion": "El gasto ocurre aunque no se haya anotado."
+    },
+    {
+      "id": "q7",
+      "texto": "Un salario mínimo para una familia:",
+      "opciones": [
+        "Siempre alcanza",
+        "Siempre sobra",
+        "Depende del mes",
+        "En muchos casos no alcanza"
+      ],
+      "correcta": 3,
+      "explicacion": "Es información para decidir, no para desanimarse."
+    },
+    {
+      "id": "q8",
+      "texto": "Ese dato explica:",
+      "opciones": [
+        "Que en muchos hogares trabajen varias personas",
+        "Que la gente gaste mal",
+        "Que no haya empleo",
+        "Que los precios sean bajos"
+      ],
+      "correcta": 0,
+      "explicacion": "También explica los ingresos complementarios y la informalidad."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-10-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-10-b-escena.webp"
+}

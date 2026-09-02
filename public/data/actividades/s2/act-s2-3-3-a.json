@@ -4,123 +4,145 @@
   "unit_title": "Construir mi portafolio de inversión: paso a paso",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "JUEGO",
-  "complejidad": "MEDIO",
-  "titulo": "Mi Buró de Crédito",
-  "descripcion": "Tu reputación financiera es como un motor: si la cuidas, te llevará lejos; si la descuidas, te dejará varado.",
-  "objetivo": "Experimentar el impacto de la puntualidad y monto de los pagos en el puntaje crediticio personal",
-  "xp": 500,
-  "mecanica": "Toma decisiones de pago cada mes y observa tu PUNTAJE (300 a 850 puntos).",
-  "escenarios": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "Arma tu Portafolio",
+  "descripcion": "Un portafolio no es una lista de cosas que te gustan: es una asignación deliberada de porcentajes que refleja tu plazo y tu tolerancia al riesgo. Constrúyelo y mira qué tan expuesto quedas.",
+  "objetivo": "Diversificar el capital entre clases de activos para optimizar el equilibrio entre riesgo y rendimiento según el horizonte personal.",
+  "xp": 750,
+  "output_type": "portafolio",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "bur1",
-      "texto": "Mes 1: Llega tu cuenta del celular ($500). Tienes el dinero completo.",
-      "imagen": "📱",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Bien! Pagar el total a tiempo es la mejor forma de subir puntos. Tu Score sube +20.",
-      "feedback_error": "❌ Mal inicio. Retrasarte en servicios básicos daña tu reputación de inmediato. Score -50.",
-      "tipo_ataque": "Pago de Servicios"
+      "id": "perfil",
+      "titulo": "🧭 Tu punto de partida",
+      "descripcion": "La asignación correcta se deriva del plazo, no del entusiasmo.",
+      "campos": [
+        {
+          "id": "capital",
+          "label": "Capital a invertir ($)",
+          "type": "number",
+          "placeholder": "Ej: 100000",
+          "requerido": true
+        },
+        {
+          "id": "anios",
+          "label": "¿En cuántos años lo necesitas?",
+          "type": "number",
+          "placeholder": "Ej: 15",
+          "requerido": true
+        },
+        {
+          "id": "variable_sugerida",
+          "label": "% sugerido en renta variable",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.min(80, anios * 5))",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Regla práctica: más plazo, más renta variable. Con menos de 3 años, casi todo debería ir a renta fija."
+        }
+      ]
     },
     {
-      "id": "bur2",
-      "texto": "Mes 2: Gastaste de más en la tarjeta. El pago total es de $5,000, pero el banco te deja pagar solo $500 (mínimo).",
-      "imagen": "💳",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Excelente! Al pagar el mínimo solo mantienes el score, pero tu deuda crece. Es mejor pagar siempre el total.",
-      "feedback_error": "❌ Cuidado. Pagar el mínimo te mantiene 'vivo', pero indica al banco que tienes problemas de liquidez. Score estable pero deuda peligrosa.",
-      "tipo_ataque": "Pago de Tarjeta"
+      "id": "asignacion",
+      "titulo": "📊 Tu asignación",
+      "descripcion": "Reparte tu capital. La suma debería dar 100%.",
+      "campos": [
+        {
+          "id": "pct_deuda",
+          "label": "% en renta fija (CETES, bonos, fondos de deuda)",
+          "type": "number",
+          "placeholder": "Ej: 40",
+          "requerido": true
+        },
+        {
+          "id": "pct_acciones",
+          "label": "% en renta variable (acciones, ETFs)",
+          "type": "number",
+          "placeholder": "Ej: 45",
+          "requerido": true
+        },
+        {
+          "id": "pct_internacional",
+          "label": "% en activos internacionales",
+          "type": "number",
+          "placeholder": "Ej: 10",
+          "requerido": true,
+          "ayuda": "Tener todo en un solo país es concentrar riesgo país. El SIC permite diversificar desde México."
+        },
+        {
+          "id": "pct_alternativos",
+          "label": "% en alternativos (FIBRAs, oro, otros)",
+          "type": "number",
+          "placeholder": "Ej: 5",
+          "requerido": true
+        },
+        {
+          "id": "suma",
+          "label": "Suma total",
+          "type": "calculated",
+          "formula": "pct_deuda + pct_acciones + pct_internacional + pct_alternativos",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Debe dar 100. Si no da, revisa: un portafolio mal sumado es un portafolio mal pensado."
+        }
+      ]
     },
     {
-      "id": "bur3",
-      "texto": "Mes 3: Tienes una emergencia y decides NO pagar la tarjeta este mes para ahorrar ese dinero.",
-      "imagen": "🆘",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Exacto! No pagar es la peor decisión. Siempre es mejor negociar con el banco o pagar aunque sea un poco.",
-      "feedback_error": "❌ ¡Desastre! Un mes sin pago es una mancha roja que tarda años en borrarse. Score -100.",
-      "tipo_ataque": "Impago"
+      "id": "riesgo",
+      "titulo": "📉 Qué pasaría en una crisis",
+      "descripcion": "La prueba real de un portafolio no es cuánto gana en un buen año: es cuánto pierde en el peor.",
+      "campos": [
+        {
+          "id": "caida_estimada",
+          "label": "Caída estimada en una crisis fuerte",
+          "type": "calculated",
+          "formula": "Math.round((pct_acciones * 0.40 + pct_internacional * 0.35 + pct_alternativos * 0.25 + pct_deuda * 0.03))",
+          "unit": "%",
+          "requerido": false
+        },
+        {
+          "id": "perdida_pesos",
+          "label": "Lo que verías perder temporalmente",
+          "type": "calculated",
+          "formula": "Math.round(capital * (pct_acciones * 0.40 + pct_internacional * 0.35 + pct_alternativos * 0.25 + pct_deuda * 0.03) / 100)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Míralo bien. Si esa cifra te haría vender, tu portafolio tiene demasiada renta variable para ti."
+        }
+      ]
     },
     {
-      "id": "bur4",
-      "texto": "Mes 4: Te ofrecen una nueva tarjeta de crédito 'oro' con límite muy alto. Ya tienes 3 tarjetas.",
-      "imagen": "✨",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Muy sabio! Pedir muchos créditos en poco tiempo hace que el banco piense que estás desesperado por dinero. Score -10 por la consulta.",
-      "feedback_error": "❌ ¡Error! Demasiadas consultas a tu buró en poco tiempo bajan tu puntaje. Se ve como comportamiento riesgoso.",
-      "tipo_ataque": "Consultas Excesivas"
-    },
-    {
-      "id": "bur5",
-      "texto": "Mes 5: Quieres comprar tu primera casa. El banco revisa tu Score de 5 meses.",
-      "imagen": "🏠",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades! Si mantuviste un score alto (>700), el banco te ofrece una tasa de interés baja. ¡Ahorrarás miles de dólares!",
-      "feedback_error": "❌ Rechazado. Con un score bajo, el banco no confía en ti. Tendrás que rentar por más años.",
-      "tipo_ataque": "Solicitud Hipotecaria"
+      "id": "reglas",
+      "titulo": "📋 Tus reglas escritas",
+      "descripcion": "Las reglas se escriben en calma para poder obedecerlas en pánico.",
+      "campos": [
+        {
+          "id": "aporte_mensual",
+          "label": "Aportación mensual comprometida ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        },
+        {
+          "id": "rebalanceo",
+          "label": "¿Cada cuánto revisarás y rebalancearás?",
+          "type": "text",
+          "placeholder": "Ej: una vez al año, en enero",
+          "requerido": true,
+          "ayuda": "Rebalancear es vender un poco de lo que subió y comprar lo que bajó: obliga a comprar barato."
+        },
+        {
+          "id": "proyeccion",
+          "label": "Valor estimado al final del plazo",
+          "type": "calculated",
+          "formula": "Math.round(capital * Math.pow(1.05, anios) + aporte_mensual * ((Math.pow(1 + 0.05/12, anios*12) - 1) / (0.05/12)))",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Con un rendimiento real del 5% anual, ya descontada la inflación."
+        }
+      ]
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Toma decisiones de pago cada mes. Elige PAGAR o NO PAGAR y observa tu puntaje de buró.",
-  "duracion": 120,
-  "opciones_clasificacion": [
-    "PAGAR A TIEMPO",
-    "NO PAGAR / MÍNIMO"
-  ],
-  "items": [
-    {
-      "id": "bur1",
-      "label": "Mes 1: Llega tu cuenta del celular ($500). Tienes el dinero completo.",
-      "emoji": "📱",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Bien! Pagar el total a tiempo es la mejor forma de subir puntos. Tu Score sube +20.",
-      "feedback_error": "❌ Mal inicio. Retrasarte en servicios básicos daña tu reputación de inmediato. Score -50.",
-      "puntos": 100
-    },
-    {
-      "id": "bur2",
-      "label": "Mes 2: Gastaste de más en la tarjeta. El pago total es de $5,000, pero el banco te deja pagar solo $...",
-      "emoji": "💳",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Excelente! Al pagar el mínimo solo mantienes el score, pero tu deuda crece. Es mejor pagar siempre el total.",
-      "feedback_error": "❌ Cuidado. Pagar el mínimo te mantiene 'vivo', pero indica al banco que tienes problemas de liquidez. Score estable pero deuda peligrosa.",
-      "puntos": 100
-    },
-    {
-      "id": "bur3",
-      "label": "Mes 3: Tienes una emergencia y decides NO pagar la tarjeta este mes para ahorrar ese dinero.",
-      "emoji": "🆘",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Exacto! No pagar es la peor decisión. Siempre es mejor negociar con el banco o pagar aunque sea un poco.",
-      "feedback_error": "❌ ¡Desastre! Un mes sin pago es una mancha roja que tarda años en borrarse. Score -100.",
-      "puntos": 100
-    },
-    {
-      "id": "bur4",
-      "label": "Mes 4: Te ofrecen una nueva tarjeta de crédito 'oro' con límite muy alto. Ya tienes 3 tarjetas.",
-      "emoji": "✨",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Muy sabio! Pedir muchos créditos en poco tiempo hace que el banco piense que estás desesperado por dinero. Score -10 por la consulta.",
-      "feedback_error": "❌ ¡Error! Demasiadas consultas a tu buró en poco tiempo bajan tu puntaje. Se ve como comportamiento riesgoso.",
-      "puntos": 100
-    },
-    {
-      "id": "bur5",
-      "label": "Mes 5: Quieres comprar tu primera casa. El banco revisa tu Score de 5 meses.",
-      "emoji": "🏠",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades! Si mantuviste un score alto (>700), el banco te ofrece una tasa de interés baja. ¡Ahorrarás miles de dólares!",
-      "feedback_error": "❌ Rechazado. Con un score bajo, el banco no confía en ti. Tendrás que rentar por más años.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  "versión": "2026.Alineada.1"
 }

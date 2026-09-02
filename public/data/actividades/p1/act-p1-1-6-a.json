@@ -1,0 +1,122 @@
+{
+  "code": "ACT-P1-1-6-A",
+  "unit_code": "P1-1-6",
+  "unit_title": "Contar mis monedas: sumar de 1, 2, 5 y 10 pesos",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Montoncitos de Diez",
+  "descripcion": "Ceny recogió un montón de monedas revueltas del piso del mercado. Ayúdale a formar grupos que valgan exactamente lo mismo.",
+  "objetivo": "Reconocer combinaciones de monedas equivalentes a $10 y distinguirlas de las que no llegan o se pasan",
+  "xp": 250,
+  "instruccion": "Arrastra cada combinación de monedas a su caja: ¿suma exactamente $10, se queda corta o se pasa?",
+  "categorias": [
+    {
+      "id": "exacto",
+      "label": "Suma justo $10",
+      "emoji": "🎯",
+      "color": "#10B981"
+    },
+    {
+      "id": "falta",
+      "label": "Le falta para $10",
+      "emoji": "⬇️",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "sobra",
+      "label": "Se pasa de $10",
+      "emoji": "⬆️",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Dos monedas de $5",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "5 + 5 = 10. ¡Justo! Dos monedas grandes valen lo mismo que una de diez."
+    },
+    {
+      "id": "i2",
+      "label": "Cinco monedas de $2",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "2 + 2 + 2 + 2 + 2 = 10. Son cinco piezas, pero valen igual que una sola de $10."
+    },
+    {
+      "id": "i3",
+      "label": "Una de $5 y dos de $2",
+      "emoji": "🪙",
+      "categoria_correcta": "falta",
+      "feedback": "5 + 2 + 2 = 9. Te falta un peso para llegar a $10."
+    },
+    {
+      "id": "i4",
+      "label": "Una de $10",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "¡La forma más simple! Una sola moneda que vale diez pesos."
+    },
+    {
+      "id": "i5",
+      "label": "Tres monedas de $5",
+      "emoji": "🪙",
+      "categoria_correcta": "sobra",
+      "feedback": "5 + 5 + 5 = 15. Te pasaste por $5."
+    },
+    {
+      "id": "i6",
+      "label": "Diez monedas de $1",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "Diez piezas pequeñas, mismo valor. Muchas monedas no significa más dinero."
+    },
+    {
+      "id": "i7",
+      "label": "Una de $5, una de $2 y una de $1",
+      "emoji": "🪙",
+      "categoria_correcta": "falta",
+      "feedback": "5 + 2 + 1 = 8. Te faltan dos pesos."
+    },
+    {
+      "id": "i8",
+      "label": "Una de $5, dos de $2 y una de $1",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "5 + 2 + 2 + 1 = 10. ¡Combinación mixta perfecta!"
+    },
+    {
+      "id": "i9",
+      "label": "Seis monedas de $2",
+      "emoji": "🪙",
+      "categoria_correcta": "sobra",
+      "feedback": "2 x 6 = 12. Dos pesos de más."
+    },
+    {
+      "id": "i10",
+      "label": "Cuatro monedas de $2",
+      "emoji": "🪙",
+      "categoria_correcta": "falta",
+      "feedback": "2 x 4 = 8. Necesitas una moneda de $2 más."
+    },
+    {
+      "id": "i11",
+      "label": "Una de $10 y una de $1",
+      "emoji": "🪙",
+      "categoria_correcta": "sobra",
+      "feedback": "10 + 1 = 11. Un peso de más."
+    },
+    {
+      "id": "i12",
+      "label": "Dos de $2 y seis de $1",
+      "emoji": "🪙",
+      "categoria_correcta": "exacto",
+      "feedback": "2 + 2 + 1 + 1 + 1 + 1 + 1 + 1 = 10. ¡Ocho monedas para el mismo valor!"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-6-a-escena.webp"
+}

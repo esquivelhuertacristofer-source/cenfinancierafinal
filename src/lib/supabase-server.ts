@@ -8,6 +8,15 @@ export async function createSupabaseServerClient() {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
+      // secure: true — @supabase/ssr no lo marca por defecto (ver
+      // DEFAULT_COOKIE_OPTIONS en el propio paquete, que omite `secure` por
+      // completo). Sin esto, las cookies de sesión (access/refresh token) se
+      // enviarían igual sobre HTTP plano si un intermediario las capturara
+      // antes de que aplique HSTS. httpOnly se deja en su default (false):
+      // @supabase/ssr necesita leer/escribir estas cookies desde el cliente
+      // (createBrowserClient) para el flujo PKCE; el CSP de middleware.ts ya
+      // mitiga el vector de robo vía XSS que httpOnly normalmente cubriría.
+      cookieOptions: { secure: true },
       cookies: {
         getAll() { return cookieStore.getAll() },
         setAll(cookiesToSet) {
@@ -63,7 +72,7 @@ export async function requireAdminSession() {
   let profileResult
   try {
     profileResult = await withServerTimeout(
-      supabase.from('profiles').select('id, role').eq('id', user.id).single(),
+      supabase.from('profiles').select('id, role, escuela_id').eq('id', user.id).single(),
       10000,
       'SUPABASE_UNAVAILABLE: tiempo de espera agotado al verificar el perfil'
     )

@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S2-2-9-A",
+  "unit_code": "S2-2-9",
+  "unit_title": "Sobreendeudamiento: las señales de alerta temprana",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Termómetro de Deuda",
+  "descripcion": "Ajusta ingresos y pagos y observa en qué zona de riesgo estás.",
+  "objetivo": "Calcular e interpretar la razón de endeudamiento",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "ingreso",
+      "label": "Ingreso neto mensual",
+      "type": "slider",
+      "min": 3000,
+      "max": 100000,
+      "step": 500,
+      "default": 16000,
+      "unit": "$",
+      "referencia": "El depósito real, no el sueldo pactado."
+    },
+    {
+      "id": "pagos_deuda",
+      "label": "Suma de todos los pagos mensuales de deuda",
+      "type": "slider",
+      "min": 0,
+      "max": 60000,
+      "step": 250,
+      "default": 5500,
+      "unit": "$",
+      "referencia": "Tarjetas, créditos, automotriz, todo junto."
+    },
+    {
+      "id": "gastos_esenciales",
+      "label": "Gastos esenciales del mes",
+      "type": "slider",
+      "min": 1000,
+      "max": 80000,
+      "step": 250,
+      "default": 8500,
+      "unit": "$",
+      "referencia": "Vivienda, comida, salud y transporte."
+    },
+    {
+      "id": "solo_minimo",
+      "label": "Meses seguidos pagando solo el mínimo",
+      "type": "slider",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "default": 3,
+      "unit": "meses",
+      "referencia": "Una de las señales objetivas más claras."
+    }
+  ],
+  "formula": "Math.round(pagos_deuda / Math.max(1, ingreso) * 100)",
+  "descripcion_formula": "Razón de endeudamiento: el porcentaje de tu ingreso neto que se va cada mes en pagar deudas.",
+  "output_label": "Razón de endeudamiento",
+  "output_suffix": "%",
+  "escenarios": [
+    {
+      "condicion": "pagos_deuda / ingreso <= 0.2 && solo_minimo == 0",
+      "mensaje": "Zona sana: tus deudas ocupan una parte manejable del ingreso y estás pagando más que el mínimo. Aquí tienes todas las opciones abiertas.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "pagos_deuda / ingreso > 0.35 && pagos_deuda / ingreso <= 0.5",
+      "mensaje": "Zona de atención: más de un tercio del ingreso se va en deuda. Deja de adquirir deuda nueva y ataca primero la de mayor tasa.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "pagos_deuda / ingreso > 0.5",
+      "mensaje": "Zona crítica: la mitad o más de tu ingreso se va en deuda. Conviene hablar con los acreedores antes del primer atraso, mientras todavía hay margen de negociación.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ingreso - pagos_deuda - gastos_esenciales < 0",
+      "mensaje": "Tus pagos y gastos esenciales superan tu ingreso. Ese hueco solo se puede cerrar con más deuda, y ese es exactamente el mecanismo de la espiral.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "solo_minimo >= 6",
+      "mensaje": "Medio año pagando solo el mínimo significa que el saldo prácticamente no baja. Es la señal objetiva más clara de que la deuda dejó de estar bajo control.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-9-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-9-a-escena.webp"
+}

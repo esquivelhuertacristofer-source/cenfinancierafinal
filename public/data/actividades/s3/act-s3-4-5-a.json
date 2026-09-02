@@ -4,144 +4,156 @@
   "unit_title": "El Emprendedor Social: Negocios con alma y propósito",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "SIMULADOR",
+  "tipo": "CONSTRUCTOR",
   "complejidad": "ALTO",
-  "titulo": "Simulador de Vida: El Desafío Final",
-  "descripcion": "Has llegado al final de tu formación. Es hora de demostrar que puedes manejar una fortuna real en un mundo cambiante.",
-  "objetivo": "Evaluar la capacidad del alumno para tomar decisiones financieras complejas bajo presión y escenarios de mercado realistas",
+  "titulo": "Tu Proyecto Final",
+  "descripcion": "Nueve años de educación financiera terminan aquí: en un proyecto tuyo que resuelva un problema real de México y que además se sostenga solo. Si no es rentable, no dura; si no resuelve nada, no importa.",
+  "objetivo": "Diseñar un proyecto de emprendimiento social que atienda una problemática real de México con un modelo económicamente sostenible.",
   "xp": 1000,
-  "descripcion_formula": "Score Final = (PatrimonioNeto / 100000) + (SocialImpact * 10).",
-  "inputs": [
+  "output_type": "proyecto_social",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "capital_inicial_s3",
-      "label": "Capital para invertir ($)",
-      "type": "slider",
-      "min": 100000,
-      "max": 1000000,
-      "step": 50000,
-      "default": 500000,
-      "unit": "$"
-    },
-    {
-      "id": "estrategia_s3",
-      "label": "Estrategia Global",
-      "type": "select",
-      "default": "Diversificada",
-      "opciones": [
-        "Agresiva (Tecnología/Cripto)",
-        "Diversificada (Acciones/Bonos)",
-        "Segura (Oro/Bienes Raíces)"
+      "id": "problema",
+      "titulo": "🎯 El problema real",
+      "descripcion": "No empieces por la idea: empieza por el problema. Y que sea uno que conozcas de cerca.",
+      "campos": [
+        {
+          "id": "problema",
+          "label": "¿Qué problema de tu comunidad quieres resolver?",
+          "type": "text",
+          "placeholder": "Ej: los adultos mayores del barrio no saben usar la banca digital",
+          "requerido": true
+        },
+        {
+          "id": "afectados",
+          "label": "¿A cuántas personas afecta, aproximadamente?",
+          "type": "number",
+          "placeholder": "Ej: 2000",
+          "requerido": true
+        },
+        {
+          "id": "como_lo_resuelven",
+          "label": "¿Cómo lo resuelven hoy, sin ti?",
+          "type": "text",
+          "placeholder": "Ej: piden ayuda a familiares o no lo usan",
+          "requerido": true,
+          "ayuda": "Si nadie hace nada al respecto, pregúntate si de verdad les duele o solo te duele a ti."
+        }
       ]
     },
     {
-      "id": "crisis_mundial_s3",
-      "label": "Evento de Mercado Inesperado",
-      "type": "select",
-      "default": "Estabilidad",
-      "opciones": [
-        "Estabilidad",
-        "Crisis Inflacionaria",
-        "Burbuja Tecnológica"
+      "id": "solucion",
+      "titulo": "💡 Tu solución",
+      "descripcion": "Concreta y pequeña. Un proyecto que se pueda empezar el mes que viene vale más que uno perfecto que nunca arranca.",
+      "campos": [
+        {
+          "id": "solucion",
+          "label": "¿Qué vas a ofrecer exactamente?",
+          "type": "text",
+          "placeholder": "Ej: talleres presenciales de 4 sesiones",
+          "requerido": true
+        },
+        {
+          "id": "quien_paga",
+          "label": "¿Quién paga? (puede no ser el beneficiario)",
+          "type": "text",
+          "placeholder": "Ej: los bancos y el municipio patrocinan",
+          "requerido": true,
+          "ayuda": "Muchos modelos sociales funcionan porque cobran a un tercero que también se beneficia."
+        },
+        {
+          "id": "precio",
+          "label": "Precio por unidad de servicio ($)",
+          "type": "number",
+          "placeholder": "Ej: 450",
+          "requerido": true
+        },
+        {
+          "id": "unidades_mes",
+          "label": "Unidades que podrías entregar al mes",
+          "type": "number",
+          "placeholder": "Ej: 60",
+          "requerido": true
+        }
       ]
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+      "id": "sostenibilidad",
+      "titulo": "💰 Que se sostenga solo",
+      "descripcion": "La rentabilidad no es lo contrario del impacto: es la condición para que el impacto siga existiendo el año que viene.",
+      "campos": [
+        {
+          "id": "costo_unitario",
+          "label": "Costo por unidad de servicio ($)",
+          "type": "number",
+          "placeholder": "Ej: 180",
+          "requerido": true
+        },
+        {
+          "id": "costos_fijos",
+          "label": "Costos fijos mensuales ($)",
+          "type": "number",
+          "placeholder": "Ej: 9000",
+          "requerido": true
+        },
+        {
+          "id": "utilidad",
+          "label": "Utilidad mensual",
+          "type": "calculated",
+          "formula": "(precio - costo_unitario) * unidades_mes - costos_fijos",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "equilibrio",
+          "label": "Unidades mínimas para no perder",
+          "type": "calculated",
+          "formula": "Math.ceil(costos_fijos / Math.max(1, precio - costo_unitario))",
+          "unit": "uds",
+          "requerido": false,
+          "ayuda": "Si ese número es mayor que lo que realmente puedes entregar, el modelo no cierra todavía."
+        }
+      ]
+    },
+    {
+      "id": "impacto",
+      "titulo": "📊 Cómo medirás el impacto",
+      "descripcion": "Impacto que no se mide es intención. Elige un indicador que alguien externo pueda verificar.",
+      "campos": [
+        {
+          "id": "indicador",
+          "label": "Tu indicador de impacto",
+          "type": "text",
+          "placeholder": "Ej: personas que hacen una transferencia solas al terminar",
+          "requerido": true
+        },
+        {
+          "id": "meta_anio",
+          "label": "Meta de personas atendidas en un año",
+          "type": "calculated",
+          "formula": "unidades_mes * 12",
+          "unit": "personas",
+          "requerido": false
+        },
+        {
+          "id": "cobertura",
+          "label": "Porcentaje del problema que atacarías",
+          "type": "calculated",
+          "formula": "Math.round(unidades_mes * 12 / Math.max(1, afectados) * 100)",
+          "unit": "%",
+          "requerido": false
+        },
+        {
+          "id": "primer_paso",
+          "label": "¿Cuál es el primer paso que darías esta semana?",
+          "type": "text",
+          "placeholder": "Ej: hablar con 10 adultos mayores del barrio",
+          "requerido": true,
+          "ayuda": "Todo lo que aprendiste en nueve años sirve para una sola cosa: que este primer paso ocurra."
+        }
+      ]
     }
   ],
-  "formula": "capital_inicial_s3 * (estrategia_s3 === 'Agresiva (Tecnología/Cripto)' ? (crisis_mundial_s3 === 'Burbuja Tecnológica' ? 3 : 0.4) : estrategia_s3 === 'Diversificada' ? (crisis_mundial_s3 === 'Crisis Inflacionaria' ? 0.8 : 1.5) : (crisis_mundial_s3 === 'Crisis Inflacionaria' ? 1.1 : 1.05))",
-  "output_label": "Patrimonio Final tras 10 años de simulación",
-  "output_prefix": "$",
-  "output_suffix": "",
-  "chart_type": "line",
-  "escenarios": [
-    {
-      "condicion": "resultado > 1500000",
-      "mensaje": "🏆 ¡Maestro de las Finanzas! Has navegado el mercado con una precisión asombrosa. Te gradúas con honores.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "resultado < 400000",
-      "mensaje": "⚠️ El mercado fue cruel. Tu estrategia no resistió la volatilidad. Recuerda que la gestión de riesgos es lo más importante.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 Las finanzas no son una ciencia exacta, son el arte de gestionar la incertidumbre. ¡Felicidades por completar el ciclo!",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Puede una empresa social ser tan escalable como una empresa tradicional? ¿Qué modelo de negocio usarías para que tu impacto social crezca sin depender de donaciones externas?",
-  "comparativa_espera": "Empresas como Bimbo, FEMSA, América Móvil y CEMEX empezaron siendo pymes locales. Hoy operan en decenas de países. El crecimiento exponencial siempre empieza con una base sólida en el mercado local.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "crecimiento_compuesto",
-      "label": "Con Crecimiento Compuesto (10%)",
-      "formula": "Math.round(resultado_principal * Math.pow(1.1, 10))",
-      "prefix": "$",
-      "suffix": " en 10 años",
-      "descripcion": "El poder del crecimiento compuesto sobre 10 años"
-    },
-    {
-      "id": "impacto_ecosistema",
-      "label": "Impacto en el Ecosistema",
-      "formula": "resultado_principal * 5",
-      "prefix": "$",
-      "suffix": " de impacto indirecto",
-      "descripcion": "El efecto multiplicador en la economía local (×5 es típico)"
-    },
-    {
-      "id": "empleos_potenciales",
-      "label": "Empleos que Podría Generar",
-      "formula": "Math.round(resultado_principal / 120000)",
-      "prefix": "",
-      "suffix": " empleos formales",
-      "descripcion": "Estimado con salario promedio de $10,000/mes"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "crecimiento_compuesto",
-      "label": "Con Crecimiento Compuesto (10%)",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

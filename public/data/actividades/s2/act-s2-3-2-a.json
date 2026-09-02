@@ -6,140 +6,79 @@
   "edad": "13-14 años",
   "tipo": "SIMULADOR",
   "complejidad": "ALTO",
-  "titulo": "El Efecto Multiplicador",
-  "descripcion": "¿Quieres ganar dinero rápido usando el capital de otros? Ten cuidado: el apalancamiento es un acelerador, tanto de la riqueza como de la ruina.",
-  "objetivo": "Visualizar matemáticamente cómo el apalancamiento magnifica los resultados (positivos y negativos) de una inversión",
-  "xp": 600,
-  "descripcion_formula": "Rendimiento sobre Capital Propio (ROE) = ((ValorFinal - ValorInicial) / InversionPropia) * 100. ValorFinal incluye el costo del interés.",
+  "titulo": "El Semáforo de una Empresa",
+  "descripcion": "Antes de comprar una acción se revisan los mismos números que revisarías antes de comprar una tienda: cuánto gana, cuánto debe y qué tan cara está. Ajusta los valores y observa el diagnóstico.",
+  "objetivo": "Aplicar indicadores básicos de análisis fundamental (P/U, margen neto, deuda/capital, ROE) para evaluar la salud de una empresa.",
+  "xp": 750,
+  "descripcion_formula": "Se construye un puntaje de salud combinando la valuación (precio/utilidad), la rentabilidad (margen neto y ROE) y el endeudamiento (deuda/capital). Ninguno de los tres decide solo.",
   "inputs": [
     {
-      "id": "inversion_propia_s2",
-      "label": "Tu Capital Inicial ($)",
+      "id": "pu",
+      "label": "Precio / Utilidad (P/U)",
       "type": "slider",
-      "min": 1000,
-      "max": 10000,
-      "step": 1000,
-      "default": 5000,
-      "unit": "$"
-    },
-    {
-      "id": "nivel_apalancamiento",
-      "label": "Nivel de Apalancamiento (X)",
-      "type": "slider",
-      "min": 1,
-      "max": 10,
+      "min": 3,
+      "max": 60,
       "step": 1,
-      "default": 1,
-      "unit": "x"
+      "default": 18,
+      "unit": "x",
+      "referencia": "Promedio histórico del mercado mexicano: cerca de 15x"
     },
     {
-      "id": "desempeño_activo",
-      "label": "Rendimiento del Activo (%)",
+      "id": "margen",
+      "label": "Margen neto (%)",
       "type": "slider",
-      "min": -20,
-      "max": 20,
-      "step": 2,
-      "default": 5,
+      "min": -10,
+      "max": 40,
+      "step": 1,
+      "default": 8,
       "unit": "%"
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "id": "deuda_capital",
+      "label": "Deuda / Capital",
       "type": "slider",
-      "min": 1,
-      "max": 30,
+      "min": 0,
+      "max": 4,
+      "step": 0.1,
+      "default": 0.8,
+      "unit": "x"
+    },
+    {
+      "id": "roe",
+      "label": "ROE: rendimiento sobre capital (%)",
+      "type": "slider",
+      "min": -10,
+      "max": 40,
       "step": 1,
-      "default": 5,
-      "unit": "años"
+      "default": 15,
+      "unit": "%"
     }
   ],
-  "formula": "((((inversion_propia_s2 * nivel_apalancamiento) * (1 + desempeño_activo/100)) - (inversion_propia_s2 * (nivel_apalancamiento - 1) * 1.1) - inversion_propia_s2) / inversion_propia_s2) * 100",
-  "output_label": "Rendimiento Real sobre tu Dinero",
+  "formula": "Math.max(0, Math.min(100, Math.round(40 - Math.abs(pu - 15) * 1.2 + margen * 1.5 + roe * 1.2 - deuda_capital * 12)))",
+  "output_label": "Puntaje de salud fundamental",
   "output_prefix": "",
-  "output_suffix": "%",
-  "chart_type": "line",
+  "output_suffix": " / 100",
   "escenarios": [
     {
-      "condicion": "nivel_apalancamiento > 5 && desempeño_activo < 0",
-      "mensaje": "🚨 ¡Ruina Total! Al estar muy apalancado, una pequeña caída en el precio borró todo tu dinero. Esto es lo que pasa cuando tomas riesgos que no puedes cubrir.",
-      "tipo": "danger"
+      "condicion": "pu > 35",
+      "mensaje": "P/U muy alto: el mercado está pagando muchísimo por cada peso de utilidad. Puede estar justificado si la empresa crece rapidísimo, y también puede ser una burbuja. Nunca compres solo porque \"está subiendo\".",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "nivel_apalancamiento > 5 && desempeño_activo > 5",
-      "mensaje": "💰 ¡Ganancia Explosiva! Gracias al dinero prestado, multiplicaste tu capital inicial de forma masiva. Pero recuerda: tuviste suerte, no siempre sube.",
-      "tipo": "success"
+      "condicion": "deuda_capital > 2",
+      "mensaje": "Endeudamiento alto. Con tasas al alza, esa deuda se vuelve una bomba: los intereses se comen la utilidad. Es lo primero que revisa un analista serio.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "true",
-      "mensaje": "💡 El apalancamiento es como usar una palanca física: permite mover objetos pesados (grandes inversiones) con poco esfuerzo (poco capital), pero si la palanca se rompe, el golpe es fuerte.",
-      "tipo": "info"
+      "condicion": "margen < 0 || roe < 0",
+      "mensaje": "La empresa está perdiendo dinero. Puede ser una etapa de inversión fuerte, y también el principio del fin. Sin utilidades, el valor depende por completo de una promesa.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "resultado >= 70",
+      "mensaje": "Buenos fundamentales: valuación razonable, rentabilidad sólida y deuda bajo control. Aun así, los números pasados no garantizan el futuro: revisa también en qué negocio está y quién la dirige.",
+      "tipo": "exito"
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "Si FEMSA reporta utilidades récord pero sus acciones bajan ese día, ¿es señal de compra o de venta? ¿Cuándo el análisis fundamental te da ventaja sobre quien solo mira gráficas de precios?",
-  "comparativa_espera": "Las finanzas conductuales demuestran que las personas toman mejores decisiones financieras cuando ven los números concretos que cuando los estiman mentalmente. Simular antes de decidir es una de las mejores prácticas de los inversionistas exitosos.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "impacto_5a",
-      "label": "Impacto a 5 Años",
-      "formula": "resultado_principal * 5",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "El efecto acumulado durante 5 años"
-    },
-    {
-      "id": "ahorro_optimo",
-      "label": "Ahorro si Optimizas",
-      "formula": "Math.round(resultado_principal * 0.2)",
-      "prefix": "$",
-      "suffix": " de ahorro potencial",
-      "descripcion": "Lo que podrías ahorrar con la mejor estrategia disponible"
-    },
-    {
-      "id": "roi_decision",
-      "label": "ROI de la Decisión",
-      "formula": "Math.round(resultado_principal * 0.25 / resultado_principal * 100)",
-      "prefix": "",
-      "suffix": "% de retorno",
-      "descripcion": "El retorno porcentual de tomar esta decisión informada"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "impacto_5a",
-      "label": "Impacto a 5 Años",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

@@ -4,110 +4,81 @@
   "unit_title": "Meses Sin Intereses: ¿oportunidad o trampa?",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Valor de tu Privacidad",
-  "descripcion": "¿Sabes qué datos puedes compartir y cuáles debes guardar bajo llave? ¡Pon a prueba tu instinto de protección!",
-  "objetivo": "Diferenciar entre tipos de datos personales y comprender la importancia de los avisos de privacidad",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Cazador de Meses",
+  "descripcion": "Rápido: ¿en qué casos los MSI son una herramienta y en cuáles una trampa?",
+  "objetivo": "Validar el criterio para usar Meses Sin Intereses solo en bienes duraderos y dentro de la capacidad de pago.",
+  "xp": 350,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "priv1",
-      "texto": "¿Cuál de estos es un 'Dato Sensible' que nunca debes compartir en público?",
-      "opciones": [
-        "Tu color favorito",
-        "Tu ubicación exacta en tiempo real",
-        "Tu nombre de pila",
-        "Tu equipo de fútbol"
+      "id": "t1",
+      "pregunta": "\"Meses Sin Intereses\" significa que…",
+      "respuesta_correcta": "Pagas el mismo precio, repartido en varios meses",
+      "incorrectas": [
+        "El producto es gratis",
+        "El banco te regala una parte",
+        "Puedes dejar de pagar cuando quieras"
       ],
-      "correcta": 1,
-      "explicacion": "Saber dónde estás exactamente puede poner en riesgo tu seguridad física."
+      "dato_extra": "La tienda absorbe el costo porque así te anima a comprar más caro."
     },
     {
-      "id": "priv2",
-      "texto": "¿Qué es un 'Aviso de Privacidad'?",
-      "opciones": [
-        "Un mensaje de error",
-        "Un documento donde una empresa explica qué hará con tus datos",
-        "Una invitación a una fiesta",
-        "Un anuncio de venta"
+      "id": "t2",
+      "pregunta": "¿Para cuál de estas compras tienen más sentido los MSI?",
+      "respuesta_correcta": "Un refrigerador que durará 10 años",
+      "incorrectas": [
+        "La despensa de la semana",
+        "Una cena en un restaurante",
+        "Gasolina"
       ],
-      "correcta": 1,
-      "explicacion": "Es obligatorio que las empresas te digan para qué usarán tu información."
+      "dato_extra": "Regla: solo para bienes que duren mucho más que el plazo de la deuda."
     },
     {
-      "id": "priv3",
-      "texto": "¿Por qué muchas apps son 'Gratis'?",
-      "opciones": [
-        "Porque son muy generosos",
-        "Porque el pago es tu información personal para venderte publicidad",
-        "Porque no valen nada",
-        "Porque el gobierno las paga"
+      "id": "t3",
+      "pregunta": "Si dejas de pagar una mensualidad de MSI…",
+      "respuesta_correcta": "Se acaba la promoción y te cobran intereses por todo el saldo",
+      "incorrectas": [
+        "No pasa nada",
+        "Te dan un mes extra gratis",
+        "Te devuelven el producto"
       ],
-      "correcta": 1,
-      "explicacion": "Tus datos son una moneda muy valiosa en internet."
+      "dato_extra": "La promoción se cae completa. Por eso hay que estar seguro de poder pagar los 12 meses."
     },
     {
-      "id": "priv4",
-      "texto": "¿Qué debes hacer si una red social te pide tu contraseña para 'verificar tu cuenta' por mensaje?",
-      "opciones": [
-        "Dársela de inmediato",
-        "No dársela; las plataformas nunca piden tu clave por mensaje",
-        "Escribirla en un comentario",
-        "Cambiar de nombre"
+      "id": "t4",
+      "pregunta": "El mayor peligro de los MSI es…",
+      "respuesta_correcta": "Acumular muchos a la vez y comprometer casi todo tu ingreso",
+      "incorrectas": [
+        "Que suban de precio",
+        "Que caduquen",
+        "Que el banco te llame"
       ],
-      "correcta": 1,
-      "explicacion": "Eso se llama robo de cuenta. Nadie oficial te pedirá tu clave así."
+      "dato_extra": "Cada MSI parece pequeño; cinco juntos pueden comerse la mitad del sueldo durante un año."
     },
     {
-      "id": "priv5",
-      "texto": "¿Qué es la 'Huella Digital'?",
-      "opciones": [
-        "La marca de tu dedo en la pantalla",
-        "El rastro de información que dejas al usar internet (fotos, comentarios, likes)",
-        "Un tipo de pintura",
-        "Una clave secreta"
+      "id": "t5",
+      "pregunta": "Una tele de $12,000 a 12 MSI te compromete a pagar…",
+      "respuesta_correcta": "$1,000 cada mes durante un año",
+      "incorrectas": [
+        "$12,000 al final del año",
+        "$100 cada mes",
+        "Lo que tú quieras cada mes"
       ],
-      "correcta": 1,
-      "explicacion": "Todo lo que haces en internet deja un rastro que dura mucho tiempo."
+      "dato_extra": "Antes de aceptar, la pregunta correcta es: \"¿voy a tener $1,000 libres cada uno de los próximos 12 meses?\"."
     },
     {
-      "id": "priv6",
-      "texto": "Si subes una foto a una red social y luego la borras, ¿desaparece de internet?",
-      "opciones": [
-        "Sí, se borra de todos lados",
-        "No, alguien pudo haberla guardado o la plataforma tener una copia",
-        "Depende de la hora",
-        "Solo si apagas el cel"
+      "id": "t6",
+      "pregunta": "Comprar a MSI algo que ibas a comprar de todas formas y puedes pagar es…",
+      "respuesta_correcta": "Inteligente: conservas tu dinero disponible más tiempo",
+      "incorrectas": [
+        "Siempre un error",
+        "Ilegal",
+        "Igual que pedir un préstamo caro"
       ],
-      "correcta": 1,
-      "explicacion": "Lo que subes a internet es muy difícil de borrar por completo. ¡Piénsalo antes de publicar!"
-    },
-    {
-      "id": "priv7",
-      "texto": "¿Qué es el 'Phishing'?",
-      "opciones": [
-        "Un deporte acuático",
-        "Un engaño para que reveles tus datos personales o claves",
-        "Un tipo de pez",
-        "Una marca de computadoras"
-      ],
-      "correcta": 1,
-      "explicacion": "Los estafadores 'pescan' víctimas con correos o mensajes falsos."
-    },
-    {
-      "id": "priv8",
-      "texto": "¿A quién pertenecen tus datos personales?",
-      "opciones": [
-        "A las empresas de tecnología",
-        "A ti, y tú tienes el derecho de decidir quién los usa",
-        "Al gobierno",
-        "A nadie"
-      ],
-      "correcta": 1,
-      "explicacion": "Tus datos son tu propiedad. Tienes derecho a la privacidad."
+      "dato_extra": "Bien usados, los MSI son de los pocos créditos que de verdad no cuestan nada."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

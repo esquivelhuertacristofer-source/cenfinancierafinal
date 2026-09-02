@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P1-1-8-A",
+  "unit_code": "P1-1-8",
+  "unit_title": "Dinero de sorpresa: regalos, aguinaldo y el domingo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "El Aguinaldo de Ceny",
+  "descripcion": "Llegó diciembre y Ceny recibió dinero de sorpresa. Completa su plan para que no se le vaya en un solo día.",
+  "objetivo": "Redactar un plan de reparto de un ingreso extraordinario usando el sistema de las tres cajas",
+  "xp": 250,
+  "contexto": "Ceny recibió $300 de aguinaldo de su abuela. Ayúdale a escribir su plan antes de salir de casa.",
+  "texto": "Este dinero llegó de __blank1__, así que se llama ingreso extraordinario. Aunque no lo esperaba, vale __blank2__ que el dinero que gano ayudando en casa. Lo primero que voy a hacer es __blank3__ en gastarlo el mismo día. Voy a repartirlo en tres cajas: una parte para mi __blank4__, otra para mi meta de la bicicleta y otra para un __blank5__ que sí disfrute. La caja que nunca debe quedarse vacía es __blank6__. Escribo mi plan __blank7__ de recibir el dinero, porque cuando ya lo tengo en la mano el antojo grita más fuerte que el plan. Si cumplo esto, en diciembre voy a estar más cerca de mi __blank8__.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "sorpresa",
+        "mi trabajo",
+        "un préstamo"
+      ],
+      "respuesta": "sorpresa"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "exactamente lo mismo",
+        "menos",
+        "más"
+      ],
+      "respuesta": "exactamente lo mismo"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "no apurarme",
+        "correr",
+        "esconderlo"
+      ],
+      "respuesta": "no apurarme"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "ahorro",
+        "antojo",
+        "olvido"
+      ],
+      "respuesta": "ahorro"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "gusto",
+        "préstamo",
+        "castigo"
+      ],
+      "respuesta": "gusto"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "ninguna",
+        "la del gusto",
+        "la del ahorro"
+      ],
+      "respuesta": "ninguna"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "antes",
+        "después",
+        "en lugar"
+      ],
+      "respuesta": "antes"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "meta",
+        "antojo",
+        "problema"
+      ],
+      "respuesta": "meta"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-8-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-8-a-escena.webp"
+}

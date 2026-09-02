@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P1-2-7-B",
+  "unit_code": "P1-2-7",
+  "unit_title": "La lista del mandado: ayudo a comprar en casa",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Súper",
+  "descripcion": "Contesta rápido y demuestra que la lista manda.",
+  "objetivo": "Consolidar el uso de la lista, la comparación de precios y el control del presupuesto",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Cuándo se decide qué comprar?",
+      "respuesta_correcta": "En casa, al hacer la lista",
+      "incorrectas": [
+        "En la fila de la caja",
+        "Frente a la vitrina",
+        "Cuando huele rico"
+      ],
+      "dato_extra": "La lista es tu yo tranquilo protegiéndote de tu yo antojado."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Traigo $200 y la cuenta da $212. ¿Cuánto me falta?",
+      "respuesta_correcta": "$12",
+      "incorrectas": [
+        "$20",
+        "$112",
+        "$32"
+      ],
+      "dato_extra": "Saberlo antes de la caja evita el momento incómodo de devolver."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Dos frijoles iguales: uno $32, otro $24. ¿Cuánto ahorro con el segundo?",
+      "respuesta_correcta": "$8",
+      "incorrectas": [
+        "$24",
+        "$32",
+        "$56"
+      ],
+      "dato_extra": "Comparar dos etiquetas toma diez segundos y deja dinero en el bolsillo."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Por qué ponen dulces junto a la caja?",
+      "respuesta_correcta": "Para que los tomes sin pensar mientras esperas",
+      "incorrectas": [
+        "Porque ahí caben",
+        "Para que se vean bonitos",
+        "Porque están fríos"
+      ],
+      "dato_extra": "La fila es el momento en que menos defensas tienes. Está calculado."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Quiero algo que no está en la lista. La mejor pregunta es:",
+      "respuesta_correcta": "¿Qué quitamos de la lista para que quepa?",
+      "incorrectas": [
+        "¿Me lo compras?",
+        "¿Por qué no?",
+        "¿Puedo llevarlo escondido?"
+      ],
+      "dato_extra": "El dinero no es infinito: cada antojo se paga con algo necesario."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Para qué sirve revisar el ticket al salir?",
+      "respuesta_correcta": "Para saber en qué se fue el dinero",
+      "incorrectas": [
+        "Para tirarlo",
+        "Para nada",
+        "Para que pese menos"
+      ],
+      "dato_extra": "A veces descubres que lo que parecía barato era lo más caro de la canasta."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Cómo ayuda de verdad un niño en el súper?",
+      "respuesta_correcta": "Tachando la lista y comparando precios",
+      "incorrectas": [
+        "Corriendo por los pasillos",
+        "Llenando el carrito",
+        "Escogiendo lo más bonito"
+      ],
+      "dato_extra": "Esa ayuda hace la compra más rápida y más barata para toda la familia."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-7-b-escena.webp"
+}

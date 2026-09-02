@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-1-7-B",
+  "unit_code": "S2-1-7",
+  "unit_title": "Devaluación y depreciación: qué le pasa al peso",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del Tipo de Cambio",
+  "descripcion": "Responde rápido sobre el peso y su valor.",
+  "objetivo": "Consolidar la comprensión del tipo de cambio y sus efectos",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Una devaluación es:",
+      "respuesta_correcta": "Una decisión oficial en régimen fijo",
+      "incorrectas": [
+        "La caída diaria del peso",
+        "La inflación",
+        "Un impuesto"
+      ],
+      "dato_extra": "México tiene régimen flotante, así que lo que ocurre es depreciación."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Con un peso más débil ganan:",
+      "respuesta_correcta": "Los exportadores",
+      "incorrectas": [
+        "Los importadores",
+        "Quien viaja fuera",
+        "Quien debe en dólares"
+      ],
+      "dato_extra": "Venden en moneda extranjera y sus costos son en pesos."
+    },
+    {
+      "id": "q3",
+      "pregunta": "También se benefician:",
+      "respuesta_correcta": "Quienes reciben remesas",
+      "incorrectas": [
+        "Quienes importan",
+        "Quienes viajan",
+        "Quienes deben fuera"
+      ],
+      "dato_extra": "Cada unidad extranjera se convierte en más pesos."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Pierden:",
+      "respuesta_correcta": "Importadores y quien debe en moneda extranjera",
+      "incorrectas": [
+        "Los exportadores",
+        "El turismo receptivo",
+        "Nadie"
+      ],
+      "dato_extra": "Y el efecto se traslada tarde o temprano a los precios internos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La reacción impulsiva más común es:",
+      "respuesta_correcta": "Comprar dólares cuando ya subieron",
+      "incorrectas": [
+        "Vender todo",
+        "Ahorrar más",
+        "No hacer nada"
+      ],
+      "dato_extra": "Es decir, comprar caro justo después de la noticia."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El tipo de cambio importa a una persona común:",
+      "respuesta_correcta": "Si tiene ingresos, deudas o gastos en otra moneda",
+      "incorrectas": [
+        "Siempre por igual",
+        "Nunca",
+        "Solo si viaja"
+      ],
+      "dato_extra": "Fuera de eso, el efecto llega indirectamente por los precios."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Especular con divisas sin conocimiento:",
+      "respuesta_correcta": "Es una forma común de perder dinero",
+      "incorrectas": [
+        "Es protegerse",
+        "Garantiza ganancias",
+        "Lo recomienda el banco"
+      ],
+      "dato_extra": "Protegerse es otra cosa: depende de tu exposición real."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-7-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-7-b-escena.webp"
+}

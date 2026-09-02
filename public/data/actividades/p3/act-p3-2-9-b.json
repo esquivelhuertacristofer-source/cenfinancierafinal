@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P3-2-9-B",
+  "unit_code": "P3-2-9",
+  "unit_title": "El IPAB: quién protege mi dinero si un banco quiebra",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Protegido o No Protegido",
+  "descripcion": "Completa el reporte de Ceny sobre dónde está seguro el dinero.",
+  "objetivo": "Verbalizar el alcance y los límites de la protección del IPAB",
+  "xp": 160,
+  "contexto": "Ceny le explica a su primo por qué conviene guardar el dinero en el banco.",
+  "texto": "En México existe una institución llamada __blank1__ que funciona como un seguro para el dinero depositado en los bancos. Si un banco __blank2__, esa institución devuelve a cada ahorrador su dinero hasta un límite que la ley expresa en __blank3__. La protección aplica por persona y por __blank4__, así que quien tiene mucho dinero puede repartirlo. Cubre cuentas de ahorro y depósitos, pero __blank5__ cubre las inversiones en la bolsa ni el dinero de una __blank6__. Guardar el dinero en casa no lo protege de robo, incendio ni de la __blank7__, que le va quitando valor cada año. Por eso el ahorro __blank8__ es más seguro que el informal.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "IPAB",
+        "SAT",
+        "IMSS"
+      ],
+      "respuesta": "IPAB"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "quiebra",
+        "crece",
+        "abre"
+      ],
+      "respuesta": "quiebra"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "UDIs",
+        "dólares",
+        "kilos"
+      ],
+      "respuesta": "UDIs"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "banco",
+        "familia",
+        "año"
+      ],
+      "respuesta": "banco"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "no",
+        "sí",
+        "siempre"
+      ],
+      "respuesta": "no"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "tanda",
+        "cuenta",
+        "nómina"
+      ],
+      "respuesta": "tanda"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "inflación",
+        "comisión",
+        "tasa"
+      ],
+      "respuesta": "inflación"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "formal",
+        "informal",
+        "escondido"
+      ],
+      "respuesta": "formal"
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-9-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-9-b-escena.webp"
+}

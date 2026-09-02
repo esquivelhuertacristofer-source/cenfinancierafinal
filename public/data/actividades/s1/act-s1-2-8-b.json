@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-2-8-B",
+  "unit_code": "S1-2-8",
+  "unit_title": "Crédito automotriz y arrendamiento: comparar el costo total",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "El Costo Real del Auto",
+  "descripcion": "Comprueba que sabes comparar más allá de la mensualidad.",
+  "objetivo": "Verificar la comprensión del costo total y las modalidades de financiamiento",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una mensualidad baja suele esconder:",
+      "opciones": [
+        "Un mejor precio",
+        "Un plazo más largo y más intereses",
+        "Un descuento",
+        "Menos costo total"
+      ],
+      "correcta": 1,
+      "explicacion": "Más meses significa más tiempo generando intereses."
+    },
+    {
+      "id": "q2",
+      "texto": "La cifra que permite decidir es:",
+      "opciones": [
+        "La mensualidad",
+        "El enganche",
+        "El costo total hasta el final",
+        "La tasa sola"
+      ],
+      "correcta": 2,
+      "explicacion": "Incluye todo lo que se pagará, no solo el pago mensual."
+    },
+    {
+      "id": "q3",
+      "texto": "El costo total incluye:",
+      "opciones": [
+        "Solo las mensualidades",
+        "Solo el precio",
+        "Solo el seguro",
+        "Enganche, mensualidades, comisiones, seguro y pagos anuales"
+      ],
+      "correcta": 3,
+      "explicacion": "Omitir un componente arruina la comparación."
+    },
+    {
+      "id": "q4",
+      "texto": "Con crédito automotriz, al final:",
+      "opciones": [
+        "El vehículo es del comprador",
+        "Se devuelve el auto",
+        "Se paga otra vez",
+        "No queda nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Queda un bien, con el valor que conserve."
+    },
+    {
+      "id": "q5",
+      "texto": "Con arrendamiento, al final:",
+      "opciones": [
+        "Siempre es tuyo",
+        "Se devuelve, se renueva o se paga un residual",
+        "Se regala",
+        "Se pierde el depósito"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso las mensualidades suelen ser menores."
+    },
+    {
+      "id": "q6",
+      "texto": "El crédito conviene si:",
+      "opciones": [
+        "Se renueva cada año",
+        "No se usa el auto",
+        "Se quiere conservar el vehículo muchos años",
+        "Nunca"
+      ],
+      "correcta": 2,
+      "explicacion": "Al final queda un bien que se sigue usando."
+    },
+    {
+      "id": "q7",
+      "texto": "Un auto es:",
+      "opciones": [
+        "Una inversión que sube de valor",
+        "Un ahorro",
+        "Un activo financiero",
+        "Un gasto de transporte que pierde valor"
+      ],
+      "correcta": 3,
+      "explicacion": "Se deprecia año con año desde el primer día."
+    },
+    {
+      "id": "q8",
+      "texto": "Comparar dos ofertas por la mensualidad:",
+      "opciones": [
+        "Compara solo una parte del costo",
+        "Es suficiente",
+        "Es lo más exacto",
+        "Evita errores"
+      ],
+      "correcta": 0,
+      "explicacion": "Depende del plazo, del enganche y de lo que pasa al final."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-8-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-8-b-escena.webp"
+}

@@ -4,6 +4,8 @@ import { Users, LayoutGrid, TrendingUp, Loader2, Award, ArrowUpRight, AlertCircl
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { notify } from "@/lib/toast";
+import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
+import { useHasMounted } from "@/lib/useHasMounted";
 
 export default function MetricCards({
   groupId,
@@ -19,10 +21,15 @@ export default function MetricCards({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [stats, setStats] = useState({ alumnos: 0, grupos: 1, practicas: 0 });
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
+
+  // Roster del profesor (grupo nuevo esquema o legacy) resuelto por el hook
+  // compartido: dedupea esta misma consulta con WelcomeBanner, TopAlumnos y
+  // LatestDeliveries, que montan simultáneamente en /dashboard/teacher.
+  const { studentIds: rosterStudentIds, loading: idsLoading } = useScopedStudentIds(groupId, teacherGroupIds);
 
   useEffect(() => {
-    setMounted(true);
+    if (idsLoading) return;
     async function fetchStats() {
       setLoading(true);
       try {
@@ -32,19 +39,9 @@ export default function MetricCards({
           : groupId ? groupId.split(",").map((g) => g.trim()) : [];
 
         if (useNewSchema) {
-          // Count students via alumnos_grupos
-          const { count: aCount } = await supabase
-            .from("alumnos_grupos")
-            .select("id_alumno", { count: "exact", head: true })
-            .in("id_grupo", groups);
-
-          // Get all student IDs for this teacher's groups
-          const { data: memberships } = await supabase
-            .from("alumnos_grupos")
-            .select("id_alumno")
-            .in("id_grupo", groups);
-
-          const studentIds = memberships?.map((m: any) => m.id_alumno) ?? [];
+          // El roster (memberships de alumnos_grupos) ya lo resolvió el hook
+          // compartido; su longitud equivale al count que antes se pedía aparte.
+          const studentIds = rosterStudentIds;
 
           let pCount = 0;
           if (studentIds.length > 0) {
@@ -56,7 +53,7 @@ export default function MetricCards({
             pCount = count ?? 0;
           }
 
-          setStats({ alumnos: aCount ?? 0, grupos: groups.length, practicas: pCount });
+          setStats({ alumnos: studentIds.length, grupos: groups.length, practicas: pCount });
         } else {
           // Legacy group_id string approach
           let studentQuery = supabase
@@ -71,28 +68,27 @@ export default function MetricCards({
           const { count: aCount } = await studentQuery;
 
           // Roster de referencia para acotar la cuenta de `progress`: por
-          // grupo si existe, si no por escuela (nunca sin filtro alguno).
-          let rosterStudentIds: string[] = [];
+          // grupo (vía el hook compartido) si existe, si no por escuela
+          // (nunca sin filtro alguno). El hook no cubre el caso "solo
+          // escuela" (no es scoping por grupo), así que ese caso se resuelve
+          // aquí como antes.
+          let rosterIds: string[] = [];
           if (groups.length > 0) {
-            const { data: students } = await supabase
-              .from("profiles")
-              .select("id")
-              .in("group_id", groups);
-            rosterStudentIds = students?.map((s: any) => s.id) ?? [];
+            rosterIds = rosterStudentIds;
           } else if (escuelaId) {
             const { data: students } = await supabase
               .from("profiles")
               .select("id")
               .eq("escuela_id", escuelaId);
-            rosterStudentIds = students?.map((s: any) => s.id) ?? [];
+            rosterIds = students?.map((s: any) => s.id) ?? [];
           }
 
           let pCount = 0;
-          if (rosterStudentIds.length > 0) {
+          if (rosterIds.length > 0) {
             const { count } = await supabase
               .from("progress")
               .select("*", { count: "exact", head: true })
-              .in("user_id", rosterStudentIds);
+              .in("user_id", rosterIds);
             pCount = count ?? 0;
           }
 
@@ -106,7 +102,7 @@ export default function MetricCards({
       }
     }
     fetchStats();
-  }, [groupId, teacherGroupIds, escuelaId, isDark]);
+  }, [groupId, teacherGroupIds, escuelaId, isDark, rosterStudentIds, idsLoading]);
 
   if (!mounted) return null;
 

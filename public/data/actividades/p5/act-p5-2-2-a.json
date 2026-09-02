@@ -10,7 +10,7 @@
   "descripcion": "El banco te dice '18% anual' pero el costo real es mucho más. El CAT (Costo Anual Total) incluye tasa de interés, comisiones y todos los costos ocultos. Calcula el verdadero precio del crédito antes de firmarlo.",
   "objetivo": "Calcular el CAT de un crédito personal y comparar distintas ofertas para tomar la decisión financiera más conveniente",
   "xp": 500,
-  "descripcion_formula": "Cuota mensual usando amortización francesa: PMT = Monto × tasa_m / (1-(1+tasa_m)^-n). CAT ≈ ((1 + (tasa_nominal/12 + comision_apertura/12/100))^12 - 1) × 100",
+  "descripcion_formula": "El CAT junta en un solo número lo que de verdad cuesta un crédito: la tasa de interés capitalizada más las comisiones repartidas en el plazo. Por eso siempre es mayor que la tasa que anuncian.",
   "inputs": [
     {
       "id": "monto_credito",
@@ -54,10 +54,10 @@
       "unit": "meses"
     }
   ],
-  "formula": "Math.round((monto_credito * (tasa_nominal_anual/100/12)) / (1 - Math.pow(1 + tasa_nominal_anual/100/12, -plazo_meses)))",
-  "output_label": "Cuota Mensual ($)",
-  "output_prefix": "$",
-  "output_suffix": "/mes",
+  "formula": "Math.round((Math.pow(1 + tasa_nominal_anual/100/12, 12) - 1) * 100 + comision_apertura * (12 / plazo_meses))",
+  "output_label": "CAT estimado (Costo Anual Total)",
+  "output_prefix": "",
+  "output_suffix": "%",
   "outputs_multiples": [
     {
       "id": "cuota_mensual",
@@ -95,11 +95,26 @@
   "comparativa_cat": {
     "titulo": "CAT real en México (Banxico 2024)",
     "datos": [
-      { "producto": "Tarjeta de crédito departamental", "cat": "74.4%" },
-      { "producto": "Crédito personal banco grande", "cat": "35-55%" },
-      { "producto": "Crédito de nómina", "cat": "25-45%" },
-      { "producto": "Hipoteca fija 20 años", "cat": "12-16%" },
-      { "producto": "CETES (inversión, no crédito)", "cat": "10.5%" }
+      {
+        "producto": "Tarjeta de crédito departamental",
+        "cat": "74.4%"
+      },
+      {
+        "producto": "Crédito personal banco grande",
+        "cat": "35-55%"
+      },
+      {
+        "producto": "Crédito de nómina",
+        "cat": "25-45%"
+      },
+      {
+        "producto": "Hipoteca fija 20 años",
+        "cat": "12-16%"
+      },
+      {
+        "producto": "CETES (inversión, no crédito)",
+        "cat": "10.5%"
+      }
     ]
   },
   "chart_type": "bar",
@@ -117,23 +132,28 @@
   ],
   "escenarios": [
     {
-      "condicion": "cat_estimado > 60",
-      "mensaje": "🔥 CAT mayor al 60%. Este crédito es una trampa. Por $20,000 prestados podrías terminar pagando el doble o más. ¡Compara antes de firmar!",
-      "tipo": "danger"
+      "condicion": "resultado > 60",
+      "mensaje": "CAT superior a 60%: territorio de tarjeta de crédito atrasada y préstamos de nómina caros. Este crédito cuesta más que casi cualquier cosa que puedas comprar con él.",
+      "tipo": "peligro"
     },
     {
-      "condicion": "cat_estimado > 35 && cat_estimado <= 60",
-      "mensaje": "⚠️ CAT elevado. Hay opciones más baratas en el mercado. Busca una institución con menor CAT o considera si realmente necesitas el crédito ahora.",
-      "tipo": "warning"
+      "condicion": "resultado > 35 && resultado <= 60",
+      "mensaje": "CAT alto. Es el rango habitual de tarjetas y créditos personales. Úsalo solo para algo que genere más valor que ese costo, y liquídalo rápido.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "cat_estimado <= 20",
-      "mensaje": "✅ CAT razonable. Estás cerca de las mejores tasas disponibles en México. Asegúrate de no pagar por seguros o servicios que no necesitas.",
-      "tipo": "success"
+      "condicion": "monto_credito * (resultado/100) * (plazo_meses/12) > monto_credito * 0.5",
+      "mensaje": "Los intereses y comisiones de este crédito superan la mitad de lo que pediste prestado. Estás pagando el producto una vez y medio.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "resultado <= 20",
+      "mensaje": "CAT razonable. Aquí caen los créditos hipotecarios y automotrices con buen historial. Fíjate cómo la comisión de apertura sube el CAT cuando el plazo es corto.",
+      "tipo": "exito"
     },
     {
       "condicion": "true",
-      "mensaje": "💡 El CAT lo dice todo: incluye tasa, comisiones y costos de seguros obligatorios. Siempre compara CAT, no solo la tasa mensual.",
+      "mensaje": "Compara siempre CAT contra CAT: es el único número que permite comparar dos créditos distintos de manera justa. Por ley debe aparecer en todo contrato.",
       "tipo": "info"
     }
   ],

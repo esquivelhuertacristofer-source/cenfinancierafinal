@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S3-2-9-A",
+  "unit_code": "S3-2-9",
+  "unit_title": "El primer crédito: construir historial desde cero",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Construir Historial",
+  "descripcion": "Ajusta tu comportamiento y observa cómo evoluciona tu perfil crediticio.",
+  "objetivo": "Visualizar el efecto de cada factor sobre la construcción del historial",
+  "xp": 1000,
+  "inputs": [
+    {
+      "id": "meses",
+      "label": "Meses con productos de crédito",
+      "type": "slider",
+      "min": 0,
+      "max": 120,
+      "step": 1,
+      "default": 18,
+      "unit": "meses",
+      "referencia": "La antigüedad es un activo que solo se construye con tiempo."
+    },
+    {
+      "id": "uso_linea",
+      "label": "Porcentaje de la línea que uso",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 30,
+      "unit": "%",
+      "referencia": "Usar casi toda la línea se lee como presión financiera."
+    },
+    {
+      "id": "atrasos",
+      "label": "Atrasos en los últimos dos años",
+      "type": "slider",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 0,
+      "unit": "atrasos",
+      "referencia": "El factor de mayor peso con diferencia."
+    },
+    {
+      "id": "productos",
+      "label": "Productos de crédito activos",
+      "type": "slider",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "default": 2,
+      "unit": "productos",
+      "referencia": "Variedad suma poco, pero tener cero no ayuda nada."
+    }
+  ],
+  "formula": "Math.max(0, Math.min(100, Math.round(35 + meses * 0.35 - atrasos * 11 - uso_linea * 0.22 + Math.min(productos, 3) * 5)))",
+  "descripcion_formula": "Perfil crediticio aproximado: suma por antigüedad y por tener productos activos bien manejados, resta por atrasos y por uso alto de la línea disponible.",
+  "output_label": "Fortaleza del historial",
+  "output_suffix": " / 100",
+  "escenarios": [
+    {
+      "condicion": "atrasos == 0 && uso_linea <= 30 && meses >= 24",
+      "mensaje": "Historial sólido: dos años sin atrasos y uso bajo de la línea. Esta combinación es la que abre las mejores condiciones de crédito.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "atrasos >= 3",
+      "mensaje": "Los atrasos son el factor de mayor peso. Antes que cualquier otra estrategia, lo que reconstruye un historial es pagar en fecha, mes tras mes.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "uso_linea >= 80",
+      "mensaje": "Estás usando casi toda tu línea disponible. Aunque pagues puntual, eso se interpreta como presión financiera y limita tu perfil.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "productos == 0",
+      "mensaje": "Sin ningún producto de crédito eres un desconocido para las instituciones. Empezar pequeño y usar bien es lo que rompe esa paradoja.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "meses <= 6 && atrasos == 0",
+      "mensaje": "Vas bien, pero el historial es corto. La antigüedad solo se construye con tiempo: no canceles tu primer producto cuando lleguen mejores ofertas.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-9-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-9-a-escena.webp"
+}

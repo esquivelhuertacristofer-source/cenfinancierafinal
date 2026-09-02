@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P4-1-9-A",
+  "unit_code": "P4-1-9",
+  "unit_title": "Remesas: el dinero que cruza la frontera",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "La Remesa de la Familia",
+  "descripcion": "Completa el análisis de Ceny sobre el dinero que envía su tío desde el extranjero.",
+  "objetivo": "Verbalizar el concepto de remesa y sus dos costos de envío",
+  "xp": 400,
+  "contexto": "Ceny investiga cómo llega el dinero que su tío manda cada mes desde el extranjero.",
+  "texto": "El dinero que una persona envía desde otro país a su familia se llama __blank1__. Para México representan una de las principales fuentes de __blank2__ y llegan a millones de hogares. Enviarlas tiene dos costos: la __blank3__ que cobra la empresa, que está a la vista, y el __blank4__ de cambio, que muchas veces es peor que el oficial y que casi nadie compara. Para comparar de verdad hay que preguntar cuántos __blank5__ va a recibir la familia, porque ese número ya lo incluye todo. Un anuncio de envío __blank6__ comisión puede compensarlo por el otro lado. La mayor parte de las remesas se usa en gasto __blank7__, y cuando hay margen, destinar una parte al __blank8__ construye algo que dura más allá del siguiente envío.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "remesa",
+        "comisión",
+        "herencia"
+      ],
+      "respuesta": "remesa"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "divisas",
+        "impuestos",
+        "deudas"
+      ],
+      "respuesta": "divisas"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "comisión",
+        "inflación",
+        "tasa"
+      ],
+      "respuesta": "comisión"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "tipo",
+        "monto",
+        "plazo"
+      ],
+      "respuesta": "tipo"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "pesos",
+        "días",
+        "dólares"
+      ],
+      "respuesta": "pesos"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "sin",
+        "con",
+        "doble"
+      ],
+      "respuesta": "sin"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "necesario",
+        "de lujo",
+        "inútil"
+      ],
+      "respuesta": "necesario"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "ahorro",
+        "gasto",
+        "préstamo"
+      ],
+      "respuesta": "ahorro"
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-9-a-escena.webp"
+}

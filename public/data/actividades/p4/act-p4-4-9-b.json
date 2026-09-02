@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-4-9-B",
+  "unit_code": "P4-4-9",
+  "unit_title": "Llevar cuentas del negocio: registro diario de ventas",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Registro y Utilidad",
+  "descripcion": "Comprueba que sabes llevar y leer las cuentas de un negocio.",
+  "objetivo": "Verificar la comprensión del registro diario y el cálculo de utilidad",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Cobrar y ganar:",
+      "opciones": [
+        "Son distintos: ganar es lo que queda tras restar costos",
+        "Son lo mismo",
+        "Ganar es más",
+        "No se pueden comparar"
+      ],
+      "correcta": 0,
+      "explicacion": "Un negocio puede cobrar mucho y estar perdiendo dinero."
+    },
+    {
+      "id": "q2",
+      "texto": "El registro mínimo tiene:",
+      "opciones": [
+        "Ocho columnas",
+        "Fecha, entradas y salidas",
+        "Solo el total",
+        "Nombre y edad"
+      ],
+      "correcta": 1,
+      "explicacion": "Simple a propósito: un sistema complicado se abandona."
+    },
+    {
+      "id": "q3",
+      "texto": "La utilidad se calcula:",
+      "opciones": [
+        "Entradas más salidas",
+        "Entradas entre salidas",
+        "Entradas menos salidas",
+        "Solo entradas"
+      ],
+      "correcta": 2,
+      "explicacion": "Y en salidas entra todo: material, transporte, empaque, permisos."
+    },
+    {
+      "id": "q4",
+      "texto": "El registro se hace:",
+      "opciones": [
+        "A fin de mes",
+        "Cuando se acuerde",
+        "Cada año",
+        "El mismo día"
+      ],
+      "correcta": 3,
+      "explicacion": "La memoria a tres días olvida gastos y exagera ventas."
+    },
+    {
+      "id": "q5",
+      "texto": "Un registro incompleto:",
+      "opciones": [
+        "Es peor que no tenerlo",
+        "Sirve igual",
+        "Es suficiente",
+        "Es lo normal"
+      ],
+      "correcta": 0,
+      "explicacion": "Da confianza en números que están mal."
+    },
+    {
+      "id": "q6",
+      "texto": "El valor del registro está en:",
+      "opciones": [
+        "Llenarlo bonito",
+        "Leerlo y detectar patrones",
+        "Guardarlo",
+        "Mostrarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Registrar sin leer es solo trabajo sin decisión."
+    },
+    {
+      "id": "q7",
+      "texto": "Con dos semanas de datos se puede ver:",
+      "opciones": [
+        "Nada útil",
+        "Solo el total",
+        "Qué días se vende más y qué gasto crece",
+        "El futuro exacto"
+      ],
+      "correcta": 2,
+      "explicacion": "Patrones invisibles a simple vista que permiten decidir."
+    },
+    {
+      "id": "q8",
+      "texto": "Un negocio sin registro:",
+      "opciones": [
+        "Ahorra tiempo",
+        "Funciona igual",
+        "Gana más",
+        "Se maneja a ciegas"
+      ],
+      "correcta": 3,
+      "explicacion": "No hay forma de saber si va bien hasta que ya es tarde."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-4-9-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-9-b-escena.webp"
+}

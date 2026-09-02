@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P3-3-9-B",
+  "unit_code": "P3-3-9",
+  "unit_title": "Préstamos informales: por qué el 'gota a gota' es una trampa",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Semáforo del Préstamo",
+  "descripcion": "Clasifica cada oferta de préstamo según su nivel de riesgo.",
+  "objetivo": "Distinguir préstamos formales, dudosos y abusivos",
+  "xp": 160,
+  "instruccion": "Arrastra cada oferta al color que le corresponde.",
+  "categorias": [
+    {
+      "id": "seguro",
+      "label": "Formal y seguro",
+      "emoji": "🟢",
+      "color": "#10B981"
+    },
+    {
+      "id": "dudoso",
+      "label": "Dudoso, hay que revisar",
+      "emoji": "🟡",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "peligroso",
+      "label": "Peligroso, no aceptar",
+      "emoji": "🔴",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Institución regulada, contrato con tasa anual por escrito",
+      "emoji": "📄",
+      "categoria_correcta": "seguro",
+      "feedback": "Contrato claro y entidad supervisada: así debe verse un préstamo."
+    },
+    {
+      "id": "i2",
+      "label": "Sin buró, en 10 minutos, solo tu credencial",
+      "emoji": "🚩",
+      "categoria_correcta": "peligroso",
+      "feedback": "Sin requisitos casi siempre significa tasa altísima."
+    },
+    {
+      "id": "i3",
+      "label": "Cobran $50 diarios durante 24 días por $1,000 prestados",
+      "emoji": "📆",
+      "categoria_correcta": "peligroso",
+      "feedback": "$200 de interés en menos de un mes: anualizado es enorme."
+    },
+    {
+      "id": "i4",
+      "label": "Un familiar presta con acuerdo escrito y sin interés",
+      "emoji": "🤝",
+      "categoria_correcta": "seguro",
+      "feedback": "Con acuerdo por escrito, para que la relación no se dañe."
+    },
+    {
+      "id": "i5",
+      "label": "Piden dejar la credencial de elector en garantía",
+      "emoji": "🪪",
+      "categoria_correcta": "peligroso",
+      "feedback": "Ninguna institución seria retiene documentos de identidad."
+    },
+    {
+      "id": "i6",
+      "label": "Oferta por redes sociales sin nombre de la empresa",
+      "emoji": "📱",
+      "categoria_correcta": "dudoso",
+      "feedback": "Sin poder verificar quién es, no hay forma de saber si está regulada."
+    },
+    {
+      "id": "i7",
+      "label": "Caja de ahorro formal del trabajo con reglamento",
+      "emoji": "🏛️",
+      "categoria_correcta": "seguro",
+      "feedback": "Reglas conocidas y por escrito: es una alternativa legítima."
+    },
+    {
+      "id": "i8",
+      "label": "Presionan para firmar hoy mismo antes de que suba",
+      "emoji": "⏱️",
+      "categoria_correcta": "peligroso",
+      "feedback": "La prisa impide leer, y esa es justamente la intención."
+    },
+    {
+      "id": "i9",
+      "label": "Financiera con oficina que no explica la tasa anual",
+      "emoji": "❓",
+      "categoria_correcta": "dudoso",
+      "feedback": "Tener oficina no basta: exige la tasa anual por escrito antes de firmar."
+    },
+    {
+      "id": "i10",
+      "label": "Usar mi propio fondo de emergencia",
+      "emoji": "🛡️",
+      "categoria_correcta": "seguro",
+      "feedback": "La única opción que no cobra intereses. Por eso vale la pena construirlo."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-9-b-escena.webp"
+}

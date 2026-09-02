@@ -4,126 +4,110 @@
   "unit_title": "Inversión sostenible: ISR y finanzas con impacto social",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "QUIZ",
   "complejidad": "ALTO",
-  "titulo": "Mi Plan de Desendeudamiento",
-  "descripcion": "La deuda es una cadena pesada. ¡Crea el mapa para liberarte de ella hoy mismo!",
-  "objetivo": "Diseñar una estrategia personalizada para la liquidación de deudas basada en priorización y control de gastos",
-  "xp": 600,
-  "output_type": "Plan Maestro de Libertad Financiera",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Invertir con Criterio",
+  "descripcion": "¿Invertir con criterios sostenibles cuesta rendimiento o lo protege? La respuesta es menos ideológica y más financiera de lo que parece.",
+  "objetivo": "Comprender la inversión socialmente responsable, sus instrumentos y su relación con la gestión de riesgos de largo plazo.",
+  "xp": 650,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "inventario_deudas_s2",
-      "titulo": "📝 Inventario de Deudas",
-      "descripcion": "No puedes pelear contra un enemigo que no conoces. Ponle nombre y monto a tus deudas.",
-      "campos": [
-        {
-          "id": "deuda_mayor_interes",
-          "label": "Deuda con mayor interés (ej: Tarjeta)",
-          "type": "text",
-          "placeholder": "Nombre de la deuda y tasa %",
-          "requerido": true
-        },
-        {
-          "id": "deuda_menor_monto",
-          "label": "Deuda más pequeña (ej: Pago a amigo)",
-          "type": "text",
-          "placeholder": "Nombre y monto total",
-          "requerido": true
-        }
-      ]
+      "id": "q1",
+      "texto": "Las siglas ASG (ESG en inglés) significan…",
+      "opciones": [
+        "Ahorro, Seguro y Ganancia",
+        "Ambiental, Social y de Gobernanza",
+        "Acciones, Servicios y Garantías",
+        "Análisis Sistemático Global"
+      ],
+      "correcta": 1,
+      "explicacion": "Son tres dimensiones de riesgo que los estados financieros tradicionales no capturan."
     },
     {
-      "id": "seleccion_metodo_s2",
-      "titulo": "🎯 Tu Estrategia",
-      "descripcion": "¿Qué priorizarás para no rendirte?",
-      "campos": [
-        {
-          "id": "metodo_elegido",
-          "label": "Método de Pago",
-          "type": "select",
-          "opciones": [
-            "Bola de Nieve (Pagos pequeños primero)",
-            "Avalancha (Intereses altos primero)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "ahorro_emergencia_s2",
-          "label": "¿Tienes un fondo de emergencia pequeño para no volver a endeudarte?",
-          "type": "select",
-          "opciones": [
-            "Sí, ya lo tengo",
-            "Lo construiré primero",
-            "No lo necesito (Error)"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "q2",
+      "texto": "La razón financiera para mirar criterios ASG es que…",
+      "opciones": [
+        "Son riesgos reales que pueden costar dinero",
+        "Es obligatorio por ley",
+        "Da más rendimiento garantizado",
+        "Es una moda"
+      ],
+      "correcta": 0,
+      "explicacion": "Una multa ambiental, una huelga o un fraude del director destruyen valor de forma muy concreta."
     },
     {
-      "id": "recortes_sacrificios",
-      "titulo": "✂️ Recortes de Emergencia",
-      "descripcion": "¿De dónde saldrá el dinero extra?",
-      "campos": [
-        {
-          "id": "gastos_a_eliminar",
-          "label": "Gastos que suspenderé hoy",
-          "type": "textarea",
-          "placeholder": "Ej: Suscripciones que no uso, comer fuera los fines de semana, compras por impulso...",
-          "requerido": true
-        },
-        {
-          "id": "ingreso_extra_s2",
-          "label": "Idea para ganar dinero extra",
-          "type": "text",
-          "placeholder": "Ej: Vender cosas que no uso, dar clases, etc.",
-          "requerido": true
-        },
-        {
-          "id": "pago_extra_mensual",
-          "label": "Pago Extra Mensual para Deudas ($)",
-          "type": "slider",
-          "min": 200,
-          "max": 20000,
-          "step": 200,
-          "default": 2000,
-          "unit": "$",
-          "requerido": false
-        },
-        {
-          "id": "meses_para_libertad",
-          "label": "Meses Estimados para Quedar Libre",
-          "type": "calculated",
-          "formula": "Math.ceil(50000 / Math.max(1, pago_extra_mensual))",
-          "unit": " meses estimados",
-          "ayuda": "Asumiendo deuda total de $50,000 — ajusta según tu situación real"
-        },
-        {
-          "id": "intereses_ahorrados_est",
-          "label": "Intereses que Te Ahorras (CAT 80%)",
-          "type": "calculated",
-          "formula": "Math.round(50000 * 0.80 * (50000 / Math.max(1, pago_extra_mensual)) / 12)",
-          "unit": "$",
-          "ayuda": "Cada mes que aceleras el pago eliminas intereses a tasa alta"
-        }
-      ]
+      "id": "q3",
+      "texto": "El \"greenwashing\" es…",
+      "opciones": [
+        "Un impuesto verde",
+        "Presumir sostenibilidad sin practicarla realmente",
+        "Una técnica de reciclaje",
+        "Un tipo de bono"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso hay que revisar métricas verificables y no solo los informes de mercadotecnia."
     },
     {
-      "id": "compromiso_libertad",
-      "titulo": "🕊️ El Compromiso",
-      "descripcion": "Firma tu pacto con el futuro.",
-      "campos": [
-        {
-          "id": "promesa_no_deuda",
-          "label": "Mi promesa de libertad",
-          "type": "textarea",
-          "placeholder": "Prometo no volver a usar tarjetas de consumo hasta que este plan termine...",
-          "requerido": true
-        }
-      ]
+      "id": "q4",
+      "texto": "Un \"bono verde\" es…",
+      "opciones": [
+        "Un billete ecológico",
+        "Deuda emitida para financiar proyectos ambientales específicos",
+        "Una acción",
+        "Un subsidio"
+      ],
+      "correcta": 1,
+      "explicacion": "Funciona como cualquier bono, con el compromiso verificable sobre el destino de los recursos."
+    },
+    {
+      "id": "q5",
+      "texto": "Evidencia sobre el rendimiento de las carteras ASG a largo plazo:",
+      "opciones": [
+        "Siempre rinden menos",
+        "Suelen rendir de forma comparable, con menor riesgo de eventos catastróficos",
+        "Siempre rinden más",
+        "No se puede medir"
+      ],
+      "correcta": 1,
+      "explicacion": "Su mayor aporte medible ha sido evitar desastres, no multiplicar rendimientos."
+    },
+    {
+      "id": "q6",
+      "texto": "Una \"empresa social\" se distingue porque…",
+      "opciones": [
+        "No gana dinero",
+        "Su modelo de negocio busca resolver un problema social siendo rentable",
+        "Es del gobierno",
+        "No paga impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "La rentabilidad es lo que le permite sostener y escalar el impacto sin depender de donativos."
+    },
+    {
+      "id": "q7",
+      "texto": "El riesgo de excluir sectores enteros de tu cartera por criterios éticos es…",
+      "opciones": [
+        "Ninguno",
+        "Reducir la diversificación y concentrarte más",
+        "Que es ilegal",
+        "Que pagas más impuestos"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una decisión legítima con un costo técnico que conviene conocer y aceptar conscientemente."
+    },
+    {
+      "id": "q8",
+      "texto": "La forma más práctica de invertir con criterios ASG desde México es…",
+      "opciones": [
+        "Comprar acción por acción tras auditar cada empresa",
+        "A través de fondos o ETFs con mandato ASG explícito",
+        "No invertir",
+        "Solo en el extranjero"
+      ],
+      "correcta": 1,
+      "explicacion": "Revisa el prospecto: ahí dice qué criterios aplica realmente y qué excluye."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

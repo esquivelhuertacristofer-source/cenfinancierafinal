@@ -1,0 +1,205 @@
+{
+  "code": "ACT-S2-3-8-A",
+  "unit_code": "S2-3-8",
+  "unit_title": "Rebalanceo: mantener el rumbo del portafolio",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Rebalancear mi Portafolio",
+  "descripcion": "Calcula cuánto mover para volver a tu composición objetivo.",
+  "objetivo": "Ejecutar un rebalanceo completo con criterio y costos considerados",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi composición objetivo",
+      "descripcion": "La proporción que decidí al inicio.",
+      "campos": [
+        {
+          "id": "objetivo_variable",
+          "label": "Porcentaje objetivo en renta variable",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "objetivo_fija",
+          "label": "Porcentaje objetivo en renta fija",
+          "type": "calculated",
+          "formula": "100 - objetivo_variable",
+          "unit": "%"
+        },
+        {
+          "id": "perfil",
+          "label": "Mi perfil de riesgo",
+          "type": "select",
+          "opciones": [
+            "Conservador",
+            "Moderado",
+            "Agresivo"
+          ],
+          "default": "Moderado",
+          "requerido": true
+        },
+        {
+          "id": "horizonte",
+          "label": "Horizonte de inversión",
+          "type": "slider",
+          "min": 1,
+          "max": 40,
+          "step": 1,
+          "default": 15,
+          "unit": "años",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Dónde estoy hoy",
+      "descripcion": "Lo que el mercado hizo con mi portafolio.",
+      "campos": [
+        {
+          "id": "saldo_variable",
+          "label": "Saldo actual en renta variable",
+          "type": "number",
+          "min": 0,
+          "max": 10000000,
+          "default": 140000,
+          "unit": "$",
+          "placeholder": "140000",
+          "requerido": true
+        },
+        {
+          "id": "saldo_fija",
+          "label": "Saldo actual en renta fija",
+          "type": "number",
+          "min": 0,
+          "max": 10000000,
+          "default": 60000,
+          "unit": "$",
+          "placeholder": "60000",
+          "requerido": true
+        },
+        {
+          "id": "total",
+          "label": "Total del portafolio",
+          "type": "calculated",
+          "formula": "saldo_variable + saldo_fija",
+          "unit": "$"
+        },
+        {
+          "id": "pct_actual_variable",
+          "label": "Porcentaje actual en renta variable",
+          "type": "calculated",
+          "formula": "Math.round(saldo_variable / Math.max(1, saldo_variable + saldo_fija) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "desviacion",
+          "label": "Desviación respecto al objetivo",
+          "type": "calculated",
+          "formula": "Math.round(saldo_variable / Math.max(1, saldo_variable + saldo_fija) * 100 - objetivo_variable)",
+          "unit": "pts"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El movimiento necesario",
+      "descripcion": "Cuánto vender y cuánto comprar.",
+      "campos": [
+        {
+          "id": "objetivo_pesos_var",
+          "label": "Cuánto debería haber en renta variable",
+          "type": "calculated",
+          "formula": "Math.round((saldo_variable + saldo_fija) * objetivo_variable / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "a_mover",
+          "label": "Monto a mover de una clase a otra",
+          "type": "calculated",
+          "formula": "Math.abs(Math.round(saldo_variable - (saldo_variable + saldo_fija) * objetivo_variable / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "aportacion",
+          "label": "Aportación nueva que puedo dirigir",
+          "type": "slider",
+          "min": 0,
+          "max": 200000,
+          "step": 500,
+          "default": 20000,
+          "unit": "$",
+          "ayuda": "Rebalancear con aportaciones evita comisiones e impuestos.",
+          "requerido": true
+        },
+        {
+          "id": "resta_vender",
+          "label": "Lo que aún tendría que vender tras aportar",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.abs(Math.round(saldo_variable - (saldo_variable + saldo_fija) * objetivo_variable / 100)) - aportacion)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi regla y sus costos",
+      "descripcion": "Cuándo lo haré y cuánto cuesta.",
+      "campos": [
+        {
+          "id": "criterio",
+          "label": "Criterio que voy a usar",
+          "type": "select",
+          "opciones": [
+            "Por calendario",
+            "Por umbral de desviación",
+            "Ambos"
+          ],
+          "default": "Por umbral de desviación",
+          "requerido": true
+        },
+        {
+          "id": "umbral",
+          "label": "Umbral de desviación que dispara el rebalanceo",
+          "type": "slider",
+          "min": 2,
+          "max": 20,
+          "step": 1,
+          "default": 5,
+          "unit": "pts",
+          "requerido": true
+        },
+        {
+          "id": "comision_op",
+          "label": "Comisión por operación",
+          "type": "slider",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 0.5,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "costo_rebalanceo",
+          "label": "Costo estimado de este rebalanceo",
+          "type": "calculated",
+          "formula": "Math.round(Math.max(0, Math.abs(saldo_variable - (saldo_variable + saldo_fija) * objetivo_variable / 100) - aportacion) * comision_op / 100)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_rebalanceo",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-3-8-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-8-a-escena.webp"
+}

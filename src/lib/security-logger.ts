@@ -1,5 +1,8 @@
 // Structured security event logger.
-// Events are written to console (picked up by Vercel logs + Sentry).
+// Events are written to console (picked up by Cloudflare Workers logs —
+// dashboard "Logs"/"Tail" or `wrangler tail`). Sentry was deliberately
+// removed during the Vercel → Cloudflare migration (2026-07-08) and is
+// not wired up here.
 // Do NOT log passwords, tokens, or full email addresses as PII here.
 
 export type SecurityEventType =

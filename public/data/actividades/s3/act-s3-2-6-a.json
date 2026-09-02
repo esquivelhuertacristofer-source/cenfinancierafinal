@@ -1,0 +1,195 @@
+{
+  "code": "ACT-S3-2-6-A",
+  "unit_code": "S3-2-6",
+  "unit_title": "RESICO: mi primera decisión fiscal como joven que ya cobra",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Decisión Fiscal",
+  "descripcion": "Compara qué régimen te conviene según tus ingresos y tus gastos.",
+  "objetivo": "Comparar la carga fiscal de dos regímenes según la estructura de gasto",
+  "xp": 1000,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi actividad",
+      "descripcion": "De dónde vienen mis ingresos.",
+      "campos": [
+        {
+          "id": "tipo_actividad",
+          "label": "Tipo de actividad",
+          "type": "select",
+          "opciones": [
+            "Servicios profesionales",
+            "Venta de productos",
+            "Oficio o reparaciones",
+            "Contenido o creatividad"
+          ],
+          "default": "Servicios profesionales",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_mensual",
+          "label": "Ingreso mensual promedio",
+          "type": "number",
+          "min": 1000,
+          "max": 400000,
+          "default": 22000,
+          "unit": "$",
+          "placeholder": "22000",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_anual",
+          "label": "Ingreso anual estimado",
+          "type": "calculated",
+          "formula": "ingreso_mensual * 12",
+          "unit": "$"
+        },
+        {
+          "id": "umbral",
+          "label": "Umbral anual del régimen simplificado",
+          "type": "number",
+          "min": 100000,
+          "max": 10000000,
+          "default": 3500000,
+          "unit": "$",
+          "placeholder": "3500000",
+          "ayuda": "Consulta el valor vigente en la fuente oficial.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mis gastos deducibles",
+      "descripcion": "Lo que sí podría descontar en el otro régimen.",
+      "campos": [
+        {
+          "id": "materiales",
+          "label": "Materiales e insumos al mes",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 4000,
+          "unit": "$",
+          "placeholder": "4000",
+          "requerido": true
+        },
+        {
+          "id": "equipo",
+          "label": "Equipo y herramientas al mes",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 1200,
+          "unit": "$",
+          "placeholder": "1200",
+          "requerido": true
+        },
+        {
+          "id": "servicios",
+          "label": "Internet, transporte y servicios al mes",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 2200,
+          "unit": "$",
+          "placeholder": "2200",
+          "requerido": true
+        },
+        {
+          "id": "gastos_totales",
+          "label": "Gastos deducibles anuales",
+          "type": "calculated",
+          "formula": "(materiales + equipo + servicios) * 12",
+          "unit": "$"
+        },
+        {
+          "id": "peso_gastos",
+          "label": "Gastos como porcentaje del ingreso",
+          "type": "calculated",
+          "formula": "Math.round((materiales + equipo + servicios) / Math.max(1, ingreso_mensual) * 100)",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Opción A: régimen simplificado",
+      "descripcion": "Tasa baja sobre ingresos, sin deducir.",
+      "campos": [
+        {
+          "id": "tasa_simplificado",
+          "label": "Tasa aplicable sobre ingresos",
+          "type": "slider",
+          "min": 0.5,
+          "max": 5,
+          "step": 0.25,
+          "default": 2,
+          "unit": "%",
+          "ayuda": "Consulta la tasa vigente para tu nivel de ingreso.",
+          "requerido": true
+        },
+        {
+          "id": "impuesto_simplificado",
+          "label": "Impuesto anual estimado",
+          "type": "calculated",
+          "formula": "Math.round(ingreso_mensual * 12 * tasa_simplificado / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "aplica",
+          "label": "¿Estoy por debajo del umbral?",
+          "type": "calculated",
+          "formula": "ingreso_mensual * 12 <= umbral ? 1 : 0",
+          "unit": "1=sí 0=no"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Opción B: sobre utilidad",
+      "descripcion": "Tasa mayor pero deduciendo gastos.",
+      "campos": [
+        {
+          "id": "tasa_utilidad",
+          "label": "Tasa efectiva estimada sobre utilidad",
+          "type": "slider",
+          "min": 5,
+          "max": 35,
+          "step": 1,
+          "default": 18,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "utilidad",
+          "label": "Utilidad anual",
+          "type": "calculated",
+          "formula": "Math.max(0, ingreso_mensual * 12 - (materiales + equipo + servicios) * 12)",
+          "unit": "$"
+        },
+        {
+          "id": "impuesto_utilidad",
+          "label": "Impuesto anual estimado",
+          "type": "calculated",
+          "formula": "Math.round(Math.max(0, ingreso_mensual * 12 - (materiales + equipo + servicios) * 12) * tasa_utilidad / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia entre ambas opciones",
+          "type": "calculated",
+          "formula": "Math.round(Math.max(0, ingreso_mensual * 12 - (materiales + equipo + servicios) * 12) * tasa_utilidad / 100 - ingreso_mensual * 12 * tasa_simplificado / 100)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "comparativo_regimen_fiscal",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-2-6-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-6-a-escena.webp"
+}

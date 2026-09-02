@@ -4,123 +4,118 @@
   "unit_title": "Mi plan financiero: de los 15 a los 65 años",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "El Poder del Banco Central",
-  "descripcion": "¿Sabes quién controla el precio del dinero en el mundo? ¡Demuestra que conoces los secretos del Banco Central!",
-  "objetivo": "Identificar las funciones principales de un Banco Central y su impacto en la economía nacional e internacional",
-  "xp": 300,
-  "preguntas": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "La Línea del Tiempo",
+  "descripcion": "Cada etapa de la vida tiene su decisión financiera correcta, y hacerla fuera de tiempo cuesta caro. Coloca cada movimiento donde corresponde.",
+  "objetivo": "Elaborar una hoja de ruta financiera de largo plazo identificando los hitos clave y la estrategia adecuada a cada etapa.",
+  "xp": 650,
+  "instruccion": "Arrastra cada decisión a la etapa de la vida donde tiene más sentido tomarla.",
+  "categorias": [
     {
-      "id": "mon1",
-      "pregunta": "¿Cuál es el objetivo principal de la mayoría de los Bancos Centrales?",
-      "respuesta_correcta": "Mantener la estabilidad de precios (controlar la inflación)",
-      "incorrectas": [
-        "Prestar dinero a las personas",
-        "Hacer que el gobierno sea rico",
-        "Vender acciones"
-      ],
-      "dato_extra": "Muchos bancos tienen un objetivo de inflación del 2% o 3% anual."
+      "id": "quince",
+      "label": "15 a 25 AÑOS",
+      "emoji": "🌱",
+      "color": "#10b981"
     },
     {
-      "id": "mon2",
-      "pregunta": "¿Qué significa que un Banco Central sea 'Autónomo'?",
-      "respuesta_correcta": "Que toma sus decisiones sin que el gobierno o los políticos le digan qué hacer",
-      "incorrectas": [
-        "Que funciona con robots",
-        "Que no tiene oficinas",
-        "Que no usa dinero"
-      ],
-      "dato_extra": "La autonomía evita que los políticos impriman dinero solo para ganar votos."
+      "id": "veinticinco",
+      "label": "25 a 45 AÑOS",
+      "emoji": "🚀",
+      "color": "#f59e0b"
     },
     {
-      "id": "mon3",
-      "pregunta": "¿Cómo se llama el Banco Central de los Estados Unidos?",
-      "respuesta_correcta": "Reserva Federal (FED)",
-      "incorrectas": [
-        "Banco de América",
-        "Tesoro Nacional",
-        "Banco Mundial"
-      ],
-      "dato_extra": "Es el banco más poderoso del mundo porque controla el dólar."
-    },
-    {
-      "id": "mon4",
-      "pregunta": "¿Qué sucede si el Banco Central imprime demasiado dinero sin que la producción del país crezca?",
-      "respuesta_correcta": "Se genera Hiperinflación y el dinero pierde su valor",
-      "incorrectas": [
-        "Todos se vuelven ricos",
-        "Los precios bajan",
-        "No pasa nada"
-      ],
-      "dato_extra": "Países como Venezuela o Zimbabue han sufrido esto por imprimir billetes en exceso."
-    },
-    {
-      "id": "mon5",
-      "pregunta": "¿Qué es el dinero 'Fiduciario' (Fiat)?",
-      "respuesta_correcta": "Dinero que no tiene respaldo en oro, sino que vale por la confianza legal y del gobierno que lo emite",
-      "incorrectas": [
-        "Dinero de juguete",
-        "Dinero respaldado en petróleo",
-        "Dinero electrónico solamente"
-      ],
-      "dato_extra": "Casi todas las monedas del mundo hoy son fiduciarias."
-    },
-    {
-      "id": "mon6",
-      "pregunta": "¿Qué es la 'Tasa de Referencia'?",
-      "respuesta_correcta": "El precio al que el Banco Central le presta dinero a los otros bancos comerciales",
-      "incorrectas": [
-        "El precio del dólar",
-        "Lo que pagas de IVA",
-        "La tasa de ahorro del banco"
-      ],
-      "dato_extra": "Es la base para todas las demás tasas de interés del país."
-    },
-    {
-      "id": "mon7",
-      "pregunta": "¿Qué es el 'Encaje Legal' o Reserva?",
-      "respuesta_correcta": "El porcentaje de dinero que los bancos deben guardar obligatoriamente y no pueden prestar",
-      "incorrectas": [
-        "Un tipo de ropa",
-        "Un impuesto al ahorro",
-        "Una comisión bancaria"
-      ],
-      "dato_extra": "Sirve para asegurar que los bancos siempre tengan efectivo disponible."
-    },
-    {
-      "id": "mon8",
-      "pregunta": "Si el Banco Central quiere 'Enfriar' la economía, ¿qué hace?",
-      "respuesta_correcta": "Sube las tasas de interés",
-      "incorrectas": [
-        "Baja las tasas de interés",
-        "Regala dinero",
-        "Cierra los bancos"
-      ],
-      "dato_extra": "Se hace para evitar que la inflación suba demasiado rápido."
-    },
-    {
-      "id": "mon9",
-      "pregunta": "¿Qué significa 'Liquidez' en el sistema financiero?",
-      "respuesta_correcta": "La facilidad con la que el dinero fluye y está disponible para transacciones rápidas",
-      "incorrectas": [
-        "Que el dinero es líquido",
-        "Que hay muchas deudas",
-        "Que el banco no tiene luz"
-      ],
-      "dato_extra": "El Banco Central actúa como 'prestamista de última instancia' para asegurar la liquidez."
-    },
-    {
-      "id": "mon10",
-      "pregunta": "¿Por qué es importante que un país tenga Reservas Internacionales (Oro, Dólares)?",
-      "respuesta_correcta": "Para dar confianza al mundo y poder enfrentar crisis económicas externas",
-      "incorrectas": [
-        "Para coleccionarlos",
-        "Para gastarlos en vacaciones del presidente",
-        "No son importantes"
-      ],
-      "dato_extra": "¡Felicidades! Ahora entiendes cómo funciona el cerebro del sistema financiero."
+      "id": "cuarenta",
+      "label": "45 EN ADELANTE",
+      "emoji": "🏔️",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Construir tu historial crediticio con una tarjeta usada bien",
+      "emoji": "💳",
+      "categoria_correcta": "quince",
+      "feedback": "A los 18 se puede empezar. Un buen historial a los 25 abre créditos baratos toda la vida."
+    },
+    {
+      "id": "i2",
+      "label": "Armar el fondo de emergencia de 6 meses",
+      "emoji": "🛡️",
+      "categoria_correcta": "quince",
+      "feedback": "Antes de invertir un solo peso. Es la base de todo lo demás."
+    },
+    {
+      "id": "i3",
+      "label": "Comprar vivienda con crédito hipotecario",
+      "emoji": "🏠",
+      "categoria_correcta": "veinticinco",
+      "feedback": "Con estabilidad laboral, enganche y certeza de dónde vas a vivir 8 años o más."
+    },
+    {
+      "id": "i4",
+      "label": "Contratar seguro de vida al tener dependientes económicos",
+      "emoji": "👨‍👩‍👧",
+      "categoria_correcta": "veinticinco",
+      "feedback": "El seguro de vida no es para ti: es para quien depende de tu ingreso."
+    },
+    {
+      "id": "i5",
+      "label": "Bajar el riesgo del portafolio poco a poco",
+      "emoji": "📉",
+      "categoria_correcta": "cuarenta",
+      "feedback": "Cuanto más cerca del retiro, menos tiempo hay para recuperarse de una caída."
+    },
+    {
+      "id": "i6",
+      "label": "Empezar a invertir aunque sea con $500 al mes",
+      "emoji": "🌾",
+      "categoria_correcta": "quince",
+      "feedback": "La cantidad importa menos que los años que ese dinero pase invertido."
+    },
+    {
+      "id": "i7",
+      "label": "Aportaciones voluntarias fuertes a la AFORE",
+      "emoji": "💰",
+      "categoria_correcta": "cuarenta",
+      "feedback": "Es cuando el ingreso es más alto y además son deducibles de impuestos."
+    },
+    {
+      "id": "i8",
+      "label": "Elegir carrera calculando su retorno y su costo",
+      "emoji": "🎓",
+      "categoria_correcta": "quince",
+      "feedback": "La decisión de mayor impacto económico de toda la vida, y la que menos se calcula."
+    },
+    {
+      "id": "i9",
+      "label": "Hacer testamento y designar beneficiarios",
+      "emoji": "📜",
+      "categoria_correcta": "veinticinco",
+      "feedback": "En cuanto hay patrimonio o hijos. No es cosa de la vejez."
+    },
+    {
+      "id": "i10",
+      "label": "Revisar tus semanas cotizadas y proyectar tu pensión",
+      "emoji": "📊",
+      "categoria_correcta": "cuarenta",
+      "feedback": "Todavía hay margen para corregir con Modalidad 40 o aportaciones extra."
+    },
+    {
+      "id": "i11",
+      "label": "Tomar más riesgo en inversión por tener décadas por delante",
+      "emoji": "📈",
+      "categoria_correcta": "quince",
+      "feedback": "Con 40 años de horizonte, la volatilidad deja de ser el riesgo principal."
+    },
+    {
+      "id": "i12",
+      "label": "Liquidar la hipoteca antes de terminar la vida laboral",
+      "emoji": "✅",
+      "categoria_correcta": "cuarenta",
+      "feedback": "Ninguna deuda larga debería sobrevivir a tu último sueldo."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

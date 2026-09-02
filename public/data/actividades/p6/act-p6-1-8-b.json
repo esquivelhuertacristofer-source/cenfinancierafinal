@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-1-8-B",
+  "unit_code": "P6-1-8",
+  "unit_title": "Ahorro voluntario en el AFORE desde joven",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Retiro y Tiempo",
+  "descripcion": "Clasifica cada afirmación sobre el ahorro para el retiro.",
+  "objetivo": "Distinguir afirmaciones correctas, mitos y acciones concretas sobre el retiro",
+  "xp": 480,
+  "instruccion": "Arrastra cada afirmación a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "correcto",
+      "label": "Es correcto",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "mito",
+      "label": "Es un mito",
+      "emoji": "❌",
+      "color": "#EF4444"
+    },
+    {
+      "id": "accion",
+      "label": "Acción concreta que puedo hacer",
+      "emoji": "🎯",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "El tiempo pesa más que el monto aportado",
+      "emoji": "⏳",
+      "categoria_correcta": "correcto",
+      "feedback": "Los rendimientos generan rendimientos: eso necesita décadas."
+    },
+    {
+      "id": "i2",
+      "label": "Hay que empezar a pensar en el retiro a los 50",
+      "emoji": "🕐",
+      "categoria_correcta": "mito",
+      "feedback": "Justo por creer eso el retiro es un problema para tanta gente."
+    },
+    {
+      "id": "i3",
+      "label": "Revisar mi estado de cuenta y la comisión que pago",
+      "emoji": "📄",
+      "categoria_correcta": "accion",
+      "feedback": "La mayoría de las personas nunca lo ha revisado."
+    },
+    {
+      "id": "i4",
+      "label": "La cuenta de retiro es de cada persona, no de la empresa",
+      "emoji": "👤",
+      "categoria_correcta": "correcto",
+      "feedback": "Y se puede consultar y cambiar de administradora."
+    },
+    {
+      "id": "i5",
+      "label": "Solo se puede aportar si ganas mucho",
+      "emoji": "💸",
+      "categoria_correcta": "mito",
+      "feedback": "Se puede aportar voluntariamente desde montos muy pequeños."
+    },
+    {
+      "id": "i6",
+      "label": "Aportar una cantidad pequeña pero sostenible cada mes",
+      "emoji": "🔁",
+      "categoria_correcta": "accion",
+      "feedback": "Sostenible vence a grande: lo que se abandona no sirve."
+    },
+    {
+      "id": "i7",
+      "label": "Una diferencia de comisión pesa mucho en cuarenta años",
+      "emoji": "📉",
+      "categoria_correcta": "correcto",
+      "feedback": "Pequeña cada año, enorme al final del horizonte."
+    },
+    {
+      "id": "i8",
+      "label": "Cambiar de administradora es imposible",
+      "emoji": "🔒",
+      "categoria_correcta": "mito",
+      "feedback": "Es un derecho del titular de la cuenta."
+    },
+    {
+      "id": "i9",
+      "label": "Subir mi aportación cada vez que aumente mi ingreso",
+      "emoji": "📈",
+      "categoria_correcta": "accion",
+      "feedback": "Crece con tu capacidad sin exigir un sacrificio inicial insostenible."
+    },
+    {
+      "id": "i10",
+      "label": "Empezar a los 20 con poco puede superar a empezar a los 40 con el doble",
+      "emoji": "🏁",
+      "categoria_correcta": "correcto",
+      "feedback": "Incluso habiendo aportado menos dinero en total."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-8-b-escena.webp"
+}

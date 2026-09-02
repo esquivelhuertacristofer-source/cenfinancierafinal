@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-1-9-B",
+  "unit_code": "P4-1-9",
+  "unit_title": "Remesas: el dinero que cruza la frontera",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Remesas: El Costo Real",
+  "descripcion": "Comprueba que sabes comparar envíos y entender su peso económico.",
+  "objetivo": "Verificar la comprensión de remesas, sus costos y su uso",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una remesa es:",
+      "opciones": [
+        "Un préstamo bancario",
+        "Un impuesto",
+        "Una inversión",
+        "Dinero enviado desde otro país a la familia"
+      ],
+      "correcta": 3,
+      "explicacion": "Millones de hogares mexicanos dependen parcial o totalmente de ellas."
+    },
+    {
+      "id": "q2",
+      "texto": "Los dos costos de enviar una remesa son:",
+      "opciones": [
+        "La comisión y el tipo de cambio",
+        "El IVA y la propina",
+        "El envío y el sello",
+        "El banco y la tienda"
+      ],
+      "correcta": 0,
+      "explicacion": "El segundo casi nunca se compara y suele ser el más caro."
+    },
+    {
+      "id": "q3",
+      "texto": "Para comparar proveedores hay que preguntar:",
+      "opciones": [
+        "Cuál es más grande",
+        "Cuántos pesos recibirá la familia",
+        "Cuánta comisión cobra",
+        "Cuál tiene más sucursales"
+      ],
+      "correcta": 1,
+      "explicacion": "Ese número ya incluye comisión y tipo de cambio."
+    },
+    {
+      "id": "q4",
+      "texto": "Un anuncio de \"envío sin comisión\":",
+      "opciones": [
+        "Siempre es la mejor opción",
+        "No existe",
+        "Puede compensarlo con peor tipo de cambio",
+        "Es ilegal"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso se compara por pesos recibidos, no por comisión anunciada."
+    },
+    {
+      "id": "q5",
+      "texto": "Para México las remesas son:",
+      "opciones": [
+        "Un ingreso menor",
+        "Algo prohibido",
+        "Un gasto público",
+        "Una de las principales fuentes de divisas"
+      ],
+      "correcta": 3,
+      "explicacion": "Suman decenas de miles de millones de dólares al año."
+    },
+    {
+      "id": "q6",
+      "texto": "La mayor parte de las remesas se destina a:",
+      "opciones": [
+        "Gasto necesario",
+        "Solo lujos",
+        "Solo ahorro",
+        "Solo inversión"
+      ],
+      "correcta": 0,
+      "explicacion": "Comida, salud, educación y servicios son los usos principales."
+    },
+    {
+      "id": "q7",
+      "texto": "Destinar una parte al ahorro o a la vivienda:",
+      "opciones": [
+        "Es un desperdicio",
+        "Construye algo duradero",
+        "Está prohibido",
+        "No cambia nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Reduce la dependencia total del siguiente envío."
+    },
+    {
+      "id": "q8",
+      "texto": "Sobre envíos mensuales, elegir bien el proveedor:",
+      "opciones": [
+        "No cambia nada",
+        "Solo importa la primera vez",
+        "Puede significar miles de pesos al año",
+        "Es imposible de calcular"
+      ],
+      "correcta": 2,
+      "explicacion": "Una diferencia pequeña por envío, multiplicada por doce, es mucho dinero."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-9-b-escena.webp"
+}

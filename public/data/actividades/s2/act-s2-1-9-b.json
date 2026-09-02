@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-1-9-B",
+  "unit_code": "S2-1-9",
+  "unit_title": "Las remesas y su peso real en la economía mexicana",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Las Remesas",
+  "descripcion": "Clasifica cada elemento según su papel en el envío y uso de remesas.",
+  "objetivo": "Verificar la comprensión de costos y usos de las remesas",
+  "xp": 400,
+  "instruccion": "Arrastra cada elemento a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "costo",
+      "label": "Costo del envío",
+      "emoji": "💸",
+      "color": "#EF4444"
+    },
+    {
+      "id": "consumo",
+      "label": "Uso en consumo",
+      "emoji": "🛒",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "patrimonio",
+      "label": "Uso que construye patrimonio",
+      "emoji": "🏗️",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Comisión que cobra el operador",
+      "emoji": "🧾",
+      "categoria_correcta": "costo",
+      "feedback": "El costo visible, el que todos comparan."
+    },
+    {
+      "id": "i2",
+      "label": "Diferencial entre el tipo de cambio real y el aplicado",
+      "emoji": "🕵️",
+      "categoria_correcta": "costo",
+      "feedback": "El costo invisible, y muchas veces el mayor."
+    },
+    {
+      "id": "i3",
+      "label": "Despensa del mes",
+      "emoji": "🥫",
+      "categoria_correcta": "consumo",
+      "feedback": "Uso legítimo y necesario del envío."
+    },
+    {
+      "id": "i4",
+      "label": "Colegiatura de un hermano menor",
+      "emoji": "🎓",
+      "categoria_correcta": "patrimonio",
+      "feedback": "La educación permanece cuando el envío se detiene."
+    },
+    {
+      "id": "i5",
+      "label": "Pago de la luz y el agua",
+      "emoji": "💡",
+      "categoria_correcta": "consumo",
+      "feedback": "Gasto corriente indispensable."
+    },
+    {
+      "id": "i6",
+      "label": "Aportación mensual a una cuenta de ahorro",
+      "emoji": "🏦",
+      "categoria_correcta": "patrimonio",
+      "feedback": "Convierte un flujo temporal en un respaldo duradero."
+    },
+    {
+      "id": "i7",
+      "label": "Cargo por envío urgente el mismo día",
+      "emoji": "⚡",
+      "categoria_correcta": "costo",
+      "feedback": "La urgencia suele costar bastante más."
+    },
+    {
+      "id": "i8",
+      "label": "Mejorar el techo de la casa",
+      "emoji": "🏠",
+      "categoria_correcta": "patrimonio",
+      "feedback": "Una mejora de vivienda queda ahí para siempre."
+    },
+    {
+      "id": "i9",
+      "label": "Ropa y calzado del año",
+      "emoji": "👟",
+      "categoria_correcta": "consumo",
+      "feedback": "Necesario, aunque conviene planearlo por adelantado."
+    },
+    {
+      "id": "i10",
+      "label": "Capital inicial para un pequeño negocio familiar",
+      "emoji": "🛠️",
+      "categoria_correcta": "patrimonio",
+      "feedback": "Genera ingreso propio y reduce la dependencia del envío."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-1-9-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-9-b-escena.webp"
+}

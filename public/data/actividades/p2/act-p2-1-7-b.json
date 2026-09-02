@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P2-1-7-B",
+  "unit_code": "P2-1-7",
+  "unit_title": "El cambio: cuando pago con más de lo que cuesta",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Cambio Exacto",
+  "descripcion": "Calcula el cambio antes de que se acabe el tiempo.",
+  "objetivo": "Consolidar el cálculo rápido de cambio con cifras reales",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Cuesta $37, pago con $50. ¿Cuánto de cambio?",
+      "respuesta_correcta": "$13",
+      "incorrectas": [
+        "$17",
+        "$23",
+        "$27"
+      ],
+      "dato_extra": "Desde 37 sube a 40, y de 40 a 50. Son 3 más 10."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Cuesta $64, pago con $100. ¿Cuánto de cambio?",
+      "respuesta_correcta": "$36",
+      "incorrectas": [
+        "$46",
+        "$26",
+        "$44"
+      ],
+      "dato_extra": "De 64 a 70 son 6, y de 70 a 100 son 30. Total 36."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Cuesta $48, pago con $50. ¿Cuánto de cambio?",
+      "respuesta_correcta": "$2",
+      "incorrectas": [
+        "$8",
+        "$12",
+        "$5"
+      ],
+      "dato_extra": "Cambios pequeños también se cuentan: dos pesos son dos pesos."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Cuesta $23, pago con $50. ¿Cuánto de cambio?",
+      "respuesta_correcta": "$27",
+      "incorrectas": [
+        "$17",
+        "$37",
+        "$23"
+      ],
+      "dato_extra": "50 − 23 = 27. Practica los dos métodos y usa el que te salga solo."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cuándo se cuenta el cambio?",
+      "respuesta_correcta": "Antes de alejarme del mostrador",
+      "incorrectas": [
+        "En casa",
+        "Al día siguiente",
+        "Nunca"
+      ],
+      "dato_extra": "Después de salir ya no hay forma de aclarar una diferencia."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Si falta cambio, la mejor frase es:",
+      "respuesta_correcta": "Disculpe, creo que me faltó, ¿lo revisamos?",
+      "incorrectas": [
+        "¡Me está robando!",
+        "Deme más dinero",
+        "Esto está mal"
+      ],
+      "dato_extra": "Casi todos los errores son distracciones. Acusar crea un problema nuevo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El cambio del mandado es dinero:",
+      "respuesta_correcta": "De quien me lo dio",
+      "incorrectas": [
+        "Mío",
+        "De la tienda",
+        "De nadie"
+      ],
+      "dato_extra": "El cambio tiene dueño. Gastarlo sin permiso es un problema aparte."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-7-b-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-1-8-B",
+  "unit_code": "S3-1-8",
+  "unit_title": "Trabajar y estudiar: el balance que sí funciona",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "El Balance Real",
+  "descripcion": "Comprueba que sabes evaluar la combinación de trabajo y estudio.",
+  "objetivo": "Verificar la evaluación de carga y su costo real",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Una semana tiene:",
+      "opciones": [
+        "168 horas",
+        "100 horas",
+        "200 horas",
+        "Las que necesites"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuando la suma las supera, sencillamente no cabe."
+    },
+    {
+      "id": "q2",
+      "texto": "Además de las clases hay que contar:",
+      "opciones": [
+        "Solo el trabajo",
+        "Estudio fuera del aula, traslados, sueño y alimentación",
+        "Nada",
+        "Solo el sueño"
+      ],
+      "correcta": 1,
+      "explicacion": "Omitir alguna hace que el plan parezca viable y no lo sea."
+    },
+    {
+      "id": "q3",
+      "texto": "El estudio fuera del aula se estima en:",
+      "opciones": [
+        "Diez minutos por materia",
+        "Nada",
+        "Una a dos horas por cada hora de clase",
+        "Media hora a la semana"
+      ],
+      "correcta": 2,
+      "explicacion": "Lectura, tareas, proyectos y preparación de exámenes."
+    },
+    {
+      "id": "q4",
+      "texto": "Trabajar pocas horas mientras se estudia:",
+      "opciones": [
+        "Es siempre negativo",
+        "Es imposible",
+        "Está prohibido",
+        "Suele ser compatible y beneficioso"
+      ],
+      "correcta": 3,
+      "explicacion": "Aporta ingreso, experiencia y disciplina."
+    },
+    {
+      "id": "q5",
+      "texto": "Después de cierto umbral de horas laborales:",
+      "opciones": [
+        "Cada hora adicional cuesta rendimiento",
+        "Mejora el rendimiento",
+        "No cambia nada",
+        "Se estudia mejor"
+      ],
+      "correcta": 0,
+      "explicacion": "Y el rendimiento bajo tiene un costo económico concreto."
+    },
+    {
+      "id": "q6",
+      "texto": "Reprobar materias:",
+      "opciones": [
+        "No tiene costo",
+        "Alarga la carrera y encarece todo",
+        "Ahorra dinero",
+        "Es indiferente"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada semestre adicional cuesta colegiatura, gastos e ingreso no percibido."
+    },
+    {
+      "id": "q7",
+      "texto": "La pregunta correcta es:",
+      "opciones": [
+        "Cuánto puedo trabajar",
+        "Cuánto pagan",
+        "Cuánto puedo trabajar sin que me cueste más de lo que gano",
+        "Dónde trabajar"
+      ],
+      "correcta": 2,
+      "explicacion": "Un empleo que alarga la carrera un año puede salir muy caro."
+    },
+    {
+      "id": "q8",
+      "texto": "La salud y el descanso:",
+      "opciones": [
+        "Son negociables si hace falta",
+        "Son un lujo",
+        "Se recuperan después",
+        "Son la condición para sostener cualquier plan"
+      ],
+      "correcta": 3,
+      "explicacion": "Recortar sueño funciona semanas, no años."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-8-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-8-b-escena.webp"
+}

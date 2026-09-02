@@ -4,110 +4,98 @@
   "unit_title": "El tipo de cambio: cómo afecta la economía cotidiana",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Gobierno Corporativo",
-  "descripcion": "¿Quién vigila a los que mandan? ¡Descubre cómo se protegen los derechos de todos los socios de una empresa!",
-  "objetivo": "Comprender la estructura de mando de una empresa pública y los estándares éticos modernos (ESG)",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
+  "tipo": "ARRASTRA",
+  "complejidad": "ALTO",
+  "titulo": "¿A Quién le Conviene un Dólar Caro?",
+  "descripcion": "Cuando el peso se devalúa, medio país celebra y el otro medio sufre. Depende de si ganas en pesos y compras en dólares, o al revés.",
+  "objetivo": "Analizar el impacto diferenciado del tipo de cambio sobre distintos actores económicos: exportadores, importadores, receptores de remesas y consumidores.",
+  "xp": 550,
+  "instruccion": "El dólar acaba de subir de $17 a $22. Arrastra a cada quien según cómo le afecta.",
+  "categorias": [
     {
-      "id": "gov1",
-      "texto": "¿Qué es el 'Consejo de Administración' (Board of Directors)?",
-      "opciones": [
-        "Un grupo de empleados que limpian la oficina",
-        "Un grupo de expertos elegidos por los accionistas para vigilar y aconsejar al CEO",
-        "Los clientes más importantes",
-        "El departamento de quejas"
-      ],
-      "correcta": 1,
-      "explicacion": "El Consejo asegura que el CEO trabaje para el beneficio de todos los dueños, no solo el suyo."
+      "id": "gana",
+      "label": "SALE BENEFICIADO",
+      "emoji": "📈",
+      "color": "#10b981"
     },
     {
-      "id": "gov2",
-      "texto": "¿Qué es el 'Deber Fiduciario'?",
-      "opciones": [
-        "La obligación de pagar impuestos",
-        "La obligación legal y ética de actuar siempre en el mejor interés de los accionistas",
-        "Un tipo de seguro",
-        "Firmar cheques"
-      ],
-      "correcta": 1,
-      "explicacion": "Los directivos deben cuidar el dinero de los socios como si fuera suyo (o mejor)."
-    },
-    {
-      "id": "gov3",
-      "texto": "¿Qué significan las siglas 'ESG'?",
-      "opciones": [
-        "Empresas Súper Grandes",
-        "Environmental, Social and Governance (Ambiental, Social y Gobernanza)",
-        "Estrategia de Seguridad Global",
-        "Efectivo, Sueldos y Ganancias"
-      ],
-      "correcta": 1,
-      "explicacion": "Son los criterios que miden si una empresa es buena para el planeta, para la sociedad y si es honesta."
-    },
-    {
-      "id": "gov4",
-      "texto": "¿Por qué es importante la transparencia financiera?",
-      "opciones": [
-        "Para que todos vean el logo",
-        "Para que los inversionistas tengan información real para tomar decisiones y no sean engañados",
-        "Porque es más barato",
-        "Para gastar más en publicidad"
-      ],
-      "correcta": 1,
-      "explicacion": "Sin información honesta, el mercado de valores no puede funcionar."
-    },
-    {
-      "id": "gov5",
-      "texto": "¿Qué derecho tiene un accionista minoritario (que tiene pocas acciones)?",
-      "opciones": [
-        "Ninguno",
-        "Derecho a recibir información clara y a participar en las votaciones de la asamblea",
-        "Derecho a ser el CEO",
-        "Derecho a productos gratis"
-      ],
-      "correcta": 1,
-      "explicacion": "Incluso con una sola acción, tienes derechos que la ley protege."
-    },
-    {
-      "id": "gov6",
-      "texto": "¿Para qué sirve una 'Auditoría' externa?",
-      "opciones": [
-        "Para despedir personas",
-        "Para que una empresa independiente revise que las cuentas de la empresa sean reales y honestas",
-        "Para inventar números",
-        "Para pagar menos luz"
-      ],
-      "correcta": 1,
-      "explicacion": "Los auditores son como los 'árbitros' que certifican que no hay trampa en los números."
-    },
-    {
-      "id": "gov7",
-      "texto": "¿Cuál es un ejemplo de mala gobernanza?",
-      "opciones": [
-        "Tener muchas ventas",
-        "Que el CEO use el dinero de la empresa para sus gastos personales",
-        "Contratar a los mejores expertos",
-        "Tener un Consejo independiente"
-      ],
-      "correcta": 1,
-      "explicacion": "Mezclar el dinero personal con el de la empresa es una falta grave de ética."
-    },
-    {
-      "id": "gov8",
-      "texto": "¿Cómo influye el comportamiento ético en el valor de una acción?",
-      "opciones": [
-        "No influye",
-        "Las empresas éticas suelen ser más estables y valiosas a largo plazo porque la gente confía en ellas",
-        "Hace que el precio baje",
-        "Solo importa la ganancia"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Has completado el primer bloque de S1. Ya piensas como un inversionista profesional y ético."
+      "id": "pierde",
+      "label": "SALE PERJUDICADO",
+      "emoji": "📉",
+      "color": "#ef4444"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Una familia que recibe remesas desde EE.UU.",
+      "emoji": "💸",
+      "categoria_correcta": "gana",
+      "feedback": "Los mismos dólares se convierten en muchos más pesos."
+    },
+    {
+      "id": "i2",
+      "label": "Un taller que importa refacciones",
+      "emoji": "🔧",
+      "categoria_correcta": "pierde",
+      "feedback": "Sus insumos suben de precio de golpe, en pesos."
+    },
+    {
+      "id": "i3",
+      "label": "Una empresa de aguacate que exporta a Estados Unidos",
+      "emoji": "🥑",
+      "categoria_correcta": "gana",
+      "feedback": "Cobra en dólares y paga sus costos en pesos: su margen se ensancha."
+    },
+    {
+      "id": "i4",
+      "label": "Alguien que va a viajar a Disney",
+      "emoji": "🎢",
+      "categoria_correcta": "pierde",
+      "feedback": "Su presupuesto en pesos ahora compra muchos menos dólares."
+    },
+    {
+      "id": "i5",
+      "label": "Un hotel en Cancún que recibe turistas extranjeros",
+      "emoji": "🏖️",
+      "categoria_correcta": "gana",
+      "feedback": "México se vuelve más barato para el turista, y llegan más."
+    },
+    {
+      "id": "i6",
+      "label": "Una persona con deuda de tarjeta en dólares",
+      "emoji": "💳",
+      "categoria_correcta": "pierde",
+      "feedback": "Su deuda creció 29% en pesos sin haber gastado un centavo más."
+    },
+    {
+      "id": "i7",
+      "label": "Una fábrica de autopartes que exporta al T-MEC",
+      "emoji": "🚗",
+      "categoria_correcta": "gana",
+      "feedback": "Es el motor exportador de México y se beneficia directamente."
+    },
+    {
+      "id": "i8",
+      "label": "Quien va a comprar un celular importado",
+      "emoji": "📱",
+      "categoria_correcta": "pierde",
+      "feedback": "Casi toda la electrónica se importa y se ajusta al tipo de cambio en semanas."
+    },
+    {
+      "id": "i9",
+      "label": "Un estudiante mexicano que paga colegiatura en el extranjero",
+      "emoji": "🎓",
+      "categoria_correcta": "pierde",
+      "feedback": "Su colegiatura en dólares no cambió; lo que cambió es cuántos pesos necesita."
+    },
+    {
+      "id": "i10",
+      "label": "Alguien que tenía parte de sus ahorros en dólares",
+      "emoji": "💵",
+      "categoria_correcta": "gana",
+      "feedback": "Justo por esto se recomienda diversificar el patrimonio en más de una moneda."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

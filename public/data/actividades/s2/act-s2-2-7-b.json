@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-2-7-B",
+  "unit_code": "S2-2-7",
+  "unit_title": "Robo de identidad: prevención y qué hacer si ya ocurrió",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Identidad",
+  "descripcion": "Responde rápido sobre protección y respuesta.",
+  "objetivo": "Consolidar la prevención y respuesta ante robo de identidad",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Para suplantar una identidad hace falta:",
+      "respuesta_correcta": "Solo obtener ciertos datos personales",
+      "incorrectas": [
+        "Robar la cartera",
+        "Falsificar la firma",
+        "Tener el celular"
+      ],
+      "dato_extra": "La mayoría entrega los datos sin darse cuenta."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Una señal clásica de fraude es:",
+      "respuesta_correcta": "Urgencia artificial y amenaza de bloqueo",
+      "incorrectas": [
+        "Un saludo cordial",
+        "Un mensaje largo",
+        "Una firma formal"
+      ],
+      "dato_extra": "La prisa impide verificar, que es justo lo que buscan."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Las instituciones legítimas:",
+      "respuesta_correcta": "Nunca piden claves completas ni códigos",
+      "incorrectas": [
+        "Las piden por mensaje",
+        "Las piden por llamada",
+        "Las piden por correo"
+      ],
+      "dato_extra": "Si te las piden, ahí termina la conversación."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La prevención más efectiva incluye:",
+      "respuesta_correcta": "Verificación en dos pasos y contraseñas distintas",
+      "incorrectas": [
+        "Una sola contraseña fácil",
+        "Anotarlas en el celular",
+        "Compartirlas con alguien"
+      ],
+      "dato_extra": "Reutilizar contraseñas convierte una filtración en muchas."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Detecta una suplantación temprano:",
+      "respuesta_correcta": "Revisar el reporte de crédito periódicamente",
+      "incorrectas": [
+        "Esperar el aviso",
+        "Cambiar de banco",
+        "Cerrar cuentas"
+      ],
+      "dato_extra": "Es la medida menos conocida y la más útil."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El primer paso si ya ocurrió es:",
+      "respuesta_correcta": "Bloquear accesos y tarjetas comprometidas",
+      "incorrectas": [
+        "Esperar",
+        "Responder al mensaje",
+        "Publicarlo en redes"
+      ],
+      "dato_extra": "Detener el daño va antes que entenderlo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Lo que sostiene una reclamación es:",
+      "respuesta_correcta": "Comprobante de cada gestión con folio y fecha",
+      "incorrectas": [
+        "La memoria",
+        "La buena fe",
+        "Un testigo"
+      ],
+      "dato_extra": "Sin documentación, cada llamada empieza desde cero."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-7-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-7-b-escena.webp"
+}

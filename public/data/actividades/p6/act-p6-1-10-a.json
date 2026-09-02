@@ -1,0 +1,169 @@
+{
+  "code": "ACT-P6-1-10-A",
+  "unit_code": "P6-1-10",
+  "unit_title": "Mi identidad financiera: CURP, RFC y NSS",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Carpeta de Identidad",
+  "descripcion": "Arma tu carpeta de identidad financiera y detecta qué te falta.",
+  "objetivo": "Organizar los documentos de identidad financiera y evaluar su resguardo",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Documentos base",
+      "descripcion": "Los que se necesitan para casi cualquier trámite.",
+      "campos": [
+        {
+          "id": "acta",
+          "label": "¿Tengo copia de mi acta de nacimiento?",
+          "type": "select",
+          "opciones": [
+            "Sí, actualizada",
+            "Sí, pero vieja",
+            "No la tengo"
+          ],
+          "default": "Sí, actualizada",
+          "requerido": true,
+          "ayuda": "Es el documento del que se derivan los demás."
+        },
+        {
+          "id": "curp",
+          "label": "¿Tengo mi CURP impresa o guardada?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "Sí",
+          "requerido": true,
+          "ayuda": "Se usa en prácticamente cualquier trámite."
+        },
+        {
+          "id": "domicilio",
+          "label": "¿Tengo comprobante de domicilio reciente?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No"
+          ],
+          "default": "No",
+          "requerido": true,
+          "ayuda": "Casi siempre debe tener menos de tres meses."
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Documentos para la vida laboral",
+      "descripcion": "Los que harán falta al empezar a trabajar formalmente.",
+      "campos": [
+        {
+          "id": "rfc",
+          "label": "¿Tengo o sé cómo obtener mi RFC?",
+          "type": "select",
+          "opciones": [
+            "Ya lo tengo",
+            "Sé cómo obtenerlo",
+            "No sé qué es"
+          ],
+          "default": "Sé cómo obtenerlo",
+          "requerido": true,
+          "ayuda": "Tenerlo no significa pagar impuestos: significa estar identificado."
+        },
+        {
+          "id": "nss",
+          "label": "¿Tengo o sé cómo obtener mi NSS?",
+          "type": "select",
+          "opciones": [
+            "Ya lo tengo",
+            "Sé cómo obtenerlo",
+            "No sé qué es"
+          ],
+          "default": "No sé qué es",
+          "requerido": true,
+          "ayuda": "Se asigna al darse de alta en un empleo formal."
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi resguardo",
+      "descripcion": "Dónde y cómo los voy a proteger.",
+      "campos": [
+        {
+          "id": "lugar",
+          "label": "Dónde guardo la carpeta física",
+          "type": "text",
+          "placeholder": "Un cajón específico en casa",
+          "requerido": true,
+          "ayuda": "Un lugar fijo y conocido por la familia."
+        },
+        {
+          "id": "copia_digital",
+          "label": "¿Tengo copia digital protegida?",
+          "type": "select",
+          "opciones": [
+            "Sí, con contraseña",
+            "Sí, sin contraseña",
+            "No tengo"
+          ],
+          "default": "No tengo",
+          "requerido": true,
+          "ayuda": "Una copia digital sin protección es un riesgo, no una ventaja."
+        },
+        {
+          "id": "documentos_listos",
+          "label": "¿Cuántos de los cinco documentos ya tengo en mano?",
+          "type": "slider",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 2,
+          "unit": "docs",
+          "requerido": true
+        },
+        {
+          "id": "avance_carpeta",
+          "label": "Avance de mi carpeta de identidad",
+          "type": "calculated",
+          "formula": "Math.round(documentos_listos / 5 * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "me_faltan",
+          "label": "Documentos que me faltan por conseguir",
+          "type": "calculated",
+          "formula": "5 - documentos_listos",
+          "unit": "docs"
+        },
+        {
+          "id": "compartido",
+          "label": "Veces que he compartido estos datos por redes",
+          "type": "slider",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 0,
+          "unit": "veces",
+          "ayuda": "Estos datos sirven para suplantar identidades.",
+          "requerido": true
+        },
+        {
+          "id": "pendientes",
+          "label": "Documentos que me faltan conseguir",
+          "type": "textarea",
+          "placeholder": "Comprobante de domicilio y NSS",
+          "requerido": true,
+          "ayuda": "Escribe la lista concreta de lo que vas a tramitar."
+        }
+      ]
+    }
+  ],
+  "output_type": "carpeta_identidad",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-1-10-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-10-a-escena.webp"
+}

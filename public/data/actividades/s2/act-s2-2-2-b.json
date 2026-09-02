@@ -4,96 +4,110 @@
   "unit_title": "Ciberseguridad financiera: protegiendo tu patrimonio digital",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Negocio de las Rentas",
-  "descripcion": "Invertir en ladrillos es un arte y una ciencia. ¿Sabes clasificar los conceptos clave del mundo inmobiliario?",
-  "objetivo": "Identificar los términos técnicos y riesgos asociados a la inversión en bienes raíces",
-  "xp": 400,
-  "instruccion": "Arrastra cada concepto a la categoría que mejor lo describa.",
-  "items": [
+  "tipo": "QUIZ",
+  "complejidad": "ALTO",
+  "titulo": "Después del Fraude",
+  "descripcion": "Aunque hagas todo bien, puede pasarte. Lo que hagas en las primeras horas decide si recuperas tu dinero o no.",
+  "objetivo": "Conocer el procedimiento correcto ante un fraude financiero y los derechos del usuario frente a las instituciones.",
+  "xp": 600,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
     {
-      "id": "inm1",
-      "label": "Comprar un local físico",
-      "emoji": "🏠",
-      "categoria_correcta": "directa",
-      "feedback": "Tienes el control total, pero requiere mucho capital y es difícil de vender rápido."
+      "id": "q1",
+      "texto": "Lo PRIMERO que hay que hacer al detectar un cargo no reconocido es…",
+      "opciones": [
+        "Esperar a ver si se cancela solo",
+        "Reportarlo al banco de inmediato y bloquear la tarjeta",
+        "Publicarlo en redes",
+        "Cambiar de banco"
+      ],
+      "correcta": 1,
+      "explicacion": "El tiempo corre en tu contra: hay plazos legales para aclarar y cada hora cuenta."
     },
     {
-      "id": "inm2",
-      "label": "Comprar títulos de FIBRAS",
-      "emoji": "📈",
-      "categoria_correcta": "fibras",
-      "feedback": "Puedes venderlos en segundos en la bolsa y recibir rentas proporcionales."
+      "id": "q2",
+      "texto": "¿Cuánto tiempo tienes para presentar una aclaración por un cargo no reconocido?",
+      "opciones": [
+        "24 horas",
+        "Generalmente 90 días desde la fecha de corte",
+        "Un año",
+        "No hay plazo"
+      ],
+      "correcta": 1,
+      "explicacion": "Pasado ese plazo pierdes el derecho a la aclaración. Por eso conviene revisar los movimientos seguido."
     },
     {
-      "id": "inm3",
-      "label": "Plusvalía",
-      "emoji": "🚀",
-      "categoria_correcta": "metricas",
-      "feedback": "Es el aumento del valor de la propiedad con el tiempo debido a la ubicación."
+      "id": "q3",
+      "texto": "Si el banco rechaza tu aclaración y no estás de acuerdo…",
+      "opciones": [
+        "No hay nada que hacer",
+        "Puedes acudir a la CONDUSEF, que es gratuita",
+        "Hay que demandar de inmediato",
+        "Debes pagar igual"
+      ],
+      "correcta": 1,
+      "explicacion": "La CONDUSEF media y hasta puede representarte legalmente sin costo."
     },
     {
-      "id": "inm4",
-      "label": "Cap Rate",
-      "emoji": "📊",
-      "categoria_correcta": "metricas",
-      "feedback": "El porcentaje de retorno anual que obtienes solo por cobrar rentas."
+      "id": "q4",
+      "texto": "El \"phishing\" consiste en…",
+      "opciones": [
+        "Robar tarjetas físicas",
+        "Engañarte para que tú mismo entregues tus datos",
+        "Hackear al banco",
+        "Clonar tu voz"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el fraude más común porque no necesita romper ninguna seguridad: te usa a ti."
     },
     {
-      "id": "inm5",
-      "label": "Riesgo de Vacancia",
-      "emoji": "🔲",
-      "categoria_correcta": "riesgos",
-      "feedback": "El peligro de que tu local esté vacío y no genere ingresos pero sí gastos."
+      "id": "q5",
+      "texto": "Compartir tu CVV o el código que te llega por SMS…",
+      "opciones": [
+        "Es seguro si es tu banco",
+        "Nunca debe hacerse con nadie, ni con el banco",
+        "Solo con familiares",
+        "Es obligatorio a veces"
+      ],
+      "correcta": 1,
+      "explicacion": "Ese código autoriza una operación. Quien lo pide, la está haciendo."
     },
     {
-      "id": "inm6",
-      "label": "Predial y Mantenimiento",
-      "emoji": "🛠️",
-      "categoria_correcta": "riesgos",
-      "feedback": "Gastos fijos que reducen tu utilidad real si no los administras bien."
+      "id": "q6",
+      "texto": "Una buena práctica para limitar el daño de un fraude es…",
+      "opciones": [
+        "Tener todo tu dinero en una sola cuenta",
+        "Usar una cuenta o tarjeta aparte con saldo limitado para compras en línea",
+        "No usar bancos",
+        "Compartir contraseñas con un familiar"
+      ],
+      "correcta": 1,
+      "explicacion": "Si comprometen esa tarjeta, el daño está acotado al saldo que tenía."
     },
     {
-      "id": "inm7",
-      "label": "Diversificación de Inquilinos",
-      "emoji": "👥",
-      "categoria_correcta": "fibras",
-      "feedback": "Las FIBRAS tienen cientos de inquilinos, si uno se va, los otros siguen pagando."
+      "id": "q7",
+      "texto": "Guardar capturas de pantalla y folios de todos tus reportes sirve porque…",
+      "opciones": [
+        "Es tu evidencia si el caso escala",
+        "No sirve de nada",
+        "Lo pide la ley",
+        "Es solo por costumbre"
+      ],
+      "correcta": 0,
+      "explicacion": "En cualquier disputa financiera, quien tiene documentación gana."
     },
     {
-      "id": "inm8",
-      "label": "Gestión Activa (Tú reparas)",
-      "emoji": "🔧",
-      "categoria_correcta": "directa",
-      "feedback": "En la inversión directa tú eres el responsable de las reparaciones y el trato con clientes."
+      "id": "q8",
+      "texto": "La razón por la que los fraudes digitales funcionan tanto es…",
+      "opciones": [
+        "La tecnología es insegura",
+        "Explotan la urgencia y el miedo para que no pienses",
+        "Los bancos no hacen nada",
+        "La gente es tonta"
+      ],
+      "correcta": 1,
+      "explicacion": "Casi todos empiezan con \"urgente\", \"última oportunidad\" o \"tu cuenta será bloqueada\". La prisa es la señal."
     }
   ],
-  "categorias": [
-    {
-      "id": "directa",
-      "label": "INVERSIÓN DIRECTA",
-      "emoji": "🧱",
-      "color": "#9a3412"
-    },
-    {
-      "id": "fibras",
-      "label": "INVERSIÓN EN FIBRAS",
-      "emoji": "🏙️",
-      "color": "#1e40af"
-    },
-    {
-      "id": "metricas",
-      "label": "MÉTRICAS DE GANANCIA",
-      "emoji": "💰",
-      "color": "#166534"
-    },
-    {
-      "id": "riesgos",
-      "label": "GASTOS Y RIESGOS",
-      "emoji": "⚠️",
-      "color": "#991b1b"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

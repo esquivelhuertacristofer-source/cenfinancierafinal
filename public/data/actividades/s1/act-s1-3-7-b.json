@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-3-7-B",
+  "unit_code": "S1-3-7",
+  "unit_title": "La curva de rendimiento: por qué el plazo cambia la tasa",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Curva",
+  "descripcion": "Responde rápido sobre plazos y tasas.",
+  "objetivo": "Consolidar la comprensión de la curva de rendimiento",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Más plazo suele pagar más porque:",
+      "respuesta_correcta": "Compensa inmovilidad e incertidumbre",
+      "incorrectas": [
+        "Es una promoción",
+        "Lo exige la ley",
+        "Es un error"
+      ],
+      "dato_extra": "Dos cosas se pagan: no poder usar el dinero y no saber qué pasará."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La curva de rendimiento grafica:",
+      "respuesta_correcta": "Tasas contra plazos de un mismo emisor",
+      "incorrectas": [
+        "Precios de acciones",
+        "La inflación",
+        "El tipo de cambio"
+      ],
+      "dato_extra": "Su forma normal es ascendente."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Una curva invertida sugiere:",
+      "respuesta_correcta": "Que el mercado espera que las tasas bajen",
+      "incorrectas": [
+        "Que todo va bien",
+        "Que suben los precios",
+        "Que no hay riesgo"
+      ],
+      "dato_extra": "Históricamente se asocia con desaceleración económica."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Es la curva una predicción infalible?",
+      "respuesta_correcta": "No, es una señal observada",
+      "incorrectas": [
+        "Sí, siempre acierta",
+        "Sí, por ley",
+        "Sí, en México"
+      ],
+      "dato_extra": "Informa sobre expectativas, no garantiza resultados."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El criterio principal al elegir plazo es:",
+      "respuesta_correcta": "Cuándo necesitaré el dinero",
+      "incorrectas": [
+        "La forma de la curva",
+        "La tasa más alta",
+        "La moda"
+      ],
+      "dato_extra": "La curva ayuda solo en los márgenes."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Si la diferencia entre plazos es mínima:",
+      "respuesta_correcta": "Conviene el corto por flexibilidad",
+      "incorrectas": [
+        "Conviene el largo",
+        "No invertir",
+        "Da lo mismo"
+      ],
+      "dato_extra": "No vale comprometer años por unas décimas de punto."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Salir de un plazo largo antes de tiempo:",
+      "respuesta_correcta": "Puede tener costo o pérdida",
+      "incorrectas": [
+        "Es gratis",
+        "Da más rendimiento",
+        "Es imposible"
+      ],
+      "dato_extra": "Por eso el plazo debe coincidir con el horizonte real."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-7-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-7-b-escena.webp"
+}

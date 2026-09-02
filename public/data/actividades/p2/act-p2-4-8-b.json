@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P2-4-8-B",
+  "unit_code": "P2-4-8",
+  "unit_title": "Un cartel que sí llame la atención",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Cartel",
+  "descripcion": "Responde rápido: ¿qué hace que un cartel funcione?",
+  "objetivo": "Consolidar los criterios de diseño funcional de un cartel de venta",
+  "xp": 200,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Cuánto tiempo tiene un cartel para funcionar?",
+      "respuesta_correcta": "Menos de dos segundos",
+      "incorrectas": [
+        "Cinco minutos",
+        "Todo el recreo",
+        "Un día"
+      ],
+      "dato_extra": "La gente camina y mira de reojo. No se detiene a estudiarlo."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Las tres partes de un buen cartel son:",
+      "respuesta_correcta": "Qué vendo, cuánto cuesta y por qué conviene",
+      "incorrectas": [
+        "Dibujo, color y nombre",
+        "Fecha, hora y lugar",
+        "Marca, logo y firma"
+      ],
+      "dato_extra": "Y en ese orden de tamaño: el producto primero, el precio después."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Qué lleva la letra más grande?",
+      "respuesta_correcta": "Qué vendo",
+      "incorrectas": [
+        "Mi nombre",
+        "El dibujo",
+        "La palabra oferta"
+      ],
+      "dato_extra": "\"Puesto de Ceny\" no dice qué hay. \"GALLETAS\" sí."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Si escondo el precio:",
+      "respuesta_correcta": "Mucha gente ni pregunta",
+      "incorrectas": [
+        "Compran más",
+        "Se ve elegante",
+        "No pasa nada"
+      ],
+      "dato_extra": "Preguntar da pena. Un precio visible quita esa barrera."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cuándo se decora el cartel?",
+      "respuesta_correcta": "Al final, con el espacio que sobra",
+      "incorrectas": [
+        "Primero de todo",
+        "Nunca",
+        "A la mitad"
+      ],
+      "dato_extra": "Decorar primero deja sin lugar al precio, que es lo que sí vende."
+    },
+    {
+      "id": "q6",
+      "pregunta": "\"Las mejores galletas del mundo\" si son normales:",
+      "respuesta_correcta": "Es una promesa que no se cumple",
+      "incorrectas": [
+        "Es buena estrategia",
+        "No importa",
+        "Vende más siempre"
+      ],
+      "dato_extra": "Quien se decepciona no vuelve, y además se lo cuenta a sus amigos."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La prueba de los cinco pasos sirve para:",
+      "respuesta_correcta": "Comprobar que el cartel se lee de lejos",
+      "incorrectas": [
+        "Medir la cartulina",
+        "Elegir colores",
+        "Contar clientes"
+      ],
+      "dato_extra": "Detecta el problema antes que los clientes, y toma diez segundos."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-8-b-escena.webp"
+}

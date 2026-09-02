@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-4-6-B",
+  "unit_code": "P3-4-6",
+  "unit_title": "De la idea al prototipo: hacer una primera versión",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "La Primera Versión",
+  "descripcion": "Comprueba que entiendes para qué sirve un prototipo.",
+  "objetivo": "Verificar la comprensión del propósito y las reglas del prototipado",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un prototipo sirve para:",
+      "opciones": [
+        "Aprender qué le falta a la idea",
+        "Venderlo caro",
+        "Presumirlo",
+        "Decorar"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una herramienta de aprendizaje, no un producto terminado."
+    },
+    {
+      "id": "q2",
+      "texto": "Las tres reglas del prototipo son:",
+      "opciones": [
+        "Lento, caro y bonito",
+        "Rápido, barato y desechable",
+        "Grande, pesado y firme",
+        "Secreto, único y caro"
+      ],
+      "correcta": 1,
+      "explicacion": "Las tres apuntan a lo mismo: poder cambiarlo sin dolor."
+    },
+    {
+      "id": "q3",
+      "texto": "La trampa más común es:",
+      "opciones": [
+        "Hacerlo de cartón",
+        "Mostrarlo pronto",
+        "Hacerlo tan bonito que nadie se atreve a cambiarlo",
+        "Hacerlo pequeño"
+      ],
+      "correcta": 2,
+      "explicacion": "Entre más costó, más se defiende y menos se mejora."
+    },
+    {
+      "id": "q4",
+      "texto": "Un prototipo que revela cinco problemas es:",
+      "opciones": [
+        "Un fracaso",
+        "Inservible",
+        "Un error",
+        "Un éxito"
+      ],
+      "correcta": 3,
+      "explicacion": "Encontrar problemas con cartón es baratísimo comparado con encontrarlos después."
+    },
+    {
+      "id": "q5",
+      "texto": "Al recibir retroalimentación hay que:",
+      "opciones": [
+        "Escuchar y anotar",
+        "Defender el prototipo",
+        "Discutir",
+        "Cambiar de tema"
+      ],
+      "correcta": 0,
+      "explicacion": "Justificar cierra la puerta a la información que sirve."
+    },
+    {
+      "id": "q6",
+      "texto": "Cuando la idea vive solo en la cabeza:",
+      "opciones": [
+        "Se mejora sola",
+        "Parece perfecta porque se saltan las partes difíciles",
+        "Se olvida",
+        "Se vuelve barata"
+      ],
+      "correcta": 1,
+      "explicacion": "Construirla es lo que obliga a resolver lo que se estaba saltando."
+    },
+    {
+      "id": "q7",
+      "texto": "El verdadero producto de una sesión de prototipado es:",
+      "opciones": [
+        "El objeto bonito",
+        "El aplauso",
+        "La lista de mejoras",
+        "La foto"
+      ],
+      "correcta": 2,
+      "explicacion": "La versión dos existe gracias a esa lista."
+    },
+    {
+      "id": "q8",
+      "texto": "Guardar una idea sin construirla:",
+      "opciones": [
+        "La protege",
+        "La hace crecer",
+        "La vuelve valiosa",
+        "Garantiza que nunca mejore"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin construir no hay retroalimentación, y sin retroalimentación no hay mejora."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-6-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-6-b-escena.webp"
+}

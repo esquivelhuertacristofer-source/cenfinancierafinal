@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-2-6-A",
+  "unit_code": "P5-2-6",
+  "unit_title": "Necesidad, deseo y capricho: los tres niveles",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Necesidad, Deseo o Capricho",
+  "descripcion": "Clasifica cada situación en el nivel que le corresponde.",
+  "objetivo": "Aplicar criterios de clasificación del gasto en situaciones concretas",
+  "xp": 300,
+  "instruccion": "Arrastra cada situación al nivel que le corresponde.",
+  "categorias": [
+    {
+      "id": "necesidad",
+      "label": "Necesidad",
+      "emoji": "🔴",
+      "color": "#EF4444"
+    },
+    {
+      "id": "deseo",
+      "label": "Deseo",
+      "emoji": "🟡",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "capricho",
+      "label": "Capricho",
+      "emoji": "🟣",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Zapatos nuevos porque los actuales están rotos",
+      "emoji": "👟",
+      "categoria_correcta": "necesidad",
+      "feedback": "La misma compra es necesidad o no según la situación."
+    },
+    {
+      "id": "i2",
+      "label": "Una bicicleta que quiero desde hace ocho meses",
+      "emoji": "🚲",
+      "categoria_correcta": "deseo",
+      "feedback": "Sobrevivió al tiempo: merece un plan de ahorro."
+    },
+    {
+      "id": "i3",
+      "label": "Un dulce que vi en la caja al pagar",
+      "emoji": "🍬",
+      "categoria_correcta": "capricho",
+      "feedback": "Activado por algo externo y en el momento exacto."
+    },
+    {
+      "id": "i4",
+      "label": "Transporte para llegar a la escuela",
+      "emoji": "🚌",
+      "categoria_correcta": "necesidad",
+      "feedback": "Sin eso no se puede cumplir con lo básico."
+    },
+    {
+      "id": "i5",
+      "label": "Un curso que llevo un año queriendo tomar",
+      "emoji": "🎓",
+      "categoria_correcta": "deseo",
+      "feedback": "Mejora la vida de forma real y aguantó la prueba del tiempo."
+    },
+    {
+      "id": "i6",
+      "label": "Comprar algo porque estaba con 60% de descuento",
+      "emoji": "🏷️",
+      "categoria_correcta": "capricho",
+      "feedback": "La oferta creó el antojo; no existía antes de verla."
+    },
+    {
+      "id": "i7",
+      "label": "Medicina para una infección",
+      "emoji": "💊",
+      "categoria_correcta": "necesidad",
+      "feedback": "La salud es de las necesidades más claras."
+    },
+    {
+      "id": "i8",
+      "label": "Un instrumento musical que practicaría a diario",
+      "emoji": "🎸",
+      "categoria_correcta": "deseo",
+      "feedback": "Si el interés lleva meses, es deseo y se puede planear."
+    },
+    {
+      "id": "i9",
+      "label": "La misma playera que le vi hoy a un compañero",
+      "emoji": "👕",
+      "categoria_correcta": "capricho",
+      "feedback": "Presión social del momento, no una preferencia propia."
+    },
+    {
+      "id": "i10",
+      "label": "Útiles escolares que pide el maestro",
+      "emoji": "✏️",
+      "categoria_correcta": "necesidad",
+      "feedback": "Necesarios para funcionar en la escuela."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-6-a-escena.webp"
+}

@@ -5,253 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Certificación: Arquitecto de Riqueza",
-  "descripcion": "¡Has completado Secundaria 1! Este examen final valida tu capacidad para gestionar la riqueza en el mundo moderno. ¡Mucha suerte!",
-  "objetivo": "Evaluar de forma integral los conocimientos de mercados, macroeconomía, riesgo y finanzas personales de nivel secundaria",
-  "xp": 300,
-  "aprobacion_minima": 0.85,
+  "complejidad": "ALTO",
+  "titulo": "Patrones del Éxito",
+  "descripcion": "Detrás de los emprendimientos mexicanos que sí funcionaron hay patrones que se repiten. Ninguno de ellos es la suerte.",
+  "objetivo": "Identificar patrones de éxito, resiliencia y adaptabilidad en trayectorias emprendedoras y aplicarlos al propio proyecto.",
+  "xp": 600,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "s1_fin1",
-      "texto": "¿Qué determina el valor intrínseco de una acción a largo plazo?",
+      "id": "q1",
+      "texto": "El rasgo más repetido en emprendedores que lo lograron es…",
       "opciones": [
-        "Su nombre famoso",
-        "La capacidad de la empresa de generar utilidades (ganancias) constantes y crecientes",
-        "El color de su logo",
-        "Lo que dicen en las noticias"
+        "Haber tenido mucho capital inicial",
+        "Haber ajustado su idea muchas veces según el cliente",
+        "Haber acertado a la primera",
+        "Tener contactos poderosos"
       ],
       "correcta": 1,
-      "explicacion": "Una acción es un pedazo de un negocio; si al negocio le va bien, a la acción también."
+      "explicacion": "Casi ningún negocio exitoso vende hoy exactamente lo que planeó al inicio."
     },
     {
-      "id": "s1_fin2",
-      "texto": "¿Qué es un ETF?",
+      "id": "q2",
+      "texto": "La mayoría de los negocios pequeños en México cierra antes de los 5 años sobre todo por…",
       "opciones": [
-        "Una moneda digital",
-        "Un fondo que agrupa muchas acciones y se compra como una sola, permitiendo diversificar barato",
-        "Un préstamo bancario",
-        "Una empresa de tecnología"
+        "Mala suerte",
+        "Falta de planeación financiera y desconocimiento de sus números",
+        "Exceso de competencia",
+        "Impuestos altos"
       ],
       "correcta": 1,
-      "explicacion": "Los ETFs son la herramienta favorita de los inversionistas inteligentes."
+      "explicacion": "No saber el costo real por unidad ni el punto de equilibrio es la causa silenciosa más común."
     },
     {
-      "id": "s1_fin3",
-      "texto": "¿Cuál es la principal herramienta del Banco Central para controlar la inflación?",
+      "id": "q3",
+      "texto": "Formalizarse ayuda a un emprendimiento porque…",
       "opciones": [
-        "Bajar los sueldos",
-        "Ajustar la Tasa de Interés de referencia",
-        "Cerrar los bancos",
-        "Imprimir más billetes"
+        "Le abre crédito, clientes grandes y contratos con gobierno",
+        "Reduce las ventas",
+        "Es solo un requisito burocrático",
+        "Elimina la competencia"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin factura, el techo de crecimiento llega muy rápido."
+    },
+    {
+      "id": "q4",
+      "texto": "La \"resiliencia\" en un emprendedor significa…",
+      "opciones": [
+        "Nunca fallar",
+        "Seguir adelante aprendiendo de los golpes",
+        "Tener más dinero",
+        "Trabajar sin descansar"
       ],
       "correcta": 1,
-      "explicacion": "Subir la tasa enfría la economía y baja los precios; bajarla la calienta."
+      "explicacion": "Los casos de éxito casi siempre incluyen al menos un fracaso previo del que aprendieron."
     },
     {
-      "id": "s1_fin4",
-      "texto": "Si la inflación es del 6% y tu banco te paga el 4% de interés, ¿cuánto es tu rendimiento real?",
+      "id": "q5",
+      "texto": "Reinvertir las primeras ganancias en vez de gastarlas…",
       "opciones": [
-        "10%",
-        "2%",
-        "-2% (Estás perdiendo poder de compra)",
-        "4%"
-      ],
-      "correcta": 2,
-      "explicacion": "Rendimiento Real = Rendimiento Nominal - Inflación."
-    },
-    {
-      "id": "s1_fin5",
-      "texto": "¿Qué mide el Producto Interno Bruto (PIB)?",
-      "opciones": [
-        "La felicidad de la gente",
-        "El valor total de los bienes y servicios producidos por un país en un periodo",
-        "El dinero en los bancos",
-        "La deuda del gobierno"
+        "Es un error",
+        "Es lo que permite crecer sin ceder capital ni endeudarse",
+        "Da igual",
+        "Solo conviene a empresas grandes"
       ],
       "correcta": 1,
-      "explicacion": "Es el termómetro del crecimiento económico."
+      "explicacion": "Es la forma de crecimiento más lenta y también la más sólida y la más barata."
     },
     {
-      "id": "s1_fin6",
-      "texto": "¿En qué fase del ciclo económico el desempleo suele subir y el PIB bajar?",
+      "id": "q6",
+      "texto": "Un emprendedor que no sabe su costo por unidad…",
       "opciones": [
-        "Expansión",
-        "Recesión",
-        "Auge",
-        "Recuperación"
+        "Puede estar perdiendo dinero en cada venta sin saberlo",
+        "Está bien mientras venda mucho",
+        "No lo necesita",
+        "Lo sabrá su contador"
       ],
-      "correcta": 1,
-      "explicacion": "La recesión es el 'invierno' de la economía."
+      "correcta": 0,
+      "explicacion": "Es el número más básico y el que más negocios entusiastas ha hundido."
     },
     {
-      "id": "s1_fin7",
-      "texto": "¿Qué sucede con un importador de autos si el dólar sube de $18 a $25 pesos?",
+      "id": "q7",
+      "texto": "Empezar pequeño y validar antes de invertir todo es preferible porque…",
       "opciones": [
-        "Gana más dinero",
-        "Sus costos suben y tendrá que aumentar el precio de los autos o ganar menos",
-        "No le afecta",
-        "Le regalan dólares"
+        "Reduce el costo de equivocarse, que es lo más probable al inicio",
+        "Es de cobardes",
+        "Garantiza el éxito",
+        "Evita pagar impuestos"
       ],
-      "correcta": 1,
-      "explicacion": "Un dólar caro castiga a quienes compran productos del extranjero."
+      "correcta": 0,
+      "explicacion": "La pregunta correcta no es \"¿cómo garantizo el éxito?\", sino \"¿cómo hago barato equivocarme?\"."
     },
     {
-      "id": "s1_fin8",
-      "texto": "¿Cuál es un ejemplo de 'Commodity' estratégico para la tecnología actual?",
+      "id": "q8",
+      "texto": "La lección financiera transversal de todos estos casos es…",
       "opciones": [
-        "El Trigo",
-        "El Litio (para las baterías de equipos y autos eléctricos)",
-        "El Algodón",
-        "La Madera"
+        "Hay que arriesgarlo todo",
+        "Conocer tus números y adaptarte vale más que la idea original",
+        "La idea lo es todo",
+        "Sin inversionistas no se puede"
       ],
       "correcta": 1,
-      "explicacion": "El litio es clave para la transición energética global."
-    },
-    {
-      "id": "s1_fin9",
-      "texto": "¿Qué es el 'Coaseguro' en un seguro de gastos médicos?",
-      "opciones": [
-        "Un descuento",
-        "El porcentaje del gasto total que el asegurado debe pagar después del deducible",
-        "El sueldo del doctor",
-        "Un seguro compartido con amigos"
-      ],
-      "correcta": 1,
-      "explicacion": "Es una forma de compartir el riesgo entre tú y la aseguradora."
-    },
-    {
-      "id": "s1_fin10",
-      "texto": "¿Para qué sirve un Fideicomiso en el blindaje patrimonial?",
-      "opciones": [
-        "Para ganar más intereses",
-        "Para separar legalmente tus bienes de tus riesgos personales y protegerlos de demandas",
-        "Para no pagar impuestos",
-        "Para comprar casas barato"
-      ],
-      "correcta": 1,
-      "explicacion": "Crea una 'muralla' legal alrededor de tu patrimonio."
-    },
-    {
-      "id": "s1_fin11",
-      "texto": "¿Qué es el 'Phishing'?",
-      "opciones": [
-        "Un deporte de pesca",
-        "Un ciberataque donde se usan correos falsos para robar tus claves",
-        "Un tipo de moneda",
-        "Una red social"
-      ],
-      "correcta": 1,
-      "explicacion": "Es la técnica más común de robo de identidad digital."
-    },
-    {
-      "id": "s1_fin12",
-      "texto": "¿Cuál es la fórmula del Patrimonio Neto?",
-      "opciones": [
-        "Salario x 12",
-        "Activos - Pasivos",
-        "Activos + Pasivos",
-        "Dinero en banco / Deudas"
-      ],
-      "correcta": 1,
-      "explicacion": "Es la métrica real de tu riqueza acumulada."
-    },
-    {
-      "id": "s1_fin13",
-      "texto": "¿Qué dice la 'Regla del 72'?",
-      "opciones": [
-        "Que te jubilas a los 72",
-        "Es el cálculo para saber en cuántos años se duplicará tu dinero (72 / tasa interés)",
-        "Que debes ahorrar el 72%",
-        "Es una ley de impuestos"
-      ],
-      "correcta": 1,
-      "explicacion": "Te ayuda a entender el poder del interés compuesto rápidamente."
-    },
-    {
-      "id": "s1_fin14",
-      "texto": "¿Cuál es la mayor ventaja de empezar a ahorrar para el retiro a los 20 años?",
-      "opciones": [
-        "Que tienes más energía",
-        "Que el tiempo multiplica tu dinero exponencialmente con menos esfuerzo",
-        "Que el banco te da regalos",
-        "Que no pagas impuestos"
-      ],
-      "correcta": 1,
-      "explicacion": "El tiempo es el ingrediente secreto de la libertad financiera."
-    },
-    {
-      "id": "s1_fin15",
-      "texto": "¿Qué es el 'Saldo a Favor' en el SAT?",
-      "opciones": [
-        "Que debes dinero",
-        "Cuando tus deducciones legales hacen que el gobierno te deba devolver dinero",
-        "Un préstamo del SAT",
-        "Que no tienes RFC"
-      ],
-      "correcta": 1,
-      "explicacion": "Es el premio por ser ordenado y pedir facturas de tus gastos de salud/educación."
-    },
-    {
-      "id": "s1_fin16",
-      "texto": "¿Qué es el ROI en una carrera profesional?",
-      "opciones": [
-        "El nombre de la universidad",
-        "Retorno de Inversión (el tiempo y dinero que recuperas por haber estudiado)",
-        "Un examen de ingreso",
-        "El sueldo de un becario"
-      ],
-      "correcta": 1,
-      "explicacion": "Te ayuda a saber si una carrera es una buena inversión económica."
-    },
-    {
-      "id": "s1_fin17",
-      "texto": "¿Qué significa que una empresa siga criterios ESG?",
-      "opciones": [
-        "Que es muy grande",
-        "Que cuida el Ambiente, lo Social y su Gobernanza (ética)",
-        "Que vende en todo el mundo",
-        "Que es una empresa del gobierno"
-      ],
-      "correcta": 1,
-      "explicacion": "Es el estándar moderno de las empresas responsables."
-    },
-    {
-      "id": "s1_fin18",
-      "texto": "¿Cuál es la diferencia entre un Activo y un Pasivo?",
-      "opciones": [
-        "No hay diferencia",
-        "El activo pone dinero en tu bolsillo; el pasivo lo saca",
-        "El activo es caro; el pasivo es barato",
-        "Uno es legal y el otro no"
-      ],
-      "correcta": 1,
-      "explicacion": "Entender esto es la base para dejar de ser pobre."
-    },
-    {
-      "id": "s1_fin19",
-      "texto": "¿Qué es la 'Resiliencia Financiera'?",
-      "opciones": [
-        "Tener mucho dinero",
-        "La capacidad de recuperarse rápido de una crisis gracias a un plan y ahorros de emergencia",
-        "No tener deudas",
-        "Ganar la lotería"
-      ],
-      "correcta": 1,
-      "explicacion": "Es estar preparado para cuando el mundo se pone difícil."
-    },
-    {
-      "id": "s1_fin20",
-      "texto": "¿Cuál es el objetivo final de un Arquitecto de Riqueza?",
-      "opciones": [
-        "Tener mucho dinero para presumir",
-        "Crear libertad para sí mismo, seguridad para su familia e impacto positivo para el mundo",
-        "Ser el más rico de la ciudad",
-        "No trabajar nunca"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades, graduado de S1! El mundo necesita más líderes financieros como tú."
+      "explicacion": "Las ideas valen poco; la ejecución informada por números reales lo vale casi todo."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

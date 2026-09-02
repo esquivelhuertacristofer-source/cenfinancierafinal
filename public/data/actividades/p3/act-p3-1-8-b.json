@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-1-8-B",
+  "unit_code": "P3-1-8",
+  "unit_title": "Gastos hormiga: los pesos que desaparecen sin darme cuenta",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Caza de Hormigas",
+  "descripcion": "Calcula el acumulado y decide con criterio.",
+  "objetivo": "Verificar el cálculo acumulado y los criterios de decisión sobre gastos hormiga",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un gasto de $15 diarios son al mes aproximadamente:",
+      "opciones": [
+        "$15",
+        "$450",
+        "$105",
+        "$1,500"
+      ],
+      "correcta": 1,
+      "explicacion": "15 × 30 = 450. La multiplicación revela el tamaño real."
+    },
+    {
+      "id": "q2",
+      "texto": "Ese mismo gasto al año es aproximadamente:",
+      "opciones": [
+        "$450",
+        "$180",
+        "$5,475",
+        "$900"
+      ],
+      "correcta": 2,
+      "explicacion": "15 × 365. Es el precio de una bici completa en jugos."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por qué se llaman gastos hormiga?",
+      "opciones": [
+        "Porque son de comida",
+        "Porque son rápidos",
+        "Porque van en fila",
+        "Porque son pequeños pero juntos se llevan mucho"
+      ],
+      "correcta": 3,
+      "explicacion": "Su fuerza está en la repetición, no en el tamaño."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Hay que eliminar todos los gastos hormiga?",
+      "opciones": [
+        "No, solo los que no disfruto de verdad",
+        "Sí, todos",
+        "No, ninguno",
+        "Solo los de comida"
+      ],
+      "correcta": 0,
+      "explicacion": "Si algo te da alegría diaria y cabe en tu presupuesto, es dinero bien gastado."
+    },
+    {
+      "id": "q5",
+      "texto": "La señal de un gasto hormiga que conviene cortar es:",
+      "opciones": [
+        "Que es caro",
+        "Que lo hago por costumbre y ni lo disfruto",
+        "Que es de dulce",
+        "Que es diario"
+      ],
+      "correcta": 1,
+      "explicacion": "Si te preguntan por qué lo compras y respondes \"no sé\", ese es el que se corta."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué funciona mejor que prohibirse un gasto?",
+      "opciones": [
+        "Prohibirlo el doble",
+        "Ignorarlo",
+        "Sustituirlo",
+        "Aumentarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Llevar el jugo de casa conserva el gusto y recupera casi todo el dinero."
+    },
+    {
+      "id": "q7",
+      "texto": "El primer paso para controlar un gasto hormiga es:",
+      "opciones": [
+        "Prohibirlo",
+        "Esconderlo",
+        "Compartirlo",
+        "Calcularlo"
+      ],
+      "correcta": 3,
+      "explicacion": "Hasta que no ves el total anual no puedes decidir nada con criterio."
+    },
+    {
+      "id": "q8",
+      "texto": "Recupero $200 al mes cortando gastos. ¿Qué hago con ellos?",
+      "opciones": [
+        "Los aparto el mismo día en mi meta",
+        "Los dejo en el bolsillo",
+        "Los gasto en otra cosa",
+        "Los presto"
+      ],
+      "correcta": 0,
+      "explicacion": "Dinero recuperado que no se aparta, se vuelve a ir por otro lado."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-8-b-escena.webp"
+}

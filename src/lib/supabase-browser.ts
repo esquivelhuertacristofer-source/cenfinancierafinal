@@ -7,6 +7,9 @@ export const supabase = createBrowserClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
   {
+    // secure: true — ver comentario en src/lib/supabase-server.ts. Debe
+    // coincidir con supabase-server.ts y middleware.ts.
+    cookieOptions: { secure: true },
     auth: {
       flowType: 'pkce',
     },

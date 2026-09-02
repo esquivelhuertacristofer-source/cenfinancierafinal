@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TriviaActivityData } from '../../types/activities';
 import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame, X } from 'lucide-react';
 
@@ -23,38 +23,23 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
   // directo (`data.preguntas[currentIdx]`) provocaría un crash inmediato.
   const currentQuestion = data.preguntas?.[currentIdx];
 
-  // Generar opciones mezcladas para la pregunta actual
-  const shuffledOptions = useMemo(() => {
-    if (!currentQuestion) return [];
-    return [...(currentQuestion.incorrectas || []), currentQuestion.respuesta_correcta]
-      .sort(() => Math.random() - 0.5);
-  }, [currentQuestion]);
+  // Generar opciones mezcladas para la pregunta actual. Se calcula en un
+  // efecto (post-mount) en vez de en el render/useMemo para evitar un
+  // mismatch de hidratación SSR/cliente por el orden aleatorio.
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
 
   useEffect(() => {
-    if (isFinished) return;
-    if (timeLeft <= 0) {
-      handleNext(false);
+    if (!currentQuestion) {
+      setShuffledOptions([]);
       return;
     }
-    const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
-    return () => clearInterval(timer);
-  }, [timeLeft, isFinished]);
-
-  if (!data.preguntas?.length || !currentQuestion) {
-    return (
-      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
-        <p className="text-white/40 text-xl font-medium text-center">Sin preguntas disponibles.</p>
-        <button
-          onClick={() => onComplete && onComplete(0)}
-          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
-        >
-          Continuar
-        </button>
-      </div>
+    setShuffledOptions(
+      [...(currentQuestion.incorrectas || []), currentQuestion.respuesta_correcta]
+        .sort(() => Math.random() - 0.5)
     );
-  }
+  }, [currentQuestion]);
 
-  const handleNext = (isCorrect: boolean) => {
+  const handleNext = useCallback((isCorrect: boolean) => {
     if (isCorrect) {
       setScore(prev => prev + 1);
       const newStreak = streak + 1;
@@ -70,7 +55,31 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     } else {
       setIsFinished(true);
     }
-  };
+  }, [streak, maxStreak, currentIdx, data.preguntas, data.tiempo_por_pregunta]);
+
+  useEffect(() => {
+    if (isFinished) return;
+    if (timeLeft <= 0) {
+      handleNext(false);
+      return;
+    }
+    const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+    return () => clearInterval(timer);
+  }, [timeLeft, isFinished, handleNext]);
+
+  if (!data.preguntas?.length || !currentQuestion) {
+    return (
+      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
+        <p className="text-white/40 text-xl font-medium text-center">Sin preguntas disponibles.</p>
+        <button
+          onClick={() => onComplete && onComplete(0)}
+          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
+        >
+          Continuar
+        </button>
+      </div>
+    );
+  }
 
   const finalPercent = data.preguntas.length > 0 ? Math.round((score / data.preguntas.length) * 100) : 0;
 

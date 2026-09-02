@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-3-6-B",
+  "unit_code": "P6-3-6",
+  "unit_title": "La regla del 4%: cuánto necesito para vivir de mis inversiones",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto del 4%",
+  "descripcion": "Responde rápido sobre la regla y sus límites.",
+  "objetivo": "Consolidar la comprensión de la regla del 4%",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La regla del 4% estima:",
+      "respuesta_correcta": "El capital necesario para vivir de rendimientos",
+      "incorrectas": [
+        "El interés de un préstamo",
+        "La inflación anual",
+        "La comisión bancaria"
+      ],
+      "dato_extra": "Convierte una meta vaga en una cifra concreta."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El gasto anual se multiplica por:",
+      "respuesta_correcta": "25",
+      "incorrectas": [
+        "4",
+        "10",
+        "100"
+      ],
+      "dato_extra": "Porque 100 entre 4 da 25."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Con un gasto de $180,000 al año se necesitan cerca de:",
+      "respuesta_correcta": "$4,500,000",
+      "incorrectas": [
+        "$720,000",
+        "$180,000",
+        "$45,000"
+      ],
+      "dato_extra": "180,000 por 25."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Eliminar $1,000 mensuales de gasto baja la meta en:",
+      "respuesta_correcta": "$300,000",
+      "incorrectas": [
+        "$12,000",
+        "$1,000",
+        "$25,000"
+      ],
+      "dato_extra": "$12,000 al año por 25: el gasto tiene efecto multiplicado."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿La regla garantiza el resultado?",
+      "respuesta_correcta": "No, es una referencia",
+      "incorrectas": [
+        "Sí, siempre",
+        "Sí, por ley",
+        "Sí, si inviertes en banco"
+      ],
+      "dato_extra": "Asume rendimientos que pueden no repetirse."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La regla no contempla:",
+      "respuesta_correcta": "Emergencias grandes y cambios de vida",
+      "incorrectas": [
+        "El gasto anual",
+        "El capital",
+        "El retiro del 4%"
+      ],
+      "dato_extra": "Por eso el fondo de emergencia sigue siendo indispensable."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Lo más eficiente para acercarse a la meta es:",
+      "respuesta_correcta": "Reducir gasto recurrente",
+      "incorrectas": [
+        "Un ingreso extra de una vez",
+        "Cambiar de banco",
+        "Esperar"
+      ],
+      "dato_extra": "Cada peso recurrente eliminado vale 25 en la meta."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-6-b-escena.webp"
+}

@@ -48,7 +48,15 @@ function buildCSP(isLocalhost: boolean): string {
     // static.cloudflareinsights.com: beacon de Cloudflare Web Analytics que el
     // proxy inyecta automáticamente en el HTML de la zona (reporta a
     // cloudflareinsights.com vía connect-src).
-    "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+    // 'unsafe-eval' SOLO en desarrollo: Fast Refresh de Next (webpack dev) compila
+    // con eval(), y sin este permiso el bundle del cliente lanza EvalError y la app
+    // NO hidrata — 'next dev' queda completamente inerte, sin un solo clic que
+    // funcione. Producción conserva el endurecimiento de SEC-006 intacto.
+    [
+      "script-src 'self' 'unsafe-inline'",
+      ...(process.env.NODE_ENV === 'development' ? ["'unsafe-eval'"] : []),
+      'https://static.cloudflareinsights.com',
+    ].join(' '),
     // Google Fonts loaded via @import in globals.css requires googleapis.com in style-src
     // and gstatic.com in font-src.
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -109,7 +117,14 @@ export async function middleware(request: NextRequest) {
   // Rate-limit login POSTs to mitigate brute-force (legacy guard — the real
   // rate limiting is in loginAction Server Action, see authActions.ts).
   if (pathname === '/log-in' && request.method === 'POST') {
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+    // cf-connecting-ip es inyectado por el borde de Cloudflare y no puede ser
+    // falsificado por el cliente (a diferencia de x-forwarded-for, que
+    // Cloudflare solo APPEND-ea, así que un cliente puede anteponer valores
+    // arbitrarios para que split(',')[0] devuelva una IP falsa y así rotar
+    // el bucket de rate limiting en cada intento).
+    const ip = request.headers.get('cf-connecting-ip')
+      ?? request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      ?? 'unknown';
     const { allowed } = await checkLoginRateLimit(`login:${ip}`);
     if (!allowed) {
       return NextResponse.json(
@@ -117,6 +132,21 @@ export async function middleware(request: NextRequest) {
         { status: 429 }
       );
     }
+  }
+
+  const isProtectedRoute = PROTECTED_PREFIXES.some(prefix => pathname.startsWith(prefix));
+  const hostname = request.nextUrl.hostname;
+  const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
+
+  // Páginas públicas (marketing, /log-in, /academia, etc.) nunca necesitan
+  // sesión: nos saltamos por completo el round-trip a Supabase para que no
+  // dependan de su disponibilidad/latencia. Esto también evita que un
+  // crawler de vista previa (WhatsApp/Facebook) se quede esperando la
+  // respuesta y descarte la miniatura por timeout.
+  if (!isProtectedRoute) {
+    const response = NextResponse.next({ request: { headers: reqHeaders } });
+    applySecurityHeaders(response, false, isLocalhost);
+    return response;
   }
 
   // Supabase session passthrough: propagates cookie refreshes across the response.
@@ -128,6 +158,12 @@ export async function middleware(request: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
+      // secure: true — ver comentario en src/lib/supabase-server.ts. Debe
+      // coincidir en los 3 sitios que instancian un cliente Supabase con
+      // cookies (aquí, supabase-server.ts y supabase-browser.ts) o el
+      // navegador podría rechazar un refresh de cookie escrito con una
+      // combinación de atributos distinta a la que ya tiene guardada.
+      cookieOptions: { secure: true },
       cookies: {
         getAll() { return request.cookies.getAll(); },
         setAll(cookiesToSet) {
@@ -157,16 +193,11 @@ export async function middleware(request: NextRequest) {
     authenticated = !!user;
   }
 
-  if (PROTECTED_PREFIXES.some(prefix => pathname.startsWith(prefix))) {
-    if (!authenticated) {
-      return NextResponse.redirect(new URL('/log-in', request.url));
-    }
+  if (!authenticated) {
+    return NextResponse.redirect(new URL('/log-in', request.url));
   }
 
-  const isProtectedRoute = PROTECTED_PREFIXES.some(prefix => pathname.startsWith(prefix));
-  const hostname = request.nextUrl.hostname;
-  const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
-  applySecurityHeaders(supabaseResponse, isProtectedRoute, isLocalhost);
+  applySecurityHeaders(supabaseResponse, true, isLocalhost);
   return supabaseResponse;
 }
 

@@ -56,13 +56,25 @@
       "id": "sector_emprendimiento",
       "label": "Sector del Negocio",
       "type": "select",
-      "options": [
-        { "label": "Tecnología / App (múltiplo x15-25)", "value": "tech" },
-        { "label": "Comercio / Retail (múltiplo x5-8)", "value": "retail" },
-        { "label": "Alimentos y Bebidas (múltiplo x4-6)", "value": "food" },
-        { "label": "Servicios (múltiplo x6-10)", "value": "servicios" }
-      ],
-      "default": "tech"
+      "default": "tech",
+      "opciones": [
+        {
+          "label": "Tecnología / App (múltiplo x15-25)",
+          "value": "tech"
+        },
+        {
+          "label": "Comercio / Retail (múltiplo x5-8)",
+          "value": "retail"
+        },
+        {
+          "label": "Alimentos y Bebidas (múltiplo x4-6)",
+          "value": "food"
+        },
+        {
+          "label": "Servicios (múltiplo x6-10)",
+          "value": "servicios"
+        }
+      ]
     }
   ],
   "formula": "Math.round(ingreso_primer_mes * Math.pow(1 + crecimiento_mensual_emp/100, 36))",
@@ -145,17 +157,27 @@
   "escenarios": [
     {
       "condicion": "crecimiento_mensual_emp >= 15",
-      "mensaje": "🚀 Crecimiento de startup. 15%+ mensual es el territorio de las empresas de alto crecimiento. Esto solo es sostenible si tienes product-market fit real y reinviertes agresivamente.",
-      "tipo": "success"
+      "mensaje": "Un 15% mensual sostenido triplica el negocio cada ocho meses. Muy pocos lo logran, y casi nunca por tres años seguidos: revisa si tu supuesto es realista.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "inversion_inicial_emp / Math.max(1, ingreso_primer_mes * pct_reinversion / 100) > 24",
+      "mensaje": "A este ritmo tardarías más de dos años en recuperar la inversión inicial. No es imposible, pero necesitas caja para aguantar todo ese tiempo.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "sector_emprendimiento === 'food'",
+      "mensaje": "En alimentos el margen es delgado y el crecimiento es lento: se crece abriendo puntos de venta, no multiplicando usuarios. Ajusta tus expectativas al sector.",
+      "tipo": "info"
     },
     {
       "condicion": "pct_reinversion < 30",
-      "mensaje": "⚠️ Reinversión baja. Los emprendedores más exitosos de México reinvirtieron el 50-80% de sus primeras ganancias. Gastar demasiado pronto es la trampa que frena el crecimiento compuesto.",
-      "tipo": "warning"
+      "mensaje": "Reinvertir menos del 30% en los primeros años frena el crecimiento. Al principio, el negocio compite contra tu bolsillo por cada peso.",
+      "tipo": "advertencia"
     },
     {
-      "condicion": "mes_punto_equilibrio > 24",
-      "mensaje": "💡 Punto de equilibrio lejano. Tardar más de 24 meses en recuperar la inversión es normal en tech, pero requiere capital suficiente para aguantar. ¿Tienes runway para llegar?",
+      "condicion": "true",
+      "mensaje": "Tres años es el horizonte donde se ve si un negocio es un negocio o un empleo disfrazado.",
       "tipo": "info"
     }
   ],

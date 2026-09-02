@@ -1,0 +1,172 @@
+{
+  "code": "ACT-P6-4-7-A",
+  "unit_code": "P6-4-7",
+  "unit_title": "Costos ocultos de emprender: permisos, tiempo y desgaste",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "El Costo Que No Viste",
+  "descripcion": "Ceny y su prima montan un negocio de postres. Cada decisión revela un costo que no habían contado.",
+  "objetivo": "Detectar costos ocultos en la puesta en marcha de un negocio real",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny y su prima calcularon que su negocio de postres deja $6,000 al mes. El presupuesto solo incluye ingredientes, empaque y publicidad.",
+  "nodo_inicial": "arranque",
+  "nodos": {
+    "arranque": {
+      "id": "arranque",
+      "texto": "Antes de arrancar, ¿qué revisan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Qué permisos y registros necesita el giro",
+          "siguiente_nodo": "tiempo",
+          "consecuencia": "Descubren obligaciones que costarían más resolver sobre la marcha.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: empiezan y ya verán",
+          "siguiente_nodo": "multa",
+          "consecuencia": "Tres meses después llega un requerimiento que hay que resolver con prisa.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -7000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-arranque.webp"
+    },
+    "multa": {
+      "id": "multa",
+      "texto": "Resolver el trámite tarde costó $7,000 y dos semanas de operación detenida. ¿Qué concluyen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que los costos administrativos existen aunque no se presupuesten",
+          "siguiente_nodo": "tiempo",
+          "consecuencia": "Lo previsible sale barato; lo urgente sale caro.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que fue mala suerte",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "No fue suerte: era una obligación conocida del giro.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-multa.webp"
+    },
+    "tiempo": {
+      "id": "tiempo",
+      "texto": "Entre producción, entregas y compras dedican 60 horas al mes cada una. ¿Cómo lo tratan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ponerle valor a esas horas y restarlo de la utilidad",
+          "siguiente_nodo": "ajuste",
+          "consecuencia": "La utilidad real baja de $6,000 a poco más de $2,000.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "No contarlo: es tiempo suyo y no se paga",
+          "siguiente_nodo": "agotamiento",
+          "consecuencia": "El tiempo propio no se factura, pero se agota igual.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-tiempo.webp"
+    },
+    "agotamiento": {
+      "id": "agotamiento",
+      "texto": "A los cinco meses las dos están agotadas y peleadas por el reparto del trabajo. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Recalcular con el tiempo valorado y ajustar el modelo",
+          "siguiente_nodo": "ajuste",
+          "consecuencia": "Tarde, pero a tiempo para salvar el negocio y la relación.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 1000
+        },
+        {
+          "id": "o2",
+          "texto": "Aguantar: es cuestión de echarle más ganas",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El desgaste no se resuelve con voluntad: se resuelve cambiando el modelo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-agotamiento.webp"
+    },
+    "ajuste": {
+      "id": "ajuste",
+      "texto": "Con el costeo completo la utilidad real es baja. ¿Qué ajustan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Subir el precio y reducir la variedad para bajar horas",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Menos productos, mejor margen y la mitad de horas.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 9000
+        },
+        {
+          "id": "o2",
+          "texto": "Cerrar: no deja lo suficiente",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Cerrar sin intentar un ajuste deja valor sobre la mesa.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-ajuste.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El negocio ahora deja más dinero con la mitad de horas, y las dos siguen trabajando juntas.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Costear completo no mata negocios: los corrige. Los tres costos ocultos son administrativos, tiempo propio y desgaste, y los tres se pagan aunque no se anoten.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Cerraron el negocio, aunque con la información completa y sin deudas.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cerrar informado es mucho mejor que seguir a ciegas, pero antes de cerrar casi siempre queda un ajuste de precio o de modelo por probar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "El negocio cerró con pérdidas, agotamiento y la relación familiar dañada.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Ninguno de los costos que las hundió era imprevisible. Estaban todos ahí desde el principio, simplemente nadie los anotó.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-4-7-a-portada.webp"
+}

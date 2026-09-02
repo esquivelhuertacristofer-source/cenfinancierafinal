@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-3-10-B",
+  "unit_code": "S2-3-10",
+  "unit_title": "Impuestos sobre inversiones: ISR y retención en México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto Fiscal de Inversiones",
+  "descripcion": "Responde rápido sobre impuestos y rendimiento neto.",
+  "objetivo": "Consolidar la comprensión fiscal de las inversiones",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El rendimiento abonado suele ser menor al bruto por:",
+      "respuesta_correcta": "Una retención de impuesto",
+      "incorrectas": [
+        "Un error del banco",
+        "Comisión del cajero",
+        "La inflación"
+      ],
+      "dato_extra": "Se entera a la autoridad fiscal, no se queda la institución."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La retención es:",
+      "respuesta_correcta": "Un anticipo de impuesto",
+      "incorrectas": [
+        "Un cobro de la institución",
+        "Una comisión",
+        "Una penalización"
+      ],
+      "dato_extra": "Después se refleja en la declaración anual."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El tratamiento fiscal:",
+      "respuesta_correcta": "Varía según el instrumento",
+      "incorrectas": [
+        "Es igual para todos",
+        "No existe",
+        "Solo aplica a acciones"
+      ],
+      "dato_extra": "Deuda, acciones, dividendos y fondos tienen reglas distintas."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Ciertos productos de retiro tienen:",
+      "respuesta_correcta": "Beneficios fiscales que compensan su menor liquidez",
+      "incorrectas": [
+        "Más impuestos",
+        "Ningún beneficio",
+        "Comisiones más altas siempre"
+      ],
+      "dato_extra": "El costo es no poder disponer del dinero libremente."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La constancia de retención sirve para:",
+      "respuesta_correcta": "La declaración anual",
+      "incorrectas": [
+        "Abrir cuentas",
+        "Pedir crédito",
+        "Nada"
+      ],
+      "dato_extra": "A veces deriva en un saldo a favor."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La comparación correcta es:",
+      "respuesta_correcta": "Tasa menos comisiones, impuestos e inflación",
+      "incorrectas": [
+        "Solo la tasa bruta",
+        "Solo la comisión",
+        "El rendimiento del año pasado"
+      ],
+      "dato_extra": "Lo que queda es lo que aumentó tu poder de compra."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un instrumento con tasa menor:",
+      "respuesta_correcta": "Puede ganar por menor comisión o mejor tratamiento fiscal",
+      "incorrectas": [
+        "Nunca gana",
+        "Siempre pierde",
+        "Es ilegal"
+      ],
+      "dato_extra": "Por eso la tasa anunciada no basta para decidir."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-10-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-10-b-escena.webp"
+}

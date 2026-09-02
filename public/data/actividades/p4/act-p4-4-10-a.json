@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P4-4-10-A",
+  "unit_code": "P4-4-10",
+  "unit_title": "Reinvertir o repartir: qué hago con la ganancia",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Qué Hago con la Ganancia",
+  "descripcion": "El negocio de Ceny dejó ganancia por primera vez. Cada decisión define su futuro.",
+  "objetivo": "Decidir la distribución de utilidades según la etapa del negocio",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Después de tres meses vendiendo, el negocio de Ceny dejó $3,000 de ganancia acumulada. Es la primera vez que tiene que decidir qué hacer con ella.",
+  "nodo_inicial": "decision",
+  "nodos": {
+    "decision": {
+      "id": "decision",
+      "texto": "¿Qué hace Ceny con los $3,000?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Repartirlos entre reinversión, reserva y un retiro pequeño",
+          "siguiente_nodo": "reinversion",
+          "consecuencia": "El negocio crece, queda protegido y Ceny recibe algo por su esfuerzo.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1000
+        },
+        {
+          "id": "o2",
+          "texto": "Gastarlos todos: se los ganó",
+          "siguiente_nodo": "sin_reserva",
+          "consecuencia": "El negocio queda exactamente igual de pequeño y frágil que al inicio.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -500
+        },
+        {
+          "id": "o3",
+          "texto": "Reinvertirlos todos para crecer lo más rápido posible",
+          "siguiente_nodo": "sin_reserva",
+          "consecuencia": "Crece rápido, pero sin un peso de reserva ante cualquier imprevisto.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-decision.webp"
+    },
+    "sin_reserva": {
+      "id": "sin_reserva",
+      "texto": "Al mes siguiente se descompone la herramienta principal. Reponerla cuesta $900 y no hay reserva. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aprender la lección y apartar reserva desde la siguiente ganancia",
+          "siguiente_nodo": "reinversion",
+          "consecuencia": "Pide prestado esta vez, pero cambia el método hacia adelante.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": -900
+        },
+        {
+          "id": "o2",
+          "texto": "Cerrar el negocio, no alcanza",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Un imprevisto de $900 terminó con un negocio que funcionaba.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-sin_reserva.webp"
+    },
+    "reinversion": {
+      "id": "reinversion",
+      "texto": "Ceny va a reinvertir. ¿En qué conviene poner ese dinero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "En lo que le permita vender más: más material y mejor presentación",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "Reinversión que se traduce directamente en capacidad de venta.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 800
+        },
+        {
+          "id": "o2",
+          "texto": "En una herramienta cara que quizá use más adelante",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "Inmoviliza dinero en algo que todavía no genera ventas.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -400
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-reinversion.webp"
+    },
+    "reparto": {
+      "id": "reparto",
+      "texto": "El negocio ya está creciendo. ¿Cómo reparte la ganancia de aquí en adelante?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ajustar los porcentajes cada tres meses según la etapa",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Lo que tenía sentido al inicio deja de tenerlo cuando el negocio crece.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1200
+        },
+        {
+          "id": "o2",
+          "texto": "Dejar los mismos porcentajes para siempre",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Una distribución fija ignora que las necesidades del negocio cambian.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 200
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-reparto.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El negocio de Ceny creció, resistió dos imprevistos y le dio una recompensa constante por su trabajo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Reinvertir para crecer, reservar para resistir y retirar para sostener el esfuerzo. Los tres a la vez, con porcentajes que se revisan: eso es administrar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio funciona, aunque con una distribución que ya no corresponde a su tamaño.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Repartir en tres fue lo correcto. Lo que faltó fue revisar los porcentajes: un negocio que crece necesita una mezcla distinta a la del arranque.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "El negocio cerró por un imprevisto de $900 que una reserva habría cubierto.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La reserva es el destino que menos se elige y el que más negocios pequeños salva. Aquí faltaron $900 de los $3,000 que hubo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p4/p4-4-10-a-portada.webp"
+}

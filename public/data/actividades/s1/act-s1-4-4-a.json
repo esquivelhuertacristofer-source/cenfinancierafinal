@@ -4,109 +4,124 @@
   "unit_title": "Contabilidad básica: balance y estado de resultados",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "Mi Plan de Carrera",
-  "descripcion": "Tu educación es la inversión más rentable que harás en tu vida. ¿Sabes cuánto vale tu futuro profesional?",
-  "objetivo": "Calcular el retorno de inversión (ROI) de una carrera profesional y proyectar ingresos a largo plazo",
-  "xp": 500,
-  "output_type": "Análisis de Inversión Educativa",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Las Cinco Cuentas",
+  "descripcion": "Toda la contabilidad del mundo se organiza en cinco tipos de cuenta. Si sabes clasificar en cuál va cada cosa, puedes leer los números de cualquier negocio.",
+  "objetivo": "Clasificar los movimientos de un negocio en activo, pasivo, capital, ingreso y gasto, base del balance y del estado de resultados.",
+  "xp": 550,
+  "instruccion": "La papelería de doña Marta tiene estos conceptos. Arrastra cada uno a su tipo de cuenta.",
+  "categorias": [
     {
-      "id": "eleccion_profesion",
-      "titulo": "🎓 La Profesión",
-      "descripcion": "¿A qué te quieres dedicar?",
-      "campos": [
-        {
-          "id": "nombre_carrera",
-          "label": "Carrera o Profesión",
-          "type": "text",
-          "placeholder": "Ej: Programador de IA, Médico, Arquitecto...",
-          "requerido": true
-        },
-        {
-          "id": "sector_laboral",
-          "label": "Sector",
-          "type": "select",
-          "opciones": [
-            "Tecnología",
-            "Salud",
-            "Finanzas",
-            "Artes y Creatividad",
-            "Ingeniería"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "activo",
+      "label": "ACTIVO",
+      "emoji": "📗",
+      "color": "#10b981"
     },
     {
-      "id": "costo_estudio",
-      "titulo": "💰 La Inversión",
-      "descripcion": "¿Cuánto costará prepararte?",
-      "campos": [
-        {
-          "id": "costo_universidad",
-          "label": "Costo total de la carrera ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 2000000,
-          "step": 50000,
-          "default": 500000,
-          "unit": "$"
-        },
-        {
-          "id": "años_estudio",
-          "label": "Duración (Años)",
-          "type": "slider",
-          "min": 1,
-          "max": 7,
-          "step": 1,
-          "default": 4,
-          "unit": "años"
-        }
-      ]
+      "id": "pasivo",
+      "label": "PASIVO",
+      "emoji": "📕",
+      "color": "#ef4444"
     },
     {
-      "id": "proyeccion_ingresos",
-      "titulo": "📈 El Retorno",
-      "descripcion": "¿Cuánto esperas ganar al graduarte?",
-      "campos": [
-        {
-          "id": "sueldo_inicial_mensual",
-          "label": "Sueldo Mensual Inicial ($)",
-          "type": "slider",
-          "min": 5000,
-          "max": 100000,
-          "step": 5000,
-          "default": 20000,
-          "unit": "$"
-        },
-        {
-          "id": "habilidades_clave",
-          "label": "¿Qué habilidades te harán ganar más?",
-          "type": "textarea",
-          "placeholder": "Ej: Inglés fluido, manejo de datos, liderazgo de equipos...",
-          "requerido": true
-        },
-        {
-          "id": "roi_educacion_10a",
-          "label": "ROI de Tu Educación (10 años laborales)",
-          "type": "calculated",
-          "formula": "Math.round((sueldo_inicial_mensual * 12 * 10 - costo_universidad) / Math.max(1, costo_universidad) * 100)",
-          "unit": "%",
-          "ayuda": "Retorno de inversión de estudiar en los primeros 10 años de carrera"
-        },
-        {
-          "id": "costo_mensual_carrera",
-          "label": "Costo Mensual de la Carrera",
-          "type": "calculated",
-          "formula": "Math.round(costo_universidad / Math.max(1, años_estudio) / 12)",
-          "unit": "$/mes",
-          "ayuda": "Lo que \"cuesta\" cada mes de estudios dividiendo el total entre años × 12"
-        }
-      ]
+      "id": "capital",
+      "label": "CAPITAL",
+      "emoji": "💎",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "resultado",
+      "label": "INGRESO O GASTO",
+      "emoji": "📊",
+      "color": "#f59e0b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "El dinero en la caja registradora",
+      "emoji": "💵",
+      "categoria_correcta": "activo",
+      "feedback": "Efectivo disponible: el activo más líquido que existe."
+    },
+    {
+      "id": "i2",
+      "label": "Lo que le debe al proveedor de cuadernos",
+      "emoji": "📦",
+      "categoria_correcta": "pasivo",
+      "feedback": "Cuentas por pagar: una obligación con un tercero."
+    },
+    {
+      "id": "i3",
+      "label": "El dinero que doña Marta puso para abrir",
+      "emoji": "🏁",
+      "categoria_correcta": "capital",
+      "feedback": "Aportación del dueño: capital social."
+    },
+    {
+      "id": "i4",
+      "label": "La venta de 200 libretas",
+      "emoji": "🧾",
+      "categoria_correcta": "resultado",
+      "feedback": "Ingreso del periodo: va al estado de resultados, no al balance."
+    },
+    {
+      "id": "i5",
+      "label": "El inventario de plumas y cuadernos",
+      "emoji": "✏️",
+      "categoria_correcta": "activo",
+      "feedback": "Mercancía que se convertirá en efectivo al venderse."
+    },
+    {
+      "id": "i6",
+      "label": "El crédito bancario a 3 años",
+      "emoji": "🏦",
+      "categoria_correcta": "pasivo",
+      "feedback": "Pasivo a largo plazo: se paga en más de un año."
+    },
+    {
+      "id": "i7",
+      "label": "La renta del local pagada este mes",
+      "emoji": "🏠",
+      "categoria_correcta": "resultado",
+      "feedback": "Gasto del periodo: se consumió al usarlo."
+    },
+    {
+      "id": "i8",
+      "label": "La copiadora que compró de contado",
+      "emoji": "🖨️",
+      "categoria_correcta": "activo",
+      "feedback": "Activo fijo: un bien que produce durante años."
+    },
+    {
+      "id": "i9",
+      "label": "Las utilidades acumuladas de años anteriores",
+      "emoji": "📈",
+      "categoria_correcta": "capital",
+      "feedback": "Ganancias reinvertidas: aumentan el capital del dueño."
+    },
+    {
+      "id": "i10",
+      "label": "El sueldo del ayudante",
+      "emoji": "🧑‍💼",
+      "categoria_correcta": "resultado",
+      "feedback": "Gasto de operación del periodo."
+    },
+    {
+      "id": "i11",
+      "label": "Lo que un cliente le debe por una compra a crédito",
+      "emoji": "🤝",
+      "categoria_correcta": "activo",
+      "feedback": "Cuentas por cobrar: dinero que aún no entra pero es tuyo."
+    },
+    {
+      "id": "i12",
+      "label": "Los impuestos que aún no ha pagado al SAT",
+      "emoji": "⚖️",
+      "categoria_correcta": "pasivo",
+      "feedback": "Impuestos por pagar: obligación pendiente y exigible."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

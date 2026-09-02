@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S3-4-8-B",
+  "unit_code": "S3-4-8",
+  "unit_title": "Dilución: cuánto de mi empresa sigue siendo mía",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Dilución",
+  "descripcion": "Responde rápido sobre dilución y valor.",
+  "objetivo": "Consolidar la comprensión de la dilución acumulada",
+  "xp": 800,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La dilución es:",
+      "respuesta_correcta": "La reducción proporcional de participación al emitir acciones nuevas",
+      "incorrectas": [
+        "Que te quiten acciones",
+        "Una pérdida de dinero",
+        "Un impuesto"
+      ],
+      "dato_extra": "El total aumenta y la misma cantidad representa menos."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La dilución acumulada se calcula:",
+      "respuesta_correcta": "Multiplicando, no sumando",
+      "incorrectas": [
+        "Sumando",
+        "Restando",
+        "Dividiendo entre las rondas"
+      ],
+      "dato_extra": "Cada reducción se aplica sobre lo que quedaba."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Tres rondas del 20% dejan al fundador cerca de:",
+      "respuesta_correcta": "51%",
+      "incorrectas": [
+        "40%",
+        "60%",
+        "20%"
+      ],
+      "dato_extra": "Sumar daría 40%, y ese es el error más común."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Lo relevante para el fundador es:",
+      "respuesta_correcta": "Cuánto vale su porcentaje",
+      "incorrectas": [
+        "El porcentaje solo",
+        "El número de acciones",
+        "El número de rondas"
+      ],
+      "dato_extra": "20% de cien millones supera al 100% de dos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La pregunta correcta ante cada ronda es:",
+      "respuesta_correcta": "Si el dinero hará crecer la empresa lo suficiente",
+      "incorrectas": [
+        "Cuánto cedo",
+        "Quién invierte",
+        "Cuándo cobro"
+      ],
+      "dato_extra": "La dilución con crecimiento es buena."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La dilución es mala cuando:",
+      "respuesta_correcta": "Entra capital y la empresa no crece",
+      "incorrectas": [
+        "Siempre",
+        "Nunca",
+        "Cuando hay dos rondas"
+      ],
+      "dato_extra": "Se pierde porcentaje sin ganar valor."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Además de las rondas, ¿qué otra cosa diluye al fundador?",
+      "respuesta_correcta": "La reserva de acciones que se aparta para el equipo",
+      "incorrectas": [
+        "Contratar más personal",
+        "Pagar impuestos",
+        "Abrir una sucursal"
+      ],
+      "dato_extra": "Puede pesar tanto como una ronda entera y casi siempre sale de la parte del fundador."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-8-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-8-b-escena.webp"
+}

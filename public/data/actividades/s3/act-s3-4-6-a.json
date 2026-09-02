@@ -1,0 +1,138 @@
+{
+  "code": "ACT-S3-4-6-A",
+  "unit_code": "S3-4-6",
+  "unit_title": "SA, SAPI o SAS: qué figura le conviene a mi empresa",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Elegir la Figura",
+  "descripcion": "Ceny debe constituir su empresa. Cada decisión define su estructura.",
+  "objetivo": "Aplicar criterios de elección de figura societaria a un caso concreto",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El negocio de Ceny factura $80,000 al mes, tiene dos socios y un fondo se ha mostrado interesado en invertir el próximo año.",
+  "nodo_inicial": "formalizar",
+  "nodos": {
+    "formalizar": {
+      "id": "formalizar",
+      "texto": "Ceny opera como persona física. ¿Debe constituir una sociedad?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Sí: tiene socios, busca inversión y necesita separar su patrimonio",
+          "siguiente_nodo": "cual",
+          "consecuencia": "Las tres señales están presentes al mismo tiempo.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "No: mientras funcione así puede esperar",
+          "siguiente_nodo": "demanda",
+          "consecuencia": "Sigue con todo el riesgo del negocio sobre su patrimonio personal.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-formalizar.webp"
+    },
+    "demanda": {
+      "id": "demanda",
+      "texto": "Un proveedor demanda al negocio por un incumplimiento. ¿Qué patrimonio responde?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El personal de Ceny, porque no existe separación",
+          "siguiente_nodo": "cual",
+          "consecuencia": "Aprende el costo de posponer la constitución.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": -45000
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el del negocio",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin sociedad no hay patrimonio del negocio separado del personal.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -70000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-demanda.webp"
+    },
+    "cual": {
+      "id": "cual",
+      "texto": "Entre las figuras disponibles, ¿cuál se ajusta mejor a un negocio con socios que buscará inversión?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Una figura pensada para recibir capital de inversionistas, con reglas flexibles entre socios",
+          "siguiente_nodo": "costo",
+          "consecuencia": "Es exactamente el escenario para el que fue diseñada.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "La figura más simple y barata, sin importar los planes",
+          "siguiente_nodo": "costo",
+          "consecuencia": "Tendrá que transformarse antes de la ronda, con costo y tiempo extra.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -22000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-cual.webp"
+    },
+    "costo": {
+      "id": "costo",
+      "texto": "El costo de constituir y mantener la estructura es mayor de lo que esperaba. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Lo compara contra el riesgo patrimonial y contra el costo de transformar después",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "El costo se justifica frente a lo que evita.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 38000
+        },
+        {
+          "id": "o2",
+          "texto": "Lo pospone hasta que llegue la inversión",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El fondo pide estructura constituida antes de invertir, y la ronda se retrasa.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-costo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny constituyó la figura adecuada para sus planes y quedó lista para recibir inversión.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La figura se elige respondiendo tres preguntas: si habrá socios, si habrá inversión externa y qué formalidad se puede sostener hoy. Y se puede transformar después.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny formalizó tarde y con costos que pudo evitar.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Posponer la constitución deja el patrimonio personal expuesto y retrasa cualquier inversión: los fondos exigen estructura constituida antes de poner dinero.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-4-6-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-4-6-a-portada.webp"
+}

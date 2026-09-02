@@ -10,7 +10,7 @@
   "descripcion": "¿Sabías que Einstein llamó al interés compuesto 'la octava maravilla del mundo'? Mueve los controles y mira cómo el tiempo multiplica tu dinero exponencialmente. Luego descubre cuánto te CUESTA esperar 5 años más.",
   "objetivo": "Visualizar la diferencia entre crecimiento lineal y exponencial y el costo de oportunidad del tiempo",
   "xp": 250,
-  "descripcion_formula": "VF = Capital × (1+r)^n + Aportación×12 × ((1+r)^n - 1) / r. Se calcula también sin interés (alcancía) y ajustado por inflación.",
+  "descripcion_formula": "Se proyecta tu capital con interés compuesto y luego se descuenta la inflación, para mostrar cuánto valdría ese dinero en poder de compra de hoy. Lo que importa no es el número, sino lo que ese número podrá comprar.",
   "inputs": [
     {
       "id": "capital",
@@ -63,11 +63,11 @@
       "unit": "%"
     }
   ],
-  "formula": "capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * ((Math.pow(1 + tasa/100, anos) - 1) / (tasa/100))",
+  "formula": "Math.round((capital * Math.pow(1 + tasa/100, anos) + aportacion * 12 * ((Math.pow(1 + tasa/100, anos) - 1) / (tasa/100))) / Math.pow(1 + inflacion/100, anos))",
   "formula_sin_interes": "capital + aportacion * 12 * anos",
   "formula_real": "(capital * Math.pow(1+tasa/100, anos) + aportacion*12 * ((Math.pow(1+tasa/100,anos)-1)/(tasa/100))) / Math.pow(1+inflacion/100, anos)",
   "formula_esperar_5_anos": "capital * Math.pow(1+tasa/100, Math.max(0,anos-5)) + aportacion*12 * ((Math.pow(1+tasa/100,Math.max(0,anos-5))-1)/(tasa/100))",
-  "output_label": "Tu dinero con interés compuesto",
+  "output_label": "Tu dinero al final, en poder de compra de hoy",
   "output_prefix": "$",
   "output_suffix": " MXN",
   "chart_type": "line",
@@ -103,24 +103,29 @@
   },
   "escenarios": [
     {
+      "condicion": "tasa - inflacion < 2",
+      "mensaje": "Tu rendimiento apenas le gana a la inflación. En términos reales casi no estás creciendo: ese es el problema de guardar el dinero en instrumentos que rinden poco.",
+      "tipo": "peligro"
+    },
+    {
       "condicion": "resultado > 1000000",
-      "mensaje": "💎 ¡Club del millón! El interés compuesto te hizo millonario sin trabajo extra.",
-      "tipo": "success"
+      "mensaje": "Más de un millón en poder de compra de hoy. La bola de nieve funcionó: fíjate que la mayor parte se acumuló en los últimos años.",
+      "tipo": "exito"
     },
     {
       "condicion": "resultado > 500000",
-      "mensaje": "🚀 ¡Muy sólido! Tienes la base para la independencia financiera.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "anos < 15",
-      "mensaje": "⏰ Revelación: si mueves el slider de años de 10 a 30, tu dinero no se triplica — se MULTIPLICA POR 17.",
-      "tipo": "info"
+      "mensaje": "Vas bien. Prueba mover los años en vez del monto: el tiempo mueve el resultado mucho más que la aportación.",
+      "tipo": "exito"
     },
     {
       "condicion": "aportacion === 0",
-      "mensaje": "💡 Prueba a poner $500/mes de aportación. Los resultados a 20 años te van a dejar sin palabras.",
-      "tipo": "warning"
+      "mensaje": "Sin aportaciones mensuales todo depende del capital inicial. Agregar aunque sea poco cada mes cambia por completo la curva.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "anos < 15",
+      "mensaje": "En plazos cortos el interés compuesto casi no se nota. Su magia necesita décadas, y por eso empezar joven vale más que empezar con mucho.",
+      "tipo": "info"
     }
   ],
   "pregunta_reflexion": "Ahora que ves estos números reales: ¿a qué edad quisieras haber empezado a invertir? ¿Qué harías diferente esta semana?",

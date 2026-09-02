@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-3-6-B",
+  "unit_code": "P3-3-6",
+  "unit_title": "El historial crediticio: la reputación de mi dinero",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Historial",
+  "descripcion": "Responde rápido sobre reputación financiera.",
+  "objetivo": "Consolidar el concepto de historial crediticio y su construcción",
+  "xp": 160,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El historial crediticio registra:",
+      "respuesta_correcta": "Si he pagado a tiempo lo que debo",
+      "incorrectas": [
+        "Cuánto gano",
+        "Dónde vivo",
+        "Mi edad"
+      ],
+      "dato_extra": "Es la memoria escrita de tus compromisos cumplidos e incumplidos."
+    },
+    {
+      "id": "q2",
+      "pregunta": "En México ese registro se llama:",
+      "respuesta_correcta": "Buró de Crédito",
+      "incorrectas": [
+        "IPAB",
+        "CURP",
+        "INE"
+      ],
+      "dato_extra": "Todo el que ha tenido un crédito aparece ahí, sin excepción."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Estar en el Buró de Crédito:",
+      "respuesta_correcta": "No es malo; importa cómo apareces",
+      "incorrectas": [
+        "Es una lista negra",
+        "Impide abrir cuentas",
+        "Es ilegal"
+      ],
+      "dato_extra": "Un historial largo y limpio es una de las mejores herramientas financieras."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Un buen historial se construye con:",
+      "respuesta_correcta": "Muchos pagos puntuales durante años",
+      "incorrectas": [
+        "Un pago grande",
+        "No pedir nada nunca",
+        "Suerte"
+      ],
+      "dato_extra": "Se construye lento y se daña rápido: por eso se cuida la fecha."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Un buen historial da acceso a:",
+      "respuesta_correcta": "Mejores condiciones y tasas más bajas",
+      "incorrectas": [
+        "Dinero gratis",
+        "Menos impuestos",
+        "Créditos ilimitados"
+      ],
+      "dato_extra": "Quien cumple paga menos intereses que quien no cumple. Literalmente."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Puedo practicar reputación sin tener créditos?",
+      "respuesta_correcta": "Sí, cumpliendo lo que prometo",
+      "incorrectas": [
+        "No, hay que ser adulto",
+        "No, solo con dinero",
+        "Solo en la escuela"
+      ],
+      "dato_extra": "Quien cumple con lo pequeño es quien después cumple con lo grande."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La reputación financiera:",
+      "respuesta_correcta": "Se acumula con acciones",
+      "incorrectas": [
+        "Se declara",
+        "La regala el banco",
+        "Se compra"
+      ],
+      "dato_extra": "Nadie puede decir \"soy confiable\": lo demuestra el registro."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-6-b-escena.webp"
+}

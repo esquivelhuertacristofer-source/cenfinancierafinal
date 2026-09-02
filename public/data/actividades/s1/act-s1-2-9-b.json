@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-2-9-B",
+  "unit_code": "S1-2-9",
+  "unit_title": "Mi primer presupuesto independiente: vivir con lo que gano",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Presupuesto Independiente",
+  "descripcion": "Clasifica cada gasto según su lugar en el presupuesto.",
+  "objetivo": "Verificar la estructura de un presupuesto independiente completo",
+  "xp": 400,
+  "instruccion": "Arrastra cada elemento según qué papel juega en el presupuesto.",
+  "categorias": [
+    {
+      "id": "fijo",
+      "label": "Gasto fijo mensual",
+      "emoji": "📌",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "variable",
+      "label": "Gasto variable",
+      "emoji": "📊",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "obligatorio",
+      "label": "Línea obligatoria que casi nadie pone",
+      "emoji": "🛡️",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Renta del departamento",
+      "emoji": "🏠",
+      "categoria_correcta": "fijo",
+      "feedback": "Mismo monto cada mes y la línea más grande."
+    },
+    {
+      "id": "i2",
+      "label": "Fondo para imprevistos",
+      "emoji": "⚡",
+      "categoria_correcta": "obligatorio",
+      "feedback": "Sin esta línea el presupuesto falla al primer mes raro."
+    },
+    {
+      "id": "i3",
+      "label": "Despensa del mes",
+      "emoji": "🛒",
+      "categoria_correcta": "variable",
+      "feedback": "Cambia según precios y consumo."
+    },
+    {
+      "id": "i4",
+      "label": "Internet",
+      "emoji": "🌐",
+      "categoria_correcta": "fijo",
+      "feedback": "Uno de los gastos invisibles que casi nadie estima."
+    },
+    {
+      "id": "i5",
+      "label": "Aportación mensual al ahorro",
+      "emoji": "🏦",
+      "categoria_correcta": "obligatorio",
+      "feedback": "Si es \"lo que sobra\", nunca hay nada."
+    },
+    {
+      "id": "i6",
+      "label": "Transporte diario",
+      "emoji": "🚌",
+      "categoria_correcta": "variable",
+      "feedback": "Depende de los días y de la distancia."
+    },
+    {
+      "id": "i7",
+      "label": "Gas y electricidad",
+      "emoji": "💡",
+      "categoria_correcta": "variable",
+      "feedback": "Fijo en concepto pero variable en monto."
+    },
+    {
+      "id": "i8",
+      "label": "Plan de telefonía",
+      "emoji": "📱",
+      "categoria_correcta": "fijo",
+      "feedback": "Monto igual cada mes mientras dure el plan."
+    },
+    {
+      "id": "i9",
+      "label": "Reposición de cosas que se rompen",
+      "emoji": "🔧",
+      "categoria_correcta": "obligatorio",
+      "feedback": "Ocurre siempre y casi nunca se presupuesta."
+    },
+    {
+      "id": "i10",
+      "label": "Ropa y calzado",
+      "emoji": "👕",
+      "categoria_correcta": "variable",
+      "feedback": "No es mensual, pero debe estar prorrateado."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-9-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-9-b-escena.webp"
+}

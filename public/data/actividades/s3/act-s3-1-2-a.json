@@ -4,124 +4,178 @@
   "unit_title": "Mi plan financiero: de los 15 a los 65 años",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "JUEGO",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "El Gobernador del Banco Central",
-  "descripcion": "El país está en tus manos. ¿Subirás las tasas para frenar la inflación o las bajarás para crear empleos? ¡Cuidado con las consecuencias!",
-  "objetivo": "Comprender el uso de las tasas de interés como herramienta para controlar la inflación y estimular el crecimiento",
-  "xp": 500,
-  "mecanica": "Toma decisiones sobre la TASA DE INTERÉS según las noticias que recibas.",
-  "escenarios": [
-    {
-      "id": "mon1",
-      "texto": "¡Alerta! La inflación ha llegado al 9%. Los precios de la comida están subiendo demasiado rápido.",
-      "imagen": "🔥",
-      "opcion_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Correcto! Al subir las tasas, el dinero se vuelve más caro, la gente gasta menos y la inflación baja.",
-      "feedback_error": "❌ ¡Error! Si bajas las tasas o no haces nada, la inflación seguirá subiendo y el dinero perderá todo su valor.",
-      "tipo_ataque": "Control de Inflación"
+  "titulo": "Cincuenta Años en Cinco Decisiones",
+  "descripcion": "Un plan financiero de vida no se rompe por una catástrofe: se rompe por cinco decisiones ordinarias tomadas en momentos distintos. Estas son las de Renata.",
+  "objetivo": "Validar la robustez de una estrategia financiera a largo plazo frente a la volatilidad del mercado y los eventos de vida.",
+  "xp": 800,
+  "personaje_principal": "Renata",
+  "contexto_inicial": "Renata tiene 18 años y acaba de empezar a trabajar. Vamos a acompañarla hasta los 65.",
+  "nodo_inicial": "a_los_18",
+  "nodos": {
+    "a_los_18": {
+      "id": "a_los_18",
+      "texto": "A los 18, primer sueldo: $9,000 al mes. Vive con su familia, así que casi todo es disponible. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "automatiza",
+          "texto": "Domiciliar el 20% a inversión el mismo día que cobra",
+          "siguiente_nodo": "a_los_27",
+          "consecuencia": "Nunca ve ese dinero en su cuenta, así que nunca lo extraña.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 21600
+        },
+        {
+          "id": "lo_que_sobre",
+          "texto": "Ahorrar lo que sobre a fin de mes",
+          "siguiente_nodo": "a_los_27",
+          "consecuencia": "Algunos meses sobra; la mayoría, no.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "despues",
+          "texto": "Empezar a ahorrar cuando gane más",
+          "siguiente_nodo": "a_los_27",
+          "consecuencia": "Cada aumento trae gastos nuevos del mismo tamaño.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "mon2",
-      "texto": "La economía está fría. El desempleo ha subido al 12% porque nadie está pidiendo créditos para abrir negocios.",
-      "imagen": "❄️",
-      "opcion_correcta": "BAJAR TASAS",
-      "feedback_acierto": "¡Bien! Al bajar las tasas, los créditos son más baratos, las empresas invierten y se crean empleos.",
-      "feedback_error": "❌ ¡Error! Mantener las tasas altas en una recesión hace que sea imposible que la economía se recupere.",
-      "tipo_ataque": "Estímulo Económico"
+    "a_los_27": {
+      "id": "a_los_27",
+      "texto": "A los 27 gana $28,000. Un amigo le ofrece entrar a un negocio \"seguro\" que promete 8% mensual. Renata tiene $180,000 invertidos.",
+      "opciones": [
+        {
+          "id": "rechaza",
+          "texto": "Rechazar: 8% mensual no existe sin riesgo de perderlo todo",
+          "siguiente_nodo": "a_los_35",
+          "consecuencia": "El negocio cerró catorce meses después dejando deudas.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "poquito",
+          "texto": "Meter solo lo que puede perder: $20,000",
+          "siguiente_nodo": "a_los_35",
+          "consecuencia": "Pierde los $20,000 y conserva el resto.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": -20000
+        },
+        {
+          "id": "todo",
+          "texto": "Meter todo: es la oportunidad de su vida",
+          "siguiente_nodo": "a_los_35",
+          "consecuencia": "Nueve años de disciplina desaparecen en catorce meses.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -180000
+        }
+      ]
     },
-    {
-      "id": "mon3",
-      "texto": "Nuestra moneda está perdiendo mucho valor frente al dólar. Los inversionistas extranjeros están sacando su dinero del país.",
-      "imagen": "📉",
-      "opcion_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Exacto! Al subir las tasas, ofreces mejores rendimientos y atraes de nuevo a los inversionistas para fortalecer la moneda.",
-      "feedback_error": "❌ ¡Error! Si no subes las tasas, la moneda seguirá devaluándose y todo lo importado será carísimo.",
-      "tipo_ataque": "Tipo de Cambio"
+    "a_los_35": {
+      "id": "a_los_35",
+      "texto": "A los 35 el mercado cae 38% en cuatro meses. Sus inversiones valen mucho menos en pantalla. Faltan 30 años para su retiro.",
+      "opciones": [
+        {
+          "id": "sigue",
+          "texto": "No tocar nada y seguir aportando cada mes",
+          "siguiente_nodo": "a_los_48",
+          "consecuencia": "Compra barato durante toda la caída sin darse cuenta.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "pausa",
+          "texto": "Pausar las aportaciones hasta que \"se calme\"",
+          "siguiente_nodo": "a_los_48",
+          "consecuencia": "Se pierde justo los meses de precios más bajos.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": -260000
+        },
+        {
+          "id": "vende",
+          "texto": "Vender todo para no perder más",
+          "siguiente_nodo": "a_los_48",
+          "consecuencia": "Convierte una caída en pantalla en una pérdida real.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -700000
+        }
+      ]
     },
-    {
-      "id": "mon4",
-      "texto": "Hay una 'Burbuja Inmobiliaria'. Todo el mundo está pidiendo créditos baratos para comprar casas y los precios están volando de forma irreal.",
-      "imagen": "🏠",
-      "opcion_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Muy sabio! Subir las tasas 'enfría' el mercado de deuda y evita que la burbuja explote y cause una crisis mayor.",
-      "feedback_error": "❌ ¡Peligro! Si mantienes el dinero barato, la burbuja crecerá hasta que el sistema colapse.",
-      "tipo_ataque": "Estabilidad Financiera"
+    "a_los_48": {
+      "id": "a_los_48",
+      "texto": "A los 48 su papá enferma. El tratamiento cuesta $340,000 y no está cubierto. ¿De dónde sale?",
+      "opciones": [
+        {
+          "id": "fondo",
+          "texto": "Del fondo de emergencia y del seguro de gastos médicos que contrató a los 30",
+          "siguiente_nodo": "a_los_65",
+          "consecuencia": "Para esto existían los dos.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": -90000
+        },
+        {
+          "id": "retiro_inv",
+          "texto": "Retirando de las inversiones de retiro",
+          "siguiente_nodo": "a_los_65",
+          "consecuencia": "Resuelve hoy y quita 17 años de crecimiento a ese dinero.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": -340000
+        },
+        {
+          "id": "credito",
+          "texto": "Con un crédito personal a 48 meses",
+          "siguiente_nodo": "a_los_65",
+          "consecuencia": "Cuatro años pagando intereses altos.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": -510000
+        }
+      ]
     },
-    {
-      "id": "mon5",
-      "texto": "Crisis Global. Todos los países están bajando sus tasas para evitar una depresión. ¿Qué hacemos?",
-      "imagen": "🌍",
-      "opcion_correcta": "BAJAR TASAS",
-      "feedback_acierto": "¡Liderazgo! Te unes al esfuerzo global para inyectar liquidez al sistema y evitar un colapso total.",
-      "feedback_error": "❌ ¡Error! Quedarse solo con tasas altas en una crisis global ahogará a las empresas locales.",
-      "tipo_ataque": "Coordinación Global"
+    "a_los_65": {
+      "id": "a_los_65",
+      "texto": "Llega a los 65. Es hora de decidir cómo vivir de lo acumulado.",
+      "opciones": [
+        {
+          "id": "regla4",
+          "texto": "Retirar cerca del 4% anual del portafolio y dejar el resto invertido",
+          "siguiente_nodo": "final_plan_solido",
+          "consecuencia": "El portafolio sigue creciendo mientras ella vive de él.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "todo_liquido",
+          "texto": "Pasar todo a efectivo para no correr ningún riesgo",
+          "siguiente_nodo": "final_inflacion",
+          "consecuencia": "Se protege del mercado y queda expuesta a la inflación durante 25 años.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -1200000
+        }
+      ]
+    },
+    "final_plan_solido": {
+      "id": "final_plan_solido",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Renata se retiró a los 65 sin depender de nadie. Ninguna de sus cinco decisiones fue heroica: automatizar, no creer en el 8% mensual, no vender en la caída, tener seguro y retirar con cabeza.",
+      "reflexion_final": "Un plan financiero de 50 años no se gana con una jugada brillante: se gana no cometiendo los cinco errores clásicos. La volatilidad no rompe los planes; venderla sí."
+    },
+    "final_inflacion": {
+      "id": "final_inflacion",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "A los 65 tenía suficiente. A los 85, ese mismo dinero en efectivo compraba menos de la mitad. Le alcanzó, con la cuenta cada vez más apretada.",
+      "reflexion_final": "Retirarse no es dejar de invertir: un retiro puede durar 25 o 30 años, y en ese plazo la inflación es un riesgo mayor que el mercado. Por eso se retira un porcentaje y el resto sigue trabajando."
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Actúas como Gobernador de Banxico. Decide si SUBIR o BAJAR la tasa de interés.",
-  "duracion": 150,
-  "opciones_clasificacion": [
-    "SUBIR TASAS",
-    "BAJAR TASAS",
-    "MANTENER TASAS"
-  ],
-  "items": [
-    {
-      "id": "mon1",
-      "label": "¡Alerta! La inflación ha llegado al 9%. Los precios de la comida están subiendo demasiado rápido.",
-      "emoji": "🔥",
-      "tipo": "correcto",
-      "respuesta_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Correcto! Al subir las tasas, el dinero se vuelve más caro, la gente gasta menos y la inflación baja.",
-      "feedback_error": "❌ ¡Error! Si bajas las tasas o no haces nada, la inflación seguirá subiendo y el dinero perderá todo su valor.",
-      "puntos": 100
-    },
-    {
-      "id": "mon2",
-      "label": "La economía está fría. El desempleo ha subido al 12% porque nadie está pidiendo créditos para abrir ...",
-      "emoji": "❄️",
-      "tipo": "correcto",
-      "respuesta_correcta": "BAJAR TASAS",
-      "feedback_acierto": "¡Bien! Al bajar las tasas, los créditos son más baratos, las empresas invierten y se crean empleos.",
-      "feedback_error": "❌ ¡Error! Mantener las tasas altas en una recesión hace que sea imposible que la economía se recupere.",
-      "puntos": 100
-    },
-    {
-      "id": "mon3",
-      "label": "Nuestra moneda está perdiendo mucho valor frente al dólar. Los inversionistas extranjeros están saca...",
-      "emoji": "📉",
-      "tipo": "correcto",
-      "respuesta_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Exacto! Al subir las tasas, ofreces mejores rendimientos y atraes de nuevo a los inversionistas para fortalecer la moneda.",
-      "feedback_error": "❌ ¡Error! Si no subes las tasas, la moneda seguirá devaluándose y todo lo importado será carísimo.",
-      "puntos": 100
-    },
-    {
-      "id": "mon4",
-      "label": "Hay una 'Burbuja Inmobiliaria'. Todo el mundo está pidiendo créditos baratos para comprar casas y lo...",
-      "emoji": "🏠",
-      "tipo": "correcto",
-      "respuesta_correcta": "SUBIR TASAS",
-      "feedback_acierto": "¡Muy sabio! Subir las tasas 'enfría' el mercado de deuda y evita que la burbuja explote y cause una crisis mayor.",
-      "feedback_error": "❌ ¡Peligro! Si mantienes el dinero barato, la burbuja crecerá hasta que el sistema colapse.",
-      "puntos": 100
-    },
-    {
-      "id": "mon5",
-      "label": "Crisis Global. Todos los países están bajando sus tasas para evitar una depresión. ¿Qué hacemos?",
-      "emoji": "🌍",
-      "tipo": "correcto",
-      "respuesta_correcta": "BAJAR TASAS",
-      "feedback_acierto": "¡Liderazgo! Te unes al esfuerzo global para inyectar liquidez al sistema y evitar un colapso total.",
-      "feedback_error": "❌ ¡Error! Quedarse solo con tasas altas en una crisis global ahogará a las empresas locales.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.2"
 }

@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S2-3-9-A",
+  "unit_code": "S2-3-9",
+  "unit_title": "Sesgos del inversionista: pánico, euforia y anclaje",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "El Costo de Reaccionar",
+  "descripcion": "Ajusta tu comportamiento ante caídas y observa cuánto te cuesta reaccionar.",
+  "objetivo": "Cuantificar el costo de las decisiones sesgadas frente a una estrategia por reglas",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "capital",
+      "label": "Capital invertido",
+      "type": "slider",
+      "min": 5000,
+      "max": 2000000,
+      "step": 5000,
+      "default": 200000,
+      "unit": "$",
+      "referencia": "El monto sobre el que actúan tus decisiones."
+    },
+    {
+      "id": "anos",
+      "label": "Años invertido",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años",
+      "referencia": "A mayor plazo, más veces aparece la tentación de reaccionar."
+    },
+    {
+      "id": "rendimiento",
+      "label": "Rendimiento anual del mercado",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "step": 0.5,
+      "default": 9,
+      "unit": "%",
+      "referencia": "Lo que habría obtenido quien no tocó nada."
+    },
+    {
+      "id": "salidas",
+      "label": "Veces que saldría del mercado por pánico",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 4,
+      "unit": "veces",
+      "referencia": "Cada salida y reentrada tardía cuesta parte del rendimiento."
+    }
+  ],
+  "formula": "Math.round(capital * Math.pow(1 + rendimiento / 100, anos) - capital * Math.pow(1 + Math.max(0, rendimiento - salidas * 0.9) / 100, anos))",
+  "descripcion_formula": "Diferencia entre mantener la estrategia y salir del mercado por pánico varias veces, asumiendo que cada salida cuesta parte del rendimiento anual promedio.",
+  "output_label": "Lo que cuesta reaccionar",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "salidas == 0",
+      "mensaje": "No reaccionaste ni una vez: obtuviste el rendimiento completo del mercado. Es exactamente lo que consiguen las reglas escritas en frío.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "salidas >= 5 && anos >= 15",
+      "mensaje": "Cinco o más salidas por pánico en un horizonte largo se llevan una parte enorme del resultado. El obstáculo no fue el mercado.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "salidas >= 1 && salidas <= 2",
+      "mensaje": "Pocas reacciones, pero cada una cuesta. Un plan escrito de qué hacer ante una caída suele reducirlas a cero.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "anos >= 25 && salidas >= 3",
+      "mensaje": "En horizontes muy largos habrá varias caídas fuertes. Decidir hoy qué harás en cada una vale más que cualquier análisis posterior.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "rendimiento <= 3 && salidas >= 3",
+      "mensaje": "Con rendimiento bajo, cada salida pesa proporcionalmente todavía más. Reaccionar es caro en cualquier escenario.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-3-9-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-3-9-a-escena.webp"
+}

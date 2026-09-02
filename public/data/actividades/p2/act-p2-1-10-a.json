@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P2-1-10-A",
+  "unit_code": "P2-1-10",
+  "unit_title": "El dinero no crece en los árboles: de dónde sale de verdad",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Frasco de la Casa",
+  "descripcion": "Ceny quiere unos tenis nuevos. Descubre cómo funciona el dinero de su casa y qué puede hacer al respecto.",
+  "objetivo": "Comprender la limitación del ingreso familiar y la diferencia entre insistir y colaborar",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny vio unos tenis de $700 y los quiere muchísimo. En su casa el dinero del mes ya está repartido entre renta, comida, luz y transporte.",
+  "nodo_inicial": "peticion",
+  "nodos": {
+    "peticion": {
+      "id": "peticion",
+      "texto": "Ceny quiere pedir los tenis. ¿Cómo lo plantea?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Decir el precio exacto y preguntar si se puede planear para más adelante",
+          "siguiente_nodo": "respuesta",
+          "consecuencia": "Llegar con el dato y sin urgencia hace que la conversación sea posible.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Insistir diciendo que todos sus amigos ya los tienen",
+          "siguiente_nodo": "conflicto",
+          "consecuencia": "La comparación con otros pone a la familia a la defensiva.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Enojarse porque nunca le compran nada",
+          "siguiente_nodo": "conflicto",
+          "consecuencia": "El enojo cierra la puerta de la conversación antes de abrirla.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-peticion.webp"
+    },
+    "conflicto": {
+      "id": "conflicto",
+      "texto": "La conversación terminó mal y nadie quedó contento. ¿Qué hace Ceny al día siguiente?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Disculparse y preguntar cómo se reparte el dinero del mes",
+          "siguiente_nodo": "respuesta",
+          "consecuencia": "Preguntar para entender abre la puerta que el reclamo cerró.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir enojado y no volver a hablar del tema",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Ni hay tenis ni hay entendimiento. Todos perdieron.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-conflicto.webp"
+    },
+    "respuesta": {
+      "id": "respuesta",
+      "texto": "Mamá le explica: este mes el dinero ya está comprometido en renta, comida y servicios. No hay $700 disponibles. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Proponer ahorrar la mitad él mismo en tres meses",
+          "siguiente_nodo": "plan",
+          "consecuencia": "Ceny pasa de pedir a aportar. Eso cambia toda la conversación.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptar el no y no hacer nada más",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Entendió la situación, pero se quedó sin plan para el futuro.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Pedirle a otro familiar a escondidas",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Ir por atrás rompe la confianza y no resuelve nada de fondo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-respuesta.webp"
+    },
+    "plan": {
+      "id": "plan",
+      "texto": "Acordaron que si Ceny junta $350, en casa ponen la otra mitad en tres meses. ¿Cómo ayuda mientras tanto?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Cuidar sus útiles, apagar luces y avisar con tiempo de los gastos escolares",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Ayuda concreta que sí está en sus manos y que de verdad hace diferencia.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 350
+        },
+        {
+          "id": "o2",
+          "texto": "Preocuparse todo el día por el dinero de la casa",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Cargar la preocupación no ayuda a nadie y no es su responsabilidad.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 100
+        }
+      ],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-plan.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Tres meses después, Ceny puso $350 y en casa se completó el resto. Los tenis llegaron.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny entendió que el dinero de casa es limitado, dejó de insistir y empezó a aportar. Los tenis fueron el resultado de un plan compartido, no de un berrinche.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny entendió la situación de su casa, aunque los tenis quedaron pendientes.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Comprender ya es mucho. Faltó el siguiente paso: convertir la comprensión en un plan concreto con fecha y con una parte que dependa de uno mismo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "El tema quedó cerrado con enojo y desconfianza en casa.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Insistir e ir por atrás no consiguen dinero que no existe, y sí cuestan confianza. Preguntar cómo se reparte el dinero habría abierto la puerta.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p2/p2-1-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p2/p2-1-10-a-portada.webp"
+}

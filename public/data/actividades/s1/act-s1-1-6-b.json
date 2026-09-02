@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-1-6-B",
+  "unit_code": "S1-1-6",
+  "unit_title": "Salario mínimo y UMA: dos referencias que no son lo mismo",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Salario Mínimo y UMA",
+  "descripcion": "Comprueba que distingues las dos referencias.",
+  "objetivo": "Verificar la comprensión de ambas unidades y su aplicación",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El salario mínimo es:",
+      "opciones": [
+        "El pago más bajo legal por jornada",
+        "Una unidad de cuenta",
+        "Una multa",
+        "Un impuesto"
+      ],
+      "correcta": 0,
+      "explicacion": "Protege el ingreso de quien menos gana."
+    },
+    {
+      "id": "q2",
+      "texto": "La UMA es:",
+      "opciones": [
+        "Un salario",
+        "Una unidad de referencia para obligaciones",
+        "Un descuento",
+        "Una prestación"
+      ],
+      "correcta": 1,
+      "explicacion": "Multas, créditos de vivienda, aportaciones y trámites."
+    },
+    {
+      "id": "q3",
+      "texto": "Salarios mínimos en México hay:",
+      "opciones": [
+        "Uno solo",
+        "Uno por estado",
+        "Uno general y uno de zona fronteriza norte",
+        "Uno por edad"
+      ],
+      "correcta": 2,
+      "explicacion": "El de la frontera norte es mayor."
+    },
+    {
+      "id": "q4",
+      "texto": "Antes de 2016:",
+      "opciones": [
+        "No existía el salario mínimo",
+        "Todo era en UMA",
+        "No había multas",
+        "Casi todo se calculaba en salarios mínimos"
+      ],
+      "correcta": 3,
+      "explicacion": "Subir el salario encarecía automáticamente multas y trámites."
+    },
+    {
+      "id": "q5",
+      "texto": "Se separaron para:",
+      "opciones": [
+        "Poder subir el salario sin encarecer obligaciones",
+        "Complicar los cálculos",
+        "Bajar salarios",
+        "Eliminar multas"
+      ],
+      "correcta": 0,
+      "explicacion": "Las obligaciones quedaron ancladas a la UMA."
+    },
+    {
+      "id": "q6",
+      "texto": "Ambos valores se actualizan:",
+      "opciones": [
+        "Cada mes",
+        "Cada año",
+        "Nunca",
+        "Cada seis años"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso hay que verificar el vigente antes de calcular."
+    },
+    {
+      "id": "q7",
+      "texto": "Una multa en UMA se convierte:",
+      "opciones": [
+        "Dividiendo entre el salario",
+        "No se puede",
+        "Multiplicando por el valor vigente de la UMA",
+        "Sumando el salario"
+      ],
+      "correcta": 2,
+      "explicacion": "UMA por valor diario da el monto en pesos."
+    },
+    {
+      "id": "q8",
+      "texto": "Si el tema es cuánto debe pagarse por trabajar aplica:",
+      "opciones": [
+        "La UMA",
+        "Ninguno",
+        "Ambos por igual",
+        "El salario mínimo"
+      ],
+      "correcta": 3,
+      "explicacion": "La UMA no es lo que gana nadie."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-6-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-6-b-escena.webp"
+}

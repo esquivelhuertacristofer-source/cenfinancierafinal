@@ -5,123 +5,91 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "Lecciones del Pasado",
-  "descripcion": "¿Sabías que incluso genios como Isaac Newton perdieron dinero en burbujas? ¡Aprende a detectar los incendios financieros antes de que empiecen!",
-  "objetivo": "Comprender los mecanismos psicológicos y económicos que generan las burbujas y crisis financieras",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "Ley Fintech y Sentido Común",
+  "descripcion": "La tecnología financiera abarata y democratiza… y también abre puertas nuevas al fraude. Contra el reloj: ¿sabes distinguir?",
+  "objetivo": "Comprender cómo la tecnología mejora la inclusión financiera y qué señales distinguen a una fintech regulada de un fraude.",
+  "xp": 450,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "cri1",
-      "pregunta": "¿Qué es una 'Burbuja Financiera'?",
-      "respuesta_correcta": "Cuando el precio de algo sube muchísimo por encima de su valor real solo porque todos quieren comprarlo",
+      "id": "t1",
+      "pregunta": "¿Qué significa \"fintech\"?",
+      "respuesta_correcta": "La unión de finanzas y tecnología",
       "incorrectas": [
-        "Un tipo de jabón para bancos",
-        "Cuando los bancos regalan dinero",
-        "Un juguete de plástico"
+        "Un tipo de criptomoneda",
+        "Un banco extranjero",
+        "Un impuesto digital"
       ],
-      "dato_extra": "Las burbujas siempre terminan explotando cuando la gente intenta vender al mismo tiempo."
+      "dato_extra": "México tiene uno de los ecosistemas fintech más grandes de América Latina."
     },
     {
-      "id": "cri2",
-      "pregunta": "¿Qué sentimiento suele causar el inicio de una burbuja?",
-      "respuesta_correcta": "La Codicia (querer ganar mucho dinero rápido)",
+      "id": "t2",
+      "pregunta": "El mayor beneficio social de las fintech en México es…",
+      "respuesta_correcta": "Dar acceso financiero a millones que no tenían banco",
       "incorrectas": [
-        "La Tristeza",
-        "La Generosidad",
-        "El Sueño"
+        "Hacer más ricos a los bancos",
+        "Eliminar el efectivo",
+        "Subir las comisiones"
       ],
-      "dato_extra": "La codicia hace que ignoremos los riesgos evidentes."
+      "dato_extra": "Casi la mitad de los adultos en México no tenía cuenta bancaria antes de esta ola tecnológica."
     },
     {
-      "id": "cri3",
-      "pregunta": "¿Qué sentimiento suele causar el final (estallido) de una burbuja?",
-      "respuesta_correcta": "El Pánico (todos quieren vender por miedo a perderlo todo)",
+      "id": "t3",
+      "pregunta": "La Ley Fintech de 2018 sirve para…",
+      "respuesta_correcta": "Regular estas empresas y proteger a los usuarios",
       "incorrectas": [
-        "La Risa",
-        "La Calma",
-        "El Hambre"
+        "Prohibir las apps financieras",
+        "Cobrar más impuestos",
+        "Favorecer a los bancos"
       ],
-      "dato_extra": "En el pánico, los precios bajan mucho más rápido de lo que subieron."
+      "dato_extra": "México fue de los primeros países del mundo en tener una ley específica para fintech."
     },
     {
-      "id": "cri4",
-      "pregunta": "¿Por qué la crisis de 2008 afectó a todo el mundo si empezó en EE.UU.?",
-      "respuesta_correcta": "Porque hoy todos los países y bancos están conectados financieramente",
+      "id": "t4",
+      "pregunta": "Antes de meter dinero en una app financiera, lo primero es…",
+      "respuesta_correcta": "Verificar que esté registrada y autorizada por la CNBV",
       "incorrectas": [
-        "Porque EE.UU. es el único país",
-        "Por un virus",
-        "Porque se acabó el papel"
+        "Ver cuántos seguidores tiene",
+        "Que tenga buen diseño",
+        "Que la use un influencer"
       ],
-      "dato_extra": "A esto se le llama 'Contagio Financiero'."
+      "dato_extra": "El padrón de instituciones autorizadas es público. Si no aparece, no metas tu dinero."
     },
     {
-      "id": "cri5",
-      "pregunta": "¿Qué hacen los gobiernos después de una gran crisis?",
-      "respuesta_correcta": "Crean nuevas leyes y reglas (Regulación) para evitar que los bancos cometan los mismos errores",
+      "id": "t5",
+      "pregunta": "Una app que promete \"35% de rendimiento mensual garantizado\" es…",
+      "respuesta_correcta": "Casi con seguridad un fraude",
       "incorrectas": [
-        "Cierran todos los bancos para siempre",
-        "No hacen nada",
-        "Regalan dinero a todos"
+        "Una gran oportunidad",
+        "Una fintech innovadora",
+        "Un banco digital"
       ],
-      "dato_extra": "La regulación busca proteger el dinero de los ahorradores."
+      "dato_extra": "Ningún instrumento legal garantiza eso. Rendimiento imposible + \"garantizado\" = fraude."
     },
     {
-      "id": "cri6",
-      "pregunta": "¿Cuál es la mejor defensa personal contra una crisis financiera?",
-      "respuesta_correcta": "Tener tus ahorros diversificados y no invertir en cosas que no entiendes",
+      "id": "t6",
+      "pregunta": "Los créditos instantáneos por app suelen…",
+      "respuesta_correcta": "Tener un CAT altísimo comparado con un banco",
       "incorrectas": [
-        "Esconder el dinero bajo el colchón",
-        "No tener dinero",
-        "Gastar todo hoy mismo"
+        "Ser los más baratos",
+        "No cobrar intereses",
+        "Ser gratis el primer año"
       ],
-      "dato_extra": "La educación financiera es tu mejor escudo."
+      "dato_extra": "La rapidez se paga. Antes de aceptar, busca el CAT: por ley debe aparecer."
     },
     {
-      "id": "cri7",
-      "pregunta": "¿Qué significa que un mercado sea 'Volátil'?",
-      "pregunta_extra": "Que los precios cambian mucho y muy rápido",
-      "respuesta_correcta": "Que los precios cambian mucho y muy rápido",
+      "id": "t7",
+      "pregunta": "CoDi y DiMo son…",
+      "respuesta_correcta": "Sistemas de pago inmediato creados por Banxico, sin comisión",
       "incorrectas": [
-        "Que los precios nunca cambian",
-        "Que el mercado es aburrido",
-        "Que solo sube"
+        "Criptomonedas mexicanas",
+        "Bancos privados",
+        "Apps de préstamos"
       ],
-      "dato_extra": "La volatilidad asusta a los novatos pero es oportunidad para los expertos."
-    },
-    {
-      "id": "cri8",
-      "pregunta": "¿Qué frase famosa se dice siempre antes de que una burbuja explote?",
-      "respuesta_correcta": "'Esta vez es diferente'",
-      "incorrectas": [
-        "'Tengo miedo'",
-        "'Mañana va a llover'",
-        "'El dinero es malo'"
-      ],
-      "dato_extra": "Casi nunca es diferente; las reglas de la economía siempre se cumplen."
-    },
-    {
-      "id": "cri9",
-      "pregunta": "¿Qué es la CNBV en México?",
-      "respuesta_correcta": "La Comisión Nacional Bancaria y de Valores (los que vigilan a los bancos)",
-      "incorrectas": [
-        "Un equipo de fútbol",
-        "Una marca de coches",
-        "Un tipo de comida"
-      ],
-      "dato_extra": "Asegúrate de que tus apps de inversión estén reguladas por ellos."
-    },
-    {
-      "id": "cri10",
-      "pregunta": "¿Para qué sirve estudiar la historia de las crisis?",
-      "respuesta_correcta": "Para reconocer las señales de peligro antes de que sea tarde",
-      "incorrectas": [
-        "Para aburrirse",
-        "Para saber fechas",
-        "No sirve para nada"
-      ],
-      "dato_extra": "¡Felicidades! Ahora tienes ojos de detective financiero."
+      "dato_extra": "Funcionan con QR o número de celular y las transferencias son gratuitas."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

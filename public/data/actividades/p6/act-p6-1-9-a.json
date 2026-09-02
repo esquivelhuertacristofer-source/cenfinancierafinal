@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-1-9-A",
+  "unit_code": "P6-1-9",
+  "unit_title": "Riesgos reales de las criptomonedas: volatilidad y fraude",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Montaña Rusa",
+  "descripcion": "Mueve las barritas y observa qué pasa con tu dinero en un mercado muy volátil.",
+  "objetivo": "Visualizar el efecto de la volatilidad extrema sobre una inversión",
+  "xp": 600,
+  "inputs": [
+    {
+      "id": "inversion",
+      "label": "Dinero que pongo",
+      "type": "slider",
+      "min": 500,
+      "max": 50000,
+      "step": 500,
+      "default": 5000,
+      "unit": "$",
+      "referencia": "Solo dinero que podrías perder por completo."
+    },
+    {
+      "id": "subida",
+      "label": "Subida en el primer periodo",
+      "type": "slider",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 80,
+      "unit": "%",
+      "referencia": "Las subidas grandes son las que se publican."
+    },
+    {
+      "id": "caida",
+      "label": "Caída en el segundo periodo",
+      "type": "slider",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "default": 60,
+      "unit": "%",
+      "referencia": "Caídas de más de la mitad no son excepcionales."
+    },
+    {
+      "id": "pct_patrimonio",
+      "label": "Porcentaje de todo mi ahorro que representa",
+      "type": "slider",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 10,
+      "unit": "%",
+      "referencia": "Cuánto de tu patrimonio total estás exponiendo."
+    }
+  ],
+  "formula": "Math.round(inversion * (1 + subida / 100) * (1 - caida / 100) - inversion)",
+  "descripcion_formula": "Resultado final después de una subida seguida de una caída, comparado con lo que pusiste al inicio.",
+  "output_label": "Ganancia o pérdida final",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "inversion * (1 + subida / 100) * (1 - caida / 100) < inversion",
+      "mensaje": "Terminaste con menos de lo que pusiste, aunque hubo una subida enorme en el camino. Una caída del 50% requiere una subida del 100% solo para volver al inicio.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "pct_patrimonio >= 30",
+      "mensaje": "Estás exponiendo casi un tercio de tu patrimonio a un activo de volatilidad extrema. La regla prudente dice: solo lo que puedas perder por completo.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "pct_patrimonio <= 5",
+      "mensaje": "Exposición pequeña respecto a tu patrimonio total. Aunque se perdiera todo, no afectaría tu situación: así se participa con prudencia.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "caida >= 50",
+      "mensaje": "Una caída de esta magnitud es perfectamente normal en este mercado. Por eso este dinero nunca debe ser el que necesitas en una fecha concreta.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "inversion * (1 + subida / 100) * (1 - caida / 100) > inversion * 1.2",
+      "mensaje": "Terminaste ganando, y esa es justamente la historia que se publica. Las que terminan en pérdida son muchas más y nadie las cuenta.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-9-a-escena.webp"
+}

@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P6-2-9-B",
+  "unit_code": "P6-2-9",
+  "unit_title": "El Buró de Crédito: mitos y realidades",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Mitos del Buró",
+  "descripcion": "Alguien le ofrece a la familia de Ceny borrar su historial. Cada decisión define el resultado.",
+  "objetivo": "Aplicar el conocimiento sobre historial crediticio ante una oferta fraudulenta",
+  "xp": 480,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny tuvo atrasos hace dos años. Un conocido les ofrece \"limpiar su historial\" por $6,000 y garantiza resultados en dos semanas.",
+  "nodo_inicial": "oferta",
+  "nodos": {
+    "oferta": {
+      "id": "oferta",
+      "texto": "La oferta promete borrar los registros negativos rápidamente. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Rechazarla: el historial refleja comportamiento real y no se borra pagando",
+          "siguiente_nodo": "reporte",
+          "consecuencia": "Se ahorraron $6,000 en un servicio que nadie puede prestar.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptar: dos semanas y quedan limpios",
+          "siguiente_nodo": "fraude",
+          "consecuencia": "Pagaron $6,000 por algo que no ocurrió ni podía ocurrir.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        },
+        {
+          "id": "o3",
+          "texto": "Pedirle que lo explique por escrito y con garantía",
+          "siguiente_nodo": "reporte",
+          "consecuencia": "El conocido evade dar cualquier cosa por escrito. Esa evasiva es la respuesta.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-oferta.webp"
+    },
+    "fraude": {
+      "id": "fraude",
+      "texto": "Pasaron dos meses y el historial sigue igual. El conocido ya no contesta. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reportarlo y enfocarse en pagar puntual, que es lo único que funciona",
+          "siguiente_nodo": "reporte",
+          "consecuencia": "Recuperar el dinero es difícil; recuperar el historial sí está en sus manos.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Buscar a otro gestor que sí lo logre",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Ningún gestor puede borrar comportamiento real de pago.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-fraude.webp"
+    },
+    "reporte": {
+      "id": "reporte",
+      "texto": "Deciden consultar su reporte de crédito. ¿Qué revisan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que todos los créditos listados sean suyos y los saldos coincidan",
+          "siguiente_nodo": "hallazgo",
+          "consecuencia": "Encuentran un crédito que nadie de la familia reconoce.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Solo el puntaje final",
+          "siguiente_nodo": "hallazgo",
+          "consecuencia": "El puntaje no explica nada por sí solo: hay que revisar los registros.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-reporte.webp"
+    },
+    "hallazgo": {
+      "id": "hallazgo",
+      "texto": "Aparece un crédito de $18,000 que nadie de la familia solicitó. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reclamarlo formalmente: puede ser una suplantación de identidad",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Existe un procedimiento para impugnar registros que no corresponden.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 18000
+        },
+        {
+          "id": "o2",
+          "texto": "Suponer que es un error que se corregirá solo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Los registros no se corrigen solos: hay que impugnarlos.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -18000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-hallazgo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia evitó el fraude, detectó una suplantación y empezó a reconstruir su historial pagando puntual.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El historial no se borra: se construye. Y revisar el propio reporte, que es gratuito y no lo daña, es lo que permite detectar registros que ni siquiera son tuyos.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La familia evitó el fraude, pero el registro ajeno sigue afectando su historial.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Detectar el problema fue lo difícil. Impugnar un registro que no corresponde es un derecho que hay que ejercer, porque nadie lo corrige de oficio.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia gastó $12,000 en gestores y su historial sigue exactamente igual.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Nadie puede borrar comportamiento real de pago. Esos $12,000 aplicados a las deudas habrían mejorado el historial de verdad.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-9-b-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-2-9-b-portada.webp"
+}

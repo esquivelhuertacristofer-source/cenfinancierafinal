@@ -4,114 +4,81 @@
   "unit_title": "Las AFOREs: sembrando mi futuro",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "TRIVIA",
   "complejidad": "MEDIO",
-  "titulo": "Analista de Empresas",
-  "descripcion": "Antes de comprar una acción, debes conocer la empresa. ¡Conviértete en un detective financiero e investiga tu marca favorita!",
-  "objetivo": "Desarrollar habilidades de análisis empresarial básico para la toma de decisiones de inversión",
-  "xp": 400,
-  "output_type": "Reporte de Analista Bursátil",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Maestro del Retiro",
+  "descripcion": "Rápido: demuestra que entendiste qué es una AFORE y por qué conviene conocerla desde ahora.",
+  "objetivo": "Validar la comprensión del ahorro para el retiro y del funcionamiento básico de una AFORE.",
+  "xp": 350,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
+  "preguntas": [
     {
-      "id": "seleccion_empresa",
-      "titulo": "🏢 Mi Empresa",
-      "descripcion": "¿En qué empresa te gustaría ser dueño?",
-      "campos": [
-        {
-          "id": "nombre_empresa_p5",
-          "label": "Nombre de la Empresa",
-          "type": "text",
-          "placeholder": "Ej: Nintendo, Amazon, Tesla...",
-          "requerido": true
-        },
-        {
-          "id": "sector_empresa",
-          "label": "¿A qué industria pertenece?",
-          "type": "select",
-          "opciones": [
-            "Tecnología",
-            "Salud",
-            "Energía",
-            "Entretenimiento",
-            "Moda",
-            "Alimentos"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "t1",
+      "pregunta": "¿Qué es una AFORE?",
+      "respuesta_correcta": "Una cuenta donde se guarda e invierte tu dinero para cuando te retires",
+      "incorrectas": [
+        "Un tipo de tarjeta de crédito",
+        "Un impuesto que cobra el gobierno",
+        "Un préstamo del banco"
+      ],
+      "dato_extra": "AFORE significa Administradora de Fondos para el Retiro."
     },
     {
-      "id": "analisis_valor",
-      "titulo": "🔍 El Análisis",
-      "descripcion": "¿Por qué la gente le compra a esta empresa?",
-      "campos": [
-        {
-          "id": "producto_estrella",
-          "label": "¿Cuál es su producto o servicio más famoso?",
-          "type": "text",
-          "placeholder": "Ej: El iPhone, su servicio de streaming...",
-          "requerido": true
-        },
-        {
-          "id": "competencia_p5",
-          "label": "¿Quién es su principal competencia?",
-          "type": "text",
-          "placeholder": "Ej: Si elegiste Apple, su competencia es Samsung...",
-          "requerido": true
-        },
-        {
-          "id": "ventaja_competitiva",
-          "label": "¿Qué hace que esta empresa sea mejor que las demás?",
-          "type": "textarea",
-          "placeholder": "Ej: Sus diseños son mejores, es más barata, todos la conocen...",
-          "requerido": true
-        }
-      ]
+      "id": "t2",
+      "pregunta": "¿De dónde sale el dinero que entra a tu AFORE?",
+      "respuesta_correcta": "De tu sueldo, tu patrón y el gobierno, cada mes",
+      "incorrectas": [
+        "Solo de lo que tú decidas depositar",
+        "De un sorteo",
+        "De los impuestos de otros"
+      ],
+      "dato_extra": "Las tres aportaciones juntas son lo que hace crecer la cuenta."
     },
     {
-      "id": "veredicto_final",
-      "titulo": "⚖️ La Decisión",
-      "descripcion": "Después de investigar, ¿invertirías tu dinero aquí?",
-      "campos": [
-        {
-          "id": "decision_inversion",
-          "label": "¿Comprarías acciones de esta empresa?",
-          "type": "select",
-          "opciones": [
-            "¡Sí, definitivamente!",
-            "Tal vez en el futuro",
-            "No, me parece muy arriesgado"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "justificacion_analista",
-          "label": "¿Por qué?",
-          "type": "textarea",
-          "placeholder": "Justifica tu respuesta como un profesional...",
-          "requerido": true
-        },
-        {
-          "id": "puntuacion_empresa",
-          "label": "Puntuación de la Empresa (1-10)",
-          "type": "slider",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "default": 5,
-          "requerido": false
-        },
-        {
-          "id": "potencial_inversion",
-          "label": "Potencial de Inversión",
-          "type": "calculated",
-          "formula": "puntuacion_empresa * 10",
-          "unit": "/100 — tu calificación de analista",
-          "ayuda": "Tu evaluación profesional sobre 100 puntos"
-        }
-      ]
+      "id": "t3",
+      "pregunta": "¿Puedes sacar el dinero de tu AFORE cuando quieras?",
+      "respuesta_correcta": "No: está reservado para tu retiro, salvo casos muy especiales",
+      "incorrectas": [
+        "Sí, cuando quieras",
+        "Sí, una vez al año",
+        "Sí, si tienes más de 18 años"
+      ],
+      "dato_extra": "Justo eso lo protege: no puedes gastártelo por impulso."
+    },
+    {
+      "id": "t4",
+      "pregunta": "Dos personas ahorran lo mismo al mes, pero una empieza 10 años antes. Al retirarse…",
+      "respuesta_correcta": "La que empezó antes termina con bastante más dinero",
+      "incorrectas": [
+        "Terminan igual",
+        "Gana la que empezó después",
+        "Depende de la suerte"
+      ],
+      "dato_extra": "El tiempo es el ingrediente más poderoso del ahorro para el retiro."
+    },
+    {
+      "id": "t5",
+      "pregunta": "Las AFOREs cobran una comisión. ¿Por qué conviene compararla?",
+      "respuesta_correcta": "Porque una comisión más baja te deja más dinero al final",
+      "incorrectas": [
+        "Porque es obligatorio cambiarse cada año",
+        "Porque la comisión es un premio",
+        "No importa, todas cobran igual"
+      ],
+      "dato_extra": "Puedes elegir y cambiar de AFORE. Una diferencia pequeña, en 40 años, es enorme."
+    },
+    {
+      "id": "t6",
+      "pregunta": "¿Quién vigila que las AFOREs cuiden bien tu dinero?",
+      "respuesta_correcta": "La CONSAR",
+      "incorrectas": [
+        "El SAT",
+        "Banxico",
+        "La tienda de la esquina"
+      ],
+      "dato_extra": "La CONSAR regula y supervisa el sistema de ahorro para el retiro."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

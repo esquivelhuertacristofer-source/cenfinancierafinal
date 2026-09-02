@@ -27,6 +27,10 @@ export interface BaseActivity {
   descripcion: string;
   objetivo: string;
   xp: number;
+  /** Portada 16:9 de la actividad (imagen generada con el flujo Krea2). */
+  portada?: string;
+  /** Escena contextual que se muestra dentro de la actividad. */
+  escena?: string;
 }
 
 // ─── QUIZ ────────────────────────────────────────────────────────────────────
@@ -45,6 +49,9 @@ export interface QuizActivityData extends BaseActivity {
 }
 
 // ─── SIMULADOR ───────────────────────────────────────────────────────────────
+/** Opción de un desplegable: cadena simple o par etiqueta/valor. */
+export type OpcionCampo = string | { label: string; value: string | number };
+
 export interface SimInput {
   id: string;
   label: string;
@@ -54,12 +61,14 @@ export interface SimInput {
   step?: number;
   default: number | string;
   unit?: string;             // "años", "$", "%"
-  opciones?: string[];       // solo si type='select'
+  opciones?: OpcionCampo[];  // solo si type='select'
+  referencia?: string;       // dato de contexto que se muestra bajo el control
 }
 export interface SimScenario {
   condicion: string;         // JS expression usando input ids, ej: "resultado > 100000"
   mensaje: string;
-  tipo: 'success' | 'warning' | 'danger' | 'info';
+  // Los JSON conviven en inglés y en español; el motor acepta ambos.
+  tipo: 'success' | 'warning' | 'danger' | 'info' | 'exito' | 'advertencia' | 'peligro';
 }
 export interface SimulatorActivityData extends BaseActivity {
   tipo: 'SIMULADOR';
@@ -143,7 +152,8 @@ export interface StoryNode {
   imagen?: string;
   opciones: StoryChoice[];  // 2-3 opciones; si vacío = nodo final
   es_final?: boolean;
-  tipo_final?: 'bueno' | 'regular' | 'malo';
+  // Los JSON usan ambos vocabularios; el motor los normaliza.
+  tipo_final?: 'bueno' | 'regular' | 'malo' | 'excelente' | 'neutral';
   reflexion_final?: string; // lección aprendida en nodos finales
 }
 export interface StoryActivityData extends BaseActivity {
@@ -163,7 +173,9 @@ export interface BuilderField {
   placeholder?: string;
   min?: number;
   max?: number;
-  opciones?: string[];
+  step?: number;
+  default?: number | string;
+  opciones?: OpcionCampo[];
   formula?: string;       // para type='calculated', usa otros field ids
   unit?: string;
   requerido: boolean;

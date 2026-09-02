@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-1-6-A",
+  "unit_code": "P4-1-6",
+  "unit_title": "Tipos de cuenta: nómina, ahorro y digital",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cada Cuenta en su Lugar",
+  "descripcion": "Clasifica cada característica según el tipo de cuenta al que corresponde.",
+  "objetivo": "Asociar características y usos con el tipo de cuenta bancaria adecuado",
+  "xp": 400,
+  "instruccion": "Arrastra cada característica al tipo de cuenta que le corresponde.",
+  "categorias": [
+    {
+      "id": "nomina",
+      "label": "Cuenta de nómina",
+      "emoji": "💼",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "ahorro",
+      "label": "Cuenta de ahorro",
+      "emoji": "🏦",
+      "color": "#10B981"
+    },
+    {
+      "id": "digital",
+      "label": "Cuenta digital",
+      "emoji": "📱",
+      "color": "#A855F7"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "La abre la empresa para depositar el sueldo",
+      "emoji": "🧾",
+      "categoria_correcta": "nomina",
+      "feedback": "Por eso está ligada al empleo y no la contrata el trabajador."
+    },
+    {
+      "id": "i2",
+      "label": "Se abre desde el celular en minutos",
+      "emoji": "⚡",
+      "categoria_correcta": "digital",
+      "feedback": "Es la puerta de entrada más fácil al sistema financiero."
+    },
+    {
+      "id": "i3",
+      "label": "Está pensada para guardar sin mover el dinero",
+      "emoji": "🔐",
+      "categoria_correcta": "ahorro",
+      "feedback": "Por eso algunas cobran si se hacen demasiados retiros."
+    },
+    {
+      "id": "i4",
+      "label": "Casi nunca cobra comisión de manejo",
+      "emoji": "🚫",
+      "categoria_correcta": "nomina",
+      "feedback": "El banco gana con el flujo quincenal del sueldo."
+    },
+    {
+      "id": "i5",
+      "label": "Tiene tope de saldo y de movimientos al mes",
+      "emoji": "📊",
+      "categoria_correcta": "digital",
+      "feedback": "Los límites dependen del nivel de la cuenta y se pueden ampliar."
+    },
+    {
+      "id": "i6",
+      "label": "Puede pagar algo de interés por el saldo",
+      "emoji": "📈",
+      "categoria_correcta": "ahorro",
+      "feedback": "En cuentas básicas suele ser poco, pero conviene compararlo."
+    },
+    {
+      "id": "i7",
+      "label": "Puede perder sus beneficios si cambio de trabajo",
+      "emoji": "🔄",
+      "categoria_correcta": "nomina",
+      "feedback": "Al cambiar de empleo conviene revisarla o migrarla."
+    },
+    {
+      "id": "i8",
+      "label": "No requiere ir a una sucursal para abrirla",
+      "emoji": "🏠",
+      "categoria_correcta": "digital",
+      "feedback": "Ideal para quien vive lejos de una sucursal."
+    },
+    {
+      "id": "i9",
+      "label": "Algunas piden mantener un saldo mínimo",
+      "emoji": "⚖️",
+      "categoria_correcta": "ahorro",
+      "feedback": "Si el saldo baja de ese mínimo, aparece una comisión."
+    },
+    {
+      "id": "i10",
+      "label": "Es la que usa quien empieza a trabajar formalmente",
+      "emoji": "👔",
+      "categoria_correcta": "nomina",
+      "feedback": "Es la primera cuenta de la mayoría de los trabajadores en México."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-6-a-escena.webp"
+}

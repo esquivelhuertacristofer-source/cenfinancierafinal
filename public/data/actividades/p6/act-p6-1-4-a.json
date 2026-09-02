@@ -5,95 +5,109 @@
   "level": "Primaria 6",
   "edad": "11-12 años",
   "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Museo de las Burbujas",
-  "descripcion": "La historia nos enseña que el dinero fácil a veces desaparece de golpe. ¿Puedes identificar las crisis más grandes del mundo?",
-  "objetivo": "Identificar las causas y patrones comunes en las crisis financieras históricas",
-  "xp": 250,
-  "instruccion": "Arrastra cada hecho a la crisis financiera correspondiente.",
-  "items": [
-    {
-      "id": "h1",
-      "label": "Bulbos de flores que valían más que una mansión",
-      "emoji": "🌷",
-      "categoria_correcta": "tulipomanía",
-      "feedback": "Holanda, siglo XVII: la primera burbuja financiera registrada."
-    },
-    {
-      "id": "h2",
-      "label": "Caída estrepitosa de Wall Street y desempleo masivo",
-      "emoji": "📉",
-      "categoria_correcta": "1929",
-      "feedback": "La Gran Depresión: cambió las leyes financieras del mundo."
-    },
-    {
-      "id": "h3",
-      "label": "Empresas de internet que valían billones sin vender nada",
-      "emoji": "💻",
-      "categoria_correcta": "dotcom",
-      "feedback": "Año 2000: el exceso de optimismo en la tecnología explotó."
-    },
-    {
-      "id": "h4",
-      "label": "Préstamos de casas (Subprime) que nadie podía pagar",
-      "emoji": "🏠",
-      "categoria_correcta": "2008",
-      "feedback": "La Gran Recesión: inició por una crisis en el sector inmobiliario."
-    },
-    {
-      "id": "h5",
-      "label": "Pánico en los bancos; la gente corría a sacar su dinero",
-      "emoji": "🏃",
-      "categoria_correcta": "1929",
-      "feedback": "La falta de confianza derrumbó el sistema bancario."
-    },
-    {
-      "id": "h6",
-      "label": "Venta de contratos por flores que aún no habían crecido",
-      "emoji": "📜",
-      "categoria_correcta": "tulipomanía",
-      "feedback": "Fue el inicio de los mercados de futuros, pero usado de forma loca."
-    },
-    {
-      "id": "h7",
-      "label": "Las hipotecas se vendían como si fueran inversiones seguras",
-      "emoji": "📑",
-      "categoria_correcta": "2008",
-      "feedback": "Los bancos cometieron errores graves al evaluar el riesgo."
-    },
-    {
-      "id": "h8",
-      "label": "Cualquier empresa con '.com' en su nombre subía de precio",
-      "emoji": "🌐",
-      "categoria_correcta": "dotcom",
-      "feedback": "La gente invertía sin entender el negocio, solo por la moda."
-    }
-  ],
+  "complejidad": "ALTO",
+  "titulo": "El Ecosistema Fintech",
+  "descripcion": "Fintech = finanzas + tecnología. En México hay cientos de empresas que hacen con una app lo que antes exigía una sucursal, una fila y tres firmas. Pero no todas hacen lo mismo, ni todas están reguladas.",
+  "objetivo": "Identificar los tipos de empresas fintech que operan en México y qué problema resuelve cada categoría.",
+  "xp": 500,
+  "instruccion": "Arrastra cada servicio al tipo de fintech que le corresponde.",
   "categorias": [
     {
-      "id": "tulipomanía",
-      "label": "TULIPOMANÍA (1637)",
-      "emoji": "🌷",
-      "color": "#f87171"
-    },
-    {
-      "id": "1929",
-      "label": "GRAN DEPRESIÓN (1929)",
-      "emoji": "🧥",
-      "color": "#4b5563"
-    },
-    {
-      "id": "dotcom",
-      "label": "BURBUJA DOT-COM (2000)",
-      "emoji": "⌨️",
-      "color": "#60a5fa"
-    },
-    {
-      "id": "2008",
-      "label": "CRISIS INMOBILIARIA (2008)",
-      "emoji": "🏚️",
+      "id": "pagos",
+      "label": "PAGOS Y TRANSFERENCIAS",
+      "emoji": "⚡",
       "color": "#f59e0b"
+    },
+    {
+      "id": "prestamos",
+      "label": "CRÉDITO DIGITAL",
+      "emoji": "💳",
+      "color": "#ef4444"
+    },
+    {
+      "id": "inversion",
+      "label": "INVERSIÓN Y AHORRO",
+      "emoji": "📈",
+      "color": "#10b981"
+    },
+    {
+      "id": "neobanco",
+      "label": "BANCA DIGITAL",
+      "emoji": "📱",
+      "color": "#3b82f6"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Transferir dinero al instante con solo un número de celular",
+      "emoji": "📲",
+      "categoria_correcta": "pagos",
+      "feedback": "Como CoDi o DiMo de Banxico: pagos inmediatos y sin comisión."
+    },
+    {
+      "id": "i2",
+      "label": "Pedir $5,000 desde una app y recibirlos en 20 minutos",
+      "emoji": "⏱️",
+      "categoria_correcta": "prestamos",
+      "feedback": "Rápido, sí; pero revisa siempre el CAT: suelen ser de los créditos más caros."
+    },
+    {
+      "id": "i3",
+      "label": "Comprar CETES desde el celular con $100",
+      "emoji": "🇲🇽",
+      "categoria_correcta": "inversion",
+      "feedback": "La tecnología abrió la inversión a quien antes no podía entrar."
+    },
+    {
+      "id": "i4",
+      "label": "Tener una cuenta y una tarjeta sin pisar una sucursal",
+      "emoji": "🏦",
+      "categoria_correcta": "neobanco",
+      "feedback": "Los neobancos operan sin sucursales físicas: por eso cobran menos comisiones."
+    },
+    {
+      "id": "i5",
+      "label": "Cobrar con el celular en un puesto de tacos",
+      "emoji": "🌮",
+      "categoria_correcta": "pagos",
+      "feedback": "Las terminales móviles llevaron el pago con tarjeta a los negocios pequeños."
+    },
+    {
+      "id": "i6",
+      "label": "Que muchas personas junten dinero para prestárselo a un negocio",
+      "emoji": "👥",
+      "categoria_correcta": "prestamos",
+      "feedback": "Se llama crowdfunding de deuda y está regulado por la Ley Fintech."
+    },
+    {
+      "id": "i7",
+      "label": "Redondear tus compras y guardar el cambio automáticamente",
+      "emoji": "🪙",
+      "categoria_correcta": "inversion",
+      "feedback": "Ahorro automático: el mejor truco contra la falta de disciplina."
+    },
+    {
+      "id": "i8",
+      "label": "Abrir una cuenta en 5 minutos con una selfie y tu INE",
+      "emoji": "🤳",
+      "categoria_correcta": "neobanco",
+      "feedback": "La identificación digital es lo que hizo posible la inclusión financiera masiva."
+    },
+    {
+      "id": "i9",
+      "label": "Mandar dinero a un familiar en Estados Unidos",
+      "emoji": "🌎",
+      "categoria_correcta": "pagos",
+      "feedback": "Las remesas digitales cobran mucho menos que las casas de cambio tradicionales."
+    },
+    {
+      "id": "i10",
+      "label": "Invertir automáticamente una parte de tu sueldo cada quincena",
+      "emoji": "🔁",
+      "categoria_correcta": "inversion",
+      "feedback": "Automatizar es la forma más efectiva de invertir con constancia."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

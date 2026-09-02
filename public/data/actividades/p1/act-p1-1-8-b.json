@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P1-1-8-B",
+  "unit_code": "P1-1-8",
+  "unit_title": "Dinero de sorpresa: regalos, aguinaldo y el domingo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Esperado o de Sorpresa?",
+  "descripcion": "Clasifica cada peso que llega a las manos de Ceny según de dónde viene.",
+  "objetivo": "Distinguir ingresos ordinarios de extraordinarios y reconocer los que no son ingreso",
+  "xp": 200,
+  "instruccion": "Arrastra cada situación a la caja correcta: ¿es dinero que Ceny esperaba, dinero de sorpresa o no es dinero suyo?",
+  "categorias": [
+    {
+      "id": "esperado",
+      "label": "Lo esperaba",
+      "emoji": "📅",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "sorpresa",
+      "label": "De sorpresa",
+      "emoji": "🎁",
+      "color": "#A855F7"
+    },
+    {
+      "id": "ajeno",
+      "label": "No es suyo",
+      "emoji": "🚫",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Su domingo de cada semana",
+      "emoji": "📆",
+      "categoria_correcta": "esperado",
+      "feedback": "Llega siempre el mismo día. Se puede planear con anticipación."
+    },
+    {
+      "id": "i2",
+      "label": "Regalo de cumpleaños del tío",
+      "emoji": "🎂",
+      "categoria_correcta": "sorpresa",
+      "feedback": "Ingreso extraordinario: no estaba en las cuentas de Ceny."
+    },
+    {
+      "id": "i3",
+      "label": "El aguinaldo de la abuela en diciembre",
+      "emoji": "🎄",
+      "categoria_correcta": "sorpresa",
+      "feedback": "Aunque diciembre llega cada año, la cantidad nunca se sabe antes."
+    },
+    {
+      "id": "i4",
+      "label": "El dinero del mandado que le dio su mamá",
+      "emoji": "🛒",
+      "categoria_correcta": "ajeno",
+      "feedback": "Ese dinero tiene dueño y destino. Ceny solo lo está llevando."
+    },
+    {
+      "id": "i5",
+      "label": "La propina fija por lavar el coche cada sábado",
+      "emoji": "🚗",
+      "categoria_correcta": "esperado",
+      "feedback": "Es un ingreso ordinario: se repite y se puede presupuestar."
+    },
+    {
+      "id": "i6",
+      "label": "Un billete que encontró en el patio de la escuela",
+      "emoji": "🔎",
+      "categoria_correcta": "ajeno",
+      "feedback": "Alguien lo perdió. Lo correcto es entregarlo en la dirección."
+    },
+    {
+      "id": "i7",
+      "label": "Premio del concurso de lectura",
+      "emoji": "🏆",
+      "categoria_correcta": "sorpresa",
+      "feedback": "No sabía si iba a ganar, así que no podía contarlo antes."
+    },
+    {
+      "id": "i8",
+      "label": "La mesada mensual acordada con sus papás",
+      "emoji": "💵",
+      "categoria_correcta": "esperado",
+      "feedback": "Cantidad y fecha conocidas. Es la base de cualquier plan de ahorro."
+    },
+    {
+      "id": "i9",
+      "label": "Dinero de reyes de su padrino",
+      "emoji": "👑",
+      "categoria_correcta": "sorpresa",
+      "feedback": "Ingreso extraordinario clásico. Es el que más rápido se gasta si no hay plan."
+    },
+    {
+      "id": "i10",
+      "label": "La cooperación que juntó el salón para el festival",
+      "emoji": "🎪",
+      "categoria_correcta": "ajeno",
+      "feedback": "Es dinero del grupo con un destino ya decidido. Nadie puede usarlo aparte."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-8-b-escena.webp"
+}

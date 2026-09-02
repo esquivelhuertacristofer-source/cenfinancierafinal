@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-1-10-B",
+  "unit_code": "S3-1-10",
+  "unit_title": "Dinero compartido: metas financieras en pareja y en familia",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Dinero Compartido",
+  "descripcion": "Comprueba que sabes organizar finanzas en común.",
+  "objetivo": "Verificar la comprensión de modelos y acuerdos de finanzas compartidas",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El conflicto por dinero en las relaciones suele venir de:",
+      "opciones": [
+        "La falta de dinero",
+        "Los impuestos",
+        "El banco",
+        "La falta de conversación"
+      ],
+      "correcta": 3,
+      "explicacion": "Muchas familias comparten gastos años sin acordar nunca cómo."
+    },
+    {
+      "id": "q2",
+      "texto": "No tener acuerdo significa:",
+      "opciones": [
+        "Que cada quien sigue reglas distintas sin saberlo",
+        "Que no hay reglas",
+        "Que todo funciona",
+        "Que hay libertad"
+      ],
+      "correcta": 0,
+      "explicacion": "Y eso es exactamente lo que genera la fricción."
+    },
+    {
+      "id": "q3",
+      "texto": "Los tres modelos son:",
+      "opciones": [
+        "Solo uno posible",
+        "Todo junto, todo separado y mixto",
+        "Dos únicamente",
+        "No existen modelos"
+      ],
+      "correcta": 1,
+      "explicacion": "Ninguno es mejor en abstracto."
+    },
+    {
+      "id": "q4",
+      "texto": "Lo que falla no es el modelo elegido sino:",
+      "opciones": [
+        "El monto",
+        "El banco",
+        "No haber elegido uno explícitamente",
+        "La ciudad"
+      ],
+      "correcta": 2,
+      "explicacion": "Improvisar es lo que genera el conflicto."
+    },
+    {
+      "id": "q5",
+      "texto": "Con ingresos muy distintos, repartir por mitades:",
+      "opciones": [
+        "Siempre es lo más justo",
+        "Es obligatorio",
+        "Es ilegal",
+        "Puede dejar a uno sin margen"
+      ],
+      "correcta": 3,
+      "explicacion": "Una alternativa es repartir en proporción al ingreso."
+    },
+    {
+      "id": "q6",
+      "texto": "La fórmula correcta es:",
+      "opciones": [
+        "La que ambas partes entiendan y acepten",
+        "Siempre mitades",
+        "Siempre proporcional",
+        "La que diga el que gana más"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo importante es que sea explícita y aceptada."
+    },
+    {
+      "id": "q7",
+      "texto": "Una de las cinco preguntas es:",
+      "opciones": [
+        "Quién gana más",
+        "Desde qué monto se consulta una compra",
+        "Quién manda",
+        "Quién decide todo"
+      ],
+      "correcta": 1,
+      "explicacion": "Junto con qué es gasto común, metas y deudas de cada quien."
+    },
+    {
+      "id": "q8",
+      "texto": "Responder las cinco preguntas antes:",
+      "opciones": [
+        "No sirve",
+        "Genera desconfianza",
+        "Evita la mayoría de los conflictos posteriores",
+        "Es innecesario"
+      ],
+      "correcta": 2,
+      "explicacion": "Una conversación incómoda hoy ahorra años de fricción."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-10-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-10-b-escena.webp"
+}

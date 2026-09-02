@@ -1,0 +1,202 @@
+{
+  "code": "ACT-S1-2-8-A",
+  "unit_code": "S1-2-8",
+  "unit_title": "Crédito automotriz y arrendamiento: comparar el costo total",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Crédito o Arrendamiento",
+  "descripcion": "Compara el costo total de las dos formas de tener un auto.",
+  "objetivo": "Calcular y comparar el costo total de crédito automotriz y arrendamiento",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "El vehículo",
+      "descripcion": "Datos comunes a las dos opciones.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio del vehículo",
+          "type": "number",
+          "min": 50000,
+          "max": 2000000,
+          "default": 340000,
+          "unit": "$",
+          "placeholder": "340000",
+          "requerido": true
+        },
+        {
+          "id": "anos",
+          "label": "Años que planeo usarlo",
+          "type": "slider",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 4,
+          "unit": "años",
+          "requerido": true
+        },
+        {
+          "id": "seguro_anual",
+          "label": "Seguro anual",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 14000,
+          "unit": "$",
+          "placeholder": "14000",
+          "requerido": true
+        },
+        {
+          "id": "mantenimiento_anual",
+          "label": "Mantenimiento, tenencia y verificación al año",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 9000,
+          "unit": "$",
+          "placeholder": "9000",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Opción A: crédito automotriz",
+      "descripcion": "El auto termina siendo mío.",
+      "campos": [
+        {
+          "id": "enganche_pct",
+          "label": "Enganche",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "tasa",
+          "label": "Tasa anual del crédito",
+          "type": "slider",
+          "min": 5,
+          "max": 40,
+          "step": 0.5,
+          "default": 14,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "enganche",
+          "label": "Enganche en pesos",
+          "type": "calculated",
+          "formula": "Math.round(precio * enganche_pct / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "mensualidad_credito",
+          "label": "Mensualidad aproximada",
+          "type": "calculated",
+          "formula": "Math.round((precio - precio * enganche_pct / 100) * (tasa / 100 / 12) / (1 - Math.pow(1 + tasa / 100 / 12, -(anos * 12))))",
+          "unit": "$"
+        },
+        {
+          "id": "total_credito",
+          "label": "Costo total del crédito",
+          "type": "calculated",
+          "formula": "Math.round(precio * enganche_pct / 100 + (precio - precio * enganche_pct / 100) * (tasa / 100 / 12) / (1 - Math.pow(1 + tasa / 100 / 12, -(anos * 12))) * anos * 12 + (seguro_anual + mantenimiento_anual) * anos)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Opción B: arrendamiento",
+      "descripcion": "Pago por usarlo durante el plazo.",
+      "campos": [
+        {
+          "id": "mensualidad_arren",
+          "label": "Mensualidad del arrendamiento",
+          "type": "number",
+          "min": 500,
+          "max": 60000,
+          "default": 6900,
+          "unit": "$",
+          "placeholder": "6900",
+          "requerido": true
+        },
+        {
+          "id": "deposito",
+          "label": "Depósito inicial",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "default": 34000,
+          "unit": "$",
+          "placeholder": "34000",
+          "requerido": true
+        },
+        {
+          "id": "residual_pct",
+          "label": "Valor residual si quiero quedármelo",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 5,
+          "default": 35,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "total_arren",
+          "label": "Costo total del arrendamiento (sin quedármelo)",
+          "type": "calculated",
+          "formula": "Math.round(deposito + mensualidad_arren * anos * 12 + (seguro_anual + mantenimiento_anual) * anos)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La comparación real",
+      "descripcion": "Costo total y qué queda al final.",
+      "campos": [
+        {
+          "id": "valor_final",
+          "label": "Valor estimado del auto al terminar",
+          "type": "calculated",
+          "formula": "Math.round(precio * Math.pow(0.85, anos))",
+          "unit": "$"
+        },
+        {
+          "id": "costo_neto_credito",
+          "label": "Costo neto del crédito (menos lo que vale el auto)",
+          "type": "calculated",
+          "formula": "Math.round(precio * enganche_pct / 100 + (precio - precio * enganche_pct / 100) * (tasa / 100 / 12) / (1 - Math.pow(1 + tasa / 100 / 12, -(anos * 12))) * anos * 12 + (seguro_anual + mantenimiento_anual) * anos - precio * Math.pow(0.85, anos))",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia entre las dos opciones",
+          "type": "calculated",
+          "formula": "Math.round(deposito + mensualidad_arren * anos * 12 + (seguro_anual + mantenimiento_anual) * anos - (precio * enganche_pct / 100 + (precio - precio * enganche_pct / 100) * (tasa / 100 / 12) / (1 - Math.pow(1 + tasa / 100 / 12, -(anos * 12))) * anos * 12 + (seguro_anual + mantenimiento_anual) * anos - precio * Math.pow(0.85, anos)))",
+          "unit": "$"
+        },
+        {
+          "id": "decision",
+          "label": "¿Cuál eliges y por qué?",
+          "type": "textarea",
+          "placeholder": "Justifica con el costo neto y con tu perfil de uso",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "comparativo_vehiculo",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-2-8-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-8-a-escena.webp"
+}

@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P6-3-9-A",
+  "unit_code": "P6-3-9",
+  "unit_title": "Invertir con poco: los montos mínimos reales en México",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Empezar Con Poco",
+  "descripcion": "Ajusta el monto y los años y observa qué pesa más en el resultado final.",
+  "objetivo": "Comprobar que la constancia y el tiempo superan al monto inicial",
+  "xp": 600,
+  "inputs": [
+    {
+      "id": "inicial",
+      "label": "Monto con el que empiezo",
+      "type": "slider",
+      "min": 100,
+      "max": 50000,
+      "step": 100,
+      "default": 500,
+      "unit": "$",
+      "referencia": "Hay instrumentos que aceptan aportaciones de cien pesos."
+    },
+    {
+      "id": "mensual",
+      "label": "Aportación cada mes",
+      "type": "slider",
+      "min": 100,
+      "max": 10000,
+      "step": 100,
+      "default": 400,
+      "unit": "$",
+      "referencia": "Lo importante no es el tamaño sino sostenerla."
+    },
+    {
+      "id": "anos",
+      "label": "Años que voy a sostenerla",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "años",
+      "referencia": "El tiempo es el ingrediente que no se puede comprar después."
+    },
+    {
+      "id": "rendimiento",
+      "label": "Rendimiento anual estimado",
+      "type": "slider",
+      "min": 0,
+      "max": 14,
+      "step": 0.5,
+      "default": 8,
+      "unit": "%",
+      "referencia": "Un supuesto conservador vale más que uno optimista."
+    }
+  ],
+  "formula": "Math.round(inicial * Math.pow(1 + rendimiento / 100 / 12, anos * 12) + mensual * (Math.pow(1 + rendimiento / 100 / 12, anos * 12) - 1) / (rendimiento / 100 / 12 || 0.0001))",
+  "descripcion_formula": "Suma del monto inicial capitalizado más el valor futuro de las aportaciones mensuales sostenidas durante todos los años elegidos.",
+  "output_label": "Total acumulado estimado",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "anos >= 25 && mensual <= 500",
+      "mensaje": "Aportaciones pequeñas sostenidas durante más de dos décadas: este es exactamente el caso que demuestra que el tiempo pesa más que el monto.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "anos <= 5 && mensual >= 3000",
+      "mensaje": "Aportaciones grandes pero poco tiempo. Compara con la opción anterior: aportando mucho menos durante más años el resultado suele ser mayor.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "inicial <= 500 && anos >= 20",
+      "mensaje": "Empezaste con casi nada y aun así el resultado es considerable. El monto inicial es lo que menos importa de toda la ecuación.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "rendimiento >= 13",
+      "mensaje": "Ese rendimiento está muy por encima de lo razonable a largo plazo. Si alguien te lo ofrece garantizado, es señal de alarma, no de oportunidad.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "anos <= 3",
+      "mensaje": "Con tan poco tiempo el interés compuesto casi no actúa. Para plazos cortos conviene un instrumento líquido, no una inversión de largo plazo.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-3-9-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-9-a-escena.webp"
+}

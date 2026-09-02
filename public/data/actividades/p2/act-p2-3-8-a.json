@@ -1,0 +1,173 @@
+{
+  "code": "ACT-P2-3-8-A",
+  "unit_code": "P2-3-8",
+  "unit_title": "Faltó dinero: ¿qué recorto primero?",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Ajusta el Presupuesto",
+  "descripcion": "Arma el presupuesto de la semana de Ceny cuando el dinero no alcanza para todo.",
+  "objetivo": "Construir un presupuesto ajustado clasificando gastos por prioridad",
+  "xp": 250,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Lo que tengo",
+      "descripcion": "Empieza por saber con cuánto cuentas realmente esta semana.",
+      "campos": [
+        {
+          "id": "domingo",
+          "label": "Mi domingo de esta semana",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "default": 100,
+          "unit": "$",
+          "ayuda": "El dinero que recibes de forma fija.",
+          "requerido": true
+        },
+        {
+          "id": "extra",
+          "label": "Dinero extra que gané o me regalaron",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "default": 50,
+          "unit": "$",
+          "ayuda": "Trabajitos, propinas o regalos de esta semana.",
+          "requerido": true
+        },
+        {
+          "id": "total_entra",
+          "label": "Total con el que cuento",
+          "type": "calculated",
+          "formula": "domingo + extra",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Lo indispensable",
+      "descripcion": "Nivel uno: lo que no se puede dejar de pagar sin consecuencias serias.",
+      "campos": [
+        {
+          "id": "pasaje",
+          "label": "Pasaje para llegar a la escuela",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "$",
+          "ayuda": "Sin esto no puedes llegar a clases.",
+          "requerido": true
+        },
+        {
+          "id": "lunch",
+          "label": "Comida de la escuela",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "$",
+          "ayuda": "Se puede ajustar llevando lunch de casa, pero comer no es opcional.",
+          "requerido": true
+        },
+        {
+          "id": "total_nivel1",
+          "label": "Total indispensable",
+          "type": "calculated",
+          "formula": "pasaje + lunch",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Lo importante ajustable",
+      "descripcion": "Nivel dos: sí hace falta, pero puede comprarse más barato o en menor cantidad.",
+      "campos": [
+        {
+          "id": "material",
+          "label": "Material escolar de la semana",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 35,
+          "unit": "$",
+          "ayuda": "Se puede comparar precios o comprar solo lo que se usará.",
+          "requerido": true
+        },
+        {
+          "id": "cooperacion",
+          "label": "Cooperación del salón",
+          "type": "slider",
+          "min": 0,
+          "max": 80,
+          "step": 5,
+          "default": 20,
+          "unit": "$",
+          "ayuda": "A veces se puede pagar en partes.",
+          "requerido": true
+        },
+        {
+          "id": "total_nivel2",
+          "label": "Total ajustable",
+          "type": "calculated",
+          "formula": "material + cooperacion",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Lo postergable y el resultado",
+      "descripcion": "Nivel tres: lo que puede esperar. Es lo primero que se recorta si no cuadra.",
+      "campos": [
+        {
+          "id": "antojos",
+          "label": "Antojos y salidas de esta semana",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "Es lo primero que se recorta cuando falta dinero.",
+          "requerido": true
+        },
+        {
+          "id": "total_sale",
+          "label": "Total que voy a gastar",
+          "type": "calculated",
+          "formula": "pasaje + lunch + material + cooperacion + antojos",
+          "unit": "$"
+        },
+        {
+          "id": "saldo",
+          "label": "Lo que me queda (o me falta)",
+          "type": "calculated",
+          "formula": "domingo + extra - (pasaje + lunch + material + cooperacion + antojos)",
+          "unit": "$"
+        },
+        {
+          "id": "ahorro_meta",
+          "label": "Lo que puedo mandar a mi meta",
+          "type": "calculated",
+          "formula": "Math.max(0, domingo + extra - (pasaje + lunch + material + cooperacion + antojos))",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "presupuesto_semanal",
+  "exportable": true,
+  "portada": "/assets/misiones/p2/p2-3-8-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-8-a-escena.webp"
+}

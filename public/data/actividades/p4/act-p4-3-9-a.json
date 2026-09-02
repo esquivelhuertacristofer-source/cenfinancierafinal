@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P4-3-9-A",
+  "unit_code": "P4-3-9",
+  "unit_title": "El costo de oportunidad: lo que dejo de hacer al elegir",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Lo que Dejo de Hacer",
+  "descripcion": "Ceny tiene $6,000 y varias opciones. Cada decisión revela lo que queda fuera.",
+  "objetivo": "Evaluar decisiones considerando explícitamente el costo de oportunidad",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny juntó $6,000 durante dos años. Tiene varias opciones sobre la mesa y solo puede elegir una.",
+  "nodo_inicial": "opciones",
+  "nodos": {
+    "opciones": {
+      "id": "opciones",
+      "texto": "Las opciones son: una consola de videojuegos, un curso de programación de seis meses, o dejarlos invertidos cinco años. ¿Qué hace primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Escribir qué gana y qué deja de ganar con cada opción",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "Con las tres comparaciones a la vista, la decisión deja de ser impulso.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar la consola, es lo que más ganas tiene",
+          "siguiente_nodo": "consola",
+          "consecuencia": "Decisión legítima, pero tomada sin ver qué quedó fuera.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Preguntar a sus amigos qué harían",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "Las opiniones ayudan, pero el costo de oportunidad es personal.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-opciones.webp"
+    },
+    "consola": {
+      "id": "consola",
+      "texto": "Ya con la consola, Ceny se entera de que el curso incluía una certificación. ¿Qué concluye?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que le faltó calcular qué dejaba fuera antes de decidir",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "Aprendizaje aplicable a la siguiente decisión, que siempre llega.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que da igual, ya está hecho",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La decisión no se puede revertir, pero el método sí se puede aprender.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-consola.webp"
+    },
+    "analisis": {
+      "id": "analisis",
+      "texto": "Los números: la consola le daría entretenimiento inmediato; el curso, una certificación que podría generarle ingresos; la inversión, unos $8,000 en cinco años. ¿Qué elige?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El curso: puede generar ingresos que superen a las otras dos opciones",
+          "siguiente_nodo": "tiempo",
+          "consecuencia": "Invertir en capacidad propia suele tener el mayor rendimiento a largo plazo.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o2",
+          "texto": "La inversión: $8,000 seguros en cinco años",
+          "siguiente_nodo": "tiempo",
+          "consecuencia": "Opción sólida y de bajo riesgo, con costo de oportunidad claro y aceptado.",
+          "xp_bonus": 40,
+          "es_optima": false,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o3",
+          "texto": "La consola, ahora sabiendo exactamente qué deja fuera",
+          "siguiente_nodo": "tiempo",
+          "consecuencia": "Elegir disfrute sabiendo el costo también es decidir bien. Lo malo es no saberlo.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-analisis.webp"
+    },
+    "tiempo": {
+      "id": "tiempo",
+      "texto": "Ahora Ceny tiene dos horas libres al día. Puede usarlas en el curso o en otra cosa. ¿Qué toma en cuenta?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que dos horas diarias son más de setecientas al año",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Puesto en horas anuales, el tamaño de la elección se vuelve evidente.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1000
+        },
+        {
+          "id": "o2",
+          "texto": "Que dos horas no son gran cosa",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Por día parecen poco; por año son la diferencia entre terminar algo o no.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-tiempo.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny eligió sabiendo exactamente qué ganaba y qué dejaba fuera, tanto en dinero como en tiempo.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "El costo de oportunidad no dice qué elegir: obliga a ver la comparación completa. Decidir sabiendo lo que se deja atrás es lo que separa una elección de un impulso.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny tomó su decisión, aunque sin dimensionar del todo lo que quedaba fuera.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Ninguna opción era incorrecta. Lo que faltó fue la pregunta: si elijo esto, ¿qué es lo mejor que estoy dejando de hacer?",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-3-9-a-n-final_regular.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p4/p4-3-9-a-portada.webp"
+}

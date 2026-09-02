@@ -1,0 +1,226 @@
+{
+  "code": "ACT-S1-1-10-A",
+  "unit_code": "S1-1-10",
+  "unit_title": "La canasta básica: cuánto cuesta vivir en México",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Cuánto Cuesta Vivir",
+  "descripcion": "Costea la canasta de un hogar y compárala con distintos ingresos.",
+  "objetivo": "Construir el costo mensual real de un hogar y evaluar su suficiencia",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "El hogar",
+      "descripcion": "Cuántas personas y de qué edades.",
+      "campos": [
+        {
+          "id": "adultos",
+          "label": "Adultos en el hogar",
+          "type": "slider",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 2,
+          "unit": "personas",
+          "requerido": true
+        },
+        {
+          "id": "menores",
+          "label": "Menores en el hogar",
+          "type": "slider",
+          "min": 0,
+          "max": 8,
+          "step": 1,
+          "default": 2,
+          "unit": "menores",
+          "requerido": true
+        },
+        {
+          "id": "total_personas",
+          "label": "Total de personas",
+          "type": "calculated",
+          "formula": "adultos + menores",
+          "unit": "personas"
+        },
+        {
+          "id": "zona",
+          "label": "Zona donde viven",
+          "type": "select",
+          "opciones": [
+            "Zona metropolitana grande",
+            "Ciudad media",
+            "Localidad pequeña"
+          ],
+          "default": "Ciudad media",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Las seis categorías",
+      "descripcion": "Costos mensuales con precios reales.",
+      "campos": [
+        {
+          "id": "alimentacion",
+          "label": "Alimentación al mes",
+          "type": "number",
+          "min": 500,
+          "max": 60000,
+          "default": 8500,
+          "unit": "$",
+          "placeholder": "8500",
+          "requerido": true
+        },
+        {
+          "id": "vivienda",
+          "label": "Vivienda y servicios",
+          "type": "number",
+          "min": 0,
+          "max": 60000,
+          "default": 6000,
+          "unit": "$",
+          "placeholder": "6000",
+          "requerido": true
+        },
+        {
+          "id": "transporte",
+          "label": "Transporte",
+          "type": "number",
+          "min": 0,
+          "max": 30000,
+          "default": 2200,
+          "unit": "$",
+          "placeholder": "2200",
+          "requerido": true
+        },
+        {
+          "id": "salud",
+          "label": "Salud y medicamentos",
+          "type": "number",
+          "min": 0,
+          "max": 30000,
+          "default": 900,
+          "unit": "$",
+          "placeholder": "900",
+          "requerido": true
+        },
+        {
+          "id": "educacion",
+          "label": "Educación",
+          "type": "number",
+          "min": 0,
+          "max": 40000,
+          "default": 1200,
+          "unit": "$",
+          "placeholder": "1200",
+          "requerido": true
+        },
+        {
+          "id": "vestido",
+          "label": "Vestido y calzado",
+          "type": "number",
+          "min": 0,
+          "max": 20000,
+          "default": 700,
+          "unit": "$",
+          "placeholder": "700",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El total",
+      "descripcion": "Lo que cuesta sostener este hogar.",
+      "campos": [
+        {
+          "id": "total_mensual",
+          "label": "Costo mensual del hogar",
+          "type": "calculated",
+          "formula": "alimentacion + vivienda + transporte + salud + educacion + vestido",
+          "unit": "$"
+        },
+        {
+          "id": "total_anual",
+          "label": "Costo anual",
+          "type": "calculated",
+          "formula": "(alimentacion + vivienda + transporte + salud + educacion + vestido) * 12",
+          "unit": "$"
+        },
+        {
+          "id": "por_persona",
+          "label": "Costo mensual por persona",
+          "type": "calculated",
+          "formula": "Math.round((alimentacion + vivienda + transporte + salud + educacion + vestido) / Math.max(1, adultos + menores))",
+          "unit": "$"
+        },
+        {
+          "id": "peso_alimentacion",
+          "label": "Peso de la alimentación en el total",
+          "type": "calculated",
+          "formula": "Math.round(alimentacion / Math.max(1, alimentacion + vivienda + transporte + salud + educacion + vestido) * 100)",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "¿Alcanza?",
+      "descripcion": "Comparar con escenarios de ingreso.",
+      "campos": [
+        {
+          "id": "sm_mensual",
+          "label": "Salario mínimo mensual vigente",
+          "type": "number",
+          "min": 1000,
+          "max": 40000,
+          "default": 8500,
+          "unit": "$",
+          "placeholder": "8500",
+          "ayuda": "Verifica el valor del año en curso.",
+          "requerido": true
+        },
+        {
+          "id": "ingresos_hogar",
+          "label": "Personas que aportan ingreso",
+          "type": "slider",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 2,
+          "unit": "personas",
+          "requerido": true
+        },
+        {
+          "id": "ingreso_total",
+          "label": "Ingreso total del hogar con salario mínimo",
+          "type": "calculated",
+          "formula": "sm_mensual * ingresos_hogar",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia entre ingreso y costo",
+          "type": "calculated",
+          "formula": "sm_mensual * ingresos_hogar - (alimentacion + vivienda + transporte + salud + educacion + vestido)",
+          "unit": "$"
+        },
+        {
+          "id": "salarios_necesarios",
+          "label": "Salarios mínimos que se necesitarían",
+          "type": "calculated",
+          "formula": "Math.round((alimentacion + vivienda + transporte + salud + educacion + vestido) / Math.max(1, sm_mensual) * 10) / 10",
+          "unit": "salarios"
+        }
+      ]
+    }
+  ],
+  "output_type": "costeo_hogar",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-1-10-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-10-a-escena.webp"
+}

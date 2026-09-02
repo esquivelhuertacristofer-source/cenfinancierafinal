@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P3-4-9-B",
+  "unit_code": "P3-4-9",
+  "unit_title": "Vender en equipo: los roles del puesto",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Un Puesto en Problemas",
+  "descripcion": "El puesto de Ceny está en caos a media feria. Cada decisión define si se recupera.",
+  "objetivo": "Resolver problemas de organización aplicando la lógica de roles",
+  "xp": 160,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "A media feria, el puesto de Ceny tiene fila, dos personas cobrando al mismo tiempo y nadie ha anotado una sola venta.",
+  "nodo_inicial": "caos",
+  "nodos": {
+    "caos": {
+      "id": "caos",
+      "texto": "Hay ocho personas esperando y el equipo se estorba entre sí. ¿Qué hace Ceny primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Parar treinta segundos y asignar un rol a cada quien",
+          "siguiente_nodo": "caja",
+          "consecuencia": "Perder medio minuto para organizar recupera mucho más tiempo después.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Pedir que todos atiendan más rápido",
+          "siguiente_nodo": "peor",
+          "consecuencia": "Más prisa sobre el mismo desorden solo aumenta los errores.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        },
+        {
+          "id": "o3",
+          "texto": "Ponerse él a cobrar y dejar todo lo demás igual",
+          "siguiente_nodo": "caja",
+          "consecuencia": "Resuelve la caja, pero el registro y la reposición siguen sin dueño.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-caos.webp"
+    },
+    "peor": {
+      "id": "peor",
+      "texto": "Dos clientes recibieron mal el cambio y tres se fueron de la fila. ¿Ahora qué?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Detenerse y asignar roles, aunque ya se perdió tiempo",
+          "siguiente_nodo": "caja",
+          "consecuencia": "Nunca es tarde para organizar. Lo caro es no hacerlo nunca.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir así hasta que termine la feria",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La caja no va a cuadrar y no habrá forma de saber por qué.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -300
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-peor.webp"
+    },
+    "caja": {
+      "id": "caja",
+      "texto": "Al contar la caja falta dinero y dos personas estuvieron cobrando. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Dejar a una sola persona en la caja de ahora en adelante",
+          "siguiente_nodo": "registro",
+          "consecuencia": "Con un solo responsable, cualquier descuadre se puede rastrear.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Acusar a alguien de haber tomado el dinero",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin registro no hay forma de saberlo, y la acusación rompe al equipo.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -200
+        },
+        {
+          "id": "o3",
+          "texto": "Dejar de contar la caja para no discutir",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "No contar no arregla el faltante: solo lo vuelve invisible.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -200
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-caja.webp"
+    },
+    "registro": {
+      "id": "registro",
+      "texto": "Nadie ha anotado ventas en toda la feria. Quedan dos horas. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Empezar a registrar desde ahora y contar el inventario que queda",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Con el inventario restante puede reconstruir cuánto se vendió antes.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 200
+        },
+        {
+          "id": "o2",
+          "texto": "No registrar, total ya se perdió la primera parte",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Perder la mitad del dato no es razón para perder la otra mitad.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-registro.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El puesto terminó ordenado, con la caja cuadrada y un registro que sirve para el año siguiente.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Treinta segundos para asignar roles, una sola persona en la caja y registro desde el momento en que se detectó la falla. Organizarse a media feria fue mejor que no organizarse nunca.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El puesto vendió, pero nadie sabe cuánto ni por qué faltó dinero.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Vender sin registro es vender a ciegas. Al año siguiente el equipo tendrá que adivinar otra vez todo lo que pudo haber sabido.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La feria terminó con caja descuadrada, clientes molestos y el equipo peleado.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El problema nunca fue la falta de esfuerzo: todos trabajaron mucho. Fue la falta de roles, que hizo que ese esfuerzo se estorbara a sí mismo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-4-9-b-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p3/p3-4-9-b-portada.webp"
+}

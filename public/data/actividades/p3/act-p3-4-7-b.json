@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-4-7-B",
+  "unit_code": "P3-4-7",
+  "unit_title": "Probar con clientes reales: escuchar antes de producir",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Validación",
+  "descripcion": "Responde rápido sobre cómo probar un producto de verdad.",
+  "objetivo": "Consolidar el método de validación con clientes",
+  "xp": 160,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Por qué no sirve preguntar si les gusta mi idea?",
+      "respuesta_correcta": "Porque responden por amabilidad",
+      "incorrectas": [
+        "Porque es larga",
+        "Porque no la entienden",
+        "Porque es secreta"
+      ],
+      "dato_extra": "La amabilidad es buena para convivir y pésima para validar."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Las preguntas útiles se refieren a:",
+      "respuesta_correcta": "Hechos del pasado",
+      "incorrectas": [
+        "Opiniones",
+        "Promesas futuras",
+        "Gustos generales"
+      ],
+      "dato_extra": "Nadie inventa un recuerdo para no lastimarte."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Las respuestas hay que anotarlas:",
+      "respuesta_correcta": "Tal cual se dijeron",
+      "incorrectas": [
+        "Suavizando lo negativo",
+        "Solo lo positivo",
+        "De memoria después"
+      ],
+      "dato_extra": "Suavizar los comentarios incómodos arruina toda la prueba."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Si cuatro de cinco señalan el mismo problema:",
+      "respuesta_correcta": "Ese es el que hay que arreglar",
+      "incorrectas": [
+        "Hay que ignorarlo",
+        "Se atiende el comentario aislado",
+        "Se cambia el color"
+      ],
+      "dato_extra": "Lo que se repite es señal; lo que dice uno solo puede ser gusto personal."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Escuchar críticas y no cambiar nada:",
+      "respuesta_correcta": "Hace que la validación sea teatro",
+      "incorrectas": [
+        "Igual sirve",
+        "Mejora el producto",
+        "Es lo normal"
+      ],
+      "dato_extra": "Peor aún: el equipo queda creyendo que ya validó."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Cuándo conviene probar con clientes?",
+      "respuesta_correcta": "Antes de producir",
+      "incorrectas": [
+        "Después de producir todo",
+        "Al final de la feria",
+        "Nunca"
+      ],
+      "dato_extra": "Detectar el problema con diez piezas cuesta mucho menos que con cien."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La gente predice su comportamiento futuro:",
+      "respuesta_correcta": "Muy mal",
+      "incorrectas": [
+        "Con exactitud",
+        "Siempre bien",
+        "Mejor que el pasado"
+      ],
+      "dato_extra": "Por eso se pregunta qué hizo, no qué haría."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-7-b-escena.webp"
+}

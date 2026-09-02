@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S2-2-9-B",
+  "unit_code": "S2-2-9",
+  "unit_title": "Sobreendeudamiento: las señales de alerta temprana",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Señales de Alerta",
+  "descripcion": "La familia de Ceny detecta señales. Cada decisión define cuántas opciones les quedan.",
+  "objetivo": "Aplicar el diagnóstico de sobreendeudamiento y actuar a tiempo",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "En casa de Ceny llevan cuatro meses pagando solo el mínimo de dos tarjetas y este mes compraron la despensa con crédito.",
+  "nodo_inicial": "senal",
+  "nodos": {
+    "senal": {
+      "id": "senal",
+      "texto": "Nadie ha querido hablar del tema. ¿Qué propone Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Calcular cuánto del ingreso se va en deuda y listar todos los saldos",
+          "siguiente_nodo": "diagnostico",
+          "consecuencia": "El problema deja de ser una sensación y pasa a ser un número.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "No decir nada: todavía están pagando",
+          "siguiente_nodo": "espera",
+          "consecuencia": "\"Todavía puedo pagar\" es la frase de los meses previos al problema serio.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-senal.webp"
+    },
+    "espera": {
+      "id": "espera",
+      "texto": "Tres meses después piden un crédito para pagar las tarjetas. ¿Qué señal es esa?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Una de las más claras: la deuda ya sostiene la operación diaria",
+          "siguiente_nodo": "diagnostico",
+          "consecuencia": "Lo reconocen y deciden actuar, con menos margen que antes.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -6000
+        },
+        {
+          "id": "o2",
+          "texto": "Una buena estrategia de consolidación",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Sin cambiar el gasto, el crédito nuevo se suma a los anteriores.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -22000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-espera.webp"
+    },
+    "diagnostico": {
+      "id": "diagnostico",
+      "texto": "El cálculo da 48% del ingreso en pagos de deuda. ¿Qué hacen primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Dejar de adquirir deuda nueva y atacar la de mayor tasa",
+          "siguiente_nodo": "acreedor",
+          "consecuencia": "Detienen el crecimiento y atacan lo que más cuesta.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 14000
+        },
+        {
+          "id": "o2",
+          "texto": "Pagar un poco de cada deuda por partes iguales",
+          "siguiente_nodo": "acreedor",
+          "consecuencia": "Repartir parejo hace que la deuda cara siga creciendo.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-diagnostico.webp"
+    },
+    "acreedor": {
+      "id": "acreedor",
+      "texto": "Ven que el próximo mes podrían no cubrir un pago. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Hablar con el acreedor antes del primer atraso, con una propuesta concreta",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Conservan credibilidad y obtienen mejores condiciones.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 12000
+        },
+        {
+          "id": "o2",
+          "texto": "Esperar a ver si el mes siguiente alcanza",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Con el atraso, la ventana de negociación se reduce mucho.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -9000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-acreedor.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia midió su situación, detuvo la deuda nueva y negoció antes del primer atraso.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Las señales existen mucho antes de la crisis y son medibles. Cada mes de espera cierra opciones: quien actúa temprano tiene todas las alternativas disponibles.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Detuvieron el crecimiento de la deuda, pero esperaron demasiado para hablar.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Diagnosticar es la mitad del trabajo. La otra mitad es actuar mientras todavía hay margen: después del primer atraso las condiciones empeoran.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Pidieron crédito para pagar crédito sin cambiar nada más, y la deuda total creció.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Consolidar sin corregir el gasto solo mueve la deuda de lugar y la hace más grande. Pedir un crédito para pagar otro es una señal de alerta, no una solución.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-2-9-b-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-2-9-b-portada.webp"
+}

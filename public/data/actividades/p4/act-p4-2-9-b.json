@@ -1,0 +1,91 @@
+{
+  "code": "ACT-P4-2-9-B",
+  "unit_code": "P4-2-9",
+  "unit_title": "Qué hacer si me roban la tarjeta",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "Protocolo de Emergencia",
+  "descripcion": "Completa el protocolo que Ceny le explica a su familia.",
+  "objetivo": "Verbalizar la secuencia correcta ante el robo de una tarjeta",
+  "xp": 320,
+  "contexto": "Ceny escribe en una hoja lo que hay que hacer si alguien de la casa pierde su tarjeta.",
+  "texto": "Lo primero, antes que cualquier otra cosa, es __blank1__ la tarjeta. No hay que buscarla antes: cada minuto que sigue activa es una oportunidad para que alguien la use. Al reportar, el banco entrega un __blank2__ con fecha y hora, que hay que anotar en ese mismo momento porque es la __blank3__ de cuándo se reportó. Después se revisan los __blank4__ recientes y se desconocen por __blank5__ los cargos que nadie reconoce, dentro del plazo que marca la ley. Luego se solicita la __blank6__ de la tarjeta, que puede tener costo según el contrato. Y si hubo robo, corresponde levantar una __blank7__ ante la autoridad. Conviene guardar el número de atención en el __blank8__, porque si la tarjeta no está, el número del reverso tampoco.",
+  "blanks": [
+    {
+      "id": "blank1",
+      "opciones": [
+        "bloquear",
+        "buscar",
+        "guardar"
+      ],
+      "respuesta": "bloquear"
+    },
+    {
+      "id": "blank2",
+      "opciones": [
+        "folio",
+        "recibo",
+        "contrato"
+      ],
+      "respuesta": "folio"
+    },
+    {
+      "id": "blank3",
+      "opciones": [
+        "prueba",
+        "copia",
+        "firma"
+      ],
+      "respuesta": "prueba"
+    },
+    {
+      "id": "blank4",
+      "opciones": [
+        "movimientos",
+        "saldos",
+        "contratos"
+      ],
+      "respuesta": "movimientos"
+    },
+    {
+      "id": "blank5",
+      "opciones": [
+        "escrito",
+        "teléfono",
+        "mensaje"
+      ],
+      "respuesta": "escrito"
+    },
+    {
+      "id": "blank6",
+      "opciones": [
+        "reposición",
+        "cancelación",
+        "apertura"
+      ],
+      "respuesta": "reposición"
+    },
+    {
+      "id": "blank7",
+      "opciones": [
+        "denuncia",
+        "queja",
+        "carta"
+      ],
+      "respuesta": "denuncia"
+    },
+    {
+      "id": "blank8",
+      "opciones": [
+        "celular",
+        "cajón",
+        "cartera"
+      ],
+      "respuesta": "celular"
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-9-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-9-b-escena.webp"
+}

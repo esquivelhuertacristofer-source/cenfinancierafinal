@@ -1,0 +1,181 @@
+{
+  "code": "ACT-P4-1-8-A",
+  "unit_code": "P4-1-8",
+  "unit_title": "Bancos, SOFIPOs y cajas de ahorro: no todos son iguales",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Antes de Depositar",
+  "descripcion": "A la familia de Ceny le ofrecen un rendimiento muy alto. Cada decisión define si el dinero está seguro.",
+  "objetivo": "Aplicar el proceso de verificación institucional antes de confiar dinero",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Un conocido le ofrece a la mamá de Ceny meter sus $30,000 de ahorro en una \"financiera\" que promete 5% mensual garantizado.",
+  "nodo_inicial": "oferta",
+  "nodos": {
+    "oferta": {
+      "id": "oferta",
+      "texto": "5% mensual son 60% al año, muy por encima de cualquier banco. ¿Qué hace la familia?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Verificar si la institución está en los registros oficiales",
+          "siguiente_nodo": "verificacion",
+          "consecuencia": "Dos minutos de búsqueda antes de mover un solo peso.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptar: el conocido es de confianza y ya lleva meses cobrando",
+          "siguiente_nodo": "sin_verificar",
+          "consecuencia": "Que a alguien le haya funcionado unos meses no dice nada sobre la solidez.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        },
+        {
+          "id": "o3",
+          "texto": "Visitar la oficina para ver si se ve seria",
+          "siguiente_nodo": "oficina",
+          "consecuencia": "La oficina es impecable. Eso no prueba absolutamente nada.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-oferta.webp"
+    },
+    "oficina": {
+      "id": "oficina",
+      "texto": "La oficina es elegante, hay recepcionista y muchos clientes. ¿Eso basta?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No: verificar de todos modos en el registro oficial",
+          "siguiente_nodo": "verificacion",
+          "consecuencia": "Los fraudes más grandes siempre tuvieron oficinas impecables.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Sí, se ve muy formal",
+          "siguiente_nodo": "sin_verificar",
+          "consecuencia": "La apariencia es lo más barato de comprar para quien monta un fraude.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-oficina.webp"
+    },
+    "verificacion": {
+      "id": "verificacion",
+      "texto": "La institución no aparece en ningún registro oficial. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No depositar y buscar una alternativa autorizada",
+          "siguiente_nodo": "alternativa",
+          "consecuencia": "Sin autorización, si algo falla no hay a quién reclamar.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 30000
+        },
+        {
+          "id": "o2",
+          "texto": "Depositar solo una parte pequeña \"para probar\"",
+          "siguiente_nodo": "prueba",
+          "consecuencia": "Es exactamente lo que espera este tipo de esquema: pagar la prueba para ganarse la confianza.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-verificacion.webp"
+    },
+    "prueba": {
+      "id": "prueba",
+      "texto": "Los primeros dos meses pagaron puntual el rendimiento prometido. Ahora piden que meta todo. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Retirar lo que pueda y no meter más",
+          "siguiente_nodo": "alternativa",
+          "consecuencia": "Pagar los primeros rendimientos es la carnada estándar de estos esquemas.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 3000
+        },
+        {
+          "id": "o2",
+          "texto": "Meter los $30,000: ya se demostró que pagan",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Los rendimientos iniciales se pagaban con el dinero de los nuevos participantes.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30000
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-prueba.webp"
+    },
+    "alternativa": {
+      "id": "alternativa",
+      "texto": "Buscando opciones autorizadas encuentran un banco con GAT bajo y una SOFIPO regulada con GAT algo mayor. ¿Cuál eligen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Repartir: parte en el banco para emergencias y parte en la SOFIPO regulada",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Ambas están supervisadas y cada una cubre una necesidad distinta.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1500
+        },
+        {
+          "id": "o2",
+          "texto": "Todo en el banco, es lo más seguro",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Decisión conservadora y perfectamente válida: nada en riesgo.",
+          "xp_bonus": 40,
+          "es_optima": false,
+          "impacto_patrimonio": 800
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-alternativa.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "El ahorro de la familia quedó en instituciones autorizadas y protegidas.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Verificar el registro oficial tomó dos minutos y protegió $30,000. Ninguna oficina elegante ni testimonio de conocido sustituye ese trámite.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-final_bueno.webp"
+    },
+    "sin_verificar": {
+      "id": "sin_verificar",
+      "texto": "A los cinco meses la \"financiera\" cerró y nadie contestó los teléfonos. No estaba autorizada, así que ninguna institución respondió.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Rendimiento imposible más ausencia de registro oficial es la combinación exacta que define un fraude. Ambas señales estaban a la vista antes de depositar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-sin_verificar.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "La familia perdió los $30,000 completos cuando el esquema colapsó.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Los primeros pagos puntuales no eran prueba de solidez: eran la inversión que el esquema hacía para conseguir el depósito grande.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-1-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p4/p4-1-8-a-portada.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-4-7-B",
+  "unit_code": "S1-4-7",
+  "unit_title": "MVP: el producto mínimo que ya sirve",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Definir el MVP",
+  "descripcion": "Comprueba que entiendes qué es y qué no es un MVP.",
+  "objetivo": "Verificar la comprensión del producto mínimo viable",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un MVP es:",
+      "opciones": [
+        "La versión más simple que ya entrega valor y permite aprender",
+        "Un prototipo interno",
+        "Un producto barato",
+        "Una maqueta"
+      ],
+      "correcta": 0,
+      "explicacion": "Alguien lo usa de verdad y muchas veces paga por él."
+    },
+    {
+      "id": "q2",
+      "texto": "Su propósito es:",
+      "opciones": [
+        "Impresionar",
+        "Enseñarte algo con la menor inversión posible",
+        "Vender mucho",
+        "Ganar premios"
+      ],
+      "correcta": 1,
+      "explicacion": "Aprender antes de comprometer todos los recursos."
+    },
+    {
+      "id": "q3",
+      "texto": "\"Mínimo\" significa:",
+      "opciones": [
+        "Mal hecho",
+        "Incompleto",
+        "Pocas funciones, bien hechas",
+        "Sin terminar"
+      ],
+      "correcta": 2,
+      "explicacion": "Se reduce el alcance, no la calidad."
+    },
+    {
+      "id": "q4",
+      "texto": "Un producto con diez funciones a medias:",
+      "opciones": [
+        "Enseña más",
+        "Es preferible",
+        "Vende mejor",
+        "Genera clientes molestos y ninguna conclusión"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin foco no se puede saber qué funcionó."
+    },
+    {
+      "id": "q5",
+      "texto": "El filtro para cada función es:",
+      "opciones": [
+        "¿Sin esto el cliente todavía resuelve su problema?",
+        "¿Es bonita?",
+        "¿Es cara?",
+        "¿La tiene la competencia?"
+      ],
+      "correcta": 0,
+      "explicacion": "Si la respuesta es sí, esa función sale de la primera versión."
+    },
+    {
+      "id": "q6",
+      "texto": "Antes de lanzar hay que definir:",
+      "opciones": [
+        "El logotipo",
+        "Qué se quiere aprender y qué señal lo confirmaría",
+        "El precio final",
+        "La marca registrada"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin eso, cualquier resultado se interpreta como uno quiera."
+    },
+    {
+      "id": "q7",
+      "texto": "Las señales útiles son:",
+      "opciones": [
+        "Cumplidos y seguidores",
+        "Visitas al sitio",
+        "Uso repetido, pago o recomendación",
+        "Comentarios positivos"
+      ],
+      "correcta": 2,
+      "explicacion": "Comportamientos, no opiniones."
+    },
+    {
+      "id": "q8",
+      "texto": "Publicitar un producto que aún no funciona:",
+      "opciones": [
+        "Lo corrige",
+        "Lo mejora",
+        "Atrae inversión",
+        "Acelera la pérdida"
+      ],
+      "correcta": 3,
+      "explicacion": "Primero se confirma que sirve; después se le pone gasolina."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-7-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-7-b-escena.webp"
+}

@@ -6,113 +6,176 @@
   "edad": "14-15 años",
   "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "Protegiendo el Patrimonio Familiar",
-  "descripcion": "Has construido una fortuna. ¿Cómo te asegurarás de que sirva para tus hijos y nietos y no se pierda en juicios o malas manos?",
-  "objetivo": "Comprender la función de los fideicomisos y protocolos familiares en la preservación de la riqueza a largo plazo",
-  "xp": 600,
-  "personaje_principal": "Fundador de Corporativo 'Legado'",
-  "contexto_inicial": "Tienes 65 años y una empresa que vale $100 millones. Tus tres hijos tienen visiones diferentes sobre el negocio. El riesgo de que la empresa se divida o quiebre al faltar tú es alto.",
-  "nodo_inicial": "la_sucesion",
+  "titulo": "Diez Apuestas",
+  "descripcion": "Un tío le deja a Sebastián $500,000 y le dice: \"inviértelos en startups mexicanas\". Sebastián cree que se trata de elegir bien. En realidad se trata de entender cómo funcionan las matemáticas del capital de riesgo.",
+  "objetivo": "Conocer el ecosistema de inversión ángel y crowdfunding de capital, comprendiendo la distribución de resultados y la importancia del portafolio.",
+  "xp": 800,
+  "personaje_principal": "Sebastián",
+  "contexto_inicial": "De cada 10 startups financiadas, históricamente 5 mueren, 3 devuelven poco o nada, 1 va bien y 1 puede multiplicar por 20 lo invertido.",
+  "nodo_inicial": "la_estrategia",
   "nodos": {
-    "la_sucesion": {
-      "id": "la_sucesion",
-      "texto": "Un consultor te sugiere crear un Fideicomiso donde las reglas de la empresa estén claras para todos los herederos. ¿Qué haces?",
+    "la_estrategia": {
+      "id": "la_estrategia",
+      "texto": "Con $500,000, ¿cómo los reparte?",
       "opciones": [
         {
-          "id": "crear_fideicomiso",
-          "texto": "Crear el Fideicomiso y un Protocolo Familiar (Reglas claras)",
-          "siguiente_nodo": "paz_y_crecimiento",
-          "consecuencia": "Aunque fue un proceso difícil, todos los hijos aceptaron las reglas. La empresa está protegida legalmente contra deudas personales de los socios.",
+          "id": "diez",
+          "texto": "Diez apuestas de $50,000 cada una en sectores distintos",
+          "siguiente_nodo": "la_seleccion",
+          "consecuencia": "Acepta que la mayoría fallará y que necesita estar presente cuando una explote.",
           "xp_bonus": 300,
           "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "dejar_testamento",
-          "texto": "Solo dejar un testamento sencillo y que ellos decidan (Libertad total)",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "A tu muerte, los hijos iniciaron un juicio que duró 10 años. La empresa se detuvo y perdió la mitad de su valor en abogados.",
+          "id": "una",
+          "texto": "Todo en la que más le convence",
+          "siguiente_nodo": "la_apuesta_unica",
+          "consecuencia": "Una sola carta en un juego donde la mitad de las cartas pierde.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "dos",
+          "texto": "Dos apuestas de $250,000: las que mejor se ven",
+          "siguiente_nodo": "la_apuesta_unica",
+          "consecuencia": "Mejor que una, todavía muy lejos de la diversificación necesaria.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": 0
+        }
+      ]
+    },
+    "la_apuesta_unica": {
+      "id": "la_apuesta_unica",
+      "texto": "Con tan pocas apuestas, la probabilidad de que ninguna sea la ganadora es altísima. El modelo del capital de riesgo no funciona sin número: es estadística, no puntería.",
+      "opciones": [
+        {
+          "id": "corregir",
+          "texto": "Reconsiderar y repartir en diez apuestas",
+          "siguiente_nodo": "la_seleccion",
+          "consecuencia": "Entiende que en este juego el tamaño del portafolio es la estrategia.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "seguir",
+          "texto": "Mantener la apuesta concentrada",
+          "siguiente_nodo": "final_concentrado",
+          "consecuencia": "Apuesta todo a que él sabe elegir mejor que fondos profesionales.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -400000
+        }
+      ]
+    },
+    "la_seleccion": {
+      "id": "la_seleccion",
+      "texto": "Ahora tiene que elegir diez. Le llegan decenas de propuestas. ¿Qué mira primero?",
+      "opciones": [
+        {
+          "id": "equipo",
+          "texto": "El equipo: quiénes son y si ya resolvieron problemas difíciles antes",
+          "siguiente_nodo": "el_vehiculo",
+          "consecuencia": "Las ideas cambian; la capacidad de ejecutar del equipo, no.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "idea",
+          "texto": "La idea: cuál suena más innovadora",
+          "siguiente_nodo": "el_vehiculo",
+          "consecuencia": "Las ideas brillantes son abundantes; la ejecución es lo escaso.",
           "xp_bonus": 100,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
-    },
-    "paz_y_crecimiento": {
-      "id": "paz_y_crecimiento",
-      "texto": "Pasan 20 años. Tus nietos están estudiando. El fideicomiso paga sus estudios y la empresa sigue creciendo bajo un director profesional.",
-      "opciones": [
-        {
-          "id": "final_imperio_eterno",
-          "texto": "Felicidades, has creado un legado.",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Tu familia está unida y protegida.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "conflicto_familiar": {
-      "id": "conflicto_familiar",
-      "texto": "La fortuna se esfumó. El dinero mal administrado y los pleitos legales destruyeron lo que te tomó 40 años construir.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "El blindaje patrimonial no es solo para los 'ricos', sino para cualquiera que quiera proteger su esfuerzo futuro."
-    },
-    "final_legado_exitoso": {
-      "id": "final_legado_exitoso",
-      "texto": "¡Misión Cumplida! Eres un maestro del blindaje patrimonial.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "Un fideicomiso es una herramienta que separa la propiedad legal de los beneficios, protegiendo los activos de eventos externos."
-    },
-    "reto_inesperado": {
-      "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "proyeccion",
+          "texto": "Las proyecciones financieras a cinco años",
+          "siguiente_nodo": "el_vehiculo",
+          "consecuencia": "A cinco años, toda proyección de una startup es ficción.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
         }
       ]
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    "el_vehiculo": {
+      "id": "el_vehiculo",
+      "texto": "¿Cómo invierte? Hay tres vías: directo con contrato propio, a través de una plataforma de crowdfunding de capital regulada por la Ley Fintech, o entrando a un fondo profesional.",
+      "opciones": [
+        {
+          "id": "regulado",
+          "texto": "Plataforma regulada y verificada ante la CNBV",
+          "siguiente_nodo": "el_resultado",
+          "consecuencia": "Contratos estandarizados, información periódica y respaldo legal.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "fondo",
+          "texto": "Entrar a un fondo profesional con otros inversionistas",
+          "siguiente_nodo": "el_resultado",
+          "consecuencia": "Menos control y acceso a mejores oportunidades y a un equipo experto.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "informal",
+          "texto": "De palabra, con un amigo emprendedor",
+          "siguiente_nodo": "final_sin_papeles",
+          "consecuencia": "Sin contrato, sin porcentaje definido y sin derechos.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -500000
+        }
+      ]
     },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    "el_resultado": {
+      "id": "el_resultado",
+      "texto": "Cinco años después: cinco startups cerraron, tres devolvieron menos de lo invertido, una duplicó y una se vendió multiplicando por 18. ¿Qué concluye Sebastián?",
+      "opciones": [
+        {
+          "id": "entender",
+          "texto": "Que el modelo funcionó exactamente como debía: una sola pagó todo lo demás",
+          "siguiente_nodo": "final_portafolio",
+          "consecuencia": "Recupera $1,020,000 de los $500,000 invertidos.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 520000
+        },
+        {
+          "id": "lamentar",
+          "texto": "Que se equivocó en ocho de diez y que no sirve para esto",
+          "siguiente_nodo": "final_portafolio",
+          "consecuencia": "La lectura emocional es esa; la matemática dice lo contrario.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 520000
+        }
+      ]
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+    "final_portafolio": {
+      "id": "final_portafolio",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Duplicó su capital habiéndose \"equivocado\" en ocho de diez casos. Así funciona el capital de riesgo: la ganancia no viene de acertar seguido, sino de tener una posición cuando algo explota.",
+      "reflexion_final": "Invertir en startups es la clase de activo más riesgosa que existe: la mayoría de las empresas muere y el dinero queda inmovilizado años. Solo tiene sentido con dinero que puedes perder entero, con un número suficiente de apuestas, apostando al equipo más que a la idea, y siempre a través de vehículos regulados con contratos claros."
+    },
+    "final_concentrado": {
+      "id": "final_concentrado",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "La startup elegida cerró a los 26 meses. De los $500,000 recuperó $0. La empresa que sí despegó estaba en el grupo que descartó.",
+      "reflexion_final": "En capital de riesgo, concentrar no es convicción: es ignorar cómo se distribuyen los resultados. Los fondos profesionales invierten en decenas de empresas precisamente porque saben que no pueden predecir cuál será la ganadora."
+    },
+    "final_sin_papeles": {
+      "id": "final_sin_papeles",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "La empresa creció y, al llegar un inversionista formal, resultó que Sebastián no aparecía en ningún documento societario. Su \"inversión\" era, legalmente, un préstamo sin contrato.",
+      "reflexion_final": "Sin contrato no eres socio: eres alguien que dio dinero. Porcentaje, derechos, información y condiciones de salida se firman antes de transferir un peso, aunque sea con un amigo. Sobre todo si es con un amigo."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-3-8-B",
+  "unit_code": "P5-3-8",
+  "unit_title": "Fondos de inversión: invertir en equipo",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Invertir en Equipo",
+  "descripcion": "Comprueba que sabes cómo funciona y cómo evaluar un fondo.",
+  "objetivo": "Verificar la comprensión de los fondos de inversión y sus costos",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un fondo de inversión:",
+      "opciones": [
+        "Es un préstamo",
+        "Reúne dinero de muchos y lo invierte con una estrategia",
+        "Es una cuenta de ahorro",
+        "Garantiza ganancias"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada participante posee una fracción proporcional a lo que aportó."
+    },
+    {
+      "id": "q2",
+      "texto": "El problema que resuelve es:",
+      "opciones": [
+        "Eliminar el riesgo",
+        "Evitar impuestos",
+        "Permitir diversificar con montos pequeños",
+        "Garantizar rendimiento"
+      ],
+      "correcta": 2,
+      "explicacion": "Solo, con poco dinero, no puedes comprar diez instrumentos distintos."
+    },
+    {
+      "id": "q3",
+      "texto": "La estrategia del fondo está:",
+      "opciones": [
+        "En la publicidad",
+        "En ningún lado",
+        "En la app",
+        "Por escrito en el prospecto"
+      ],
+      "correcta": 3,
+      "explicacion": "Elegir un fondo es elegir su estrategia, no su nombre."
+    },
+    {
+      "id": "q4",
+      "texto": "La comisión se cobra:",
+      "opciones": [
+        "Sobre el monto administrado, cada año",
+        "Solo sobre la ganancia",
+        "Una sola vez",
+        "Nunca"
+      ],
+      "correcta": 0,
+      "explicacion": "Incluidos los rendimientos ya acumulados."
+    },
+    {
+      "id": "q5",
+      "texto": "A diez años, 1.5 puntos de diferencia en comisión:",
+      "opciones": [
+        "Son irrelevantes",
+        "Representan una parte sustancial del resultado",
+        "Se compensan solos",
+        "No se pueden calcular"
+      ],
+      "correcta": 1,
+      "explicacion": "El efecto se acumula año tras año sobre un saldo creciente."
+    },
+    {
+      "id": "q6",
+      "texto": "Las cuatro preguntas son:",
+      "opciones": [
+        "Color, tamaño, marca y precio",
+        "Cuánto y cuándo",
+        "Estrategia, comisión, liquidez y administrador",
+        "Quién lo recomienda"
+      ],
+      "correcta": 2,
+      "explicacion": "Si un fondo no responde las cuatro con claridad, no debería recibir tu dinero."
+    },
+    {
+      "id": "q7",
+      "texto": "El fondo más estable suele ser:",
+      "opciones": [
+        "El de renta variable",
+        "El agresivo",
+        "El internacional",
+        "El de deuda de corto plazo"
+      ],
+      "correcta": 3,
+      "explicacion": "Baja variación, útil para dinero que se puede necesitar pronto."
+    },
+    {
+      "id": "q8",
+      "texto": "El rendimiento pasado de un fondo:",
+      "opciones": [
+        "No garantiza nada",
+        "Garantiza el futuro",
+        "Es lo único importante",
+        "Es un contrato"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la trampa más común al elegir un fondo."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-8-b-escena.webp"
+}

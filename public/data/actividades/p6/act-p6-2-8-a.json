@@ -1,0 +1,179 @@
+{
+  "code": "ACT-P6-2-8-A",
+  "unit_code": "P6-2-8",
+  "unit_title": "Reestructurar: cuando la deuda ya no se puede pagar",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Propuesta de Reestructura",
+  "descripcion": "Arma una propuesta realista para renegociar una deuda que ya no cabe.",
+  "objetivo": "Calcular capacidad de pago real y construir una propuesta de reestructura",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La deuda actual",
+      "descripcion": "Las condiciones que ya no se pueden sostener.",
+      "campos": [
+        {
+          "id": "saldo",
+          "label": "Saldo que falta por pagar",
+          "type": "number",
+          "min": 1000,
+          "max": 500000,
+          "default": 45000,
+          "unit": "$",
+          "placeholder": "45000",
+          "requerido": true
+        },
+        {
+          "id": "mensualidad_actual",
+          "label": "Mensualidad actual",
+          "type": "slider",
+          "min": 200,
+          "max": 20000,
+          "step": 100,
+          "default": 3500,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "tasa",
+          "label": "Tasa anual del crédito",
+          "type": "slider",
+          "min": 5,
+          "max": 80,
+          "step": 1,
+          "default": 35,
+          "unit": "%",
+          "ayuda": "Viene en el contrato y en el estado de cuenta.",
+          "requerido": true
+        },
+        {
+          "id": "meses_restantes",
+          "label": "Meses que faltan al ritmo actual",
+          "type": "calculated",
+          "formula": "Math.ceil(saldo / Math.max(1, mensualidad_actual))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi capacidad real",
+      "descripcion": "Cuánto puedo pagar sin sacrificar lo esencial.",
+      "campos": [
+        {
+          "id": "ingreso",
+          "label": "Ingreso mensual",
+          "type": "number",
+          "min": 1000,
+          "max": 200000,
+          "default": 14000,
+          "unit": "$",
+          "placeholder": "14000",
+          "requerido": true
+        },
+        {
+          "id": "gastos_esenciales",
+          "label": "Gastos esenciales del mes",
+          "type": "number",
+          "min": 500,
+          "max": 200000,
+          "default": 10500,
+          "unit": "$",
+          "placeholder": "10500",
+          "requerido": true,
+          "ayuda": "Vivienda, comida, salud, transporte: lo que no se puede recortar."
+        },
+        {
+          "id": "capacidad",
+          "label": "Lo que realmente puedo destinar al pago",
+          "type": "calculated",
+          "formula": "Math.max(0, ingreso - gastos_esenciales)",
+          "unit": "$"
+        },
+        {
+          "id": "faltante",
+          "label": "Cuánto me falta para la mensualidad actual",
+          "type": "calculated",
+          "formula": "Math.max(0, mensualidad_actual - Math.max(0, ingreso - gastos_esenciales))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi propuesta",
+      "descripcion": "El plan concreto que voy a presentar.",
+      "campos": [
+        {
+          "id": "propuesta_mensual",
+          "label": "Mensualidad que propongo",
+          "type": "slider",
+          "min": 100,
+          "max": 20000,
+          "step": 100,
+          "default": 2500,
+          "unit": "$",
+          "ayuda": "Debe ser realista: prometer de más lleva a incumplir otra vez.",
+          "requerido": true
+        },
+        {
+          "id": "meses_propuesta",
+          "label": "Meses que tomaría con esa mensualidad",
+          "type": "calculated",
+          "formula": "Math.ceil(saldo / Math.max(1, propuesta_mensual))",
+          "unit": "meses"
+        },
+        {
+          "id": "meses_extra",
+          "label": "Meses adicionales respecto al plan original",
+          "type": "calculated",
+          "formula": "Math.ceil(saldo / Math.max(1, propuesta_mensual)) - Math.ceil(saldo / Math.max(1, mensualidad_actual))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "El costo de alargar",
+      "descripcion": "Cuánto más se paga por bajar la mensualidad.",
+      "campos": [
+        {
+          "id": "intereses_original",
+          "label": "Intereses aproximados con el plan original",
+          "type": "calculated",
+          "formula": "Math.round(saldo * tasa / 100 * Math.ceil(saldo / Math.max(1, mensualidad_actual)) / 24)",
+          "unit": "$"
+        },
+        {
+          "id": "intereses_propuesta",
+          "label": "Intereses aproximados con la propuesta",
+          "type": "calculated",
+          "formula": "Math.round(saldo * tasa / 100 * Math.ceil(saldo / Math.max(1, propuesta_mensual)) / 24)",
+          "unit": "$"
+        },
+        {
+          "id": "costo_alargar",
+          "label": "Lo que cuesta alargar el plazo",
+          "type": "calculated",
+          "formula": "Math.round(saldo * tasa / 100 * Math.ceil(saldo / Math.max(1, propuesta_mensual)) / 24 - saldo * tasa / 100 * Math.ceil(saldo / Math.max(1, mensualidad_actual)) / 24)",
+          "unit": "$"
+        },
+        {
+          "id": "alivio_mensual",
+          "label": "Alivio mensual que consigo",
+          "type": "calculated",
+          "formula": "Math.max(0, mensualidad_actual - propuesta_mensual)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "propuesta_reestructura",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-2-8-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-8-a-escena.webp"
+}

@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P4-2-8-A",
+  "unit_code": "P4-2-8",
+  "unit_title": "Phishing: el mensaje que parece de mi banco",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "El Mensaje del Banco",
+  "descripcion": "A Ceny le llega un mensaje alarmante. Cada decisión define si sus datos quedan seguros.",
+  "objetivo": "Aplicar el protocolo de verificación ante un intento de phishing",
+  "xp": 400,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Al celular de la mamá de Ceny llega un SMS: \"BANCO: detectamos un cargo de $8,450. Si no lo reconoce, verifique aquí en las próximas 2 horas o su cuenta será bloqueada.\"",
+  "nodo_inicial": "mensaje",
+  "nodos": {
+    "mensaje": {
+      "id": "mensaje",
+      "texto": "El mensaje trae un enlace y un número de teléfono. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "No tocar el enlace y entrar al banco por la app oficial",
+          "siguiente_nodo": "verificacion",
+          "consecuencia": "En la app no hay ningún cargo ni ninguna alerta. El mensaje era falso.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Dar clic en el enlace para ver qué dice",
+          "siguiente_nodo": "enlace",
+          "consecuencia": "Se abre una página idéntica a la del banco que pide usuario y contraseña.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Llamar al número que viene en el mensaje",
+          "siguiente_nodo": "llamada",
+          "consecuencia": "Contesta alguien muy amable que se presenta como ejecutivo del banco.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-mensaje.webp"
+    },
+    "enlace": {
+      "id": "enlace",
+      "texto": "La página pide usuario y contraseña. Se ve idéntica a la del banco. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Cerrarla y revisar la dirección: no es el sitio oficial",
+          "siguiente_nodo": "verificacion",
+          "consecuencia": "La dirección tenía letras de más. Cerraron a tiempo.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Escribir usuario y contraseña para revisar el cargo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Los datos se entregaron directamente al estafador.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -8450
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-enlace.webp"
+    },
+    "llamada": {
+      "id": "llamada",
+      "texto": "El supuesto ejecutivo pide el código de seis dígitos que acaba de llegar por SMS. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Colgar: ningún banco pide ese código",
+          "siguiente_nodo": "verificacion",
+          "consecuencia": "Ese código es justo lo que necesitaba para completar la operación.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Dárselo, suena muy profesional",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Con ese código autorizó la transferencia que el estafador ya tenía preparada.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -8450
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-llamada.webp"
+    },
+    "verificacion": {
+      "id": "verificacion",
+      "texto": "Confirmado: no había ningún cargo. ¿Qué hacen con el mensaje?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reportarlo al banco y avisar a la familia que circula ese fraude",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Avisar evita que alguien más de la familia caiga con el mismo mensaje.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Borrarlo y ya",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Ellos quedaron a salvo, pero el mismo mensaje llegará a otros teléfonos de la casa.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-verificacion.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La cuenta quedó intacta, el fraude reportado y toda la familia advertida.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "No tocar el enlace, entrar por el canal oficial y verificar: tres pasos que funcionan igual aunque el mensaje hubiera sido real. Por eso se aplican siempre.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La cuenta quedó a salvo, pero nadie más se enteró del intento.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Protegerse está bien; avisar protege a los demás. Estos mensajes se envían por miles y alguien más de la casa lo va a recibir.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Con los datos entregados, el estafador vació la cuenta en minutos.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "El mensaje no hackeó nada: consiguió que la información se entregara voluntariamente. La urgencia fue la herramienta, y el protocolo de tres pasos la habría desactivado por completo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p4/p4-2-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p4/p4-2-8-a-portada.webp"
+}

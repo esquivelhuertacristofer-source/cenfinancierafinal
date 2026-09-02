@@ -4,142 +4,107 @@
   "unit_title": "El Perfil de Inversionista: conócete a ti mismo",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "ALTO",
-  "titulo": "La Máquina del Tiempo Financiera",
-  "descripcion": "Ya conoces el interés compuesto, pero ¿qué pasa si además ahorras un poquito extra cada mes? ¡Ve cómo tu dinero se multiplica a la velocidad de la luz!",
-  "objetivo": "Visualizar el impacto de las aportaciones recurrentes en el crecimiento exponencial del capital",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Tu Perfil de Inversionista",
+  "descripcion": "No existe una inversión buena para todo el mundo. Existe la inversión buena PARA TI. Y eso depende de tres cosas: cuándo necesitas el dinero, cuánto aguantas ver pérdidas y para qué es.",
+  "objetivo": "Identificar el propio perfil de tolerancia al riesgo comprendiendo la relación entre seguridad, plazo y ganancia posible.",
   "xp": 500,
-  "descripcion_formula": "Calculamos el Valor Futuro con Anualidades: [P*(1+i)^n] + [PMT * (((1+i)^n - 1) / i)]. El ahorro constante es la clave.",
-  "inputs": [
+  "output_type": "perfil_inversionista",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "capital_p5",
-      "label": "Inversión inicial",
-      "type": "slider",
-      "min": 1000,
-      "max": 10000,
-      "step": 1000,
-      "default": 5000,
-      "unit": "$"
+      "id": "meta",
+      "titulo": "🎯 ¿Para qué es este dinero?",
+      "descripcion": "La primera pregunta nunca es \"¿cuánto gano?\", sino \"¿para qué lo quiero?\".",
+      "campos": [
+        {
+          "id": "objetivo_meta",
+          "label": "¿Qué quieres lograr con este dinero?",
+          "type": "text",
+          "placeholder": "Ej: comprar una bici / estudiar",
+          "requerido": true
+        },
+        {
+          "id": "monto",
+          "label": "¿Cuánto vas a invertir? ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        }
+      ]
     },
     {
-      "id": "ahorro_mensual_p5",
-      "label": "Ahorro extra mensual",
-      "type": "slider",
-      "min": 100,
-      "max": 2000,
-      "step": 100,
-      "default": 500,
-      "unit": "$"
+      "id": "plazo",
+      "titulo": "⏳ ¿Cuándo lo necesitas?",
+      "descripcion": "Cuanto más lejos esté la fecha, más riesgo puedes permitirte: hay tiempo para recuperarse de un mal año.",
+      "campos": [
+        {
+          "id": "meses_plazo",
+          "label": "¿En cuántos meses lo vas a usar?",
+          "type": "number",
+          "placeholder": "Ej: 36",
+          "requerido": true
+        },
+        {
+          "id": "puntos_plazo",
+          "label": "Puntos por plazo",
+          "type": "calculated",
+          "formula": "Math.min(40, Math.round(meses_plazo / 3))",
+          "unit": "pts",
+          "requerido": false,
+          "ayuda": "Dinero que necesitas en 3 meses no debería estar en nada que pueda bajar."
+        }
+      ]
     },
     {
-      "id": "tasa_anual_p5",
-      "label": "Tasa de rendimiento (%)",
-      "type": "slider",
-      "min": 5,
-      "max": 15,
-      "step": 1,
-      "default": 10,
-      "unit": "%"
+      "id": "aguante",
+      "titulo": "😰 ¿Cuánto aguantas?",
+      "descripcion": "Imagina que tu inversión baja y de $1,000 ves $800. ¿Cuánto tiempo podrías dormir tranquilo así?",
+      "campos": [
+        {
+          "id": "baja_tolerable",
+          "label": "¿Cuánto podría bajar sin que la vendieras? (%)",
+          "type": "number",
+          "placeholder": "Ej: 20",
+          "requerido": true,
+          "ayuda": "Sé honesto contigo. Casi todo el mundo dice 30% y vende cuando ve 10%."
+        },
+        {
+          "id": "puntos_riesgo",
+          "label": "Puntos por tolerancia",
+          "type": "calculated",
+          "formula": "Math.min(60, Math.round(baja_tolerable * 1.5))",
+          "unit": "pts",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "anios_p5",
-      "label": "Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 20,
-      "step": 1,
-      "default": 10,
-      "unit": "años"
+      "id": "resultado",
+      "titulo": "🧭 Tu perfil",
+      "descripcion": "Suma los puntos. Entre 0 y 35 eres conservador; entre 36 y 70, moderado; arriba de 70, agresivo.",
+      "campos": [
+        {
+          "id": "perfil_total",
+          "label": "Puntaje de tu perfil",
+          "type": "calculated",
+          "formula": "Math.min(40, Math.round(meses_plazo / 3)) + Math.min(60, Math.round(baja_tolerable * 1.5))",
+          "unit": "pts",
+          "requerido": false,
+          "ayuda": "Conservador → CETES y pagarés. Moderado → mezcla de deuda y fondos. Agresivo → más acciones, y solo con dinero que no necesitas pronto."
+        },
+        {
+          "id": "en_riesgo",
+          "label": "Dinero que podrías llegar a ver perdido temporalmente",
+          "type": "calculated",
+          "formula": "Math.round(monto * baja_tolerable / 100)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Míralo bien. Si esa cantidad te asusta, tu perfil real es más conservador de lo que pusiste."
+        }
+      ]
     }
   ],
-  "formula": "capital_p5 * Math.pow(1 + tasa_anual_p5/100, anios_p5) + (ahorro_mensual_p5 * 12 * (Math.pow(1 + tasa_anual_p5/100, anios_p5) - 1) / (tasa_anual_p5/100))",
-  "output_label": "Tu Capital Final Proyectado",
-  "output_prefix": "$",
-  "output_suffix": " pesos",
-  "chart_type": "line",
-  "escenarios": [
-    {
-      "condicion": "resultado > 100000",
-      "mensaje": "🚀 ¡Felicidades! Te has convertido en un maestro de la capitalización. Con este ritmo serás libre financieramente muy joven.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "resultado > 20000 && resultado <= 100000",
-      "mensaje": "📈 ¡Excelente progreso! El ahorro constante está haciendo su magia. Sigue así.",
-      "tipo": "info"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "💡 Tip: Si subes el 'Ahorro mensual' aunque sea $100, verás un cambio gigante al final de los años.",
-      "tipo": "info"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Eres inversionista conservador, moderado o agresivo? ¿Cómo cambiaría tu estrategia si necesitas el dinero en 1 año vs si lo necesitas en 20 años?",
-  "comparativa_espera": "En México, el 90% de la riqueza está concentrada en el 10% de la población. La diferencia no es solo el ingreso — es que ese 10% invierte consistentemente su excedente. La inversión es el puente entre el trabajo y el patrimonio.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "retorno_porcentual",
-      "label": "Retorno Porcentual",
-      "formula": "Math.round((resultado_principal / (resultado_principal * 0.85) - 1) * 100 * 10) / 10",
-      "prefix": "",
-      "suffix": "% de retorno",
-      "descripcion": "El porcentaje de ganancia sobre la inversión"
-    },
-    {
-      "id": "en_3_anios",
-      "label": "Proyección 3 Años",
-      "formula": "Math.round(resultado_principal * Math.pow(1.10, 3))",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Si el rendimiento se mantiene al 10% anual"
-    },
-    {
-      "id": "meta_libertad",
-      "label": "Para Alcanzar $1,000,000",
-      "formula": "Math.round(1000000 / resultado_principal)",
-      "prefix": "",
-      "suffix": " períodos así",
-      "descripcion": "Cuántas veces necesitas repetir este resultado para llegar a 1M"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "retorno_porcentual",
-      "label": "Retorno Porcentual",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

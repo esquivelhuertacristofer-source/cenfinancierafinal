@@ -1,0 +1,190 @@
+{
+  "code": "ACT-P3-1-8-A",
+  "unit_code": "P3-1-8",
+  "unit_title": "Gastos hormiga: los pesos que desaparecen sin darme cuenta",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Hormiga de Ceny",
+  "descripcion": "Ceny descubrió cuánto se le va en gastos pequeños. Cada decisión define cuánto recupera.",
+  "objetivo": "Decidir sobre gastos hormiga con información del acumulado anual",
+  "xp": 200,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny registró dos semanas y encontró tres gastos hormiga: un jugo de $15 diario, un dulce de $8 diario y una recarga de $20 semanales. Quiere una tablet de $3,000.",
+  "nodo_inicial": "calculo",
+  "nodos": {
+    "calculo": {
+      "id": "calculo",
+      "texto": "Primero Ceny quiere saber de cuánto está hablando. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Multiplicar cada gasto por los días del año",
+          "siguiente_nodo": "decision",
+          "consecuencia": "El jugo son $5,475 al año, el dulce $2,920 y la recarga $1,040. Más de $9,000.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Suponer que \"no es tanto\"",
+          "siguiente_nodo": "sin_datos",
+          "consecuencia": "Sin el número real, no hay forma de decidir nada.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Decidir eliminarlos todos de inmediato",
+          "siguiente_nodo": "prohibicion",
+          "consecuencia": "Prohibirse tres cosas a la vez casi nunca se sostiene.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-calculo.webp"
+    },
+    "sin_datos": {
+      "id": "sin_datos",
+      "texto": "Pasan dos meses y la tablet sigue igual de lejos. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Hacer por fin la multiplicación",
+          "siguiente_nodo": "decision",
+          "consecuencia": "El número lo deja frío: ahí estaba el dinero de la tablet, en pedacitos.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Concluir que ahorrar no funciona",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "No es que no funcione: es que nunca miró dónde se iba el dinero.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-sin_datos.webp"
+    },
+    "prohibicion": {
+      "id": "prohibicion",
+      "texto": "Ceny aguantó cuatro días sin ninguno de los tres y al quinto se hartó y compró todo. ¿Qué aprende?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que conviene sustituir en vez de prohibir",
+          "siguiente_nodo": "decision",
+          "consecuencia": "Llevar el jugo de casa conserva el gusto y recupera casi todo el dinero.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que no tiene fuerza de voluntad",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "No era falta de voluntad: era una estrategia mal diseñada.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-prohibicion.webp"
+    },
+    "decision": {
+      "id": "decision",
+      "texto": "Con el número enfrente, Ceny decide qué hacer con cada gasto. El jugo lo disfruta mucho; el dulce lo compra por costumbre y ni lo saborea.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Llevar el jugo de casa y cortar el dulce que no disfruta",
+          "siguiente_nodo": "meta",
+          "consecuencia": "Sustituye lo que le gusta y elimina lo que hacía en automático.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Cortar el jugo, que es el más caro, y conservar el dulce",
+          "siguiente_nodo": "meta",
+          "consecuencia": "Recupera más dinero, pero quitó justo lo que sí disfrutaba.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 5475
+        },
+        {
+          "id": "o3",
+          "texto": "No cortar nada, total ya sabe el número",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Saber sin actuar deja todo exactamente igual que antes.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-decision.webp"
+    },
+    "meta": {
+      "id": "meta",
+      "texto": "Con lo recuperado, ¿qué hace Ceny para que ese dinero no se vaya en otra cosa?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Guardarlo el mismo día en su meta de la tablet",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Dinero recuperado que no se aparta, se vuelve a ir en otro lado.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlo en el bolsillo, ya lo guardará después",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El dinero sin destino asignado encuentra uno solo, como siempre.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-meta.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ocho meses después Ceny compró su tablet, y sigue tomando su jugo todos los días.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny no se privó de lo que disfrutaba: sustituyó lo que podía y cortó lo que hacía en automático. El dinero de la tablet siempre estuvo ahí, repartido en pedacitos de $8 y $15.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny sabe cuánto se le va, pero la tablet sigue lejos.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Calcular es el primer paso, pero solo el primero. Sin decidir qué cortar y sin apartar lo recuperado, el número se queda en una curiosidad.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny abandonó la meta convencido de que no gana suficiente.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Se le iban más de $9,000 al año en gastos de $8 y $15. El problema nunca fue cuánto recibía: era que nunca miró a dónde se iba.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p3/p3-1-8-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p3/p3-1-8-a-portada.webp"
+}

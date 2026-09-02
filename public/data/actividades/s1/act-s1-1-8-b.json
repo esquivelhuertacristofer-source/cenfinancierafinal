@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-1-8-B",
+  "unit_code": "S1-1-8",
+  "unit_title": "Informalidad laboral: la mitad de México sin prestaciones",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Informalidad Laboral",
+  "descripcion": "Comprueba que entiendes qué está en juego.",
+  "objetivo": "Verificar la comprensión de la informalidad y sus costos",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La informalidad en México abarca:",
+      "opciones": [
+        "Menos del 5% de los ocupados",
+        "Casi a nadie",
+        "Cerca de la mitad de los ocupados",
+        "Solo al campo"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la situación de una parte enorme de la población trabajadora."
+    },
+    {
+      "id": "q2",
+      "texto": "Trabajar informalmente significa:",
+      "opciones": [
+        "No trabajar",
+        "Trabajar por horas",
+        "Trabajar sin sueldo",
+        "Trabajar sin registro ante la seguridad social"
+      ],
+      "correcta": 3,
+      "explicacion": "La persona trabaja y genera ingreso, pero queda fuera del sistema de protección."
+    },
+    {
+      "id": "q3",
+      "texto": "Un trabajador informal no tiene:",
+      "opciones": [
+        "Atención médica institucional ni incapacidad pagada",
+        "Ingresos",
+        "Horario",
+        "Clientes"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada gasto médico sale directo de su bolsillo."
+    },
+    {
+      "id": "q4",
+      "texto": "En cuanto al retiro:",
+      "opciones": [
+        "Se aporta igual",
+        "No hay aportación a una cuenta de retiro",
+        "Se aporta el doble",
+        "Lo cubre el patrón"
+      ],
+      "correcta": 1,
+      "explicacion": "Nada se acumula para la vejez por esa vía."
+    },
+    {
+      "id": "q5",
+      "texto": "El costo de la informalidad aparece:",
+      "opciones": [
+        "Cada mes",
+        "Nunca",
+        "Concentrado en un momento difícil",
+        "Al inicio"
+      ],
+      "correcta": 2,
+      "explicacion": "Enfermedad, accidente, embarazo o despido."
+    },
+    {
+      "id": "q6",
+      "texto": "Ese patrón se parece al de:",
+      "opciones": [
+        "El ahorro",
+        "El crédito",
+        "La inversión",
+        "Los riesgos sin seguro"
+      ],
+      "correcta": 3,
+      "explicacion": "Poco probable pero devastador cuando ocurre."
+    },
+    {
+      "id": "q7",
+      "texto": "Las causas de la informalidad son:",
+      "opciones": [
+        "Estructurales más que personales",
+        "Personales",
+        "De actitud",
+        "De edad"
+      ],
+      "correcta": 0,
+      "explicacion": "Escasez de empleos formales, trámites complejos, evasión patronal."
+    },
+    {
+      "id": "q8",
+      "texto": "Conocer los derechos laborales:",
+      "opciones": [
+        "No sirve de nada",
+        "Es la condición para poder exigirlos",
+        "Solo sirve al patrón",
+        "Es opcional"
+      ],
+      "correcta": 1,
+      "explicacion": "No resuelve el problema estructural, pero es el primer paso."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-1-8-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-1-8-b-escena.webp"
+}

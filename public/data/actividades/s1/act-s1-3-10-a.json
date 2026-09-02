@@ -1,0 +1,224 @@
+{
+  "code": "ACT-S1-3-10-A",
+  "unit_code": "S1-3-10",
+  "unit_title": "Mi estado patrimonial: activos menos pasivos",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Estado Patrimonial",
+  "descripcion": "Suma lo que tienes, resta lo que debes y descubre tu posición real.",
+  "objetivo": "Elaborar un estado patrimonial completo y proyectar su evolución",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mis activos líquidos",
+      "descripcion": "Lo que puedo usar pronto.",
+      "campos": [
+        {
+          "id": "efectivo",
+          "label": "Efectivo y cuentas bancarias",
+          "type": "number",
+          "min": 0,
+          "max": 5000000,
+          "default": 18000,
+          "unit": "$",
+          "placeholder": "18000",
+          "requerido": true
+        },
+        {
+          "id": "inversiones",
+          "label": "Inversiones",
+          "type": "number",
+          "min": 0,
+          "max": 10000000,
+          "default": 25000,
+          "unit": "$",
+          "placeholder": "25000",
+          "requerido": true
+        },
+        {
+          "id": "afore",
+          "label": "Saldo de AFORE",
+          "type": "number",
+          "min": 0,
+          "max": 10000000,
+          "default": 42000,
+          "unit": "$",
+          "placeholder": "42000",
+          "requerido": true
+        },
+        {
+          "id": "liquidos",
+          "label": "Total de activos líquidos",
+          "type": "calculated",
+          "formula": "efectivo + inversiones + afore",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mis bienes",
+      "descripcion": "Valorados por lo que se venderían hoy, no por lo que costaron.",
+      "campos": [
+        {
+          "id": "vehiculo",
+          "label": "Valor actual del vehículo",
+          "type": "number",
+          "min": 0,
+          "max": 3000000,
+          "default": 95000,
+          "unit": "$",
+          "placeholder": "95000",
+          "ayuda": "Lo que te darían hoy por él, no lo que pagaste.",
+          "requerido": true
+        },
+        {
+          "id": "inmueble",
+          "label": "Valor actual de inmuebles",
+          "type": "number",
+          "min": 0,
+          "max": 30000000,
+          "default": 0,
+          "unit": "$",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "otros_bienes",
+          "label": "Equipo, herramientas y otros bienes",
+          "type": "number",
+          "min": 0,
+          "max": 2000000,
+          "default": 15000,
+          "unit": "$",
+          "placeholder": "15000",
+          "requerido": true
+        },
+        {
+          "id": "total_activos",
+          "label": "Total de activos",
+          "type": "calculated",
+          "formula": "efectivo + inversiones + afore + vehiculo + inmueble + otros_bienes",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mis pasivos",
+      "descripcion": "Saldos completos, no mensualidades.",
+      "campos": [
+        {
+          "id": "tarjetas",
+          "label": "Saldo total de tarjetas de crédito",
+          "type": "number",
+          "min": 0,
+          "max": 2000000,
+          "default": 22000,
+          "unit": "$",
+          "placeholder": "22000",
+          "ayuda": "El saldo que debes, no el pago mínimo.",
+          "requerido": true
+        },
+        {
+          "id": "personales",
+          "label": "Saldo de créditos personales",
+          "type": "number",
+          "min": 0,
+          "max": 3000000,
+          "default": 30000,
+          "unit": "$",
+          "placeholder": "30000",
+          "requerido": true
+        },
+        {
+          "id": "automotriz",
+          "label": "Saldo del crédito automotriz",
+          "type": "number",
+          "min": 0,
+          "max": 3000000,
+          "default": 65000,
+          "unit": "$",
+          "placeholder": "65000",
+          "requerido": true
+        },
+        {
+          "id": "hipotecario",
+          "label": "Saldo hipotecario",
+          "type": "number",
+          "min": 0,
+          "max": 20000000,
+          "default": 0,
+          "unit": "$",
+          "placeholder": "0",
+          "requerido": true
+        },
+        {
+          "id": "familiares",
+          "label": "Deudas con familiares o conocidos",
+          "type": "number",
+          "min": 0,
+          "max": 1000000,
+          "default": 5000,
+          "unit": "$",
+          "placeholder": "5000",
+          "requerido": true
+        },
+        {
+          "id": "total_pasivos",
+          "label": "Total de pasivos",
+          "type": "calculated",
+          "formula": "tarjetas + personales + automotriz + hipotecario + familiares",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi patrimonio neto",
+      "descripcion": "La cifra que dice dónde estás parado.",
+      "campos": [
+        {
+          "id": "patrimonio",
+          "label": "Patrimonio neto (activos menos pasivos)",
+          "type": "calculated",
+          "formula": "efectivo + inversiones + afore + vehiculo + inmueble + otros_bienes - tarjetas - personales - automotriz - hipotecario - familiares",
+          "unit": "$"
+        },
+        {
+          "id": "razon_deuda",
+          "label": "Porcentaje de mis activos comprometido en deudas",
+          "type": "calculated",
+          "formula": "Math.round((tarjetas + personales + automotriz + hipotecario + familiares) / Math.max(1, efectivo + inversiones + afore + vehiculo + inmueble + otros_bienes) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "mejora_mensual",
+          "label": "Cuánto puedo mejorarlo al mes",
+          "type": "slider",
+          "min": 0,
+          "max": 30000,
+          "step": 250,
+          "default": 2000,
+          "unit": "$",
+          "ayuda": "Ahorro más abono a capital de deudas.",
+          "requerido": true
+        },
+        {
+          "id": "meses_positivo",
+          "label": "Meses para llegar a patrimonio positivo",
+          "type": "calculated",
+          "formula": "Math.max(0, Math.ceil((tarjetas + personales + automotriz + hipotecario + familiares - efectivo - inversiones - afore - vehiculo - inmueble - otros_bienes) / Math.max(1, mejora_mensual)))",
+          "unit": "meses"
+        }
+      ]
+    }
+  ],
+  "output_type": "estado_patrimonial",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-3-10-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-10-a-escena.webp"
+}

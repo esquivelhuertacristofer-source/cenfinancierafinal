@@ -1,0 +1,103 @@
+{
+  "code": "ACT-S3-4-8-A",
+  "unit_code": "S3-4-8",
+  "unit_title": "Dilución: cuánto de mi empresa sigue siendo mía",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Cuánto Sigue Siendo Mío",
+  "descripcion": "Ajusta las rondas y observa tu participación y su valor.",
+  "objetivo": "Cuantificar la dilución acumulada y el valor resultante de la participación",
+  "xp": 1000,
+  "inputs": [
+    {
+      "id": "participacion_inicial",
+      "label": "Mi participación inicial",
+      "type": "slider",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "default": 100,
+      "unit": "%",
+      "referencia": "Con cuánto empiezas antes de cualquier ronda."
+    },
+    {
+      "id": "cesion_por_ronda",
+      "label": "Porcentaje que cedo en cada ronda",
+      "type": "slider",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "%",
+      "referencia": "Cada ronda se aplica sobre lo que quedaba."
+    },
+    {
+      "id": "rondas",
+      "label": "Número de rondas",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "unit": "rondas",
+      "referencia": "Cada ronda diluye a todos los accionistas previos."
+    },
+    {
+      "id": "reserva_equipo",
+      "label": "Reserva total para el equipo",
+      "type": "slider",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 10,
+      "unit": "%",
+      "referencia": "Suele salir de la parte del fundador."
+    },
+    {
+      "id": "valuacion_final",
+      "label": "Valuación final de la empresa",
+      "type": "slider",
+      "min": 1000000,
+      "max": 500000000,
+      "step": 1000000,
+      "default": 80000000,
+      "unit": "$",
+      "referencia": "Lo que vale la empresa después de todas las rondas."
+    }
+  ],
+  "formula": "Math.round(valuacion_final * Math.max(0, participacion_inicial * Math.pow(1 - cesion_por_ronda / 100, rondas) - reserva_equipo) / 100)",
+  "descripcion_formula": "Valor de tu participación: la participación inicial se reduce multiplicativamente en cada ronda, se resta la reserva del equipo y el resultado se aplica a la valuación final.",
+  "output_label": "Valor de mi participación",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "rondas >= 4 && cesion_por_ronda >= 25",
+      "mensaje": "Con esta cantidad de rondas y este nivel de cesión, tu participación cae mucho. Revisa si el crecimiento acompaña esa dilución o si estás cediendo demasiado por muy poco.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "participacion_inicial * Math.pow(1 - cesion_por_ronda / 100, rondas) - reserva_equipo < 15",
+      "mensaje": "Quedar por debajo del 15% suele traer un problema adicional al financiero: pérdida de control e incentivo del fundador. Es el momento de revisar la estructura, no solo la cifra.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "valuacion_final >= 50000000 && rondas >= 2",
+      "mensaje": "Aquí se ve el punto central: cediste porcentaje pero el valor de tu parte creció mucho. La dilución con crecimiento es buena; sin crecimiento sería pura pérdida.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "valuacion_final < 5000000 && rondas >= 3",
+      "mensaje": "Muchas rondas y valuación baja: perdiste porcentaje sin ganar valor. Este es exactamente el caso en el que la dilución sí es mala.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "reserva_equipo >= 15",
+      "mensaje": "Una reserva de este tamaño diluye al fundador tanto como una ronda entera. Negocia si sale solo de tu parte o de todos los accionistas.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-4-8-a-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-8-a-escena.webp"
+}

@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P2-4-9-A",
+  "unit_code": "P2-4-9",
+  "unit_title": "Clientes contentos: cumplir lo que prometo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Cliente que Regresa",
+  "descripcion": "Mueve las barritas y descubre cuánto vende tu puesto según cuántos clientes vuelven cada día.",
+  "objetivo": "Cuantificar el efecto de la clientela recurrente sobre la venta semanal",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "clientes_dia1",
+      "label": "Clientes el primer día",
+      "type": "slider",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "default": 20,
+      "unit": "clientes",
+      "referencia": "Los que llegaron por el cartel o por curiosidad."
+    },
+    {
+      "id": "precio",
+      "label": "Precio de mi producto",
+      "type": "slider",
+      "min": 3,
+      "max": 40,
+      "step": 1,
+      "default": 8,
+      "unit": "$",
+      "referencia": "El precio que calculaste desde tu costo."
+    },
+    {
+      "id": "porcentaje_vuelve",
+      "label": "De cada 10 clientes, cuántos vuelven",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "de 10",
+      "referencia": "Depende de si cumpliste lo que prometió tu cartel."
+    },
+    {
+      "id": "dias",
+      "label": "Días que vendo esta semana",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5,
+      "unit": "días",
+      "referencia": "Los recreos en que pondrás tu puesto."
+    }
+  ],
+  "formula": "Math.round(clientes_dia1 * precio * (1 + (dias - 1) * porcentaje_vuelve / 10))",
+  "descripcion_formula": "Los clientes del primer día, más los que regresan cada día siguiente, por el precio.",
+  "output_label": "Venta de la semana",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "porcentaje_vuelve == 0",
+      "mensaje": "Nadie regresa: cada día tienes que empezar de cero buscando clientes nuevos. Es el modo más difícil de vender.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "porcentaje_vuelve >= 1 && porcentaje_vuelve <= 3",
+      "mensaje": "Vuelven pocos. Revisa qué prometió tu cartel y si tu producto lo cumplió.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "porcentaje_vuelve >= 4 && porcentaje_vuelve <= 6",
+      "mensaje": "La mitad regresa. Ya tienes una base de clientes que sostiene tu semana.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "porcentaje_vuelve >= 7",
+      "mensaje": "Casi todos vuelven. Eso solo pasa cuando lo que prometes y lo que entregas son la misma cosa.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "dias == 1",
+      "mensaje": "Con un solo día de venta, que vuelvan o no da igual. El valor de la clientela aparece con los días.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-9-a-escena.webp"
+}

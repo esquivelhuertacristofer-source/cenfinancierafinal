@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-2-6-A",
+  "unit_code": "P6-2-6",
+  "unit_title": "Presupuesto base cero: justificar cada peso",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Justifica Cada Peso",
+  "descripcion": "Clasifica cada gasto según si se justifica, se ajusta o se elimina.",
+  "objetivo": "Aplicar el criterio de justificación a gastos concretos de un presupuesto",
+  "xp": 600,
+  "instruccion": "Arrastra cada gasto a la decisión que le corresponde.",
+  "categorias": [
+    {
+      "id": "justificado",
+      "label": "Se justifica",
+      "emoji": "✅",
+      "color": "#10B981"
+    },
+    {
+      "id": "ajustar",
+      "label": "Se ajusta el monto",
+      "emoji": "✂️",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "eliminar",
+      "label": "Se elimina",
+      "emoji": "❌",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Transporte para ir a la escuela todos los días",
+      "emoji": "🚌",
+      "categoria_correcta": "justificado",
+      "feedback": "Sin él no se puede cumplir con lo básico."
+    },
+    {
+      "id": "i2",
+      "label": "Servicio de video que nadie abre hace ocho meses",
+      "emoji": "📺",
+      "categoria_correcta": "eliminar",
+      "feedback": "Ocho meses de cobro sin un solo uso."
+    },
+    {
+      "id": "i3",
+      "label": "Comida fuera cuatro veces por semana",
+      "emoji": "🍔",
+      "categoria_correcta": "ajustar",
+      "feedback": "No hay que eliminarla: hay que ponerle un monto decidido."
+    },
+    {
+      "id": "i4",
+      "label": "Medicamento de una condición crónica",
+      "emoji": "💊",
+      "categoria_correcta": "justificado",
+      "feedback": "La salud es de las líneas menos cuestionables."
+    },
+    {
+      "id": "i5",
+      "label": "Suscripción duplicada que hace lo mismo que otra",
+      "emoji": "👯",
+      "categoria_correcta": "eliminar",
+      "feedback": "Pagar dos veces por la misma función es puro desperdicio."
+    },
+    {
+      "id": "i6",
+      "label": "Recarga de datos del celular",
+      "emoji": "📱",
+      "categoria_correcta": "ajustar",
+      "feedback": "Necesaria, aunque el plan puede no ser el más adecuado."
+    },
+    {
+      "id": "i7",
+      "label": "Aportación mensual al fondo de emergencia",
+      "emoji": "🛡️",
+      "categoria_correcta": "justificado",
+      "feedback": "Se trata como un pago obligatorio, no como un sobrante."
+    },
+    {
+      "id": "i8",
+      "label": "Comisión bancaria evitable por usar cajeros ajenos",
+      "emoji": "🏧",
+      "categoria_correcta": "eliminar",
+      "feedback": "Se elimina cambiando de cajero, sin sacrificar nada."
+    },
+    {
+      "id": "i9",
+      "label": "Regalos de cumpleaños del año",
+      "emoji": "🎁",
+      "categoria_correcta": "ajustar",
+      "feedback": "Se planea el monto por adelantado en vez de improvisarlo."
+    },
+    {
+      "id": "i10",
+      "label": "Renta o gasto de vivienda",
+      "emoji": "🏠",
+      "categoria_correcta": "justificado",
+      "feedback": "La línea más grande y la más claramente justificada."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-6-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-6-a-escena.webp"
+}

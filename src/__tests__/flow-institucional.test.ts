@@ -20,27 +20,28 @@ import {
 import MetricCards from "@/components/dashboard/MetricCards";
 
 const mockFrom = supabase.from as jest.Mock;
+const mockRpc = supabase.rpc as jest.Mock;
 
 const STUDENT_UUID = "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11";
 const ACTIVITY_ID = "ACT-P1-1-1-B";
 const GROUP_ID = "b1ffcd00-1d1c-5fg9-cc7e-7cc0ce491b22";
 
 // ─── Test 1 ───────────────────────────────────────────────────────────────────
-// El payload que markActivityComplete escribe en 'intentos' debe contener todos
-// los campos que el dashboard del profesor consulta (user_id, activity_id,
-// status="completed", score, tiempo_segundos).
+// markActivityComplete escribe 'intentos' vía la RPC record_intento (acumula
+// tiempo, conserva el mejor score — ver record_intento.sql) y 'progress' con
+// un upsert idempotente. El payload de la RPC debe contener todos los campos
+// que el dashboard del profesor necesita (user_id, activity_id, score, tiempo).
 describe("Flujo 1: contrato de escritura — markActivityComplete escribe el shape correcto", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockRpc.mockResolvedValue({ data: null, error: null });
     localStorage.removeItem("cen_sync_queue");
   });
 
-  it("escribe a intentos con payload completo y a progress con upsert idempotente", async () => {
-    const mockInsert = jest.fn().mockResolvedValue({ error: null });
+  it("escribe a intentos vía RPC record_intento y a progress con upsert idempotente", async () => {
     const mockUpsert = jest.fn().mockResolvedValue({ error: null });
 
     mockFrom.mockReturnValue({
-      insert: mockInsert,
       upsert: mockUpsert,
       select: jest.fn().mockReturnThis(),
       eq: jest.fn().mockReturnThis(),
@@ -53,23 +54,19 @@ describe("Flujo 1: contrato de escritura — markActivityComplete escribe el sha
 
     expect(result).toBe(true);
 
-    // Ambas tablas fueron escritas
-    const tables = mockFrom.mock.calls.map((c) => c[0]);
-    expect(tables).toContain("intentos");
-    expect(tables).toContain("progress");
-
-    // Payload de intentos contiene los campos que el dashboard lee
-    expect(mockInsert).toHaveBeenCalledWith(
+    // intentos se escribe vía la RPC record_intento, no un insert directo
+    expect(mockRpc).toHaveBeenCalledWith(
+      "record_intento",
       expect.objectContaining({
-        user_id: STUDENT_UUID,
-        activity_id: ACTIVITY_ID,
-        status: "completed",
-        score: 85,
-        tiempo_segundos: 120,
+        p_user_id: STUDENT_UUID,
+        p_activity_id: ACTIVITY_ID,
+        p_score: 85,
+        p_tiempo_segundos: 120,
       })
     );
 
-    // Upsert en progress es idempotente (onConflict user_id,activity_id)
+    // progress sigue recibiendo un upsert idempotente (onConflict user_id,activity_id)
+    expect(mockFrom).toHaveBeenCalledWith("progress");
     expect(mockUpsert).toHaveBeenCalledWith(
       expect.objectContaining({
         user_id: STUDENT_UUID,

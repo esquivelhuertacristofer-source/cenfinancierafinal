@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P5-3-9-B",
+  "unit_code": "P5-3-9",
+  "unit_title": "El horizonte: a qué plazo voy a necesitar el dinero",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cada Meta a su Plazo",
+  "descripcion": "Asigna cada meta al horizonte que le corresponde.",
+  "objetivo": "Clasificar metas según su horizonte y el tipo de instrumento adecuado",
+  "xp": 240,
+  "instruccion": "Arrastra cada meta al horizonte que le corresponde.",
+  "categorias": [
+    {
+      "id": "inmediato",
+      "label": "Disponible siempre",
+      "emoji": "⚡",
+      "color": "#EF4444"
+    },
+    {
+      "id": "corto",
+      "label": "Uno a tres años",
+      "emoji": "📅",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "largo",
+      "label": "Más de cinco años",
+      "emoji": "🌳",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Fondo de emergencia de la familia",
+      "emoji": "🚨",
+      "categoria_correcta": "inmediato",
+      "feedback": "Su horizonte es \"en cualquier momento\": nunca se inmoviliza."
+    },
+    {
+      "id": "i2",
+      "label": "Estudios universitarios en ocho años",
+      "emoji": "🎓",
+      "categoria_correcta": "largo",
+      "feedback": "Con ocho años hay margen para aguantar variaciones del mercado."
+    },
+    {
+      "id": "i3",
+      "label": "Un viaje planeado para dentro de dos años",
+      "emoji": "✈️",
+      "categoria_correcta": "corto",
+      "feedback": "Instrumento que venza antes de la fecha, con margen."
+    },
+    {
+      "id": "i4",
+      "label": "Reparaciones imprevistas de la casa",
+      "emoji": "🔧",
+      "categoria_correcta": "inmediato",
+      "feedback": "Los imprevistos no avisan: el dinero debe estar libre."
+    },
+    {
+      "id": "i5",
+      "label": "El enganche de una casa dentro de diez años",
+      "emoji": "🏠",
+      "categoria_correcta": "largo",
+      "feedback": "Horizonte largo: aquí el interés compuesto trabaja de verdad."
+    },
+    {
+      "id": "i6",
+      "label": "Cambiar la computadora el año que viene",
+      "emoji": "💻",
+      "categoria_correcta": "corto",
+      "feedback": "Un instrumento a menos de doce meses, renovable si se pospone."
+    },
+    {
+      "id": "i7",
+      "label": "El retiro, dentro de varias décadas",
+      "emoji": "🌅",
+      "categoria_correcta": "largo",
+      "feedback": "El horizonte más largo de todos, y por eso el que más puede crecer."
+    },
+    {
+      "id": "i8",
+      "label": "Dinero para un gasto médico que puede surgir",
+      "emoji": "🏥",
+      "categoria_correcta": "inmediato",
+      "feedback": "Salud imprevista: disponibilidad total por encima del rendimiento."
+    },
+    {
+      "id": "i9",
+      "label": "Un curso que empieza en año y medio",
+      "emoji": "📚",
+      "categoria_correcta": "corto",
+      "feedback": "Instrumento de plazo menor a la fecha, para tener margen."
+    },
+    {
+      "id": "i10",
+      "label": "Herencia para los hijos en veinte años",
+      "emoji": "👨‍👩‍👧",
+      "categoria_correcta": "largo",
+      "feedback": "Con dos décadas, la variación de corto plazo deja de importar."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-3-9-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-9-b-escena.webp"
+}

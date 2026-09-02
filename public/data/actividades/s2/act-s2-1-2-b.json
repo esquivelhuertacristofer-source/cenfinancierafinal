@@ -4,126 +4,115 @@
   "unit_title": "La política monetaria: cómo Banxico controla la inflación",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "JUEGO",
-  "complejidad": "MEDIO",
-  "titulo": "Cazador de Tendencias",
-  "descripcion": "El mercado siempre se mueve en una dirección. Tu trabajo es identificarla antes de que sea tarde. ¿Estás listo?",
-  "objetivo": "Diferenciar entre tendencias alcistas, bajistas y laterales en una gráfica de precios",
-  "xp": 400,
-  "mecanica": "Analiza la descripción de la gráfica y elige la TENDENCIA correcta.",
-  "escenarios": [
-    {
-      "id": "ten1",
-      "texto": "La gráfica muestra una serie de 'picos' cada vez más altos y 'valles' que nunca bajan más que el anterior.",
-      "imagen": "📈",
-      "opcion_correcta": "ALCISTA (BULLISH)",
-      "feedback_acierto": "¡Correcto! Máximos y mínimos crecientes definen una tendencia alcista clara.",
-      "feedback_error": "❌ ¡Error! Si el precio sube escalonadamente, es una tendencia alcista.",
-      "tipo_ataque": "Estructura de Mercado"
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "La Junta de Gobierno",
+  "descripcion": "Eres parte de la Junta de Gobierno de Banxico. La inflación llegó a 7.8%, muy por encima del objetivo de 3%. Tienes una sola herramienta principal y todas sus consecuencias.",
+  "objetivo": "Analizar las herramientas del Banco de México para mantener la estabilidad de precios y los efectos secundarios de la tasa de interés.",
+  "xp": 800,
+  "personaje_principal": "Tú",
+  "contexto_inicial": "Objetivo de inflación: 3% ± 1%. Inflación actual: 7.8%. Tasa de referencia: 6%. Desempleo: 3.5%. El gobierno presiona para no frenar la economía.",
+  "nodo_inicial": "la_decision",
+  "nodos": {
+    "la_decision": {
+      "id": "la_decision",
+      "texto": "La inflación duplica el objetivo. ¿Qué hace la Junta con la tasa de referencia?",
+      "opciones": [
+        {
+          "id": "subir",
+          "texto": "Subirla de forma decidida: encarecer el crédito para enfriar el consumo",
+          "siguiente_nodo": "los_efectos",
+          "consecuencia": "Sube a 9%. Los créditos se encarecen de inmediato.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "mantener",
+          "texto": "Mantenerla: no frenar el crecimiento ni el empleo",
+          "siguiente_nodo": "la_espiral",
+          "consecuencia": "La economía sigue caliente y los precios siguen subiendo.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "bajar",
+          "texto": "Bajarla para estimular la economía",
+          "siguiente_nodo": "la_espiral",
+          "consecuencia": "Más crédito barato, más consumo, más presión sobre los precios.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ten2",
-      "texto": "El precio está atrapado entre un 'techo' y un 'piso' plano. No sube ni baja, solo se mueve de lado.",
-      "imagen": "↔️",
-      "opcion_correcta": "LATERAL (RANGO)",
-      "feedback_acierto": "¡Bien hecho! El mercado está descansando o acumulando energía. No hay dirección clara.",
-      "feedback_error": "❌ ¡Error! Esto se llama rango o consolidación.",
-      "tipo_ataque": "Estructura de Mercado"
+    "la_espiral": {
+      "id": "la_espiral",
+      "texto": "Seis meses después la inflación llega a 11%. Los sueldos no alcanzan, la gente compra por adelantado esperando más aumentos y eso empuja los precios todavía más: son las expectativas descontroladas.",
+      "opciones": [
+        {
+          "id": "corregir",
+          "texto": "Subir la tasa de forma agresiva ahora, aunque duela más",
+          "siguiente_nodo": "los_efectos",
+          "consecuencia": "Actuar tarde obliga a subir mucho más de lo que habría hecho falta.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "controlar_precios",
+          "texto": "Pedir al gobierno que fije los precios por decreto",
+          "siguiente_nodo": "final_escasez",
+          "consecuencia": "Los precios oficiales bajan y los productos desaparecen de los estantes.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ten3",
-      "texto": "Cada vez que el precio intenta subir, se detiene en un punto más bajo que el anterior, y las caídas son cada vez más profundas.",
-      "imagen": "📉",
-      "opcion_correcta": "BAJISTA (BEARISH)",
-      "feedback_acierto": "¡Exacto! El pesimismo domina el mercado. Los vendedores tienen el control total.",
-      "feedback_error": "❌ ¡Error! Máximos decrecientes indican una tendencia bajista.",
-      "tipo_ataque": "Estructura de Mercado"
+    "los_efectos": {
+      "id": "los_efectos",
+      "texto": "La tasa alta funciona: la inflación empieza a ceder. Pero los efectos secundarios llegan: las hipotecas a tasa variable suben, hay menos crédito para empresas y el crecimiento se frena. Un empresario acusa a Banxico de \"matar la economía\".",
+      "opciones": [
+        {
+          "id": "explicar",
+          "texto": "Sostener la decisión y explicar que la inflación alta empobrece más que la desaceleración",
+          "siguiente_nodo": "final_estabilidad",
+          "consecuencia": "La Junta comunica su decisión con transparencia y calendario.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "ceder",
+          "texto": "Ceder a la presión y bajar la tasa antes de tiempo",
+          "siguiente_nodo": "final_recaida",
+          "consecuencia": "La inflación repunta a los pocos meses.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "ten4",
-      "texto": "Después de bajar por mucho tiempo, el precio rompe el último 'techo' hacia arriba con mucho volumen.",
-      "imagen": "🚀",
-      "opcion_correcta": "CAMBIO DE TENDENCIA (ALCISTA)",
-      "feedback_acierto": "¡Excelente! Has detectado un 'Rompimiento' (Breakout). El mercado está cambiando de humor.",
-      "feedback_error": "❌ ¡Error! Cuando se rompe una resistencia importante tras una caída, suele iniciar una subida.",
-      "tipo_ataque": "Psicología de Precios"
+    "final_estabilidad": {
+      "id": "final_estabilidad",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Dieciocho meses después la inflación volvió al 4%. Hubo un año difícil de crédito caro, pero los salarios recuperaron poder de compra y los ahorros dejaron de encogerse.",
+      "reflexion_final": "La política monetaria es una palanca lenta y con efectos secundarios. Subir la tasa frena el consumo, encarece el crédito y enfría los precios; bajarla hace lo contrario. La autonomía de Banxico existe justamente para poder sostener decisiones impopulares: quien más sufre la inflación siempre es quien menos tiene."
     },
-    {
-      "id": "ten5",
-      "texto": "El precio sube y baja con saltos gigantescos y desordenados. No hay patrón de picos o valles claros.",
-      "imagen": "🎢",
-      "opcion_correcta": "VOLÁTIL / SIN TENDENCIA",
-      "feedback_acierto": "¡Muy inteligente! A veces lo mejor es no operar. Un mercado errático es muy peligroso.",
-      "feedback_error": "❌ ¡Cuidado! Si no hay un patrón claro, no hay tendencia. Es mejor esperar.",
-      "tipo_ataque": "Riesgo de Mercado"
+    "final_recaida": {
+      "id": "final_recaida",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Bajar antes de tiempo hizo repuntar la inflación, y hubo que volver a subir la tasa aún más alto. El costo total fue mayor que si se hubiera sostenido.",
+      "reflexion_final": "La credibilidad del banco central es su herramienta más poderosa. Cuando la gente cree que la inflación bajará, deja de subir precios por adelantado. Ceder a la presión destruye esa credibilidad y encarece la siguiente batalla."
+    },
+    "final_escasez": {
+      "id": "final_escasez",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Con precios fijados por decreto, producir dejó de ser rentable. Aparecieron desabasto, filas y un mercado paralelo con precios más altos que los originales.",
+      "reflexion_final": "Controlar precios por decreto trata el síntoma y no la causa. La inflación se combate con política monetaria y disciplina fiscal, no prohibiendo que los precios digan la verdad."
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Analiza la descripción de la gráfica y elige la TENDENCIA correcta.",
-  "duracion": 150,
-  "opciones_clasificacion": [
-    "ALCISTA (BULLISH)",
-    "BAJISTA (BEARISH)",
-    "LATERAL (RANGO)",
-    "CAMBIO DE TENDENCIA (ALCISTA)",
-    "VOLÁTIL / SIN TENDENCIA"
-  ],
-  "items": [
-    {
-      "id": "ten1",
-      "label": "La gráfica muestra una serie de 'picos' cada vez más altos y 'valles' que nunca bajan más que el ant...",
-      "emoji": "📈",
-      "tipo": "correcto",
-      "respuesta_correcta": "ALCISTA (BULLISH)",
-      "feedback_acierto": "¡Correcto! Máximos y mínimos crecientes definen una tendencia alcista clara.",
-      "feedback_error": "❌ ¡Error! Si el precio sube escalonadamente, es una tendencia alcista.",
-      "puntos": 100
-    },
-    {
-      "id": "ten2",
-      "label": "El precio está atrapado entre un 'techo' y un 'piso' plano. No sube ni baja, solo se mueve de lado.",
-      "emoji": "↔️",
-      "tipo": "correcto",
-      "respuesta_correcta": "LATERAL (RANGO)",
-      "feedback_acierto": "¡Bien hecho! El mercado está descansando o acumulando energía. No hay dirección clara.",
-      "feedback_error": "❌ ¡Error! Esto se llama rango o consolidación.",
-      "puntos": 100
-    },
-    {
-      "id": "ten3",
-      "label": "Cada vez que el precio intenta subir, se detiene en un punto más bajo que el anterior, y las caídas ...",
-      "emoji": "📉",
-      "tipo": "correcto",
-      "respuesta_correcta": "BAJISTA (BEARISH)",
-      "feedback_acierto": "¡Exacto! El pesimismo domina el mercado. Los vendedores tienen el control total.",
-      "feedback_error": "❌ ¡Error! Máximos decrecientes indican una tendencia bajista.",
-      "puntos": 100
-    },
-    {
-      "id": "ten4",
-      "label": "Después de bajar por mucho tiempo, el precio rompe el último 'techo' hacia arriba con mucho volumen.",
-      "emoji": "🚀",
-      "tipo": "correcto",
-      "respuesta_correcta": "CAMBIO DE TENDENCIA (ALCISTA)",
-      "feedback_acierto": "¡Excelente! Has detectado un 'Rompimiento' (Breakout). El mercado está cambiando de humor.",
-      "feedback_error": "❌ ¡Error! Cuando se rompe una resistencia importante tras una caída, suele iniciar una subida.",
-      "puntos": 100
-    },
-    {
-      "id": "ten5",
-      "label": "El precio sube y baja con saltos gigantescos y desordenados. No hay patrón de picos o valles claros.",
-      "emoji": "🎢",
-      "tipo": "correcto",
-      "respuesta_correcta": "VOLÁTIL / SIN TENDENCIA",
-      "feedback_acierto": "¡Muy inteligente! A veces lo mejor es no operar. Un mercado errático es muy peligroso.",
-      "feedback_error": "❌ ¡Cuidado! Si no hay un patrón claro, no hay tendencia. Es mejor esperar.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 500
-  }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

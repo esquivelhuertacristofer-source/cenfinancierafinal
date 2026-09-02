@@ -4,110 +4,152 @@
   "unit_title": "La Bolsa de Valores: siendo dueño de empresas",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "ARRASTRA",
+  "tipo": "DECIDE",
   "complejidad": "MEDIO",
-  "titulo": "El Valor de la Tierra",
-  "descripcion": "Los 'Commodities' son productos básicos que se usan para todo. ¿Sabes clasificarlos según su origen?",
-  "objetivo": "Identificar y categorizar los principales tipos de materias primas y su importancia económica",
-  "xp": 250,
-  "instruccion": "Arrastra cada recurso a su categoría correspondiente.",
-  "items": [
-    {
-      "id": "c1",
-      "label": "Petróleo",
-      "emoji": "🛢️",
-      "categoria_correcta": "energeticos",
-      "feedback": "La base del combustible y plásticos del mundo."
+  "titulo": "Ceny se vuelve dueña",
+  "descripcion": "La panadería del barrio quiere crecer y abrir tres sucursales. Para juntar el dinero, Don Beto va a dividir su negocio en pedacitos llamados acciones y venderlos. Ceny tiene $1,000 ahorrados.",
+  "objetivo": "Comprender que una acción es un pedazo de propiedad de una empresa, y que comprarla te vuelve socio: ganas si a la empresa le va bien y pierdes si le va mal.",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Don Beto reúne a los vecinos: \"Mi panadería vale $100,000. La voy a dividir en 1,000 acciones de $100 cada una. Quien compre una, será dueño de una milésima parte del negocio... y de sus ganancias\".",
+  "nodo_inicial": "la_oferta",
+  "nodos": {
+    "la_oferta": {
+      "id": "la_oferta",
+      "texto": "Ceny tiene $1,000. Con eso puede comprar 10 acciones de la panadería. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "comprar",
+          "texto": "Comprar 10 acciones y volverse socia",
+          "siguiente_nodo": "primer_anio",
+          "consecuencia": "Ceny recibe un papel: es dueña del 1% de la panadería.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "prestar",
+          "texto": "Mejor prestarle los $1,000 a Don Beto",
+          "siguiente_nodo": "diferencia",
+          "consecuencia": "Ceny le presta el dinero. Don Beto se lo devolverá con un poco de interés.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "guardar",
+          "texto": "No arriesgarse y dejarlos en el cochinito",
+          "siguiente_nodo": "final_seguro",
+          "consecuencia": "El dinero se queda quieto, seguro pero sin crecer.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "c2",
-      "label": "Oro",
-      "emoji": "🥇",
-      "categoria_correcta": "metales",
-      "feedback": "El metal precioso por excelencia y refugio de valor."
+    "diferencia": {
+      "id": "diferencia",
+      "texto": "Al final del año Don Beto le devuelve sus $1,000 más $80 de interés. Pero la panadería creció tanto que cada acción ahora vale $130. Los vecinos que compraron acciones ganaron $300 por cada 10.",
+      "opciones": [
+        {
+          "id": "entendi",
+          "texto": "Ahora sí: comprar acciones y ser socia",
+          "siguiente_nodo": "primer_anio",
+          "consecuencia": "Prestar da un pago fijo. Ser dueño te da una parte de lo que la empresa gane, sea mucho o poco.",
+          "xp_bonus": 120,
+          "es_optima": true,
+          "impacto_patrimonio": 80
+        },
+        {
+          "id": "seguir_prestando",
+          "texto": "Seguir prestando, es más seguro",
+          "siguiente_nodo": "final_prestamista",
+          "consecuencia": "Ceny prefiere lo seguro y predecible.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": 80
+        }
+      ]
     },
-    {
-      "id": "c3",
-      "label": "Maíz",
-      "emoji": "🌽",
-      "categoria_correcta": "agricolas",
-      "feedback": "Esencial para la alimentación humana y animal."
+    "primer_anio": {
+      "id": "primer_anio",
+      "texto": "Pasa un año. La panadería vendió muchísimo pan y ganó $20,000. Don Beto reparte la mitad entre los dueños de acciones: a Ceny le tocan $100. A eso se le llama dividendo. Además, cada acción ya vale $130.",
+      "opciones": [
+        {
+          "id": "vender_todo",
+          "texto": "Vender las 10 acciones a $130 y tomar la ganancia",
+          "siguiente_nodo": "final_ganancia",
+          "consecuencia": "Ceny vende en $1,300 lo que le costó $1,000, más los $100 de dividendo.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 400
+        },
+        {
+          "id": "conservar",
+          "texto": "Conservarlas: la panadería sigue creciendo",
+          "siguiente_nodo": "segundo_anio",
+          "consecuencia": "Ceny decide seguir siendo socia.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 400
+        }
+      ]
     },
-    {
-      "id": "c4",
-      "label": "Gas Natural",
-      "emoji": "🔥",
-      "categoria_correcta": "energeticos",
-      "feedback": "Energía clave para calefacción e industria."
+    "segundo_anio": {
+      "id": "segundo_anio",
+      "texto": "El segundo año llueve sin parar, la gente sale menos y la panadería vende poco. No hay dividendo y cada acción baja a $90. Ceny tiene menos de lo que puso.",
+      "opciones": [
+        {
+          "id": "vender_panico",
+          "texto": "Vender ya, antes de perder más",
+          "siguiente_nodo": "final_perdida",
+          "consecuencia": "Ceny vende en $900 lo que le costó $1,000.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -100
+        },
+        {
+          "id": "aguantar",
+          "texto": "Aguantar: el negocio sigue siendo bueno",
+          "siguiente_nodo": "final_socia",
+          "consecuencia": "Ceny entiende que ser dueña incluye los años malos.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 100
+        }
+      ]
     },
-    {
-      "id": "c5",
-      "label": "Litio",
-      "emoji": "🔋",
-      "categoria_correcta": "metales",
-      "feedback": "El metal de las baterías del futuro (celulares y autos)."
+    "final_socia": {
+      "id": "final_socia",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Al tercer año vuelve el buen clima, abren dos sucursales y cada acción llega a $180. Ceny sigue siendo dueña de una parte de un negocio que crece. Eso es exactamente lo que hace la Bolsa de Valores, pero con empresas grandes y miles de personas.",
+      "reflexion_final": "Comprar una acción no es apostar: es volverte dueño de un pedacito de una empresa real. Ganas cuando a la empresa le va bien y pierdes cuando le va mal. Por eso hay que elegir bien y pensar a largo plazo."
     },
-    {
-      "id": "c6",
-      "label": "Trigo",
-      "emoji": "🌾",
-      "categoria_correcta": "agricolas",
-      "feedback": "La base del pan y cereales en todo el mundo."
+    "final_ganancia": {
+      "id": "final_ganancia",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Ceny se llevó $1,400 de los $1,000 que puso. Ganó por dos vías: el dividendo (su parte de las ganancias) y la venta de la acción a mayor precio.",
+      "reflexion_final": "Ser dueño de acciones da dos tipos de ganancia: los dividendos que reparte la empresa y el aumento de precio de la acción. Las dos vienen de que al negocio le vaya bien."
     },
-    {
-      "id": "c7",
-      "label": "Ganado vacuno",
-      "emoji": "🐄",
-      "categoria_correcta": "ganaderos",
-      "feedback": "Materia prima para carne, leche y cuero."
+    "final_perdida": {
+      "id": "final_perdida",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Ceny recuperó $900 de los $1,000 que puso. Vender en el peor momento convirtió una mala racha en una pérdida definitiva.",
+      "reflexion_final": "El precio de una acción sube y baja. Ser dueño significa aguantar los años flojos si el negocio sigue siendo bueno. Vender por miedo es lo que convierte una bajada en una pérdida real."
     },
-    {
-      "id": "c8",
-      "label": "Plata",
-      "emoji": "🥈",
-      "categoria_correcta": "metales",
-      "feedback": "Metal usado en joyería y también en tecnología."
+    "final_prestamista": {
+      "id": "final_prestamista",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Ceny prestó su dinero varias veces y siempre recuperó lo suyo más un interés fijo. Nunca perdió... y nunca fue dueña de nada.",
+      "reflexion_final": "Prestar es más seguro y te da un pago fijo. Ser dueño arriesga más pero te da una parte del crecimiento. Las dos cosas existen y sirven para cosas distintas."
     },
-    {
-      "id": "c9",
-      "label": "Algodón",
-      "emoji": "👕",
-      "categoria_correcta": "agricolas",
-      "feedback": "La fibra vegetal más usada en la ropa."
-    },
-    {
-      "id": "c10",
-      "label": "Cobre",
-      "emoji": "🔌",
-      "categoria_correcta": "metales",
-      "feedback": "Sin el cobre no habría electricidad en las casas."
+    "final_seguro": {
+      "id": "final_seguro",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Los $1,000 siguen intactos en el cochinito tres años después. Valen lo mismo... salvo que con la inflación ahora compran menos pan que antes.",
+      "reflexion_final": "Guardar sin invertir también tiene un costo: el dinero quieto pierde valor con la inflación. Por eso existen las inversiones."
     }
-  ],
-  "categorias": [
-    {
-      "id": "energeticos",
-      "label": "ENERGÉTICOS",
-      "emoji": "⚡",
-      "color": "#1f2937"
-    },
-    {
-      "id": "metales",
-      "label": "METALES",
-      "emoji": "🛠️",
-      "color": "#9ca3af"
-    },
-    {
-      "id": "agricolas",
-      "label": "AGRÍCOLAS",
-      "emoji": "🚜",
-      "color": "#fbbf24"
-    },
-    {
-      "id": "ganaderos",
-      "label": "GANADEROS",
-      "emoji": "🤠",
-      "color": "#b45309"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

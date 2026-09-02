@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-3-8-B",
+  "unit_code": "P4-3-8",
+  "unit_title": "Ahorro automático: pagarme a mí primero",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Pagarme a Mí Primero",
+  "descripcion": "Comprueba que dominas el principio y su automatización.",
+  "objetivo": "Verificar la comprensión del ahorro prioritario y automático",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Ahorrar lo que sobre al final del mes da como resultado:",
+      "opciones": [
+        "Mucho ahorro",
+        "Lo mismo que ahorrar primero",
+        "Ahorrar cero",
+        "Más interés"
+      ],
+      "correcta": 2,
+      "explicacion": "El gasto crece hasta llenar el ingreso disponible."
+    },
+    {
+      "id": "q2",
+      "texto": "Pagarse a uno mismo primero significa:",
+      "opciones": [
+        "Gastar en uno mismo",
+        "Cobrar por trabajar",
+        "Ahorrar al final",
+        "Apartar el ahorro apenas entra el dinero"
+      ],
+      "correcta": 3,
+      "explicacion": "El ahorro se trata como una obligación, no como un sobrante."
+    },
+    {
+      "id": "q3",
+      "texto": "Con este método, el gasto:",
+      "opciones": [
+        "Se ajusta al resto disponible",
+        "Se dispara",
+        "No cambia",
+        "Desaparece"
+      ],
+      "correcta": 0,
+      "explicacion": "La misma flexibilidad que lo hacía crecer ahora trabaja a favor."
+    },
+    {
+      "id": "q4",
+      "texto": "El ahorro automático es:",
+      "opciones": [
+        "Ahorrar sin querer",
+        "Una transferencia programada el día del ingreso",
+        "Un préstamo",
+        "Una comisión"
+      ],
+      "correcta": 1,
+      "explicacion": "Quita la decisión mensual, que es lo que se pospone."
+    },
+    {
+      "id": "q5",
+      "texto": "Automatizar funciona porque:",
+      "opciones": [
+        "Da más interés",
+        "Lo exige el banco",
+        "Lo que no requiere decisión no se pospone",
+        "Es más barato"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el mismo mecanismo de las suscripciones, jugando de tu lado."
+    },
+    {
+      "id": "q6",
+      "texto": "La transferencia debe ir:",
+      "opciones": [
+        "A la misma cuenta",
+        "A efectivo",
+        "A la tarjeta",
+        "A una cuenta separada"
+      ],
+      "correcta": 3,
+      "explicacion": "Separado del gasto diario para no confundirlo."
+    },
+    {
+      "id": "q7",
+      "texto": "Este método requiere:",
+      "opciones": [
+        "Solo cambiar el orden",
+        "Ganar más",
+        "Pedir prestado",
+        "Un salario alto"
+      ],
+      "correcta": 0,
+      "explicacion": "Mismo ingreso, mismos gastos, resultado completamente distinto."
+    },
+    {
+      "id": "q8",
+      "texto": "El ahorro debe tratarse como:",
+      "opciones": [
+        "Un premio si sobra",
+        "Una cuenta obligatoria más",
+        "Algo opcional",
+        "Un lujo"
+      ],
+      "correcta": 1,
+      "explicacion": "Igual que la renta o la luz: se paga antes que los gustos."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-8-b-escena.webp"
+}

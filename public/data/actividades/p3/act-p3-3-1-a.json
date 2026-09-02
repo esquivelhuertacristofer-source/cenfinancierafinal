@@ -43,76 +43,52 @@
       "texto": "Ahora, mi hermano quiere la nueva consola de juegos, pero no ha ahorrado nada. ¿Debería pedir un crédito?",
       "opciones": [
         {
-          "id": "si_juego",
-          "texto": "Sí, para que juegue hoy mismo",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "¡Cuidado! Pagar intereses por un juguete es una deuda que te quita dinero del futuro.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -40
+          "id": "no_ahorrar",
+          "texto": "No: es mejor que ahorre y la compre cuando tenga el dinero",
+          "siguiente_nodo": "final_analisis",
+          "consecuencia": "Tarda cuatro meses y la consola le sale al precio de la etiqueta.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "id": "no_ahorrar",
-          "texto": "No, es mejor que ahorre y la compre cuando tenga el dinero",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "¡Muy bien! Los deseos deben comprarse con ahorro, no con crédito.",
-          "xp_bonus": 150,
-          "es_optima": true,
-          "impacto_patrimonio": 50
+          "id": "si_condicionado",
+          "texto": "Sí, pero solo si él paga cada mensualidad con su domingo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La consola llega hoy y su domingo queda comprometido medio año.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": -600
+        },
+        {
+          "id": "si_juego",
+          "texto": "Sí, para que juegue hoy mismo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La consola llega hoy y la deuda también.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -1800
         }
       ]
     },
     "final_analisis": {
       "id": "final_analisis",
-      "texto": "Has aprendido la regla de oro: El crédito es para necesidades o inversiones, el ahorro es para deseos.",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "Pedir prestado no es malo, lo malo es no saber para qué lo pides ni cómo lo vas a pagar."
-    },
-    "reto_inesperado": {
-      "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
-          "es_optima": true,
-          "impacto_patrimonio": 50
-        },
-        {
-          "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -40
-        }
-      ]
-    },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "texto": "La computadora de mamá se reparó con crédito y volvió a generar dinero desde el primer día. La consola se compró cuatro meses después, sin intereses y sin deudas.",
+      "reflexion_final": "La regla de oro: el crédito es para lo que produce dinero o resuelve una necesidad; el ahorro es para lo que se disfruta. Cambiar el orden es lo que endeuda a las familias."
     },
     "final_regular": {
       "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "La consola llegó hoy. Los siguientes seis meses, el domingo de tu hermano se fue completo en pagarla, y para el tercer mes ya casi no la usaba.",
+      "reflexion_final": "Comprometer un ingreso futuro por algo que se disfruta hoy tiene un costo: cuando llega la mensualidad, la emoción ya se acabó pero el pago sigue."
     },
     "final_malo": {
       "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "La consola de $1,200 terminó costando $1,800 con intereses. Cuando se acabó de pagar, ya había salido un modelo nuevo.",
+      "reflexion_final": "Pedir crédito para un capricho significa pagar más por algo que vale menos cada mes. El crédito multiplica lo que haces con él: si produce, multiplica ganancias; si no, multiplica el costo."
     }
   },
   "versión": "2026.Diamond.V2",

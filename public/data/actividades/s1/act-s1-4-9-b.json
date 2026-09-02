@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S1-4-9-B",
+  "unit_code": "S1-4-9",
+  "unit_title": "Flujo de efectivo: por qué un negocio rentable puede quebrar",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Utilidad y Flujo",
+  "descripcion": "Comprueba que distingues ganar dinero de tenerlo.",
+  "objetivo": "Verificar la comprensión del flujo de efectivo",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La utilidad se calcula con:",
+      "opciones": [
+        "El dinero en la cuenta",
+        "Los gastos",
+        "Las ventas registradas aunque no se hayan cobrado",
+        "Los impuestos"
+      ],
+      "correcta": 2,
+      "explicacion": "Por eso puede ser alta con la cuenta vacía."
+    },
+    {
+      "id": "q2",
+      "texto": "El flujo de efectivo registra:",
+      "opciones": [
+        "Las ventas del periodo",
+        "Las promesas de pago",
+        "Los pedidos",
+        "Lo que entró y salió de verdad"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el dinero real disponible."
+    },
+    {
+      "id": "q3",
+      "texto": "Un negocio rentable:",
+      "opciones": [
+        "Puede quedarse sin efectivo",
+        "Nunca se queda sin dinero",
+        "Siempre tiene liquidez",
+        "No necesita flujo"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una de las causas más comunes de quiebra."
+    },
+    {
+      "id": "q4",
+      "texto": "El desfase típico es:",
+      "opciones": [
+        "Se cobra antes y se paga después",
+        "Se paga antes y se cobra después",
+        "Todo simultáneo",
+        "No hay desfase"
+      ],
+      "correcta": 1,
+      "explicacion": "Material y nómina no esperan a la cobranza."
+    },
+    {
+      "id": "q5",
+      "texto": "Crecer rápido:",
+      "opciones": [
+        "Genera efectivo",
+        "Es neutro",
+        "Consume efectivo",
+        "Elimina el riesgo"
+      ],
+      "correcta": 2,
+      "explicacion": "Más ventas exigen más material comprado por adelantado."
+    },
+    {
+      "id": "q6",
+      "texto": "Muchos negocios quiebran:",
+      "opciones": [
+        "Cuando venden poco",
+        "Al inicio siempre",
+        "Nunca por flujo",
+        "Justo cuando más venden"
+      ],
+      "correcta": 3,
+      "explicacion": "El crecimiento exigió efectivo que no tenían."
+    },
+    {
+      "id": "q7",
+      "texto": "Una medida útil es:",
+      "opciones": [
+        "Pedir anticipos y negociar plazos",
+        "Comprar más material",
+        "Vender más sin cobrar",
+        "Ignorar el flujo"
+      ],
+      "correcta": 0,
+      "explicacion": "Adelantar entradas y retrasar salidas."
+    },
+    {
+      "id": "q8",
+      "texto": "El colchón de efectivo debe cubrir:",
+      "opciones": [
+        "Un día",
+        "Varios meses de gastos fijos",
+        "Una semana",
+        "Nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Es lo que permite atravesar un mes crítico sin quebrar."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-9-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-9-b-escena.webp"
+}

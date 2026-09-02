@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-1-6-B",
+  "unit_code": "S3-1-6",
+  "unit_title": "Mi línea de tiempo financiera: 10 hitos de los 15 a los 30",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Planear los Próximos Quince Años",
+  "descripcion": "Comprueba que sabes construir una línea de tiempo financiera.",
+  "objetivo": "Verificar la construcción y secuenciación de hitos financieros",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Entre los 15 y los 30:",
+      "opciones": [
+        "No pasa nada relevante",
+        "Solo se estudia",
+        "Se concentran casi todos los eventos financieros grandes",
+        "Solo se trabaja"
+      ],
+      "correcta": 2,
+      "explicacion": "Y llegan encimados si nadie los planea."
+    },
+    {
+      "id": "q2",
+      "texto": "Cuando varios hitos coinciden sin preverse:",
+      "opciones": [
+        "Se resuelven solos",
+        "No importa",
+        "Se posponen",
+        "La salida más frecuente es el crédito caro"
+      ],
+      "correcta": 3,
+      "explicacion": "Planear con anticipación evita justamente eso."
+    },
+    {
+      "id": "q3",
+      "texto": "Un hito necesita:",
+      "opciones": [
+        "Edad y monto estimado",
+        "Solo un nombre",
+        "Solo entusiasmo",
+        "Aprobación familiar"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin fecha ni cifra es un deseo, no un hito."
+    },
+    {
+      "id": "q4",
+      "texto": "La estimación del costo:",
+      "opciones": [
+        "Debe ser exacta al peso",
+        "No tiene que ser exacta, pero debe existir",
+        "No hace falta",
+        "La da el banco"
+      ],
+      "correcta": 1,
+      "explicacion": "Una cifra aproximada permite planear; una ausente no permite nada."
+    },
+    {
+      "id": "q5",
+      "texto": "El fondo de emergencia va:",
+      "opciones": [
+        "Después de invertir",
+        "Al final de todo",
+        "Antes de las primeras inversiones",
+        "Es opcional"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin él, un imprevisto obliga a liquidar inversiones en mal momento."
+    },
+    {
+      "id": "q6",
+      "texto": "La formación suele ir temprano porque:",
+      "opciones": [
+        "Es barata",
+        "Es obligatoria",
+        "Está de moda",
+        "Aumenta la capacidad de ingreso"
+      ],
+      "correcta": 3,
+      "explicacion": "Habilita todos los hitos posteriores."
+    },
+    {
+      "id": "q7",
+      "texto": "Un hito a quince años, empezando hoy:",
+      "opciones": [
+        "Requiere una aportación mensual pequeña",
+        "Requiere una aportación enorme",
+        "Es imposible",
+        "No se puede calcular"
+      ],
+      "correcta": 0,
+      "explicacion": "El tiempo hace la mayor parte del trabajo."
+    },
+    {
+      "id": "q8",
+      "texto": "El argumento central de la planeación temprana es:",
+      "opciones": [
+        "Hay que ahorrar mucho",
+        "Hay que ahorrar pronto",
+        "No hay que ahorrar",
+        "Hay que endeudarse"
+      ],
+      "correcta": 1,
+      "explicacion": "Empezar tarde exige aportaciones mucho mayores."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-1-6-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-1-6-b-escena.webp"
+}

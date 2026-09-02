@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-4-7-B",
+  "unit_code": "P2-4-7",
+  "unit_title": "Poner precio: sumar mis costos primero",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Precio Bien Calculado",
+  "descripcion": "Demuestra que ya no pones precios por corazonada.",
+  "objetivo": "Verificar el cálculo de costo por pieza y de precio de venta",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Gasté $60 y salieron 20 piezas. Cada pieza costó:",
+      "opciones": [
+        "$3",
+        "$60",
+        "$20",
+        "$6"
+      ],
+      "correcta": 0,
+      "explicacion": "60 entre 20 son 3. Ese es el piso absoluto de tu precio."
+    },
+    {
+      "id": "q2",
+      "texto": "Cada pieza cuesta $3 y quiero ganar $2. Mi precio es:",
+      "opciones": [
+        "$1",
+        "$5",
+        "$3",
+        "$6"
+      ],
+      "correcta": 1,
+      "explicacion": "Precio = costo por pieza + ganancia por pieza."
+    },
+    {
+      "id": "q3",
+      "texto": "Si vendo por debajo del costo:",
+      "opciones": [
+        "Gano más",
+        "Salgo igual",
+        "Pierdo en cada venta",
+        "Gano al final"
+      ],
+      "correcta": 2,
+      "explicacion": "Y mientras más vendas, peor te va. Es la trampa más común."
+    },
+    {
+      "id": "q4",
+      "texto": "El paso que casi todos se saltan es:",
+      "opciones": [
+        "Comprar materiales",
+        "Hacer el cartel",
+        "Contar clientes",
+        "Dividir el costo entre las piezas"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin el costo por pieza no se puede poner precio con criterio."
+    },
+    {
+      "id": "q5",
+      "texto": "La ganancia representa:",
+      "opciones": [
+        "El pago por tu tiempo, trabajo y riesgo",
+        "Un abuso",
+        "Un error de cuentas",
+        "Un impuesto"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin ganancia, un negocio es solo trabajo gratis."
+    },
+    {
+      "id": "q6",
+      "texto": "Gasté $90 y salieron 30 piezas. Cada pieza costó:",
+      "opciones": [
+        "$30",
+        "$3",
+        "$90",
+        "$9"
+      ],
+      "correcta": 1,
+      "explicacion": "90 entre 30 son 3. Siempre divide antes de decidir el precio."
+    },
+    {
+      "id": "q7",
+      "texto": "Si pongo un precio muy alto:",
+      "opciones": [
+        "Gano siempre",
+        "Vendo más rápido",
+        "Puede que nadie compre",
+        "No cambia nada"
+      ],
+      "correcta": 2,
+      "explicacion": "La ganancia solo existe si alguien acepta pagar el precio."
+    },
+    {
+      "id": "q8",
+      "texto": "20 piezas a $5 cada una son:",
+      "opciones": [
+        "$25",
+        "$50",
+        "$200",
+        "$100"
+      ],
+      "correcta": 3,
+      "explicacion": "5 × 20 = 100. Esa es la venta; la ganancia es lo que queda al restar el costo."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-7-b-escena.webp"
+}

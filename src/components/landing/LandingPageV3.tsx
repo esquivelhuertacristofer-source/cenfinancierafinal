@@ -5,6 +5,7 @@ import Link from 'next/link';
 import './LandingV3.css';
 import { TIERS, ALLIES, DEMO_VIDEO_URL } from './LandingData';
 import { Rocket, PlayCircle, ArrowRight, TrendingUp, MapPin, Zap } from 'lucide-react';
+import { useHasMounted } from '../../lib/useHasMounted';
 
 // Custom hook for counting animation
 const useCounter = (target: number, durationMs = 2000, start = 0) => {
@@ -30,7 +31,7 @@ const useCounter = (target: number, durationMs = 2000, start = 0) => {
 };
 
 export default function LandingPageV3() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const [viewMode, setViewMode] = useState<'grid' | 'path'>('grid');
   const [showDemo, setShowDemo] = useState(false);
   const [activeTab, setActiveTab] = useState('primaria');
@@ -39,10 +40,6 @@ export default function LandingPageV3() {
   const countKids = useCounter(12480, 2500, 11000);
   const countSchools = useCounter(284, 2000, 200);
   const countLessons = useCounter(946, 2200, 800);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) return <div className="landing-v3-root" style={{ background: '#F4F1EA', minHeight: '100vh' }} />;
 

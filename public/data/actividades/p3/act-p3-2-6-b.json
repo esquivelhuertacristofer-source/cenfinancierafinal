@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-2-6-B",
+  "unit_code": "P3-2-6",
+  "unit_title": "Sucursal, cajero y app: las tres puertas del banco",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Las Tres Puertas",
+  "descripcion": "Demuestra que sabes qué canal usar y cómo usarlo con seguridad.",
+  "objetivo": "Verificar el conocimiento de canales bancarios y las reglas de seguridad",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los tres canales para operar con un banco son:",
+      "opciones": [
+        "Efectivo, tarjeta y cheque",
+        "Tienda, calle y casa",
+        "Sucursal, cajero y app",
+        "Ahorro, crédito e inversión"
+      ],
+      "correcta": 2,
+      "explicacion": "Los tres llevan al mismo dinero, pero no sirven para lo mismo."
+    },
+    {
+      "id": "q2",
+      "texto": "Para aclarar un cobro que no reconozco, voy a:",
+      "opciones": [
+        "El cajero",
+        "La app",
+        "La tienda",
+        "La sucursal"
+      ],
+      "correcta": 3,
+      "explicacion": "Los problemas que necesitan explicación requieren atención de una persona."
+    },
+    {
+      "id": "q3",
+      "texto": "La gran ventaja del cajero automático es:",
+      "opciones": [
+        "Que está disponible casi siempre",
+        "Que resuelve cualquier problema",
+        "Que es gratis siempre",
+        "Que da consejos"
+      ],
+      "correcta": 0,
+      "explicacion": "Funciona cuando la sucursal está cerrada, incluso de noche y en domingo."
+    },
+    {
+      "id": "q4",
+      "texto": "Al teclear el NIP en un cajero debo:",
+      "opciones": [
+        "Decirlo en voz alta",
+        "Taparlo con la mano",
+        "Anotarlo en la tarjeta",
+        "Pedir ayuda"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un hábito de dos segundos que evita que alguien lo vea."
+    },
+    {
+      "id": "q5",
+      "texto": "Un desconocido se ofrece a ayudarme en el cajero:",
+      "opciones": [
+        "Acepto si es amable",
+        "Le doy la tarjeta",
+        "No acepto ninguna ayuda",
+        "Le digo mi NIP"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una de las formas más comunes de fraude en cajeros."
+    },
+    {
+      "id": "q6",
+      "texto": "Usar wifi público para operaciones bancarias es:",
+      "opciones": [
+        "Recomendable",
+        "Obligatorio",
+        "Más rápido y seguro",
+        "Riesgoso"
+      ],
+      "correcta": 3,
+      "explicacion": "En una red pública otros pueden intentar interceptar tu información."
+    },
+    {
+      "id": "q7",
+      "texto": "Si saco dinero en el cajero, en la app:",
+      "opciones": [
+        "El saldo baja de inmediato",
+        "No cambia nada",
+        "Sube el saldo",
+        "Se cierra la cuenta"
+      ],
+      "correcta": 0,
+      "explicacion": "No son tres cuentas: es la misma vista desde tres lugares."
+    },
+    {
+      "id": "q8",
+      "texto": "El error más frecuente al usar un cajero es:",
+      "opciones": [
+        "Teclear mal el monto",
+        "Olvidar la tarjeta",
+        "Elegir el idioma",
+        "Guardar el comprobante"
+      ],
+      "correcta": 1,
+      "explicacion": "Toma el dinero, toma la tarjeta y guarda el comprobante, en ese orden."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-6-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-6-b-escena.webp"
+}

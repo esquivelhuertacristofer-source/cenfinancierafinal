@@ -1,0 +1,195 @@
+{
+  "code": "ACT-S2-4-10-A",
+  "unit_code": "S2-4-10",
+  "unit_title": "Pivotar: cambiar de rumbo sin perder el aprendizaje",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Decisión de Pivote",
+  "descripcion": "Evalúa las señales, decide y define qué conservas.",
+  "objetivo": "Estructurar una decisión de pivote con señales y criterios definidos",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "La situación actual",
+      "descripcion": "Los datos duros del negocio.",
+      "campos": [
+        {
+          "id": "meses_operando",
+          "label": "Meses operando",
+          "type": "slider",
+          "min": 1,
+          "max": 60,
+          "step": 1,
+          "default": 14,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "clientes",
+          "label": "Clientes activos",
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "default": 45,
+          "unit": "clientes",
+          "placeholder": "45",
+          "requerido": true
+        },
+        {
+          "id": "crecimiento",
+          "label": "Crecimiento mensual de clientes",
+          "type": "slider",
+          "min": -20,
+          "max": 50,
+          "step": 1,
+          "default": 2,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "contribucion",
+          "label": "Contribución por cliente al mes",
+          "type": "number",
+          "min": -5000,
+          "max": 100000,
+          "default": 90,
+          "unit": "$",
+          "placeholder": "90",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Las señales",
+      "descripcion": "Qué dicen los clientes con su comportamiento.",
+      "campos": [
+        {
+          "id": "uso_distinto",
+          "label": "Clientes que usan el producto para algo distinto",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 35,
+          "unit": "%",
+          "ayuda": "Una señal fuerte de que el valor real está en otro lado.",
+          "requerido": true
+        },
+        {
+          "id": "segmento_inesperado",
+          "label": "Ventas que vienen de un segmento no objetivo",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "intentos",
+          "label": "Intentos serios de arreglar la economía unitaria",
+          "type": "slider",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 3,
+          "unit": "intentos",
+          "requerido": true
+        },
+        {
+          "id": "senales_total",
+          "label": "Fuerza combinada de las señales",
+          "type": "calculated",
+          "formula": "Math.round((uso_distinto + segmento_inesperado) / 2 + intentos * 5)",
+          "unit": "pts"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El pivote propuesto",
+      "descripcion": "Qué cambio exactamente.",
+      "campos": [
+        {
+          "id": "que_cambio",
+          "label": "¿Qué elemento voy a cambiar?",
+          "type": "select",
+          "opciones": [
+            "El segmento de cliente",
+            "El problema que atiendo",
+            "El modelo de ingreso",
+            "El canal de venta"
+          ],
+          "default": "El segmento de cliente",
+          "requerido": true
+        },
+        {
+          "id": "hipotesis",
+          "label": "Mi hipótesis del pivote",
+          "type": "textarea",
+          "placeholder": "Creo que si cambio X, entonces Y ocurrirá porque...",
+          "requerido": true
+        },
+        {
+          "id": "conservo",
+          "label": "¿Qué conservo del negocio actual?",
+          "type": "textarea",
+          "placeholder": "Clientes, conocimiento, relaciones, tecnología, equipo...",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Las señales de la próxima revisión",
+      "descripcion": "Definidas ahora, en frío.",
+      "campos": [
+        {
+          "id": "plazo",
+          "label": "Plazo para evaluar el pivote",
+          "type": "slider",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "default": 3,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "meta_clientes",
+          "label": "Clientes que necesito ver al final del plazo",
+          "type": "number",
+          "min": 1,
+          "max": 100000,
+          "default": 90,
+          "unit": "clientes",
+          "placeholder": "90",
+          "requerido": true
+        },
+        {
+          "id": "crecimiento_necesario",
+          "label": "Crecimiento mensual que eso implica",
+          "type": "calculated",
+          "formula": "Math.round((Math.pow(meta_clientes / Math.max(1, clientes), 1 / Math.max(1, plazo)) - 1) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "que_haria_si_no",
+          "label": "Si no alcanzo esa meta, ¿qué haré?",
+          "type": "textarea",
+          "placeholder": "Decidirlo ahora evita decidir por cansancio después",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "decision_pivote",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-4-10-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-10-a-escena.webp"
+}

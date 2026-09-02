@@ -4,110 +4,79 @@
   "unit_title": "Interés Compuesto: la octava maravilla del mundo",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Secreto de las AFOREs",
-  "descripcion": "¿Sabes quién cuida el dinero de los trabajadores en México? ¡Descubre el poder de las AFOREs!",
-  "objetivo": "Identificar el funcionamiento del sistema de ahorro para el retiro en México (SAR)",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
+  "tipo": "RELLENA",
+  "complejidad": "MEDIO",
+  "titulo": "La Carta de Ceny a su Yo del Futuro",
+  "contexto": "Ceny acaba de descubrir el interés compuesto y le escribe una carta a la persona que será dentro de 40 años.",
+  "descripcion": "Completa la carta con los conceptos correctos. Cada hueco encierra la razón por la que empezar temprano lo cambia todo.",
+  "objetivo": "Consolidar el mecanismo del interés compuesto: los intereses generan nuevos intereses, y el factor más poderoso es el tiempo.",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "texto": "Querida yo del futuro: hoy aprendí algo increíble. Cuando inviertes dinero, ganas intereses. Pero al año siguiente ganas intereses sobre tu dinero Y TAMBIÉN sobre __blank1__. A eso le llaman interés __blank2__. Mi maestra dice que el ingrediente más poderoso de todos no es la cantidad de dinero, sino el __blank3__. Si guardo $500 al mes desde los 20 años, a los 60 tendría muchísimo más que si empiezo a los __blank4__ guardando lo mismo. La diferencia no es del doble: es de __blank5__. Por eso lo peor que puedo hacer es __blank6__. Prometo que en cuanto tenga mi primer trabajo voy a __blank7__ una parte antes de gastar el resto. Atentamente, tu yo de 11 años.",
+  "blanks": [
     {
-      "id": "afo1",
-      "texto": "¿Qué significa la palabra AFORE?",
+      "id": "blank1",
       "opciones": [
-        "Administradora de Fondos para el Retiro",
-        "Asociación de Futuros Operadores Ricos y Exitosos",
-        "Ayuda Financiera Organizada y Real",
-        "Agencia de Fortunas en Efectivo"
+        "los intereses que ya ganaste",
+        "los impuestos",
+        "las deudas"
       ],
-      "correcta": 0,
-      "explicacion": "Es una institución que invierte tu dinero para que crezca mientras tú trabajas."
+      "respuesta": "los intereses que ya ganaste"
     },
     {
-      "id": "afo2",
-      "texto": "¿De quién es el dinero que está en una AFORE?",
+      "id": "blank2",
       "opciones": [
-        "Del gobierno",
-        "Del banco",
-        "Del trabajador (es una cuenta individual)",
-        "De la empresa"
+        "compuesto",
+        "simple",
+        "prestado"
       ],
-      "correcta": 2,
-      "explicacion": "Cada trabajador tiene su propia cuenta con su nombre, como una alcancía personal."
+      "respuesta": "compuesto"
     },
     {
-      "id": "afo3",
-      "texto": "¿A qué edad se retira normalmente una persona en México?",
+      "id": "blank3",
       "opciones": [
-        "A los 40 años",
-        "A los 65 años",
-        "A los 80 años",
-        "Nunca"
+        "tiempo",
+        "sueldo",
+        "banco"
       ],
-      "correcta": 1,
-      "explicacion": "A los 65 años es cuando puedes disponer de tu fondo completo para vivir tu jubilación."
+      "respuesta": "tiempo"
     },
     {
-      "id": "afo4",
-      "texto": "¿Qué son las 'Aportaciones Voluntarias'?",
+      "id": "blank4",
       "opciones": [
-        "Multas que te cobran",
-        "Dinero extra que tú decides ahorrar en tu AFORE para que crezca más",
-        "Regalos que le haces al banco",
-        "Pagos por usar la App"
+        "40",
+        "21",
+        "25"
       ],
-      "correcta": 1,
-      "explicacion": "Es la mejor forma de subir tu pensión final por decisión propia."
+      "respuesta": "40"
     },
     {
-      "id": "afo5",
-      "texto": "¿En qué tres cosas debes fijarte para elegir la mejor AFORE?",
+      "id": "blank5",
       "opciones": [
-        "En el color del logo",
-        "En los Rendimientos, las Comisiones y el Servicio",
-        "En qué tan cerca está de tu casa",
-        "En si te regalan una pluma"
+        "varias veces más",
+        "unos pesos",
+        "nada"
       ],
-      "correcta": 1,
-      "explicacion": "Buscas que te paguen más (rendimiento) y te cobren menos (comisión)."
+      "respuesta": "varias veces más"
     },
     {
-      "id": "afo6",
-      "texto": "¿Qué es la CONSAR?",
+      "id": "blank6",
       "opciones": [
-        "Una marca de computadoras",
-        "La autoridad que vigila que las AFOREs cuiden bien tu dinero",
-        "Un tipo de moneda",
-        "El nombre de un banco"
+        "esperar a empezar",
+        "invertir poco",
+        "preguntar dudas"
       ],
-      "correcta": 1,
-      "explicacion": "CONSAR es el guardián que asegura que nadie toque tu dinero sin permiso."
+      "respuesta": "esperar a empezar"
     },
     {
-      "id": "afo7",
-      "texto": "¿Por qué el dinero de la AFORE crece tanto en 40 años?",
+      "id": "blank7",
       "opciones": [
-        "Por arte de magia",
-        "Por el Interés Compuesto (el dinero genera ganancias que se reinvierten)",
-        "Porque el gobierno le mete dinero",
-        "Porque los billetes se reproducen"
+        "invertir",
+        "gastar",
+        "prestar"
       ],
-      "correcta": 1,
-      "explicacion": "El tiempo es el mejor aliado del interés compuesto."
-    },
-    {
-      "id": "afo8",
-      "texto": "¿Cuándo es el mejor momento para empezar a pensar en tu AFORE?",
-      "opciones": [
-        "Cuando cumplas 60 años",
-        "Desde tu primer trabajo formal",
-        "Cuando seas jefe",
-        "Nunca"
-      ],
-      "correcta": 1,
-      "explicacion": "Entre más joven empieces, más millonario serás al retirarte."
+      "respuesta": "invertir"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

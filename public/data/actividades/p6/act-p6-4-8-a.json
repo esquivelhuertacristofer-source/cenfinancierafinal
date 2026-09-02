@@ -1,0 +1,200 @@
+{
+  "code": "ACT-P6-4-8-A",
+  "unit_code": "P6-4-8",
+  "unit_title": "Precio por valor, no por costo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Precio Por Valor",
+  "descripcion": "Calcula tu costo real y define un precio justificado por el valor que entregas.",
+  "objetivo": "Construir un precio a partir de costo, valor percibido y competencia",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi costo real por unidad",
+      "descripcion": "El piso por debajo del cual pierdo dinero.",
+      "campos": [
+        {
+          "id": "materiales",
+          "label": "Materiales por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 10000,
+          "default": 45,
+          "unit": "$",
+          "placeholder": "45",
+          "requerido": true
+        },
+        {
+          "id": "empaque",
+          "label": "Empaque por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 2000,
+          "default": 8,
+          "unit": "$",
+          "placeholder": "8",
+          "requerido": true
+        },
+        {
+          "id": "minutos",
+          "label": "Minutos de trabajo por unidad",
+          "type": "slider",
+          "min": 1,
+          "max": 300,
+          "step": 1,
+          "default": 25,
+          "unit": "min",
+          "requerido": true
+        },
+        {
+          "id": "valor_hora",
+          "label": "Lo que vale mi hora",
+          "type": "slider",
+          "min": 20,
+          "max": 800,
+          "step": 10,
+          "default": 90,
+          "unit": "$/h",
+          "ayuda": "Tu tiempo cuesta aunque no lo factures.",
+          "requerido": true
+        },
+        {
+          "id": "costo_total",
+          "label": "Costo real por unidad",
+          "type": "calculated",
+          "formula": "Math.round(materiales + empaque + minutos / 60 * valor_hora)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "El valor que entrego",
+      "descripcion": "Lo que hace que el cliente pague más.",
+      "campos": [
+        {
+          "id": "resultado",
+          "label": "¿Qué resultado compra en realidad el cliente?",
+          "type": "textarea",
+          "placeholder": "Ej. que su fiesta salga bien sin preocuparse",
+          "requerido": true
+        },
+        {
+          "id": "diferenciadores",
+          "label": "Diferenciadores que ofrezco",
+          "type": "slider",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 2,
+          "unit": "dif.",
+          "ayuda": "Rapidez, garantía, atención, presentación, conveniencia.",
+          "requerido": true
+        },
+        {
+          "id": "precio_competencia",
+          "label": "Precio promedio de la competencia",
+          "type": "number",
+          "min": 1,
+          "max": 100000,
+          "default": 160,
+          "unit": "$",
+          "placeholder": "160",
+          "requerido": true
+        },
+        {
+          "id": "techo_estimado",
+          "label": "Techo estimado por valor percibido",
+          "type": "calculated",
+          "formula": "Math.round(precio_competencia * (1 + diferenciadores * 0.12))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi precio",
+      "descripcion": "Dónde me ubico entre los tres límites.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio que voy a cobrar",
+          "type": "slider",
+          "min": 1,
+          "max": 5000,
+          "step": 5,
+          "default": 190,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "margen",
+          "label": "Margen por unidad",
+          "type": "calculated",
+          "formula": "Math.round(precio - (materiales + empaque + minutos / 60 * valor_hora))",
+          "unit": "$"
+        },
+        {
+          "id": "margen_pct",
+          "label": "Margen sobre el precio",
+          "type": "calculated",
+          "formula": "Math.round((precio - (materiales + empaque + minutos / 60 * valor_hora)) / Math.max(1, precio) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "vs_competencia",
+          "label": "Diferencia contra la competencia",
+          "type": "calculated",
+          "formula": "Math.round((precio - precio_competencia) / Math.max(1, precio_competencia) * 100)",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Sostener el precio",
+      "descripcion": "Cuánto necesito vender y cómo lo justifico.",
+      "campos": [
+        {
+          "id": "meta_mensual",
+          "label": "Utilidad mensual que busco",
+          "type": "number",
+          "min": 500,
+          "max": 500000,
+          "default": 8000,
+          "unit": "$",
+          "placeholder": "8000",
+          "requerido": true
+        },
+        {
+          "id": "unidades_necesarias",
+          "label": "Unidades que debo vender al mes",
+          "type": "calculated",
+          "formula": "Math.ceil(meta_mensual / Math.max(1, precio - (materiales + empaque + minutos / 60 * valor_hora)))",
+          "unit": "uds"
+        },
+        {
+          "id": "horas_mes",
+          "label": "Horas de trabajo que implica",
+          "type": "calculated",
+          "formula": "Math.round(Math.ceil(meta_mensual / Math.max(1, precio - (materiales + empaque + minutos / 60 * valor_hora))) * minutos / 60)",
+          "unit": "h"
+        },
+        {
+          "id": "justificacion",
+          "label": "Cómo justifico mi precio ante el cliente",
+          "type": "textarea",
+          "placeholder": "Una frase concreta sobre el valor que entrego",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "estrategia_precio",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-4-8-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-8-a-escena.webp"
+}

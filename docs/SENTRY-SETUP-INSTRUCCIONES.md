@@ -1,6 +1,20 @@
 # Sentry — Instrucciones de Configuración Manual
 
+> ## ⚠️ NO VIGENTE — Documento histórico
+>
+> **Sentry fue removido deliberadamente del proyecto el 2026-07-08**, durante la migración de Vercel a Cloudflare Workers. El paquete `@sentry/nextjs` nunca llegó a tener un DSN configurado en producción (estaba inerte) y su SDK de servidor (más OpenTelemetry) inflaba el Worker por encima del límite de 3 MiB gzip del plan free de Cloudflare.
+>
+> **Las instrucciones de este documento ya NO aplican al estado actual del código.** No existen `sentry.client.config.ts`, `sentry.server.config.ts`, `sentry.edge.config.ts`, `src/app/api/test-sentry/route.ts` ni el wrap `withSentryConfig` en `next.config.ts` — todo eso fue removido. **No reinstales el paquete `@sentry/nextjs` ni recrees estos archivos como si esta guía siguiera vigente.**
+>
+> Reactivar monitoreo de errores en producción (con Sentry, si es compatible con Cloudflare Workers, o con una alternativa) es una **decisión de producto pendiente**, no algo a ejecutar automáticamente a partir de este documento. Mientras tanto, los errores de producción se observan vía logs del Worker (dashboard de Cloudflare / `wrangler tail`).
+>
+> Este documento se conserva sin reescribir como referencia histórica de cómo estaba configurado Sentry antes de la migración.
+
+---
+
 El código de Sentry ya está integrado en la plataforma. Solo faltan los pasos manuales de cuenta y variables de entorno.
+
+*(Contenido histórico a partir de aquí — ver advertencia arriba)*
 
 ---
 

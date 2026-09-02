@@ -4,99 +4,124 @@
   "unit_title": "Business Model Canvas avanzado: los 9 bloques en práctica",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "Plan de Crecimiento de Patrimonio",
-  "descripcion": "Tu valor neto es el marcador de tu juego financiero. ¡Diseña la estrategia para hacerlo crecer año con año!",
-  "objetivo": "Establecer metas financieras a mediano plazo y definir acciones para incrementar activos y reducir pasivos",
-  "xp": 600,
-  "output_type": "Estrategia de Crecimiento Patrimonial",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Los Nueve Bloques",
+  "descripcion": "Una cafetería de barrio describe su negocio en frases sueltas. Colócalas en el bloque del Canvas que les corresponde.",
+  "objetivo": "Identificar y ubicar correctamente los nueve bloques del Business Model Canvas en un caso real.",
+  "xp": 650,
+  "instruccion": "Arrastra cada frase al bloque del Canvas al que pertenece.",
+  "categorias": [
     {
-      "id": "meta_patrimonio_s2",
-      "titulo": "🎯 Tu Meta a 5 Años",
-      "descripcion": "¿Cuánto quieres valer en el futuro?",
-      "campos": [
-        {
-          "id": "objetivo_valor_neto",
-          "label": "Meta de Patrimonio Neto ($)",
-          "type": "slider",
-          "min": 100000,
-          "max": 10000000,
-          "step": 100000,
-          "default": 500000,
-          "unit": "$"
-        },
-        {
-          "id": "proposito_riqueza",
-          "label": "¿Para qué quieres construir este patrimonio?",
-          "type": "textarea",
-          "placeholder": "Ej: Para tener libertad de elegir mi trabajo, para asegurar la educación de mis hijos, para viajar por el mundo...",
-          "requerido": true
-        }
-      ]
+      "id": "valor",
+      "label": "PROPUESTA DE VALOR",
+      "emoji": "💡",
+      "color": "#f59e0b"
     },
     {
-      "id": "ataque_activos_s2",
-      "titulo": "🚀 Operación: Subir Activos",
-      "descripcion": "¿Cómo harás que entre más dinero?",
-      "campos": [
-        {
-          "id": "estrategia_activos",
-          "label": "Acciones para aumentar activos",
-          "type": "textarea",
-          "placeholder": "Ej: Invertir el 20% de mi sueldo cada mes, comprar FIBRAS, aprender una habilidad de alta demanda (programación, ventas)...",
-          "requerido": true
-        }
-      ]
+      "id": "clientes",
+      "label": "CLIENTES Y CANALES",
+      "emoji": "🎯",
+      "color": "#3b82f6"
     },
     {
-      "id": "defensa_pasivos_s2",
-      "titulo": "🛡️ Operación: Bajar Pasivos",
-      "descripcion": "¿Cómo evitarás que el dinero se escape?",
-      "campos": [
-        {
-          "id": "estrategia_pasivos",
-          "label": "Acciones para reducir deudas",
-          "type": "textarea",
-          "placeholder": "Ej: No usar tarjetas de crédito para lujos, pagar deudas viejas con el método avalancha, vivir por debajo de mis posibilidades...",
-          "requerido": true
-        }
-      ]
+      "id": "infra",
+      "label": "RECURSOS Y SOCIOS",
+      "emoji": "⚙️",
+      "color": "#8b5cf6"
     },
     {
-      "id": "numero_libertad_s2",
-      "titulo": "🕊️ El Número de Libertad",
-      "descripcion": "¿Cuánto dinero invertido necesitas para que los intereses paguen tus gastos básicos?",
-      "campos": [
-        {
-          "id": "calculo_libertad",
-          "label": "Mi Número de Libertad Financiera ($)",
-          "type": "text",
-          "placeholder": "Ej: $5,000,000 (basado en la regla del 4%)",
-          "requerido": true
-        },
-        {
-          "id": "gasto_mensual_actual",
-          "label": "Tu Gasto Mensual Actual ($)",
-          "type": "slider",
-          "min": 5000,
-          "max": 100000,
-          "step": 1000,
-          "default": 20000,
-          "requerido": false
-        },
-        {
-          "id": "numero_fire_personal",
-          "label": "Tu Número FIRE (Libertad Financiera)",
-          "type": "calculated",
-          "formula": "Math.round(gasto_mensual_actual * 12 * 25)",
-          "unit": "$",
-          "ayuda": "Con 25× tus gastos anuales invertidos, vives para siempre de los rendimientos (Regla 4%)"
-        }
-      ]
+      "id": "finanzas",
+      "label": "INGRESOS Y COSTOS",
+      "emoji": "💰",
+      "color": "#10b981"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Café de especialidad tostado el mismo día",
+      "emoji": "☕",
+      "categoria_correcta": "valor",
+      "feedback": "Es la promesa que hace distinta a esta cafetería."
+    },
+    {
+      "id": "i2",
+      "label": "Oficinistas que pasan camino al trabajo",
+      "emoji": "💼",
+      "categoria_correcta": "clientes",
+      "feedback": "Segmento definido por comportamiento y horario, no por edad."
+    },
+    {
+      "id": "i3",
+      "label": "La máquina de espresso profesional",
+      "emoji": "🔧",
+      "categoria_correcta": "infra",
+      "feedback": "Recurso clave: sin ella no hay producto."
+    },
+    {
+      "id": "i4",
+      "label": "Renta del local: $18,000 al mes",
+      "emoji": "🏠",
+      "categoria_correcta": "finanzas",
+      "feedback": "Estructura de costos: fijo, se pague o no se venda."
+    },
+    {
+      "id": "i5",
+      "label": "Ambiente tranquilo con wifi para trabajar",
+      "emoji": "📶",
+      "categoria_correcta": "valor",
+      "feedback": "Parte de la propuesta: venden espacio, no solo café."
+    },
+    {
+      "id": "i6",
+      "label": "Venta en mostrador y pedidos por app",
+      "emoji": "📱",
+      "categoria_correcta": "clientes",
+      "feedback": "Canales: las dos vías por las que llega el producto."
+    },
+    {
+      "id": "i7",
+      "label": "Proveedor de granos de Chiapas con contrato directo",
+      "emoji": "🌱",
+      "categoria_correcta": "infra",
+      "feedback": "Socio clave: de él depende la promesa de calidad."
+    },
+    {
+      "id": "i8",
+      "label": "Suscripción mensual de café ilimitado",
+      "emoji": "🔁",
+      "categoria_correcta": "finanzas",
+      "feedback": "Fuente de ingresos recurrente: la más valiosa que puede tener un negocio."
+    },
+    {
+      "id": "i9",
+      "label": "Baristas capacitados y certificados",
+      "emoji": "👩‍🍳",
+      "categoria_correcta": "infra",
+      "feedback": "Recurso humano clave que sostiene la calidad."
+    },
+    {
+      "id": "i10",
+      "label": "Programa de lealtad: el décimo café es gratis",
+      "emoji": "🎫",
+      "categoria_correcta": "clientes",
+      "feedback": "Relación con clientes: busca que regresen."
+    },
+    {
+      "id": "i11",
+      "label": "Precio promedio por ticket: $95",
+      "emoji": "🧾",
+      "categoria_correcta": "finanzas",
+      "feedback": "Ingreso por cliente: la otra mitad de la ecuación económica."
+    },
+    {
+      "id": "i12",
+      "label": "Tuestan y muelen en el local cada mañana",
+      "emoji": "⏰",
+      "categoria_correcta": "valor",
+      "feedback": "La actividad que hace creíble la promesa de frescura."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

@@ -4,110 +4,162 @@
   "unit_title": "Ahorro para la universidad: becas, créditos educativos, FINAE",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El Lenguaje de las Divisas",
-  "descripcion": "¿Sabes por qué las monedas suben y bajan? ¡Ponte a prueba en el mercado más grande del mundo!",
-  "objetivo": "Identificar los conceptos fundamentales del mercado de divisas y su impacto en el comercio internacional",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
-    {
-      "id": "for1",
-      "texto": "¿Qué es la 'Apreciación' de una moneda?",
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "Cuatro Caminos a la Universidad",
+  "descripcion": "Valeria entra a la universidad en un año. Tiene promedio de 9.4, su familia puede aportar $3,000 al mes y ella trabaja los fines de semana. Cuatro caminos, consecuencias muy distintas.",
+  "objetivo": "Comparar las vías de financiamiento de la educación superior en México evaluando costo total, riesgo y libertad posterior.",
+  "xp": 800,
+  "personaje_principal": "Valeria",
+  "contexto_inicial": "Carrera deseada: ingeniería en sistemas. Pública: sin colegiatura, a 90 minutos. Privada: $11,000 al mes. Su familia puede aportar $3,000 mensuales.",
+  "nodo_inicial": "el_ano_previo",
+  "nodos": {
+    "el_ano_previo": {
+      "id": "el_ano_previo",
+      "texto": "Falta un año. ¿Cuál es el movimiento más rentable que puede hacer AHORA?",
       "opciones": [
-        "Cuando una moneda pierde valor frente a otra",
-        "Cuando una moneda aumenta su valor frente a otra (ej: el peso se fortalece)",
-        "Cuando el banco central imprime más dinero",
-        "Cuando el precio del oro sube"
-      ],
-      "correcta": 1,
-      "explicacion": "Una moneda apreciada significa que tienes más poder de compra internacional."
+        {
+          "id": "becas",
+          "texto": "Buscar y postular a todas las becas para las que califica con su 9.4",
+          "siguiente_nodo": "las_opciones",
+          "consecuencia": "Encuentra siete convocatorias. Postula a las siete.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "trabajar",
+          "texto": "Trabajar más horas para juntar dinero",
+          "siguiente_nodo": "las_opciones",
+          "consecuencia": "Junta $40,000 y su promedio baja a 8.7, con lo que pierde acceso a las mejores becas.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": 40000
+        },
+        {
+          "id": "esperar",
+          "texto": "Esperar a ver qué pasa cuando llegue el momento",
+          "siguiente_nodo": "las_opciones",
+          "consecuencia": "Las convocatorias de beca cierran meses antes del inicio de clases.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "for2",
-      "texto": "¿Qué es el 'Tipo de Cambio Flexible'?",
+    "las_opciones": {
+      "id": "las_opciones",
+      "texto": "Llega el momento. Opciones: (1) pública gratuita, (2) privada con beca del 60% pagando $4,400 al mes, (3) privada completa con crédito educativo de $528,000, (4) trabajar un año y entrar después.",
       "opciones": [
-        "Cuando el gobierno decide cuánto vale la moneda",
-        "Cuando el precio de la moneda lo determina la oferta y la demanda en el mercado libre",
-        "Cuando el precio nunca cambia",
-        "Cuando se usa oro en lugar de billetes"
-      ],
-      "correcta": 1,
-      "explicacion": "La mayoría de los países modernos usan este sistema donde el mercado manda."
+        {
+          "id": "publica",
+          "texto": "Pública: invertir los $3,000 mensuales de la familia durante toda la carrera",
+          "siguiente_nodo": "el_traslado",
+          "consecuencia": "Cero deuda y un capital que crece desde los 18 años.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 195000
+        },
+        {
+          "id": "beca",
+          "texto": "Privada con beca al 60%: $4,400 al mes, casi cubierto por la familia",
+          "siguiente_nodo": "final_beca",
+          "consecuencia": "Sale con título privado y sin deuda, aportando $1,400 propios al mes.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": -67000
+        },
+        {
+          "id": "credito",
+          "texto": "Privada completa con crédito educativo",
+          "siguiente_nodo": "el_credito",
+          "consecuencia": "El asesor le muestra \"mensualidades desde $6,900 al graduarte\".",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "diferir",
+          "texto": "Trabajar un año antes de entrar",
+          "siguiente_nodo": "final_diferido",
+          "consecuencia": "Junta dinero y pierde un año de carrera y de ingresos futuros.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": 60000
+        }
+      ]
     },
-    {
-      "id": "for3",
-      "texto": "¿Por qué el mercado Forex es único?",
+    "el_credito": {
+      "id": "el_credito",
+      "texto": "Valeria lee el contrato completo. Los intereses corren desde el desembolso: al graduarse deberá $792,000, no $528,000. La mensualidad real será $11,400 durante 8 años, y su sueldo esperado es $19,000.",
       "opciones": [
-        "Porque solo abre los domingos",
-        "Porque funciona las 24 horas del día, 5 días a la semana, de forma global",
-        "Porque no usa internet",
-        "Porque solo participan bancos"
-      ],
-      "correcta": 1,
-      "explicacion": "Es el mercado más grande del mundo y siempre hay alguien operando en algún lugar."
+        {
+          "id": "recalcular",
+          "texto": "Recalcular: son 60% de su primer sueldo durante 8 años",
+          "siguiente_nodo": "el_traslado",
+          "consecuencia": "Se echa para atrás y elige la pública.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 195000
+        },
+        {
+          "id": "firmar",
+          "texto": "Firmar: \"cuando me gradúe voy a ganar mucho más\"",
+          "siguiente_nodo": "final_atada",
+          "consecuencia": "Firma un compromiso de ocho años basado en un sueldo que aún no existe.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -792000
+        }
+      ]
     },
-    {
-      "id": "for4",
-      "texto": "¿A quién beneficia una moneda LOCAL DÉBIL?",
+    "el_traslado": {
+      "id": "el_traslado",
+      "texto": "La pública está a 90 minutos: tres horas diarias de traslado y unos $2,000 mensuales de transporte. ¿Cómo lo resuelve?",
       "opciones": [
-        "A los que quieren viajar al extranjero",
-        "A los exportadores (quienes venden productos fuera), porque sus productos son más baratos para el mundo",
-        "A los que ahorran en pesos",
-        "A nadie"
-      ],
-      "correcta": 1,
-      "explicacion": "Si el peso es barato, es más fácil vender aguacates o autos mexicanos al extranjero."
+        {
+          "id": "rentar",
+          "texto": "Rentar un cuarto cerca con parte del dinero que no gasta en colegiatura",
+          "siguiente_nodo": "final_publica",
+          "consecuencia": "Recupera 15 horas semanales para estudiar y trabajar.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": -40000
+        },
+        {
+          "id": "aguantar",
+          "texto": "Aguantar el traslado y ahorrar todo",
+          "siguiente_nodo": "final_publica",
+          "consecuencia": "Ahorra más dinero y pierde tres horas diarias durante cuatro años.",
+          "xp_bonus": 150,
+          "impacto_patrimonio": 30000
+        }
+      ]
     },
-    {
-      "id": "for5",
-      "texto": "¿A quién beneficia una moneda LOCAL FUERTE?",
-      "opciones": [
-        "A los importadores y viajeros, porque los productos extranjeros y viajes son más baratos",
-        "A los que exportan petróleo",
-        "Al gobierno solamente",
-        "A nadie"
-      ],
-      "correcta": 0,
-      "explicacion": "Con una moneda fuerte, comprar tecnología o viajar a Disney cuesta menos pesos."
+    "final_publica": {
+      "id": "final_publica",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Se tituló sin deuda y con $195,000 invertidos que su familia aportó durante la carrera. A los 22 años ya tenía patrimonio, historial crediticio y libertad para elegir su primer trabajo por lo que aprendería, no por lo que pagaba.",
+      "reflexion_final": "La universidad es la mayor inversión de tu vida y también la que más se decide por prestigio y no por números. En México la educación pública superior ofrece el mismo título con costo cercano a cero. Y salir sin deuda a los 22 años no es solo ahorro: es la libertad de poder decir que no a un mal primer trabajo."
     },
-    {
-      "id": "for6",
-      "texto": "¿Qué es el 'Spread' en el cambio de divisas?",
-      "opciones": [
-        "Una comisión que te regalan",
-        "La diferencia entre el precio de compra y el precio de venta de una moneda",
-        "El nombre de la moneda europea",
-        "Un tipo de ahorro"
-      ],
-      "correcta": 1,
-      "explicacion": "Es cómo ganan dinero las casas de cambio y los bancos."
+    "final_beca": {
+      "id": "final_beca",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Su promedio de 9.4 le valió el 60% de beca. Se tituló en la privada sin deuda, con la red de contactos de esa escuela y con un costo total de $211,000 en cuatro años.",
+      "reflexion_final": "Un buen promedio es dinero: las becas se ganan años antes de la inscripción y casi nadie postula a todas las que podría. Es la mejor tasa de retorno disponible para un estudiante de 17 años."
     },
-    {
-      "id": "for7",
-      "texto": "¿Cuál es la moneda de reserva más importante del mundo?",
-      "opciones": [
-        "El Euro",
-        "El Dólar Estadounidense (USD)",
-        "El Yen Japonés",
-        "El Bitcoin"
-      ],
-      "correcta": 1,
-      "explicacion": "La mayoría de las transacciones globales y el petróleo se pagan en dólares."
+    "final_diferido": {
+      "id": "final_diferido",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Trabajó un año y juntó $60,000. Entró a la universidad un año más tarde y se tituló un año más tarde, lo que significa un año menos de salario profesional en toda su vida laboral.",
+      "reflexion_final": "Diferir la carrera tiene un costo que casi nadie calcula: un año completo de salario profesional al final de la vida laboral, más un año menos de interés compuesto. A veces es necesario; nunca es gratis."
     },
-    {
-      "id": "for8",
-      "texto": "¿Qué sucede con el tipo de cambio si un país tiene una inflación muy alta?",
-      "opciones": [
-        "Su moneda suele depreciarse (perder valor) frente a otras más estables",
-        "Su moneda se vuelve más fuerte",
-        "No le afecta",
-        "El tipo de cambio desaparece"
-      ],
-      "correcta": 0,
-      "explicacion": "¡Felicidades! Ahora entiendes los hilos que mueven el valor de tu dinero en el mundo."
+    "final_atada": {
+      "id": "final_atada",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Se graduó debiendo $792,000. Con $11,400 mensuales durante ocho años sobre un sueldo de $19,000, no pudo mudarse, ni rechazar trabajos, ni ahorrar. A los 30 años seguía pagando la carrera.",
+      "reflexion_final": "La frase \"págalo cuando te gradúes\" oculta que los intereses corren desde el primer día. Regla práctica: si la mensualidad estimada supera el 20% de tu sueldo esperado, ese crédito no es financiamiento, es una hipoteca sobre tus primeros años de vida adulta."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

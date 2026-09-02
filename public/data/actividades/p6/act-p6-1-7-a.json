@@ -1,0 +1,190 @@
+{
+  "code": "ACT-P6-1-7-A",
+  "unit_code": "P6-1-7",
+  "unit_title": "Comparar productos financieros: la letra chiquita",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Tabla de la Letra Chica",
+  "descripcion": "Compara dos productos financieros cláusula por cláusula y descubre cuál cuesta menos de verdad.",
+  "objetivo": "Comparar el costo anual real de dos productos financieros",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Producto A",
+      "descripcion": "Las condiciones del primer producto.",
+      "campos": [
+        {
+          "id": "anualidad_a",
+          "label": "Anualidad",
+          "type": "slider",
+          "min": 0,
+          "max": 2000,
+          "step": 50,
+          "default": 0,
+          "unit": "$",
+          "ayuda": "Muchas ofrecen el primer año gratis y cobran después.",
+          "requerido": true
+        },
+        {
+          "id": "meses_gratis_a",
+          "label": "Meses de promoción sin anualidad",
+          "type": "slider",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 12,
+          "unit": "meses",
+          "ayuda": "La vigencia de la promoción es la cláusula más olvidada.",
+          "requerido": true
+        },
+        {
+          "id": "comision_a",
+          "label": "Comisión mensual de manejo",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 10,
+          "default": 0,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "penalizacion_a",
+          "label": "Penalización por incumplir el saldo mínimo",
+          "type": "slider",
+          "min": 0,
+          "max": 500,
+          "step": 25,
+          "default": 200,
+          "unit": "$",
+          "requerido": true,
+          "ayuda": "Se cobra cada vez que el saldo baja del mínimo."
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Producto B",
+      "descripcion": "Las condiciones del segundo producto.",
+      "campos": [
+        {
+          "id": "anualidad_b",
+          "label": "Anualidad",
+          "type": "slider",
+          "min": 0,
+          "max": 2000,
+          "step": 50,
+          "default": 600,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "meses_gratis_b",
+          "label": "Meses de promoción sin anualidad",
+          "type": "slider",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 0,
+          "unit": "meses",
+          "requerido": true
+        },
+        {
+          "id": "comision_b",
+          "label": "Comisión mensual de manejo",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 10,
+          "default": 0,
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "penalizacion_b",
+          "label": "Penalización por incumplir el saldo mínimo",
+          "type": "slider",
+          "min": 0,
+          "max": 500,
+          "step": 25,
+          "default": 0,
+          "unit": "$",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi uso real",
+      "descripcion": "Cómo voy a usar el producto en la práctica.",
+      "campos": [
+        {
+          "id": "veces_bajo_minimo",
+          "label": "Veces al año que bajaría del saldo mínimo",
+          "type": "slider",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "default": 3,
+          "unit": "veces",
+          "ayuda": "Sé realista: es la cláusula que más se activa.",
+          "requerido": true
+        },
+        {
+          "id": "anios",
+          "label": "Años que pienso conservarlo",
+          "type": "slider",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 3,
+          "unit": "años",
+          "ayuda": "Las promociones se acaban; el costo real aparece después.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "El costo real",
+      "descripcion": "Cuánto cuesta cada producto en todo el periodo.",
+      "campos": [
+        {
+          "id": "costo_a",
+          "label": "Costo total del producto A",
+          "type": "calculated",
+          "formula": "Math.round(anualidad_a * Math.max(0, anios - meses_gratis_a / 12) + comision_a * 12 * anios + penalizacion_a * veces_bajo_minimo * anios)",
+          "unit": "$"
+        },
+        {
+          "id": "costo_b",
+          "label": "Costo total del producto B",
+          "type": "calculated",
+          "formula": "Math.round(anualidad_b * Math.max(0, anios - meses_gratis_b / 12) + comision_b * 12 * anios + penalizacion_b * veces_bajo_minimo * anios)",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia (positivo = B es más barato)",
+          "type": "calculated",
+          "formula": "Math.round(anualidad_a * Math.max(0, anios - meses_gratis_a / 12) + comision_a * 12 * anios + penalizacion_a * veces_bajo_minimo * anios - (anualidad_b * Math.max(0, anios - meses_gratis_b / 12) + comision_b * 12 * anios + penalizacion_b * veces_bajo_minimo * anios))",
+          "unit": "$"
+        },
+        {
+          "id": "peso_penalizaciones_a",
+          "label": "Cuánto del costo de A son penalizaciones",
+          "type": "calculated",
+          "formula": "penalizacion_a * veces_bajo_minimo * anios",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "comparacion_contratos",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-1-7-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-7-a-escena.webp"
+}

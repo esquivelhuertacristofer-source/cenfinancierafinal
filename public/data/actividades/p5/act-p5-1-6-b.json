@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P5-1-6-B",
+  "unit_code": "P5-1-6",
+  "unit_title": "CONDUSEF y el Buró de Entidades Financieras",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto CONDUSEF y Buró",
+  "descripcion": "Responde rápido sobre tus herramientas de defensa como usuario.",
+  "objetivo": "Consolidar las funciones de CONDUSEF y del Buró de Entidades Financieras",
+  "xp": 240,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La CONDUSEF sirve para:",
+      "respuesta_correcta": "Defender al usuario de servicios financieros",
+      "incorrectas": [
+        "Prestar dinero",
+        "Cobrar impuestos",
+        "Emitir tarjetas"
+      ],
+      "dato_extra": "Su servicio es gratuito y no se necesita abogado."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El primer paso de una reclamación es:",
+      "respuesta_correcta": "Presentarla ante la propia institución",
+      "incorrectas": [
+        "Ir directo a la comisión",
+        "Publicarlo en redes",
+        "Cerrar la cuenta"
+      ],
+      "dato_extra": "Y guardar el folio: es lo que después permite escalar el caso."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El Buró de Entidades Financieras sirve para:",
+      "respuesta_correcta": "Elegir antes de contratar",
+      "incorrectas": [
+        "Reclamar",
+        "Pedir crédito",
+        "Bloquear tarjetas"
+      ],
+      "dato_extra": "Es una de las herramientas más útiles y menos usadas del sistema."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Una institución con muchas reclamaciones:",
+      "respuesta_correcta": "Puede tener también muchos clientes",
+      "incorrectas": [
+        "Es siempre la peor",
+        "Es siempre la mejor",
+        "Está prohibida"
+      ],
+      "dato_extra": "Se comparan proporciones, no números absolutos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Además del número de quejas hay que ver:",
+      "respuesta_correcta": "Cuántas se resuelven a favor del usuario",
+      "incorrectas": [
+        "El logo",
+        "Las sucursales",
+        "El horario"
+      ],
+      "dato_extra": "Y cuánto tardan en resolverlas."
+    },
+    {
+      "id": "q6",
+      "pregunta": "A la CONDUSEF hay que llevar:",
+      "respuesta_correcta": "Contrato, estados de cuenta, folios y respuestas",
+      "incorrectas": [
+        "Solo la queja verbal",
+        "Nada",
+        "Un abogado"
+      ],
+      "dato_extra": "Llegar con documentación completa es lo que hace avanzar un caso."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Consultar el Buró antes de contratar es:",
+      "respuesta_correcta": "Gratuito y público",
+      "incorrectas": [
+        "De paga",
+        "Solo para abogados",
+        "Imposible"
+      ],
+      "dato_extra": "Cualquiera puede revisarlo antes de firmar un contrato."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-1-6-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-1-6-b-escena.webp"
+}

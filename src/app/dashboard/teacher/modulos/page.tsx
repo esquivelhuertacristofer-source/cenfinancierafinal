@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
+import { useHasMounted } from "../../../../lib/useHasMounted";
 import { getPillarsForGrade, PillarMeta, Unit } from "../../../../lib/hub";
 import { 
   BookOpen, 
@@ -130,11 +131,10 @@ export default function ModulosPage() {
   const [selectedGrade, setSelectedGrade] = useState<string | null>(null);
   const [selectedPillar, setSelectedPillar] = useState<PillarMeta | null>(null);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [mounted, setMounted] = useState(false);
+  const mounted = useHasMounted();
   const router = useRouter();
 
   useEffect(() => {
-    setMounted(true);
     const init = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) { router.push("/log-in"); return; }

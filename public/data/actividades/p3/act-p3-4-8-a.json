@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P3-4-8-A",
+  "unit_code": "P3-4-8",
+  "unit_title": "El inventario: cuánto produzco sin que me sobre",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Cuánto Produzco",
+  "descripcion": "Calcula tu producción para la feria sin quedarte corto ni que te sobre.",
+  "objetivo": "Estimar demanda y definir una producción por lotes con costos",
+  "xp": 200,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Cuánta gente va a venir",
+      "descripcion": "La base de toda la estimación es el número de asistentes.",
+      "campos": [
+        {
+          "id": "asistentes",
+          "label": "Personas que asistirán al evento",
+          "type": "slider",
+          "min": 20,
+          "max": 600,
+          "step": 10,
+          "default": 200,
+          "unit": "personas",
+          "ayuda": "Usa el dato del año pasado si existe.",
+          "requerido": true
+        },
+        {
+          "id": "pct_acercan",
+          "label": "Porcentaje que se acercará a mi puesto",
+          "type": "slider",
+          "min": 5,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "ayuda": "Depende de la ubicación y de qué tan visible sea el puesto.",
+          "requerido": true
+        },
+        {
+          "id": "visitantes",
+          "label": "Personas que se acercarán",
+          "type": "calculated",
+          "formula": "Math.round(asistentes * pct_acercan / 100)",
+          "unit": "personas"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Cuántos comprarán",
+      "descripcion": "De los que se acercan, solo una parte compra.",
+      "campos": [
+        {
+          "id": "pct_compran",
+          "label": "Porcentaje de los que se acercan que compra",
+          "type": "slider",
+          "min": 5,
+          "max": 80,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Uno de cada cinco es una estimación prudente para un puesto escolar.",
+          "requerido": true
+        },
+        {
+          "id": "demanda",
+          "label": "Unidades que estimo vender",
+          "type": "calculated",
+          "formula": "Math.round(asistentes * pct_acercan / 100 * pct_compran / 100)",
+          "unit": "unidades"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mis costos",
+      "descripcion": "Cuánto me cuesta cada unidad y a cuánto la voy a vender.",
+      "campos": [
+        {
+          "id": "costo_unidad",
+          "label": "Costo de producir una unidad",
+          "type": "slider",
+          "min": 1,
+          "max": 200,
+          "step": 1,
+          "default": 12,
+          "unit": "$",
+          "ayuda": "Incluye material; el tiempo también cuenta aunque no se pague.",
+          "requerido": true
+        },
+        {
+          "id": "precio_venta",
+          "label": "Precio al que la voy a vender",
+          "type": "slider",
+          "min": 1,
+          "max": 400,
+          "step": 1,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "Debe cubrir el costo y dejar ganancia.",
+          "requerido": true
+        },
+        {
+          "id": "ganancia_unidad",
+          "label": "Ganancia por unidad vendida",
+          "type": "calculated",
+          "formula": "precio_venta - costo_unidad",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi plan por lotes",
+      "descripcion": "Produzco un primer lote menor a la estimación y repongo si se agota.",
+      "campos": [
+        {
+          "id": "primer_lote",
+          "label": "Unidades del primer lote",
+          "type": "calculated",
+          "formula": "Math.max(5, Math.round(asistentes * pct_acercan / 100 * pct_compran / 100 * 0.7))",
+          "unit": "unidades"
+        },
+        {
+          "id": "inversion_inicial",
+          "label": "Lo que invierto en el primer lote",
+          "type": "calculated",
+          "formula": "Math.max(5, Math.round(asistentes * pct_acercan / 100 * pct_compran / 100 * 0.7)) * costo_unidad",
+          "unit": "$"
+        },
+        {
+          "id": "ganancia_esperada",
+          "label": "Ganancia si vendo el primer lote completo",
+          "type": "calculated",
+          "formula": "Math.max(5, Math.round(asistentes * pct_acercan / 100 * pct_compran / 100 * 0.7)) * (precio_venta - costo_unidad)",
+          "unit": "$"
+        },
+        {
+          "id": "riesgo_maximo",
+          "label": "Lo máximo que puedo perder si no vendo nada",
+          "type": "calculated",
+          "formula": "Math.max(5, Math.round(asistentes * pct_acercan / 100 * pct_compran / 100 * 0.7)) * costo_unidad",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_produccion",
+  "exportable": true,
+  "portada": "/assets/misiones/p3/p3-4-8-a-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-8-a-escena.webp"
+}

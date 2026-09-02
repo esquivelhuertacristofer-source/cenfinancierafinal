@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S1-3-7-A",
+  "unit_code": "S1-3-7",
+  "unit_title": "La curva de rendimiento: por qué el plazo cambia la tasa",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Corto o Largo",
+  "descripcion": "Ceny tiene dinero para invertir y la curva de rendimiento está cambiando. Cada decisión cuenta.",
+  "objetivo": "Aplicar la lectura de la curva de rendimiento a decisiones de plazo",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene $40,000 para invertir. El plazo de 28 días paga 9.8% y el de 3 años paga 10.1%. La diferencia es mínima.",
+  "nodo_inicial": "lectura",
+  "nodos": {
+    "lectura": {
+      "id": "lectura",
+      "texto": "La curva está casi plana. ¿Qué le sugiere eso a Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que el mercado espera que las tasas bajen y que el largo no compensa lo suficiente",
+          "siguiente_nodo": "horizonte",
+          "consecuencia": "Lee la señal correctamente sin tratarla como certeza.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que da igual: siempre conviene el plazo más largo",
+          "siguiente_nodo": "atrapada",
+          "consecuencia": "Comprometió tres años por 0.3% adicional de tasa.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-lectura.webp"
+    },
+    "atrapada": {
+      "id": "atrapada",
+      "texto": "A los cuatro meses Ceny necesita parte del dinero para una emergencia. ¿Qué descubre?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que salir antes de tiempo tiene costo y que el plazo debió coincidir con su horizonte",
+          "siguiente_nodo": "horizonte",
+          "consecuencia": "Recupera el dinero, pero perdiendo parte del rendimiento.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": -3000
+        },
+        {
+          "id": "o2",
+          "texto": "Que no puede tocar nada y pide un préstamo con tarjeta",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Pagar 60% de interés por no poder usar su propio dinero.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -9000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-atrapada.webp"
+    },
+    "horizonte": {
+      "id": "horizonte",
+      "texto": "Ceny reconsidera. De sus $40,000, sabe que $15,000 podrían hacerle falta este año. ¿Cómo los distribuye?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "$15,000 a plazo corto y el resto a plazo largo",
+          "siguiente_nodo": "cambio",
+          "consecuencia": "Cada peso queda en el plazo que corresponde a su necesidad.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 4000
+        },
+        {
+          "id": "o2",
+          "texto": "Todo a plazo corto para no arriesgarse",
+          "siguiente_nodo": "cambio",
+          "consecuencia": "Seguro, aunque deja rendimiento sobre la mesa en el dinero que no necesitará.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 1000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-horizonte.webp"
+    },
+    "cambio": {
+      "id": "cambio",
+      "texto": "Meses después la curva se empina: el plazo largo ahora paga 13% contra 9% del corto. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Al vencer su plazo corto, mover a largo la parte que no necesitará pronto",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Ahora la diferencia sí compensa comprometer el dinero.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 6000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: ya decidió una vez",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La curva cambia y las decisiones de plazo se revisan al vencimiento.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-cambio.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny distribuyó por horizonte y ajustó cuando la curva cambió.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La curva informa, el horizonte decide. Cuando la diferencia entre plazos es mínima conviene la flexibilidad; cuando es amplia y el dinero no hace falta, el largo compensa.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny distribuyó bien pero no revisó su decisión cuando las condiciones cambiaron.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Una decisión de plazo no es para siempre: al vencimiento conviene volver a mirar la curva y el horizonte antes de reinvertir.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny quedó con su dinero comprometido y tuvo que financiar su emergencia con crédito caro.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Comprometer a tres años dinero que podía hacer falta en meses, por 0.3% adicional, terminó costando mucho más que ese diferencial.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s1/s1-3-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s1/s1-3-7-a-portada.webp"
+}

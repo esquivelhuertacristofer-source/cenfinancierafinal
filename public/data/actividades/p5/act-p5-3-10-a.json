@@ -1,0 +1,125 @@
+{
+  "code": "ACT-P5-3-10-A",
+  "unit_code": "P5-3-10",
+  "unit_title": "Fraudes de inversión: pirámides y promesas imposibles",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Matemática de la Pirámide",
+  "descripcion": "Calcula en qué nivel se rompe un esquema piramidal y a cuánta gente arrastra.",
+  "objetivo": "Demostrar numéricamente la inviabilidad de un esquema piramidal",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Las reglas del esquema",
+      "descripcion": "Cómo dice funcionar la supuesta oportunidad.",
+      "campos": [
+        {
+          "id": "reclutas",
+          "label": "Personas que cada participante debe reclutar",
+          "type": "slider",
+          "min": 2,
+          "max": 10,
+          "step": 1,
+          "default": 6,
+          "unit": "personas",
+          "ayuda": "Casi siempre entre tres y seis.",
+          "requerido": true
+        },
+        {
+          "id": "aportacion",
+          "label": "Aportación de cada persona al entrar",
+          "type": "slider",
+          "min": 500,
+          "max": 50000,
+          "step": 500,
+          "default": 5000,
+          "unit": "$",
+          "ayuda": "Lo que se pide para \"participar\".",
+          "requerido": true
+        },
+        {
+          "id": "poblacion",
+          "label": "Población total disponible",
+          "type": "number",
+          "min": 1000,
+          "max": 130000000,
+          "default": 130000000,
+          "unit": "personas",
+          "placeholder": "130000000",
+          "requerido": true,
+          "ayuda": "Aproximadamente la población de México."
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "El crecimiento por niveles",
+      "descripcion": "Cuánta gente hace falta en cada nivel.",
+      "campos": [
+        {
+          "id": "nivel3",
+          "label": "Personas necesarias en el nivel 3",
+          "type": "calculated",
+          "formula": "Math.pow(reclutas, 3)",
+          "unit": "personas"
+        },
+        {
+          "id": "nivel6",
+          "label": "Personas necesarias en el nivel 6",
+          "type": "calculated",
+          "formula": "Math.pow(reclutas, 6)",
+          "unit": "personas"
+        },
+        {
+          "id": "nivel9",
+          "label": "Personas necesarias en el nivel 9",
+          "type": "calculated",
+          "formula": "Math.pow(reclutas, 9)",
+          "unit": "personas"
+        },
+        {
+          "id": "nivel_colapso",
+          "label": "Nivel en el que ya no alcanza la población",
+          "type": "calculated",
+          "formula": "Math.ceil(Math.log(poblacion) / Math.log(reclutas))",
+          "unit": "niveles"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Quién pierde",
+      "descripcion": "Cuánta gente se queda sin recuperar su dinero.",
+      "campos": [
+        {
+          "id": "perdedores",
+          "label": "Personas del último nivel que pierden todo",
+          "type": "calculated",
+          "formula": "Math.pow(reclutas, Math.ceil(Math.log(poblacion) / Math.log(reclutas)) - 1)",
+          "unit": "personas"
+        },
+        {
+          "id": "dinero_perdido",
+          "label": "Dinero perdido por ese último nivel",
+          "type": "calculated",
+          "formula": "Math.pow(reclutas, Math.ceil(Math.log(poblacion) / Math.log(reclutas)) - 1) * aportacion",
+          "unit": "$"
+        },
+        {
+          "id": "pct_perdedores",
+          "label": "Porcentaje de participantes que pierde",
+          "type": "calculated",
+          "formula": "Math.round((reclutas - 1) * 100 / reclutas)",
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_piramide",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-3-10-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-10-a-escena.webp"
+}

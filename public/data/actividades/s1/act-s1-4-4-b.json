@@ -4,115 +4,159 @@
   "unit_title": "Contabilidad básica: balance y estado de resultados",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "DECIDE",
-  "complejidad": "MEDIO",
-  "titulo": "El Dilema del Primer Empleo",
-  "descripcion": "Te acabas de graduar y tienes dos ofertas increíbles. ¿Elegirás el dinero rápido o el conocimiento que te hará rico después?",
-  "objetivo": "Diferenciar entre el valor del salario monetario y el valor del capital intelectual en las etapas iniciales de la carrera",
-  "xp": 450,
-  "personaje_principal": "Dani",
-  "contexto_inicial": "Dani es un programador recién graduado. Tiene dos ofertas en la mesa. Debe decidir qué priorizar para su futuro.",
-  "nodo_inicial": "las_ofertas",
-  "nodos": {
-    "las_ofertas": {
-      "id": "las_ofertas",
-      "texto": "¿Qué oferta aceptarás?",
-      "opciones": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "El Estado de Resultados",
+  "descripcion": "El balance dice cuánto vale un negocio hoy. El estado de resultados dice si está ganando o perdiendo. Vas a armar el segundo, línea por línea, como lo hace cualquier contador.",
+  "objetivo": "Elaborar un estado de resultados básico distinguiendo ingresos, costo de ventas, gastos de operación, utilidad bruta y utilidad neta.",
+  "xp": 700,
+  "output_type": "estado_resultados",
+  "exportable": true,
+  "pasos": [
+    {
+      "id": "ingresos",
+      "titulo": "1️⃣ Ingresos",
+      "descripcion": "Todo lo que vendió el negocio en el periodo. Ojo: vendido, no cobrado necesariamente.",
+      "campos": [
         {
-          "id": "gran_corporativo",
-          "texto": "Oferta A: Sueldo ALTO ($40k), pero harás tareas repetitivas y nadie te enseña nada",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "Ganaste buen dinero los primeros 2 años, pero ahora tus habilidades son viejas y nadie te quiere contratar por más dinero.",
-          "xp_bonus": 100,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "negocio",
+          "label": "Nombre del negocio",
+          "type": "text",
+          "placeholder": "Ej: Papelería Marta",
+          "requerido": true
         },
         {
-          "id": "startup_innovadora",
-          "texto": "Oferta B: Sueldo MEDIO ($25k), pero trabajarás con los mejores expertos y aprenderás tecnologías de vanguardia",
-          "siguiente_nodo": "crecimiento_exponencial",
-          "consecuencia": "Aprendiste tanto que ahora las empresas pelean por ti. Te ofrecen puestos de dirección.",
-          "xp_bonus": 400,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "crecimiento_exponencial": {
-      "id": "crecimiento_exponencial",
-      "texto": "3 años después. Gracias a lo que aprendiste, fundas tu propia consultora o te contratan en Silicon Valley por $150k.",
-      "opciones": [
-        {
-          "id": "final_exito_profesional",
-          "texto": "Ver que el conocimiento es el mejor activo",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Tu valor en el mercado es altísimo.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "final_estancado_monetario": {
-      "id": "final_estancado_monetario",
-      "texto": "Sigues ganando lo mismo que cuando empezaste. El mundo cambió y tú te quedaste atrás.",
-      "es_final": true,
-      "tipo_final": "neutral",
-      "reflexion_final": "En los primeros años de carrera, no trabajes para ganar; trabaja para aprender."
-    },
-    "final_maestro_carrera": {
-      "id": "final_maestro_carrera",
-      "texto": "¡Felicidades! Entendiste que el sueldo más alto es el que te permite crecer más como profesional.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "La educación no termina en la escuela, continúa en cada decisión de tu vida laboral."
-    },
-    "reto_inesperado": {
-      "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "id": "ventas",
+          "label": "Ventas del mes ($)",
+          "type": "number",
+          "placeholder": "Ej: 120000",
+          "requerido": true
         },
         {
-          "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "devoluciones",
+          "label": "Devoluciones y descuentos ($)",
+          "type": "number",
+          "placeholder": "Ej: 3000",
+          "requerido": true
+        },
+        {
+          "id": "ventas_netas",
+          "label": "Ventas netas",
+          "type": "calculated",
+          "formula": "ventas - devoluciones",
+          "unit": "$",
+          "requerido": false
         }
       ]
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+    {
+      "id": "costo_ventas",
+      "titulo": "2️⃣ Costo de lo vendido",
+      "descripcion": "Lo que te costó exactamente la mercancía que vendiste. No incluye renta ni sueldos.",
+      "campos": [
+        {
+          "id": "costo_mercancia",
+          "label": "Costo de la mercancía vendida ($)",
+          "type": "number",
+          "placeholder": "Ej: 66000",
+          "requerido": true
+        },
+        {
+          "id": "utilidad_bruta",
+          "label": "UTILIDAD BRUTA",
+          "type": "calculated",
+          "formula": "ventas - devoluciones - costo_mercancia",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Lo que queda antes de pagar la operación. Si esto ya es bajo, el negocio no tiene arreglo por la vía de recortar gastos."
+        },
+        {
+          "id": "margen_bruto",
+          "label": "Margen bruto",
+          "type": "calculated",
+          "formula": "Math.round((ventas - devoluciones - costo_mercancia) / Math.max(1, ventas - devoluciones) * 100)",
+          "unit": "%",
+          "requerido": false
+        }
+      ]
     },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+    {
+      "id": "operacion",
+      "titulo": "3️⃣ Gastos de operación",
+      "descripcion": "Lo que cuesta mantener el negocio abierto, se venda mucho o poco.",
+      "campos": [
+        {
+          "id": "sueldos",
+          "label": "Sueldos ($)",
+          "type": "number",
+          "placeholder": "Ej: 18000",
+          "requerido": true
+        },
+        {
+          "id": "renta_servicios",
+          "label": "Renta y servicios ($)",
+          "type": "number",
+          "placeholder": "Ej: 12000",
+          "requerido": true
+        },
+        {
+          "id": "otros_gastos",
+          "label": "Publicidad y otros gastos ($)",
+          "type": "number",
+          "placeholder": "Ej: 4000",
+          "requerido": true
+        },
+        {
+          "id": "utilidad_operacion",
+          "label": "UTILIDAD DE OPERACIÓN",
+          "type": "calculated",
+          "formula": "ventas - devoluciones - costo_mercancia - sueldos - renta_servicios - otros_gastos",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Es la que mide si el negocio en sí funciona, antes de impuestos e intereses."
+        }
+      ]
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+    {
+      "id": "neta",
+      "titulo": "4️⃣ Utilidad neta",
+      "descripcion": "Después de intereses e impuestos: lo que de verdad se queda el dueño.",
+      "campos": [
+        {
+          "id": "intereses",
+          "label": "Intereses de créditos ($)",
+          "type": "number",
+          "placeholder": "Ej: 2500",
+          "requerido": true
+        },
+        {
+          "id": "utilidad_antes_impuestos",
+          "label": "Utilidad antes de impuestos",
+          "type": "calculated",
+          "formula": "ventas - devoluciones - costo_mercancia - sueldos - renta_servicios - otros_gastos - intereses",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "utilidad_neta",
+          "label": "UTILIDAD NETA (después de 30% de ISR)",
+          "type": "calculated",
+          "formula": "Math.round((ventas - devoluciones - costo_mercancia - sueldos - renta_servicios - otros_gastos - intereses) * 0.7)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Esta es la línea final, la que en inglés llaman \"bottom line\". Todo lo demás es camino hacia ella."
+        },
+        {
+          "id": "margen_neto",
+          "label": "Margen neto",
+          "type": "calculated",
+          "formula": "Math.round((ventas - devoluciones - costo_mercancia - sueldos - renta_servicios - otros_gastos - intereses) * 0.7 / Math.max(1, ventas - devoluciones) * 100)",
+          "unit": "%",
+          "requerido": false,
+          "ayuda": "Un margen neto del 5% al 10% es normal en comercio. Debajo de 3%, el negocio es muy frágil."
+        }
+      ]
     }
-  },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  ],
+  "versión": "2026.Alineada.1"
 }

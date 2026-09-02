@@ -1,0 +1,181 @@
+{
+  "code": "ACT-P1-3-7-A",
+  "unit_code": "P1-3-7",
+  "unit_title": "¿Cuánto me falta? Restar para saberlo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Cuenta Regresiva de Ceny",
+  "descripcion": "A Ceny le faltan $60 para su balón. Cada semana trae una decisión que acerca o aleja la fecha.",
+  "objetivo": "Aplicar la resta y la conversión a semanas en decisiones de ahorro consecutivas",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El balón cuesta $180. Ceny tiene $120 ahorrados y recibe $20 cada domingo. Si no falla, le faltan tres semanas exactas.",
+  "nodo_inicial": "semana1",
+  "nodos": {
+    "semana1": {
+      "id": "semana1",
+      "texto": "Domingo 1. Ceny recibe sus $20. Un compañero vende paletas a $15 en la escuela y se ven riquísimas. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Guardar los $20 completos: quedan $140",
+          "siguiente_nodo": "semana2",
+          "consecuencia": "Va según el plan. Faltan $40, o sea dos semanas.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 20
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar la paleta y guardar $5",
+          "siguiente_nodo": "atraso",
+          "consecuencia": "Solo suma $5. La cuenta cambia: ahora faltan $55.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 5
+        },
+        {
+          "id": "o3",
+          "texto": "Gastar los $20 completos",
+          "siguiente_nodo": "atraso",
+          "consecuencia": "La semana no avanzó nada. Siguen faltando $60.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-semana1.webp"
+    },
+    "atraso": {
+      "id": "atraso",
+      "texto": "Ceny hace cuentas: al ritmo actual la fecha se recorrió. ¿Qué hace para recuperar el tiempo perdido?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ofrecerse a lavar el coche del vecino por $25",
+          "siguiente_nodo": "semana2",
+          "consecuencia": "Un ingreso extra recupera la semana perdida.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 25
+        },
+        {
+          "id": "o2",
+          "texto": "Esperar y ya, total llegará algún día",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin plan nuevo, la fecha se sigue recorriendo sola.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-atraso.webp"
+    },
+    "semana2": {
+      "id": "semana2",
+      "texto": "Domingo 2. Ceny recibe otros $20. Su hermana le pide prestados $30 y promete devolverlos \"algún día\", sin fecha.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Prestarle solo si acuerdan una fecha exacta",
+          "siguiente_nodo": "semana3",
+          "consecuencia": "Un préstamo con fecha es un acuerdo. Sin fecha es un regalo disfrazado.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": 20
+        },
+        {
+          "id": "o2",
+          "texto": "Prestarle sin fecha, es su hermana",
+          "siguiente_nodo": "semana3_atrasada",
+          "consecuencia": "El dinero salió del ahorro y nadie sabe cuándo vuelve.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -10
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-semana2.webp"
+    },
+    "semana3_atrasada": {
+      "id": "semana3_atrasada",
+      "texto": "Domingo 3. Ceny cuenta: tiene $150. Le faltan $30, o sea dos semanas más al ritmo normal. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Recordarle a su hermana la deuda, con respeto",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Cobrar lo que te deben no es de mala persona: es parte del acuerdo.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 30
+        },
+        {
+          "id": "o2",
+          "texto": "No decir nada y esperar",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El dinero prestado sin fecha ni recordatorio casi nunca regresa.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-semana3_atrasada.webp"
+    },
+    "semana3": {
+      "id": "semana3",
+      "texto": "Domingo 3. Ceny cuenta $160 y recibe $20 más: llega a $180 exactos. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ir hoy mismo por el balón: la cuenta cuadró",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Tres semanas de plan cumplido, ni un peso de más ni de menos.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": -180
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir ahorrando para uno más caro",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Cambiar la meta al final no es error, pero la fecha se recorre otra vez.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 20
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-semana3.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny compra su balón el tercer domingo, exactamente como lo calculó.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La cuenta fue simple: $180 menos $120 son $60, y $60 entre $20 semanales son tres semanas. Ceny no adivinó la fecha: la calculó y la cumplió.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny llegará a su balón, pero un par de semanas después de lo calculado.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La meta sigue viva y eso vale. Pero cada peso que salió del ahorro se convirtió en días de espera. El calendario no negocia.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Pasó un mes y Ceny sigue con $150. El préstamo sin fecha nunca volvió.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Prestar sin acordar fecha convirtió $30 de ahorro en un regalo involuntario, y la meta se quedó a dos semanas de distancia sin avanzar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-3-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-3-7-a-portada.webp"
+}

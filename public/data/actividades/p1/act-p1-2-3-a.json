@@ -4,13 +4,60 @@
   "unit_title": "El precio de las cosas: ¿caro o barato?",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "CRECIMIENTO",
-  "complejidad": "MAESTRÍA",
-  "titulo": "El Secreto del Crecimiento",
-  "descripcion": "Ceny quiere un equipo de exploración de $500. Su dinero crece solo, ¡pero crece más rápido si Ceny estudia! ¿Podrás ayudarle a no gastar en dulces para llegar a la meta?",
-  "objetivo": "Entender el valor del tiempo y la inversión en conocimiento para acelerar el cumplimiento de metas de ahorro.",
-  "xp": 600,
-  "meta_objetivo": 500,
-  "instruccion": "Usa los botones para decidir: ¿Inviertes en saber para crecer más rápido o gastas en un antojo hoy?",
-  "versión": "2026.Diamond.Growth"
+  "tipo": "SIMULADOR",
+  "complejidad": "BAJO",
+  "titulo": "El Comparador de Precios de Ceny",
+  "descripcion": "El mismo cuaderno cuesta distinto en la tienda de la esquina y en el mercado. Mueve los precios y descubre cuánto dinero se queda en tu bolsillo por comparar antes de comprar.",
+  "objetivo": "Comparar el precio de un mismo producto en dos lugares y calcular cuánto dinero se ahorra al elegir el más barato.",
+  "xp": 400,
+  "instruccion": "Mueve las barras para poner el precio de cada lugar. Abajo verás cuánto te ahorras si compras en el más barato.",
+  "inputs": [
+    {
+      "id": "precio_tienda",
+      "label": "Precio en la tienda de la esquina ($)",
+      "type": "slider",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 45,
+      "unit": "$"
+    },
+    {
+      "id": "precio_mercado",
+      "label": "Precio en el mercado ($)",
+      "type": "slider",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "default": 30,
+      "unit": "$"
+    }
+  ],
+  "formula": "precio_tienda - precio_mercado",
+  "output_label": "Lo que te ahorras comprando en el mercado",
+  "output_prefix": "$",
+  "output_suffix": "",
+  "escenarios": [
+    {
+      "condicion": "resultado > 20",
+      "mensaje": "🎉 ¡Qué diferencia! Con lo que te ahorras por comparar te alcanza para algo más. Siempre vale la pena preguntar en dos lugares.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "resultado > 0",
+      "mensaje": "👍 El mercado está más barato. Aunque sea poquito, ese dinero se queda en tu cochinito.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "resultado === 0",
+      "mensaje": "🤔 Cuestan exactamente lo mismo. Aquí puedes elegir por otra cosa: cuál te queda más cerca o cuál es de mejor calidad.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "resultado < 0",
+      "mensaje": "⚠️ ¡Cuidado! Aquí el mercado salió MÁS caro. Lo barato no siempre está donde uno cree: hay que comparar de verdad.",
+      "tipo": "advertencia"
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

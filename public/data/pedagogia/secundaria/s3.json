@@ -904,6 +904,926 @@
       "Muestre una Constancia de Situación Fiscal real para que se familiaricen con el documento."
     ]
   },
+  "S3-1-6": {
+    "code": "S3-1-6",
+    "title": "Mi línea de tiempo financiera: 10 hitos de los 15 a los 30",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Construir una línea de tiempo financiera personal con hitos concretos y montos estimados entre los 15 y los 30 años.",
+      "competencies": [
+        "Planeación de Largo Plazo",
+        "Definición de Hitos",
+        "Estimación de Costos",
+        "Secuenciación de Metas"
+      ],
+      "materials": [
+        "Formato de línea de tiempo",
+        "Calculadora",
+        "Costos de referencia por hito",
+        "Casos de trayectorias distintas",
+        "Cartel de los diez hitos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Los Próximos Quince Años",
+          "duration": "15 min",
+          "label": "Todo pasa junto"
+        },
+        {
+          "phase": "Desarrollo: Los Hitos",
+          "duration": "30 min",
+          "label": "Ordenar y costear"
+        },
+        {
+          "phase": "Cierre: El Ahorro que Implica",
+          "duration": "15 min",
+          "label": "De la meta al mes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TODO PASA JUNTO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que entre los 15 y los 30 se concentran casi todos los eventos financieros grandes de una vida: estudios, primer empleo, independencia, quizá un vehículo, quizá una pareja o una familia, primeras inversiones. Y que llegan encimados si no se planean.",
+          "activity": "Dinámica \"¿Qué Viene?\": el grupo enumera todo lo que puede ocurrir en esos quince años."
+        },
+        {
+          "title": "FASE II: ORDENAR Y COSTEAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos ubican diez hitos en una línea de tiempo con edad estimada y costo aproximado: terminar estudios, primer empleo formal, fondo de emergencia, independencia habitacional, primera inversión, formación adicional, vehículo si aplica, aportación voluntaria al retiro, seguro y una meta personal grande.",
+          "activity": "Dinámica \"Mi Línea\": cada alumno ubica los diez hitos con edad y costo estimado."
+        },
+        {
+          "title": "FASE III: DE LA META AL MES (CIERRE)",
+          "duration": "15 min",
+          "description": "Convierten cada hito en un ahorro mensual desde hoy. Insista en que la potencia de este ejercicio es que los hitos lejanos requieren aportaciones pequeñas si se empiezan ahora, y aportaciones enormes si se empiezan tarde.",
+          "activity": "Dinámica \"Cuánto al Mes\": cada alumno calcula el ahorro mensual necesario para sus tres hitos más cercanos."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Entre los 15 y los 30 se concentran casi todos los eventos financieros grandes de una vida. Llegan encimados si nadie los planea, y llegan manejables si se ordenan y se les pone fecha y monto.",
+      "sections": [
+        {
+          "subtitle": "Por qué esta etapa concentra tanto",
+          "content": "Estudios, primer empleo, salir de casa, primeras compras grandes, primeras inversiones y a veces formar una familia ocurren en un lapso relativamente corto. Cada uno tiene un costo, y cuando dos o tres coinciden sin haberse previsto, la salida más frecuente es el crédito caro. Ordenarlos con anticipación cambia por completo el resultado."
+        },
+        {
+          "subtitle": "Un hito necesita edad y monto",
+          "content": "Una meta sin fecha ni cifra no es un hito: es un deseo. Escribir a qué edad se quiere alcanzar y cuánto costaría aproximadamente convierte una intención en algo verificable. La estimación no tiene que ser exacta: tiene que existir, porque una cifra aproximada permite planear y una cifra ausente no permite nada."
+        },
+        {
+          "subtitle": "El orden importa tanto como el contenido",
+          "content": "Hay hitos que habilitan a otros. El fondo de emergencia va antes que las primeras inversiones, porque sin él cualquier imprevisto obliga a liquidarlas en mal momento. La formación suele ir antes que las compras grandes, porque aumenta la capacidad de ingreso. Secuenciar bien evita que un hito temprano bloquee tres posteriores."
+        },
+        {
+          "subtitle": "Lo lejano es barato si empieza hoy",
+          "content": "Un hito a quince años requiere una aportación mensual sorprendentemente pequeña si se empieza ahora, y una enorme si se empieza a los treinta. Ese es el argumento central de toda planeación temprana: no es que haya que ahorrar mucho, es que hay que ahorrar pronto. El tiempo hace la mayor parte del trabajo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué ocurre entre los 15 y los 30?",
+          "options": [
+            "No pasa nada",
+            "Solo se estudia",
+            "Se concentran casi todos los eventos financieros grandes"
+          ],
+          "correct": "Se concentran casi todos los eventos financieros grandes"
+        },
+        {
+          "question": "¿Qué pasa si coinciden sin preverse?",
+          "options": [
+            "La salida más frecuente es el crédito caro",
+            "Se resuelven solos",
+            "No importa"
+          ],
+          "correct": "La salida más frecuente es el crédito caro"
+        },
+        {
+          "question": "¿Qué necesita un hito?",
+          "options": [
+            "Solo el nombre",
+            "Edad y monto",
+            "Solo entusiasmo"
+          ],
+          "correct": "Edad y monto"
+        },
+        {
+          "question": "Una meta sin fecha ni cifra es:",
+          "options": [
+            "Un hito",
+            "Un plan",
+            "Un deseo"
+          ],
+          "correct": "Un deseo"
+        },
+        {
+          "question": "¿Tiene que ser exacta la estimación?",
+          "options": [
+            "No, pero tiene que existir",
+            "Sí, al peso",
+            "No hace falta"
+          ],
+          "correct": "No, pero tiene que existir"
+        },
+        {
+          "question": "¿Qué va antes de las primeras inversiones?",
+          "options": [
+            "El vehículo",
+            "El fondo de emergencia",
+            "El viaje"
+          ],
+          "correct": "El fondo de emergencia"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Por costumbre",
+            "Por ley",
+            "Sin él, un imprevisto obliga a liquidarlas en mal momento"
+          ],
+          "correct": "Sin él, un imprevisto obliga a liquidarlas en mal momento"
+        },
+        {
+          "question": "¿Por qué la formación suele ir temprano?",
+          "options": [
+            "Porque aumenta la capacidad de ingreso",
+            "Porque es barata",
+            "Por moda"
+          ],
+          "correct": "Porque aumenta la capacidad de ingreso"
+        },
+        {
+          "question": "Un hito a quince años empezando hoy requiere:",
+          "options": [
+            "Una aportación enorme",
+            "Una aportación mensual pequeña",
+            "Nada"
+          ],
+          "correct": "Una aportación mensual pequeña"
+        },
+        {
+          "question": "¿Cuál es el argumento central?",
+          "options": [
+            "Hay que ahorrar todo",
+            "No hay que ahorrar",
+            "No hay que ahorrar mucho, hay que ahorrar pronto"
+          ],
+          "correct": "No hay que ahorrar mucho, hay que ahorrar pronto"
+        }
+      ],
+      "rubric": "Logrado: construye una línea con diez hitos fechados, costeados y secuenciados, y calcula el ahorro mensual. En proceso: lista hitos sin montos ni orden. Inicial: identifica eventos financieros de la etapa."
+    },
+    "teacher_tips": [
+      "Exija edad y monto en cada hito: sin esos dos datos el ejercicio pierde todo su valor.",
+      "El contraste entre empezar hoy y empezar a los treinta es lo que hace memorable la clase. Calcúlelo.",
+      "Respete trayectorias distintas: no todos los alumnos tendrán los mismos hitos ni el mismo orden."
+    ]
+  },
+  "S3-1-7": {
+    "code": "S3-1-7",
+    "title": "El costo real de una carrera: pública, privada y en línea",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comparar el costo total de distintas opciones formativas incluyendo costos directos, indirectos y de oportunidad.",
+      "competencies": [
+        "Análisis de Inversión Educativa",
+        "Costo de Oportunidad",
+        "Comparación de Alternativas",
+        "Decisión Formativa"
+      ],
+      "materials": [
+        "Comparativo de costos por modalidad",
+        "Calculadora",
+        "Datos de ingreso por nivel de estudios",
+        "Formato de análisis de retorno",
+        "Cartel de los tres costos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Colegiatura No Es Todo",
+          "duration": "15 min",
+          "label": "Lo que falta contar"
+        },
+        {
+          "phase": "Desarrollo: Los Tres Costos",
+          "duration": "30 min",
+          "label": "Directo, indirecto y de oportunidad"
+        },
+        {
+          "phase": "Cierre: El Retorno",
+          "duration": "15 min",
+          "label": "Qué devuelve la inversión"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA COLEGIATURA NO ES TODO (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto cuesta una carrera. Casi todos mencionarán la colegiatura, y en una institución pública dirán que nada. Explique que faltan transporte, materiales, alimentación, y sobre todo el ingreso que se deja de percibir durante los años de estudio.",
+          "activity": "Dinámica \"¿Qué Falta?\": el grupo enumera todo lo que no aparece en la cifra de colegiatura."
+        },
+        {
+          "title": "FASE II: LOS TRES COSTOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique los costos directos, los indirectos y el de oportunidad. Los alumnos calculan el costo total de tres modalidades: pública presencial, privada presencial y en línea, considerando duración y posibilidad de trabajar simultáneamente.",
+          "activity": "Dinámica \"Tres Modalidades\": cada equipo calcula el costo total de las tres opciones."
+        },
+        {
+          "title": "FASE III: QUÉ DEVUELVE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que la inversión educativa se evalúa por lo que devuelve: diferencia de ingreso esperada, empleabilidad del campo y tiempo de recuperación. Aclare que el retorno varía mucho por área y que ninguna decisión formativa se toma solo con números, pero tampoco debe tomarse sin ellos.",
+          "activity": "Dinámica \"Años de Recuperación\": cada equipo calcula en cuánto tiempo se recupera la inversión."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando alguien pregunta cuánto cuesta una carrera, casi todos piensan en la colegiatura. Falta lo demás: transporte, materiales, y sobre todo el ingreso que no se percibe durante los años de estudio.",
+      "sections": [
+        {
+          "subtitle": "Los costos directos",
+          "content": "Son los que se pagan explícitamente: inscripción, colegiatura, materiales, titulación y trámites. En una institución pública pueden ser muy bajos, aunque casi nunca cero. Son los únicos que la mayoría considera, y suelen ser una fracción del costo total real de estudiar."
+        },
+        {
+          "subtitle": "Los costos indirectos",
+          "content": "Transporte diario durante años, alimentación fuera de casa, equipo de cómputo, conexión a internet, y en muchos casos mudanza y renta si la institución está en otra ciudad. Sumados a lo largo de una carrera completa, con frecuencia superan a los costos directos en instituciones públicas."
+        },
+        {
+          "subtitle": "El costo de oportunidad",
+          "content": "Es el ingreso que se deja de percibir por estudiar en lugar de trabajar tiempo completo. En una carrera de cuatro o cinco años es una cifra grande, y suele ser el costo mayor de todos. No aparece en ningún recibo, pero es real, y es lo que hace que estudiar en línea mientras se trabaja tenga una estructura de costos completamente distinta."
+        },
+        {
+          "subtitle": "Qué devuelve la inversión",
+          "content": "La inversión educativa se evalúa por la diferencia de ingreso esperada, la empleabilidad del campo y el tiempo que toma recuperar lo invertido. El retorno varía enormemente entre áreas y no todo es dinero: hay vocación, propósito y satisfacción. Pero una decisión de esta magnitud tampoco debería tomarse sin haber hecho las cuentas."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué considera la mayoría al calcular el costo de una carrera?",
+          "options": [
+            "Solo la colegiatura",
+            "Todo",
+            "El costo de oportunidad"
+          ],
+          "correct": "Solo la colegiatura"
+        },
+        {
+          "question": "¿Cuáles son los costos directos?",
+          "options": [
+            "El transporte",
+            "Inscripción, colegiatura, materiales y trámites",
+            "El ingreso perdido"
+          ],
+          "correct": "Inscripción, colegiatura, materiales y trámites"
+        },
+        {
+          "question": "En una institución pública los directos:",
+          "options": [
+            "Son siempre cero",
+            "Son los mayores",
+            "Pueden ser muy bajos pero casi nunca cero"
+          ],
+          "correct": "Pueden ser muy bajos pero casi nunca cero"
+        },
+        {
+          "question": "¿Cuáles son los indirectos?",
+          "options": [
+            "Transporte, alimentación, equipo, internet y a veces renta",
+            "La colegiatura",
+            "El sueldo"
+          ],
+          "correct": "Transporte, alimentación, equipo, internet y a veces renta"
+        },
+        {
+          "question": "¿Qué pasa con los indirectos en instituciones públicas?",
+          "options": [
+            "Son cero",
+            "Con frecuencia superan a los directos",
+            "Son menores siempre"
+          ],
+          "correct": "Con frecuencia superan a los directos"
+        },
+        {
+          "question": "¿Qué es el costo de oportunidad?",
+          "options": [
+            "La colegiatura",
+            "El transporte",
+            "El ingreso que se deja de percibir por estudiar"
+          ],
+          "correct": "El ingreso que se deja de percibir por estudiar"
+        },
+        {
+          "question": "¿Suele ser grande?",
+          "options": [
+            "Sí, normalmente es el costo mayor",
+            "No, es mínimo",
+            "No existe"
+          ],
+          "correct": "Sí, normalmente es el costo mayor"
+        },
+        {
+          "question": "¿Por qué estudiar en línea cambia la estructura de costos?",
+          "options": [
+            "Porque es gratis",
+            "Porque permite trabajar al mismo tiempo",
+            "Porque dura menos siempre"
+          ],
+          "correct": "Porque permite trabajar al mismo tiempo"
+        },
+        {
+          "question": "¿Cómo se evalúa el retorno?",
+          "options": [
+            "Solo por el prestigio",
+            "Solo por la duración",
+            "Diferencia de ingreso, empleabilidad y tiempo de recuperación"
+          ],
+          "correct": "Diferencia de ingreso, empleabilidad y tiempo de recuperación"
+        },
+        {
+          "question": "¿Se decide solo con números?",
+          "options": [
+            "No, pero tampoco sin ellos",
+            "Sí, solo números",
+            "No, nunca con números"
+          ],
+          "correct": "No, pero tampoco sin ellos"
+        }
+      ],
+      "rubric": "Logrado: calcula los tres costos de varias modalidades y estima el tiempo de recuperación. En proceso: identifica los tipos de costo sin calcular. Inicial: reconoce que la colegiatura no es todo."
+    },
+    "teacher_tips": [
+      "El costo de oportunidad es el concepto clave y el que nunca se enseña. Calcúlelo explícitamente.",
+      "Use costos reales de instituciones de la región: el ejercicio pierde valor con cifras genéricas.",
+      "Aclare que la decisión no es solo financiera: vocación y propósito son razones legítimas."
+    ]
+  },
+  "S3-1-8": {
+    "code": "S3-1-8",
+    "title": "Trabajar y estudiar: el balance que sí funciona",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Evaluar la viabilidad de combinar trabajo y estudio considerando horas, rendimiento académico e ingreso.",
+      "competencies": [
+        "Gestión del Tiempo",
+        "Evaluación de Carga",
+        "Decisión de Equilibrio",
+        "Planeación Realista"
+      ],
+      "materials": [
+        "Formato de distribución semanal de horas",
+        "Calculadora",
+        "Casos de estudiantes que trabajan",
+        "Datos de rendimiento por carga laboral",
+        "Cartel del punto de quiebre"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Puedo con Todo",
+          "duration": "15 min",
+          "label": "El optimismo inicial"
+        },
+        {
+          "phase": "Desarrollo: Las Horas Reales",
+          "duration": "30 min",
+          "label": "Contar la semana"
+        },
+        {
+          "phase": "Cierre: El Punto de Quiebre",
+          "duration": "15 min",
+          "label": "Cuánto es demasiado"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"PUEDO CON TODO\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien que va a estudiar tiempo completo y trabajar treinta horas semanales. Pregunte si es viable. Explique que la respuesta depende de cuántas horas realmente quedan libres, y que casi nadie hace esa cuenta antes de comprometerse.",
+          "activity": "Dinámica \"¿Cabe?\": el grupo estima si la combinación propuesta cabe en una semana."
+        },
+        {
+          "title": "FASE II: CONTAR LA SEMANA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos construyen una semana completa: horas de clase, horas de estudio fuera de clase, traslados, trabajo, sueño, alimentación y descanso. Descubren cuántas horas quedan realmente y si la combinación es sostenible o solo posible en el papel.",
+          "activity": "Dinámica \"Mi Semana Real\": cada alumno distribuye las 168 horas de la semana."
+        },
+        {
+          "title": "FASE III: EL PUNTO DE QUIEBRE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que existe un umbral a partir del cual más horas de trabajo empiezan a costar rendimiento académico, y que reprobar materias alarga la carrera y encarece todo. La pregunta no es cuánto puedo trabajar, sino cuánto puedo trabajar sin que me cueste más de lo que gano.",
+          "activity": "Dinámica \"El Umbral\": cada equipo determina el máximo de horas laborales viable para un caso."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Estudiar tiempo completo y trabajar treinta horas a la semana suena posible hasta que cuentas las horas. La pregunta no es si cabe en el papel: es si es sostenible durante años sin que te cueste más de lo que ganas.",
+      "sections": [
+        {
+          "subtitle": "La semana tiene 168 horas y no más",
+          "content": "Contar la semana completa cambia la conversación. Al sueño, la alimentación, los traslados, las clases y las horas de estudio fuera del aula les queda mucho menos espacio del que se cree. Cuando la suma supera las 168 horas, no es cuestión de esfuerzo: sencillamente no cabe."
+        },
+        {
+          "subtitle": "Las horas de estudio que nadie cuenta",
+          "content": "Una materia no consume solo sus horas de clase: exige lectura, tareas, proyectos y preparación de exámenes. La regla práctica es contar una a dos horas fuera del aula por cada hora de clase. Omitir esas horas es lo que hace que una combinación parezca viable en el papel y sea imposible en la práctica."
+        },
+        {
+          "subtitle": "El punto de quiebre",
+          "content": "Trabajar unas pocas horas semanales suele ser compatible e incluso beneficioso: aporta ingreso, experiencia y disciplina. A partir de cierto umbral, cada hora adicional empieza a costar rendimiento. Reprobar materias alarga la carrera, y cada semestre adicional cuesta colegiatura, gastos y más ingreso no percibido."
+        },
+        {
+          "subtitle": "La pregunta correcta",
+          "content": "No es cuánto puedo trabajar, sino cuánto puedo trabajar sin que me cueste más de lo que gano. Un empleo que aporta ingreso pero alarga la carrera un año completo puede salir muy caro. Y hay factores que no son dinero: la salud y el descanso no son lujos negociables, son la condición para sostener cualquier plan."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuántas horas tiene la semana?",
+          "options": [
+            "100",
+            "168",
+            "200"
+          ],
+          "correct": "168"
+        },
+        {
+          "question": "¿Qué hay que contar además de las clases?",
+          "options": [
+            "Solo las clases",
+            "Nada más",
+            "Estudio fuera del aula, traslados, sueño y alimentación"
+          ],
+          "correct": "Estudio fuera del aula, traslados, sueño y alimentación"
+        },
+        {
+          "question": "¿Cuánto tiempo de estudio fuera del aula se estima?",
+          "options": [
+            "Una a dos horas por cada hora de clase",
+            "Nada",
+            "Diez minutos"
+          ],
+          "correct": "Una a dos horas por cada hora de clase"
+        },
+        {
+          "question": "¿Qué pasa si se omiten esas horas?",
+          "options": [
+            "No pasa nada",
+            "La combinación parece viable y no lo es",
+            "Sobra tiempo"
+          ],
+          "correct": "La combinación parece viable y no lo es"
+        },
+        {
+          "question": "¿Es malo trabajar pocas horas mientras se estudia?",
+          "options": [
+            "Sí, siempre",
+            "Sí, es imposible",
+            "No, suele ser compatible y beneficioso"
+          ],
+          "correct": "No, suele ser compatible y beneficioso"
+        },
+        {
+          "question": "¿Qué aporta?",
+          "options": [
+            "Ingreso, experiencia y disciplina",
+            "Solo cansancio",
+            "Nada"
+          ],
+          "correct": "Ingreso, experiencia y disciplina"
+        },
+        {
+          "question": "¿Qué ocurre después de cierto umbral?",
+          "options": [
+            "Se mejora",
+            "Cada hora adicional cuesta rendimiento",
+            "Nada"
+          ],
+          "correct": "Cada hora adicional cuesta rendimiento"
+        },
+        {
+          "question": "¿Qué implica reprobar materias?",
+          "options": [
+            "Nada",
+            "Ahorrar",
+            "Alargar la carrera y encarecer todo"
+          ],
+          "correct": "Alargar la carrera y encarecer todo"
+        },
+        {
+          "question": "¿Cuál es la pregunta correcta?",
+          "options": [
+            "Cuánto puedo trabajar sin que me cueste más de lo que gano",
+            "Cuánto puedo trabajar",
+            "Cuánto pagan"
+          ],
+          "correct": "Cuánto puedo trabajar sin que me cueste más de lo que gano"
+        },
+        {
+          "question": "¿Son negociables la salud y el descanso?",
+          "options": [
+            "Sí",
+            "No, son la condición para sostener cualquier plan",
+            "Solo el primer año"
+          ],
+          "correct": "No, son la condición para sostener cualquier plan"
+        }
+      ],
+      "rubric": "Logrado: distribuye las 168 horas, identifica el punto de quiebre y decide con criterio de costo total. En proceso: cuenta horas sin evaluar el umbral. Inicial: reconoce que hay que contar el estudio fuera del aula."
+    },
+    "teacher_tips": [
+      "La distribución de las 168 horas es un ejercicio contundente. Insista en que sumen y comprueben.",
+      "Recuerde contar las horas de estudio fuera del aula: es la omisión que arruina la mayoría de los planes.",
+      "Trate con seriedad el caso de quien necesita trabajar por obligación: el objetivo es optimizar, no juzgar."
+    ]
+  },
+  "S3-1-9": {
+    "code": "S3-1-9",
+    "title": "Freelance: cobrar, facturar y no morir en el intento",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender cómo cobrar y facturar como trabajador independiente, y gestionar la irregularidad del ingreso.",
+      "competencies": [
+        "Gestión de Trabajo Independiente",
+        "Cobro y Facturación",
+        "Manejo de Ingreso Variable",
+        "Fijación de Tarifas"
+      ],
+      "materials": [
+        "Formato de cotización",
+        "Calculadora",
+        "Ejemplos de contratos simples",
+        "Casos de ingreso irregular",
+        "Cartel de las reglas del independiente"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Cobrar es lo Difícil",
+          "duration": "15 min",
+          "label": "No es el trabajo"
+        },
+        {
+          "phase": "Desarrollo: Tarifa y Cobro",
+          "duration": "30 min",
+          "label": "Cómo se hace bien"
+        },
+        {
+          "phase": "Cierre: Ingreso Irregular",
+          "duration": "15 min",
+          "label": "Vivir con altibajos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LO DIFÍCIL NO ES EL TRABAJO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que quien trabaja por cuenta propia descubre pronto que la parte difícil no es hacer el trabajo, sino cotizar bien, cobrar a tiempo y sobrevivir a los meses malos. Esas tres cosas casi nunca se enseñan.",
+          "activity": "Dinámica \"¿Qué Sale Mal?\": el grupo enumera los problemas típicos de quien trabaja por su cuenta."
+        },
+        {
+          "title": "FASE II: TARIFA Y COBRO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe a construir una tarifa: costo de operación, tiempo real incluyendo revisiones, impuestos y periodos sin trabajo. Y las reglas de cobro: anticipo, cotización por escrito, plazo de pago acordado y qué pasa si se retrasa. Los alumnos construyen una tarifa por hora completa.",
+          "activity": "Dinámica \"Mi Tarifa Real\": cada alumno calcula su tarifa considerando todos los componentes."
+        },
+        {
+          "title": "FASE III: VIVIR CON ALTIBAJOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique cómo gestionar ingresos irregulares: calcular un promedio conservador, tratarse a sí mismo como empleado con un sueldo fijo mensual, y guardar los excedentes de los meses buenos para cubrir los malos. Ese mecanismo convierte un ingreso caótico en uno manejable.",
+          "activity": "Dinámica \"Mi Sueldo Propio\": cada alumno define su sueldo mensual y su reserva de nivelación."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Quien trabaja por su cuenta descubre pronto que lo difícil no es hacer el trabajo: es cotizar bien, cobrar a tiempo y sobrevivir a los meses malos. Nadie enseña esas tres cosas, y son las que deciden todo.",
+      "sections": [
+        {
+          "subtitle": "La tarifa no es lo que gana un empleado",
+          "content": "Un error habitual es tomar el sueldo mensual de un empleo equivalente y dividirlo entre las horas. Eso ignora que el independiente paga sus propias herramientas, su seguro, sus periodos sin trabajo, sus impuestos y sus vacaciones. Una tarifa correcta incluye todo eso, y por eso siempre es mayor que el equivalente por hora de un empleo."
+        },
+        {
+          "subtitle": "El tiempo real incluye lo que no se factura",
+          "content": "Por cada hora facturable hay tiempo dedicado a cotizar, coordinar, revisar, corregir y cobrar. Si se factura solo el tiempo de producción, se está trabajando gratis buena parte de la semana. La tarifa debe cubrir el tiempo total dedicado al cliente, no solo la parte visible del trabajo."
+        },
+        {
+          "subtitle": "Las reglas del cobro",
+          "content": "Cotización por escrito con alcance definido, anticipo antes de empezar, plazo de pago acordado desde el inicio y una consecuencia clara ante el retraso. Especificar qué no incluye el trabajo evita la mayoría de los conflictos, y cobrar un anticipo filtra a los clientes que no iban a pagar de todos modos."
+        },
+        {
+          "subtitle": "Convertir el caos en sueldo",
+          "content": "El ingreso independiente es irregular por naturaleza. El mecanismo que funciona es calcular un promedio conservador de varios meses, asignarse un sueldo mensual fijo por debajo de ese promedio y guardar los excedentes de los meses buenos en una reserva que cubre los malos. Así el gasto personal deja de depender de si este mes hubo trabajo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la parte difícil del trabajo independiente?",
+          "options": [
+            "Hacer el trabajo",
+            "Encontrar oficina",
+            "Cotizar, cobrar y sobrevivir a los meses malos"
+          ],
+          "correct": "Cotizar, cobrar y sobrevivir a los meses malos"
+        },
+        {
+          "question": "¿Cuál es un error habitual con la tarifa?",
+          "options": [
+            "Dividir el sueldo de un empleo equivalente entre las horas",
+            "Cobrar mucho",
+            "Cotizar por escrito"
+          ],
+          "correct": "Dividir el sueldo de un empleo equivalente entre las horas"
+        },
+        {
+          "question": "¿Qué debe incluir una tarifa correcta?",
+          "options": [
+            "Solo el tiempo",
+            "Herramientas, seguro, periodos sin trabajo, impuestos y vacaciones",
+            "Solo el material"
+          ],
+          "correct": "Herramientas, seguro, periodos sin trabajo, impuestos y vacaciones"
+        },
+        {
+          "question": "¿Es mayor o menor que el equivalente por hora de un empleo?",
+          "options": [
+            "Siempre menor",
+            "Igual",
+            "Siempre mayor"
+          ],
+          "correct": "Siempre mayor"
+        },
+        {
+          "question": "¿Qué tiempo hay además del productivo?",
+          "options": [
+            "Cotizar, coordinar, revisar, corregir y cobrar",
+            "Ninguno",
+            "Solo el descanso"
+          ],
+          "correct": "Cotizar, coordinar, revisar, corregir y cobrar"
+        },
+        {
+          "question": "Si se factura solo el tiempo de producción:",
+          "options": [
+            "Se gana más",
+            "Se trabaja gratis buena parte de la semana",
+            "No pasa nada"
+          ],
+          "correct": "Se trabaja gratis buena parte de la semana"
+        },
+        {
+          "question": "¿Cuáles son las reglas de cobro?",
+          "options": [
+            "Confiar",
+            "Cobrar al final siempre",
+            "Cotización escrita, anticipo, plazo acordado y consecuencia por retraso"
+          ],
+          "correct": "Cotización escrita, anticipo, plazo acordado y consecuencia por retraso"
+        },
+        {
+          "question": "¿Qué logra cobrar un anticipo?",
+          "options": [
+            "Filtra a quienes no iban a pagar",
+            "Espanta clientes buenos",
+            "Nada"
+          ],
+          "correct": "Filtra a quienes no iban a pagar"
+        },
+        {
+          "question": "¿Cómo se maneja el ingreso irregular?",
+          "options": [
+            "Gastar lo que entre",
+            "Asignarse un sueldo fijo por debajo del promedio",
+            "No planear"
+          ],
+          "correct": "Asignarse un sueldo fijo por debajo del promedio"
+        },
+        {
+          "question": "¿Qué se hace con los excedentes de meses buenos?",
+          "options": [
+            "Gastarlos",
+            "Ignorarlos",
+            "Guardarlos en una reserva para los malos"
+          ],
+          "correct": "Guardarlos en una reserva para los malos"
+        }
+      ],
+      "rubric": "Logrado: construye una tarifa completa, define reglas de cobro y diseña su mecanismo de nivelación. En proceso: calcula tarifa sin reglas de cobro. Inicial: reconoce que la tarifa incluye más que el tiempo."
+    },
+    "teacher_tips": [
+      "El cálculo de la tarifa real suele sorprender: casi todos cotizan muy por debajo al principio.",
+      "La regla del anticipo es la que más problemas evita. Preséntela como estándar profesional, no como desconfianza.",
+      "El mecanismo del sueldo propio es lo más aplicable de la unidad para cualquiera con ingreso variable."
+    ]
+  },
+  "S3-1-10": {
+    "code": "S3-1-10",
+    "title": "Dinero compartido: metas financieras en pareja y en familia",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender cómo se gestionan las finanzas compartidas, desde metas comunes hasta la transparencia y los acuerdos.",
+      "competencies": [
+        "Finanzas Compartidas",
+        "Comunicación Financiera",
+        "Acuerdos de Aportación",
+        "Prevención de Conflictos"
+      ],
+      "materials": [
+        "Formato de acuerdo financiero",
+        "Casos de conflictos por dinero",
+        "Calculadora",
+        "Modelos de reparto de gastos",
+        "Cartel de la conversación pendiente"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Tema que No se Habla",
+          "duration": "15 min",
+          "label": "Por qué se evita"
+        },
+        {
+          "phase": "Desarrollo: Los Modelos",
+          "duration": "30 min",
+          "label": "Formas de organizar"
+        },
+        {
+          "phase": "Cierre: La Conversación",
+          "duration": "15 min",
+          "label": "Qué preguntar y cuándo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL TEMA QUE NO SE HABLA (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que el dinero es una de las causas más frecuentes de conflicto en las relaciones, y que la razón principal no es la falta de dinero sino la falta de conversación. Muchas parejas y familias comparten gastos durante años sin haber acordado nunca cómo.",
+          "activity": "Dinámica \"Nunca lo Hablamos\": el grupo identifica qué temas de dinero suelen quedar sin conversar."
+        },
+        {
+          "title": "FASE II: LOS MODELOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente tres formas de organizar: todo junto en un fondo común, todo separado con reparto de gastos, y el modelo mixto con un fondo común para lo compartido y cuentas propias para lo personal. Los alumnos analizan ventajas y desventajas de cada uno en distintos escenarios de ingreso.",
+          "activity": "Dinámica \"Tres Modelos\": cada equipo evalúa los tres esquemas en dos escenarios de ingreso distinto."
+        },
+        {
+          "title": "FASE III: LA CONVERSACIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe las preguntas que conviene acordar antes: cómo se reparten los gastos comunes, qué se considera gasto común, a partir de qué monto se consulta una compra, qué metas se comparten y qué deudas trae cada quien. Insista en que hablarlo antes evita el conflicto después.",
+          "activity": "Dinámica \"Las Cinco Preguntas\": cada alumno redacta sus respuestas a las cinco preguntas clave."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El dinero es una de las causas más frecuentes de conflicto en las relaciones, y no suele ser por falta de dinero: es por falta de conversación. Muchas familias comparten gastos durante años sin haber acordado nunca cómo.",
+      "sections": [
+        {
+          "subtitle": "Por qué se evita la conversación",
+          "content": "Hablar de dinero se siente incómodo porque toca temas de poder, de origen y de expectativas. Por eso muchas parejas y familias improvisan durante años. El problema es que la ausencia de acuerdo no significa que no haya reglas: significa que cada quien está siguiendo reglas distintas sin saberlo."
+        },
+        {
+          "subtitle": "Los tres modelos",
+          "content": "Todo junto: ambos ingresos van a un fondo común del que sale todo. Todo separado: cada quien conserva su ingreso y se reparten los gastos comunes. Mixto: un fondo común para lo compartido y cuentas propias para lo personal. Ninguno es mejor en abstracto; lo que falla es no haber elegido uno de forma explícita."
+        },
+        {
+          "subtitle": "El reparto cuando los ingresos son distintos",
+          "content": "Cuando una persona gana bastante más que otra, repartir los gastos comunes por mitades exactas puede dejar a una de las dos sin margen alguno. Una alternativa frecuente es repartir en proporción al ingreso de cada quien. No hay una fórmula correcta universal: hay una que ambas partes entiendan y acepten explícitamente."
+        },
+        {
+          "subtitle": "Las cinco preguntas",
+          "content": "Cómo se reparten los gastos comunes, qué cuenta como gasto común, a partir de qué monto se consulta una compra antes de hacerla, qué metas se comparten y con qué plazo, y qué deudas trae cada quien. Responder estas cinco preguntas antes de compartir gastos evita la enorme mayoría de los conflictos posteriores."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la causa principal de conflicto por dinero?",
+          "options": [
+            "La falta de conversación",
+            "La falta de dinero",
+            "Los impuestos"
+          ],
+          "correct": "La falta de conversación"
+        },
+        {
+          "question": "¿Por qué se evita la conversación?",
+          "options": [
+            "Porque es aburrida",
+            "Porque toca poder, origen y expectativas",
+            "Porque es ilegal"
+          ],
+          "correct": "Porque toca poder, origen y expectativas"
+        },
+        {
+          "question": "¿Qué significa no tener acuerdo?",
+          "options": [
+            "Que no hay reglas",
+            "Que todo funciona",
+            "Que cada quien sigue reglas distintas sin saberlo"
+          ],
+          "correct": "Que cada quien sigue reglas distintas sin saberlo"
+        },
+        {
+          "question": "¿Cuáles son los tres modelos?",
+          "options": [
+            "Todo junto, todo separado y mixto",
+            "Solo uno",
+            "Dos"
+          ],
+          "correct": "Todo junto, todo separado y mixto"
+        },
+        {
+          "question": "¿Cuál es mejor?",
+          "options": [
+            "Todo junto",
+            "Ninguno en abstracto: lo que falla es no elegir explícitamente",
+            "Todo separado"
+          ],
+          "correct": "Ninguno en abstracto: lo que falla es no elegir explícitamente"
+        },
+        {
+          "question": "Si los ingresos son muy distintos, repartir por mitades:",
+          "options": [
+            "Siempre es justo",
+            "Es obligatorio",
+            "Puede dejar a uno sin margen"
+          ],
+          "correct": "Puede dejar a uno sin margen"
+        },
+        {
+          "question": "¿Cuál es una alternativa?",
+          "options": [
+            "Repartir en proporción al ingreso",
+            "No repartir",
+            "Que pague uno solo siempre"
+          ],
+          "correct": "Repartir en proporción al ingreso"
+        },
+        {
+          "question": "¿Hay una fórmula universal correcta?",
+          "options": [
+            "Sí, mitades",
+            "No, hay una que ambas partes acepten explícitamente",
+            "Sí, proporcional"
+          ],
+          "correct": "No, hay una que ambas partes acepten explícitamente"
+        },
+        {
+          "question": "¿Cuál es una de las cinco preguntas?",
+          "options": [
+            "Quién gana más",
+            "Quién manda",
+            "A partir de qué monto se consulta una compra"
+          ],
+          "correct": "A partir de qué monto se consulta una compra"
+        },
+        {
+          "question": "¿Qué evita responderlas antes?",
+          "options": [
+            "La enorme mayoría de los conflictos posteriores",
+            "Nada",
+            "Los impuestos"
+          ],
+          "correct": "La enorme mayoría de los conflictos posteriores"
+        }
+      ],
+      "rubric": "Logrado: compara los tres modelos, propone un reparto justificado y responde las cinco preguntas. En proceso: identifica los modelos sin aplicarlos. Inicial: reconoce que hay que conversar el tema."
+    },
+    "teacher_tips": [
+      "Trate el tema con neutralidad: hay muchas formas legítimas de organizar finanzas compartidas.",
+      "El reparto proporcional cuando los ingresos difieren mucho es el concepto más útil y menos conocido.",
+      "Las cinco preguntas son un entregable concreto que los alumnos pueden usar toda la vida."
+    ]
+  },
   "S3-2-1": {
     "code": "S3-2-1",
     "title": "La primera declaración fiscal: ISR y deducciones básicas",
@@ -1809,6 +2729,926 @@
       "Realice un experimento simple de 'aversión a la pérdida' en clase con puntos ficticios."
     ]
   },
+  "S3-2-6": {
+    "code": "S3-2-6",
+    "title": "RESICO: mi primera decisión fiscal como joven que ya cobra",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender los regímenes fiscales simplificados para personas físicas y elegir el adecuado según el tipo y nivel de ingreso.",
+      "competencies": [
+        "Elección de Régimen Fiscal",
+        "Comprensión de Obligaciones",
+        "Cálculo de Carga Fiscal",
+        "Planeación Tributaria"
+      ],
+      "materials": [
+        "Comparativo de regímenes",
+        "Calculadora",
+        "Casos de distintos niveles de ingreso",
+        "Calendario de obligaciones",
+        "Cartel de la decisión fiscal"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Mi Primer Ingreso Propio",
+          "duration": "15 min",
+          "label": "Y ahora qué"
+        },
+        {
+          "phase": "Desarrollo: Los Regímenes",
+          "duration": "30 min",
+          "label": "Cuál me toca"
+        },
+        {
+          "phase": "Cierre: Las Obligaciones",
+          "duration": "15 min",
+          "label": "Qué implica cada uno"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: MI PRIMER INGRESO PROPIO (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien que empieza a recibir ingresos por su cuenta: clases particulares, diseño, reparaciones, ventas. Pregunte qué debe hacer fiscalmente. La respuesta habitual es no saber. Explique que existe un régimen simplificado pensado justamente para ese caso.",
+          "activity": "Dinámica \"¿Y Ahora Qué?\": el grupo enumera las dudas fiscales de alguien que empieza a cobrar por su cuenta."
+        },
+        {
+          "title": "FASE II: CUÁL ME TOCA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los regímenes principales para personas físicas: el simplificado de confianza, con tasas bajas y obligaciones reducidas para ingresos por debajo de cierto umbral; el de actividad empresarial y profesional, con más obligaciones y posibilidad de deducir; y el de sueldos. Los alumnos determinan cuál aplica a cinco casos.",
+          "activity": "Dinámica \"Cada Caso su Régimen\": cada equipo asigna régimen a cinco perfiles de ingreso distintos."
+        },
+        {
+          "title": "FASE III: QUÉ IMPLICA CADA UNO (CIERRE)",
+          "duration": "15 min",
+          "description": "Compare obligaciones: frecuencia de declaración, emisión de comprobantes, posibilidad de deducir y contabilidad requerida. Insista en que un régimen simplificado paga menos pero permite deducir menos, y que la elección depende de si los gastos del negocio son altos o bajos.",
+          "activity": "Dinámica \"Simplificado o Deducible\": cada equipo decide para dos casos con estructuras de gasto distintas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "El día que empiezas a cobrar por tu cuenta aparece una pregunta que nadie te preparó para responder: qué hacer fiscalmente. Existe un régimen simplificado pensado justo para ese momento, y elegir bien desde el inicio ahorra dinero y complicaciones.",
+      "sections": [
+        {
+          "subtitle": "Por qué importa elegir bien desde el inicio",
+          "content": "El régimen determina cuánto se paga, con qué frecuencia se declara, qué se puede deducir y cuánta contabilidad hace falta llevar. Elegir el que no corresponde puede significar pagar más de lo necesario o cargar con obligaciones desproporcionadas para el tamaño del ingreso. Cambiar después es posible pero implica trámites y ajustes."
+        },
+        {
+          "subtitle": "El régimen simplificado de confianza",
+          "content": "Está diseñado para personas físicas con ingresos por debajo de cierto umbral anual. Su ventaja es que aplica tasas bajas sobre los ingresos y reduce las obligaciones de contabilidad. Su contrapartida es que, al calcular sobre ingresos y no sobre utilidad, prácticamente no permite deducir gastos. Conviene a quien tiene gastos bajos respecto a lo que factura."
+        },
+        {
+          "subtitle": "El régimen de actividad empresarial y profesional",
+          "content": "Aquí el impuesto se calcula sobre la utilidad, es decir, sobre los ingresos menos las deducciones autorizadas. Exige más obligaciones y llevar contabilidad, pero permite descontar los gastos necesarios para la actividad. Conviene a quien tiene costos altos, porque paga sobre lo que realmente ganó y no sobre lo que cobró."
+        },
+        {
+          "subtitle": "La regla para decidir",
+          "content": "Si los gastos del negocio son bajos respecto a los ingresos, un régimen simplificado suele salir mejor. Si son altos, poder deducirlos puede compensar con creces las obligaciones adicionales. Los umbrales, tasas y condiciones cambian con las reformas, así que el criterio permanente es la lógica, y la cifra vigente siempre se consulta en la fuente oficial."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué determina el régimen fiscal?",
+          "options": [
+            "Cuánto se paga, cómo se declara, qué se deduce y qué contabilidad se lleva",
+            "Solo el nombre",
+            "La ciudad"
+          ],
+          "correct": "Cuánto se paga, cómo se declara, qué se deduce y qué contabilidad se lleva"
+        },
+        {
+          "question": "¿Qué pasa si se elige el que no corresponde?",
+          "options": [
+            "Nada",
+            "Se puede pagar de más o cargar obligaciones desproporcionadas",
+            "Se cancela el negocio"
+          ],
+          "correct": "Se puede pagar de más o cargar obligaciones desproporcionadas"
+        },
+        {
+          "question": "¿Para quién está pensado el régimen simplificado?",
+          "options": [
+            "Grandes empresas",
+            "Solo empleados",
+            "Personas físicas con ingresos bajo cierto umbral"
+          ],
+          "correct": "Personas físicas con ingresos bajo cierto umbral"
+        },
+        {
+          "question": "¿Cuál es su ventaja?",
+          "options": [
+            "Tasas bajas y menos obligaciones de contabilidad",
+            "Deducir todo",
+            "No declarar"
+          ],
+          "correct": "Tasas bajas y menos obligaciones de contabilidad"
+        },
+        {
+          "question": "¿Cuál es su contrapartida?",
+          "options": [
+            "Paga más",
+            "Prácticamente no permite deducir gastos",
+            "No existe"
+          ],
+          "correct": "Prácticamente no permite deducir gastos"
+        },
+        {
+          "question": "¿A quién le conviene?",
+          "options": [
+            "A quien tiene gastos altos",
+            "A todos",
+            "A quien tiene gastos bajos respecto a lo que factura"
+          ],
+          "correct": "A quien tiene gastos bajos respecto a lo que factura"
+        },
+        {
+          "question": "¿Sobre qué calcula el régimen de actividad empresarial?",
+          "options": [
+            "Sobre la utilidad",
+            "Sobre los ingresos",
+            "Sobre el capital"
+          ],
+          "correct": "Sobre la utilidad"
+        },
+        {
+          "question": "¿Qué exige?",
+          "options": [
+            "Nada",
+            "Más obligaciones y llevar contabilidad",
+            "Solo una firma"
+          ],
+          "correct": "Más obligaciones y llevar contabilidad"
+        },
+        {
+          "question": "¿A quién conviene?",
+          "options": [
+            "A quien no gasta",
+            "A nadie",
+            "A quien tiene costos altos"
+          ],
+          "correct": "A quien tiene costos altos"
+        },
+        {
+          "question": "¿Dónde se consultan tasas y umbrales vigentes?",
+          "options": [
+            "En la fuente oficial, porque cambian con las reformas",
+            "En redes sociales",
+            "No se pueden consultar"
+          ],
+          "correct": "En la fuente oficial, porque cambian con las reformas"
+        }
+      ],
+      "rubric": "Logrado: asigna régimen según estructura de ingreso y gasto, y justifica con la lógica de deducción. En proceso: distingue los regímenes sin aplicarlos. Inicial: sabe que hay que elegir uno."
+    },
+    "teacher_tips": [
+      "Evite dar tasas y umbrales exactos: cambian con las reformas. Enseñe la lógica de decisión.",
+      "La regla de gastos altos contra gastos bajos es el criterio que permanece aunque cambien las cifras.",
+      "Recuerde que la orientación oficial es gratuita: es la referencia correcta para el dato vigente."
+    ]
+  },
+  "S3-2-7": {
+    "code": "S3-2-7",
+    "title": "Facturas, deducciones y devolución de impuestos",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender el mecanismo de las deducciones personales y cómo puede resultar una devolución en la declaración anual.",
+      "competencies": [
+        "Comprensión de Deducciones",
+        "Organización Documental",
+        "Declaración Anual",
+        "Recuperación de Impuestos"
+      ],
+      "materials": [
+        "Lista de deducciones personales",
+        "Ejemplos de comprobantes fiscales",
+        "Calculadora",
+        "Casos con distintos gastos deducibles",
+        "Cartel de los requisitos del comprobante"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dinero que Regresa",
+          "duration": "15 min",
+          "label": "La devolución"
+        },
+        {
+          "phase": "Desarrollo: Qué se Deduce",
+          "duration": "30 min",
+          "label": "Y con qué requisitos"
+        },
+        {
+          "phase": "Cierre: Organizar el Año",
+          "duration": "15 min",
+          "label": "Guardar desde enero"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DINERO QUE REGRESA (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que muchas personas asalariadas pueden recibir una devolución de impuestos si presentan su declaración anual y aplican deducciones personales, y que una parte importante de la población nunca la solicita porque no sabe que existe.",
+          "activity": "Dinámica \"¿Sabías Que?\": el grupo estima cuántas personas creen que pueden solicitar devolución."
+        },
+        {
+          "title": "FASE II: QUÉ SE DEDUCE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los tipos de deducción personal: gastos médicos y dentales, primas de seguros de gastos médicos, colegiaturas dentro de ciertos límites, intereses de crédito hipotecario, aportaciones voluntarias al retiro y donativos. Explique los requisitos: comprobante fiscal a nombre propio y pago con medio bancario.",
+          "activity": "Dinámica \"¿Deduce o No?\": cada equipo evalúa diez gastos y determina cuáles cumplen los requisitos."
+        },
+        {
+          "title": "FASE III: GUARDAR DESDE ENERO (CIERRE)",
+          "duration": "15 min",
+          "description": "Insista en el punto operativo: la deducción se pierde si no se pidió el comprobante en el momento del gasto o si se pagó en efectivo. Enseñe a llevar una carpeta desde enero y a pedir siempre comprobante con los datos fiscales correctos.",
+          "activity": "Dinámica \"Mi Carpeta del Año\": cada alumno diseña su sistema de organización de comprobantes."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Mucha gente asalariada puede recibir una devolución de impuestos cada año y nunca la solicita porque no sabe que existe. La condición es haber guardado los comprobantes correctos, y eso se decide en el momento del gasto, no en abril.",
+      "sections": [
+        {
+          "subtitle": "Cómo funciona la devolución",
+          "content": "A lo largo del año se retienen impuestos sobre el sueldo. Al presentar la declaración anual y aplicar las deducciones personales a las que se tiene derecho, puede resultar que lo retenido fue mayor que lo que correspondía. Esa diferencia se devuelve. No es un regalo ni un beneficio extraordinario: es dinero propio que se pagó de más."
+        },
+        {
+          "subtitle": "Qué se puede deducir",
+          "content": "Las deducciones personales típicas incluyen gastos médicos, dentales y hospitalarios, primas de seguros de gastos médicos, colegiaturas dentro de ciertos límites, intereses reales de crédito hipotecario, aportaciones voluntarias para el retiro, gastos funerarios y donativos a instituciones autorizadas. Existe un tope global a la suma de deducciones."
+        },
+        {
+          "subtitle": "Los dos requisitos que todo el mundo olvida",
+          "content": "El comprobante fiscal debe estar a nombre de quien deduce, con sus datos correctos, y el pago debe haberse realizado por un medio bancario y no en efectivo. Un gasto médico perfectamente deducible pagado en efectivo simplemente no cuenta. Esos dos requisitos son la causa principal de deducciones perdidas."
+        },
+        {
+          "subtitle": "La decisión se toma en el momento del gasto",
+          "content": "Nada de esto se puede arreglar en abril: o se pidió el comprobante y se pagó con tarjeta o transferencia en su momento, o la deducción se perdió. Por eso conviene llevar una carpeta desde enero, tener los datos fiscales a la mano y pedir comprobante siempre, aunque en ese instante no parezca que valdrá la pena."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una devolución de impuestos?",
+          "options": [
+            "Un regalo del gobierno",
+            "Dinero propio que se pagó de más y se recupera",
+            "Un préstamo"
+          ],
+          "correct": "Dinero propio que se pagó de más y se recupera"
+        },
+        {
+          "question": "¿Cómo se solicita?",
+          "options": [
+            "Llamando por teléfono",
+            "No se puede",
+            "Presentando la declaración anual con deducciones"
+          ],
+          "correct": "Presentando la declaración anual con deducciones"
+        },
+        {
+          "question": "¿Qué se puede deducir?",
+          "options": [
+            "Gastos médicos, colegiaturas, intereses hipotecarios y aportaciones al retiro",
+            "Todo",
+            "Nada"
+          ],
+          "correct": "Gastos médicos, colegiaturas, intereses hipotecarios y aportaciones al retiro"
+        },
+        {
+          "question": "¿Hay un límite?",
+          "options": [
+            "No",
+            "Sí, existe un tope global",
+            "Solo para médicos"
+          ],
+          "correct": "Sí, existe un tope global"
+        },
+        {
+          "question": "¿A nombre de quién debe estar el comprobante?",
+          "options": [
+            "De cualquiera",
+            "Del hospital",
+            "De quien deduce, con sus datos correctos"
+          ],
+          "correct": "De quien deduce, con sus datos correctos"
+        },
+        {
+          "question": "¿Cómo debe pagarse?",
+          "options": [
+            "Por medio bancario, no en efectivo",
+            "En efectivo",
+            "Como sea"
+          ],
+          "correct": "Por medio bancario, no en efectivo"
+        },
+        {
+          "question": "Un gasto médico pagado en efectivo:",
+          "options": [
+            "Cuenta igual",
+            "No cuenta como deducción",
+            "Cuenta doble"
+          ],
+          "correct": "No cuenta como deducción"
+        },
+        {
+          "question": "¿Cuál es la causa principal de deducciones perdidas?",
+          "options": [
+            "La ley",
+            "El banco",
+            "No pedir comprobante o pagar en efectivo"
+          ],
+          "correct": "No pedir comprobante o pagar en efectivo"
+        },
+        {
+          "question": "¿Se puede arreglar en abril?",
+          "options": [
+            "No, se decide en el momento del gasto",
+            "Sí, siempre",
+            "Sí, con multa"
+          ],
+          "correct": "No, se decide en el momento del gasto"
+        },
+        {
+          "question": "¿Qué conviene hacer desde enero?",
+          "options": [
+            "Esperar",
+            "Llevar una carpeta y pedir comprobante siempre",
+            "Guardar solo lo grande"
+          ],
+          "correct": "Llevar una carpeta y pedir comprobante siempre"
+        }
+      ],
+      "rubric": "Logrado: identifica deducciones válidas, verifica requisitos y organiza un sistema de comprobantes. En proceso: reconoce deducciones sin dominar los requisitos. Inicial: sabe que existe la devolución."
+    },
+    "teacher_tips": [
+      "El requisito del pago bancario es el que más deducciones hace perder. Repítalo de forma explícita.",
+      "Evite dar topes y porcentajes exactos: cambian. Enseñe la lógica y remita a la fuente oficial.",
+      "El sistema de carpeta desde enero es el entregable más práctico de toda la unidad."
+    ]
+  },
+  "S3-2-8": {
+    "code": "S3-2-8",
+    "title": "Mudarme solo: el presupuesto real de la independencia",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Determinar cuándo se está financieramente listo para independizarse, considerando el costo de arranque y la reserva necesaria.",
+      "competencies": [
+        "Evaluación de Preparación",
+        "Cálculo de Costo de Arranque",
+        "Gestión de Reserva",
+        "Decisión de Timing"
+      ],
+      "materials": [
+        "Lista de costos de mudanza",
+        "Calculadora",
+        "Casos de independencia prematura",
+        "Formato de checklist de preparación",
+        "Cartel de las tres condiciones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Ya me Quiero Ir",
+          "duration": "15 min",
+          "label": "La prisa"
+        },
+        {
+          "phase": "Desarrollo: El Costo de Arrancar",
+          "duration": "30 min",
+          "label": "Lo que cuesta el día uno"
+        },
+        {
+          "phase": "Cierre: Las Tres Condiciones",
+          "duration": "15 min",
+          "label": "Cuándo estoy listo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"YA ME QUIERO IR\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Reconozca que querer independizarse es legítimo y sano. Explique que el problema no es la decisión sino el momento: irse sin reserva suele terminar en regresar con deudas, y eso desanima más que haber esperado unos meses.",
+          "activity": "Dinámica \"¿Qué Sale Mal?\": el grupo enumera qué falla en una independencia mal preparada."
+        },
+        {
+          "title": "FASE II: LO QUE CUESTA EL DÍA UNO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos calculan el costo de arranque: depósito, mes adelantado, mudanza, muebles básicos, enseres de cocina, contratación de servicios y el colchón para los primeros meses. Descubren que ese desembolso suele ser mucho mayor que la renta mensual.",
+          "activity": "Dinámica \"El Día Uno\": cada equipo calcula el desembolso inicial completo de una mudanza."
+        },
+        {
+          "title": "FASE III: LAS TRES CONDICIONES (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente las tres condiciones para estar listo: ingreso estable que cubra el presupuesto con margen, el costo de arranque completo disponible sin endeudarse y una reserva de al menos tres meses de gastos. Faltando cualquiera, la independencia es frágil.",
+          "activity": "Dinámica \"¿Estoy Listo?\": cada alumno evalúa un caso contra las tres condiciones."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Querer independizarse es sano. El problema casi nunca es la decisión: es el momento. Irse sin reserva suele terminar en regresar con deudas, y eso desanima mucho más que haber esperado unos meses.",
+      "sections": [
+        {
+          "subtitle": "El costo de arranque sorprende",
+          "content": "Antes de pagar la primera renta hay depósito, mes adelantado, mudanza, muebles básicos, enseres de cocina, ropa de cama y contratación de servicios. Sumado, ese desembolso inicial suele equivaler a varios meses de renta. Quien solo calculó la mensualidad descubre el problema exactamente el peor día."
+        },
+        {
+          "subtitle": "Los primeros meses cuestan más",
+          "content": "Al inicio aparecen gastos que después desaparecen: lo que faltó comprar, lo que se rompió al mudarse, los ajustes de la vivienda. Además, hasta que se establece una rutina, el gasto en alimentación suele ser mayor. Presupuestar los primeros tres meses con un margen adicional evita empezar ya endeudado."
+        },
+        {
+          "subtitle": "Las tres condiciones",
+          "content": "Ingreso estable que cubra el presupuesto completo con margen, no justo. El costo de arranque completo disponible sin recurrir a crédito. Y una reserva de al menos tres meses de gastos para el caso de que el ingreso se interrumpa. Faltando cualquiera de las tres, la independencia se sostiene solo mientras nada salga mal."
+        },
+        {
+          "subtitle": "Esperar no es fracasar",
+          "content": "Posponer la mudanza tres o seis meses para llegar con las tres condiciones cumplidas no es renunciar: es asegurarse de no tener que volver. Compartir vivienda al inicio también es una forma legítima y muy común de hacer viable la independencia mientras se construye la reserva."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es el problema habitual al independizarse?",
+          "options": [
+            "La decisión",
+            "La ciudad",
+            "El momento, no la decisión"
+          ],
+          "correct": "El momento, no la decisión"
+        },
+        {
+          "question": "¿Qué suele pasar si se va sin reserva?",
+          "options": [
+            "Terminar regresando con deudas",
+            "Todo sale bien",
+            "Se ahorra más"
+          ],
+          "correct": "Terminar regresando con deudas"
+        },
+        {
+          "question": "¿Qué incluye el costo de arranque?",
+          "options": [
+            "Solo la renta",
+            "Depósito, mes adelantado, mudanza, muebles, enseres y servicios",
+            "Solo el depósito"
+          ],
+          "correct": "Depósito, mes adelantado, mudanza, muebles, enseres y servicios"
+        },
+        {
+          "question": "¿A cuánto suele equivaler?",
+          "options": [
+            "A media renta",
+            "A nada",
+            "A varios meses de renta"
+          ],
+          "correct": "A varios meses de renta"
+        },
+        {
+          "question": "¿Cómo son los primeros meses?",
+          "options": [
+            "Más caros que los siguientes",
+            "Más baratos",
+            "Iguales"
+          ],
+          "correct": "Más caros que los siguientes"
+        },
+        {
+          "question": "¿Por qué?",
+          "options": [
+            "Suben los precios",
+            "Aparecen gastos de ajuste que después desaparecen",
+            "Por casualidad"
+          ],
+          "correct": "Aparecen gastos de ajuste que después desaparecen"
+        },
+        {
+          "question": "¿Cuál es la primera condición?",
+          "options": [
+            "Tener muebles",
+            "Tener auto",
+            "Ingreso estable que cubra el presupuesto con margen"
+          ],
+          "correct": "Ingreso estable que cubra el presupuesto con margen"
+        },
+        {
+          "question": "¿Cuál es la segunda?",
+          "options": [
+            "Costo de arranque disponible sin crédito",
+            "Tener pareja",
+            "Tener trabajo formal"
+          ],
+          "correct": "Costo de arranque disponible sin crédito"
+        },
+        {
+          "question": "¿Cuál es la tercera?",
+          "options": [
+            "Un auto",
+            "Reserva de al menos tres meses de gastos",
+            "Una tarjeta"
+          ],
+          "correct": "Reserva de al menos tres meses de gastos"
+        },
+        {
+          "question": "¿Qué es esperar unos meses?",
+          "options": [
+            "Renunciar",
+            "Fracasar",
+            "Asegurarse de no tener que volver"
+          ],
+          "correct": "Asegurarse de no tener que volver"
+        }
+      ],
+      "rubric": "Logrado: calcula costo de arranque y reserva, y evalúa preparación contra las tres condiciones. En proceso: calcula gastos mensuales sin costo de arranque. Inicial: reconoce que hace falta prepararse."
+    },
+    "teacher_tips": [
+      "El costo de arranque es la sorpresa de la clase: casi nadie lo dimensiona correctamente.",
+      "Presente compartir vivienda como una opción legítima, no como un plan de segunda.",
+      "Deje claro que esperar unos meses no es fracasar: es la diferencia entre irse y quedarse."
+    ]
+  },
+  "S3-2-9": {
+    "code": "S3-2-9",
+    "title": "El primer crédito: construir historial desde cero",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender cómo se construye un historial crediticio desde cero y qué prácticas lo fortalecen o lo dañan.",
+      "competencies": [
+        "Construcción de Historial",
+        "Uso Responsable de Crédito",
+        "Comprensión de Factores",
+        "Planeación Crediticia"
+      ],
+      "materials": [
+        "Simulador de comportamiento crediticio",
+        "Calculadora",
+        "Casos de historiales distintos",
+        "Lista de factores que influyen",
+        "Cartel del primer crédito"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Nadie me Presta",
+          "duration": "15 min",
+          "label": "La paradoja del inicio"
+        },
+        {
+          "phase": "Desarrollo: Cómo se Construye",
+          "duration": "30 min",
+          "label": "Los factores"
+        },
+        {
+          "phase": "Cierre: El Primer Producto",
+          "duration": "15 min",
+          "label": "Por dónde empezar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PARADOJA DEL INICIO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique la paradoja: para obtener crédito hace falta historial, y para tener historial hace falta crédito. Aclare que existen productos diseñados justamente para romper ese círculo, y que la clave está en empezar pequeño y bien.",
+          "activity": "Dinámica \"El Círculo\": el grupo describe la paradoja y propone formas de romperla."
+        },
+        {
+          "title": "FASE II: LOS FACTORES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente qué influye en un historial: la puntualidad de los pagos, que es lo más importante; el porcentaje de la línea utilizada; la antigüedad del historial; la variedad de productos; y las solicitudes recientes de crédito. Los alumnos evalúan tres perfiles y explican sus diferencias.",
+          "activity": "Dinámica \"Tres Perfiles\": cada equipo compara tres historiales e identifica qué los diferencia."
+        },
+        {
+          "title": "FASE III: POR DÓNDE EMPEZAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique las opciones para empezar: una tarjeta garantizada respaldada por un depósito, un crédito pequeño de tienda departamental o ser usuario adicional de una cuenta con buen historial. Insista en la regla de oro: usar poco y pagar el total cada mes.",
+          "activity": "Dinámica \"Mi Primer Producto\": cada alumno elige una opción de inicio y define sus reglas de uso."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Para que te den crédito necesitas historial, y para tener historial necesitas crédito. Esa paradoja frena a mucha gente, y se rompe empezando pequeño y usando bien lo poco que te dan.",
+      "sections": [
+        {
+          "subtitle": "La puntualidad pesa más que todo",
+          "content": "De todos los factores que construyen un historial, el más importante con diferencia es pagar a tiempo. Un solo atraso puede pesar más que meses de comportamiento correcto, y un historial de pagos puntuales sostenidos es lo que abre acceso a mejores condiciones. Antes que cualquier estrategia, está pagar en fecha."
+        },
+        {
+          "subtitle": "Usar poco de lo que te dan",
+          "content": "El porcentaje de la línea de crédito que se utiliza es el segundo factor en importancia. Usar casi toda la línea disponible se interpreta como señal de presión financiera, incluso pagando puntualmente. Mantener el uso en una fracción baja de la línea comunica exactamente lo contrario, y es una de las cosas más fáciles de controlar."
+        },
+        {
+          "subtitle": "La antigüedad y la variedad",
+          "content": "Un historial largo vale más que uno corto, aunque el corto sea impecable. Por eso conviene no cancelar la primera tarjeta cuando llegan mejores ofertas: su antigüedad es un activo. La variedad de productos manejados también suma, aunque en mucha menor medida, y nunca justifica contratar productos que no se necesitan."
+        },
+        {
+          "subtitle": "Por dónde empezar y con qué regla",
+          "content": "Las vías habituales son una tarjeta garantizada por un depósito, un crédito pequeño de tienda o ser usuario adicional en una cuenta con buen comportamiento. Cualquiera funciona si se aplica la regla de oro: usar una fracción pequeña de la línea y pagar el total cada mes, no el mínimo. Así se construye historial sin pagar intereses."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuál es la paradoja del inicio?",
+          "options": [
+            "Para crédito hace falta historial y para historial hace falta crédito",
+            "No hay paradoja",
+            "Todos empiezan igual"
+          ],
+          "correct": "Para crédito hace falta historial y para historial hace falta crédito"
+        },
+        {
+          "question": "¿Cuál es el factor más importante?",
+          "options": [
+            "El monto",
+            "La puntualidad de los pagos",
+            "El banco"
+          ],
+          "correct": "La puntualidad de los pagos"
+        },
+        {
+          "question": "¿Cuánto puede pesar un atraso?",
+          "options": [
+            "Nada",
+            "Poco",
+            "Más que meses de comportamiento correcto"
+          ],
+          "correct": "Más que meses de comportamiento correcto"
+        },
+        {
+          "question": "¿Cuál es el segundo factor?",
+          "options": [
+            "El porcentaje de la línea utilizada",
+            "La edad",
+            "La ciudad"
+          ],
+          "correct": "El porcentaje de la línea utilizada"
+        },
+        {
+          "question": "¿Cómo se interpreta usar casi toda la línea?",
+          "options": [
+            "Como buena gestión",
+            "Como señal de presión financiera",
+            "No se interpreta"
+          ],
+          "correct": "Como señal de presión financiera"
+        },
+        {
+          "question": "¿Qué vale más, un historial largo o uno corto impecable?",
+          "options": [
+            "El corto",
+            "Igual",
+            "El largo"
+          ],
+          "correct": "El largo"
+        },
+        {
+          "question": "¿Conviene cancelar la primera tarjeta?",
+          "options": [
+            "No, su antigüedad es un activo",
+            "Sí, siempre",
+            "Sí, al año"
+          ],
+          "correct": "No, su antigüedad es un activo"
+        },
+        {
+          "question": "¿Cuáles son vías para empezar?",
+          "options": [
+            "Solo hipoteca",
+            "Tarjeta garantizada, crédito de tienda o usuario adicional",
+            "Ninguna"
+          ],
+          "correct": "Tarjeta garantizada, crédito de tienda o usuario adicional"
+        },
+        {
+          "question": "¿Cuál es la regla de oro?",
+          "options": [
+            "Usar todo y pagar el mínimo",
+            "No usarla",
+            "Usar poco y pagar el total cada mes"
+          ],
+          "correct": "Usar poco y pagar el total cada mes"
+        },
+        {
+          "question": "¿Qué se logra con esa regla?",
+          "options": [
+            "Construir historial sin pagar intereses",
+            "Pagar más",
+            "Nada"
+          ],
+          "correct": "Construir historial sin pagar intereses"
+        }
+      ],
+      "rubric": "Logrado: explica los factores, elige una vía de inicio y define reglas de uso concretas. En proceso: identifica factores sin plan de inicio. Inicial: comprende la paradoja del historial."
+    },
+    "teacher_tips": [
+      "La regla de usar poco y pagar el total es el mensaje que debe quedar. Repítalo al cierre.",
+      "Advierta contra cancelar la primera tarjeta: es un error muy común que borra antigüedad valiosa.",
+      "Aclare que pagar el total cada mes construye historial sin costo de intereses: sorprende a muchos."
+    ]
+  },
+  "S3-2-10": {
+    "code": "S3-2-10",
+    "title": "Decisiones grandes: auto, viaje o inversión",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Aplicar un marco de decisión para elegir entre opciones grandes que compiten por el mismo dinero.",
+      "competencies": [
+        "Marco de Decisión",
+        "Costo de Oportunidad",
+        "Priorización",
+        "Justificación de Elecciones"
+      ],
+      "materials": [
+        "Formato de matriz de decisión",
+        "Calculadora",
+        "Casos con tres alternativas",
+        "Criterios de evaluación ponderados",
+        "Cartel de las cuatro preguntas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Solo Alcanza para Una",
+          "duration": "15 min",
+          "label": "Elegir duele"
+        },
+        {
+          "phase": "Desarrollo: El Marco",
+          "duration": "30 min",
+          "label": "Cuatro preguntas"
+        },
+        {
+          "phase": "Cierre: Decidir y Sostener",
+          "duration": "15 min",
+          "label": "Vivir con la elección"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SOLO ALCANZA PARA UNA (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien con $120,000 ahorrados y tres opciones: un auto, un viaje largo o invertirlos. Pregunte cuál es la correcta. Explique que no hay una respuesta universal, pero sí un marco que permite decidir con argumentos en lugar de con impulso.",
+          "activity": "Dinámica \"¿Qué Elegirías?\": el grupo vota y después descubre qué información faltaba."
+        },
+        {
+          "title": "FASE II: LAS CUATRO PREGUNTAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el marco: qué problema real resuelve cada opción, qué costo total tiene incluyendo los recurrentes, qué renuncio al elegirla, y si es reversible o no. Los alumnos evalúan las tres alternativas con las cuatro preguntas.",
+          "activity": "Dinámica \"Las Cuatro Preguntas\": cada equipo evalúa las tres opciones y llena la matriz."
+        },
+        {
+          "title": "FASE III: VIVIR CON LA ELECCIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que una decisión bien tomada incluye aceptar lo que se renuncia sin arrepentirse después. Y que las decisiones reversibles pueden tomarse rápido, mientras que las irreversibles merecen más análisis. Ese criterio ordena la mayoría de las decisiones grandes.",
+          "activity": "Dinámica \"Reversible o No\": cada equipo clasifica seis decisiones y ajusta cuánto análisis merece cada una."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Tienes $120,000 y tres opciones que compiten por el mismo dinero. No hay una respuesta universalmente correcta, pero sí una forma de decidir con argumentos en lugar de con impulso.",
+      "sections": [
+        {
+          "subtitle": "Pregunta uno: qué problema resuelve",
+          "content": "Toda opción grande debería resolver un problema real o habilitar algo concreto. Un vehículo puede resolver dos horas diarias de traslado o puede ser solo un deseo. Un viaje puede ser una experiencia formativa o un escape de algo que seguirá ahí al volver. Nombrar el problema con precisión ya descarta varias opciones."
+        },
+        {
+          "subtitle": "Pregunta dos: cuál es el costo total",
+          "content": "El precio de compra casi nunca es el costo. Un vehículo suma seguro, mantenimiento, combustible, tenencia y depreciación. Un viaje largo suma el ingreso no percibido durante ese tiempo. Una inversión suma comisiones e impuestos. Comparar precios de compra en lugar de costos totales lleva sistemáticamente a la peor elección."
+        },
+        {
+          "subtitle": "Pregunta tres: a qué renuncio",
+          "content": "Elegir una opción significa renunciar a las otras y a lo que habrían producido. Ese es el costo de oportunidad, y se hace visible cuando se calcula qué habría pasado con ese dinero en la alternativa. No sirve para descartar automáticamente el consumo, sino para elegirlo sabiendo exactamente qué se deja del otro lado."
+        },
+        {
+          "subtitle": "Pregunta cuatro: es reversible",
+          "content": "Una decisión reversible puede tomarse rápido: si sale mal, se corrige. Una irreversible merece mucho más análisis, porque el error se queda. Comprar un vehículo es parcialmente reversible con pérdida; comprometerse con un crédito a cinco años lo es mucho menos. Ajustar el tiempo de análisis a la reversibilidad es de los criterios más útiles que existen."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Hay una respuesta universalmente correcta?",
+          "options": [
+            "Sí, invertir siempre",
+            "No, pero hay un marco para decidir",
+            "Sí, el auto"
+          ],
+          "correct": "No, pero hay un marco para decidir"
+        },
+        {
+          "question": "¿Cuál es la pregunta uno?",
+          "options": [
+            "Cuánto cuesta",
+            "Qué dirán",
+            "Qué problema real resuelve"
+          ],
+          "correct": "Qué problema real resuelve"
+        },
+        {
+          "question": "¿Qué logra nombrar el problema con precisión?",
+          "options": [
+            "Descartar varias opciones",
+            "Nada",
+            "Complicar todo"
+          ],
+          "correct": "Descartar varias opciones"
+        },
+        {
+          "question": "¿Cuál es la pregunta dos?",
+          "options": [
+            "Cuál es el precio",
+            "Cuál es el costo total, no el precio",
+            "Quién lo vende"
+          ],
+          "correct": "Cuál es el costo total, no el precio"
+        },
+        {
+          "question": "¿Qué suma un vehículo además del precio?",
+          "options": [
+            "Nada",
+            "Solo gasolina",
+            "Seguro, mantenimiento, combustible, tenencia y depreciación"
+          ],
+          "correct": "Seguro, mantenimiento, combustible, tenencia y depreciación"
+        },
+        {
+          "question": "¿Qué suma un viaje largo?",
+          "options": [
+            "El ingreso no percibido durante ese tiempo",
+            "Nada",
+            "Solo los boletos"
+          ],
+          "correct": "El ingreso no percibido durante ese tiempo"
+        },
+        {
+          "question": "¿Cuál es la pregunta tres?",
+          "options": [
+            "Quién me acompaña",
+            "A qué renuncio al elegirla",
+            "Qué color es"
+          ],
+          "correct": "A qué renuncio al elegirla"
+        },
+        {
+          "question": "¿Sirve el costo de oportunidad para descartar el consumo?",
+          "options": [
+            "Sí, siempre",
+            "No sirve",
+            "No, sirve para elegirlo sabiendo qué se deja"
+          ],
+          "correct": "No, sirve para elegirlo sabiendo qué se deja"
+        },
+        {
+          "question": "¿Cuál es la pregunta cuatro?",
+          "options": [
+            "Si es reversible o no",
+            "Si es popular",
+            "Si es rápida"
+          ],
+          "correct": "Si es reversible o no"
+        },
+        {
+          "question": "¿Qué decisiones merecen más análisis?",
+          "options": [
+            "Las reversibles",
+            "Las irreversibles",
+            "Todas igual"
+          ],
+          "correct": "Las irreversibles"
+        }
+      ],
+      "rubric": "Logrado: aplica las cuatro preguntas, calcula costo total y costo de oportunidad, y justifica su elección. En proceso: compara precios sin costo total. Inicial: identifica que hay que comparar más que el precio."
+    },
+    "teacher_tips": [
+      "El criterio de reversibilidad es el más transferible: sirve para decisiones que no son financieras.",
+      "Insista en que el marco no descarta el consumo: lo hace consciente, que es distinto.",
+      "Use el mismo monto para las tres opciones: obliga a comparar de verdad."
+    ]
+  },
   "S3-3-1": {
     "code": "S3-3-1",
     "title": "Plan de retiro anticipado: construirlo desde los 15",
@@ -2438,6 +4278,926 @@
     "teacher_tips": [
       "Use ejemplos de grandes filántropos (Bill Gates, Chuck Feeney).",
       "Termine con un mensaje inspirador sobre el poder de sus decisiones."
+    ]
+  },
+  "S3-3-6": {
+    "code": "S3-3-6",
+    "title": "Asignación de activos por edad: la regla de los 110",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender la asignación de activos por edad y ajustar la proporción entre renta variable y renta fija según horizonte y perfil.",
+      "competencies": [
+        "Asignación de Activos",
+        "Gestión de Riesgo por Horizonte",
+        "Ajuste por Perfil",
+        "Diseño de Portafolio"
+      ],
+      "materials": [
+        "Tabla de asignación por edad",
+        "Calculadora",
+        "Casos de perfiles distintos",
+        "Datos de volatilidad por clase de activo",
+        "Cartel de la regla y sus límites"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuánto Riesgo Aguanto?",
+          "duration": "15 min",
+          "label": "La pregunta de fondo"
+        },
+        {
+          "phase": "Desarrollo: La Regla",
+          "duration": "30 min",
+          "label": "Edad y horizonte"
+        },
+        {
+          "phase": "Cierre: Sus Límites",
+          "duration": "15 min",
+          "label": "La edad no es todo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿CUÁNTO RIESGO AGUANTO? (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánta variación de su dinero podrían soportar sin vender por pánico. Explique que esa tolerancia no es solo emocional: depende sobre todo de cuánto tiempo falta para necesitar el dinero, y que existe una regla sencilla que traduce eso a porcentajes.",
+          "activity": "Dinámica \"¿Cuánto Aguantas?\": el grupo estima qué caída soportaría sin vender y compara respuestas."
+        },
+        {
+          "title": "FASE II: EDAD Y HORIZONTE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente la regla de los 110: restar la edad a 110 da el porcentaje aproximado que podría ir a renta variable, y el resto a renta fija. La lógica es que a mayor horizonte, más tiempo hay para recuperarse de una caída. Los alumnos calculan la asignación para cinco edades.",
+          "activity": "Dinámica \"La Regla en Acción\": cada equipo calcula la asignación de cinco perfiles de edad."
+        },
+        {
+          "title": "FASE III: LA EDAD NO ES TODO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique los límites: la regla ignora la estabilidad del ingreso, la existencia de un fondo de emergencia, las metas de corto plazo y la tolerancia real de la persona. Es un punto de partida razonable, no una prescripción. Los alumnos ajustan la regla para dos perfiles con circunstancias particulares.",
+          "activity": "Dinámica \"Ajusta la Regla\": cada equipo modifica la asignación de dos casos con circunstancias especiales."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuánto riesgo puedes tomar no depende solo de tu carácter: depende sobre todo de cuánto tiempo falta para que necesites ese dinero. Existe una regla sencilla que traduce esa idea en porcentajes concretos.",
+      "sections": [
+        {
+          "subtitle": "El tiempo es lo que permite tomar riesgo",
+          "content": "La renta variable puede caer con fuerza en periodos cortos y históricamente ha recuperado en periodos largos. Por eso quien tiene treinta años por delante puede sostener una proporción alta: le sobra tiempo para atravesar varias caídas. Quien necesita el dinero en dos años no tiene ese margen, por muy tolerante que sea."
+        },
+        {
+          "subtitle": "La regla de los 110",
+          "content": "Consiste en restar la edad a 110 para obtener el porcentaje aproximado que podría destinarse a renta variable, y colocar el resto en renta fija. A los veinte años daría alrededor de noventa por ciento variable; a los sesenta, alrededor de cincuenta. Es una simplificación deliberada de un problema complejo, y su valor está en dar un punto de partida."
+        },
+        {
+          "subtitle": "Lo que la regla ignora",
+          "content": "No considera si el ingreso es estable o irregular, si existe un fondo de emergencia, si hay metas de corto plazo que exigirán liquidez, ni la tolerancia real de la persona a ver caer su saldo. Alguien con ingreso muy variable probablemente deba ser más conservador que lo que su edad sugeriría, y alguien sin fondo de emergencia debería resolver eso antes."
+        },
+        {
+          "subtitle": "Cómo usarla bien",
+          "content": "Se toma como punto de partida y se ajusta por circunstancias. Después se sostiene con rebalanceo, porque el mercado desviará la proporción con el tiempo. Y se revisa cada varios años, no cada mes: la asignación es una decisión estructural, no una reacción a lo que hizo el mercado la semana pasada."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿De qué depende sobre todo el riesgo que puedo tomar?",
+          "options": [
+            "Del carácter",
+            "Del tiempo que falta para necesitar el dinero",
+            "Del banco"
+          ],
+          "correct": "Del tiempo que falta para necesitar el dinero"
+        },
+        {
+          "question": "¿Cómo se comporta la renta variable?",
+          "options": [
+            "Nunca cae",
+            "Nunca sube",
+            "Puede caer en corto plazo y ha recuperado en largo"
+          ],
+          "correct": "Puede caer en corto plazo y ha recuperado en largo"
+        },
+        {
+          "question": "¿En qué consiste la regla de los 110?",
+          "options": [
+            "Restar la edad a 110 da el porcentaje en renta variable",
+            "Sumar 110 a la edad",
+            "Dividir entre 110"
+          ],
+          "correct": "Restar la edad a 110 da el porcentaje en renta variable"
+        },
+        {
+          "question": "A los veinte años daría aproximadamente:",
+          "options": [
+            "20% en variable",
+            "90% en variable",
+            "50% en variable"
+          ],
+          "correct": "90% en variable"
+        },
+        {
+          "question": "A los sesenta daría aproximadamente:",
+          "options": [
+            "90% en variable",
+            "10% en variable",
+            "50% en variable"
+          ],
+          "correct": "50% en variable"
+        },
+        {
+          "question": "¿Qué ignora la regla?",
+          "options": [
+            "Estabilidad del ingreso, fondo de emergencia, metas cortas y tolerancia real",
+            "Nada",
+            "La edad"
+          ],
+          "correct": "Estabilidad del ingreso, fondo de emergencia, metas cortas y tolerancia real"
+        },
+        {
+          "question": "Alguien con ingreso muy variable debería ser:",
+          "options": [
+            "Más agresivo",
+            "Más conservador de lo que su edad sugiere",
+            "Igual"
+          ],
+          "correct": "Más conservador de lo que su edad sugiere"
+        },
+        {
+          "question": "¿Qué hay que resolver antes de invertir?",
+          "options": [
+            "Comprar un auto",
+            "Cambiar de banco",
+            "El fondo de emergencia"
+          ],
+          "correct": "El fondo de emergencia"
+        },
+        {
+          "question": "¿Cómo se sostiene la asignación en el tiempo?",
+          "options": [
+            "Con rebalanceo",
+            "Sola",
+            "Vendiendo todo"
+          ],
+          "correct": "Con rebalanceo"
+        },
+        {
+          "question": "¿Cada cuánto se revisa?",
+          "options": [
+            "Cada semana",
+            "Cada varios años, no cada mes",
+            "Nunca"
+          ],
+          "correct": "Cada varios años, no cada mes"
+        }
+      ],
+      "rubric": "Logrado: calcula la asignación por edad y la ajusta por circunstancias con justificación. En proceso: aplica la regla sin ajustarla. Inicial: comprende que el horizonte determina el riesgo."
+    },
+    "teacher_tips": [
+      "Deje muy claro que la regla es un punto de partida y no una prescripción: presentarla como ley sería incorrecto.",
+      "El ajuste por estabilidad del ingreso es el más relevante para el contexto mexicano.",
+      "Vincule con rebalanceo: sin él, la asignación decidida se pierde en dos años."
+    ]
+  },
+  "S3-3-7": {
+    "code": "S3-3-7",
+    "title": "Ingresos pasivos reales contra promesas de internet",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Distinguir las fuentes reales de ingreso pasivo de las promesas comerciales que circulan en internet.",
+      "competencies": [
+        "Evaluación de Oportunidades",
+        "Detección de Fraude",
+        "Análisis de Ingreso Pasivo",
+        "Pensamiento Crítico Digital"
+      ],
+      "materials": [
+        "Ejemplos de promesas de internet",
+        "Calculadora",
+        "Comparativo de fuentes reales",
+        "Lista de señales de alarma",
+        "Cartel de qué requiere cada fuente"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Gana Mientras Duermes",
+          "duration": "15 min",
+          "label": "La promesa"
+        },
+        {
+          "phase": "Desarrollo: Las Fuentes Reales",
+          "duration": "30 min",
+          "label": "Qué requiere cada una"
+        },
+        {
+          "phase": "Cierre: Las Señales",
+          "duration": "15 min",
+          "label": "Cómo distinguir"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"GANA MIENTRAS DUERMES\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre ejemplos de promesas típicas de internet sobre ingresos pasivos. Pregunte qué tienen en común. Aparecerán la facilidad, la rapidez y la ausencia de esfuerzo. Explique que el ingreso pasivo existe, pero casi siempre requiere capital previo, trabajo previo o ambos.",
+          "activity": "Dinámica \"¿Qué Tienen en Común?\": el grupo identifica el patrón de las promesas."
+        },
+        {
+          "title": "FASE II: LAS FUENTES REALES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente fuentes legítimas: rendimientos de inversiones, rentas de inmuebles, regalías por obra creada, productos digitales ya construidos y participación en negocios. Para cada una, explique qué requiere antes: capital, trabajo de creación, o mantenimiento continuo que la hace menos pasiva de lo que parece.",
+          "activity": "Dinámica \"Qué Requiere Antes\": cada equipo asigna a cada fuente su requisito previo real."
+        },
+        {
+          "title": "FASE III: CÓMO DISTINGUIR (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente las señales de alarma: rendimientos muy por encima del mercado presentados como garantizados, presión para decidir rápido, ganancias que dependen de reclutar a otros, falta de registro ante autoridades financieras y ausencia de explicación clara de dónde sale el dinero.",
+          "activity": "Dinámica \"Detecta la Alarma\": cada equipo evalúa cinco propuestas y marca las señales presentes."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "\"Gana dinero mientras duermes\" es una de las frases más repetidas de internet. El ingreso pasivo existe de verdad, pero casi siempre requiere capital previo, trabajo previo o ambos. Lo que no requiere nada de eso suele ser otra cosa.",
+      "sections": [
+        {
+          "subtitle": "Qué es realmente el ingreso pasivo",
+          "content": "Es aquel que no exige intercambiar tiempo por dinero de forma continua. Pero eso no significa que aparezca de la nada: casi siempre es el resultado de capital acumulado antes o de trabajo realizado antes. Lo pasivo es el cobro, no la construcción, y confundir ambas cosas es lo que hace tan efectivas las promesas engañosas."
+        },
+        {
+          "subtitle": "Las fuentes que sí existen",
+          "content": "Los rendimientos de inversiones requieren capital acumulado. Las rentas de inmuebles requieren capital y además gestión, reparaciones y periodos sin inquilino. Las regalías requieren haber creado una obra. Los productos digitales requieren construirlos y luego actualizarlos. La participación en negocios requiere capital y asumir riesgo real."
+        },
+        {
+          "subtitle": "Menos pasivo de lo que parece",
+          "content": "Casi ninguna fuente es completamente pasiva. Un inmueble en renta implica mantenimiento, trámites, cobranza y periodos vacíos. Un producto digital deja de venderse si nadie lo actualiza. Una inversión requiere revisión periódica y rebalanceo. Contarlo así no desanima: evita que alguien abandone su ingreso principal creyendo que el otro se sostiene solo."
+        },
+        {
+          "subtitle": "Las señales de alarma",
+          "content": "Rendimientos muy por encima del mercado presentados como garantizados. Presión para decidir de inmediato. Ganancias que dependen principalmente de reclutar a otras personas. Ausencia de registro ante las autoridades financieras. Y la más reveladora: que nadie pueda explicar con claridad de dónde sale el dinero que reparten."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el ingreso pasivo?",
+          "options": [
+            "Dinero que aparece solo",
+            "Un sueldo",
+            "El que no exige intercambiar tiempo por dinero de forma continua"
+          ],
+          "correct": "El que no exige intercambiar tiempo por dinero de forma continua"
+        },
+        {
+          "question": "¿De dónde suele venir?",
+          "options": [
+            "De capital acumulado antes o trabajo realizado antes",
+            "De la nada",
+            "De la suerte"
+          ],
+          "correct": "De capital acumulado antes o trabajo realizado antes"
+        },
+        {
+          "question": "¿Qué es lo pasivo?",
+          "options": [
+            "Todo",
+            "El cobro, no la construcción",
+            "Nada"
+          ],
+          "correct": "El cobro, no la construcción"
+        },
+        {
+          "question": "¿Qué requieren los rendimientos de inversiones?",
+          "options": [
+            "Nada",
+            "Reclutar gente",
+            "Capital acumulado"
+          ],
+          "correct": "Capital acumulado"
+        },
+        {
+          "question": "¿Qué requiere una renta de inmueble?",
+          "options": [
+            "Capital, gestión, reparaciones y aguantar periodos vacíos",
+            "Solo capital",
+            "Nada"
+          ],
+          "correct": "Capital, gestión, reparaciones y aguantar periodos vacíos"
+        },
+        {
+          "question": "¿Qué requieren las regalías?",
+          "options": [
+            "Comprarlas",
+            "Haber creado una obra",
+            "Nada"
+          ],
+          "correct": "Haber creado una obra"
+        },
+        {
+          "question": "¿Es alguna fuente completamente pasiva?",
+          "options": [
+            "Todas",
+            "La mitad",
+            "Casi ninguna"
+          ],
+          "correct": "Casi ninguna"
+        },
+        {
+          "question": "¿Cuál es una señal de alarma?",
+          "options": [
+            "Rendimientos altos presentados como garantizados",
+            "Rendimientos moderados",
+            "Un contrato claro"
+          ],
+          "correct": "Rendimientos altos presentados como garantizados"
+        },
+        {
+          "question": "¿Qué otra señal existe?",
+          "options": [
+            "Que haya registro oficial",
+            "Que las ganancias dependan de reclutar a otros",
+            "Que expliquen todo"
+          ],
+          "correct": "Que las ganancias dependan de reclutar a otros"
+        },
+        {
+          "question": "¿Cuál es la señal más reveladora?",
+          "options": [
+            "Que tarde en pagar",
+            "Que sea nueva",
+            "Que nadie explique de dónde sale el dinero"
+          ],
+          "correct": "Que nadie explique de dónde sale el dinero"
+        }
+      ],
+      "rubric": "Logrado: distingue fuentes reales, identifica sus requisitos previos y detecta señales de alarma. En proceso: enumera fuentes sin identificar requisitos. Inicial: reconoce que el ingreso pasivo no aparece solo."
+    },
+    "teacher_tips": [
+      "Use ejemplos reales de promesas que circulan: reconocerlas en su formato original es lo que forma criterio.",
+      "La distinción entre cobro pasivo y construcción activa es el concepto central de la unidad.",
+      "La pregunta de dónde sale el dinero desmonta casi cualquier esquema fraudulento. Enséñela como herramienta."
+    ]
+  },
+  "S3-3-8": {
+    "code": "S3-3-8",
+    "title": "FIBRAs: invertir en bienes raíces desde la bolsa",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué son los instrumentos que permiten invertir en bienes raíces desde el mercado bursátil y compararlos con la compra directa.",
+      "competencies": [
+        "Inversión Inmobiliaria Indirecta",
+        "Comparación de Alternativas",
+        "Análisis de Distribuciones",
+        "Diversificación"
+      ],
+      "materials": [
+        "Comparativo de compra directa e instrumento bursátil",
+        "Calculadora",
+        "Datos de distribuciones históricas",
+        "Casos con distintos montos disponibles",
+        "Cartel de ventajas y limitaciones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Ladrillos Sin Ladrillos",
+          "duration": "15 min",
+          "label": "La alternativa"
+        },
+        {
+          "phase": "Desarrollo: Cómo Funcionan",
+          "duration": "30 min",
+          "label": "Estructura y distribuciones"
+        },
+        {
+          "phase": "Cierre: Comparar",
+          "duration": "15 min",
+          "label": "Contra comprar directo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LADRILLOS SIN LADRILLOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto haría falta para invertir en bienes raíces. Las cifras serán altas. Explique que existen instrumentos listados en bolsa que permiten participar en portafolios inmobiliarios con montos muy pequeños y recibir una parte de las rentas.",
+          "activity": "Dinámica \"¿Cuánto Hace Falta?\": el grupo compara el monto de comprar un inmueble contra el de un instrumento bursátil."
+        },
+        {
+          "title": "FASE II: CÓMO FUNCIONAN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la estructura: un vehículo que reúne capital de muchos inversionistas, adquiere y administra inmuebles que generan renta, y distribuye periódicamente una parte de esos ingresos entre los tenedores. Los alumnos calculan el rendimiento por distribución de tres casos.",
+          "activity": "Dinámica \"La Distribución\": cada equipo calcula cuánto recibiría con distintos montos invertidos."
+        },
+        {
+          "title": "FASE III: CONTRA COMPRAR DIRECTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Compare ambas rutas: monto mínimo, liquidez, diversificación, gestión, apalancamiento posible y control. Insista en que ninguna es superior en abstracto y que la comparación honesta incluye lo que la compra directa exige en tiempo, mantenimiento y riesgo de concentración.",
+          "activity": "Dinámica \"Dos Rutas\": cada equipo compara ambas opciones en seis criterios y recomienda por perfil."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Invertir en bienes raíces suena a necesitar millones. Existen instrumentos listados en bolsa que permiten participar en portafolios inmobiliarios con montos muy pequeños y recibir una parte de las rentas que generan.",
+      "sections": [
+        {
+          "subtitle": "Cómo funcionan",
+          "content": "Son vehículos que reúnen capital de muchos inversionistas para adquirir y administrar inmuebles que generan renta: centros comerciales, naves industriales, oficinas u hoteles. Los ingresos por renta, después de gastos, se distribuyen periódicamente entre quienes tienen participaciones. Cotizan en bolsa, así que se compran y venden como cualquier título listado."
+        },
+        {
+          "subtitle": "Las ventajas frente a comprar directo",
+          "content": "El monto mínimo es una fracción diminuta del precio de un inmueble. La liquidez es mucho mayor, porque se puede vender en el mercado en lugar de esperar meses a un comprador. Y hay diversificación instantánea: se participa en decenas de propiedades distintas en lugar de concentrar todo en una sola ubicación."
+        },
+        {
+          "subtitle": "Las limitaciones",
+          "content": "No se tiene control sobre qué inmuebles se compran ni cómo se administran. El precio de la participación fluctúa en el mercado, así que puede caer aunque las rentas sigan cobrándose. No se puede usar apalancamiento hipotecario como en una compra directa. Y las distribuciones dependen de que los inmuebles estén ocupados y pagando."
+        },
+        {
+          "subtitle": "La comparación honesta",
+          "content": "Comprar directo da control y permite usar crédito hipotecario, pero exige un capital muy superior, concentra todo el riesgo en una propiedad y consume tiempo en gestión, mantenimiento e inquilinos. Ninguna ruta es superior en abstracto: depende del capital disponible, del tiempo que se quiera dedicar y de cuánto control se necesite."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué son estos instrumentos?",
+          "options": [
+            "Vehículos que reúnen capital para adquirir y administrar inmuebles",
+            "Créditos hipotecarios",
+            "Seguros"
+          ],
+          "correct": "Vehículos que reúnen capital para adquirir y administrar inmuebles"
+        },
+        {
+          "question": "¿Qué hacen con los ingresos por renta?",
+          "options": [
+            "Los guardan",
+            "Los distribuyen periódicamente entre los tenedores",
+            "Los reinvierten siempre"
+          ],
+          "correct": "Los distribuyen periódicamente entre los tenedores"
+        },
+        {
+          "question": "¿Dónde se compran y venden?",
+          "options": [
+            "En notaría",
+            "En el banco",
+            "En bolsa, como cualquier título listado"
+          ],
+          "correct": "En bolsa, como cualquier título listado"
+        },
+        {
+          "question": "¿Cómo es el monto mínimo?",
+          "options": [
+            "Una fracción diminuta del precio de un inmueble",
+            "Igual al de un inmueble",
+            "Mayor"
+          ],
+          "correct": "Una fracción diminuta del precio de un inmueble"
+        },
+        {
+          "question": "¿Cómo es la liquidez?",
+          "options": [
+            "Menor",
+            "Mucho mayor que la de un inmueble",
+            "Igual"
+          ],
+          "correct": "Mucho mayor que la de un inmueble"
+        },
+        {
+          "question": "¿Qué diversificación ofrecen?",
+          "options": [
+            "Solo una",
+            "Ninguna",
+            "Participación en decenas de propiedades"
+          ],
+          "correct": "Participación en decenas de propiedades"
+        },
+        {
+          "question": "¿Cuál es una limitación?",
+          "options": [
+            "No hay control sobre qué inmuebles se compran",
+            "El monto mínimo alto",
+            "La falta de liquidez"
+          ],
+          "correct": "No hay control sobre qué inmuebles se compran"
+        },
+        {
+          "question": "¿Puede caer el precio de la participación?",
+          "options": [
+            "No",
+            "Sí, aunque las rentas sigan cobrándose",
+            "Solo si quiebra"
+          ],
+          "correct": "Sí, aunque las rentas sigan cobrándose"
+        },
+        {
+          "question": "¿Qué permite la compra directa que estos no?",
+          "options": [
+            "Diversificación",
+            "Liquidez",
+            "Control y uso de crédito hipotecario"
+          ],
+          "correct": "Control y uso de crédito hipotecario"
+        },
+        {
+          "question": "¿Cuál ruta es superior?",
+          "options": [
+            "Ninguna en abstracto: depende de capital, tiempo y control deseado",
+            "La directa",
+            "La bursátil"
+          ],
+          "correct": "Ninguna en abstracto: depende de capital, tiempo y control deseado"
+        }
+      ],
+      "rubric": "Logrado: explica la estructura, calcula distribuciones y compara ambas rutas con criterios. En proceso: describe el instrumento sin comparar. Inicial: sabe que existe la alternativa bursátil."
+    },
+    "teacher_tips": [
+      "La comparación en seis criterios es lo que evita presentar una ruta como superior a la otra.",
+      "Aclare que el precio de la participación puede caer aunque las rentas se cobren: sorprende a muchos.",
+      "Mencione el tiempo de gestión que exige la compra directa: casi nunca se contabiliza."
+    ]
+  },
+  "S3-3-9": {
+    "code": "S3-3-9",
+    "title": "Invertir en el extranjero: SIC, dólares y riesgo cambiario",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender cómo se invierte en activos internacionales desde México y cómo el tipo de cambio afecta el resultado.",
+      "competencies": [
+        "Inversión Internacional",
+        "Gestión de Riesgo Cambiario",
+        "Diversificación Geográfica",
+        "Análisis de Rendimiento en Dos Monedas"
+      ],
+      "materials": [
+        "Datos de rendimiento en dos monedas",
+        "Calculadora",
+        "Serie del tipo de cambio",
+        "Casos con distintos escenarios cambiarios",
+        "Cartel del doble efecto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Más Allá de México",
+          "duration": "15 min",
+          "label": "Por qué diversificar"
+        },
+        {
+          "phase": "Desarrollo: El Doble Efecto",
+          "duration": "30 min",
+          "label": "Rendimiento y tipo de cambio"
+        },
+        {
+          "phase": "Cierre: Cuánto Exponerse",
+          "duration": "15 min",
+          "label": "La proporción"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: MÁS ALLÁ DE MÉXICO (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que concentrar todas las inversiones en un solo país significa que la economía, la moneda y los riesgos políticos de ese país afectan todo el patrimonio a la vez. Diversificar geográficamente reparte esa exposición, y hoy es accesible desde el mercado local.",
+          "activity": "Dinámica \"Todo en un País\": el grupo enumera qué riesgos comparte alguien con todo su patrimonio en un solo lugar."
+        },
+        {
+          "title": "FASE II: EL DOBLE EFECTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que en una inversión internacional hay dos movimientos simultáneos: el del activo en su moneda y el del tipo de cambio. Un activo que sube 10% en dólares con un peso que se apreció 10% puede dar cero en pesos. Los alumnos calculan cuatro combinaciones posibles.",
+          "activity": "Dinámica \"Las Cuatro Combinaciones\": cada equipo calcula el resultado en pesos de cuatro escenarios."
+        },
+        {
+          "title": "FASE III: CUÁNTO EXPONERSE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que el riesgo cambiario no es solo un riesgo: también es una cobertura, porque si el peso se deprecia, la parte internacional del patrimonio protege. La pregunta no es si exponerse, sino en qué proporción, considerando en qué moneda se van a hacer los gastos futuros.",
+          "activity": "Dinámica \"Mi Proporción\": cada alumno define su exposición internacional según sus gastos futuros esperados."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Tener todo el patrimonio en un solo país significa que su economía, su moneda y sus riesgos te afectan todos a la vez. Diversificar hacia el extranjero reparte esa exposición, pero agrega un factor nuevo: el tipo de cambio.",
+      "sections": [
+        {
+          "subtitle": "Por qué diversificar geográficamente",
+          "content": "Cuando todo el patrimonio está en un país, cualquier crisis local afecta simultáneamente el empleo, la moneda, las inversiones y el valor de los bienes. Distribuir parte del patrimonio en activos de otras economías reduce esa correlación. Hoy es accesible desde el mercado local a través de instrumentos que replican índices internacionales."
+        },
+        {
+          "subtitle": "El doble efecto",
+          "content": "En una inversión internacional ocurren dos cosas a la vez: el activo se mueve en su moneda y el tipo de cambio se mueve frente al peso. Un activo que sube diez por ciento en dólares, con un peso que se apreció diez por ciento, puede dejar cero en pesos. Y un activo plano puede dar buen resultado si el peso se depreció."
+        },
+        {
+          "subtitle": "El riesgo cambiario también protege",
+          "content": "Se presenta el tipo de cambio como riesgo, y lo es en un sentido, pero también funciona como cobertura. Si el peso se deprecia, la parte del patrimonio en moneda extranjera aumenta su valor medida en pesos, justo cuando lo importado se encarece. Esa protección es una de las razones principales para tener exposición internacional."
+        },
+        {
+          "subtitle": "La proporción depende de tus gastos futuros",
+          "content": "La pregunta útil no es si exponerse sino en qué proporción. Quien vivirá y gastará toda su vida en pesos no debería tener todo su patrimonio en otra moneda, porque quedaría expuesto a que se aprecie el peso. Una proporción moderada da diversificación sin desalinear el patrimonio de los gastos que realmente tendrá."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué implica tener todo el patrimonio en un país?",
+          "options": [
+            "Más seguridad",
+            "Que sus riesgos te afectan todos a la vez",
+            "Nada"
+          ],
+          "correct": "Que sus riesgos te afectan todos a la vez"
+        },
+        {
+          "question": "¿Qué logra diversificar geográficamente?",
+          "options": [
+            "Elimina el riesgo",
+            "Garantiza ganancias",
+            "Reduce la correlación de riesgos"
+          ],
+          "correct": "Reduce la correlación de riesgos"
+        },
+        {
+          "question": "¿Cuáles son los dos movimientos simultáneos?",
+          "options": [
+            "El del activo en su moneda y el del tipo de cambio",
+            "Solo el del activo",
+            "Solo el cambio"
+          ],
+          "correct": "El del activo en su moneda y el del tipo de cambio"
+        },
+        {
+          "question": "Un activo que sube 10% con un peso que se apreció 10%:",
+          "options": [
+            "Deja 20%",
+            "Puede dejar cero en pesos",
+            "Deja 10%"
+          ],
+          "correct": "Puede dejar cero en pesos"
+        },
+        {
+          "question": "¿Puede un activo plano dar buen resultado?",
+          "options": [
+            "No",
+            "Solo si sube",
+            "Sí, si el peso se depreció"
+          ],
+          "correct": "Sí, si el peso se depreció"
+        },
+        {
+          "question": "¿Es el tipo de cambio solo un riesgo?",
+          "options": [
+            "No, también funciona como cobertura",
+            "Sí, solo riesgo",
+            "No afecta"
+          ],
+          "correct": "No, también funciona como cobertura"
+        },
+        {
+          "question": "¿Cuándo protege?",
+          "options": [
+            "Cuando el peso se aprecia",
+            "Cuando el peso se deprecia y lo importado se encarece",
+            "Nunca"
+          ],
+          "correct": "Cuando el peso se deprecia y lo importado se encarece"
+        },
+        {
+          "question": "¿Cuál es la pregunta útil?",
+          "options": [
+            "Si exponerse o no",
+            "Cuándo vender",
+            "En qué proporción exponerse"
+          ],
+          "correct": "En qué proporción exponerse"
+        },
+        {
+          "question": "¿De qué depende esa proporción?",
+          "options": [
+            "De en qué moneda serán los gastos futuros",
+            "De la moda",
+            "Del banco"
+          ],
+          "correct": "De en qué moneda serán los gastos futuros"
+        },
+        {
+          "question": "¿Debería alguien que gastará en pesos tener todo en otra moneda?",
+          "options": [
+            "Sí",
+            "No, quedaría expuesto a que se aprecie el peso",
+            "Da igual"
+          ],
+          "correct": "No, quedaría expuesto a que se aprecie el peso"
+        }
+      ],
+      "rubric": "Logrado: calcula el resultado combinando rendimiento y tipo de cambio, y define una proporción justificada. En proceso: entiende el doble efecto sin calcularlo. Inicial: reconoce el valor de diversificar geográficamente."
+    },
+    "teacher_tips": [
+      "Las cuatro combinaciones de rendimiento y tipo de cambio son el ejercicio central. No lo omita.",
+      "Presente el tipo de cambio como riesgo y como cobertura: verlo solo como riesgo lleva a decisiones malas.",
+      "Insista en alinear la exposición con la moneda de los gastos futuros: es el criterio que ordena la proporción."
+    ]
+  },
+  "S3-3-10": {
+    "code": "S3-3-10",
+    "title": "Blindaje legal: fideicomisos, seguros y separación de patrimonio",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Conocer los instrumentos legales que protegen el patrimonio y comprender qué protege cada uno.",
+      "competencies": [
+        "Protección Patrimonial",
+        "Comprensión de Figuras Legales",
+        "Separación de Riesgos",
+        "Planeación de Blindaje"
+      ],
+      "materials": [
+        "Fichas de figuras legales",
+        "Casos de patrimonio expuesto",
+        "Comparativo de instrumentos",
+        "Formato de mapa de riesgos",
+        "Cartel de los tres frentes"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Todo en un Solo Nombre",
+          "duration": "15 min",
+          "label": "La exposición"
+        },
+        {
+          "phase": "Desarrollo: Los Instrumentos",
+          "duration": "30 min",
+          "label": "Qué protege cada uno"
+        },
+        {
+          "phase": "Cierre: Los Tres Frentes",
+          "duration": "15 min",
+          "label": "De qué me protejo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TODO EN UN SOLO NOMBRE (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee a alguien con un negocio, una casa y ahorros, todo a su nombre personal. Pregunte qué pasaría si el negocio enfrenta una demanda o una deuda impagable. Explique que sin separación, el patrimonio personal responde por los riesgos del negocio.",
+          "activity": "Dinámica \"¿Qué Está Expuesto?\": el grupo identifica qué bienes quedarían en riesgo en distintos escenarios."
+        },
+        {
+          "title": "FASE II: QUÉ PROTEGE CADA INSTRUMENTO (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las figuras: la sociedad mercantil, que separa el patrimonio del negocio del personal; el fideicomiso, que transfiere bienes a una administración con fines definidos; los seguros, que transfieren riesgos específicos; y el testamento, que ordena la sucesión. Los alumnos asocian cada riesgo con su instrumento.",
+          "activity": "Dinámica \"Cada Riesgo su Instrumento\": cada equipo empareja ocho riesgos con la figura adecuada."
+        },
+        {
+          "title": "FASE III: DE QUÉ ME PROTEJO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique los tres frentes: riesgos del negocio, riesgos personales como enfermedad o accidente, y la sucesión. Insista en que blindar no es esconder ni evadir: es organizar el patrimonio de forma legal para que un problema en un frente no arrase con todo.",
+          "activity": "Dinámica \"Mi Mapa de Riesgos\": cada alumno identifica sus tres frentes y el instrumento correspondiente."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando el negocio, la casa y los ahorros están todos a nombre de una misma persona, un problema en cualquiera de ellos puede arrasar con el resto. Existen figuras legales que separan esos riesgos.",
+      "sections": [
+        {
+          "subtitle": "La separación entre negocio y persona",
+          "content": "Cuando alguien opera un negocio a título personal, las deudas y responsabilidades de ese negocio pueden alcanzar su patrimonio personal. Constituir una sociedad crea una persona jurídica distinta, con su propio patrimonio y sus propias obligaciones. Esa separación es la protección más básica y la que más se pospone."
+        },
+        {
+          "subtitle": "El fideicomiso",
+          "content": "Es una figura donde una persona transfiere bienes a una institución para que los administre conforme a fines definidos y en beneficio de quien se designe. Se usa para ordenar herencias complejas, proteger patrimonio destinado a un fin específico o administrar bienes para personas que aún no pueden hacerlo. No es un instrumento para esconder nada: es un contrato formal y registrado."
+        },
+        {
+          "subtitle": "Los seguros como transferencia de riesgo",
+          "content": "Un seguro no evita que ocurra un evento: transfiere su costo financiero a otra entidad. La responsabilidad civil cubre el daño que uno causa a terceros, el de gastos médicos mayores cubre el golpe de salud, el de vida protege a los dependientes. Es la forma más accesible de blindaje porque no requiere estructura legal, solo una póliza bien elegida."
+        },
+        {
+          "subtitle": "Blindar no es esconder",
+          "content": "Toda esta organización es legal, pública y verificable. Blindar significa ordenar el patrimonio para que un problema en un frente no arrase con los demás, no ocultarlo de obligaciones legítimas. Las estructuras diseñadas para evadir obligaciones o defraudar acreedores son ilegales y, además, suelen desmoronarse cuando se revisan."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué pasa si el negocio opera a título personal?",
+          "options": [
+            "Nada",
+            "Se protege solo",
+            "Sus deudas pueden alcanzar el patrimonio personal"
+          ],
+          "correct": "Sus deudas pueden alcanzar el patrimonio personal"
+        },
+        {
+          "question": "¿Qué logra constituir una sociedad?",
+          "options": [
+            "Crear una persona jurídica con patrimonio propio",
+            "Pagar menos impuestos siempre",
+            "Esconder bienes"
+          ],
+          "correct": "Crear una persona jurídica con patrimonio propio"
+        },
+        {
+          "question": "¿Qué es un fideicomiso?",
+          "options": [
+            "Un préstamo",
+            "Transferir bienes a una institución para fines definidos",
+            "Un seguro"
+          ],
+          "correct": "Transferir bienes a una institución para fines definidos"
+        },
+        {
+          "question": "¿Para qué se usa?",
+          "options": [
+            "Esconder dinero",
+            "Evadir",
+            "Ordenar herencias, proteger patrimonio con un fin o administrar bienes"
+          ],
+          "correct": "Ordenar herencias, proteger patrimonio con un fin o administrar bienes"
+        },
+        {
+          "question": "¿Qué hace un seguro?",
+          "options": [
+            "Transfiere el costo financiero de un evento",
+            "Evita que ocurra",
+            "Elimina el riesgo"
+          ],
+          "correct": "Transfiere el costo financiero de un evento"
+        },
+        {
+          "question": "¿Qué cubre la responsabilidad civil?",
+          "options": [
+            "La propia salud",
+            "El daño que uno causa a terceros",
+            "El auto propio"
+          ],
+          "correct": "El daño que uno causa a terceros"
+        },
+        {
+          "question": "¿Por qué es el seguro el blindaje más accesible?",
+          "options": [
+            "Es gratis",
+            "Es obligatorio",
+            "No requiere estructura legal, solo una póliza bien elegida"
+          ],
+          "correct": "No requiere estructura legal, solo una póliza bien elegida"
+        },
+        {
+          "question": "¿Cuáles son los tres frentes?",
+          "options": [
+            "Riesgos del negocio, riesgos personales y sucesión",
+            "Ahorro, gasto y deuda",
+            "Casa, auto y trabajo"
+          ],
+          "correct": "Riesgos del negocio, riesgos personales y sucesión"
+        },
+        {
+          "question": "¿Qué significa blindar?",
+          "options": [
+            "Esconderlo",
+            "Organizar el patrimonio legalmente para separar riesgos",
+            "Evadir obligaciones"
+          ],
+          "correct": "Organizar el patrimonio legalmente para separar riesgos"
+        },
+        {
+          "question": "¿Qué pasa con las estructuras para evadir?",
+          "options": [
+            "Funcionan siempre",
+            "Son recomendables",
+            "Son ilegales y suelen desmoronarse al revisarse"
+          ],
+          "correct": "Son ilegales y suelen desmoronarse al revisarse"
+        }
+      ],
+      "rubric": "Logrado: asocia riesgos con instrumentos y construye un mapa de blindaje en los tres frentes. En proceso: identifica las figuras sin asociarlas a riesgos. Inicial: comprende el riesgo de no separar patrimonios."
+    },
+    "teacher_tips": [
+      "Deje muy clara la línea entre blindaje legal y evasión: es una distinción ética y jurídica importante.",
+      "El seguro como blindaje accesible es el mensaje más aplicable para la mayoría de los alumnos.",
+      "La separación entre negocio y persona es lo que más pospone quien emprende. Insista ahí."
     ]
   },
   "S3-4-1": {
@@ -3344,8 +6104,927 @@
       "Fomente la idea de que 'ser un buen empresario es ser un buen ciudadano'.",
       "Invite a los alumnos a aplicar estas herramientas en su vida diaria, no solo en negocios futuros."
     ]
-  }
-,
+  },
+  "S3-4-6": {
+    "code": "S3-4-6",
+    "title": "SA, SAPI o SAS: qué figura le conviene a mi empresa",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comparar las principales figuras societarias mexicanas y elegir la adecuada según el tipo de empresa y sus planes de crecimiento.",
+      "competencies": [
+        "Elección de Figura Societaria",
+        "Análisis de Estructura Legal",
+        "Planeación de Crecimiento",
+        "Toma de Decisiones Formales"
+      ],
+      "materials": [
+        "Comparativo de figuras societarias",
+        "Casos de empresas con distintos planes",
+        "Tabla de requisitos por figura",
+        "Formato de decisión",
+        "Cartel de las tres preguntas clave"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Y Ahora Qué Soy?",
+          "duration": "15 min",
+          "label": "La formalización"
+        },
+        {
+          "phase": "Desarrollo: Las Figuras",
+          "duration": "30 min",
+          "label": "Qué permite cada una"
+        },
+        {
+          "phase": "Cierre: Las Tres Preguntas",
+          "duration": "15 min",
+          "label": "Cómo elegir"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ¿Y AHORA QUÉ SOY? (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee que un negocio que crece llega a un punto donde operar como persona física deja de alcanzar: quiere socios, quiere inversión o quiere separar su patrimonio. Ahí aparece la pregunta de qué figura constituir, y la respuesta cambia según los planes.",
+          "activity": "Dinámica \"¿Cuándo Deja de Alcanzar?\": el grupo identifica tres señales de que un negocio necesita constituirse."
+        },
+        {
+          "title": "FASE II: QUÉ PERMITE CADA FIGURA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente las principales: la sociedad anónima, estructura tradicional para empresas con varios socios; la sociedad por acciones simplificada, pensada para constituirse rápido y con un solo socio posible; y la sociedad anónima promotora de inversión, diseñada para recibir capital de inversionistas con reglas más flexibles. Compare requisitos, costos y límites.",
+          "activity": "Dinámica \"Tabla Comparativa\": cada equipo llena una tabla con requisitos, ventajas y límites de las tres figuras."
+        },
+        {
+          "title": "FASE III: LAS TRES PREGUNTAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Reduzca la decisión a tres preguntas: ¿voy a tener socios y cuántos? ¿voy a buscar inversión externa? ¿qué nivel de formalidad y costo puedo sostener hoy? Insista en que la figura se puede cambiar después, y que quedarse sin constituir por miedo a elegir mal es peor que empezar simple.",
+          "activity": "Dinámica \"Mi Figura\": cada alumno responde las tres preguntas para su proyecto y elige figura."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Llega un momento en que operar como persona física deja de alcanzar: quieres socios, quieres inversión o quieres separar tu patrimonio del negocio. Ahí toca elegir qué figura constituir.",
+      "sections": [
+        {
+          "subtitle": "La sociedad anónima",
+          "content": "Es la estructura tradicional para empresas con varios socios. Su capital se divide en acciones, tiene órganos de gobierno definidos y permite una operación formal reconocida por cualquier contraparte. Requiere constituirse ante notario, llevar libros corporativos y celebrar asambleas. Es más costosa de mantener, pero es la figura que casi nadie cuestiona."
+        },
+        {
+          "subtitle": "La sociedad por acciones simplificada",
+          "content": "Fue creada para bajar la barrera de entrada: permite constituirse en línea, con menos costo y hasta con un solo accionista. Está pensada para negocios pequeños que quieren formalizarse rápido. Tiene límites de ingresos anuales y, al superarlos, debe transformarse en otra figura. Es un buen punto de partida, no necesariamente un destino."
+        },
+        {
+          "subtitle": "La sociedad anónima promotora de inversión",
+          "content": "Está diseñada para empresas que van a recibir capital de inversionistas. Permite reglas más flexibles sobre derechos de accionistas, acuerdos entre socios y mecanismos de salida, que son justamente las cláusulas que un fondo de inversión pide. Es la figura habitual de las empresas que levantan rondas de inversión."
+        },
+        {
+          "subtitle": "Las tres preguntas y el cambio de figura",
+          "content": "¿Voy a tener socios y cuántos? ¿Voy a buscar inversión externa? ¿Qué formalidad y costo puedo sostener hoy? Con esas tres respuestas la elección se aclara. Y algo importante: la figura se puede transformar más adelante. Quedarse sin constituir por miedo a elegir mal es peor que empezar con la estructura simple y migrar cuando haga falta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuándo deja de alcanzar operar como persona física?",
+          "options": [
+            "Nunca",
+            "Solo al exportar",
+            "Cuando quieres socios, inversión o separar patrimonio"
+          ],
+          "correct": "Cuando quieres socios, inversión o separar patrimonio"
+        },
+        {
+          "question": "¿Cómo se divide el capital de una sociedad anónima?",
+          "options": [
+            "En acciones",
+            "En partes iguales siempre",
+            "No se divide"
+          ],
+          "correct": "En acciones"
+        },
+        {
+          "question": "¿Qué requiere la sociedad anónima?",
+          "options": [
+            "Nada",
+            "Notario, libros corporativos y asambleas",
+            "Solo un correo"
+          ],
+          "correct": "Notario, libros corporativos y asambleas"
+        },
+        {
+          "question": "¿Para qué se creó la sociedad por acciones simplificada?",
+          "options": [
+            "Para grandes corporativos",
+            "Para exportar",
+            "Para bajar la barrera de entrada a la formalización"
+          ],
+          "correct": "Para bajar la barrera de entrada a la formalización"
+        },
+        {
+          "question": "¿Con cuántos accionistas puede constituirse?",
+          "options": [
+            "Incluso con uno solo",
+            "Mínimo cinco",
+            "Mínimo diez"
+          ],
+          "correct": "Incluso con uno solo"
+        },
+        {
+          "question": "¿Qué límite tiene?",
+          "options": [
+            "Ninguno",
+            "Un tope de ingresos anuales",
+            "Un tope de empleados"
+          ],
+          "correct": "Un tope de ingresos anuales"
+        },
+        {
+          "question": "¿Para qué está diseñada la promotora de inversión?",
+          "options": [
+            "Para negocios familiares",
+            "Para exportar",
+            "Para empresas que van a recibir capital de inversionistas"
+          ],
+          "correct": "Para empresas que van a recibir capital de inversionistas"
+        },
+        {
+          "question": "¿Qué permite esa figura?",
+          "options": [
+            "Reglas flexibles sobre derechos, acuerdos y salidas",
+            "Menos impuestos",
+            "No llevar contabilidad"
+          ],
+          "correct": "Reglas flexibles sobre derechos, acuerdos y salidas"
+        },
+        {
+          "question": "¿Cuáles son las tres preguntas clave?",
+          "options": [
+            "Precio, costo y margen",
+            "Socios, inversión externa y formalidad sostenible",
+            "Local, empleados y horario"
+          ],
+          "correct": "Socios, inversión externa y formalidad sostenible"
+        },
+        {
+          "question": "¿Se puede cambiar de figura?",
+          "options": [
+            "No, es definitiva",
+            "Solo tras diez años",
+            "Sí, se puede transformar más adelante"
+          ],
+          "correct": "Sí, se puede transformar más adelante"
+        }
+      ],
+      "rubric": "Logrado: compara las tres figuras y elige una justificando con las tres preguntas. En proceso: describe las figuras sin decidir. Inicial: reconoce que existen distintas estructuras societarias."
+    },
+    "teacher_tips": [
+      "El mensaje de que la figura se puede transformar evita la parálisis por miedo a elegir mal.",
+      "La sociedad por acciones simplificada es la más relevante para proyectos escolares reales.",
+      "No entre en detalle de trámites: lo importante es el criterio de elección, no el procedimiento."
+    ]
+  },
+  "S3-4-7": {
+    "code": "S3-4-7",
+    "title": "Term sheet: entender la primera oferta de un inversionista",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Interpretar los elementos principales de una primera oferta de inversión y calcular qué implica para el fundador.",
+      "competencies": [
+        "Lectura de Ofertas de Inversión",
+        "Cálculo de Valuación",
+        "Negociación Informada",
+        "Evaluación de Condiciones"
+      ],
+      "materials": [
+        "Ejemplo de oferta simplificada",
+        "Calculadora",
+        "Glosario de términos",
+        "Casos con distintas condiciones",
+        "Cartel de las cifras clave"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Primera Oferta",
+          "duration": "15 min",
+          "label": "El documento"
+        },
+        {
+          "phase": "Desarrollo: Las Cifras",
+          "duration": "30 min",
+          "label": "Valuación y porcentaje"
+        },
+        {
+          "phase": "Cierre: Las Cláusulas",
+          "duration": "15 min",
+          "label": "Lo que no es dinero"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PRIMERA OFERTA (APERTURA)",
+          "duration": "15 min",
+          "description": "Explique que cuando un inversionista se interesa en una empresa, entrega primero un documento con las condiciones propuestas. No es el contrato final, pero define casi todo lo que después se firma. Leerlo con criterio es una de las habilidades más valiosas de un fundador.",
+          "activity": "Dinámica \"¿Qué Estoy Firmando?\": el grupo enumera qué querría saber antes de aceptar una oferta."
+        },
+        {
+          "title": "FASE II: VALUACIÓN Y PORCENTAJE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las tres cifras que se relacionan entre sí: el monto invertido, la valuación antes de la inversión y el porcentaje resultante para el inversionista. Muestre cómo se calculan una a partir de las otras dos y por qué la valuación previa es la cifra que más se negocia.",
+          "activity": "Dinámica \"Las Tres Cifras\": cada equipo calcula el porcentaje resultante en cuatro combinaciones distintas."
+        },
+        {
+          "title": "FASE III: LO QUE NO ES DINERO (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que además del monto hay cláusulas que pesan tanto o más: derechos de preferencia, asientos en el consejo, condiciones de salida y la reserva de acciones para el equipo. Una oferta con valuación alta y cláusulas duras puede ser peor que una con valuación menor y condiciones limpias.",
+          "activity": "Dinámica \"Compara Dos Ofertas\": cada equipo evalúa dos ofertas con distinta valuación y distintas cláusulas."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando un inversionista se interesa en tu empresa, lo primero que entrega es un documento con las condiciones propuestas. No es el contrato final, pero define casi todo lo que después se firma.",
+      "sections": [
+        {
+          "subtitle": "Las tres cifras que se relacionan",
+          "content": "El monto que entra, la valuación de la empresa antes de la inversión y el porcentaje que se lleva el inversionista están ligados: conocidas dos, la tercera se calcula. El porcentaje resulta de dividir el monto entre la suma de la valuación previa más el monto. Entender esa relación evita aceptar cifras que suenan bien y no lo son."
+        },
+        {
+          "subtitle": "Por qué se negocia la valuación previa",
+          "content": "Es la cifra que determina cuánto se entrega a cambio del dinero. Con el mismo monto, una valuación previa mayor significa un porcentaje menor cedido. Por eso es el punto central de la negociación, y por eso el fundador necesita poder sostener su cifra con datos de tracción, no con expectativas."
+        },
+        {
+          "subtitle": "Las cláusulas que no son dinero",
+          "content": "Los derechos de preferencia definen quién cobra primero si la empresa se vende. Los asientos en el consejo definen quién decide. Las condiciones de salida definen qué pasa si alguien quiere vender su parte. Y la reserva de acciones para el equipo suele salir de la parte del fundador, no de la del inversionista."
+        },
+        {
+          "subtitle": "Valuación alta no siempre es mejor oferta",
+          "content": "Una oferta con valuación alta y cláusulas duras puede dejar al fundador en peor posición que otra con valuación menor y condiciones limpias. La comparación honesta mira las dos dimensiones a la vez. Un fundador que solo mira la cifra grande está negociando con la mitad de la información."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una primera oferta de inversión?",
+          "options": [
+            "Un documento con las condiciones propuestas antes del contrato",
+            "El contrato final",
+            "Un recibo"
+          ],
+          "correct": "Un documento con las condiciones propuestas antes del contrato"
+        },
+        {
+          "question": "¿Cuáles son las tres cifras ligadas?",
+          "options": [
+            "Ingreso, gasto y utilidad",
+            "Monto, valuación previa y porcentaje",
+            "Precio, costo y margen"
+          ],
+          "correct": "Monto, valuación previa y porcentaje"
+        },
+        {
+          "question": "¿Cómo se obtiene el porcentaje?",
+          "options": [
+            "Restando",
+            "Multiplicando",
+            "Dividiendo el monto entre la valuación previa más el monto"
+          ],
+          "correct": "Dividiendo el monto entre la valuación previa más el monto"
+        },
+        {
+          "question": "Con el mismo monto, mayor valuación previa significa:",
+          "options": [
+            "Menor porcentaje cedido",
+            "Mayor porcentaje cedido",
+            "Igual"
+          ],
+          "correct": "Menor porcentaje cedido"
+        },
+        {
+          "question": "¿Con qué se sostiene una valuación?",
+          "options": [
+            "Con expectativas",
+            "Con datos de tracción",
+            "Con entusiasmo"
+          ],
+          "correct": "Con datos de tracción"
+        },
+        {
+          "question": "¿Qué definen los derechos de preferencia?",
+          "options": [
+            "El precio del producto",
+            "Los impuestos",
+            "Quién cobra primero si la empresa se vende"
+          ],
+          "correct": "Quién cobra primero si la empresa se vende"
+        },
+        {
+          "question": "¿Qué definen los asientos en el consejo?",
+          "options": [
+            "Quién decide",
+            "Quién cobra",
+            "El monto"
+          ],
+          "correct": "Quién decide"
+        },
+        {
+          "question": "¿De dónde suele salir la reserva de acciones del equipo?",
+          "options": [
+            "De la del inversionista",
+            "De la parte del fundador",
+            "De ninguna"
+          ],
+          "correct": "De la parte del fundador"
+        },
+        {
+          "question": "¿Es siempre mejor una valuación alta?",
+          "options": [
+            "Sí, siempre",
+            "Da igual",
+            "No, si viene con cláusulas duras"
+          ],
+          "correct": "No, si viene con cláusulas duras"
+        },
+        {
+          "question": "¿Qué mira una comparación honesta?",
+          "options": [
+            "Valuación y cláusulas a la vez",
+            "Solo la valuación",
+            "Solo el monto"
+          ],
+          "correct": "Valuación y cláusulas a la vez"
+        }
+      ],
+      "rubric": "Logrado: calcula las tres cifras y compara ofertas considerando cláusulas. En proceso: calcula el porcentaje sin evaluar cláusulas. Inicial: identifica los elementos de una oferta."
+    },
+    "teacher_tips": [
+      "La fórmula del porcentaje es corta y hay que practicarla hasta que salga sin dudar.",
+      "El ejercicio de comparar dos ofertas con distinta valuación y distintas cláusulas es el que forma criterio.",
+      "Aclare que la reserva para el equipo suele diluir al fundador: es de las sorpresas más frecuentes."
+    ]
+  },
+  "S3-4-8": {
+    "code": "S3-4-8",
+    "title": "Dilución: cuánto de mi empresa sigue siendo mía",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Calcular el efecto de sucesivas rondas de inversión sobre la participación del fundador y distinguir dilución de pérdida de valor.",
+      "competencies": [
+        "Cálculo de Dilución",
+        "Análisis de Rondas Sucesivas",
+        "Valuación de Participación",
+        "Visión de Largo Plazo"
+      ],
+      "materials": [
+        "Tabla de rondas sucesivas",
+        "Calculadora",
+        "Casos de empresas conocidas",
+        "Gráfico de participación contra valor",
+        "Cartel del porcentaje contra el valor"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Cada Vez Menos Mío",
+          "duration": "15 min",
+          "label": "La preocupación"
+        },
+        {
+          "phase": "Desarrollo: El Cálculo",
+          "duration": "30 min",
+          "label": "Rondas sucesivas"
+        },
+        {
+          "phase": "Cierre: Porcentaje o Valor",
+          "duration": "15 min",
+          "label": "Qué importa realmente"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CADA VEZ MENOS MÍO (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee que un fundador que empieza con el cien por ciento de su empresa termina, tras varias rondas, con una fracción mucho menor. Pregunte si eso es necesariamente malo. Deje la pregunta abierta: se resuelve al final de la sesión.",
+          "activity": "Dinámica \"¿Es Malo?\": el grupo vota si perder porcentaje es bueno o malo y guarda su respuesta."
+        },
+        {
+          "title": "FASE II: RONDAS SUCESIVAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Muestre cómo se acumula la dilución: cada ronda reduce proporcionalmente la participación de todos los accionistas previos. Los alumnos calculan la participación del fundador tras tres rondas consecutivas y observan que la reducción es multiplicativa, no aditiva.",
+          "activity": "Dinámica \"Tres Rondas\": cada equipo calcula la participación del fundador ronda por ronda."
+        },
+        {
+          "title": "FASE III: PORCENTAJE O VALOR (CIERRE)",
+          "duration": "15 min",
+          "description": "Retome la pregunta inicial. Muestre que lo relevante no es el porcentaje sino el valor de la participación: veinte por ciento de una empresa de cien millones vale mucho más que cien por ciento de una de dos. La dilución con crecimiento es buena; sin crecimiento es pura pérdida.",
+          "activity": "Dinámica \"Revisa tu Voto\": el grupo recalcula el valor de la participación y revisa su respuesta inicial."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un fundador empieza con el cien por ciento de su empresa y, tras varias rondas de inversión, se queda con una fracción. La pregunta es si eso es necesariamente malo. La respuesta depende de una sola cosa.",
+      "sections": [
+        {
+          "subtitle": "Qué es la dilución",
+          "content": "Cuando entra capital nuevo se emiten acciones nuevas, y la participación de todos los accionistas previos se reduce proporcionalmente. No es que le quiten acciones a nadie: es que el total aumenta y la misma cantidad representa una fracción menor. Ocurre en cada ronda y también al reservar acciones para el equipo."
+        },
+        {
+          "subtitle": "La dilución se acumula multiplicando",
+          "content": "Tres rondas que ceden veinte por ciento cada una no dejan al fundador con cuarenta por ciento sino con alrededor de cincuenta y uno, porque cada reducción se aplica sobre lo que quedaba. Ese cálculo multiplicativo sorprende a muchos fundadores que llevaban la cuenta sumando y restando."
+        },
+        {
+          "subtitle": "Porcentaje contra valor",
+          "content": "Lo relevante no es qué porcentaje conservas sino cuánto vale ese porcentaje. Veinte por ciento de una empresa de cien millones vale mucho más que el cien por ciento de una de dos. La pregunta correcta ante cada ronda no es cuánto cedo, sino si el dinero que entra hará crecer la empresa lo suficiente para que mi parte valga más."
+        },
+        {
+          "subtitle": "Cuándo la dilución sí es mala",
+          "content": "Cuando el capital entra a una valuación baja sin que la empresa lo aproveche para crecer, el fundador pierde porcentaje y no gana valor. Y cuando la dilución acumulada baja tanto la participación que el fundador pierde control o incentivo, el problema deja de ser financiero y se vuelve de gobierno de la empresa."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la dilución?",
+          "options": [
+            "Que te quiten acciones",
+            "La reducción proporcional de participación al emitir acciones nuevas",
+            "Una pérdida de dinero"
+          ],
+          "correct": "La reducción proporcional de participación al emitir acciones nuevas"
+        },
+        {
+          "question": "¿Por qué ocurre?",
+          "options": [
+            "Porque bajan las ventas",
+            "Porque suben los costos",
+            "Porque el total de acciones aumenta"
+          ],
+          "correct": "Porque el total de acciones aumenta"
+        },
+        {
+          "question": "¿Cuándo más ocurre además de las rondas?",
+          "options": [
+            "Al reservar acciones para el equipo",
+            "Al vender producto",
+            "Al contratar"
+          ],
+          "correct": "Al reservar acciones para el equipo"
+        },
+        {
+          "question": "¿Cómo se acumula la dilución?",
+          "options": [
+            "Sumando",
+            "Multiplicativamente",
+            "Restando"
+          ],
+          "correct": "Multiplicativamente"
+        },
+        {
+          "question": "Tres rondas de 20% cada una dejan al fundador cerca de:",
+          "options": [
+            "40%",
+            "60%",
+            "51%"
+          ],
+          "correct": "51%"
+        },
+        {
+          "question": "¿Qué es lo relevante?",
+          "options": [
+            "Cuánto vale tu porcentaje",
+            "El porcentaje solo",
+            "El número de acciones"
+          ],
+          "correct": "Cuánto vale tu porcentaje"
+        },
+        {
+          "question": "¿Qué vale más?",
+          "options": [
+            "100% de una de dos millones",
+            "20% de una empresa de cien millones",
+            "Son iguales"
+          ],
+          "correct": "20% de una empresa de cien millones"
+        },
+        {
+          "question": "¿Cuál es la pregunta correcta ante cada ronda?",
+          "options": [
+            "Cuánto cedo",
+            "Quién invierte",
+            "Si el dinero hará crecer la empresa lo suficiente"
+          ],
+          "correct": "Si el dinero hará crecer la empresa lo suficiente"
+        },
+        {
+          "question": "¿Cuándo la dilución sí es mala?",
+          "options": [
+            "Cuando entra capital y la empresa no crece",
+            "Siempre",
+            "Nunca"
+          ],
+          "correct": "Cuando entra capital y la empresa no crece"
+        },
+        {
+          "question": "¿Qué otro problema genera la dilución excesiva?",
+          "options": [
+            "Más impuestos",
+            "Pérdida de control o de incentivo del fundador",
+            "Menos ventas"
+          ],
+          "correct": "Pérdida de control o de incentivo del fundador"
+        }
+      ],
+      "rubric": "Logrado: calcula la dilución acumulada y evalúa cada ronda por el valor resultante. En proceso: calcula una ronda sin acumular. Inicial: entiende qué es la dilución."
+    },
+    "teacher_tips": [
+      "El error de sumar en lugar de multiplicar es el más común. Muéstrelo explícitamente.",
+      "La comparación de porcentaje contra valor es el momento pedagógico de la unidad.",
+      "Cierre con el caso en que la dilución sí es mala: sin ese matiz el mensaje quedaría incompleto."
+    ]
+  },
+  "S3-4-9": {
+    "code": "S3-4-9",
+    "title": "Franquicias: crecer con el capital de otros",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender el modelo de franquicia desde ambos lados y evaluar cuándo conviene otorgarla o adquirirla.",
+      "competencies": [
+        "Modelo de Franquicias",
+        "Análisis de Escalamiento",
+        "Evaluación de Contratos",
+        "Decisión de Expansión"
+      ],
+      "materials": [
+        "Comparativo franquiciante y franquiciatario",
+        "Casos de franquicias mexicanas",
+        "Tabla de costos y regalías",
+        "Lista de requisitos para franquiciar",
+        "Cartel de los dos lados"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Crecer sin mi Dinero",
+          "duration": "15 min",
+          "label": "La idea"
+        },
+        {
+          "phase": "Desarrollo: Los Dos Lados",
+          "duration": "30 min",
+          "label": "Quién pone qué"
+        },
+        {
+          "phase": "Cierre: Cuándo Conviene",
+          "duration": "15 min",
+          "label": "Los requisitos"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CRECER SIN MI DINERO (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cómo haría alguien para abrir veinte sucursales sin tener capital para veinte locales. Introduzca la franquicia: un modelo donde otra persona pone el capital y opera bajo la marca y el sistema del dueño original, a cambio de un pago inicial y regalías.",
+          "activity": "Dinámica \"Veinte Sucursales\": el grupo estima cuánto costaría abrirlas con capital propio."
+        },
+        {
+          "title": "FASE II: QUIÉN PONE QUÉ (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique ambos lados. Quien otorga aporta marca, sistema probado, capacitación y soporte, y recibe cuota inicial y regalías. Quien adquiere aporta capital y operación, y recibe un modelo que ya funciona y una marca conocida. Los alumnos identifican las obligaciones de cada parte.",
+          "activity": "Dinámica \"Quién Aporta Qué\": cada equipo reparte diez elementos entre las dos partes."
+        },
+        {
+          "title": "FASE III: CUÁNDO CONVIENE (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique los requisitos para poder franquiciar: el modelo debe estar probado y ser rentable, los procesos deben estar documentados, la marca debe estar registrada y debe existir capacidad de dar soporte. Franquiciar un negocio que aún no funciona bien multiplica el problema en lugar del éxito.",
+          "activity": "Dinámica \"¿Está Listo?\": cada equipo evalúa si tres negocios cumplen los requisitos para franquiciar."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Abrir veinte sucursales exige capital para veinte locales. La franquicia resuelve eso de otra forma: otra persona pone el capital y opera bajo tu marca y tu sistema, a cambio de un pago inicial y regalías.",
+      "sections": [
+        {
+          "subtitle": "Qué aporta quien otorga la franquicia",
+          "content": "Aporta la marca, el modelo de negocio probado, los manuales de operación, la capacitación inicial y el soporte continuo. A cambio recibe una cuota inicial por otorgar el derecho y regalías periódicas calculadas normalmente como un porcentaje de las ventas. Crece en número de puntos sin poner el capital de cada uno."
+        },
+        {
+          "subtitle": "Qué aporta quien la adquiere",
+          "content": "Pone el capital de la inversión inicial, el local, el inventario y la operación diaria. A cambio recibe un modelo que ya demostró funcionar, una marca que el cliente reconoce y un acompañamiento que reduce la curva de aprendizaje. Su riesgo es menor que abrir un negocio desde cero, pero no desaparece."
+        },
+        {
+          "subtitle": "Los requisitos para poder franquiciar",
+          "content": "El modelo debe estar probado y ser rentable de forma consistente, no en un solo local afortunado. Los procesos deben estar documentados con detalle suficiente para que alguien más los ejecute. La marca debe estar registrada. Y debe existir capacidad real de dar soporte, porque un franquiciatario abandonado daña la marca de todos."
+        },
+        {
+          "subtitle": "Los riesgos de ambos lados",
+          "content": "Quien otorga pierde control directo sobre la operación: un mal franquiciatario afecta la reputación de toda la red. Quien adquiere queda atado a un contrato con obligaciones, regalías y estándares, y depende de que la marca siga siendo valiosa. Ninguna de las dos posiciones es pasiva ni está libre de riesgo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una franquicia?",
+          "options": [
+            "Un préstamo",
+            "Una sociedad",
+            "Un modelo donde otro pone capital y opera bajo tu marca y sistema"
+          ],
+          "correct": "Un modelo donde otro pone capital y opera bajo tu marca y sistema"
+        },
+        {
+          "question": "¿Qué aporta quien otorga?",
+          "options": [
+            "Marca, modelo probado, manuales, capacitación y soporte",
+            "Capital",
+            "El local"
+          ],
+          "correct": "Marca, modelo probado, manuales, capacitación y soporte"
+        },
+        {
+          "question": "¿Qué recibe a cambio?",
+          "options": [
+            "Solo regalías",
+            "Cuota inicial y regalías",
+            "Nada"
+          ],
+          "correct": "Cuota inicial y regalías"
+        },
+        {
+          "question": "¿Cómo se calculan normalmente las regalías?",
+          "options": [
+            "Como monto fijo único",
+            "Como porcentaje del capital",
+            "Como porcentaje de las ventas"
+          ],
+          "correct": "Como porcentaje de las ventas"
+        },
+        {
+          "question": "¿Qué aporta quien adquiere?",
+          "options": [
+            "Capital, local, inventario y operación diaria",
+            "La marca",
+            "Los manuales"
+          ],
+          "correct": "Capital, local, inventario y operación diaria"
+        },
+        {
+          "question": "¿Qué recibe?",
+          "options": [
+            "Ganancias garantizadas",
+            "Un modelo probado, marca reconocida y acompañamiento",
+            "Capital"
+          ],
+          "correct": "Un modelo probado, marca reconocida y acompañamiento"
+        },
+        {
+          "question": "¿Qué requisito debe cumplir el modelo?",
+          "options": [
+            "Ser nuevo",
+            "Ser barato",
+            "Estar probado y ser rentable de forma consistente"
+          ],
+          "correct": "Estar probado y ser rentable de forma consistente"
+        },
+        {
+          "question": "¿Qué más se requiere?",
+          "options": [
+            "Procesos documentados, marca registrada y capacidad de soporte",
+            "Solo la marca",
+            "Solo capital"
+          ],
+          "correct": "Procesos documentados, marca registrada y capacidad de soporte"
+        },
+        {
+          "question": "¿Cuál es el riesgo de quien otorga?",
+          "options": [
+            "Poner capital",
+            "Perder control: un mal franquiciatario daña a toda la red",
+            "Pagar regalías"
+          ],
+          "correct": "Perder control: un mal franquiciatario daña a toda la red"
+        },
+        {
+          "question": "¿Cuál es el riesgo de quien adquiere?",
+          "options": [
+            "Ninguno",
+            "No tener marca",
+            "Quedar atado a un contrato y depender del valor de la marca"
+          ],
+          "correct": "Quedar atado a un contrato y depender del valor de la marca"
+        }
+      ],
+      "rubric": "Logrado: explica ambos lados, identifica requisitos y evalúa si un negocio está listo para franquiciar. En proceso: describe el modelo sin evaluar requisitos. Inicial: comprende qué es una franquicia."
+    },
+    "teacher_tips": [
+      "Use franquicias mexicanas conocidas: el reconocimiento hace concreto el modelo.",
+      "El punto de que franquiciar un negocio no probado multiplica el problema es el más importante.",
+      "Insista en que ninguna de las dos posiciones es pasiva: ambas exigen trabajo real."
+    ]
+  },
+  "S3-4-10": {
+    "code": "S3-4-10",
+    "title": "Legado: qué queda cuando el emprendedor se va",
+    "level": "Secundaria 3",
+    "duration": "60 min",
+    "difficulty": "Avanzado",
+    "category": "¡Es Hora de Emprender!",
+    "metadata": {
+      "objective": "Comprender qué sucede con una empresa y un patrimonio cuando el fundador se retira o fallece, y planear la continuidad.",
+      "competencies": [
+        "Planeación de Continuidad",
+        "Sucesión Empresarial",
+        "Documentación de Procesos",
+        "Visión de Legado"
+      ],
+      "materials": [
+        "Casos de empresas con y sin sucesión",
+        "Formato de plan de continuidad",
+        "Lista de documentos clave",
+        "Mapa de dependencias del fundador",
+        "Cartel de las tres decisiones"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Si Yo no Estoy",
+          "duration": "15 min",
+          "label": "La pregunta incómoda"
+        },
+        {
+          "phase": "Desarrollo: Qué Debe Quedar",
+          "duration": "30 min",
+          "label": "Sistemas y personas"
+        },
+        {
+          "phase": "Cierre: Mi Plan",
+          "duration": "15 min",
+          "label": "Las tres decisiones"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: SI YO NO ESTOY (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee una empresa donde el fundador conoce a todos los clientes, guarda las contraseñas, negocia con los proveedores y decide todo. Pregunte qué pasaría si mañana no pudiera trabajar durante seis meses. La respuesta suele ser incómoda y esa incomodidad es el punto de partida.",
+          "activity": "Dinámica \"Seis Meses Ausente\": el grupo enumera qué se detendría en un negocio sin su fundador."
+        },
+        {
+          "title": "FASE II: SISTEMAS Y PERSONAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique los dos frentes de la continuidad: los sistemas, es decir, procesos documentados, accesos ordenados y contratos claros; y las personas, es decir, alguien capacitado para tomar decisiones. Ambas cosas se construyen antes de necesitarlas, nunca durante la emergencia.",
+          "activity": "Dinámica \"Mapa de Dependencias\": cada equipo identifica qué depende exclusivamente del fundador y cómo repartirlo."
+        },
+        {
+          "title": "FASE III: LAS TRES DECISIONES (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente las tres decisiones del legado: quién dirige, quién es dueño y qué pasa con el patrimonio personal. Son distintas y pueden recaer en personas distintas. Cierre conectando con todo el curso: la educación financiera termina cuando lo construido puede sostenerse sin quien lo construyó.",
+          "activity": "Dinámica \"Mi Plan de Continuidad\": cada alumno redacta las tres decisiones para su proyecto."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay una pregunta que casi nadie quiere hacerse: ¿qué pasaría con lo que construí si mañana yo no pudiera seguir? La respuesta separa un negocio de un proyecto personal.",
+      "sections": [
+        {
+          "subtitle": "La dependencia del fundador",
+          "content": "En muchos negocios el fundador conoce a todos los clientes, guarda todos los accesos, negocia con todos los proveedores y toma todas las decisiones. Eso funciona mientras esté presente y se derrumba en cuanto no lo esté. Un negocio que depende por completo de una persona no es todavía una empresa: es un empleo complicado."
+        },
+        {
+          "subtitle": "Los sistemas",
+          "content": "La continuidad empieza por lo documentable: procesos escritos, accesos ordenados y compartidos con quien deba tenerlos, contratos con clientes y proveedores a nombre de la empresa y no de la persona, y información financiera al día. Nada de eso se puede improvisar durante una emergencia; se construye en calma y con anticipación."
+        },
+        {
+          "subtitle": "Las personas",
+          "content": "Además de sistemas hace falta alguien capacitado para decidir. Eso implica delegar de verdad antes de necesitarlo, permitir que otra persona tome decisiones y se equivoque mientras el fundador sigue ahí para corregir. Un sucesor que aprende el día de la emergencia aprende en las peores condiciones posibles."
+        },
+        {
+          "subtitle": "Las tres decisiones del legado",
+          "content": "Quién dirige la empresa, quién es su dueño y qué pasa con el patrimonio personal son tres decisiones distintas y pueden recaer en personas distintas. Documentarlas mediante testamento, acuerdos entre socios y protocolos de sucesión evita que la familia y el equipo tengan que adivinar en el peor momento."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué pregunta separa un negocio de un proyecto personal?",
+          "options": [
+            "Qué pasaría si mañana yo no pudiera seguir",
+            "Cuánto vendo",
+            "Cuántos empleados tengo"
+          ],
+          "correct": "Qué pasaría si mañana yo no pudiera seguir"
+        },
+        {
+          "question": "Un negocio que depende por completo de una persona es:",
+          "options": [
+            "Una empresa sólida",
+            "Un empleo complicado, no todavía una empresa",
+            "Una franquicia"
+          ],
+          "correct": "Un empleo complicado, no todavía una empresa"
+        },
+        {
+          "question": "¿Por dónde empieza la continuidad?",
+          "options": [
+            "Por vender",
+            "Por contratar",
+            "Por lo documentable: procesos, accesos, contratos e información"
+          ],
+          "correct": "Por lo documentable: procesos, accesos, contratos e información"
+        },
+        {
+          "question": "¿A nombre de quién deben estar los contratos?",
+          "options": [
+            "De la empresa, no de la persona",
+            "De la persona",
+            "Da igual"
+          ],
+          "correct": "De la empresa, no de la persona"
+        },
+        {
+          "question": "¿Se puede improvisar la continuidad en la emergencia?",
+          "options": [
+            "Sí",
+            "No, se construye en calma y con anticipación",
+            "Solo si hay dinero"
+          ],
+          "correct": "No, se construye en calma y con anticipación"
+        },
+        {
+          "question": "¿Qué implica preparar a las personas?",
+          "options": [
+            "Avisarles el día del problema",
+            "Nada",
+            "Delegar de verdad antes de necesitarlo"
+          ],
+          "correct": "Delegar de verdad antes de necesitarlo"
+        },
+        {
+          "question": "¿Por qué debe equivocarse el sucesor antes?",
+          "options": [
+            "Porque el fundador sigue ahí para corregir",
+            "Para que renuncie",
+            "No debe"
+          ],
+          "correct": "Porque el fundador sigue ahí para corregir"
+        },
+        {
+          "question": "¿Cuáles son las tres decisiones del legado?",
+          "options": [
+            "Precio, costo y margen",
+            "Quién dirige, quién es dueño y qué pasa con el patrimonio personal",
+            "Marca, local y personal"
+          ],
+          "correct": "Quién dirige, quién es dueño y qué pasa con el patrimonio personal"
+        },
+        {
+          "question": "¿Pueden recaer en personas distintas?",
+          "options": [
+            "No, siempre es la misma",
+            "Solo dos",
+            "Sí, son decisiones distintas"
+          ],
+          "correct": "Sí, son decisiones distintas"
+        },
+        {
+          "question": "¿Cómo se documentan?",
+          "options": [
+            "Con testamento, acuerdos entre socios y protocolos de sucesión",
+            "De palabra",
+            "No se documentan"
+          ],
+          "correct": "Con testamento, acuerdos entre socios y protocolos de sucesión"
+        }
+      ],
+      "rubric": "Logrado: identifica dependencias, propone sistemas y personas, y define las tres decisiones. En proceso: reconoce la dependencia sin plan. Inicial: comprende la importancia de la continuidad."
+    },
+    "teacher_tips": [
+      "La dinámica de los seis meses ausente genera la incomodidad productiva que abre la unidad.",
+      "La distinción entre quién dirige y quién es dueño es clave y casi nunca se enseña.",
+      "Cierre el curso aquí: lo construido debe poder sostenerse sin quien lo construyó."
+    ]
+  },
   "S3-SUPREMO-PORTFOLIO": {
     "code": "S3-SUPREMO-PORTFOLIO",
     "title": "Portfolio Builder: Tu Vida Financiera",

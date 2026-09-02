@@ -4,99 +4,92 @@
   "unit_title": "Estrategia de precios: cómo definir el precio ideal",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "CONSTRUCTOR",
-  "complejidad": "MEDIO",
-  "titulo": "Mi Primera Declaración",
-  "descripcion": "Llegó abril y debes rendir cuentas. Si pediste facturas por tus gastos de salud y educación, ¡el SAT podría devolverte dinero!",
-  "objetivo": "Comprender el concepto de deducción personal y cómo impacta en el cálculo del impuesto anual",
-  "xp": 450,
-  "output_type": "Resumen de Declaración Anual",
-  "exportable": true,
-  "pasos": [
+  "tipo": "TRIVIA",
+  "complejidad": "ALTO",
+  "titulo": "El Precio Correcto",
+  "descripcion": "Contra el reloj: la decisión que más rápido cambia la rentabilidad de un negocio, y la que más se toma a ojo.",
+  "objetivo": "Consolidar los métodos de fijación de precios y comprender el impacto de un cambio de precio sobre el margen.",
+  "xp": 550,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
+  "preguntas": [
     {
-      "id": "ingresos_anuales_s1",
-      "titulo": "💰 Tus Ingresos",
-      "descripcion": "¿Cuánto ganaste en el año por tu trabajo?",
-      "campos": [
-        {
-          "id": "sueldo_anual",
-          "label": "Sueldo Anual Bruto ($)",
-          "type": "slider",
-          "min": 100000,
-          "max": 1000000,
-          "step": 50000,
-          "default": 250000,
-          "unit": "$"
-        }
-      ]
+      "id": "t1",
+      "pregunta": "Poner precio solo sumando costos más un margen se llama…",
+      "respuesta_correcta": "Precio por costos",
+      "incorrectas": [
+        "Precio por valor",
+        "Precio psicológico",
+        "Precio dinámico"
+      ],
+      "dato_extra": "Es el más usado y el que menos ganancia deja, porque ignora al cliente."
     },
     {
-      "id": "deducciones_personales",
-      "titulo": "🧾 Tus Deducciones",
-      "descripcion": "Selecciona los gastos por los que pediste factura oficial.",
-      "campos": [
-        {
-          "id": "gasto_medico",
-          "label": "Gastos Médicos y Dentales ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 20000,
-          "step": 1000,
-          "default": 5000,
-          "unit": "$"
-        },
-        {
-          "id": "colegiaturas",
-          "label": "Colegiaturas de Escuela ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 15000,
-          "step": 1000,
-          "default": 0,
-          "unit": "$"
-        },
-        {
-          "id": "lentes",
-          "label": "Lentes Graduados ($)",
-          "type": "slider",
-          "min": 0,
-          "max": 2500,
-          "step": 500,
-          "default": 2500,
-          "unit": "$"
-        }
-      ]
+      "id": "t2",
+      "pregunta": "El método de precios más rentable suele ser…",
+      "respuesta_correcta": "Por valor: cuánto vale para el cliente el problema resuelto",
+      "incorrectas": [
+        "Por costos",
+        "El más bajo posible",
+        "Copiar a la competencia"
+      ],
+      "dato_extra": "Exige entender a fondo a tu cliente, por eso pocos lo usan."
     },
     {
-      "id": "resultado_sat",
-      "titulo": "📊 Resultado Final",
-      "descripcion": "Mira cómo tus deducciones bajaron el impuesto que debes pagar.",
-      "campos": [
-        {
-          "id": "mensaje_sat",
-          "label": "¿Qué harás con tu Saldo a Favor?",
-          "type": "textarea",
-          "placeholder": "Ej: Lo voy a invertir en mi fondo de retiro para que crezca más...",
-          "requerido": true
-        },
-        {
-          "id": "base_gravable_est",
-          "label": "Base Gravable Estimada",
-          "type": "calculated",
-          "formula": "Math.max(0, sueldo_anual - gasto_medico - colegiaturas - lentes)",
-          "unit": "$",
-          "ayuda": "Tu ingreso anual menos las deducciones personales comprobadas"
-        },
-        {
-          "id": "isr_estimado",
-          "label": "ISR Estimado a Pagar",
-          "type": "calculated",
-          "formula": "Math.round(Math.max(0, sueldo_anual - gasto_medico - colegiaturas - lentes) * 0.20)",
-          "unit": "$",
-          "ayuda": "Aproximación con tasa efectiva del 20% — la real depende de tu tabla ISR"
-        }
-      ]
+      "id": "t3",
+      "pregunta": "Vender por debajo de tu costo variable significa…",
+      "respuesta_correcta": "Perder dinero en cada venta: vender más empeora todo",
+      "incorrectas": [
+        "Ganar por volumen",
+        "Hacer publicidad",
+        "Ser competitivo"
+      ],
+      "dato_extra": "No hay volumen que compense un margen negativo."
+    },
+    {
+      "id": "t4",
+      "pregunta": "Subir el precio un 10% en un negocio con margen del 20%…",
+      "respuesta_correcta": "Puede aumentar la ganancia mucho más que un 10%",
+      "incorrectas": [
+        "Aumenta la ganancia exactamente 10%",
+        "No cambia nada",
+        "Reduce la ganancia"
+      ],
+      "dato_extra": "El precio es la palanca más poderosa: cada peso extra va casi entero a la utilidad."
+    },
+    {
+      "id": "t5",
+      "pregunta": "Ser el más barato del mercado como estrategia…",
+      "respuesta_correcta": "Solo funciona si tienes los costos más bajos de todos",
+      "incorrectas": [
+        "Siempre funciona",
+        "Es la mejor estrategia",
+        "Garantiza clientes fieles"
+      ],
+      "dato_extra": "El cliente que llega por precio se va por precio en cuanto aparece alguien más barato."
+    },
+    {
+      "id": "t6",
+      "pregunta": "Un precio demasiado bajo puede…",
+      "respuesta_correcta": "Hacer que el cliente dude de la calidad",
+      "incorrectas": [
+        "Siempre atraer más clientes",
+        "Aumentar el margen",
+        "Mejorar tu marca"
+      ],
+      "dato_extra": "El precio también comunica: es parte de cómo te percibe la gente."
+    },
+    {
+      "id": "t7",
+      "pregunta": "Antes de fijar un precio, lo primero que necesitas saber es…",
+      "respuesta_correcta": "Tu costo real por unidad, incluyendo la parte de los costos fijos",
+      "incorrectas": [
+        "Cuánto quieres ganar",
+        "El precio de la competencia",
+        "Qué opina tu familia"
+      ],
+      "dato_extra": "Sin ese número, cualquier precio es una apuesta."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

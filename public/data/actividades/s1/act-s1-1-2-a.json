@@ -5,89 +5,117 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Radar del Valor",
-  "descripcion": "Antes de comprar una acción, debes revisar los números de la empresa. ¿Sabes qué significa cada dato?",
-  "objetivo": "Clasificar las métricas financieras básicas para realizar un análisis fundamental inicial",
-  "xp": 400,
-  "instruccion": "Arrastra cada métrica a la categoría correcta para analizar la salud de la empresa.",
-  "items": [
-    {
-      "id": "met1",
-      "label": "Ventas Totales (Ingresos)",
-      "emoji": "📈",
-      "categoria_correcta": "crecimiento",
-      "feedback": "Indica si la empresa está atrayendo más dinero cada año."
-    },
-    {
-      "id": "met2",
-      "label": "Número de Clientes Nuevos",
-      "emoji": "👥",
-      "categoria_correcta": "crecimiento",
-      "feedback": "Muestra la expansión de la marca en el mercado."
-    },
-    {
-      "id": "met3",
-      "label": "Deuda Total",
-      "emoji": "📉",
-      "categoria_correcta": "salud",
-      "feedback": "Es vital que la deuda no sea mayor a lo que la empresa puede pagar."
-    },
-    {
-      "id": "met4",
-      "label": "Efectivo en Caja (Cash)",
-      "emoji": "💰",
-      "categoria_correcta": "salud",
-      "feedback": "Dinero disponible para emergencias o nuevas compras."
-    },
-    {
-      "id": "met5",
-      "label": "Margen de Ganancia (%)",
-      "emoji": "💎",
-      "categoria_correcta": "eficiencia",
-      "feedback": "Indica cuánto dinero se queda la empresa por cada dólar vendido."
-    },
-    {
-      "id": "met6",
-      "label": "Retorno sobre Capital (ROE)",
-      "emoji": "🔄",
-      "categoria_correcta": "eficiencia",
-      "feedback": "Mide qué tan bien usa la empresa el dinero de los socios."
-    },
-    {
-      "id": "met7",
-      "label": "Costo de Fabricación",
-      "emoji": "🏭",
-      "categoria_correcta": "eficiencia",
-      "feedback": "Si este costo baja, la empresa es más eficiente."
-    },
-    {
-      "id": "met8",
-      "label": "Apertura de nuevas sucursales",
-      "emoji": "📍",
-      "categoria_correcta": "crecimiento",
-      "feedback": "Señal física de expansión del negocio."
-    }
-  ],
+  "complejidad": "ALTO",
+  "titulo": "El Presupuesto de un País",
+  "descripcion": "Cada año el gobierno mexicano decide cómo repartir varios billones de pesos. Ese dinero entra por unas vías y sale por otras. Y cuando no alcanza, se pide prestado: eso es la deuda pública.",
+  "objetivo": "Comprender el presupuesto nacional distinguiendo fuentes de ingreso, destinos de gasto y el papel de la deuda soberana.",
+  "xp": 550,
+  "instruccion": "Arrastra cada concepto según sea dinero que ENTRA, dinero que SALE o un mecanismo de DEUDA.",
   "categorias": [
     {
-      "id": "crecimiento",
-      "label": "MÉTRICAS DE CRECIMIENTO",
-      "emoji": "🚀",
-      "color": "#166534"
+      "id": "ingreso",
+      "label": "INGRESO DEL ESTADO",
+      "emoji": "📥",
+      "color": "#10b981"
     },
     {
-      "id": "salud",
-      "label": "SALUD FINANCIERA",
-      "emoji": "🛡️",
-      "color": "#1e40af"
+      "id": "gasto",
+      "label": "GASTO PÚBLICO",
+      "emoji": "📤",
+      "color": "#f97316"
     },
     {
-      "id": "eficiencia",
-      "label": "EFICIENCIA OPERATIVA",
-      "emoji": "⚙️",
-      "color": "#6b21a8"
+      "id": "deuda",
+      "label": "DEUDA",
+      "emoji": "🏦",
+      "color": "#ef4444"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Recaudación de IVA e ISR",
+      "emoji": "🧾",
+      "categoria_correcta": "ingreso",
+      "feedback": "Los impuestos son la fuente principal: alrededor de dos terceras partes del ingreso."
+    },
+    {
+      "id": "i2",
+      "label": "Sueldos de maestros y médicos",
+      "emoji": "👩‍🏫",
+      "categoria_correcta": "gasto",
+      "feedback": "El gasto en personal es de los rubros más grandes del presupuesto."
+    },
+    {
+      "id": "i3",
+      "label": "Emisión de CETES y bonos",
+      "emoji": "📜",
+      "categoria_correcta": "deuda",
+      "feedback": "Cuando compras un CETE, le estás prestando al gobierno: eso es deuda pública interna."
+    },
+    {
+      "id": "i4",
+      "label": "Ingresos petroleros de Pemex",
+      "emoji": "🛢️",
+      "categoria_correcta": "ingreso",
+      "feedback": "Fueron dominantes durante décadas; hoy pesan mucho menos que los impuestos."
+    },
+    {
+      "id": "i5",
+      "label": "Construcción de carreteras y hospitales",
+      "emoji": "🏗️",
+      "categoria_correcta": "gasto",
+      "feedback": "Se llama gasto de inversión: crea infraestructura que dura décadas."
+    },
+    {
+      "id": "i6",
+      "label": "Préstamos del Banco Mundial",
+      "emoji": "🌎",
+      "categoria_correcta": "deuda",
+      "feedback": "Deuda externa: en moneda extranjera, y por eso sensible al tipo de cambio."
+    },
+    {
+      "id": "i7",
+      "label": "Pago de intereses de la deuda",
+      "emoji": "💸",
+      "categoria_correcta": "gasto",
+      "feedback": "Es de los gastos más grandes y el más doloroso: no construye nada, solo paga el pasado."
+    },
+    {
+      "id": "i8",
+      "label": "Derechos por trámites y permisos",
+      "emoji": "📋",
+      "categoria_correcta": "ingreso",
+      "feedback": "Pasaportes, licencias y concesiones también financian al Estado."
+    },
+    {
+      "id": "i9",
+      "label": "Programas sociales y pensiones",
+      "emoji": "🤝",
+      "categoria_correcta": "gasto",
+      "feedback": "Transferencias directas a las personas: una porción creciente del presupuesto."
+    },
+    {
+      "id": "i10",
+      "label": "Bonos soberanos vendidos a inversionistas extranjeros",
+      "emoji": "🌐",
+      "categoria_correcta": "deuda",
+      "feedback": "Si el país deja de pagar, pierde acceso a crédito por años."
+    },
+    {
+      "id": "i11",
+      "label": "Aportaciones a estados y municipios",
+      "emoji": "🗺️",
+      "categoria_correcta": "gasto",
+      "feedback": "Buena parte de lo recaudado se reparte al resto del país."
+    },
+    {
+      "id": "i12",
+      "label": "Impuestos al comercio exterior (aranceles)",
+      "emoji": "🚢",
+      "categoria_correcta": "ingreso",
+      "feedback": "Se cobran sobre productos importados al entrar al país."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

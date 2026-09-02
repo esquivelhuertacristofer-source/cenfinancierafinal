@@ -1,6 +1,8 @@
 # Evaluación Arquitectónica — Plantilla White-Label
 ## CEN Educación Financiera · Junio 2026
 
+> **⚠️ Documento histórico — puede estar desactualizado.** Esta evaluación se realizó en junio de 2026. Desde entonces el proyecto migró de Vercel a Cloudflare Workers (2026-07-08, ver `docs/SEGURIDAD-PENDIENTES.md` y `README.md`) y Sentry fue removido deliberadamente, entre otros cambios posteriores. Datos como el stack de despliegue/monitoreo, el conteo de rutas/componentes o el diagnóstico de multi-tenencia pueden no reflejar el estado actual del código — verificar contra el repositorio (`git log`) antes de tomar decisiones basadas en este documento. Se conserva sin reescribir como referencia histórica.
+
 **Propósito:** Determinar si esta plataforma es viable como plantilla white-label para educación financiera institucional.  
 **Metodología:** Análisis estático de 59 rutas, 48 componentes, 12 librerías, 6 migraciones SQL, y árbol de dependencias completo.  
 **Calificación global: 6.5 / 10**

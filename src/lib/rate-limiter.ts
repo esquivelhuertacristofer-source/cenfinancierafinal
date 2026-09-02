@@ -65,23 +65,38 @@ export async function rateLimit({ key, max, windowMs }: RateLimitOptions): Promi
     return checkDevBucket(key, max, windowMs, now);
   }
 
-  const raw = await kv.get(key);
-  const bucket: Bucket | null = raw ? JSON.parse(raw) : null;
+  try {
+    const raw = await kv.get(key);
+    const bucket: Bucket | null = raw ? JSON.parse(raw) : null;
 
-  if (!bucket || now > bucket.resetAt) {
-    const resetAt = now + windowMs;
-    await kv.put(key, JSON.stringify({ count: 1, resetAt }), { expirationTtl: Math.ceil(windowMs / 1000) });
-    return { allowed: true, remaining: max - 1, resetAt };
+    if (!bucket || now > bucket.resetAt) {
+      const resetAt = now + windowMs;
+      try {
+        await kv.put(key, JSON.stringify({ count: 1, resetAt }), { expirationTtl: Math.ceil(windowMs / 1000) });
+      } catch (err) {
+        console.error(`[rate-limiter] KV put failed (fail-open) for key "${key}":`, err);
+      }
+      return { allowed: true, remaining: max - 1, resetAt };
+    }
+
+    if (bucket.count >= max) {
+      return { allowed: false, remaining: 0, resetAt: bucket.resetAt };
+    }
+
+    const count = bucket.count + 1;
+    const ttlSeconds = Math.max(60, Math.ceil((bucket.resetAt - now) / 1000));
+    try {
+      await kv.put(key, JSON.stringify({ count, resetAt: bucket.resetAt }), { expirationTtl: ttlSeconds });
+    } catch (err) {
+      console.error(`[rate-limiter] KV put failed (fail-open) for key "${key}":`, err);
+    }
+    return { allowed: true, remaining: max - count, resetAt: bucket.resetAt };
+  } catch (err) {
+    // KV no disponible (cuota agotada, error de red, etc.) — fail-open: no bloquear
+    // el login de todos los usuarios por un fallo de infraestructura de rate-limiting.
+    console.error(`[rate-limiter] KV get failed (fail-open) for key "${key}":`, err);
+    return { allowed: true, remaining: max - 1, resetAt: now + windowMs };
   }
-
-  if (bucket.count >= max) {
-    return { allowed: false, remaining: 0, resetAt: bucket.resetAt };
-  }
-
-  const count = bucket.count + 1;
-  const ttlSeconds = Math.max(60, Math.ceil((bucket.resetAt - now) / 1000));
-  await kv.put(key, JSON.stringify({ count, resetAt: bucket.resetAt }), { expirationTtl: ttlSeconds });
-  return { allowed: true, remaining: max - count, resetAt: bucket.resetAt };
 }
 
 // Legacy wrapper — used by middleware.ts

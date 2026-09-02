@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P5-2-10-B",
+  "unit_code": "P5-2-10",
+  "unit_title": "PROFECO: cómo y cuándo presentar una queja",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Queja",
+  "descripcion": "Responde rápido sobre cómo y cuándo escalar una reclamación.",
+  "objetivo": "Consolidar el proceso de queja ante la autoridad del consumidor",
+  "xp": 240,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La autoridad del consumidor:",
+      "respuesta_correcta": "Recibe quejas, concilia y puede sancionar",
+      "incorrectas": [
+        "Presta dinero",
+        "Vende productos",
+        "Cobra impuestos"
+      ],
+      "dato_extra": "No se necesita abogado para acudir."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El primer paso de toda reclamación es:",
+      "respuesta_correcta": "Reclamar ante el proveedor y documentarlo",
+      "incorrectas": [
+        "Presentar la queja directo",
+        "Publicarlo en redes",
+        "Demandar"
+      ],
+      "dato_extra": "Fecha, nombre de quien atendió y respuesta recibida."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Una queja bien presentada incluye:",
+      "respuesta_correcta": "Datos, hechos, documentos y petición concreta",
+      "incorrectas": [
+        "Solo la queja verbal",
+        "Una foto",
+        "Testigos"
+      ],
+      "dato_extra": "Una descripción confusa retrasa tanto como la falta de papeles."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Después de presentar la queja viene:",
+      "respuesta_correcta": "Una audiencia de conciliación",
+      "incorrectas": [
+        "Un juicio inmediato",
+        "Nada",
+        "Una multa automática"
+      ],
+      "dato_extra": "Ahí se busca un acuerdo entre las partes."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Arrepentirse sin política de devolución:",
+      "respuesta_correcta": "Normalmente no procede",
+      "incorrectas": [
+        "Siempre procede",
+        "Procede si es caro",
+        "Procede en línea"
+      ],
+      "dato_extra": "La devolución por arrepentimiento es política comercial, no obligación."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Un daño por mal uso:",
+      "respuesta_correcta": "Normalmente no procede",
+      "incorrectas": [
+        "Siempre procede",
+        "Procede con ticket",
+        "Procede si es reciente"
+      ],
+      "dato_extra": "La garantía cubre defectos de fabricación, no accidentes."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Conocer los límites del derecho sirve para:",
+      "respuesta_correcta": "Concentrar el esfuerzo donde sí se tiene razón",
+      "incorrectas": [
+        "No reclamar nunca",
+        "Evitar trámites",
+        "Perder el caso"
+      ],
+      "dato_extra": "Un consumidor informado es más efectivo, no más pasivo."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-10-b-escena.webp"
+}

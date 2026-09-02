@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-4-6-A",
+  "unit_code": "P2-4-6",
+  "unit_title": "Buscar una necesidad en mi salón",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Cacería de Problemas",
+  "descripcion": "Ceny anotó todo lo que le molesta en la escuela. Clasifica cada uno según qué tan buena oportunidad es.",
+  "objetivo": "Filtrar problemas del entorno según cuánta gente afectan y qué tanto molestan",
+  "xp": 250,
+  "instruccion": "Arrastra cada problema según si es una buena oportunidad, una oportunidad débil o algo que no es problema.",
+  "categorias": [
+    {
+      "id": "buena",
+      "label": "Buena oportunidad",
+      "emoji": "⭐",
+      "color": "#10B981"
+    },
+    {
+      "id": "debil",
+      "label": "Oportunidad débil",
+      "emoji": "🤏",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "no",
+      "label": "No es un problema",
+      "emoji": "🚫",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "A media clase todos tienen sed y no hay agua cerca",
+      "emoji": "💧",
+      "categoria_correcta": "buena",
+      "feedback": "Le pasa a muchos y molesta de verdad. Los dos filtros aprobados."
+    },
+    {
+      "id": "i2",
+      "label": "Se acaban las puntas de los lápices y no hay sacapuntas",
+      "emoji": "✏️",
+      "categoria_correcta": "buena",
+      "feedback": "Molestia frecuente que le ocurre a todo el salón varias veces por semana."
+    },
+    {
+      "id": "i3",
+      "label": "A Ceny no le gusta el color de la pared",
+      "emoji": "🎨",
+      "categoria_correcta": "no",
+      "feedback": "Es un gusto personal, no un problema que alguien pagaría por resolver."
+    },
+    {
+      "id": "i4",
+      "label": "Nadie recuerda las fechas de entrega de trabajos",
+      "emoji": "📅",
+      "categoria_correcta": "buena",
+      "feedback": "Afecta a todo el grupo y las consecuencias son reales."
+    },
+    {
+      "id": "i5",
+      "label": "A un solo compañero le queda lejos su casillero",
+      "emoji": "🔒",
+      "categoria_correcta": "debil",
+      "feedback": "Problema real pero de una sola persona: no hay suficientes clientes."
+    },
+    {
+      "id": "i6",
+      "label": "La basura del recreo se queda en el patio",
+      "emoji": "🗑️",
+      "categoria_correcta": "buena",
+      "feedback": "Afecta a todos y es visible todos los días."
+    },
+    {
+      "id": "i7",
+      "label": "La silla de Ceny rechina un poco a veces",
+      "emoji": "🪑",
+      "categoria_correcta": "debil",
+      "feedback": "Molesta muy poco y a casi nadie. Nadie pagaría por arreglarlo."
+    },
+    {
+      "id": "i8",
+      "label": "A Ceny le gustaría que hubiera más recreo",
+      "emoji": "⏰",
+      "categoria_correcta": "no",
+      "feedback": "Es un deseo, no un problema que un negocio pueda resolver."
+    },
+    {
+      "id": "i9",
+      "label": "En época de lluvias todos llegan mojados y sin dónde secarse",
+      "emoji": "☔",
+      "categoria_correcta": "buena",
+      "feedback": "Mucha gente, mucha molestia y además es estacional y predecible."
+    },
+    {
+      "id": "i10",
+      "label": "Una vez al año se pierde un suéter en el patio",
+      "emoji": "🧥",
+      "categoria_correcta": "debil",
+      "feedback": "Sí molesta, pero pasa tan poco que no sostiene un negocio."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-6-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-6-a-escena.webp"
+}

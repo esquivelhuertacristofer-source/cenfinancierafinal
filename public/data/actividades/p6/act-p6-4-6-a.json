@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-4-6-A",
+  "unit_code": "P6-4-6",
+  "unit_title": "Validar antes de gastar: la prueba de los 10 clientes",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Qué Tan Fuerte Valida",
+  "descripcion": "Clasifica cada respuesta según cuánto valida realmente tu idea.",
+  "objetivo": "Jerarquizar señales de validación según su fuerza real",
+  "xp": 600,
+  "instruccion": "Arrastra cada respuesta de un cliente potencial según cuánto valida tu idea.",
+  "categorias": [
+    {
+      "id": "fuerte",
+      "label": "Valida fuerte",
+      "emoji": "💰",
+      "color": "#10B981"
+    },
+    {
+      "id": "media",
+      "label": "Valida algo",
+      "emoji": "🤔",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "nula",
+      "label": "No valida nada",
+      "emoji": "🫧",
+      "color": "#94A3B8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "\"Te lo compro ahora, aquí está el anticipo\"",
+      "emoji": "🤝",
+      "categoria_correcta": "fuerte",
+      "feedback": "La validación más fuerte que existe: dinero comprometido."
+    },
+    {
+      "id": "i2",
+      "label": "\"Qué buena idea, deberías hacerlo\"",
+      "emoji": "👏",
+      "categoria_correcta": "nula",
+      "feedback": "Amabilidad, no información."
+    },
+    {
+      "id": "i3",
+      "label": "\"Ya pago $250 al mes por algo parecido\"",
+      "emoji": "🧾",
+      "categoria_correcta": "fuerte",
+      "feedback": "Describe un gasto real que ya existe."
+    },
+    {
+      "id": "i4",
+      "label": "\"Sí, seguro lo compraría algún día\"",
+      "emoji": "🗓️",
+      "categoria_correcta": "nula",
+      "feedback": "Futuro hipotético: la gente responde con amabilidad."
+    },
+    {
+      "id": "i5",
+      "label": "\"Lo resuelvo así hoy y me molesta esto\"",
+      "emoji": "🔧",
+      "categoria_correcta": "media",
+      "feedback": "Describe comportamiento real y un dolor concreto."
+    },
+    {
+      "id": "i6",
+      "label": "\"Mi mamá dice que le encanta\"",
+      "emoji": "👩",
+      "categoria_correcta": "nula",
+      "feedback": "La familia siempre dice que le gusta."
+    },
+    {
+      "id": "i7",
+      "label": "\"Déjame tu contacto, lo necesito el mes que entra\"",
+      "emoji": "📇",
+      "categoria_correcta": "media",
+      "feedback": "Hay intención con fecha, aunque todavía sin compromiso."
+    },
+    {
+      "id": "i8",
+      "label": "\"Lo necesité la semana pasada y no encontré dónde\"",
+      "emoji": "🔍",
+      "categoria_correcta": "media",
+      "feedback": "Necesidad reciente y comprobable: buena señal."
+    },
+    {
+      "id": "i9",
+      "label": "\"Te aparto tres y te pago la mitad hoy\"",
+      "emoji": "💵",
+      "categoria_correcta": "fuerte",
+      "feedback": "Compromiso con dinero: el único que no miente."
+    },
+    {
+      "id": "i10",
+      "label": "\"Está padrísimo, mucha suerte\"",
+      "emoji": "🍀",
+      "categoria_correcta": "nula",
+      "feedback": "Un buen deseo no es un cliente."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-6-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-6-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P2-1-9-B",
+  "unit_code": "P2-1-9",
+  "unit_title": "Un peso hoy y un peso mañana: el dinero se acumula",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Acumula o No Acumula?",
+  "descripcion": "Clasifica cada hábito según lo que le hace al ahorro de Ceny en un mes.",
+  "objetivo": "Distinguir hábitos que acumulan de los que estancan o reducen el ahorro",
+  "xp": 200,
+  "instruccion": "Arrastra cada hábito según su efecto sobre el ahorro acumulado del mes.",
+  "categorias": [
+    {
+      "id": "mucho",
+      "label": "Acumula mucho",
+      "emoji": "🚀",
+      "color": "#10B981"
+    },
+    {
+      "id": "poco",
+      "label": "Acumula poquito",
+      "emoji": "🐌",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "nada",
+      "label": "No acumula nada",
+      "emoji": "🛑",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Guardar $5 todos los días",
+      "emoji": "📅",
+      "categoria_correcta": "mucho",
+      "feedback": "$150 al mes. La frecuencia diaria es la que más junta."
+    },
+    {
+      "id": "i2",
+      "label": "Guardar $20 una vez por semana",
+      "emoji": "🗓️",
+      "categoria_correcta": "poco",
+      "feedback": "$80 al mes. Cantidad mayor, pero solo cuatro aportaciones."
+    },
+    {
+      "id": "i3",
+      "label": "Guardar $100 una vez al mes",
+      "emoji": "📆",
+      "categoria_correcta": "poco",
+      "feedback": "Junta algo, pero un solo día de decisión es muy fácil de saltarse."
+    },
+    {
+      "id": "i4",
+      "label": "Guardar \"cuando me acuerde\"",
+      "emoji": "🤔",
+      "categoria_correcta": "nada",
+      "feedback": "El problema es que cada vez uno se acuerda menos, hasta que ya no."
+    },
+    {
+      "id": "i5",
+      "label": "Guardar $10 diarios y sacar $10 cada tercer día",
+      "emoji": "🔄",
+      "categoria_correcta": "nada",
+      "feedback": "Lo que entra y sale a la misma velocidad no se acumula nunca."
+    },
+    {
+      "id": "i6",
+      "label": "Guardar $2 diarios sin fallar un año",
+      "emoji": "🐢",
+      "categoria_correcta": "mucho",
+      "feedback": "Cerca de $730 con la moneda más pequeña. El tiempo hace el trabajo."
+    },
+    {
+      "id": "i7",
+      "label": "Prometer guardar $50 diarios teniendo $10",
+      "emoji": "🎯",
+      "categoria_correcta": "nada",
+      "feedback": "Una meta imposible se rompe la primera semana y desanima para siempre."
+    },
+    {
+      "id": "i8",
+      "label": "Guardar todo el cambio del mandado cada día",
+      "emoji": "🪙",
+      "categoria_correcta": "mucho",
+      "feedback": "Cantidades irregulares pero diarias: la frecuencia compensa lo pequeño."
+    },
+    {
+      "id": "i9",
+      "label": "Guardar solo los meses que sobra dinero",
+      "emoji": "🌦️",
+      "categoria_correcta": "poco",
+      "feedback": "Funciona a medias: si nunca sobra, nunca se ahorra."
+    },
+    {
+      "id": "i10",
+      "label": "Guardar $5 diarios y no tocarlo",
+      "emoji": "🔒",
+      "categoria_correcta": "mucho",
+      "feedback": "Aportar seguido y no retirar es la fórmula completa del ahorro."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-9-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-9-b-escena.webp"
+}

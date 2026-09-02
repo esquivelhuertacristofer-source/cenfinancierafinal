@@ -4,85 +4,160 @@
   "unit_title": "Propiedad intelectual: protege tus ideas y marcas",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "JUEGO",
+  "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "El Arbitraje Global",
-  "descripcion": "Tienes 1 millón de dólares. En Japón el dinero es 'gratis' (tasa 0%) y en México pagan mucho (tasa 11%). ¿Podrás ganar dinero moviéndolo de un país a otro?",
-  "objetivo": "Comprender el concepto de diferencial de tasas de interés y el riesgo cambiario en inversiones internacionales",
-  "xp": 500,
-  "mecanica": "Toma decisiones de inversión global y enfrenta la volatilidad de las divisas.",
-  "escenarios": [
-    {
-      "id": "glob_game1",
-      "texto": "Pides un préstamo en Yenes Japoneses a una tasa de casi 0%. Cambias esos Yenes a Pesos Mexicanos para invertirlos al 11%. ¿Cómo se llama esta estrategia?",
-      "imagen": "💴",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Correcto! Se llama CARRY TRADE. Estás aprovechando la diferencia de tasas entre dos países.",
-      "feedback_error": "❌ Se llama Carry Trade. Es una de las formas más comunes en que los bancos mueven dinero por el mundo.",
-      "tipo_ataque": "Concepto Carry Trade"
+  "titulo": "El Nombre que Perdió",
+  "descripcion": "Camila lleva dos años vendiendo mochilas artesanales bajo un nombre que ya reconoce medio Instagram. Nunca registró nada: \"es mi nombre, yo lo inventé\". Hoy le llegó una carta de un despacho de abogados.",
+  "objetivo": "Comprender las consecuencias prácticas de no registrar la propiedad intelectual y el orden correcto de protección.",
+  "xp": 800,
+  "personaje_principal": "Camila",
+  "contexto_inicial": "Ventas: $180,000 al mes. 42,000 seguidores. Marca no registrada. La carta dice que otra empresa registró ese nombre hace ocho meses y exige que deje de usarlo.",
+  "nodo_inicial": "la_carta",
+  "nodos": {
+    "la_carta": {
+      "id": "la_carta",
+      "texto": "\"Yo lo usaba antes que ellos\", dice Camila. ¿Eso la protege?",
+      "opciones": [
+        {
+          "id": "consultar",
+          "texto": "Consultar con un especialista qué derechos le da el uso previo",
+          "siguiente_nodo": "la_realidad",
+          "consecuencia": "En México la marca es de quien la registra primero, con excepciones muy acotadas para el uso previo demostrable.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": -15000
+        },
+        {
+          "id": "ignorar",
+          "texto": "Ignorar la carta: \"que me demanden\"",
+          "siguiente_nodo": "final_perdio",
+          "consecuencia": "A los tres meses le suspenden la tienda en línea y las redes por infracción.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -540000
+        },
+        {
+          "id": "pelear",
+          "texto": "Responder públicamente en redes acusándolos de robo",
+          "siguiente_nodo": "la_realidad",
+          "consecuencia": "Gana simpatías y no cambia nada de su situación legal.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "glob_game2",
-      "texto": "Llevas 6 meses ganando el 11% anual. Todo va bien. Pero de repente, hay una crisis política en México y el Peso empieza a perder valor frente al Yen.",
-      "imagen": "📉",
-      "opcion_correcta": "AMENAZA",
-      "feedback_acierto": "¡Decisión de experto! Decides cerrar tu posición y devolver el préstamo en Yenes antes de que el tipo de cambio se dispare. Salvaste tus ganancias.",
-      "feedback_error": "❌ Te quedaste paralizado. El Peso se devaluó un 20%. Aunque ganaste 11% de interés, ahora debes un 20% más en Yenes. ¡Has perdido dinero!",
-      "tipo_ataque": "Riesgo Cambiario"
+    "la_realidad": {
+      "id": "la_realidad",
+      "texto": "El especialista le explica: puede intentar demostrar uso previo, un proceso caro e incierto, o negociar. Le quedan tres caminos.",
+      "opciones": [
+        {
+          "id": "negociar",
+          "texto": "Negociar una licencia o la compra del registro",
+          "siguiente_nodo": "el_desenlace",
+          "consecuencia": "La otra empresa pide $200,000 por ceder el registro.",
+          "xp_bonus": 220,
+          "impacto_patrimonio": -200000
+        },
+        {
+          "id": "rebautizar",
+          "texto": "Cambiar de nombre y registrarlo bien esta vez",
+          "siguiente_nodo": "el_rebranding",
+          "consecuencia": "Duele, y es la salida más limpia y más rápida.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": -80000
+        },
+        {
+          "id": "juicio",
+          "texto": "Ir a juicio a defender el uso previo",
+          "siguiente_nodo": "final_juicio",
+          "consecuencia": "Dos años de proceso con resultado incierto.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": -320000
+        }
+      ]
     },
-    {
-      "id": "glob_game3",
-      "texto": "Has aprendido que en las finanzas globales, no solo importa cuánto interés te pagan, sino qué tan estable es la moneda en la que estás invirtiendo.",
-      "imagen": "🌍",
-      "opcion_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades, Arbitrajista Global! Estás listo para entender los flujos de capital del mundo real.",
-      "feedback_error": "Nunca ignores el tipo de cambio; es el factor que más influye en el éxito de una inversión internacional.",
-      "tipo_ataque": "Lección de Divisas"
+    "el_rebranding": {
+      "id": "el_rebranding",
+      "texto": "Antes de elegir el nombre nuevo, ¿qué hace?",
+      "opciones": [
+        {
+          "id": "buscar",
+          "texto": "Buscar en la base del IMPI si está disponible y registrarlo antes de lanzarlo",
+          "siguiente_nodo": "final_protegida",
+          "consecuencia": "La búsqueda es pública y gratuita; el registro cuesta unos pocos miles de pesos.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "lanzar",
+          "texto": "Lanzar el nombre nuevo y registrarlo después, cuando pegue",
+          "siguiente_nodo": "final_repite",
+          "consecuencia": "El mismo error, otra vez.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -180000
+        }
+      ]
+    },
+    "el_desenlace": {
+      "id": "el_desenlace",
+      "texto": "Pagar $200,000 por su propio nombre duele, y conserva dos años de reputación construida. Al hacerlo, ¿qué más protege?",
+      "opciones": [
+        {
+          "id": "todo",
+          "texto": "Registrar también el eslogan, los diseños y firmar confidencialidad con sus proveedores",
+          "siguiente_nodo": "final_protegida",
+          "consecuencia": "Blinda todo lo que puede blindarse, de una vez.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": -12000
+        },
+        {
+          "id": "solo_marca",
+          "texto": "Solo la marca: lo demás es exagerar",
+          "siguiente_nodo": "final_parcial",
+          "consecuencia": "Meses después un excolaborador lanza una línea idéntica.",
+          "xp_bonus": 100,
+          "impacto_patrimonio": -90000
+        }
+      ]
+    },
+    "final_protegida": {
+      "id": "final_protegida",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Camila reconstruyó su marca sobre un registro propio. Dos años después vale más que la anterior, y cuando una tienda departamental quiso distribuirla, todo el papeleo de propiedad intelectual ya estaba en orden.",
+      "reflexion_final": "En México la marca es de quien la registra primero, no de quien la usó primero. Registrar cuesta unos pocos miles de pesos y toma meses; perder tu nombre cuesta todo lo que construiste con él. La regla: busca en la base del IMPI antes de elegir el nombre, y regístralo antes de invertir en él."
+    },
+    "final_parcial": {
+      "id": "final_parcial",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Salvó la marca y perdió sus diseños: un excolaborador registró una línea casi idéntica sin haber firmado nada de confidencialidad.",
+      "reflexion_final": "La propiedad intelectual son varias capas: marca, derechos de autor sobre diseños y confidencialidad con quien tiene acceso a lo tuyo. Proteger solo una deja las otras puertas abiertas."
+    },
+    "final_juicio": {
+      "id": "final_juicio",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Dos años de juicio, $320,000 en abogados y una resolución parcial. Mientras litigaba no pudo crecer, no consiguió distribuidores y sus ventas cayeron a la mitad.",
+      "reflexion_final": "Litigar por una marca no registrada es caro, lento e incierto. El costo del juicio suele superar por mucho lo que habría costado registrarla a tiempo, y el peor costo es el tiempo que dejas de crecer."
+    },
+    "final_perdio": {
+      "id": "final_perdio",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Le suspendieron tienda y redes por infracción. Perdió 42,000 seguidores, su posicionamiento y seis meses de ventas. Tuvo que empezar de cero, esta vez sin capital.",
+      "reflexion_final": "Ignorar un requerimiento legal por propiedad intelectual no lo hace desaparecer: lo hace más caro. Las plataformas retiran cuentas ante una notificación de infracción sin esperar a que un juez resuelva."
+    },
+    "final_repite": {
+      "id": "final_repite",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "El nombre nuevo pegó rápido y, seis meses después, llegó otra carta: alguien más lo había registrado mientras Camila construía la marca. Segunda vez, mismo error.",
+      "reflexion_final": "Registrar después de que la marca funciona es exactamente al revés. El momento de registrar es antes de invertir en darla a conocer: el trámite es barato, y para cuando el nombre ya vale algo, suele ser tarde."
     }
-  ],
-  "versión": "2026.Diamond.V2",
-  "game_type": "clasificacion",
-  "instruccion": "Toma decisiones de inversión global. ¿Esta estrategia MAXIMIZA o EXPONE a riesgo?",
-  "duracion": 150,
-  "opciones_clasificacion": [
-    "MAXIMIZA RETORNO",
-    "EXPONE A RIESGO"
-  ],
-  "items": [
-    {
-      "id": "glob_game1",
-      "label": "Pides un préstamo en Yenes Japoneses a una tasa de casi 0%. Cambias esos Yenes a Pesos Mexicanos par...",
-      "emoji": "💴",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Correcto! Se llama CARRY TRADE. Estás aprovechando la diferencia de tasas entre dos países.",
-      "feedback_error": "❌ Se llama Carry Trade. Es una de las formas más comunes en que los bancos mueven dinero por el mundo.",
-      "puntos": 100
-    },
-    {
-      "id": "glob_game2",
-      "label": "Llevas 6 meses ganando el 11% anual. Todo va bien. Pero de repente, hay una crisis política en Méxic...",
-      "emoji": "📉",
-      "tipo": "correcto",
-      "respuesta_correcta": "AMENAZA",
-      "feedback_acierto": "¡Decisión de experto! Decides cerrar tu posición y devolver el préstamo en Yenes antes de que el tipo de cambio se dispare. Salvaste tus ganancias.",
-      "feedback_error": "❌ Te quedaste paralizado. El Peso se devaluó un 20%. Aunque ganaste 11% de interés, ahora debes un 20% más en Yenes. ¡Has perdido dinero!",
-      "puntos": 100
-    },
-    {
-      "id": "glob_game3",
-      "label": "Has aprendido que en las finanzas globales, no solo importa cuánto interés te pagan, sino qué tan es...",
-      "emoji": "🌍",
-      "tipo": "correcto",
-      "respuesta_correcta": "SEGURO",
-      "feedback_acierto": "¡Felicidades, Arbitrajista Global! Estás listo para entender los flujos de capital del mundo real.",
-      "feedback_error": "Nunca ignores el tipo de cambio; es el factor que más influye en el éxito de una inversión internacional.",
-      "puntos": 100
-    }
-  ],
-  "puntos": {
-    "acierto": 100,
-    "error": -25,
-    "max_posible": 300
-  }
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

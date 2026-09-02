@@ -4,96 +4,194 @@
   "unit_title": "Negociación salarial: pedir un aumento con argumentos",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "El Mapa de los Recursos",
-  "descripcion": "El mundo se mueve por las materias primas. ¿Sabes para qué sirven y por qué los países pelean por ellas?",
-  "objetivo": "Identificar los principales commodities y su importancia estratégica en la economía global",
-  "xp": 400,
-  "instruccion": "Arrastra cada recurso a su uso estratégico correcto.",
-  "items": [
-    {
-      "id": "res1",
-      "label": "Petróleo Crudo",
-      "emoji": "🛢️",
-      "categoria_correcta": "energia",
-      "feedback": "Base de la gasolina, plásticos y fertilizantes."
+  "tipo": "DECIDE",
+  "complejidad": "ALTO",
+  "titulo": "El Aumento",
+  "descripcion": "La hermana de Iván lleva dos años en su trabajo sin un solo aumento. Hace más cosas que cuando entró y gana lo mismo. Va a pedir un aumento y tiene una sola oportunidad de hacerlo bien.",
+  "objetivo": "Desarrollar habilidades de comunicación asertiva para negociar compensación con base en valor aportado y resultados medibles.",
+  "xp": 750,
+  "personaje_principal": "Nora",
+  "contexto_inicial": "Gana $18,000. En dos años automatizó un proceso que ahorra 40 horas al mes al equipo y capacitó a tres personas nuevas. El puesto equivalente en el mercado paga entre $23,000 y $27,000.",
+  "nodo_inicial": "la_preparacion",
+  "nodos": {
+    "la_preparacion": {
+      "id": "la_preparacion",
+      "texto": "Antes de pedir la reunión, ¿qué prepara Nora?",
+      "opciones": [
+        {
+          "id": "evidencia",
+          "texto": "Una lista de resultados medibles y datos del salario de mercado",
+          "siguiente_nodo": "el_momento",
+          "consecuencia": "Llega con cifras: 40 horas al mes ahorradas, 3 personas capacitadas, rango de mercado.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "necesidad",
+          "texto": "Una explicación de por qué necesita el dinero: subió la renta",
+          "siguiente_nodo": "el_momento",
+          "consecuencia": "Sus gastos son un problema suyo, no un argumento para la empresa.",
+          "xp_bonus": 50,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "nada",
+          "texto": "Nada: entrar y pedirlo directo",
+          "siguiente_nodo": "sin_argumentos",
+          "consecuencia": "\"Déjame revisarlo\" y nunca se revisa.",
+          "xp_bonus": 10,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "res2",
-      "label": "Gas Natural",
-      "emoji": "🔥",
-      "categoria_correcta": "energia",
-      "feedback": "Usado para generar electricidad y calefacción."
+    "sin_argumentos": {
+      "id": "sin_argumentos",
+      "texto": "El jefe pregunta: \"¿por qué crees que mereces un aumento?\". Nora no tiene una respuesta concreta preparada.",
+      "opciones": [
+        {
+          "id": "pedir_tiempo",
+          "texto": "Pedir reagendar y volver con datos",
+          "siguiente_nodo": "el_momento",
+          "consecuencia": "Mejor una semana de retraso que un \"no\" definitivo.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "improvisar",
+          "texto": "Improvisar: \"llevo dos años aquí\"",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "La antigüedad sola no es un argumento de valor.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "res3",
-      "label": "Litio",
-      "emoji": "🔋",
-      "categoria_correcta": "tecnologia",
-      "feedback": "El 'oro blanco': indispensable para baterías de autos eléctricos."
+    "el_momento": {
+      "id": "el_momento",
+      "texto": "¿Cuándo pide la reunión?",
+      "opciones": [
+        {
+          "id": "buen_momento",
+          "texto": "Justo después de entregar el proyecto que salió muy bien",
+          "siguiente_nodo": "la_cifra",
+          "consecuencia": "Su valor está fresco en la memoria de todos.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "mal_momento",
+          "texto": "El día del cierre de mes, cuando todos están saturados",
+          "siguiente_nodo": "la_cifra",
+          "consecuencia": "El jefe la escucha con la cabeza en otra parte.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "res4",
-      "label": "Cobre",
-      "emoji": "🔌",
-      "categoria_correcta": "tecnologia",
-      "feedback": "El mejor conductor para cables eléctricos y construcción."
+    "la_cifra": {
+      "id": "la_cifra",
+      "texto": "El jefe pregunta: \"¿cuánto tenías en mente?\". Este es el momento decisivo.",
+      "opciones": [
+        {
+          "id": "rango_alto",
+          "texto": "Dar un rango informado: \"entre $25,000 y $27,000, según el mercado\"",
+          "siguiente_nodo": "la_objecion",
+          "consecuencia": "Ancla la negociación en datos, no en sensaciones.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "devolver",
+          "texto": "Devolver la pregunta: \"¿qué rango maneja la empresa para este puesto?\"",
+          "siguiente_nodo": "la_objecion",
+          "consecuencia": "También válido: obliga a que la primera cifra la diga él.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "poco",
+          "texto": "Pedir poco para asegurar el sí: \"$19,500 estaría bien\"",
+          "siguiente_nodo": "final_barata",
+          "consecuencia": "El jefe acepta de inmediato. Demasiado rápido.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 18000
+        }
+      ]
     },
-    {
-      "id": "res5",
-      "label": "Oro",
-      "emoji": "🥇",
-      "categoria_correcta": "refugio",
-      "feedback": "Activo que mantiene su valor durante guerras y crisis financieras."
+    "la_objecion": {
+      "id": "la_objecion",
+      "texto": "El jefe responde: \"No hay presupuesto para eso este trimestre\".",
+      "opciones": [
+        {
+          "id": "plan",
+          "texto": "Proponer un plan: \"¿podemos acordar por escrito una revisión en 3 meses con metas concretas?\"",
+          "siguiente_nodo": "final_exito",
+          "consecuencia": "Convierte un no en un calendario con compromiso.",
+          "xp_bonus": 300,
+          "es_optima": true,
+          "impacto_patrimonio": 84000
+        },
+        {
+          "id": "alternativas",
+          "texto": "Explorar otras compensaciones: días libres, capacitación pagada, home office",
+          "siguiente_nodo": "final_mixto",
+          "consecuencia": "El presupuesto de sueldo está cerrado; el de capacitación no.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 30000
+        },
+        {
+          "id": "amenazar",
+          "texto": "Amenazar con renunciar",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "Una amenaza que no piensas cumplir destruye tu posición.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "rendirse",
+          "texto": "Aceptar el no y no volver a mencionarlo",
+          "siguiente_nodo": "final_no",
+          "consecuencia": "Un año después sigue ganando lo mismo.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "res6",
-      "label": "Plata",
-      "emoji": "🥈",
-      "categoria_correcta": "refugio",
-      "feedback": "Usada en joyería y componentes electrónicos avanzados."
+    "final_exito": {
+      "id": "final_exito",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Acordaron por escrito tres metas y una revisión a 90 días. Nora las cumplió y su sueldo pasó a $25,000. En dos años ese aumento representó $168,000 adicionales.",
+      "reflexion_final": "Un aumento no se pide, se argumenta. Las claves: datos de lo que aportaste (medibles, no adjetivos), datos del mercado, el momento correcto, una cifra concreta y, ante un no, convertirlo en un plan con fecha. Un \"no ahora\" con calendario vale mucho más que un \"no\" aceptado en silencio."
     },
-    {
-      "id": "res7",
-      "label": "Trigo y Maíz",
-      "emoji": "🌾",
-      "categoria_correcta": "comida",
-      "feedback": "Base de la alimentación mundial; su escasez causa hambrunas."
+    "final_mixto": {
+      "id": "final_mixto",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "No consiguió el aumento inmediato, pero sí una certificación pagada de $40,000 y dos días de home office. Con esa certificación, al año siguiente cambió de empleo ganando $28,000.",
+      "reflexion_final": "Cuando el presupuesto de sueldo está cerrado, otras partidas siguen abiertas. Capacitación, flexibilidad y responsabilidades nuevas también son compensación, y a veces valen más a futuro que el aumento."
     },
-    {
-      "id": "res8",
-      "label": "Soja",
-      "emoji": "🌱",
-      "categoria_correcta": "comida",
-      "feedback": "Principal fuente de proteína para la ganadería global."
+    "final_barata": {
+      "id": "final_barata",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Consiguió $19,500. El \"sí\" instantáneo le dejó una duda: pidió $1,500 cuando el mercado pagaba $7,000 más. Ese error se repetirá en cada aumento porcentual futuro.",
+      "reflexion_final": "Pedir poco para asegurar el sí es el error más común. Además, cada aumento futuro se calcula sobre esa base baja: subestimarte una vez te persigue durante años. Investigar el rango del mercado antes de hablar es lo que evita esto."
+    },
+    "final_no": {
+      "id": "final_no",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Se quedó sin aumento y con una conversación incómoda. Un año después seguía en $18,000, haciendo el trabajo de dos personas.",
+      "reflexion_final": "La antigüedad no es un argumento y las amenazas vacías destruyen tu credibilidad. Lo que negocia un aumento es el valor demostrado con números, no el tiempo transcurrido."
     }
-  ],
-  "categorias": [
-    {
-      "id": "energia",
-      "label": "ENERGÍA E INDUSTRIA",
-      "emoji": "🏭",
-      "color": "#1e3a8a"
-    },
-    {
-      "id": "tecnologia",
-      "label": "TECNOLOGÍA Y FUTURO",
-      "emoji": "🚀",
-      "color": "#b45309"
-    },
-    {
-      "id": "refugio",
-      "label": "RESERVA DE VALOR",
-      "emoji": "💎",
-      "color": "#047857"
-    },
-    {
-      "id": "comida",
-      "label": "SEGURIDAD ALIMENTARIA",
-      "emoji": "🍞",
-      "color": "#7c3aed"
-    }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

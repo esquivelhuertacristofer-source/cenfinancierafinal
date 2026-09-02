@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-4-9-B",
+  "unit_code": "P1-4-9",
+  "unit_title": "Un negocio entre amigos: repartir el trabajo",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Socios y Acuerdos",
+  "descripcion": "Demuestra que sabes organizar un negocio con otras personas sin acabar peleado.",
+  "objetivo": "Verificar la comprensión de roles, acuerdos previos y reparto",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los cuatro trabajos de un negocio son:",
+      "opciones": [
+        "Comprar, vender, gastar y ahorrar",
+        "Pensar, hablar, correr y contar",
+        "Hacer, deshacer, guardar y tirar",
+        "Materiales, producción, venta y cuentas"
+      ],
+      "correcta": 3,
+      "explicacion": "Trabajando solo haces las cuatro; en equipo conviene repartirlas."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Cuándo se acuerda el reparto de la ganancia?",
+      "opciones": [
+        "Antes de empezar",
+        "Al final, con el dinero contado",
+        "Nunca",
+        "Cuando alguien se queja"
+      ],
+      "correcta": 0,
+      "explicacion": "Antes nadie está enojado y todos piensan con calma."
+    },
+    {
+      "id": "q3",
+      "texto": "Ganamos $90 entre tres, en partes iguales. A cada uno le toca:",
+      "opciones": [
+        "$45",
+        "$30",
+        "$90",
+        "$20"
+      ],
+      "correcta": 1,
+      "explicacion": "90 entre 3 son 30. El reparto por igual es válido si se acordó antes."
+    },
+    {
+      "id": "q4",
+      "texto": "Escribir el acuerdo entre amigos significa:",
+      "opciones": [
+        "Que desconfío de ellos",
+        "Que soy exagerado",
+        "Que quiero seguir siendo su amigo después",
+        "Que no los quiero"
+      ],
+      "correcta": 2,
+      "explicacion": "Los socios adultos hacen contratos justo para proteger la relación."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Qué frase suele terminar en pleito?",
+      "opciones": [
+        "\"Tú vendes y yo produzco\"",
+        "\"Anotemos lo que gastamos\"",
+        "\"Vamos a turnarnos\"",
+        "\"Ya luego vemos cómo repartimos\""
+      ],
+      "correcta": 3,
+      "explicacion": "Posponer el acuerdo es posponer el conflicto, no evitarlo."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Todos los roles cuestan el mismo esfuerzo?",
+      "opciones": [
+        "No, y el acuerdo puede reflejarlo",
+        "Sí, siempre",
+        "Sí, si son amigos",
+        "No, pero da igual"
+      ],
+      "correcta": 0,
+      "explicacion": "Un equipo puede repartir por igual o dar más a quien hizo lo más pesado. Lo importante es decidirlo."
+    },
+    {
+      "id": "q7",
+      "texto": "El dinero del equipo se cuenta:",
+      "opciones": [
+        "En casa de quien cobró",
+        "Frente a todo el equipo",
+        "Al día siguiente",
+        "Cuando alguien lo pida"
+      ],
+      "correcta": 1,
+      "explicacion": "Contar juntos elimina la mayoría de las dudas antes de que existan."
+    },
+    {
+      "id": "q8",
+      "texto": "Quien puso el dinero de los materiales:",
+      "opciones": [
+        "Lo pierde",
+        "Cobra doble siempre",
+        "Debe recuperarlo antes de repartir ganancias",
+        "No participa"
+      ],
+      "correcta": 2,
+      "explicacion": "Primero se recupera lo invertido; lo que sobra es la ganancia a repartir."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-9-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-9-b-escena.webp"
+}

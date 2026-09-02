@@ -5,95 +5,117 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "ARRASTRA",
-  "complejidad": "MEDIO",
-  "titulo": "Escalones de la Libertad",
-  "descripcion": "La riqueza no es cuánto dinero tienes, sino cuántos días puedes vivir sin trabajar. ¡Descubre tu nivel de libertad!",
-  "objetivo": "Diferenciar las etapas de la independencia financiera y las prioridades en cada una",
-  "xp": 400,
-  "instruccion": "Arrastra cada situación al escalón de libertad financiera que le corresponde.",
-  "items": [
-    {
-      "id": "lib1",
-      "label": "Vivir 'cheque a cheque', sin ahorros",
-      "emoji": "🏃",
-      "categoria_correcta": "supervivencia",
-      "feedback": "Estás atrapado en la carrera de la rata. Un imprevisto sería un desastre."
-    },
-    {
-      "id": "lib2",
-      "label": "Tener deudas de tarjetas bajo control",
-      "emoji": "📉",
-      "categoria_correcta": "supervivencia",
-      "feedback": "El primer paso es dejar de cavar el hoyo de la deuda."
-    },
-    {
-      "id": "lib3",
-      "label": "Fondo de emergencia de 6 meses de gastos",
-      "emoji": "🛡️",
-      "categoria_correcta": "seguridad",
-      "feedback": "Ahora puedes dormir tranquilo. Una pérdida de empleo es solo un contratiempo."
-    },
-    {
-      "id": "lib4",
-      "label": "Tener todos tus seguros contratados",
-      "emoji": "🏥",
-      "categoria_correcta": "seguridad",
-      "feedback": "Tus ahorros están blindados contra accidentes o enfermedades."
-    },
-    {
-      "id": "lib5",
-      "label": "Tus rendimientos pagan tu renta y comida",
-      "emoji": "🏠",
-      "categoria_correcta": "independencia",
-      "feedback": "¡Hito histórico! Ya no necesitas trabajar para sobrevivir."
-    },
-    {
-      "id": "lib6",
-      "label": "Poder dejar tu empleo hoy mismo",
-      "emoji": "🚪",
-      "categoria_correcta": "independencia",
-      "feedback": "Eres libre de elegir cómo usar tu tiempo, el activo más valioso."
-    },
-    {
-      "id": "lib7",
-      "label": "Tus inversiones pagan lujos y viajes pro",
-      "emoji": "✈️",
-      "categoria_correcta": "libertad",
-      "feedback": "Nivel maestro. El dinero sobra para vivir la vida que soñaste."
-    },
-    {
-      "id": "lib8",
-      "label": "Donar a causas y crear una fundación",
-      "emoji": "🤝",
-      "categoria_correcta": "libertad",
-      "feedback": "Tu dinero se convierte en impacto social y un legado para el mundo."
-    }
-  ],
+  "complejidad": "ALTO",
+  "titulo": "Preguntar Bien",
+  "descripcion": "Investigar el mercado no es preguntar \"¿te gusta mi idea?\". Hay dos formas de investigar y cada una responde preguntas distintas. Y hay preguntas que no sirven para nada.",
+  "objetivo": "Aplicar técnicas de investigación cualitativa y cuantitativa, distinguiéndolas de las preguntas que producen respuestas falsas.",
+  "xp": 550,
+  "instruccion": "Arrastra cada técnica o pregunta a su categoría.",
   "categorias": [
     {
-      "id": "supervivencia",
-      "label": "NIVEL 1: SUPERVIVENCIA",
-      "emoji": "⚠️",
-      "color": "#dc2626"
+      "id": "cualitativa",
+      "label": "CUALITATIVA (por qué)",
+      "emoji": "💬",
+      "color": "#8b5cf6"
     },
     {
-      "id": "seguridad",
-      "label": "NIVEL 2: SEGURIDAD",
-      "emoji": "🛡️",
-      "color": "#2563eb"
+      "id": "cuantitativa",
+      "label": "CUANTITATIVA (cuántos)",
+      "emoji": "📊",
+      "color": "#3b82f6"
     },
     {
-      "id": "independencia",
-      "label": "NIVEL 3: INDEPENDENCIA",
-      "emoji": "🔓",
-      "color": "#059669"
-    },
-    {
-      "id": "libertad",
-      "label": "NIVEL 4: LIBERTAD / LEGADO",
-      "emoji": "👑",
-      "color": "#7c3aed"
+      "id": "inutil",
+      "label": "NO SIRVE",
+      "emoji": "🚫",
+      "color": "#ef4444"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Entrevistar a 10 clientes potenciales una hora cada uno",
+      "emoji": "🎙️",
+      "categoria_correcta": "cualitativa",
+      "feedback": "Sirve para descubrir el problema real, ese que no sabías que existía."
+    },
+    {
+      "id": "i2",
+      "label": "Encuestar a 400 personas con preguntas cerradas",
+      "emoji": "📋",
+      "categoria_correcta": "cuantitativa",
+      "feedback": "Sirve para medir cuánta gente comparte un problema ya identificado."
+    },
+    {
+      "id": "i3",
+      "label": "Preguntarle a tu mamá si le gusta tu idea",
+      "emoji": "🚫",
+      "categoria_correcta": "inutil",
+      "feedback": "Quien te quiere no puede darte información honesta. Siempre dirá que sí."
+    },
+    {
+      "id": "i4",
+      "label": "Observar cómo la gente resuelve hoy ese problema",
+      "emoji": "👀",
+      "categoria_correcta": "cualitativa",
+      "feedback": "Lo que la gente HACE es más confiable que lo que DICE que hace."
+    },
+    {
+      "id": "i5",
+      "label": "Medir cuántas personas dan clic en un anuncio de prueba",
+      "emoji": "🖱️",
+      "categoria_correcta": "cuantitativa",
+      "feedback": "Un anuncio de un producto que aún no existe mide interés real por muy poco dinero."
+    },
+    {
+      "id": "i6",
+      "label": "\"¿Comprarías esto si existiera?\"",
+      "emoji": "🚫",
+      "categoria_correcta": "inutil",
+      "feedback": "La respuesta hipotética casi siempre es sí, y casi nunca se convierte en compra."
+    },
+    {
+      "id": "i7",
+      "label": "\"Cuéntame la última vez que tuviste este problema\"",
+      "emoji": "💬",
+      "categoria_correcta": "cualitativa",
+      "feedback": "Preguntar por el pasado concreto da información real; preguntar por el futuro, ficción."
+    },
+    {
+      "id": "i8",
+      "label": "Contar cuántos competidores hay y a qué precio venden",
+      "emoji": "🏪",
+      "categoria_correcta": "cuantitativa",
+      "feedback": "Que existan competidores es buena señal: prueba que hay mercado."
+    },
+    {
+      "id": "i9",
+      "label": "Preguntar en un grupo donde todos son tus amigos",
+      "emoji": "🚫",
+      "categoria_correcta": "inutil",
+      "feedback": "Sesgo de muestra: tus amigos no son tu mercado."
+    },
+    {
+      "id": "i10",
+      "label": "Preguntar \"¿cuánto pagas hoy por resolverlo?\"",
+      "emoji": "💰",
+      "categoria_correcta": "cualitativa",
+      "feedback": "Revela si el problema duele lo suficiente como para que ya gasten dinero en él."
+    },
+    {
+      "id": "i11",
+      "label": "Poner un botón de preventa y contar cuántos pagan",
+      "emoji": "💳",
+      "categoria_correcta": "cuantitativa",
+      "feedback": "La validación definitiva: dinero real de gente real."
+    },
+    {
+      "id": "i12",
+      "label": "Preguntar solo a quienes ya te dijeron que les gusta",
+      "emoji": "🚫",
+      "categoria_correcta": "inutil",
+      "feedback": "Buscar confirmación en vez de verdad es el sesgo que hunde más proyectos."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

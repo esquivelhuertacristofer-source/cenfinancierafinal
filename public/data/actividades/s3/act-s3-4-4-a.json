@@ -4,136 +4,118 @@
   "unit_title": "Exit Strategy: El gran retiro del emprendedor",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "ALTO",
-  "titulo": "Mi Portafolio de Vida",
-  "descripcion": "Este es tu examen final de vida. Diseña la estrategia financiera que seguirás desde hoy hasta tu retiro. ¡El futuro empieza ahora!",
-  "objetivo": "Integrar todos los conocimientos de finanzas personales, corporativas y gestión de riesgos en un plan financiero integral",
-  "xp": 1000,
-  "output_type": "Master Plan Financiero de Vida",
-  "exportable": true,
-  "pasos": [
+  "titulo": "Lo que Sube y lo que Hunde el Precio",
+  "descripcion": "Dos empresas facturan lo mismo y una vale el triple que la otra. La diferencia no está en las ventas: está en estas características.",
+  "objetivo": "Comprender la valuación de una empresa por múltiplos y qué factores aumentan o destruyen su valor de venta.",
+  "xp": 700,
+  "instruccion": "Arrastra cada característica según lo que le hace al precio de venta de una empresa.",
+  "categorias": [
     {
-      "id": "metas_grandes_s3",
-      "titulo": "🎯 Metas de Vida",
-      "descripcion": "¿Para qué quieres el dinero? Define tus motores.",
-      "campos": [
-        {
-          "id": "meta_libertad_s3",
-          "label": "¿A qué edad quieres ser financieramente libre (no tener que trabajar)?",
-          "type": "slider",
-          "min": 30,
-          "max": 75,
-          "step": 1,
-          "default": 55,
-          "unit": "años"
-        },
-        {
-          "id": "sueno_financiero",
-          "label": "Describe tu meta más grande",
-          "type": "textarea",
-          "placeholder": "Ej: Crear una fundación para niños, viajar por el mundo, ser dueño de un equipo de fútbol...",
-          "requerido": true
-        }
-      ]
+      "id": "sube",
+      "label": "SUBE EL PRECIO",
+      "emoji": "📈",
+      "color": "#22c55e"
     },
     {
-      "id": "estrategia_inversion_s3",
-      "titulo": "📈 Estrategia de Crecimiento",
-      "descripcion": "¿Cómo harás que tu dinero trabaje por ti?",
-      "campos": [
-        {
-          "id": "mezcla_activos_s3",
-          "label": "Distribución del Portafolio (%)",
-          "type": "select",
-          "opciones": [
-            "Agresivo (80% Acciones/Cripto, 20% Bonos)",
-            "Moderado (50% Acciones, 50% Bonos)",
-            "Conservador (20% Acciones, 80% Bonos/Oro)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "ahorro_mensual_s3",
-          "label": "Porcentaje de tus ingresos que ahorrarás/invertirás siempre",
-          "type": "slider",
-          "min": 5,
-          "max": 50,
-          "step": 5,
-          "default": 20,
-          "unit": "%"
-        }
-      ]
+      "id": "hunde",
+      "label": "HUNDE EL PRECIO",
+      "emoji": "📉",
+      "color": "#ef4444"
     },
     {
-      "id": "blindaje_riesgos_s3",
-      "titulo": "🛡️ Blindaje y Protección",
-      "descripcion": "Nadie es invencible. Protege tu camino.",
-      "campos": [
-        {
-          "id": "seguros_clave_s3",
-          "label": "Seguros que consideras obligatorios",
-          "type": "select",
-          "opciones": [
-            "Médico + Vida",
-            "Médico + Responsabilidad Civil",
-            "Todo Incluido (Médico, Vida, Ciber, Hogar)"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "plan_emergencia_s3",
-          "label": "¿De cuántos meses será tu Fondo de Emergencia?",
-          "type": "slider",
-          "min": 3,
-          "max": 24,
-          "step": 3,
-          "default": 6,
-          "unit": "meses"
-        }
-      ]
-    },
-    {
-      "id": "legado_final_s3",
-      "titulo": "💎 El Legado",
-      "descripcion": "¿Qué dejarás cuando ya no estés?",
-      "campos": [
-        {
-          "id": "herramienta_sucesion",
-          "label": "¿Qué usarás para proteger tu herencia?",
-          "type": "select",
-          "opciones": [
-            "Fideicomiso (Trust)",
-            "Testamento Simple",
-            "Donación en Vida"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "causa_social_s3",
-          "label": "¿A qué causa social dedicarás parte de tu riqueza?",
-          "type": "textarea",
-          "placeholder": "Ej: Educación, Cambio Climático, Salud, Artes...",
-          "requerido": true
-        },
-        {
-          "id": "meta_ahorro_mensual_est",
-          "label": "Ahorro Mensual Recomendado (20% de ingresos)",
-          "type": "calculated",
-          "formula": "Math.round(ahorro_mensual_s3 * 200)",
-          "unit": "$",
-          "ayuda": "Si tu % de ahorro fuera tu ingreso mensual estimado, este sería tu ahorro mensual real"
-        },
-        {
-          "id": "fondo_emergencia_meses",
-          "label": "Fondo de Emergencia Sugerido",
-          "type": "calculated",
-          "formula": "Math.round(ahorro_mensual_s3 * 200 * plan_emergencia_s3)",
-          "unit": "$",
-          "ayuda": "Tu ahorro mensual estimado × los meses de cobertura configurados"
-        }
-      ]
+      "id": "neutro",
+      "label": "CASI NO IMPORTA",
+      "emoji": "➖",
+      "color": "#64748b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Contratos que se renuevan solos cada año",
+      "emoji": "🔁",
+      "categoria_correcta": "sube",
+      "feedback": "Ingreso recurrente: el comprador sabe qué va a facturar el año que entra. Es lo que más eleva un múltiplo."
+    },
+    {
+      "id": "i2",
+      "label": "El dueño toma el 90% de las decisiones",
+      "emoji": "👤",
+      "categoria_correcta": "hunde",
+      "feedback": "Si el negocio no funciona sin ti, no estás vendiendo una empresa: estás vendiendo tu empleo."
+    },
+    {
+      "id": "i3",
+      "label": "Un solo cliente representa el 60% de las ventas",
+      "emoji": "🎯",
+      "categoria_correcta": "hunde",
+      "feedback": "Concentración: si ese cliente se va, se va la empresa. El comprador descuenta fuerte por eso."
+    },
+    {
+      "id": "i4",
+      "label": "Contabilidad ordenada y auditada",
+      "emoji": "📚",
+      "categoria_correcta": "sube",
+      "feedback": "La mayoría de las ventas se caen en la revisión previa por números que no cuadran."
+    },
+    {
+      "id": "i5",
+      "label": "La oficina es bonita y está recién remodelada",
+      "emoji": "🪴",
+      "categoria_correcta": "neutro",
+      "feedback": "Se valúa la capacidad de generar utilidad, no la decoración."
+    },
+    {
+      "id": "i6",
+      "label": "Procesos documentados que otro puede seguir",
+      "emoji": "📋",
+      "categoria_correcta": "sube",
+      "feedback": "Un manual convierte tu conocimiento en un activo transferible. Sin él, no hay nada que vender."
+    },
+    {
+      "id": "i7",
+      "label": "Parte del ingreso se cobra en efectivo sin factura",
+      "emoji": "🚩",
+      "categoria_correcta": "hunde",
+      "feedback": "Lo que no se puede comprobar no se puede vender: el comprador no paga por ingresos que no existen en papel."
+    },
+    {
+      "id": "i8",
+      "label": "La empresa tiene 20 años de antigüedad",
+      "emoji": "📅",
+      "categoria_correcta": "neutro",
+      "feedback": "La antigüedad sola no vale: hay negocios de 20 años que siguen dependiendo por completo del fundador."
+    },
+    {
+      "id": "i9",
+      "label": "La marca está registrada ante el IMPI",
+      "emoji": "™️",
+      "categoria_correcta": "sube",
+      "feedback": "Propiedad intelectual en orden: sin ella, el comprador está pagando por algo que legalmente no es tuyo."
+    },
+    {
+      "id": "i10",
+      "label": "El equipo clave no tiene contrato ni antigüedad reconocida",
+      "emoji": "⚠️",
+      "categoria_correcta": "hunde",
+      "feedback": "Si la gente que sostiene la operación se puede ir mañana, el comprador asume que se irá."
+    },
+    {
+      "id": "i11",
+      "label": "Muchos seguidores en redes sociales",
+      "emoji": "📱",
+      "categoria_correcta": "neutro",
+      "feedback": "Solo vale si se convierte en ventas comprobables. Seguidores sin facturación no mueven el precio."
+    },
+    {
+      "id": "i12",
+      "label": "Margen de utilidad creciente los últimos tres años",
+      "emoji": "💹",
+      "categoria_correcta": "sube",
+      "feedback": "La tendencia importa más que el número: un negocio que mejora se paga más caro que uno estancado."
+    }
+  ],
+  "versión": "2026.Alineada.2"
 }

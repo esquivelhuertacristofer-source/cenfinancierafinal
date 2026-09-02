@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-4-8-B",
+  "unit_code": "P6-4-8",
+  "unit_title": "Precio por valor, no por costo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Piso, Techo y Rango",
+  "descripcion": "Clasifica cada elemento según su papel en la fijación del precio.",
+  "objetivo": "Verificar la comprensión de los tres límites del precio",
+  "xp": 480,
+  "instruccion": "Arrastra cada elemento según qué papel juega al fijar un precio.",
+  "categorias": [
+    {
+      "id": "piso",
+      "label": "Marca el piso",
+      "emoji": "⬇️",
+      "color": "#EF4444"
+    },
+    {
+      "id": "techo",
+      "label": "Sube el techo",
+      "emoji": "⬆️",
+      "color": "#10B981"
+    },
+    {
+      "id": "rango",
+      "label": "Define el rango",
+      "emoji": "↔️",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Costo de los materiales",
+      "emoji": "📦",
+      "categoria_correcta": "piso",
+      "feedback": "Por debajo del costo total se pierde dinero."
+    },
+    {
+      "id": "i2",
+      "label": "Entrega garantizada en 24 horas",
+      "emoji": "⚡",
+      "categoria_correcta": "techo",
+      "feedback": "Sube el valor percibido casi sin subir el costo."
+    },
+    {
+      "id": "i3",
+      "label": "Precio promedio de negocios similares",
+      "emoji": "🏪",
+      "categoria_correcta": "rango",
+      "feedback": "Es la referencia contra la que el cliente compara."
+    },
+    {
+      "id": "i4",
+      "label": "El tiempo de trabajo por unidad",
+      "emoji": "⏱️",
+      "categoria_correcta": "piso",
+      "feedback": "Tu tiempo es costo aunque no lo factures."
+    },
+    {
+      "id": "i5",
+      "label": "Garantía de reposición sin preguntas",
+      "emoji": "🛡️",
+      "categoria_correcta": "techo",
+      "feedback": "Quita preocupación al cliente y eso se paga."
+    },
+    {
+      "id": "i6",
+      "label": "Lo que cobran los tres competidores cercanos",
+      "emoji": "📊",
+      "categoria_correcta": "rango",
+      "feedback": "Ubica en qué franja se mueve la decisión."
+    },
+    {
+      "id": "i7",
+      "label": "Costo del empaque",
+      "emoji": "🎁",
+      "categoria_correcta": "piso",
+      "feedback": "Suma al costo total que marca el mínimo."
+    },
+    {
+      "id": "i8",
+      "label": "Atención personalizada y respuesta rápida",
+      "emoji": "💬",
+      "categoria_correcta": "techo",
+      "feedback": "De los diferenciadores más baratos y más valorados."
+    },
+    {
+      "id": "i9",
+      "label": "Presentación cuidada del producto",
+      "emoji": "✨",
+      "categoria_correcta": "techo",
+      "feedback": "Cambia la percepción sin cambiar el contenido."
+    },
+    {
+      "id": "i10",
+      "label": "El precio de referencia que el cliente ya conoce",
+      "emoji": "🧠",
+      "categoria_correcta": "rango",
+      "feedback": "Todo precio se juzga contra algo ya conocido."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-4-8-b-escena.webp"
+}

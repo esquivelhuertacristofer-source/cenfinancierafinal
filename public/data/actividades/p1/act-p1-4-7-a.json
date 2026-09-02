@@ -1,0 +1,190 @@
+{
+  "code": "ACT-P1-4-7-A",
+  "unit_code": "P1-4-7",
+  "unit_title": "Los materiales cuestan: contar lo que gasté",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Limonada de Ceny",
+  "descripcion": "Ceny va a vender limonada en la feria escolar. Cada decisión de compra cambia su ganancia final.",
+  "objetivo": "Tomar decisiones de costo y precio observando su efecto directo sobre la ganancia",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny va a vender limonada en la feria. Su mamá le prestó $80 para materiales, que debe devolver al final del día. Cada decisión cambia cuánto le queda.",
+  "nodo_inicial": "compras",
+  "nodos": {
+    "compras": {
+      "id": "compras",
+      "texto": "Ceny va al mercado con $80. Hay limones a $30 el kilo y otros más pequeños a $18. Los grandes rinden un poco más.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Comprar los de $18 y probar cuánto rinden",
+          "siguiente_nodo": "olvido",
+          "consecuencia": "Ahorra $12 de entrada. Con eso ya hay margen para lo demás.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 12
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar los de $30 sin comparar",
+          "siguiente_nodo": "olvido",
+          "consecuencia": "Doce pesos más de costo que van directo a restar de la ganancia.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -12
+        },
+        {
+          "id": "o3",
+          "texto": "Comprar los dos tipos, por si acaso",
+          "siguiente_nodo": "sin_margen",
+          "consecuencia": "Ahora el costo de limones es $48 y quedan $32 para todo lo demás.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -30
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-compras.webp"
+    },
+    "olvido": {
+      "id": "olvido",
+      "texto": "Ya tiene limones y azúcar. Al llegar a casa se da cuenta de que no compró vasos. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Anotar los vasos en la lista de costos y comprarlos",
+          "siguiente_nodo": "precio",
+          "consecuencia": "Lo que se compra para el negocio va en la lista, aunque se haya olvidado.",
+          "xp_bonus": 45,
+          "es_optima": true,
+          "impacto_patrimonio": -20
+        },
+        {
+          "id": "o2",
+          "texto": "Usar los vasos de casa y no anotarlos",
+          "siguiente_nodo": "cuenta_falsa",
+          "consecuencia": "La cuenta va a decir que ganó más de lo que ganó.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-olvido.webp"
+    },
+    "sin_margen": {
+      "id": "sin_margen",
+      "texto": "Con $32 restantes apenas alcanza para azúcar y vasos. No queda nada de margen. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Devolver los limones caros y quedarse con los baratos",
+          "siguiente_nodo": "precio",
+          "consecuencia": "Corregir a tiempo es parte de llevar bien un negocio.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 30
+        },
+        {
+          "id": "o2",
+          "texto": "Seguir adelante y ya se verá",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Sin margen, cualquier imprevisto se convierte en pérdida.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-sin_margen.webp"
+    },
+    "cuenta_falsa": {
+      "id": "cuenta_falsa",
+      "texto": "Al final del día Ceny junta $110 y cree que ganó $50, porque no anotó los vasos ni el azúcar de casa. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Rehacer la cuenta incluyendo todo lo usado",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "La ganancia real es menor, pero ahora el número es verdadero.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": -20
+        },
+        {
+          "id": "o2",
+          "texto": "Quedarse con su número y gastarlo",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Decidir con un número falso lleva a repetir el error más grande la próxima vez.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -20
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-cuenta_falsa.webp"
+    },
+    "precio": {
+      "id": "precio",
+      "texto": "El costo total quedó en $68 y Ceny hará 20 vasos. ¿A qué precio los vende?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "A $6 el vaso: 20 vasos son $120",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "$120 de venta menos $68 de costo: $52 de ganancia real.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 52
+        },
+        {
+          "id": "o2",
+          "texto": "A $3 el vaso, para vender rapidísimo",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "20 vasos a $3 son $60, menos que los $68 que costó producirlos.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -8
+        },
+        {
+          "id": "o3",
+          "texto": "A $15 el vaso, para ganar mucho",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Casi nadie compra a ese precio. Sobran 14 vasos sin vender.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 22
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-precio.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny vendió los 20 vasos, devolvió los $80 a su mamá y le quedaron $52 limpios.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Ceny comparó precios, anotó todo lo que gastó y puso un precio que cubría el costo. Los $52 que le quedaron son ganancia de verdad, no una ilusión.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny vendió, pero la ganancia fue mucho menor de lo que esperaba.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El negocio funcionó, pero el precio o las cuentas no cuadraron bien. Lo importante es que ahora sabe el número real y puede corregirlo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny no pudo devolverle los $80 completos a su mamá.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Vender no es ganar. Sin anotar los costos y sin margen, un día entero de trabajo terminó en pérdida sin que Ceny lo notara a tiempo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-4-7-a-portada.webp"
+}

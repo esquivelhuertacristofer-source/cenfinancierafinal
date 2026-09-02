@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-2-7-B",
+  "unit_code": "P3-2-7",
+  "unit_title": "El estado de cuenta: aprender a leerlo",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Estado de Cuenta",
+  "descripcion": "Lee rápido y detecta lo que no cuadra.",
+  "objetivo": "Consolidar la lectura de campos y el proceso de aclaración",
+  "xp": 160,
+  "tiempo_por_pregunta": 22,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Saldo inicial $500, abonos $300, cargos $200. Saldo final:",
+      "respuesta_correcta": "$600",
+      "incorrectas": [
+        "$400",
+        "$1,000",
+        "$800"
+      ],
+      "dato_extra": "500 + 300 − 200 = 600. Si el impreso dice otra cosa, hay algo que revisar."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Los abonos son:",
+      "respuesta_correcta": "Todo lo que entró a la cuenta",
+      "incorrectas": [
+        "Todo lo que salió",
+        "Las comisiones",
+        "El saldo final"
+      ],
+      "dato_extra": "Depósitos, transferencias recibidas e intereses ganados."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Los cargos son:",
+      "respuesta_correcta": "Todo lo que salió de la cuenta",
+      "incorrectas": [
+        "Todo lo que entró",
+        "El saldo inicial",
+        "Los intereses"
+      ],
+      "dato_extra": "Retiros, compras, transferencias enviadas y comisiones."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Comparar el estado de cuenta con mi registro se llama:",
+      "respuesta_correcta": "Conciliar",
+      "incorrectas": [
+        "Presupuestar",
+        "Invertir",
+        "Cotizar"
+      ],
+      "dato_extra": "Es exactamente lo que hacen los contadores, solo que con más movimientos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Encuentro un cargo raro. ¿Qué hago primero?",
+      "respuesta_correcta": "Revisar mi registro y preguntar en casa",
+      "incorrectas": [
+        "Cerrar la cuenta",
+        "Reclamar sin datos",
+        "Ignorarlo"
+      ],
+      "dato_extra": "Muchos cargos \"raros\" resultan ser de alguien de la familia."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Por qué hay que reclamar pronto?",
+      "respuesta_correcta": "Porque hay un plazo para hacerlo",
+      "incorrectas": [
+        "Porque sube el cargo",
+        "Porque cierra el banco",
+        "Porque se pierde el papel"
+      ],
+      "dato_extra": "El propio estado de cuenta indica cuántos días tienes."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un cargo pequeño no reclamado:",
+      "respuesta_correcta": "Suele repetirse cada mes",
+      "incorrectas": [
+        "Se corrige solo",
+        "Desaparece",
+        "Se convierte en abono"
+      ],
+      "dato_extra": "$100 ignorados durante cuatro meses son $400 y un plazo vencido."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-2-7-b-escena.webp"
+}

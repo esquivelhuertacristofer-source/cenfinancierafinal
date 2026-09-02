@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-1-7-B",
+  "unit_code": "P1-1-7",
+  "unit_title": "Cuidar el dinero: por qué no se rompe ni se moja",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Guardián de mi Dinero",
+  "descripcion": "Demuestra que sabes dónde y cómo se cuida el dinero de verdad.",
+  "objetivo": "Verificar la comprensión de los criterios de resguardo y del costo real de perder dinero",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "¿Cuál de estos NO es un lugar seguro?",
+      "opciones": [
+        "El bolsillo del pantalón",
+        "Mi alcancía",
+        "El monedero con cierre",
+        "El cajón de mi cuarto"
+      ],
+      "correcta": 0,
+      "explicacion": "El bolsillo se abre, cambia de lugar cada día y termina en la lavadora."
+    },
+    {
+      "id": "q2",
+      "texto": "Perder $20 es igual de malo que...",
+      "opciones": [
+        "Ahorrarlos",
+        "Gastarlos en algo que ni siquiera querías",
+        "Prestarlos a tu mamá",
+        "Contarlos dos veces"
+      ],
+      "correcta": 1,
+      "explicacion": "En los dos casos el dinero ya no está, pero al perderlo ni siquiera recibiste algo a cambio."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Por qué es mala idea cambiar de escondite cada semana?",
+      "opciones": [
+        "Porque se ensucia el dinero",
+        "Porque el banco se enoja",
+        "Porque puedo olvidar dónde lo dejé",
+        "Porque cuesta dinero"
+      ],
+      "correcta": 2,
+      "explicacion": "Un lugar seguro es siempre el mismo. La memoria falla más que el cerrojo."
+    },
+    {
+      "id": "q4",
+      "texto": "Los billetes mexicanos actuales están hechos de:",
+      "opciones": [
+        "Papel de cuaderno",
+        "Tela de algodón",
+        "Cartón delgado",
+        "Polímero, parecido al plástico"
+      ],
+      "correcta": 3,
+      "explicacion": "El polímero resiste el agua y el uso mucho mejor que el papel, pero no es indestructible."
+    },
+    {
+      "id": "q5",
+      "texto": "Un billete se rompió a la mitad. ¿Qué se hace?",
+      "opciones": [
+        "Un adulto lo canjea en el banco si conserva más de la mitad",
+        "Se tira",
+        "Se pega y se usa igual",
+        "Se guarda de recuerdo"
+      ],
+      "correcta": 0,
+      "explicacion": "Banxico permite el canje de billetes dañados a través de los bancos comerciales."
+    },
+    {
+      "id": "q6",
+      "texto": "Traigo cambio en la mano y suena la campana. ¿Qué hago?",
+      "opciones": [
+        "Lo dejo en la banca un ratito",
+        "Lo guardo en mi monedero",
+        "Lo aprieto fuerte y corro",
+        "Se lo doy a un amigo"
+      ],
+      "correcta": 1,
+      "explicacion": "El único lugar donde el dinero está realmente a salvo es guardado y cerrado."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Quién es responsable de cuidar tu ahorro?",
+      "opciones": [
+        "El banco",
+        "La maestra",
+        "Yo, porque es mío",
+        "Nadie"
+      ],
+      "correcta": 2,
+      "explicacion": "Puedes pedir ayuda a un adulto, pero la responsabilidad de dónde lo dejas es tuya."
+    },
+    {
+      "id": "q8",
+      "texto": "Una moneda de $10 está rayada y sucia. Su valor es:",
+      "opciones": [
+        "Menos de $10",
+        "Cero",
+        "Depende de la tienda",
+        "Exactamente $10"
+      ],
+      "correcta": 3,
+      "explicacion": "El valor está en la denominación, no en el aspecto. Sucia o limpia, vale diez pesos."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-1-7-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-1-7-b-escena.webp"
+}

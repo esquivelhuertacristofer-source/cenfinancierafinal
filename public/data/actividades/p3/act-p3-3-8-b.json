@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P3-3-8-B",
+  "unit_code": "P3-3-8",
+  "unit_title": "Comprar a meses: cuánto termino pagando de verdad",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de los Meses",
+  "descripcion": "Calcula rápido cuánto se termina pagando.",
+  "objetivo": "Consolidar el cálculo del costo total en compras a plazos",
+  "xp": 160,
+  "tiempo_por_pregunta": 22,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "$199 al mes durante 24 meses son:",
+      "respuesta_correcta": "$4,776",
+      "incorrectas": [
+        "$2,388",
+        "$3,200",
+        "$1,990"
+      ],
+      "dato_extra": "199 × 24. Si el producto cuesta $3,200, pagas $1,576 de más."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El costo del financiamiento se obtiene:",
+      "respuesta_correcta": "Total pagado menos precio de contado",
+      "incorrectas": [
+        "Precio por meses",
+        "Mensualidad más meses",
+        "Total entre meses"
+      ],
+      "dato_extra": "Esa resta es lo que la publicidad nunca pone en grande."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Al alargar el plazo:",
+      "respuesta_correcta": "La mensualidad baja pero el total sube",
+      "incorrectas": [
+        "Todo baja",
+        "Todo sube",
+        "Nada cambia"
+      ],
+      "dato_extra": "Por eso te ofrecen plazos largos: el negocio es mayor."
+    },
+    {
+      "id": "q4",
+      "pregunta": "En meses sin intereses reales, el total a meses:",
+      "respuesta_correcta": "Es igual al precio de contado",
+      "incorrectas": [
+        "Es mayor",
+        "Es menor",
+        "Es el doble"
+      ],
+      "dato_extra": "Si no es igual, la promoción no es lo que dice ser."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Si me atraso en meses sin intereses:",
+      "respuesta_correcta": "Puede cancelarse y cobrarse los intereses",
+      "incorrectas": [
+        "No pasa nada",
+        "Me dan más meses",
+        "Baja la mensualidad"
+      ],
+      "dato_extra": "Un solo atraso puede activar todos los intereses de golpe."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La pregunta correcta antes de comprar a meses:",
+      "respuesta_correcta": "¿Cuánto termino pagando en total?",
+      "incorrectas": [
+        "¿Cuánto pago al mes?",
+        "¿Cuántos meses son?",
+        "¿Qué color tiene?"
+      ],
+      "dato_extra": "Con esa cifra la decisión deja de ser emocional."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Comparar planes solo por la mensualidad es:",
+      "respuesta_correcta": "El error que la oferta espera",
+      "incorrectas": [
+        "Lo más práctico",
+        "Lo recomendado",
+        "Igual que comparar totales"
+      ],
+      "dato_extra": "La mensualidad más baja suele esconder el total más alto."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-3-8-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-3-8-b-escena.webp"
+}

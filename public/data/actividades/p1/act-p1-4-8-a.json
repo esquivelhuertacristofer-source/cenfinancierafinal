@@ -1,0 +1,112 @@
+{
+  "code": "ACT-P1-4-8-A",
+  "unit_code": "P1-4-8",
+  "unit_title": "Mi puesto: cómo se ve y cómo invito",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Puesto que Sí Jala",
+  "descripcion": "Ajusta las barritas de tu puesto y descubre cuántos clientes se acercarían en un recreo.",
+  "objetivo": "Relacionar decisiones de presentación e invitación con la cantidad de clientes atraídos",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "orden",
+      "label": "¿Qué tan ordenado está mi puesto?",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts",
+      "referencia": "10 = mantel limpio y producto acomodado."
+    },
+    {
+      "id": "precio_visible",
+      "label": "¿Se ve el precio desde lejos?",
+      "type": "select",
+      "opciones": [
+        {
+          "label": "Sí, cartel grande",
+          "value": 3
+        },
+        {
+          "label": "Sí, pero pequeño",
+          "value": 2
+        },
+        {
+          "label": "No se ve",
+          "value": 1
+        }
+      ],
+      "default": 3,
+      "referencia": "El error más común es no poner el precio."
+    },
+    {
+      "id": "saludo",
+      "label": "¿Saludo a quien pasa?",
+      "type": "select",
+      "opciones": [
+        {
+          "label": "Saludo y espero",
+          "value": 3
+        },
+        {
+          "label": "Solo espero callado",
+          "value": 2
+        },
+        {
+          "label": "Persigo e insisto",
+          "value": 1
+        }
+      ],
+      "default": 3,
+      "referencia": "Insistir ahuyenta más de lo que atrae."
+    },
+    {
+      "id": "pasan",
+      "label": "Personas que pasan en el recreo",
+      "type": "slider",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "default": 80,
+      "unit": "personas",
+      "referencia": "Depende de dónde pongas tu mesa."
+    }
+  ],
+  "formula": "Math.round(pasan * (orden * 2 + precio_visible * 8 + saludo * 6) / 100)",
+  "descripcion_formula": "De toda la gente que pasa, solo se acerca una parte, y esa parte depende del orden, del precio visible y del saludo.",
+  "output_label": "Clientes que se acercan",
+  "output_suffix": " personas",
+  "escenarios": [
+    {
+      "condicion": "precio_visible == 1",
+      "mensaje": "Sin precio visible pierdes clientes que ni siquiera se acercan a preguntar. Es el arreglo más barato y el que más sirve.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "saludo == 1",
+      "mensaje": "Perseguir espanta. Quien dice que no hoy podría comprar mañana, si lo dejas ir con amabilidad.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "orden <= 3",
+      "mensaje": "Un puesto amontonado hace que la gente no entienda qué vendes y siga de largo.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "orden >= 8 && precio_visible == 3 && saludo == 3",
+      "mensaje": "Puesto ordenado, precio claro y saludo amable: así se aprovecha toda la gente que pasa.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "pasan >= 150",
+      "mensaje": "Estás en un lugar de mucho paso. La ubicación también es una decisión de negocio.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-8-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-8-a-escena.webp"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S2-4-7-B",
+  "unit_code": "S2-4-7",
+  "unit_title": "CAC y LTV: las dos cifras que deciden si puedes escalar",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Las Dos Cifras",
+  "descripcion": "Clasifica cada elemento según si afecta al costo de adquisición, al valor de vida o a ambos.",
+  "objetivo": "Verificar la comprensión de los componentes de CAC y LTV",
+  "xp": 400,
+  "instruccion": "Arrastra cada elemento según qué cifra modifica.",
+  "categorias": [
+    {
+      "id": "cac",
+      "label": "Afecta el costo de adquisición",
+      "emoji": "🎯",
+      "color": "#EF4444"
+    },
+    {
+      "id": "ltv",
+      "label": "Afecta el valor de vida",
+      "emoji": "💎",
+      "color": "#10B981"
+    },
+    {
+      "id": "ambos",
+      "label": "Afecta a los dos",
+      "emoji": "🔗",
+      "color": "#8B5CF6"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Inversión mensual en publicidad",
+      "emoji": "📢",
+      "categoria_correcta": "cac",
+      "feedback": "Es el numerador del costo de adquisición."
+    },
+    {
+      "id": "i2",
+      "label": "Cuántos meses permanece un cliente",
+      "emoji": "📆",
+      "categoria_correcta": "ltv",
+      "feedback": "La permanencia multiplica todo el valor de vida."
+    },
+    {
+      "id": "i3",
+      "label": "Contribución por cada venta",
+      "emoji": "💵",
+      "categoria_correcta": "ltv",
+      "feedback": "Lo que queda de cada compra tras costos variables."
+    },
+    {
+      "id": "i4",
+      "label": "Promociones de bienvenida al nuevo cliente",
+      "emoji": "🎁",
+      "categoria_correcta": "cac",
+      "feedback": "Cuenta como costo de conseguirlo."
+    },
+    {
+      "id": "i5",
+      "label": "Bajar el precio de venta",
+      "emoji": "📉",
+      "categoria_correcta": "ambos",
+      "feedback": "Puede atraer más clientes pero reduce la contribución."
+    },
+    {
+      "id": "i6",
+      "label": "Mejorar la calidad del producto",
+      "emoji": "⭐",
+      "categoria_correcta": "ambos",
+      "feedback": "Retiene más y además facilita atraer por recomendación."
+    },
+    {
+      "id": "i7",
+      "label": "Frecuencia con que el cliente compra",
+      "emoji": "🔁",
+      "categoria_correcta": "ltv",
+      "feedback": "Más compras en el mismo periodo elevan el valor."
+    },
+    {
+      "id": "i8",
+      "label": "Comisión pagada a un vendedor por cerrar",
+      "emoji": "🤝",
+      "categoria_correcta": "cac",
+      "feedback": "Es parte de lo invertido en conseguir al cliente."
+    },
+    {
+      "id": "i9",
+      "label": "Atención posventa que evita cancelaciones",
+      "emoji": "📞",
+      "categoria_correcta": "ltv",
+      "feedback": "La retención es la palanca más barata que existe."
+    },
+    {
+      "id": "i10",
+      "label": "Elegir un canal de venta más caro",
+      "emoji": "🏷️",
+      "categoria_correcta": "cac",
+      "feedback": "Sube directamente el costo por cliente conseguido."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-7-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-7-b-escena.webp"
+}

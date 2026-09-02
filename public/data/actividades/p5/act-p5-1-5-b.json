@@ -5,109 +5,109 @@
   "level": "Primaria 5",
   "edad": "10-11 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Los Guardianes de la Economía",
-  "descripcion": "¿Sabes quién ayuda a los países en problemas? ¡Descubre a los superhéroes de las finanzas mundiales!",
-  "objetivo": "Diferenciar las funciones y objetivos del FMI, el Banco Mundial y la OMC",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
+  "complejidad": "MEDIO",
+  "titulo": "Ciudadano Contribuyente",
+  "descripcion": "Pagar impuestos no es un castigo: es la cuota que hace posible lo que usamos entre todos. Comprueba si entendiste cómo funciona.",
+  "objetivo": "Conocer la función del SAT, identificar los impuestos más comunes en México y comprender la razón ética de contribuir al gasto público.",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "org1",
-      "texto": "¿Cuál es la principal función del Fondo Monetario Internacional (FMI)?",
+      "id": "q1",
+      "texto": "¿Qué hace el SAT?",
       "opciones": [
-        "Prestar dinero a países en crisis para estabilizar su economía",
-        "Construir parques en todo el mundo",
-        "Vender boletos de lotería",
-        "Elegir al presidente de cada país"
+        "Fabrica los billetes",
+        "Recauda los impuestos del país",
+        "Presta dinero a las familias",
+        "Vigila a los bancos"
+      ],
+      "correcta": 1,
+      "explicacion": "SAT significa Servicio de Administración Tributaria: cobra y administra los impuestos."
+    },
+    {
+      "id": "q2",
+      "texto": "Cuando compras un juguete, en el precio viene incluido un impuesto llamado…",
+      "opciones": [
+        "ISR",
+        "IVA",
+        "AFORE",
+        "CAT"
+      ],
+      "correcta": 1,
+      "explicacion": "El IVA (Impuesto al Valor Agregado) es del 16% y está incluido en casi todo lo que compras."
+    },
+    {
+      "id": "q3",
+      "texto": "El impuesto que se paga sobre el dinero que uno gana trabajando se llama…",
+      "opciones": [
+        "IVA",
+        "ISR",
+        "Predial",
+        "Tenencia"
+      ],
+      "correcta": 1,
+      "explicacion": "El ISR es el Impuesto Sobre la Renta: se calcula sobre lo que ganas."
+    },
+    {
+      "id": "q4",
+      "texto": "Si nadie pagara impuestos, lo más probable es que…",
+      "opciones": [
+        "Todos fuéramos más ricos",
+        "No hubiera escuelas, hospitales ni carreteras públicas",
+        "Los precios bajaran",
+        "No cambiara nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Los servicios públicos no aparecen solos: se pagan con lo que aporta cada quien."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Quién paga IVA cuando compra en una tienda?",
+      "opciones": [
+        "Solo los adultos",
+        "Solo quienes tienen RFC",
+        "Cualquiera que compre, incluso un niño",
+        "Solo las empresas"
+      ],
+      "correcta": 2,
+      "explicacion": "El IVA va en el precio: si compras un dulce, ya contribuiste."
+    },
+    {
+      "id": "q6",
+      "texto": "Pedir factura de una compra sirve para…",
+      "opciones": [
+        "Que el negocio declare esa venta y pague lo que le toca",
+        "Que te salga más barato",
+        "Ganar un premio",
+        "Nada, es solo un papel"
       ],
       "correcta": 0,
-      "explicacion": "El FMI actúa como un 'médico financiero' para países en problemas graves."
+      "explicacion": "La factura deja registro de la venta. Sin ella, ese impuesto puede no llegar nunca al país."
     },
     {
-      "id": "org2",
-      "texto": "¿A qué se dedica principalmente el Banco Mundial?",
+      "id": "q7",
+      "texto": "Un negocio que no da facturas y no reporta sus ventas está en la economía…",
       "opciones": [
-        "A guardar el dinero de todas las personas",
-        "A financiar proyectos de desarrollo (como escuelas, hospitales y puentes) en países pobres",
-        "A imprimir billetes de colores",
-        "A vender seguros de vida"
+        "Formal",
+        "Informal",
+        "Internacional",
+        "Digital"
       ],
       "correcta": 1,
-      "explicacion": "Su meta es reducir la pobreza financiando el progreso a largo plazo."
+      "explicacion": "La informalidad deja al negocio y a sus trabajadores sin seguridad social ni crédito, y al país sin recursos."
     },
     {
-      "id": "org3",
-      "texto": "¿Qué hace la Organización Mundial del Comercio (OMC)?",
+      "id": "q8",
+      "texto": "La razón principal para pagar impuestos es…",
       "opciones": [
-        "Organiza torneos de fútbol",
-        "Establece las reglas para que los países puedan comprar y vender entre ellos de forma justa",
-        "Fabrica todos los productos del mundo",
-        "Regala comida gratis"
+        "Que no te multen",
+        "Que existan servicios que ninguna familia podría pagar sola",
+        "Que el SAT tenga trabajo",
+        "Que suba tu sueldo"
       ],
       "correcta": 1,
-      "explicacion": "La OMC ayuda a que el comercio mundial sea fluido y sin peleas injustas."
-    },
-    {
-      "id": "org4",
-      "texto": "¿Por qué los países se ayudan entre sí a través de estos organismos?",
-      "opciones": [
-        "Por obligación",
-        "Porque si a un país le va mal, puede afectar a todos los demás (interdependencia)",
-        "Porque les sobra el dinero",
-        "Para que todos hablen el mismo idioma"
-      ],
-      "correcta": 1,
-      "explicacion": "En un mundo globalizado, la estabilidad de uno es la seguridad de todos."
-    },
-    {
-      "id": "org5",
-      "texto": "¿Qué es la 'Cooperación Internacional'?",
-      "opciones": [
-        "Competir para ver quién es el mejor",
-        "Trabajar juntos para resolver problemas que afectan a muchos países",
-        "Hacer trampa en los negocios",
-        "Vivir en una isla solos"
-      ],
-      "correcta": 1,
-      "explicacion": "Unirse para enfrentar retos como la pobreza o el cambio climático."
-    },
-    {
-      "id": "org6",
-      "texto": "¿De dónde sacan el dinero estos organismos internacionales?",
-      "opciones": [
-        "Lo encuentran tirado",
-        "De las aportaciones de todos los países miembros",
-        "Lo fabrican ellos mismos",
-        "De donaciones anónimas"
-      ],
-      "correcta": 1,
-      "explicacion": "Los países miembros pagan una cuota para formar este fondo común."
-    },
-    {
-      "id": "org7",
-      "texto": "Si un país quiere construir una presa gigante para dar luz a sus habitantes, ¿a quién le pide ayuda?",
-      "opciones": [
-        "Al FMI",
-        "Al Banco Mundial",
-        "A la OMC",
-        "A una tienda de conveniencia"
-      ],
-      "correcta": 1,
-      "explicacion": "El Banco Mundial financia proyectos de infraestructura y desarrollo."
-    },
-    {
-      "id": "org8",
-      "texto": "¿Cuál es el objetivo final de todos estos organismos?",
-      "opciones": [
-        "Que el mundo sea más próspero, estable y con menos pobreza",
-        "Que todos usen la misma moneda",
-        "Que no existan los bancos",
-        "Dominar el espacio exterior"
-      ],
-      "correcta": 0,
-      "explicacion": "Buscan un equilibrio económico global que beneficie a la humanidad."
+      "explicacion": "Ninguna familia podría construir sola una carretera o un hospital. Juntando la aportación de todos, sí se puede."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

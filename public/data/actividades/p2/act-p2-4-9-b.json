@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-4-9-B",
+  "unit_code": "P2-4-9",
+  "unit_title": "Clientes contentos: cumplir lo que prometo",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Clientes que Vuelven",
+  "descripcion": "Demuestra que entiendes por qué cumplir vale más que prometer.",
+  "objetivo": "Verificar el cálculo del valor de la recurrencia y los criterios de promesa cumplible",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un cliente compra $8 cada día durante 5 días. Deja:",
+      "opciones": [
+        "$8",
+        "$13",
+        "$40",
+        "$85"
+      ],
+      "correcta": 2,
+      "explicacion": "8 × 5 = 40. La misma persona, cinco veces más valiosa."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Qué es más difícil?",
+      "opciones": [
+        "Conservar al cliente que ya llegó",
+        "Los dos igual",
+        "Ninguno",
+        "Conseguir uno nuevo"
+      ],
+      "correcta": 3,
+      "explicacion": "Conseguir a alguien nuevo requiere llamarle la atención y convencerlo. Conservarlo solo requiere cumplir."
+    },
+    {
+      "id": "q3",
+      "texto": "Prometí la mejor galleta y di una normal. Lo más probable es que:",
+      "opciones": [
+        "El cliente simplemente no vuelva",
+        "El cliente reclame",
+        "Compre el doble",
+        "No pase nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Y tú ni te enteras de por qué bajaron tus ventas."
+    },
+    {
+      "id": "q4",
+      "texto": "¿Cuál de estas es una promesa concreta?",
+      "opciones": [
+        "El mejor sabor",
+        "El precio anunciado es el que cobro",
+        "Calidad insuperable",
+        "Increíble experiencia"
+      ],
+      "correcta": 1,
+      "explicacion": "Se puede verificar, y por eso construye confianza."
+    },
+    {
+      "id": "q5",
+      "texto": "¿Por qué \"el mejor sabor\" es mala promesa?",
+      "opciones": [
+        "Porque es larga",
+        "Porque es cara",
+        "Porque nadie puede medirla",
+        "Porque no cabe en el cartel"
+      ],
+      "correcta": 2,
+      "explicacion": "Una promesa que no se puede comprobar no genera confianza."
+    },
+    {
+      "id": "q6",
+      "texto": "Cometí un error con un cliente. Lo que decide si vuelve es:",
+      "opciones": [
+        "El error mismo",
+        "El precio",
+        "El clima",
+        "Lo que hago después"
+      ],
+      "correcta": 3,
+      "explicacion": "Reconocer, disculparse y reponer convierte un mal momento en una razón para confiar."
+    },
+    {
+      "id": "q7",
+      "texto": "Vendo a $8 y tengo 20 clientes el lunes. Si la mitad vuelve el martes, el martes vendo:",
+      "opciones": [
+        "$80",
+        "$160",
+        "$40",
+        "$8"
+      ],
+      "correcta": 0,
+      "explicacion": "10 clientes × $8 = $80, sin haber tenido que convencer a nadie nuevo."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Qué conviene más?",
+      "opciones": [
+        "Prometer mucho aunque falle",
+        "Prometer poco y cumplirlo siempre",
+        "No prometer nada",
+        "Prometer distinto cada día"
+      ],
+      "correcta": 1,
+      "explicacion": "Una promesa pequeña cumplida vale más que una grande incumplida."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-9-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-9-b-escena.webp"
+}

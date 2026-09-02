@@ -4,110 +4,96 @@
   "unit_title": "Del negocio a la empresa: sistemas y escalabilidad",
   "level": "Secundaria 3",
   "edad": "14-15 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Invertir con Propósito",
-  "descripcion": "¿Sabes qué diferencia a una empresa que solo quiere dinero de una que quiere mejorar el mundo? ¡Ponte a prueba!",
-  "objetivo": "Identificar los principios de la inversión de impacto, criterios ESG y el concepto de capitalismo consciente",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "El Organigrama de la Fortuna",
+  "descripcion": "En una empresa familiar, cada quien debe tener un lugar claro para evitar el caos. ¿Sabes dónde va cada uno?",
+  "objetivo": "Diferenciar los roles de gestión, gobierno y propiedad dentro de una estructura corporativa familiar",
+  "xp": 400,
+  "instruccion": "Arrastra cada rol a la categoría que le corresponde según su función en el negocio.",
+  "items": [
     {
-      "id": "esg1",
-      "texto": "¿Qué significan las siglas 'ESG'?",
-      "opciones": [
-        "Economic, Social, Growth",
-        "Environmental, Social, Governance (Ambiental, Social y de Gobierno Corporativo)",
-        "Energy, Solar, Global",
-        "Expert, Stable, Guaranteed"
-      ],
-      "correcta": 1,
-      "explicacion": "Son los tres pilares que miden la sostenibilidad y la ética de una inversión."
+      "id": "rol1",
+      "label": "Director General (CEO)",
+      "emoji": "👔",
+      "categoria_correcta": "gestion",
+      "feedback": "Encargado de que la empresa gane dinero y funcione todos los días. Debe ser el más capaz, sea familiar o no."
     },
     {
-      "id": "esg2",
-      "texto": "¿Qué es la 'Inversión de Impacto'?",
-      "opciones": [
-        "Invertir en cosas que explotan",
-        "Inversiones hechas con la intención de generar un impacto social o ambiental positivo medible, además de un retorno financiero",
-        "Donar todo tu dinero",
-        "Invertir solo en empresas grandes"
-      ],
-      "correcta": 1,
-      "explicacion": "Busca el 'doble beneficio': ganar dinero y ayudar al mundo."
+      "id": "rol2",
+      "label": "Consejo de Familia",
+      "emoji": "🏠",
+      "categoria_correcta": "gobierno",
+      "feedback": "Vigila la armonía familiar y que se respeten los valores del fundador."
     },
     {
-      "id": "esg3",
-      "texto": "¿Qué es el 'Greenwashing'?",
-      "opciones": [
-        "Lavar dinero de forma ecológica",
-        "Una práctica engañosa donde una empresa dice ser ecológica solo por marketing, pero no lo es en realidad",
-        "Invertir en plantas",
-        "Limpiar paneles solares"
-      ],
-      "correcta": 1,
-      "explicacion": "Como inversionista, debes aprender a detectar estas mentiras para no financiar empresas poco éticas."
+      "id": "rol3",
+      "label": "Accionista Pasivo",
+      "emoji": "💸",
+      "categoria_correcta": "propiedad",
+      "feedback": "Es dueño de una parte pero no trabaja ahí. Solo recibe su parte de las ganancias (dividendos)."
     },
     {
-      "id": "esg4",
-      "texto": "¿Qué es una 'Empresa B' (B-Corp)?",
-      "opciones": [
-        "Una empresa de segunda clase",
-        "Empresas certificadas que cumplen con los más altos estándares de desempeño social, ambiental y transparencia",
-        "Empresas que solo aceptan Bitcoins",
-        "Empresas que no pagan impuestos"
-      ],
-      "correcta": 1,
-      "explicacion": "Es un sello de calidad ética reconocido mundialmente."
+      "id": "rol4",
+      "label": "Sucesor en Entrenamiento",
+      "emoji": "🎓",
+      "categoria_correcta": "sucesion",
+      "feedback": "Familiar que está rotando por todas las áreas para conocer el negocio desde abajo."
     },
     {
-      "id": "esg5",
-      "texto": "¿Qué significa el término 'Stakeholder Capitalism'?",
-      "opciones": [
-        "Que solo importan los dueños de las acciones",
-        "Que las empresas deben crear valor para todos: empleados, clientes, proveedores, comunidad y planeta, no solo para los dueños",
-        "Que el gobierno es el dueño de todo",
-        "Que no se permite tener ganancias"
-      ],
-      "correcta": 1,
-      "explicacion": "Es la evolución del capitalismo hacia una visión más humana y equilibrada."
+      "id": "rol5",
+      "label": "Asamblea de Accionistas",
+      "emoji": "🤝",
+      "categoria_correcta": "propiedad",
+      "feedback": "El máximo órgano donde se toman las decisiones de cuánto vale la empresa y si se vende o no."
     },
     {
-      "id": "esg6",
-      "texto": "¿Por qué los criterios de 'Governance' (Gobierno Corporativo) son importantes en ESG?",
-      "opciones": [
-        "Para que el gobierno mande en la empresa",
-        "Porque aseguran que la empresa sea honesta, no tenga corrupción y trate bien a sus empleados",
-        "Para que la empresa no venda nada",
-        "No son importantes"
-      ],
-      "correcta": 1,
-      "explicacion": "Una empresa con mal gobierno es una inversión muy riesgosa."
+      "id": "rol6",
+      "label": "Jefe de Producción",
+      "emoji": "🏭",
+      "categoria_correcta": "gestion",
+      "feedback": "Rol operativo enfocado en la eficiencia de la fábrica o el servicio."
     },
     {
-      "id": "esg7",
-      "texto": "¿Qué es la 'Economía Circular'?",
-      "opciones": [
-        "Un sistema donde el dinero solo circula en un país",
-        "Un modelo de producción que busca reducir, reutilizar y reciclar materiales para que nada se convierta en basura",
-        "Vender productos redondos",
-        "Invertir en círculos"
-      ],
-      "correcta": 1,
-      "explicacion": "Es clave para la sostenibilidad a largo plazo del planeta."
+      "id": "rol7",
+      "label": "Fiduciario",
+      "emoji": "📑",
+      "categoria_correcta": "sucesion",
+      "feedback": "Institución o persona que protege legalmente los bienes para que lleguen a los nietos."
     },
     {
-      "id": "esg8",
-      "texto": "¿Cuál es la principal ventaja de invertir en fondos ESG a largo plazo?",
-      "opciones": [
-        "Que te dan dinero gratis",
-        "Que suelen ser empresas más preparadas para el futuro, con menos riesgos legales y mayor lealtad de sus clientes",
-        "Que no tienen competencia",
-        "Que no usan tecnología"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora entiendes que el dinero puede ser una herramienta poderosa para el bien común."
+      "id": "rol8",
+      "label": "Comité de Inversiones",
+      "emoji": "📈",
+      "categoria_correcta": "gobierno",
+      "feedback": "Decide qué nuevos negocios comprar para que el patrimonio siga creciendo."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "categorias": [
+    {
+      "id": "gestion",
+      "label": "GESTIÓN (Día a día)",
+      "emoji": "⚙️",
+      "color": "#1e40af"
+    },
+    {
+      "id": "gobierno",
+      "label": "GOBIERNO (Reglas)",
+      "emoji": "⚖️",
+      "color": "#6b21a8"
+    },
+    {
+      "id": "propiedad",
+      "label": "PROPIEDAD (Dueños)",
+      "emoji": "💎",
+      "color": "#166534"
+    },
+    {
+      "id": "sucesion",
+      "label": "SUCESIÓN (Futuro)",
+      "emoji": "⏳",
+      "color": "#475569"
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

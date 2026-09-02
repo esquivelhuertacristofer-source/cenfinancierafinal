@@ -4,157 +4,130 @@
   "unit_title": "CETES: prestándole dinero al gobierno",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "ALTO",
-  "titulo": "El Chef de la Inversión",
-  "descripcion": "Invertir es como cocinar: necesitas los ingredientes correctos en las cantidades exactas. ¡Crea tu portafolio y ve qué tan seguro y rentable es!",
-  "objetivo": "Aprender a balancear un portafolio de inversión utilizando diferentes clases de activos",
-  "xp": 500,
-  "descripcion_formula": "Calculamos el Rendimiento Promedio Ponderado: (%Cetes*11 + %Bolsa*15 + %Cripto*40 + %Oro*5) / 100.",
-  "inputs": [
-    {
-      "id": "porcentaje_cetes",
-      "label": "% en CETES (Seguro)",
-      "type": "slider",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 40,
-      "unit": "%"
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "Los $10,000 de la Abuela",
+  "descripcion": "La abuela de Ceny lleva 12 años guardando $10,000 dentro de un colchón. \"Ahí nadie me los toca\", dice. Ceny acaba de aprender qué son los CETES y quiere explicárselo.",
+  "objetivo": "Comprender qué son los CETES, por qué son la inversión más segura de México y qué le pasa al dinero que se guarda sin invertir.",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Hace 12 años, con $10,000 se compraba el refrigerador que la abuela quería. Hoy ese mismo refrigerador cuesta $19,000. El dinero no se movió... pero el mundo sí.",
+  "nodo_inicial": "el_colchon",
+  "nodos": {
+    "el_colchon": {
+      "id": "el_colchon",
+      "texto": "La abuela dice: \"Mis diez mil siguen siendo diez mil, no he perdido nada\". ¿Qué le responde Ceny?",
+      "opciones": [
+        {
+          "id": "inflacion",
+          "texto": "\"Abue, son los mismos diez mil pero ya no compran lo mismo: eso es la inflación\"",
+          "siguiente_nodo": "la_propuesta",
+          "consecuencia": "La abuela se queda callada mirando el refrigerador de la tienda.",
+          "xp_bonus": 180,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "razon",
+          "texto": "\"Tienes razón, guardado está más seguro\"",
+          "siguiente_nodo": "final_colchon",
+          "consecuencia": "El dinero sigue en el colchón otros años más.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -9000
+        },
+        {
+          "id": "bolsa",
+          "texto": "\"Mejor mételos a la Bolsa, ahí ganas mucho más\"",
+          "siguiente_nodo": "demasiado_riesgo",
+          "consecuencia": "La abuela se asusta: \"¿Y si los pierdo? Es todo lo que tengo\".",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "porcentaje_bolsa",
-      "label": "% en Bolsa (Crecimiento)",
-      "type": "slider",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 30,
-      "unit": "%"
+    "demasiado_riesgo": {
+      "id": "demasiado_riesgo",
+      "texto": "Ceny recuerda lo que aprendió sobre el perfil de inversionista: la abuela tiene 74 años y ese dinero es su respaldo para emergencias. No puede permitirse verlo bajar.",
+      "opciones": [
+        {
+          "id": "corregir",
+          "texto": "Proponerle algo seguro en vez de la Bolsa",
+          "siguiente_nodo": "la_propuesta",
+          "consecuencia": "Ceny entiende que la inversión correcta depende de quién es la persona.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "porcentaje_cripto",
-      "label": "% en Cripto (Arriesgado)",
-      "type": "slider",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 10,
-      "unit": "%"
+    "la_propuesta": {
+      "id": "la_propuesta",
+      "texto": "Ceny le explica: \"Existen los CETES. Le prestas dinero al gobierno de México por 28, 91 o 364 días. Al final te devuelve tu dinero más un rendimiento. Es la inversión más segura del país porque el gobierno tendría que quebrar para no pagarte\". La abuela pregunta: \"¿Y dónde se compran? ¿Necesito ser rica?\".",
+      "opciones": [
+        {
+          "id": "cetesdirecto",
+          "texto": "\"Desde $100, en cetesdirecto.com, sin intermediarios ni comisiones\"",
+          "siguiente_nodo": "el_plazo",
+          "consecuencia": "La abuela abre los ojos: \"¿Cien pesos? ¡Yo pensaba que eso era para ricos!\".",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "banco",
+          "texto": "\"Ve al banco, ellos te lo manejan y te cobran una comisión\"",
+          "siguiente_nodo": "el_plazo",
+          "consecuencia": "Se puede, pero la comisión se come parte del rendimiento.",
+          "xp_bonus": 70,
+          "impacto_patrimonio": -300
+        }
+      ]
     },
-    {
-      "id": "porcentaje_oro",
-      "label": "% en Oro (Refugio)",
-      "type": "slider",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 20,
-      "unit": "%"
+    "el_plazo": {
+      "id": "el_plazo",
+      "texto": "La abuela quiere invertir sus $10,000, pero podría necesitar dinero si se enferma. ¿Qué plazo le conviene?",
+      "opciones": [
+        {
+          "id": "corto",
+          "texto": "CETES a 28 días: se renuevan solos y en un mes puede sacarlos",
+          "siguiente_nodo": "final_cetes",
+          "consecuencia": "La abuela invierte con la tranquilidad de tener su dinero cerca.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 1050
+        },
+        {
+          "id": "largo",
+          "texto": "CETES a 364 días: pagan un poco más",
+          "siguiente_nodo": "final_atrapado",
+          "consecuencia": "Gana algo más, pero su dinero queda comprometido un año entero.",
+          "xp_bonus": 90,
+          "impacto_patrimonio": 1150
+        }
+      ]
     },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+    "final_cetes": {
+      "id": "final_cetes",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Un año después la abuela tiene $11,050 y su dinero disponible cada 28 días. Ahora revisa su cuenta desde el celular y le presume a sus amigas que \"le presta al gobierno\".",
+      "reflexion_final": "Los CETES son la inversión más segura de México y se puede empezar con $100. No te vuelven rico, pero hacen algo esencial: evitan que la inflación se coma tus ahorros mientras esperas. Guardar dinero quieto no es seguridad, es una pérdida lenta."
+    },
+    "final_atrapado": {
+      "id": "final_atrapado",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "La abuela ganó $1,150, un poco más que a corto plazo. A los seis meses necesitó dinero para el dentista y tuvo que pedir prestado, porque el suyo estaba comprometido hasta el año.",
+      "reflexion_final": "Los plazos largos pagan mejor, pero solo sirven para dinero que de verdad no vas a necesitar. Antes de elegir el plazo, pregúntate cuándo podrías necesitarlo."
+    },
+    "final_colchon": {
+      "id": "final_colchon",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Cinco años después los $10,000 siguen intactos en el colchón. El refrigerador ya cuesta $24,000. La abuela nunca perdió un peso... y aun así perdió más de la mitad de lo que su dinero podía comprar.",
+      "reflexion_final": "La inflación es un ladrón silencioso: no te quita billetes, les quita valor. No invertir también es una decisión, y casi siempre es la más cara."
     }
-  ],
-  "formula": "(porcentaje_cetes * 11 + porcentaje_bolsa * 15 + porcentaje_cripto * 40 + porcentaje_oro * 5) / 100",
-  "output_label": "Rendimiento Estimado Anual",
-  "output_prefix": "",
-  "output_suffix": "%",
-  "chart_type": "pie",
-  "escenarios": [
-    {
-      "condicion": "porcentaje_cripto > 30",
-      "mensaje": "⚠️ ¡Cuidado, Chef! Tu receta es muy picante. Si las criptomonedas bajan, podrías perder mucho dinero.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "porcentaje_cetes > 60",
-      "mensaje": "🛡️ Eres un chef muy precavido. Tu dinero está seguro, pero crecerá lento. ¡Considera un poco más de Bolsa!",
-      "tipo": "info"
-    },
-    {
-      "condicion": "porcentaje_cetes + porcentaje_bolsa + porcentaje_cripto + porcentaje_oro != 100",
-      "mensaje": "🚫 ¡Error en la receta! La suma de tus porcentajes debe ser exactamente 100%.",
-      "tipo": "danger"
-    },
-    {
-      "condicion": "true",
-      "mensaje": "✅ ¡Portafolio Equilibrado! Tienes un poco de todo para protegerte y crecer al mismo tiempo.",
-      "tipo": "success"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "Si los CETES pagan 10% anual y la inflación es 5%, ¿cuánto ganas en términos reales? ¿Por qué invertir en CETES es mejor que dejar el dinero en una cuenta de ahorro normal?",
-  "comparativa_espera": "Los inversionistas más exitosos del mundo, como Warren Buffett, aplican el mismo principio: comprar activos buenos a precios justos y mantenerlos largo plazo. La paciencia es la ventaja competitiva más accesible.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado principal"
-    },
-    {
-      "id": "eficiencia",
-      "label": "Eficiencia vs Alternativa",
-      "formula": "Math.round(resultado_principal * 1.12)",
-      "prefix": "$",
-      "suffix": " vs CETES",
-      "descripcion": "Lo que generaría en CETES al 12%"
-    },
-    {
-      "id": "riesgo_ajustado",
-      "label": "Resultado Ajustado por Riesgo",
-      "formula": "Math.round(resultado_principal * 0.85)",
-      "prefix": "$",
-      "suffix": " (pesimista)",
-      "descripcion": "Si el resultado fuera 15% menor al esperado"
-    },
-    {
-      "id": "horizonte_largo",
-      "label": "En un Horizonte de 10 Años",
-      "formula": "Math.round(resultado_principal * 2.59)",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Reinvirtiendo al 10% anual durante 10 años"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "eficiencia",
-      "label": "Eficiencia vs Alternativa",
-      "color": "#22c55e"
-    }
-  ]
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

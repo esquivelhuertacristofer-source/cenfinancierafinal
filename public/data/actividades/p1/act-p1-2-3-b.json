@@ -4,132 +4,123 @@
   "unit_title": "El precio de las cosas: ¿caro o barato?",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "QUIZ",
+  "tipo": "TRIVIA",
   "complejidad": "ALTA",
   "titulo": "Maestro de las Ofertas",
   "descripcion": "¿Sabes leer las etiquetas? ¡No dejes que los precios te confundan y elige siempre la mejor opción!",
   "objetivo": "Aprender a comparar precios y entender el valor de las ofertas y el ahorro inteligente",
   "xp": 200,
-  "aprobacion_minima": 0.8,
   "preguntas": [
     {
       "id": "q1",
-      "texto": "¿Qué es el 'Precio' de un objeto?",
-      "opciones": [
+      "pregunta": "¿Qué es el 'Precio' de un objeto?",
+      "respuesta_correcta": "La cantidad de dinero que debemos pagar para tenerlo",
+      "incorrectas": [
         "Su peso",
-        "La cantidad de dinero que debemos pagar para tenerlo",
         "Su color favorito",
         "Su nombre"
       ],
-      "correcta": 1,
-      "explicacion": "El precio nos indica cuánto valor debemos entregar (en dinero) para llevarnos algo a casa."
+      "dato_extra": "El precio nos indica cuánto valor debemos entregar (en dinero) para llevarnos algo a casa."
     },
     {
       "id": "q2",
-      "texto": "Si una manzana cuesta $5 en una tienda y $8 en otra, ¿dónde te conviene comprarla?",
-      "opciones": [
+      "pregunta": "Si una manzana cuesta $5 en una tienda y $8 en otra, ¿dónde te conviene comprarla?",
+      "respuesta_correcta": "En la de $5 (¡es más barato!)",
+      "incorrectas": [
         "En la de $8",
-        "En la de $5 (¡es más barato!)",
         "En ninguna",
         "En las dos"
       ],
-      "correcta": 1,
-      "explicacion": "Comparar nos ayuda a cuidar nuestras monedas. ¡El mismo objeto puede tener precios diferentes!"
+      "dato_extra": "Comparar nos ayuda a cuidar nuestras monedas. ¡El mismo objeto puede tener precios diferentes!"
     },
     {
       "id": "q3",
-      "texto": "¿Dónde encuentras el precio de los productos en el supermercado?",
-      "opciones": [
+      "pregunta": "¿Dónde encuentras el precio de los productos en el supermercado?",
+      "respuesta_correcta": "En las etiquetas o carteles junto al producto",
+      "incorrectas": [
         "En el techo",
-        "En las etiquetas o carteles junto al producto",
         "En el piso",
         "No tienen precio"
       ],
-      "correcta": 1,
-      "explicacion": "Saber leer las etiquetas es el primer paso para ser un comprador experto."
+      "dato_extra": "Saber leer las etiquetas es el primer paso para ser un comprador experto."
     },
     {
       "id": "q4",
-      "texto": "¿Qué significa que algo esté en 'Oferta'?",
-      "opciones": [
+      "pregunta": "¿Qué significa que algo esté en 'Oferta'?",
+      "respuesta_correcta": "Que su precio es más bajo por un tiempo",
+      "incorrectas": [
         "Que cuesta más de lo normal",
-        "Que su precio es más bajo por un tiempo",
         "Que es gratis",
         "Que está roto"
       ],
-      "correcta": 1,
-      "explicacion": "Las ofertas son oportunidades para comprar lo que necesitamos gastando menos dinero."
+      "dato_extra": "Las ofertas son oportunidades para comprar lo que necesitamos gastando menos dinero."
     },
     {
       "id": "q5",
-      "texto": "Si tienes $20 pesos y quieres algo que cuesta $25, ¿te alcanza?",
-      "opciones": [
+      "pregunta": "Si tienes $20 pesos y quieres algo que cuesta $25, ¿te alcanza?",
+      "respuesta_correcta": "No, te faltan $5 pesos",
+      "incorrectas": [
         "Sí, sobra dinero",
-        "No, te faltan $5 pesos",
         "Me falta un peso",
         "No lo sé"
       ],
-      "correcta": 1,
-      "explicacion": "Siempre debemos revisar nuestro dinero antes de llegar a la caja para no llevarnos sorpresas."
+      "dato_extra": "Siempre debemos revisar nuestro dinero antes de llegar a la caja para no llevarnos sorpresas."
     },
     {
       "id": "q6",
-      "texto": "¿Por qué algunas cosas son más caras que otras?",
-      "opciones": [
-        "Porque son más grandes o más difíciles de hacer",
+      "pregunta": "¿Por qué algunas cosas son más caras que otras?",
+      "respuesta_correcta": "Porque son más grandes o más difíciles de hacer",
+      "incorrectas": [
         "Porque tienen colores feos",
         "Por accidente",
         "Porque son viejas"
       ],
-      "correcta": 0,
-      "explicacion": "El precio suele depender del trabajo, los materiales y el tiempo que tomó fabricar el objeto."
+      "dato_extra": "El precio suele depender del trabajo, los materiales y el tiempo que tomó fabricar el objeto."
     },
     {
       "id": "q7",
-      "texto": "Si compras algo de $10 y pagas con un billete de $20, ¿cuánto dinero te deben devolver?",
-      "opciones": [
+      "pregunta": "Si compras algo de $10 y pagas con un billete de $20, ¿cuánto dinero te deben devolver?",
+      "respuesta_correcta": "$10 pesos (tu cambio)",
+      "incorrectas": [
         "Nada",
-        "$10 pesos (tu cambio)",
         "$5 pesos",
         "$20 pesos"
       ],
-      "correcta": 1,
-      "explicacion": "¡Exacto! 20 menos 10 son 10. Siempre revisa que tu cambio sea el correcto."
+      "dato_extra": "¡Exacto! 20 menos 10 son 10. Siempre revisa que tu cambio sea el correcto."
     },
     {
       "id": "q8",
-      "texto": "Verdadero o Falso: ¡Lo más caro siempre es lo mejor!",
-      "opciones": [
-        "Verdadero",
-        "Falso"
+      "pregunta": "Verdadero o Falso: ¡Lo más caro siempre es lo mejor!",
+      "respuesta_correcta": "Falso",
+      "incorrectas": [
+        "Verdadero"
       ],
-      "correcta": 1,
-      "explicacion": "¡Falso! A veces pagamos mucho solo por la marca. Busca siempre la mejor calidad al mejor precio."
+      "dato_extra": "¡Falso! A veces pagamos mucho solo por la marca. Busca siempre la mejor calidad al mejor precio."
     },
     {
       "id": "q9",
-      "texto": "¿Qué debes hacer antes de pagar algo que te gusta mucho?",
-      "opciones": [
+      "pregunta": "¿Qué debes hacer antes de pagar algo que te gusta mucho?",
+      "respuesta_correcta": "Comparar el precio en otra tienda si puedes",
+      "incorrectas": [
         "Correr a la caja",
-        "Comparar el precio en otra tienda si puedes",
         "Cerrar los ojos",
         "Gritar"
       ],
-      "correcta": 1,
-      "explicacion": "Comparar es el 'superpoder' que protege tu alcancía de gastos innecesarios."
+      "dato_extra": "Comparar es el 'superpoder' que protege tu alcancía de gastos innecesarios."
     },
     {
       "id": "q10",
-      "texto": "¿Cómo se llama el papelito que te dan al pagar donde dice cuánto costó cada cosa?",
-      "opciones": [
+      "pregunta": "¿Cómo se llama el papelito que te dan al pagar donde dice cuánto costó cada cosa?",
+      "respuesta_correcta": "Ticket o recibo",
+      "incorrectas": [
         "Dibujo",
-        "Ticket o recibo",
         "Carta",
         "Cuento"
       ],
-      "correcta": 1,
-      "explicacion": "El ticket es tu comprobante. ¡Guárdalo por si necesitas cambiar algo o revisar tus gastos!"
+      "dato_extra": "El ticket es tu comprobante. ¡Guárdalo por si necesitas cambiar algo o revisar tus gastos!"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Diamond.V2",
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true
 }

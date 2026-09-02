@@ -5,109 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "¿Cuánto valgo realmente?",
-  "descripcion": "¿Sabes la diferencia entre ser rico y parecer rico? ¡Pon a prueba tu conocimiento sobre activos y pasivos!",
-  "objetivo": "Identificar y clasificar correctamente los elementos que componen el patrimonio neto personal",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Construir, Medir, Aprender",
+  "descripcion": "La causa número uno de fracaso de los negocios nuevos no es la falta de dinero: es construir algo que nadie quería. Lean Startup existe para evitar exactamente eso.",
+  "objetivo": "Comprender la metodología Lean Startup: hipótesis, producto mínimo viable, medición y pivote.",
+  "xp": 550,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "pat1",
-      "texto": "¿Qué es un 'Activo'?",
+      "id": "q1",
+      "texto": "Un MVP (Producto Mínimo Viable) es…",
       "opciones": [
-        "Algo que te gusta mucho",
-        "Cualquier cosa que poseas y que tenga valor o que ponga dinero en tu bolsillo",
-        "El dinero que debes al banco",
-        "Un gasto necesario"
+        "Una versión incompleta y mal hecha",
+        "La versión más simple que ya permite aprender del cliente real",
+        "El producto final",
+        "Un prototipo que no se muestra a nadie"
       ],
       "correcta": 1,
-      "explicacion": "Ejemplos: ahorros, acciones, una casa que rentas o tu propia educación."
+      "explicacion": "Mínimo no significa malo: significa suficiente para probar tu hipótesis con gente real."
     },
     {
-      "id": "pat2",
-      "texto": "¿Qué es un 'Pasivo'?",
+      "id": "q2",
+      "texto": "El ciclo central de Lean Startup es…",
       "opciones": [
-        "Una persona que no trabaja",
-        "Cualquier deuda u obligación que saque dinero de tu bolsillo",
-        "Un regalo del banco",
-        "Un activo que ya no usas"
+        "Planear, ejecutar, vender",
+        "Construir, Medir, Aprender",
+        "Comprar, producir, cobrar",
+        "Ahorrar, invertir, gastar"
       ],
       "correcta": 1,
-      "explicacion": "Ejemplos: préstamos, saldos de tarjetas de crédito o impuestos por pagar."
+      "explicacion": "Y se repite lo más rápido posible: cada vuelta reduce la incertidumbre."
     },
     {
-      "id": "pat3",
-      "texto": "¿Cómo se calcula el 'Patrimonio Neto'?",
+      "id": "q3",
+      "texto": "Una \"hipótesis\" en un negocio es…",
       "opciones": [
-        "Sumando todo tu salario del año",
-        "Activos menos Pasivos",
-        "Activos más Pasivos",
-        "Lo que tienes en el banco solamente"
+        "Una suposición que todavía no compruebas",
+        "Un hecho probado",
+        "Una meta de ventas",
+        "Un préstamo"
       ],
-      "correcta": 1,
-      "explicacion": "Es lo que realmente te quedaría si hoy vendieras todo lo que tienes y pagaras todo lo que debes."
+      "correcta": 0,
+      "explicacion": "\"Los papás pagarían por esto\" es una hipótesis, no un hecho, hasta que alguien te pague."
     },
     {
-      "id": "pat4",
-      "texto": "¿Por qué un auto nuevo se considera un pasivo para la mayoría de las personas?",
+      "id": "q4",
+      "texto": "\"Pivotar\" significa…",
       "opciones": [
-        "Porque es muy rápido",
-        "Porque pierde valor cada año (depreciación) y genera gastos de gasolina, seguro y mantenimiento",
-        "Porque no es una casa",
-        "No es un pasivo, es un activo"
+        "Rendirse",
+        "Cambiar de estrategia conservando lo aprendido",
+        "Vender la empresa",
+        "Bajar el precio"
       ],
       "correcta": 1,
-      "explicacion": "A menos que lo uses para un negocio que te dé dinero, un auto es un gasto constante."
+      "explicacion": "No es fracasar: es corregir el rumbo con la información que antes no tenías."
     },
     {
-      "id": "pat5",
-      "texto": "¿Qué significa tener un 'Patrimonio Neto Negativo'?",
+      "id": "q5",
+      "texto": "Gastar un año y todos tus ahorros construyendo en secreto el producto perfecto…",
       "opciones": [
-        "Que no tienes dinero en efectivo",
-        "Que debes más dinero del que valen todas tus posesiones",
-        "Que el banco te debe dinero",
-        "Que eres una persona humilde"
+        "Es la mejor estrategia",
+        "Es el error más caro: puede que nadie lo quiera",
+        "Garantiza el éxito",
+        "Reduce el riesgo"
       ],
       "correcta": 1,
-      "explicacion": "Es una señal de alerta financiera que debe corregirse ahorrando y pagando deudas."
+      "explicacion": "Todo ese tiempo y dinero se apuestan a una suposición que nunca se comprobó."
     },
     {
-      "id": "pat6",
-      "texto": "¿Qué es la 'Liquidez'?",
+      "id": "q6",
+      "texto": "Una \"métrica de vanidad\" es…",
       "opciones": [
-        "El agua que tomas",
-        "La facilidad con la que puedes convertir un activo en dinero efectivo (cash) rápido",
-        "El valor de tu casa",
-        "Tener muchas deudas"
+        "Un número que se ve bien y no dice si el negocio funciona",
+        "Una medida contable",
+        "El precio del producto",
+        "Un impuesto"
       ],
-      "correcta": 1,
-      "explicacion": "El dinero en tu cuenta es muy líquido; una casa tiene poca liquidez porque tarda meses en venderse."
+      "correcta": 0,
+      "explicacion": "Seguidores y visitas son vanidad; clientes que pagan y regresan es lo que importa."
     },
     {
-      "id": "pat7",
-      "texto": "¿Qué es la 'Depreciación'?",
+      "id": "q7",
+      "texto": "La mejor forma de validar si alguien pagaría por tu producto es…",
       "opciones": [
-        "Sentirse triste por el dinero",
-        "La pérdida de valor que sufren los objetos (como la tecnología o autos) por el uso y el tiempo",
-        "Cuando el dólar baja",
-        "Pagar menos impuestos"
+        "Preguntarle a tu familia si les gusta",
+        "Intentar cobrarles a clientes reales",
+        "Hacer una encuesta anónima",
+        "Pensarlo bien"
       ],
       "correcta": 1,
-      "explicacion": "Por eso los activos que se deprecian no son buenas inversiones a largo plazo."
+      "explicacion": "\"Me encantaría comprarlo\" es gratis de decir. El único voto que cuenta es el que se paga."
     },
     {
-      "id": "pat8",
-      "texto": "¿Cuál es la mejor estrategia para aumentar tu patrimonio neto?",
+      "id": "q8",
+      "texto": "Un MVP para una app de tareas escolares podría ser…",
       "opciones": [
-        "Comprar mucha ropa de marca",
-        "Adquirir activos que suban de valor (apreciación) o generen ingresos, y reducir pasivos",
-        "Pedir muchos préstamos",
-        "Ganar la lotería"
+        "Un grupo de WhatsApp manejado a mano durante dos semanas",
+        "La app completa con 40 funciones",
+        "Un plan de negocios de 80 páginas",
+        "Nada, mejor esperar"
       ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora tienes la brújula para medir tu verdadero progreso financiero."
+      "correcta": 0,
+      "explicacion": "Si nadie usa la versión manual, la app tampoco se usará. Y probarlo costó cero."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

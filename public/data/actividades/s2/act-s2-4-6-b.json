@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-4-6-B",
+  "unit_code": "S2-4-6",
+  "unit_title": "Unit economics: cuánto cuesta y cuánto deja cada cliente",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "La Unidad Manda",
+  "descripcion": "Comprueba que dominas la economía unitaria.",
+  "objetivo": "Verificar el cálculo y la interpretación de la economía unitaria",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un negocio puede crecer y perder más si:",
+      "opciones": [
+        "Cada venta individual pierde dinero",
+        "Es imposible",
+        "Sube el precio",
+        "Baja el costo"
+      ],
+      "correcta": 0,
+      "explicacion": "Vender más multiplica una pérdida que ya existía por unidad."
+    },
+    {
+      "id": "q2",
+      "texto": "La contribución unitaria es:",
+      "opciones": [
+        "Precio menos todos los costos",
+        "Precio menos costos variables directos",
+        "El ingreso total",
+        "La utilidad neta"
+      ],
+      "correcta": 1,
+      "explicacion": "Los fijos se cubren después con la suma de contribuciones."
+    },
+    {
+      "id": "q3",
+      "texto": "Los costos variables:",
+      "opciones": [
+        "Existen aunque no vendas",
+        "Son solo la renta",
+        "Cambian con cada venta",
+        "No existen"
+      ],
+      "correcta": 2,
+      "explicacion": "Material, empaque, comisión y envío."
+    },
+    {
+      "id": "q4",
+      "texto": "Los costos fijos:",
+      "opciones": [
+        "Cambian con cada venta",
+        "Son el material",
+        "Son el envío",
+        "Existen aunque no vendas nada"
+      ],
+      "correcta": 3,
+      "explicacion": "Renta, sueldos base y suscripciones."
+    },
+    {
+      "id": "q5",
+      "texto": "El punto de equilibrio es:",
+      "opciones": [
+        "Las unidades que cubren exactamente los fijos",
+        "El precio ideal",
+        "El costo mínimo",
+        "La utilidad"
+      ],
+      "correcta": 0,
+      "explicacion": "Por debajo se pierde, por encima se gana."
+    },
+    {
+      "id": "q6",
+      "texto": "Escalar con contribución negativa:",
+      "opciones": [
+        "Mejora el negocio",
+        "Acelera la quiebra",
+        "No cambia nada",
+        "Reduce costos"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada cliente nuevo aumenta la pérdida."
+    },
+    {
+      "id": "q7",
+      "texto": "La secuencia correcta es:",
+      "opciones": [
+        "Escalar y luego arreglar",
+        "Solo escalar",
+        "Arreglar la unidad y luego escalar",
+        "Solo vender"
+      ],
+      "correcta": 2,
+      "explicacion": "Subir precio, bajar costo variable o cambiar el modelo."
+    },
+    {
+      "id": "q8",
+      "texto": "Escalar un negocio:",
+      "opciones": [
+        "Corrige sus errores",
+        "Reduce riesgos",
+        "Baja los fijos",
+        "Amplifica lo que ya existe, bueno o malo"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso la unidad tiene que estar sana antes."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-6-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-6-b-escena.webp"
+}

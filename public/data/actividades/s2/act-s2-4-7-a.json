@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S2-4-7-A",
+  "unit_code": "S2-4-7",
+  "unit_title": "CAC y LTV: las dos cifras que deciden si puedes escalar",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "CAC y LTV",
+  "descripcion": "El negocio de Ceny quiere invertir en publicidad. Las dos cifras dirán si conviene.",
+  "objetivo": "Aplicar el análisis de CAC y LTV a una decisión de crecimiento",
+  "xp": 500,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "El negocio de Ceny vende suscripciones de $250 al mes. Le proponen invertir $40,000 en publicidad para atraer clientes.",
+  "nodo_inicial": "primero",
+  "nodos": {
+    "primero": {
+      "id": "primero",
+      "texto": "Antes de invertir, ¿qué calcula Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Cuánto le costaría cada cliente y cuánto deja cada cliente en total",
+          "siguiente_nodo": "retencion",
+          "consecuencia": "Reúne las dos cifras que definen si la inversión tiene sentido.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: si trae clientes, es buena inversión",
+          "siguiente_nodo": "perdida",
+          "consecuencia": "Traer clientes que cuestan más de lo que dejan destruye valor.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -40000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-primero.webp"
+    },
+    "perdida": {
+      "id": "perdida",
+      "texto": "Consiguió 80 clientes con los $40,000, pero se van en promedio a los dos meses. ¿Qué descubre?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que cada cliente costó $500 y deja menos que eso antes de irse",
+          "siguiente_nodo": "retencion",
+          "consecuencia": "La inversión destruyó valor por cada cliente traído.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que necesita invertir más en publicidad para compensar",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Escalar una relación desfavorable multiplica la pérdida.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-perdida.webp"
+    },
+    "retencion": {
+      "id": "retencion",
+      "texto": "Sus clientes duran dos meses en promedio. ¿Qué ataca primero?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "La retención: mejorar el producto y la atención para que duren más",
+          "siguiente_nodo": "nueva_cuenta",
+          "consecuencia": "La permanencia sube a siete meses sin gastar en publicidad.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 30000
+        },
+        {
+          "id": "o2",
+          "texto": "Bajar el precio para atraer más gente",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Bajar el precio reduce la contribución y empeora la relación.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-retencion.webp"
+    },
+    "nueva_cuenta": {
+      "id": "nueva_cuenta",
+      "texto": "Con siete meses de permanencia, el valor de vida ahora supera bastante el costo de adquisición. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Ahora sí invertir en adquisición, canal por canal y midiendo cada uno",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Cada peso invertido en traer clientes ahora genera valor.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 45000
+        },
+        {
+          "id": "o2",
+          "texto": "Invertir todo en un solo canal sin medir por separado",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El promedio general oculta canales que no cierran.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-nueva_cuenta.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny arregló la retención primero y después invirtió en crecer con la relación a favor.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Bajar el costo de adquisición es difícil; subir el valor de vida está en tus manos. Mejorar la retención es casi siempre la palanca más rentable.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio creció, pero sin medir bien qué canal funcionaba.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El costo de adquisición se calcula por canal: el promedio general oculta canales que destruyen valor mientras otros lo generan.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny invirtió más en traer clientes que costaban más de lo que dejaban.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Cuando el valor de vida no supera el costo de adquisición, cada cliente nuevo destruye valor. Invertir más solo multiplica el problema.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s2/s2-4-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s2/s2-4-7-a-portada.webp"
+}

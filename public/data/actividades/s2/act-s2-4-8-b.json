@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-4-8-B",
+  "unit_code": "S2-4-8",
+  "unit_title": "Suscripción: el poder del ingreso recurrente",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Ingreso Recurrente",
+  "descripcion": "Comprueba que entiendes el modelo de suscripción.",
+  "objetivo": "Verificar la comprensión del ingreso recurrente y la cancelación",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Un negocio de venta única:",
+      "opciones": [
+        "Empieza cada mes con lo anterior",
+        "No necesita vender",
+        "Empieza cada mes en cero",
+        "Crece solo"
+      ],
+      "correcta": 2,
+      "explicacion": "Todo el esfuerzo produce solo el ingreso de ese mes."
+    },
+    {
+      "id": "q2",
+      "texto": "En suscripción, el esfuerzo de este mes:",
+      "opciones": [
+        "Produce solo el ingreso de hoy",
+        "No produce nada",
+        "Se pierde",
+        "Produce ingreso mientras el cliente permanezca"
+      ],
+      "correcta": 3,
+      "explicacion": "El trabajo se acumula en lugar de reiniciarse."
+    },
+    {
+      "id": "q3",
+      "texto": "La gráfica del ingreso recurrente es:",
+      "opciones": [
+        "Una escalera ascendente",
+        "Una línea plana",
+        "Descendente",
+        "Aleatoria"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada mes suma sobre lo que ya existía."
+    },
+    {
+      "id": "q4",
+      "texto": "La tasa de cancelación es:",
+      "opciones": [
+        "El precio",
+        "El porcentaje de clientes que se van cada mes",
+        "La comisión",
+        "El costo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la métrica que primero se revisa en un negocio recurrente."
+    },
+    {
+      "id": "q5",
+      "texto": "La cancelación impone:",
+      "opciones": [
+        "Un descuento",
+        "Más ventas",
+        "Un techo matemático al crecimiento",
+        "Menos costos"
+      ],
+      "correcta": 2,
+      "explicacion": "Llega un punto en que los nuevos solo reemplazan a los que se van."
+    },
+    {
+      "id": "q6",
+      "texto": "Con cancelación alta:",
+      "opciones": [
+        "Se crece más rápido",
+        "No hay techo",
+        "Baja el costo",
+        "El techo llega muy pronto"
+      ],
+      "correcta": 3,
+      "explicacion": "El esfuerzo comercial se consume en reponer la base."
+    },
+    {
+      "id": "q7",
+      "texto": "Bajar la cancelación:",
+      "opciones": [
+        "Sube el techo y alarga la permanencia",
+        "No sirve",
+        "Baja el precio",
+        "Sube el costo"
+      ],
+      "correcta": 0,
+      "explicacion": "Aumenta el valor de vida sin gastar en adquisición."
+    },
+    {
+      "id": "q8",
+      "texto": "Un punto menos de cancelación mensual:",
+      "opciones": [
+        "Vale menos que un cliente nuevo",
+        "Suele valer más que un punto más de clientes nuevos",
+        "Da igual",
+        "Es imposible"
+      ],
+      "correcta": 1,
+      "explicacion": "Actúa sobre toda la base, no solo sobre los que entran."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-8-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-8-b-escena.webp"
+}

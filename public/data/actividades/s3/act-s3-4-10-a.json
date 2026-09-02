@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-4-10-A",
+  "unit_code": "S3-4-10",
+  "unit_title": "Legado: qué queda cuando el emprendedor se va",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Seis Meses Ausente",
+  "descripcion": "El fundador debe ausentarse. Cada decisión define qué queda de la empresa.",
+  "objetivo": "Aplicar criterios de continuidad ante la ausencia del fundador",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny dirige una empresa con nueve empleados. Un problema de salud la obliga a ausentarse seis meses a partir de la próxima semana.",
+  "nodo_inicial": "accesos",
+  "nodos": {
+    "accesos": {
+      "id": "accesos",
+      "texto": "Todas las contraseñas, cuentas bancarias y sistemas están únicamente a nombre de Ceny. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Documentar accesos y darlos de forma ordenada a quien debe tenerlos",
+          "siguiente_nodo": "decisiones",
+          "consecuencia": "La empresa puede operar y pagar sin ella.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlo así: solo son seis meses",
+          "siguiente_nodo": "bloqueo",
+          "consecuencia": "Nadie puede pagar nómina ni proveedores la primera semana.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-accesos.webp"
+    },
+    "bloqueo": {
+      "id": "bloqueo",
+      "texto": "La operación está bloqueada y los empleados sin cobrar. ¿Qué aprende?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que la continuidad se construye antes, no durante la emergencia",
+          "siguiente_nodo": "decisiones",
+          "consecuencia": "Resuelve los accesos, con daño ya causado.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": -20000
+        },
+        {
+          "id": "o2",
+          "texto": "Que tendrá que trabajar desde el hospital",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Su salud empeora y la empresa sigue igual de frágil.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -110000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-bloqueo.webp"
+    },
+    "decisiones": {
+      "id": "decisiones",
+      "texto": "Alguien debe tomar decisiones diarias. Nadie más lo ha hecho nunca. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Designar a alguien con límites claros y acompañarlo la semana que le queda",
+          "siguiente_nodo": "clientes",
+          "consecuencia": "Imperfecto, pero hay una cadena de decisión definida.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 25000
+        },
+        {
+          "id": "o2",
+          "texto": "Pedir que le consulten todo por mensaje",
+          "siguiente_nodo": "clientes",
+          "consecuencia": "La empresa se detiene cada vez que ella no puede responder.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -35000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-decisiones.webp"
+    },
+    "clientes": {
+      "id": "clientes",
+      "texto": "Los contratos con los clientes principales están a nombre personal de Ceny. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Migrarlos a nombre de la empresa y presentar a quien dará seguimiento",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "La relación deja de depender de una sola persona.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 70000
+        },
+        {
+          "id": "o2",
+          "texto": "Dejarlos así porque los clientes confían en ella personalmente",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Dos clientes grandes se van durante su ausencia.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -80000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-clientes.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La empresa operó seis meses sin Ceny y ella regresó a una organización más fuerte.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "La continuidad se construye con sistemas documentados y personas preparadas, siempre antes de necesitarla. Lo construido debe poder sostenerse sin quien lo construyó.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La empresa sobrevivió, pero perdió clientes que dependían solo de ella.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cuando las relaciones y los contratos están a nombre de la persona y no de la empresa, la ausencia del fundador se lleva parte del negocio.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny trabajó enferma y la empresa quedó igual de frágil que antes.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Un negocio que depende por completo de una persona no es todavía una empresa. Sostenerlo desde la cama solo pospone el problema y cobra el costo en salud.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-4-10-a-portada.webp"
+}

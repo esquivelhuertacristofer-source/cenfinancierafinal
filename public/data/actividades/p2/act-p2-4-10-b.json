@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P2-4-10-B",
+  "unit_code": "P2-4-10",
+  "unit_title": "Repartir la ganancia: ahorro, reinversión y gusto",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto del Reparto",
+  "descripcion": "Calcula las fracciones y demuestra que sabes repartir una ganancia.",
+  "objetivo": "Consolidar el cálculo de fracciones aplicadas al reparto de utilidades",
+  "xp": 200,
+  "tiempo_por_pregunta": 22,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Un tercio de $90 es:",
+      "respuesta_correcta": "$30",
+      "incorrectas": [
+        "$45",
+        "$22",
+        "$60"
+      ],
+      "dato_extra": "90 entre 3 son 30. Repartir en tres partes iguales es el reparto más simple."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La mitad de $90 es:",
+      "respuesta_correcta": "$45",
+      "incorrectas": [
+        "$30",
+        "$90",
+        "$22"
+      ],
+      "dato_extra": "Al principio de un negocio suele convenir mandar la mitad a crecer."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Gané $60 y reparto en tres partes iguales. Cada parte es:",
+      "respuesta_correcta": "$20",
+      "incorrectas": [
+        "$30",
+        "$60",
+        "$15"
+      ],
+      "dato_extra": "60 entre 3 son 20. Calcula antes de repartir, no a ojo."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Los tres destinos de la ganancia son:",
+      "respuesta_correcta": "Crecer, guardar y disfrutar",
+      "incorrectas": [
+        "Gastar, perder, olvidar",
+        "Comprar, vender, cobrar",
+        "Pedir, deber, pagar"
+      ],
+      "dato_extra": "El error no es elegir uno: es dejar los otros dos vacíos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Si no reinvierto nada:",
+      "respuesta_correcta": "Produzco siempre lo mismo",
+      "incorrectas": [
+        "Crezco más",
+        "Gano el doble",
+        "No pasa nada"
+      ],
+      "dato_extra": "Por más que trabajes, sin semilla el negocio no crece."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Si nunca disfruto nada de lo ganado:",
+      "respuesta_correcta": "Tarde o temprano abandono",
+      "incorrectas": [
+        "Crezco al doble",
+        "Ahorro más",
+        "No importa"
+      ],
+      "dato_extra": "Un negocio sin recompensa deja de tener sentido para quien lo trabaja."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿El reparto debe ser siempre el mismo?",
+      "respuesta_correcta": "No, se ajusta con el tiempo",
+      "incorrectas": [
+        "Sí, para siempre",
+        "Sí, lo marca la ley",
+        "Sí, siempre en tercios"
+      ],
+      "dato_extra": "Al principio conviene crecer más; después, guardar y disfrutar más."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-10-b-escena.webp"
+}

@@ -5,109 +5,109 @@
   "level": "Secundaria 1",
   "edad": "12-13 años",
   "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "El S&P 500 y los ETFs",
-  "descripcion": "¿Sabías que puedes ser dueño de las 500 empresas más grandes de EE.UU. con un solo clic? ¡Descubre el poder de los índices!",
-  "objetivo": "Identificar el funcionamiento de los índices bursátiles y los beneficios de los fondos cotizados (ETFs)",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "complejidad": "ALTO",
+  "titulo": "Tus Derechos en el Trabajo",
+  "descripcion": "La Ley Federal del Trabajo te da derechos que muchos patrones esperan que no conozcas. Conócelos antes de firmar tu primer contrato.",
+  "objetivo": "Identificar los derechos y obligaciones de un contrato laboral mexicano y la importancia de la formalidad.",
+  "xp": 550,
+  "aprobacion_minima": 0.7,
   "preguntas": [
     {
-      "id": "ind1",
-      "texto": "¿Qué es un 'Índice Bursátil'?",
+      "id": "q1",
+      "texto": "El aguinaldo mínimo por ley en México equivale a…",
       "opciones": [
-        "Una lista de precios de comida",
-        "Un promedio que mide el rendimiento de un grupo de empresas (ej: las 500 más grandes)",
-        "Un tipo de impuesto",
-        "Una oficina de gobierno"
+        "15 días de salario",
+        "Un mes completo",
+        "5 días",
+        "No es obligatorio"
       ],
-      "correcta": 1,
-      "explicacion": "Un índice sirve como termómetro para saber cómo le va a la economía en general."
+      "correcta": 0,
+      "explicacion": "Es el mínimo legal y debe pagarse antes del 20 de diciembre. Muchas empresas dan más."
     },
     {
-      "id": "ind2",
-      "texto": "¿Qué es el S&P 500?",
+      "id": "q2",
+      "texto": "Desde la reforma de 2023, las vacaciones del primer año son…",
       "opciones": [
-        "Un carro de carreras",
-        "Un índice que agrupa a las 500 empresas más importantes de la bolsa de EE.UU.",
-        "El precio del dólar",
-        "Una marca de ropa"
+        "6 días",
+        "12 días",
+        "20 días",
+        "No hay"
       ],
       "correcta": 1,
-      "explicacion": "Es considerado el indicador más confiable de la salud económica mundial."
+      "explicacion": "La \"Ley de Vacaciones Dignas\" las subió de 6 a 12 días, y suben 2 días por año hasta llegar a 20."
     },
     {
-      "id": "ind3",
-      "texto": "¿Qué significa 'ETF' (Exchange Traded Fund)?",
+      "id": "q3",
+      "texto": "La prima vacacional es…",
       "opciones": [
-        "Empresa de Tecnología Famosa",
-        "Fondo Cotizado en Bolsa (una canasta de acciones que se compra como si fuera una sola acción)",
-        "Estrategia de Trabajo Fuerte",
-        "Efectivo Total y Fácil"
+        "Un bono opcional",
+        "Un 25% extra sobre el salario de los días de vacaciones",
+        "El aguinaldo",
+        "Un préstamo"
       ],
       "correcta": 1,
-      "explicacion": "Los ETFs permiten diversificar tu dinero de forma barata y rápida."
+      "explicacion": "Es dinero adicional para que puedas efectivamente descansar, no solo faltar."
     },
     {
-      "id": "ind4",
-      "texto": "¿Cuál es la ventaja de la 'Gestión Pasiva'?",
+      "id": "q4",
+      "texto": "Un contrato \"por honorarios\" para trabajo de tiempo completo con horario fijo…",
       "opciones": [
-        "Que ganas más dinero siempre",
-        "Que las comisiones son muy bajas porque solo sigues al índice automáticamente",
-        "Que no pagas nada",
-        "Que es más arriesgada"
+        "Es totalmente legal",
+        "Suele ser una simulación para evitar prestaciones",
+        "Da más derechos",
+        "Incluye IMSS"
       ],
       "correcta": 1,
-      "explicacion": "Al no necesitar un equipo de analistas eligiendo acciones, los costos para ti son mínimos."
+      "explicacion": "Si hay subordinación, horario y jefe, legalmente es una relación laboral, se llame como se llame."
     },
     {
-      "id": "ind5",
-      "texto": "¿Qué es el NASDAQ?",
+      "id": "q5",
+      "texto": "El periodo de prueba máximo permitido por la ley es de…",
       "opciones": [
-        "Un tipo de cohete",
-        "La bolsa de valores especializada en empresas de tecnología",
-        "Un canal de noticias",
-        "El banco central de Japón"
+        "30 días (o 180 en puestos de dirección)",
+        "Un año",
+        "5 años",
+        "No existe límite"
       ],
-      "correcta": 1,
-      "explicacion": "Ahí es donde cotizan Apple, Google y Microsoft."
+      "correcta": 0,
+      "explicacion": "Durante ese periodo ya tienes derecho a sueldo, IMSS y todas las prestaciones."
     },
     {
-      "id": "ind6",
-      "texto": "¿Qué pasa si una empresa del S&P 500 quiebra o se vuelve muy pequeña?",
+      "id": "q6",
+      "texto": "Si te despiden injustificadamente, tienes derecho a…",
       "opciones": [
-        "El índice desaparece",
-        "Es expulsada del índice y reemplazada por una nueva empresa exitosa",
-        "El gobierno la rescata",
-        "No pasa nada"
+        "Nada",
+        "Indemnización de 3 meses más 20 días por año trabajado",
+        "Solo tu último sueldo",
+        "Una carta de recomendación"
       ],
       "correcta": 1,
-      "explicacion": "Los índices se 'limpian' solos, manteniendo siempre a las mejores empresas."
+      "explicacion": "Más las partes proporcionales de aguinaldo, vacaciones y prima. Se reclama ante la autoridad laboral."
     },
     {
-      "id": "ind7",
-      "texto": "¿Por qué es mejor un ETF que comprar solo una acción?",
+      "id": "q7",
+      "texto": "El PTU (reparto de utilidades) es…",
       "opciones": [
-        "Porque siempre sube",
-        "Porque si a una empresa le va mal, las otras 499 pueden compensar la pérdida (Menos Riesgo)",
-        "Porque es más caro",
-        "Porque te dan regalos"
+        "Un regalo de la empresa",
+        "Tu derecho a una parte de las ganancias de la empresa",
+        "Un impuesto",
+        "Un descuento"
       ],
       "correcta": 1,
-      "explicacion": "La diversificación es la única forma 'gratis' de reducir el riesgo."
+      "explicacion": "Se paga en mayo y corresponde al 10% de la utilidad fiscal, con topes por trabajador."
     },
     {
-      "id": "ind8",
-      "texto": "¿Cuál es el consejo de Warren Buffett para la mayoría de las personas?",
+      "id": "q8",
+      "texto": "Firmar hojas en blanco o una renuncia sin fecha al entrar a un trabajo…",
       "opciones": [
-        "Comprar boletos de lotería",
-        "Invertir en un fondo indexado barato (ETF) del S&P 500 y dejarlo crecer por décadas",
-        "Vender todo cada vez que hay miedo",
-        "No invertir nunca"
+        "Es una práctica normal",
+        "Es ilegal y te deja sin ninguna protección",
+        "Es obligatorio",
+        "Te da más derechos"
       ],
       "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora conoces la estrategia de los maestros de las finanzas."
+      "explicacion": "Con eso pueden fabricar una renuncia voluntaria y borrar tu indemnización. Nunca firmes documentos en blanco."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

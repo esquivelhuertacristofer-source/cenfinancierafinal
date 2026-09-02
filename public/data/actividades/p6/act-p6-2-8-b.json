@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P6-2-8-B",
+  "unit_code": "P6-2-8",
+  "unit_title": "Reestructurar: cuando la deuda ya no se puede pagar",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Negociar la Deuda",
+  "descripcion": "Comprueba que sabes cuándo y cómo reestructurar.",
+  "objetivo": "Verificar la comprensión de la reestructura y su preparación",
+  "xp": 480,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El momento de hablar con el acreedor es:",
+      "opciones": [
+        "Después de varios atrasos",
+        "Antes de dejar de pagar",
+        "Nunca",
+        "Al final del crédito"
+      ],
+      "correcta": 1,
+      "explicacion": "Quien avisa antes del primer atraso conserva credibilidad."
+    },
+    {
+      "id": "q2",
+      "texto": "Quien se esconde:",
+      "opciones": [
+        "Logra que la deuda desaparezca",
+        "Obtiene mejores condiciones",
+        "Acumula recargos y daña su historial",
+        "No pasa nada"
+      ],
+      "correcta": 2,
+      "explicacion": "Y llega a negociar desde una posición mucho más débil."
+    },
+    {
+      "id": "q3",
+      "texto": "Reestructurar significa:",
+      "opciones": [
+        "Dejar de pagar",
+        "Cambiar de banco",
+        "Cancelar la deuda",
+        "Acordar condiciones nuevas"
+      ],
+      "correcta": 3,
+      "explicacion": "Plazo, tasa, periodo de gracia o unificación de deudas."
+    },
+    {
+      "id": "q4",
+      "texto": "Alargar el plazo:",
+      "opciones": [
+        "Baja la mensualidad pero sube el total",
+        "Baja todo",
+        "No cambia nada",
+        "Elimina intereses"
+      ],
+      "correcta": 0,
+      "explicacion": "Más meses significa más tiempo generando intereses."
+    },
+    {
+      "id": "q5",
+      "texto": "Reestructurar:",
+      "opciones": [
+        "Es gratis",
+        "Tiene costos y a veces queda en el historial",
+        "Mejora el historial",
+        "No tiene consecuencias"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una solución para un problema real, no una conveniencia."
+    },
+    {
+      "id": "q6",
+      "texto": "A negociar hay que llegar:",
+      "opciones": [
+        "Con explicaciones",
+        "Sin decir nada",
+        "Con una propuesta concreta de monto, fecha y plazo",
+        "Con un abogado"
+      ],
+      "correcta": 2,
+      "explicacion": "Los números dan al acreedor una salida que puede aceptar."
+    },
+    {
+      "id": "q7",
+      "texto": "Un acreedor acepta cobrar menos porque:",
+      "opciones": [
+        "Por caridad",
+        "Lo obliga la ley",
+        "Le conviene fiscalmente",
+        "Prefiere cobrar menos que no cobrar nada"
+      ],
+      "correcta": 3,
+      "explicacion": "Una propuesta realista le resuelve un problema a él también."
+    },
+    {
+      "id": "q8",
+      "texto": "La mensualidad que se propone debe ser:",
+      "opciones": [
+        "Realista y sostenible",
+        "La más baja posible",
+        "La misma de antes",
+        "Simbólica"
+      ],
+      "correcta": 0,
+      "explicacion": "Prometer de más lleva a incumplir otra vez y a perder credibilidad."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-8-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-8-b-escena.webp"
+}

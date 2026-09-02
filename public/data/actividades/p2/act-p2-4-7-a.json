@@ -1,0 +1,149 @@
+{
+  "code": "ACT-P2-4-7-A",
+  "unit_code": "P2-4-7",
+  "unit_title": "Poner precio: sumar mis costos primero",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Calcula tu Precio",
+  "descripcion": "Arma el precio de venta de tu producto paso por paso, desde los materiales hasta la ganancia.",
+  "objetivo": "Construir un precio de venta partiendo del costo real por pieza",
+  "xp": 250,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mis materiales",
+      "descripcion": "Anota todo lo que compraste para producir. No olvides lo pequeño: bolsitas, listones, etiquetas.",
+      "campos": [
+        {
+          "id": "material1",
+          "label": "Material principal",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 60,
+          "unit": "$",
+          "ayuda": "Lo más caro de tu lista, como la harina o el papel.",
+          "requerido": true
+        },
+        {
+          "id": "material2",
+          "label": "Material secundario",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "default": 30,
+          "unit": "$",
+          "ayuda": "Lo que acompaña: azúcar, pintura, pegamento.",
+          "requerido": true
+        },
+        {
+          "id": "empaque",
+          "label": "Bolsitas, etiquetas y listón",
+          "type": "slider",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "default": 20,
+          "unit": "$",
+          "ayuda": "Lo que casi todos olvidan anotar y sí se paga.",
+          "requerido": true
+        },
+        {
+          "id": "costo_total",
+          "label": "Costo total de materiales",
+          "type": "calculated",
+          "formula": "material1 + material2 + empaque",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Cuántas piezas salen",
+      "descripcion": "Este es el paso que casi todos se saltan: dividir el costo entre lo que produjiste.",
+      "campos": [
+        {
+          "id": "piezas",
+          "label": "Piezas que voy a producir",
+          "type": "slider",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 20,
+          "unit": "piezas",
+          "ayuda": "Cuenta bien: de esto depende todo el cálculo.",
+          "requerido": true
+        },
+        {
+          "id": "costo_pieza",
+          "label": "Costo de cada pieza",
+          "type": "calculated",
+          "formula": "(material1 + material2 + empaque) / piezas",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi ganancia",
+      "descripcion": "La ganancia paga tu tiempo, tu trabajo y el riesgo de haber comprado materiales por adelantado.",
+      "campos": [
+        {
+          "id": "ganancia_pieza",
+          "label": "Lo que quiero ganar por pieza",
+          "type": "slider",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 3,
+          "unit": "$",
+          "ayuda": "Ni tan poca que no valga el esfuerzo, ni tanta que nadie compre.",
+          "requerido": true
+        },
+        {
+          "id": "precio_venta",
+          "label": "Precio de venta por pieza",
+          "type": "calculated",
+          "formula": "(material1 + material2 + empaque) / piezas + ganancia_pieza",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Mi resultado",
+      "descripcion": "Revisa cómo queda tu negocio si logras vender todo lo que produjiste.",
+      "campos": [
+        {
+          "id": "venta_total",
+          "label": "Si vendo todo, junto",
+          "type": "calculated",
+          "formula": "((material1 + material2 + empaque) / piezas + ganancia_pieza) * piezas",
+          "unit": "$"
+        },
+        {
+          "id": "ganancia_total",
+          "label": "Mi ganancia si vendo todo",
+          "type": "calculated",
+          "formula": "ganancia_pieza * piezas",
+          "unit": "$"
+        },
+        {
+          "id": "punto_seguro",
+          "label": "Piezas que debo vender para no perder",
+          "type": "calculated",
+          "formula": "Math.ceil((material1 + material2 + empaque) / ((material1 + material2 + empaque) / piezas + ganancia_pieza))",
+          "unit": "piezas"
+        }
+      ]
+    }
+  ],
+  "output_type": "costeo_producto",
+  "exportable": true,
+  "portada": "/assets/misiones/p2/p2-4-7-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-4-7-a-escena.webp"
+}

@@ -4,121 +4,112 @@
   "unit_title": "Costos Fijos vs. Variables: la salud del negocio",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "CONSTRUCTOR",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Mi Manifiesto de Líder",
-  "descripcion": "Un gran líder sabe quién es y qué defiende. ¡Escribe tu propio código de honor y prepárate para guiar a otros!",
-  "objetivo": "Definir un marco ético y estratégico personal para el ejercicio del liderazgo",
-  "xp": 350,
-  "output_type": "Manifiesto de Liderazgo",
-  "exportable": true,
-  "pasos": [
+  "titulo": "¿Fijo o Variable?",
+  "descripcion": "La taquería de la esquina tiene estos gastos. Clasifícalos: ¿se pagan aunque no venda ni un taco, o solo aparecen cuando vende?",
+  "objetivo": "Clasificar correctamente los gastos de un negocio en costos fijos y variables.",
+  "xp": 400,
+  "instruccion": "Pregúntate siempre lo mismo: \"si hoy no vendo nada, ¿lo pago igual?\". Si la respuesta es sí, es fijo.",
+  "categorias": [
     {
-      "id": "mis_pilares_eticos",
-      "titulo": "⚖️ Mis Valores",
-      "descripcion": "Elige los 3 valores que nunca vas a romper en tus negocios.",
-      "campos": [
-        {
-          "id": "valor_1",
-          "label": "Valor 1",
-          "type": "select",
-          "opciones": [
-            "Honestidad",
-            "Puntualidad",
-            "Generosidad",
-            "Excelencia",
-            "Justicia"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "valor_2",
-          "label": "Valor 2",
-          "type": "select",
-          "opciones": [
-            "Honestidad",
-            "Puntualidad",
-            "Generosidad",
-            "Excelencia",
-            "Justicia"
-          ],
-          "requerido": true
-        },
-        {
-          "id": "valor_3",
-          "label": "Valor 3",
-          "type": "select",
-          "opciones": [
-            "Honestidad",
-            "Puntualidad",
-            "Generosidad",
-            "Excelencia",
-            "Justicia"
-          ],
-          "requerido": true
-        }
-      ]
+      "id": "fijo",
+      "label": "COSTO FIJO",
+      "emoji": "🔒",
+      "color": "#6366f1"
     },
     {
-      "id": "compromiso_equipo",
-      "titulo": "🤝 Con mi Equipo",
-      "descripcion": "¿Cómo quieres que la gente se sienta trabajando contigo?",
-      "campos": [
-        {
-          "id": "trato_equipo",
-          "label": "¿Cuál es tu promesa hacia tus colaboradores?",
-          "type": "textarea",
-          "placeholder": "Ej: Yo me comprometo a escucharlos siempre y a ayudarlos a ser mejores cada día...",
-          "requerido": true
-        },
-        {
-          "id": "manejo_error",
-          "label": "¿Qué harás cuando alguien de tu equipo cometa un error?",
-          "type": "text",
-          "placeholder": "Ej: En lugar de gritar, le enseñaré cómo hacerlo bien...",
-          "requerido": true
-        }
-      ]
-    },
-    {
-      "id": "mi_vision_grande",
-      "titulo": "✨ Mi Gran Visión",
-      "descripcion": "¿Qué huella quieres dejar en el mundo con tu liderazgo?",
-      "campos": [
-        {
-          "id": "vision_mundo",
-          "label": "Mi sueño es que mi empresa/liderazgo logre...",
-          "type": "textarea",
-          "placeholder": "Ej: Crear un mundo donde nadie tenga hambre y todos tengan educación...",
-          "requerido": true
-        },
-        {
-          "id": "frase_lider",
-          "label": "Escribe una frase que te motive en los días difíciles",
-          "type": "text",
-          "placeholder": "Ej: 'Rendirse no es una opción' o 'Juntos llegamos más lejos'...",
-          "requerido": true
-        },
-        {
-          "id": "personas_a_impactar",
-          "label": "Personas que Quieres Impactar con tu Empresa",
-          "type": "slider",
-          "min": 1000,
-          "max": 1000000,
-          "step": 1000,
-          "default": 10000,
-          "requerido": false
-        },
-        {
-          "id": "empleos_proyectados",
-          "label": "Empleos que Podría Crear tu Empresa",
-          "type": "calculated",
-          "formula": "Math.round(personas_a_impactar / 50)",
-          "unit": " empleos directos",
-          "ayuda": "Referencia: 1 empleo directo impacta a ~50 personas en la economía"
-        }
-      ]
+      "id": "variable",
+      "label": "COSTO VARIABLE",
+      "emoji": "📦",
+      "color": "#f59e0b"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "La renta del local",
+      "emoji": "🏠",
+      "categoria_correcta": "fijo",
+      "feedback": "Se paga vendas o no vendas. Fijo clásico."
+    },
+    {
+      "id": "i2",
+      "label": "La carne de cada taco",
+      "emoji": "🥩",
+      "categoria_correcta": "variable",
+      "feedback": "Sin tacos vendidos, no se gasta carne."
+    },
+    {
+      "id": "i3",
+      "label": "El internet del negocio",
+      "emoji": "📶",
+      "categoria_correcta": "fijo",
+      "feedback": "Llega la factura aunque el local esté vacío."
+    },
+    {
+      "id": "i4",
+      "label": "Las servilletas que usa cada cliente",
+      "emoji": "🧻",
+      "categoria_correcta": "variable",
+      "feedback": "Más clientes, más servilletas."
+    },
+    {
+      "id": "i5",
+      "label": "El sueldo del cocinero de planta",
+      "emoji": "👨‍🍳",
+      "categoria_correcta": "fijo",
+      "feedback": "Su sueldo no cambia con las ventas del día."
+    },
+    {
+      "id": "i6",
+      "label": "Las tortillas",
+      "emoji": "🫓",
+      "categoria_correcta": "variable",
+      "feedback": "Se compran en función de lo que se espera vender."
+    },
+    {
+      "id": "i7",
+      "label": "El permiso anual de la alcaldía",
+      "emoji": "📋",
+      "categoria_correcta": "fijo",
+      "feedback": "Un pago obligatorio, haya o no clientes."
+    },
+    {
+      "id": "i8",
+      "label": "Las bolsas para llevar",
+      "emoji": "🛍️",
+      "categoria_correcta": "variable",
+      "feedback": "Solo se usan cuando alguien pide para llevar."
+    },
+    {
+      "id": "i9",
+      "label": "El seguro del local",
+      "emoji": "🛡️",
+      "categoria_correcta": "fijo",
+      "feedback": "Se paga todos los meses pase lo que pase."
+    },
+    {
+      "id": "i10",
+      "label": "El gas del comal",
+      "emoji": "🔥",
+      "categoria_correcta": "variable",
+      "feedback": "Se consume en proporción a lo que se cocina."
+    },
+    {
+      "id": "i11",
+      "label": "La comisión de la terminal por cada pago",
+      "emoji": "💳",
+      "categoria_correcta": "variable",
+      "feedback": "Solo se cobra cuando hay una venta con tarjeta."
+    },
+    {
+      "id": "i12",
+      "label": "El pago mensual del refrigerador a MSI",
+      "emoji": "🧊",
+      "categoria_correcta": "fijo",
+      "feedback": "La mensualidad no perdona: hay que pagarla venda o no venda."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

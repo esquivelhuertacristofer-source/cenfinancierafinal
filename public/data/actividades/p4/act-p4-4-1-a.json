@@ -4,86 +4,104 @@
   "unit_title": "El ADN del emprendedor: detectando oportunidades",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "DECIDE",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "Mentalidad Diamante",
-  "descripcion": "Emprender no es solo ganar dinero, es resolver problemas y nunca rendirse. ¡Enfréntate a tu primer gran reto!",
-  "objetivo": "Fomentar la resiliencia y la capacidad de pivotar ante el fracaso inicial de una idea de negocio",
+  "titulo": "¿Queja u Oportunidad?",
+  "descripcion": "Todo negocio empieza igual: alguien se queja de algo. La diferencia está en quién se queda en la queja y quién ve un problema que puede resolver.",
+  "objetivo": "Detectar oportunidades de emprendimiento distinguiendo entre quejarse de un problema, resolverlo y las excusas que impiden empezar.",
   "xp": 450,
-  "personaje_principal": "Futuro Líder",
-  "contexto_inicial": "Decidiste vender pulseras tejidas a tus amigos. Invertiste todo tu ahorro, pero ¡nadie te ha comprado ninguna! ¿Qué haces?",
-  "nodo_inicial": "crisis_inicial",
-  "nodos": {
-    "crisis_inicial": {
-      "id": "crisis_inicial",
-      "texto": "Estás triste porque no has vendido nada. Te sientes frustrado.",
-      "opciones": [
-        {
-          "id": "preguntar_clientes",
-          "texto": "Preguntarles a tus amigos por qué no les gustan las pulseras",
-          "siguiente_nodo": "ajuste_idea",
-          "consecuencia": "¡Paso de valiente! Escuchar al cliente es el primer paso al éxito.",
-          "xp_bonus": 200,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "rendirse_ya",
-          "texto": "Cerrar el negocio y decir que emprender es muy difícil",
-          "siguiente_nodo": "final_rendicion",
-          "consecuencia": "Te rendiste muy pronto. El fracaso es solo una lección.",
-          "xp_bonus": 0,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
+  "instruccion": "Arrastra cada frase a la columna que le corresponde.",
+  "categorias": [
+    {
+      "id": "queja",
+      "label": "SOLO QUEJA",
+      "emoji": "😤",
+      "color": "#ef4444"
     },
-    "ajuste_idea": {
-      "id": "ajuste_idea",
-      "texto": "Tus amigos dicen: 'Están bonitas, pero son muy caras y los colores no nos gustan'. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "cambiar_diseno",
-          "texto": "Cambiar los colores y buscar materiales más baratos para bajar el precio",
-          "siguiente_nodo": "exito_negocio",
-          "consecuencia": "¡Eso se llama PIVOTAR! Ajustaste tu idea a lo que el mercado quería.",
-          "xp_bonus": 250,
-          "es_optima": true,
-          "impacto_patrimonio": 100
-        },
-        {
-          "id": "insistir_mismo",
-          "texto": "Seguir vendiendo las mismas pulseras al mismo precio",
-          "siguiente_nodo": "final_estancado",
-          "consecuencia": "Si el cliente no lo quiere, por más que insistas, no te lo comprará.",
-          "xp_bonus": 50,
-          "es_optima": false,
-          "impacto_patrimonio": -50
-        }
-      ]
+    {
+      "id": "oportunidad",
+      "label": "OPORTUNIDAD DETECTADA",
+      "emoji": "💡",
+      "color": "#22c55e"
     },
-    "exito_negocio": {
-      "id": "exito_negocio",
-      "texto": "¡Increíble! Con los nuevos colores y el precio justo, ¡vendiste todas en el recreo! Ahora tienes capital para crecer.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "Un emprendedor no es el que nunca falla, sino el que aprende rápido de sus fallas."
-    },
-    "final_rendicion": {
-      "id": "final_rendicion",
-      "texto": "Decidiste no seguir. Perdiste tu ahorro y te quedaste con muchas pulseras guardadas. ¿Quieres intentar de nuevo?",
-      "es_final": true,
-      "tipo_final": "malo",
-      "reflexion_final": "A veces la victoria está justo después del primer fracaso. ¡No te detengas!"
-    },
-    "final_estancado": {
-      "id": "final_estancado",
-      "texto": "Pasan las semanas y sigues sin vender. Tu negocio se quedó estancado por no escuchar al cliente.",
-      "es_final": true,
-      "tipo_final": "regular",
-      "reflexion_final": "El mercado manda. Si quieres vender, debes ofrecer algo que la gente valore y pueda pagar."
+    {
+      "id": "excusa",
+      "label": "EXCUSA PARA NO EMPEZAR",
+      "emoji": "🚧",
+      "color": "#f59e0b"
     }
-  },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "\"En mi escuela nadie vende agua fría en el recreo\"",
+      "emoji": "🥤",
+      "categoria_correcta": "oportunidad",
+      "feedback": "Detectaste una necesidad que nadie está atendiendo. Eso es una oportunidad."
+    },
+    {
+      "id": "i2",
+      "label": "\"Qué mala suerte que hace tanto calor aquí\"",
+      "emoji": "☀️",
+      "categoria_correcta": "queja",
+      "feedback": "La misma situación, sin buscar qué hacer con ella."
+    },
+    {
+      "id": "i3",
+      "label": "\"Necesitaría mucho dinero para empezar cualquier cosa\"",
+      "emoji": "💸",
+      "categoria_correcta": "excusa",
+      "feedback": "Casi todos los negocios pequeños empiezan con lo que ya se tiene."
+    },
+    {
+      "id": "i4",
+      "label": "\"A los vecinos les cuesta trabajo pasear a sus perros\"",
+      "emoji": "🐕",
+      "categoria_correcta": "oportunidad",
+      "feedback": "Un problema real de personas concretas: eso es exactamente lo que se busca."
+    },
+    {
+      "id": "i5",
+      "label": "\"Ya alguien más debe haberlo pensado\"",
+      "emoji": "🤷",
+      "categoria_correcta": "excusa",
+      "feedback": "Que alguien lo haya pensado no significa que lo haya hecho, ni que lo haga bien."
+    },
+    {
+      "id": "i6",
+      "label": "\"Siempre se acaban los lápices a media clase\"",
+      "emoji": "✏️",
+      "categoria_correcta": "oportunidad",
+      "feedback": "Un problema que se repite todos los días es la mejor clase de oportunidad."
+    },
+    {
+      "id": "i7",
+      "label": "\"Este lugar es aburridísimo y nunca pasa nada\"",
+      "emoji": "😑",
+      "categoria_correcta": "queja",
+      "feedback": "Quejarse no cambia nada. Preguntarse qué falta, sí."
+    },
+    {
+      "id": "i8",
+      "label": "\"Soy muy chico para hacer un negocio\"",
+      "emoji": "📏",
+      "categoria_correcta": "excusa",
+      "feedback": "Muchos negocios enormes empezaron con alguien de tu edad vendiendo algo pequeño."
+    },
+    {
+      "id": "i9",
+      "label": "\"Nadie en mi cuadra arregla bicicletas\"",
+      "emoji": "🚲",
+      "categoria_correcta": "oportunidad",
+      "feedback": "Detectaste algo que la gente necesita y nadie ofrece cerca."
+    },
+    {
+      "id": "i10",
+      "label": "\"La comida de la cooperativa está carísima y punto\"",
+      "emoji": "🍔",
+      "categoria_correcta": "queja",
+      "feedback": "Le falta la segunda mitad: ¿y qué podrías hacer tú al respecto?"
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

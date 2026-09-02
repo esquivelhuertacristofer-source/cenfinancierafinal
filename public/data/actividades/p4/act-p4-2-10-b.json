@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-2-10-B",
+  "unit_code": "P4-2-10",
+  "unit_title": "Mi huella digital: lo que las apps saben de mis compras",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Mi Huella Digital",
+  "descripcion": "Comprueba que entiendes qué datos generas y cómo protegerte.",
+  "objetivo": "Verificar la comprensión de la huella digital y los hábitos de control",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La huella digital de compra es:",
+      "opciones": [
+        "El registro de lo que buscas, ves y compras",
+        "Un virus",
+        "Una tarjeta",
+        "Una app"
+      ],
+      "correcta": 0,
+      "explicacion": "Con ese registro se construye un perfil que predice tus decisiones."
+    },
+    {
+      "id": "q2",
+      "texto": "Un anuncio de lo que acabas de buscar aparece porque:",
+      "opciones": [
+        "Es casualidad",
+        "Tus datos permiten predecir qué comprarías",
+        "Es magia",
+        "Alguien te escuchó"
+      ],
+      "correcta": 1,
+      "explicacion": "No es coincidencia: es el uso normal de datos de navegación."
+    },
+    {
+      "id": "q3",
+      "texto": "La mayoría de esos datos:",
+      "opciones": [
+        "Se roban",
+        "Los inventa la app",
+        "Se entregan al usar servicios gratuitos",
+        "Vienen del gobierno"
+      ],
+      "correcta": 2,
+      "explicacion": "Cuando el servicio es gratis, el modelo suele ser la publicidad."
+    },
+    {
+      "id": "q4",
+      "texto": "Un anuncio demasiado oportuno aprovecha:",
+      "opciones": [
+        "Que tienes dinero",
+        "Que estás aburrido",
+        "Que es fin de mes",
+        "Que tu interés ya está activado"
+      ],
+      "correcta": 3,
+      "explicacion": "Mejor momento para venderte no significa mejor producto."
+    },
+    {
+      "id": "q5",
+      "texto": "Los permisos que conviene negar son:",
+      "opciones": [
+        "Los que no tienen relación con la función de la app",
+        "Todos",
+        "Ninguno",
+        "Solo los de cámara"
+      ],
+      "correcta": 0,
+      "explicacion": "Un juego que pide tus contactos no los necesita para funcionar."
+    },
+    {
+      "id": "q6",
+      "texto": "Los ajustes de privacidad conviene revisarlos:",
+      "opciones": [
+        "Una sola vez",
+        "Cada cierto tiempo",
+        "Nunca",
+        "Solo al instalar"
+      ],
+      "correcta": 1,
+      "explicacion": "Las actualizaciones pueden cambiarlos sin que lo notes."
+    },
+    {
+      "id": "q7",
+      "texto": "El objetivo de estos hábitos es:",
+      "opciones": [
+        "Desaparecer de internet",
+        "No usar apps",
+        "Saber qué entregas y a cambio de qué",
+        "Comprar más barato"
+      ],
+      "correcta": 2,
+      "explicacion": "Se trata de decidir el intercambio, no de evitarlo por completo."
+    },
+    {
+      "id": "q8",
+      "texto": "Ante un anuncio muy oportuno, la mejor herramienta es:",
+      "opciones": [
+        "Comprar rápido",
+        "Compartirlo",
+        "Aceptar cookies",
+        "Aplicar la regla de esperar"
+      ],
+      "correcta": 3,
+      "explicacion": "La misma espera que funciona con las compras dentro de los juegos."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-10-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-10-b-escena.webp"
+}

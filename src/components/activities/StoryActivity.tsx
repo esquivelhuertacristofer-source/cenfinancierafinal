@@ -36,16 +36,22 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
     setCurrentNodeId(choice.siguiente_nodo);
   };
 
-  // Score real: prioriza el tipo de final alcanzado ('bueno'/'regular'/'malo');
-  // si el nodo final no lo especifica, usa la proporción de decisiones
-  // óptimas tomadas a lo largo de la historia.
+  // Score real: combina el desenlace alcanzado con la calidad del camino. Solo
+  // con el tipo de final, dos alumnos que llegan al mismo desenlace obtienen lo
+  // mismo aunque uno haya acertado todas las decisiones intermedias y el otro
+  // ninguna; solo con la proporción de óptimas, el desenlace no cuenta.
+  // Los JSON usan 'bueno' y 'excelente' indistintamente para el mejor final.
   const computeScore = (): number => {
     const tipoFinal = currentNode?.tipo_final;
-    if (tipoFinal === 'bueno') return 100;
-    if (tipoFinal === 'regular') return 60;
-    if (tipoFinal === 'malo') return 30;
-    if (totalChoices > 0) return Math.round((optimalChoices / totalChoices) * 100);
-    return 100; // sin decisiones ni final evaluable (ej. contenido incompleto)
+    const base =
+      tipoFinal === 'bueno' || tipoFinal === 'excelente' ? 100 :
+      tipoFinal === 'regular' || tipoFinal === 'neutral' ? 60 :
+      tipoFinal === 'malo' ? 30 : null;
+    const ratio = totalChoices > 0 ? (optimalChoices / totalChoices) * 100 : null;
+
+    if (base === null) return ratio === null ? 100 : Math.round(ratio);
+    if (ratio === null) return base;
+    return Math.round(base * 0.6 + ratio * 0.4);
   };
 
   const handleFinish = () => {

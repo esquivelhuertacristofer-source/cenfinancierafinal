@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S3-3-6-B",
+  "unit_code": "S3-3-6",
+  "unit_title": "Asignación de activos por edad: la regla de los 110",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Asignación",
+  "descripcion": "Responde rápido sobre asignación de activos.",
+  "objetivo": "Consolidar la comprensión de la asignación por edad y horizonte",
+  "xp": 800,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El riesgo que puedes tomar depende sobre todo de:",
+      "respuesta_correcta": "El tiempo que falta para necesitar el dinero",
+      "incorrectas": [
+        "Tu carácter",
+        "El banco",
+        "La moda"
+      ],
+      "dato_extra": "El tiempo es lo que permite atravesar caídas."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La regla de los 110 consiste en:",
+      "respuesta_correcta": "Restar la edad a 110 para el porcentaje en renta variable",
+      "incorrectas": [
+        "Sumar 110 a la edad",
+        "Dividir entre 110",
+        "Multiplicar por 110"
+      ],
+      "dato_extra": "El resto va a renta fija."
+    },
+    {
+      "id": "q3",
+      "pregunta": "A los veinte años la regla sugiere:",
+      "respuesta_correcta": "Cerca del 90% en renta variable",
+      "incorrectas": [
+        "20%",
+        "50%",
+        "10%"
+      ],
+      "dato_extra": "Cuarenta años de horizonte lo permiten."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La regla ignora:",
+      "respuesta_correcta": "Estabilidad del ingreso, fondo de emergencia y metas cortas",
+      "incorrectas": [
+        "La edad",
+        "El horizonte",
+        "Nada"
+      ],
+      "dato_extra": "Por eso es un punto de partida, no una prescripción."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Con ingreso muy irregular conviene ser:",
+      "respuesta_correcta": "Más conservador de lo que sugiere la edad",
+      "incorrectas": [
+        "Más agresivo",
+        "Igual",
+        "No invertir"
+      ],
+      "dato_extra": "Podrías necesitar liquidar en un mal momento."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Antes de aplicar cualquier asignación hay que:",
+      "respuesta_correcta": "Tener el fondo de emergencia resuelto",
+      "incorrectas": [
+        "Comprar un auto",
+        "Cambiar de banco",
+        "Pedir crédito"
+      ],
+      "dato_extra": "Sin él, cualquier imprevisto obliga a vender en mal momento."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La asignación se revisa:",
+      "respuesta_correcta": "Cada varios años, no cada mes",
+      "incorrectas": [
+        "Cada semana",
+        "A diario",
+        "Nunca"
+      ],
+      "dato_extra": "Es una decisión estructural, no una reacción al mercado."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-3-6-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-3-6-b-escena.webp"
+}

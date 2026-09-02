@@ -4,60 +4,98 @@
   "unit_title": "La Tarjeta de Crédito: dinero prestado, no regalado",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "RELLENA",
+  "tipo": "ARRASTRA",
   "complejidad": "MEDIO",
-  "titulo": "El Código del Ciber-Guardián",
-  "descripcion": "Demuestra que conoces los términos de los expertos para proteger el mundo digital.",
-  "objetivo": "Reforzar el vocabulario técnico y los conceptos teóricos de la ciberseguridad",
-  "xp": 300,
-  "contexto": "Completa el texto con el término técnico correcto de cada espacio.",
-  "texto": "La ciberseguridad protege nuestra información. El pilar de la __BLANK1__ asegura que solo nosotros veamos nuestros datos. Si alguien secuestra tus archivos y pide dinero por ellos, se trata de un __BLANK2__. Nunca debemos conectar una __BLANK3__ que encontremos en la calle, pues puede tener virus. Para que nuestras cuentas sean casi imposibles de hackear, debemos activar el __BLANK4__ de Autenticación. Finalmente, navegar en sitios que empiezan con __BLANK5__ nos asegura que la conexión está cifrada y segura.",
-  "blanks": [
+  "titulo": "Débito o Crédito",
+  "descripcion": "Las dos son de plástico, las dos se pasan por la terminal y las dos tienen tu nombre. Pero una gasta TU dinero y la otra gasta el del banco. Clasifica cada característica.",
+  "objetivo": "Distinguir con precisión las características legales y financieras de la tarjeta de débito frente a la de crédito.",
+  "xp": 400,
+  "instruccion": "Arrastra cada característica a la tarjeta que le corresponde.",
+  "categorias": [
     {
-      "id": "BLANK1",
-      "opciones": [
-        "Confidencialidad",
-        "Disponibilidad",
-        "Integridad"
-      ],
-      "respuesta": "Confidencialidad"
+      "id": "debito",
+      "label": "TARJETA DE DÉBITO",
+      "emoji": "💚",
+      "color": "#10b981"
     },
     {
-      "id": "BLANK2",
-      "opciones": [
-        "Ransomware",
-        "Virus",
-        "Spam"
-      ],
-      "respuesta": "Ransomware"
-    },
-    {
-      "id": "BLANK3",
-      "opciones": [
-        "USB",
-        "Cable",
-        "Teclado"
-      ],
-      "respuesta": "USB"
-    },
-    {
-      "id": "BLANK4",
-      "opciones": [
-        "Doble Factor",
-        "Contraseña",
-        "PIN"
-      ],
-      "respuesta": "Doble Factor"
-    },
-    {
-      "id": "BLANK5",
-      "opciones": [
-        "HTTPS",
-        "HTTP",
-        "FTP"
-      ],
-      "respuesta": "HTTPS"
+      "id": "credito",
+      "label": "TARJETA DE CRÉDITO",
+      "emoji": "🔶",
+      "color": "#f97316"
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "items": [
+    {
+      "id": "i1",
+      "label": "Gasta dinero que ya es tuyo",
+      "emoji": "💵",
+      "categoria_correcta": "debito",
+      "feedback": "Correcto: el débito saca de tu cuenta lo que tú depositaste."
+    },
+    {
+      "id": "i2",
+      "label": "El banco te presta y luego se lo devuelves",
+      "emoji": "🏦",
+      "categoria_correcta": "credito",
+      "feedback": "Exacto. Cada compra a crédito es una deuda nueva."
+    },
+    {
+      "id": "i3",
+      "label": "Si no tienes saldo, la compra se rechaza",
+      "emoji": "🚫",
+      "categoria_correcta": "debito",
+      "feedback": "Así es, y por eso es imposible endeudarte con ella."
+    },
+    {
+      "id": "i4",
+      "label": "Tiene fecha de corte y fecha límite de pago",
+      "emoji": "📅",
+      "categoria_correcta": "credito",
+      "feedback": "¡Bien! Esas dos fechas deciden si pagas intereses o no."
+    },
+    {
+      "id": "i5",
+      "label": "Puede cobrarte intereses altísimos",
+      "emoji": "📈",
+      "categoria_correcta": "credito",
+      "feedback": "En México muchas superan el 70% anual."
+    },
+    {
+      "id": "i6",
+      "label": "Construye tu historial crediticio",
+      "emoji": "📊",
+      "categoria_correcta": "credito",
+      "feedback": "Correcto: cada pago puntual mejora tu reputación financiera."
+    },
+    {
+      "id": "i7",
+      "label": "No puedes endeudarte usándola",
+      "emoji": "🛡️",
+      "categoria_correcta": "debito",
+      "feedback": "Su gran ventaja: solo gastas lo que tienes."
+    },
+    {
+      "id": "i8",
+      "label": "Tiene un \"límite\" asignado por el banco",
+      "emoji": "🎚️",
+      "categoria_correcta": "credito",
+      "feedback": "Ese límite es cuánto te dejan deber, no cuánto tienes."
+    },
+    {
+      "id": "i9",
+      "label": "Sirve para retirar tu sueldo del cajero",
+      "emoji": "🏧",
+      "categoria_correcta": "debito",
+      "feedback": "Sacar efectivo con crédito, en cambio, cobra comisión e intereses desde el primer día."
+    },
+    {
+      "id": "i10",
+      "label": "Si pagas todo antes de la fecha límite, no cobra intereses",
+      "emoji": "✅",
+      "categoria_correcta": "credito",
+      "feedback": "¡Ese es el uso inteligente! Un préstamo gratis de hasta 45 días."
+    }
+  ],
+  "versión": "2026.Alineada.1"
 }

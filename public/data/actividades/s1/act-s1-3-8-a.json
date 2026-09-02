@@ -1,0 +1,108 @@
+{
+  "code": "ACT-S1-3-8-A",
+  "unit_code": "S1-3-8",
+  "unit_title": "Costo promedio en pesos: invertir poco a poco",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "AVANZADO",
+  "titulo": "Poco a Poco o Todo de Golpe",
+  "descripcion": "Clasifica cada afirmación según si describe la estrategia de aportaciones o intentar adivinar el momento.",
+  "objetivo": "Distinguir la lógica de la aportación periódica de la especulación de momento",
+  "xp": 500,
+  "instruccion": "Arrastra cada afirmación a la estrategia que describe.",
+  "categorias": [
+    {
+      "id": "periodica",
+      "label": "Aportación periódica",
+      "emoji": "📆",
+      "color": "#10B981"
+    },
+    {
+      "id": "momento",
+      "label": "Adivinar el momento",
+      "emoji": "🔮",
+      "color": "#EF4444"
+    },
+    {
+      "id": "ambas",
+      "label": "Vale para las dos",
+      "emoji": "⚖️",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Invertir el mismo monto cada mes sin ver el precio",
+      "emoji": "📅",
+      "categoria_correcta": "periodica",
+      "feedback": "La definición exacta de la estrategia."
+    },
+    {
+      "id": "i2",
+      "label": "Esperar a que \"esté barato\" para entrar",
+      "emoji": "⏳",
+      "categoria_correcta": "momento",
+      "feedback": "Muchos esperan tanto que nunca invierten."
+    },
+    {
+      "id": "i3",
+      "label": "Conviene tener un horizonte de largo plazo",
+      "emoji": "🎯",
+      "categoria_correcta": "ambas",
+      "feedback": "El tiempo ayuda en cualquier estrategia razonable."
+    },
+    {
+      "id": "i4",
+      "label": "Cuando el precio sube, compro menos unidades",
+      "emoji": "📉",
+      "categoria_correcta": "periodica",
+      "feedback": "Y cuando baja compro más: eso mejora el costo promedio."
+    },
+    {
+      "id": "i5",
+      "label": "Vender todo porque el mercado va a caer",
+      "emoji": "🏃",
+      "categoria_correcta": "momento",
+      "feedback": "Requiere acertar dos veces: cuándo salir y cuándo volver."
+    },
+    {
+      "id": "i6",
+      "label": "Elimina la decisión emocional de cada periodo",
+      "emoji": "🧘",
+      "categoria_correcta": "periodica",
+      "feedback": "Su beneficio más real es de comportamiento."
+    },
+    {
+      "id": "i7",
+      "label": "Hay que entender en qué se está invirtiendo",
+      "emoji": "📚",
+      "categoria_correcta": "ambas",
+      "feedback": "Ninguna estrategia sustituye conocer el instrumento."
+    },
+    {
+      "id": "i8",
+      "label": "Reduce el riesgo de entrar todo en el peor momento",
+      "emoji": "🛡️",
+      "categoria_correcta": "periodica",
+      "feedback": "Reduce ese riesgo específico, no el riesgo de mercado."
+    },
+    {
+      "id": "i9",
+      "label": "Meter todos los ahorros de golpe tras un rumor",
+      "emoji": "📢",
+      "categoria_correcta": "momento",
+      "feedback": "La forma más común de comprar caro."
+    },
+    {
+      "id": "i10",
+      "label": "Conviene revisar el plan al menos una vez al año",
+      "emoji": "🔍",
+      "categoria_correcta": "ambas",
+      "feedback": "Revisar no es lo mismo que reaccionar cada semana."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-8-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-8-a-escena.webp"
+}

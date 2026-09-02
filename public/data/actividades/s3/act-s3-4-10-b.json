@@ -1,0 +1,183 @@
+{
+  "code": "ACT-S3-4-10-B",
+  "unit_code": "S3-4-10",
+  "unit_title": "Legado: qué queda cuando el emprendedor se va",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Plan de Legado",
+  "descripcion": "Construye el plan de continuidad de tu proyecto.",
+  "objetivo": "Diseñar un plan de continuidad y sucesión aplicable al proyecto propio",
+  "xp": 800,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mis dependencias",
+      "descripcion": "Qué depende solo de mí.",
+      "campos": [
+        {
+          "id": "proyecto",
+          "label": "Nombre de mi proyecto o empresa",
+          "type": "text",
+          "placeholder": "Ej. Ceny Labs",
+          "requerido": true
+        },
+        {
+          "id": "personas",
+          "label": "Personas que dependen de este proyecto",
+          "type": "number",
+          "min": 0,
+          "max": 500,
+          "default": 4,
+          "unit": "personas",
+          "placeholder": "4",
+          "requerido": true
+        },
+        {
+          "id": "tareas_solo_yo",
+          "label": "Tareas que solo yo puedo hacer hoy",
+          "type": "slider",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 8,
+          "unit": "tareas",
+          "requerido": true
+        },
+        {
+          "id": "nivel_dependencia",
+          "label": "Nivel de dependencia de mi persona",
+          "type": "calculated",
+          "formula": "Math.min(100, Math.round(tareas_solo_yo * 100 / 15))",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Los sistemas",
+      "descripcion": "Lo documentable.",
+      "campos": [
+        {
+          "id": "procesos_documentados",
+          "label": "Procesos clave ya documentados",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "accesos_compartidos",
+          "label": "¿Los accesos críticos están compartidos?",
+          "type": "select",
+          "opciones": [
+            "Sí, con respaldo ordenado",
+            "Parcialmente",
+            "No, solo yo los tengo"
+          ],
+          "default": "No, solo yo los tengo",
+          "requerido": true
+        },
+        {
+          "id": "contratos_empresa",
+          "label": "¿Los contratos están a nombre de la empresa?",
+          "type": "select",
+          "opciones": [
+            "Sí, todos",
+            "Algunos",
+            "No, a nombre personal"
+          ],
+          "default": "Algunos",
+          "requerido": true
+        },
+        {
+          "id": "brecha_sistemas",
+          "label": "Brecha por cerrar en documentación",
+          "type": "calculated",
+          "formula": "100 - procesos_documentados",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Las personas",
+      "descripcion": "Quién puede decidir.",
+      "campos": [
+        {
+          "id": "sucesor",
+          "label": "¿Quién tomaría decisiones si yo faltara?",
+          "type": "text",
+          "placeholder": "Nombre o rol",
+          "requerido": true
+        },
+        {
+          "id": "ha_decidido",
+          "label": "¿Esa persona ya ha tomado decisiones reales?",
+          "type": "select",
+          "opciones": [
+            "Sí, con frecuencia",
+            "Algunas veces",
+            "Nunca"
+          ],
+          "default": "Nunca",
+          "requerido": true
+        },
+        {
+          "id": "meses_preparacion",
+          "label": "Meses que necesitaría para prepararse",
+          "type": "slider",
+          "min": 0,
+          "max": 36,
+          "step": 1,
+          "default": 6,
+          "unit": "meses",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Las tres decisiones",
+      "descripcion": "Dirección, propiedad y patrimonio.",
+      "campos": [
+        {
+          "id": "quien_dirige",
+          "label": "¿Quién dirigiría la empresa?",
+          "type": "text",
+          "placeholder": "Nombre o rol",
+          "requerido": true
+        },
+        {
+          "id": "quien_es_dueno",
+          "label": "¿Quién sería el dueño?",
+          "type": "text",
+          "placeholder": "Puede ser una persona distinta de quien dirige",
+          "requerido": true
+        },
+        {
+          "id": "patrimonio_personal",
+          "label": "¿Qué pasa con el patrimonio personal?",
+          "type": "textarea",
+          "placeholder": "Testamento, beneficiarios de seguros, cuentas...",
+          "requerido": true
+        },
+        {
+          "id": "primer_paso",
+          "label": "Primer paso que daré este mes",
+          "type": "textarea",
+          "placeholder": "Algo concreto y realizable en 30 días",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_continuidad",
+  "exportable": true,
+  "portada": "/assets/misiones/s3/s3-4-10-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-4-10-b-escena.webp"
+}

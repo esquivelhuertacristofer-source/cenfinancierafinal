@@ -1,0 +1,177 @@
+{
+  "code": "ACT-P5-3-7-A",
+  "unit_code": "P5-3-7",
+  "unit_title": "Diversificación: no poner todo en una canasta",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Arma tu Portafolio",
+  "descripcion": "Reparte tu inversión y compara el resultado en distintos escenarios.",
+  "objetivo": "Construir un portafolio diversificado y evaluar su comportamiento",
+  "xp": 300,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi capital",
+      "descripcion": "Cuánto voy a invertir y por cuánto tiempo.",
+      "campos": [
+        {
+          "id": "capital",
+          "label": "Dinero que voy a invertir",
+          "type": "number",
+          "min": 1000,
+          "max": 500000,
+          "default": 20000,
+          "unit": "$",
+          "placeholder": "20000",
+          "requerido": true
+        },
+        {
+          "id": "anios",
+          "label": "Años que lo voy a dejar",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "default": 5,
+          "unit": "años",
+          "ayuda": "Entre más largo el plazo, más riesgo se puede tolerar.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Mi distribución",
+      "descripcion": "Cómo reparto entre los tres niveles de riesgo.",
+      "campos": [
+        {
+          "id": "pct_bajo",
+          "label": "Porcentaje en riesgo bajo",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "%",
+          "ayuda": "Deuda gubernamental y depósitos: estables y de rendimiento moderado.",
+          "requerido": true
+        },
+        {
+          "id": "pct_medio",
+          "label": "Porcentaje en riesgo medio",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40,
+          "unit": "%",
+          "ayuda": "Fondos diversificados: variación moderada.",
+          "requerido": true
+        },
+        {
+          "id": "pct_alto",
+          "label": "Porcentaje en riesgo alto",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Acciones: pueden subir mucho o caer mucho.",
+          "requerido": true
+        },
+        {
+          "id": "suma",
+          "label": "Suma de porcentajes (debe dar 100)",
+          "type": "calculated",
+          "formula": "pct_bajo + pct_medio + pct_alto",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Escenario favorable",
+      "descripcion": "Qué pasa si todo sale bien.",
+      "campos": [
+        {
+          "id": "rend_bajo_bueno",
+          "label": "Rendimiento anual del riesgo bajo",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 6,
+          "unit": "%",
+          "requerido": true,
+          "ayuda": "Los instrumentos estables varían poco entre escenarios."
+        },
+        {
+          "id": "rend_alto_bueno",
+          "label": "Rendimiento anual del riesgo alto",
+          "type": "slider",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "default": 18,
+          "unit": "%",
+          "requerido": true,
+          "ayuda": "En un buen año, la parte de mayor riesgo es la que más aporta."
+        },
+        {
+          "id": "resultado_bueno",
+          "label": "Valor del portafolio en escenario favorable",
+          "type": "calculated",
+          "formula": "Math.round(capital * (pct_bajo / 100 * Math.pow(1 + rend_bajo_bueno / 100, anios) + pct_medio / 100 * Math.pow(1 + (rend_bajo_bueno + rend_alto_bueno) / 200, anios) + pct_alto / 100 * Math.pow(1 + rend_alto_bueno / 100, anios)))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Escenario adverso",
+      "descripcion": "Qué pasa si el mercado cae.",
+      "campos": [
+        {
+          "id": "caida_alto",
+          "label": "Caída anual del riesgo alto en mal escenario",
+          "type": "slider",
+          "min": 0,
+          "max": 40,
+          "step": 1,
+          "default": 15,
+          "unit": "%",
+          "requerido": true,
+          "ayuda": "Los mercados caen; la pregunta es cuánto te afecta."
+        },
+        {
+          "id": "resultado_malo",
+          "label": "Valor del portafolio en escenario adverso",
+          "type": "calculated",
+          "formula": "Math.round(capital * (pct_bajo / 100 * Math.pow(1 + rend_bajo_bueno / 100, anios) + pct_medio / 100 * Math.pow(1 + (rend_bajo_bueno - caida_alto) / 200, anios) + pct_alto / 100 * Math.pow(1 - caida_alto / 100, anios)))",
+          "unit": "$"
+        },
+        {
+          "id": "todo_en_alto_malo",
+          "label": "Valor si hubiera puesto todo en riesgo alto",
+          "type": "calculated",
+          "formula": "Math.round(capital * Math.pow(1 - caida_alto / 100, anios))",
+          "unit": "$"
+        },
+        {
+          "id": "proteccion",
+          "label": "Lo que me protegió diversificar en el mal escenario",
+          "type": "calculated",
+          "formula": "Math.round(capital * (pct_bajo / 100 * Math.pow(1 + rend_bajo_bueno / 100, anios) + pct_medio / 100 * Math.pow(1 + (rend_bajo_bueno - caida_alto) / 200, anios) + pct_alto / 100 * Math.pow(1 - caida_alto / 100, anios)) - capital * Math.pow(1 - caida_alto / 100, anios))",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "portafolio_diversificado",
+  "exportable": true,
+  "portada": "/assets/misiones/p5/p5-3-7-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-3-7-a-escena.webp"
+}

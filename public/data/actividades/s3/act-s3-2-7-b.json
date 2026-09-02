@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S3-2-7-B",
+  "unit_code": "S3-2-7",
+  "unit_title": "Facturas, deducciones y devolución de impuestos",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de las Deducciones",
+  "descripcion": "Responde rápido sobre deducciones y devolución.",
+  "objetivo": "Consolidar el conocimiento sobre deducciones personales",
+  "xp": 800,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Una devolución de impuestos es:",
+      "respuesta_correcta": "Dinero propio que se pagó de más",
+      "incorrectas": [
+        "Un regalo del gobierno",
+        "Un préstamo",
+        "Un descuento"
+      ],
+      "dato_extra": "Mucha gente nunca la solicita porque no sabe que existe."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Se solicita:",
+      "respuesta_correcta": "Presentando la declaración anual con deducciones",
+      "incorrectas": [
+        "Por teléfono",
+        "En el banco",
+        "No se puede"
+      ],
+      "dato_extra": "Al aplicar deducciones puede resultar que retuvieron de más."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Una deducción personal típica es:",
+      "respuesta_correcta": "Gastos médicos y hospitalarios",
+      "incorrectas": [
+        "Ropa",
+        "Entretenimiento",
+        "Vacaciones"
+      ],
+      "dato_extra": "También colegiaturas, seguros médicos e intereses hipotecarios."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El comprobante debe estar:",
+      "respuesta_correcta": "A nombre de quien deduce, con datos correctos",
+      "incorrectas": [
+        "A nombre de cualquiera",
+        "Sin nombre",
+        "A nombre del proveedor"
+      ],
+      "dato_extra": "Es uno de los dos requisitos que más deducciones hace perder."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El pago debe hacerse:",
+      "respuesta_correcta": "Por medio bancario, no en efectivo",
+      "incorrectas": [
+        "En efectivo",
+        "Como sea",
+        "Solo en ventanilla"
+      ],
+      "dato_extra": "Un gasto deducible pagado en efectivo no cuenta."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La deducción se decide:",
+      "respuesta_correcta": "En el momento del gasto",
+      "incorrectas": [
+        "En abril",
+        "Al final del año",
+        "Cuando uno quiera"
+      ],
+      "dato_extra": "No hay forma de arreglarlo después."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Lo más práctico es:",
+      "respuesta_correcta": "Llevar una carpeta desde enero y pedir comprobante siempre",
+      "incorrectas": [
+        "Guardar solo lo grande",
+        "Esperar a abril",
+        "No guardar nada"
+      ],
+      "dato_extra": "Aunque en ese momento no parezca que valdrá la pena."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-7-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-7-b-escena.webp"
+}

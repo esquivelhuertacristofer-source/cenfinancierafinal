@@ -4,142 +4,130 @@
   "unit_title": "La tarjeta de débito: usarla bien y sin perder el control",
   "level": "Primaria 4",
   "edad": "9-10 años",
-  "tipo": "SIMULADOR",
+  "tipo": "DECIDE",
   "complejidad": "MEDIO",
-  "titulo": "Control con Débito",
-  "descripcion": "Usar tarjeta es cómodo, pero es fácil olvidar cuánto dinero te queda. Simula una semana de gastos y asegúrate de no gastar más de lo que tienes.",
-  "objetivo": "Entender que la tarjeta de débito usa dinero propio y requiere un control de saldo riguroso",
-  "xp": 400,
-  "descripcion_formula": "Saldo Final = Saldo Inicial - Gastos Seleccionados. Si el saldo llega a cero, no puedes seguir comprando.",
-  "inputs": [
-    {
-      "id": "gasto_comida",
-      "label": "Comida de la semana",
-      "type": "slider",
-      "min": 200,
-      "max": 800,
-      "step": 50,
-      "default": 400,
-      "unit": "$"
+  "titulo": "La Tarjeta de Sofía",
+  "descripcion": "A Sofía le dieron su primera tarjeta de débito con $600 para la semana. Con débito no te prestan nada: solo puedes gastar lo que hay.",
+  "objetivo": "Entender que la tarjeta de débito usa dinero propio y exige llevar un control del saldo.",
+  "xp": 450,
+  "personaje_principal": "Sofía",
+  "contexto_inicial": "Saldo inicial: $600. Tiene que alcanzarle de lunes a domingo.",
+  "nodo_inicial": "el_lunes",
+  "nodos": {
+    "el_lunes": {
+      "id": "el_lunes",
+      "texto": "Lunes. Sofía compra su desayuno con la tarjeta. La máquina dice \"aprobado\" y no muestra cuánto le queda. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "revisa",
+          "texto": "Abrir la app del banco y ver su saldo",
+          "siguiente_nodo": "el_miercoles",
+          "consecuencia": "Le quedan $555. Ahora sabe con qué cuenta.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": -45
+        },
+        {
+          "id": "ignora",
+          "texto": "No revisar: \"seguro todavía hay bastante\"",
+          "siguiente_nodo": "el_miercoles",
+          "consecuencia": "Guarda la tarjeta sin saber cuánto le queda.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -45
+        }
+      ]
     },
-    {
-      "id": "gasto_diversion",
-      "label": "Salida al cine/juegos",
-      "type": "slider",
-      "min": 0,
-      "max": 600,
-      "step": 50,
-      "default": 300,
-      "unit": "$"
+    "el_miercoles": {
+      "id": "el_miercoles",
+      "texto": "Miércoles. Sus amigos van al cine: $120 la entrada más palomitas. Sofía todavía tiene que pagar el material de la escuela el viernes, que cuesta $180.",
+      "opciones": [
+        {
+          "id": "aparta",
+          "texto": "Apartar mentalmente los $180 del viernes y decidir con lo que sobra",
+          "siguiente_nodo": "el_viernes",
+          "consecuencia": "Va al cine sin palomitas y le sigue alcanzando para el viernes.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": -120
+        },
+        {
+          "id": "todo_cine",
+          "texto": "Cine, palomitas y refresco: ya verá el viernes",
+          "siguiente_nodo": "el_viernes",
+          "consecuencia": "Se gasta $260 en una tarde.",
+          "xp_bonus": 30,
+          "impacto_patrimonio": -260
+        }
+      ]
     },
-    {
-      "id": "gasto_regalo",
-      "label": "Regalo de cumpleaños",
-      "type": "slider",
-      "min": 0,
-      "max": 1000,
-      "step": 100,
-      "default": 200,
-      "unit": "$"
+    "el_viernes": {
+      "id": "el_viernes",
+      "texto": "Viernes, papelería. El material cuesta $180. Sofía pasa la tarjeta.",
+      "opciones": [
+        {
+          "id": "alcanza",
+          "texto": "Le alcanza y paga sin problema",
+          "siguiente_nodo": "el_domingo",
+          "consecuencia": "Sale con su material y todavía le queda algo.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": -180
+        },
+        {
+          "id": "rechazada",
+          "texto": "La tarjeta se rechaza por saldo insuficiente",
+          "siguiente_nodo": "final_sin_control",
+          "consecuencia": "Con débito no hay préstamo: si no hay dinero, no hay compra.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "gasto_antojos",
-      "label": "Dulces y antojos",
-      "type": "slider",
-      "min": 0,
-      "max": 400,
-      "step": 20,
-      "default": 100,
-      "unit": "$"
+    "el_domingo": {
+      "id": "el_domingo",
+      "texto": "Domingo. Le sobraron $95. Ve un juego que cuesta exactamente $95.",
+      "opciones": [
+        {
+          "id": "guarda",
+          "texto": "Dejarlos en la cuenta como colchón para la semana que viene",
+          "siguiente_nodo": "final_control",
+          "consecuencia": "Empieza la siguiente semana con $95 de ventaja.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "gasta",
+          "texto": "Comprar el juego: al fin y al cabo le sobró",
+          "siguiente_nodo": "final_justo",
+          "consecuencia": "Termina la semana en ceros exactos.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -95
+        }
+      ]
+    },
+    "final_control": {
+      "id": "final_control",
+      "es_final": true,
+      "tipo_final": "bueno",
+      "texto": "Sofía terminó la semana con todo pagado y $95 de sobra. No usó ninguna app complicada: solo revisó su saldo y apartó mentalmente lo que ya tenía dueño.",
+      "reflexion_final": "La tarjeta de débito gasta tu propio dinero, y como no ves los billetes salir, es fácil perder la cuenta. Revisar el saldo y apartar lo que ya está comprometido es todo el truco."
+    },
+    "final_justo": {
+      "id": "final_justo",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "Sofía llegó al domingo con todo pagado y en ceros. Nada salió mal, y si el lunes hubiera aparecido un gasto sorpresa, no habría tenido de dónde.",
+      "reflexion_final": "Gastar hasta el último peso funciona mientras nada se salga del plan. Dejar aunque sea un poco en la cuenta es lo que convierte una semana apretada en una semana tranquila."
+    },
+    "final_sin_control": {
+      "id": "final_sin_control",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "La tarjeta fue rechazada frente a toda la fila. Sofía tuvo que pedir prestado para su material y llegó tarde a entregar la tarea.",
+      "reflexion_final": "Con débito no existe \"me lo fían\": si no hay saldo, no hay compra. Por eso hay que apartar primero lo que ya tiene dueño y gastar solo con lo que sobra."
     }
-  ],
-  "formula": "2000 - (gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos)",
-  "output_label": "Saldo Restante en tu Tarjeta",
-  "output_prefix": "$",
-  "output_suffix": " pesos",
-  "chart_type": "bar",
-  "escenarios": [
-    {
-      "condicion": "resultado >= 500",
-      "mensaje": "🌟 ¡Maestro del Control! Gastaste con inteligencia y aún tienes ahorro en tu tarjeta.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "resultado < 500 && resultado >= 0",
-      "mensaje": "⚠️ ¡Cuidado! Te queda muy poco dinero para terminar la semana. ¡No gastes más!",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "resultado < 0",
-      "mensaje": "🚫 ¡TRANSACCIÓN RECHAZADA! Has intentado gastar dinero que no tienes. Esto es el peligro de no revisar tu saldo.",
-      "tipo": "danger"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Cuál es la diferencia principal entre tarjeta de débito y de crédito? ¿Por qué es más seguro usar una tarjeta que llevar efectivo en la calle?",
-  "comparativa_espera": "El 43% de los jóvenes mexicanos no sabe cuánto gasta cada mes. Las tarjetas de débito con notificaciones instantáneas cambiaron esto: ahora puedes saber en tiempo real si estás excediendo tu presupuesto.",
-  "outputs_multiples": [
-    {
-      "id": "saldo_restante",
-      "label": "Saldo Restante en la Tarjeta",
-      "formula": "Math.max(0, 2000 - (gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos))",
-      "prefix": "$",
-      "suffix": " disponibles",
-      "descripcion": "Lo que queda en tu tarjeta de débito"
-    },
-    {
-      "id": "total_gastado",
-      "label": "Total Gastado",
-      "formula": "gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos",
-      "prefix": "$",
-      "suffix": " gastados",
-      "descripcion": "La suma de todos tus gastos"
-    },
-    {
-      "id": "porcentaje_gastado",
-      "label": "% del Presupuesto Usado",
-      "formula": "Math.round((gasto_comida + gasto_diversion + gasto_regalo + gasto_antojos) / 2000 * 100)",
-      "prefix": "",
-      "suffix": "% del presupuesto",
-      "descripcion": "Qué tanto de tus $2,000 ya utilizaste"
-    },
-    {
-      "id": "mayor_gasto",
-      "label": "Mayor Categoría de Gasto",
-      "formula": "Math.max(gasto_comida, gasto_diversion, gasto_regalo, gasto_antojos)",
-      "prefix": "$",
-      "suffix": " (categoría mayor)",
-      "descripcion": "El gasto que más pesa en tu presupuesto"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "saldo_restante",
-      "label": "Saldo Restante en la Tarjeta",
-      "color": "#6366f1"
-    },
-    {
-      "id": "total_gastado",
-      "label": "Total Gastado",
-      "color": "#22c55e"
-    }
-  ]
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.2"
 }

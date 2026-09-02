@@ -1,0 +1,165 @@
+{
+  "code": "ACT-P1-4-10-A",
+  "unit_code": "P1-4-10",
+  "unit_title": "Volver a invertir: usar mi ganancia para hacer más",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Semilla de Ceny",
+  "descripcion": "Ceny ganó $60 con su limonada. Tres rondas, tres decisiones, y un imprevisto en el camino.",
+  "objetivo": "Experimentar el efecto acumulado de reinvertir y la utilidad de una reserva",
+  "xp": 250,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny ganó $60 limpios con su primer día de limonada. Vienen tres ferias más en el mes y cada decisión sobre esa ganancia cambia lo que puede hacer en la siguiente.",
+  "nodo_inicial": "ronda1",
+  "nodos": {
+    "ronda1": {
+      "id": "ronda1",
+      "texto": "Primera decisión: ¿qué hace Ceny con sus $60 de ganancia?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Reinvertir $30, ahorrar $20 y gastar $10 en un gusto",
+          "siguiente_nodo": "imprevisto",
+          "consecuencia": "Con $30 de materiales puede producir el doble en la próxima feria.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": 60
+        },
+        {
+          "id": "o2",
+          "texto": "Gastarse los $60 completos hoy",
+          "siguiente_nodo": "sin_semilla",
+          "consecuencia": "Se lo pasó increíble, pero mañana no hay con qué producir.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -60
+        },
+        {
+          "id": "o3",
+          "texto": "Reinvertir los $60 completos",
+          "siguiente_nodo": "imprevisto",
+          "consecuencia": "Va a producir muchísimo, pero se quedó sin reserva ni gusto.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": 60
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-ronda1.webp"
+    },
+    "sin_semilla": {
+      "id": "sin_semilla",
+      "texto": "Llega la segunda feria y Ceny no tiene con qué comprar materiales. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Pedir prestado a mamá y comprometerse a devolverlo",
+          "siguiente_nodo": "imprevisto",
+          "consecuencia": "Puede producir, pero ahora una parte de la ganancia ya tiene dueño.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": -20
+        },
+        {
+          "id": "o2",
+          "texto": "No participar en la feria",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Un día completo de venta perdido por haberse gastado la semilla.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-sin_semilla.webp"
+    },
+    "imprevisto": {
+      "id": "imprevisto",
+      "texto": "En la segunda feria, a media mañana se derrama la jarra completa. Hay que comprar más limones: $25.",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Usar el dinero de la reserva y seguir vendiendo",
+          "siguiente_nodo": "ronda3",
+          "consecuencia": "Para esto servía guardar. El susto no detuvo el negocio.",
+          "xp_bonus": 50,
+          "es_optima": true,
+          "impacto_patrimonio": -25
+        },
+        {
+          "id": "o2",
+          "texto": "Recoger todo e irse a casa",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin reserva, un accidente pequeño cancela el día entero.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40
+        },
+        {
+          "id": "o3",
+          "texto": "Vender lo poco que quedó al doble de precio",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Subir el precio por el apuro molesta a los clientes que ya venían.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": 10
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-imprevisto.webp"
+    },
+    "ronda3": {
+      "id": "ronda3",
+      "texto": "Tercera feria. Ceny lleva $95 de ganancia acumulada. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Repartir otra vez entre reinvertir, ahorrar y disfrutar",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "El sistema funcionó una vez y vuelve a aplicarlo. Eso es un hábito.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 95
+        },
+        {
+          "id": "o2",
+          "texto": "Reinvertirlo todo para crecer más rápido",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El negocio crece, pero Ceny lleva tres ferias sin disfrutar nada de su trabajo.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 95
+        }
+      ],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-ronda3.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Al final del mes, Ceny produce el triple que el primer día, tiene una reserva y se dio dos gustos.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Reinvertir una parte hizo crecer el negocio, guardar otra parte salvó el día del derrame, y disfrutar la tercera mantuvo las ganas de seguir. Los tres frascos, no uno solo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio sigue vivo, pero creció menos de lo que pudo o dejó de ser divertido.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Poner todo en un solo frasco siempre tiene un costo: sin reserva no se aguantan los sustos, y sin gusto no se aguantan las ganas.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny se quedó fuera de dos ferias y su negocio se detuvo.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Gastarse la ganancia completa es comerse todas las semillas. El día fue divertido, pero el negocio se quedó sin con qué volver a empezar.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p1/p1-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p1/p1-4-10-a-portada.webp"
+}

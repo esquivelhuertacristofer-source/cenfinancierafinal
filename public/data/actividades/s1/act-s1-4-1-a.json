@@ -10,7 +10,7 @@
   "descripcion": "Tienes una idea de negocio. Opción A: pasar 6 meses construyendo el producto perfecto y gastar $200,000. Opción B: hacer un prototipo básico en 3 semanas, mostrarlo a 10 personas reales y pivotar si es necesario. Simula qué pasa con cada estrategia según la probabilidad de que el mercado quiera tu producto.",
   "objetivo": "Comparar el costo y riesgo de lanzar con MVP vs. desarrollo completo, y entender el ciclo Construir-Medir-Aprender del método Lean Startup",
   "xp": 500,
-  "descripcion_formula": "Costo MVP = semanas_mvp × costo_semana_dev. Probabilidad de éxito sin validación ≈ 10-30%. Con validación MVP ≈ 60-80%. Costo de pivotar = costo_dev_full × 0.4 si el mercado rechaza.",
+  "descripcion_formula": "El costo de un MVP depende de cuánto tiempo le dediques y del tipo de producto: un producto físico exige inventario y moldes, un servicio casi no requiere inversión inicial.",
   "inputs": [
     {
       "id": "costo_desarrollo_full",
@@ -46,16 +46,28 @@
       "id": "tipo_idea",
       "label": "Tipo de Idea de Negocio",
       "type": "select",
-      "options": [
-        { "label": "App/Software (puede escalar rápido)", "value": "software" },
-        { "label": "Producto físico (inventario necesario)", "value": "fisico" },
-        { "label": "Servicio (bajo costo de entrada)", "value": "servicio" },
-        { "label": "Marketplace (conecta oferta y demanda)", "value": "marketplace" }
-      ],
-      "default": "software"
+      "default": "software",
+      "opciones": [
+        {
+          "label": "App/Software (puede escalar rápido)",
+          "value": "software"
+        },
+        {
+          "label": "Producto físico (inventario necesario)",
+          "value": "fisico"
+        },
+        {
+          "label": "Servicio (bajo costo de entrada)",
+          "value": "servicio"
+        },
+        {
+          "label": "Marketplace (conecta oferta y demanda)",
+          "value": "marketplace"
+        }
+      ]
     }
   ],
-  "formula": "Math.round(costo_desarrollo_full * 0.05 * semanas_mvp)",
+  "formula": "Math.round(costo_desarrollo_full * 0.05 * semanas_mvp * (tipo_idea === 'fisico' ? 1.6 : tipo_idea === 'marketplace' ? 1.3 : tipo_idea === 'servicio' ? 0.6 : 1))",
   "output_label": "Costo del MVP ($)",
   "output_prefix": "$",
   "output_suffix": "",
@@ -96,10 +108,26 @@
   "ciclo_lean": {
     "titulo": "El ciclo Construir-Medir-Aprender",
     "pasos": [
-      { "paso": "1. CONSTRUIR", "descripcion": "Crea el MVP más pequeño posible que pruebe tu hipótesis principal", "tiempo": "1-4 semanas" },
-      { "paso": "2. MEDIR", "descripcion": "Muéstralo a 10-20 clientes reales. ¿Pagarían? ¿Cuánto? ¿Qué cambiarían?", "tiempo": "1-2 semanas" },
-      { "paso": "3. APRENDER", "descripcion": "Analiza datos. ¿Pivotar (cambiar dirección) o perseverar?", "tiempo": "3-5 días" },
-      { "paso": "4. REPETIR", "descripcion": "Vuelve al paso 1 con lo aprendido. Cada ciclo acerca más al product-market fit.", "tiempo": "→ Ciclo continuo" }
+      {
+        "paso": "1. CONSTRUIR",
+        "descripcion": "Crea el MVP más pequeño posible que pruebe tu hipótesis principal",
+        "tiempo": "1-4 semanas"
+      },
+      {
+        "paso": "2. MEDIR",
+        "descripcion": "Muéstralo a 10-20 clientes reales. ¿Pagarían? ¿Cuánto? ¿Qué cambiarían?",
+        "tiempo": "1-2 semanas"
+      },
+      {
+        "paso": "3. APRENDER",
+        "descripcion": "Analiza datos. ¿Pivotar (cambiar dirección) o perseverar?",
+        "tiempo": "3-5 días"
+      },
+      {
+        "paso": "4. REPETIR",
+        "descripcion": "Vuelve al paso 1 con lo aprendido. Cada ciclo acerca más al product-market fit.",
+        "tiempo": "→ Ciclo continuo"
+      }
     ]
   },
   "chart_type": "bar",
@@ -117,19 +145,29 @@
   ],
   "escenarios": [
     {
-      "condicion": "costo_mvp < costo_desarrollo_full * 0.1",
-      "mensaje": "🏆 MVP eficiente. Tu prototipo cuesta menos del 10% del desarrollo completo pero te da el 80% del aprendizaje. Esta es la esencia del Lean Startup.",
-      "tipo": "success"
+      "condicion": "resultado < costo_desarrollo_full * 0.1",
+      "mensaje": "Tu MVP cuesta menos del 10% del producto completo. Eso es exactamente un MVP: la versión más barata capaz de responder si alguien lo quiere.",
+      "tipo": "exito"
     },
     {
       "condicion": "clientes_entrevistados < 10",
-      "mensaje": "⚠️ Muestra pequeña. Con menos de 10 entrevistas, el riesgo de sesgo de confirmación es alto — tiendes a hablar con quienes ya te apoyan. Intenta llegar a mínimo 20 extraños.",
-      "tipo": "warning"
+      "mensaje": "Menos de 10 entrevistas no alcanzan para saber si el problema existe. Construir antes de preguntar es la forma más cara de descubrir que nadie lo necesitaba.",
+      "tipo": "advertencia"
     },
     {
       "condicion": "semanas_mvp > 8",
-      "mensaje": "🐢 MVP muy largo. Si tu MVP tarda más de 8 semanas, quizás no es mínimo. Pregúntate: ¿qué es lo único que NECESITAS probar? Elimina todo lo demás.",
-      "tipo": "warning"
+      "mensaje": "Más de ocho semanas ya no es un MVP: es un producto. Si tardas tanto en salir a la calle, vas a enamorarte de tu idea antes de saber si funciona.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "tipo_idea === 'fisico'",
+      "mensaje": "Un producto físico encarece el MVP: hay moldes, inventario y logística. Muchos lo resuelven con preventa, que valida y financia al mismo tiempo.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "El MVP no es un producto barato: es un experimento diseñado para responder una pregunta concreta lo antes posible.",
+      "tipo": "info"
     }
   ],
   "versión": "2026.Diamond.V2",

@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-2-10-A",
+  "unit_code": "P6-2-10",
+  "unit_title": "Finanzas y salud mental: el estrés del dinero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Controlo o No Controlo",
+  "descripcion": "Clasifica cada elemento según si está o no en tus manos.",
+  "objetivo": "Separar factores controlables de incontrolables en situaciones de presión financiera",
+  "xp": 600,
+  "instruccion": "Arrastra cada elemento a la categoría que le corresponde.",
+  "categorias": [
+    {
+      "id": "controlo",
+      "label": "Sí lo controlo",
+      "emoji": "✋",
+      "color": "#10B981"
+    },
+    {
+      "id": "no_controlo",
+      "label": "No lo controlo",
+      "emoji": "🌊",
+      "color": "#64748B"
+    },
+    {
+      "id": "apoyo",
+      "label": "Puedo pedir apoyo",
+      "emoji": "🤝",
+      "color": "#0EA5E9"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Revisar exactamente cuánto debo y a quién",
+      "emoji": "📋",
+      "categoria_correcta": "controlo",
+      "feedback": "Un problema con tamaño definido se puede atacar."
+    },
+    {
+      "id": "i2",
+      "label": "La inflación del país",
+      "emoji": "📈",
+      "categoria_correcta": "no_controlo",
+      "feedback": "Preocuparse por esto consume energía sin cambiar nada."
+    },
+    {
+      "id": "i3",
+      "label": "Hablar del tema en familia con números",
+      "emoji": "💬",
+      "categoria_correcta": "apoyo",
+      "feedback": "Aislarse es la reacción más común y la más dañina."
+    },
+    {
+      "id": "i4",
+      "label": "Llamar al acreedor antes de dejar de pagar",
+      "emoji": "📞",
+      "categoria_correcta": "controlo",
+      "feedback": "Avisar a tiempo cambia por completo la negociación."
+    },
+    {
+      "id": "i5",
+      "label": "Que una empresa haga recortes de personal",
+      "emoji": "🏢",
+      "categoria_correcta": "no_controlo",
+      "feedback": "No depende de ti, aunque te afecte directamente."
+    },
+    {
+      "id": "i6",
+      "label": "Buscar orientación gratuita en una institución",
+      "emoji": "🏛️",
+      "categoria_correcta": "apoyo",
+      "feedback": "Existen instancias que orientan sin costo."
+    },
+    {
+      "id": "i7",
+      "label": "Ajustar un gasto que sí puedo modificar",
+      "emoji": "✂️",
+      "categoria_correcta": "controlo",
+      "feedback": "Una acción concreta recupera la sensación de avance."
+    },
+    {
+      "id": "i8",
+      "label": "Una emergencia médica inesperada",
+      "emoji": "🏥",
+      "categoria_correcta": "no_controlo",
+      "feedback": "No se controla que ocurra; sí se controla cómo se responde."
+    },
+    {
+      "id": "i9",
+      "label": "Pedir apoyo emocional cuando el malestar es grande",
+      "emoji": "❤️",
+      "categoria_correcta": "apoyo",
+      "feedback": "No es señal de fracaso: es parte de resolver el problema."
+    },
+    {
+      "id": "i10",
+      "label": "Hacer un plan de pago con fechas concretas",
+      "emoji": "🗓️",
+      "categoria_correcta": "controlo",
+      "feedback": "Convierte la angustia difusa en pasos con calendario."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-10-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-10-a-escena.webp"
+}

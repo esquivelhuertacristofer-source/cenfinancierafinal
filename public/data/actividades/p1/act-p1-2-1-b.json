@@ -4,132 +4,123 @@
   "unit_title": "Necesito vs. quiero: la diferencia más importante",
   "level": "Primaria 1",
   "edad": "6-7 años",
-  "tipo": "QUIZ",
+  "tipo": "TRIVIA",
   "complejidad": "ALTA",
   "titulo": "Maestro del Semáforo Financiero",
   "descripcion": "¿Sabes cuándo decir 'sí' y cuándo decir 'ahora no'? ¡Usa el semáforo para decidir!",
   "objetivo": "Aplicar criterios de prioridad en situaciones de compra cotidiana",
   "xp": 200,
-  "aprobacion_minima": 0.8,
   "preguntas": [
     {
       "id": "q1",
-      "texto": "¿Qué es lo primero que debes comprar con tu dinero?",
-      "opciones": [
+      "pregunta": "¿Qué es lo primero que debes comprar con tu dinero?",
+      "respuesta_correcta": "Tus necesidades básicas (comida, salud)",
+      "incorrectas": [
         "Lo más divertido",
-        "Tus necesidades básicas (comida, salud)",
         "Lo más brillante",
         "Dulces"
       ],
-      "correcta": 1,
-      "explicacion": "Primero aseguramos lo que necesitamos para vivir bien, ¡eso es ser inteligente!"
+      "dato_extra": "Primero aseguramos lo que necesitamos para vivir bien, ¡eso es ser inteligente!"
     },
     {
       "id": "q2",
-      "texto": "Si quieres un juguete pero tus zapatos tienen un hoyo, ¿qué es prioridad?",
-      "opciones": [
+      "pregunta": "Si quieres un juguete pero tus zapatos tienen un hoyo, ¿qué es prioridad?",
+      "respuesta_correcta": "Los zapatos nuevos",
+      "incorrectas": [
         "El juguete",
-        "Los zapatos nuevos",
         "Comprar helado",
         "No comprar nada"
       ],
-      "correcta": 1,
-      "explicacion": "Tener zapatos sanos es una necesidad, el juguete es un deseo que puede esperar."
+      "dato_extra": "Tener zapatos sanos es una necesidad, el juguete es un deseo que puede esperar."
     },
     {
       "id": "q3",
-      "texto": "¿Qué color del semáforo significa 'ESPERA Y PIENSA'?",
-      "opciones": [
+      "pregunta": "¿Qué color del semáforo significa 'ESPERA Y PIENSA'?",
+      "respuesta_correcta": "Amarillo",
+      "incorrectas": [
         "Verde",
         "Rojo",
-        "Amarillo",
         "Azul"
       ],
-      "correcta": 2,
-      "explicacion": "El amarillo nos invita a preguntarnos: '¿Realmente lo necesito o solo es un antojo?'."
+      "dato_extra": "El amarillo nos invita a preguntarnos: '¿Realmente lo necesito o solo es un antojo?'."
     },
     {
       "id": "q4",
-      "texto": "¿Cuál de estos es un deseo que parece necesidad pero no lo es?",
-      "opciones": [
+      "pregunta": "¿Cuál de estos es un deseo que parece necesidad pero no lo es?",
+      "respuesta_correcta": "Un videojuego de moda",
+      "incorrectas": [
         "El agua",
-        "Un videojuego de moda",
         "La fruta",
         "El jabón"
       ],
-      "correcta": 1,
-      "explicacion": "A veces la publicidad nos hace creer que necesitamos un juego para ser felices, pero es un deseo."
+      "dato_extra": "A veces la publicidad nos hace creer que necesitamos un juego para ser felices, pero es un deseo."
     },
     {
       "id": "q5",
-      "texto": "Si tienes hambre en el recreo, ¿qué es mejor comprar?",
-      "opciones": [
+      "pregunta": "Si tienes hambre en el recreo, ¿qué es mejor comprar?",
+      "respuesta_correcta": "Una manzana o un sándwich",
+      "incorrectas": [
         "Unas estampas",
-        "Una manzana o un sándwich",
         "Un juguete de plástico",
         "Nada"
       ],
-      "correcta": 1,
-      "explicacion": "Alimentarte es una necesidad verde. ¡Dale energía a tu cuerpo!"
+      "dato_extra": "Alimentarte es una necesidad verde. ¡Dale energía a tu cuerpo!"
     },
     {
       "id": "q6",
-      "texto": "¿Qué pasa si gastas todo tu dinero en deseos y luego tienes una necesidad?",
-      "opciones": [
+      "pregunta": "¿Qué pasa si gastas todo tu dinero en deseos y luego tienes una necesidad?",
+      "respuesta_correcta": "Te sentirás en problemas porque no tienes dinero para lo importante",
+      "incorrectas": [
         "No pasa nada",
-        "Te sentirás en problemas porque no tienes dinero para lo importante",
         "Te regalan más dinero",
         "Se arregla solo"
       ],
-      "correcta": 1,
-      "explicacion": "Por eso siempre guardamos un poco: las necesidades no pueden esperar."
+      "dato_extra": "Por eso siempre guardamos un poco: las necesidades no pueden esperar."
     },
     {
       "id": "q7",
-      "texto": "Verdadero o Falso: Los deseos son malos y nunca debemos cumplirlos.",
-      "opciones": [
-        "Verdadero",
-        "Falso"
+      "pregunta": "Verdadero o Falso: Los deseos son malos y nunca debemos cumplirlos.",
+      "respuesta_correcta": "Falso",
+      "incorrectas": [
+        "Verdadero"
       ],
-      "correcta": 1,
-      "explicacion": "¡Falso! Los deseos son geniales, pero se cumplen DESPUÉS de las necesidades y con ahorro."
+      "dato_extra": "¡Falso! Los deseos son geniales, pero se cumplen DESPUÉS de las necesidades y con ahorro."
     },
     {
       "id": "q8",
-      "texto": "¿Cómo se siente un 'Genio Financiero' al elegir una necesidad sobre un deseo?",
-      "opciones": [
+      "pregunta": "¿Cómo se siente un 'Genio Financiero' al elegir una necesidad sobre un deseo?",
+      "respuesta_correcta": "Responsable y tranquilo",
+      "incorrectas": [
         "Triste",
-        "Responsable y tranquilo",
         "Enojado",
         "Aburrido"
       ],
-      "correcta": 1,
-      "explicacion": "Saber que cuidaste lo importante te da una gran paz mental."
+      "dato_extra": "Saber que cuidaste lo importante te da una gran paz mental."
     },
     {
       "id": "q9",
-      "texto": "Si ves algo que quieres mucho, ¿cuánto tiempo es bueno esperar para pensar?",
-      "opciones": [
+      "pregunta": "Si ves algo que quieres mucho, ¿cuánto tiempo es bueno esperar para pensar?",
+      "respuesta_correcta": "Dormir una noche antes de comprarlo",
+      "incorrectas": [
         "Un segundo",
-        "Dormir una noche antes de comprarlo",
         "Nunca pensarlo",
         "Gritar"
       ],
-      "correcta": 1,
-      "explicacion": "Esperar una noche ayuda a que el 'calentón' del deseo pase y decidas mejor."
+      "dato_extra": "Esperar una noche ayuda a que el 'calentón' del deseo pase y decidas mejor."
     },
     {
       "id": "q10",
-      "texto": "¿Qué herramienta de CEN Academy usas para decidir tus compras?",
-      "opciones": [
+      "pregunta": "¿Qué herramienta de CEN Academy usas para decidir tus compras?",
+      "respuesta_correcta": "El Filtro de Supervivencia (Necesidad vs Deseo)",
+      "incorrectas": [
         "Una moneda al aire",
-        "El Filtro de Supervivencia (Necesidad vs Deseo)",
         "Cerrar los ojos",
         "Comprar lo más caro"
       ],
-      "correcta": 1,
-      "explicacion": "¡Exacto! El filtro es tu mejor amigo para tomar decisiones de éxito."
+      "dato_extra": "¡Exacto! El filtro es tu mejor amigo para tomar decisiones de éxito."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Diamond.V2",
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true
 }

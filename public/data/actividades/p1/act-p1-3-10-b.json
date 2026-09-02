@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P1-3-10-B",
+  "unit_code": "P1-3-10",
+  "unit_title": "Dos metas a la vez: ¿cuál va primero?",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "El Orden Correcto",
+  "descripcion": "Demuestra que sabes decidir cuál meta va primero y por qué.",
+  "objetivo": "Verificar la aplicación de los criterios de priorización entre metas",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Reparto $20 semanales entre dos metas. Cada una recibe:",
+      "opciones": [
+        "$20",
+        "$40",
+        "$10",
+        "$5"
+      ],
+      "correcta": 2,
+      "explicacion": "El total no cambia, pero cada meta avanza a la mitad de velocidad."
+    },
+    {
+      "id": "q2",
+      "texto": "Los tres criterios para priorizar son:",
+      "opciones": [
+        "Color, tamaño y marca",
+        "Tienda, día y hora",
+        "Peso, largo y ancho",
+        "Urgencia, precio y utilidad"
+      ],
+      "correcta": 3,
+      "explicacion": "Se revisan en ese orden: primero si hay fecha, luego cuál termino antes, luego cuál uso más."
+    },
+    {
+      "id": "q3",
+      "texto": "Una meta tiene fecha y la otra no. ¿Cuál va primero?",
+      "opciones": [
+        "La que tiene fecha",
+        "La que no tiene fecha",
+        "Las dos",
+        "La más cara"
+      ],
+      "correcta": 0,
+      "explicacion": "Las fechas no se mueven. Lo que no tiene fecha siempre puede esperar."
+    },
+    {
+      "id": "q4",
+      "texto": "Ninguna tiene fecha. Empezar por la más barata sirve para:",
+      "opciones": [
+        "Gastar menos",
+        "Tener una victoria rápida que motive",
+        "Que nadie se entere",
+        "Que suba de precio"
+      ],
+      "correcta": 1,
+      "explicacion": "Terminar algo pronto entrena el hábito para aguantar la meta grande."
+    },
+    {
+      "id": "q5",
+      "texto": "Entre dos cosas que quiero igual, gana:",
+      "opciones": [
+        "La más cara",
+        "La más nueva",
+        "La que voy a usar más veces",
+        "La que tiene más color"
+      ],
+      "correcta": 2,
+      "explicacion": "Un balón diario rinde más que un juguete que usarás tres veces."
+    },
+    {
+      "id": "q6",
+      "texto": "¿Qué pregunta ayuda a saber si de verdad lo usaré?",
+      "opciones": [
+        "¿Cuánto cuesta?",
+        "¿Quién más lo tiene?",
+        "¿De qué color es?",
+        "¿Dónde va a estar esto en tres meses?"
+      ],
+      "correcta": 3,
+      "explicacion": "En el momento de quererlo todos creemos que lo usaremos muchísimo."
+    },
+    {
+      "id": "q7",
+      "texto": "¿Por qué la gente abandona cuando reparte el ahorro?",
+      "opciones": [
+        "Porque ninguna meta se siente cerca",
+        "Porque pierde dinero",
+        "Porque se le olvida",
+        "Porque suben los precios"
+      ],
+      "correcta": 0,
+      "explicacion": "No avanzar visiblemente es lo que desanima, aunque el dinero sí esté creciendo."
+    },
+    {
+      "id": "q8",
+      "texto": "Planear de verdad significa:",
+      "opciones": [
+        "Adivinar lo mejor",
+        "Elegir con criterios y saber por qué",
+        "Pedir que otro decida",
+        "No elegir nunca"
+      ],
+      "correcta": 1,
+      "explicacion": "Si puedes defender tu decisión con una razón, ya estás planeando."
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-3-10-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-3-10-b-escena.webp"
+}

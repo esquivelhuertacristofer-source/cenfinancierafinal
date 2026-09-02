@@ -1,0 +1,191 @@
+{
+  "code": "ACT-S2-1-8-A",
+  "unit_code": "S2-1-8",
+  "unit_title": "Deuda pública y calificadoras: por qué importa el rating de México",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "La Deuda del País",
+  "descripcion": "Analiza la sostenibilidad de una deuda pública y su efecto en el costo del dinero.",
+  "objetivo": "Evaluar la deuda pública en términos relativos y su impacto en las tasas",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "El tamaño de la economía",
+      "descripcion": "El punto de referencia para juzgar la deuda.",
+      "campos": [
+        {
+          "id": "pib",
+          "label": "PIB anual del país (miles de millones)",
+          "type": "number",
+          "min": 100,
+          "max": 50000,
+          "default": 1800,
+          "unit": "mmd",
+          "placeholder": "1800",
+          "requerido": true
+        },
+        {
+          "id": "deuda",
+          "label": "Deuda pública total (miles de millones)",
+          "type": "number",
+          "min": 10,
+          "max": 50000,
+          "default": 900,
+          "unit": "mmd",
+          "placeholder": "900",
+          "requerido": true
+        },
+        {
+          "id": "razon",
+          "label": "Deuda como porcentaje del PIB",
+          "type": "calculated",
+          "formula": "Math.round(deuda / Math.max(1, pib) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "crecimiento",
+          "label": "Crecimiento anual esperado del PIB",
+          "type": "slider",
+          "min": -5,
+          "max": 10,
+          "step": 0.5,
+          "default": 2,
+          "unit": "%",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "El costo de servirla",
+      "descripcion": "Lo que importa más que el monto.",
+      "campos": [
+        {
+          "id": "tasa_deuda",
+          "label": "Tasa promedio que paga el país por su deuda",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 0.25,
+          "default": 8,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "intereses",
+          "label": "Intereses anuales",
+          "type": "calculated",
+          "formula": "Math.round(deuda * tasa_deuda / 100)",
+          "unit": "mmd"
+        },
+        {
+          "id": "peso_intereses",
+          "label": "Intereses como porcentaje del PIB",
+          "type": "calculated",
+          "formula": "Math.round(deuda * tasa_deuda / 100 / Math.max(1, pib) * 1000) / 10",
+          "unit": "%"
+        },
+        {
+          "id": "ingresos_pub",
+          "label": "Ingresos públicos como porcentaje del PIB",
+          "type": "slider",
+          "min": 10,
+          "max": 50,
+          "step": 1,
+          "default": 23,
+          "unit": "%",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El efecto de una baja de calificación",
+      "descripcion": "Qué cambia si sube el costo de financiarse.",
+      "campos": [
+        {
+          "id": "alza_tasa",
+          "label": "Puntos que subiría la tasa tras una baja de calificación",
+          "type": "slider",
+          "min": 0,
+          "max": 5,
+          "step": 0.25,
+          "default": 1.5,
+          "unit": "pts",
+          "requerido": true
+        },
+        {
+          "id": "intereses_nuevos",
+          "label": "Intereses anuales con la nueva tasa",
+          "type": "calculated",
+          "formula": "Math.round(deuda * (tasa_deuda + alza_tasa) / 100)",
+          "unit": "mmd"
+        },
+        {
+          "id": "costo_extra",
+          "label": "Costo adicional anual",
+          "type": "calculated",
+          "formula": "Math.round(deuda * alza_tasa / 100)",
+          "unit": "mmd"
+        },
+        {
+          "id": "pct_ingresos",
+          "label": "Ese costo extra como porcentaje de los ingresos públicos",
+          "type": "calculated",
+          "formula": "Math.round(deuda * alza_tasa / 100 / Math.max(1, pib * ingresos_pub / 100) * 1000) / 10",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La cadena hasta mí",
+      "descripcion": "Cómo llega al crédito de una persona.",
+      "campos": [
+        {
+          "id": "mi_credito",
+          "label": "Saldo de mi crédito con tasa variable",
+          "type": "number",
+          "min": 0,
+          "max": 3000000,
+          "default": 40000,
+          "unit": "$",
+          "placeholder": "40000",
+          "requerido": true
+        },
+        {
+          "id": "traslado",
+          "label": "Parte del alza que se traslada a mi tasa",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "default": 70,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "costo_personal",
+          "label": "Cuánto más pagaría al año por ese crédito",
+          "type": "calculated",
+          "formula": "Math.round(mi_credito * alza_tasa * traslado / 10000)",
+          "unit": "$"
+        },
+        {
+          "id": "conclusion",
+          "label": "¿Por qué una noticia macro llega hasta tu bolsillo?",
+          "type": "textarea",
+          "placeholder": "Explica la cadena con tus palabras",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_deuda_publica",
+  "exportable": true,
+  "portada": "/assets/misiones/s2/s2-1-8-a-portada.webp",
+  "escena": "/assets/misiones/s2/s2-1-8-a-escena.webp"
+}

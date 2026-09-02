@@ -130,5 +130,6 @@
   "titulo": "Cuestionario: El Monstruo de la Inflación",
   "descripcion": "La inflación es invisible pero poderosa. Comprueba que entiendes cómo afecta tu dinero y qué herramientas existen para proteger tu poder adquisitivo.",
   "xp": 300,
-  "level": "Secundaria 1"
+  "level": "Secundaria 1",
+  "objetivo": "Comprobar la comprensión del interés compuesto y del efecto del plazo sobre el resultado de una inversión."
 }

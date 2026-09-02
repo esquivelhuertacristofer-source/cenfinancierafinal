@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-3-7-A",
+  "unit_code": "S3-3-7",
+  "unit_title": "Ingresos pasivos reales contra promesas de internet",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Real o Promesa",
+  "descripcion": "A Ceny le llegan tres propuestas de ingreso pasivo. Cada decisión define su patrimonio.",
+  "objetivo": "Evaluar propuestas de ingreso pasivo distinguiendo las legítimas de las fraudulentas",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny tiene $80,000 ahorrados. Le llegan tres propuestas: una plataforma que promete 8% mensual garantizado, un curso de \"ingresos automáticos\" y comprar instrumentos de inversión.",
+  "nodo_inicial": "plataforma",
+  "nodos": {
+    "plataforma": {
+      "id": "plataforma",
+      "texto": "La plataforma promete 8% mensual garantizado y muestra testimonios. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Preguntar de dónde sale ese dinero y verificar si está registrada ante las autoridades",
+          "siguiente_nodo": "curso",
+          "consecuencia": "No hay explicación clara ni registro: descarta la propuesta.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 80000
+        },
+        {
+          "id": "o2",
+          "texto": "Invertir $40,000 para probar",
+          "siguiente_nodo": "colapso",
+          "consecuencia": "Los primeros dos meses paga. El tercero deja de contestar.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -40000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-plataforma.webp"
+    },
+    "colapso": {
+      "id": "colapso",
+      "texto": "La plataforma colapsó. Le dicen que si recluta a tres personas recupera su dinero. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Negarse: reclutar para recuperar es exactamente la mecánica del fraude",
+          "siguiente_nodo": "curso",
+          "consecuencia": "Pierde su dinero pero no arrastra a nadie más.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Reclutar a familiares para recuperar lo perdido",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Ahora la pérdida es también de las personas que confiaron en ella.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -60000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-colapso.webp"
+    },
+    "curso": {
+      "id": "curso",
+      "texto": "El curso de \"ingresos automáticos\" cuesta $15,000 y promete resultados en 30 días. ¿Qué evalúa?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Qué requiere realmente ese ingreso: capital previo, trabajo previo o ambos",
+          "siguiente_nodo": "real",
+          "consecuencia": "El curso no menciona ningún requisito previo: mala señal.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 15000
+        },
+        {
+          "id": "o2",
+          "texto": "Comprarlo: 30 días es rápido",
+          "siguiente_nodo": "real",
+          "consecuencia": "El contenido resulta ser genérico y sin ninguna aplicación concreta.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -15000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-curso.webp"
+    },
+    "real": {
+      "id": "real",
+      "texto": "Queda la opción de invertir en instrumentos con rendimientos moderados. ¿Cómo lo ve?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Como lo que realmente es el ingreso pasivo: capital acumulado que produce con el tiempo",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Rendimientos modestos, verificables y sostenibles.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 22000
+        },
+        {
+          "id": "o2",
+          "texto": "Como algo aburrido que rinde muy poco",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Aburrido y real vence a emocionante e inexistente.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-real.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny descartó las dos promesas y construyó ingreso pasivo real con su capital.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Lo pasivo es el cobro, no la construcción. Toda fuente real requiere capital previo, trabajo previo o ambos. Lo que no requiere nada suele ser otra cosa.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny evitó los fraudes pero no aprovechó la opción real.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Evitar el fraude es la mitad del trabajo. La otra mitad es reconocer que las fuentes legítimas rinden menos, tardan más y sí funcionan.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny perdió su dinero y arrastró a su familia al mismo esquema.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Cuando las ganancias dependen de reclutar a otros, el dinero de los nuevos paga a los antiguos. Reclutar para recuperar solo amplía el daño.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-3-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-3-7-a-portada.webp"
+}

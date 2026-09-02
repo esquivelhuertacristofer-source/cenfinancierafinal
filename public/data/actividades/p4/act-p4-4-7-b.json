@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P4-4-7-B",
+  "unit_code": "P4-4-7",
+  "unit_title": "Mi propuesta de valor en una sola frase",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Una Sola Frase",
+  "descripcion": "Comprueba que sabes construir una propuesta de valor.",
+  "objetivo": "Verificar la estructura y los criterios de una propuesta de valor",
+  "xp": 320,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La propuesta debe caber en una frase porque:",
+      "opciones": [
+        "Es más elegante",
+        "Lo pide la ley",
+        "La gente decide en segundos",
+        "Ahorra papel"
+      ],
+      "correcta": 2,
+      "explicacion": "Si la explicación es larga, el interés se pierde antes del punto."
+    },
+    {
+      "id": "q2",
+      "texto": "Las tres partes son:",
+      "opciones": [
+        "Nombre, precio y color",
+        "Qué, cuándo y dónde",
+        "Costo, venta y ganancia",
+        "Para quién, qué problema y por qué es mejor"
+      ],
+      "correcta": 3,
+      "explicacion": "Las tres juntas: quitar una deja la frase incompleta."
+    },
+    {
+      "id": "q3",
+      "texto": "Decir \"es para todos\":",
+      "opciones": [
+        "Significa que no se pensó en nadie",
+        "Amplía el mercado",
+        "Es lo ideal",
+        "Es lo más honesto"
+      ],
+      "correcta": 0,
+      "explicacion": "Entre más específico el destinatario, más se reconoce en el mensaje."
+    },
+    {
+      "id": "q4",
+      "texto": "En la parte dos se describe:",
+      "opciones": [
+        "El material",
+        "El problema, no las características",
+        "El precio",
+        "El horario"
+      ],
+      "correcta": 1,
+      "explicacion": "Nadie compra un taladro por sus velocidades: lo compra por el hoyo."
+    },
+    {
+      "id": "q5",
+      "texto": "La parte que más se olvida es:",
+      "opciones": [
+        "El nombre",
+        "El precio",
+        "Por qué es mejor que lo existente",
+        "El destinatario"
+      ],
+      "correcta": 2,
+      "explicacion": "Y es justamente la que decide la compra."
+    },
+    {
+      "id": "q6",
+      "texto": "Para diferenciarse hay que ser mejor:",
+      "opciones": [
+        "En todo",
+        "En el precio siempre",
+        "En nada",
+        "En una cosa que le importe al cliente"
+      ],
+      "correcta": 3,
+      "explicacion": "Más barato, más rápido, más cerca o más confiable: basta con una."
+    },
+    {
+      "id": "q7",
+      "texto": "La propuesta se prueba:",
+      "opciones": [
+        "Pidiendo que alguien la repita con sus palabras",
+        "Leyéndola en voz alta",
+        "Preguntando si suena bien",
+        "Escribiéndola bonito"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el filtro más implacable y más útil que existe."
+    },
+    {
+      "id": "q8",
+      "texto": "Si el otro no la puede repetir:",
+      "opciones": [
+        "Falla el compañero",
+        "Falla la frase",
+        "No importa",
+        "Hay que repetirla más fuerte"
+      ],
+      "correcta": 1,
+      "explicacion": "La responsabilidad de ser claro es de quien comunica."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-4-7-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-4-7-b-escena.webp"
+}

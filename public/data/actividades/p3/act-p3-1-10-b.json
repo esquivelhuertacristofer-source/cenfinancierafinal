@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-1-10-B",
+  "unit_code": "P3-1-10",
+  "unit_title": "Mi presupuesto mensual completo: armarlo de principio a fin",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "ALTA",
+  "titulo": "Presupuesto que Cuadra",
+  "descripcion": "Demuestra que sabes armar, verificar y ajustar un presupuesto mensual.",
+  "objetivo": "Verificar el armado, cuadre y proyección de un presupuesto mensual",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Recibo $800, gasto $650 y quiero ahorrar $200. El presupuesto:",
+      "opciones": [
+        "Cuadra exacto",
+        "Sobran $50",
+        "No cuadra: faltan $50",
+        "Sobran $150"
+      ],
+      "correcta": 2,
+      "explicacion": "650 + 200 = 850, que es más que 800. Hay que ajustar."
+    },
+    {
+      "id": "q2",
+      "texto": "Mi meta cuesta $1,200 y ahorro $200 al mes. Llego en:",
+      "opciones": [
+        "3 meses",
+        "12 meses",
+        "2 meses",
+        "6 meses"
+      ],
+      "correcta": 3,
+      "explicacion": "1200 entre 200 son 6. Esa división convierte tu meta en una fecha."
+    },
+    {
+      "id": "q3",
+      "texto": "Si el presupuesto no cuadra, recorto primero:",
+      "opciones": [
+        "El rojo",
+        "El verde",
+        "El amarillo",
+        "El ahorro"
+      ],
+      "correcta": 0,
+      "explicacion": "De abajo hacia arriba: primero lo que puede esperar sin daño."
+    },
+    {
+      "id": "q4",
+      "texto": "La diferencia entre registrar y presupuestar es:",
+      "opciones": [
+        "Son lo mismo",
+        "Registrar mira el pasado, presupuestar el futuro",
+        "Registrar es del banco",
+        "Presupuestar es solo para adultos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los dos se necesitan: el registro da los números reales para presupuestar bien."
+    },
+    {
+      "id": "q5",
+      "texto": "Con el verde, si no cuadra, se debe:",
+      "opciones": [
+        "Eliminarlo",
+        "Duplicarlo",
+        "Buscar que cueste menos",
+        "Ignorarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Llevar lunch de casa baja el gasto sin dejar de comer."
+    },
+    {
+      "id": "q6",
+      "texto": "Si no cuadra ni recortando, la salida es:",
+      "opciones": [
+        "Rendirse",
+        "Pedir prestado siempre",
+        "Ignorarlo",
+        "Buscar un ingreso adicional"
+      ],
+      "correcta": 3,
+      "explicacion": "Un presupuesto tiene dos lados: gastos e ingresos."
+    },
+    {
+      "id": "q7",
+      "texto": "Recibo $1,000, gasto $700. Mi meta cuesta $1,500. Llego en:",
+      "opciones": [
+        "5 meses",
+        "3 meses",
+        "10 meses",
+        "15 meses"
+      ],
+      "correcta": 0,
+      "explicacion": "Ahorras $300 al mes; 1500 entre 300 son 5 meses."
+    },
+    {
+      "id": "q8",
+      "texto": "Un presupuesto bien hecho es sobre todo:",
+      "opciones": [
+        "Una lista de prohibiciones",
+        "Un mapa que dice cuándo llegarás a tu meta",
+        "Un castigo",
+        "Un registro"
+      ],
+      "correcta": 1,
+      "explicacion": "Su valor está en la fecha que te devuelve, no en lo que te quita."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-1-10-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-1-10-b-escena.webp"
+}

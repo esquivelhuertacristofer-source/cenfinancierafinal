@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-4-9-B",
+  "unit_code": "S2-4-9",
+  "unit_title": "Operaciones y proveedores: la cadena que sostiene la promesa",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de Operaciones",
+  "descripcion": "Responde rápido sobre proveedores y operación.",
+  "objetivo": "Consolidar el conocimiento sobre gestión operativa",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La promesa comercial la sostiene:",
+      "respuesta_correcta": "La operación",
+      "incorrectas": [
+        "La publicidad",
+        "El precio",
+        "El logotipo"
+      ],
+      "dato_extra": "El cliente no distingue en qué eslabón falló: recuerda que le fallaste."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Un buen producto con mala operación:",
+      "respuesta_correcta": "Pierde clientes más rápido de lo que los consigue",
+      "incorrectas": [
+        "Crece igual",
+        "No tiene problema",
+        "Compensa con precio"
+      ],
+      "dato_extra": "Una entrega tardía borra una buena primera impresión."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Al elegir proveedor, el precio es:",
+      "respuesta_correcta": "Un criterio entre varios",
+      "incorrectas": [
+        "El único criterio",
+        "Irrelevante",
+        "El último"
+      ],
+      "dato_extra": "Cumplimiento, consistencia, capacidad y comunicación pesan igual."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Un proveedor barato que falla dos veces al año:",
+      "respuesta_correcta": "Puede costar más que uno caro confiable",
+      "incorrectas": [
+        "Siempre conviene",
+        "Es lo mismo",
+        "Es el ideal"
+      ],
+      "dato_extra": "El costo de una falla incluye clientes perdidos."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Depender de un único proveedor crítico:",
+      "respuesta_correcta": "Es una fragilidad común y seria",
+      "incorrectas": [
+        "Es lo recomendable",
+        "No importa",
+        "Reduce costos siempre"
+      ],
+      "dato_extra": "Si sube precios, se retrasa o cierra, el negocio se detiene."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Un plan de contingencia incluye:",
+      "respuesta_correcta": "Alterno probado, inventario de seguridad y acuerdo escrito",
+      "incorrectas": [
+        "Solo una lista de contactos",
+        "Nada",
+        "Solo esperanza"
+      ],
+      "dato_extra": "Se diseña en frío, antes de que ocurra la falla."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un proveedor alterno con el que nunca has operado:",
+      "respuesta_correcta": "No es un plan, es una intención",
+      "incorrectas": [
+        "Es suficiente",
+        "Es lo ideal",
+        "Reduce el riesgo a cero"
+      ],
+      "dato_extra": "Hasta que no compras una vez, no sabes si cumple."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-4-9-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-4-9-b-escena.webp"
+}

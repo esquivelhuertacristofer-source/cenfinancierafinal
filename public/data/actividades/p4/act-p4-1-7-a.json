@@ -1,0 +1,111 @@
+{
+  "code": "ACT-P4-1-7-A",
+  "unit_code": "P4-1-7",
+  "unit_title": "El GAT: cuánto rinde de verdad mi ahorro",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Calcula tu GAT Real",
+  "descripcion": "Arma la comparación de tu ahorro y descubre si de verdad está creciendo.",
+  "objetivo": "Calcular el GAT real de un instrumento y su efecto sobre el poder de compra",
+  "xp": 400,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi ahorro y su rendimiento",
+      "descripcion": "Cuánto guardo y qué GAT nominal me ofrecen.",
+      "campos": [
+        {
+          "id": "ahorro",
+          "label": "Dinero que voy a guardar",
+          "type": "number",
+          "min": 100,
+          "max": 100000,
+          "default": 5000,
+          "unit": "$",
+          "placeholder": "5000",
+          "requerido": true,
+          "ayuda": "La cantidad que dejarás en el instrumento durante el año."
+        },
+        {
+          "id": "gat_nominal",
+          "label": "GAT nominal que ofrece",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 5,
+          "unit": "%",
+          "ayuda": "Viene publicado por ley en el contrato y en la publicidad.",
+          "requerido": true
+        },
+        {
+          "id": "ganancia_pesos",
+          "label": "Lo que ganaría en pesos en un año",
+          "type": "calculated",
+          "formula": "Math.round(ahorro * gat_nominal / 100)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "La inflación",
+      "descripcion": "Cuánto suben los precios en el mismo periodo.",
+      "campos": [
+        {
+          "id": "inflacion",
+          "label": "Inflación anual estimada",
+          "type": "slider",
+          "min": 0,
+          "max": 15,
+          "step": 0.5,
+          "default": 4.5,
+          "unit": "%",
+          "ayuda": "Es el dato que publica el INEGI cada mes.",
+          "requerido": true
+        },
+        {
+          "id": "gat_real",
+          "label": "GAT real (nominal menos inflación)",
+          "type": "calculated",
+          "formula": "gat_nominal - inflacion",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mi poder de compra",
+      "descripcion": "Qué pasó de verdad con mi dinero.",
+      "campos": [
+        {
+          "id": "saldo_final",
+          "label": "Pesos que tendré al año",
+          "type": "calculated",
+          "formula": "Math.round(ahorro * (1 + gat_nominal / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "valor_real",
+          "label": "Lo que ese dinero comprará en precios de hoy",
+          "type": "calculated",
+          "formula": "Math.round(ahorro * (1 + gat_nominal / 100) / (1 + inflacion / 100))",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia_real",
+          "label": "Ganancia o pérdida en poder de compra",
+          "type": "calculated",
+          "formula": "Math.round(ahorro * (1 + gat_nominal / 100) / (1 + inflacion / 100) - ahorro)",
+          "unit": "$"
+        }
+      ]
+    }
+  ],
+  "output_type": "analisis_gat",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-1-7-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-7-a-escena.webp"
+}

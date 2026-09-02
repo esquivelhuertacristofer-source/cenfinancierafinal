@@ -1,0 +1,92 @@
+{
+  "code": "ACT-S1-3-9-A",
+  "unit_code": "S1-3-9",
+  "unit_title": "Comisiones de inversión: el enemigo silencioso",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "AVANZADO",
+  "titulo": "El Enemigo Silencioso",
+  "descripcion": "Ajusta la comisión y observa cuánto de tu dinero se queda en el camino.",
+  "objetivo": "Cuantificar el efecto acumulado de las comisiones en el largo plazo",
+  "xp": 500,
+  "inputs": [
+    {
+      "id": "aportacion",
+      "label": "Aportación mensual",
+      "type": "slider",
+      "min": 100,
+      "max": 20000,
+      "step": 100,
+      "default": 1500,
+      "unit": "$",
+      "referencia": "Lo que aportas de tu bolsillo cada mes."
+    },
+    {
+      "id": "anos",
+      "label": "Años que voy a invertir",
+      "type": "slider",
+      "min": 1,
+      "max": 40,
+      "step": 1,
+      "default": 30,
+      "unit": "años",
+      "referencia": "Entre más largo el plazo, más pesa la comisión."
+    },
+    {
+      "id": "rendimiento",
+      "label": "Rendimiento anual bruto",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "step": 0.5,
+      "default": 9,
+      "unit": "%",
+      "referencia": "Antes de descontar comisiones."
+    },
+    {
+      "id": "comision",
+      "label": "Comisión anual de administración",
+      "type": "slider",
+      "min": 0,
+      "max": 4,
+      "step": 0.1,
+      "default": 1.5,
+      "unit": "%",
+      "referencia": "Se cobra sobre el saldo total, no sobre la ganancia."
+    }
+  ],
+  "formula": "Math.round(aportacion * (Math.pow(1 + rendimiento / 100 / 12, anos * 12) - 1) / (rendimiento / 100 / 12) - aportacion * (Math.pow(1 + (rendimiento - comision) / 100 / 12, anos * 12) - 1) / ((rendimiento - comision) / 100 / 12 || 0.0001))",
+  "descripcion_formula": "Diferencia entre lo que acumularías sin comisión y lo que acumulas con ella. Es decir, cuánto dinero se queda la comisión en total.",
+  "output_label": "Lo que te cuesta la comisión en total",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "comision >= 2 && anos >= 25",
+      "mensaje": "Con esta comisión y este plazo, una parte enorme de tu esfuerzo se queda en el camino. Reducirla es la mejora más segura que puedes hacer a tu inversión.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "comision <= 0.5 && anos >= 20",
+      "mensaje": "Comisión baja y plazo largo: la combinación que más conserva tu dinero. Cada décima de punto que ahorras se acumula durante todos los años restantes.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "comision == 0",
+      "mensaje": "Sin comisión conservas todo el rendimiento. En la práctica casi siempre hay algún costo: lo importante es conocerlo antes de contratar, no después.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "anos <= 5 && comision >= 2",
+      "mensaje": "A plazo corto la comisión pesa menos, pero sigue restando. Y si el plazo se alarga, ese porcentaje empieza a acumularse rápido.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "comision >= 3",
+      "mensaje": "Una comisión de este nivel es muy alta para un producto de inversión. Vale la pena comparar alternativas antes de comprometer aportaciones por años.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-3-9-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-3-9-a-escena.webp"
+}

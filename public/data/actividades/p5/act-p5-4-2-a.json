@@ -4,110 +4,144 @@
   "unit_title": "Costos Fijos vs. Variables: la salud del negocio",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Perfil de Líder 360",
-  "descripcion": "¿Tienes lo que se necesita para guiar a un equipo al éxito? ¡Descubre las cualidades de los grandes líderes!",
-  "objetivo": "Identificar rasgos de liderazgo ético y habilidades de gestión de equipos",
-  "xp": 200,
-  "aprobacion_minima": 0.8,
-  "preguntas": [
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "ALTO",
+  "titulo": "La Estructura de Costos de tu Negocio",
+  "descripcion": "Un negocio tiene dos clases de gastos: los que pagas aunque no vendas nada (fijos) y los que solo aparecen cuando vendes (variables). Confundirlos es la forma más común de poner un precio que te hace perder dinero.",
+  "objetivo": "Separar los costos fijos de los variables en un negocio real y calcular el costo total por unidad vendida.",
+  "xp": 600,
+  "output_type": "estructura_costos",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "lid1",
-      "texto": "¿Cuál es la cualidad más importante de un líder financiero?",
-      "opciones": [
-        "Ser el que más dinero tiene",
-        "La Integridad (que sus acciones coincidan con sus palabras)",
-        "Ser el más gritón",
-        "Saber todos los trucos de magia"
-      ],
-      "correcta": 1,
-      "explicacion": "La confianza se basa en la integridad. Si nadie confía en ti, no puedes liderar."
+      "id": "negocio",
+      "titulo": "🏪 Tu negocio",
+      "descripcion": "Piensa en un negocio pequeño y real: un puesto de tortas, venta de pulseras, paseo de perros.",
+      "campos": [
+        {
+          "id": "nombre_negocio",
+          "label": "¿Qué vas a vender?",
+          "type": "text",
+          "placeholder": "Ej: tortas de jamón",
+          "requerido": true
+        },
+        {
+          "id": "unidades",
+          "label": "¿Cuántas piensas vender al mes?",
+          "type": "number",
+          "placeholder": "Ej: 300",
+          "requerido": true
+        }
+      ]
     },
     {
-      "id": "lid2",
-      "texto": "¿Qué significa 'Delegar'?",
-      "opciones": [
-        "Hacer todo tú solo porque nadie lo hace mejor",
-        "Confiar tareas importantes a los miembros de tu equipo según sus talentos",
-        "Mandar a los demás para tú descansar",
-        "Borrar archivos de la computadora"
-      ],
-      "correcta": 1,
-      "explicacion": "Un gran líder sabe que no puede hacerlo todo; necesita la fuerza de su equipo."
+      "id": "fijos",
+      "titulo": "🔒 Costos FIJOS",
+      "descripcion": "Los que pagas cada mes vendas 0 o vendas 1,000. Renta, luz, internet, el permiso, el sueldo de alguien fijo.",
+      "campos": [
+        {
+          "id": "renta",
+          "label": "Renta o espacio ($ al mes)",
+          "type": "number",
+          "placeholder": "Ej: 2000",
+          "requerido": true
+        },
+        {
+          "id": "servicios",
+          "label": "Luz, gas, internet ($ al mes)",
+          "type": "number",
+          "placeholder": "Ej: 800",
+          "requerido": true
+        },
+        {
+          "id": "otros_fijos",
+          "label": "Otros fijos: permisos, sueldos ($ al mes)",
+          "type": "number",
+          "placeholder": "Ej: 500",
+          "requerido": true
+        },
+        {
+          "id": "total_fijos",
+          "label": "Total de costos fijos",
+          "type": "calculated",
+          "formula": "renta + servicios + otros_fijos",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Este número te persigue todos los meses. Es lo primero que tienes que cubrir."
+        }
+      ]
     },
     {
-      "id": "lid3",
-      "texto": "Si el negocio pierde dinero por un error, ¿qué hace un buen líder?",
-      "opciones": [
-        "Culpa al empleado más nuevo",
-        "Asume la responsabilidad y busca una solución junto con su equipo",
-        "Esconde los papeles para que nadie se entere",
-        "Renuncia de inmediato"
-      ],
-      "correcta": 1,
-      "explicacion": "La responsabilidad (accountability) es la marca de un líder maduro."
+      "id": "variables",
+      "titulo": "📦 Costos VARIABLES",
+      "descripcion": "Los que solo existen cuando produces una unidad más: los ingredientes, el empaque, la bolsa.",
+      "campos": [
+        {
+          "id": "materia_prima",
+          "label": "Materiales por cada unidad ($)",
+          "type": "number",
+          "placeholder": "Ej: 18",
+          "requerido": true
+        },
+        {
+          "id": "empaque",
+          "label": "Empaque o envío por unidad ($)",
+          "type": "number",
+          "placeholder": "Ej: 2",
+          "requerido": true
+        },
+        {
+          "id": "costo_variable_unitario",
+          "label": "Costo variable por unidad",
+          "type": "calculated",
+          "formula": "materia_prima + empaque",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "total_variables",
+          "label": "Total variable del mes",
+          "type": "calculated",
+          "formula": "(materia_prima + empaque) * unidades",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Este sube y baja con tus ventas. Si no vendes, no lo pagas."
+        }
+      ]
     },
     {
-      "id": "lid4",
-      "texto": "¿Qué es la 'Visión' en un negocio?",
-      "opciones": [
-        "Tener buena vista",
-        "Tener una idea clara de hacia dónde quieres llevar tu empresa en el futuro",
-        "Mirar mucha televisión",
-        "Saber leer el futuro en una bola de cristal"
-      ],
-      "correcta": 1,
-      "explicacion": "La visión inspira a los demás a trabajar por un objetivo común."
-    },
-    {
-      "id": "lid5",
-      "texto": "¿Cómo motiva un líder a su equipo?",
-      "opciones": [
-        "Amenazándolos con correrlos",
-        "Reconociendo su esfuerzo y dándoles las herramientas para crecer",
-        "Dándoles muchos dulces",
-        "Ignorándolos para que se esfuercen más"
-      ],
-      "correcta": 1,
-      "explicacion": "La motivación positiva crea equipos leales y eficientes."
-    },
-    {
-      "id": "lid6",
-      "texto": "¿Qué es la 'Resiliencia'?",
-      "opciones": [
-        "Saber mucho de leyes",
-        "La capacidad de levantarse y seguir adelante después de un fracaso",
-        "Un tipo de metal",
-        "Ser muy flexible"
-      ],
-      "correcta": 1,
-      "explicacion": "En los negocios habrá días malos. La resiliencia te mantiene en el juego."
-    },
-    {
-      "id": "lid7",
-      "texto": "¿Por qué un líder debe saber escuchar?",
-      "opciones": [
-        "Para perder el tiempo",
-        "Porque las mejores ideas a veces vienen de quien menos lo esperas",
-        "Para saber los chismes",
-        "No debe escuchar, solo mandar"
-      ],
-      "correcta": 1,
-      "explicacion": "La escucha activa permite detectar problemas y oportunidades a tiempo."
-    },
-    {
-      "id": "lid8",
-      "texto": "¿Cuál es el objetivo final de un líder?",
-      "opciones": [
-        "Ser famoso",
-        "Que el equipo logre su meta y todos crezcan juntos",
-        "Tener una oficina grande",
-        "Mandar a muchas personas"
-      ],
-      "correcta": 1,
-      "explicacion": "El éxito del líder es el éxito de su equipo."
+      "id": "unitario",
+      "titulo": "🎯 Lo que de verdad te cuesta cada pieza",
+      "descripcion": "Aquí está el número que casi nadie calcula y que decide si un negocio gana o pierde.",
+      "campos": [
+        {
+          "id": "fijo_por_unidad",
+          "label": "Parte del costo fijo que carga cada unidad",
+          "type": "calculated",
+          "formula": "(renta + servicios + otros_fijos) / unidades",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Mientras más vendes, menos costo fijo carga cada pieza. Por eso vender más abarata."
+        },
+        {
+          "id": "costo_real_unitario",
+          "label": "COSTO REAL de cada unidad",
+          "type": "calculated",
+          "formula": "(materia_prima + empaque) + (renta + servicios + otros_fijos) / unidades",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Vender por debajo de este número significa perder dinero en cada venta, por más clientes que tengas."
+        },
+        {
+          "id": "precio_sugerido",
+          "label": "Precio con 40% de ganancia",
+          "type": "calculated",
+          "formula": "Math.ceil(((materia_prima + empaque) + (renta + servicios + otros_fijos) / unidades) * 1.4)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

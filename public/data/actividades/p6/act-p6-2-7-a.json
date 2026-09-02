@@ -1,0 +1,156 @@
+{
+  "code": "ACT-P6-2-7-A",
+  "unit_code": "P6-2-7",
+  "unit_title": "Deuda buena y deuda mala: el criterio definitivo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Deuda de la Familia",
+  "descripcion": "La familia de Ceny evalúa tres posibles créditos. Cada decisión define su situación futura.",
+  "objetivo": "Aplicar el criterio de tres preguntas a decisiones reales de endeudamiento",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "La familia de Ceny tiene tres opciones sobre la mesa: financiar un curso técnico, cambiar la pantalla de la sala o reparar el vehículo con el que trabaja el papá.",
+  "nodo_inicial": "evaluacion",
+  "nodos": {
+    "evaluacion": {
+      "id": "evaluacion",
+      "texto": "¿Cómo evalúan las tres opciones?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Aplicar las tres preguntas del criterio a cada una",
+          "siguiente_nodo": "prioridad",
+          "consecuencia": "Con el criterio aplicado, dos opciones pasan y una no.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Elegir la que tenga la mensualidad más baja",
+          "siguiente_nodo": "mensualidad_baja",
+          "consecuencia": "La mensualidad baja no dice nada sobre si la deuda tiene sentido.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        },
+        {
+          "id": "o3",
+          "texto": "Tomar las tres, total cada una es pequeña",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Tres mensualidades juntas superan lo que cabe en el presupuesto.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -15000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-evaluacion.webp"
+    },
+    "mensualidad_baja": {
+      "id": "mensualidad_baja",
+      "texto": "La de mensualidad más baja resultó ser la pantalla, a 36 meses. ¿Qué notan al revisar?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que terminarían pagando casi el doble por algo que pierde valor",
+          "siguiente_nodo": "prioridad",
+          "consecuencia": "Primera pregunta del criterio: no genera ni conserva valor.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que como cabe en el presupuesto, está bien",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Caber en el presupuesto es solo una de las tres preguntas.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-mensualidad_baja.webp"
+    },
+    "prioridad": {
+      "id": "prioridad",
+      "texto": "El vehículo de trabajo y el curso técnico pasan las tres preguntas, pero solo alcanza para uno. ¿Cuál eligen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "La reparación del vehículo: sin él se detiene el ingreso principal",
+          "siguiente_nodo": "plan",
+          "consecuencia": "Proteger la fuente de ingreso va antes que aumentarla.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 8000
+        },
+        {
+          "id": "o2",
+          "texto": "El curso, porque a largo plazo da más",
+          "siguiente_nodo": "plan",
+          "consecuencia": "Buena inversión, pero si el vehículo falla no habrá con qué pagar el curso.",
+          "xp_bonus": 25,
+          "es_optima": false,
+          "impacto_patrimonio": -2000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-prioridad.webp"
+    },
+    "plan": {
+      "id": "plan",
+      "texto": "Antes de firmar, ¿qué preparan?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "El plan completo hasta la última mensualidad, con escenario de ingreso menor",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "La tercera pregunta contestada de verdad, no solo para el primer mes.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 3000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada: si cabe este mes, cabrá los demás",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Los imprevistos no avisan, y una deuda sin plan se paga con otra deuda.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -3000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-plan.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "La familia financió lo que protegía su ingreso, con una mensualidad que cabía y un plan hasta el final.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Las tres preguntas juntas: genera o conserva valor, cabe en el presupuesto y tiene plan completo. Cuando las tres se responden que sí, la deuda construye.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "La familia tomó el crédito, aunque sin haber respondido las tres preguntas.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Responder una o dos preguntas no basta. Las tres funcionan juntas: fallar una convierte una buena decisión en un problema a mediano plazo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Con tres créditos simultáneos, las mensualidades superaron lo que el presupuesto podía sostener.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Cada deuda parecía pequeña por separado. La segunda pregunta se responde sobre la suma de todas, no sobre cada una por su cuenta.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-2-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-2-7-a-portada.webp"
+}

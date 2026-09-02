@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S2-2-10-B",
+  "unit_code": "S2-2-10",
+  "unit_title": "Negociar con cobranza sin ceder mis derechos",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Cobranza",
+  "descripcion": "Responde rápido sobre tus derechos ante la cobranza.",
+  "objetivo": "Consolidar el conocimiento de derechos del deudor",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Deber dinero de un crédito de consumo es:",
+      "respuesta_correcta": "Un asunto civil, no penal",
+      "incorrectas": [
+        "Un delito",
+        "Una falta administrativa",
+        "Un fraude"
+      ],
+      "dato_extra": "Las amenazas de detención son presión, no descripción de la realidad."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La herramienta principal de la cobranza abusiva es:",
+      "respuesta_correcta": "El miedo",
+      "incorrectas": [
+        "La ley",
+        "La paciencia",
+        "La cortesía"
+      ],
+      "dato_extra": "Por eso conocer tus derechos cambia toda la conversación."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Un cobrador sí puede:",
+      "respuesta_correcta": "Identificarse, informar el saldo y ofrecer opciones",
+      "incorrectas": [
+        "Insultar",
+        "Amenazar",
+        "Llamar a los vecinos"
+      ],
+      "dato_extra": "La cobranza legítima existe y merece una respuesta razonable."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Está prohibido que:",
+      "respuesta_correcta": "Contacte a vecinos o al trabajo para exponer la deuda",
+      "incorrectas": [
+        "Informe el monto",
+        "Ofrezca un plan",
+        "Deje constancia del contacto"
+      ],
+      "dato_extra": "Exponer la deuda ante terceros es una conducta denunciable."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Hacerse pasar por autoridad:",
+      "respuesta_correcta": "Está prohibido",
+      "incorrectas": [
+        "Es normal",
+        "Se permite por escrito",
+        "Solo lo hacen los bancos"
+      ],
+      "dato_extra": "Igual que enviar documentos que aparenten ser oficiales sin serlo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El registro de contactos debe incluir:",
+      "respuesta_correcta": "Fecha, hora, nombre, empresa y lo acordado",
+      "incorrectas": [
+        "Solo la fecha",
+        "Solo el monto",
+        "Nada"
+      ],
+      "dato_extra": "Es lo que sostiene una queja ante las instancias correspondientes."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un descuento prometido por teléfono:",
+      "respuesta_correcta": "No existe si no está por escrito",
+      "incorrectas": [
+        "Vale igual",
+        "Es automático",
+        "Lo respeta cualquiera"
+      ],
+      "dato_extra": "Regla sin excepciones: acuerdo por escrito antes de pagar."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-10-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-10-b-escena.webp"
+}

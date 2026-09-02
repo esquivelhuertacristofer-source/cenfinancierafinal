@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-4-10-B",
+  "unit_code": "P5-4-10",
+  "unit_title": "Ética empresarial: ganar sin dañar",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Ganar sin Dañar",
+  "descripcion": "Comprueba que sabes decidir cuando la ley no alcanza.",
+  "objetivo": "Verificar la aplicación de criterios éticos a decisiones empresariales",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Para un negocio, la ley es:",
+      "opciones": [
+        "La meta máxima",
+        "Una sugerencia",
+        "Irrelevante",
+        "El mínimo, no el objetivo"
+      ],
+      "correcta": 3,
+      "explicacion": "La ética empieza donde la ley deja de dar respuestas."
+    },
+    {
+      "id": "q2",
+      "texto": "¿Puede algo legal estar mal?",
+      "opciones": [
+        "Sí",
+        "No",
+        "Solo en otros países",
+        "Solo si es grande"
+      ],
+      "correcta": 0,
+      "explicacion": "Letra pequeña engañosa y publicidad técnicamente cierta son ejemplos."
+    },
+    {
+      "id": "q3",
+      "texto": "La prueba de la publicidad consiste en:",
+      "opciones": [
+        "Ver si el anuncio funciona",
+        "Preguntarse si estaría cómodo con que todos lo supieran",
+        "Contratar publicidad",
+        "Medir el alcance"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que requiere ocultarse rara vez resiste el análisis."
+    },
+    {
+      "id": "q4",
+      "texto": "La prueba del cliente consiste en:",
+      "opciones": [
+        "Preguntarle al cliente",
+        "Hacer una encuesta",
+        "Preguntarse si aceptaría que se lo hicieran a uno",
+        "Ver la competencia"
+      ],
+      "correcta": 2,
+      "explicacion": "El cambio de perspectiva resuelve la mayoría de los dilemas."
+    },
+    {
+      "id": "q5",
+      "texto": "La prueba de la repetición pregunta:",
+      "opciones": [
+        "Si conviene repetir la venta",
+        "Cuántas veces se hizo",
+        "Si es rentable",
+        "Qué pasaría si todos lo hicieran"
+      ],
+      "correcta": 3,
+      "explicacion": "Si el mercado se rompería, la práctica es dañina aunque parezca menor."
+    },
+    {
+      "id": "q6",
+      "texto": "En un negocio pequeño, la reputación:",
+      "opciones": [
+        "Es casi todo el capital",
+        "No importa",
+        "Se compra",
+        "Es secundaria"
+      ],
+      "correcta": 0,
+      "explicacion": "Se construye durante años y se destruye en una decisión."
+    },
+    {
+      "id": "q7",
+      "texto": "Vender algo de menor calidad sin avisar:",
+      "opciones": [
+        "Está bien si es legal",
+        "No pasa la prueba del cliente",
+        "Es buena estrategia",
+        "No tiene consecuencias"
+      ],
+      "correcta": 1,
+      "explicacion": "Avisar y dejar que el cliente decida sí pasaría las tres pruebas."
+    },
+    {
+      "id": "q8",
+      "texto": "Cobrar más a quien no compara:",
+      "opciones": [
+        "Es aprovechar una oportunidad",
+        "Es legal y por tanto correcto",
+        "Es cobrar de más a quien confía",
+        "No afecta al negocio"
+      ],
+      "correcta": 2,
+      "explicacion": "Las malas decisiones no provocan escándalos: provocan que la gente deje de volver."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-10-b-escena.webp"
+}

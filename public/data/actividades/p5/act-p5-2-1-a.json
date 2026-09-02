@@ -4,88 +4,145 @@
   "unit_title": "La Tarjeta de Crédito: dinero prestado, no regalado",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "JUEGO",
+  "tipo": "DECIDE",
   "complejidad": "MEDIO",
-  "titulo": "Escudo Digital",
-  "descripcion": "Las amenazas en internet son cada vez más inteligentes. ¿Podrás interceptar los virus y proteger tu información?",
-  "objetivo": "Identificar y diferenciar tipos de ciberataques modernos y medidas de protección",
-  "xp": 400,
-  "game_type": "click",
-  "duracion": 60,
-  "velocidad_inicial": "media",
-  "velocidad_incremento": true,
-  "instruccion": "Haz clic en las ACCIONES SEGURAS (✅) y bloquea las AMENAZAS (🚫).",
-  "items": [
-    {
-      "id": "t1",
-      "label": "Ransomware: 'Tus archivos están bloqueados'",
-      "emoji": "🔓",
-      "tipo": "incorrecto",
-      "puntos": -200
+  "titulo": "La Tarjeta de la Tía Rosa",
+  "descripcion": "La tía Rosa acaba de recibir su primera tarjeta de crédito con un límite de $15,000. Está feliz: \"¡Es como si me hubieran regalado quince mil pesos!\". Ceny no está tan segura.",
+  "objetivo": "Diferenciar el dinero propio (débito) del dinero prestado (crédito) y comprender que la tarjeta de crédito genera una deuda con fecha límite e intereses.",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "En el sobre viene una carta: \"Límite de crédito $15,000. Fecha de corte: día 5. Fecha límite de pago: día 25. Tasa de interés anual: 72%\".",
+  "nodo_inicial": "el_sobre",
+  "nodos": {
+    "el_sobre": {
+      "id": "el_sobre",
+      "texto": "La tía Rosa dice: \"Voy a comprarme la tele de $12,000 que quería\". Ceny mira la carta. ¿Qué le explica?",
+      "opciones": [
+        {
+          "id": "prestado",
+          "texto": "\"Tía, ese dinero no es tuyo: el banco te lo presta y hay que devolverlo\"",
+          "siguiente_nodo": "la_compra",
+          "consecuencia": "La tía se queda pensando. Nunca lo había visto así.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "regalo",
+          "texto": "\"¡Aprovecha! Es dinero extra del banco\"",
+          "siguiente_nodo": "la_compra",
+          "consecuencia": "La tía compra la tele convencida de que fue gratis.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "nunca",
+          "texto": "\"Nunca uses esa tarjeta, las tarjetas son malas\"",
+          "siguiente_nodo": "matiz",
+          "consecuencia": "La tía la guarda en un cajón, asustada.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": 0
+        }
+      ]
     },
-    {
-      "id": "s1",
-      "label": "Actualización de Sistema Oficial",
-      "emoji": "🔄",
-      "tipo": "correcto",
-      "puntos": 100
+    "matiz": {
+      "id": "matiz",
+      "texto": "Meses después el coche de la tía se descompone y necesita $6,000 de inmediato. No tiene ahorros y la tarjeta sigue en el cajón. Termina pidiendo prestado a un prestamista que le cobra el triple.",
+      "opciones": [
+        {
+          "id": "herramienta",
+          "texto": "Entender que la tarjeta es una herramienta: peligrosa mal usada, útil bien usada",
+          "siguiente_nodo": "la_compra",
+          "consecuencia": "No es buena ni mala. Depende de si puedes pagar lo que gastas.",
+          "xp_bonus": 120,
+          "es_optima": true,
+          "impacto_patrimonio": -3000
+        }
+      ]
     },
-    {
-      "id": "t2",
-      "label": "Archivo.exe adjunto de un extraño",
-      "emoji": "📁",
-      "tipo": "incorrecto",
-      "puntos": -150
+    "la_compra": {
+      "id": "la_compra",
+      "texto": "La tía compra la tele: $12,000 a crédito. Llega el estado de cuenta. Le dan dos números: \"Pago para no generar intereses: $12,000\" y \"Pago mínimo: $600\". ¿Qué le conviene?",
+      "opciones": [
+        {
+          "id": "total",
+          "texto": "Pagar los $12,000 completos antes del día 25",
+          "siguiente_nodo": "final_impecable",
+          "consecuencia": "La tía junta el dinero y paga todo. Intereses cobrados: cero.",
+          "xp_bonus": 200,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "minimo",
+          "texto": "Pagar solo el mínimo de $600, así queda más dinero libre",
+          "siguiente_nodo": "bola_nieve",
+          "consecuencia": "El banco acepta... y empieza a cobrar 72% anual sobre lo que queda.",
+          "xp_bonus": 40,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "nada",
+          "texto": "No pagar este mes, ya pagará el siguiente",
+          "siguiente_nodo": "final_buro",
+          "consecuencia": "Al no pagar nada, además de intereses llegan comisiones por pago tardío.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -1500
+        }
+      ]
     },
-    {
-      "id": "s2",
-      "label": "Usar una VPN en red pública",
-      "emoji": "🌐",
-      "tipo": "correcto",
-      "puntos": 100
+    "bola_nieve": {
+      "id": "bola_nieve",
+      "texto": "Pasan 12 meses pagando solo el mínimo. La tía ha entregado $7,200... y todavía debe $11,400. Casi todo lo que pagó se fue en intereses, no en la tele.",
+      "opciones": [
+        {
+          "id": "liquidar",
+          "texto": "Juntar lo que pueda y liquidar la deuda de golpe",
+          "siguiente_nodo": "final_leccion",
+          "consecuencia": "La tía vende cosas que no usaba y liquida. Nunca más pagará solo el mínimo.",
+          "xp_bonus": 150,
+          "es_optima": true,
+          "impacto_patrimonio": -6600
+        },
+        {
+          "id": "seguir",
+          "texto": "Seguir pagando el mínimo, es más cómodo",
+          "siguiente_nodo": "final_trampa",
+          "consecuencia": "La tele de $12,000 va camino de costarle más de $30,000.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -18000
+        }
+      ]
     },
-    {
-      "id": "t3",
-      "label": "Anuncio: '¡Tu celular tiene 10 virus! Haz clic'",
-      "emoji": "⚠️",
-      "tipo": "incorrecto",
-      "puntos": -100
+    "final_impecable": {
+      "id": "final_impecable",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "La tele costó exactamente $12,000. Ni un peso más. Además el banco registró que la tía paga puntual, y eso le abre mejores créditos en el futuro.",
+      "reflexion_final": "Usada así, la tarjeta de crédito es un préstamo GRATIS de hasta 45 días: si pagas el total antes de la fecha límite, no cobra un solo peso de interés. La regla es simple: no compres con tarjeta lo que no puedas pagar completo al final del mes."
     },
-    {
-      "id": "s3",
-      "label": "Autenticación de Dos Pasos (2FA) activa",
-      "emoji": "📱",
-      "tipo": "correcto",
-      "puntos": 150
+    "final_leccion": {
+      "id": "final_leccion",
+      "es_final": true,
+      "tipo_final": "regular",
+      "texto": "La tía salió de la deuda, pero la tele de $12,000 terminó costándole alrededor de $18,600. Pagó una tele y media.",
+      "reflexion_final": "El \"pago mínimo\" no es un descuento: es la forma en que el banco gana más. Casi todo se va a intereses y la deuda casi no baja. Es la trampa más común de las tarjetas en México."
     },
-    {
-      "id": "t4",
-      "label": "USB que encontraste tirada en la calle",
-      "emoji": "💾",
-      "tipo": "incorrecto",
-      "puntos": -200
+    "final_trampa": {
+      "id": "final_trampa",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Tres años después la tía sigue pagando esa tele. Ya entregó más de $21,000 y aún debe dinero. La tele, mientras tanto, ya se ve vieja.",
+      "reflexion_final": "A 72% anual, una deuda que solo recibe el pago mínimo puede tardar años en morir. Comprar algo que se gasta rápido con dinero que se paga lento es la peor combinación que existe."
     },
-    {
-      "id": "s4",
-      "label": "Navegar solo en sitios con HTTPS",
-      "emoji": "🔒",
-      "tipo": "correcto",
-      "puntos": 100
-    },
-    {
-      "id": "t5",
-      "label": "Llamada: 'Danos tu código de WhatsApp'",
-      "emoji": "📞",
-      "tipo": "incorrecto",
-      "puntos": -300
-    },
-    {
-      "id": "s5",
-      "label": "Contraseña de 16 caracteres con símbolos",
-      "emoji": "🔑",
-      "tipo": "correcto",
-      "puntos": 100
+    "final_buro": {
+      "id": "final_buro",
+      "es_final": true,
+      "tipo_final": "malo",
+      "texto": "Al tercer mes sin pagar, el banco reportó a la tía. Cuando quiso pedir un crédito para arreglar su casa, se lo negaron: su historial estaba manchado.",
+      "reflexion_final": "Cada pago (o cada falta de pago) queda registrado en tu historial crediticio. Ese historial decide, años después, si te prestan para un coche o una casa, y a qué tasa."
     }
-  ],
-  "versión": "2026.Diamond.V2"
+  },
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

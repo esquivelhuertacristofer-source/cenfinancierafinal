@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P2-3-6-B",
+  "unit_code": "P2-3-6",
+  "unit_title": "Mi semana en pesos: registrar lo que entra y lo que sale",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "El Saldo de la Semana",
+  "descripcion": "Calcula el saldo de Ceny y demuestra que sabes leer un registro.",
+  "objetivo": "Verificar el cálculo de saldo y las reglas del registro",
+  "xp": 200,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Entraron $100 y salieron $65. El saldo es:",
+      "opciones": [
+        "Faltaron $35",
+        "Cero",
+        "Sobraron $35",
+        "Sobraron $165"
+      ],
+      "correcta": 2,
+      "explicacion": "100 − 65 = 35. Saldo positivo significa que sobró dinero."
+    },
+    {
+      "id": "q2",
+      "texto": "Entraron $80 y salieron $95. El saldo es:",
+      "opciones": [
+        "Sobraron $15",
+        "Cero",
+        "Sobraron $175",
+        "Faltaron $15"
+      ],
+      "correcta": 3,
+      "explicacion": "Saldo negativo: se gastó más de lo que entró esa semana."
+    },
+    {
+      "id": "q3",
+      "texto": "¿Cuándo se anota un movimiento?",
+      "opciones": [
+        "El mismo día",
+        "El domingo todo junto",
+        "A fin de mes",
+        "Cuando me acuerde"
+      ],
+      "correcta": 0,
+      "explicacion": "Si lo dejas para después, olvidarás la mitad y el registro será inútil."
+    },
+    {
+      "id": "q4",
+      "texto": "Prestarle $20 a un amigo, en el registro es:",
+      "opciones": [
+        "Una entrada",
+        "Una salida",
+        "No se anota",
+        "Depende del amigo"
+      ],
+      "correcta": 1,
+      "explicacion": "Hoy salió de tus manos. Cuando te lo devuelvan, se anota como entrada."
+    },
+    {
+      "id": "q5",
+      "texto": "Pasar monedas de la alcancía al monedero:",
+      "opciones": [
+        "Es entrada",
+        "Es salida",
+        "No cambia el saldo",
+        "Se anota dos veces"
+      ],
+      "correcta": 2,
+      "explicacion": "Mover el dinero de lugar no lo aumenta ni lo reduce."
+    },
+    {
+      "id": "q6",
+      "texto": "$10 diarios de lunes a viernes suman a la semana:",
+      "opciones": [
+        "$10",
+        "$70",
+        "$100",
+        "$50"
+      ],
+      "correcta": 3,
+      "explicacion": "Y al mes son unos $200: más que muchas compras grandes."
+    },
+    {
+      "id": "q7",
+      "texto": "El gasto que más sorprende al registrar por primera vez es:",
+      "opciones": [
+        "El pequeño repetido",
+        "El más caro",
+        "El del domingo",
+        "El de la escuela"
+      ],
+      "correcta": 0,
+      "explicacion": "Nadie decide gastar $200 al mes en cosas de $10. Simplemente pasa."
+    },
+    {
+      "id": "q8",
+      "texto": "¿Para qué sirve el registro?",
+      "opciones": [
+        "Para gastar más",
+        "Para ver lo que la memoria no guarda",
+        "Para presumir",
+        "Para nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que no se anota no se ve, y lo que no se ve no se puede cambiar."
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-3-6-b-portada.webp",
+  "escena": "/assets/misiones/p2/p2-3-6-b-escena.webp"
+}

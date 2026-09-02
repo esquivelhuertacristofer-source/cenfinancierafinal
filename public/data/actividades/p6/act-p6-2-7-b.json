@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P6-2-7-B",
+  "unit_code": "P6-2-7",
+  "unit_title": "Deuda buena y deuda mala: el criterio definitivo",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Deuda",
+  "descripcion": "Responde rápido sobre cuándo endeudarse tiene sentido.",
+  "objetivo": "Consolidar el criterio de evaluación de deuda",
+  "xp": 480,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Toda deuda es mala?",
+      "respuesta_correcta": "No, depende de para qué se use",
+      "incorrectas": [
+        "Sí, siempre",
+        "No, nunca",
+        "Solo si es grande"
+      ],
+      "dato_extra": "Es una herramienta: puede construir o destruir según el uso."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La primera pregunta del criterio es:",
+      "respuesta_correcta": "¿Genera o conserva más valor que el costo?",
+      "incorrectas": [
+        "¿Es barato?",
+        "¿Cuántos meses son?",
+        "¿Quién lo ofrece?"
+      ],
+      "dato_extra": "Un curso o una herramienta de trabajo suelen pasarla; un lujo no."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La segunda pregunta es:",
+      "respuesta_correcta": "¿La mensualidad cabe sin sacrificar lo esencial?",
+      "incorrectas": [
+        "¿Cuánto cuesta?",
+        "¿Cuál banco es?",
+        "¿Es urgente?"
+      ],
+      "dato_extra": "Y se responde sobre la suma de todas tus deudas, no sobre una sola."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La tercera pregunta es:",
+      "respuesta_correcta": "¿Hay plan para pagarla completa?",
+      "incorrectas": [
+        "¿Cuándo empieza?",
+        "¿Es en línea?",
+        "¿Tiene descuento?"
+      ],
+      "dato_extra": "Es la más olvidada: no basta con poder pagar el primer mes."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cuántas respuestas deben ser sí?",
+      "respuesta_correcta": "Las tres",
+      "incorrectas": [
+        "Al menos una",
+        "Dos",
+        "Ninguna"
+      ],
+      "dato_extra": "Fallar una convierte la decisión en problema a mediano plazo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Una deuda sin plan de salida:",
+      "respuesta_correcta": "Se paga con otra deuda",
+      "incorrectas": [
+        "Se paga sola",
+        "Se perdona",
+        "No existe"
+      ],
+      "dato_extra": "Así empieza la espiral que después cuesta mucho romper."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Quien nunca se endeuda:",
+      "respuesta_correcta": "Puede dejar pasar oportunidades reales",
+      "incorrectas": [
+        "Siempre acierta",
+        "Es más rico",
+        "No tiene riesgos"
+      ],
+      "dato_extra": "Las dos posturas extremas fallan porque no distinguen."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p6/p6-2-7-b-escena.webp"
+}

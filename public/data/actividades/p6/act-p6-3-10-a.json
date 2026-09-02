@@ -1,0 +1,185 @@
+{
+  "code": "ACT-P6-3-10-A",
+  "unit_code": "P6-3-10",
+  "unit_title": "Testamento y sucesión: proteger a quien quiero",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Inventario Patrimonial",
+  "descripcion": "Arma el inventario que permitiría a tu familia encontrar todo.",
+  "objetivo": "Construir un inventario patrimonial y distinguir mecanismos de transmisión",
+  "xp": 600,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Lo que va por beneficiarios",
+      "descripcion": "Productos que se transmiten por designación, no por testamento.",
+      "campos": [
+        {
+          "id": "tiene_afore",
+          "label": "¿Hay una cuenta de AFORE?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No",
+            "No lo sé"
+          ],
+          "default": "Sí",
+          "requerido": true
+        },
+        {
+          "id": "beneficiario_afore",
+          "label": "Beneficiario designado en el AFORE",
+          "type": "text",
+          "placeholder": "Nombre completo",
+          "ayuda": "Si dice \"no lo sé\", ese es justo el trámite pendiente.",
+          "requerido": true
+        },
+        {
+          "id": "tiene_seguro",
+          "label": "¿Hay seguro de vida?",
+          "type": "select",
+          "opciones": [
+            "Sí",
+            "No",
+            "No lo sé"
+          ],
+          "default": "No",
+          "requerido": true
+        },
+        {
+          "id": "ultima_revision",
+          "label": "Años desde la última revisión de beneficiarios",
+          "type": "slider",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "default": 5,
+          "unit": "años",
+          "ayuda": "Conviene revisarlas tras cada cambio familiar importante.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Lo que va por testamento",
+      "descripcion": "Bienes que requieren el documento.",
+      "campos": [
+        {
+          "id": "inmuebles",
+          "label": "Valor aproximado de inmuebles",
+          "type": "number",
+          "min": 0,
+          "max": 20000000,
+          "default": 800000,
+          "unit": "$",
+          "placeholder": "800000",
+          "requerido": true
+        },
+        {
+          "id": "vehiculos",
+          "label": "Valor aproximado de vehículos",
+          "type": "number",
+          "min": 0,
+          "max": 3000000,
+          "default": 120000,
+          "unit": "$",
+          "placeholder": "120000",
+          "requerido": true
+        },
+        {
+          "id": "cuentas",
+          "label": "Saldo aproximado en cuentas e inversiones",
+          "type": "number",
+          "min": 0,
+          "max": 10000000,
+          "default": 90000,
+          "unit": "$",
+          "placeholder": "90000",
+          "requerido": true
+        },
+        {
+          "id": "patrimonio_testamentario",
+          "label": "Total que pasaría por testamento",
+          "type": "calculated",
+          "formula": "inmuebles + vehiculos + cuentas",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "El costo de no hacerlo",
+      "descripcion": "Estimación del peso del proceso sin testamento.",
+      "campos": [
+        {
+          "id": "costo_estimado",
+          "label": "Costo aproximado del proceso sin testamento",
+          "type": "calculated",
+          "formula": "Math.round((inmuebles + vehiculos + cuentas) * 0.06 + 15000)",
+          "unit": "$"
+        },
+        {
+          "id": "porcentaje",
+          "label": "Porcentaje del patrimonio que se iría en el proceso",
+          "type": "calculated",
+          "formula": "Math.round(((inmuebles + vehiculos + cuentas) * 0.06 + 15000) / Math.max(1, inmuebles + vehiculos + cuentas) * 100)",
+          "unit": "%"
+        },
+        {
+          "id": "meses_proceso",
+          "label": "Meses aproximados que puede tomar",
+          "type": "slider",
+          "min": 3,
+          "max": 60,
+          "step": 1,
+          "default": 18,
+          "unit": "meses",
+          "ayuda": "Durante ese tiempo la familia no accede a los bienes.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Dónde está todo",
+      "descripcion": "Que se pueda encontrar es tan importante como que exista.",
+      "campos": [
+        {
+          "id": "persona_confianza",
+          "label": "Persona que sabría dónde buscar",
+          "type": "text",
+          "placeholder": "Nombre y parentesco",
+          "requerido": true
+        },
+        {
+          "id": "ubicacion_docs",
+          "label": "Dónde están los documentos",
+          "type": "text",
+          "placeholder": "Carpeta, caja, lugar específico",
+          "requerido": true
+        },
+        {
+          "id": "instituciones",
+          "label": "Instituciones donde hay algo a mi nombre",
+          "type": "textarea",
+          "placeholder": "Banco, AFORE, aseguradora...",
+          "requerido": true
+        },
+        {
+          "id": "pendiente",
+          "label": "El primer trámite que voy a hacer",
+          "type": "text",
+          "placeholder": "Ej. actualizar beneficiario del AFORE",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "inventario_patrimonial",
+  "exportable": true,
+  "portada": "/assets/misiones/p6/p6-3-10-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-3-10-a-escena.webp"
+}

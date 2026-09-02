@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P1-4-10-B",
+  "unit_code": "P1-4-10",
+  "unit_title": "Volver a invertir: usar mi ganancia para hacer más",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "JUEGO",
+  "complejidad": "MEDIO",
+  "titulo": "Siembra tu Ganancia",
+  "descripcion": "Atrapa las decisiones que hacen crecer el negocio y esquiva las que se comen la semilla.",
+  "objetivo": "Reforzar de forma lúdica los destinos correctos de la ganancia",
+  "xp": 200,
+  "game_type": "catch",
+  "duracion": 50,
+  "velocidad_inicial": "media",
+  "velocidad_incremento": true,
+  "instruccion": "Atrapa todo lo que hace crecer tu negocio. ¡Esquiva lo que se come la ganancia sin dejar nada!",
+  "items": [
+    {
+      "id": "g1",
+      "label": "Reinvertir en materiales",
+      "emoji": "🌱",
+      "tipo": "correcto",
+      "puntos": 400
+    },
+    {
+      "id": "g2",
+      "label": "Guardar reserva para sustos",
+      "emoji": "🏦",
+      "tipo": "correcto",
+      "puntos": 350
+    },
+    {
+      "id": "g3",
+      "label": "Anotar cuánto gané",
+      "emoji": "🧾",
+      "tipo": "correcto",
+      "puntos": 250
+    },
+    {
+      "id": "g4",
+      "label": "Un gusto pequeño merecido",
+      "emoji": "🍦",
+      "tipo": "correcto",
+      "puntos": 200
+    },
+    {
+      "id": "g5",
+      "label": "Comparar precios de materiales",
+      "emoji": "⚖️",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "g6",
+      "label": "Preguntar a los clientes qué quieren",
+      "emoji": "❓",
+      "tipo": "correcto",
+      "puntos": 300
+    },
+    {
+      "id": "b1",
+      "label": "Gastarlo todo el mismo día",
+      "emoji": "💸",
+      "tipo": "incorrecto",
+      "puntos": -450
+    },
+    {
+      "id": "b2",
+      "label": "No anotar los costos",
+      "emoji": "🙈",
+      "tipo": "incorrecto",
+      "puntos": -350
+    },
+    {
+      "id": "b3",
+      "label": "Repartir \"como salga\" al final",
+      "emoji": "🎲",
+      "tipo": "incorrecto",
+      "puntos": -300
+    },
+    {
+      "id": "b4",
+      "label": "Vender por debajo del costo",
+      "emoji": "📉",
+      "tipo": "incorrecto",
+      "puntos": -400
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-4-10-b-portada.webp",
+  "escena": "/assets/misiones/p1/p1-4-10-b-escena.webp"
+}

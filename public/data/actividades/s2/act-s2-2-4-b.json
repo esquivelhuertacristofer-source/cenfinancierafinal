@@ -4,110 +4,92 @@
   "unit_title": "Planificación ante imprevistos: escenarios y soluciones",
   "level": "Secundaria 2",
   "edad": "13-14 años",
-  "tipo": "QUIZ",
-  "complejidad": "ALTA",
-  "titulo": "Invertir en lo Tangible",
-  "descripcion": "¿Sabes qué hace que un objeto se convierta en una fortuna? ¡Descubre el valor de lo real!",
-  "objetivo": "Evaluar la comprensión de los costos, beneficios y riesgos de invertir en activos físicos",
-  "xp": 300,
-  "aprobacion_minima": 0.8,
+  "tipo": "TRIVIA",
+  "complejidad": "ALTO",
+  "titulo": "Antes de que Pase",
+  "descripcion": "Contra el reloj: cómo se decide qué riesgos se asumen, cuáles se transfieren a un seguro y cuáles simplemente se evitan.",
+  "objetivo": "Aplicar criterios de gestión de riesgo personal: retener, transferir, reducir o evitar.",
+  "xp": 600,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "tan1",
-      "texto": "¿Por qué el oro se considera un activo de 'Refugio'?",
-      "opciones": [
-        "Porque es muy brillante",
-        "Porque no puede ser impreso por los gobiernos y mantiene su valor cuando el dinero normal pierde poder de compra",
-        "Porque es fácil de encontrar",
-        "Porque lo regalan en el banco"
+      "id": "t1",
+      "pregunta": "La regla básica para decidir si contratar un seguro es…",
+      "respuesta_correcta": "Asegurar lo que no podrías reponer de tu bolsillo",
+      "incorrectas": [
+        "Asegurar todo",
+        "Nunca asegurar nada",
+        "Asegurar lo más barato"
       ],
-      "correcta": 1,
-      "explicacion": "El oro ha sido dinero por más de 5,000 años. Su escasez es natural."
+      "dato_extra": "Por eso tiene sentido asegurar una casa y casi nunca un celular."
     },
     {
-      "id": "tan2",
-      "texto": "¿Cuál es uno de los mayores costos de invertir en Arte?",
-      "opciones": [
-        "El precio de la pintura",
-        "El costo de almacenamiento seguro, seguros contra robo e incendios, y la verificación de autenticidad",
-        "Que se ensucie",
-        "Que el pintor sea famoso"
+      "id": "t2",
+      "pregunta": "Un \"deducible\" en un seguro es…",
+      "respuesta_correcta": "La parte del daño que pagas tú antes de que entre el seguro",
+      "incorrectas": [
+        "Un descuento",
+        "La prima mensual",
+        "Una comisión"
       ],
-      "correcta": 1,
-      "explicacion": "Mantener una obra de arte en perfecto estado es muy costoso y requiere expertos."
+      "dato_extra": "Un deducible más alto abarata la prima: sirve si tienes fondo de emergencia."
     },
     {
-      "id": "tan3",
-      "texto": "¿Qué significa que un activo tenga 'Baja Correlación' con la bolsa?",
-      "opciones": [
-        "Que siempre suben juntos",
-        "Que su precio se mueve de forma independiente a las acciones; si la bolsa cae, este activo puede subir o mantenerse",
-        "Que nadie lo quiere comprar",
-        "Que es una inversión barata"
+      "id": "t3",
+      "pregunta": "El fondo de emergencia debería estar en…",
+      "respuesta_correcta": "Instrumentos líquidos y seguros, disponibles en días",
+      "incorrectas": [
+        "Acciones",
+        "Un terreno",
+        "Criptomonedas"
       ],
-      "correcta": 1,
-      "explicacion": "Tener activos de baja correlación protege tu portafolio en las crisis."
+      "dato_extra": "Un fondo de emergencia que no puedes usar el día de la emergencia no es fondo de emergencia."
     },
     {
-      "id": "tan4",
-      "texto": "¿Qué es la 'Procedencia' en el mercado del arte?",
-      "opciones": [
-        "De qué país viene el cuadro",
-        "La historia documentada de todos los dueños anteriores de la obra para probar que es real",
-        "El nombre del museo",
-        "El precio original"
+      "id": "t4",
+      "pregunta": "Riesgo de baja probabilidad pero de costo catastrófico: lo correcto es…",
+      "respuesta_correcta": "Transferirlo a un seguro",
+      "incorrectas": [
+        "Ignorarlo",
+        "Ahorrar para cubrirlo entero",
+        "Pedir un crédito si pasa"
       ],
-      "correcta": 1,
-      "explicacion": "Sin una procedencia clara, una obra de arte pierde casi todo su valor porque podría ser falsa."
+      "dato_extra": "Ese es justo el tipo de riesgo para el que se inventaron los seguros."
     },
     {
-      "id": "tan5",
-      "texto": "¿Por qué los relojes de lujo pueden ser una buena inversión?",
-      "opciones": [
-        "Porque dan la hora exacta",
-        "Porque algunas marcas producen muy pocas unidades y la demanda es mucho mayor, subiendo su valor",
-        "Porque son de oro",
-        "Porque son muy grandes"
+      "id": "t5",
+      "pregunta": "Riesgo frecuente y de costo bajo (como que se descomponga un electrodoméstico)…",
+      "respuesta_correcta": "Conviene retenerlo: cúbrelo con tu fondo",
+      "incorrectas": [
+        "Asegurarlo siempre",
+        "Endeudarse",
+        "Ignorarlo"
       ],
-      "correcta": 1,
-      "explicacion": "La escasez controlada por la marca es la clave del valor."
+      "dato_extra": "Las garantías extendidas suelen costar más de lo que valen estadísticamente."
     },
     {
-      "id": "tan6",
-      "texto": "¿Cuál es la principal desventaja del oro físico comparado con una acción?",
-      "opciones": [
-        "Es feo",
-        "No paga dividendos ni intereses; solo ganas si el precio sube",
-        "Es ilegal",
-        "No se puede vender"
+      "id": "t6",
+      "pregunta": "El error más común en planeación de imprevistos es…",
+      "respuesta_correcta": "Suponer que a uno no le va a pasar",
+      "incorrectas": [
+        "Ahorrar demasiado",
+        "Contratar seguros",
+        "Hacer presupuesto"
       ],
-      "correcta": 1,
-      "explicacion": "El oro es una reserva de valor, no un negocio que genere utilidades."
+      "dato_extra": "En 2020 millones de familias descubrieron a la vez que no tenían plan."
     },
     {
-      "id": "tan7",
-      "texto": "¿Qué son los 'Activos Duros'?",
-      "opciones": [
-        "Activos que son difíciles de entender",
-        "Activos físicos y tangibles (oro, tierra, metales) que tienen valor por sí mismos",
-        "Empresas de construcción",
-        "Dinero en monedas de metal"
+      "id": "t7",
+      "pregunta": "Tener parte del fondo en una cuenta distinta a la de uso diario ayuda porque…",
+      "respuesta_correcta": "Reduce la tentación de gastarlo y limita el daño de un fraude",
+      "incorrectas": [
+        "Paga más intereses siempre",
+        "Es obligatorio",
+        "Evita impuestos"
       ],
-      "correcta": 1,
-      "explicacion": "Son lo opuesto a los 'Activos de Papel' como las acciones o los bonos."
-    },
-    {
-      "id": "tan8",
-      "texto": "¿En qué momento suele subir más el precio del oro?",
-      "opciones": [
-        "Cuando hay mucha paz y estabilidad",
-        "Cuando hay alta inflación, guerras o crisis financieras globales",
-        "En navidad",
-        "Cuando los bancos están felices"
-      ],
-      "correcta": 1,
-      "explicacion": "¡Felicidades! Ahora entiendes por qué los tesoros siguen siendo parte fundamental de la riqueza."
+      "dato_extra": "La fricción es una herramienta: lo que cuesta trabajo tocar, no se toca."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

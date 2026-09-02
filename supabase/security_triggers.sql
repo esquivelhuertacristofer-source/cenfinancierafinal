@@ -2,7 +2,7 @@
 -- ============================================================================
 -- TRIGGERS Y FUNCIONES DE SEGURIDAD — CEN Plataforma de Educación Financiera
 -- ============================================================================
--- Versionado: 2026-05-10
+-- Versionado: 2026-07-14 (sincronizado con supabase/migrations/*)
 -- Capturado del proyecto Supabase: kmskaebltcbqgqrgrilq
 --
 -- Este archivo contiene las funciones y triggers SECURITY DEFINER que
@@ -11,8 +11,13 @@
 --   - Recursión infinita en RLS policies de profiles
 --   - Tablas nuevas creadas sin RLS activado
 --
--- IMPORTANTE: Si el proyecto Supabase se migra o recrea, ejecutar este
--- archivo completo en el SQL Editor para restaurar la seguridad.
+-- IMPORTANTE: este archivo es un snapshot de referencia, no la fuente de
+-- verdad — la fuente de verdad es la secuencia de migraciones en
+-- supabase/migrations/ (ver README.md ahí para el orden y la tabla de
+-- tracking public._schema_migrations). Si el proyecto Supabase se migra o
+-- recrea, aplicar las migraciones en orden en vez de correr solo este
+-- archivo; este archivo puede quedar desactualizado si se agregan
+-- migraciones nuevas sin actualizarlo.
 -- ============================================================================
 
 -- ============================================================================
@@ -26,6 +31,7 @@
 CREATE OR REPLACE FUNCTION public.get_my_role()
 RETURNS text
 LANGUAGE sql
+STABLE
 SECURITY DEFINER
 SET search_path = public
 AS $$
@@ -38,6 +44,14 @@ $$;
 -- ============================================================================
 -- Crea automáticamente un registro en public.profiles cuando un nuevo usuario
 -- se registra en auth.users.
+--
+-- El rol SIEMPRE se fija a 'student' aquí — nunca se lee de
+-- raw_user_meta_data, que es contenido enviado por el propio cliente en el
+-- signup (auth.signUp({ options: { data: {...} } })), así que un valor como
+-- role: 'admin' ahí sería autoescalado de forma trivial si esta función lo
+-- aceptara. Los administradores asignan roles manualmente después vía
+-- adminUserActions.ts (repairUserProfile), no en el signup. Ver
+-- supabase/migrations/fix_handle_new_user_role_escalation.sql.
 -- ============================================================================
 
 CREATE OR REPLACE FUNCTION public.handle_new_user()
@@ -47,15 +61,18 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 BEGIN
-  INSERT INTO public.profiles (id, email, full_name, role, school_level, group_id)
-    VALUES (
-      new.id,
-      new.email,
-      new.raw_user_meta_data->>'full_name',
-      COALESCE(new.raw_user_meta_data->>'role', 'student'),
-      COALESCE(new.raw_user_meta_data->>'school_level', 'primary'),
-      new.raw_user_meta_data->>'group_id'
-    );
+  INSERT INTO public.profiles (
+    id, email, full_name, role, school_level, group_id, created_at
+  ) VALUES (
+    new.id,
+    new.email,
+    COALESCE(new.raw_user_meta_data->>'full_name', new.email),
+    'student',
+    COALESCE(new.raw_user_meta_data->>'school_level', 'primary'),
+    new.raw_user_meta_data->>'group_id',
+    NOW()
+  )
+  ON CONFLICT (id) DO NOTHING;
   RETURN new;
 END;
 $$;

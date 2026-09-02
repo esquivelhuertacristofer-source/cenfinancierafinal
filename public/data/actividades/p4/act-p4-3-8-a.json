@@ -1,0 +1,92 @@
+{
+  "code": "ACT-P4-3-8-A",
+  "unit_code": "P4-3-8",
+  "unit_title": "Ahorro automático: pagarme a mí primero",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "Primero Yo",
+  "descripcion": "Compara cuánto acumulas ahorrando primero contra ahorrar lo que sobre.",
+  "objetivo": "Cuantificar la diferencia entre ahorro automático y ahorro residual",
+  "xp": 400,
+  "inputs": [
+    {
+      "id": "ingreso",
+      "label": "Dinero que recibo al mes",
+      "type": "slider",
+      "min": 100,
+      "max": 5000,
+      "step": 50,
+      "default": 800,
+      "unit": "$",
+      "referencia": "Domingo, apoyos o ingresos propios."
+    },
+    {
+      "id": "pct_ahorro",
+      "label": "Porcentaje que aparto en cuanto lo recibo",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "%",
+      "referencia": "Se aparta antes de gastar nada, como si fuera un pago obligatorio."
+    },
+    {
+      "id": "sobra_real",
+      "label": "Lo que realmente sobra al final si no aparto nada",
+      "type": "slider",
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "default": 30,
+      "unit": "$",
+      "referencia": "Sé honesto: casi siempre es mucho menos de lo que uno cree."
+    },
+    {
+      "id": "meses",
+      "label": "Meses que voy a mantener el método",
+      "type": "slider",
+      "min": 3,
+      "max": 60,
+      "step": 1,
+      "default": 12,
+      "unit": "meses",
+      "referencia": "Entre más tiempo, más se separa una curva de la otra."
+    }
+  ],
+  "formula": "Math.round((ingreso * pct_ahorro / 100 - sobra_real) * meses)",
+  "descripcion_formula": "Diferencia entre lo acumulado apartando el ahorro primero y lo acumulado ahorrando solo lo que sobra al final.",
+  "output_label": "Ventaja de pagarme a mí primero",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "pct_ahorro == 0",
+      "mensaje": "Sin apartar nada, solo queda lo que sobre. Y lo que sobra casi siempre es cero: el gasto crece hasta llenar el ingreso.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "ingreso * pct_ahorro / 100 > sobra_real && meses >= 12",
+      "mensaje": "En un año la diferencia ya es notable, y no requirió ganar un peso más: solo cambiar el orden.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "pct_ahorro >= 20",
+      "mensaje": "Apartar 20% o más es un hábito sólido. Automatiza la transferencia el mismo día que recibes el dinero para no depender de la voluntad.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "meses >= 36",
+      "mensaje": "A tres años o más, la constancia pesa mucho más que el monto. Un ahorro pequeño y automático supera a uno grande e irregular.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "sobra_real >= ingreso * pct_ahorro / 100",
+      "mensaje": "Con estos números te sobraría más de lo que apartarías. Revísalo: si de verdad sobra tanto, conviene subir el porcentaje que apartas primero.",
+      "tipo": "info"
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-3-8-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-8-a-escena.webp"
+}

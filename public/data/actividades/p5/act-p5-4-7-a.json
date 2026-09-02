@@ -1,0 +1,215 @@
+{
+  "code": "ACT-P5-4-7-A",
+  "unit_code": "P5-4-7",
+  "unit_title": "Prototipar rápido y barato",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "DECIDE",
+  "complejidad": "MEDIO",
+  "titulo": "La Prueba más Barata",
+  "descripcion": "Ceny tiene una idea y poco dinero. Cada decisión define cuánto aprende por cuánto gasta.",
+  "objetivo": "Elegir el prototipo mínimo que responde la pregunta clave de una idea",
+  "xp": 300,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny quiere ofrecer un servicio de armado de kits escolares personalizados. Tiene $1,500 y seis semanas antes del regreso a clases.",
+  "nodo_inicial": "pregunta",
+  "nodos": {
+    "pregunta": {
+      "id": "pregunta",
+      "texto": "¿Qué hace Ceny antes de gastar un peso?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Escribir la pregunta clave: ¿alguien pagaría por esto?",
+          "siguiente_nodo": "tipo",
+          "consecuencia": "Con la pregunta definida, ya sabe qué tipo de prueba necesita.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Comprar material para armar veinte kits de muestra",
+          "siguiente_nodo": "gasto_temprano",
+          "consecuencia": "Gastó $1,200 sin saber todavía si alguien lo quiere.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -1200
+        },
+        {
+          "id": "o3",
+          "texto": "Diseñar un logo y las redes sociales",
+          "siguiente_nodo": "gasto_temprano",
+          "consecuencia": "La marca no responde ninguna pregunta sobre si el negocio funciona.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": -300
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-pregunta.webp"
+    },
+    "gasto_temprano": {
+      "id": "gasto_temprano",
+      "texto": "Ya gastó parte del dinero y sigue sin saber si alguien compraría. ¿Qué hace ahora?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Usar lo que ya tiene para hacer una preventa con anticipo",
+          "siguiente_nodo": "preventa",
+          "consecuencia": "Aprovecha lo gastado para conseguir la información que faltaba.",
+          "xp_bonus": 35,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Producir el resto y esperar que se vendan",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "Apostar todo el dinero sin una sola prueba de demanda.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -1500
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-gasto_temprano.webp"
+    },
+    "tipo": {
+      "id": "tipo",
+      "texto": "La pregunta es si alguien pagaría. ¿Qué prototipo elige?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Una preventa con anticipo simbólico, sin producir nada todavía",
+          "siguiente_nodo": "preventa",
+          "consecuencia": "Costo casi cero y responde exactamente la pregunta clave.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Una encuesta preguntando si les gustaría el servicio",
+          "siguiente_nodo": "encuesta",
+          "consecuencia": "Todos dicen que sí. La encuesta mide cortesía, no demanda.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o3",
+          "texto": "Un kit de muestra bien armado para enseñarlo",
+          "siguiente_nodo": "preventa",
+          "consecuencia": "Útil para explicar la idea, aunque no prueba que alguien pague.",
+          "xp_bonus": 30,
+          "es_optima": false,
+          "impacto_patrimonio": -100
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-tipo.webp"
+    },
+    "encuesta": {
+      "id": "encuesta",
+      "texto": "Treinta personas dijeron que les encantaría. ¿Qué concluye Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Que necesita pedir un anticipo para saber la verdad",
+          "siguiente_nodo": "preventa",
+          "consecuencia": "Pedir dinero es lo único que distingue interés de cortesía.",
+          "xp_bonus": 40,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Que ya está validado y puede producir treinta kits",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "De los treinta \"sí\", solo cuatro habrían pagado.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -1500
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-encuesta.webp"
+    },
+    "preventa": {
+      "id": "preventa",
+      "texto": "Antes de la preventa, ¿qué define Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Su criterio de éxito: si al menos 8 de 30 apartan, sigue adelante",
+          "siguiente_nodo": "resultado",
+          "consecuencia": "Con el criterio escrito antes, el resultado se interpreta sin autoengaño.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Nada, ya verá qué sale",
+          "siguiente_nodo": "resultado",
+          "consecuencia": "Sin criterio previo, cualquier resultado parecerá confirmar lo que ya creía.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-preventa.webp"
+    },
+    "resultado": {
+      "id": "resultado",
+      "texto": "Once personas apartaron con anticipo. ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Producir solo esos once kits y usar el anticipo para el material",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Producción vendida por adelantado: riesgo prácticamente cero.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 1800
+        },
+        {
+          "id": "o2",
+          "texto": "Producir cincuenta, porque seguro llegan más clientes",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Superó su criterio y aun así apostó por encima de lo comprobado.",
+          "xp_bonus": 15,
+          "es_optima": false,
+          "impacto_patrimonio": -600
+        }
+      ],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-resultado.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny entregó once kits ya pagados, con el material financiado por los propios anticipos.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Pregunta clave primero, el prototipo más barato que la responde después, y criterio de éxito antes de la prueba. Tres pasos, casi cero riesgo.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Ceny vendió los once apartados y le sobraron kits sin vender.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "La validación funcionó. Lo que falló fue producir por encima de lo que la evidencia respaldaba.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny gastó todo su dinero en kits que casi nadie compró.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "Treinta personas dijeron que sí y cuatro habrían pagado. Un anticipo simbólico habría revelado esa diferencia antes de gastar $1,500.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p5/p5-4-7-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p5/p5-4-7-a-portada.webp"
+}

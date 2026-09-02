@@ -6,113 +6,152 @@
   "edad": "12-13 años",
   "tipo": "DECIDE",
   "complejidad": "ALTO",
-  "titulo": "Navegando la Recesión",
-  "descripcion": "La economía del país está en recesión. Las ventas de tu cadena de pizzerías están bajando. ¿Qué harás para que tu sueño no desaparezca?",
-  "objetivo": "Evaluar la toma de decisiones estratégicas durante las fases negativas del ciclo económico",
-  "xp": 500,
-  "personaje_principal": "Mateo",
-  "contexto_inicial": "Mateo tiene 5 pizzerías. El PIB del país ha caído por 6 meses. La gente tiene menos dinero y está dejando de comer fuera. Tienes $50,000 en reserva.",
-  "nodo_inicial": "crisis_recesion",
+  "titulo": "La Primera Casa",
+  "descripcion": "Iván tiene 27 años, seis cotizando, y acaba de descubrir que ya califica para un crédito INFONAVIT de $780,000. Su mamá le dice que use el crédito ya. Su jefe le dice que espere.",
+  "objetivo": "Evaluar la decisión de ejercer un crédito hipotecario considerando plazo, ubicación, capacidad de pago e historial crediticio.",
+  "xp": 750,
+  "personaje_principal": "Iván",
+  "contexto_inicial": "Gana $16,000 al mes y paga $5,500 de renta cerca de su trabajo. Su subcuenta de vivienda tiene $58,000.",
+  "nodo_inicial": "la_precalificacion",
   "nodos": {
-    "crisis_recesion": {
-      "id": "crisis_recesion",
-      "texto": "Las ventas bajaron 20%. Necesitas actuar rápido.",
+    "la_precalificacion": {
+      "id": "la_precalificacion",
+      "texto": "Con $780,000 hay dos opciones reales: un departamento pequeño a 15 minutos del trabajo por $1,150,000 (le faltarían $370,000) o una casa a 2 horas de camino por $760,000.",
       "opciones": [
         {
-          "id": "recortar_todo",
-          "texto": "Despedir al 30% del personal y usar ingredientes más baratos",
-          "siguiente_nodo": "reto_inesperado",
-          "consecuencia": "Ahorraste dinero, pero la calidad de tu pizza bajó y tus empleados están tristes y asustados.",
-          "xp_bonus": 100,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "analizar",
+          "texto": "Calcular el costo total de cada una, incluyendo transporte y tiempo",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "Iván saca la calculadora antes de enamorarse de ninguna.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
         },
         {
-          "id": "innovar_eficiencia",
-          "texto": "Invertir en una app de entregas propia y crear combos económicos (Eficiencia)",
-          "siguiente_nodo": "recuperacion_ciclo",
-          "consecuencia": "Gastaste tus reservas, pero ahora llegas a las casas de la gente y vendes más volumen a menor precio.",
-          "xp_bonus": 400,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "id": "lejos",
+          "texto": "La casa lejana: es la que alcanza sin endeudarse más",
+          "siguiente_nodo": "los_numeros",
+          "consecuencia": "Parece la opción prudente. Falta ver el costo escondido.",
+          "xp_bonus": 80,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "esperar",
+          "texto": "Esperar dos años más para acumular puntos y mejor enganche",
+          "siguiente_nodo": "final_espera",
+          "consecuencia": "Sigue rentando e invirtiendo la diferencia.",
+          "xp_bonus": 180,
+          "impacto_patrimonio": 90000
         }
       ]
     },
-    "recuperacion_ciclo": {
-      "id": "recuperacion_ciclo",
-      "texto": "¡La economía empieza a crecer de nuevo (Expansión)! Tus competidores cerraron porque no se adaptaron.",
+    "los_numeros": {
+      "id": "los_numeros",
+      "texto": "La casa lejana suma $3,200 mensuales de transporte y 4 horas diarias de traslado: 20 horas a la semana, casi 1,000 al año. El departamento cercano exige un crédito adicional de $370,000 con el banco.",
       "opciones": [
         {
-          "id": "expandir_negocio",
-          "texto": "Aprovechar que eres el líder para abrir 3 sucursales más",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Tu marca es ahora la más famosa de la ciudad. Arriesgar en la crisis valió la pena.",
+          "id": "cofinanciamiento",
+          "texto": "Investigar el cofinanciamiento INFONAVIT + banco para el departamento cercano",
+          "siguiente_nodo": "el_plazo",
+          "consecuencia": "Descubre que sí existe y que su perfil califica.",
+          "xp_bonus": 250,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "lejos_igual",
+          "texto": "Comprar la casa lejana: el pago mensual es menor",
+          "siguiente_nodo": "final_lejos",
+          "consecuencia": "El pago baja, el costo de vida sube.",
+          "xp_bonus": 60,
+          "impacto_patrimonio": -180000
+        }
+      ]
+    },
+    "el_plazo": {
+      "id": "el_plazo",
+      "texto": "Le ofrecen el crédito a 30 años ($8,900 al mes) o a 20 años ($11,200 al mes). Gana $16,000. La regla dice que la vivienda no debería pasar del 30% del ingreso.",
+      "opciones": [
+        {
+          "id": "veinte",
+          "texto": "20 años: $11,200 es el 70% de su ingreso... imposible",
+          "siguiente_nodo": "reconsiderar",
+          "consecuencia": "Iván se da cuenta de que ni siquiera esa opción cabe.",
           "xp_bonus": 200,
           "es_optima": true,
-          "impacto_patrimonio": 100
-        }
-      ]
-    },
-    "final_supervivencia_gris": {
-      "id": "final_supervivencia_gris",
-      "texto": "Tu negocio sobrevivió, pero ahora es una pizzería común con mala fama. Perdiste la oportunidad de brillar.",
-      "es_final": true,
-      "tipo_final": "neutral",
-      "reflexion_final": "En las crisis, el que solo recorta se encoge. El que innova, crece."
-    },
-    "final_exito_total": {
-      "id": "final_exito_total",
-      "texto": "¡Eres un maestro de los ciclos! Entendiste que la recesión es el momento de sembrar para cosechar en la expansión.",
-      "es_final": true,
-      "tipo_final": "bueno",
-      "reflexion_final": "Los grandes empresarios no siguen la corriente; la crean."
-    },
-    "reto_inesperado": {
-      "id": "reto_inesperado",
-      "texto": "¡Ha surgido un imprevisto! Un gasto que no tenías planeado aparece en tu camino. ¿Cómo reaccionas?",
-      "opciones": [
-        {
-          "id": "usar_ahorro",
-          "texto": "Usar una pequeña parte de mis ahorros",
-          "siguiente_nodo": "final_excelente",
-          "consecuencia": "Para eso son los ahorros de emergencia, ¡bien pensado!",
-          "xp_bonus": 30,
-          "es_optima": true,
-          "impacto_patrimonio": 100
+          "impacto_patrimonio": 0
         },
         {
-          "id": "pedir_prestado",
-          "texto": "Pedir prestado a un amigo",
-          "siguiente_nodo": "final_regular",
-          "consecuencia": "Ten cuidado, las deudas pueden crecer rápido.",
-          "xp_bonus": 10,
-          "es_optima": false,
-          "impacto_patrimonio": -50
+          "id": "treinta",
+          "texto": "30 años: $8,900 es el 56% de su ingreso, \"se puede apretar\"",
+          "siguiente_nodo": "final_ahogado",
+          "consecuencia": "Firma un compromiso de 30 años que consume más de la mitad de su sueldo.",
+          "xp_bonus": 20,
+          "impacto_patrimonio": -420000
         }
       ]
     },
-    "final_excelente": {
-      "id": "final_excelente",
-      "texto": "¡Felicidades! Tus decisiones han sido perfectas. Has logrado la meta familiar y superado todas las expectativas.",
+    "reconsiderar": {
+      "id": "reconsiderar",
+      "texto": "Ninguna de las dos cabe en su presupuesto actual. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "esperar_mejor",
+          "texto": "Esperar, subir su ingreso y acumular más subcuenta antes de comprar",
+          "siguiente_nodo": "final_espera",
+          "consecuencia": "Sigue rentando, invierte la diferencia y busca un ascenso.",
+          "xp_bonus": 280,
+          "es_optima": true,
+          "impacto_patrimonio": 90000
+        },
+        {
+          "id": "conyugal",
+          "texto": "Buscar un crédito conyugal o mancomunado para sumar capacidad",
+          "siguiente_nodo": "final_conyugal",
+          "consecuencia": "Si hay pareja que también cotiza, los créditos se suman.",
+          "xp_bonus": 220,
+          "es_optima": true,
+          "impacto_patrimonio": 40000
+        },
+        {
+          "id": "forzar",
+          "texto": "Comprar de todas formas: \"es que la renta es dinero tirado\"",
+          "siguiente_nodo": "final_ahogado",
+          "consecuencia": "La frase le costó treinta años.",
+          "xp_bonus": 0,
+          "impacto_patrimonio": -420000
+        }
+      ]
+    },
+    "final_espera": {
+      "id": "final_espera",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "texto": "Tres años después Iván gana $24,000, su subcuenta tiene $130,000 y su historial crediticio es impecable. Compró el departamento cercano a 15 años, pagando el 27% de su ingreso. Le quedó dinero para vivir, para invertir y para imprevistos.",
+      "reflexion_final": "Un crédito hipotecario es la decisión financiera más grande de la mayoría de las personas: 20 o 30 años de compromiso. Las tres reglas que la vuelven segura: que la mensualidad no pase del 30% de tu ingreso, el plazo más corto que puedas sostener, y contar el costo de la ubicación (transporte y tiempo) como parte del precio de la casa."
+    },
+    "final_conyugal": {
+      "id": "final_conyugal",
       "es_final": true,
       "tipo_final": "bueno",
-      "reflexion_final": "El éxito financiero no es suerte, es el resultado de elegir bien cada día."
+      "texto": "Con el crédito mancomunado alcanzó para el departamento cercano y la mensualidad se repartió entre dos ingresos: 24% para cada uno.",
+      "reflexion_final": "Sumar créditos es una herramienta legítima y poderosa. Exige un acuerdo claro por escrito sobre qué pasa si la relación cambia: la casa y la deuda quedan a nombre de los dos durante décadas."
     },
-    "final_regular": {
-      "id": "final_regular",
-      "texto": "Has logrado la meta, pero fue difícil. Tuviste algunos gastos innecesarios que podrías haber evitado.",
+    "final_lejos": {
+      "id": "final_lejos",
       "es_final": true,
       "tipo_final": "regular",
-      "reflexion_final": "Cada moneda cuenta. Intenta priorizar mejor la próxima vez."
+      "texto": "Compró la casa lejana. Cinco años después ha gastado $192,000 en transporte y ha pasado casi 5,000 horas en el camino. Cambió de trabajo dos veces buscando algo más cerca.",
+      "reflexion_final": "La casa barata lejos casi nunca es barata: el transporte y el tiempo son costos reales que no aparecen en el contrato. Antes de comprar, suma el traslado al precio y compara otra vez."
     },
-    "final_malo": {
-      "id": "final_malo",
-      "texto": "Esta vez no se pudo lograr la meta completa. El dinero se gastó en cosas que no eran urgentes.",
+    "final_ahogado": {
+      "id": "final_ahogado",
       "es_final": true,
       "tipo_final": "malo",
-      "reflexion_final": "No te rindas. Aprender de los errores es el primer paso para ser un experto en finanzas."
+      "texto": "La mensualidad se llevó el 56% de su ingreso durante años. Sin margen para ahorrar ni para imprevistos, cada emergencia se pagó con tarjeta. A los cuatro años acumulaba $180,000 de deuda de consumo además de la hipoteca.",
+      "reflexion_final": "Una hipoteca que no cabe en tu presupuesto no te da patrimonio: te quita libertad. \"La renta es dinero tirado\" ha empujado a miles de personas a comprometer treinta años de su vida en una casa que no podían pagar."
     }
   },
-  "versión": "2026.Diamond.V2",
-  "resumen_patrimonio_al_final": true
+  "resumen_patrimonio_al_final": true,
+  "versión": "2026.Alineada.1"
 }

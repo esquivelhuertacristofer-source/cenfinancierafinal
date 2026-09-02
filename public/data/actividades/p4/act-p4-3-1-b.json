@@ -10,11 +10,11 @@
   "descripcion": "Ingresa cuánto dinero recibes y descubre cuánto deberías estar ahorrando para cumplir tus sueños.",
   "objetivo": "Visualizar la distribución porcentual de los ingresos y proyectar el ahorro anual",
   "xp": 300,
-  "descripcion_formula": "Calculamos tu ahorro anual basado en el 20% de tu ingreso mensual: (Ingreso * 0.20) * 12 meses.",
+  "descripcion_formula": "La regla 50/30/20 reparte tu ingreso: 50% en necesidades, 30% en gustos y 20% en ahorro. Aquí ves a cuánto llega ese 20% (o el porcentaje que elijas) al cabo de un año.",
   "inputs": [
     {
       "id": "ingreso_mensual",
-      "label": "Tu ingreso mensual total",
+      "label": "Tu ingreso mensual total ($)",
       "type": "slider",
       "min": 200,
       "max": 5000,
@@ -23,66 +23,42 @@
       "unit": "$"
     },
     {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
+      "id": "pct_ahorro",
+      "label": "% que apartas para ahorro",
       "type": "slider",
-      "min": 1,
-      "max": 30,
+      "min": 5,
+      "max": 40,
       "step": 1,
-      "default": 5,
-      "unit": "años"
-    },
-    {
-      "id": "escenario_tipo",
-      "label": "Escenario de Mercado",
-      "type": "select",
-      "options": [
-        {
-          "label": "Conservador",
-          "value": 0.8
-        },
-        {
-          "label": "Moderado",
-          "value": 1
-        },
-        {
-          "label": "Optimista",
-          "value": 1.2
-        }
-      ],
-      "default": 1
-    },
-    {
-      "id": "tasa_crecimiento",
-      "label": "Tasa de Crecimiento Sugerida (%)",
-      "type": "slider",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "default": 5,
-      "unit": "%"
+      "default": 20,
+      "unit": "%",
+      "referencia": "La regla 50/30/20 propone 20%"
     }
   ],
-  "formula": "ingreso_mensual * 0.20 * 12",
+  "formula": "Math.round(ingreso_mensual * pct_ahorro / 100 * 12)",
   "output_label": "Tu Ahorro al Final del Año",
   "output_prefix": "$",
   "output_suffix": " pesos",
   "chart_type": "pie",
   "escenarios": [
     {
-      "condicion": "resultado >= 2400",
-      "mensaje": "📈 ¡Impresionante! Con este ritmo de ahorro, podrás comprar algo grande muy pronto.",
-      "tipo": "success"
+      "condicion": "pct_ahorro >= 20 && resultado >= 2400",
+      "mensaje": "Estás cumpliendo la regla y el resultado se nota: un año de constancia construye tu primer fondo de emergencia.",
+      "tipo": "exito"
     },
     {
-      "condicion": "resultado < 2400 && resultado >= 500",
-      "mensaje": "👍 Es un buen comienzo. Recuerda: lo importante no es cuánto ganas, sino cuánto guardas.",
+      "condicion": "pct_ahorro >= 20",
+      "mensaje": "Cumples el 20% que propone la regla. Aunque el monto sea pequeño, el hábito es lo que estás construyendo.",
       "tipo": "info"
     },
     {
-      "condicion": "resultado < 500",
-      "mensaje": "🌱 ¡Empieza poco a poco! Incluso una pequeña cantidad ahorrada cada mes hace la diferencia.",
-      "tipo": "warning"
+      "condicion": "pct_ahorro < 10",
+      "mensaje": "Menos del 10% deja tu plan a merced de cualquier imprevisto. Sube el porcentaje y observa cómo cambia el total del año.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "true",
+      "mensaje": "Vas en camino. Prueba subir un punto porcentual y mira cuánto suma al año: casi siempre sorprende.",
+      "tipo": "info"
     }
   ],
   "versión": "2026.Diamond.V2",

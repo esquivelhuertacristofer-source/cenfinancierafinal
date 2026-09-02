@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-4-10-B",
+  "unit_code": "S1-4-10",
+  "unit_title": "Darme de alta en el SAT: persona física con actividad empresarial",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Formalización",
+  "descripcion": "Responde rápido sobre darse de alta y sus implicaciones.",
+  "objetivo": "Consolidar el conocimiento sobre formalización fiscal",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Emitir comprobantes fiscales permite:",
+      "respuesta_correcta": "Vender a empresas y a quien comprueba gastos",
+      "incorrectas": [
+        "No pagar impuestos",
+        "Ganar más automáticamente",
+        "Evitar declaraciones"
+      ],
+      "dato_extra": "Es una parte enorme del mercado que de otro modo queda cerrada."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Otro beneficio de formalizarse es:",
+      "respuesta_correcta": "Acreditar ingresos para acceder a crédito",
+      "incorrectas": [
+        "Pagar menos siempre",
+        "No llevar registros",
+        "Evitar clientes"
+      ],
+      "dato_extra": "Sin ingresos comprobables, el crédito formal es muy difícil."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Las obligaciones incluyen:",
+      "respuesta_correcta": "Emitir comprobantes, declarar y llevar registro",
+      "incorrectas": [
+        "Ninguna",
+        "Solo pagar una vez",
+        "Contratar personal"
+      ],
+      "dato_extra": "Son previsibles y se pueden calendarizar."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Sobre los regímenes fiscales:",
+      "respuesta_correcta": "Hay varios según actividad e ingresos",
+      "incorrectas": [
+        "Hay uno solo",
+        "No se puede elegir",
+        "Todos son iguales"
+      ],
+      "dato_extra": "Algunos están diseñados para negocios pequeños."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La orientación oficial:",
+      "respuesta_correcta": "Es gratuita",
+      "incorrectas": [
+        "Cuesta mucho",
+        "Solo con contador",
+        "No existe"
+      ],
+      "dato_extra": "Consultarla antes de elegir régimen evita pagar de más."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Deducir significa:",
+      "respuesta_correcta": "Restar gastos necesarios de la base del impuesto",
+      "incorrectas": [
+        "No pagar nada",
+        "Cobrar más caro",
+        "Cancelar una venta"
+      ],
+      "dato_extra": "Reduce el impuesto sobre dinero que ya se gastó en operar."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Para deducir un gasto hace falta:",
+      "respuesta_correcta": "El comprobante correspondiente",
+      "incorrectas": [
+        "Solo recordarlo",
+        "Una nota a mano",
+        "Nada"
+      ],
+      "dato_extra": "Por eso conviene pedir factura de todas las compras del negocio."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-4-10-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-10-b-escena.webp"
+}

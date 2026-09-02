@@ -1,0 +1,96 @@
+{
+  "code": "ACT-S1-2-7-B",
+  "unit_code": "S1-2-7",
+  "unit_title": "Finiquito y liquidación: qué me toca si me despiden",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "TRIVIA",
+  "complejidad": "AVANZADO",
+  "titulo": "Reto de la Terminación",
+  "descripcion": "Responde rápido sobre finiquito y liquidación.",
+  "objetivo": "Consolidar el conocimiento sobre terminación laboral",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El finiquito corresponde:",
+      "respuesta_correcta": "Siempre que termina la relación laboral",
+      "incorrectas": [
+        "Solo si hay despido",
+        "Solo si renuncias",
+        "Nunca"
+      ],
+      "dato_extra": "Es dinero ya ganado: días, aguinaldo proporcional, vacaciones y prima."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La liquidación aplica:",
+      "respuesta_correcta": "En despido sin causa justificada",
+      "incorrectas": [
+        "Siempre",
+        "Cuando renuncias",
+        "Al jubilarse únicamente"
+      ],
+      "dato_extra": "Agrega una indemnización al finiquito."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El cálculo de la indemnización considera:",
+      "respuesta_correcta": "Salario, antigüedad y conceptos de ley",
+      "incorrectas": [
+        "Solo el último sueldo",
+        "El humor del patrón",
+        "La zona geográfica"
+      ],
+      "dato_extra": "Con más antigüedad la diferencia crece mucho."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Hay obligación de firmar el mismo día?",
+      "respuesta_correcta": "No",
+      "incorrectas": [
+        "Sí, siempre",
+        "Sí, o se pierde el pago",
+        "Solo con abogado"
+      ],
+      "dato_extra": "Se puede pedir el documento y revisarlo con calma."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El documento debe:",
+      "respuesta_correcta": "Desglosar cada concepto",
+      "incorrectas": [
+        "Traer solo el total",
+        "No traer cifras",
+        "Ser verbal"
+      ],
+      "dato_extra": "Un total sin desglose no se puede verificar."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Firmar sin entender es:",
+      "respuesta_correcta": "La forma más común de perder derechos",
+      "incorrectas": [
+        "Lo recomendable",
+        "Obligatorio",
+        "Indiferente"
+      ],
+      "dato_extra": "Por eso la prisa suele venir del otro lado."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Para consultar antes de firmar:",
+      "respuesta_correcta": "Existen instancias públicas gratuitas",
+      "incorrectas": [
+        "Solo abogados privados",
+        "No hay a dónde acudir",
+        "Solo el patrón informa"
+      ],
+      "dato_extra": "Consultar cuesta tiempo, no dinero."
+    }
+  ],
+  "portada": "/assets/misiones/s1/s1-2-7-b-portada.webp",
+  "escena": "/assets/misiones/s1/s1-2-7-b-escena.webp"
+}

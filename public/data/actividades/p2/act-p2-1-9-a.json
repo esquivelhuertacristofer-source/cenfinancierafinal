@@ -1,0 +1,81 @@
+{
+  "code": "ACT-P2-1-9-A",
+  "unit_code": "P2-1-9",
+  "unit_title": "Un peso hoy y un peso mañana: el dinero se acumula",
+  "level": "Primaria 2",
+  "edad": "7-8 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "La Carrera del Ahorro",
+  "descripcion": "Mueve las barritas y compara cuánto juntas guardando poquito seguido contra mucho de vez en cuando.",
+  "objetivo": "Comparar cuantitativamente frecuencia y monto de aportación en el ahorro",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "cantidad",
+      "label": "Cuánto guardo cada vez",
+      "type": "slider",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 5,
+      "unit": "$",
+      "referencia": "Una cantidad pequeña que sí puedas cumplir siempre."
+    },
+    {
+      "id": "veces_semana",
+      "label": "Cuántas veces por semana guardo",
+      "type": "slider",
+      "min": 1,
+      "max": 7,
+      "step": 1,
+      "default": 7,
+      "unit": "veces",
+      "referencia": "7 significa todos los días."
+    },
+    {
+      "id": "semanas",
+      "label": "Semanas que sostengo el hábito",
+      "type": "slider",
+      "min": 1,
+      "max": 52,
+      "step": 1,
+      "default": 4,
+      "unit": "semanas",
+      "referencia": "4 semanas es un mes; 52 es un año completo."
+    }
+  ],
+  "formula": "cantidad * veces_semana * semanas",
+  "descripcion_formula": "Lo que guardas cada vez, por las veces que lo haces a la semana, por las semanas que aguantas.",
+  "output_label": "Total acumulado",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "veces_semana == 7",
+      "mensaje": "Guardar todos los días convierte el ahorro en costumbre. Es la frecuencia que más aguanta el paso del tiempo.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "veces_semana <= 2",
+      "mensaje": "Guardar una o dos veces por semana funciona, pero es más fácil de olvidar que el hábito diario.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "semanas >= 52",
+      "mensaje": "Mira ese total: nació de aportaciones que parecían insignificantes. Eso es lo que hace el tiempo.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "semanas <= 2",
+      "mensaje": "Dos semanas todavía no es un hábito. Sube las semanas y observa cómo despega el total.",
+      "tipo": "info"
+    },
+    {
+      "condicion": "cantidad >= 30 && veces_semana >= 5",
+      "mensaje": "Cuidado: una meta muy alta y muy frecuente suele romperse. Vale más una cantidad chica que sí cumplas.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p2/p2-1-9-a-portada.webp",
+  "escena": "/assets/misiones/p2/p2-1-9-a-escena.webp"
+}

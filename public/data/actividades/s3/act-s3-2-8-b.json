@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S3-2-8-B",
+  "unit_code": "S3-2-8",
+  "unit_title": "Mudarme solo: el presupuesto real de la independencia",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Listo para Independizarme",
+  "descripcion": "Comprueba que sabes cuándo estás preparado.",
+  "objetivo": "Verificar la evaluación de preparación para la independencia",
+  "xp": 800,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "El problema habitual al independizarse es:",
+      "opciones": [
+        "La decisión",
+        "La ciudad",
+        "El trabajo",
+        "El momento"
+      ],
+      "correcta": 3,
+      "explicacion": "Querer independizarse es sano; irse sin preparación no."
+    },
+    {
+      "id": "q2",
+      "texto": "El costo de arranque incluye:",
+      "opciones": [
+        "Depósito, mes adelantado, mudanza, muebles y servicios",
+        "Solo la renta",
+        "Solo el depósito",
+        "Nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Suele equivaler a varios meses de renta."
+    },
+    {
+      "id": "q3",
+      "texto": "Los primeros meses:",
+      "opciones": [
+        "Son más baratos",
+        "Son más caros por gastos de ajuste",
+        "Son iguales",
+        "No cuentan"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que faltó, lo que se rompió y los ajustes de la vivienda."
+    },
+    {
+      "id": "q4",
+      "texto": "La primera condición es:",
+      "opciones": [
+        "Tener muebles",
+        "Tener auto",
+        "Ingreso estable que cubra el presupuesto con margen",
+        "Tener pareja"
+      ],
+      "correcta": 2,
+      "explicacion": "Con margen, no justo."
+    },
+    {
+      "id": "q5",
+      "texto": "La segunda condición es:",
+      "opciones": [
+        "Tener tarjeta de crédito",
+        "Tener aval",
+        "Tener título",
+        "Costo de arranque disponible sin crédito"
+      ],
+      "correcta": 3,
+      "explicacion": "Financiar el arranque con crédito empieza la independencia endeudado."
+    },
+    {
+      "id": "q6",
+      "texto": "La tercera condición es:",
+      "opciones": [
+        "Reserva de al menos tres meses de gastos",
+        "Un auto",
+        "Un seguro",
+        "Un contrato indefinido"
+      ],
+      "correcta": 0,
+      "explicacion": "Por si el ingreso se interrumpe."
+    },
+    {
+      "id": "q7",
+      "texto": "Faltando una de las tres:",
+      "opciones": [
+        "No pasa nada",
+        "La independencia se sostiene solo mientras nada salga mal",
+        "Es imposible mudarse",
+        "Se compensa con esfuerzo"
+      ],
+      "correcta": 1,
+      "explicacion": "Y siempre termina saliendo algo mal."
+    },
+    {
+      "id": "q8",
+      "texto": "Posponer la mudanza unos meses:",
+      "opciones": [
+        "Es fracasar",
+        "Es rendirse",
+        "Es asegurarse de no tener que volver",
+        "No sirve"
+      ],
+      "correcta": 2,
+      "explicacion": "Compartir vivienda también es una opción legítima y común."
+    }
+  ],
+  "portada": "/assets/misiones/s3/s3-2-8-b-portada.webp",
+  "escena": "/assets/misiones/s3/s3-2-8-b-escena.webp"
+}

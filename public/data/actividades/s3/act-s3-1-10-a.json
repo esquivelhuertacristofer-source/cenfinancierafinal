@@ -1,0 +1,147 @@
+{
+  "code": "ACT-S3-1-10-A",
+  "unit_code": "S3-1-10",
+  "unit_title": "Dinero compartido: metas financieras en pareja y en familia",
+  "level": "Secundaria 3",
+  "edad": "14-15 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "La Conversación Pendiente",
+  "descripcion": "Ceny y su pareja van a compartir gastos. Cada decisión define su relación con el dinero.",
+  "objetivo": "Aplicar los modelos y acuerdos de finanzas compartidas",
+  "xp": 1000,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Ceny gana $14,000 al mes y su pareja $26,000. Van a compartir vivienda y gastos, y nunca han hablado de cómo.",
+  "nodo_inicial": "inicio",
+  "nodos": {
+    "inicio": {
+      "id": "inicio",
+      "texto": "La primera propuesta es \"vamos viendo sobre la marcha\". ¿Qué hace Ceny?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Proponer sentarse a acordar cómo se reparten los gastos antes de mudarse",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "La conversación incómoda de hoy evita los conflictos de los próximos años.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Aceptar: ya se irá acomodando solo",
+          "siguiente_nodo": "friccion",
+          "consecuencia": "Sin acuerdo, cada quien sigue reglas distintas sin saberlo.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -6000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-inicio.webp"
+    },
+    "friccion": {
+      "id": "friccion",
+      "texto": "A los cuatro meses hay discusiones constantes por quién paga qué. ¿Qué hacen?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Parar y acordar reglas explícitas por escrito",
+          "siguiente_nodo": "reparto",
+          "consecuencia": "Tarde, pero la conversación resuelve lo que la improvisación rompió.",
+          "xp_bonus": 30,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Cada quien paga lo que puede y ya",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "La ambigüedad convierte cada gasto en una negociación.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -15000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-friccion.webp"
+    },
+    "reparto": {
+      "id": "reparto",
+      "texto": "Los gastos comunes suman $18,000. ¿Cómo los reparten con ingresos de $14,000 y $26,000?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "En proporción al ingreso: cada quien aporta el mismo porcentaje de lo que gana",
+          "siguiente_nodo": "consulta",
+          "consecuencia": "A ambos les queda un margen proporcionalmente equivalente.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 9000
+        },
+        {
+          "id": "o2",
+          "texto": "Por mitades exactas: $9,000 cada uno",
+          "siguiente_nodo": "consulta",
+          "consecuencia": "A Ceny le quedarían $5,000 y a su pareja $17,000: el margen es muy desigual.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-reparto.webp"
+    },
+    "consulta": {
+      "id": "consulta",
+      "texto": "¿Qué más acuerdan además del reparto?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Qué cuenta como gasto común, desde qué monto se consulta una compra, metas y deudas de cada quien",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Las cinco preguntas respondidas antes de que aparezca el problema.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 12000
+        },
+        {
+          "id": "o2",
+          "texto": "Nada más: con el reparto basta",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El reparto es solo una de las cinco preguntas que generan conflicto.",
+          "xp_bonus": 20,
+          "es_optima": false,
+          "impacto_patrimonio": -4000
+        }
+      ],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-consulta.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny y su pareja acordaron reparto, criterios y metas antes de compartir gastos.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "No hay un modelo correcto universal: hay uno que ambas partes entienden y aceptan explícitamente. La conversación incómoda de una tarde ahorra años de fricción.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "Acordaron el reparto, pero dejaron sin resolver el resto de los temas.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "El reparto de gastos es solo una de las cinco preguntas. Qué cuenta como común, desde qué monto se consulta y qué deudas trae cada quien generan tanto conflicto como el reparto.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Sin acuerdos claros, cada gasto se convirtió en una negociación y la relación se desgastó.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "La ausencia de acuerdo no significa que no haya reglas: significa que cada quien sigue las suyas. Y el conflicto por dinero casi nunca es por falta de dinero.",
+      "opciones": [],
+      "imagen": "/assets/misiones/s3/s3-1-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/s3/s3-1-10-a-portada.webp"
+}

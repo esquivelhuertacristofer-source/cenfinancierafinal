@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P6-1-6-A",
+  "unit_code": "P6-1-6",
+  "unit_title": "Neobancos y billeteras digitales en México",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "Banco, Neobanco o Billetera",
+  "descripcion": "Clasifica cada característica según el tipo de institución al que corresponde.",
+  "objetivo": "Distinguir bancos, neobancos y billeteras digitales por sus características",
+  "xp": 600,
+  "instruccion": "Arrastra cada característica al tipo de institución que le corresponde.",
+  "categorias": [
+    {
+      "id": "banco",
+      "label": "Banco tradicional",
+      "emoji": "🏛️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "neobanco",
+      "label": "Neobanco",
+      "emoji": "📱",
+      "color": "#A855F7"
+    },
+    {
+      "id": "billetera",
+      "label": "Billetera digital",
+      "emoji": "👛",
+      "color": "#10B981"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Tiene sucursales físicas para trámites complejos",
+      "emoji": "🏢",
+      "categoria_correcta": "banco",
+      "feedback": "Sigue siendo insustituible para aclaraciones y trámites con firma."
+    },
+    {
+      "id": "i2",
+      "label": "Se abre en minutos desde el celular, sin ir a ningún lado",
+      "emoji": "⚡",
+      "categoria_correcta": "neobanco",
+      "feedback": "Su ventaja principal es la agilidad de apertura y uso."
+    },
+    {
+      "id": "i3",
+      "label": "Guarda saldo para pagos pero no es un banco",
+      "emoji": "💸",
+      "categoria_correcta": "billetera",
+      "feedback": "Opera bajo reglas distintas a las bancarias."
+    },
+    {
+      "id": "i4",
+      "label": "Sus depósitos están cubiertos por el seguro de depósito",
+      "emoji": "🛡️",
+      "categoria_correcta": "banco",
+      "feedback": "La protección más clara del sistema, hasta el límite legal."
+    },
+    {
+      "id": "i5",
+      "label": "Puede operar aliado con un banco que respalda los depósitos",
+      "emoji": "🤝",
+      "categoria_correcta": "neobanco",
+      "feedback": "Por eso hay que revisar su figura legal en los términos."
+    },
+    {
+      "id": "i6",
+      "label": "Ideal para el gasto cotidiano y recibir dinero rápido",
+      "emoji": "🛒",
+      "categoria_correcta": "billetera",
+      "feedback": "Perfecta para el día a día, no para el ahorro grande."
+    },
+    {
+      "id": "i7",
+      "label": "Suele cobrar más comisiones de manejo",
+      "emoji": "💰",
+      "categoria_correcta": "banco",
+      "feedback": "El precio de la infraestructura y la supervisión estricta."
+    },
+    {
+      "id": "i8",
+      "label": "Comisiones bajas y buena experiencia de uso",
+      "emoji": "✨",
+      "categoria_correcta": "neobanco",
+      "feedback": "Sin sucursales, la estructura de costos es mucho menor."
+    },
+    {
+      "id": "i9",
+      "label": "No es el lugar adecuado para el ahorro de largo plazo",
+      "emoji": "⚠️",
+      "categoria_correcta": "billetera",
+      "feedback": "Su función es transaccional, no de resguardo."
+    },
+    {
+      "id": "i10",
+      "label": "Ofrece atención presencial cuando algo se complica",
+      "emoji": "🙋",
+      "categoria_correcta": "banco",
+      "feedback": "Hablar con una persona sigue siendo valioso en casos difíciles."
+    }
+  ],
+  "portada": "/assets/misiones/p6/p6-1-6-a-portada.webp",
+  "escena": "/assets/misiones/p6/p6-1-6-a-escena.webp"
+}

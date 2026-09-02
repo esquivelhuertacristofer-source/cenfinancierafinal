@@ -1,0 +1,168 @@
+{
+  "code": "ACT-P4-3-7-A",
+  "unit_code": "P4-3-7",
+  "unit_title": "Corto, mediano y largo plazo: separar mis ahorros",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "MEDIO",
+  "titulo": "Mis Tres Horizontes",
+  "descripcion": "Arma tu plan de ahorro repartido en corto, mediano y largo plazo.",
+  "objetivo": "Distribuir el ahorro mensual entre tres horizontes con metas concretas",
+  "xp": 400,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi ahorro mensual",
+      "descripcion": "Cuánto puedo apartar cada mes en total.",
+      "campos": [
+        {
+          "id": "ahorro_mes",
+          "label": "Lo que puedo ahorrar al mes",
+          "type": "slider",
+          "min": 50,
+          "max": 3000,
+          "step": 50,
+          "default": 400,
+          "unit": "$",
+          "ayuda": "De tu domingo, apoyos o ingresos propios.",
+          "requerido": true
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Corto plazo (hasta un año)",
+      "descripcion": "Metas cercanas y el fondo de emergencia.",
+      "campos": [
+        {
+          "id": "meta_corto",
+          "label": "Mi meta de corto plazo",
+          "type": "text",
+          "placeholder": "Fondo de emergencia y un libro",
+          "requerido": true,
+          "ayuda": "Algo que necesites o quieras dentro de los próximos doce meses."
+        },
+        {
+          "id": "monto_corto",
+          "label": "Cuánto necesito para esa meta",
+          "type": "number",
+          "min": 100,
+          "max": 50000,
+          "default": 2400,
+          "unit": "$",
+          "placeholder": "2400",
+          "requerido": true
+        },
+        {
+          "id": "pct_corto",
+          "label": "Porcentaje del ahorro que le asigno",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "ayuda": "Al principio conviene priorizar el fondo de emergencia.",
+          "requerido": true
+        },
+        {
+          "id": "meses_corto",
+          "label": "Meses para alcanzarla",
+          "type": "calculated",
+          "formula": "Math.ceil(monto_corto / Math.max(1, ahorro_mes * pct_corto / 100))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Mediano plazo (uno a cinco años)",
+      "descripcion": "Metas más grandes con algunos años de margen.",
+      "campos": [
+        {
+          "id": "meta_mediano",
+          "label": "Mi meta de mediano plazo",
+          "type": "text",
+          "placeholder": "Una bicicleta buena o un curso",
+          "requerido": true,
+          "ayuda": "Algo que requiera juntar durante varios años."
+        },
+        {
+          "id": "monto_mediano",
+          "label": "Cuánto necesito",
+          "type": "number",
+          "min": 500,
+          "max": 200000,
+          "default": 9000,
+          "unit": "$",
+          "placeholder": "9000",
+          "requerido": true
+        },
+        {
+          "id": "pct_mediano",
+          "label": "Porcentaje que le asigno",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 30,
+          "unit": "%",
+          "ayuda": "Sube este porcentaje cuando el fondo de emergencia ya esté completo.",
+          "requerido": true
+        },
+        {
+          "id": "meses_mediano",
+          "label": "Meses para alcanzarla",
+          "type": "calculated",
+          "formula": "Math.ceil(monto_mediano / Math.max(1, ahorro_mes * pct_mediano / 100))",
+          "unit": "meses"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "Largo plazo (más de cinco años)",
+      "descripcion": "Lo que no vas a tocar y donde el interés compuesto trabaja mejor.",
+      "campos": [
+        {
+          "id": "pct_largo",
+          "label": "Porcentaje que le asigno",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20,
+          "unit": "%",
+          "ayuda": "Aunque sea poco, empezar joven vale más que aportar mucho después.",
+          "requerido": true
+        },
+        {
+          "id": "aporte_largo",
+          "label": "Aporte mensual al largo plazo",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_mes * pct_largo / 100)",
+          "unit": "$"
+        },
+        {
+          "id": "total_10_anios",
+          "label": "Acumulado en 10 años al 6% anual",
+          "type": "calculated",
+          "formula": "Math.round(ahorro_mes * pct_largo / 100 * 12 * (Math.pow(1.06, 10) - 1) / 0.06)",
+          "unit": "$"
+        },
+        {
+          "id": "suma_porcentajes",
+          "label": "Suma de mis porcentajes (debe dar 100)",
+          "type": "calculated",
+          "formula": "pct_corto + pct_mediano + pct_largo",
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "output_type": "plan_horizontes",
+  "exportable": true,
+  "portada": "/assets/misiones/p4/p4-3-7-a-portada.webp",
+  "escena": "/assets/misiones/p4/p4-3-7-a-escena.webp"
+}

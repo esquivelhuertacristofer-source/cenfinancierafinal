@@ -1,0 +1,103 @@
+{
+  "code": "ACT-P5-4-9-A",
+  "unit_code": "P5-4-9",
+  "unit_title": "Medir el negocio: ventas, margen y clientes",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Tablero del Negocio",
+  "descripcion": "Ajusta tus indicadores y descubre qué te está diciendo tu negocio.",
+  "objetivo": "Calcular indicadores clave y leer lo que sugieren sobre el negocio",
+  "xp": 300,
+  "inputs": [
+    {
+      "id": "unidades_vendidas",
+      "label": "Unidades vendidas en el mes",
+      "type": "slider",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "default": 120,
+      "unit": "unidades",
+      "referencia": "Del registro de ventas, no de la memoria."
+    },
+    {
+      "id": "precio",
+      "label": "Precio promedio de venta",
+      "type": "slider",
+      "min": 1,
+      "max": 500,
+      "step": 1,
+      "default": 45,
+      "unit": "$",
+      "referencia": "Si hubo descuentos, usa el promedio real."
+    },
+    {
+      "id": "costo_unidad",
+      "label": "Costo por unidad",
+      "type": "slider",
+      "min": 1,
+      "max": 400,
+      "step": 1,
+      "default": 28,
+      "unit": "$",
+      "referencia": "Material más la parte proporcional de los fijos."
+    },
+    {
+      "id": "clientes",
+      "label": "Clientes distintos en el mes",
+      "type": "slider",
+      "min": 1,
+      "max": 300,
+      "step": 1,
+      "default": 40,
+      "unit": "clientes",
+      "referencia": "Personas diferentes, no número de ventas."
+    },
+    {
+      "id": "pct_recurrentes",
+      "label": "Porcentaje de clientes que ya habían comprado",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 25,
+      "unit": "%",
+      "referencia": "El indicador más ignorado y el más revelador."
+    }
+  ],
+  "formula": "Math.round(unidades_vendidas * (precio - costo_unidad))",
+  "descripcion_formula": "Margen total del mes: las unidades vendidas multiplicadas por lo que deja cada una después del costo.",
+  "output_label": "Margen total del mes",
+  "output_prefix": "$",
+  "escenarios": [
+    {
+      "condicion": "precio <= costo_unidad",
+      "mensaje": "El precio no cubre el costo: cada venta genera pérdida. Vender más solo agranda el problema. Revisa precio y costos antes que cualquier otra cosa.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "pct_recurrentes <= 10 && clientes >= 30",
+      "mensaje": "Llegas a muchos clientes pero casi ninguno vuelve. El problema no es de comunicación: es del producto o de la experiencia.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "clientes <= 5 && unidades_vendidas >= 50",
+      "mensaje": "Dependes de muy pocos clientes. Si uno se va, se cae una parte enorme del ingreso: conviene ampliar la base.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "pct_recurrentes >= 40 && precio > costo_unidad",
+      "mensaje": "Buena recurrencia y margen positivo: la combinación más sana. Retener sale más barato que conseguir clientes nuevos.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "unidades_vendidas >= 200 && precio - costo_unidad <= 5",
+      "mensaje": "Vendes mucho con margen mínimo. Un pequeño aumento de costos te dejaría en negativo: revisa precio o proveedores.",
+      "tipo": "advertencia"
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-4-9-a-portada.webp",
+  "escena": "/assets/misiones/p5/p5-4-9-a-escena.webp"
+}

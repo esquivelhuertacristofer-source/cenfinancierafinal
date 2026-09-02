@@ -4,135 +4,216 @@
   "unit_title": "Herramientas digitales para las finanzas personales",
   "level": "Secundaria 1",
   "edad": "12-13 años",
-  "tipo": "SIMULADOR",
+  "tipo": "CONSTRUCTOR",
   "complejidad": "MEDIO",
-  "titulo": "La App que Te Hace Rico",
-  "descripcion": "Los jóvenes que usan apps de finanzas personales ahorran 18% más. Pero no es magia — es visibilidad. Simula cómo cambiaría tu situación financiera al usar presupuestos digitales, alertas de gasto y automatización de ahorro.",
-  "objetivo": "Comparar el impacto de usar herramientas digitales de finanzas personales (apps de presupuesto, pagos automáticos, banca digital) versus manejar el dinero sin ellas",
-  "xp": 500,
-  "descripcion_formula": "Ahorro sin app = ingreso × (1 - gasto_pct/100) × 0.6 (solo 60% de lo que crees ahorrar realmente se ahorra por gastos hormiga no controlados). Ahorro con app = ingreso × pct_ahorro_meta / 100 × 0.9 (90% de la meta se cumple con automatización).",
-  "inputs": [
+  "titulo": "Tu Sistema en Piloto Automático",
+  "descripcion": "Ninguna app ahorra por ti. Lo que ahorra es la transferencia que sale sola el día que cobras, antes de que puedas gastarla. Diseña tu sistema.",
+  "objetivo": "Comparar el impacto de automatizar las finanzas personales frente a manejar el dinero manualmente, y diseñar un sistema propio.",
+  "xp": 650,
+  "output_type": "sistema_automatizado",
+  "exportable": true,
+  "pasos": [
     {
-      "id": "ingreso_mensual_app",
-      "label": "Ingreso Mensual ($)",
-      "type": "slider",
-      "min": 3000,
-      "max": 60000,
-      "step": 1000,
-      "default": 15000,
-      "unit": "$"
+      "id": "entrada",
+      "titulo": "💵 Por dónde entra el dinero",
+      "descripcion": "Todo sistema empieza en el día de cobro. Ese día se decide el mes entero.",
+      "campos": [
+        {
+          "id": "ingreso",
+          "label": "¿Cuánto recibes al mes? ($)",
+          "type": "slider",
+          "min": 200,
+          "max": 30000,
+          "step": 100,
+          "default": 3000,
+          "unit": "$",
+          "requerido": true,
+          "ayuda": "Cuenta domingo, apoyos, trabajos ocasionales: todo lo que entra."
+        },
+        {
+          "id": "dia_cobro",
+          "label": "¿Qué día del mes entra?",
+          "type": "slider",
+          "min": 1,
+          "max": 31,
+          "step": 1,
+          "default": 15,
+          "unit": "día",
+          "requerido": true
+        },
+        {
+          "id": "pct_ahorro",
+          "label": "¿Qué porcentaje se va a apartar solo?",
+          "type": "slider",
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "default": 20,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "ahorro_mes",
+          "label": "Se aparta cada mes, sin que lo pienses",
+          "type": "calculated",
+          "formula": "Math.round(ingreso * pct_ahorro / 100)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "pct_ahorro_meta",
-      "label": "Meta de Ahorro Mensual (%)",
-      "type": "slider",
-      "min": 5,
-      "max": 40,
-      "step": 5,
-      "default": 20,
-      "unit": "%"
+      "id": "reparto",
+      "titulo": "🧭 A dónde va cada peso",
+      "descripcion": "Un solo bote es un desastre. Tres botes con nombre hacen que el dinero no se mezcle.",
+      "campos": [
+        {
+          "id": "meta",
+          "label": "¿Para qué es tu bote de meta?",
+          "type": "text",
+          "placeholder": "Ej: una bici, un curso, una computadora",
+          "requerido": true
+        },
+        {
+          "id": "pct_emergencia",
+          "label": "% del ahorro que va al fondo de emergencia",
+          "type": "slider",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 50,
+          "unit": "%",
+          "requerido": true,
+          "ayuda": "Hasta juntar el equivalente a tres meses de tus gastos. Después, todo puede ir a la meta."
+        },
+        {
+          "id": "a_emergencia",
+          "label": "Al fondo de emergencia, al mes",
+          "type": "calculated",
+          "formula": "Math.round(ingreso * pct_ahorro / 100 * pct_emergencia / 100)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "a_meta",
+          "label": "A tu meta, al mes",
+          "type": "calculated",
+          "formula": "Math.round(ingreso * pct_ahorro / 100 * (100 - pct_emergencia) / 100)",
+          "unit": "$",
+          "requerido": false
+        }
+      ]
     },
     {
-      "id": "gastos_hormiga_estimados",
-      "label": "Gastos Hormiga Estimados al Mes ($)",
-      "type": "slider",
-      "min": 200,
-      "max": 5000,
-      "step": 100,
-      "default": 1500,
-      "unit": "$",
-      "referencia": "Café, snacks, suscripciones olvidadas, apps, delivery — el promedio mexicano gasta $2,000/mes sin darse cuenta"
+      "id": "herramientas",
+      "titulo": "📱 Con qué lo vas a hacer",
+      "descripcion": "La herramienta importa menos que la regla, y una mala elección sí te puede costar.",
+      "campos": [
+        {
+          "id": "herramienta",
+          "label": "¿Dónde va a vivir tu ahorro?",
+          "type": "select",
+          "default": "cetes",
+          "requerido": true,
+          "opciones": [
+            {
+              "label": "Cetesdirecto (gobierno, desde $100)",
+              "value": "cetes"
+            },
+            {
+              "label": "Cuenta de ahorro del banco",
+              "value": "banco"
+            },
+            {
+              "label": "App financiera regulada",
+              "value": "app"
+            },
+            {
+              "label": "Alcancía en casa",
+              "value": "casa"
+            }
+          ],
+          "ayuda": "Antes de meter dinero en cualquier app, revisa que esté autorizada por la CNBV. Si promete rendimientos garantizados altos, desconfía."
+        },
+        {
+          "id": "registro",
+          "label": "¿Cómo vas a saber en qué se te va el dinero?",
+          "type": "select",
+          "default": "app_gasto",
+          "requerido": true,
+          "opciones": [
+            {
+              "label": "App de gastos en el celular",
+              "value": "app_gasto"
+            },
+            {
+              "label": "Hoja de cálculo",
+              "value": "hoja"
+            },
+            {
+              "label": "Libreta de papel",
+              "value": "libreta"
+            }
+          ],
+          "ayuda": "La que uses todos los días le gana a la más completa. Registrar un mes entero es lo que revela los gastos hormiga."
+        },
+        {
+          "id": "gasto_hormiga",
+          "label": "¿Cuánto crees que se te va en gastos hormiga al mes? ($)",
+          "type": "number",
+          "placeholder": "Ej: 400",
+          "unit": "$",
+          "requerido": true
+        },
+        {
+          "id": "hormiga_anual",
+          "label": "Eso al año es",
+          "type": "calculated",
+          "formula": "Math.round(gasto_hormiga * 12)",
+          "unit": "$",
+          "requerido": false,
+          "ayuda": "Casi nadie acierta este número a la primera. Por eso se registra en vez de estimarlo."
+        }
+      ]
     },
     {
-      "id": "anos_diferencia",
-      "label": "Años de Proyección",
-      "type": "slider",
-      "min": 1,
-      "max": 20,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+      "id": "prueba",
+      "titulo": "🔒 La prueba del sistema",
+      "descripcion": "Un sistema sirve si funciona el mes que se te antoja romperlo.",
+      "campos": [
+        {
+          "id": "en_un_anio",
+          "label": "Lo que tendrás en un año si el sistema aguanta",
+          "type": "calculated",
+          "formula": "Math.round(ingreso * pct_ahorro / 100 * 12)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "con_hormiga",
+          "label": "Si además recuperas la mitad de tus gastos hormiga",
+          "type": "calculated",
+          "formula": "Math.round(ingreso * pct_ahorro / 100 * 12 + gasto_hormiga * 6)",
+          "unit": "$",
+          "requerido": false
+        },
+        {
+          "id": "regla_tentacion",
+          "label": "¿Cuál es tu regla para cuando quieras sacar dinero del bote?",
+          "type": "text",
+          "placeholder": "Ej: esperar 3 días y volver a preguntarme",
+          "requerido": true,
+          "ayuda": "La regla se escribe hoy, en frío. En caliente nadie la inventa bien."
+        },
+        {
+          "id": "revision",
+          "label": "¿Qué día de cada mes vas a revisar tus números?",
+          "type": "text",
+          "placeholder": "Ej: el último domingo, con mi mamá",
+          "requerido": true
+        }
+      ]
     }
   ],
-  "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.5)",
-  "output_label": "Ahorro Real Sin App (mensual)",
-  "output_prefix": "$",
-  "output_suffix": "/mes",
-  "outputs_multiples": [
-    {
-      "id": "ahorro_sin_app_mensual",
-      "label": "Ahorro Real Sin Herramientas Digitales",
-      "formula": "Math.round(Math.max(0, ingreso_mensual_app * pct_ahorro_meta / 100 - gastos_hormiga_estimados * 0.7))",
-      "prefix": "$",
-      "suffix": "/mes",
-      "descripcion": "Lo que realmente sobra después de gastos hormiga no controlados"
-    },
-    {
-      "id": "ahorro_con_app_mensual",
-      "label": "Ahorro Con Automatización Digital",
-      "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9)",
-      "prefix": "$",
-      "suffix": "/mes",
-      "descripcion": "Ahorro automático programado — se transfiere antes de que puedas gastarlo"
-    },
-    {
-      "id": "diferencia_anual",
-      "label": "Diferencia Anual",
-      "formula": "Math.round((ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9 - Math.max(0, ingreso_mensual_app * pct_ahorro_meta / 100 - gastos_hormiga_estimados * 0.7)) * 12)",
-      "prefix": "$",
-      "suffix": "/año más",
-      "descripcion": "El dinero extra que generas por tener visibilidad y control digital de tus finanzas"
-    },
-    {
-      "id": "ahorro_acumulado_proyectado",
-      "label": "Acumulado en el Futuro (Con App)",
-      "formula": "Math.round(ingreso_mensual_app * pct_ahorro_meta / 100 * 0.9 * 12 * anos_diferencia * 1.08)",
-      "prefix": "$",
-      "suffix": " acumulados",
-      "descripcion": "Lo que acumularías invirtiendo ese ahorro al 8% anual"
-    }
-  ],
-  "herramientas_recomendadas": {
-    "titulo": "Herramientas digitales de finanzas en México",
-    "apps": [
-      { "nombre": "Fintonic / Mobills", "uso": "Registro y categorización automática de gastos", "costo": "Gratis" },
-      { "nombre": "CETES Directo (banxico)", "uso": "Inversión en CETES desde $100", "costo": "Sin comisión" },
-      { "nombre": "GBM+ / Kuspit", "uso": "Inversión en bolsa y CETES", "costo": "Desde $0/mes" },
-      { "nombre": "Clip / Mercado Pago", "uso": "Cobros digitales para pequeños negocios", "costo": "Comisión por transacción" },
-      { "nombre": "Banca digital (Nu, Hey, BBVA)", "uso": "Ahorro automático, transferencias SPEI", "costo": "Sin comisión mensual" }
-    ]
-  },
-  "chart_type": "bar",
-  "chart_series": [
-    {
-      "id": "ahorro_sin_app_mensual",
-      "label": "Sin Herramientas ($)",
-      "color": "#ef4444"
-    },
-    {
-      "id": "ahorro_con_app_mensual",
-      "label": "Con Automatización ($)",
-      "color": "#22c55e"
-    }
-  ],
-  "escenarios": [
-    {
-      "condicion": "gastos_hormiga_estimados > ingreso_mensual_app * 0.15",
-      "mensaje": "🐜 Gastos hormiga críticos. Representan más del 15% de tu ingreso. Una app de categorización automatizada puede ayudarte a identificar y cortar los que no valen la pena.",
-      "tipo": "warning"
-    },
-    {
-      "condicion": "ahorro_con_app_mensual > ahorro_sin_app_mensual * 2",
-      "mensaje": "💡 Impacto masivo. La diferencia entre ahorrar con y sin herramientas digitales en tu caso es más del doble. La visibilidad cambia el comportamiento.",
-      "tipo": "success"
-    },
-    {
-      "condicion": "pct_ahorro_meta >= 20",
-      "mensaje": "🏆 Meta de ahorro ambiciosa. El 20%+ es la recomendación de los planificadores financieros. Automatízalo: transfiere ese porcentaje el mismo día que recibes tu sueldo.",
-      "tipo": "success"
-    }
-  ],
-  "versión": "2026.Diamond.V2",
-  "pregunta_reflexion": "¿Qué app financiera usarías para controlar tus gastos? ¿Cuál es el riesgo de concentrar todas tus finanzas en una sola app o banco digital?",
-  "comparativa_espera": "Los jóvenes que usan apps de finanzas personales ahorran en promedio 18% más que quienes no las usan. La visibilidad automática del gasto cambia el comportamiento sin necesitar más disciplina consciente."
+  "versión": "2026.Alineada.2"
 }

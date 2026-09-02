@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P5-2-9-B",
+  "unit_code": "P5-2-9",
+  "unit_title": "Garantías y devoluciones: mis derechos como consumidor",
+  "level": "Primaria 5",
+  "edad": "10-11 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "Garantías y Devoluciones",
+  "descripcion": "Comprueba que sabes ejercer tus derechos como consumidor.",
+  "objetivo": "Verificar la comprensión de garantías, devoluciones y documentación",
+  "xp": 240,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "La garantía cubre:",
+      "opciones": [
+        "Cualquier daño",
+        "Defectos de fabricación",
+        "El arrepentimiento",
+        "El robo"
+      ],
+      "correcta": 1,
+      "explicacion": "No cubre daños por mal uso, y esa es la discusión más común."
+    },
+    {
+      "id": "q2",
+      "texto": "La garantía debe:",
+      "opciones": [
+        "Ser verbal",
+        "Ser un favor de la tienda",
+        "Constar por escrito con plazo y condiciones",
+        "Durar siempre"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin documento escrito no hay forma de saber qué se cubre."
+    },
+    {
+      "id": "q3",
+      "texto": "La política de devolución es:",
+      "opciones": [
+        "Igual que la garantía",
+        "Obligatoria por ley",
+        "Un tipo de garantía",
+        "Una decisión comercial de cada tienda"
+      ],
+      "correcta": 3,
+      "explicacion": "Puede ser generosa o inexistente, según la tienda."
+    },
+    {
+      "id": "q4",
+      "texto": "El documento clave para reclamar es:",
+      "opciones": [
+        "El ticket o la factura",
+        "La bolsa",
+        "Una foto",
+        "El empaque"
+      ],
+      "correcta": 0,
+      "explicacion": "Acredita qué, cuándo, dónde y por cuánto se compró."
+    },
+    {
+      "id": "q5",
+      "texto": "El ticket se guarda:",
+      "opciones": [
+        "Una semana",
+        "Todo el plazo de la garantía",
+        "No hace falta",
+        "Un día"
+      ],
+      "correcta": 1,
+      "explicacion": "Junto con la póliza, si el producto la incluye."
+    },
+    {
+      "id": "q6",
+      "texto": "Una reclamación efectiva lleva:",
+      "opciones": [
+        "Enojo y volumen",
+        "Testigos",
+        "Comprobante, descripción del defecto y petición concreta",
+        "Un abogado"
+      ],
+      "correcta": 2,
+      "explicacion": "Firme, documentada y sin agresividad: ese tono funciona."
+    },
+    {
+      "id": "q7",
+      "texto": "Si la tienda no responde:",
+      "opciones": [
+        "No hay nada que hacer",
+        "Hay que demandar de inmediato",
+        "Hay que publicarlo",
+        "Se puede acudir a protección al consumidor"
+      ],
+      "correcta": 3,
+      "explicacion": "Existe una instancia oficial para justamente esos casos."
+    },
+    {
+      "id": "q8",
+      "texto": "Mucha gente no ejerce sus derechos:",
+      "opciones": [
+        "Por no conocerlos",
+        "Porque no existen",
+        "Porque cuestan caro",
+        "Porque están prohibidos"
+      ],
+      "correcta": 0,
+      "explicacion": "Los derechos existen; lo que falta suele ser información y el ticket."
+    }
+  ],
+  "portada": "/assets/misiones/p5/p5-2-9-b-portada.webp",
+  "escena": "/assets/misiones/p5/p5-2-9-b-escena.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "code": "ACT-P3-4-8-B",
+  "unit_code": "P3-4-8",
+  "unit_title": "El inventario: cuánto produzco sin que me sobre",
+  "level": "Primaria 3",
+  "edad": "8-9 años",
+  "tipo": "QUIZ",
+  "complejidad": "MEDIO",
+  "titulo": "El Inventario Justo",
+  "descripcion": "Comprueba que sabes cuánto producir y por qué.",
+  "objetivo": "Verificar el cálculo de demanda y la lógica de producción por lotes",
+  "xp": 160,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Los dos errores al producir para un evento son:",
+      "opciones": [
+        "Vender caro o barato",
+        "Llegar tarde o temprano",
+        "Que se acabe todo y que sobre mucho",
+        "Ninguno"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dos cuestan: uno en ventas perdidas, el otro en material desperdiciado."
+    },
+    {
+      "id": "q2",
+      "texto": "Asisten 200, se acerca la mitad, compra 1 de cada 5 de esos. Estimo:",
+      "opciones": [
+        "100 unidades",
+        "40 unidades",
+        "10 unidades",
+        "20 unidades"
+      ],
+      "correcta": 3,
+      "explicacion": "200 × 50% = 100 visitantes; 100 × 20% = 20 unidades."
+    },
+    {
+      "id": "q3",
+      "texto": "Una estimación de demanda es:",
+      "opciones": [
+        "Un cálculo con supuestos revisables",
+        "Una adivinanza",
+        "Un dato exacto",
+        "Un secreto comercial"
+      ],
+      "correcta": 0,
+      "explicacion": "Escribir los supuestos es lo que permite corregir la estimación después."
+    },
+    {
+      "id": "q4",
+      "texto": "Quedarse sin producto cuesta:",
+      "opciones": [
+        "Nada, todo se vendió",
+        "Las ventas que se pierden",
+        "Solo tiempo",
+        "El material"
+      ],
+      "correcta": 1,
+      "explicacion": "Había clientes con dinero en la mano que se fueron sin comprar."
+    },
+    {
+      "id": "q5",
+      "texto": "Los productos que se echan a perder exigen:",
+      "opciones": [
+        "Producir el doble",
+        "Ignorar la demanda",
+        "Estimaciones más conservadoras",
+        "Precios más bajos"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo que sobra no se puede guardar para la siguiente ocasión."
+    },
+    {
+      "id": "q6",
+      "texto": "Producir en dos lotes significa:",
+      "opciones": [
+        "Hacer todo el doble",
+        "Producir el último día",
+        "Comprar dos veces el material",
+        "Un lote chico y más solo si se agota"
+      ],
+      "correcta": 3,
+      "explicacion": "Reduce el riesgo en los dos sentidos a la vez."
+    },
+    {
+      "id": "q7",
+      "texto": "Producir por lotes se parece a:",
+      "opciones": [
+        "Prototipar: comprometer poco y ajustar",
+        "Ahorrar",
+        "Pedir prestado",
+        "Vender fiado"
+      ],
+      "correcta": 0,
+      "explicacion": "Misma lógica: decidir con información en vez de con corazonadas."
+    },
+    {
+      "id": "q8",
+      "texto": "La ganancia por unidad se calcula:",
+      "opciones": [
+        "Precio más costo",
+        "Precio de venta menos costo",
+        "Costo entre precio",
+        "Precio por costo"
+      ],
+      "correcta": 1,
+      "explicacion": "Si esa resta es negativa, cada venta te hace perder dinero."
+    }
+  ],
+  "portada": "/assets/misiones/p3/p3-4-8-b-portada.webp",
+  "escena": "/assets/misiones/p3/p3-4-8-b-escena.webp"
+}

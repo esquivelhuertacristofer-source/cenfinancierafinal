@@ -1,0 +1,114 @@
+{
+  "code": "ACT-S2-2-8-B",
+  "unit_code": "S2-2-8",
+  "unit_title": "Fondo de emergencia avanzado: dónde guardarlo para que rinda",
+  "level": "Secundaria 2",
+  "edad": "13-14 años",
+  "tipo": "QUIZ",
+  "complejidad": "AVANZADO",
+  "titulo": "Dónde Guardar el Fondo",
+  "descripcion": "Comprueba que sabes equilibrar liquidez y rendimiento.",
+  "objetivo": "Verificar el diseño del fondo de emergencia por capas",
+  "xp": 400,
+  "aprobacion_minima": 0.7,
+  "preguntas": [
+    {
+      "id": "q1",
+      "texto": "Guardar todo el fondo en efectivo:",
+      "opciones": [
+        "Garantiza una pérdida de poder adquisitivo",
+        "Es lo ideal",
+        "Rinde bien",
+        "Es lo más rentable"
+      ],
+      "correcta": 0,
+      "explicacion": "La inflación se lo come año con año."
+    },
+    {
+      "id": "q2",
+      "texto": "Invertirlo todo a largo plazo:",
+      "opciones": [
+        "Es lo ideal",
+        "Rompe su función de estar disponible",
+        "No tiene riesgos",
+        "Es lo más seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "Un fondo que no está cuando hace falta no es un fondo."
+    },
+    {
+      "id": "q3",
+      "texto": "La pregunta que ordena el diseño es:",
+      "opciones": [
+        "Cuánto rinde",
+        "Quién lo administra",
+        "En cuánto tiempo puedo disponer de él",
+        "Cuál es más famoso"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada emergencia tolera un plazo distinto."
+    },
+    {
+      "id": "q4",
+      "texto": "La primera capa debe ser:",
+      "opciones": [
+        "La más grande",
+        "A plazo largo",
+        "En acciones",
+        "Pequeña y de disponibilidad inmediata"
+      ],
+      "correcta": 3,
+      "explicacion": "Cubre lo que puede pasar hoy mismo."
+    },
+    {
+      "id": "q5",
+      "texto": "La segunda capa:",
+      "opciones": [
+        "Es la más grande y liquidable en pocos días",
+        "Es la más pequeña",
+        "No existe",
+        "Va en efectivo"
+      ],
+      "correcta": 0,
+      "explicacion": "Debe al menos competir con la inflación."
+    },
+    {
+      "id": "q6",
+      "texto": "No debe estar el fondo en:",
+      "opciones": [
+        "Una cuenta bancaria",
+        "Instrumentos cuyo valor pueda caer al necesitarlo",
+        "Instrumentos de corto plazo",
+        "Fondos de liquidez diaria"
+      ],
+      "correcta": 1,
+      "explicacion": "Ni en plazos forzosos con penalización."
+    },
+    {
+      "id": "q7",
+      "texto": "Mezclar el fondo con la cuenta de gastos:",
+      "opciones": [
+        "Lo protege",
+        "Lo hace rendir más",
+        "Hace que se use sin darse cuenta",
+        "Es recomendable"
+      ],
+      "correcta": 2,
+      "explicacion": "En pocos meses deja de existir."
+    },
+    {
+      "id": "q8",
+      "texto": "El diseño por capas permite:",
+      "opciones": [
+        "Renunciar a la liquidez",
+        "Ganar más riesgo",
+        "Olvidarse del fondo",
+        "Que todo el fondo trabaje sin perder su función"
+      ],
+      "correcta": 3,
+      "explicacion": "Disponibilidad donde hace falta, rendimiento donde se puede."
+    }
+  ],
+  "portada": "/assets/misiones/s2/s2-2-8-b-portada.webp",
+  "escena": "/assets/misiones/s2/s2-2-8-b-escena.webp"
+}

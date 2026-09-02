@@ -5,122 +5,91 @@
   "level": "Primaria 5",
   "edad": "10-11 años",
   "tipo": "TRIVIA",
-  "complejidad": "MEDIO",
-  "titulo": "Grandes Marcas de la Historia",
-  "descripcion": "¿Por qué elegimos una marca sobre otra? ¡Descubre el poder del branding y los secretos de las marcas famosas!",
-  "objetivo": "Identificar las estrategias de diferenciación y el concepto de lealtad de marca",
-  "xp": 300,
+  "complejidad": "ALTO",
+  "titulo": "El Número que Salva Negocios",
+  "descripcion": "El punto de equilibrio es la venta exacta donde dejas de perder y empiezas a ganar. Contra el reloj: demuestra que lo entiendes.",
+  "objetivo": "Consolidar el cálculo y el significado del punto de equilibrio como umbral entre pérdida y ganancia.",
+  "xp": 400,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": true,
   "preguntas": [
     {
-      "id": "br1",
-      "pregunta": "¿Qué es el 'Branding'?",
-      "respuesta_correcta": "El proceso de construir una personalidad y una imagen para una marca",
+      "id": "t1",
+      "pregunta": "El punto de equilibrio es…",
+      "respuesta_correcta": "Cuántas unidades debes vender para cubrir todos tus costos",
       "incorrectas": [
-        "Ponerle un precio a algo",
-        "Vender productos en la calle",
-        "Hacer dibujos en la pared"
+        "Tu ganancia máxima",
+        "El precio más alto que puedes cobrar",
+        "El dinero que tienes en el banco"
       ],
-      "dato_extra": "El branding es el 'alma' de la empresa."
+      "dato_extra": "Debajo de ese número pierdes; arriba, ganas."
     },
     {
-      "id": "br2",
-      "pregunta": "¿Por qué Apple puede vender sus productos más caros que otras marcas?",
-      "respuesta_correcta": "Por su valor de marca basado en diseño, estatus y facilidad de uso",
+      "id": "t2",
+      "pregunta": "Se calcula dividiendo…",
+      "respuesta_correcta": "Los costos fijos entre la ganancia que deja cada unidad",
       "incorrectas": [
-        "Porque son los únicos que existen",
-        "Porque los regalan",
-        "Porque son de fruta"
+        "El precio entre los costos fijos",
+        "Las ventas entre los clientes",
+        "Los impuestos entre el sueldo"
       ],
-      "dato_extra": "La gente paga por la experiencia y la confianza en la marca."
+      "dato_extra": "Punto de equilibrio = costos fijos ÷ (precio − costo variable unitario)."
     },
     {
-      "id": "br3",
-      "pregunta": "¿Cuál es el famoso eslogan de Nike que motiva a las personas a esforzarse?",
-      "respuesta_correcta": "Just Do It (Solo hazlo)",
+      "id": "t3",
+      "pregunta": "Costos fijos de $3,000, precio $50, costo variable $20. ¿Cuántas unidades necesitas?",
+      "respuesta_correcta": "100 unidades",
       "incorrectas": [
-        "I'm lovin' it",
-        "Think Different",
-        "Always Coca-Cola"
+        "60 unidades",
+        "150 unidades",
+        "30 unidades"
       ],
-      "dato_extra": "Un buen eslogan resume el propósito de la marca en pocas palabras."
+      "dato_extra": "Cada venta deja $30 limpios. $3,000 ÷ $30 = 100 unidades solo para no perder."
     },
     {
-      "id": "br4",
-      "pregunta": "¿Qué marca de videojuegos se asocia con 'diversión para toda la familia' y nostalgia?",
-      "respuesta_correcta": "Nintendo",
+      "id": "t4",
+      "pregunta": "Si suben tus costos fijos, tu punto de equilibrio…",
+      "respuesta_correcta": "Sube: necesitas vender más para no perder",
       "incorrectas": [
-        "Ferrari",
-        "Netflix",
-        "Adidas"
+        "Baja",
+        "No cambia",
+        "Desaparece"
       ],
-      "dato_extra": "Nintendo cuida su marca para que siempre se sienta amigable y segura para niños."
+      "dato_extra": "Por eso un local más caro obliga a vender bastante más solo para quedar igual."
     },
     {
-      "id": "br5",
-      "pregunta": "¿Qué es un 'Logotipo'?",
-      "respuesta_correcta": "El símbolo visual que representa a una marca",
+      "id": "t5",
+      "pregunta": "Si subes el precio y todo lo demás sigue igual, el punto de equilibrio…",
+      "respuesta_correcta": "Baja: cada venta deja más y necesitas menos ventas",
       "incorrectas": [
-        "Un tipo de papel",
-        "El nombre del dueño",
-        "Un tipo de contrato"
+        "Sube",
+        "Se queda igual",
+        "Se vuelve negativo"
       ],
-      "dato_extra": "Los mejores logos son tan famosos que los reconoces sin leer el nombre."
+      "dato_extra": "Ojo: subir el precio también puede reducir cuántos clientes llegan."
     },
     {
-      "id": "br6",
-      "pregunta": "¿Por qué es importante la 'Consistencia' en una marca?",
-      "respuesta_correcta": "Para que el cliente siempre reciba la misma calidad y no se confunda",
+      "id": "t6",
+      "pregunta": "Vender por debajo del costo variable unitario significa que…",
+      "respuesta_correcta": "Pierdes dinero en CADA venta, y vender más empeora todo",
       "incorrectas": [
-        "Para cambiar de logo cada semana",
-        "Para tener muchos colores",
-        "No es importante"
+        "Ganas por volumen",
+        "Recuperas con publicidad",
+        "Es la mejor estrategia"
       ],
-      "dato_extra": "Si compras una Coca-Cola en China o en México, debe saber exactamente igual."
+      "dato_extra": "Es el error más caro del emprendedor novato: \"compensarlo con volumen\" es imposible."
     },
     {
-      "id": "br7",
-      "pregunta": "¿Qué significa que una marca sea 'Socialmente Responsable'?",
-      "respuesta_correcta": "Que además de vender, ayuda a la comunidad o cuida el planeta",
+      "id": "t7",
+      "pregunta": "Un negocio que vende justo su punto de equilibrio…",
+      "respuesta_correcta": "No gana ni pierde: queda en cero",
       "incorrectas": [
-        "Que tiene muchas redes sociales",
-        "Que hace muchas fiestas",
-        "Que es muy famosa"
+        "Gana el doble",
+        "Está quebrando",
+        "Ya es rentable"
       ],
-      "dato_extra": "Las marcas que ayudan son más queridas por los clientes modernos."
-    },
-    {
-      "id": "br8",
-      "pregunta": "¿Qué es el 'Marketing de Boca en Boca'?",
-      "respuesta_correcta": "Cuando los clientes recomiendan tu marca a sus amigos porque les encantó",
-      "incorrectas": [
-        "Hablar muy fuerte en la calle",
-        "Poner anuncios en la radio",
-        "Gritar los precios"
-      ],
-      "dato_extra": "¡Es la publicidad más valiosa y es gratis!"
-    },
-    {
-      "id": "br9",
-      "pregunta": "¿Cómo ayuda el marketing a una empresa nueva?",
-      "respuesta_correcta": "Haciendo que la gente sepa que existe y qué problema resuelve",
-      "incorrectas": [
-        "Haciendo que el producto sea gratis",
-        "Cerrando a la competencia",
-        "No ayuda"
-      ],
-      "dato_extra": "Sin marketing, nadie sabría que tienes un gran producto."
-    },
-    {
-      "id": "br10",
-      "pregunta": "¿Cuál es el activo más valioso de una marca?",
-      "respuesta_correcta": "La confianza de sus clientes",
-      "incorrectas": [
-        "Sus edificios",
-        "Sus camiones",
-        "Sus computadoras"
-      ],
-      "dato_extra": "¡Felicidades! Ahora entiendes que una marca se construye con el corazón."
+      "dato_extra": "Es el piso, no la meta. La ganancia empieza en la siguiente unidad."
     }
   ],
-  "versión": "2026.Diamond.V2"
+  "versión": "2026.Alineada.1"
 }

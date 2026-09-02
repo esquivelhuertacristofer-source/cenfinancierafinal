@@ -1,0 +1,108 @@
+{
+  "code": "ACT-P4-1-8-B",
+  "unit_code": "P4-1-8",
+  "unit_title": "Bancos, SOFIPOs y cajas de ahorro: no todos son iguales",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Quién Responde por mi Dinero?",
+  "descripcion": "Clasifica cada institución según su nivel de protección.",
+  "objetivo": "Asociar cada tipo de institución con su supervisión y protección",
+  "xp": 320,
+  "instruccion": "Arrastra cada caso al nivel de protección que le corresponde.",
+  "categorias": [
+    {
+      "id": "banco",
+      "label": "Banco (IPAB)",
+      "emoji": "🏦",
+      "color": "#10B981"
+    },
+    {
+      "id": "sofipo",
+      "label": "SOFIPO o caja regulada",
+      "emoji": "🏛️",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "informal",
+      "label": "Sin protección",
+      "emoji": "⚠️",
+      "color": "#EF4444"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "label": "Cuenta de ahorro en una institución bancaria autorizada",
+      "emoji": "💳",
+      "categoria_correcta": "banco",
+      "feedback": "Cubierta por el IPAB hasta el límite que marca la ley."
+    },
+    {
+      "id": "i2",
+      "label": "Caja de ahorro entre compañeros de trabajo, sin registro",
+      "emoji": "🤝",
+      "categoria_correcta": "informal",
+      "feedback": "Puede funcionar por confianza, pero si falla nadie responde."
+    },
+    {
+      "id": "i3",
+      "label": "Sociedad financiera popular autorizada y supervisada",
+      "emoji": "📋",
+      "categoria_correcta": "sofipo",
+      "feedback": "Tiene fondo de protección propio, con un límite menor al bancario."
+    },
+    {
+      "id": "i4",
+      "label": "\"Financiera\" que promete 5% mensual y no aparece en registros",
+      "emoji": "🚩",
+      "categoria_correcta": "informal",
+      "feedback": "Rendimiento imposible más ausencia de registro: la definición de fraude."
+    },
+    {
+      "id": "i5",
+      "label": "Depósito a plazo en un banco supervisado",
+      "emoji": "📆",
+      "categoria_correcta": "banco",
+      "feedback": "También entra en la cobertura del IPAB."
+    },
+    {
+      "id": "i6",
+      "label": "Cooperativa de ahorro autorizada de una comunidad",
+      "emoji": "🌾",
+      "categoria_correcta": "sofipo",
+      "feedback": "Opción legítima y a veces la única disponible en zonas rurales."
+    },
+    {
+      "id": "i7",
+      "label": "Tanda organizada por vecinos",
+      "emoji": "🔄",
+      "categoria_correcta": "informal",
+      "feedback": "Sin respaldo legal: todo depende de que nadie falle."
+    },
+    {
+      "id": "i8",
+      "label": "Cuenta digital de una institución bancaria autorizada",
+      "emoji": "📱",
+      "categoria_correcta": "banco",
+      "feedback": "Ser digital no cambia la protección: lo que importa es quién la emite."
+    },
+    {
+      "id": "i9",
+      "label": "Persona que recibe dinero prometiendo invertirlo por ti",
+      "emoji": "🕴️",
+      "categoria_correcta": "informal",
+      "feedback": "Una persona física no está autorizada para captar ahorro del público."
+    },
+    {
+      "id": "i10",
+      "label": "Entidad con fondo de protección propio y supervisión oficial",
+      "emoji": "🛡️",
+      "categoria_correcta": "sofipo",
+      "feedback": "Menos cobertura que un banco, pero muy lejos de estar desprotegida."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-1-8-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-1-8-b-escena.webp"
+}

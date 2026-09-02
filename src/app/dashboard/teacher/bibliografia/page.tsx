@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import Sidebar from "../../../../components/dashboard/Sidebar";
+import { useHasMounted } from "../../../../lib/useHasMounted";
 import { 
   Book, 
   Globe, 
@@ -136,9 +137,7 @@ export default function BibliografiaPage() {
   const [activeCategory, setActiveCategory] = useState<string>("Todos");
   const [activeLevel, setActiveLevel] = useState<string>("Todos");
   const [search, setSearch] = useState("");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => { setMounted(true); }, []);
+  const mounted = useHasMounted();
 
   const filteredResources = useMemo(() => {
     return resources.filter(r => {

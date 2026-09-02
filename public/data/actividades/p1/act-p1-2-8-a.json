@@ -1,0 +1,81 @@
+{
+  "code": "ACT-P1-2-8-A",
+  "unit_code": "P1-2-8",
+  "unit_title": "Los anuncios quieren que yo compre",
+  "level": "Primaria 1",
+  "edad": "6-7 años",
+  "tipo": "SIMULADOR",
+  "complejidad": "MEDIO",
+  "titulo": "El Medidor de Ganas",
+  "descripcion": "Mueve las barritas y descubre cómo las ganas de comprar bajan solas con el tiempo, y suben con cada truco del anuncio.",
+  "objetivo": "Visualizar que el deseo generado por publicidad se desvanece con la espera",
+  "xp": 250,
+  "inputs": [
+    {
+      "id": "trucos",
+      "label": "Trucos que usa el anuncio",
+      "type": "slider",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "unit": "trucos",
+      "referencia": "Niños felices, prisa, exageración y \"todos lo tienen\"."
+    },
+    {
+      "id": "dias",
+      "label": "Días que espero antes de decidir",
+      "type": "slider",
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "default": 0,
+      "unit": "días",
+      "referencia": "La regla de oro es esperar al menos 3 días."
+    },
+    {
+      "id": "me_sirve",
+      "label": "¿De verdad me sirve? (1 = nada, 10 = mucho)",
+      "type": "slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "unit": "pts",
+      "referencia": "Piensa en cuántas veces lo usarías de verdad."
+    }
+  ],
+  "formula": "Math.max(0, Math.min(100, (trucos * 15 + me_sirve * 5) - dias * 6))",
+  "descripcion_formula": "Cada truco sube las ganas, cada día de espera las baja, y lo que de verdad te sirve es lo único que se queda.",
+  "output_label": "Ganas de comprarlo ahora",
+  "output_suffix": "/100",
+  "escenarios": [
+    {
+      "condicion": "trucos * 15 + me_sirve * 5 - dias * 6 >= 70",
+      "mensaje": "Ganas altísimas. Ojo: si vienen de los trucos y no de que te sirva, en tres días se desinflan.",
+      "tipo": "peligro"
+    },
+    {
+      "condicion": "trucos * 15 + me_sirve * 5 - dias * 6 >= 40 && trucos * 15 + me_sirve * 5 - dias * 6 < 70",
+      "mensaje": "Ganas medias. Sube los días de espera y mira qué tanto bajan.",
+      "tipo": "advertencia"
+    },
+    {
+      "condicion": "trucos * 15 + me_sirve * 5 - dias * 6 < 40 && me_sirve >= 7",
+      "mensaje": "Las ganas bajaron pero sigue siendo útil para ti. Ese sí es un deseo tuyo, no del anuncio.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "trucos * 15 + me_sirve * 5 - dias * 6 < 40 && me_sirve < 7",
+      "mensaje": "Se desinflaron. El deseo era del anuncio, no tuyo. Te acabas de ahorrar el dinero.",
+      "tipo": "exito"
+    },
+    {
+      "condicion": "dias == 0",
+      "mensaje": "Estás decidiendo el mismo día que viste el anuncio. Ese es el peor momento posible.",
+      "tipo": "peligro"
+    }
+  ],
+  "portada": "/assets/misiones/p1/p1-2-8-a-portada.webp",
+  "escena": "/assets/misiones/p1/p1-2-8-a-escena.webp"
+}

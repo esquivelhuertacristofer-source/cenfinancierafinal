@@ -1,0 +1,96 @@
+{
+  "code": "ACT-P4-2-7-B",
+  "unit_code": "P4-2-7",
+  "unit_title": "Compras dentro de los videojuegos",
+  "level": "Primaria 4",
+  "edad": "9-10 años",
+  "tipo": "TRIVIA",
+  "complejidad": "MEDIO",
+  "titulo": "Reto de la Tienda del Juego",
+  "descripcion": "Responde rápido sobre cómo funcionan las compras dentro de los juegos.",
+  "objetivo": "Consolidar el reconocimiento de mecanismos de gasto en juegos",
+  "xp": 320,
+  "tiempo_por_pregunta": 20,
+  "multiplicador_racha": 1.5,
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Las monedas virtuales existen para:",
+      "respuesta_correcta": "Esconder el precio real",
+      "incorrectas": [
+        "Ahorrarte dinero",
+        "Cumplir la ley",
+        "Facilitar el pago"
+      ],
+      "dato_extra": "Si el precio no está en pesos, el cerebro no lo registra como gasto."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Los paquetes nunca cuadran con los precios porque:",
+      "respuesta_correcta": "El sobrante empuja a comprar más",
+      "incorrectas": [
+        "Es un error",
+        "Es casualidad",
+        "Lo exige la tienda"
+      ],
+      "dato_extra": "Diseño deliberado: el sobrante nunca alcanza para nada por sí solo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Una oferta por tiempo limitado busca:",
+      "respuesta_correcta": "Que no te dé tiempo de pensar",
+      "incorrectas": [
+        "Que ahorres",
+        "Que compares",
+        "Que esperes"
+      ],
+      "dato_extra": "La prisa es enemiga de cualquier buena decisión de compra."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Las cajas sorpresa funcionan como:",
+      "respuesta_correcta": "Una apuesta",
+      "incorrectas": [
+        "Un ahorro",
+        "Un préstamo",
+        "Un descuento"
+      ],
+      "dato_extra": "La posibilidad de ganar algo raro es lo que hace comprar otra y otra."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La regla de las 24 horas consiste en:",
+      "respuesta_correcta": "Esperar un día antes de comprar",
+      "incorrectas": [
+        "Comprar en 24 horas",
+        "Jugar 24 horas",
+        "Cancelar en 24 horas"
+      ],
+      "dato_extra": "Desactiva de un golpe la prisa, el azar y la presión social."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Si a las 24 horas ya no me acuerdo del artículo:",
+      "respuesta_correcta": "Era una reacción, no una decisión",
+      "incorrectas": [
+        "Hay que comprarlo igual",
+        "Hay que comprar dos",
+        "Se perdió la oferta"
+      ],
+      "dato_extra": "El olvido es la mejor prueba de que no lo querías tanto."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Poner un límite mensual sirve para:",
+      "respuesta_correcta": "Decidir con conciencia",
+      "incorrectas": [
+        "Dejar de jugar",
+        "Gastar más",
+        "Ganar el juego"
+      ],
+      "dato_extra": "No se trata de prohibir: se trata de elegir en vez de reaccionar."
+    }
+  ],
+  "portada": "/assets/misiones/p4/p4-2-7-b-portada.webp",
+  "escena": "/assets/misiones/p4/p4-2-7-b-escena.webp"
+}

@@ -1,0 +1,188 @@
+{
+  "code": "ACT-S1-4-8-A",
+  "unit_code": "S1-4-8",
+  "unit_title": "Canales de venta: dónde encuentro a mi cliente",
+  "level": "Secundaria 1",
+  "edad": "12-13 años",
+  "tipo": "CONSTRUCTOR",
+  "complejidad": "AVANZADO",
+  "titulo": "Mi Mezcla de Canales",
+  "descripcion": "Evalúa tus canales por costo de adquisición y decide dónde invertir.",
+  "objetivo": "Calcular el costo de adquisición por canal y elegir la mezcla adecuada",
+  "xp": 500,
+  "pasos": [
+    {
+      "id": "paso1",
+      "titulo": "Mi producto y mi cliente",
+      "descripcion": "Los datos que definen la decisión.",
+      "campos": [
+        {
+          "id": "precio",
+          "label": "Precio de venta por unidad",
+          "type": "number",
+          "min": 10,
+          "max": 200000,
+          "default": 450,
+          "unit": "$",
+          "placeholder": "450",
+          "requerido": true
+        },
+        {
+          "id": "costo_unitario",
+          "label": "Costo por unidad",
+          "type": "number",
+          "min": 0,
+          "max": 150000,
+          "default": 180,
+          "unit": "$",
+          "placeholder": "180",
+          "requerido": true
+        },
+        {
+          "id": "compras_al_ano",
+          "label": "Veces que un cliente compra al año",
+          "type": "slider",
+          "min": 1,
+          "max": 52,
+          "step": 1,
+          "default": 6,
+          "unit": "compras",
+          "ayuda": "La recurrencia cambia por completo qué canal conviene.",
+          "requerido": true
+        },
+        {
+          "id": "valor_cliente",
+          "label": "Lo que deja un cliente en un año",
+          "type": "calculated",
+          "formula": "Math.round((precio - costo_unitario) * compras_al_ano)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso2",
+      "titulo": "Canal A: redes sociales",
+      "descripcion": "Alcance amplio con costo variable.",
+      "campos": [
+        {
+          "id": "inversion_redes",
+          "label": "Inversión mensual en el canal",
+          "type": "number",
+          "min": 0,
+          "max": 200000,
+          "default": 3000,
+          "unit": "$",
+          "placeholder": "3000",
+          "requerido": true
+        },
+        {
+          "id": "clientes_redes",
+          "label": "Clientes nuevos que trae al mes",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 1,
+          "default": 12,
+          "unit": "clientes",
+          "requerido": true
+        },
+        {
+          "id": "cac_redes",
+          "label": "Costo por cliente en redes",
+          "type": "calculated",
+          "formula": "Math.round(inversion_redes / Math.max(1, clientes_redes))",
+          "unit": "$"
+        },
+        {
+          "id": "margen_redes",
+          "label": "Lo que deja cada cliente menos su costo",
+          "type": "calculated",
+          "formula": "Math.round((precio - costo_unitario) * compras_al_ano - inversion_redes / Math.max(1, clientes_redes))",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso3",
+      "titulo": "Canal B: intermediario",
+      "descripcion": "Volumen a cambio de margen.",
+      "campos": [
+        {
+          "id": "comision_pct",
+          "label": "Comisión que se lleva el intermediario",
+          "type": "slider",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "default": 25,
+          "unit": "%",
+          "requerido": true
+        },
+        {
+          "id": "clientes_inter",
+          "label": "Clientes nuevos que trae al mes",
+          "type": "slider",
+          "min": 0,
+          "max": 300,
+          "step": 1,
+          "default": 35,
+          "unit": "clientes",
+          "requerido": true
+        },
+        {
+          "id": "margen_inter",
+          "label": "Lo que deja cada cliente por este canal",
+          "type": "calculated",
+          "formula": "Math.round((precio * (1 - comision_pct / 100) - costo_unitario) * compras_al_ano)",
+          "unit": "$"
+        },
+        {
+          "id": "total_inter",
+          "label": "Aporte mensual del intermediario",
+          "type": "calculated",
+          "formula": "Math.round((precio * (1 - comision_pct / 100) - costo_unitario) * clientes_inter)",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "id": "paso4",
+      "titulo": "La decisión",
+      "descripcion": "Comparar y elegir la mezcla.",
+      "campos": [
+        {
+          "id": "aporte_redes",
+          "label": "Aporte mensual del canal de redes",
+          "type": "calculated",
+          "formula": "Math.round((precio - costo_unitario) * clientes_redes - inversion_redes)",
+          "unit": "$"
+        },
+        {
+          "id": "diferencia",
+          "label": "Diferencia entre ambos canales al mes",
+          "type": "calculated",
+          "formula": "Math.round((precio * (1 - comision_pct / 100) - costo_unitario) * clientes_inter - ((precio - costo_unitario) * clientes_redes - inversion_redes))",
+          "unit": "$"
+        },
+        {
+          "id": "recuperacion",
+          "label": "Compras necesarias para recuperar el costo de un cliente de redes",
+          "type": "calculated",
+          "formula": "Math.ceil(inversion_redes / Math.max(1, clientes_redes) / Math.max(1, precio - costo_unitario))",
+          "unit": "compras"
+        },
+        {
+          "id": "decision",
+          "label": "¿Qué mezcla eliges y por qué?",
+          "type": "textarea",
+          "placeholder": "Justifica con costo por cliente y recurrencia",
+          "requerido": true
+        }
+      ]
+    }
+  ],
+  "output_type": "estrategia_canales",
+  "exportable": true,
+  "portada": "/assets/misiones/s1/s1-4-8-a-portada.webp",
+  "escena": "/assets/misiones/s1/s1-4-8-a-escena.webp"
+}

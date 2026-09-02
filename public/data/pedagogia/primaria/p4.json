@@ -909,6 +909,926 @@
       "Explique que la CONDUSEF no es un banco, es una parte del gobierno que vigila a los bancos."
     ]
   },
+  "P4-1-6": {
+    "code": "P4-1-6",
+    "title": "Tipos de cuenta: nómina, ahorro y digital",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Distinguir los tipos de cuenta bancaria más comunes en México (nómina, ahorro y digital) y elegir la adecuada según el uso que se le va a dar.",
+      "competencies": [
+        "Clasificación de Productos Bancarios",
+        "Elección Según Necesidad",
+        "Comparación de Características",
+        "Autonomía Financiera"
+      ],
+      "materials": [
+        "Fichas descriptivas de tres tipos de cuenta",
+        "Tabla comparativa vacía",
+        "Casos de personas con necesidades distintas",
+        "Contratos simulados resumidos",
+        "Cartel de las cuatro preguntas comparativas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: No Todas Iguales",
+          "duration": "15 min",
+          "label": "Tres cuentas distintas"
+        },
+        {
+          "phase": "Desarrollo: Comparar",
+          "duration": "30 min",
+          "label": "Características de cada una"
+        },
+        {
+          "phase": "Cierre: Elegir",
+          "duration": "15 min",
+          "label": "Cuál para cada caso"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: NO TODAS LAS CUENTAS SON IGUALES (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuántos tipos de cuenta bancaria creen que existen. La mayoría pensará que solo una. Presente los tres tipos más comunes y explique que elegir mal una cuenta cuesta dinero cada mes, y que la elección depende del uso, no de cuál suena mejor.",
+          "activity": "Dinámica \"¿Cuántas Hay?\": el grupo estima y después descubre la variedad real de productos de captación en México."
+        },
+        {
+          "title": "FASE II: QUÉ TIENE CADA UNA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Con las fichas, los alumnos llenan una tabla comparativa con cuatro columnas: para qué sirve, qué comisiones tiene, qué requisitos pide y qué ventaja principal ofrece. La cuenta de nómina la abre el patrón y suele no cobrar manejo; la de ahorro busca guardar y puede pagar algo de interés; la digital se abre desde el celular y suele tener comisiones bajas pero límites de saldo.",
+          "activity": "Dinámica \"La Tabla\": cada equipo llena la comparación completa y marca la casilla que le parece más importante."
+        },
+        {
+          "title": "FASE III: CUÁL PARA CADA CASO (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente cuatro casos: alguien que empieza a trabajar, alguien que quiere guardar para un año, un adolescente que quiere su primera cuenta y alguien que solo necesita recibir transferencias. Los alumnos eligen la cuenta adecuada para cada uno y justifican con la tabla.",
+          "activity": "Dinámica \"Un Caso, Una Cuenta\": cada equipo asigna cuenta a cada caso y defiende su elección con dos argumentos de la tabla."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando alguien dice \"voy a abrir una cuenta\", casi nadie pregunta cuál. Pero existen varios tipos y elegir el equivocado cuesta dinero cada mes. En esta clase vas a conocer los tres más comunes en México y a saber cuál pedir según lo que necesites.",
+      "sections": [
+        {
+          "subtitle": "La cuenta de nómina",
+          "content": "Es la que abre una empresa para depositar el sueldo de sus trabajadores. Como el banco gana con el flujo de dinero que entra cada quincena, casi siempre no cobra comisión de manejo ni exige saldo mínimo. Su desventaja es que está ligada al empleo: si la persona cambia de trabajo, esa cuenta suele perder sus condiciones especiales y conviene revisarla."
+        },
+        {
+          "subtitle": "La cuenta de ahorro",
+          "content": "Está pensada para guardar dinero, no para moverlo todos los días. Puede pagar algún interés, aunque en México suele ser bajo en las cuentas básicas. A cambio, algunas piden saldo mínimo o cobran comisión si se hacen muchos retiros. Es la cuenta adecuada cuando el objetivo es acumular para una meta y no tocar el dinero constantemente."
+        },
+        {
+          "subtitle": "La cuenta digital",
+          "content": "Se abre desde el celular, en minutos y sin ir a una sucursal. Suele tener comisiones bajas o nulas y es la puerta de entrada más fácil al sistema financiero. A cambio tiene límites: un tope de saldo y de movimientos al mes, definidos por el nivel de la cuenta. Para un primer acercamiento son excelentes, y se pueden ampliar después presentando documentos."
+        },
+        {
+          "subtitle": "Las cuatro preguntas para elegir",
+          "content": "Ante cualquier cuenta conviene preguntar cuatro cosas: para qué la voy a usar, cuánto cobra al mes, qué requisitos pide y qué límites tiene. Con esas cuatro respuestas la comparación se vuelve objetiva. Elegir por el nombre del banco o porque la sucursal queda cerca es lo que lleva a pagar comisiones que no se necesitaban."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Quién abre normalmente la cuenta de nómina?",
+          "options": [
+            "El propio trabajador",
+            "La empresa donde se trabaja",
+            "El gobierno"
+          ],
+          "correct": "La empresa donde se trabaja"
+        },
+        {
+          "question": "¿Por qué la cuenta de nómina no suele cobrar manejo?",
+          "options": [
+            "Porque es obligatorio",
+            "Porque no tiene servicios",
+            "Porque el banco gana con el flujo del sueldo"
+          ],
+          "correct": "Porque el banco gana con el flujo del sueldo"
+        },
+        {
+          "question": "¿Para qué está pensada la cuenta de ahorro?",
+          "options": [
+            "Para guardar sin mover el dinero a diario",
+            "Para gastar todos los días",
+            "Para pagar la nómina"
+          ],
+          "correct": "Para guardar sin mover el dinero a diario"
+        },
+        {
+          "question": "¿Qué puede pedir una cuenta de ahorro?",
+          "options": [
+            "Un aval",
+            "Saldo mínimo o cobro por muchos retiros",
+            "Un empleo formal"
+          ],
+          "correct": "Saldo mínimo o cobro por muchos retiros"
+        },
+        {
+          "question": "¿Dónde se abre una cuenta digital?",
+          "options": [
+            "Solo en ventanilla",
+            "En la escuela",
+            "Desde el celular, sin ir a la sucursal"
+          ],
+          "correct": "Desde el celular, sin ir a la sucursal"
+        },
+        {
+          "question": "¿Qué limitación tienen las cuentas digitales básicas?",
+          "options": [
+            "Un tope de saldo y de movimientos",
+            "No se puede depositar",
+            "No tienen tarjeta"
+          ],
+          "correct": "Un tope de saldo y de movimientos"
+        },
+        {
+          "question": "Si cambio de trabajo, mi cuenta de nómina:",
+          "options": [
+            "Se cierra automáticamente",
+            "Puede perder sus condiciones especiales",
+            "Mejora sus beneficios"
+          ],
+          "correct": "Puede perder sus condiciones especiales"
+        },
+        {
+          "question": "¿Cuáles son las cuatro preguntas para elegir cuenta?",
+          "options": [
+            "Color, tamaño, logo y horario",
+            "Nombre, dirección, teléfono y correo",
+            "Para qué, cuánto cobra, qué pide y qué límites tiene"
+          ],
+          "correct": "Para qué, cuánto cobra, qué pide y qué límites tiene"
+        },
+        {
+          "question": "Elegir cuenta por el nombre del banco:",
+          "options": [
+            "Lleva a pagar comisiones innecesarias",
+            "Es lo más recomendable",
+            "Da mejores intereses"
+          ],
+          "correct": "Lleva a pagar comisiones innecesarias"
+        },
+        {
+          "question": "Una cuenta digital de nivel básico se puede:",
+          "options": [
+            "Nunca cambiar",
+            "Ampliar después presentando documentos",
+            "Usar solo un mes"
+          ],
+          "correct": "Ampliar después presentando documentos"
+        }
+      ],
+      "rubric": "Logrado: distingue los tres tipos de cuenta y asigna la adecuada a cada caso con argumentos de la tabla. En proceso: describe los tipos sin aplicarlos. Inicial: reconoce que existen varios tipos."
+    },
+    "teacher_tips": [
+      "Use folletos reales de bancos mexicanos si es posible. El lenguaje comercial real es parte de lo que hay que aprender a leer.",
+      "Insista en que la mejor cuenta depende del uso. Los alumnos tienden a buscar \"la mejor\" en abstracto.",
+      "Mencione los niveles de cuenta digital. Muchos adolescentes podrán abrir una en pocos años y conviene que sepan sus límites."
+    ]
+  },
+  "P4-1-7": {
+    "code": "P4-1-7",
+    "title": "El GAT: cuánto rinde de verdad mi ahorro",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender qué es el GAT, distinguir GAT nominal de GAT real y usarlo para comparar cuál instrumento de ahorro rinde de verdad.",
+      "competencies": [
+        "Lectura de Indicadores Financieros",
+        "Comparación de Rendimientos",
+        "Comprensión de Inflación",
+        "Decisión de Ahorro"
+      ],
+      "materials": [
+        "Fichas con GAT de distintos productos",
+        "Calculadora",
+        "Dato de inflación anual",
+        "Tabla de comparación de instrumentos",
+        "Cartel de GAT nominal contra GAT real"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dos Ofertas",
+          "duration": "15 min",
+          "label": "¿Cuál rinde más?"
+        },
+        {
+          "phase": "Desarrollo: El GAT",
+          "duration": "30 min",
+          "label": "Nominal y real"
+        },
+        {
+          "phase": "Cierre: Comparar",
+          "duration": "15 min",
+          "label": "Elegir con el dato"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: DOS OFERTAS QUE SUENAN IGUAL (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente dos productos de ahorro: uno que \"paga 6%\" y otro que \"paga 5% sin comisiones\". Pregunte cuál conviene. El grupo se dividirá. Explique que para no depender de la publicidad existe un indicador estandarizado que junta todo en un solo número: el GAT.",
+          "activity": "Dinámica \"¿Cuál Elijo?\": el grupo vota entre dos ofertas y descubre que faltan datos para decidir."
+        },
+        {
+          "title": "FASE II: GAT NOMINAL Y GAT REAL (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que el GAT, o Ganancia Anual Total, resume en un porcentaje lo que un ahorro rinde una vez descontadas las comisiones. Y que el GAT real le resta además la inflación, mostrando si el dinero realmente creció en poder de compra. Los alumnos calculan el GAT real de tres productos con la inflación dada y descubren que algunos quedan en negativo.",
+          "activity": "Dinámica \"Resta la Inflación\": cada equipo calcula el GAT real de tres productos y ordena de mejor a peor."
+        },
+        {
+          "title": "FASE III: ELEGIR CON EL DATO (CIERRE)",
+          "duration": "15 min",
+          "description": "Los alumnos vuelven a las dos ofertas del inicio, ahora con los GAT completos, y eligen con fundamento. Explique que por ley los productos de ahorro en México deben publicar su GAT, así que siempre se puede pedir. La conclusión es que un GAT real negativo no significa perder pesos, sino perder poder de compra.",
+          "activity": "Dinámica \"Ahora Sí Decido\": el grupo revisa su voto inicial y explica qué cambió con el dato del GAT real."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un banco dice que paga 6%, otro dice 5% sin comisiones y un tercero promete \"el mejor rendimiento\". ¿Cuál conviene? Para no adivinar existe un solo número que lo resume todo: el GAT. En esta clase vas a aprender a leerlo y a usar el que de verdad importa.",
+      "sections": [
+        {
+          "subtitle": "Qué es el GAT",
+          "content": "GAT significa Ganancia Anual Total. Es un porcentaje que resume cuánto rinde realmente un instrumento de ahorro en un año, ya descontadas las comisiones que cobra. Por ley, los productos de ahorro en México deben publicarlo, precisamente para que la gente pueda comparar sin depender de cómo esté escrita la publicidad."
+        },
+        {
+          "subtitle": "El GAT nominal y su límite",
+          "content": "El GAT nominal dice cuánto crece tu dinero en pesos. Si guardas $1,000 con un GAT nominal de 5%, al año tendrás $1,050. Suena bien, pero le falta una pieza: si mientras tanto los precios subieron 6%, esos $1,050 compran menos cosas que los $1,000 del año pasado. Creciste en pesos y perdiste en poder de compra."
+        },
+        {
+          "subtitle": "El GAT real es el que decide",
+          "content": "El GAT real le resta la inflación al nominal, y por eso es el que dice la verdad. Un GAT real positivo significa que tu dinero compra más que antes. Un GAT real negativo significa que compra menos, aunque tengas más pesos. Muchas cuentas de ahorro básicas en México tienen GAT real negativo: no te roban, pero tampoco te protegen de la inflación."
+        },
+        {
+          "subtitle": "Cómo usarlo para elegir",
+          "content": "Ante dos productos, se comparan sus GAT reales y se elige el mayor, considerando también el plazo y la disponibilidad del dinero. Un GAT real ligeramente negativo puede ser aceptable para el fondo de emergencia, que necesita estar disponible al instante. Pero para dinero que no vas a tocar en años, aceptar un GAT real negativo es regalar poder de compra."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué significa GAT?",
+          "options": [
+            "Gasto Anual Toal",
+            "Garantía Anual Tributaria",
+            "Ganancia Anual Total"
+          ],
+          "correct": "Ganancia Anual Total"
+        },
+        {
+          "question": "¿Qué resume el GAT?",
+          "options": [
+            "Lo que rinde el ahorro descontadas las comisiones",
+            "Solo el interés bruto",
+            "Las comisiones únicamente"
+          ],
+          "correct": "Lo que rinde el ahorro descontadas las comisiones"
+        },
+        {
+          "question": "¿Los productos de ahorro en México deben publicar su GAT?",
+          "options": [
+            "No, es opcional",
+            "Sí, por ley",
+            "Solo los bancos grandes"
+          ],
+          "correct": "Sí, por ley"
+        },
+        {
+          "question": "¿Qué le resta el GAT real al nominal?",
+          "options": [
+            "Las comisiones",
+            "Los impuestos",
+            "La inflación"
+          ],
+          "correct": "La inflación"
+        },
+        {
+          "question": "GAT nominal 5% e inflación 6%. El GAT real es:",
+          "options": [
+            "Negativo",
+            "Positivo",
+            "Cero"
+          ],
+          "correct": "Negativo"
+        },
+        {
+          "question": "Un GAT real negativo significa:",
+          "options": [
+            "Que perdí pesos",
+            "Que mi dinero compra menos que antes",
+            "Que me cobraron de más"
+          ],
+          "correct": "Que mi dinero compra menos que antes"
+        },
+        {
+          "question": "Con GAT nominal 5%, $1,000 al año se vuelven:",
+          "options": [
+            "$1,500",
+            "$1,005",
+            "$1,050"
+          ],
+          "correct": "$1,050"
+        },
+        {
+          "question": "¿Cuál es el GAT que decide una comparación?",
+          "options": [
+            "El real",
+            "El nominal",
+            "El de la publicidad"
+          ],
+          "correct": "El real"
+        },
+        {
+          "question": "Un GAT real ligeramente negativo puede aceptarse en:",
+          "options": [
+            "El ahorro de diez años",
+            "El fondo de emergencia, que debe estar disponible",
+            "Cualquier caso"
+          ],
+          "correct": "El fondo de emergencia, que debe estar disponible"
+        },
+        {
+          "question": "Muchas cuentas de ahorro básicas en México tienen:",
+          "options": [
+            "GAT real altísimo",
+            "GAT prohibido",
+            "GAT real negativo"
+          ],
+          "correct": "GAT real negativo"
+        }
+      ],
+      "rubric": "Logrado: define GAT, distingue nominal de real y elige el mejor producto justificando con el dato. En proceso: define GAT sin aplicar la resta de inflación. Inicial: reconoce que existe un indicador comparativo."
+    },
+    "teacher_tips": [
+      "Use el dato de inflación vigente al momento de la clase. El ejercicio pierde fuerza con cifras inventadas.",
+      "Insista en que GAT real negativo no es un fraude. Es una realidad del mercado que hay que saber leer.",
+      "Conecte con la clase de inflación del bloque: aquí es donde ese concepto se vuelve una herramienta de decisión."
+    ]
+  },
+  "P4-1-8": {
+    "code": "P4-1-8",
+    "title": "Bancos, SOFIPOs y cajas de ahorro: no todos son iguales",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Distinguir bancos, SOFIPOs y cajas de ahorro por su nivel de regulación y protección, y verificar que una institución esté autorizada antes de confiarle dinero.",
+      "competencies": [
+        "Verificación de Instituciones",
+        "Evaluación de Riesgo",
+        "Conocimiento del Sistema Financiero",
+        "Prevención de Fraude"
+      ],
+      "materials": [
+        "Fichas de tres tipos de institución",
+        "Casos de instituciones reales y ficticias",
+        "Tabla de protección por tipo",
+        "Guía para verificar autorización",
+        "Casos de quiebras históricas adaptados"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Promesas Altas",
+          "duration": "15 min",
+          "label": "\"Te pago 20% al mes\""
+        },
+        {
+          "phase": "Desarrollo: Tres Tipos",
+          "duration": "30 min",
+          "label": "Quién los supervisa"
+        },
+        {
+          "phase": "Cierre: Verificar",
+          "duration": "15 min",
+          "label": "Cómo comprobar antes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA PROMESA DEMASIADO BUENA (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una oferta ficticia que promete 20% mensual garantizado. Pregunte si aceptarían. Explique que rendimientos así no existen en instrumentos seguros, y que la primera defensa contra un fraude no es desconfiar de todo, sino saber verificar si la institución está autorizada.",
+          "activity": "Dinámica \"¿Aceptas?\": el grupo evalúa tres ofertas con rendimientos crecientes y decide en cuál empieza la desconfianza."
+        },
+        {
+          "title": "FASE II: BANCOS, SOFIPOS Y CAJAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique las tres categorías. Los bancos están supervisados y sus depósitos protegidos por el IPAB. Las SOFIPOs son sociedades financieras populares autorizadas, con su propio fondo de protección y un límite menor. Las cajas de ahorro pueden estar reguladas o ser informales, y esa diferencia lo cambia todo. Los alumnos llenan una tabla de supervisión y protección.",
+          "activity": "Dinámica \"Quién Responde\": cada equipo llena la tabla de quién supervisa y hasta cuánto protege cada tipo de institución."
+        },
+        {
+          "title": "FASE III: VERIFICAR ANTES DE CONFIAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el hábito: antes de depositar dinero en cualquier institución, verificar que esté autorizada en los registros oficiales de las autoridades financieras. Explique que una oficina bonita, un logo profesional y testimonios en redes no prueban nada. Solo el registro oficial lo hace.",
+          "activity": "Dinámica \"Antes de Depositar\": el grupo define el checklist de tres pasos que aplicaría antes de confiar dinero a una institución."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "No todas las instituciones que reciben dinero son iguales. Algunas están supervisadas y tienen tu dinero protegido; otras no responden ante nadie. La diferencia no se ve en el letrero de la puerta, y en esta clase vas a aprender exactamente cómo distinguirlas.",
+      "sections": [
+        {
+          "subtitle": "Los bancos: la máxima supervisión",
+          "content": "Los bancos en México están sujetos a la supervisión más estricta del sistema y sus depósitos están cubiertos por el IPAB hasta el límite que marca la ley. A cambio de esa seguridad, los rendimientos que ofrecen suelen ser moderados. Es la relación de siempre: más seguridad, menos rendimiento. Quien promete lo contrario está ofreciendo algo que no puede sostener."
+        },
+        {
+          "subtitle": "Las SOFIPOs: autorizadas y con su propio fondo",
+          "content": "Las Sociedades Financieras Populares son instituciones autorizadas que atienden a personas y comunidades que muchas veces no llegan a la banca tradicional. Están supervisadas y cuentan con un fondo de protección propio, aunque con un límite de cobertura menor al de los bancos. Pueden ofrecer rendimientos algo mayores, y ese diferencial corresponde a un riesgo también algo mayor."
+        },
+        {
+          "subtitle": "Las cajas de ahorro: depende de cuál",
+          "content": "Aquí está la trampa. Existen cajas y cooperativas de ahorro debidamente autorizadas y supervisadas, que son opciones legítimas. Y existen cajas informales que operan por confianza entre vecinos o compañeros de trabajo, sin autorización ni supervisión. Ambas se llaman igual y pueden verse igual, pero si la informal falla, no hay ninguna institución que responda."
+        },
+        {
+          "subtitle": "Verificar es un trámite de dos minutos",
+          "content": "Antes de confiar dinero a cualquier institución hay que verificar que aparezca en los registros oficiales de las autoridades financieras mexicanas. No cuesta nada y toma minutos. Una oficina elegante, un logo profesional o testimonios en redes sociales no prueban absolutamente nada: los fraudes más grandes siempre tuvieron oficinas impecables."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué protege los depósitos bancarios en México?",
+          "options": [
+            "El IPAB",
+            "La CURP",
+            "El INEGI"
+          ],
+          "correct": "El IPAB"
+        },
+        {
+          "question": "¿Qué son las SOFIPOs?",
+          "options": [
+            "Bancos extranjeros",
+            "Sociedades financieras populares autorizadas",
+            "Tiendas de crédito"
+          ],
+          "correct": "Sociedades financieras populares autorizadas"
+        },
+        {
+          "question": "Las SOFIPOs tienen:",
+          "options": [
+            "La misma cobertura que los bancos",
+            "Ninguna protección",
+            "Su propio fondo de protección con límite menor"
+          ],
+          "correct": "Su propio fondo de protección con límite menor"
+        },
+        {
+          "question": "¿Todas las cajas de ahorro están reguladas?",
+          "options": [
+            "No, algunas son informales",
+            "Sí, todas",
+            "Ninguna lo está"
+          ],
+          "correct": "No, algunas son informales"
+        },
+        {
+          "question": "Si una caja informal falla:",
+          "options": [
+            "Responde el IPAB",
+            "No hay institución que responda",
+            "Responde el banco"
+          ],
+          "correct": "No hay institución que responda"
+        },
+        {
+          "question": "A mayor seguridad, normalmente:",
+          "options": [
+            "Mayor rendimiento",
+            "No hay relación",
+            "Menor rendimiento"
+          ],
+          "correct": "Menor rendimiento"
+        },
+        {
+          "question": "Alguien promete 20% mensual garantizado. Eso:",
+          "options": [
+            "No existe en instrumentos seguros",
+            "Es una gran oportunidad",
+            "Es común en bancos"
+          ],
+          "correct": "No existe en instrumentos seguros"
+        },
+        {
+          "question": "¿Qué prueba que una institución es confiable?",
+          "options": [
+            "Tener oficina bonita",
+            "Aparecer en los registros oficiales",
+            "Tener muchos seguidores"
+          ],
+          "correct": "Aparecer en los registros oficiales"
+        },
+        {
+          "question": "Un logo profesional y testimonios en redes:",
+          "options": [
+            "Son garantía suficiente",
+            "Reemplazan la verificación",
+            "No prueban nada"
+          ],
+          "correct": "No prueban nada"
+        },
+        {
+          "question": "¿Cuánto toma verificar una institución?",
+          "options": [
+            "Minutos, y no cuesta nada",
+            "Varios meses",
+            "Requiere abogado"
+          ],
+          "correct": "Minutos, y no cuesta nada"
+        }
+      ],
+      "rubric": "Logrado: distingue los tres tipos por supervisión y protección, y describe el proceso de verificación. En proceso: nombra los tipos sin diferenciar su protección. Inicial: reconoce que hay instituciones más seguras que otras."
+    },
+    "teacher_tips": [
+      "No presente a las SOFIPOs ni a las cajas reguladas como algo malo. Son opciones legítimas y a veces las únicas disponibles en comunidades rurales.",
+      "El punto central es la verificación, no la desconfianza. Un alumno que desconfía de todo queda igual de desprotegido.",
+      "Si hay conexión disponible, muestre en vivo el registro oficial de una institución. La demostración vale más que la explicación."
+    ]
+  },
+  "P4-1-9": {
+    "code": "P4-1-9",
+    "title": "Remesas: el dinero que cruza la frontera",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Comprender qué son las remesas, su importancia en la economía mexicana y cómo comparar el costo de enviarlas y recibirlas.",
+      "competencies": [
+        "Comprensión de Remesas",
+        "Comparación de Costos de Envío",
+        "Conciencia Económica Nacional",
+        "Empatía Financiera"
+      ],
+      "materials": [
+        "Mapa de México con flujos de remesas",
+        "Comparativo de comisiones de envío",
+        "Datos del volumen anual de remesas",
+        "Calculadora",
+        "Casos de familias receptoras"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Dinero que Cruza",
+          "duration": "15 min",
+          "label": "¿Cuánto llega al año?"
+        },
+        {
+          "phase": "Desarrollo: El Costo",
+          "duration": "30 min",
+          "label": "Comisión y tipo de cambio"
+        },
+        {
+          "phase": "Cierre: Qué se Hace",
+          "duration": "15 min",
+          "label": "Usar bien lo que llega"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL DINERO QUE CRUZA LA FRONTERA (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte si conocen a alguien que reciba dinero de un familiar en el extranjero. En la mayoría de los grupos habrá manos levantadas. Explique que ese envío se llama remesa y que en conjunto representan una de las principales fuentes de ingreso de divisas de México, sosteniendo a millones de hogares.",
+          "activity": "Dinámica \"¿Cuánto Crees?\": el grupo estima el monto anual de remesas que recibe México y luego se compara con el dato real."
+        },
+        {
+          "title": "FASE II: LO QUE CUESTA ENVIAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique que enviar una remesa tiene dos costos: la comisión que cobra la empresa y el tipo de cambio que aplica, que suele ser peor que el oficial. Los alumnos calculan cuánto llega realmente con dos proveedores distintos sobre el mismo envío. Descubren que la diferencia entre uno y otro puede ser de varios cientos de pesos.",
+          "activity": "Dinámica \"Compara Dos Envíos\": cada equipo calcula lo que recibe la familia con dos proveedores y encuentra la diferencia."
+        },
+        {
+          "title": "FASE III: USAR BIEN LO QUE LLEGA (CIERRE)",
+          "duration": "15 min",
+          "description": "Discutan qué suele hacerse con las remesas: gasto corriente, salud, educación, vivienda, ahorro. Explique que las familias que destinan una parte al ahorro o a mejorar una vivienda construyen algo duradero, mientras que las que gastan el total quedan dependiendo del siguiente envío. Trate el tema con respeto: muchas familias no tienen margen para elegir.",
+          "activity": "Dinámica \"Reparto de la Remesa\": el grupo propone una distribución para una remesa mensual y justifica cada porcentaje."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cada año millones de personas envían dinero a México desde el extranjero para sostener a sus familias. Ese dinero tiene nombre: remesa. En esta clase vas a entender cuánto significa para el país, cuánto cuesta enviarlo y cómo se aprovecha mejor cuando llega.",
+      "sections": [
+        {
+          "subtitle": "Qué es una remesa",
+          "content": "Una remesa es el dinero que una persona que trabaja en otro país envía a su familia en el suyo. En México son un pilar de la economía: en conjunto suman decenas de miles de millones de dólares al año y llegan a millones de hogares, muchos de ellos en comunidades pequeñas donde representan una parte central del ingreso familiar."
+        },
+        {
+          "subtitle": "Los dos costos del envío",
+          "content": "Enviar dinero cuesta de dos formas. La primera es la comisión, que es lo que cobra la empresa por el servicio y que suele estar a la vista. La segunda es el tipo de cambio: muchas empresas convierten los dólares a un tipo peor que el oficial y se quedan con la diferencia. Ese segundo costo es el que casi nadie compara, y muchas veces es el más grande de los dos."
+        },
+        {
+          "subtitle": "Comparar antes de enviar",
+          "content": "Para comparar de verdad hay que preguntar una sola cosa: cuántos pesos va a recibir la familia. Ese número ya incluye comisión y tipo de cambio, así que evita que la publicidad de \"envíos sin comisión\" confunda. Sobre envíos frecuentes, elegir bien el proveedor puede representar miles de pesos al año para la familia receptora."
+        },
+        {
+          "subtitle": "Qué se hace con lo que llega",
+          "content": "La mayor parte de las remesas se destina a gasto necesario: comida, salud, educación, servicios. Cuando hay margen, la parte que se destina a ahorro, a mejorar la vivienda o a un pequeño negocio construye algo que dura más allá del siguiente envío. No todas las familias tienen ese margen, y reconocerlo es parte de entender el tema con seriedad y sin juicios."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una remesa?",
+          "options": [
+            "Un préstamo bancario",
+            "Dinero enviado desde otro país a la familia",
+            "Un impuesto"
+          ],
+          "correct": "Dinero enviado desde otro país a la familia"
+        },
+        {
+          "question": "Para México, las remesas son:",
+          "options": [
+            "Un ingreso menor",
+            "Algo prohibido",
+            "Una de las principales fuentes de divisas"
+          ],
+          "correct": "Una de las principales fuentes de divisas"
+        },
+        {
+          "question": "¿Cuáles son los dos costos de enviar?",
+          "options": [
+            "La comisión y el tipo de cambio",
+            "El envío y el sello",
+            "El IVA y la propina"
+          ],
+          "correct": "La comisión y el tipo de cambio"
+        },
+        {
+          "question": "¿Cuál de los dos costos casi nadie compara?",
+          "options": [
+            "La comisión",
+            "El tipo de cambio",
+            "Ninguno"
+          ],
+          "correct": "El tipo de cambio"
+        },
+        {
+          "question": "¿Qué hay que preguntar para comparar bien?",
+          "options": [
+            "Cuánto cobra de comisión",
+            "Cuál empresa es más grande",
+            "Cuántos pesos recibirá la familia"
+          ],
+          "correct": "Cuántos pesos recibirá la familia"
+        },
+        {
+          "question": "Un anuncio de \"envío sin comisión\" puede:",
+          "options": [
+            "Compensarlo con un peor tipo de cambio",
+            "Ser siempre la mejor opción",
+            "No tener trampa nunca"
+          ],
+          "correct": "Compensarlo con un peor tipo de cambio"
+        },
+        {
+          "question": "Sobre envíos frecuentes, elegir bien el proveedor puede significar:",
+          "options": [
+            "Unos centavos",
+            "Miles de pesos al año",
+            "Nada"
+          ],
+          "correct": "Miles de pesos al año"
+        },
+        {
+          "question": "¿En qué se usa la mayor parte de las remesas?",
+          "options": [
+            "Solo en lujos",
+            "Solo en ahorro",
+            "Gasto necesario: comida, salud y educación"
+          ],
+          "correct": "Gasto necesario: comida, salud y educación"
+        },
+        {
+          "question": "Destinar una parte al ahorro o a la vivienda:",
+          "options": [
+            "Construye algo que dura más allá del siguiente envío",
+            "Es un desperdicio",
+            "Está prohibido"
+          ],
+          "correct": "Construye algo que dura más allá del siguiente envío"
+        },
+        {
+          "question": "¿Todas las familias pueden ahorrar parte de la remesa?",
+          "options": [
+            "Sí, todas",
+            "No, muchas no tienen margen",
+            "Solo las de la ciudad"
+          ],
+          "correct": "No, muchas no tienen margen"
+        }
+      ],
+      "rubric": "Logrado: explica qué son las remesas, identifica los dos costos y compara proveedores por pesos recibidos. En proceso: define remesa sin analizar costos. Inicial: reconoce el fenómeno."
+    },
+    "teacher_tips": [
+      "Trate el tema con sensibilidad. En muchos grupos habrá alumnos con familiares en el extranjero y la clase los toca directamente.",
+      "El hallazgo del tipo de cambio como costo oculto es el aprendizaje central. Dedíquele el tiempo del cálculo comparativo.",
+      "Evite juzgar el uso que las familias dan a las remesas. El objetivo es informar sobre opciones, no evaluar decisiones ajenas."
+    ]
+  },
+  "P4-1-10": {
+    "code": "P4-1-10",
+    "title": "Hablar de dinero en familia: la conversación que nadie tiene",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Primeros Pasos Hacia el Ahorro",
+    "metadata": {
+      "objective": "Reconocer el valor de hablar de dinero en familia y practicar una conversación financiera respetuosa sobre gastos, metas y prioridades.",
+      "competencies": [
+        "Comunicación Financiera",
+        "Escucha en Familia",
+        "Planeación Conjunta",
+        "Manejo de Temas Sensibles"
+      ],
+      "materials": [
+        "Guion de conversación familiar",
+        "Tarjetas de temas para conversar",
+        "Formato de acuerdos familiares",
+        "Casos de conversaciones que salieron mal",
+        "Cartel de las tres reglas de la conversación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Tema Prohibido",
+          "duration": "15 min",
+          "label": "¿Se habla de dinero en casa?"
+        },
+        {
+          "phase": "Desarrollo: Cómo Hablar",
+          "duration": "30 min",
+          "label": "Reglas y práctica"
+        },
+        {
+          "phase": "Cierre: Mi Conversación",
+          "duration": "15 min",
+          "label": "Preparar la de casa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL TEMA DEL QUE NADIE HABLA (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte, sin pedir detalles personales, si en su casa se habla de dinero abiertamente. En muchas familias el tema se evita porque genera tensión. Explique que ese silencio tiene un costo: los hijos no aprenden a manejar dinero y los adultos toman decisiones importantes sin ponerse de acuerdo.",
+          "activity": "Dinámica \"¿Se Habla o No?\": votación anónima sobre si el dinero es tema de conversación en casa, y discusión del resultado agregado."
+        },
+        {
+          "title": "FASE II: LAS TRES REGLAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enseñe tres reglas para que la conversación funcione: elegir un momento tranquilo y no en medio de un problema, hablar de números y no de culpas, y terminar con un acuerdo concreto. Los alumnos practican en tríos representando una conversación familiar sobre un gasto grande.",
+          "activity": "Dinámica \"Conversación en Tríos\": cada grupo representa una conversación aplicando las tres reglas y recibe observaciones."
+        },
+        {
+          "title": "FASE III: PREPARAR LA CONVERSACIÓN DE CASA (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno prepara una conversación real que podría tener en casa: sobre su domingo, sobre una meta de ahorro o sobre un gasto que quiere proponer. Escribe qué va a pedir, con qué números lo va a sustentar y qué acuerdo buscaría. Aclare que el objetivo no es exigir, sino participar.",
+          "activity": "Dinámica \"Mi Propuesta\": cada alumno redacta su planteamiento en tres líneas: qué pide, con qué números y qué acuerdo propone."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "En muchas casas se habla de todo menos de dinero. Y ese silencio cuesta: nadie se pone de acuerdo, nadie aprende y las decisiones importantes se toman a solas. En esta clase vas a aprender a tener esa conversación bien, y a prepararla para tu propia casa.",
+      "sections": [
+        {
+          "subtitle": "Por qué el dinero se vuelve un tema difícil",
+          "content": "Hablar de dinero mezcla números con emociones: preocupación, culpa, comparación con otras familias, miedo a preocupar a los hijos. Por eso muchas conversaciones terminan en discusión y muchas familias prefieren evitarlas. Pero el tema no desaparece por no hablarlo: solo se vuelve más difícil cuando finalmente hay que enfrentarlo."
+        },
+        {
+          "subtitle": "Regla uno: el momento correcto",
+          "content": "La peor hora para hablar de dinero es en medio de un problema de dinero. Cuando acaba de llegar un recibo alto o falta para algo urgente, las emociones están al máximo y nadie escucha. La conversación funciona cuando se agenda en un momento tranquilo, sin prisa y sin una crisis encima. Puede parecer artificial, y funciona mucho mejor."
+        },
+        {
+          "subtitle": "Regla dos: números, no culpas",
+          "content": "Decir \"siempre gastas de más\" no lleva a ningún lado, porque la respuesta natural es defenderse. Decir \"este mes gastamos $800 en comida fuera y teníamos $500 planeados\" abre una conversación distinta, porque el número es un hecho compartido y no una acusación. Los números no se ofenden y no se defienden: se revisan juntos."
+        },
+        {
+          "subtitle": "Regla tres: terminar con un acuerdo",
+          "content": "Una conversación que termina sin acuerdo concreto se va a repetir igual el mes siguiente. Un acuerdo puede ser pequeño: revisar los gastos una vez al mes, poner un límite a una categoría, apartar una cantidad fija para una meta. Lo importante es que sea específico y que ambas partes lo digan en voz alta. Un acuerdo vago es lo mismo que no tener acuerdo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué el dinero es un tema difícil en familia?",
+          "options": [
+            "Porque es aburrido",
+            "Porque es ilegal",
+            "Porque mezcla números con emociones"
+          ],
+          "correct": "Porque mezcla números con emociones"
+        },
+        {
+          "question": "¿Qué pasa cuando el tema se evita?",
+          "options": [
+            "No desaparece, solo se vuelve más difícil",
+            "Se resuelve solo",
+            "Mejora la relación"
+          ],
+          "correct": "No desaparece, solo se vuelve más difícil"
+        },
+        {
+          "question": "¿Cuál es la peor hora para hablar de dinero?",
+          "options": [
+            "Un domingo tranquilo",
+            "En medio de un problema de dinero",
+            "Después de comer"
+          ],
+          "correct": "En medio de un problema de dinero"
+        },
+        {
+          "question": "¿Cuál es la regla uno?",
+          "options": [
+            "Hablar fuerte",
+            "Hablar a solas",
+            "Elegir un momento tranquilo"
+          ],
+          "correct": "Elegir un momento tranquilo"
+        },
+        {
+          "question": "Decir \"siempre gastas de más\":",
+          "options": [
+            "Provoca que la otra persona se defienda",
+            "Resuelve el problema",
+            "Es la mejor forma"
+          ],
+          "correct": "Provoca que la otra persona se defienda"
+        },
+        {
+          "question": "¿Cómo se plantea mejor un problema de gasto?",
+          "options": [
+            "Con reproches",
+            "Con el número concreto y lo planeado",
+            "Con silencio"
+          ],
+          "correct": "Con el número concreto y lo planeado"
+        },
+        {
+          "question": "¿Por qué funcionan los números?",
+          "options": [
+            "Porque asustan",
+            "Porque son difíciles",
+            "Porque son hechos compartidos, no acusaciones"
+          ],
+          "correct": "Porque son hechos compartidos, no acusaciones"
+        },
+        {
+          "question": "¿Cómo debe terminar la conversación?",
+          "options": [
+            "Con un acuerdo concreto",
+            "Con un abrazo nada más",
+            "Sin conclusiones"
+          ],
+          "correct": "Con un acuerdo concreto"
+        },
+        {
+          "question": "Una conversación sin acuerdo:",
+          "options": [
+            "Ya sirvió",
+            "Se va a repetir igual el mes siguiente",
+            "Es la ideal"
+          ],
+          "correct": "Se va a repetir igual el mes siguiente"
+        },
+        {
+          "question": "Un acuerdo vago:",
+          "options": [
+            "Sirve igual",
+            "Es mejor que uno específico",
+            "Es lo mismo que no tener acuerdo"
+          ],
+          "correct": "Es lo mismo que no tener acuerdo"
+        }
+      ],
+      "rubric": "Logrado: aplica las tres reglas y prepara un planteamiento con números y acuerdo propuesto. En proceso: nombra las reglas sin aplicarlas. Inicial: reconoce la importancia de hablar del tema."
+    },
+    "teacher_tips": [
+      "Nunca pida a los alumnos que revelen la situación económica de su casa. Trabaje con casos ficticios y con preparación personal privada.",
+      "La práctica en tríos es donde se aprende. Escuchar la regla sin ensayarla no cambia el comportamiento en casa.",
+      "Aclare que el objetivo es participar, no exigir. Un alumno que llega a casa a reclamar convierte el ejercicio en un problema."
+    ]
+  },
   "P4-2-1": {
     "code": "P4-2-1",
     "title": "La tarjeta de débito: usarla bien y sin perder el control",
@@ -1808,6 +2728,926 @@
       "Simule el envío de un correo de phishing en el salón para ver quién cae y explicar el error en vivo.",
       "Enseñe la regla: 'Ante la duda, no des clic'.",
       "Mencione que los bancos tienen canales oficiales (Apps, teléfonos en tarjetas) para verificar información."
+    ]
+  },
+  "P4-2-6": {
+    "code": "P4-2-6",
+    "title": "Suscripciones: los cobros que se renuevan solos",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar los cobros por suscripción que se renuevan automáticamente, calcular su costo anual y aprender a revisarlos y cancelarlos.",
+      "competencies": [
+        "Detección de Cobros Recurrentes",
+        "Cálculo de Costo Anual",
+        "Gestión de Suscripciones",
+        "Control del Gasto Automático"
+      ],
+      "materials": [
+        "Lista de suscripciones comunes con precios",
+        "Estados de cuenta simulados con cargos recurrentes",
+        "Calculadora",
+        "Formato de inventario de suscripciones",
+        "Cartel de la prueba gratis"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Cobro Invisible",
+          "duration": "15 min",
+          "label": "¿De dónde salió esto?"
+        },
+        {
+          "phase": "Desarrollo: El Inventario",
+          "duration": "30 min",
+          "label": "Listar y sumar"
+        },
+        {
+          "phase": "Cierre: Revisar y Cancelar",
+          "duration": "15 min",
+          "label": "El hábito trimestral"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL COBRO QUE NADIE RECUERDA (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un estado de cuenta simulado con cinco cargos pequeños y repetidos de distintas apps. Pregunte cuáles reconocerían. Explique que una suscripción se cobra sola cada mes hasta que alguien la cancela, y que ese \"hasta que alguien la cancele\" es exactamente el modelo de negocio.",
+          "activity": "Dinámica \"¿Cuál Reconoces?\": el grupo revisa el estado de cuenta y marca los cargos que podría explicar."
+        },
+        {
+          "title": "FASE II: EL INVENTARIO Y LA SUMA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos listan las suscripciones que hay en un hogar típico: video, música, videojuegos, almacenamiento en la nube, apps. Anotan el precio mensual de cada una y multiplican por doce. La suma anual suele superar por mucho lo que cualquiera hubiera estimado, y ese es el momento clave de la sesión.",
+          "activity": "Dinámica \"Multiplica por Doce\": cada equipo suma el costo anual de un paquete de suscripciones y lo compara con su estimación previa."
+        },
+        {
+          "title": "FASE III: EL HÁBITO DE REVISAR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el hábito: cada tres meses revisar la lista de suscripciones activas y preguntarse una sola cosa por cada una: ¿la usé este mes? Las que no se usan se cancelan. Explique también la trampa de la prueba gratis, que pide la tarjeta y empieza a cobrar en silencio cuando termina el periodo.",
+          "activity": "Dinámica \"¿La Usé?\": el grupo aplica la pregunta a una lista de suscripciones y decide cuáles cancelaría."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Hay gastos que no decides cada mes: se cobran solos. Se llaman suscripciones y tienen una característica peculiar: siguen cobrando aunque hayas dejado de usarlas. En esta clase vas a aprender a encontrarlas, a sumarlas y a decidir cuáles vale la pena conservar.",
+      "sections": [
+        {
+          "subtitle": "Cómo funciona una suscripción",
+          "content": "Una suscripción es un servicio que se cobra automáticamente cada periodo, casi siempre cada mes, hasta que alguien la cancela. No hay que autorizar cada cobro: se autorizó una sola vez al contratarla. Por eso es tan cómoda, y por eso es tan fácil olvidarla. La empresa no tiene ninguna obligación de recordarte que dejaste de usarla."
+        },
+        {
+          "subtitle": "Pequeñas por diseño",
+          "content": "Los precios de las suscripciones están pensados para no doler: $79, $99, $149 al mes. Cada uno por separado parece irrelevante. Pero cinco suscripciones de $100 son $500 al mes y $6,000 al año, que ya es una cantidad seria. Es el mismo mecanismo del gasto hormiga, pero automatizado, y por eso es todavía más difícil de detectar."
+        },
+        {
+          "subtitle": "La trampa de la prueba gratis",
+          "content": "La prueba gratis pide tu tarjeta desde el inicio, aunque no vaya a cobrar nada durante el periodo de prueba. Al terminar, empieza a cobrar sin avisar. Quien no anotó la fecha se entera meses después. La regla es simple: al activar una prueba gratis, anota inmediatamente la fecha en que termina y decide antes de ese día si sigues o cancelas."
+        },
+        {
+          "subtitle": "La revisión trimestral",
+          "content": "El hábito que resuelve todo es revisar las suscripciones activas cada tres meses y hacerse una sola pregunta por cada una: ¿la usé en este periodo? Si la respuesta es no, se cancela. Siempre se puede volver a contratar. Mucha gente conserva servicios que no usa por si acaso, y ese \"por si acaso\" cuesta miles de pesos al año."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es una suscripción?",
+          "options": [
+            "Una compra única",
+            "Un préstamo",
+            "Un cobro automático que se repite hasta cancelarlo"
+          ],
+          "correct": "Un cobro automático que se repite hasta cancelarlo"
+        },
+        {
+          "question": "¿Cuántas veces se autoriza el cobro?",
+          "options": [
+            "Una sola vez, al contratarla",
+            "Cada mes",
+            "Nunca"
+          ],
+          "correct": "Una sola vez, al contratarla"
+        },
+        {
+          "question": "Cinco suscripciones de $100 al mes son al año:",
+          "options": [
+            "$500",
+            "$6,000",
+            "$1,200"
+          ],
+          "correct": "$6,000"
+        },
+        {
+          "question": "¿Por qué los precios son pequeños?",
+          "options": [
+            "Porque el servicio es barato",
+            "Por ley",
+            "Para que no duelan y no se noten"
+          ],
+          "correct": "Para que no duelan y no se noten"
+        },
+        {
+          "question": "¿Qué pide una prueba gratis?",
+          "options": [
+            "La tarjeta desde el inicio",
+            "Nada",
+            "Solo el correo"
+          ],
+          "correct": "La tarjeta desde el inicio"
+        },
+        {
+          "question": "Al terminar la prueba gratis:",
+          "options": [
+            "Se cancela sola",
+            "Empieza a cobrar sin avisar",
+            "Avisan por teléfono"
+          ],
+          "correct": "Empieza a cobrar sin avisar"
+        },
+        {
+          "question": "¿Qué hay que hacer al activar una prueba gratis?",
+          "options": [
+            "Olvidarla",
+            "Compartirla",
+            "Anotar la fecha en que termina"
+          ],
+          "correct": "Anotar la fecha en que termina"
+        },
+        {
+          "question": "¿Cada cuánto conviene revisar las suscripciones?",
+          "options": [
+            "Cada tres meses",
+            "Cada diez años",
+            "Nunca"
+          ],
+          "correct": "Cada tres meses"
+        },
+        {
+          "question": "¿Cuál es la pregunta de la revisión?",
+          "options": [
+            "¿Está de moda?",
+            "¿La usé en este periodo?",
+            "¿La usan mis amigos?"
+          ],
+          "correct": "¿La usé en este periodo?"
+        },
+        {
+          "question": "Conservar servicios \"por si acaso\":",
+          "options": [
+            "Es lo más prudente",
+            "No cuesta nada",
+            "Cuesta miles de pesos al año"
+          ],
+          "correct": "Cuesta miles de pesos al año"
+        }
+      ],
+      "rubric": "Logrado: identifica cobros recurrentes, calcula el costo anual y aplica el criterio de uso para cancelar. En proceso: identifica suscripciones sin calcular. Inicial: reconoce el cobro automático."
+    },
+    "teacher_tips": [
+      "Use precios reales de servicios conocidos. El impacto del cálculo anual depende de que las cifras sean creíbles.",
+      "El momento clave es la multiplicación por doce. Deje que estimen antes y compare con el resultado.",
+      "Mencione que cancelar y volver a contratar casi siempre es posible. Quita el miedo a cancelar."
+    ]
+  },
+  "P4-2-7": {
+    "code": "P4-2-7",
+    "title": "Compras dentro de los videojuegos",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Analizar el gasto en compras dentro de videojuegos, reconocer los mecanismos de diseño que lo estimulan y establecer un límite consciente.",
+      "competencies": [
+        "Análisis de Gasto Digital",
+        "Reconocimiento de Diseño Persuasivo",
+        "Autocontrol",
+        "Establecimiento de Límites"
+      ],
+      "materials": [
+        "Ejemplos de tiendas dentro de juegos",
+        "Tabla de conversión de moneda virtual a pesos",
+        "Calculadora",
+        "Formato de límite personal",
+        "Cartel de los mecanismos de presión"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Moneda Rara",
+          "duration": "15 min",
+          "label": "¿Cuánto cuesta de verdad?"
+        },
+        {
+          "phase": "Desarrollo: Los Mecanismos",
+          "duration": "30 min",
+          "label": "Cómo te empujan a comprar"
+        },
+        {
+          "phase": "Cierre: Mi Límite",
+          "duration": "15 min",
+          "label": "Poner una regla propia"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA MONEDA QUE NO ES DINERO (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una tienda de juego donde los precios están en gemas, monedas o créditos. Pregunte cuánto cuesta un artículo en pesos. Nadie podrá decirlo sin hacer cuentas. Explique que esa dificultad es deliberada: cuando el precio no está en pesos, el cerebro no lo siente como gasto real.",
+          "activity": "Dinámica \"Conviértelo a Pesos\": el grupo calcula el precio real de tres artículos comprados con moneda virtual."
+        },
+        {
+          "title": "FASE II: LOS MECANISMOS DE PRESIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los mecanismos más usados: paquetes que no coinciden con el precio del artículo y siempre dejan sobrante, ofertas por tiempo limitado, cajas sorpresa con premio aleatorio, y presión social por lo que tienen los demás. Los alumnos identifican estos mecanismos en ejemplos reales y explican cómo funciona cada uno.",
+          "activity": "Dinámica \"Detecta el Mecanismo\": cada equipo analiza tres pantallas de tienda y nombra la técnica que se está usando."
+        },
+        {
+          "title": "FASE III: MI LÍMITE PROPIO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno define su propia regla: cuánto al mes como máximo, si lo saca de su domingo o de un ahorro específico, y una regla de espera de 24 horas antes de cualquier compra dentro de un juego. Aclare que el objetivo no es prohibir: es decidir con conciencia en lugar de reaccionar a un botón.",
+          "activity": "Dinámica \"Mi Regla\": cada alumno escribe su límite mensual y su regla de espera, y la firma."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "En muchos juegos no se paga con pesos: se paga con gemas, monedas o créditos. Esa diferencia no es casualidad, y hace que gastar se sienta distinto a gastar. En esta clase vas a aprender a convertir esos precios a pesos y a poner tu propio límite.",
+      "sections": [
+        {
+          "subtitle": "Por qué la moneda virtual esconde el precio",
+          "content": "Cuando un artículo cuesta 750 gemas, no hay forma de saber si es caro sin hacer una conversión. Y como esa conversión requiere esfuerzo, casi nadie la hace. El resultado es que se compra sin saber cuánto se está gastando en realidad. Convertir a pesos antes de comprar es la defensa más simple y la más efectiva."
+        },
+        {
+          "subtitle": "Los paquetes que nunca cuadran",
+          "content": "Los paquetes de moneda virtual casi nunca coinciden con los precios de los artículos. Si el artículo cuesta 750 gemas, los paquetes serán de 500 o de 1,200. Siempre queda un sobrante que no alcanza para nada, y que empuja a la siguiente compra. Es un diseño deliberado, no un descuido, y una vez que se ve ya no se deja de ver."
+        },
+        {
+          "subtitle": "Prisa, azar y presión social",
+          "content": "Otros tres mecanismos trabajan juntos. Las ofertas por tiempo limitado impiden pensar. Las cajas sorpresa con premio aleatorio activan el mismo mecanismo de una apuesta: la posibilidad de ganar algo raro hace que se compre otra y otra más. Y la presión social hace que se compre para no quedarse fuera de lo que tienen los demás. Ninguno tiene que ver con lo que el artículo vale."
+        },
+        {
+          "subtitle": "La regla de las 24 horas",
+          "content": "La herramienta más eficaz contra todo lo anterior es esperar un día. Si después de 24 horas sigues queriendo el artículo, cómpralo dentro de tu límite mensual. Si se te olvidó, esa compra nunca fue una decisión: fue una reacción. La espera desactiva la prisa, el azar y la presión, que son justamente los tres mecanismos que la tienda usa."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué los juegos usan monedas virtuales?",
+          "options": [
+            "Porque esconden el precio real",
+            "Porque son más baratas",
+            "Porque lo exige la ley"
+          ],
+          "correct": "Porque esconden el precio real"
+        },
+        {
+          "question": "¿Qué hay que hacer antes de comprar?",
+          "options": [
+            "Comprar rápido",
+            "Convertir el precio a pesos",
+            "Preguntar a un amigo"
+          ],
+          "correct": "Convertir el precio a pesos"
+        },
+        {
+          "question": "¿Por qué los paquetes no coinciden con los precios?",
+          "options": [
+            "Por error del sistema",
+            "Por casualidad",
+            "Para que siempre quede un sobrante que empuje a comprar más"
+          ],
+          "correct": "Para que siempre quede un sobrante que empuje a comprar más"
+        },
+        {
+          "question": "¿Qué logra una oferta por tiempo limitado?",
+          "options": [
+            "Que no te dé tiempo de pensar",
+            "Que ahorres dinero",
+            "Que compares mejor"
+          ],
+          "correct": "Que no te dé tiempo de pensar"
+        },
+        {
+          "question": "Las cajas sorpresa activan el mecanismo de:",
+          "options": [
+            "Un ahorro",
+            "Una apuesta",
+            "Un préstamo"
+          ],
+          "correct": "Una apuesta"
+        },
+        {
+          "question": "¿Qué es la presión social en este contexto?",
+          "options": [
+            "Un descuento",
+            "Una recompensa",
+            "Comprar para no quedarse fuera de lo que tienen los demás"
+          ],
+          "correct": "Comprar para no quedarse fuera de lo que tienen los demás"
+        },
+        {
+          "question": "¿En qué consiste la regla de las 24 horas?",
+          "options": [
+            "Esperar un día antes de comprar",
+            "Comprar en 24 horas",
+            "Jugar 24 horas"
+          ],
+          "correct": "Esperar un día antes de comprar"
+        },
+        {
+          "question": "Si a las 24 horas ya se me olvidó:",
+          "options": [
+            "Hay que comprarla igual",
+            "Esa compra era una reacción, no una decisión",
+            "Hay que comprar dos"
+          ],
+          "correct": "Esa compra era una reacción, no una decisión"
+        },
+        {
+          "question": "¿Cuál es el objetivo de poner un límite?",
+          "options": [
+            "Dejar de jugar",
+            "Gastar más ordenadamente",
+            "Decidir con conciencia, no prohibir"
+          ],
+          "correct": "Decidir con conciencia, no prohibir"
+        },
+        {
+          "question": "La espera de 24 horas desactiva:",
+          "options": [
+            "La prisa, el azar y la presión",
+            "El juego completo",
+            "La conexión"
+          ],
+          "correct": "La prisa, el azar y la presión"
+        }
+      ],
+      "rubric": "Logrado: convierte precios virtuales a pesos, nombra los mecanismos de presión y define un límite propio. En proceso: identifica mecanismos sin establecer límite. Inicial: reconoce que la moneda virtual esconde el precio."
+    },
+    "teacher_tips": [
+      "No trate el gasto en juegos como algo necesariamente malo. Prohibir cierra la conversación; analizar la abre.",
+      "La conversión a pesos en el pizarrón es el momento más impactante. Use precios de juegos que el grupo conozca.",
+      "La regla de las 24 horas funciona mejor si el alumno la escribe y la firma. El compromiso escrito cambia el comportamiento."
+    ]
+  },
+  "P4-2-8": {
+    "code": "P4-2-8",
+    "title": "Phishing: el mensaje que parece de mi banco",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Identificar mensajes de phishing que suplantan a un banco y aplicar el protocolo correcto de verificación ante cualquier comunicación sospechosa.",
+      "competencies": [
+        "Detección de Phishing",
+        "Verificación por Canal Oficial",
+        "Protección de Datos",
+        "Reacción ante Intento de Fraude"
+      ],
+      "materials": [
+        "Mensajes simulados de phishing",
+        "Comparativo de mensaje real y falso",
+        "Lista de señales de alerta",
+        "Números oficiales de atención bancaria",
+        "Cartel del protocolo de verificación"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Mensaje Urgente",
+          "duration": "15 min",
+          "label": "¿Es real o no?"
+        },
+        {
+          "phase": "Desarrollo: Las Señales",
+          "duration": "30 min",
+          "label": "Cómo detectarlo"
+        },
+        {
+          "phase": "Cierre: El Protocolo",
+          "duration": "15 min",
+          "label": "Qué hacer siempre"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"SU CUENTA SERÁ BLOQUEADA\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre tres mensajes: dos falsos y uno real. Pida que identifiquen cuál es cuál. Habrá aciertos y errores. Explique que los mensajes falsos son cada vez mejores, y que por eso la defensa no puede ser \"reconocer al malo\": tiene que ser un protocolo que se aplique siempre.",
+          "activity": "Dinámica \"Real o Falso\": el grupo vota mensaje por mensaje y después se revelan las señales que delataban a cada uno."
+        },
+        {
+          "title": "FASE II: LAS SEÑALES DE ALERTA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Enumere las señales: urgencia extrema, amenaza de bloqueo, enlace que no coincide con el sitio oficial, petición de datos que el banco ya tiene, faltas de ortografía, remitente con dominio raro. Los alumnos analizan cinco mensajes y marcan todas las señales que encuentran en cada uno.",
+          "activity": "Dinámica \"Caza de Señales\": cada equipo marca las señales en cinco mensajes y cuenta cuántas encontró en cada uno."
+        },
+        {
+          "title": "FASE III: EL PROTOCOLO QUE SIEMPRE FUNCIONA (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el protocolo de tres pasos: no dar clic en ningún enlace del mensaje, salir del mensaje y entrar al banco por la app oficial o el número del reverso de la tarjeta, y verificar ahí si realmente pasa algo. Explique que ese protocolo funciona incluso si el mensaje era real, así que no hay razón para no aplicarlo siempre.",
+          "activity": "Dinámica \"Aplica el Protocolo\": cada alumno recorre los tres pasos ante un mensaje simulado y explica por qué funciona siempre."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Llega un mensaje que dice ser de tu banco: hay un cargo sospechoso, tu cuenta será bloqueada, haz clic aquí. El corazón se acelera y ahí está el problema, porque esa prisa es exactamente lo que busca. En esta clase vas a aprender un protocolo que funciona siempre.",
+      "sections": [
+        {
+          "subtitle": "Qué es el phishing",
+          "content": "Phishing es cuando alguien se hace pasar por una institución que confías, casi siempre tu banco, para conseguir tus datos: usuario, contraseña, número de tarjeta o código de verificación. Llega por mensaje de texto, correo, llamada o redes sociales. No busca hackear nada: busca que tú entregues la información voluntariamente."
+        },
+        {
+          "subtitle": "La urgencia es la herramienta principal",
+          "content": "Casi todos los mensajes de phishing tienen algo en común: crean prisa. Tu cuenta será bloqueada, se detectó un cargo, tienes 24 horas para responder. La razón es simple: una persona apurada no verifica. Si un mensaje te hace sentir que tienes que actuar en este momento, esa sensación por sí sola ya es la señal de alerta más importante."
+        },
+        {
+          "subtitle": "Lo que un banco nunca pide",
+          "content": "Hay cosas que ninguna institución legítima solicita por mensaje, correo o llamada: tu contraseña completa, tu NIP, el código de verificación que te llegó por SMS, ni los datos completos de tu tarjeta. El banco ya tiene tus datos; no necesita que se los mandes. Cualquier petición de esa información es, sin excepción, un intento de fraude."
+        },
+        {
+          "subtitle": "El protocolo de tres pasos",
+          "content": "Ante cualquier mensaje: primero, no des clic en ningún enlace ni llames al número que viene ahí. Segundo, sal del mensaje y entra a tu banco por la app oficial o llama al número impreso en el reverso de tu tarjeta. Tercero, verifica ahí si de verdad pasa algo. Este protocolo funciona igual si el mensaje era real, así que aplicarlo nunca tiene costo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el phishing?",
+          "options": [
+            "Un virus",
+            "Hacerse pasar por una institución para conseguir tus datos",
+            "Un tipo de cuenta"
+          ],
+          "correct": "Hacerse pasar por una institución para conseguir tus datos"
+        },
+        {
+          "question": "¿Cuál es la herramienta principal del phishing?",
+          "options": [
+            "La cortesía",
+            "El silencio",
+            "La urgencia"
+          ],
+          "correct": "La urgencia"
+        },
+        {
+          "question": "¿Por qué crean prisa?",
+          "options": [
+            "Porque una persona apurada no verifica",
+            "Porque es más barato",
+            "Porque el sistema lo exige"
+          ],
+          "correct": "Porque una persona apurada no verifica"
+        },
+        {
+          "question": "¿Un banco pide tu contraseña por mensaje?",
+          "options": [
+            "Solo en emergencias",
+            "Nunca",
+            "Sí, es normal"
+          ],
+          "correct": "Nunca"
+        },
+        {
+          "question": "¿Un banco pide el código que llegó por SMS?",
+          "options": [
+            "Sí, para verificar",
+            "Solo por teléfono",
+            "Nunca"
+          ],
+          "correct": "Nunca"
+        },
+        {
+          "question": "¿Cuál es el paso uno del protocolo?",
+          "options": [
+            "No dar clic en ningún enlace del mensaje",
+            "Responder rápido",
+            "Reenviarlo"
+          ],
+          "correct": "No dar clic en ningún enlace del mensaje"
+        },
+        {
+          "question": "¿Cuál es el paso dos?",
+          "options": [
+            "Llamar al número del mensaje",
+            "Entrar por la app oficial o el número de la tarjeta",
+            "Buscar en redes"
+          ],
+          "correct": "Entrar por la app oficial o el número de la tarjeta"
+        },
+        {
+          "question": "¿Por qué el número del mensaje no sirve?",
+          "options": [
+            "Porque está saturado",
+            "Porque cobra",
+            "Porque puede ser del estafador"
+          ],
+          "correct": "Porque puede ser del estafador"
+        },
+        {
+          "question": "Si el mensaje era real, aplicar el protocolo:",
+          "options": [
+            "Funciona igual, no cuesta nada",
+            "Causa problemas",
+            "Bloquea la cuenta"
+          ],
+          "correct": "Funciona igual, no cuesta nada"
+        },
+        {
+          "question": "Si un mensaje me hace sentir que debo actuar ya:",
+          "options": [
+            "Hay que obedecer",
+            "Esa sensación ya es la señal de alerta",
+            "Es señal de que es real"
+          ],
+          "correct": "Esa sensación ya es la señal de alerta"
+        }
+      ],
+      "rubric": "Logrado: identifica señales de phishing y aplica el protocolo de tres pasos sin excepción. En proceso: reconoce mensajes sospechosos sin aplicar protocolo. Inicial: sabe que existen mensajes falsos."
+    },
+    "teacher_tips": [
+      "Use mensajes simulados que se vean profesionales. Los ejemplos con faltas de ortografía obvias dan falsa confianza.",
+      "Insista en que el protocolo se aplica siempre, incluso ante mensajes que parecen reales. La excepción es donde entra el fraude.",
+      "Recuerde a los alumnos que caer en un fraude no es tontería. Están diseñados por profesionales para engañar a gente atenta."
+    ]
+  },
+  "P4-2-9": {
+    "code": "P4-2-9",
+    "title": "Qué hacer si me roban la tarjeta",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Ejecutar en orden correcto los pasos ante el robo o extravío de una tarjeta bancaria, priorizando el bloqueo inmediato.",
+      "competencies": [
+        "Reacción ante Emergencia Financiera",
+        "Priorización de Acciones",
+        "Conocimiento de Derechos",
+        "Documentación de Incidentes"
+      ],
+      "materials": [
+        "Tarjeta de utilería con número de atención",
+        "Tarjetas de pasos desordenadas",
+        "Formato de reporte de incidente",
+        "Cronómetro",
+        "Cartel de la regla de los primeros minutos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Los Primeros Minutos",
+          "duration": "15 min",
+          "label": "Qué hago primero"
+        },
+        {
+          "phase": "Desarrollo: El Orden",
+          "duration": "30 min",
+          "label": "Los seis pasos"
+        },
+        {
+          "phase": "Cierre: Simulacro",
+          "duration": "15 min",
+          "label": "Practicar contra reloj"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LOS PRIMEROS MINUTOS DECIDEN (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la situación: acabas de darte cuenta de que tu tarjeta no está. Pregunte qué harían primero. Aparecerán respuestas como buscarla, avisar en casa o revisar el estado de cuenta. Explique que todas son razonables y todas están en segundo lugar: lo primero, siempre, es bloquear.",
+          "activity": "Dinámica \"¿Qué Hago Primero?\": el grupo ordena tres acciones posibles y descubre cuál va antes que todas."
+        },
+        {
+          "title": "FASE II: LOS SEIS PASOS EN ORDEN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los seis pasos: bloquear de inmediato, anotar el folio del reporte, revisar los movimientos recientes, desconocer por escrito los cargos no reconocidos, solicitar la reposición y, si hubo robo, levantar la denuncia. Los alumnos ordenan tarjetas desordenadas y justifican el orden.",
+          "activity": "Dinámica \"Ordena los Pasos\": cada equipo ordena las seis tarjetas y explica qué pasaría si se alterara el orden."
+        },
+        {
+          "title": "FASE III: SIMULACRO CONTRA RELOJ (CIERRE)",
+          "duration": "15 min",
+          "description": "Simulacro cronometrado: cada alumno tiene sesenta segundos para decir en voz alta los primeros tres pasos con la tarjeta de utilería en la mano. Explique que el número de atención está impreso en el reverso de la tarjeta, y que conviene tenerlo guardado también en el celular, porque si la tarjeta no está, el número tampoco.",
+          "activity": "Dinámica \"Sesenta Segundos\": cada alumno ejecuta la secuencia inicial contra reloj frente a un compañero."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Un día metes la mano a la bolsa y la tarjeta no está. Lo que hagas en los siguientes cinco minutos define si pierdes cero pesos o si pierdes todo lo que había. En esta clase vas a aprender el orden exacto de lo que hay que hacer.",
+      "sections": [
+        {
+          "subtitle": "Bloquear va primero, siempre",
+          "content": "Antes de buscarla, antes de avisar en casa, antes de cualquier otra cosa: bloquear. Mientras la tarjeta esté activa, cada minuto es una oportunidad para que alguien la use. Bloquear es gratis, es inmediato y se puede revertir si la tarjeta aparece bajo el sofá diez minutos después. No bloquear porque \"a lo mejor aparece\" es el error más caro de toda la lista."
+        },
+        {
+          "subtitle": "El folio es la prueba",
+          "content": "Al reportar, el banco entrega un número de folio con fecha y hora. Ese dato es la prueba de que se reportó en un momento específico, y es lo que separa los cargos que ocurrieron antes del bloqueo de los que ocurrieron después. Sin folio, la aclaración se vuelve la palabra de una persona contra el registro del banco. Se anota en el momento, no después."
+        },
+        {
+          "subtitle": "Revisar, desconocer y reponer",
+          "content": "Con la tarjeta ya bloqueada viene la revisión: mirar los movimientos recientes y detectar los que no se reconocen. Esos cargos hay que desconocerlos formalmente, por escrito y dentro del plazo que marca la ley. Después se solicita la reposición, que puede tener costo salvo en casos de robo comprobado, según el contrato de cada banco."
+        },
+        {
+          "subtitle": "Si hubo robo, hay denuncia",
+          "content": "Cuando la tarjeta fue robada, y sobre todo si hubo violencia, corresponde levantar una denuncia ante la autoridad. Ese documento respalda la aclaración de los cargos y a veces es requisito para que proceda. Puede parecer un trámite lento e incómodo, pero es el respaldo formal del incidente y protege a quien lo levanta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es lo primero que hay que hacer?",
+          "options": [
+            "Buscarla bien",
+            "Avisar en casa",
+            "Bloquear la tarjeta"
+          ],
+          "correct": "Bloquear la tarjeta"
+        },
+        {
+          "question": "¿Por qué bloquear va primero?",
+          "options": [
+            "Porque cada minuto activa es una oportunidad para que la usen",
+            "Porque es lo más rápido",
+            "Porque lo pide la ley"
+          ],
+          "correct": "Porque cada minuto activa es una oportunidad para que la usen"
+        },
+        {
+          "question": "Si la tarjeta aparece después de bloquear:",
+          "options": [
+            "Se pierde el dinero",
+            "Se puede resolver, el bloqueo no es un problema grave",
+            "Hay que pagar multa"
+          ],
+          "correct": "Se puede resolver, el bloqueo no es un problema grave"
+        },
+        {
+          "question": "¿Qué entrega el banco al reportar?",
+          "options": [
+            "Una tarjeta nueva al instante",
+            "Dinero",
+            "Un folio con fecha y hora"
+          ],
+          "correct": "Un folio con fecha y hora"
+        },
+        {
+          "question": "¿Para qué sirve el folio?",
+          "options": [
+            "Para probar cuándo se reportó",
+            "Para presumir",
+            "Para nada"
+          ],
+          "correct": "Para probar cuándo se reportó"
+        },
+        {
+          "question": "¿Cuándo se anota el folio?",
+          "options": [
+            "Al día siguiente",
+            "En el momento de recibirlo",
+            "Nunca"
+          ],
+          "correct": "En el momento de recibirlo"
+        },
+        {
+          "question": "Los cargos no reconocidos hay que:",
+          "options": [
+            "Ignorarlos",
+            "Pagarlos y ya",
+            "Desconocerlos por escrito dentro del plazo"
+          ],
+          "correct": "Desconocerlos por escrito dentro del plazo"
+        },
+        {
+          "question": "La reposición de la tarjeta:",
+          "options": [
+            "Puede tener costo según el contrato",
+            "Siempre es gratis",
+            "Nunca se puede pedir"
+          ],
+          "correct": "Puede tener costo según el contrato"
+        },
+        {
+          "question": "Si hubo robo:",
+          "options": [
+            "No hay nada que hacer",
+            "Corresponde levantar denuncia",
+            "Basta con avisar al banco"
+          ],
+          "correct": "Corresponde levantar denuncia"
+        },
+        {
+          "question": "No bloquear porque \"a lo mejor aparece\" es:",
+          "options": [
+            "Lo más sensato",
+            "Lo que recomiendan los bancos",
+            "El error más caro de la lista"
+          ],
+          "correct": "El error más caro de la lista"
+        }
+      ],
+      "rubric": "Logrado: ejecuta los seis pasos en orden correcto y explica la función del folio. En proceso: sabe que hay que bloquear sin dominar el resto. Inicial: reconoce la urgencia."
+    },
+    "teacher_tips": [
+      "El simulacro cronometrado es lo que fija el aprendizaje. En una emergencia real no hay tiempo de recordar una lista.",
+      "Insista en guardar el número de atención en el celular. Si la tarjeta no está, el número del reverso tampoco.",
+      "Aclare que bloquear por precaución nunca es un error. El miedo a \"molestar al banco\" hace perder minutos decisivos."
+    ]
+  },
+  "P4-2-10": {
+    "code": "P4-2-10",
+    "title": "Mi huella digital: lo que las apps saben de mis compras",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Construyendo Independencia",
+    "metadata": {
+      "objective": "Comprender qué datos generan las compras digitales, cómo se usan para influir en decisiones y qué medidas concretas dan más control.",
+      "competencies": [
+        "Conciencia de Datos Personales",
+        "Comprensión de Publicidad Dirigida",
+        "Protección de Privacidad",
+        "Decisión Informada en Línea"
+      ],
+      "materials": [
+        "Ejemplos de anuncios personalizados",
+        "Lista de permisos de aplicaciones",
+        "Casos de recomendaciones dirigidas",
+        "Guía de ajustes de privacidad",
+        "Cartel de los cuatro hábitos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cómo Supieron?",
+          "duration": "15 min",
+          "label": "El anuncio que te sigue"
+        },
+        {
+          "phase": "Desarrollo: La Huella",
+          "duration": "30 min",
+          "label": "Qué dato deja cada acción"
+        },
+        {
+          "phase": "Cierre: Los Hábitos",
+          "duration": "15 min",
+          "label": "Recuperar control"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL ANUNCIO QUE ADIVINA (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte si alguna vez les apareció un anuncio de algo que justo estaban buscando. Casi todos dirán que sí. Explique que no es magia ni casualidad: es el resultado de datos que se generan con cada búsqueda, cada clic y cada compra, y que se usan para mostrar exactamente lo que tiene más probabilidad de hacerte comprar.",
+          "activity": "Dinámica \"¿Te Ha Pasado?\": el grupo comparte ejemplos de anuncios sorprendentemente atinados y trata de explicar de dónde salió el dato."
+        },
+        {
+          "title": "FASE II: QUÉ DATO DEJA CADA ACCIÓN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos analizan qué información genera cada acción: buscar un producto, agregarlo al carrito, comprarlo, calificarlo, aceptar permisos de una app. Explique que con esos datos se construye un perfil que predice qué comprarías, cuándo y a qué precio dirías que sí. No es información robada: se entregó al usar el servicio.",
+          "activity": "Dinámica \"Qué Dejo Atrás\": cada equipo mapea una compra en línea completa y lista todos los datos que se generaron en el camino."
+        },
+        {
+          "title": "FASE III: CUATRO HÁBITOS DE CONTROL (CIERRE)",
+          "duration": "15 min",
+          "description": "Presente cuatro hábitos concretos: revisar y limitar los permisos que se dan a las apps, no aceptar todo sin leer, desconfiar del anuncio que aparece justo después de buscar algo, y revisar los ajustes de privacidad cada cierto tiempo. Explique que el objetivo no es desaparecer de internet, sino saber qué se está entregando y a cambio de qué.",
+          "activity": "Dinámica \"Mis Cuatro Hábitos\": cada alumno elige el hábito que va a aplicar esta semana y explica cómo lo hará."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Buscas unos tenis y en la tarde te aparecen anuncios de tenis en todas partes. No es coincidencia ni es magia: es tu huella digital trabajando. En esta clase vas a entender qué dejas atrás con cada clic y cómo recuperar algo de control.",
+      "sections": [
+        {
+          "subtitle": "Qué es la huella digital de compra",
+          "content": "Cada búsqueda, cada clic, cada producto que ves y cada compra que haces deja un registro. Juntos forman un perfil que describe qué te interesa, cuánto sueles gastar, a qué hora compras y qué mensajes te convencen. Ese perfil es valioso porque permite mostrarte exactamente el anuncio con más probabilidad de funcionar contigo."
+        },
+        {
+          "subtitle": "No es robo: es intercambio",
+          "content": "Es importante entender que la mayoría de estos datos no se roban: se entregan al usar servicios gratuitos. Cuando una app es gratis, muchas veces el modelo de negocio es la publicidad, y para vender publicidad efectiva se necesita conocer al usuario. No es necesariamente malo, pero sí conviene saber que existe ese intercambio y decidir si vale la pena en cada caso."
+        },
+        {
+          "subtitle": "Cuando el anuncio adivina demasiado",
+          "content": "Un anuncio que aparece justo después de que buscaste algo aprovecha un momento en que tu interés ya está activado. Eso no lo hace mejor ni peor producto: lo hace mejor momento para venderte. Saber esto permite hacerse la pregunta correcta: ¿lo quiero porque lo necesito, o porque me lo pusieron enfrente en el momento exacto?"
+        },
+        {
+          "subtitle": "Cuatro hábitos que dan control",
+          "content": "Primero, revisar qué permisos pide cada app y negar los que no tienen relación con su función. Segundo, no aceptar condiciones sin al menos ver de qué tratan. Tercero, desconfiar del anuncio demasiado oportuno y aplicarle la regla de esperar. Y cuarto, revisar los ajustes de privacidad cada cierto tiempo, porque cambian solos con las actualizaciones."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es la huella digital de compra?",
+          "options": [
+            "El registro de lo que buscas, ves y compras",
+            "Un virus",
+            "Una tarjeta"
+          ],
+          "correct": "El registro de lo que buscas, ves y compras"
+        },
+        {
+          "question": "¿Por qué te aparece un anuncio de lo que buscaste?",
+          "options": [
+            "Por casualidad",
+            "Porque tus datos permiten mostrarte lo más probable de comprar",
+            "Por magia"
+          ],
+          "correct": "Porque tus datos permiten mostrarte lo más probable de comprar"
+        },
+        {
+          "question": "La mayoría de esos datos:",
+          "options": [
+            "Se roban siempre",
+            "Los inventa la app",
+            "Se entregan al usar servicios gratuitos"
+          ],
+          "correct": "Se entregan al usar servicios gratuitos"
+        },
+        {
+          "question": "Si una app es gratis, muchas veces:",
+          "options": [
+            "El modelo de negocio es la publicidad",
+            "No gana dinero",
+            "La paga el gobierno"
+          ],
+          "correct": "El modelo de negocio es la publicidad"
+        },
+        {
+          "question": "Un anuncio justo después de buscar algo aprovecha:",
+          "options": [
+            "Que estás distraído",
+            "Que tu interés ya está activado",
+            "Que tienes dinero"
+          ],
+          "correct": "Que tu interés ya está activado"
+        },
+        {
+          "question": "¿Qué pregunta conviene hacerse?",
+          "options": [
+            "¿Cuánto cuesta?",
+            "¿Quién más lo tiene?",
+            "¿Lo quiero o me lo pusieron enfrente en el momento exacto?"
+          ],
+          "correct": "¿Lo quiero o me lo pusieron enfrente en el momento exacto?"
+        },
+        {
+          "question": "¿Qué permisos hay que negar?",
+          "options": [
+            "Los que no tienen relación con la función de la app",
+            "Todos siempre",
+            "Ninguno"
+          ],
+          "correct": "Los que no tienen relación con la función de la app"
+        },
+        {
+          "question": "¿Por qué revisar los ajustes de privacidad cada cierto tiempo?",
+          "options": [
+            "Porque es divertido",
+            "Porque cambian con las actualizaciones",
+            "Porque lo pide la ley"
+          ],
+          "correct": "Porque cambian con las actualizaciones"
+        },
+        {
+          "question": "¿Cuál es el objetivo de estos hábitos?",
+          "options": [
+            "Desaparecer de internet",
+            "No usar apps",
+            "Saber qué se entrega y a cambio de qué"
+          ],
+          "correct": "Saber qué se entrega y a cambio de qué"
+        },
+        {
+          "question": "El perfil que se construye permite predecir:",
+          "options": [
+            "Qué comprarías, cuándo y a qué precio",
+            "Tu nombre completo",
+            "Tus calificaciones"
+          ],
+          "correct": "Qué comprarías, cuándo y a qué precio"
+        }
+      ],
+      "rubric": "Logrado: explica cómo se genera la huella digital, reconoce el intercambio de datos y aplica hábitos de control. En proceso: reconoce la publicidad dirigida sin explicar su origen. Inicial: identifica que los anuncios son personalizados."
+    },
+    "teacher_tips": [
+      "Evite el tono alarmista. El objetivo es que entiendan el intercambio, no que teman usar internet.",
+      "Si es posible, revise en vivo los permisos de una app común. Ver la lista real sorprende más que describirla.",
+      "Conecte con la regla de espera de la clase de videojuegos: es la misma herramienta ante el anuncio oportuno."
     ]
   },
   "P4-3-1": {
@@ -2720,6 +4560,926 @@
       "Enfatice que el tiempo es su mejor amigo para las metas de largo plazo."
     ]
   },
+  "P4-3-6": {
+    "code": "P4-3-6",
+    "title": "El fondo de emergencia: tres meses de tranquilidad",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Comprender qué es un fondo de emergencia, cuánto debe tener y qué situaciones justifican usarlo, distinguiéndolo del ahorro para metas.",
+      "competencies": [
+        "Construcción de Fondo de Emergencia",
+        "Distinción Emergencia vs. Deseo",
+        "Cálculo de Meta de Reserva",
+        "Prevención de Deuda"
+      ],
+      "materials": [
+        "Tarjetas de situaciones imprevistas",
+        "Calculadora",
+        "Frascos o sobres para separar ahorro",
+        "Tabla de gastos mensuales tipo",
+        "Cartel de las tres preguntas del fondo"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Imprevisto",
+          "duration": "15 min",
+          "label": "Cuando algo sale mal"
+        },
+        {
+          "phase": "Desarrollo: El Fondo",
+          "duration": "30 min",
+          "label": "Cuánto y dónde"
+        },
+        {
+          "phase": "Cierre: ¿Es Emergencia?",
+          "duration": "15 min",
+          "label": "Cuándo sí se usa"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: CUANDO ALGO SALE MAL (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente tres imprevistos típicos de una familia: una reparación urgente, un gasto médico, la pérdida temporal de un ingreso. Pregunte de dónde saldría el dinero. Aparecerán respuestas como pedir prestado o vender algo. Explique que existe una tercera opción que evita ambas: tener dinero apartado exactamente para esto.",
+          "activity": "Dinámica \"¿De Dónde Sale?\": el grupo propone soluciones para tres imprevistos y compara el costo de cada una."
+        },
+        {
+          "title": "FASE II: CUÁNTO Y DÓNDE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Explique la regla: un fondo de emergencia debe cubrir entre tres y seis meses de gastos esenciales. Los alumnos calculan cuánto sería para una familia tipo. Después discutan dónde guardarlo: debe estar disponible de inmediato y separado del dinero del día a día, para que no se confunda con el gasto normal.",
+          "activity": "Dinámica \"Calcula el Fondo\": cada equipo suma los gastos esenciales de una familia y multiplica por tres y por seis."
+        },
+        {
+          "title": "FASE III: ¿ESTO ES EMERGENCIA? (CIERRE)",
+          "duration": "15 min",
+          "description": "Con las tarjetas de situaciones, los alumnos clasifican qué es emergencia y qué no. Enseñe las tres preguntas: ¿es inesperado?, ¿es necesario?, ¿es urgente? Solo si las tres respuestas son sí, se toca el fondo. Una oferta increíble no cumple ninguna de las tres, aunque lo parezca.",
+          "activity": "Dinámica \"Las Tres Preguntas\": cada situación se evalúa con las tres preguntas y se decide si justifica usar el fondo."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "A todas las familias les pasa algo inesperado: se descompone algo, alguien se enferma, se cae un ingreso. La diferencia entre las que salen adelante y las que terminan endeudadas casi siempre es una sola cosa: tener dinero apartado antes de que pasara.",
+      "sections": [
+        {
+          "subtitle": "Qué es y para qué sirve",
+          "content": "Un fondo de emergencia es dinero guardado con un solo propósito: cubrir imprevistos. No es el ahorro para un viaje ni para un celular nuevo. Es el colchón que evita que un problema se convierta en una deuda cara. Quien no tiene fondo de emergencia, ante un imprevisto solo tiene dos salidas: pedir prestado o dejar de pagar algo."
+        },
+        {
+          "subtitle": "De tres a seis meses de gastos esenciales",
+          "content": "La referencia más usada es que el fondo cubra entre tres y seis meses de gastos esenciales: vivienda, comida, servicios, transporte, salud. No de todos los gastos, solo de los indispensables. Para calcularlo se suman esos gastos de un mes y se multiplican por tres como mínimo. Parece mucho, y por eso se construye poco a poco, no de golpe."
+        },
+        {
+          "subtitle": "Disponible pero separado",
+          "content": "El fondo tiene dos requisitos que parecen contradictorios. Debe estar disponible de inmediato, porque una emergencia no espera a que venza una inversión. Y debe estar separado del dinero del día a día, porque si está en la misma cuenta se gasta sin darse cuenta. Una cuenta distinta, o al menos un sobre aparte, resuelve las dos cosas."
+        },
+        {
+          "subtitle": "Las tres preguntas antes de tocarlo",
+          "content": "Antes de usar el fondo hay que responder tres preguntas: ¿es inesperado?, ¿es necesario?, ¿es urgente? Solo si las tres respuestas son sí se justifica. Una oferta de temporada no es inesperada, un antojo no es necesario y un viaje planeado no es urgente. Si el fondo se usa para lo que no es emergencia, deja de existir justo cuando hace falta."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Para qué sirve el fondo de emergencia?",
+          "options": [
+            "Para cubrir imprevistos",
+            "Para un viaje",
+            "Para invertir"
+          ],
+          "correct": "Para cubrir imprevistos"
+        },
+        {
+          "question": "¿Cuánto debe cubrir el fondo?",
+          "options": [
+            "Un año de todos los gastos",
+            "De tres a seis meses de gastos esenciales",
+            "Una semana"
+          ],
+          "correct": "De tres a seis meses de gastos esenciales"
+        },
+        {
+          "question": "¿Qué gastos se cuentan para calcularlo?",
+          "options": [
+            "Todos, incluidos los lujos",
+            "Solo la comida",
+            "Solo los esenciales"
+          ],
+          "correct": "Solo los esenciales"
+        },
+        {
+          "question": "¿Dónde debe estar el fondo?",
+          "options": [
+            "Disponible de inmediato y separado del gasto diario",
+            "En una inversión a diez años",
+            "En la misma cuenta de siempre"
+          ],
+          "correct": "Disponible de inmediato y separado del gasto diario"
+        },
+        {
+          "question": "¿Por qué debe estar separado?",
+          "options": [
+            "Porque lo exige el banco",
+            "Porque si no se gasta sin darse cuenta",
+            "Por moda"
+          ],
+          "correct": "Porque si no se gasta sin darse cuenta"
+        },
+        {
+          "question": "¿Cuáles son las tres preguntas antes de usarlo?",
+          "options": [
+            "¿Es barato, bonito y nuevo?",
+            "¿Lo quiero, lo veo y lo compro?",
+            "¿Es inesperado, necesario y urgente?"
+          ],
+          "correct": "¿Es inesperado, necesario y urgente?"
+        },
+        {
+          "question": "Una oferta increíble:",
+          "options": [
+            "No es emergencia",
+            "Sí es emergencia",
+            "Depende del descuento"
+          ],
+          "correct": "No es emergencia"
+        },
+        {
+          "question": "Sin fondo de emergencia, ante un imprevisto:",
+          "options": [
+            "No pasa nada",
+            "Solo queda pedir prestado o dejar de pagar algo",
+            "El banco ayuda"
+          ],
+          "correct": "Solo queda pedir prestado o dejar de pagar algo"
+        },
+        {
+          "question": "¿Cómo se construye el fondo?",
+          "options": [
+            "De golpe o no se puede",
+            "Con un préstamo",
+            "Poco a poco"
+          ],
+          "correct": "Poco a poco"
+        },
+        {
+          "question": "Si el fondo se usa para lo que no es emergencia:",
+          "options": [
+            "Deja de existir justo cuando hace falta",
+            "Se recupera solo",
+            "No importa"
+          ],
+          "correct": "Deja de existir justo cuando hace falta"
+        }
+      ],
+      "rubric": "Logrado: calcula el monto del fondo, explica sus dos requisitos y aplica las tres preguntas. En proceso: define el fondo sin calcular ni discriminar usos. Inicial: reconoce la utilidad de tener reserva."
+    },
+    "teacher_tips": [
+      "Insista en que se construye poco a poco. La cifra de tres meses puede desanimar si se presenta como requisito inmediato.",
+      "La clasificación de emergencias reales es donde más discute el grupo. Es buena señal: ahí se está formando el criterio.",
+      "Conecte con la clase de préstamos informales: el fondo es la única alternativa que no cobra intereses."
+    ]
+  },
+  "P4-3-7": {
+    "code": "P4-3-7",
+    "title": "Corto, mediano y largo plazo: separar mis ahorros",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Separar el ahorro en tres horizontes (corto, mediano y largo plazo) y asignar a cada uno su meta, monto y forma de guardarlo.",
+      "competencies": [
+        "Planeación por Horizontes",
+        "Asignación de Recursos",
+        "Definición de Metas",
+        "Organización del Ahorro"
+      ],
+      "materials": [
+        "Tres frascos o sobres etiquetados",
+        "Tarjetas de metas de distintos plazos",
+        "Calculadora",
+        "Formato de plan de tres horizontes",
+        "Línea del tiempo grande"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Todo Junto",
+          "duration": "15 min",
+          "label": "El problema de un solo bote"
+        },
+        {
+          "phase": "Desarrollo: Tres Plazos",
+          "duration": "30 min",
+          "label": "Separar por horizonte"
+        },
+        {
+          "phase": "Cierre: Mi Plan",
+          "duration": "15 min",
+          "label": "Repartir mi ahorro"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL PROBLEMA DE UN SOLO BOTE (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente el caso de alguien que ahorra todo junto en un mismo lugar y termina gastando en algo pequeño lo que era para algo grande. Pregunte por qué pasa. La conclusión será que cuando el dinero no tiene nombre, se lo lleva lo primero que aparece. Separar es lo que le pone nombre.",
+          "activity": "Dinámica \"Un Solo Bote\": el grupo analiza el caso y explica en qué momento exacto se perdió el ahorro grande."
+        },
+        {
+          "title": "FASE II: LOS TRES HORIZONTES (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los tres plazos: corto, hasta un año; mediano, de uno a cinco años; largo, más de cinco. Cada uno tiene metas distintas y forma distinta de guardarse. El corto necesita disponibilidad; el largo puede buscar más rendimiento porque no se va a tocar. Los alumnos clasifican metas en los tres frascos.",
+          "activity": "Dinámica \"Tres Frascos\": cada equipo coloca diez metas en el horizonte correcto y justifica dos de ellas."
+        },
+        {
+          "title": "FASE III: REPARTIR MI AHORRO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno arma su plan: define una meta por horizonte, cuánto necesita para cada una y qué porcentaje de su ahorro mensual le asigna. Explique que los porcentajes no son fijos: dependen de la edad y de la situación. Lo importante es que cada peso ahorrado tenga un destino asignado.",
+          "activity": "Dinámica \"Mi Reparto\": cada alumno asigna porcentajes a sus tres horizontes y calcula en cuánto tiempo llega a cada meta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Mucha gente ahorra todo en el mismo lugar y después se pregunta a dónde se fue el dinero de lo importante. La respuesta suele ser que se lo llevó algo pequeño. En esta clase vas a separar tu ahorro en tres, para que cada peso sepa a dónde va.",
+      "sections": [
+        {
+          "subtitle": "Por qué separar cambia todo",
+          "content": "Cuando todo el ahorro está en un solo lugar, no hay forma de saber qué se puede gastar y qué no. Y como el dinero no tiene nombre, se lo lleva lo primero que aparece. Separar el ahorro por destino le pone nombre a cada peso: este es para emergencias, este es para la bicicleta, este es para dentro de cinco años. Con nombre, cuesta mucho más gastarlo."
+        },
+        {
+          "subtitle": "Corto plazo: hasta un año",
+          "content": "Aquí van las metas cercanas: un regalo, un curso, un objeto que se quiere comprar este año, y también el fondo de emergencia. Como puede necesitarse pronto, este dinero debe estar disponible y no arriesgado. No busca rendimiento: busca estar ahí cuando se necesite. Es la parte más líquida del ahorro."
+        },
+        {
+          "subtitle": "Mediano plazo: de uno a cinco años",
+          "content": "Aquí van metas que requieren más dinero y más tiempo: un equipo importante, un viaje grande, una parte de los estudios. Como hay algunos años de margen, se puede aceptar un instrumento que pague algo más aunque tenga menos disponibilidad inmediata. La clave es que el plazo del instrumento coincida con el de la meta."
+        },
+        {
+          "subtitle": "Largo plazo: más de cinco años",
+          "content": "Aquí va lo que no se va a tocar en mucho tiempo: los estudios universitarios, un patrimonio, el retiro cuando se es adulto. Como el tiempo es largo, se pueden buscar rendimientos mayores y aguantar variaciones temporales. El interés compuesto trabaja mejor justamente aquí, y por eso empezar joven vale más que aportar mucho."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué conviene separar el ahorro?",
+          "options": [
+            "Porque lo pide el banco",
+            "Porque el dinero sin nombre se lo lleva lo primero que aparece",
+            "Porque se ve mejor"
+          ],
+          "correct": "Porque el dinero sin nombre se lo lleva lo primero que aparece"
+        },
+        {
+          "question": "¿Cuánto dura el corto plazo?",
+          "options": [
+            "Cinco años",
+            "Diez años",
+            "Hasta un año"
+          ],
+          "correct": "Hasta un año"
+        },
+        {
+          "question": "¿Cuánto dura el mediano plazo?",
+          "options": [
+            "De uno a cinco años",
+            "Un mes",
+            "Veinte años"
+          ],
+          "correct": "De uno a cinco años"
+        },
+        {
+          "question": "¿Cuánto dura el largo plazo?",
+          "options": [
+            "Menos de un año",
+            "Más de cinco años",
+            "Tres meses"
+          ],
+          "correct": "Más de cinco años"
+        },
+        {
+          "question": "¿Qué necesita el dinero de corto plazo?",
+          "options": [
+            "Máximo rendimiento",
+            "Estar bloqueado",
+            "Estar disponible y no arriesgado"
+          ],
+          "correct": "Estar disponible y no arriesgado"
+        },
+        {
+          "question": "¿Dónde va el fondo de emergencia?",
+          "options": [
+            "En el corto plazo",
+            "En el largo plazo",
+            "En ninguno"
+          ],
+          "correct": "En el corto plazo"
+        },
+        {
+          "question": "En el largo plazo se pueden buscar:",
+          "options": [
+            "Solo efectivo",
+            "Rendimientos mayores",
+            "Cero rendimiento"
+          ],
+          "correct": "Rendimientos mayores"
+        },
+        {
+          "question": "¿Por qué el interés compuesto trabaja mejor en el largo plazo?",
+          "options": [
+            "Porque paga más al inicio",
+            "Porque es obligatorio",
+            "Porque tiene más tiempo para acumularse"
+          ],
+          "correct": "Porque tiene más tiempo para acumularse"
+        },
+        {
+          "question": "¿Qué debe coincidir con el plazo de la meta?",
+          "options": [
+            "El plazo del instrumento",
+            "El color del frasco",
+            "El nombre del banco"
+          ],
+          "correct": "El plazo del instrumento"
+        },
+        {
+          "question": "Los porcentajes asignados a cada horizonte:",
+          "options": [
+            "Son iguales para todos",
+            "Dependen de la edad y la situación",
+            "Los define el banco"
+          ],
+          "correct": "Dependen de la edad y la situación"
+        }
+      ],
+      "rubric": "Logrado: clasifica metas en los tres horizontes y asigna porcentajes con criterio. En proceso: distingue los plazos sin asignar recursos. Inicial: reconoce que hay metas de distinta duración."
+    },
+    "teacher_tips": [
+      "Los frascos físicos funcionan muy bien incluso en cuarto de primaria. La separación tangible ancla el concepto.",
+      "Aclare que los porcentajes no son universales. Un alumno que copia una fórmula no aprendió a decidir.",
+      "Conecte el largo plazo con el interés compuesto de la clase anterior del bloque: es donde ese concepto se vuelve estrategia."
+    ]
+  },
+  "P4-3-8": {
+    "code": "P4-3-8",
+    "title": "Ahorro automático: pagarme a mí primero",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Aplicar el principio de pagarse a uno mismo primero mediante ahorro automático, y comparar sus resultados contra ahorrar lo que sobra.",
+      "competencies": [
+        "Automatización del Ahorro",
+        "Disciplina Financiera",
+        "Proyección de Resultados",
+        "Priorización del Ahorro"
+      ],
+      "materials": [
+        "Dos frascos para simular métodos",
+        "Calculadora",
+        "Tabla comparativa a doce meses",
+        "Fichas de ingreso mensual",
+        "Cartel del orden correcto"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Lo que Sobra",
+          "duration": "15 min",
+          "label": "¿Cuánto sobra al final?"
+        },
+        {
+          "phase": "Desarrollo: Invertir el Orden",
+          "duration": "30 min",
+          "label": "Ahorrar primero"
+        },
+        {
+          "phase": "Cierre: Automatizar",
+          "duration": "15 min",
+          "label": "Que no dependa de mí"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: AHORRAR LO QUE SOBRE (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte cuánto suele sobrar al final del mes cuando alguien se propone ahorrar lo que quede. La respuesta honesta casi siempre es nada. Explique que no es falta de voluntad: es que el gasto crece hasta llenar el ingreso disponible. Si el ahorro va al final, siempre pierde.",
+          "activity": "Dinámica \"¿Cuánto Sobró?\": el grupo simula tres meses de gastos con el método de ahorrar al final y registra el resultado."
+        },
+        {
+          "title": "FASE II: INVERTIR EL ORDEN (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el principio: pagarse a uno mismo primero significa apartar el ahorro en cuanto entra el dinero, antes de gastar nada. El resto se usa para vivir. Los alumnos simulan doce meses con ambos métodos, mismo ingreso y mismos gastos, y comparan el acumulado. La diferencia es enorme y no depende de ganar más.",
+          "activity": "Dinámica \"Dos Frascos\": cada equipo simula doce meses con los dos métodos y compara los totales acumulados."
+        },
+        {
+          "title": "FASE III: QUE NO DEPENDA DE MI VOLUNTAD (CIERRE)",
+          "duration": "15 min",
+          "description": "Explique que el ahorro automático lleva el principio un paso más allá: se programa una transferencia el día que entra el dinero, de modo que ni siquiera hay que decidirlo cada mes. Lo que no requiere decisión no se puede posponer. Es la misma lógica de las suscripciones, pero a favor.",
+          "activity": "Dinámica \"Programa tu Transferencia\": cada alumno define el día, el monto y el destino de su ahorro automático."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Casi todo el mundo se propone ahorrar lo que sobre al final del mes. Y casi nunca sobra. El problema no es la voluntad: es el orden. En esta clase vas a aprender a invertirlo y a comprobar con números cuánta diferencia hace.",
+      "sections": [
+        {
+          "subtitle": "Por qué nunca sobra",
+          "content": "Cuando el ahorro queda al final, compite contra todo lo demás y pierde siempre. El gasto tiende a crecer hasta llenar el dinero disponible: si hay más, se gasta más, casi sin notarlo. Por eso ahorrar lo que sobra da como resultado ahorrar cero, incluso en personas con toda la intención de hacerlo."
+        },
+        {
+          "subtitle": "Pagarse a uno mismo primero",
+          "content": "El principio consiste en invertir el orden: en cuanto entra el dinero, se aparta el ahorro y solo después se decide cómo gastar el resto. Se llama pagarse a uno mismo primero porque se trata al ahorro como si fuera una cuenta obligatoria más, igual que la renta o la luz. Y como cualquier obligación, se paga antes que los gustos."
+        },
+        {
+          "subtitle": "El gasto se ajusta al resto",
+          "content": "Lo sorprendente de este método es que funciona sin sacrificio proporcional. Cuando el ahorro sale primero, la persona se organiza con lo que queda y casi siempre lo logra sin sentirlo tanto como esperaba. La misma flexibilidad que hacía crecer el gasto ahora trabaja a favor: el gasto se ajusta hacia abajo igual que se ajustaba hacia arriba."
+        },
+        {
+          "subtitle": "Automatizar quita la decisión",
+          "content": "El paso final es automatizar: programar una transferencia el mismo día que entra el ingreso, hacia una cuenta separada. Así el ahorro deja de depender de recordarlo o de tener ganas ese día. Todo lo que requiere una decisión mensual se puede posponer; lo automático no. Es el mismo mecanismo de las suscripciones, pero jugando de tu lado."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué no sobra nada al final del mes?",
+          "options": [
+            "Porque los precios suben",
+            "Porque el banco cobra",
+            "Porque el gasto crece hasta llenar el ingreso"
+          ],
+          "correct": "Porque el gasto crece hasta llenar el ingreso"
+        },
+        {
+          "question": "¿En qué consiste pagarse a uno mismo primero?",
+          "options": [
+            "Apartar el ahorro en cuanto entra el dinero",
+            "Ahorrar lo que sobre",
+            "Gastar primero lo importante"
+          ],
+          "correct": "Apartar el ahorro en cuanto entra el dinero"
+        },
+        {
+          "question": "¿Cómo se trata al ahorro en este método?",
+          "options": [
+            "Como un premio",
+            "Como una cuenta obligatoria más",
+            "Como algo opcional"
+          ],
+          "correct": "Como una cuenta obligatoria más"
+        },
+        {
+          "question": "¿Qué pasa con el gasto cuando el ahorro sale primero?",
+          "options": [
+            "Se dispara",
+            "No cambia",
+            "Se ajusta al resto disponible"
+          ],
+          "correct": "Se ajusta al resto disponible"
+        },
+        {
+          "question": "¿Qué es el ahorro automático?",
+          "options": [
+            "Una transferencia programada el día que entra el ingreso",
+            "Ahorrar sin querer",
+            "Un préstamo"
+          ],
+          "correct": "Una transferencia programada el día que entra el ingreso"
+        },
+        {
+          "question": "¿Por qué funciona automatizar?",
+          "options": [
+            "Porque da más interés",
+            "Porque lo que no requiere decisión no se pospone",
+            "Porque lo exige el banco"
+          ],
+          "correct": "Porque lo que no requiere decisión no se pospone"
+        },
+        {
+          "question": "El ahorro automático se parece a:",
+          "options": [
+            "Un préstamo",
+            "Una comisión",
+            "Una suscripción, pero a tu favor"
+          ],
+          "correct": "Una suscripción, pero a tu favor"
+        },
+        {
+          "question": "¿A dónde debe ir la transferencia?",
+          "options": [
+            "A una cuenta separada",
+            "A la misma cuenta",
+            "A efectivo"
+          ],
+          "correct": "A una cuenta separada"
+        },
+        {
+          "question": "Ahorrar lo que sobra da como resultado:",
+          "options": [
+            "Ahorrar más",
+            "Ahorrar cero",
+            "Lo mismo"
+          ],
+          "correct": "Ahorrar cero"
+        },
+        {
+          "question": "Este método funciona:",
+          "options": [
+            "Solo con ingresos altos",
+            "Solo con préstamos",
+            "Sin necesidad de ganar más"
+          ],
+          "correct": "Sin necesidad de ganar más"
+        }
+      ],
+      "rubric": "Logrado: explica el principio, compara ambos métodos con números y define un ahorro automático concreto. En proceso: entiende el principio sin cuantificarlo. Inicial: reconoce que ahorrar al final no funciona."
+    },
+    "teacher_tips": [
+      "La simulación de doce meses con ambos métodos es el corazón de la clase. La diferencia numérica convence sola.",
+      "Enfatice que no se trata de ganar más. Muchos alumnos creen que ahorrar es imposible sin más ingreso.",
+      "La conexión con las suscripciones es potente: el mismo mecanismo automático que cobra puede hacerse trabajar a favor."
+    ]
+  },
+  "P4-3-9": {
+    "code": "P4-3-9",
+    "title": "El costo de oportunidad: lo que dejo de hacer al elegir",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Aplicar el concepto de costo de oportunidad para evaluar decisiones, identificando explícitamente lo que se deja de hacer al elegir.",
+      "competencies": [
+        "Análisis de Costo de Oportunidad",
+        "Evaluación de Alternativas",
+        "Toma de Decisiones",
+        "Pensamiento Comparativo"
+      ],
+      "materials": [
+        "Tarjetas de decisiones con alternativas",
+        "Calculadora",
+        "Formato de comparación de opciones",
+        "Casos con dinero y con tiempo",
+        "Cartel de la pregunta clave"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Elegir es Perder",
+          "duration": "15 min",
+          "label": "Lo que dejas atrás"
+        },
+        {
+          "phase": "Desarrollo: Ponerle Número",
+          "duration": "30 min",
+          "label": "Calcular la alternativa"
+        },
+        {
+          "phase": "Cierre: Aplicarlo",
+          "duration": "15 min",
+          "label": "Decidir mejor"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: ELEGIR SIEMPRE ES DEJAR ALGO (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee una elección sencilla: con $500 se puede comprar una cosa o la otra, no las dos. Pregunte qué se pierde al elegir. La respuesta es la otra opción. Explique que a eso se le llama costo de oportunidad, y que existe en toda decisión, aunque casi nunca se calcule.",
+          "activity": "Dinámica \"Solo Una\": el grupo elige entre dos opciones y nombra explícitamente lo que quedó fuera."
+        },
+        {
+          "title": "FASE II: PONERLE NÚMERO A LO QUE NO ELEGÍ (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Los alumnos calculan el costo de oportunidad en casos concretos: gastar $3,000 hoy contra invertirlos cinco años, o usar dos horas diarias en una actividad contra otra. Explique que el costo de oportunidad también aplica al tiempo, y que muchas veces esa es la versión más importante.",
+          "activity": "Dinámica \"Cuánto Costó Elegir\": cada equipo calcula el valor de la alternativa descartada en tres casos distintos."
+        },
+        {
+          "title": "FASE III: USARLO PARA DECIDIR (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe la pregunta clave: si elijo esto, ¿qué es lo mejor que estoy dejando de hacer? Los alumnos la aplican a una decisión personal real. Aclare que el concepto no dice qué elegir: solo obliga a ver la comparación completa antes de decidir, que es donde se toman mejores decisiones.",
+          "activity": "Dinámica \"Mi Decisión\": cada alumno aplica la pregunta clave a una decisión propia y escribe la alternativa que descarta."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cada vez que eliges algo, automáticamente estás dejando de elegir otra cosa. Eso tiene un nombre y hasta se puede calcular: costo de oportunidad. Es una de las ideas más útiles que existen para decidir bien, y casi nadie la usa a conciencia.",
+      "sections": [
+        {
+          "subtitle": "Qué es el costo de oportunidad",
+          "content": "El costo de oportunidad es el valor de la mejor alternativa que dejaste de lado al elegir. Si con $500 compras unos audífonos, el costo de oportunidad es lo mejor que podrías haber hecho con esos $500. No aparece en ningún recibo, pero es tan real como el precio pagado, y muchas veces es más grande."
+        },
+        {
+          "subtitle": "También aplica al tiempo",
+          "content": "El costo de oportunidad no es solo de dinero. Cada hora que dedicas a algo es una hora que no dedicas a otra cosa. Dos horas diarias en una actividad son más de setecientas al año, y esa cifra hace evidente el tamaño de la elección. Con el tiempo el costo de oportunidad es todavía más importante, porque el tiempo no se puede reponer."
+        },
+        {
+          "subtitle": "Gastar hoy contra dejarlo crecer",
+          "content": "El caso más claro en dinero es comparar gastar ahora contra ahorrar o invertir. Si $3,000 gastados hoy podrían haberse convertido en $4,000 en cinco años, el costo de oportunidad de gastarlos es esa diferencia más lo que dejaste de tener. No significa que gastar esté mal: significa que la comparación completa incluye lo que no se ve."
+        },
+        {
+          "subtitle": "La pregunta que ordena cualquier decisión",
+          "content": "La herramienta práctica es una sola pregunta: si elijo esto, ¿qué es lo mejor que estoy dejando de hacer? Formularla en voz alta antes de decidir cambia muchas decisiones, no porque obligue a elegir lo más rentable, sino porque hace visible la comparación completa. Decidir sabiendo lo que se deja atrás es decidir de verdad."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué es el costo de oportunidad?",
+          "options": [
+            "El valor de la mejor alternativa que dejé de elegir",
+            "El precio que pagué",
+            "Una comisión"
+          ],
+          "correct": "El valor de la mejor alternativa que dejé de elegir"
+        },
+        {
+          "question": "¿Aparece en algún recibo?",
+          "options": [
+            "Sí, siempre",
+            "No, pero es igual de real",
+            "Solo en el banco"
+          ],
+          "correct": "No, pero es igual de real"
+        },
+        {
+          "question": "¿El costo de oportunidad aplica solo al dinero?",
+          "options": [
+            "Sí, solo al dinero",
+            "Solo a las compras",
+            "No, también al tiempo"
+          ],
+          "correct": "No, también al tiempo"
+        },
+        {
+          "question": "¿Por qué es más importante con el tiempo?",
+          "options": [
+            "Porque el tiempo no se puede reponer",
+            "Porque el tiempo es gratis",
+            "Porque no se mide"
+          ],
+          "correct": "Porque el tiempo no se puede reponer"
+        },
+        {
+          "question": "Dos horas diarias al año son:",
+          "options": [
+            "Cincuenta horas",
+            "Más de setecientas horas",
+            "Diez horas"
+          ],
+          "correct": "Más de setecientas horas"
+        },
+        {
+          "question": "Si gasto $3,000 hoy y podían ser $4,000 en cinco años:",
+          "options": [
+            "No perdí nada",
+            "Gané $1,000",
+            "Ese crecimiento es parte del costo de oportunidad"
+          ],
+          "correct": "Ese crecimiento es parte del costo de oportunidad"
+        },
+        {
+          "question": "¿El costo de oportunidad dice qué elegir?",
+          "options": [
+            "No, solo obliga a ver la comparación completa",
+            "Sí, siempre lo más rentable",
+            "Sí, siempre ahorrar"
+          ],
+          "correct": "No, solo obliga a ver la comparación completa"
+        },
+        {
+          "question": "¿Cuál es la pregunta clave?",
+          "options": [
+            "¿Cuánto cuesta?",
+            "¿Qué es lo mejor que estoy dejando de hacer?",
+            "¿Quién más lo tiene?"
+          ],
+          "correct": "¿Qué es lo mejor que estoy dejando de hacer?"
+        },
+        {
+          "question": "Formular la pregunta en voz alta:",
+          "options": [
+            "Complica todo",
+            "No sirve de nada",
+            "Hace visible la comparación completa"
+          ],
+          "correct": "Hace visible la comparación completa"
+        },
+        {
+          "question": "Que algo tenga costo de oportunidad significa que:",
+          "options": [
+            "Elegir siempre implica dejar algo",
+            "Está mal elegirlo",
+            "Es caro"
+          ],
+          "correct": "Elegir siempre implica dejar algo"
+        }
+      ],
+      "rubric": "Logrado: calcula el costo de oportunidad en dinero y tiempo, y aplica la pregunta clave a una decisión propia. En proceso: define el concepto sin cuantificarlo. Inicial: reconoce que elegir implica dejar algo."
+    },
+    "teacher_tips": [
+      "Use casos de tiempo además de dinero. Para muchos alumnos el ejemplo de las horas es más revelador que el de los pesos.",
+      "Aclare que el concepto no obliga a elegir siempre lo más rentable. Si se enseña así, se vuelve una regla de austeridad, no una herramienta.",
+      "La aplicación a una decisión personal real es lo que hace que el concepto salga del salón."
+    ]
+  },
+  "P4-3-10": {
+    "code": "P4-3-10",
+    "title": "Revisar mi plan: ajustar cuando la vida cambia",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Planificación y Crecimiento",
+    "metadata": {
+      "objective": "Revisar y ajustar un plan financiero cuando cambian las circunstancias, distinguiendo entre ajustar por causa real y abandonar por falta de constancia.",
+      "competencies": [
+        "Revisión de Planes",
+        "Adaptación a Cambios",
+        "Evaluación de Avance",
+        "Constancia con Flexibilidad"
+      ],
+      "materials": [
+        "Planes financieros de sesiones anteriores",
+        "Tarjetas de cambios de circunstancia",
+        "Calculadora",
+        "Formato de revisión trimestral",
+        "Cartel de las tres preguntas de revisión"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Plan Viejo",
+          "duration": "15 min",
+          "label": "¿Sigue sirviendo?"
+        },
+        {
+          "phase": "Desarrollo: Ajustar",
+          "duration": "30 min",
+          "label": "Qué se cambia y qué no"
+        },
+        {
+          "phase": "Cierre: Mi Revisión",
+          "duration": "15 min",
+          "label": "Actualizar mi plan"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: UN PLAN DE HACE UN AÑO (APERTURA)",
+          "duration": "15 min",
+          "description": "Muestre un plan financiero hecho hace tiempo con supuestos que ya no aplican. Pregunte si sigue sirviendo. Explique que ningún plan sobrevive intacto al paso del tiempo, y que eso no es un fracaso del plan: es la razón por la que se revisa periódicamente.",
+          "activity": "Dinámica \"¿Qué Cambió?\": el grupo identifica en un plan de ejemplo qué supuestos dejaron de ser válidos."
+        },
+        {
+          "title": "FASE II: AJUSTAR NO ES ABANDONAR (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Distinga dos cosas que se confunden: ajustar el plan porque cambiaron las circunstancias, y abandonarlo porque costó trabajo. Presente casos y pida que clasifiquen cuáles justifican un ajuste real. Enseñe que al ajustar se cambia el monto o el plazo, pero rara vez se elimina la meta completa.",
+          "activity": "Dinámica \"Ajusto o Abandono\": cada equipo clasifica seis situaciones y propone el ajuste concreto para las que lo justifican."
+        },
+        {
+          "title": "FASE III: MI REVISIÓN (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno revisa su propio plan de horizontes con tres preguntas: ¿sigo avanzando hacia la meta?, ¿cambió algo que obligue a ajustar?, ¿el monto sigue siendo realista? Escribe la versión actualizada. Explique que conviene hacer esta revisión cada tres meses, no cada vez que algo se complica.",
+          "activity": "Dinámica \"Versión Dos\": cada alumno actualiza su plan y anota qué cambió y por qué."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Ningún plan sobrevive intacto al paso del tiempo. Cambian los precios, cambian los ingresos, cambian las metas. Eso no significa que el plan estuviera mal: significa que hay que revisarlo. En esta clase vas a aprender a ajustar sin abandonar.",
+      "sections": [
+        {
+          "subtitle": "Un plan no es una promesa eterna",
+          "content": "Un plan financiero se hace con la información que se tiene en un momento. Con el tiempo esa información cambia: sube un precio, cambia un ingreso, aparece una necesidad nueva. Que el plan quede desactualizado no es una falla; es lo esperado. La falla sería no revisarlo nunca y seguir usando supuestos que ya no son ciertos."
+        },
+        {
+          "subtitle": "Ajustar por causa real",
+          "content": "Hay cambios que justifican ajustar: el precio de la meta subió, el ingreso disponible bajó, apareció una prioridad más urgente. En esos casos se modifica el monto mensual o el plazo, y a veces ambos. Lo que casi nunca hay que hacer es eliminar la meta completa: una meta postergada sigue siendo una meta, una meta borrada desaparece."
+        },
+        {
+          "subtitle": "Abandonar por cansancio no es ajustar",
+          "content": "Hay otra situación que se disfraza de ajuste: dejar el plan porque costó más trabajo del esperado. Ahí no cambió ninguna circunstancia, cambió el ánimo. La señal para distinguirlas es simple: si puedes nombrar el hecho concreto que cambió, es un ajuste. Si solo puedes decir que se te complicó, es abandono con otro nombre."
+        },
+        {
+          "subtitle": "Revisar en calendario, no en crisis",
+          "content": "La revisión conviene hacerla cada tres meses, en una fecha fijada de antemano, no cada vez que algo se complica. Revisar en medio de un problema lleva a decisiones emocionales; revisar en calma lleva a ajustes razonados. Tres preguntas bastan: ¿sigo avanzando?, ¿cambió algo real?, ¿el monto sigue siendo realista?"
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Qué pasa con los planes al paso del tiempo?",
+          "options": [
+            "Se cumplen solos",
+            "Se desactualizan, y eso es lo esperado",
+            "Nunca cambian"
+          ],
+          "correct": "Se desactualizan, y eso es lo esperado"
+        },
+        {
+          "question": "¿Cuál sería la verdadera falla?",
+          "options": [
+            "Que cambie",
+            "Escribirlo",
+            "No revisarlo nunca"
+          ],
+          "correct": "No revisarlo nunca"
+        },
+        {
+          "question": "¿Qué cambios justifican ajustar?",
+          "options": [
+            "Subió el precio, bajó el ingreso o cambió la prioridad",
+            "Que dé flojera",
+            "Que sea lunes"
+          ],
+          "correct": "Subió el precio, bajó el ingreso o cambió la prioridad"
+        },
+        {
+          "question": "Al ajustar se modifica:",
+          "options": [
+            "Solo la meta",
+            "El monto o el plazo",
+            "Nada"
+          ],
+          "correct": "El monto o el plazo"
+        },
+        {
+          "question": "¿Conviene eliminar la meta completa?",
+          "options": [
+            "Siempre",
+            "Sí, si cuesta trabajo",
+            "Casi nunca; mejor postergarla"
+          ],
+          "correct": "Casi nunca; mejor postergarla"
+        },
+        {
+          "question": "¿Cómo distingo ajuste de abandono?",
+          "options": [
+            "Si puedo nombrar el hecho concreto que cambió",
+            "Por la fecha",
+            "Por el monto"
+          ],
+          "correct": "Si puedo nombrar el hecho concreto que cambió"
+        },
+        {
+          "question": "Dejar el plan porque costó trabajo es:",
+          "options": [
+            "Un ajuste válido",
+            "Abandono con otro nombre",
+            "Lo recomendable"
+          ],
+          "correct": "Abandono con otro nombre"
+        },
+        {
+          "question": "¿Cada cuánto conviene revisar?",
+          "options": [
+            "Cada vez que algo se complica",
+            "Nunca",
+            "Cada tres meses, en fecha fijada"
+          ],
+          "correct": "Cada tres meses, en fecha fijada"
+        },
+        {
+          "question": "¿Por qué no revisar en medio de un problema?",
+          "options": [
+            "Porque lleva a decisiones emocionales",
+            "Porque no hay tiempo",
+            "Porque está prohibido"
+          ],
+          "correct": "Porque lleva a decisiones emocionales"
+        },
+        {
+          "question": "¿Cuáles son las tres preguntas de revisión?",
+          "options": [
+            "¿Cuánto, cuándo, dónde?",
+            "¿Sigo avanzando, cambió algo real, el monto es realista?",
+            "¿Quién, cómo, por qué?"
+          ],
+          "correct": "¿Sigo avanzando, cambió algo real, el monto es realista?"
+        }
+      ],
+      "rubric": "Logrado: distingue ajuste de abandono, actualiza su plan y justifica cada cambio con un hecho concreto. En proceso: revisa el plan sin distinguir causas. Inicial: reconoce que los planes cambian."
+    },
+    "teacher_tips": [
+      "Recupere los planes que los alumnos hicieron en clases anteriores del bloque. Revisar un plan propio enseña más que revisar uno de ejemplo.",
+      "La distinción entre ajustar y abandonar es el corazón de la clase. Sin ella, \"flexibilidad\" se vuelve excusa.",
+      "Fije con el grupo una fecha concreta de próxima revisión. Un hábito sin fecha no es un hábito."
+    ]
+  },
   "P4-4-1": {
     "code": "P4-4-1",
     "title": "El ADN del emprendedor: detectando oportunidades",
@@ -3630,8 +6390,927 @@
       "Use premios simbólicos para el 'mejor stand', 'más innovador' y 'mejor servicio'.",
       "Haga una asamblea final para compartir sentimientos y aprendizajes."
     ]
-  }
-,
+  },
+  "P4-4-6": {
+    "code": "P4-4-6",
+    "title": "Encontrar un problema que valga la pena resolver",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento",
+    "metadata": {
+      "objective": "Identificar problemas reales del entorno que valga la pena resolver y distinguirlos de ideas que solo suenan atractivas.",
+      "competencies": [
+        "Detección de Problemas",
+        "Observación del Entorno",
+        "Validación de Necesidad",
+        "Enfoque en el Usuario"
+      ],
+      "materials": [
+        "Bitácora de observación",
+        "Tarjetas de ideas y de problemas",
+        "Formato de las tres pruebas",
+        "Casos de negocios que fracasaron",
+        "Cartel de la diferencia idea contra problema"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: La Idea Genial",
+          "duration": "15 min",
+          "label": "¿Y quién lo necesita?"
+        },
+        {
+          "phase": "Desarrollo: Buscar Problemas",
+          "duration": "30 min",
+          "label": "Observar el entorno"
+        },
+        {
+          "phase": "Cierre: Las Tres Pruebas",
+          "duration": "15 min",
+          "label": "Filtrar lo que vale"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: LA IDEA QUE NADIE PIDIÓ (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente una idea de producto llamativa pero que no resuelve nada. Pregunte quién la compraría y por qué. Al no haber respuesta clara, explique que la mayoría de los negocios que fracasan no fallan por ejecutar mal: fallan porque resolvían un problema que nadie tenía.",
+          "activity": "Dinámica \"¿Quién lo Necesita?\": el grupo intenta identificar al comprador de tres ideas llamativas y descubre que algunas no tienen ninguno."
+        },
+        {
+          "title": "FASE II: SALIR A BUSCAR PROBLEMAS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Cambie el enfoque: en lugar de buscar ideas, buscar problemas. Los alumnos observan su entorno (escuela, casa, colonia) y anotan cosas que molestan, que tardan, que cuestan de más o que la gente resuelve de forma incómoda. Cada molestia observada es un candidato mucho mejor que una idea inventada en abstracto.",
+          "activity": "Dinámica \"Bitácora de Molestias\": cada alumno anota cinco problemas reales que haya visto esta semana y los comparte."
+        },
+        {
+          "title": "FASE III: LAS TRES PRUEBAS (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe el filtro: un problema vale la pena si le pasa a mucha gente, si les molesta de verdad y si estarían dispuestos a pagar por resolverlo. Los alumnos aplican las tres pruebas a los problemas que anotaron. Los que pasan las tres son los que merecen convertirse en un proyecto.",
+          "activity": "Dinámica \"Filtro de Tres\": cada problema observado se evalúa con las tres pruebas y se marca cuáles pasan."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "La mayoría de los negocios que fracasan no fracasan por trabajar mal: fracasan porque resolvían algo que a nadie le importaba. Por eso los buenos emprendedores no salen a buscar ideas geniales: salen a buscar problemas reales. En esta clase vas a aprender a encontrarlos.",
+      "sections": [
+        {
+          "subtitle": "Idea no es lo mismo que problema",
+          "content": "Una idea es algo que se te ocurre; un problema es algo que a alguien le pasa. La diferencia es enorme. Una idea puede ser brillante y no servirle a nadie, mientras que un problema real siempre tiene a alguien dispuesto a pagar por resolverlo. Empezar por el problema en lugar de por la idea cambia por completo la probabilidad de éxito."
+        },
+        {
+          "subtitle": "Los problemas se observan, no se inventan",
+          "content": "Para encontrar problemas hay que mirar el entorno con atención: qué cosas tardan de más, qué cosas molestan, qué resuelve la gente de forma incómoda o improvisada. Esas soluciones improvisadas son la mejor pista de todas: cuando alguien ya inventó un remedio casero para algo, es porque el problema le importa lo suficiente."
+        },
+        {
+          "subtitle": "Las tres pruebas",
+          "content": "No todo problema merece un proyecto. Vale la pena si pasa tres pruebas: le pasa a mucha gente, les molesta de verdad y estarían dispuestos a pagar por resolverlo. Si le pasa a muchos pero no les molesta, no hay negocio. Si les molesta mucho pero son cinco personas, tampoco. Las tres pruebas juntas son las que filtran."
+        },
+        {
+          "subtitle": "Estar dispuesto a pagar es la prueba dura",
+          "content": "La tercera prueba es la que más ideas descarta y la que más se evita aplicar. Mucha gente dice que un problema le molesta, pero no lo suficiente para pagar por resolverlo. La forma de averiguarlo es preguntar qué ha hecho hasta ahora al respecto y cuánto ha gastado. Si nunca ha gastado nada, probablemente no gastará contigo."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué fracasan la mayoría de los negocios?",
+          "options": [
+            "Porque trabajaron poco",
+            "Porque resolvían algo que a nadie le importaba",
+            "Por mala suerte"
+          ],
+          "correct": "Porque resolvían algo que a nadie le importaba"
+        },
+        {
+          "question": "¿Cuál es la diferencia entre idea y problema?",
+          "options": [
+            "Ninguna",
+            "La idea es más grande",
+            "La idea se te ocurre; el problema le pasa a alguien"
+          ],
+          "correct": "La idea se te ocurre; el problema le pasa a alguien"
+        },
+        {
+          "question": "¿Cómo se encuentran los problemas?",
+          "options": [
+            "Observando el entorno con atención",
+            "Inventándolos",
+            "Preguntando en internet"
+          ],
+          "correct": "Observando el entorno con atención"
+        },
+        {
+          "question": "¿Cuál es la mejor pista de un problema real?",
+          "options": [
+            "Que nadie hable de él",
+            "Que la gente ya inventó un remedio improvisado",
+            "Que sea complicado"
+          ],
+          "correct": "Que la gente ya inventó un remedio improvisado"
+        },
+        {
+          "question": "¿Cuáles son las tres pruebas?",
+          "options": [
+            "Es nuevo, bonito y barato",
+            "Es fácil, rápido y divertido",
+            "Le pasa a muchos, les molesta y pagarían por resolverlo"
+          ],
+          "correct": "Le pasa a muchos, les molesta y pagarían por resolverlo"
+        },
+        {
+          "question": "Si le pasa a muchos pero no les molesta:",
+          "options": [
+            "No hay negocio",
+            "Es una gran oportunidad",
+            "Hay que insistir"
+          ],
+          "correct": "No hay negocio"
+        },
+        {
+          "question": "Si les molesta mucho pero son cinco personas:",
+          "options": [
+            "Es perfecto",
+            "Tampoco alcanza",
+            "Da igual"
+          ],
+          "correct": "Tampoco alcanza"
+        },
+        {
+          "question": "¿Cuál es la prueba más dura?",
+          "options": [
+            "Que sea nuevo",
+            "Que sea bonito",
+            "Estar dispuesto a pagar"
+          ],
+          "correct": "Estar dispuesto a pagar"
+        },
+        {
+          "question": "¿Cómo averiguo si pagarían?",
+          "options": [
+            "Preguntando qué han hecho y cuánto han gastado",
+            "Preguntando si les gustaría",
+            "Adivinando"
+          ],
+          "correct": "Preguntando qué han hecho y cuánto han gastado"
+        },
+        {
+          "question": "Si nunca ha gastado nada en resolverlo:",
+          "options": [
+            "Seguro comprará",
+            "Probablemente tampoco gastará contigo",
+            "Es el mejor cliente"
+          ],
+          "correct": "Probablemente tampoco gastará contigo"
+        }
+      ],
+      "rubric": "Logrado: observa problemas reales del entorno y los filtra con las tres pruebas. En proceso: identifica problemas sin aplicar el filtro. Inicial: distingue idea de problema."
+    },
+    "teacher_tips": [
+      "La bitácora de observación funciona mejor si se hace fuera del salón. Pida que observen durante la semana antes de la sesión.",
+      "La tercera prueba es incómoda y por eso se evita. Insista en preguntar por gasto pasado, no por intención futura.",
+      "Valide los problemas pequeños. Un problema modesto pero real vale más que una idea ambiciosa sin usuario."
+    ]
+  },
+  "P4-4-7": {
+    "code": "P4-4-7",
+    "title": "Mi propuesta de valor en una sola frase",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento",
+    "metadata": {
+      "objective": "Construir una propuesta de valor clara en una sola frase que diga a quién sirve el producto, qué problema resuelve y por qué es mejor que la alternativa.",
+      "competencies": [
+        "Comunicación de Valor",
+        "Síntesis",
+        "Diferenciación",
+        "Enfoque en el Cliente"
+      ],
+      "materials": [
+        "Ejemplos de propuestas buenas y malas",
+        "Plantilla de la frase en tres partes",
+        "Tarjetas de productos para practicar",
+        "Cronómetro para el reto de diez segundos",
+        "Cartel de la estructura"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Diez Segundos",
+          "duration": "15 min",
+          "label": "Explícalo rápido"
+        },
+        {
+          "phase": "Desarrollo: La Estructura",
+          "duration": "30 min",
+          "label": "Tres partes de la frase"
+        },
+        {
+          "phase": "Cierre: Mi Frase",
+          "duration": "15 min",
+          "label": "Escribir y probar"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: TIENES DIEZ SEGUNDOS (APERTURA)",
+          "duration": "15 min",
+          "description": "Pida a algunos alumnos que expliquen su producto en diez segundos. La mayoría se enredará o hablará de características en lugar de beneficios. Explique que si no se puede explicar en una frase, el cliente no lo va a entender, y un cliente que no entiende no compra.",
+          "activity": "Dinámica \"Diez Segundos\": cada voluntario explica su producto contra reloj y el grupo dice si entendió o no."
+        },
+        {
+          "title": "FASE II: LAS TRES PARTES DE LA FRASE (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente la estructura: para quién es, qué problema resuelve y por qué es mejor que lo que ya existe. Los alumnos escriben su propuesta siguiendo la plantilla y la corrigen dos veces. Explique que la parte que más se olvida es la tercera: sin diferencia, la frase describe pero no convence.",
+          "activity": "Dinámica \"Arma la Frase\": cada alumno completa la plantilla de tres partes y la ajusta con dos rondas de corrección."
+        },
+        {
+          "title": "FASE III: PROBARLA CON ALGUIEN (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno dice su frase a un compañero que no conoce su producto, y este debe repetir con sus palabras qué entendió. Si no coincide, la frase falla, no el compañero. Esa prueba de repetición es el mejor filtro que existe para una propuesta de valor.",
+          "activity": "Dinámica \"Repítelo con tus Palabras\": la propuesta se valida solo si el otro puede reformularla correctamente."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Si alguien te pregunta qué vendes y necesitas dos minutos para explicarlo, ya perdiste al cliente. Una buena propuesta de valor cabe en una frase y dice tres cosas. En esta clase vas a escribir la tuya y a probarla con alguien de verdad.",
+      "sections": [
+        {
+          "subtitle": "Por qué una sola frase",
+          "content": "La gente decide en segundos si algo le interesa. Si la explicación es larga, el interés se pierde antes de llegar al punto. Una frase clara no simplifica el producto: obliga a saber exactamente qué es lo más importante de él. Quien no puede resumirlo suele ser porque todavía no lo tiene claro ni para sí mismo."
+        },
+        {
+          "subtitle": "Parte uno: para quién es",
+          "content": "Toda propuesta empieza definiendo al cliente. \"Para estudiantes de secundaria que olvidan material\" es infinitamente mejor que \"para todos\". Decir que es para todos suena ambicioso y en realidad significa que no se pensó en nadie. Entre más específico el destinatario, más fácil es que esa persona se reconozca y preste atención."
+        },
+        {
+          "subtitle": "Parte dos: qué problema resuelve",
+          "content": "Aquí va el problema, no las características. La gente no compra un taladro porque tenga tres velocidades: lo compra porque necesita un hoyo en la pared. Describir el problema conecta con lo que la persona ya siente; describir características obliga a que ella misma traduzca, y casi nadie hace ese trabajo."
+        },
+        {
+          "subtitle": "Parte tres: por qué es mejor",
+          "content": "Es la parte que más se olvida y la que decide la compra. Sin diferencia frente a lo que ya existe, la frase describe pero no convence. Puede ser más barato, más rápido, más cerca, más fácil o más confiable. No tiene que ser mejor en todo: basta con ser claramente mejor en una cosa que le importe al cliente."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Por qué la propuesta debe caber en una frase?",
+          "options": [
+            "Porque es más elegante",
+            "Porque lo pide la ley",
+            "Porque la gente decide en segundos"
+          ],
+          "correct": "Porque la gente decide en segundos"
+        },
+        {
+          "question": "¿Cuáles son las tres partes?",
+          "options": [
+            "Para quién, qué problema resuelve y por qué es mejor",
+            "Nombre, precio y color",
+            "Qué, cuándo y dónde"
+          ],
+          "correct": "Para quién, qué problema resuelve y por qué es mejor"
+        },
+        {
+          "question": "Decir que el producto es \"para todos\":",
+          "options": [
+            "Es lo ideal",
+            "Significa que no se pensó en nadie",
+            "Amplía el mercado"
+          ],
+          "correct": "Significa que no se pensó en nadie"
+        },
+        {
+          "question": "¿Qué se describe en la parte dos?",
+          "options": [
+            "El precio",
+            "El material",
+            "El problema, no las características"
+          ],
+          "correct": "El problema, no las características"
+        },
+        {
+          "question": "La gente compra un taladro porque:",
+          "options": [
+            "Necesita un hoyo en la pared",
+            "Tiene tres velocidades",
+            "Es bonito"
+          ],
+          "correct": "Necesita un hoyo en la pared"
+        },
+        {
+          "question": "¿Cuál es la parte que más se olvida?",
+          "options": [
+            "El nombre",
+            "Por qué es mejor que lo que ya existe",
+            "El precio"
+          ],
+          "correct": "Por qué es mejor que lo que ya existe"
+        },
+        {
+          "question": "Sin diferencia, la frase:",
+          "options": [
+            "Convence igual",
+            "Es perfecta",
+            "Describe pero no convence"
+          ],
+          "correct": "Describe pero no convence"
+        },
+        {
+          "question": "¿Hay que ser mejor en todo?",
+          "options": [
+            "No, basta con serlo en una cosa que le importe al cliente",
+            "Sí, en todo",
+            "Sí, al menos en tres cosas"
+          ],
+          "correct": "No, basta con serlo en una cosa que le importe al cliente"
+        },
+        {
+          "question": "¿Cómo se prueba una propuesta?",
+          "options": [
+            "Preguntando si suena bien",
+            "Pidiendo a alguien que la repita con sus palabras",
+            "Leyéndola en voz alta"
+          ],
+          "correct": "Pidiendo a alguien que la repita con sus palabras"
+        },
+        {
+          "question": "Si el otro no la puede repetir bien:",
+          "options": [
+            "Falla el compañero",
+            "No importa",
+            "Falla la frase, no el compañero"
+          ],
+          "correct": "Falla la frase, no el compañero"
+        }
+      ],
+      "rubric": "Logrado: escribe una propuesta con las tres partes y pasa la prueba de repetición. En proceso: escribe la frase sin diferenciación. Inicial: describe el producto sin estructura."
+    },
+    "teacher_tips": [
+      "El reto de diez segundos al inicio es incómodo a propósito. Esa incomodidad es la que motiva a estructurar la frase.",
+      "Corrija especialmente la tercera parte. Casi todos la omiten en el primer intento.",
+      "La prueba de repetición es implacable y por eso funciona. Insista en que el fallo es de la frase, nunca de quien escuchó."
+    ]
+  },
+  "P4-4-8": {
+    "code": "P4-4-8",
+    "title": "Proveedores: comprar barato sin bajar la calidad",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento",
+    "metadata": {
+      "objective": "Comparar proveedores considerando precio, calidad, tiempo de entrega y confiabilidad, y calcular el costo total real de abastecerse.",
+      "competencies": [
+        "Selección de Proveedores",
+        "Comparación Multicriterio",
+        "Cálculo de Costos",
+        "Negociación Básica"
+      ],
+      "materials": [
+        "Fichas de tres proveedores ficticios",
+        "Calculadora",
+        "Tabla de comparación multicriterio",
+        "Muestras de calidad distinta",
+        "Cartel de los cuatro criterios"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: El Más Barato",
+          "duration": "15 min",
+          "label": "¿Siempre conviene?"
+        },
+        {
+          "phase": "Desarrollo: Cuatro Criterios",
+          "duration": "30 min",
+          "label": "Comparar de verdad"
+        },
+        {
+          "phase": "Cierre: El Costo Total",
+          "duration": "15 min",
+          "label": "Sumarlo todo"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: EL MÁS BARATO NO SIEMPRE (APERTURA)",
+          "duration": "15 min",
+          "description": "Presente dos materiales: uno barato que se rompe y uno más caro que dura. Pregunte cuál conviene. Con muestras físicas la respuesta cambia de inmediato. Explique que elegir proveedor solo por precio es el error más común, y que el precio es apenas uno de cuatro criterios.",
+          "activity": "Dinámica \"Tócalo y Decide\": el grupo compara dos muestras y calcula cuántas piezas baratas equivalen a una buena."
+        },
+        {
+          "title": "FASE II: LOS CUATRO CRITERIOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los cuatro criterios: precio, calidad, tiempo de entrega y confiabilidad. Los alumnos llenan una tabla comparando tres proveedores en los cuatro. Descubren que el más barato suele fallar en alguno de los otros tres, y que ese fallo tiene un costo aunque no aparezca en la factura.",
+          "activity": "Dinámica \"Tabla de Cuatro\": cada equipo califica tres proveedores en los cuatro criterios y elige justificando."
+        },
+        {
+          "title": "FASE III: EL COSTO TOTAL REAL (CIERRE)",
+          "duration": "15 min",
+          "description": "Enseñe a calcular el costo total: precio de compra, más el costo de las piezas que salen mal, más lo que cuesta esperar si tarda. Los alumnos calculan el costo total de los tres proveedores y descubren que el orden puede invertirse. Mencione que pedir volumen o pagar de contado suele abrir descuentos.",
+          "activity": "Dinámica \"Suma Todo\": cada equipo calcula el costo total real de los tres proveedores y compara con el precio de lista."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Cuando compras material para tu negocio, el precio parece ser lo único que importa. Pero un proveedor barato que entrega tarde o vende material que se rompe termina costando más. En esta clase vas a aprender a comparar de verdad.",
+      "sections": [
+        {
+          "subtitle": "El precio es solo uno de cuatro",
+          "content": "Elegir proveedor solo por precio es el error más común al empezar un negocio. Hay tres criterios más que importan igual: la calidad de lo que entrega, el tiempo que tarda y la confiabilidad, que es qué tan seguro es que cumpla lo prometido. Un proveedor puede ganar en precio y perder tanto en los otros tres que salga más caro."
+        },
+        {
+          "subtitle": "La calidad se paga de un lado o del otro",
+          "content": "El material barato que se rompe se paga dos veces: cuando lo compras y cuando tienes que reponerlo o devolverle el dinero a un cliente molesto. Si de cada diez piezas baratas dos salen mal, el precio real por pieza usable es mucho mayor que el de lista. Ese cálculo es el que revela cuál era realmente el barato."
+        },
+        {
+          "subtitle": "El tiempo también cuesta",
+          "content": "Un proveedor que tarda tres semanas obliga a comprar con más anticipación, a tener más inventario guardado y a perder ventas si algo se acaba. Todo eso es costo, aunque no aparezca en ninguna factura. Cuando el negocio depende de reponer rápido, el tiempo de entrega puede pesar más que el precio."
+        },
+        {
+          "subtitle": "Negociar es normal",
+          "content": "Pedir un mejor precio no es grosería: es parte de comprar. Casi siempre hay margen cuando se compra más volumen, cuando se paga de contado o cuando se es cliente frecuente. Lo que hay que hacer es preguntar con respeto y estar dispuesto a comparar. Un proveedor que se molesta porque comparas ya te dijo algo importante de él."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuáles son los cuatro criterios para elegir proveedor?",
+          "options": [
+            "Precio, calidad, tiempo de entrega y confiabilidad",
+            "Precio, color, tamaño y marca",
+            "Cercanía, amistad, fama y logo"
+          ],
+          "correct": "Precio, calidad, tiempo de entrega y confiabilidad"
+        },
+        {
+          "question": "¿Cuál es el error más común?",
+          "options": [
+            "Elegir solo por calidad",
+            "Elegir solo por precio",
+            "Comparar demasiado"
+          ],
+          "correct": "Elegir solo por precio"
+        },
+        {
+          "question": "El material barato que se rompe:",
+          "options": [
+            "Sale más barato",
+            "No tiene costo extra",
+            "Se paga dos veces"
+          ],
+          "correct": "Se paga dos veces"
+        },
+        {
+          "question": "Si de diez piezas dos salen mal:",
+          "options": [
+            "El precio real por pieza usable es mayor",
+            "Da igual",
+            "Sale más barato"
+          ],
+          "correct": "El precio real por pieza usable es mayor"
+        },
+        {
+          "question": "¿Qué costos genera un proveedor lento?",
+          "options": [
+            "Ninguno",
+            "Más inventario guardado y ventas perdidas",
+            "Solo espera"
+          ],
+          "correct": "Más inventario guardado y ventas perdidas"
+        },
+        {
+          "question": "¿Aparecen esos costos en la factura?",
+          "options": [
+            "Sí, siempre",
+            "Solo el primer mes",
+            "No, pero son reales"
+          ],
+          "correct": "No, pero son reales"
+        },
+        {
+          "question": "¿Qué es la confiabilidad?",
+          "options": [
+            "Qué tan seguro es que cumpla lo prometido",
+            "Qué tan barato es",
+            "Qué tan cerca está"
+          ],
+          "correct": "Qué tan seguro es que cumpla lo prometido"
+        },
+        {
+          "question": "¿Cuándo suele haber descuentos?",
+          "options": [
+            "Nunca",
+            "Por volumen, pago de contado o ser cliente frecuente",
+            "Solo en diciembre"
+          ],
+          "correct": "Por volumen, pago de contado o ser cliente frecuente"
+        },
+        {
+          "question": "Pedir un mejor precio es:",
+          "options": [
+            "Una grosería",
+            "Ilegal",
+            "Parte normal de comprar"
+          ],
+          "correct": "Parte normal de comprar"
+        },
+        {
+          "question": "Si un proveedor se molesta porque comparas:",
+          "options": [
+            "Ya te dijo algo importante de él",
+            "Hay que disculparse",
+            "Hay que comprarle igual"
+          ],
+          "correct": "Ya te dijo algo importante de él"
+        }
+      ],
+      "rubric": "Logrado: compara proveedores en los cuatro criterios y calcula el costo total real. En proceso: compara solo precio y calidad. Inicial: reconoce que el más barato no siempre conviene."
+    },
+    "teacher_tips": [
+      "Las muestras físicas de distinta calidad hacen el punto en segundos. Sin ellas la discusión se queda en teoría.",
+      "El cálculo del precio por pieza usable es el que cambia el orden de los proveedores. No se lo salte.",
+      "Practique la frase para negociar. Muchos alumnos creen que pedir descuento es de mala educación."
+    ]
+  },
+  "P4-4-9": {
+    "code": "P4-4-9",
+    "title": "Llevar cuentas del negocio: registro diario de ventas",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento",
+    "metadata": {
+      "objective": "Llevar un registro diario de ventas y gastos del negocio, y usarlo para conocer la utilidad real y detectar tendencias.",
+      "competencies": [
+        "Registro Contable Básico",
+        "Análisis de Tendencias",
+        "Cálculo de Utilidad",
+        "Toma de Decisiones con Datos"
+      ],
+      "materials": [
+        "Formato de registro diario",
+        "Calculadora",
+        "Casos con datos de dos semanas",
+        "Gráfica en blanco para trazar",
+        "Cartel de las tres columnas"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: ¿Cuánto Ganaste?",
+          "duration": "15 min",
+          "label": "La pregunta sin respuesta"
+        },
+        {
+          "phase": "Desarrollo: El Registro",
+          "duration": "30 min",
+          "label": "Tres columnas al día"
+        },
+        {
+          "phase": "Cierre: Leer los Datos",
+          "duration": "15 min",
+          "label": "Qué me dicen"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: \"¿CUÁNTO GANASTE?\" (APERTURA)",
+          "duration": "15 min",
+          "description": "Pregunte a alguien que haya vendido algo cuánto ganó exactamente. Casi nadie lo sabe: se sabe cuánto se cobró, no cuánto se ganó. Explique que sin registro no hay forma de saberlo, y que un negocio sin registro se maneja completamente a ciegas.",
+          "activity": "Dinámica \"Cuánto Cobré, Cuánto Gané\": el grupo distingue las dos cifras y descubre que casi siempre solo se conoce la primera."
+        },
+        {
+          "title": "FASE II: TRES COLUMNAS AL DÍA (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente el registro mínimo: fecha, lo que entró y lo que salió. Con eso basta para calcular la utilidad de cualquier periodo. Los alumnos llenan dos semanas de un caso y calculan ingresos, gastos y utilidad. Explique que el registro se hace el mismo día, porque la memoria a tres días ya no sirve.",
+          "activity": "Dinámica \"Llena el Registro\": cada equipo registra catorce días de operación y calcula la utilidad del periodo."
+        },
+        {
+          "title": "FASE III: LEER LO QUE DICEN LOS DATOS (CIERRE)",
+          "duration": "15 min",
+          "description": "Con los datos registrados, los alumnos identifican patrones: qué días se vende más, qué gasto crece, si la utilidad sube o baja. Explique que ese es el verdadero valor del registro: no es cumplir un trámite, es descubrir cosas que a simple vista no se ven y decidir con ellas.",
+          "activity": "Dinámica \"¿Qué Ves?\": cada equipo encuentra dos patrones en sus datos y propone una decisión basada en cada uno."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Si le preguntas a alguien que vende cuánto ganó ayer, casi siempre te dice cuánto cobró. No son lo mismo, y la diferencia solo aparece si se lleva registro. En esta clase vas a aprender el registro mínimo que necesita cualquier negocio.",
+      "sections": [
+        {
+          "subtitle": "Cobrar no es ganar",
+          "content": "Cobrar es todo el dinero que entró; ganar es lo que queda después de restar lo que costó producirlo y operar. Un negocio puede cobrar mucho y ganar poco, o incluso perder. Confundir ambas cifras es el error más común de quien empieza, y lleva a creer que un negocio va bien cuando en realidad está consumiendo su propio capital."
+        },
+        {
+          "subtitle": "El registro mínimo: tres columnas",
+          "content": "No hace falta contabilidad complicada para empezar. Con tres columnas basta: la fecha, lo que entró y lo que salió. Anotando eso todos los días se puede calcular la utilidad de cualquier periodo restando la columna de salidas a la de entradas. Es simple a propósito: un sistema complicado se abandona a la semana."
+        },
+        {
+          "subtitle": "El mismo día o no sirve",
+          "content": "El registro se hace el mismo día, idealmente al cerrar. La memoria a tres días ya no es confiable: se olvidan gastos pequeños y se recuerdan ventas de más. Un registro incompleto es peor que no tenerlo, porque da confianza en números equivocados. Cinco minutos diarios al cierre valen más que dos horas de reconstrucción al mes."
+        },
+        {
+          "subtitle": "Los datos revelan lo invisible",
+          "content": "El valor del registro no está en llenarlo: está en leerlo. Con dos semanas de datos ya se ven cosas que a simple vista no se notan: qué días se vende más, qué gasto está creciendo, si la utilidad mejora o empeora. Cada patrón detectado permite tomar una decisión concreta, y esa es la diferencia entre administrar y adivinar."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Es lo mismo cobrar que ganar?",
+          "options": [
+            "Sí, es igual",
+            "No: ganar es lo que queda después de restar costos",
+            "Ganar es más que cobrar"
+          ],
+          "correct": "No: ganar es lo que queda después de restar costos"
+        },
+        {
+          "question": "¿Cuáles son las tres columnas del registro mínimo?",
+          "options": [
+            "Nombre, edad y dirección",
+            "Producto, color y precio",
+            "Fecha, lo que entró y lo que salió"
+          ],
+          "correct": "Fecha, lo que entró y lo que salió"
+        },
+        {
+          "question": "¿Cómo se calcula la utilidad?",
+          "options": [
+            "Entradas menos salidas",
+            "Entradas más salidas",
+            "Entradas entre salidas"
+          ],
+          "correct": "Entradas menos salidas"
+        },
+        {
+          "question": "¿Cuándo se hace el registro?",
+          "options": [
+            "A fin de mes",
+            "El mismo día",
+            "Cuando se acuerde"
+          ],
+          "correct": "El mismo día"
+        },
+        {
+          "question": "¿Por qué no sirve la memoria a tres días?",
+          "options": [
+            "Porque es aburrido",
+            "Porque es ilegal",
+            "Se olvidan gastos y se recuerdan ventas de más"
+          ],
+          "correct": "Se olvidan gastos y se recuerdan ventas de más"
+        },
+        {
+          "question": "Un registro incompleto:",
+          "options": [
+            "Es peor que no tenerlo, porque da confianza en números falsos",
+            "Sirve igual",
+            "Es suficiente"
+          ],
+          "correct": "Es peor que no tenerlo, porque da confianza en números falsos"
+        },
+        {
+          "question": "¿Por qué el sistema debe ser simple?",
+          "options": [
+            "Porque es más barato",
+            "Porque uno complicado se abandona",
+            "Porque lo pide la ley"
+          ],
+          "correct": "Porque uno complicado se abandona"
+        },
+        {
+          "question": "¿Dónde está el valor del registro?",
+          "options": [
+            "En llenarlo bonito",
+            "En guardarlo",
+            "En leerlo, no solo en llenarlo"
+          ],
+          "correct": "En leerlo, no solo en llenarlo"
+        },
+        {
+          "question": "¿Qué se puede descubrir con dos semanas de datos?",
+          "options": [
+            "Qué días se vende más y qué gasto crece",
+            "Nada útil",
+            "Solo el total"
+          ],
+          "correct": "Qué días se vende más y qué gasto crece"
+        },
+        {
+          "question": "Un negocio sin registro:",
+          "options": [
+            "Funciona igual",
+            "Se maneja a ciegas",
+            "Ahorra tiempo"
+          ],
+          "correct": "Se maneja a ciegas"
+        }
+      ],
+      "rubric": "Logrado: lleva el registro de tres columnas, calcula utilidad y detecta al menos un patrón accionable. En proceso: registra sin analizar. Inicial: distingue cobrar de ganar."
+    },
+    "teacher_tips": [
+      "Insista en la simplicidad del formato. Un sistema de ocho columnas se abandona antes de la segunda semana.",
+      "El paso que más valor agrega es la lectura de patrones. Registrar sin leer es solo trabajo.",
+      "Pida que registren durante una semana real, aunque sea de sus gastos personales. El hábito se aprende haciéndolo."
+    ]
+  },
+  "P4-4-10": {
+    "code": "P4-4-10",
+    "title": "Reinvertir o repartir: qué hago con la ganancia",
+    "level": "Primaria 4",
+    "duration": "60 min",
+    "difficulty": "Intermedio",
+    "category": "Emprendimiento",
+    "metadata": {
+      "objective": "Decidir cómo distribuir la ganancia de un negocio entre reinversión, reserva y retiro personal, entendiendo el efecto de cada opción.",
+      "competencies": [
+        "Distribución de Utilidades",
+        "Visión de Crecimiento",
+        "Gestión de Reservas",
+        "Decisión Estratégica"
+      ],
+      "materials": [
+        "Fichas que representen la ganancia",
+        "Tres contenedores etiquetados",
+        "Calculadora",
+        "Casos de negocios con distinta distribución",
+        "Cartel de los tres destinos"
+      ]
+    },
+    "strategy": {
+      "timeline": [
+        {
+          "phase": "Apertura: Ya Gané, ¿Ahora Qué?",
+          "duration": "15 min",
+          "label": "Tres caminos"
+        },
+        {
+          "phase": "Desarrollo: Los Tres Destinos",
+          "duration": "30 min",
+          "label": "Qué hace cada uno"
+        },
+        {
+          "phase": "Cierre: Mi Reparto",
+          "duration": "15 min",
+          "label": "Decidir porcentajes"
+        }
+      ],
+      "phases": [
+        {
+          "title": "FASE I: YA GANÉ, ¿AHORA QUÉ? (APERTURA)",
+          "duration": "15 min",
+          "description": "Plantee la situación: el negocio dejó una ganancia. Pregunte qué harían con ella. Aparecerán respuestas divididas entre gastarla y volverla a meter al negocio. Explique que hay tres destinos posibles y que la decisión sobre cómo repartirla define si el negocio crece, sobrevive o desaparece.",
+          "activity": "Dinámica \"¿Qué Haces con la Ganancia?\": el grupo vota entre tres destinos y se registran las razones de cada uno."
+        },
+        {
+          "title": "FASE II: LOS TRES DESTINOS (DESARROLLO)",
+          "duration": "30 min",
+          "description": "Presente los tres: reinvertir, que hace crecer la capacidad de vender; reservar, que protege ante imprevistos del negocio; y retirar, que es la recompensa del esfuerzo. Los alumnos simulan tres negocios con distribuciones distintas y comparan qué pasa con cada uno después de seis meses.",
+          "activity": "Dinámica \"Tres Negocios\": cada equipo simula seis meses con una distribución distinta y compara resultados finales."
+        },
+        {
+          "title": "FASE III: MI REPARTO (CIERRE)",
+          "duration": "15 min",
+          "description": "Cada alumno define su distribución con porcentajes que sumen cien y la justifica. Explique que no hay una fórmula universal: un negocio que empieza suele reinvertir más, y uno consolidado puede retirar más. Lo que nunca debe faltar es algo de reserva, porque los imprevistos del negocio también existen.",
+          "activity": "Dinámica \"Mi Distribución\": cada alumno asigna sus tres porcentajes y explica por qué en su etapa tiene sentido."
+        }
+      ]
+    },
+    "theory": {
+      "introduction": "Vender bien es solo la mitad. La otra mitad es decidir qué hacer con lo que ganaste. Hay tres caminos, y la mezcla que elijas define si tu negocio crece, se queda igual o desaparece al primer problema.",
+      "sections": [
+        {
+          "subtitle": "Reinvertir: hacer crecer la capacidad",
+          "content": "Reinvertir significa meter parte de la ganancia de vuelta al negocio: más material, mejores herramientas, más variedad, mejor presentación. Es lo que permite vender más el mes siguiente. Un negocio que nunca reinvierte se queda del mismo tamaño para siempre, y en un entorno donde los costos suben, quedarse igual es en realidad ir hacia atrás."
+        },
+        {
+          "subtitle": "Reservar: sobrevivir a los imprevistos",
+          "content": "El negocio también tiene emergencias: se descompone algo, un cliente no paga, sube el precio del material de golpe. La reserva es el fondo de emergencia del negocio y cumple la misma función que el personal. Sin ella, cualquier imprevisto obliga a pedir prestado o a cerrar. Es la parte que más se subestima y la que más negocios pequeños salva."
+        },
+        {
+          "subtitle": "Retirar: la recompensa del esfuerzo",
+          "content": "Retirar es tomar una parte de la ganancia para uso personal. Es legítimo y necesario: nadie sostiene un esfuerzo durante meses sin ver ningún beneficio. El error no es retirar, sino retirar todo. Un negocio del que se saca el cien por ciento de la ganancia queda exactamente igual de frágil y de pequeño que el primer día."
+        },
+        {
+          "subtitle": "La mezcla depende de la etapa",
+          "content": "No existe una distribución correcta para todos. Un negocio que apenas empieza suele necesitar reinvertir la mayor parte para alcanzar tamaño. Uno más consolidado puede retirar más. Lo único que no debería faltar en ninguna etapa es algo de reserva. Y la distribución se revisa: lo que tenía sentido hace seis meses puede no tenerlo hoy."
+        }
+      ]
+    },
+    "evaluation": {
+      "exam_questions": [
+        {
+          "question": "¿Cuáles son los tres destinos de la ganancia?",
+          "options": [
+            "Gastar, prestar y esconder",
+            "Vender, comprar y cambiar",
+            "Reinvertir, reservar y retirar"
+          ],
+          "correct": "Reinvertir, reservar y retirar"
+        },
+        {
+          "question": "¿Qué logra reinvertir?",
+          "options": [
+            "Hacer crecer la capacidad de vender",
+            "Reducir el negocio",
+            "Pagar impuestos"
+          ],
+          "correct": "Hacer crecer la capacidad de vender"
+        },
+        {
+          "question": "Un negocio que nunca reinvierte:",
+          "options": [
+            "Crece solo",
+            "Se queda del mismo tamaño para siempre",
+            "Gana más"
+          ],
+          "correct": "Se queda del mismo tamaño para siempre"
+        },
+        {
+          "question": "¿Para qué sirve la reserva?",
+          "options": [
+            "Para gastos personales",
+            "Para pagar sueldos",
+            "Para los imprevistos del negocio"
+          ],
+          "correct": "Para los imprevistos del negocio"
+        },
+        {
+          "question": "La reserva es como:",
+          "options": [
+            "El fondo de emergencia, pero del negocio",
+            "Una inversión de largo plazo",
+            "Un préstamo"
+          ],
+          "correct": "El fondo de emergencia, pero del negocio"
+        },
+        {
+          "question": "Sin reserva, ante un imprevisto:",
+          "options": [
+            "No pasa nada",
+            "Hay que pedir prestado o cerrar",
+            "El banco ayuda"
+          ],
+          "correct": "Hay que pedir prestado o cerrar"
+        },
+        {
+          "question": "¿Está mal retirar ganancia?",
+          "options": [
+            "Sí, siempre",
+            "Solo si es poco",
+            "No; el error es retirar todo"
+          ],
+          "correct": "No; el error es retirar todo"
+        },
+        {
+          "question": "Un negocio del que se retira el 100%:",
+          "options": [
+            "Queda igual de frágil y pequeño",
+            "Crece más rápido",
+            "Es el ideal"
+          ],
+          "correct": "Queda igual de frágil y pequeño"
+        },
+        {
+          "question": "Un negocio que empieza suele:",
+          "options": [
+            "Retirar la mayor parte",
+            "Reinvertir la mayor parte",
+            "No hacer nada"
+          ],
+          "correct": "Reinvertir la mayor parte"
+        },
+        {
+          "question": "¿Qué no debe faltar en ninguna etapa?",
+          "options": [
+            "Retiro alto",
+            "Publicidad cara",
+            "Algo de reserva"
+          ],
+          "correct": "Algo de reserva"
+        }
+      ],
+      "rubric": "Logrado: define una distribución con porcentajes justificados según la etapa del negocio. En proceso: nombra los tres destinos sin asignar. Inicial: reconoce que la ganancia tiene varios usos."
+    },
+    "teacher_tips": [
+      "La simulación de tres negocios con distinta distribución es lo que hace tangible el efecto de la decisión.",
+      "Valide el retiro como algo legítimo. Si se enseña que retirar está mal, los alumnos abandonan sus proyectos por falta de recompensa.",
+      "Insista en la reserva: es el destino que menos se elige y el que más negocios pequeños salva."
+    ]
+  },
   "P4-SUPREMO-BANCO-TIEMPO": {
     "code": "P4-SUPREMO-BANCO-TIEMPO",
     "title": "Banco del Tiempo: Tres Crisis",

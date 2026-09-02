@@ -4,152 +4,124 @@
   "unit_title": "El Equipo Ideal: roles para el éxito",
   "level": "Primaria 5",
   "edad": "10-11 años",
-  "tipo": "SIMULADOR",
-  "complejidad": "ALTO",
-  "titulo": "La Fábrica de Ideas",
-  "descripcion": "Un negocio es como un reloj: si una pieza falla, todo se detiene. ¡Configura tu cadena de producción y ve qué tan rápido puedes entregar!",
-  "objetivo": "Comprender la interdependencia de los procesos empresariales y la importancia de la eficiencia en cada etapa",
-  "xp": 500,
-  "descripcion_formula": "La Eficiencia Total está limitada por el paso más lento (Cuello de Botella). Calculamos: Eficiencia = Math.min(pasos).",
-  "inputs": [
+  "tipo": "ARRASTRA",
+  "complejidad": "MEDIO",
+  "titulo": "¿Quién Hace Qué?",
+  "descripcion": "La cooperativa escolar va a vender aguas frescas en la kermés. Hay cuatro personas y muchísimas tareas. Si todos hacen todo, no se hace nada. Reparte el trabajo.",
+  "objetivo": "Identificar los roles clave de un equipo emprendedor y comprender que un negocio necesita talentos distintos, no cuatro personas iguales.",
+  "xp": 400,
+  "instruccion": "Arrastra cada tarea a la persona del equipo que debe encargarse de ella.",
+  "categorias": [
     {
-      "id": "ef_diseno",
-      "label": "Velocidad de Diseño",
-      "type": "slider",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "default": 5,
-      "unit": "pts"
+      "id": "operaciones",
+      "label": "PRODUCCIÓN",
+      "emoji": "🍹",
+      "color": "#10b981"
     },
     {
-      "id": "ef_produccion",
-      "label": "Velocidad de Fábrica",
-      "type": "slider",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "default": 5,
-      "unit": "pts"
+      "id": "ventas",
+      "label": "VENTAS",
+      "emoji": "📣",
+      "color": "#f97316"
     },
     {
-      "id": "ef_ventas",
-      "label": "Velocidad de Ventas",
-      "type": "slider",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "default": 5,
-      "unit": "pts"
+      "id": "finanzas",
+      "label": "DINERO",
+      "emoji": "🧮",
+      "color": "#3b82f6"
     },
     {
-      "id": "ef_entrega",
-      "label": "Velocidad de Envío",
-      "type": "slider",
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "default": 5,
-      "unit": "pts"
-    },
-    {
-      "id": "anios_sim",
-      "label": "Horizonte de Tiempo (Años)",
-      "type": "slider",
-      "min": 1,
-      "max": 30,
-      "step": 1,
-      "default": 5,
-      "unit": "años"
+      "id": "lider",
+      "label": "COORDINACIÓN",
+      "emoji": "🧭",
+      "color": "#a855f7"
     }
   ],
-  "formula": "Math.min(ef_diseno, ef_produccion, ef_ventas, ef_entrega) * 10",
-  "output_label": "Eficiencia Real de tu Empresa",
-  "output_prefix": "",
-  "output_suffix": "%",
-  "chart_type": "bar",
-  "escenarios": [
+  "items": [
     {
-      "condicion": "resultado >= 80",
-      "mensaje": "⚙️ ¡Máquina Perfecta! Todos tus departamentos trabajan a la misma velocidad. No hay desperdicio.",
-      "tipo": "success"
+      "id": "i1",
+      "label": "Preparar el agua de jamaica",
+      "emoji": "🫗",
+      "categoria_correcta": "operaciones",
+      "feedback": "Producción: sin producto no hay negocio."
     },
     {
-      "condicion": "resultado < 80 && (ef_diseno < 5 || ef_produccion < 5 || ef_ventas < 5 || ef_entrega < 5)",
-      "mensaje": "⚠️ Tienes un 'Cuello de Botella'. Aunque un departamento sea muy rápido, el más lento detiene a todos. ¡Invierte en el más débil!",
-      "tipo": "warning"
+      "id": "i2",
+      "label": "Llevar la cuenta de cuánto entró",
+      "emoji": "📒",
+      "categoria_correcta": "finanzas",
+      "feedback": "Correcto. Alguien tiene que saber si están ganando o perdiendo."
     },
     {
-      "condicion": "true",
-      "mensaje": "💡 Tip: Un buen líder no hace que uno corra mucho, sino que todos avancen al mismo ritmo.",
-      "tipo": "info"
+      "id": "i3",
+      "label": "Gritar la promoción a los que pasan",
+      "emoji": "🗣️",
+      "categoria_correcta": "ventas",
+      "feedback": "Ventas: el mejor producto no se vende solo."
+    },
+    {
+      "id": "i4",
+      "label": "Decidir qué hacer si llueve",
+      "emoji": "🌧️",
+      "categoria_correcta": "lider",
+      "feedback": "Coordinación: alguien debe tomar decisiones cuando el plan falla."
+    },
+    {
+      "id": "i5",
+      "label": "Comprar la fruta y el hielo",
+      "emoji": "🛒",
+      "categoria_correcta": "operaciones",
+      "feedback": "Conseguir insumos es parte de producción."
+    },
+    {
+      "id": "i6",
+      "label": "Calcular a cuánto vender el vaso",
+      "emoji": "💲",
+      "categoria_correcta": "finanzas",
+      "feedback": "El precio sale de los costos, no de la intuición."
+    },
+    {
+      "id": "i7",
+      "label": "Hacer el cartel del puesto",
+      "emoji": "🎨",
+      "categoria_correcta": "ventas",
+      "feedback": "Atraer clientes también es vender."
+    },
+    {
+      "id": "i8",
+      "label": "Repartir las ganancias al final",
+      "emoji": "🤝",
+      "categoria_correcta": "finanzas",
+      "feedback": "Con cuentas claras y a la vista de todos."
+    },
+    {
+      "id": "i9",
+      "label": "Resolver un pleito entre dos compañeros",
+      "emoji": "⚖️",
+      "categoria_correcta": "lider",
+      "feedback": "Coordinar personas es tan importante como producir."
+    },
+    {
+      "id": "i10",
+      "label": "Mantener limpia la mesa de servicio",
+      "emoji": "🧽",
+      "categoria_correcta": "operaciones",
+      "feedback": "La calidad también es producción."
+    },
+    {
+      "id": "i11",
+      "label": "Atender y cobrar a los clientes",
+      "emoji": "🤗",
+      "categoria_correcta": "ventas",
+      "feedback": "El trato al cliente decide si regresa."
+    },
+    {
+      "id": "i12",
+      "label": "Revisar que se cumpla el horario acordado",
+      "emoji": "⏱️",
+      "categoria_correcta": "lider",
+      "feedback": "Coordinación: que el plan de todos se cumpla."
     }
   ],
-  "versión": "2026.Diamond.V2",
-  "milestones": [
-    {
-      "valor": 25,
-      "mensaje": "Punto de partida: Los cimientos están listos."
-    },
-    {
-      "valor": 50,
-      "mensaje": "¡Buen progreso! Estás a mitad de camino de la meta."
-    },
-    {
-      "valor": 75,
-      "mensaje": "Zona de éxito: La estrategia está dando frutos significativos."
-    },
-    {
-      "valor": 100,
-      "mensaje": "¡Meta Alcanzada! Has dominado el equilibrio financiero."
-    }
-  ],
-  "pregunta_reflexion": "¿Qué rol jugarías tú en un equipo emprendedor: liderazgo, finanzas, tecnología o ventas? ¿Qué habilidad que te falta buscarías en un socio estratégico?",
-  "comparativa_espera": "Las decisiones financieras más importantes de la vida se toman entre los 25 y 45 años: primera hipoteca, primer crédito auto, primeras inversiones. Tener educación financiera sólida en esos momentos puede valer millones a los 65.",
-  "outputs_multiples": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "formula": "resultado_principal",
-      "prefix": "$",
-      "suffix": "",
-      "descripcion": "Resultado calculado"
-    },
-    {
-      "id": "por_mes",
-      "label": "Dividido en 12 Meses",
-      "formula": "Math.round(resultado_principal / 12)",
-      "prefix": "$",
-      "suffix": "/mes",
-      "descripcion": "El impacto mensualizado"
-    },
-    {
-      "id": "en_10_anios",
-      "label": "Proyección a 10 Años",
-      "formula": "Math.round(resultado_principal * 10 * 1.08)",
-      "prefix": "$",
-      "suffix": " acumulado",
-      "descripcion": "Si mantienes el resultado y lo reinviertes"
-    },
-    {
-      "id": "diferencia_vs_base",
-      "label": "Diferencia vs Sin Optimización",
-      "formula": "Math.round(resultado_principal * 0.2)",
-      "prefix": "+$",
-      "suffix": " de mejora",
-      "descripcion": "El beneficio de tomar decisiones informadas"
-    }
-  ],
-  "chart_series": [
-    {
-      "id": "resultado_principal",
-      "label": "Resultado",
-      "color": "#6366f1"
-    },
-    {
-      "id": "por_mes",
-      "label": "Dividido en 12 Meses",
-      "color": "#22c55e"
-    }
-  ]
+  "versión": "2026.Alineada.1"
 }

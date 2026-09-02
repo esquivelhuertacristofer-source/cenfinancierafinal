@@ -1,0 +1,147 @@
+{
+  "code": "ACT-P6-4-10-A",
+  "unit_code": "P6-4-10",
+  "unit_title": "Fracasar bien: cerrar un negocio y aprender",
+  "level": "Primaria 6",
+  "edad": "11-12 años",
+  "tipo": "DECIDE",
+  "complejidad": "AVANZADO",
+  "titulo": "Cerrar Bien",
+  "descripcion": "El negocio de Ceny no funcionó. Cada decisión sobre cómo cerrarlo define lo que se lleva al siguiente.",
+  "objetivo": "Aplicar el cierre ordenado y el análisis honesto de un negocio que no funcionó",
+  "xp": 600,
+  "personaje_principal": "Ceny",
+  "contexto_inicial": "Después de un año, el negocio de Ceny no alcanza a cubrir sus costos. Hay tres pedidos pendientes, una deuda con el proveedor y registros abiertos.",
+  "nodo_inicial": "decision",
+  "nodos": {
+    "decision": {
+      "id": "decision",
+      "texto": "Ceny decide cerrar. ¿Cómo lo hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Avisar a todos, cumplir los pedidos pendientes y acordar la deuda",
+          "siguiente_nodo": "proveedor",
+          "consecuencia": "Cierra dando la cara y conserva sus relaciones.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 0
+        },
+        {
+          "id": "o2",
+          "texto": "Dejar de contestar y desaparecer",
+          "siguiente_nodo": "reputacion",
+          "consecuencia": "Los pedidos quedan sin entregar y la deuda sin resolver.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -12000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-decision.webp"
+    },
+    "reputacion": {
+      "id": "reputacion",
+      "texto": "Meses después, Ceny quiere empezar otro proyecto pero nadie de la zona quiere trabajar con ella. ¿Qué hace?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Buscar a cada afectado, resolver lo pendiente y disculparse",
+          "siguiente_nodo": "proveedor",
+          "consecuencia": "Tarde y más difícil, pero empieza a reconstruir.",
+          "xp_bonus": 25,
+          "es_optima": true,
+          "impacto_patrimonio": -4000
+        },
+        {
+          "id": "o2",
+          "texto": "Empezar en otro lado donde nadie la conozca",
+          "siguiente_nodo": "final_malo",
+          "consecuencia": "El problema se muda con ella: no aprendió nada del cierre.",
+          "xp_bonus": 0,
+          "es_optima": false,
+          "impacto_patrimonio": -8000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-reputacion.webp"
+    },
+    "proveedor": {
+      "id": "proveedor",
+      "texto": "Debe $9,000 al proveedor y solo tiene $4,000. ¿Qué le propone?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "Abonar los $4,000 y acordar por escrito el resto en pagos",
+          "siguiente_nodo": "analisis",
+          "consecuencia": "El proveedor acepta: prefiere cobrar en partes que no cobrar.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 2000
+        },
+        {
+          "id": "o2",
+          "texto": "No decirle nada hasta tener el total",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "El silencio se interpreta como huida y la relación se rompe.",
+          "xp_bonus": 5,
+          "es_optima": false,
+          "impacto_patrimonio": -5000
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-proveedor.webp"
+    },
+    "analisis": {
+      "id": "analisis",
+      "texto": "Con todo cerrado, Ceny se sienta a analizar qué pasó. ¿Qué escribe?",
+      "opciones": [
+        {
+          "id": "o1",
+          "texto": "\"Supuse que comprarían cada semana y compraban cada mes\"",
+          "siguiente_nodo": "final_bueno",
+          "consecuencia": "Un supuesto concreto identificado: eso sí sirve para el siguiente intento.",
+          "xp_bonus": 55,
+          "es_optima": true,
+          "impacto_patrimonio": 5000
+        },
+        {
+          "id": "o2",
+          "texto": "\"No funcionó, mala suerte\"",
+          "siguiente_nodo": "final_regular",
+          "consecuencia": "Sin un supuesto concreto identificado, el mismo error se repite.",
+          "xp_bonus": 10,
+          "es_optima": false,
+          "impacto_patrimonio": 0
+        }
+      ],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-analisis.webp"
+    },
+    "final_bueno": {
+      "id": "final_bueno",
+      "texto": "Ceny cerró sin deudas ocultas, conservó sus relaciones y sabe exactamente qué supuesto falló.",
+      "es_final": true,
+      "tipo_final": "excelente",
+      "reflexion_final": "Cerrar bien es un oficio en sí mismo: sin cabos sueltos, sin relaciones rotas y con un análisis concreto. Así una pérdida se convierte en la ventaja del siguiente intento.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-final_bueno.webp"
+    },
+    "final_regular": {
+      "id": "final_regular",
+      "texto": "El negocio cerró, pero quedaron pendientes o el aprendizaje no fue concreto.",
+      "es_final": true,
+      "tipo_final": "regular",
+      "reflexion_final": "Cerrar a medias deja un lastre. Y \"no funcionó\" no es un aprendizaje: sin identificar el supuesto falso, el siguiente intento repite el mismo error.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-final_regular.webp"
+    },
+    "final_malo": {
+      "id": "final_malo",
+      "texto": "Ceny desapareció, perdió su reputación en la zona y arrastra deudas sin resolver.",
+      "es_final": true,
+      "tipo_final": "malo",
+      "reflexion_final": "En un negocio pequeño la reputación es el activo más valioso, y es el único que no se puede reponer con dinero. Desaparecer cuesta más caro que cualquier deuda.",
+      "opciones": [],
+      "imagen": "/assets/misiones/p6/p6-4-10-a-n-final_malo.webp"
+    }
+  },
+  "resumen_patrimonio_al_final": true,
+  "portada": "/assets/misiones/p6/p6-4-10-a-portada.webp"
+}
