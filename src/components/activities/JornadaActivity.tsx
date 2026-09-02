@@ -115,7 +115,7 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
     return (
       <div className="w-full flex flex-col items-center px-4 sm:px-8 py-10 sm:py-16 text-center">
         <div className="max-w-2xl w-full space-y-6 sm:space-y-8">
-          <div className="flex items-center justify-center gap-3 text-[#FF8C00] font-black tracking-[0.3em] uppercase text-[10px] sm:text-xs">
+          <div className="flex items-center justify-center gap-3 text-[#FF8C00] font-black tracking-[0.16em] md:tracking-[0.3em] uppercase text-[10px] sm:text-xs">
             <Clock size={14} aria-hidden /> El día de trabajo
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-white italic uppercase tracking-tight leading-none">
@@ -126,7 +126,7 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
           )}
           {data?.instruccion && (
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 text-left space-y-2">
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Cómo se juega</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/40">Cómo se juega</p>
               <p className="text-sm sm:text-lg text-white/80 leading-relaxed">{data.instruccion}</p>
             </div>
           )}
@@ -144,7 +144,7 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
           </div>
           <button
             onClick={() => setFase('jugando')}
-            className="inline-flex items-center gap-3 px-10 sm:px-16 py-5 sm:py-6 bg-white text-black rounded-full font-black text-[10px] sm:text-xs uppercase tracking-[0.4em] hover:scale-105 transition-transform"
+            className="inline-flex items-center gap-3 px-5 md:px-10 sm:px-16 py-5 sm:py-6 bg-white text-black rounded-full font-black text-[10px] sm:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-transform"
           >
             <Play size={16} aria-hidden /> Empezar el día
           </button>
@@ -248,7 +248,7 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
         <div className="max-w-4xl mx-auto mt-6 text-center">
           <button
             onClick={terminarDia}
-            className="px-8 py-4 rounded-full border border-white/20 text-white/70 font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white/10 transition-colors"
+            className="px-8 py-4 rounded-full border border-white/20 text-white/70 font-black text-[10px] uppercase tracking-[0.16em] md:tracking-[0.3em] hover:bg-white/10 transition-colors"
           >
             Terminar el día
           </button>
@@ -291,7 +291,7 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
 
               {/* El momento didáctico: con las MISMAS horas se podía ganar más */}
               <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-left space-y-3">
-                <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-[#FF8C00]">
+                <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-[#FF8C00]">
                   <Lightbulb size={14} aria-hidden /> Con las mismas {cfg.bloques} horas
                 </p>
                 <p className="text-white/70 text-sm sm:text-base leading-relaxed">
@@ -304,15 +304,15 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
                 </p>
               </div>
 
-              <div className="flex items-center justify-center gap-10">
+              <div className="flex items-center justify-center gap-5 md:gap-10">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">Puntaje</p>
-                  <p className="text-4xl font-black text-emerald-400 italic tabular-nums">{puntaje}</p>
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/30">Puntaje</p>
+                  <p className="text-2xl md:text-4xl font-black text-emerald-400 italic tabular-nums">{puntaje}</p>
                 </div>
                 {xp > 0 && logro && (
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">XP</p>
-                    <p className="text-4xl font-black text-amber-400 italic tabular-nums">{xp}</p>
+                    <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/30">XP</p>
+                    <p className="text-2xl md:text-4xl font-black text-amber-400 italic tabular-nums">{xp}</p>
                   </div>
                 )}
               </div>
@@ -320,13 +320,13 @@ export default function JornadaActivity({ data, onComplete, onClose }: Props) {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={reiniciar}
-                  className="px-9 py-4 rounded-full border border-white/20 text-white font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white/10 transition-colors"
+                  className="px-9 py-4 rounded-full border border-white/20 text-white font-black text-[10px] uppercase tracking-[0.16em] md:tracking-[0.3em] hover:bg-white/10 transition-colors"
                 >
                   Intentar otro día
                 </button>
                 <button
                   onClick={() => (onClose ? onClose() : onComplete?.(puntaje))}
-                  className="px-9 py-4 bg-white text-black rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:scale-105 transition-transform"
+                  className="px-9 py-4 bg-white text-black rounded-full font-black text-[10px] uppercase tracking-[0.16em] md:tracking-[0.3em] hover:scale-105 transition-transform"
                 >
                   Continuar
                 </button>

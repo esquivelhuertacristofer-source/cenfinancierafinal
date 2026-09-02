@@ -44,16 +44,16 @@ export default function TemaClient() {
 
   return (
     <div className="min-h-screen bg-[#05010D] text-white font-sans">
-      <header className="border-b border-white/10 px-8 py-10 max-w-6xl mx-auto">
+      <header className="border-b border-white/10 px-5 md:px-8 py-8 md:py-10 max-w-6xl mx-auto">
         <div className="text-[10px] font-black uppercase tracking-[0.5em] text-[#FF8C00] mb-3">Solo desarrollo</div>
-        <h1 className="text-5xl font-black italic tracking-tighter uppercase mb-3">Recorrido de un Tema</h1>
-        <p className="text-white/40 text-lg font-medium max-w-2xl leading-relaxed">
+        <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase mb-3 break-words">Recorrido de un Tema</h1>
+        <p className="text-white/40 text-base md:text-lg font-medium max-w-2xl leading-relaxed">
           Abre cualquier unidad con su flujo completo: Marco Teórico, Laboratorio/Ejercicio y Evaluación.
           Es el mismo componente que usa el hub, sin necesidad de iniciar sesión.
         </p>
       </header>
 
-      <div className="max-w-6xl mx-auto px-8 py-10 space-y-8">
+      <div className="max-w-6xl mx-auto px-5 md:px-8 py-8 md:py-10 space-y-6 md:space-y-8">
         <div className="flex flex-wrap gap-2">
           {GRADOS.map(g => (
             <button
@@ -74,7 +74,7 @@ export default function TemaClient() {
           value={filtro}
           onChange={e => setFiltro(e.target.value)}
           placeholder="Filtrar por título o código de unidad…"
-          className="w-full bg-white/[0.03] border border-white/10 rounded-3xl px-8 py-6 text-lg font-bold outline-none focus:border-[#FF8C00] transition-all placeholder:text-white/20"
+          className="w-full bg-white/[0.03] border border-white/10 rounded-3xl px-5 md:px-8 py-4 md:py-6 text-base md:text-lg font-bold outline-none focus:border-[#FF8C00] transition-all placeholder:text-white/20"
         />
 
         {cargando && <p className="text-white/30 font-black uppercase tracking-[0.3em] py-20 text-center">Cargando temario…</p>}
@@ -96,17 +96,17 @@ export default function TemaClient() {
               <button
                 key={unit.code}
                 onClick={() => setAbierto({ unit, pillar })}
-                className="text-left bg-white/[0.03] border border-white/10 rounded-[32px] px-8 py-6 hover:border-[#FF8C00]/50 hover:bg-white/[0.06] transition-all group"
+                className="text-left w-full min-w-0 overflow-hidden bg-white/[0.03] border border-white/10 rounded-[24px] md:rounded-[32px] px-5 md:px-8 py-5 md:py-6 hover:border-[#FF8C00]/50 hover:bg-white/[0.06] transition-all group"
               >
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex items-center justify-between gap-4 md:gap-6 min-w-0">
                   <div className="min-w-0">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-3 mb-2 min-w-0">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em]" style={{ color: pillar.color }}>
                         {unit.code}
                       </span>
                       <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/20 truncate">{pillar.title}</span>
                     </div>
-                    <div className="text-2xl font-black tracking-tight truncate group-hover:text-[#FF8C00] transition-colors">{unit.title}</div>
+                    <div className="text-lg md:text-2xl font-black tracking-tight truncate group-hover:text-[#FF8C00] transition-colors">{unit.title}</div>
                     {unit.objective && <p className="text-white/30 text-sm font-medium mt-2 line-clamp-2">{unit.objective}</p>}
                   </div>
                   <div className="shrink-0 text-right">

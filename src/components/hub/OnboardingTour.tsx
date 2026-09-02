@@ -72,7 +72,7 @@ export default function OnboardingTour() {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative z-10 w-full max-w-lg bg-[#111827] border border-white/10 rounded-[40px] p-10 shadow-[0_50px_100px_rgba(0,0,0,0.5)] overflow-hidden"
+          className="relative z-10 w-full max-w-lg bg-[#111827] border border-white/10 rounded-[24px] md:rounded-[40px] p-5 md:p-10 shadow-[0_50px_100px_rgba(0,0,0,0.5)] overflow-hidden"
         >
           {/* Background Glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF8C00]/10 blur-[80px] -mr-32 -mt-32" />

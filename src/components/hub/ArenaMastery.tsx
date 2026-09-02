@@ -143,7 +143,7 @@ export default function ArenaMastery({
                 <Trophy className="w-24 h-24 text-[#42E8E0] relative z-10 mx-auto" />
               </div>
               <div className="space-y-4">
-                <h1 className="text-5xl font-black text-white tracking-tight">
+                <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight">
                   EL DESAFÍO <span className="text-[#42E8E0]">DIAMOND</span>
                 </h1>
                 <p className="text-xl text-white/60 max-w-lg mx-auto">
@@ -153,7 +153,7 @@ export default function ArenaMastery({
               </div>
               <button
                 onClick={() => setStep('playing')}
-                className="group relative px-12 py-5 bg-[#42E8E0] text-[#011126] font-black rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95"
+                className="group relative px-6 md:px-12 py-5 bg-[#42E8E0] text-[#011126] font-black rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95"
               >
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12" />
                 <span className="relative flex items-center gap-3 text-lg">
@@ -281,19 +281,19 @@ export default function ArenaMastery({
             >
               <div className="relative">
                 <div className={`absolute inset-0 blur-3xl rounded-full ${getRank(score).bg}`} />
-                <div className="relative p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                <div className="relative p-6 md:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
                   <div className="mb-6 flex justify-center">{getRank(score).icon}</div>
                   <h4 className="text-sm font-black text-white/40 uppercase tracking-[0.3em] mb-2">Rango Obtenido</h4>
-                  <h2 className={`text-5xl font-black mb-8 ${getRank(score).color}`}>{getRank(score).title}</h2>
+                  <h2 className={`text-3xl md:text-5xl font-black mb-8 ${getRank(score).color}`}>{getRank(score).title}</h2>
                   
                   <div className="grid grid-cols-2 gap-6">
                     <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
                       <span className="block text-xs font-bold text-white/30 uppercase mb-1">Aciertos</span>
-                      <span className="text-4xl font-black text-white">{score} <span className="text-xl text-white/20">/ {quiz.length}</span></span>
+                      <span className="text-2xl md:text-4xl font-black text-white">{score} <span className="text-xl text-white/20">/ {quiz.length}</span></span>
                     </div>
                     <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
                       <span className="block text-xs font-bold text-white/30 uppercase mb-1">Puntaje Total</span>
-                      <span className="text-4xl font-black text-[#42E8E0]">{score * 150}</span>
+                      <span className="text-2xl md:text-4xl font-black text-[#42E8E0]">{score * 150}</span>
                     </div>
                   </div>
                 </div>
@@ -302,13 +302,13 @@ export default function ArenaMastery({
               <div className="flex gap-4 justify-center">
                 <button
                   onClick={onClose}
-                  className="px-10 py-5 rounded-2xl font-black border border-white/10 text-white hover:bg-white/5 transition-all"
+                  className="px-5 md:px-10 py-5 rounded-2xl font-black border border-white/10 text-white hover:bg-white/5 transition-all"
                 >
                   SALIR DEL ARENA
                 </button>
                 <button
                   onClick={() => onComplete(score)}
-                  className="px-10 py-5 rounded-2xl font-black bg-[#42E8E0] text-[#011126] hover:scale-105 transition-all"
+                  className="px-5 md:px-10 py-5 rounded-2xl font-black bg-[#42E8E0] text-[#011126] hover:scale-105 transition-all"
                 >
                   REGISTRAR VICTORIA
                 </button>

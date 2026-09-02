@@ -109,7 +109,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
 
   if (isFinished) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/60 backdrop-blur-2xl flex items-center justify-center p-10">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/60 backdrop-blur-2xl flex items-center justify-center p-5 md:p-10">
          <button
            onClick={handleClose}
            aria-label="Cerrar"
@@ -117,7 +117,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
          >
             <X size={24} />
          </button>
-         <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[60px] p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+         <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[32px] md:rounded-[60px] p-8 md:p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-12">
                <motion.div 
@@ -130,24 +130,24 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
                   </div>
                </motion.div>
                <div className="space-y-4">
-                  <h2 className="text-7xl font-black tracking-tighter italic uppercase text-white">Misión Épica</h2>
+                  <h2 className="text-4xl md:text-7xl font-black tracking-tighter italic uppercase text-white">Misión Épica</h2>
                   <p className="text-white/40 text-2xl font-medium italic">Grado de Maestría: Diamond</p>
                </div>
                <div className="grid grid-cols-2 gap-6">
-                  <div className="p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-yellow-400 mb-4 opacity-70">Puntaje</div>
-                     <div className="text-7xl font-black text-white italic tracking-tighter">{finalScore}%</div>
+                  <div className="p-5 md:p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-yellow-400 mb-4 opacity-70">Puntaje</div>
+                     <div className="text-4xl md:text-7xl font-black text-white italic tracking-tighter">{finalScore}%</div>
                   </div>
-                  <div className="p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-400 mb-4 opacity-70">Racha Máx</div>
-                     <div className="text-7xl font-black text-white italic tracking-tighter">x{maxStreak}</div>
+                  <div className="p-5 md:p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-emerald-400 mb-4 opacity-70">Racha Máx</div>
+                     <div className="text-4xl md:text-7xl font-black text-white italic tracking-tighter">x{maxStreak}</div>
                   </div>
                </div>
                <motion.button 
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
                  onClick={reportCompletion}
-                 className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.6em] shadow-[0_20px_50px_rgba(255,255,255,0.15)] group"
+                 className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.28em] md:tracking-[0.6em] shadow-[0_20px_50px_rgba(255,255,255,0.15)] group"
                >
                   Recibir Galardón <ChevronRight className="inline-block group-hover:translate-x-2 transition-transform" />
                </motion.button>
@@ -158,10 +158,10 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
   }
 
   return (
-    <div className="w-full h-full relative font-sans perspective-1000 p-8 select-none">
+    <div className="w-full h-full relative font-sans perspective-1000 p-4 md:p-8 select-none">
       
       {/* HUD SUPERIOR */}
-      <header className="flex justify-between items-end mb-16 relative z-20 px-6">
+      <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-5 md:gap-0 mb-8 md:mb-16 relative z-20 px-0 md:px-6">
          <div className="flex flex-col">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -169,18 +169,18 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
               className="flex items-center gap-3 mb-2"
             >
                <Sparkles className="text-yellow-400 animate-pulse" size={16} />
-               <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.5em] italic">{data.instruccion || 'Clasifica cada ficha'}</span>
+               <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.25em] md:tracking-[0.5em] italic">{data.instruccion || 'Clasifica cada ficha'}</span>
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl font-black tracking-tighter italic uppercase text-white"
+              className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase text-white"
             >
               {data.titulo}
             </motion.h1>
          </div>
 
-         <div className="flex items-center gap-10 bg-white/[0.03] p-8 rounded-[50px] border border-white/10 backdrop-blur-3xl relative overflow-hidden group">
+         <div className="flex items-center gap-5 md:gap-10 bg-white/[0.03] p-4 md:p-8 rounded-[28px] md:rounded-[50px] border border-white/10 backdrop-blur-3xl relative overflow-hidden group self-stretch md:self-auto justify-between">
             <AnimatePresence>
               {streak >= 3 && (
                 <motion.div 
@@ -200,7 +200,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
                     <motion.div 
                       key={i} 
                       animate={{ scale: i < streak % 5 ? [1, 1.2, 1] : 1 }}
-                      className={`w-12 h-2 rounded-full transition-all duration-700 ${i < streak % 5 ? 'bg-yellow-400 shadow-[0_0_20px_#FACC15]' : (streak >= 5 ? 'bg-orange-500' : 'bg-white/10')}`} 
+                      className={`w-8 md:w-12 h-2 rounded-full transition-all duration-700 ${i < streak % 5 ? 'bg-yellow-400 shadow-[0_0_20px_#FACC15]' : (streak >= 5 ? 'bg-orange-500' : 'bg-white/10')}`} 
                     />
                   ))}
                </div>
@@ -220,10 +220,10 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
          </div>
       </header>
 
-      <main className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+      <main className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 relative z-10">
          <section className="lg:col-span-4 space-y-8">
             <div className="bg-black/20 border border-white/5 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
-               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 italic">Por clasificar ({pendingItems.length})</span>
+               <span className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/40 italic">Por clasificar ({pendingItems.length})</span>
             </div>
             <div className="grid grid-cols-1 gap-6">
                <AnimatePresence mode="popLayout">
@@ -237,12 +237,12 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
                     >
                        <button
                          onClick={() => handleItemClick(item.id)}
-                         className={`w-full p-8 rounded-[40px] border-2 text-left transition-all duration-500 flex items-center gap-6 group relative overflow-hidden
+                         className={`w-full p-8 rounded-[24px] md:rounded-[40px] border-2 text-left transition-all duration-500 flex items-center gap-6 group relative overflow-hidden
                            ${selectedItemId === item.id 
                               ? 'bg-white border-white text-black scale-105 shadow-[0_40px_100px_rgba(255,255,255,0.2)]' 
                               : 'bg-white/[0.03] border-white/5 hover:border-white/30 text-white/80'}`}
                        >
-                          <div className="text-5xl group-hover:rotate-12 transition-transform">{item.emoji}</div>
+                          <div className="text-3xl md:text-5xl group-hover:rotate-12 transition-transform">{item.emoji}</div>
                           <div className="flex flex-col">
                              
                              <span className="text-2xl font-black tracking-tighter italic uppercase leading-tight">{item.label}</span>
@@ -255,21 +255,21 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
          </section>
 
          <section className="lg:col-span-8 space-y-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                {(data.categorias || []).map((cat) => (
                  <motion.div 
                    key={cat.id}
                    whileHover={{ scale: selectedItemId ? 1.02 : 1 }}
                    onClick={() => handleCategoryClick(cat.id)}
-                   className={`group relative p-12 rounded-[80px] border-2 transition-all duration-500 flex flex-col min-h-[500px] cursor-pointer overflow-hidden backdrop-blur-2xl
+                   className={`group relative p-6 md:p-12 rounded-[80px] border-2 transition-all duration-500 flex flex-col min-h-[500px] cursor-pointer overflow-hidden backdrop-blur-2xl
                      ${selectedItemId ? 'border-white/25 bg-white/[0.04] animate-pulse' : 'border-white/5 bg-white/[0.01]'}
                    `}
                  >
                     <header className="relative z-10 flex flex-col items-center text-center mb-12">
-                       <div className="w-24 h-24 rounded-[35px] bg-white/5 border border-white/10 flex items-center justify-center text-5xl mb-6">
+                       <div className="w-24 h-24 rounded-[35px] bg-white/5 border border-white/10 flex items-center justify-center text-3xl md:text-5xl mb-6">
                           {cat.emoji}
                        </div>
-                       <h3 className="text-4xl font-black tracking-tighter uppercase italic text-white">{cat.label}</h3>
+                       <h3 className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic text-white">{cat.label}</h3>
                     </header>
                     <div className="relative z-10 flex-1 flex flex-wrap content-start justify-center gap-4">
                        {items.filter(i => i.assignedCategoryId === cat.id).map((item) => (
@@ -301,9 +301,9 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
                      x: isFeedbackCorrect ? 0 : [0, -10, 10, -10, 10, 0]
                    }}
                    exit={{ opacity: 0, scale: 0.9 }}
-                   className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
+                   className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-8 md:p-20"
                  >
-                    <div className={`p-10 rounded-[40px] border-2 transition-colors duration-500 flex items-center gap-8
+                    <div className={`p-5 md:p-10 rounded-[24px] md:rounded-[40px] border-2 transition-colors duration-500 flex items-center gap-8
                       ${isFeedbackCorrect 
                         ? 'bg-emerald-500/10 border-emerald-500/30 shadow-[0_0_50px_rgba(16,185,129,0.2)]' 
                         : 'bg-rose-500/10 border-rose-500/30 shadow-[0_0_50px_rgba(244,63,94,0.2)]'}`}
@@ -311,7 +311,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
                        {isFeedbackCorrect ? <CheckCircle2 size={36} /> : <Zap size={36} />}
                     </div>
                     <div className="space-y-1">
-                       <div className={`text-[10px] font-black uppercase tracking-[0.4em] mb-1 ${isFeedbackCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                       <div className={`text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] mb-1 ${isFeedbackCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                           {isFeedbackCorrect ? 'Sincronización Académica' : 'Revisión Conceptual'}
                        </div>
                        <p className="text-3xl font-black text-white italic tracking-tighter uppercase leading-tight">{feedback}</p>

@@ -21,6 +21,7 @@ const mockEq = jest.fn();
 const mockOrder = jest.fn();
 const mockUpdate = jest.fn();
 const mockUpdateEq = jest.fn();
+const mockRpc = jest.fn();
 
 jest.mock('@supabase/supabase-js', () => ({
   createClient: jest.fn(() => ({
@@ -29,6 +30,7 @@ jest.mock('@supabase/supabase-js', () => ({
         createUser: mockCreateUser,
       },
     },
+    rpc: mockRpc,
     from: jest.fn(() => ({
       insert: mockInsert,
       select: mockSelect,
@@ -117,6 +119,16 @@ describe('onboardInstitutionalUsers', () => {
     mockRequireAdminSession.mockResolvedValue(ADMIN_SESSION);
     mockUpdate.mockReturnValue({ eq: mockUpdateEq });
     mockUpdateEq.mockResolvedValue({ error: null });
+    // onboardInstitutionalUsers valida que el grupo destino sea de la misma
+    // escuela: admin.from('grupos').select('escuela_id').eq('id', groupId).single()
+    mockSelect.mockReturnValue({
+      eq: jest.fn(() => ({
+        single: jest.fn().mockResolvedValue({ data: { escuela_id: 'esc-1' }, error: null }),
+      })),
+    });
+    // link_student_to_group / assign_teacher_to_group: RPC atómico que vincula
+    // escuela + grupo. Sin este stub el alta de alumnos con grupo falla siempre.
+    mockRpc.mockResolvedValue({ error: null });
   });
 
   it('throws when password is too short', async () => {

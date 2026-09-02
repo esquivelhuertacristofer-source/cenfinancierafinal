@@ -103,16 +103,16 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in zoom-in duration-700">
-         <div className="max-w-xl w-full bg-white/[0.02] border border-white/10 rounded-[60px] p-16 text-center space-y-10">
+         <div className="max-w-xl w-full bg-white/[0.02] border border-white/10 rounded-[32px] md:rounded-[60px] p-8 md:p-16 text-center space-y-10">
             <div className="w-24 h-24 bg-emerald-500 text-white rounded-[35px] flex items-center justify-center mx-auto shadow-[0_0_50px_rgba(16,185,129,0.3)]">
                <Trophy size={48} />
             </div>
-            <h2 className="text-5xl font-black tracking-tighter">¡MEMORIA DE ÉLITE!</h2>
-            <div className="p-10 bg-white/5 rounded-3xl border border-white/5">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter">¡MEMORIA DE ÉLITE!</h2>
+            <div className="p-5 md:p-10 bg-white/5 rounded-3xl border border-white/5">
                <div className="text-[10px] font-black uppercase tracking-widest opacity-30 mb-2">Movimientos Totales</div>
-               <div className="text-6xl font-black text-emerald-400">{moves}</div>
+               <div className="text-4xl md:text-6xl font-black text-emerald-400">{moves}</div>
             </div>
-            <button onClick={onClose} className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all">
+            <button onClick={onClose} className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all">
                Recoger XP y Salir
             </button>
          </div>
@@ -139,9 +139,9 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
         </div>
       </nav>
 
-      <main className="max-w-6xl mx-auto w-full flex-1 flex flex-col items-center justify-center gap-12">
+      <main className="max-w-6xl mx-auto w-full flex-1 flex flex-col items-center justify-center gap-6 md:gap-12">
          <header className="text-center space-y-4">
-            <h1 className="text-4xl font-black tracking-tighter leading-tight">{data.titulo}</h1>
+            <h1 className="text-2xl md:text-4xl font-black tracking-tighter leading-tight">{data.titulo}</h1>
             <p className="text-white/40 font-medium">Encuentra los pares correspondientes para limpiar el tablero.</p>
          </header>
 
@@ -160,7 +160,7 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
                  {/* Cara Frontal (Oculta) */}
                  <div className={`absolute inset-0 flex items-center justify-center backface-hidden ${card.isFlipped ? 'hidden' : 'block'}`}>
                     <div className="w-12 h-12 bg-white/10 rounded-full blur-xl animate-pulse" />
-                    <span className="text-4xl font-black text-white/10 italic">CEN</span>
+                    <span className="text-2xl md:text-4xl font-black text-white/10 italic">CEN</span>
                  </div>
 
                  {/* Cara Trasera (Contenido) */}

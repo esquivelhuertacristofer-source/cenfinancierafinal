@@ -77,16 +77,16 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in zoom-in duration-700">
-         <div className="max-w-2xl w-full bg-white/[0.02] border border-white/10 rounded-[60px] p-16 text-center space-y-10">
+         <div className="max-w-2xl w-full bg-white/[0.02] border border-white/10 rounded-[32px] md:rounded-[60px] p-8 md:p-16 text-center space-y-10">
             <div className="w-24 h-24 bg-purple-500 text-white rounded-[35px] flex items-center justify-center mx-auto shadow-[0_0_50px_rgba(168,85,247,0.4)]">
                <Trophy size={48} />
             </div>
-            <h2 className="text-5xl font-black tracking-tighter">FIN DE LA RONDA</h2>
-            <div className="p-10 bg-white/5 rounded-3xl border border-white/5">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter">FIN DE LA RONDA</h2>
+            <div className="p-5 md:p-10 bg-white/5 rounded-3xl border border-white/5">
                <div className="text-[10px] font-black uppercase tracking-widest opacity-30 mb-2">Decisiones Acertadas</div>
-               <div className="text-6xl font-black text-purple-400">{score} / {data.giros}</div>
+               <div className="text-4xl md:text-6xl font-black text-purple-400">{score} / {data.giros}</div>
             </div>
-            <button onClick={onClose} className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all">
+            <button onClick={onClose} className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all">
                Recoger XP y Salir
             </button>
          </div>
@@ -187,7 +187,7 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
 
                  {showFeedback && (
                    <div className="animate-in fade-in slide-in-from-top-4 duration-500 space-y-8">
-                      <div className="p-8 bg-white/5 border border-white/10 rounded-[40px] flex gap-6">
+                      <div className="p-8 bg-white/5 border border-white/10 rounded-[24px] md:rounded-[40px] flex gap-6">
                          <div className="p-4 bg-purple-500/20 text-purple-400 rounded-2xl h-fit">
                             <Info size={24} />
                          </div>
@@ -195,7 +195,7 @@ export default function RouletteActivity({ data, onComplete, onClose }: Props) {
                       </div>
                       <button 
                         onClick={handleNextTurn}
-                        className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-3"
+                        className="w-full py-8 bg-white text-[#050A10] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] flex items-center justify-center gap-3"
                       >
                          {history.length >= data.giros ? 'Ver Resultados' : 'Siguiente Giro'} <ChevronRight size={16} />
                       </button>

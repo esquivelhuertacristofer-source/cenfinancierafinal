@@ -69,11 +69,11 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
 
   if (!data.preguntas?.length || !currentQuestion) {
     return (
-      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
+      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-6 md:p-12">
         <p className="text-white/40 text-xl font-medium text-center">Sin preguntas disponibles.</p>
         <button
           onClick={() => onComplete && onComplete(0)}
-          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
+          className="px-6 md:px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all"
         >
           Continuar
         </button>
@@ -103,7 +103,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
          >
             <X size={24} />
          </button>
-         <div className="max-w-xl w-full bg-white/[0.05] border border-white/10 rounded-[60px] p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+         <div className="max-w-xl w-full bg-white/[0.05] border border-white/10 rounded-[32px] md:rounded-[60px] p-8 md:p-20 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             <div className="relative z-10 space-y-12">
                <div className="flex justify-center relative">
@@ -112,17 +112,17 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                   </div>
                </div>
                <div className="space-y-4">
-                  <h2 className="text-7xl font-black tracking-tighter italic uppercase text-white drop-shadow-2xl">Grand Prix Finalizado</h2>
+                  <h2 className="text-4xl md:text-7xl font-black tracking-tighter italic uppercase text-white drop-shadow-2xl">Grand Prix Finalizado</h2>
                   <p className="text-white/40 text-2xl font-medium italic">Dominio Total de Velocidad</p>
                </div>
                <div className="grid grid-cols-2 gap-6">
-                  <div className="p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-yellow-400 mb-4 opacity-70">Precisión</div>
-                     <div className="text-7xl font-black text-white italic tracking-tighter">{finalPercent}%</div>
+                  <div className="p-5 md:p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-yellow-400 mb-4 opacity-70">Precisión</div>
+                     <div className="text-4xl md:text-7xl font-black text-white italic tracking-tighter">{finalPercent}%</div>
                   </div>
-                  <div className="p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-400 mb-4 opacity-70">Combo Máx</div>
-                     <div className="text-7xl font-black text-white italic tracking-tighter">x{maxStreak}</div>
+                  <div className="p-5 md:p-10 bg-white/5 rounded-[45px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-emerald-400 mb-4 opacity-70">Combo Máx</div>
+                     <div className="text-4xl md:text-7xl font-black text-white italic tracking-tighter">x{maxStreak}</div>
                   </div>
                </div>
                <button
@@ -131,7 +131,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                    hasCompletedRef.current = true;
                    onComplete && onComplete(finalPercent);
                  }}
-                 className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.6em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
+                 className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
                >
                   Registrar Puntuación Élite
                </button>
@@ -145,16 +145,16 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     <div className="w-full h-full relative font-sans perspective-1000 p-4 md:p-8">
       
       {/* HUD DE VELOCIDAD */}
-      <header className="flex justify-between items-center mb-16 relative z-20 px-6">
+      <header className="flex flex-col md:flex-row md:justify-between md:items-center gap-5 md:gap-0 mb-8 md:mb-16 relative z-20 px-0 md:px-6">
          <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-2">
                <Timer className={`transition-colors duration-300 ${timeLeft < 5 ? 'text-rose-500 animate-ping' : 'text-[#FF8C00]'}`} size={16} />
                <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.8em] italic">Reto de Velocidad Diamond</span>
             </div>
-            <h1 className="text-5xl font-black tracking-tighter italic uppercase text-white">{data.titulo}</h1>
+            <h1 className="text-3xl md:text-5xl font-black tracking-tighter italic uppercase text-white">{data.titulo}</h1>
          </div>
 
-         <div className="flex items-center gap-10">
+         <div className="flex items-center gap-5 md:gap-10">
             {/* TIMER CIRCULAR NEÓN */}
             <div className="relative w-24 h-24 flex items-center justify-center">
                <svg className="absolute inset-0 w-full h-full rotate-[-90deg]">
@@ -166,7 +166,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                     className={`transition-all duration-1000 ease-linear ${timeLeft < 5 ? 'text-rose-500 shadow-[0_0_15px_#F43F5E]' : 'text-yellow-400 shadow-[0_0_15px_#FACC15]'}`}
                   />
                </svg>
-               <span className={`text-4xl font-black italic tracking-tighter ${timeLeft < 5 ? 'text-rose-500' : 'text-white'}`}>{timeLeft}s</span>
+               <span className={`text-2xl md:text-4xl font-black italic tracking-tighter ${timeLeft < 5 ? 'text-rose-500' : 'text-white'}`}>{timeLeft}s</span>
             </div>
 
             <div className={`w-20 h-20 rounded-[30px] border-2 flex flex-col items-center justify-center backdrop-blur-2xl transition-all duration-500
@@ -177,7 +177,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
          </div>
       </header>
 
-      <main className="max-w-5xl mx-auto w-full px-10 relative z-10 flex flex-col justify-center animate-in slide-in-from-right-12 duration-700">
+      <main className="max-w-5xl mx-auto w-full px-5 md:px-10 relative z-10 flex flex-col justify-center animate-in slide-in-from-right-12 duration-700">
          <div className="space-y-12">
             <div className="text-center space-y-6">
                <div className="text-[10px] font-black uppercase tracking-[0.8em] opacity-30 italic">Pregunta {currentIdx + 1} de {data.preguntas.length}</div>
@@ -191,7 +191,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                  <button
                    key={idx}
                    onClick={() => handleNext(opcion === currentQuestion.respuesta_correcta)}
-                   className="p-10 rounded-[50px] bg-white/[0.03] border-2 border-white/5 hover:border-white text-white/80 hover:text-white transition-all duration-300 text-left group relative overflow-hidden transform-style-3d hover:scale-105 active:scale-95 shadow-2xl"
+                   className="p-5 md:p-10 rounded-[28px] md:rounded-[50px] bg-white/[0.03] border-2 border-white/5 hover:border-white text-white/80 hover:text-white transition-all duration-300 text-left group relative overflow-hidden transform-style-3d hover:scale-105 active:scale-95 shadow-2xl"
                  >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="flex items-center gap-6 relative z-10">

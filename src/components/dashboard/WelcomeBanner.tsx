@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { useHasMounted } from "@/lib/useHasMounted";
@@ -67,7 +68,7 @@ export default function WelcomeBanner({
   if (!mounted) return null;
 
   return (
-    <div className={`relative overflow-hidden rounded-[4rem] p-12 md:p-20 shadow-2xl group border transition-all duration-1000 noise-texture ${
+    <div className={`relative overflow-hidden rounded-[2rem] md:rounded-[4rem] p-6 md:p-12 md:p-20 shadow-2xl group border transition-all duration-1000 noise-texture ${
       isDark ? 'bg-[#011C40] border-white/10' : 'bg-white border-slate-100'
     }`}>
       
@@ -75,9 +76,9 @@ export default function WelcomeBanner({
       <div className={`absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full opacity-10 blur-[140px] animate-pulse ${isDark ? 'bg-[#42E8E0]' : 'bg-[#42E8E0]/40'}`} />
       <div className={`absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full opacity-10 blur-[120px] ${isDark ? 'bg-[#FF8C00]' : 'bg-[#FF8C00]/40'}`} />
       
-      <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-16">
+      <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-6 md:gap-16">
         
-        <div className="flex-1 space-y-12 text-center xl:text-left">
+        <div className="flex-1 space-y-8 md:space-y-12 text-center xl:text-left">
           <div className="flex flex-wrap justify-center xl:justify-start gap-4">
             <div className={`inline-flex items-center gap-3 px-6 py-2.5 rounded-full backdrop-blur-3xl border shadow-2xl ${
               isDark ? 'bg-white/5 border-white/10 text-[#42E8E0]' : 'bg-[#42E8E0]/5 border-[#42E8E0]/10 text-[#011C40]'
@@ -122,17 +123,17 @@ export default function WelcomeBanner({
           <div className="flex flex-wrap justify-center xl:justify-start gap-6 pt-4">
             <button 
               onClick={() => window.location.href = "/dashboard/teacher/mis-alumnos"}
-              className="px-12 py-6 bg-[#FF8C00] hover:bg-[#E87A00] text-white font-black rounded-[2.5rem] shadow-2xl transition-all hover:-translate-y-2 active:scale-95 text-[12px] uppercase tracking-[0.3em] flex items-center gap-5 group/btn overflow-hidden relative"
+              className="px-6 md:px-12 py-6 bg-[#FF8C00] hover:bg-[#E87A00] text-white font-black rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl transition-all hover:-translate-y-2 active:scale-95 text-[12px] uppercase tracking-[0.3em] flex items-center gap-5 group/btn overflow-hidden relative"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
               <span>Gestión de Grupo</span>
               <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-3 transition-transform" />
             </button>
-            <button className={`px-12 py-6 font-black rounded-[2.5rem] border backdrop-blur-2xl transition-all text-[12px] uppercase tracking-[0.3em] hover:-translate-y-1 ${
+            <Link href="/dashboard/teacher/reportes" className={`px-6 md:px-12 py-6 font-black rounded-[1.5rem] md:rounded-[2.5rem] border backdrop-blur-2xl transition-all text-[12px] uppercase tracking-[0.3em] hover:-translate-y-1 ${
               isDark ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-[#011C40]/5 border-[#011C40]/10 text-[#011C40] hover:bg-[#011C40]/10'
             }`}>
               Reportes SEP
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -140,7 +141,7 @@ export default function WelcomeBanner({
           <div className={`absolute inset-0 rounded-full blur-[100px] animate-pulse ${isDark ? 'bg-[#42E8E0]/5' : 'bg-[#42E8E0]/10'}`} />
           <div className={`absolute inset-0 border-[2px] rounded-full animate-[spin_30s_linear_infinite] ${isDark ? 'border-white/10' : 'border-[#011C40]/5'}`} />
           
-          <div className={`relative w-48 h-48 md:w-72 md:h-72 border backdrop-blur-3xl rounded-[4rem] flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform duration-1000 group/diamond overflow-hidden cursor-pointer ${
+          <div className={`relative w-48 h-48 md:w-72 md:h-72 border backdrop-blur-3xl rounded-[2rem] md:rounded-[4rem] flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform duration-1000 group/diamond overflow-hidden cursor-pointer ${
             isDark ? 'bg-white/5 border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.5)]' : 'bg-white border-slate-100 shadow-[0_40px_80px_rgba(1,28,64,0.1)]'
           }`}>
             <div className={`absolute inset-0 opacity-60 ${isDark ? 'bg-gradient-to-tr from-[#42E8E0]/20 to-[#FF8C00]/20' : 'bg-gradient-to-tr from-[#42E8E0]/5 to-[#FF8C00]/5'}`} />

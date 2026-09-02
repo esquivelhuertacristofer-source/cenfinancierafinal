@@ -228,7 +228,7 @@ export default function StudentHubV19() {
 
   if (loading) return (
     <div className={`min-h-screen font-['Epilogue'] transition-colors duration-1000 ${isDark ? 'bg-[#010A19]' : 'bg-[#F4F1EA]'}`}>
-      <div className="p-12 lg:p-20 space-y-16">
+      <div className="p-6 md:p-12 lg:p-20 space-y-10 md:space-y-16">
         {/* Header Skeleton */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-8">
            <div className="space-y-6">
@@ -236,13 +236,13 @@ export default function StudentHubV19() {
               <div className={`w-full max-w-[600px] h-24 rounded-3xl animate-pulse ${isDark ? 'bg-white/5' : 'bg-black/5'}`} />
               <div className={`w-full max-w-[400px] h-6 rounded-full animate-pulse ${isDark ? 'bg-white/5' : 'bg-black/5'}`} />
            </div>
-           <div className={`w-32 h-32 rounded-[2.5rem] animate-pulse ${isDark ? 'bg-white/5' : 'bg-black/5'}`} />
+           <div className={`w-32 h-32 rounded-[1.5rem] md:rounded-[2.5rem] animate-pulse ${isDark ? 'bg-white/5' : 'bg-black/5'}`} />
         </div>
 
         {/* Pillars Grid Skeleton */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-12">
            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className={`h-[600px] rounded-[4rem] border animate-pulse flex flex-col justify-between p-16 ${isDark ? 'bg-white/5 border-white/5' : 'bg-black/5 border-black/5'}`}>
+              <div key={i} className={`h-[600px] rounded-[2rem] md:rounded-[4rem] border animate-pulse flex flex-col justify-between p-8 md:p-16 ${isDark ? 'bg-white/5 border-white/5' : 'bg-black/5 border-black/5'}`}>
                  <div className="space-y-6">
                     <div className={`w-24 h-6 rounded-full ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
                     <div className={`w-full h-16 rounded-2xl ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
@@ -376,7 +376,7 @@ export default function StudentHubV19() {
         }
         .gb-illustration {
           position: absolute; inset: 0; 
-          background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23ffffff' fill-opacity='0.5'%3E%3Ccircle cx='5' cy='7' r='1'/%3E%3Ccircle cx='23' cy='3' r='1'/%3E%3Ccircle cx='34' cy='17' r='1'/%3E%3Ccircle cx='12' cy='26' r='1'/%3E%3Ccircle cx='29' cy='33' r='1'/%3E%3Ccircle cx='18' cy='15' r='1'/%3E%3C/g%3E%3C/svg%3E");
           opacity: 0.08; pointer-events: none; mix-blend-mode: overlay;
         }
         .gb-glow { position: absolute; top: -50%; left: -20%; width: 60%; height: 200%; background: radial-gradient(circle, var(--grade-accent) 0.15, transparent 70%); pointer-events: none; opacity: 0.15; }
@@ -408,10 +408,22 @@ export default function StudentHubV19() {
         @media (min-width: 640px) { .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
         @media (min-width: 1400px) { .pillars-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
         @media (max-width: 768px) {
-          .grade-briefing { padding: 60px 20px 40px 20px !important; }
+          /* 100px arriba para que el contenido pase por debajo del botón de menú,
+             que es fixed en la esquina superior izquierda. */
+          .grade-briefing { padding: 100px 20px 40px 20px !important; }
+          .gb-title { font-size: clamp(2rem, 9vw, 6rem); }
           .pillars-section { padding: 32px 20px !important; }
           .gb-grade-badge { display: none; }
           .theme-toggle { top: 20px; right: 20px; width: 52px; height: 52px; }
+          /* El núcleo holográfico está en position:absolute y en móvil cae justo
+             encima del texto (en escritorio va desplazado a la derecha). Se deja
+             como fondo tenue para que la descripción siga siendo legible. */
+          .gb-nucleo { opacity: 0.16; }
+          /* El tag lleva letter-spacing 0.4em: en 390px no cabe en una línea y
+             además choca con el botón de tema, que es fixed arriba a la derecha. */
+          .gb-tag { flex-wrap: wrap; letter-spacing: 0.22em; margin-bottom: 20px; }
+          .gb-description { font-size: 16px; line-height: 1.7; margin-bottom: 32px; }
+          .malla-btn { width: 100%; justify-content: center; padding: 16px 20px; font-size: 11px; }
         }
         .p-card-v16 {
           background: var(--card-bg); border: 1px solid var(--border);
@@ -582,7 +594,7 @@ export default function StudentHubV19() {
           <div className="gb-glow" />
           
           {/* NÚCLEO HOLOGRÁFICO (CENTRO DE ENERGÍA DIAMOND) */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="gb-nucleo absolute inset-0 flex items-center justify-center pointer-events-none">
              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] left-0 md:left-[15%] lg:left-[20%] flex items-center justify-center">
                 
                 {/* Resplandor de Fondo (Atmósfera Tenue) */}
@@ -637,7 +649,7 @@ export default function StudentHubV19() {
             <h1 className="gb-title">{gradeMeta?.title}</h1>
             <p className="gb-description">{gradeMeta?.briefing}</p>
             
-            <div className="flex items-center gap-8">
+            <div className="flex flex-wrap items-center gap-4 md:gap-8">
               <button 
                 className="malla-btn" 
                 onMouseEnter={() => playSFX('hover')}
@@ -648,7 +660,7 @@ export default function StudentHubV19() {
               
               {/* BOTÓN DE PRESENTACIÓN DINÁMICO */}
               <button 
-                className="px-10 py-5 text-white rounded-[24px] font-black text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:scale-105 transition-all group overflow-hidden relative shadow-2xl"
+                className="w-full md:w-auto justify-center px-6 md:px-10 py-4 md:py-5 text-white rounded-[24px] font-black text-[11px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:scale-105 transition-all group overflow-hidden relative shadow-2xl"
                 style={{ 
                   backgroundColor: gradeMeta?.accentColor || '#FF8C00',
                   boxShadow: `0 20px 40px ${gradeMeta?.accentColor}44` 
@@ -660,19 +672,19 @@ export default function StudentHubV19() {
                 <Sparkles size={18} className="animate-pulse" />
                 <span className="relative z-10">Descubrir mi año</span>
               </button>
-              <div className="h-16 w-px bg-white/10" />
-              <div className="flex gap-12">
+              <div className="hidden md:block h-16 w-px bg-white/10" />
+              <div className="flex flex-wrap gap-6 md:gap-12">
                 <div>
                    <div className="text-[10px] font-black opacity-30 uppercase tracking-widest mb-2">Dominio Global</div>
-                   <div className="text-4xl font-black text-[#4ADE80]">{totalPct}%</div>
+                   <div className="text-2xl md:text-4xl font-black text-[#4ADE80]">{totalPct}%</div>
                 </div>
                 <div>
                    <div className="text-[10px] font-black opacity-30 uppercase tracking-widest mb-2">Unidades</div>
-                   <div className="text-4xl font-black">{totalUnits}</div>
+                   <div className="text-2xl md:text-4xl font-black">{totalUnits}</div>
                 </div>
                 <div>
                    <div className="text-[10px] font-black opacity-30 uppercase tracking-widest mb-2">XP Total</div>
-                   <div className="text-4xl font-black text-[#FF8C00]">{totalXP.toLocaleString()}</div>
+                   <div className="text-2xl md:text-4xl font-black text-[#FF8C00]">{totalXP.toLocaleString()}</div>
                 </div>
                 <div className="h-12 w-px bg-white/10 mx-2 self-center" />
                 <div className="flex flex-col justify-center">
@@ -778,12 +790,12 @@ export default function StudentHubV19() {
                 <div className="flex items-center gap-3 font-black uppercase text-xs tracking-[0.4em] mb-8 text-yellow-300">
                   <Sparkles size={24} className="text-yellow-300" /> Actividad Bono
                 </div>
-                <h2 className="text-7xl font-black text-white tracking-tighter mb-10 leading-none">Juego Financiero</h2>
+                <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-10 leading-none">Juego Financiero</h2>
                 <p className="text-2xl font-bold text-white/50 leading-relaxed mb-12">
                   Pon en práctica lo aprendido en una aventura interactiva. Completa el juego para ganar XP extra.
                 </p>
                 <div className="flex items-center gap-6">
-                  <div className="inline-flex items-center gap-3 px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-white shadow-[0_20px_40px_rgba(245,158,11,0.4)]"
+                  <div className="inline-flex items-center gap-3 px-6 md:px-12 py-6 rounded-[2rem] font-black uppercase tracking-widest text-white shadow-[0_20px_40px_rgba(245,158,11,0.4)]"
                        style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}>
                     <Play size={22} fill="white" /> Jugar Ahora
                   </div>
@@ -810,11 +822,11 @@ export default function StudentHubV19() {
                 <div className="flex items-center gap-3 font-black uppercase text-xs tracking-[0.4em] mb-8" style={{ color: 'var(--grade-accent)' }}>
                   <Star size={24} style={{ fill: 'var(--grade-accent)', color: 'var(--grade-accent)' }} /> Arena de Desafío Élite
                 </div>
-                <h2 className="text-7xl font-black text-white tracking-tighter mb-10 leading-none">Arena de Maestría</h2>
+                <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-10 leading-none">Arena de Maestría</h2>
                 <p className="text-2xl font-bold text-white/50 leading-relaxed mb-12">
                   Pon a prueba tus conocimientos globales. Una evaluación de 10 preguntas aleatorias que certificará tu dominio real sobre el grado.
                 </p>
-                <div className="inline-block px-12 py-6 bg-[#FF8C00] text-white rounded-[2rem] font-black uppercase tracking-widest shadow-[0_20px_40px_rgba(255,140,0,0.3)]">
+                <div className="inline-block px-6 md:px-12 py-6 bg-[#FF8C00] text-white rounded-[2rem] font-black uppercase tracking-widest shadow-[0_20px_40px_rgba(255,140,0,0.3)]">
                    Iniciar Desafío Maestro
                 </div>
              </div>
@@ -832,7 +844,7 @@ export default function StudentHubV19() {
           <div className="fixed inset-0 bg-black/95 backdrop-blur-2xl" />
 
           {/* BARRA SUPERIOR */}
-          <div className="relative z-10 flex items-center justify-between px-10 py-6 border-b border-white/10"
+          <div className="relative z-10 flex items-center justify-between px-5 md:px-10 py-6 border-b border-white/10"
                style={{ background: 'rgba(26, 5, 51, 0.95)' }}>
             <div className="flex items-center gap-4">
               <div className="text-2xl">🎮</div>
@@ -893,7 +905,7 @@ export default function StudentHubV19() {
           <div className="fixed inset-0 bg-[#011126]/95 backdrop-blur-3xl" onClick={() => setShowCurriculum(false)} />
           
           <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
-            <div className="flex w-full justify-between items-center mb-20">
+            <div className="flex w-full justify-between items-center mb-10 md:mb-20">
                 <div className="text-left">
                   <h2 className="text-5xl lg:text-7xl font-black tracking-tighter mb-4 text-white">Objetivos de Aprendizaje • Aprendizajes Esperados</h2>
                   <div className="text-sm font-black uppercase tracking-[0.4em] text-[#FF8C00]">Grado {profile?.grade} • CEN Educación Financiera</div>
@@ -903,7 +915,7 @@ export default function StudentHubV19() {
                 </button>
             </div>
              <div className="malla-body custom-scrollbar">
-                <div className="mb-20 p-12 bg-white/5 rounded-[56px] border border-white/10">
+                <div className="mb-10 md:mb-20 p-6 md:p-12 bg-white/5 rounded-[56px] border border-white/10">
                    <h3 className="text-3xl font-black text-[#FF8C00] mb-8 flex items-center gap-4">
                      <Target size={32} /> Objetivo Central del Grado
                    </h3>
@@ -961,7 +973,7 @@ export default function StudentHubV19() {
         return (
           <div className={`fixed inset-0 z-[5000] overflow-y-auto ${isDark ? 'bg-[#011126] text-white' : 'bg-[#F4F1EA] text-[#011C40]'}`}>
             {/* NAV */}
-            <div className="sticky top-0 z-10 flex items-center justify-between px-16 py-6 border-b"
+            <div className="sticky top-0 z-10 flex items-center justify-between px-6 md:px-16 py-6 border-b"
               style={{ background: isDark ? 'rgba(1,17,38,0.9)' : 'rgba(244,241,234,0.9)', borderColor: 'var(--border)', backdropFilter: 'blur(20px)' }}>
               <button
                 className="flex items-center gap-3 text-xs font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity"
@@ -979,7 +991,7 @@ export default function StudentHubV19() {
             </div>
 
             {/* HERO ATMOSFÉRICO XL CON DECORACIÓN MASIVA */}
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 px-10 lg:px-20 py-32 relative overflow-hidden bg-[#011226] border-b border-white/5 min-h-[650px] w-full mx-auto">
+            <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-12 lg:gap-24 px-5 md:px-10 lg:px-20 py-32 relative overflow-hidden bg-[#011226] border-b border-white/5 min-h-[650px] w-full mx-auto">
               {/* Elementos Decorativos (Lluvia de Billetes y Objetos) */}
               <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
                 <img src="/assets/landing-v3/money.png" alt="" className="absolute -top-10 left-10 w-40 rotate-12 blur-[1px] animate-bounce-slow" />
@@ -1023,7 +1035,7 @@ export default function StudentHubV19() {
                   ))}
                 </div>
 
-                <div className="max-w-xl bg-white/[0.03] p-10 rounded-[40px] border border-white/10 backdrop-blur-3xl shadow-2xl relative overflow-hidden group">
+                <div className="max-w-xl bg-white/[0.03] p-5 md:p-10 rounded-[24px] md:rounded-[40px] border border-white/10 backdrop-blur-3xl shadow-2xl relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   <div className="relative z-10">
                     <div className="flex justify-between mb-5">
@@ -1040,7 +1052,7 @@ export default function StudentHubV19() {
                 {/* VIDEO HOLDER HOLOGRÁFICO (Diamond v3) — Rediseño Premium */}
                 {activePillar.videoUrl && (
                   <div 
-                    className="relative z-10 w-full lg:w-[560px] h-[360px] shrink-0 bg-[#000]/40 rounded-[60px] border border-white/10 backdrop-blur-3xl flex items-center justify-center group cursor-pointer overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.6)] transition-all duration-700 hover:scale-[1.05] hover:border-[#FF8C00]/40 hover:shadow-[#FF8C00]/20"
+                    className="relative z-10 w-full lg:w-[560px] h-[360px] shrink-0 bg-[#000]/40 rounded-[32px] md:rounded-[60px] border border-white/10 backdrop-blur-3xl flex items-center justify-center group cursor-pointer overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.6)] transition-all duration-700 hover:scale-[1.05] hover:border-[#FF8C00]/40 hover:shadow-[#FF8C00]/20"
                     onClick={() => { setActiveVideo(activePillar.videoUrl!); }}
                   >
                     {/* Background Texture & Glow */}
@@ -1068,8 +1080,8 @@ export default function StudentHubV19() {
             </div>
 
             {/* TIMELINE (IMAX FULL-WIDTH) */}
-            <div className="w-full px-10 lg:px-20 py-24">
-              <div className="flex items-center gap-6 mb-20">
+            <div className="w-full px-5 md:px-10 lg:px-20 py-24">
+              <div className="flex items-center gap-6 mb-10 md:mb-20">
                 <div className="w-4 h-4 rounded-full bg-[#FF8C00] shadow-[0_0_15px_#FF8C00]" />
                 <span className="text-3xl font-black uppercase tracking-widest text-white" style={{ fontFamily: 'Epilogue, sans-serif' }}>Ruta de Aprendizaje</span>
                 <div className="flex-1 h-px bg-white/10" />
@@ -1130,25 +1142,25 @@ export default function StudentHubV19() {
         <div className="fixed inset-0 z-[6000] flex items-center justify-center p-8 lg:p-20 animate-in fade-in zoom-in duration-500">
           <div className="fixed inset-0 bg-[#011126]/95 backdrop-blur-3xl" onClick={() => setShowPresentation(false)} />
           
-          <div className="relative z-10 w-full max-w-7xl bg-white/[0.02] border border-white/10 rounded-[60px] overflow-hidden flex flex-col lg:flex-row h-[85vh] shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
+          <div className="relative z-10 w-full max-w-7xl bg-white/[0.02] border border-white/10 rounded-[32px] md:rounded-[60px] overflow-hidden flex flex-col lg:flex-row h-[85vh] shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
              {/* Glows Decorativos */}
              <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FF8C00] blur-[150px] opacity-20 pointer-events-none" />
              <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#4ADE80] blur-[150px] opacity-10 pointer-events-none" />
 
              {/* Columna Izquierda: Video (Reproductor) */}
-             <div className="flex-1 p-12 lg:p-20 flex flex-col">
+             <div className="flex-1 p-6 md:p-12 lg:p-20 flex flex-col">
                 <div className="flex items-center gap-4 mb-10">
                    <div className="w-12 h-12 bg-[#FF8C00] rounded-2xl flex items-center justify-center text-white shadow-lg">
                       <Play size={24} fill="white" />
                    </div>
                    <div>
-                      <h2 className="text-4xl font-black text-white tracking-tighter">Bienvenido a {gradeMeta?.title}</h2>
+                      <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter">Bienvenido a {gradeMeta?.title}</h2>
                       <p className="text-xs font-black uppercase tracking-[0.4em]" style={{ color: 'var(--grade-accent)' }}>Presentación del Ciclo • Grado {profile?.grade}</p>
                    </div>
                 </div>
 
                 {/* Contenedor del Video / Poster de Presentación */}
-                <div className="flex-1 bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-inner relative">
+                <div className="flex-1 bg-black rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-inner relative">
                    {gradeMeta?.introVideo ? (
                      <iframe
                        src={gradeMeta.introVideo}
@@ -1165,11 +1177,11 @@ export default function StudentHubV19() {
                          className="w-full h-full object-cover opacity-60"
                          alt="Presentación"
                        />
-                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-12 text-center">
+                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 md:p-12 text-center">
                          <div className="w-24 h-24 bg-[#FF8C00] rounded-full flex items-center justify-center text-white mb-8 animate-pulse shadow-[0_0_50px_#FF8C00]">
                            <Play size={40} fill="white" />
                          </div>
-                         <h3 className="text-5xl font-black text-white tracking-tighter mb-4 italic uppercase">Misión {profile?.grade}00</h3>
+                         <h3 className="text-3xl md:text-5xl font-black text-white tracking-tighter mb-4 italic uppercase">Misión {profile?.grade}00</h3>
                          <p className="text-xl text-white/60 font-medium max-w-md">Contenido audiovisual próximamente.</p>
                        </div>
                      </>
@@ -1178,7 +1190,7 @@ export default function StudentHubV19() {
              </div>
 
              {/* Columna Derecha: Resumen del Ciclo */}
-             <div className="w-full lg:w-[450px] bg-white/[0.03] border-l border-white/5 p-12 lg:p-20 flex flex-col">
+             <div className="w-full lg:w-[450px] bg-white/[0.03] border-l border-white/5 p-6 md:p-12 lg:p-20 flex flex-col">
                 <button
                   onClick={() => setShowPresentation(false)}
                   className="self-end w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-500 transition-all group mb-12"
@@ -1187,10 +1199,10 @@ export default function StudentHubV19() {
                    <X size={24} className="text-white group-hover:rotate-90 transition-transform" />
                 </button>
 
-                <div className="space-y-12 overflow-y-auto custom-scrollbar pr-4">
+                <div className="space-y-8 md:space-y-12 overflow-y-auto custom-scrollbar pr-4">
                    <div>
                       <div className="text-[10px] font-black uppercase tracking-[0.4em] mb-4" style={{ color: 'var(--grade-accent)' }}>Lo que aprenderás</div>
-                      <h3 className="text-4xl font-black text-white mb-6 leading-tight">{gradeMeta?.title}</h3>
+                      <h3 className="text-2xl md:text-4xl font-black text-white mb-6 leading-tight">{gradeMeta?.title}</h3>
                       <p className="text-lg text-white/50 leading-relaxed font-medium">
                         {gradeMeta?.briefing}
                       </p>
@@ -1286,7 +1298,7 @@ export default function StudentHubV19() {
           </button>
 
           {/* FRAME DEL REPRODUCTOR (DIAMOND CINEMA) */}
-          <div className="relative w-full max-w-7xl aspect-video rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1),0_0_60px_rgba(255,140,0,0.1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000 fill-mode-both">
+          <div className="relative w-full max-w-7xl aspect-video rounded-[32px] md:rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1),0_0_60px_rgba(255,140,0,0.1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000 fill-mode-both">
             
             {/* Marco de Lujo */}
             <div className="absolute inset-0 pointer-events-none border-[20px] border-black/60 z-20" />
@@ -1344,9 +1356,9 @@ export default function StudentHubV19() {
 
       {/* BANNER MODO INVITADO */}
       {profile?.id === 'guest_user' && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9000] flex items-center gap-4 px-6 py-4 bg-[#011C40] border border-[#FF8C00]/40 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl animate-in slide-in-from-bottom duration-700">
+        <div className="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-[9000] w-[calc(100vw-2rem)] max-w-md md:w-auto md:max-w-none flex items-center gap-3 md:gap-4 px-4 md:px-6 py-3 md:py-4 bg-[#011C40] border border-[#FF8C00]/40 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl animate-in slide-in-from-bottom duration-700">
           <div className="w-8 h-8 rounded-full bg-[#FF8C00]/20 flex items-center justify-center text-[#FF8C00] text-lg font-black flex-shrink-0">!</div>
-          <p className="text-white/70 text-sm font-semibold">Modo Invitado — tu progreso no se guarda.</p>
+          <p className="flex-1 text-white/70 text-xs md:text-sm font-semibold leading-snug">Modo Invitado — tu progreso no se guarda.</p>
           <button
             onClick={() => router.push('/log-in')}
             className="ml-2 px-4 py-2 bg-[#FF8C00] text-black text-xs font-black rounded-xl hover:scale-105 transition-all flex-shrink-0"

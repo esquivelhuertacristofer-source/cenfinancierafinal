@@ -129,7 +129,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in zoom-in duration-1000 font-sans">
-         <div className="max-w-4xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-20 text-center relative overflow-hidden">
+         <div className="max-w-4xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-8 md:p-20 text-center relative overflow-hidden">
             <button
               onClick={handleClose}
               aria-label="Cerrar"
@@ -141,20 +141,20 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
             
             <div className="relative z-10 space-y-12">
                <div className="flex justify-center">
-                  <div style={{ backgroundColor: acento, boxShadow: `0 0 80px ${acento}66` }} className="w-32 h-32 text-black rounded-[40px] flex items-center justify-center">
+                  <div style={{ backgroundColor: acento, boxShadow: `0 0 80px ${acento}66` }} className="w-32 h-32 text-black rounded-[24px] md:rounded-[40px] flex items-center justify-center">
                      <CheckCircle2 size={64} />
                   </div>
                </div>
 
                <div className="space-y-4">
-                  <h2 className="text-7xl font-black tracking-tighter italic text-white uppercase">¡Estrategia Creada!</h2>
+                  <h2 className="text-4xl md:text-7xl font-black tracking-tighter italic text-white uppercase">¡Estrategia Creada!</h2>
                   <p className="text-white/40 text-2xl font-medium">Has completado tu plan de: <br/> <span className="text-white">"{data.titulo}"</span></p>
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                   {(data.pasos || []).map(step => (
-                    <div key={step.id} className="p-8 bg-white/5 border border-white/10 rounded-[40px] space-y-4 backdrop-blur-xl">
-                       <h4 className="text-[10px] font-black uppercase tracking-[0.4em]" style={{ color: acento }}>{step.titulo}</h4>
+                    <div key={step.id} className="p-8 bg-white/5 border border-white/10 rounded-[24px] md:rounded-[40px] space-y-4 backdrop-blur-xl">
+                       <h4 className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em]" style={{ color: acento }}>{step.titulo}</h4>
                        <div className="space-y-3">
                           {(step.campos || []).map(field => (
                             <div key={field.id} className="flex justify-between gap-4 text-sm">
@@ -174,7 +174,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
 
                <button
                  onClick={reportCompletion}
-                 className="w-full py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] hover:scale-105 transition-all shadow-2xl"
+                 className="w-full py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 transition-all shadow-2xl"
                >
                   Finalizar Misión Diamond
                </button>
@@ -194,10 +194,10 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
     <div className="w-full h-full bg-transparent text-white flex flex-col relative overflow-hidden font-sans">
 
       {/* HUD DE PROGRESO */}
-      <header className="shrink-0 px-8 md:px-16 py-8 md:py-10 flex justify-between items-center relative z-20">
+      <header className="shrink-0 px-4 md:px-16 py-6 md:py-10 flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0 relative z-20">
          <div className="flex flex-col">
-            <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.8em] mb-2">Constructor de Misión</span>
-            <h1 className="text-4xl font-black tracking-tighter italic uppercase">{currentStep.titulo}</h1>
+            <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] md:tracking-[0.8em] mb-2">Constructor de Misión</span>
+            <h1 className="text-2xl md:text-4xl font-black tracking-tighter italic uppercase">{currentStep.titulo}</h1>
          </div>
 
          <div className="flex items-center gap-8">
@@ -301,7 +301,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
                         de ellos se quedaban en 0. */}
                     {field.type === 'slider' && (
                       <div className="space-y-4">
-                         <div className="text-4xl font-black italic tracking-tighter leading-none">
+                         <div className="text-2xl md:text-4xl font-black italic tracking-tighter leading-none">
                            {field.unit === '$' && '$'}
                            {valorSlider.toLocaleString()}
                            {field.unit && field.unit !== '$' && <span className="text-base not-italic opacity-30 ml-2 tracking-normal">{field.unit}</span>}
@@ -356,7 +356,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
 
                     {field.type === 'calculated' && (
                       <div className="flex items-end justify-between gap-6">
-                         <span className="text-5xl font-black text-white italic tracking-tighter leading-none">
+                         <span className="text-3xl md:text-5xl font-black text-white italic tracking-tighter leading-none">
                             {field.unit === '$' && '$'}
                             {getFieldValue(field).toLocaleString()}
                             {field.unit && field.unit !== '$' && <span className="text-lg not-italic opacity-40 ml-2 tracking-normal">{field.unit}</span>}
@@ -375,10 +375,10 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
             </div>
 
             {liveCalcs.length > 0 && (
-              <div className="bg-white/[0.03] border border-white/10 rounded-[50px] p-10 space-y-6">
+              <div className="bg-white/[0.03] border border-white/10 rounded-[28px] md:rounded-[50px] p-5 md:p-10 space-y-6">
                 <div className="flex items-center gap-3">
                   <Sparkles size={16} className="text-emerald-400" />
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">Calculadora en Vivo</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/30">Calculadora en Vivo</span>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {liveCalcs.map(calc => (
@@ -405,13 +405,13 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
                <button
                   onClick={handleBack}
                   disabled={currentStepIdx === 0}
-                  className={`flex items-center gap-4 font-black text-[10px] uppercase tracking-[0.4em] transition-all ${currentStepIdx === 0 ? 'opacity-0 pointer-events-none' : 'text-white/40 hover:text-white'}`}
+                  className={`flex items-center gap-4 font-black text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] transition-all ${currentStepIdx === 0 ? 'opacity-0 pointer-events-none' : 'text-white/40 hover:text-white'}`}
                >
                   <ChevronLeft size={20} /> Atrás
                </button>
                <button
                   onClick={handleNext}
-                  className="px-12 py-7 bg-white text-black rounded-[32px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_80px_rgba(255,255,255,0.1)] flex items-center gap-4 group"
+                  className="px-6 md:px-12 py-7 bg-white text-black rounded-[32px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_80px_rgba(255,255,255,0.1)] flex items-center gap-4 group"
                >
                   {currentStepIdx < data.pasos.length - 1 ? 'Continuar' : 'Construir Blueprint'}
                   <ChevronRight size={20} className="group-hover:translate-x-2 transition-transform" />

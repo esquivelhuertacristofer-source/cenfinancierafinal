@@ -156,21 +156,21 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
     <div className="w-full h-full min-h-[600px] bg-transparent relative flex flex-col items-center justify-center font-sans overflow-visible select-none p-0">
       
       {/* HUD FLOTANTE - SIN BORDES DE CAJA */}
-      <div className="absolute top-0 left-0 right-0 px-12 py-10 flex justify-between items-start z-[100] pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 px-6 md:px-12 py-10 flex justify-between items-start z-[100] pointer-events-none">
          <div className="flex gap-4 pointer-events-auto">
             <div className="bg-[#0A0118]/40 border border-white/5 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
-               <div className="text-[10px] font-black text-white/20 uppercase tracking-[0.4em] mb-1">Misión</div>
-               <div className={`text-4xl font-black italic tracking-tighter ${timeLeft < 10 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
+               <div className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] md:tracking-[0.4em] mb-1">Misión</div>
+               <div className={`text-2xl md:text-4xl font-black italic tracking-tighter ${timeLeft < 10 ? 'text-rose-500 animate-pulse' : 'text-white'}`}>
                   {timeLeft}s
                </div>
             </div>
-            <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-3xl p-6 px-10 backdrop-blur-xl shadow-2xl">
-               <div className="text-[10px] font-black text-emerald-400/40 uppercase tracking-[0.4em] mb-1">Tesoro</div>
-               <div className="text-4xl font-black text-white italic tracking-tighter">{score}</div>
+            <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-3xl p-6 px-5 md:px-10 backdrop-blur-xl shadow-2xl">
+               <div className="text-[10px] font-black text-emerald-400/40 uppercase tracking-[0.2em] md:tracking-[0.4em] mb-1">Tesoro</div>
+               <div className="text-2xl md:text-4xl font-black text-white italic tracking-tighter">{score}</div>
             </div>
          </div>
 
-         <div className="bg-white/5 border border-white/10 rounded-[40px] p-6 px-12 backdrop-blur-3xl shadow-2xl pointer-events-auto">
+         <div className="bg-white/5 border border-white/10 rounded-[24px] md:rounded-[40px] p-6 px-6 md:px-12 backdrop-blur-3xl shadow-2xl pointer-events-auto">
             <div className="flex gap-4">
                {[...Array(3)].map((_, i) => (
                  <Heart 
@@ -196,7 +196,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
                 onPointerDown={() => handleCatch(obj)}
                 className="absolute w-40 h-40 flex flex-col items-center justify-center cursor-pointer group active:scale-90 transition-transform"
               >
-                 <div className="text-8xl drop-shadow-[0_15px_40px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform pointer-events-none">
+                 <div className="text-5xl md:text-8xl drop-shadow-[0_15px_40px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform pointer-events-none">
                     {obj.emoji}
                  </div>
                  <div className={`mt-4 px-5 py-2 rounded-2xl text-[10px] font-black uppercase tracking-widest border backdrop-blur-3xl pointer-events-none shadow-2xl
@@ -213,7 +213,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
                 key={feedback.id}
                 initial={{ y: feedback.y + "%", x: feedback.x + "%", opacity: 1, scale: 1 }}
                 animate={{ y: (feedback.y - 25) + "%", opacity: 0, scale: 3 }}
-                className={`absolute z-[110] font-black text-7xl italic pointer-events-none drop-shadow-2xl ${feedback.color}`}
+                className={`absolute z-[110] font-black text-4xl md:text-7xl italic pointer-events-none drop-shadow-2xl ${feedback.color}`}
               >
                 {feedback.text}
               </motion.div>
@@ -223,20 +223,20 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
 
       {/* INTRODUCCIÓN GLASS */}
       {gameState === 'intro' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-[#0A0118]/60 backdrop-blur-2xl flex items-center justify-center p-10">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-[#0A0118]/60 backdrop-blur-2xl flex items-center justify-center p-5 md:p-10">
            <div className="max-w-xl text-center space-y-12">
-              <div className="w-28 h-28 bg-white/10 rounded-[40px] flex items-center justify-center mx-auto border border-white/20">
+              <div className="w-28 h-28 bg-white/10 rounded-[24px] md:rounded-[40px] flex items-center justify-center mx-auto border border-white/20">
                  <PlayCircle size={60} className="text-white" />
               </div>
               <div className="space-y-4">
-                 <h2 className="text-7xl font-black text-white italic uppercase tracking-tighter leading-none">{data.titulo}</h2>
+                 <h2 className="text-4xl md:text-7xl font-black text-white italic uppercase tracking-tighter leading-none">{data.titulo}</h2>
                  <p className="text-2xl text-white/60 font-medium italic leading-relaxed">
                     ¡Toca los tesoros que caen para guardarlos en tu alcancía!
                  </p>
               </div>
               <button 
                 onClick={startGame}
-                className="w-full py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.8em] hover:scale-105 transition-all shadow-2xl"
+                className="w-full py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.8em] hover:scale-105 transition-all shadow-2xl"
               >
                  ¡Empezar!
               </button>
@@ -246,19 +246,19 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
 
       {/* FINALIZACIÓN GLASS */}
       {gameState === 'finished' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/80 backdrop-blur-3xl flex items-center justify-center p-10">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[2500] bg-black/80 backdrop-blur-3xl flex items-center justify-center p-5 md:p-10">
            <div className="text-center space-y-12">
-              <div className="w-48 h-48 bg-emerald-500 rounded-[60px] flex items-center justify-center mx-auto shadow-[0_0_150px_rgba(16,185,129,0.4)]">
+              <div className="w-48 h-48 bg-emerald-500 rounded-[32px] md:rounded-[60px] flex items-center justify-center mx-auto shadow-[0_0_150px_rgba(16,185,129,0.4)]">
                  <Trophy size={100} className="text-white" />
               </div>
               <div className="text-center space-y-3">
-                 <h2 className="text-8xl font-black text-white italic uppercase tracking-tighter leading-none">¡Excelente!</h2>
+                 <h2 className="text-5xl md:text-8xl font-black text-white italic uppercase tracking-tighter leading-none">¡Excelente!</h2>
                  <p className="text-2xl text-white/40 font-medium italic">Has completado tu entrenamiento de campo.</p>
               </div>
-              <div className="text-7xl font-black text-emerald-400 italic tracking-tighter uppercase">¡Logrado!</div>
+              <div className="text-4xl md:text-7xl font-black text-emerald-400 italic tracking-tighter uppercase">¡Logrado!</div>
               <button 
                 onClick={onClose}
-                className="px-20 py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] hover:scale-105 transition-all shadow-2xl"
+                className="px-20 py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 transition-all shadow-2xl"
               >
                  Cerrar Desafío
               </button>
@@ -267,7 +267,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
       )}
 
       {/* PIE SIN BORDES */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-10 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.6em] italic">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-10 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.28em] md:tracking-[0.6em] italic">
          <Zap size={16} /> Diamond Engine v5.1
       </div>
 

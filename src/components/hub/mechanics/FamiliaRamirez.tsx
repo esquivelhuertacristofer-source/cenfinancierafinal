@@ -371,7 +371,7 @@ export default function FamiliaRamirez({
         <div className="max-w-md w-full space-y-8">
           {/* Hero */}
           <div className="space-y-3">
-            <div className="text-7xl animate-bounce">🏠</div>
+            <div className="text-4xl md:text-7xl animate-bounce">🏠</div>
             <h1 className="text-3xl font-black text-white uppercase tracking-widest leading-tight">
               {content.family_name}
             </h1>
@@ -435,7 +435,7 @@ export default function FamiliaRamirez({
         <div className="max-w-md w-full space-y-6">
           {/* Alert header */}
           <div className="text-center space-y-2">
-            <div className="text-6xl animate-pulse">{emergency.emoji}</div>
+            <div className="text-4xl md:text-6xl animate-pulse">{emergency.emoji}</div>
             <div className="inline-block px-4 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-300 text-xs font-black uppercase tracking-widest">
               ⚡ Emergencia del Hogar — Dia {emergency.day}
             </div>
@@ -528,7 +528,7 @@ export default function FamiliaRamirez({
         <div className="max-w-md w-full space-y-6">
           {/* Score hero */}
           <div className="text-center space-y-3">
-            <div className="text-6xl">{lesson.emoji}</div>
+            <div className="text-4xl md:text-6xl">{lesson.emoji}</div>
             <h2 className="text-3xl font-black text-white uppercase tracking-widest">{lesson.title}</h2>
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-600/20 border border-purple-500/30">
               <span className="text-purple-300 font-black text-xs uppercase tracking-widest">Puntaje final</span>
@@ -639,7 +639,7 @@ export default function FamiliaRamirez({
     return (
       <div className="min-h-screen w-full bg-[#0a0a1a] flex items-center justify-center p-6">
         <div className="text-center space-y-4">
-          <div className="text-5xl animate-spin">⏳</div>
+          <div className="text-3xl md:text-5xl animate-spin">⏳</div>
           <p className="text-white font-black text-xl">Calculando resultados...</p>
         </div>
       </div>
@@ -696,7 +696,7 @@ export default function FamiliaRamirez({
         {!showFeedback ? (
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 space-y-4">
             <div className="flex items-start gap-3">
-              <div className="text-4xl flex-shrink-0">{currentEvent.emoji}</div>
+              <div className="text-2xl md:text-4xl flex-shrink-0">{currentEvent.emoji}</div>
               <div>
                 <p className="text-yellow-300 text-[10px] font-black uppercase tracking-widest mb-1">
                   Dia {currentEvent.day}
@@ -764,7 +764,7 @@ export default function FamiliaRamirez({
           /* Feedback card */
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6 space-y-5 animate-pulse">
             <div className="text-center space-y-2">
-              <div className="text-5xl">
+              <div className="text-3xl md:text-5xl">
                 {selectedChoice !== null
                   ? moodEmoji(currentEvent.choices[selectedChoice].mood_effect)
                   : '👍'}

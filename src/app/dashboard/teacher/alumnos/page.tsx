@@ -467,7 +467,7 @@ export default function AlumnosPage() {
   if (loadError) return (
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue']">
       <Sidebar teacherName="..." groupId="..." />
-      <main className="flex-1 md:ml-[260px] flex items-center justify-center p-12">
+      <main className="flex-1 md:ml-[260px] flex items-center justify-center p-6 md:p-12">
         <div className="flex flex-col items-center gap-6 text-center max-w-md">
           <AlertCircle className="w-12 h-12 text-[#011C40]/30" />
           <p className="text-lg font-black text-[#011C40]">No pudimos conectar con el servidor</p>
@@ -488,11 +488,11 @@ export default function AlumnosPage() {
   if (loading) return (
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue']">
       <Sidebar teacherName="..." groupId="..." />
-      <main className="flex-1 md:ml-[260px] p-12 space-y-16">
-        <div className="h-64 bg-[#011C40] rounded-[4rem] animate-pulse" />
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+      <main className="flex-1 md:ml-[260px] p-6 md:p-12 space-y-10 md:space-y-16">
+        <div className="h-64 bg-[#011C40] rounded-[2rem] md:rounded-[4rem] animate-pulse" />
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="h-[400px] bg-white rounded-[3.5rem] border border-slate-100 animate-pulse p-12" />
+            <div key={i} className="h-[400px] bg-white rounded-[1.75rem] md:rounded-[3.5rem] border border-slate-100 animate-pulse p-6 md:p-12" />
           ))}
         </div>
       </main>
@@ -503,12 +503,12 @@ export default function AlumnosPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] relative overflow-hidden">
       <Sidebar teacherName={teacher?.full_name} groupId={teacher?.group_id} />
 
-      <main className="flex-1 md:ml-[260px] p-12 space-y-16 relative z-10">
+      <main className="flex-1 md:ml-[260px] p-6 md:p-12 space-y-10 md:space-y-16 relative z-10">
 
         {/* HEADER */}
-        <div className="relative overflow-hidden rounded-[4rem] bg-[#011C40] p-16 shadow-2xl animate-in fade-in slide-in-from-top-12 duration-700">
+        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[4rem] bg-[#011C40] p-8 md:p-16 shadow-2xl animate-in fade-in slide-in-from-top-12 duration-700">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-[100px]" />
-          <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-12">
+          <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-6 md:gap-12">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <Users className="w-5 h-5 text-[#42E8E0]" />
@@ -519,7 +519,7 @@ export default function AlumnosPage() {
                   </span>
                 )}
               </div>
-              <h1 className="text-7xl font-black text-white leading-none tracking-tighter">
+              <h1 className="text-4xl md:text-7xl font-black text-white leading-none tracking-tighter">
                 Mis <span className="dashboard-gradient-orange italic">Alumnos</span>
               </h1>
               <p className="text-white/50 font-medium text-lg max-w-xl">
@@ -533,7 +533,7 @@ export default function AlumnosPage() {
                   type="text"
                   placeholder="Buscar alumno, grupo..."
                   aria-label="Buscar alumno por nombre, correo o grupo"
-                  className="w-full pl-16 pr-6 py-6 bg-white/5 border border-white/10 rounded-[2.5rem] text-white focus:border-[#FF8C00] outline-none transition-all backdrop-blur-xl"
+                  className="w-full pl-16 pr-6 py-6 bg-white/5 border border-white/10 rounded-[1.5rem] md:rounded-[2.5rem] text-white focus:border-[#FF8C00] outline-none transition-all backdrop-blur-xl"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -596,7 +596,7 @@ export default function AlumnosPage() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10">
             {filtered.map((student, i) => (
               <div
                 key={student.id}
@@ -605,7 +605,7 @@ export default function AlumnosPage() {
                 aria-label={`Ver expediente de ${student.full_name}`}
                 onClick={() => setSelected(student)}
                 onKeyDown={(e) => e.key === "Enter" && setSelected(student)}
-                className="group relative bg-white rounded-[3.5rem] p-12 cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-slate-100 flex flex-col h-full overflow-hidden animate-in fade-in slide-in-from-bottom-8 fill-mode-backwards focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:ring-offset-2"
+                className="group relative bg-white rounded-[1.75rem] md:rounded-[3.5rem] p-6 md:p-12 cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-slate-100 flex flex-col h-full overflow-hidden animate-in fade-in slide-in-from-bottom-8 fill-mode-backwards focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:ring-offset-2"
                 style={{ animationDelay: `${i * 50}ms` }}
               >
                 <div className="flex items-start justify-between mb-8">
@@ -681,23 +681,23 @@ export default function AlumnosPage() {
           onClick={() => setSelected(null)}
         >
           <div
-            className="w-full max-w-4xl max-h-[90vh] bg-[#F4F1EA] rounded-[4rem] overflow-hidden shadow-2xl flex flex-col xl:flex-row relative"
+            className="w-full max-w-4xl max-h-[90vh] bg-[#F4F1EA] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-2xl flex flex-col xl:flex-row relative"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Sidebar (Identity) */}
-            <div className="w-full xl:w-[380px] bg-[#011C40] p-12 text-white flex flex-col justify-between relative overflow-hidden">
+            <div className="w-full xl:w-[380px] bg-[#011C40] p-6 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-0 right-0 p-8 opacity-10">
                 <GraduationCap className="w-48 h-48" />
               </div>
               <div className="relative z-10 space-y-10">
-                <div className="w-32 h-32 bg-white/10 rounded-[3rem] border border-white/20 flex items-center justify-center text-4xl font-black shadow-2xl">
+                <div className="w-32 h-32 bg-white/10 rounded-[1.75rem] md:rounded-[3rem] border border-white/20 flex items-center justify-center text-2xl md:text-4xl font-black shadow-2xl">
                   {getInitials(selected.full_name || "")}
                 </div>
                 <div className="space-y-4">
                   <span className="px-4 py-1.5 bg-[#42E8E0] text-[#011C40] rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg">
                     Expediente Oficial
                   </span>
-                  <h2 className="text-4xl font-black tracking-tighter leading-none">{selected.full_name}</h2>
+                  <h2 className="text-2xl md:text-4xl font-black tracking-tighter leading-none">{selected.full_name}</h2>
                   <p className="text-[#FF8C00] font-black text-xs uppercase tracking-[0.3em]">
                     {getLevelLabel(selected.school_level)}
                   </p>
@@ -739,7 +739,7 @@ export default function AlumnosPage() {
             </div>
 
             {/* Modal Main Content */}
-            <div className="flex-1 p-12 overflow-y-auto dashboard-scrollbar-thin space-y-12">
+            <div className="flex-1 p-6 md:p-12 overflow-y-auto dashboard-scrollbar-thin space-y-8 md:space-y-12">
               <div className="flex items-center justify-between">
                 <h3 className="text-xs font-black uppercase tracking-[0.4em] text-[#011C40]/40">Analítica de Desempeño</h3>
                 <button
@@ -752,9 +752,9 @@ export default function AlumnosPage() {
 
               {/* KPI Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
+                <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Actividades</p>
-                  <p className="text-5xl font-black text-[#011C40]">
+                  <p className="text-3xl md:text-5xl font-black text-[#011C40]">
                     {selected.progress_count}<span className="text-slate-200 text-3xl">/{CLASES_POR_GRADO}</span>
                   </p>
                   <div className="w-full h-3 bg-slate-50 rounded-full overflow-hidden border border-slate-100">
@@ -764,16 +764,16 @@ export default function AlumnosPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
+                <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Puntaje Prom.</p>
-                  <p className="text-5xl font-black text-[#FF8C00]">
+                  <p className="text-3xl md:text-5xl font-black text-[#FF8C00]">
                     {selected.avg_score}<span className="text-slate-200 text-3xl">/100</span>
                   </p>
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Promedio general</p>
                 </div>
-                <div className="bg-white rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
+                <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-8 border border-white shadow-sm flex flex-col items-center text-center space-y-4">
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tiempo</p>
-                  <p className="text-5xl font-black text-[#011C40]">
+                  <p className="text-3xl md:text-5xl font-black text-[#011C40]">
                     {selected.total_minutes}<span className="text-slate-200 text-3xl">m</span>
                   </p>
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">Tiempo total</p>
@@ -781,7 +781,7 @@ export default function AlumnosPage() {
               </div>
 
               {/* Practice dots */}
-              <div className="bg-white rounded-[2.5rem] p-10 border border-white shadow-sm space-y-8">
+              <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 border border-white shadow-sm space-y-8">
                 <div className="flex items-center justify-between">
                   <p className="text-[10px] font-black text-[#011C40] uppercase tracking-widest">Mapa de Prácticas</p>
                   <div className="flex gap-4">
@@ -865,7 +865,7 @@ export default function AlumnosPage() {
                       </div>
                     ))
                   ) : (
-                    <div className="flex flex-col items-center py-12 gap-4 bg-white rounded-[3rem] border border-dashed border-slate-200">
+                    <div className="flex flex-col items-center py-6 md:py-12 gap-4 bg-white rounded-[1.75rem] md:rounded-[3rem] border border-dashed border-slate-200">
                       <AlertCircle className="w-10 h-10 text-slate-200" />
                       <p className="text-sm font-bold text-slate-400 italic">No hay prácticas registradas en este ciclo.</p>
                     </div>

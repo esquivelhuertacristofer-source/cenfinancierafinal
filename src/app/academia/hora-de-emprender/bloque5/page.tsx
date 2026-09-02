@@ -21,10 +21,10 @@ export default function Segmento4Bloque5Page() {
           <Link href="/academia/hora-de-emprender" className="hover:text-[#0980E8] transition-colors text-[#0980E8]">Hora de Emprender</Link>
         </div>
         <Link href="/log-in">
-          <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
-            Iniciar Sesión
-          </button>
-        </Link>
+            <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
+              Iniciar Sesión
+            </button>
+          </Link>
       </nav>
 
       {/* 2. HERO DEL BLOQUE (Celeste a Blanco) */}
@@ -83,7 +83,7 @@ export default function Segmento4Bloque5Page() {
                </div>
             </div>
             <div className="w-full flex justify-center">
-               <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:bg-[#011C40] transition-colors">
+               <button disabled title="Vista previa del material docente; la herramienta interactiva vive en el Hub del estudiante" className="disabled:opacity-60 disabled:cursor-not-allowed bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:bg-[#011C40] transition-colors">
                   Guardar Números
                </button>
             </div>
@@ -116,7 +116,7 @@ export default function Segmento4Bloque5Page() {
                   <label className="text-[#011C40] font-black text-[10px] uppercase tracking-widest">A resolver (Problema)...</label>
                   <input type="text" className="h-10 bg-slate-50 border border-slate-200 rounded-lg px-4 text-sm outline-none focus:border-[#0980E8]" />
                </div>
-               <button className="bg-[#011C40] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg mt-2 hover:bg-[#0980E8] transition-colors self-start">
+               <button disabled title="Vista previa del material docente; la herramienta interactiva vive en el Hub del estudiante" className="disabled:opacity-60 disabled:cursor-not-allowed bg-[#011C40] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg mt-2 hover:bg-[#0980E8] transition-colors self-start">
                   Generar Pitch
                </button>
             </div>
@@ -177,7 +177,7 @@ export default function Segmento4Bloque5Page() {
             </div>
             <div className="w-full flex justify-center">
                {/* Botón Dorado Distintivo */}
-               <button className="bg-gradient-to-r from-[#F59E0B] to-[#FBBF24] text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl shadow-yellow-500/40 hover:scale-105 transition-transform w-full md:w-auto">
+               <button disabled title="Vista previa del material docente; la herramienta interactiva vive en el Hub del estudiante" className="disabled:opacity-60 disabled:cursor-not-allowed bg-gradient-to-r from-[#F59E0B] to-[#FBBF24] text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl shadow-yellow-500/40 hover:scale-105 transition-transform w-full md:w-auto">
                   ¡Comenzar Lanzamiento!
                </button>
             </div>
@@ -226,9 +226,11 @@ export default function Segmento4Bloque5Page() {
               <p className="font-bold text-sm text-white/70 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                  En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de recursos que te ayudarán a profundizar en tu aventura financiera.
               </p>
-              <button className="bg-[#0980E8] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
-                 Accede Ahora
-              </button>
+              <Link href="/dashboard/teacher/bibliografia">
+                <button className="bg-[#0980E8] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
+                   Accede Ahora
+                </button>
+              </Link>
            </div>
            <div className="md:w-1/2 flex justify-center">
               <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-white/10 shadow-2xl relative">

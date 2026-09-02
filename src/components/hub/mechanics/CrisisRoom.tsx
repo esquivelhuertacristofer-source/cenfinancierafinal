@@ -615,14 +615,14 @@ export default function CrisisRoom({ activity, onComplete }: { activity: Activit
         <div className="relative z-10 max-w-3xl mx-auto w-full flex flex-col gap-5">
           {/* Score hero */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 flex flex-col items-center text-center gap-3">
-            <div className="w-20 h-20 rounded-3xl bg-purple-600/20 border-2 border-purple-500/40 flex items-center justify-center text-4xl">
+            <div className="w-20 h-20 rounded-3xl bg-purple-600/20 border-2 border-purple-500/40 flex items-center justify-center text-2xl md:text-4xl">
               {scoreEmoji}
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight">{scoreMsgTitle}</h2>
             <p className="text-white/60 font-bold text-sm leading-relaxed max-w-md">{scoreMsgBody}</p>
             <div className="flex items-center gap-2 mt-2">
               <span className="text-xs font-black text-white/40 uppercase tracking-widest">Puntaje Final:</span>
-              <span className="text-4xl font-black text-purple-300">{finalScore}</span>
+              <span className="text-2xl md:text-4xl font-black text-purple-300">{finalScore}</span>
               <span className="text-sm text-white/30 font-black">/ 100</span>
             </div>
             {/* Score bar */}

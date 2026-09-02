@@ -4,7 +4,7 @@ import { TrendingUp, BarChart3, Sparkles } from "lucide-react";
 
 export default function PerformanceChart({ isDark = true }: { isDark?: boolean }) {
   return (
-    <div className={`rounded-[3rem] border transition-all duration-700 p-10 group h-full flex flex-col relative overflow-hidden ${
+    <div className={`rounded-[1.75rem] md:rounded-[3rem] border transition-all duration-700 p-5 md:p-10 group h-full flex flex-col relative overflow-hidden ${
       isDark 
       ? 'bg-white/5 border-white/5 shadow-2xl backdrop-blur-2xl' 
       : 'bg-white border-slate-200 shadow-xl'

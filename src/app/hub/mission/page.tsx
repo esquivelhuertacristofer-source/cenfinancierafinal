@@ -40,14 +40,14 @@ export default function MissionPage() {
         }
       `}</style>
 
-      <nav className="p-10 flex justify-between items-center border-b border-white/5">
+      <nav className="p-5 md:p-10 flex justify-between items-center border-b border-white/5">
         <div className="cursor-pointer opacity-50 hover:opacity-100 flex items-center gap-2" onClick={() => window.location.assign('/hub')}>
           <ChevronLeft /> VOLVER AL HUB
         </div>
         <div className="font-black text-sm uppercase tracking-widest">{pillar.title}</div>
       </nav>
 
-      <header className="p-10 lg:p-20 max-w-7xl mx-auto">
+      <header className="p-5 md:p-10 lg:p-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="animate-in slide-in-from-left duration-1000">
             <span className="text-[#FF8C00] font-black text-xs tracking-[0.5em] block mb-6 uppercase opacity-50">CEN Academia Diamond</span>
@@ -68,7 +68,7 @@ export default function MissionPage() {
             {pillar.videoUrl && (
               <button 
                 onClick={() => setShowExpertVideo(true)}
-                className="flex items-center gap-6 px-12 py-8 bg-[#FF8C00] text-white rounded-[32px] font-black text-xl uppercase tracking-widest hover:scale-105 hover:shadow-[0_20px_50px_rgba(255,140,0,0.4)] active:scale-95 transition-all"
+                className="flex items-center gap-6 px-6 md:px-12 py-8 bg-[#FF8C00] text-white rounded-[32px] font-black text-xl uppercase tracking-widest hover:scale-105 hover:shadow-[0_20px_50px_rgba(255,140,0,0.4)] active:scale-95 transition-all"
               >
                 <PlayCircle size={32} /> Ver Masterclass de Misión
               </button>
@@ -83,14 +83,14 @@ export default function MissionPage() {
         </div>
       </header>
 
-      <main className="px-10 lg:px-20 py-20 max-w-7xl mx-auto">
-        <div className="flex items-center gap-6 mb-16">
+      <main className="px-5 md:px-10 lg:px-20 py-20 max-w-7xl mx-auto">
+        <div className="flex items-center gap-6 mb-8 md:mb-16">
           <div className="w-4 h-4 rounded-full bg-[#FF8C00] shadow-[0_0_15px_#FF8C00]" />
-          <span className="text-4xl font-black uppercase tracking-tighter text-white font-epilogue">Ruta Académica</span>
+          <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white font-epilogue">Ruta Académica</span>
           <div className="flex-1 h-px bg-white/10" />
         </div>
         
-        <div className="bg-white/[0.02] rounded-[60px] p-12 lg:p-20 border border-white/5 backdrop-blur-3xl">
+        <div className="bg-white/[0.02] rounded-[32px] md:rounded-[60px] p-6 md:p-12 lg:p-20 border border-white/5 backdrop-blur-3xl">
           <UnitTimeline
             pillar={pillar}
             completed={new Set()}
@@ -116,7 +116,7 @@ export default function MissionPage() {
             <X size={32} className="group-hover:rotate-90 transition-transform duration-700" />
           </button>
 
-          <div className="relative w-full max-w-7xl aspect-video rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000">
+          <div className="relative w-full max-w-7xl aspect-video rounded-[32px] md:rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000">
             <iframe 
               src={`${pillar.videoUrl}${pillar.videoUrl.includes('?') ? '&' : '?'}autoplay=1&rel=0&modestbranding=1`}
               className="w-full h-full"

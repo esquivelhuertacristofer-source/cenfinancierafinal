@@ -292,8 +292,8 @@ export default function PrimerNegocio({
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-center p-6">
         <div className="max-w-lg w-full text-center">
-          <div className="text-8xl mb-4 animate-bounce">🥤</div>
-          <h1 className="text-4xl font-black text-white mb-2 uppercase tracking-widest">
+          <div className="text-5xl md:text-8xl mb-4 animate-bounce">🥤</div>
+          <h1 className="text-2xl md:text-4xl font-black text-white mb-2 uppercase tracking-widest">
             Mi Primer Negocio
           </h1>
           <p className="text-purple-300 font-bold text-lg mb-2">Temporada Alta</p>
@@ -350,7 +350,7 @@ export default function PrimerNegocio({
         <div className="max-w-lg w-full">
           <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
-            <div className="text-5xl mb-2">📦</div>
+            <div className="text-3xl md:text-5xl mb-2">📦</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
               Paso 1 de 3
             </h2>
@@ -427,7 +427,7 @@ export default function PrimerNegocio({
         <div className="max-w-lg w-full">
           <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
-            <div className="text-5xl mb-2">🏷️</div>
+            <div className="text-3xl md:text-5xl mb-2">🏷️</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
               Paso 2 de 3
             </h2>
@@ -497,7 +497,7 @@ export default function PrimerNegocio({
         <div className="max-w-lg w-full">
           <PhaseIndicator phase={phase} />
           <div className="text-center mb-6">
-            <div className="text-5xl mb-2">📍</div>
+            <div className="text-3xl md:text-5xl mb-2">📍</div>
             <h2 className="text-2xl font-black text-white uppercase tracking-widest">
               Paso 3 de 3
             </h2>
@@ -524,7 +524,7 @@ export default function PrimerNegocio({
                 className="w-full text-left rounded-3xl border border-purple-500/30 bg-white/5 hover:bg-purple-600/20 hover:border-purple-400/60 p-5 transition-all duration-300 min-h-[80px] cursor-pointer"
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-4xl">{loc.emoji}</span>
+                  <span className="text-2xl md:text-4xl">{loc.emoji}</span>
                   <div className="flex-1">
                     <p className="text-white font-black text-lg">{loc.name}</p>
                     <p className="text-white/70 text-sm font-bold">{loc.description}</p>
@@ -625,7 +625,7 @@ export default function PrimerNegocio({
 
               {dayAnimStep === 'event' && currentEvent && (
                 <div className="animate-bounce">
-                  <div className="text-8xl mb-4">{currentEvent.emoji}</div>
+                  <div className="text-5xl md:text-8xl mb-4">{currentEvent.emoji}</div>
                   <h3 className="text-white font-black text-xl mb-2">¡Evento del día!</h3>
                   <p className="text-white/70 font-bold text-base">{currentEvent.description}</p>
                   <div className="mt-3">
@@ -648,7 +648,7 @@ export default function PrimerNegocio({
 
               {dayAnimStep === 'selling' && (
                 <div>
-                  <div className="text-7xl mb-3 animate-pulse">🏪</div>
+                  <div className="text-4xl md:text-7xl mb-3 animate-pulse">🏪</div>
                   <h3 className="text-white font-black text-xl mb-2">¡Vendiendo!</h3>
                   <div className="flex justify-center gap-2 flex-wrap mt-3">
                     {Array.from({ length: Math.min(8, unitsRemaining) }).map((_, i) => (
@@ -678,7 +678,7 @@ export default function PrimerNegocio({
               {dayAnimStep === 'summary' && pendingDay && (
                 <div>
                   <div
-                    className={`text-6xl mb-3 ${
+                    className={`text-4xl md:text-6xl mb-3 ${
                       pendingDay.wasStockedOut ? 'animate-bounce' : ''
                     }`}
                   >
@@ -799,7 +799,7 @@ export default function PrimerNegocio({
 
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="text-7xl mb-3">{isProfit ? '🎊' : '😔'}</div>
+            <div className="text-4xl md:text-7xl mb-3">{isProfit ? '🎊' : '😔'}</div>
             <h2 className="text-3xl font-black text-white uppercase tracking-widest">
               {isProfit ? '¡Cerraste tu negocio!' : 'Fin de la Semana'}
             </h2>

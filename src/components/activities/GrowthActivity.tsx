@@ -102,15 +102,15 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
     <div className="w-full h-full min-h-[750px] bg-transparent relative flex flex-col items-center justify-center font-sans overflow-visible select-none">
       
       {/* HUD SUPERIOR */}
-      <div className="absolute top-0 left-0 right-0 p-12 flex justify-between items-start z-50">
+      <div className="absolute top-0 left-0 right-0 p-6 md:p-12 flex justify-between items-start z-50">
          <div className="space-y-2">
-            <h1 className="text-6xl font-black text-white italic uppercase tracking-tighter">Bóveda de Maestría</h1>
+            <h1 className="text-4xl md:text-6xl font-black text-white italic uppercase tracking-tighter">Bóveda de Maestría</h1>
             <p className="text-xl text-white/40 font-bold uppercase tracking-widest italic">{data.descripcion || "Haz crecer tu capital estratégicamente"}</p>
          </div>
          
-         <div className="p-8 bg-emerald-500/10 border border-emerald-500/40 rounded-[40px] backdrop-blur-3xl text-center min-w-[240px]">
-            <div className="text-[10px] font-black text-emerald-400 uppercase tracking-[0.3em] mb-2">Meta Objetivo</div>
-            <div className="text-5xl font-black text-white">${targetGoal}</div>
+         <div className="p-8 bg-emerald-500/10 border border-emerald-500/40 rounded-[24px] md:rounded-[40px] backdrop-blur-3xl text-center min-w-[240px]">
+            <div className="text-[10px] font-black text-emerald-400 uppercase tracking-[0.16em] md:tracking-[0.3em] mb-2">Meta Objetivo</div>
+            <div className="text-3xl md:text-5xl font-black text-white">${targetGoal}</div>
          </div>
       </div>
 
@@ -173,7 +173,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
            whileHover={{ scale: 1.05, y: -5 }}
            whileTap={{ scale: 0.95 }}
            onClick={handleInvest}
-           className="px-12 py-8 bg-emerald-500 text-white rounded-[35px] flex flex-col items-center gap-2 shadow-2xl shadow-emerald-500/20 border border-emerald-400/50"
+           className="px-6 md:px-12 py-8 bg-emerald-500 text-white rounded-[35px] flex flex-col items-center gap-2 shadow-2xl shadow-emerald-500/20 border border-emerald-400/50"
          >
             <BookOpen size={32} />
             <span className="font-black text-[10px] uppercase tracking-[0.2em]">Invertir en Saber (-$30)</span>
@@ -184,7 +184,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
            whileHover={{ scale: 1.05, y: -5 }}
            whileTap={{ scale: 0.95 }}
            onClick={handleSpend}
-           className="px-12 py-8 bg-white/5 hover:bg-white/10 text-white rounded-[35px] flex flex-col items-center gap-2 border border-white/10 backdrop-blur-xl"
+           className="px-6 md:px-12 py-8 bg-white/5 hover:bg-white/10 text-white rounded-[35px] flex flex-col items-center gap-2 border border-white/10 backdrop-blur-xl"
          >
             <Gift size={32} className="text-pink-400" />
             <span className="font-black text-[10px] uppercase tracking-[0.2em]">Comprar Antojo (-$50)</span>
@@ -198,7 +198,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[2500] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
+            className="fixed inset-0 z-[2500] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-8 md:p-20"
           >
              <button
                onClick={handleClose}
@@ -211,15 +211,15 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
                 <motion.div
                   initial={{ scale: 0, y: 50 }}
                   animate={{ scale: 1, y: 0 }}
-                  className="w-40 h-40 bg-emerald-500 rounded-[50px] flex items-center justify-center mx-auto shadow-[0_0_80px_rgba(16,185,129,0.5)]"
+                  className="w-40 h-40 bg-emerald-500 rounded-[28px] md:rounded-[50px] flex items-center justify-center mx-auto shadow-[0_0_80px_rgba(16,185,129,0.5)]"
                 >
                    <Rocket size={80} className="text-white" />
                 </motion.div>
                 <div className="space-y-4">
-                  <h2 className="text-8xl font-black text-white italic uppercase tracking-tighter leading-none">Meta Alcanzada</h2>
+                  <h2 className="text-5xl md:text-8xl font-black text-white italic uppercase tracking-tighter leading-none">Meta Alcanzada</h2>
                   <p className="text-2xl text-white/40 font-medium italic">¡Tu paciencia y sabiduría han llenado la bóveda!</p>
                 </div>
-                <div className="text-5xl font-black text-emerald-400 italic">CRECIMIENTO FINAL: x{multiplier.toFixed(1)}</div>
+                <div className="text-3xl md:text-5xl font-black text-emerald-400 italic">CRECIMIENTO FINAL: x{multiplier.toFixed(1)}</div>
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -227,7 +227,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={completeNow}
-                  className="px-20 py-8 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] shadow-2xl"
+                  className="px-20 py-8 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] shadow-2xl"
                 >
                   Continuar
                 </motion.button>

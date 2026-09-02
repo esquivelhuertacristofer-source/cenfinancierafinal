@@ -148,3 +148,8 @@
 .animate-twinkle { animation: twinkle 4s infinite; }
 .animate-float-slow { animation: float-slow 8s infinite ease-in-out; }
 .animate-spin-slow { animation: spin 60s linear infinite; }
+
+/* no-scrollbar — oculta la barra en carruseles horizontales (riel de pestañas
+   del reproductor de actividades en móvil). */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

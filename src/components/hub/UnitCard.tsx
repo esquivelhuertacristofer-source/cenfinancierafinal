@@ -81,7 +81,7 @@ export default function UnitCard({
   };
 
   return (
-    <div className={`flex gap-10 relative group ${isLast ? "pb-0" : "pb-14"}`}>
+    <div className={`flex gap-5 md:gap-10 relative group ${isLast ? "pb-0" : "pb-14"}`}>
       {/* Step Marker */}
       <div className="flex flex-col items-center w-12 shrink-0">
         <div
@@ -113,7 +113,7 @@ export default function UnitCard({
           transform: `perspective(2000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
           transition: "all 1.5s cubic-bezier(0.23, 1, 0.32, 1)",
         }}
-        className={`flex-1 flex flex-col md:flex-row min-h-[320px] bg-[#011C40] rounded-[48px] overflow-hidden border border-white/10 transition-all duration-1500 relative
+        className={`flex-1 flex flex-col md:flex-row min-h-[320px] bg-[#011C40] rounded-[28px] md:rounded-[48px] overflow-hidden border border-white/10 transition-all duration-1500 relative
           ${isLocked ? "opacity-40 grayscale cursor-not-allowed" : "cursor-pointer hover:shadow-[0_40px_80px_rgba(0,0,0,0.5)] hover:border-[#FF8C00]/50"}
         `}
       >
@@ -150,7 +150,7 @@ export default function UnitCard({
         </div>
 
         {/* Mission Details (Auto-expandible) */}
-        <div className="flex-1 p-10 md:p-14 flex flex-col justify-between relative z-10 min-w-0">
+        <div className="flex-1 p-5 md:p-10 md:p-14 flex flex-col justify-between relative z-10 min-w-0">
           <div className="w-full">
             <div
               className={`text-[10px] font-black tracking-[0.5em] uppercase mb-6 ${isDone ? "text-[#10B981]" : "text-[#FF8C00]"}`}
@@ -205,7 +205,9 @@ export default function UnitCard({
             </div>
 
             <button
-              className={`flex items-center gap-4 px-12 py-6 rounded-[28px] font-black uppercase text-sm tracking-widest transition-all duration-300 whitespace-nowrap
+              type="button"
+              onClick={(e) => { e.stopPropagation(); if (!isLocked) onClick(); }}
+              className={`flex items-center gap-4 px-6 md:px-12 py-6 rounded-[28px] font-black uppercase text-sm tracking-widest transition-all duration-300 whitespace-nowrap
               ${isDone ? "bg-[#10B981] text-white hover:bg-[#0E9F6E]" : "bg-[#FF8C00] text-white hover:bg-[#FF9F26] shadow-[0_20px_50px_rgba(255,140,0,0.4)] hover:scale-105 active:scale-95"}
             `}
             >

@@ -45,7 +45,7 @@ export default function PillarCard({ pillar, done, total, pct }: PillarCardProps
         transform: `perspective(2000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: 'all 1.5s cubic-bezier(0.23, 1, 0.32, 1)'
       }}
-      className={`group relative flex flex-col justify-end overflow-hidden rounded-[2.5rem] min-h-[350px] shadow-lg hover:shadow-[0_40px_80px_rgba(0,0,0,0.4)] transition-all duration-500 ${
+      className={`group relative flex flex-col justify-end overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] min-h-[350px] shadow-lg hover:shadow-[0_40px_80px_rgba(0,0,0,0.4)] transition-all duration-500 ${
         isComplete ? 'ring-2 ring-emerald-400 ring-offset-2' : ''
       }`}
     >
@@ -72,7 +72,7 @@ export default function PillarCard({ pillar, done, total, pct }: PillarCardProps
       {/* Emoji centered in card body */}
       <div className="absolute inset-0 flex items-center justify-center pb-24">
         <div className="relative">
-          <div className="w-28 h-28 rounded-[2rem] bg-white/15 backdrop-blur-sm flex items-center justify-center text-6xl shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/20">
+          <div className="w-28 h-28 rounded-[2rem] bg-white/15 backdrop-blur-sm flex items-center justify-center text-4xl md:text-6xl shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/20">
             {pillar.icon}
           </div>
           {/* Progress ring over emoji */}

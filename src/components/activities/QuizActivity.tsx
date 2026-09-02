@@ -113,7 +113,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
          >
             <X size={24} />
          </button>
-         <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[60px] p-10 md:p-16 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+         <div className="max-w-xl w-full bg-black/40 border border-white/10 rounded-[32px] md:rounded-[60px] p-5 md:p-10 md:p-16 text-center relative overflow-hidden backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-transparent pointer-events-none" />
             
             <div className="relative z-10 space-y-10">
@@ -137,12 +137,12 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                </div>
 
                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-8 bg-white/5 rounded-[40px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30 mb-3 italic">Eficiencia</div>
+                  <div className="p-8 bg-white/5 rounded-[24px] md:rounded-[40px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/30 mb-3 italic">Eficiencia</div>
                      <div className={`text-4xl md:text-5xl font-black italic tracking-tighter ${passed ? 'text-emerald-400' : 'text-rose-400'}`}>{score}%</div>
                   </div>
-                  <div className="p-8 bg-white/5 rounded-[40px] border border-white/10 backdrop-blur-md">
-                     <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FF8C00] mb-3 italic">Recompensa</div>
+                  <div className="p-8 bg-white/5 rounded-[24px] md:rounded-[40px] border border-white/10 backdrop-blur-md">
+                     <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-[#FF8C00] mb-3 italic">Recompensa</div>
                      <div className="text-4xl md:text-5xl font-black text-white italic tracking-tighter">+{passed ? data.xp : 0}</div>
                   </div>
                </div>
@@ -152,7 +152,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                  whileTap={{ scale: 0.95 }}
                  onClick={passed ? handleFinalize : handleRetry}
                  disabled={isSubmitting}
-                 className={`w-full py-8 md:py-10 rounded-[40px] font-black text-xs uppercase tracking-[0.6em] transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]
+                 className={`w-full py-8 md:py-10 rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]
                    ${passed ? 'bg-white text-black' : 'bg-[#FF8C00] text-black'}
                    ${isSubmitting ? 'opacity-50' : ''}`}
                >
@@ -168,7 +168,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
     <div className="w-full h-full relative font-sans perspective-1000 p-4 md:p-8 overflow-hidden">
       
       {/* HUD DE PROGRESO */}
-      <header className="flex flex-col md:flex-row justify-between items-center gap-6 mb-16 relative z-20 px-6">
+      <header className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 md:mb-16 relative z-20 px-6">
          <div className="flex flex-col text-center md:text-left">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-3 justify-center md:justify-start mb-2">
                <Sparkles className="text-yellow-400 animate-pulse" size={14} />
@@ -206,7 +206,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
               className="space-y-12"
             >
                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.5em] text-[#FF8C00]">
+                  <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em] text-[#FF8C00]">
                      <Zap size={14} /> Pregunta ACT_{currentIdx + 1}
                   </div>
                   <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] italic uppercase text-white">
@@ -251,7 +251,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                              <Info size={32} />
                           </div>
                           <div className="space-y-1">
-                             <div className="text-[10px] font-black uppercase tracking-[0.5em] text-[#FF8C00]">Fundamento Diamond</div>
+                             <div className="text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em] text-[#FF8C00]">Fundamento Diamond</div>
                              <p className="text-xl md:text-2xl font-black italic uppercase text-white/90">"{currentQuestion.explicacion}"</p>
                           </div>
                        </div>
@@ -260,7 +260,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           onClick={handleNext}
-                          className="w-full py-8 md:py-10 bg-[#FF8C00] text-black rounded-[40px] font-black text-sm uppercase tracking-[0.6em] shadow-[0_25px_80px_rgba(255,140,0,0.3)] flex items-center justify-center gap-4"
+                          className="w-full py-8 md:py-10 bg-[#FF8C00] text-black rounded-[24px] md:rounded-[40px] font-black text-sm uppercase tracking-[0.28em] md:tracking-[0.6em] shadow-[0_25px_80px_rgba(255,140,0,0.3)] flex items-center justify-center gap-4"
                        >
                           {currentIdx < preguntas.length - 1 ? 'Siguiente Pregunta' : 'Consolidar Misión'}
                           <ChevronRight />

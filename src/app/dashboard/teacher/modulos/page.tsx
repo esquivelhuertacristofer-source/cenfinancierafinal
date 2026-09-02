@@ -210,14 +210,14 @@ export default function ModulosPage() {
       <main className="flex-1 md:ml-[260px] relative z-10 dashboard-scrollbar-thin overflow-y-auto h-screen flex flex-col">
         
         {/* HUD STATUS BAR */}
-        <div className={`sticky top-0 z-50 backdrop-blur-3xl border-b px-12 py-5 flex items-center justify-between transition-all duration-700 ${theme === 'dark' ? 'bg-[#011C40]/80 border-white/5 shadow-2xl' : 'bg-[#F4F1EA]/80 border-[#011C40]/5 shadow-lg'}`}>
-          <div className="flex items-center gap-12">
+        <div className={`sticky top-0 z-50 backdrop-blur-3xl border-b pl-20 pr-4 md:px-12 py-4 md:py-5 flex flex-wrap items-center justify-between gap-3 transition-all duration-700 ${theme === 'dark' ? 'bg-[#011C40]/80 border-white/5 shadow-2xl' : 'bg-[#F4F1EA]/80 border-[#011C40]/5 shadow-lg'}`}>
+          <div className="flex items-center gap-6 md:gap-12">
              <div className="flex items-center gap-4">
                 <div className={`w-3 h-3 rounded-full animate-pulse shadow-[0_0_15px_rgba(255,140,0,0.5)] bg-[#FF8C00]`} />
                 <span className={`text-[11px] font-black uppercase tracking-[0.4em] ${theme === 'dark' ? 'text-white/50' : 'text-[#011C40]/40'}`}>CURRÍCULUM V3.1</span>
              </div>
              <div className="h-6 w-px bg-current opacity-10" />
-             <div className="hidden xl:flex items-center gap-10">
+             <div className="hidden xl:flex items-center gap-5 md:gap-10">
                 <div className="flex items-center gap-3 group cursor-default">
                   <Library className="w-4 h-4 text-[#42E8E0]" />
                   <div className="flex flex-col">
@@ -266,14 +266,14 @@ export default function ModulosPage() {
         </div>
 
         {/* MAIN CONTENT AREA */}
-        <div className="p-12 space-y-16 flex-1">
+        <div className="p-6 md:p-12 space-y-10 md:space-y-16 flex-1">
           
           {!selectedGrade ? (
             <div className="space-y-24 animate-in fade-in slide-in-from-bottom-12 duration-1000">
               
               {/* Header section when no grade selected */}
               <div className="space-y-4">
-                 <h1 className={`text-7xl font-black tracking-tighter leading-none ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
+                 <h1 className={`text-4xl md:text-7xl font-black tracking-tighter leading-none ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
                    Biblioteca <span className={`italic font-sans ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#FF8C00]'}`}>CEN</span>
                  </h1>
                  <p className={`text-lg font-medium max-w-xl ${theme === 'dark' ? 'text-white/40' : 'text-slate-500'}`}>
@@ -284,18 +284,18 @@ export default function ModulosPage() {
               {/* Primaria Grid */}
               <section className="space-y-10">
                 <div className="flex items-center gap-4">
-                   <h2 className={`text-4xl font-black tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
+                   <h2 className={`text-2xl md:text-4xl font-black tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
                      Academia <span className="text-[#FF8C00]">Primaria</span>
                    </h2>
                    <div className="h-px flex-1 bg-current opacity-10" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10">
                   {PREMIUM_GRADES.filter(g => g.level === "Primaria").map((grade, i) => (
                     <div
                       key={grade.key}
                       onClick={() => setSelectedGrade(grade.key)}
-                      className={`group relative h-[500px] rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-4 cursor-pointer ${
+                      className={`group relative h-[500px] rounded-[1.75rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-4 cursor-pointer ${
                         theme === 'dark' ? 'hover:shadow-[0_40px_90px_rgba(255,140,0,0.2)]' : 'hover:shadow-[0_40px_90px_rgba(1,28,64,0.2)]'
                       }`}
                       style={{ animationDelay: `${i * 100}ms` }}
@@ -303,12 +303,12 @@ export default function ModulosPage() {
                       <img src={grade.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                       <div className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-700 ${theme === 'dark' ? 'from-[#011C40] via-[#011C40]/80 to-transparent' : 'from-[#011C40] via-[#011C40]/60 to-transparent'}`} />
                       
-                      <div className="absolute inset-0 p-12 flex flex-col justify-between z-10 text-white">
+                      <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between z-10 text-white">
                          <div className="flex items-start justify-between">
                             <div className="px-5 py-2 bg-[#FF8C00] rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl">
                               Grado {grade.num}
                             </div>
-                            <span className="text-5xl font-black tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity">{grade.num}°</span>
+                            <span className="text-3xl md:text-5xl font-black tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity">{grade.num}°</span>
                          </div>
                          <div className="space-y-6">
                             <div>
@@ -329,18 +329,18 @@ export default function ModulosPage() {
               {/* Secundaria Grid */}
               <section className="space-y-10">
                 <div className="flex items-center gap-4">
-                   <h2 className={`text-4xl font-black tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
+                   <h2 className={`text-2xl md:text-4xl font-black tracking-tighter ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>
                      Academia <span className="text-[#42E8E0]">Secundaria</span>
                    </h2>
                    <div className="h-px flex-1 bg-current opacity-10" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 pb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10 pb-20">
                   {PREMIUM_GRADES.filter(g => g.level === "Secundaria").map((grade, i) => (
                     <div
                       key={grade.key}
                       onClick={() => setSelectedGrade(grade.key)}
-                      className={`group relative h-[500px] rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-4 cursor-pointer ${
+                      className={`group relative h-[500px] rounded-[1.75rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-4 cursor-pointer ${
                         theme === 'dark' ? 'hover:shadow-[0_40px_90px_rgba(66,232,224,0.2)]' : 'hover:shadow-[0_40px_90px_rgba(1,28,64,0.2)]'
                       }`}
                       style={{ animationDelay: `${(i+6) * 100}ms` }}
@@ -348,12 +348,12 @@ export default function ModulosPage() {
                       <img src={grade.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                       <div className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-700 ${theme === 'dark' ? 'from-[#011C40] via-[#011C40]/80 to-transparent' : 'from-[#011C40] via-[#011C40]/60 to-transparent'}`} />
                       
-                      <div className="absolute inset-0 p-12 flex flex-col justify-between z-10 text-white">
+                      <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between z-10 text-white">
                          <div className="flex items-start justify-between">
                             <div className="px-5 py-2 bg-[#42E8E0] text-[#011C40] rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl">
                               Grado {grade.num}
                             </div>
-                            <span className="text-5xl font-black tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity">{grade.num}°</span>
+                            <span className="text-3xl md:text-5xl font-black tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity">{grade.num}°</span>
                          </div>
                          <div className="space-y-6">
                             <div>
@@ -373,8 +373,8 @@ export default function ModulosPage() {
             </div>
           ) : (
             /* Vista de temario por grado (Bento Path) */
-            <div className="space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <div className="flex items-center justify-between bg-white/5 backdrop-blur-xl p-6 rounded-[2.5rem] border border-white/5">
+            <div className="space-y-8 md:space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <div className="flex items-center justify-between bg-white/5 backdrop-blur-xl p-6 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/5">
                 <button
                   onClick={() => { setSelectedGrade(null); setSelectedPillar(null); }}
                   className={`flex items-center gap-4 px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all shadow-xl active:scale-95 ${
@@ -395,7 +395,7 @@ export default function ModulosPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-10">
                 {/* Pillars list (Bento Sidebar) */}
                 <div className="lg:col-span-5 space-y-5">
                   <div className="flex items-center gap-4 mb-6">
@@ -406,7 +406,7 @@ export default function ModulosPage() {
                     <button
                       key={pillar.id}
                       onClick={() => setSelectedPillar(pillar)}
-                      className={`w-full text-left p-8 rounded-[3rem] transition-all relative overflow-hidden group border ${
+                      className={`w-full text-left p-8 rounded-[1.75rem] md:rounded-[3rem] transition-all relative overflow-hidden group border ${
                         selectedPillar?.id === pillar.id 
                         ? (theme === 'dark' ? "bg-white text-[#011C40] border-white scale-[1.03] shadow-[0_20px_50px_rgba(255,255,255,0.1)]" : "bg-[#011C40] text-white border-[#011C40] scale-[1.03] shadow-2xl") 
                         : (theme === 'dark' ? "bg-white/5 border-white/5 text-white hover:bg-white/10" : "bg-white border-slate-100 text-[#011C40] hover:border-[#FF8C00] shadow-sm")
@@ -414,7 +414,7 @@ export default function ModulosPage() {
                     >
                       <div className="relative z-10 flex items-center justify-between">
                         <div className="flex items-center gap-5">
-                          <span className={`text-4xl transition-transform duration-700 ${selectedPillar?.id === pillar.id ? "scale-125 rotate-6" : "group-hover:scale-110"}`}>
+                          <span className={`text-2xl md:text-4xl transition-transform duration-700 ${selectedPillar?.id === pillar.id ? "scale-125 rotate-6" : "group-hover:scale-110"}`}>
                             {pillar.icon}
                           </span>
                           <div>
@@ -434,13 +434,13 @@ export default function ModulosPage() {
                 <div className="lg:col-span-7">
                   {selectedPillar ? (
                     <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-1000">
-                      <div className={`rounded-[3.5rem] p-12 relative overflow-hidden shadow-2xl ${theme === 'dark' ? 'bg-gradient-to-br from-[#011C40] to-[#011C40]/40 border border-white/5' : 'bg-[#011C40] text-white'}`}>
-                         <div className="absolute top-0 right-0 p-12 opacity-10 rotate-12 transition-transform hover:scale-110">
+                      <div className={`rounded-[1.75rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-2xl ${theme === 'dark' ? 'bg-gradient-to-br from-[#011C40] to-[#011C40]/40 border border-white/5' : 'bg-[#011C40] text-white'}`}>
+                         <div className="absolute top-0 right-0 p-6 md:p-12 opacity-10 rotate-12 transition-transform hover:scale-110">
                             <BookOpen className="w-48 h-48" />
                          </div>
                          <div className="relative z-10 space-y-6">
                             <div className="flex items-center gap-5">
-                              <span className="text-5xl">{selectedPillar.icon}</span>
+                              <span className="text-3xl md:text-5xl">{selectedPillar.icon}</span>
                               <div className="h-10 w-px bg-white/20" />
                               <h4 className="text-3xl font-black tracking-tighter text-white">{selectedPillar.title}</h4>
                             </div>
@@ -454,7 +454,7 @@ export default function ModulosPage() {
                         {selectedPillar.units.map((unit: Unit, i: number) => (
                           <div 
                             key={unit.code} 
-                            className={`rounded-[3rem] p-10 border transition-all duration-700 group animate-in fade-in slide-in-from-bottom-8 ${
+                            className={`rounded-[1.75rem] md:rounded-[3rem] p-5 md:p-10 border transition-all duration-700 group animate-in fade-in slide-in-from-bottom-8 ${
                               theme === 'dark' 
                               ? 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10' 
                               : 'bg-white border-slate-100 shadow-lg hover:shadow-2xl hover:border-[#FF8C00]/20'
@@ -492,7 +492,7 @@ export default function ModulosPage() {
                               </div>
                               <button
                                 onClick={() => abrirUnidad(unit.code)}
-                                className={`px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all shadow-xl active:scale-95 cursor-pointer ${
+                                className={`px-5 md:px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all shadow-xl active:scale-95 cursor-pointer ${
                                 theme === 'dark' ? 'bg-white text-[#011C40] hover:bg-[#42E8E0]' : 'bg-[#011C40] text-white hover:bg-[#FF8C00]'
                               }`}>
                                  Abrir Módulo
@@ -503,7 +503,7 @@ export default function ModulosPage() {
                       </div>
                     </div>
                   ) : (
-                    <div className={`h-full min-h-[500px] rounded-[4rem] border-2 border-dashed flex flex-col items-center justify-center p-16 text-center space-y-8 transition-all ${
+                    <div className={`h-full min-h-[500px] rounded-[2rem] md:rounded-[4rem] border-2 border-dashed flex flex-col items-center justify-center p-8 md:p-16 text-center space-y-8 transition-all ${
                       theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white/50 border-slate-200'
                     }`}>
                       <div className={`w-24 h-24 rounded-[2rem] flex items-center justify-center shadow-2xl animate-bounce transition-colors ${theme === 'dark' ? 'bg-white' : 'bg-[#011C40]'}`}>

@@ -60,7 +60,7 @@ function buildCSP(isLocalhost: boolean): string {
     // Google Fonts loaded via @import in globals.css requires googleapis.com in style-src
     // and gstatic.com in font-src.
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "img-src 'self' data: blob: https://*.supabase.co https://i.pravatar.cc https://www.transparenttextures.com",
+    "img-src 'self' data: blob: https://*.supabase.co",
     "font-src 'self' data: https://fonts.gstatic.com",
     "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://cloudflareinsights.com",
     "media-src 'self' https://assets.mixkit.co",

@@ -168,7 +168,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
     return (
       <div className="w-full flex flex-col items-center justify-center px-4 sm:px-8 py-10 sm:py-16 text-center">
         <div className="max-w-2xl w-full space-y-6 sm:space-y-8">
-          <div className="flex items-center justify-center gap-3 text-[#FF8C00] font-black tracking-[0.3em] uppercase text-[10px] sm:text-xs">
+          <div className="flex items-center justify-center gap-3 text-[#FF8C00] font-black tracking-[0.16em] md:tracking-[0.3em] uppercase text-[10px] sm:text-xs">
             <Rocket size={14} aria-hidden /> Calibrador de Sueños
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-white italic uppercase tracking-tight leading-none">
@@ -179,7 +179,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
           )}
           {data?.instruccion && (
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 text-left space-y-3">
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Cómo se juega</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/40">Cómo se juega</p>
               <p className="text-sm sm:text-lg text-white/80 leading-relaxed">{data.instruccion}</p>
             </div>
           )}
@@ -200,7 +200,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
           </p>
           <button
             onClick={() => setFase('jugando')}
-            className="inline-flex items-center gap-3 px-10 sm:px-16 py-5 sm:py-6 bg-white text-black rounded-full font-black text-[10px] sm:text-xs uppercase tracking-[0.4em] hover:scale-105 transition-transform"
+            className="inline-flex items-center gap-3 px-5 md:px-10 sm:px-16 py-5 sm:py-6 bg-white text-black rounded-full font-black text-[10px] sm:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-transform"
           >
             <Play size={16} aria-hidden /> Comenzar
           </button>
@@ -226,7 +226,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
       {/* Medidor de la meta */}
       <div className="w-full max-w-3xl mb-6 sm:mb-10">
         <div className="flex items-end justify-between mb-2">
-          <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-white/50">{etiquetas.meta}</span>
+          <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/50">{etiquetas.meta}</span>
           <span className="text-2xl sm:text-3xl font-black text-white italic tabular-nums">{Math.floor(vista.meta)}%</span>
         </div>
         <div className="h-5 sm:h-6 w-full rounded-full bg-white/5 border border-white/10 overflow-hidden">
@@ -389,7 +389,7 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
             <div className="text-center space-y-6 sm:space-y-8 max-w-lg">
               <motion.div
                 initial={{ scale: 0 }} animate={{ scale: 1 }}
-                className={`w-28 h-28 sm:w-40 sm:h-40 rounded-[40px] flex items-center justify-center mx-auto ${fase === 'ganado' ? 'bg-emerald-500' : 'bg-slate-700'}`}
+                className={`w-28 h-28 sm:w-40 sm:h-40 rounded-[24px] md:rounded-[40px] flex items-center justify-center mx-auto ${fase === 'ganado' ? 'bg-emerald-500' : 'bg-slate-700'}`}
               >
                 {fase === 'ganado'
                   ? <Trophy size={70} className="text-white" />
@@ -405,12 +405,12 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
               </p>
               <div className="flex items-center justify-center gap-8 sm:gap-12">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">Puntaje</p>
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/30">Puntaje</p>
                   <p className="text-4xl sm:text-5xl font-black text-emerald-400 italic tabular-nums">{puntaje}</p>
                 </div>
                 {xp > 0 && fase === 'ganado' && (
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">XP</p>
+                    <p className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/30">XP</p>
                     <p className="text-4xl sm:text-5xl font-black text-amber-400 italic tabular-nums">{xp}</p>
                   </div>
                 )}
@@ -418,13 +418,13 @@ export default function BalanceActivity({ data, onComplete, onClose }: Props) {
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
                 <button
                   onClick={reiniciar}
-                  className="px-10 py-5 rounded-full border border-white/20 text-white font-black text-[10px] uppercase tracking-[0.35em] hover:bg-white/10 transition-colors"
+                  className="px-5 md:px-10 py-5 rounded-full border border-white/20 text-white font-black text-[10px] uppercase tracking-[0.35em] hover:bg-white/10 transition-colors"
                 >
                   Reintentar
                 </button>
                 <button
                   onClick={cerrar}
-                  className="px-10 py-5 bg-white text-black rounded-full font-black text-[10px] uppercase tracking-[0.35em] hover:scale-105 transition-transform"
+                  className="px-5 md:px-10 py-5 bg-white text-black rounded-full font-black text-[10px] uppercase tracking-[0.35em] hover:scale-105 transition-transform"
                 >
                   Continuar
                 </button>

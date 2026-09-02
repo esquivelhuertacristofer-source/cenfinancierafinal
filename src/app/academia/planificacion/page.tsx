@@ -21,10 +21,10 @@ export default function PlanificacionPage() {
           <Link href="#" className="hover:text-[#0980E8] transition-colors">Hora de Emprender</Link>
         </div>
         <Link href="/log-in">
-          <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
-            Iniciar Sesión
-          </button>
-        </Link>
+            <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
+              Iniciar Sesión
+            </button>
+          </Link>
       </nav>
 
       {/* 2. HERO DEL SEGMENTO (Amarillo Crema a Blanco) */}
@@ -103,9 +103,11 @@ export default function PlanificacionPage() {
                  <p className="font-bold text-sm opacity-90 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                     En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de libros y recursos de expertos que nos han inspirado y que te ayudarán a profundizar en tu aventura financiera.
                  </p>
-                 <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-400/30 hover:scale-105 transition-all uppercase text-xs">
-                    Accede Ahora
-                 </button>
+                 <Link href="/dashboard/teacher/bibliografia">
+                   <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-400/30 hover:scale-105 transition-all uppercase text-xs">
+                      Accede Ahora
+                   </button>
+                 </Link>
               </div>
               <div className="md:w-1/2 flex justify-center">
                  <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-white/10 shadow-2xl relative">

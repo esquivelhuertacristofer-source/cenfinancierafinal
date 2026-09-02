@@ -334,7 +334,7 @@ export default function NegociaSueldo({
         className={`w-full min-h-[500px] flex flex-col items-center justify-center gap-8 p-6 transition-all duration-500 ${animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
       >
         <div className="text-center space-y-3">
-          <div className="text-6xl animate-bounce">💼</div>
+          <div className="text-4xl md:text-6xl animate-bounce">💼</div>
           <h1 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight leading-tight">
             Negocia tu<br />
             <span className="text-purple-300">Primer Sueldo</span>
@@ -397,7 +397,7 @@ export default function NegociaSueldo({
               className="rounded-3xl border border-white/10 bg-white/5 hover:border-purple-500/60 hover:bg-purple-900/20 p-5 text-left transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] group"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-4xl">{job.emoji}</span>
+                <span className="text-2xl md:text-4xl">{job.emoji}</span>
                 <div>
                   <p className="font-black text-white text-base leading-tight">{job.company}</p>
                   <p className="text-purple-300 text-xs font-bold uppercase tracking-wider">
@@ -561,7 +561,7 @@ export default function NegociaSueldo({
           <div
             className={`rounded-3xl border p-5 text-center ${pendingRound.success ? 'border-emerald-500/40 bg-emerald-900/20' : 'border-red-500/30 bg-red-900/10'}`}
           >
-            <div className="text-4xl mb-2">
+            <div className="text-2xl md:text-4xl mb-2">
               {pendingRound.success ? '🎉' : '😅'}
             </div>
             <p
@@ -670,7 +670,7 @@ export default function NegociaSueldo({
         className={`w-full flex flex-col gap-5 p-4 md:p-6 transition-all duration-500 ${animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
       >
         <div className="text-center space-y-1">
-          <div className="text-4xl">📈</div>
+          <div className="text-2xl md:text-4xl">📈</div>
           <h2 className="text-xl font-black text-white uppercase tracking-tight">
             Proyección a 5 años
           </h2>
@@ -831,7 +831,7 @@ export default function NegociaSueldo({
         className={`w-full flex flex-col gap-6 p-4 md:p-6 items-center transition-all duration-500 ${animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
       >
         <div className="text-center space-y-3">
-          <div className="text-6xl animate-bounce">{msg.emoji}</div>
+          <div className="text-4xl md:text-6xl animate-bounce">{msg.emoji}</div>
           <h2 className={`text-2xl font-black uppercase tracking-tight ${msg.color}`}>
             {msg.title}
           </h2>

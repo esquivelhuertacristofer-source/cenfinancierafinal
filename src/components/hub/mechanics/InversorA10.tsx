@@ -505,7 +505,7 @@ export default function InversorA10({
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-start p-4 pb-10">
         {/* Header */}
         <div className="text-center mt-6 mb-8">
-          <div className="text-6xl mb-3 animate-bounce">💰</div>
+          <div className="text-4xl md:text-6xl mb-3 animate-bounce">💰</div>
           <h1 className="text-3xl font-black text-white mb-2 tracking-tight">
             Inversor a los 10
           </h1>
@@ -571,7 +571,7 @@ export default function InversorA10({
         <div className="w-full max-w-md">
           {/* Header */}
           <div className="text-center mt-6 mb-6">
-            <div className="text-5xl mb-2">🎯</div>
+            <div className="text-3xl md:text-5xl mb-2">🎯</div>
             <h1 className="text-2xl font-black text-white mb-1">
               ¿Cómo inviertes tus ${starting_capital}?
             </h1>
@@ -887,7 +887,7 @@ export default function InversorA10({
         <div className="w-full max-w-md">
           {/* Header */}
           <div className="text-center mt-6 mb-6">
-            <div className="text-5xl mb-2">⚖️</div>
+            <div className="text-3xl md:text-5xl mb-2">⚖️</div>
             <h1 className="text-2xl font-black text-white mb-2">
               ¡Rebalanceo al mes 3!
             </h1>
@@ -1017,10 +1017,10 @@ export default function InversorA10({
         <div className="w-full max-w-md">
           {/* Header */}
           <div className="text-center mt-6 mb-6">
-            <div className="text-6xl mb-2 animate-bounce">{scoreMoji}</div>
+            <div className="text-4xl md:text-6xl mb-2 animate-bounce">{scoreMoji}</div>
             <h1 className="text-3xl font-black text-white mb-1">{scoreLabel}</h1>
             <div
-              className={`text-5xl font-black mt-2 mb-1 ${
+              className={`text-3xl md:text-5xl font-black mt-2 mb-1 ${
                 won ? 'text-emerald-300' : 'text-red-300'
               }`}
             >
@@ -1042,7 +1042,7 @@ export default function InversorA10({
             <div className="text-white/60 text-xs font-black uppercase tracking-widest mb-1">
               Puntuación
             </div>
-            <div className="text-4xl font-black text-purple-300">{finalScore}</div>
+            <div className="text-2xl md:text-4xl font-black text-purple-300">{finalScore}</div>
             <div className="text-white/40 text-xs font-bold">/ 100 puntos</div>
             {/* Mini progress bar */}
             <div className="h-3 bg-white/10 rounded-full mt-3 overflow-hidden">

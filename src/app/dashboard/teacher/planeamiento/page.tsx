@@ -104,11 +104,11 @@ export default function PlaneamientoPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] text-[#011C40]">
       <Sidebar teacherName="Profesor CEN" groupId={`${selectedGrade.toUpperCase()}-A`} />
 
-      <main className="flex-1 md:ml-[260px] flex h-screen overflow-hidden">
+      <main className="flex-1 min-w-0 md:ml-[260px] flex flex-col md:flex-row min-h-screen md:h-screen overflow-visible md:overflow-hidden">
         
         {/* LEFT PANEL: UNIT SELECTOR (Bento Sidebar) */}
-        <div className="w-[380px] bg-white/50 backdrop-blur-xl border-r border-white/40 flex flex-col shadow-[20px_0_40px_rgba(0,0,0,0.02)] relative z-10">
-          <div className="p-8 space-y-6">
+        <div className="w-full min-w-0 md:w-[380px] shrink-0 max-h-[55vh] md:max-h-none overflow-y-auto md:overflow-visible bg-white/50 backdrop-blur-xl border-b md:border-b-0 md:border-r border-white/40 flex flex-col shadow-[20px_0_40px_rgba(0,0,0,0.02)] relative z-10">
+          <div className="p-5 md:p-8 pt-20 md:pt-8 space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#011C40] rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/20">
@@ -208,15 +208,19 @@ export default function PlaneamientoPage() {
         </div>
 
         {/* RIGHT PANEL: MAIN CONTENT (Bento Grid Layout) */}
-        <div className="flex-1 overflow-y-auto bg-[#F4F1EA] custom-scrollbar">
+        <div className="flex-1 min-w-0 overflow-y-auto bg-[#F4F1EA] custom-scrollbar">
           
           {/* PREMIUM TOP NAV */}
-          <div className="sticky top-0 z-30 bg-[#F4F1EA]/80 backdrop-blur-xl px-12 py-6 flex items-center justify-between border-b border-[#011C40]/5">
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-2">
-                {[1,2,3].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-[#F4F1EA] bg-slate-200 overflow-hidden">
-                    <img src={`https://i.pravatar.cc/100?u=${i}`} alt="avatar" />
+          <div className="sticky top-0 z-30 bg-[#F4F1EA]/80 backdrop-blur-xl px-4 md:px-12 py-4 md:py-6 flex flex-wrap items-center justify-end sm:justify-between gap-3 border-b border-[#011C40]/5">
+            <div className="hidden sm:flex items-center gap-4">
+              <div className="flex -space-x-2" aria-hidden="true">
+                {[['A', '#011C40'], ['M', '#FF8C00'], ['R', '#42E8E0']].map(([ini, color]) => (
+                  <div
+                    key={ini}
+                    className="w-8 h-8 rounded-full border-2 border-[#F4F1EA] flex items-center justify-center text-[10px] font-black text-white"
+                    style={{ backgroundColor: color }}
+                  >
+                    {ini}
                   </div>
                 ))}
               </div>
@@ -225,22 +229,32 @@ export default function PlaneamientoPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <button className="p-3 bg-white border border-white rounded-2xl shadow-sm text-slate-400 hover:text-[#011C40] hover:shadow-md transition-all">
+              <button
+                title="Modo proyector (pantalla completa)"
+                onClick={() => {
+                  const el = document.documentElement;
+                  if (document.fullscreenElement) document.exitFullscreen();
+                  else el.requestFullscreen?.();
+                }}
+                className="p-3 bg-white border border-white rounded-2xl shadow-sm text-slate-400 hover:text-[#011C40] hover:shadow-md transition-all">
                 <Monitor className="w-5 h-5" />
               </button>
-              <button className="flex items-center gap-3 px-6 py-3.5 bg-[#011C40] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all">
+              <button
+                title="Genera el PDF de la planeacion para entregar a la SEP"
+                onClick={() => window.print()}
+                className="flex items-center gap-3 px-6 py-3.5 bg-[#011C40] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all">
                 <Download className="w-4 h-4 text-[#42E8E0]" />
                 Exportar para SEP
               </button>
             </div>
           </div>
 
-          <div className="p-12 space-y-12">
+          <div className="p-6 md:p-12 space-y-8 md:space-y-12">
             
             {/* HERO SECTION (Bento Style) */}
             <div className="grid grid-cols-12 gap-6">
               {/* Main Title Card */}
-              <div className="col-span-12 lg:col-span-8 bento-card p-12 relative overflow-hidden group">
+              <div className="col-span-12 lg:col-span-8 bento-card p-6 md:p-12 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFE3BF]/30 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-110 transition-transform duration-700" />
                 <div className="relative z-10 space-y-6">
                   <div className="flex items-center gap-3">
@@ -252,7 +266,7 @@ export default function PlaneamientoPage() {
                       ID: {activeUnit?.code}
                     </span>
                   </div>
-                  <h1 className="text-6xl font-black text-[#011C40] leading-[1.1] tracking-tighter">
+                  <h1 className="text-4xl md:text-6xl font-black text-[#011C40] leading-[1.1] tracking-tighter">
                     {activeUnit?.title.split(':')[0]}
                     <span className="block premium-gradient-text mt-2 italic font-serif-premium opacity-90">
                       {activeUnit?.title.split(':')[1] || ""}
@@ -300,7 +314,7 @@ export default function PlaneamientoPage() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as any)}
-                    className={`flex items-center gap-3 px-10 py-5 rounded-[24px] text-[12px] font-black uppercase tracking-widest transition-all duration-300 ${
+                    className={`flex items-center gap-3 px-5 md:px-10 py-5 rounded-[24px] text-[12px] font-black uppercase tracking-widest transition-all duration-300 ${
                       activeTab === tab.id 
                       ? "bg-[#011C40] text-white shadow-2xl scale-105" 
                       : "text-slate-500 hover:bg-white hover:text-[#011C40]"
@@ -321,7 +335,7 @@ export default function PlaneamientoPage() {
                 {activeTab === "estrategia" && (
                   <div className="space-y-6">
                     {activeUnit?.strategy.phases.map((phase: any, i: number) => (
-                      <div key={i} className="group relative bento-card p-10 overflow-hidden">
+                      <div key={i} className="group relative bento-card p-5 md:p-10 overflow-hidden">
                         <div className={`absolute top-0 left-0 w-2 h-full ${i === 0 ? "bg-[#FF8C00]" : i === 1 ? "bg-[#011C40]" : "bg-[#42E8E0]"}`} />
                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative z-10">
                           <div className="space-y-4 flex-1">
@@ -359,17 +373,17 @@ export default function PlaneamientoPage() {
                 )}
 
                 {activeTab === "teoria" && (
-                  <div className="bento-card p-16 space-y-12 animate-in fade-in zoom-in duration-500">
+                  <div className="bento-card p-8 md:p-16 space-y-8 md:space-y-12 animate-in fade-in zoom-in duration-500">
                     <div className="space-y-6">
                       <div className="w-16 h-1 bg-[#42E8E0] rounded-full" />
-                      <h2 className="text-4xl font-black text-[#011C40] leading-tight">
+                      <h2 className="text-2xl md:text-4xl font-black text-[#011C40] leading-tight">
                         Introducción al <span className="premium-gradient-text">Marco Teórico</span>
                       </h2>
                       <p className="text-2xl text-slate-500 font-medium leading-relaxed italic">
                         "{activeUnit?.theory.introduction}"
                       </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                       {activeUnit?.theory.sections.map((section: any, i: number) => (
                         <div key={i} className="space-y-4 group">
                           <div className="w-10 h-10 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-[#011C40] group-hover:text-white transition-all">
@@ -387,7 +401,7 @@ export default function PlaneamientoPage() {
 
                 {activeTab === "evaluacion" && (
                   <div className="space-y-8 animate-in slide-in-from-bottom-8 duration-500">
-                    <div className="bg-white rounded-[48px] p-12 border border-white shadow-xl space-y-10">
+                    <div className="bg-white rounded-[28px] md:rounded-[48px] p-6 md:p-12 border border-white shadow-xl space-y-10">
                       <div className="flex items-center justify-between border-b border-slate-100 pb-8">
                         <h4 className="text-2xl font-black text-[#011C40]">Banco de Evaluación</h4>
                         <div className="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-xl text-[10px] font-black uppercase tracking-widest">
@@ -418,8 +432,8 @@ export default function PlaneamientoPage() {
                     </div>
                     
                     {/* Rubric Card */}
-                    <div className="bg-[#011C40] rounded-[48px] p-12 text-white relative overflow-hidden shadow-2xl">
-                      <div className="absolute top-0 right-0 p-12 opacity-10">
+                    <div className="bg-[#011C40] rounded-[28px] md:rounded-[48px] p-6 md:p-12 text-white relative overflow-hidden shadow-2xl">
+                      <div className="absolute top-0 right-0 p-6 md:p-12 opacity-10">
                         <Target className="w-48 h-48" />
                       </div>
                       <div className="relative z-10 space-y-6">
@@ -442,7 +456,7 @@ export default function PlaneamientoPage() {
               <div className="col-span-12 lg:col-span-4 space-y-8">
                 
                 {/* Ficha Técnica Premium Card */}
-                <div className="bg-white rounded-[40px] p-10 shadow-2xl border border-white relative overflow-hidden group">
+                <div className="bg-white rounded-[24px] md:rounded-[40px] p-5 md:p-10 shadow-2xl border border-white relative overflow-hidden group">
                   <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#42E8E0]/10 rounded-full -mb-16 -mr-16 blur-2xl" />
                   <div className="space-y-10 relative z-10">
                     <div className="flex items-center gap-4">
@@ -487,7 +501,7 @@ export default function PlaneamientoPage() {
                 </div>
 
                 {/* Teacher Tips Floating Card */}
-                <div className="bg-[#FFF1D6] rounded-[40px] p-10 border border-[#FFE3BF] relative group overflow-hidden">
+                <div className="bg-[#FFF1D6] rounded-[24px] md:rounded-[40px] p-5 md:p-10 border border-[#FFE3BF] relative group overflow-hidden">
                   <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:rotate-12 transition-transform duration-500">
                     <Lightbulb className="w-20 h-20 text-[#FF8C00]" />
                   </div>
@@ -509,7 +523,7 @@ export default function PlaneamientoPage() {
                 </div>
 
                 {/* Call to action card */}
-                <div className="bg-gradient-to-br from-[#011C40] to-[#042a5e] rounded-[40px] p-10 text-white shadow-2xl relative overflow-hidden group cursor-pointer">
+                <div className="bg-gradient-to-br from-[#011C40] to-[#042a5e] rounded-[24px] md:rounded-[40px] p-5 md:p-10 text-white shadow-2xl relative overflow-hidden group cursor-pointer">
                   <div className="relative z-10 flex flex-col items-center text-center space-y-4">
                     <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Monitor className="w-8 h-8 text-[#42E8E0]" />

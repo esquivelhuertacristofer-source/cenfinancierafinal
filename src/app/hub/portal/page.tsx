@@ -259,7 +259,7 @@ export default function MissionPage() {
             <div className="flex items-center gap-3 font-black text-xs uppercase tracking-widest mb-6 text-white/80">
               <Award size={24} /> Desafío Supremo
             </div>
-            <h3 className="text-6xl font-black tracking-tighter mb-6 text-white">Proyecto Integrador</h3>
+            <h3 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-white">Proyecto Integrador</h3>
             <p className="text-xl font-bold text-white/90 leading-relaxed">
               {isCompleted 
                 ? '¡Certificación disponible! Aplica todo lo aprendido en el simulador de vida real.' 
@@ -280,9 +280,9 @@ export default function MissionPage() {
 
       {showProject && (
         <div className="fixed inset-0 z-[500] bg-[#011126]/90 backdrop-filter blur-2xl flex items-center justify-center p-8" onClick={() => setShowProject(false)}>
-          <div className="w-full max-w-4xl bg-[#011C40] border border-white/10 rounded-[4rem] p-16 relative overflow-hidden" onClick={e => e.stopPropagation()}>
+          <div className="w-full max-w-4xl bg-[#011C40] border border-white/10 rounded-[2rem] md:rounded-[4rem] p-8 md:p-16 relative overflow-hidden" onClick={e => e.stopPropagation()}>
             <button className="absolute top-10 right-10 text-white/30 hover:text-white" onClick={() => setShowProject(false)}><X size={40} /></button>
-            <h2 className="text-7xl font-black tracking-tighter mb-12 text-white">Certificación</h2>
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-12 text-white">Certificación</h2>
             <button onClick={() => setShowProject(false)} className="w-full py-8 bg-[#FF8C00] text-white rounded-3xl font-black uppercase text-xl shadow-2xl">Empezar Proyecto</button>
           </div>
         </div>

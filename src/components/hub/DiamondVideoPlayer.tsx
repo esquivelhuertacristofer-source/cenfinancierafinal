@@ -22,7 +22,7 @@ export default function DiamondVideoPlayer({ url, title, onClose, isModal = fals
   };
 
   const content = (
-    <div className={`relative w-full ${isModal ? 'max-w-5xl' : 'aspect-video'} bg-black rounded-[40px] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.6)] border border-white/10 group`}>
+    <div className={`relative w-full ${isModal ? 'max-w-5xl' : 'aspect-video'} bg-black rounded-[24px] md:rounded-[40px] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.6)] border border-white/10 group`}>
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0118] via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
       
       {isModal && (

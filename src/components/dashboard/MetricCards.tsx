@@ -157,7 +157,7 @@ export default function MetricCards({
             key={card.title}
             role="article"
             aria-label={`${card.title}: ${loading ? "cargando" : card.value}`}
-            className={`group relative h-[240px] rounded-[3rem] border transition-all duration-700 flex flex-col p-10 overflow-hidden shadow-2xl ${
+            className={`group relative h-[240px] rounded-[1.75rem] md:rounded-[3rem] border transition-all duration-700 flex flex-col p-5 md:p-10 overflow-hidden shadow-2xl ${
               isDark
                 ? "bg-white/5 border-white/5 backdrop-blur-2xl hover:bg-white/10 hover:-translate-y-2"
                 : "bg-white border-slate-200 hover:shadow-[0_40px_80px_rgba(1,28,64,0.12)] hover:-translate-y-2"
@@ -209,7 +209,7 @@ export default function MetricCards({
                     />
                   ) : (
                     <span
-                      className={`text-7xl font-black tracking-tighter leading-none group-hover:translate-x-1 transition-transform ${
+                      className={`text-4xl md:text-7xl font-black tracking-tighter leading-none group-hover:translate-x-1 transition-transform ${
                         isDark ? "text-white" : "text-[#011C40]"
                       }`}
                     >

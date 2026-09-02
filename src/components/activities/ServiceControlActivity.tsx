@@ -207,7 +207,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
       {/* HUD SUPERIOR REFORMADO */}
       <div className="absolute top-4 md:top-8 left-8 right-8 flex justify-between items-start z-50">
          <div className="space-y-1">
-            <div className="flex items-center gap-2 text-white/30 font-black text-[8px] uppercase tracking-[0.4em]">
+            <div className="flex items-center gap-2 text-white/30 font-black text-[8px] uppercase tracking-[0.2em] md:tracking-[0.4em]">
                <ShieldCheck size={12} className="text-emerald-500" /> Diamond Service Console
             </div>
             <h1 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter">{tituloConsola}</h1>
@@ -238,12 +238,12 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
           animate={{ opacity: 1, scale: 1 }}
           className="fixed inset-0 z-[100] bg-black/20 backdrop-blur-xl flex items-center justify-center p-8"
         >
-           <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[60px] p-12 md:p-16 text-center space-y-10 shadow-2xl">
+           <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[32px] md:rounded-[60px] p-6 md:p-12 md:p-16 text-center space-y-10 shadow-2xl">
               <div className="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-3xl flex items-center justify-center mx-auto">
                  <AlertTriangle size={40} />
               </div>
               <div className="space-y-4">
-                 <h2 className="text-4xl font-black text-white italic uppercase tracking-tighter">{tituloMision}</h2>
+                 <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase tracking-tighter">{tituloMision}</h2>
                  <p className="text-white/60 text-lg font-medium leading-relaxed">
                     {data?.descripcion ? (
                       data.descripcion
@@ -258,7 +258,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
               </div>
               <button
                 onClick={() => setGameStarted(true)}
-                className="w-full py-8 bg-emerald-500 text-white rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-4"
+                className="w-full py-8 bg-emerald-500 text-white rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-4"
               >
                  <PlayCircle size={20} /> Empezar Misión
               </button>
@@ -267,11 +267,11 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
       )}
 
       {/* ÁREA CENTRAL - LOS MONITORES COMPACTOS */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl mt-20 md:mt-0 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl mt-10 md:mt-20 md:mt-0 relative z-10">
          {services.map((service) => (
            <motion.div
              key={service.id}
-             className={`relative bg-white/5 border rounded-[40px] p-8 flex flex-col items-center gap-6 transition-all duration-300
+             className={`relative bg-white/5 border rounded-[24px] md:rounded-[40px] p-8 flex flex-col items-center gap-6 transition-all duration-300
                ${service.level > umbralAlerta ? 'border-rose-500 bg-rose-500/10 scale-105' :
                  service.level > umbralCosto ? 'border-orange-500/50 bg-orange-500/5' : 'border-white/10'}`}
            >
@@ -339,7 +339,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className={`w-32 h-32 rounded-[40px] flex items-center justify-center mx-auto shadow-2xl
+                  className={`w-32 h-32 rounded-[24px] md:rounded-[40px] flex items-center justify-center mx-auto shadow-2xl
                     ${isLost ? 'bg-rose-500' : 'bg-emerald-500'}`}
                 >
                    {isLost ? <AlertTriangle size={60} className="text-white" /> : <ShieldCheck size={60} className="text-white" />}
@@ -356,13 +356,13 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
                   </p>
                 </div>
 
-                <div className={`text-4xl font-black italic ${isLost ? 'text-rose-400' : 'text-emerald-400'}`}>
+                <div className={`text-2xl md:text-4xl font-black italic ${isLost ? 'text-rose-400' : 'text-emerald-400'}`}>
                    PRESUPUESTO: ${Math.floor(budget)}
                 </div>
 
                 <button
                   onClick={onClose}
-                  className="w-full py-7 bg-white text-[#0A0118] rounded-[25px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
+                  className="w-full py-7 bg-white text-[#0A0118] rounded-[25px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
                 >
                    Terminar
                 </button>

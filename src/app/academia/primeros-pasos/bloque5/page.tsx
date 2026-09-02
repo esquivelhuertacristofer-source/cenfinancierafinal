@@ -98,9 +98,11 @@ export default function Bloque5Page() {
               <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-slate-50 rounded-[3rem] flex items-center justify-center text-slate-300 font-black text-xl mb-8 border-4 border-dashed border-slate-200">
                  [ JUEGO INTERACTIVO: INVENTARIO ]
               </div>
-              <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors">
-                Jugar Ahora
-              </button>
+              <Link href="/juego">
+                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors">
+                  Jugar Ahora
+                </button>
+              </Link>
            </div>
         </div>
       </section>
@@ -210,9 +212,11 @@ export default function Bloque5Page() {
               <p className="font-bold text-sm text-white/80 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                  En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de recursos que te ayudarán a profundizar en tu aventura financiera.
               </p>
-              <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-400/30 hover:scale-105 transition-all uppercase text-xs">
-                 Accede Ahora
-              </button>
+              <Link href="/dashboard/teacher/bibliografia">
+                <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-400/30 hover:scale-105 transition-all uppercase text-xs">
+                   Accede Ahora
+                </button>
+              </Link>
            </div>
            <div className="md:w-1/2 flex justify-center">
               <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-white/10 shadow-2xl relative">

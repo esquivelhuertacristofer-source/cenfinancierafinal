@@ -21,15 +21,15 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay" />
       </div>
       
-      <div className="relative w-full max-w-6xl bg-[#011C40] rounded-[4rem] overflow-hidden shadow-[0_80px_200px_rgba(0,0,0,0.8)] flex flex-col lg:flex-row border border-white/10 animate-in zoom-in-95 slide-in-from-bottom-20 duration-1000 fill-mode-both">
+      <div className="relative w-full max-w-6xl bg-[#011C40] rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-[0_80px_200px_rgba(0,0,0,0.8)] flex flex-col lg:flex-row border border-white/10 animate-in zoom-in-95 slide-in-from-bottom-20 duration-1000 fill-mode-both">
         
         {/* SIDE DECOR (VIBRANT ORANGE SECTION) */}
-        <div className="w-full lg:w-[400px] bg-[#FF8C00] p-16 flex flex-col justify-between text-white relative overflow-hidden shrink-0">
+        <div className="w-full lg:w-[400px] bg-[#FF8C00] p-8 md:p-16 flex flex-col justify-between text-white relative overflow-hidden shrink-0">
            {/* Patrón de rejilla técnico */}
            <div className="absolute inset-0 opacity-[0.1]" 
                 style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
            
-           <div className="absolute top-0 right-0 p-12 opacity-30 rotate-12 transition-transform hover:scale-110">
+           <div className="absolute top-0 right-0 p-6 md:p-12 opacity-30 rotate-12 transition-transform hover:scale-110">
               <Zap size={240} className="text-white" />
            </div>
 
@@ -39,11 +39,11 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
                     <span className="text-[10px] font-black uppercase tracking-[0.3em]">Nivel Diamond</span>
                  </div>
               </div>
-              <div className="text-8xl font-black tracking-tighter leading-none">{unit.code}</div>
+              <div className="text-5xl md:text-8xl font-black tracking-tighter leading-none">{unit.code}</div>
            </div>
 
            <div className="relative z-10 mt-auto">
-              <h3 className="text-4xl font-black leading-[1.1] tracking-tight mb-8 drop-shadow-2xl">{unit.title}</h3>
+              <h3 className="text-2xl md:text-4xl font-black leading-[1.1] tracking-tight mb-8 drop-shadow-2xl">{unit.title}</h3>
               
               <div className="flex items-center gap-6">
                  <div className="flex items-center gap-3 px-5 py-3 bg-black/20 rounded-2xl border border-white/10 backdrop-blur-md">
@@ -55,7 +55,7 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
         </div>
 
         {/* CONTENT AREA (DARK PREMIUM SECTION) */}
-        <div className="flex-1 p-16 lg:p-24 flex flex-col bg-gradient-to-br from-[#011C40] to-[#010D1F] relative">
+        <div className="flex-1 p-8 md:p-16 lg:p-24 flex flex-col bg-gradient-to-br from-[#011C40] to-[#010D1F] relative">
            {/* Botón Cerrar Ultra-Premium */}
            <button 
              onClick={onClose} 
@@ -64,7 +64,7 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
               <X size={24} />
            </button>
 
-           <div className="flex-1 space-y-16">
+           <div className="flex-1 space-y-10 md:space-y-16">
               {/* Header con Badge */}
               <div className="space-y-4">
                  <div className="flex items-center gap-4 text-[#FF8C00]">
@@ -78,7 +78,7 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
 
               {/* Bento Grid de Info */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                 <div className="p-10 rounded-[3rem] bg-white/5 border border-white/5 group hover:bg-white/[0.08] transition-all duration-500">
+                 <div className="p-5 md:p-10 rounded-[1.75rem] md:rounded-[3rem] bg-white/5 border border-white/5 group hover:bg-white/[0.08] transition-all duration-500">
                     <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-6 flex items-center gap-3">
                        <BookOpen size={14} /> Contenidos del Módulo
                     </div>
@@ -98,7 +98,7 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
                     </div>
                  </div>
 
-                 <div className="p-10 rounded-[3rem] bg-white/5 border border-white/5 group hover:bg-white/[0.08] transition-all duration-500">
+                 <div className="p-5 md:p-10 rounded-[1.75rem] md:rounded-[3rem] bg-white/5 border border-white/5 group hover:bg-white/[0.08] transition-all duration-500">
                     <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-6 flex items-center gap-3">
                        <Zap size={14} /> Desafío Académico
                     </div>
@@ -126,7 +126,7 @@ export default function MissionFicha({ unit, onClose, onStart }: MissionFichaPro
            <div className="mt-12 pt-12 border-t border-white/5">
               <button 
                 onClick={onStart}
-                className="group relative w-full h-24 rounded-[2.5rem] bg-white overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
+                className="group relative w-full h-24 rounded-[1.5rem] md:rounded-[2.5rem] bg-white overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
               >
                  {/* Efecto Shimmer */}
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF8C00]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

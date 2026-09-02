@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { useHasMounted } from "@/lib/useHasMounted";
@@ -120,7 +121,7 @@ export default function LatestDeliveries({
 
   return (
     <div
-      className={`rounded-[4rem] p-12 flex flex-col h-full relative overflow-hidden group/main animate-in fade-in slide-in-from-left-8 duration-1000 border transition-all ${
+      className={`rounded-[2rem] md:rounded-[4rem] p-6 md:p-12 flex flex-col h-full relative overflow-hidden group/main animate-in fade-in slide-in-from-left-8 duration-1000 border transition-all ${
         isDark
           ? "bg-white/5 backdrop-blur-3xl border-white/5 shadow-2xl"
           : "bg-white border-slate-100 shadow-[0_40px_80px_rgba(1,28,64,0.06)]"
@@ -163,13 +164,13 @@ export default function LatestDeliveries({
             </p>
           </div>
         </div>
-        <button
+        <Link href="/dashboard/teacher/reportes"
           className={`flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] transition-colors group/audit ${
             isDark ? "text-[#42E8E0] hover:text-white" : "text-[#011C40]/40 hover:text-[#FF8C00]"
           }`}
         >
           Audit <ArrowUpRight className="w-4 h-4 group-hover/audit:translate-x-1 group-hover/audit:-translate-y-1 transition-transform" />
-        </button>
+        </Link>
       </div>
 
       <div className="space-y-10 flex-1 relative z-10">
@@ -186,7 +187,7 @@ export default function LatestDeliveries({
             ))}
           </div>
         ) : error ? (
-          <div className="flex flex-col items-center justify-center py-16 gap-4">
+          <div className="flex flex-col items-center justify-center py-8 md:py-16 gap-4">
             <Activity className={`w-12 h-12 ${isDark ? "text-white/10" : "text-slate-200"}`} />
             <p
               className={`text-[10px] font-black uppercase tracking-widest text-center ${
@@ -205,7 +206,7 @@ export default function LatestDeliveries({
             </button>
           </div>
         ) : deliveries.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-16 gap-4">
+          <div className="flex flex-col items-center justify-center py-8 md:py-16 gap-4">
             <Activity className={`w-12 h-12 ${isDark ? "text-white/10" : "text-slate-200"}`} />
             <p
               className={`text-[10px] font-black uppercase tracking-widest ${
@@ -286,8 +287,8 @@ export default function LatestDeliveries({
         )}
       </div>
 
-      <button
-        className={`w-full mt-14 py-6 font-black rounded-[2.5rem] border text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-2xl backdrop-blur-xl ${
+      <Link href="/dashboard/teacher/reportes"
+        className={`w-full mt-14 py-6 font-black rounded-[1.5rem] md:rounded-[2.5rem] border text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-2xl backdrop-blur-xl ${
           isDark
             ? "bg-[#42E8E0]/10 border-[#42E8E0]/20 text-[#42E8E0] hover:bg-[#42E8E0] hover:text-[#011C40]"
             : "bg-[#011C40] border-[#011C40] text-white hover:bg-[#FF8C00] hover:border-[#FF8C00]"
@@ -295,7 +296,7 @@ export default function LatestDeliveries({
       >
         <span>Historial de Sesiones</span>
         <Zap className="w-5 h-5 group-hover/btn:fill-current" />
-      </button>
+      </Link>
 
       {selectedStudent && (
         <StudentRecordModal

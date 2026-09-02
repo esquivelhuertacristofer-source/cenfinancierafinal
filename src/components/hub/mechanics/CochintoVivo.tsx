@@ -174,7 +174,7 @@ export default function CochintoVivo({
       <div className="min-h-screen bg-[#0a0a1a] flex flex-col items-center justify-center p-6 text-center">
         <div className="max-w-sm w-full">
           {/* Title */}
-          <h1 className="text-4xl font-black text-white mb-2 tracking-tight">
+          <h1 className="text-2xl md:text-4xl font-black text-white mb-2 tracking-tight">
             El Cochinito Vivo 🐷
           </h1>
           <p className="text-purple-300 text-lg font-bold mb-8">
@@ -208,7 +208,7 @@ export default function CochintoVivo({
           </div>
 
           {/* Big pig */}
-          <div className="text-8xl mb-8 animate-bounce">😢</div>
+          <div className="text-5xl md:text-8xl mb-8 animate-bounce">😢</div>
           <p className="text-white/60 text-sm font-bold mb-6">
             ¡El cochinito necesita tu ayuda para llenarse de monedas!
           </p>
@@ -254,7 +254,7 @@ export default function CochintoVivo({
 
         <div className="max-w-sm w-full relative z-10">
           {/* Result emoji */}
-          <div className="text-8xl mb-4">
+          <div className="text-5xl md:text-8xl mb-4">
             {won ? '🎉' : percent >= 0.7 ? '😊' : percent >= 0.4 ? '😐' : '😢'}
           </div>
 
@@ -277,7 +277,7 @@ export default function CochintoVivo({
             <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-2">
               Tu puntuación
             </p>
-            <p className={`text-6xl font-black mb-1 ${won ? 'text-emerald-300' : 'text-purple-300'}`}>
+            <p className={`text-4xl md:text-6xl font-black mb-1 ${won ? 'text-emerald-300' : 'text-purple-300'}`}>
               {score}
             </p>
             <p className="text-white/50 text-sm font-bold">de 100 puntos</p>
@@ -413,7 +413,7 @@ export default function CochintoVivo({
 
           {/* Pig emoji */}
           <div
-            className="text-8xl select-none leading-none"
+            className="text-5xl md:text-8xl select-none leading-none"
             style={{
               animation: pigBounce ? 'pigBounce 0.4s ease-out forwards' : undefined,
               display: 'inline-block',

@@ -90,9 +90,11 @@ export default function Bloque1Page() {
                 />
               </div>
               <h3 className="text-2xl font-black text-[#011C40] tracking-tighter mb-4">Reto 1: Identifica las monedas</h3>
-              <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
-                Jugar Ahora
-              </button>
+              <Link href="/juego">
+                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
+                  Jugar Ahora
+                </button>
+              </Link>
            </div>
 
            {/* QUIZ 2 - VIAJE DEL EMPRENDEDOR */}
@@ -105,9 +107,11 @@ export default function Bloque1Page() {
                 />
               </div>
               <h3 className="text-2xl font-black text-[#011C40] tracking-tighter mb-4">Reto 2: Suma tus ahorros</h3>
-              <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
-                Jugar Ahora
-              </button>
+              <Link href="/juego">
+                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
+                  Jugar Ahora
+                </button>
+              </Link>
            </div>
 
            {/* QUIZ 3 - EL QUIZ MÁGICO DEL DINERO */}
@@ -120,9 +124,11 @@ export default function Bloque1Page() {
                 />
               </div>
               <h3 className="text-2xl font-black text-[#011C40] tracking-tighter mb-4">Reto 3: Esquiva los gastos hormiga</h3>
-              <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
-                Jugar Ahora
-              </button>
+              <Link href="/juego">
+                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg shadow-blue-500/30 hover:bg-[#011C40] transition-colors">
+                  Jugar Ahora
+                </button>
+              </Link>
            </div>
 
         </div>
@@ -236,9 +242,11 @@ export default function Bloque1Page() {
               <p className="font-bold text-sm text-slate-500 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                  En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de libros y recursos de expertos que nos han inspirado.
               </p>
-              <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-200 hover:scale-105 transition-all uppercase text-xs">
-                 Accede Ahora
-              </button>
+              <Link href="/dashboard/teacher/bibliografia">
+                <button className="bg-[#22D3EE] text-white px-8 py-4 rounded-full font-black shadow-xl shadow-cyan-200 hover:scale-105 transition-all uppercase text-xs">
+                   Accede Ahora
+                </button>
+              </Link>
            </div>
            <div className="md:w-1/2 flex justify-center">
               <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-pink-100 shadow-2xl relative">

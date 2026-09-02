@@ -57,18 +57,18 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
   if (isFinished) {
     return (
       <div className="w-full h-full bg-transparent flex items-center justify-center p-8 animate-in fade-in zoom-in duration-700">
-         <div className="max-w-2xl w-full bg-white/[0.03] border border-white/10 rounded-[60px] p-16 text-center space-y-10">
+         <div className="max-w-2xl w-full bg-white/[0.03] border border-white/10 rounded-[32px] md:rounded-[60px] p-8 md:p-16 text-center space-y-10">
             <div className="w-20 h-20 bg-[#FF8C00]/20 text-[#FF8C00] rounded-3xl flex items-center justify-center mx-auto">
                <BookOpen size={40} />
             </div>
-            <h2 className="text-5xl font-black tracking-tighter italic">TEXTO COMPLETADO</h2>
-            <div className="p-10 bg-white/5 rounded-3xl border border-white/5">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">TEXTO COMPLETADO</h2>
+            <div className="p-5 md:p-10 bg-white/5 rounded-3xl border border-white/5">
                <div className="text-[10px] font-black uppercase tracking-widest opacity-30 mb-2">Puntaje Diamond</div>
-               <div className="text-6xl font-black text-[#FF8C00]">{score}%</div>
+               <div className="text-4xl md:text-6xl font-black text-[#FF8C00]">{score}%</div>
             </div>
             <button 
               onClick={onClose}
-              className="w-full py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all"
+              className="w-full py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all"
             >
                Recoger XP y Salir
             </button>
@@ -79,15 +79,15 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
 
   return (
     <div className="w-full h-full bg-transparent text-white p-4 md:p-12">
-      <nav className="max-w-5xl mx-auto w-full flex justify-between items-center mb-16">
+      <nav className="max-w-5xl mx-auto w-full flex justify-between items-center mb-8 md:mb-16">
         <button onClick={onClose} className="text-white/30 hover:text-white transition-colors flex items-center gap-2 text-[10px] font-black uppercase tracking-widest">
            <ArrowLeft size={16} /> Salir
         </button>
         <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-widest">Comprensión Lectora Diamond</span>
       </nav>
 
-      <main className="max-w-5xl mx-auto w-full bg-white/[0.02] border border-white/5 p-10 md:p-20 rounded-[60px] animate-in slide-in-from-bottom-10 duration-1000 relative">
-         <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+      <main className="max-w-5xl mx-auto w-full bg-white/[0.02] border border-white/5 p-5 md:p-10 md:p-20 rounded-[32px] md:rounded-[60px] animate-in slide-in-from-bottom-10 duration-1000 relative">
+         <div className="absolute top-0 right-0 p-6 md:p-12 opacity-5 pointer-events-none">
             <BookOpen size={200} />
          </div>
 
@@ -130,14 +130,14 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
                {!showFeedback ? (
                  <button 
                    onClick={() => setShowFeedback(true)}
-                   className="px-16 py-8 bg-[#FF8C00] text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-2xl shadow-[#FF8C00]/20"
+                   className="px-6 md:px-16 py-8 bg-[#FF8C00] text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-2xl shadow-[#FF8C00]/20"
                  >
                     Verificar Lectura
                  </button>
                ) : (
                  <button 
                    onClick={handleFinish}
-                   className="px-16 py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
+                   className="px-6 md:px-16 py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
                  >
                     Finalizar Misión <ChevronRight className="inline ml-2" />
                  </button>

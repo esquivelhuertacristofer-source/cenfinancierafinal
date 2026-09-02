@@ -493,7 +493,7 @@ export default function PortfolioBuilder({
 
         <div className="relative z-10 max-w-lg w-full text-center space-y-8">
           {/* Big emoji hero */}
-          <div className="text-8xl animate-bounce" style={{ animationDuration: '2s' }}>
+          <div className="text-5xl md:text-8xl animate-bounce" style={{ animationDuration: '2s' }}>
             🗺️
           </div>
 
@@ -568,7 +568,7 @@ export default function PortfolioBuilder({
         <div className="relative z-10 max-w-2xl w-full space-y-6 py-6">
           {/* Header */}
           <div className="text-center space-y-2">
-            <div className="text-6xl mb-2">
+            <div className="text-4xl md:text-6xl mb-2">
               {score >= 70 ? '🏆' : score >= 50 ? '⭐' : '📚'}
             </div>
             <h1 className="text-3xl md:text-4xl font-black text-white">
@@ -798,7 +798,7 @@ export default function PortfolioBuilder({
           >
             {/* Stage header */}
             <div className="flex items-center gap-3">
-              <div className="text-4xl">{currentStage.emoji}</div>
+              <div className="text-2xl md:text-4xl">{currentStage.emoji}</div>
               <div>
                 <p className="text-xs font-bold text-white/50 uppercase tracking-widest">
                   Edad {currentStage.age_start}–{currentStage.age_end}

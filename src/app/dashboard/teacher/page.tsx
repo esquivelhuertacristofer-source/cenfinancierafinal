@@ -134,8 +134,8 @@ export default function TeacherDashboard() {
       <main className="flex-1 md:ml-[260px] relative z-10 custom-scrollbar overflow-y-auto h-screen flex flex-col">
         
         {/* HUD STATUS BAR (THEME AWARE) */}
-        <div className={`sticky top-0 z-50 backdrop-blur-3xl border-b px-12 py-5 flex items-center justify-between transition-all duration-700 ${theme === 'dark' ? 'bg-[#011C40]/80 border-white/5 shadow-2xl' : 'bg-[#F4F1EA]/80 border-[#011C40]/5 shadow-lg shadow-[#011C40]/5'}`}>
-          <div className="flex items-center gap-12">
+        <div className={`sticky top-0 z-50 backdrop-blur-3xl border-b pl-20 pr-4 md:px-12 py-4 md:py-5 flex flex-wrap items-center justify-between gap-3 transition-all duration-700 ${theme === 'dark' ? 'bg-[#011C40]/80 border-white/5 shadow-2xl' : 'bg-[#F4F1EA]/80 border-[#011C40]/5 shadow-lg shadow-[#011C40]/5'}`}>
+          <div className="flex items-center gap-6 md:gap-12">
              <div className="flex items-center gap-4">
                 <div className={`w-3 h-3 rounded-full animate-pulse shadow-[0_0_15px_rgba(52,211,153,0.5)] ${theme === 'dark' ? 'bg-emerald-400' : 'bg-emerald-500'}`} />
                 <span className={`text-[11px] font-black uppercase tracking-[0.4em] ${theme === 'dark' ? 'text-white/50' : 'text-[#011C40]/40'}`}>SISTEMA ONLINE</span>
@@ -143,7 +143,7 @@ export default function TeacherDashboard() {
              
              <div className="h-6 w-px bg-current opacity-10" />
              
-             <div className="hidden xl:flex items-center gap-10">
+             <div className="hidden xl:flex items-center gap-5 md:gap-10">
                 {[
                   { label: "Tráfico", val: "Optimizado", icon: Activity, color: theme === 'dark' ? "text-[#FF8C00]" : "text-[#FF8C00]" },
                   { label: "Sync", val: "12ms", icon: Zap, color: theme === 'dark' ? "text-[#42E8E0]" : "text-[#011C40]" },
@@ -187,7 +187,7 @@ export default function TeacherDashboard() {
         </div>
 
         {/* MAIN DASHBOARD CONTENT */}
-        <div className="p-12 space-y-24 flex-1">
+        <div className="p-6 md:p-12 space-y-24 flex-1">
           
           {/* WELCOME SECTION */}
           <div className="animate-in fade-in slide-in-from-top-12 duration-1000">
@@ -195,14 +195,14 @@ export default function TeacherDashboard() {
           </div>
 
           {/* ANALYTICS SECTION */}
-          <div className="space-y-12 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
+          <div className="space-y-8 md:space-y-12 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
              <div className="flex items-center justify-between px-4">
                 <div className="flex items-center gap-6">
                    <div className={`w-16 h-16 rounded-3xl border flex items-center justify-center shadow-2xl transition-all ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-slate-100'}`}>
                       <BarChart3 className={`w-8 h-8 ${theme === 'dark' ? 'text-[#FF8C00]' : 'text-[#011C40]'}`} />
                    </div>
                    <div>
-                      <h2 className={`text-4xl font-black tracking-tighter leading-none mb-2 transition-colors ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>Resumen Ejecutivo</h2>
+                      <h2 className={`text-2xl md:text-4xl font-black tracking-tighter leading-none mb-2 transition-colors ${theme === 'dark' ? 'text-white' : 'text-[#011C40]'}`}>Resumen Ejecutivo</h2>
                       <div className="flex items-center gap-3">
                          <div className={`w-2 h-2 rounded-full animate-pulse ${theme === 'dark' ? 'bg-[#42E8E0]' : 'bg-[#FF8C00]'}`} />
                          <p className={`text-[11px] font-bold uppercase tracking-[0.3em] transition-colors ${theme === 'dark' ? 'text-white/30' : 'text-slate-400'}`}>Panel de Inteligencia Académica</p>
@@ -219,7 +219,7 @@ export default function TeacherDashboard() {
           </div>
 
           {/* BENTO GRID: FEED & RANKING */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch pb-20 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-400">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-stretch pb-20 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-400">
             {/* PANEL IZQUIERDO: ACTIVIDAD */}
             <div className="lg:col-span-7">
                <LatestDeliveries groupId={teacherData?.group_id} teacherGroupIds={teacherGroupIds} isDark={theme === 'dark'} />

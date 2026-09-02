@@ -21,10 +21,10 @@ export default function Segmento2Bloque4Page() {
           <Link href="#" className="hover:text-[#0980E8] transition-colors">Hora de Emprender</Link>
         </div>
         <Link href="/log-in">
-          <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
-            Iniciar Sesión
-          </button>
-        </Link>
+            <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
+              Iniciar Sesión
+            </button>
+          </Link>
       </nav>
 
       {/* 2. HERO DEL BLOQUE (Celeste Suave a Blanco) */}
@@ -92,9 +92,11 @@ export default function Segmento2Bloque4Page() {
                 <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-white rounded-[3rem] flex items-center justify-center text-slate-300 font-black text-xl mb-6 border-4 border-dashed border-yellow-300">
                    [ JUEGO INTERACTIVO: TRAZAR RUTA ]
                 </div>
-                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors mb-4">
-                  Jugar Ahora
-                </button>
+                <Link href="/juego">
+                  <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors mb-4">
+                    Jugar Ahora
+                  </button>
+                </Link>
              </div>
           </div>
         </section>
@@ -109,9 +111,11 @@ export default function Segmento2Bloque4Page() {
                 <div className="w-full aspect-[4/3] md:aspect-[21/9] bg-white rounded-[3rem] flex items-center justify-center text-slate-300 font-black text-xl mb-6 border-4 border-dashed border-sky-300">
                    [ QUIZ INTERACTIVO: ESCENARIOS ]
                 </div>
-                <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors mb-4">
-                  Jugar Ahora
-                </button>
+                <Link href="/juego">
+                  <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs shadow-lg hover:bg-[#011C40] transition-colors mb-4">
+                    Jugar Ahora
+                  </button>
+                </Link>
              </div>
           </div>
         </section>
@@ -208,9 +212,11 @@ export default function Segmento2Bloque4Page() {
               <p className="font-bold text-sm text-[#0369A1] leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                  En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de recursos que te ayudarán a profundizar en tu aventura financiera.
               </p>
-              <button className="bg-[#0369A1] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
-                 Accede Ahora
-              </button>
+              <Link href="/dashboard/teacher/bibliografia">
+                <button className="bg-[#0369A1] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
+                   Accede Ahora
+                </button>
+              </Link>
            </div>
            <div className="md:w-1/2 flex justify-center">
               <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-white/20 shadow-2xl relative">

@@ -67,7 +67,7 @@ const JornadaActivity = dynamic(() => import('../activities/JornadaActivity'), {
 const SupremoLoading = () => (
   <div className="flex items-center justify-center py-40 gap-4">
     <div className="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin" />
-    <span className="text-white/40 font-black uppercase tracking-[0.3em] text-sm">Cargando Reto...</span>
+    <span className="text-white/40 font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-sm">Cargando Reto...</span>
   </div>
 );
 
@@ -170,14 +170,14 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
     <div className="absolute inset-0 z-10 opacity-20">
        <img 
           src="/assets/png/coin-portal.png" 
-          className="absolute -top-40 -left-40 w-[600px] h-[600px] animate-spin-slow mix-blend-screen grayscale brightness-150" 
+          className="absolute -top-24 -left-24 w-[340px] h-[340px] md:-top-40 md:-left-40 md:w-[600px] md:h-[600px] animate-spin-slow mix-blend-screen grayscale brightness-150" 
           loading="lazy"
           decoding="async"
           style={{ animationDuration: '60s' }}
        />
        <img 
           src="/assets/png/coin-bill-friends.png" 
-          className="absolute bottom-10 right-10 w-96 h-96 animate-float-slow opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
+          className="absolute bottom-10 right-10 w-56 h-56 md:w-96 md:h-96 animate-float-slow opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
           loading="lazy"
           decoding="async"
        />
@@ -204,16 +204,16 @@ AdventureBackground.displayName = 'AdventureBackground';
 
 const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
   <div className="fixed top-0 left-0 w-full z-[2100]">
-     <div className="absolute top-6 left-12 flex items-center gap-4 group animate-in slide-in-from-left duration-1000">
+     <div className="absolute top-3 left-3 md:top-6 md:left-12 flex items-center gap-2 md:gap-4 group animate-in slide-in-from-left duration-1000">
         <div className="relative">
            <div className="absolute inset-0 bg-[#FF8C00] blur-xl opacity-40 group-hover:opacity-100 transition-opacity animate-pulse" />
            <img 
               src="/assets/png/ceny-guide.png" 
-              className="w-16 h-16 relative z-10 drop-shadow-2xl animate-bounce-slow" 
+              className="w-10 h-10 md:w-16 md:h-16 relative z-10 drop-shadow-2xl animate-bounce-slow" 
               fetchPriority="high"
            />
         </div>
-        <div className="px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl flex flex-col">
+        <div className="px-3 py-1.5 md:px-5 md:py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl flex flex-col">
            <span className="text-[8px] font-black text-[#FF8C00] uppercase tracking-[0.2em] mb-0.5">Tu Guía CEN</span>
            <span className="text-[10px] font-black text-white uppercase tracking-widest">¡Vamos {progress >= 50 ? 'excelente' : 'por ello'}!</span>
         </div>
@@ -232,12 +232,12 @@ const FiscalSummaryCard = memo(({ unitCode }: { unitCode: string }) => {
   if (!unitCode.startsWith('S3')) return null;
 
   return (
-    <div className="mt-20 mb-32 p-12 bg-gradient-to-br from-[#FF8C00]/20 to-yellow-500/10 border border-[#FF8C00]/30 rounded-[60px] backdrop-blur-3xl relative overflow-hidden group">
-      <div className="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity"><Coins size={200} /></div>
-      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-16">
+    <div className="mt-12 mb-8 md:mb-16 md:mt-20 md:mb-32 p-6 md:p-12 bg-gradient-to-br from-[#FF8C00]/20 to-yellow-500/10 border border-[#FF8C00]/30 rounded-[32px] md:rounded-[60px] backdrop-blur-3xl relative overflow-hidden group">
+      <div className="absolute top-0 right-0 p-5 md:p-10 opacity-10 group-hover:opacity-20 transition-opacity"><Coins size={200} /></div>
+      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         <div className="space-y-4 text-center lg:text-left">
            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF8C00] text-black rounded-full text-[10px] font-black uppercase tracking-widest">Contexto Fiscal 2026</div>
-           <h4 className="text-5xl font-black text-white tracking-tighter italic uppercase">Indicadores Maestros</h4>
+           <h4 className="text-3xl md:text-5xl font-black text-white tracking-tighter italic uppercase">Indicadores Maestros</h4>
            <p className="text-xl text-white/40 font-medium max-w-sm">Datos oficiales actualizados para la simulación de tu vida adulta.</p>
         </div>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
@@ -246,10 +246,10 @@ const FiscalSummaryCard = memo(({ unitCode }: { unitCode: string }) => {
              { label: 'Valor UMA', value: '$122.00', unit: 'MXN', icon: Target },
              { label: 'Tasa CETES', value: '9.00%', unit: 'Anual', icon: Activity }
            ].map((stat, i) => (
-             <div key={i} className="p-8 bg-white/5 rounded-[40px] border border-white/5 hover:border-white/10 transition-all">
+             <div key={i} className="p-8 bg-white/5 rounded-[24px] md:rounded-[40px] border border-white/5 hover:border-white/10 transition-all">
                 <stat.icon size={24} className="text-[#FF8C00] mb-4" />
                 <div className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-2">{stat.label}</div>
-                <div className="text-4xl font-black text-white">{stat.value}</div>
+                <div className="text-2xl md:text-4xl font-black text-white">{stat.value}</div>
                 <div className="text-xs font-bold text-white/20 mt-1">{stat.unit}</div>
              </div>
            ))}
@@ -280,16 +280,16 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-12 animate-in fade-in duration-1000 relative z-10">
-      <div className="relative mb-32">
+    <div className="max-w-6xl mx-auto py-6 md:py-12 animate-in fade-in duration-1000 relative z-10">
+      <div className="relative mb-8 md:mb-16 md:mb-32">
          {/* HEADER CINEMÁTICO */}
-         <div className="space-y-6 text-center lg:text-left mb-20">
+         <div className="space-y-4 md:space-y-6 text-center lg:text-left mb-10 md:mb-20">
             <div className="flex items-center justify-center lg:justify-start gap-4 text-[#FF8C00]">
                <Sparkles size={20} className="animate-pulse" />
-               <span className="text-[10px] font-black uppercase tracking-[0.5em]">Módulo de Teoría Elite</span>
+               <span className="text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em]">Módulo de Teoría Elite</span>
             </div>
             
-            <h1 className="text-7xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-6xl lg:text-9xl font-black text-white leading-[0.95] md:leading-[0.9] tracking-tighter drop-shadow-2xl">
                {unit.title.split(' ').map((word, i) => (
                   <span key={i} className={i % 2 !== 0 ? 'text-[#FF8C00]' : 'text-white'}>{word}{' '}</span>
                ))}
@@ -298,9 +298,9 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
             <div className="h-2 w-40 bg-[#FF8C00] rounded-full mx-auto lg:mx-0 opacity-60" />
          </div>
 
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-20 items-center">
             <div className="space-y-8 order-2 lg:order-1">
-               <p className="text-3xl lg:text-4xl font-medium leading-snug text-white/80 tracking-tight italic">
+               <p className="text-xl md:text-3xl lg:text-4xl font-medium leading-snug text-white/80 tracking-tight italic">
                   "{intro}"
                </p>
                
@@ -334,7 +334,7 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
                <div className="absolute -inset-4 border border-white/10 rounded-[70px] pointer-events-none z-0 group-hover/hero-img:border-[#FF8C00]/20 transition-all duration-700" />
                <div className="absolute -inset-8 border border-white/5 rounded-[80px] pointer-events-none z-0 group-hover/hero-img:border-[#FF8C00]/10 transition-all duration-1000 delay-100" />
                
-               <div className="relative w-full h-full rounded-[60px] overflow-hidden border-4 border-white/10 shadow-2xl z-10 transition-transform duration-1000 group-hover:scale-105">
+               <div className="relative w-full h-full rounded-[32px] md:rounded-[60px] overflow-hidden border-4 border-white/10 shadow-2xl z-10 transition-transform duration-1000 group-hover:scale-105">
                   <img 
                      src={getThemeImage(0)} 
                      className="w-full h-full object-cover animate-float-slow"
@@ -348,16 +348,16 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
 
       <FiscalSummaryCard unitCode={unit.code} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
         {sections.map((section: any, i: number) => (
           <div key={i} className="group relative">
-             <div className="h-full bg-white/[0.03] border border-white/5 p-12 rounded-[4rem] backdrop-blur-3xl flex flex-col gap-8 hover:bg-white/[0.06] hover:border-[#FF8C00]/30 transition-all duration-500">
+             <div className="h-full bg-white/[0.03] border border-white/5 p-6 md:p-12 rounded-[2rem] md:rounded-[4rem] backdrop-blur-3xl flex flex-col gap-5 md:gap-8 hover:bg-white/[0.06] hover:border-[#FF8C00]/30 transition-all duration-500">
                 <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-[#FF8C00] group-hover:scale-110 transition-transform">
                    {i % 2 === 0 ? <Zap size={28} /> : <Target size={28} />}
                 </div>
                 <div className="space-y-4">
-                   <h3 className="text-3xl font-black text-white leading-tight">{section.subtitle || section.title}</h3>
-                   <p className="text-xl text-white/50 leading-relaxed font-medium">{section.content || section.description}</p>
+                   <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">{section.subtitle || section.title}</h3>
+                   <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">{section.content || section.description}</p>
                 </div>
              </div>
           </div>
@@ -374,20 +374,20 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
             }}
           >
             <div className="flex items-center gap-6">
-               <span className="text-3xl font-black text-[#0A0118] uppercase tracking-[0.3em]">{nextLabel ?? 'Continuar'}</span>
+               <span className="text-3xl font-black text-[#0A0118] uppercase tracking-[0.16em] md:tracking-[0.3em]">{nextLabel ?? 'Continuar'}</span>
                <div className="w-12 h-12 bg-[#0A0118] rounded-2xl flex items-center justify-center text-white transition-transform group-hover:translate-x-3">
                   <ChevronRight size={24} />
                </div>
             </div>
           </button>
         ) : (
-          <div className="flex items-center gap-10 px-20 py-10 bg-[#10B981]/10 border border-[#10B981]/30 text-[#10B981] rounded-[3rem] animate-in zoom-in duration-700">
+          <div className="flex items-center gap-5 md:gap-10 px-20 py-10 bg-[#10B981]/10 border border-[#10B981]/30 text-[#10B981] rounded-[1.75rem] md:rounded-[3rem] animate-in zoom-in duration-700">
              <div className="w-20 h-20 rounded-full bg-[#10B981] flex items-center justify-center text-white shadow-[0_0_40px_#10B981] animate-bounce">
                 <CheckCircle2 size={40} />
              </div>
              <div className="text-left">
-                <div className="text-xs font-black uppercase tracking-[0.5em] opacity-60 mb-2">Contenido Revisado</div>
-                <div className="text-4xl font-black uppercase tracking-widest">Lectura Completada</div>
+                <div className="text-xs font-black uppercase tracking-[0.25em] md:tracking-[0.5em] opacity-60 mb-2">Contenido Revisado</div>
+                <div className="text-2xl md:text-4xl font-black uppercase tracking-widest">Lectura Completada</div>
              </div>
           </div>
         )}
@@ -444,11 +444,11 @@ const normalizeActivityData = (data: any) => {
 const PortadaActividad = memo(({ data }: { data: any }) => {
   if (!data?.portada) return null;
   return (
-    <div className="relative w-full h-[200px] md:h-[280px] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl mb-10">
+    <div className="relative w-full h-[200px] md:h-[280px] rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl mb-10">
       <img src={data.portada} alt="" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0118] via-[#0A0118]/50 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
-        <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.4em] italic">
+        <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.2em] md:tracking-[0.4em] italic">
           {data.complejidad || 'Misión'}
         </span>
         <h3 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter mt-2 drop-shadow-2xl">
@@ -468,7 +468,7 @@ const EscenaActividad = memo(({ data }: { data: any }) => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0118] via-[#0A0118]/70 to-transparent" />
       <div className="absolute inset-0 flex flex-col justify-center gap-2 p-8 max-w-2xl">
         {data.objetivo && (
-          <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.4em] italic">{data.objetivo}</span>
+          <span className="text-[10px] font-black text-[#FF8C00] uppercase tracking-[0.2em] md:tracking-[0.4em] italic">{data.objetivo}</span>
         )}
         {data.descripcion && (
           <p className="text-base lg:text-lg font-medium text-white/80 leading-snug">{data.descripcion}</p>
@@ -497,7 +497,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   if (loading) return (
     <div className="flex flex-col items-center justify-center py-40 gap-6">
        <div className="w-16 h-16 border-4 border-[#FF8C00] border-t-transparent rounded-full animate-spin" />
-       <p className="text-white/40 font-black uppercase tracking-[0.3em]">Cargando Laboratorio...</p>
+       <p className="text-white/40 font-black uppercase tracking-[0.16em] md:tracking-[0.3em]">Cargando Laboratorio...</p>
     </div>
   );
 
@@ -507,11 +507,11 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
         <div className="w-40 h-40 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 flex items-center justify-center text-[#10B981] mb-10 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
            <CheckCircle2 size={80} className="animate-bounce" />
         </div>
-        <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">Práctica Completada ✓</h3>
+        <h3 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter mb-4">Práctica Completada ✓</h3>
         <p className="text-white/40 text-xl font-medium mb-12">Tus resultados han sido sincronizados con el Profesor.</p>
         <button
           onClick={() => onComplete()}
-          className="px-16 py-6 bg-white text-[#0A0118] rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
+          className="px-8 md:px-16 py-5 md:py-6 bg-white text-[#0A0118] rounded-full font-black uppercase text-xs tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
         >
           {isSupremoUnit ? 'Finalizar Reto' : 'Continuar al Quiz'}
         </button>
@@ -521,10 +521,10 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
 
   if (!data) return (
     <div className="text-center py-40">
-       <div className="text-6xl mb-6">🔧</div>
+       <div className="text-4xl md:text-6xl mb-6">🔧</div>
        <p className="text-white/40 text-2xl font-black mb-4">Actividad no disponible</p>
        <p className="text-white/20 text-base font-medium mb-10">Esta práctica aún no está configurada.<br/>Puedes marcarla como completada y continuar.</p>
-       <button onClick={() => onComplete()} className="px-12 py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Marcar como completada</button>
+       <button onClick={() => onComplete()} className="px-8 md:px-12 py-5 md:py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Marcar como completada</button>
     </div>
   );
 
@@ -596,10 +596,10 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
       {isPortfolioBuilder && <PortfolioBuilder activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {!isKnown && (
-        <div className="text-center p-20 border border-white/5 bg-white/5 rounded-[40px]">
-           <h3 className="text-white text-4xl font-black mb-4">Misión Especial Detectada</h3>
+        <div className="text-center p-8 md:p-20 border border-white/5 bg-white/5 rounded-[28px] md:rounded-[40px]">
+           <h3 className="text-white text-2xl md:text-4xl font-black mb-4">Misión Especial Detectada</h3>
            <p className="text-white/40 text-xl mb-10">Este contenido requiere el visor Diamond v2.0 ({activityType})</p>
-           <button onClick={() => { setIsFinishedLocal(true); onComplete(); }} className="px-10 py-5 bg-white text-black font-black uppercase rounded-full">Ejecutar en Modo Compatibilidad</button>
+           <button onClick={() => { setIsFinishedLocal(true); onComplete(); }} className="px-5 md:px-10 py-5 bg-white text-black font-black uppercase rounded-full">Ejecutar en Modo Compatibilidad</button>
         </div>
       )}
     </div>
@@ -630,7 +630,7 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
   if (loading) return (
     <div className="flex flex-col items-center justify-center py-40 gap-6">
        <div className="w-16 h-16 border-4 border-[#FF8C00] border-t-transparent rounded-full animate-spin" />
-       <p className="text-white/40 font-black uppercase tracking-[0.3em]">Sincronizando Desafío...</p>
+       <p className="text-white/40 font-black uppercase tracking-[0.16em] md:tracking-[0.3em]">Sincronizando Desafío...</p>
     </div>
   );
 
@@ -640,11 +640,11 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
         <div className="w-40 h-40 rounded-full bg-[#FF8C00]/10 border border-[#FF8C00]/30 flex items-center justify-center text-[#FF8C00] mb-10 shadow-[0_0_50px_rgba(255,140,0,0.2)]">
            <Trophy size={80} className="animate-bounce" />
         </div>
-        <h3 className="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">¡Certificación Lograda!</h3>
+        <h3 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter mb-4">¡Certificación Lograda!</h3>
         <p className="text-white/40 text-xl font-medium mb-12">Has demostrado dominio total de estos conceptos.</p>
         <button
           onClick={() => onComplete(100)}
-          className="px-16 py-6 bg-[#FF8C00] text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
+          className="px-8 md:px-16 py-5 md:py-6 bg-[#FF8C00] text-black rounded-full font-black uppercase text-xs tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all shadow-2xl"
         >
           Finalizar Misión
         </button>
@@ -655,7 +655,7 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
   if (!data) return (
     <div className="text-center py-40">
        <p className="text-white/20 text-3xl font-black mb-8">Esta unidad aún no tiene una evaluación industrializada.</p>
-       <button onClick={() => onComplete(100)} className="px-12 py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Saltar Evaluación</button>
+       <button onClick={() => onComplete(100)} className="px-8 md:px-12 py-5 md:py-6 bg-white/5 text-white/40 rounded-full font-black uppercase hover:text-white transition-all">Saltar Evaluación</button>
     </div>
   );
 
@@ -755,17 +755,17 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
       {!isTrivia && !isGame && !isQuiz && !isFillBlanks && !isStory && !isDragDrop && !isMatching && !isRoulette && !isBuilder && !isSimulator && (
         <div className="text-center py-20 space-y-6">
            <p className="text-white/20 text-xl font-black italic">Formato de Evaluación no reconocido: {activityType}</p>
-           <button onClick={() => onComplete(100)} className="px-10 py-4 bg-white/10 text-white rounded-full font-black uppercase text-xs tracking-widest">Omitir Evaluación</button>
+           <button onClick={() => onComplete(100)} className="px-5 md:px-10 py-4 bg-white/10 text-white rounded-full font-black uppercase text-xs tracking-widest">Omitir Evaluación</button>
         </div>
       )}
     </div>
 
     {puntajeFallido !== null && (
       <div className="fixed inset-0 z-[3000] bg-black/80 backdrop-blur-2xl flex items-center justify-center p-8" role="dialog" aria-modal="true" aria-labelledby="titulo-reintento">
-        <div className="max-w-lg w-full bg-[#0a0a0a] border border-white/10 rounded-[48px] p-12 text-center space-y-8 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
-          <div className="text-6xl" aria-hidden="true">🎯</div>
+        <div className="max-w-lg w-full bg-[#0a0a0a] border border-white/10 rounded-[32px] md:rounded-[48px] p-6 md:p-12 text-center space-y-6 md:space-y-8 shadow-[0_40px_100px_rgba(0,0,0,0.6)]">
+          <div className="text-4xl md:text-6xl" aria-hidden="true">🎯</div>
           <div className="space-y-3">
-            <h2 id="titulo-reintento" className="text-4xl font-black italic uppercase tracking-tighter text-white">Casi lo logras</h2>
+            <h2 id="titulo-reintento" className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter text-white">Casi lo logras</h2>
             <p className="text-white/50 text-lg font-medium leading-relaxed">
               Obtuviste <span className="text-[#FF8C00] font-black">{puntajeFallido}%</span> y para aprobar esta misión
               necesitas <span className="text-white font-black">{minimoAprobacion}%</span>.
@@ -775,14 +775,14 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
           <div className="space-y-3">
             <button
               onClick={() => { setPuntajeFallido(null); setIntentoEval((n) => n + 1); }}
-              className="w-full py-6 bg-white text-black rounded-[32px] font-black text-xs uppercase tracking-[0.4em] hover:scale-[1.02] transition-transform"
+              className="w-full py-6 bg-white text-black rounded-[32px] font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:scale-[1.02] transition-transform"
             >
               Reintentar
             </button>
             {intentoEval >= 1 && (
               <button
                 onClick={() => { const s = puntajeFallido; setPuntajeFallido(null); setIsFinishedLocal(true); onComplete(s); }}
-                className="w-full py-4 text-white/30 hover:text-white/70 font-bold text-[11px] uppercase tracking-[0.3em] transition-colors"
+                className="w-full py-4 text-white/30 hover:text-white/70 font-bold text-[11px] uppercase tracking-[0.16em] md:tracking-[0.3em] transition-colors"
               >
                 Continuar de todos modos
               </button>
@@ -877,18 +877,18 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
 
       {/* OVERLAY DE ÉXITO: MISIÓN CUMPLIDA */}
       {showSuccess && (
-        <div className="fixed inset-0 z-[3000] flex items-center justify-center p-8 animate-in fade-in zoom-in duration-500">
+        <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 md:p-8 animate-in fade-in zoom-in duration-500">
           <div className="fixed inset-0 bg-[#011126]/90 backdrop-blur-2xl" />
-          <div className="relative z-10 w-full max-w-2xl bg-white/[0.03] border border-white/10 rounded-[60px] p-20 text-center shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
+          <div className="relative z-10 w-full max-w-2xl bg-white/[0.03] border border-white/10 rounded-[36px] md:rounded-[60px] p-8 md:p-20 text-center shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-64 h-64">
                 <div className="absolute inset-0 bg-[#FF8C00] blur-3xl opacity-30 animate-pulse" />
                 <img src="/assets/png/coin-bill-friends.png" className="w-full h-full relative z-10 animate-bounce-slow" />
              </div>
              
              <div className="mt-16 mb-12">
-                <div className="text-xs font-black text-[#FF8C00] uppercase tracking-[0.4em] mb-4">Misión Desbloqueada</div>
-                <h2 className="text-6xl font-black text-white tracking-tighter mb-6">¡Felicidades, Estudiante!</h2>
-                <p className="text-xl text-white/50 font-medium leading-relaxed">
+                <div className="text-xs font-black text-[#FF8C00] uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4">Misión Desbloqueada</div>
+                <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">¡Felicidades, Estudiante!</h2>
+                <p className="text-base md:text-xl text-white/50 font-medium leading-relaxed">
                    Has completado con éxito la misión: <br/>
                    <span className="text-white">"{unit.title}"</span>
                 </p>
@@ -897,13 +897,13 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
              <div className="flex flex-col gap-4">
                 <button 
                   onClick={onClose}
-                  className="w-full py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-2xl uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
+                  className="w-full py-5 md:py-8 bg-white text-[#0A0118] rounded-[30px] font-black text-lg md:text-2xl uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
                 >
                    Volver al Hub
                 </button>
                 <button 
                   onClick={() => { setShowSuccess(false); onClose(); }}
-                  className="w-full py-6 bg-white/5 text-white/40 rounded-[30px] font-black text-xs uppercase tracking-widest hover:text-white transition-all"
+                  className="w-full py-4 md:py-6 bg-white/5 text-white/40 rounded-[30px] font-black text-xs uppercase tracking-widest hover:text-white transition-all"
                 >
                    Ver Resumen de Insignias
                 </button>
@@ -929,9 +929,9 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
       )}
 
       {/* NAVEGACIÓN FLOTANTE - ELEVADA A Z-2200 PARA EVITAR BLOQUEOS */}
-      <div className="fixed left-12 top-1/2 -translate-y-1/2 z-[2200] flex flex-col gap-10 animate-in slide-in-from-left duration-1000 delay-300">
-         <div className="p-5 bg-[#120526]/60 backdrop-blur-3xl border border-white/10 rounded-[60px] flex flex-col gap-8 shadow-2xl relative group">
-            <div className="w-20 h-20 bg-[#FF8C00] rounded-[30px] flex items-center justify-center text-white text-4xl animate-pulse mb-4">💎</div>
+      <div className="fixed z-[2200] bottom-0 left-0 right-0 flex justify-center p-3 md:bottom-auto md:left-12 md:right-auto md:top-1/2 md:-translate-y-1/2 md:p-0 md:flex-col md:gap-10 animate-in slide-in-from-bottom md:slide-in-from-left duration-1000 delay-300" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
+         <div className="p-2 md:p-5 bg-[#120526]/90 md:bg-[#120526]/60 backdrop-blur-3xl border border-white/10 rounded-[30px] md:rounded-[60px] flex items-center md:flex-col gap-2 md:gap-8 shadow-2xl relative group max-w-full overflow-x-auto no-scrollbar">
+            <div className="hidden md:flex w-20 h-20 bg-[#FF8C00] rounded-[30px] items-center justify-center text-white text-2xl md:text-4xl animate-pulse mb-4">💎</div>
             
             {unit.contents.map(c => {
                const IconComp = MODALITY_ICONS_MODERN[c.type] || FileText;
@@ -940,21 +940,22 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
                return (
                   <button 
                      key={c.type} 
-                     className={`w-20 h-24 rounded-[30px] flex flex-col items-center justify-center gap-3 transition-all relative group/btn
-                        ${active ? 'bg-white text-[#0A0118] scale-110 z-10' : 'text-white/20 hover:text-white/60 hover:bg-white/5'}
+                     data-rail-tab={c.type}
+                     className={`w-16 h-16 md:w-20 md:h-24 shrink-0 rounded-[22px] md:rounded-[30px] flex flex-col items-center justify-center gap-3 transition-all relative group/btn
+                        ${active ? 'bg-white text-[#0A0118] md:scale-110 z-10' : 'text-white/30 md:text-white/20 hover:text-white/60 hover:bg-white/5'}
                      `}
                      onClick={() => setActiveTab(c.type)}
                   >
-                     <IconComp size={active ? 36 : 28} />
+                     <><IconComp size={active ? 36 : 28} className="hidden md:block" /><IconComp size={active ? 26 : 22} className="md:hidden" /></>
                      {done && <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center"><CheckCircle2 size={12} /></div>}
                   </button>
                );
             })}
             
-            <div className="mt-10 pt-10 border-t border-white/10">
+            <div className="pl-2 ml-1 border-l border-white/10 md:mt-10 md:pt-10 md:pl-0 md:ml-0 md:border-l-0 md:border-t">
                {/* BOTÓN REGRESAR - REFORZADO Y PRIORITARIO */}
                <button 
-                  className="w-20 h-20 rounded-[30px] bg-red-500/20 text-red-500 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all group/exit cursor-pointer active:scale-90"
+                  className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-[22px] md:rounded-[30px] bg-red-500/20 text-red-500 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all group/exit cursor-pointer active:scale-90"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -962,14 +963,14 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
                   }}
                   title="Salir de la misión"
                >
-                  <ArrowLeft size={40} className="group-hover/exit:-translate-x-2 transition-transform" />
+                  <><ArrowLeft size={40} className="hidden md:block group-hover/exit:-translate-x-2 transition-transform" /><ArrowLeft size={24} className="md:hidden" /></>
                </button>
             </div>
          </div>
       </div>
 
-      <main className="flex-1 overflow-y-auto pl-48 pr-[100px] py-[80px] custom-scrollbar relative z-10 scroll-smooth">
-        <div className="relative z-10 max-w-7xl mx-auto pb-60">
+      <main className="flex-1 overflow-y-auto px-5 pt-24 pb-44 md:px-0 md:pl-48 md:pr-[100px] md:py-[80px] custom-scrollbar relative z-10 scroll-smooth">
+        <div className="relative z-10 max-w-7xl mx-auto pb-10 md:pb-60">
           {activeTab === 'theory' && (
             <TheoryTab
               unit={unit}
@@ -1013,7 +1014,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               <X size={40} />
            </button>
            
-           <div className="w-full max-w-6xl aspect-video bg-black rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_150px_rgba(255,140,0,0.3)] relative group">
+           <div className="w-full max-w-6xl aspect-video bg-black rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_150px_rgba(255,140,0,0.3)] relative group">
               <iframe 
                 src="https://www.youtube.com/embed/QOzt8F2nxm8?autoplay=1&rel=0"
                 className="w-full h-full"
@@ -1028,7 +1029,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
       {rankUp && (
         <div className="fixed inset-0 z-[4000] flex items-center justify-center p-8 animate-in fade-in zoom-in duration-500">
            <div className="fixed inset-0 bg-black/80 backdrop-blur-3xl" />
-           <div className="relative z-10 w-full max-w-lg bg-white/[0.03] border-2 border-white/20 rounded-[50px] p-12 text-center shadow-[0_0_100px_rgba(255,255,255,0.1)]">
+           <div className="relative z-10 w-full max-w-lg bg-white/[0.03] border-2 border-white/20 rounded-[32px] md:rounded-[50px] p-6 md:p-12 text-center shadow-[0_0_100px_rgba(255,255,255,0.1)]">
               <div className="w-40 h-40 mx-auto mb-10 relative">
                  <div className="absolute inset-0 blur-3xl opacity-50 animate-pulse" style={{ backgroundColor: rankUp.color }} />
                  <div className="relative z-10 w-full h-full rounded-full flex items-center justify-center border-4 border-white/20" style={{ backgroundColor: `${rankUp.color}10` }}>
@@ -1037,15 +1038,15 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               </div>
 
               <div className="mb-10">
-                 <div className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40 mb-3">Nivel Alcanzado</div>
-                 <h2 className="text-4xl font-black text-white italic uppercase tracking-tighter mb-4">Rango: {rankUp.rank}</h2>
+                 <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] opacity-40 mb-3">Nivel Alcanzado</div>
+                 <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase tracking-tighter mb-4">Rango: {rankUp.rank}</h2>
                  <div className="h-px w-20 bg-white/20 mx-auto mb-6" />
                  <p className="text-white/60 font-medium">Has desbloqueado el siguiente nivel de maestría en <br/> <span className="text-white font-bold">{rankUp.pillarTitle}</span></p>
               </div>
 
               <button 
                 onClick={() => setRankUp(null)}
-                className="px-12 py-5 rounded-2xl bg-white text-black font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all w-full"
+                className="px-6 md:px-12 py-5 rounded-2xl bg-white text-black font-black uppercase text-xs tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all w-full"
               >
                  Continuar
               </button>

@@ -284,12 +284,12 @@ export default function SupermercadoCaos({
     return (
       <div className="min-h-screen w-full bg-[#0a0a1a] flex flex-col items-center justify-center p-6 text-white">
         {/* Big icon */}
-        <div className="text-8xl mb-4 animate-bounce">🛒</div>
+        <div className="text-5xl md:text-8xl mb-4 animate-bounce">🛒</div>
 
         <h1 className="text-3xl font-black uppercase tracking-widest text-center text-purple-300 mb-2">
           Supermercado
         </h1>
-        <h2 className="text-4xl font-black uppercase tracking-widest text-center text-white mb-6">
+        <h2 className="text-2xl md:text-4xl font-black uppercase tracking-widest text-center text-white mb-6">
           del Caos
         </h2>
 
@@ -371,7 +371,7 @@ export default function SupermercadoCaos({
 
     return (
       <div className="min-h-screen w-full bg-[#0a0a1a] flex flex-col items-center justify-center p-6 text-white">
-        <div className="text-7xl mb-3">{emoji}</div>
+        <div className="text-4xl md:text-7xl mb-3">{emoji}</div>
 
         <h2 className="text-3xl font-black uppercase tracking-widest text-purple-300 mb-1">
           ¡Resultado!
@@ -386,7 +386,7 @@ export default function SupermercadoCaos({
             background: 'rgba(255,255,255,0.05)',
           }}
         >
-          <span className="text-4xl font-black leading-none">{finalScore}</span>
+          <span className="text-2xl md:text-4xl font-black leading-none">{finalScore}</span>
           <span className="text-xs font-bold text-white/50 uppercase tracking-widest">puntos</span>
         </div>
 
@@ -678,7 +678,7 @@ export default function SupermercadoCaos({
 
                 {/* Emoji */}
                 <span
-                  className="text-4xl"
+                  className="text-2xl md:text-4xl"
                   style={{ marginTop: item.spike_flash ? 16 : 0 }}
                 >
                   {item.emoji}

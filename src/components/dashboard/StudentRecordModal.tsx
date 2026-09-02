@@ -55,7 +55,7 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
     <div className="fixed inset-0 z-[10000] flex items-center justify-center p-6 animate-in fade-in duration-500">
       <div className="absolute inset-0 bg-[#0A0118]/90 backdrop-blur-3xl" onClick={onClose} />
       
-      <div className={`relative z-10 w-full max-w-3xl rounded-[60px] border p-12 overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.5)] ${
+      <div className={`relative z-10 w-full max-w-3xl rounded-[32px] md:rounded-[60px] border p-6 md:p-12 overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.5)] ${
         isDark ? 'bg-white/[0.03] border-white/10 text-white' : 'bg-white border-slate-100 text-slate-900'
       }`}>
         {/* Header Decor */}
@@ -63,14 +63,14 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
         
         <div className="flex justify-between items-start mb-12 relative z-10">
           <div className="flex items-center gap-8">
-            <div className={`w-24 h-24 rounded-[30px] flex items-center justify-center text-4xl font-black ${
+            <div className={`w-24 h-24 rounded-[30px] flex items-center justify-center text-2xl md:text-4xl font-black ${
               isDark ? 'bg-[#FF8C00]/20 text-[#FF8C00]' : 'bg-[#FF8C00] text-white'
             }`}>
               {studentName[0]}
             </div>
             <div>
               <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FF8C00] mb-2">Expediente Académico</div>
-              <h2 className="text-4xl font-black tracking-tighter italic uppercase">{studentName}</h2>
+              <h2 className="text-2xl md:text-4xl font-black tracking-tighter italic uppercase">{studentName}</h2>
               <div className="flex items-center gap-4 mt-4 opacity-50 font-bold text-xs uppercase tracking-widest">
                 <ShieldCheck size={16} className="text-[#42E8E0]" /> Estudiante Certificado
               </div>

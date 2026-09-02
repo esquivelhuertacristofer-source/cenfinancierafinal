@@ -65,11 +65,11 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
 
   if (!currentNode) {
     return (
-      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-12">
+      <div className="w-full h-full min-h-[400px] flex flex-col items-center justify-center gap-8 p-6 md:p-12">
         <p className="text-white/40 text-xl font-medium text-center">Este escenario no tiene contenido disponible.</p>
         <button
           onClick={handleFinish}
-          className="px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.4em] hover:scale-105 transition-all"
+          className="px-6 md:px-16 py-6 bg-white text-black rounded-full font-black uppercase text-xs tracking-[0.2em] md:tracking-[0.4em] hover:scale-105 transition-all"
         >
           Continuar
         </button>
@@ -80,7 +80,7 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
   return (
     <div className="w-full h-full min-h-[600px] flex flex-col relative z-10">
       
-      <main className="flex-1 max-w-7xl mx-auto w-full p-4 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <main className="flex-1 max-w-7xl mx-auto w-full p-4 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
          
          {/* PERSONAJE */}
          <section className="lg:col-span-5 relative">
@@ -109,9 +109,9 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                      initial={{ y: 50, opacity: 0 }}
                      animate={{ y: 0, opacity: 1 }}
                      exit={{ y: -50, opacity: 0 }}
-                     className="absolute bottom-8 left-8 right-8 p-6 md:p-8 bg-blue-600/20 backdrop-blur-3xl border border-blue-400/30 rounded-[40px] shadow-2xl"
+                     className="absolute bottom-8 left-8 right-8 p-6 md:p-8 bg-blue-600/20 backdrop-blur-3xl border border-blue-400/30 rounded-[24px] md:rounded-[40px] shadow-2xl"
                    >
-                      <div className="text-[10px] font-black text-blue-400 uppercase tracking-[0.4em] mb-3 flex items-center gap-2">
+                      <div className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] md:tracking-[0.4em] mb-3 flex items-center gap-2">
                          <Award size={14} /> Impacto de Decisión
                       </div>
                       <p className="text-lg md:text-xl text-white font-black italic leading-tight tracking-tight">"{lastConsequence}"</p>
@@ -127,7 +127,7 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                <motion.div 
                  initial={{ opacity: 0 }}
                  animate={{ opacity: 1 }}
-                 className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.5em] text-[#FF8C00]"
+                 className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em] text-[#FF8C00]"
                >
                   {currentNode.es_final ? 'Final de Misión' : 'Secuencia de Decisión'}
                </motion.div>
@@ -147,7 +147,7 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                  <motion.div 
                    initial={{ scale: 0.9, opacity: 0 }}
                    animate={{ scale: 1, opacity: 1 }}
-                   className="p-10 bg-[#FF8C00]/10 border-2 border-[#FF8C00]/30 rounded-[50px] space-y-4"
+                   className="p-5 md:p-10 bg-[#FF8C00]/10 border-2 border-[#FF8C00]/30 rounded-[28px] md:rounded-[50px] space-y-4"
                  >
                     <div className="flex items-center gap-4 text-[#FF8C00]">
                        <BookOpen size={32} />
@@ -169,10 +169,10 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                      whileHover={{ x: 15, backgroundColor: "rgba(255,255,255,1)", color: "#000" }}
                      whileTap={{ scale: 0.98 }}
                      onClick={() => handleChoice(opcion.id)}
-                     className="w-full p-8 md:p-10 bg-white/[0.03] border border-white/10 rounded-[40px] text-left transition-colors group flex justify-between items-center relative overflow-hidden"
+                     className="w-full p-8 md:p-10 bg-white/[0.03] border border-white/10 rounded-[24px] md:rounded-[40px] text-left transition-colors group flex justify-between items-center relative overflow-hidden"
                    >
                       <div className="relative z-10 flex flex-col">
-                         <span className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40 group-hover:opacity-40 group-hover:text-black mb-2">DECISIÓN_ID_{idx + 1}</span>
+                         <span className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] opacity-40 group-hover:opacity-40 group-hover:text-black mb-2">DECISIÓN_ID_{idx + 1}</span>
                          <span className="text-2xl md:text-3xl font-black italic uppercase tracking-tighter leading-none">{opcion.texto}</span>
                       </div>
                       <ChevronRight size={32} className="relative z-10" />
@@ -183,14 +183,14 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={handleFinish}
-                    className="w-full py-10 bg-white text-black rounded-[50px] font-black text-xs uppercase tracking-[0.8em] shadow-[0_20px_80px_rgba(255,255,255,0.2)] flex items-center justify-center gap-4 group"
+                    className="w-full py-10 bg-white text-black rounded-[28px] md:rounded-[50px] font-black text-xs uppercase tracking-[0.8em] shadow-[0_20px_80px_rgba(255,255,255,0.2)] flex items-center justify-center gap-4 group"
                  >
                     Finalizar Certificación <Sparkles size={20} className="group-hover:rotate-12 transition-transform" />
                  </motion.button>
                )}
             </div>
 
-            <footer className="flex items-center gap-12 pt-8 border-t border-white/5">
+            <footer className="flex items-center gap-6 md:gap-12 pt-8 border-t border-white/5">
                <div className="flex flex-col">
                   <span className="text-[10px] font-black text-white/20 uppercase tracking-widest mb-1 italic">Misión</span>
                   <span className="text-xs font-black text-white/50 uppercase italic tracking-tighter">{data.unit_title}</span>

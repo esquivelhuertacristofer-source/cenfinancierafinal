@@ -121,7 +121,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
       <div style={{ backgroundColor: acento, opacity: 0.1 }} className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none" />
       
-      <main className="flex-1 max-w-7xl mx-auto w-full p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
+      <main className="flex-1 max-w-7xl mx-auto w-full p-8 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 relative z-10">
         
         {/* CONTROLES */}
         <section className="lg:col-span-5 space-y-12">
@@ -132,7 +132,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                 className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full"
               >
                  <Zap size={14} style={{ color: acento }} />
-                 <span className="text-[10px] font-black uppercase tracking-[0.3em]">{data.tipo} DIAMOND</span>
+                 <span className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em]">{data.tipo} DIAMOND</span>
               </motion.div>
               <motion.h1 
                 initial={{ y: 20, opacity: 0 }}
@@ -144,7 +144,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
               <p className="text-xl text-white/40 font-medium leading-relaxed max-w-md">{data.descripcion}</p>
            </header>
 
-           <div className="space-y-8 p-10 bg-white/[0.02] border border-white/10 rounded-[60px] backdrop-blur-3xl">
+           <div className="space-y-8 p-5 md:p-10 bg-white/[0.02] border border-white/10 rounded-[32px] md:rounded-[60px] backdrop-blur-3xl">
               {(data.inputs || []).map((input, idx) => (
                 <motion.div 
                   key={input.id} 
@@ -219,7 +219,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
              whileTap={{ scale: 0.95 }}
              onClick={() => setIsCompleted(true)}
              style={{ backgroundColor: acento, boxShadow: `0 20px 80px ${acento}4d` }}
-             className="w-full py-8 text-black rounded-[36px] font-black text-xs uppercase tracking-[0.5em] flex items-center justify-center gap-4 group"
+             className="w-full py-8 text-black rounded-[36px] font-black text-xs uppercase tracking-[0.25em] md:tracking-[0.5em] flex items-center justify-center gap-4 group"
            >
               Finalizar Simulación <ArrowRight className="group-hover:translate-x-2 transition-transform" />
            </motion.button>
@@ -227,7 +227,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
 
         {/* VISUALIZACIÓN DE DATOS */}
         <section className="lg:col-span-7 space-y-8">
-           <div className="bg-white/[0.01] border border-white/5 rounded-[80px] p-12 relative overflow-hidden flex flex-col min-h-[500px]">
+           <div className="bg-white/[0.01] border border-white/5 rounded-[80px] p-6 md:p-12 relative overflow-hidden flex flex-col min-h-[500px]">
               <div style={{ background: `linear-gradient(to top right, ${acento}0d, transparent 60%)` }} className="absolute inset-0 pointer-events-none" />
               
               <div className="relative z-10 flex flex-col h-full">
@@ -238,10 +238,10 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                  <div className="flex flex-wrap justify-between items-center gap-4 mb-10">
                     <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full">
                        <BarChart3 size={16} style={{ color: acento }} />
-                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">{data.output_label}</span>
+                       <span className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/40">{data.output_label}</span>
                     </div>
                     {ejeLabel && (
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/25">
+                      <span className="text-[10px] font-black uppercase tracking-[0.16em] md:tracking-[0.3em] text-white/25">
                         según {ejeLabel}
                       </span>
                     )}
@@ -318,7 +318,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className={`p-10 rounded-[50px] border-2 backdrop-blur-3xl shadow-2xl
+                  className={`p-5 md:p-10 rounded-[28px] md:rounded-[50px] border-2 backdrop-blur-3xl shadow-2xl
                     ${escenarioTipo === 'exito' ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' :
                       escenarioTipo === 'advertencia' ? 'bg-amber-500/10 border-amber-500/30 text-amber-400' :
                       escenarioTipo === 'peligro' ? 'bg-rose-500/10 border-rose-500/30 text-rose-400' :
@@ -329,7 +329,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                          <Info size={32} />
                       </div>
                       <div className="space-y-2">
-                         <div className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Analítica Diamond 2026</div>
+                         <div className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] opacity-40">Analítica Diamond 2026</div>
                          <p className="text-3xl font-black italic uppercase leading-tight tracking-tighter">{activeScenario.mensaje}</p>
                       </div>
                    </div>
@@ -353,12 +353,12 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
              >
                 <X size={24} />
              </button>
-             <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-20 text-center space-y-12">
-                <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} style={{ backgroundColor: acento, boxShadow: `0 0 80px ${acento}80` }} className="w-32 h-32 text-black rounded-[40px] flex items-center justify-center mx-auto">
+             <div className="max-w-xl w-full bg-white/[0.03] border border-white/10 rounded-[80px] p-8 md:p-20 text-center space-y-12">
+                <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} style={{ backgroundColor: acento, boxShadow: `0 0 80px ${acento}80` }} className="w-32 h-32 text-black rounded-[24px] md:rounded-[40px] flex items-center justify-center mx-auto">
                    <CheckCircle2 size={64} />
                 </motion.div>
                 <div className="space-y-4">
-                   <h2 className="text-6xl font-black italic tracking-tighter uppercase">Simulación Validada</h2>
+                   <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase">Simulación Validada</h2>
                    <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">"{data.titulo}"</span></p>
                 </div>
                 <button
@@ -367,7 +367,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                     hasCompletedRef.current = true;
                     onComplete && onComplete(simulationScore);
                   }}
-                  className="w-full py-10 bg-white text-black rounded-[40px] font-black text-xs uppercase tracking-[0.6em] hover:scale-105 transition-all"
+                  className="w-full py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 transition-all"
                 >
                    Finalizar Misión
                 </button>

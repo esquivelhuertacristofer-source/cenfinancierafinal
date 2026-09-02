@@ -41,10 +41,10 @@ export default function DiamondConceptCarousel() {
         <div className="absolute inset-0 bg-[#05010D]/90" />
       </div>
 
-      <div className="w-full max-w-[1800px] mx-auto px-10 relative z-10 flex flex-col items-center">
+      <div className="w-full max-w-[1800px] mx-auto px-5 md:px-10 relative z-10 flex flex-col items-center">
         
         {/* Filter - Reposicionado con más aire */}
-        <div className="flex gap-2 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-3xl mb-16 animate-in slide-in-from-top duration-1000">
+        <div className="flex gap-2 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-3xl mb-8 md:mb-16 animate-in slide-in-from-top duration-1000">
           {['all', 'ahorro', 'inversion', 'gasto', 'banco', 'emprendimiento'].map((cat) => (
             <button
               key={cat}
@@ -100,7 +100,7 @@ export default function DiamondConceptCarousel() {
                     className="absolute"
                     style={{ transformStyle: 'preserve-3d' }}
                   >
-                    <div className={`w-[480px] aspect-[4/6] bg-black rounded-[40px] border-2 ${isCenter ? 'border-white' : 'border-white/5'} overflow-hidden shadow-2xl relative group`}>
+                    <div className={`w-[480px] aspect-[4/6] bg-black rounded-[24px] md:rounded-[40px] border-2 ${isCenter ? 'border-white' : 'border-white/5'} overflow-hidden shadow-2xl relative group`}>
                       <img 
                         src={card.image} 
                         className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105" 
@@ -137,7 +137,7 @@ export default function DiamondConceptCarousel() {
               <div className="text-[#FF8C00] font-black uppercase text-[10px] tracking-[0.5em] mb-4">
                 CONCEPT • {currentCard.category}
               </div>
-              <h3 className="text-6xl font-black text-white italic uppercase tracking-tighter mb-6">
+              <h3 className="text-4xl md:text-6xl font-black text-white italic uppercase tracking-tighter mb-6">
                 {currentCard.title}
               </h3>
               <p className="text-xl text-white/40 font-medium leading-relaxed italic max-w-xl">

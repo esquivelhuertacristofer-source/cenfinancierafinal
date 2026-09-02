@@ -150,9 +150,9 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
       </div>
 
       {/* HUD DE ESTADO */}
-      <div className="absolute top-0 left-0 right-0 flex justify-between items-start z-50 p-12">
+      <div className="absolute top-0 left-0 right-0 flex justify-between items-start z-50 p-6 md:p-12">
          <div className="space-y-4">
-            <h1 className="text-7xl font-black text-white italic uppercase tracking-tighter drop-shadow-2xl">Misión: Prioridad Vital</h1>
+            <h1 className="text-4xl md:text-7xl font-black text-white italic uppercase tracking-tighter drop-shadow-2xl">Misión: Prioridad Vital</h1>
             
             <AnimatePresence mode="wait">
               {lastFeedback && (
@@ -173,16 +173,16 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
          </div>
 
          <div className="flex gap-8">
-            <div className={`p-8 border rounded-[40px] backdrop-blur-3xl text-center min-w-[240px] transition-all duration-500
+            <div className={`p-8 border rounded-[24px] md:rounded-[40px] backdrop-blur-3xl text-center min-w-[240px] transition-all duration-500
                ${budget < 40 ? 'bg-red-500/20 border-red-500 shadow-[0_0_40px_rgba(239,68,68,0.4)] animate-pulse' : 'bg-white/5 border-white/10'}`}>
-               <div className="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] mb-2">Presupuesto</div>
-               <div className="text-6xl font-black text-white">${budget}</div>
+               <div className="text-[10px] font-black text-white/40 uppercase tracking-[0.16em] md:tracking-[0.3em] mb-2">Presupuesto</div>
+               <div className="text-4xl md:text-6xl font-black text-white">${budget}</div>
             </div>
          </div>
       </div>
 
       {/* ÁREA DE JUEGO */}
-      <div className="relative w-full max-w-6xl aspect-video mt-20">
+      <div className="relative w-full max-w-6xl aspect-video mt-10 md:mt-20">
          <AnimatePresence>
             {items.map(item => (
               <motion.button
@@ -194,7 +194,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => handleScan(item)}
                 style={{ left: `${item.pos.x}%`, top: `${item.pos.y}%` }}
-                className={`absolute p-10 rounded-[45px] border-2 backdrop-blur-3xl transition-all shadow-2xl cursor-pointer flex flex-col items-center gap-3
+                className={`absolute p-5 md:p-10 rounded-[45px] border-2 backdrop-blur-3xl transition-all shadow-2xl cursor-pointer flex flex-col items-center gap-3
                   ${item.type === 'need' 
                     ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400 shadow-emerald-500/20' 
                     : 'bg-pink-500/10 border-pink-500/40 text-pink-400 shadow-pink-500/20'}
@@ -213,7 +213,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-20"
+            className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex items-center justify-center p-8 md:p-20"
           >
              <button
                onClick={handleClose}
@@ -232,18 +232,18 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
                 </motion.div>
                 
                 <div className="space-y-4">
-                  <h2 className="text-7xl font-black text-white italic uppercase tracking-tighter leading-none">Misión<br/><span className="text-emerald-400 text-5xl tracking-normal">Completada</span></h2>
+                  <h2 className="text-4xl md:text-7xl font-black text-white italic uppercase tracking-tighter leading-none">Misión<br/><span className="text-emerald-400 text-3xl md:text-5xl tracking-normal">Completada</span></h2>
                   <p className="text-xl text-white/30 font-medium italic">Análisis de Prioridades Finalizado.</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 w-full max-w-2xl mx-auto">
-                   <div className="p-8 bg-white/5 border border-white/10 rounded-[40px] backdrop-blur-md">
-                      <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.5em] mb-2">Tu Calificación</div>
+                   <div className="p-8 bg-white/5 border border-white/10 rounded-[24px] md:rounded-[40px] backdrop-blur-md">
+                      <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.25em] md:tracking-[0.5em] mb-2">Tu Calificación</div>
                       <div className={`text-3xl font-black italic uppercase ${getRank().color}`}>{getRank().title}</div>
                    </div>
-                   <div className="p-8 bg-white/5 border border-white/10 rounded-[40px] backdrop-blur-md">
-                      <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.5em] mb-2">Capital Salvado</div>
-                      <div className="text-5xl font-black text-white">${budget}</div>
+                   <div className="p-8 bg-white/5 border border-white/10 rounded-[24px] md:rounded-[40px] backdrop-blur-md">
+                      <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.25em] md:tracking-[0.5em] mb-2">Capital Salvado</div>
+                      <div className="text-3xl md:text-5xl font-black text-white">${budget}</div>
                    </div>
                 </div>
              </div>

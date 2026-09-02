@@ -254,7 +254,7 @@ export default function PillarPageV19({ params }: { params: any }) {
         </div>
       </nav>
 
-      <header className="p-hero max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-12 lg:gap-24 items-center">
+      <header className="p-hero max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-6 md:gap-12 lg:gap-24 items-center">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none" style={{ background: `radial-gradient(circle at center, ${cfg.accent} 0%, transparent 70%)` }} />
         <img src={cfg.image} className="hero-img" alt="" />
         
@@ -316,7 +316,7 @@ export default function PillarPageV19({ params }: { params: any }) {
             <div className="flex items-center gap-3 font-black text-xs uppercase tracking-widest mb-6 text-white/80">
               <Award size={24} /> Desafío Supremo
             </div>
-            <h3 className="text-6xl font-black tracking-tighter mb-6 text-white">Proyecto Integrador</h3>
+            <h3 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-white">Proyecto Integrador</h3>
             <p className="text-xl font-bold text-white/90 leading-relaxed">
               {isCompleted 
                 ? '¡Certificación disponible! Aplica todo lo aprendido en el simulador de vida real.' 
@@ -341,12 +341,12 @@ export default function PillarPageV19({ params }: { params: any }) {
       {/* PROJECT MODAL */}
       {showProject && (
         <div className="fixed inset-0 z-[500] bg-[#011126]/90 backdrop-filter blur-2xl flex items-center justify-center p-8 animate-in fade-in duration-500" onClick={() => setShowProject(false)}>
-          <div className="w-full max-w-4xl bg-[#011C40] border border-white/10 rounded-[4rem] p-16 relative overflow-hidden" onClick={e => e.stopPropagation()}>
+          <div className="w-full max-w-4xl bg-[#011C40] border border-white/10 rounded-[2rem] md:rounded-[4rem] p-8 md:p-16 relative overflow-hidden" onClick={e => e.stopPropagation()}>
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF8C00] opacity-[0.05] blur-[100px]" />
             <button className="absolute top-10 right-10 text-white/30 hover:text-white" onClick={() => setShowProject(false)}><X size={40} /></button>
             <div className="text-[#FF8C00] font-black uppercase text-xs tracking-[0.5em] mb-8">Misión Integradora • {pillar.title}</div>
-            <h2 className="text-7xl font-black tracking-tighter mb-12 text-white">Certificación de Pilar</h2>
-            <div className="space-y-10 text-2xl font-medium text-white/60 leading-relaxed mb-16">
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-12 text-white">Certificación de Pilar</h2>
+            <div className="space-y-10 text-2xl font-medium text-white/60 leading-relaxed mb-8 md:mb-16">
               <p>Has dominado el marco teórico. Ahora es momento de la práctica clínica:</p>
               <ul className="space-y-6">
                 <li className="flex gap-4"><div className="w-2 h-2 bg-[#FF8C00] rounded-full mt-3" /><span>Diseña un plan de {pillar.shortTitle} basado en el caso adjunto.</span></li>
@@ -371,7 +371,7 @@ export default function PillarPageV19({ params }: { params: any }) {
             <X size={48} />
           </button>
           
-          <div className="w-full max-w-6xl aspect-video rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.5)]" onClick={e => e.stopPropagation()}>
+          <div className="w-full max-w-6xl aspect-video rounded-[1.75rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.5)]" onClick={e => e.stopPropagation()}>
             <iframe
               src={`${activeVideo}?autoplay=1&rel=0&modestbranding=1`}
               className="w-full h-full"

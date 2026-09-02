@@ -243,11 +243,11 @@ export default function BancoDelTiempo({
         </div>
 
         <div className="relative z-10 text-center space-y-8">
-          <div className="text-8xl animate-bounce">⏰</div>
+          <div className="text-5xl md:text-8xl animate-bounce">⏰</div>
           <h2 className="text-white font-black text-3xl uppercase tracking-widest">
             ¡Viajando en el tiempo!
           </h2>
-          <div className="text-purple-300 font-black text-7xl tracking-widest tabular-nums animate-pulse">
+          <div className="text-purple-300 font-black text-4xl md:text-7xl tracking-widest tabular-nums animate-pulse">
             {travelYear}
           </div>
           <p className="text-white/50 font-bold text-lg uppercase tracking-widest">
@@ -288,7 +288,7 @@ export default function BancoDelTiempo({
         <div className="relative z-10 max-w-lg w-full text-center space-y-8">
           {/* Icon */}
           <div className="flex justify-center">
-            <div className="w-28 h-28 rounded-3xl bg-purple-700/40 border border-purple-500/30 flex items-center justify-center text-6xl animate-pulse">
+            <div className="w-28 h-28 rounded-3xl bg-purple-700/40 border border-purple-500/30 flex items-center justify-center text-4xl md:text-6xl animate-pulse">
               🕰️
             </div>
           </div>
@@ -383,7 +383,7 @@ export default function BancoDelTiempo({
         <div className="relative z-10 max-w-2xl w-full space-y-6 py-6">
           {/* Header */}
           <div className="text-center space-y-3">
-            <div className="text-7xl">{finalScore >= 70 ? '🏆' : finalScore >= 40 ? '🎖️' : '💡'}</div>
+            <div className="text-4xl md:text-7xl">{finalScore >= 70 ? '🏆' : finalScore >= 40 ? '🎖️' : '💡'}</div>
             <h1 className="text-white font-black text-4xl md:text-5xl uppercase tracking-widest leading-tight">
               {finalScore >= 70 ? '¡Genio Financiero!' : finalScore >= 40 ? '¡Buen intento!' : 'Aprendiste algo'}
             </h1>
@@ -410,7 +410,7 @@ export default function BancoDelTiempo({
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <span
-                  className={`font-black text-4xl ${
+                  className={`font-black text-2xl md:text-4xl ${
                     finalScore >= 70
                       ? 'text-emerald-300'
                       : finalScore >= 40
@@ -697,7 +697,7 @@ export default function BancoDelTiempo({
                         </span>
                         <div className="text-white font-black text-xl mt-1">{option.label}</div>
                       </div>
-                      <div className="text-4xl">{getMultiplierEmoji(option.multiplier)}</div>
+                      <div className="text-2xl md:text-4xl">{getMultiplierEmoji(option.multiplier)}</div>
                     </div>
 
                     <div className="flex items-center gap-4">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { useHasMounted } from "@/lib/useHasMounted";
@@ -81,7 +82,7 @@ export default function TopAlumnos({
 
   return (
     <div
-      className={`rounded-[4rem] p-12 flex flex-col h-full relative overflow-hidden group/main animate-in fade-in slide-in-from-right-8 duration-1000 shadow-2xl border noise-texture transition-colors ${
+      className={`rounded-[2rem] md:rounded-[4rem] p-6 md:p-12 flex flex-col h-full relative overflow-hidden group/main animate-in fade-in slide-in-from-right-8 duration-1000 shadow-2xl border noise-texture transition-colors ${
         isDark ? "bg-[#FF8C00] border-white/20" : "bg-[#FF8C00] border-[#FF8C00]"
       }`}
     >
@@ -122,7 +123,7 @@ export default function TopAlumnos({
           topList.map((alumno, i) => (
             <div
               key={i}
-              className="flex items-center gap-6 rounded-[2.5rem] p-5 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-white/10 group/item relative overflow-hidden"
+              className="flex items-center gap-6 rounded-[1.5rem] md:rounded-[2.5rem] p-5 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-white/10 group/item relative overflow-hidden"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="relative">
@@ -159,7 +160,7 @@ export default function TopAlumnos({
               </div>
 
               <div className="text-right">
-                <p className="text-4xl font-black text-white leading-none tracking-tighter">{alumno.score}</p>
+                <p className="text-2xl md:text-4xl font-black text-white leading-none tracking-tighter">{alumno.score}</p>
                 <p className="text-[9px] font-black text-white/40 uppercase tracking-widest mt-1">XP</p>
               </div>
             </div>
@@ -167,13 +168,13 @@ export default function TopAlumnos({
         )}
       </div>
 
-      <button
+      <Link href="/dashboard/teacher/alumnos"
         aria-label="Ver ranking completo de alumnos"
-        className="w-full mt-10 py-6 bg-white/10 hover:bg-white text-white hover:text-[#FF8C00] font-black rounded-[2.5rem] border border-white/20 text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-xl backdrop-blur-xl"
+        className="w-full mt-10 py-6 bg-white/10 hover:bg-white text-white hover:text-[#FF8C00] font-black rounded-[1.5rem] md:rounded-[2.5rem] border border-white/20 text-[12px] uppercase tracking-[0.3em] transition-all duration-700 flex items-center justify-center gap-4 group/btn shadow-xl backdrop-blur-xl"
       >
         <span>Auditores Completos</span>
         <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-3 transition-transform" aria-hidden="true" />
-      </button>
+      </Link>
     </div>
   );
 }

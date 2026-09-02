@@ -146,7 +146,7 @@ export default function Sidebar({
 
         {/* Active Context Badge */}
         <div className="relative z-10 px-6 mb-10">
-          <button className="w-full flex items-center gap-4 rounded-[1.75rem] bg-white/5 backdrop-blur-2xl border border-white/10 px-5 py-4 shadow-inner group transition-all duration-500 hover:bg-white/10 hover:border-white/20 text-left">
+          <Link href="/dashboard/teacher/alumnos" className="w-full flex items-center gap-4 rounded-[1.75rem] bg-white/5 backdrop-blur-2xl border border-white/10 px-5 py-4 shadow-inner group transition-all duration-500 hover:bg-white/10 hover:border-white/20 text-left">
             <div className="relative h-8 w-8 shrink-0">
               <div className="absolute inset-0 bg-[#FF8C00] rounded-xl blur-lg opacity-40 group-hover:opacity-100 transition-opacity" />
               <div className="relative h-full w-full rounded-xl bg-gradient-to-br from-[#FF8C00] to-[#e67e00] flex items-center justify-center text-white shadow-xl">
@@ -162,7 +162,7 @@ export default function Sidebar({
                 <ChevronDown className="w-3.5 h-3.5 text-white/20 group-hover:text-white transition-colors" />
               </div>
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Primary Navigation */}
@@ -197,7 +197,7 @@ export default function Sidebar({
 
         {/* Footer / Profile */}
         <div className="relative z-10 p-6 mt-auto">
-          <div className="mb-6 p-1 bg-white/5 rounded-[2.5rem] flex items-center gap-4 pr-6 border border-white/5">
+          <div className="mb-6 p-1 bg-white/5 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center gap-4 pr-6 border border-white/5">
             <div className="h-12 w-12 rounded-[2rem] bg-gradient-to-tr from-white/10 to-white/20 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white font-black text-lg shadow-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               {teacherName?.charAt(0)?.toUpperCase() || "T"}
@@ -333,7 +333,7 @@ export default function Sidebar({
 
             {/* Footer / Profile */}
             <div className="relative z-10 p-6 mt-auto">
-              <div className="mb-6 p-1 bg-white/5 rounded-[2.5rem] flex items-center gap-4 pr-6 border border-white/5">
+              <div className="mb-6 p-1 bg-white/5 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center gap-4 pr-6 border border-white/5">
                 <div className="h-11 w-11 rounded-[1.75rem] bg-gradient-to-tr from-white/10 to-white/20 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white font-black text-lg shadow-2xl relative overflow-hidden">
                   {teacherName?.charAt(0)?.toUpperCase() || "T"}
                 </div>

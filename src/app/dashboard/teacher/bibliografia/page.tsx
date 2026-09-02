@@ -156,12 +156,12 @@ export default function BibliografiaPage() {
     <div className="flex min-h-screen bg-[#F4F1EA] font-['Epilogue'] text-[#011C40]">
       <Sidebar teacherName="Profesor CEN" groupId="MASTER-REF" />
 
-      <main className="flex-1 md:ml-[260px] p-8 md:p-12 space-y-12 relative">
+      <main className="flex-1 md:ml-[260px] p-8 md:p-12 space-y-8 md:space-y-12 relative">
         
         {/* HEADER SECTION */}
-        <div className="relative overflow-hidden rounded-[3.5rem] bg-[#011C40] p-16 shadow-[0_40px_80px_rgba(1,28,64,0.3)] animate-in fade-in slide-in-from-top-12 duration-700">
+        <div className="relative overflow-hidden rounded-[1.75rem] md:rounded-[3.5rem] bg-[#011C40] p-8 md:p-16 shadow-[0_40px_80px_rgba(1,28,64,0.3)] animate-in fade-in slide-in-from-top-12 duration-700">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF8C00]/20 rounded-full blur-[140px] animate-pulse" />
-          <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-12">
+          <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-6 md:gap-12">
             <div className="space-y-8 flex-1 text-center xl:text-left">
               <div className="flex items-center justify-center xl:justify-start gap-4">
                 <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20">
@@ -183,7 +183,7 @@ export default function BibliografiaPage() {
                 <input 
                   type="text" 
                   placeholder="Búsqueda Inteligente..."
-                  className="w-full pl-16 pr-8 py-7 bg-white/5 border border-white/10 rounded-[2.5rem] text-white font-bold focus:ring-4 focus:ring-[#FF8C00]/20 focus:border-[#FF8C00] outline-none transition-all backdrop-blur-xl"
+                  className="w-full pl-16 pr-8 py-7 bg-white/5 border border-white/10 rounded-[1.5rem] md:rounded-[2.5rem] text-white font-bold focus:ring-4 focus:ring-[#FF8C00]/20 focus:border-[#FF8C00] outline-none transition-all backdrop-blur-xl"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -193,7 +193,7 @@ export default function BibliografiaPage() {
         </div>
 
         {/* CONTROLS & FILTERS */}
-        <div className="sticky top-8 z-30 bg-[#F4F1EA]/80 backdrop-blur-2xl p-6 rounded-[3rem] border border-white shadow-xl flex flex-wrap items-center justify-between gap-8">
+        <div className="sticky top-8 z-30 bg-[#F4F1EA]/80 backdrop-blur-2xl p-6 rounded-[1.75rem] md:rounded-[3rem] border border-white shadow-xl flex flex-wrap items-center justify-between gap-8">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-[#011C40] text-white rounded-2xl">
               <Filter className="w-5 h-5" />
@@ -236,11 +236,11 @@ export default function BibliografiaPage() {
         </div>
 
         {/* RESOURCES GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 md:gap-10">
           {filteredResources.map((resource, i) => (
             <div 
               key={resource.id}
-              className="group relative bg-white rounded-[3.5rem] p-12 border border-white shadow-[0_30px_60px_rgba(0,0,0,0.03)] hover:shadow-[0_60px_100px_rgba(1,28,64,0.1)] transition-all duration-700 hover:-translate-y-4 flex flex-col animate-in fade-in slide-in-from-bottom-12 fill-mode-backwards"
+              className="group relative bg-white rounded-[1.75rem] md:rounded-[3.5rem] p-6 md:p-12 border border-white shadow-[0_30px_60px_rgba(0,0,0,0.03)] hover:shadow-[0_60px_100px_rgba(1,28,64,0.1)] transition-all duration-700 hover:-translate-y-4 flex flex-col animate-in fade-in slide-in-from-bottom-12 fill-mode-backwards"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {resource.isPremium && (

@@ -152,7 +152,7 @@ export default function LibraryPage() {
         </div>
       </nav>
 
-      <header className="lib-header-content mb-20">
+      <header className="lib-header-content mb-10 md:mb-20">
         <h1 className="lib-h1">Biblioteca</h1>
         <p className="lib-p">
           Explora los fundamentos técnicos y estratégicos de cada unidad del temario. Estos contenidos son la base para tus evaluaciones en la Arena.
@@ -160,12 +160,12 @@ export default function LibraryPage() {
       </header>
 
       {/* 3D CONCEPT CAROUSEL (MEMORAMA) */}
-      <section className="mb-20">
+      <section className="mb-10 md:mb-20">
         <DiamondConceptCarousel />
       </section>
 
       <div className="search-container">
-        <div className="section-title mb-16 flex items-center gap-6">
+        <div className="section-title mb-8 md:mb-16 flex items-center gap-6">
           <div className="h-px flex-1 bg-white/5" />
           <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/20">Explorador de Temario</span>
           <div className="h-px flex-1 bg-white/5" />
@@ -203,9 +203,9 @@ export default function LibraryPage() {
           <div className="modal-content custom-scrollbar" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setSelectedUnit(null)}><X size={32} /></button>
 
-            <div className="mb-20">
+            <div className="mb-10 md:mb-20">
               <div className="text-[#FF8C00] font-black uppercase text-xs tracking-[0.5em] mb-4">Temario CEN • {selectedUnit.code}</div>
-              <h2 className="text-7xl font-black tracking-tighter mb-8 leading-[0.9]">{selectedUnit.title}</h2>
+              <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9]">{selectedUnit.title}</h2>
               <div className="h-2 w-32 bg-[#FF8C00] rounded-full" />
             </div>
 
@@ -252,7 +252,7 @@ export default function LibraryPage() {
             {selectedUnit.theory?.glossary && (
               <div className="theory-block">
                 <div className="theory-label"><BookMarked size={20} /> Glosario Técnico</div>
-                <div className="bg-[#011126] border border-white/10 rounded-[40px] p-12 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                <div className="bg-[#011126] border border-white/10 rounded-[24px] md:rounded-[40px] p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
                   {Object.entries(selectedUnit.theory.glossary).map(([term, def]: [string, any], idx: number) => (
                     <div key={idx}>
                       <div className="text-[#FF8C00] font-black text-xl mb-2">{term}</div>
@@ -263,9 +263,9 @@ export default function LibraryPage() {
               </div>
             )}
 
-            <div className="mt-20 pt-20 border-t border-white/10 flex justify-between items-center">
+            <div className="mt-10 md:mt-20 pt-20 border-t border-white/10 flex justify-between items-center">
               <div className="opacity-30 text-xs font-black uppercase tracking-widest">© CEN Educación Financiera • Sistema de Formación Diamond</div>
-              <button onClick={() => setSelectedUnit(null)} className="px-12 py-6 bg-white text-[#011C40] rounded-2xl font-black uppercase tracking-widest hover:bg-[#FF8C00] hover:text-white transition-all shadow-xl">Cerrar Biblioteca</button>
+              <button onClick={() => setSelectedUnit(null)} className="px-6 md:px-12 py-6 bg-white text-[#011C40] rounded-2xl font-black uppercase tracking-widest hover:bg-[#FF8C00] hover:text-white transition-all shadow-xl">Cerrar Biblioteca</button>
             </div>
           </div>
         </div>

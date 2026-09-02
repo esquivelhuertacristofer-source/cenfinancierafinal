@@ -21,10 +21,10 @@ export default function Segmento4Bloque4Page() {
           <Link href="/academia/hora-de-emprender" className="hover:text-[#0980E8] transition-colors text-[#0980E8]">Hora de Emprender</Link>
         </div>
         <Link href="/log-in">
-          <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
-            Iniciar Sesión
-          </button>
-        </Link>
+            <button className="bg-[#22D3EE] text-white px-8 py-3 rounded-full font-black shadow-lg shadow-cyan-200/50 hover:scale-105 transition-all uppercase text-xs">
+              Iniciar Sesión
+            </button>
+          </Link>
       </nav>
 
       {/* 2. HERO DEL BLOQUE (Azul Sólido Corporativo) */}
@@ -107,7 +107,7 @@ export default function Segmento4Bloque4Page() {
             </div>
 
             <div className="w-full flex justify-center">
-               <button className="bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:bg-[#011C40] transition-colors">
+               <button disabled title="Vista previa del material docente; la herramienta interactiva vive en el Hub del estudiante" className="disabled:opacity-60 disabled:cursor-not-allowed bg-[#0980E8] text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:bg-[#011C40] transition-colors">
                   Guardar Mapa
                </button>
             </div>
@@ -180,9 +180,11 @@ export default function Segmento4Bloque4Page() {
               <p className="font-bold text-sm text-white/70 leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
                  En CEN, creemos que el conocimiento es la herramienta más valiosa. Por eso, hemos creado esta biblioteca con una selección de recursos que te ayudarán a profundizar en tu aventura financiera.
               </p>
-              <button className="bg-[#0980E8] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
-                 Accede Ahora
-              </button>
+              <Link href="/dashboard/teacher/bibliografia">
+                <button className="bg-[#0980E8] text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 transition-all uppercase text-xs">
+                   Accede Ahora
+                </button>
+              </Link>
            </div>
            <div className="md:w-1/2 flex justify-center">
               <div className="w-72 h-72 bg-[#F472B6] rounded-full flex items-center justify-center border-8 border-white/10 shadow-2xl relative">
