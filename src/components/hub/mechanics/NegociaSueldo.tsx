@@ -219,6 +219,10 @@ export default function NegociaSueldo({
   const [animateIn, setAnimateIn] = useState(false);
 
   useEffect(() => {
+    /* Reinicia la animacion de entrada al cambiar de fase: apagarla y encenderla 50 ms
+       despues es lo que hace que la transicion se vea. Calcularlo en el render daria siempre
+       el mismo valor y la animacion no se repetiria. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAnimateIn(false);
     const t = setTimeout(() => setAnimateIn(true), 50);
     return () => clearTimeout(t);

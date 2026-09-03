@@ -49,12 +49,20 @@ export default function PracticaPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    /* `localStorage` tampoco existe en el servidor. Leerlo en el render daria un HTML
+       distinto al del servidor y React descartaria la hidratacion; leerlo aqui es lo
+       correcto, no un descuido. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setChoice(loadGuestChoice());
     setCompleted(getGuestCompletedActivities());
   }, []);
 
   useEffect(() => {
     let cancelled = false;
+    /* Marcar la carga antes de pedir los datos: el efecto se vuelve a lanzar cuando cambia el
+       grado y la pantalla tiene que volver al estado de espera. La alternativa que pide la
+       regla es Suspense, que aqui obligaria a mover la carga fuera del componente. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
     const schoolLevel = `${choice.nivel} ${choice.grado}`;
 

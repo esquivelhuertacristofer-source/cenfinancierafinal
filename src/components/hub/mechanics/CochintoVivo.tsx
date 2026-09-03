@@ -118,6 +118,10 @@ export default function CochintoVivo({
   // ─── Trigger confetti when goal reached ──────────────────────────────────
   useEffect(() => {
     if (reached && screen === 'game') {
+      /* El confeti es la celebracion de haber llegado a la meta, un suceso puntual, no un dato
+         que se pueda calcular en el render. Ademas arranca un temporizador para pasar a los
+         resultados, asi que su sitio es el efecto. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setConfetti(generateConfetti(50));
       const t = setTimeout(() => setScreen('results'), 2200);
       return () => clearTimeout(t);

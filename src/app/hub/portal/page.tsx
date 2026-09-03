@@ -46,6 +46,10 @@ export default function MissionPage() {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
+      /* La URL solo existe en el navegador: en el servidor no hay `window`, asi que este dato
+         no puede salir del primer render sin romper la hidratacion. La regla querria que la
+         pagina se suspendiera, y eso es reescribir el enrutado entero. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPillarId(id || 'primeros_pasos_hacia_el_ahorro');
     }
   }, []);

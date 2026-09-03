@@ -30,6 +30,10 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
 
   useEffect(() => {
     if (!currentQuestion) {
+      /* El orden es aleatorio, asi que el servidor y el navegador nunca coincidirian. Barajar
+         despues de montar es justo lo que evita el fallo de hidratacion; hacerlo en el render
+         o en un useMemo lo provocaria. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShuffledOptions([]);
       return;
     }
@@ -60,6 +64,10 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
   useEffect(() => {
     if (isFinished) return;
     if (timeLeft <= 0) {
+      /* Se acabo el tiempo de la pregunta. Esto no es estado derivado del render: es un suceso
+         del reloj que tiene que contestar por el alumno. La regla lo marca porque no distingue
+         entre ambas cosas. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       handleNext(false);
       return;
     }

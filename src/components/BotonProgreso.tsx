@@ -23,6 +23,10 @@ export default function ProgressButton({ lessonId }: ProgressButtonProps) {
     const storageKey = `academia_demo_progress_${lessonId}`;
 
     useEffect(() => {
+        /* `localStorage` tampoco existe en el servidor. Leerlo en el render daria un HTML
+           distinto al del servidor y React descartaria la hidratacion; leerlo aqui es lo
+           correcto, no un descuido. */
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsCompleted(window.localStorage.getItem(storageKey) === "true");
         setLoading(false);
     }, [storageKey]);

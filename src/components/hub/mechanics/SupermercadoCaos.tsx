@@ -152,6 +152,10 @@ export default function SupermercadoCaos({
   useEffect(() => {
     if (screen !== 'game') return;
 
+    /* Los precios suben solos conforme corre el reloj de la partida. Es una consecuencia del
+       tiempo transcurrido, no del render, y modifica la lista sobre la que el alumno esta
+       comprando. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShopItems((prev) =>
       prev.map((item) => {
         if (item.price_spike && !item.spiked) {

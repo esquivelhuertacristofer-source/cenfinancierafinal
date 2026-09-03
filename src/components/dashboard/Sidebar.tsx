@@ -55,6 +55,10 @@ export default function Sidebar({
 
   // Cierra el drawer automáticamente al cambiar de ruta
   useEffect(() => {
+    /* Cerrar el menu lateral al cambiar de ruta. El cambio de ruta viene de fuera del
+       componente (un enlace, el boton de atras del navegador o una redireccion), asi que no
+       hay un unico manejador donde ponerlo. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileOpen(false);
   }, [pathname]);
 

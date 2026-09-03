@@ -69,6 +69,10 @@ export default function PlaneamientoPage() {
 
   useEffect(() => {
     const { grado, unidad, tab } = paramsDeUrl();
+    /* La URL solo existe en el navegador: en el servidor no hay `window`, asi que este dato
+       no puede salir del primer render sin romper la hidratacion. La regla querria que la
+       pagina se suspendiera, y eso es reescribir el enrutado entero. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (/^[ps][1-6]$/.test(grado)) setSelectedGrade(grado);
     if (unidad) setUnidadPedida(unidad);
     if (tab === "teoria" || tab === "evaluacion" || tab === "estrategia") setActiveTab(tab);

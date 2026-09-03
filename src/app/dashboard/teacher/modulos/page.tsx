@@ -156,6 +156,10 @@ export default function ModulosPage() {
 
   const [pillarsForGrade, setPillarsForGrade] = useState<PillarMeta[]>([]);
   useEffect(() => {
+    /* Marcar la carga antes de pedir los datos: el efecto se vuelve a lanzar cuando cambia el
+       grado y la pantalla tiene que volver al estado de espera. La alternativa que pide la
+       regla es Suspense, que aqui obligaria a mover la carga fuera del componente. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!selectedGrade) { setPillarsForGrade([]); return; }
     const [level, numStr] = selectedGrade.split("-");
     getPillarsForGrade(parseInt(numStr), level).then(setPillarsForGrade);
