@@ -32,6 +32,11 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
   const [feedback, setFeedback] = useState<{ id: number, x: number, y: number, text: string, color: string } | null>(null);
   const requestRef = useRef<number>(0);
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  /* Contador para identificar cada globo de feedback. Antes era `Date.now()`, que tiene dos
+     problemas: dos aciertos en el mismo milisegundo comparten id y el timeout del primero borra el
+     globo del segundo, y ademas es impuro, asi que React no puede garantizar que llamarlo no
+     dependa del momento del render. Un contador es monotono, no colisiona y no lee el reloj. */
+  const siguienteFeedbackRef = useRef(0);
   const hasCompletedRef = useRef(false);
   const maxPossibleScoreRef = useRef(0);
 
@@ -122,7 +127,7 @@ export default function GameActivity({ data, onComplete, onClose }: Props) {
   };
 
   const showFeedback = (x: number, y: number, text: string, color: string) => {
-    const id = Date.now();
+    const id = ++siguienteFeedbackRef.current;
     setFeedback({ id, x, y, text, color });
     if (feedbackTimeoutRef.current) clearTimeout(feedbackTimeoutRef.current);
     feedbackTimeoutRef.current = setTimeout(() => {

@@ -345,7 +345,7 @@ export default function CochintoVivo({
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-            borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+            borderRadius: p.shape === 'circle' ? '50%' : '2px',
             animation: `confettiFall ${p.duration}s ease-in ${p.delay}s forwards`,
           }}
         />
