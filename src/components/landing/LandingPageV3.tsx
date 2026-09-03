@@ -32,9 +32,7 @@ const useCounter = (target: number, durationMs = 2000, start = 0) => {
 
 export default function LandingPageV3() {
   const mounted = useHasMounted();
-  const [viewMode, setViewMode] = useState<'grid' | 'path'>('grid');
   const [showDemo, setShowDemo] = useState(false);
-  const [activeTab, setActiveTab] = useState('primaria');
 
   // Counters for LiveBand
   const countKids = useCounter(12480, 2500, 11000);

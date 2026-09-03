@@ -58,7 +58,7 @@ export default function WelcomeBanner({
         const levelInsights = insights[currentLevel as keyof typeof insights] || insights.secundaria;
         setAiInsight(levelInsights[Math.floor(Math.random() * levelInsights.length)]);
 
-      } catch (err) {
+      } catch {
         setCompletionRate(null);
       }
     };

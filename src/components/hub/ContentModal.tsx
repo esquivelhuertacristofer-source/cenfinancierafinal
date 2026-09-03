@@ -62,7 +62,6 @@ interface ContentModalProps {
   userId: string | null;
   onComplete: (activityId: string) => void;
   onClose: () => void;
-  onNextUnit?: () => void;
 }
 
 const MODALITY_ICONS_MODERN: Record<string, LucideIcon> = {
@@ -236,7 +235,7 @@ FiscalSummaryCard.displayName = 'FiscalSummaryCard';
 
 // ─── Pestañas Optimizadas ─────────────────────────────────────────────────────
 
-const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; color: string; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
+const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
   const [readingFinished, setReadingFinished] = useState(isDone);
   /* La ficha pinta el marco teorico si lo hay y, si no, las fases del plan de clase. Son dos
      formas distintas del mismo hueco —una trae `subtitle`/`content` y la otra `title`/`description`—
@@ -499,7 +498,7 @@ const EscenaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
 });
 EscenaActividad.displayName = 'EscenaActividad';
 
-const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: ThemeType; isSupremoUnit?: boolean }) => {
+const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; isSupremoUnit?: boolean }) => {
   const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
@@ -632,7 +631,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
 });
 SimulatorTab.displayName = 'SimulatorTab';
 
-const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: ThemeType; color?: string }) => {
+const QuizTab = memo(({ unitCode, onComplete, isDone, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; color?: string }) => {
   const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
@@ -828,7 +827,7 @@ QuizTab.displayName = 'QuizTab';
 
 // ─── Componente Principal de la Misión ────────────────────────────────────────
 
-export default function ContentModal({ unit, pillar, completed, userId, onComplete, onClose, onNextUnit }: ContentModalProps) {
+export default function ContentModal({ unit, pillar, completed, userId, onComplete, onClose }: ContentModalProps) {
   const [activeTab, setActiveTab] = useState<ContentType>(unit.contents[0].type);
   const [showSuccess, setShowSuccess] = useState(false);
   const [rankUp, setRankUp] = useState<{ pillarTitle: string; rank: string; color: string } | null>(null);
@@ -1018,7 +1017,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               isDone={isDone('theory')}
               onComplete={() => setActiveTab(nextAfterTheory?.type ?? 'quiz')}
               nextLabel={theoryNextLabel}
-              color={pillar.color}
               theme={theme}
               onShowVideo={setShowUnitVideo}
             />
@@ -1029,7 +1027,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               isDone={isDone('simulator')}
               onComplete={(score) => { handleComplete('simulator', score); if (!unit.code.includes('SUPREMO')) setActiveTab('quiz'); }}
               color={pillar.color}
-              theme={theme}
               isSupremoUnit={unit.code.includes('SUPREMO')}
             />
           )}
@@ -1038,7 +1035,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               unitCode={unit.code}
               isDone={isDone('quiz')}
               onComplete={(score) => handleComplete('quiz', score)}
-              theme={theme}
               color={pillar.color}
             />
           )}

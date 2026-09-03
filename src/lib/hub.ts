@@ -771,7 +771,7 @@ export async function getCurrentProfile(): Promise<UserProfile | null> {
     const { data, error } = await supabase.from('profiles').select('*').eq('id', session.user.id).single();
     if (error || !data) return null;
     return { ...data, grade: deriveGrade(data.school_level) };
-  } catch (e) {
+  } catch {
     return null;
   }
 }

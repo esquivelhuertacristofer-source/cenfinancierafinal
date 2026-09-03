@@ -227,7 +227,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
             </div>
             <div className="grid grid-cols-1 gap-6">
                <AnimatePresence mode="popLayout">
-                  {pendingItems.map((item, idx) => (
+                  {pendingItems.map((item) => (
                     <motion.div 
                       key={item.id}
                       layout

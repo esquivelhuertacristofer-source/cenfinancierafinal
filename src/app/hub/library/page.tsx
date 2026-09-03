@@ -11,11 +11,10 @@ import {
 } from '../../../lib/hub';
 import DiamondConceptCarousel from '../../../components/hub/DiamondConceptCarousel';
 import type { PillarMeta } from '@/lib/hub';
-import type { GradeMeta, UserProfile } from '@/lib/hub';
+import type { GradeMeta } from '@/lib/hub';
 
 export default function LibraryPage() {
   const router = useRouter();
-  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
   const [loading, setLoading] = useState(true);
@@ -27,8 +26,6 @@ export default function LibraryPage() {
       try {
         const p = await getCurrentProfile();
         if (!p) { router.replace('/log-in'); return; }
-        setProfile(p);
-
         const gradePillars = await getPillarsForGrade(p.grade, p.school_level ?? 'primary');
         setPillars(gradePillars);
         setGradeMeta(getGradeMetadata(p.grade, p.school_level ?? 'primary'));

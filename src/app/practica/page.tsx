@@ -123,7 +123,7 @@ export default function PracticaPage() {
             {NIVELES.map((n) => (
               <button
                 key={n.value}
-                onClick={() => setChoice((c) => ({ nivel: n.value, grado: n.grados[0] }))}
+                onClick={() => setChoice({ nivel: n.value, grado: n.grados[0] })}
                 className={`px-4 py-2 rounded-xl text-sm font-bold transition-colors ${
                   choice.nivel === n.value ? 'bg-[#FF8C00] text-[#011C40]' : 'bg-white/5 text-white/60 hover:bg-white/10'
                 }`}

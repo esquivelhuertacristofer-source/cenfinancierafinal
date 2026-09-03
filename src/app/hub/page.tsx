@@ -83,7 +83,6 @@ export default function StudentHubV19() {
   const [totalXP, setTotalXP] = useState(0);
   const [arenaQuiz, setArenaQuiz] = useState<QuizQuestion[]>([]);
   const [showArena, setShowArena] = useState(false);
-  const [score, setScore] = useState(0);
   const [showPresentation, setShowPresentation] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [showGame, setShowGame] = useState(false);
@@ -588,7 +587,7 @@ export default function StudentHubV19() {
               playSFX('click');
               await logoutAction();
               window.location.href = '/log-in';
-            } catch(e){
+            } catch {
               window.location.href = '/log-in';
             }
           }}
@@ -740,7 +739,7 @@ export default function StudentHubV19() {
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    try { playSFX('click'); } catch(err){}
+                    try { playSFX('click'); } catch {}
                     setActivePillar(p);
                   }}
                   style={{ 
@@ -989,7 +988,7 @@ export default function StudentHubV19() {
               style={{ background: isDark ? 'rgba(1,17,38,0.9)' : 'rgba(244,241,234,0.9)', borderColor: 'var(--border)', backdropFilter: 'blur(20px)' }}>
               <button
                 className="flex items-center gap-3 text-xs font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity"
-                onClick={() => { try { playSFX('click'); } catch(e){} setActivePillar(null); }}
+                onClick={() => { try { playSFX('click'); } catch {} setActivePillar(null); }}
               >
                 <ChevronLeft size={18} /> Volver al Hub
               </button>
@@ -1133,7 +1132,6 @@ export default function StudentHubV19() {
           isDark={isDark}
           onClose={() => setShowArena(false)}
           onComplete={async (finalScore) => {
-            setScore(finalScore);
             setShowArena(false);
             // Registrar éxito en la base de datos si es necesario
             if (profile?.id) {

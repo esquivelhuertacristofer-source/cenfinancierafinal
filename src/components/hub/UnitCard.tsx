@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Lock, CheckCircle2, ChevronRight, PlayCircle, BookOpen, Rocket, FileText, HelpCircle } from "lucide-react";
+import { Lock, CheckCircle2, ChevronRight, BookOpen, Rocket, HelpCircle } from "lucide-react";
 import type { Unit } from "../../lib/hub";
-import type { LucideIcon } from 'lucide-react';
 
 interface UnitCardProps {
   unit: Unit;
@@ -12,14 +11,6 @@ interface UnitCardProps {
   onClick: () => void;
   unitIndex: number; // Global index for image mapping
 }
-
-const ICON_MAP: Record<string, LucideIcon> = {
-  video: PlayCircle,
-  reading: BookOpen,
-  simulator: Rocket,
-  printable: FileText,
-  quiz: HelpCircle,
-};
 
 export default function UnitCard({
   unit,

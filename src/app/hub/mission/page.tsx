@@ -8,18 +8,12 @@ import VideoFrame from '@/components/hub/VideoFrame';
 import type { PillarMeta } from '@/lib/hub';
 
 export default function MissionPage() {
-  const [pillarId, setPillarId] = useState<string | null>(null);
   const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [showExpertVideo, setShowExpertVideo] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-    /* La URL solo existe en el navegador: en el servidor no hay `window`, asi que este dato
-       no puede salir del primer render sin romper la hidratacion. La regla querria que la
-       pagina se suspendiera, y eso es reescribir el enrutado entero. */
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setPillarId(id);
     getPillarById(id || 'p1', FALLBACK_PROFILE.grade, 'primary').then(setPillar);
   }, []);
 

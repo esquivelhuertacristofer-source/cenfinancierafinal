@@ -26,7 +26,9 @@ const SOUNDS = {
   complete: 'https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3',
 };
 
-export default function PillarPageV19({ params }: { params: Promise<{ pillar: string }> }) {
+/* No recibe `params`: el id del pilar se saca de la ruta ya en el navegador (mas abajo), porque
+   esta pantalla es de cliente y se entra a ella tanto por enlace como por navegacion interna. */
+export default function PillarPageV19() {
   const router = useRouter();
   
   // Safe param resolution for Next.js 15+ vs 14 compatibility
@@ -123,7 +125,7 @@ export default function PillarPageV19({ params }: { params: Promise<{ pillar: st
     </div>
   );
 
-  const { done, total, pct } = getPillarProgress(pillar, completed);
+  const { total, pct } = getPillarProgress(pillar, completed);
   const cfg = PILLAR_CONFIG[pillar.id] || PILLAR_CONFIG[Object.keys(PILLAR_CONFIG)[0]];
   const isCompleted = pct === 100;
 
@@ -219,7 +221,7 @@ export default function PillarPageV19({ params }: { params: Promise<{ pillar: st
         <div 
           className="back-link cursor-pointer" 
           onMouseEnter={() => playSFX('hover')} 
-          onClick={() => { try { playSFX('click'); } catch(e){} window.location.assign('/hub'); }}
+          onClick={() => { try { playSFX('click'); } catch {} window.location.assign('/hub'); }}
         >
           <ChevronLeft size={18} /> Volver al Hub
         </div>

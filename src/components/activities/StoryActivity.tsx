@@ -11,7 +11,9 @@ interface Props {
   onClose?: () => void;
 }
 
-export default function StoryActivity({ data, onComplete, onClose }: Props) {
+/* `onClose` sigue en Props porque quien monta este motor lo pasa igual que a los demas; esta
+   pantalla no tiene boton de salir propio, asi que no lo usa. */
+export default function StoryActivity({ data, onComplete }: Props) {
   const [currentNodeId, setCurrentNodeId] = useState(data.nodo_inicial);
   const [totalBonus, setTotalBonus] = useState(0);
   const [lastConsequence, setLastConsequence] = useState<string | null>(null);

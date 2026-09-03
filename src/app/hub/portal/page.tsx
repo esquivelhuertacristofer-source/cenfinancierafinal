@@ -71,7 +71,7 @@ export default function MissionPage() {
         setPillar(found);
         setUserId(effectiveProfile.id);
         setCompleted(progressData);
-      } catch (err) {
+      } catch {
         const errPillar = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
         setPillar(errPillar);
       }
@@ -95,7 +95,7 @@ export default function MissionPage() {
     );
   }
 
-  const { total, pct } = getPillarProgress(pillar, completed);
+  const { pct } = getPillarProgress(pillar, completed);
   const cfg = PILLAR_CONFIG[pillar.id] || PILLAR_CONFIG[Object.keys(PILLAR_CONFIG)[0]];
   const isCompleted = pct === 100;
 

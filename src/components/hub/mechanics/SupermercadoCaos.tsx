@@ -95,7 +95,6 @@ export default function SupermercadoCaos({
   const isOverBudget = remaining < 0;
 
   const listItems = sourceItems.filter((i) => i.is_on_list);
-  const cartListItems = cart.filter((e) => e.is_on_list);
   /* Este conjunto decide si un articulo de la lista ya esta en el carrito, y es dependencia de dos
      callbacks. Construirlo suelto en cada render hacia que esos callbacks se recrearan siempre. */
   const listItemsBought = useMemo(
@@ -355,7 +354,6 @@ export default function SupermercadoCaos({
     const totalListCount = listItems.length;
 
     const spentOnList = cart.filter((e) => e.is_on_list).reduce((s, e) => s + e.price_paid, 0);
-    const cheapestListCost = listItems.reduce((s, li) => s + li.base_price, 0);
     const expensiveListCost = listItems.reduce((s, li) => {
       const spikedPrice = li.price_spike ? li.price_spike.new_price : li.base_price;
       return s + spikedPrice;

@@ -40,11 +40,6 @@ export default function UnitTimeline({ pillar, completed, userId, onComplete, gl
           userId={userId}
           onComplete={(id) => { onComplete(id); }}
           onClose={() => setActiveUnit(null)}
-          onNextUnit={(() => {
-            const idx = pillar.units.findIndex(u => u.code === activeUnit.code);
-            const next = pillar.units[idx + 1];
-            return next ? () => setActiveUnit(next) : undefined;
-          })()}
         />
       )}
     </>
