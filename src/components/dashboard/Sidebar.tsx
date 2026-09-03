@@ -129,10 +129,10 @@ export default function Sidebar({
         {/* LEVEL SELECTOR (NEW) */}
         <div className="relative z-10 px-6 mb-8">
            <div className="bg-white/5 p-1.5 rounded-2xl border border-white/10 flex gap-1">
-              {['primaria', 'secundaria'].map((lvl) => (
+              {(['primaria', 'secundaria'] as const).map((lvl) => (
                 <button
                   key={lvl}
-                  onClick={() => onLevelChange?.(lvl as any)}
+                  onClick={() => onLevelChange?.(lvl)}
                   className={`flex-1 py-2.5 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all duration-500 ${
                     currentLevel === lvl
                     ? 'bg-white text-[#011C40] shadow-xl translate-y-[-1px]'
@@ -267,10 +267,10 @@ export default function Sidebar({
             {/* LEVEL SELECTOR */}
             <div className="relative z-10 px-6 mb-6">
                <div className="bg-white/5 p-1.5 rounded-2xl border border-white/10 flex gap-1">
-                  {['primaria', 'secundaria'].map((lvl) => (
+                  {(['primaria', 'secundaria'] as const).map((lvl) => (
                     <button
                       key={lvl}
-                      onClick={() => onLevelChange?.(lvl as any)}
+                      onClick={() => onLevelChange?.(lvl)}
                       className={`flex-1 py-2.5 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all duration-500 ${
                         currentLevel === lvl
                         ? 'bg-white text-[#011C40] shadow-xl translate-y-[-1px]'

@@ -18,8 +18,8 @@ interface Props {
 
 export default function SimulatorActivity({ data, onComplete, onClose, accent }: Props) {
   const acento = accent || '#FF8C00';
-  const [inputs, setInputs] = useState<Record<string, any>>(() => {
-    const initial: Record<string, any> = {};
+  const [inputs, setInputs] = useState<Record<string, string | number>>(() => {
+    const initial: Record<string, string | number> = {};
     (data.inputs || []).forEach(input => {
       initial[input.id] = input.default;
     });
@@ -183,7 +183,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                         <motion.div
                           style={{ background: `linear-gradient(to right, ${acento}, ${acento}cc)` }}
                           className="absolute top-1/2 -translate-y-1/2 left-0 h-2 rounded-full pointer-events-none"
-                          animate={{ width: `${((inputs[input.id] - (input.min ?? 0)) / ((input.max ?? 100) - (input.min ?? 0))) * 100}%` }}
+                          animate={{ width: `${((Number(inputs[input.id]) || 0) - (input.min ?? 0)) / ((input.max ?? 100) - (input.min ?? 0)) * 100}%` }}
                         />
                      </div>
                    )}

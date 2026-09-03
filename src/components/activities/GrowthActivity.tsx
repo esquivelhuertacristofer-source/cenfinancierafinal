@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Wallet, BookOpen, Gift, Rocket, ChevronRight, Zap, Target, X } from 'lucide-react';
+import type { GrowthActivityData } from '@/types/activities';
 
 interface Props {
-  data: any;
+  data: GrowthActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }

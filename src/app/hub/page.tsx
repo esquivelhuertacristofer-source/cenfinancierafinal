@@ -44,6 +44,15 @@ import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
 import type { GradeMeta, PillarMeta, Unit, UserProfile } from '@/lib/hub';
 
+/**
+ * Un objeto de estilo que ademas define variables CSS.
+ *
+ * `React.CSSProperties` no admite claves `--algo`, asi que un estilo que las trae hay que
+ * castearlo. Castear a `any` apaga de paso la comprobacion de las propiedades normales que van
+ * al lado; esto solo abre la puerta a las variables y deja el resto vigilado.
+ */
+type EstiloConVariables = React.CSSProperties & Record<`--${string}`, string | number>;
+
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
   construyendo_independencia: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
@@ -270,7 +279,7 @@ export default function StudentHubV19() {
          style={{ 
            '--grade-accent': gradeMeta?.accentColor || '#FF8C00',
            '--grade-secondary': gradeMeta?.secondaryColor || '#FFD700'
-         } as any}>
+         } as EstiloConVariables}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Epilogue:wght@400;500;700;800;900&display=swap');
 
@@ -740,7 +749,7 @@ export default function StudentHubV19() {
                     cursor: 'pointer', 
                     zIndex: 10, 
                     position: 'relative' 
-                  } as any}
+                  } as EstiloConVariables}
                 >
                   <img src={cfg.image} className="p-image-v16" alt="" />
                   

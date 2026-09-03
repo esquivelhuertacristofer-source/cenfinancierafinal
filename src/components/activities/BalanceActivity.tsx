@@ -12,6 +12,7 @@ import {
   clamp,
   type ConfigBalance,
 } from '@/lib/activities/balance-sim';
+import type { BalanceActivityData } from '@/types/activities';
 
 /**
  * BalanceActivity — "El Calibrador de Sueños"
@@ -32,7 +33,7 @@ import {
 type Fase = 'briefing' | 'jugando' | 'ganado' | 'perdido';
 
 interface Props {
-  data: any;
+  data: BalanceActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }

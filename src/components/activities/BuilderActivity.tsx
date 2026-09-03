@@ -20,8 +20,8 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
   // Sliders y selects arrancan con un valor: si no, sus fórmulas dependientes
   // evalúan con variables indefinidas y muestran 0 hasta que el alumno los toca.
-  const [formData, setFormData] = useState<Record<string, any>>(() => {
-    const inicial: Record<string, any> = {};
+  const [formData, setFormData] = useState<Record<string, string | number | undefined>>(() => {
+    const inicial: Record<string, string | number | undefined> = {};
     for (const paso of data.pasos || []) {
       for (const campo of paso.campos || []) {
         if (campo.type === 'slider') {

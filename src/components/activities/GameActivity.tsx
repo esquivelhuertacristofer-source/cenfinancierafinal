@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Trophy, Timer, Star, PlayCircle, Zap } from 'lucide-react';
+import type { GameActivityData } from '@/types/activities';
 
 interface Props {
-  data: any;
+  data: GameActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }

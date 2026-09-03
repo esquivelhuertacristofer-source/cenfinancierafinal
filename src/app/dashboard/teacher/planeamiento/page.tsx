@@ -147,7 +147,7 @@ export default function PlaneamientoPage() {
               <div className="relative">
                 <select 
                   value={selectedGrade}
-                  onChange={(e) => setSelectedGrade(e.target.value as any)}
+                  onChange={(e) => setSelectedGrade(e.target.value)}
                   className="appearance-none bg-[#FF8C00] text-white text-[11px] font-black uppercase px-4 py-2 pr-8 rounded-xl shadow-lg shadow-orange-500/20 cursor-pointer outline-none hover:bg-[#e67e00] transition-colors"
                 >
                   {["p1","p2","p3","p4","p5","p6","s1","s2","s3"].map(g => (
@@ -336,7 +336,7 @@ export default function PlaneamientoPage() {
                 ].map((tab) => (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() => setActiveTab(tab.id as "estrategia" | "teoria" | "evaluacion")}
                     className={`flex items-center gap-3 px-5 md:px-10 py-5 rounded-[24px] text-[12px] font-black uppercase tracking-widest transition-all duration-300 ${
                       activeTab === tab.id 
                       ? "bg-[#011C40] text-white shadow-2xl scale-105" 

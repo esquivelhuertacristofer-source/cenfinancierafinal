@@ -142,7 +142,10 @@ export default function BibliografiaPage() {
   const filteredResources = useMemo(() => {
     return resources.filter(r => {
       const matchesCategory = activeCategory === "Todos" || r.category === activeCategory;
-      const matchesLevel = activeLevel === "Todos" || r.level.includes(activeLevel as any);
+      /* `activeLevel` es la cadena del filtro y `r.level` una lista de tres valores concretos.
+         `includes` sobre esa lista no acepta una cadena cualquiera, asi que se busca al reves,
+         que ademas es lo que de verdad se pregunta. */
+      const matchesLevel = activeLevel === "Todos" || r.level.some((l) => l === activeLevel);
       const matchesSearch = r.title.toLowerCase().includes(search.toLowerCase()) || 
                            r.description.toLowerCase().includes(search.toLowerCase()) ||
                            r.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));

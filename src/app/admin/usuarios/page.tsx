@@ -599,7 +599,7 @@ export default function AdminUsuariosPage() {
                   <label className="block text-xs font-black uppercase text-[#011C40]/40 mb-2">Rol</label>
                   <select
                     value={role}
-                    onChange={e => setRole(e.target.value as any)}
+                    onChange={e => setRole(e.target.value as "student" | "teacher")}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 font-bold text-[#011C40] focus:ring-2 focus:ring-[#FF8C00] outline-none"
                   >
                     <option value="student">Alumno</option>

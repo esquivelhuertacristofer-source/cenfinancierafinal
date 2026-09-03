@@ -240,6 +240,51 @@ export interface GameActivityData extends BaseActivity {
   instruccion: string;
 }
 
+// ─── BALANCE ─────────────────────────────────────────────────────────────────
+/**
+ * Los tres motores de abajo no tenian tipo y usaban `data: any`.
+ *
+ * Lo que se declara aqui sale de lo que el componente lee de verdad, campo por campo, no de lo que
+ * el JSON podria traer. Por eso casi todo es opcional: estos motores nacieron leyendo con `?.` y
+ * cayendo a un valor por defecto, y varias actividades no traen `config` ni `metadata`.
+ */
+export interface BalanceActivityData extends Partial<BaseActivity> {
+  instruccion?: string;
+  imagenes?: Record<string, string>;
+  /* Ajustes finos del motor; lo que no venga sale del preset de su dificultad. */
+  config?: Record<string, number>;
+  /* Rotulos con los que cada actividad renombra los marcadores en pantalla. */
+  metadata?: {
+    target_label?: string;
+    knowledge_label?: string;
+    action_label?: string;
+  };
+  /* `resolverDificultad` mira estos tres, y ninguno es obligatorio. */
+  dificultad?: string;
+  complejidad?: Complexity;
+  edad?: string;
+}
+
+// ─── CRECIMIENTO ─────────────────────────────────────────────────────────────
+export interface GrowthActivityData extends Partial<BaseActivity> {
+  meta_objetivo?: number;
+}
+
+// ─── JORNADA ─────────────────────────────────────────────────────────────────
+
+export interface JornadaActivityData extends Partial<BaseActivity> {
+  instruccion?: string;
+  /* `Oficio` lo define el propio motor en `@/lib/activities/jornada-sim`; se referencia con una
+     importacion diferida para no atar este archivo de tipos a la implementacion. */
+  oficios?: import('@/lib/activities/jornada-sim').Oficio[];
+  config?: Record<string, number>;
+  metadata?: {
+    moneda_label?: string;
+    recurso_label?: string;
+    meta_label?: string;
+  };
+}
+
 // ─── RULETA ───────────────────────────────────────────────────────────────────
 export interface RouletteScenario {
   id: string;
