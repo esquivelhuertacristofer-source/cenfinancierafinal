@@ -28,7 +28,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
     };
   }, []);
 
-  const preguntas = data.preguntas || (data as any).questions || [];
+  const preguntas = data.preguntas || data.questions || [];
   const currentQuestion = preguntas[currentIdx];
 
   const score = useMemo(() => {

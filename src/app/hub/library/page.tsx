@@ -186,7 +186,7 @@ export default function LibraryPage() {
 
       <main className="lib-grid">
         {filteredUnits.map((u) => (
-          <div key={u.code} className="resource-card" onClick={() => setSelectedUnit(u as any)}>
+          <div key={u.code} className="resource-card" onClick={() => setSelectedUnit(u)}>
             <div className="res-type">Unidad {u.code}</div>
             <h3 className="res-title">{u.title}</h3>
             <div className="res-pillar">{u.pillarName}</div>

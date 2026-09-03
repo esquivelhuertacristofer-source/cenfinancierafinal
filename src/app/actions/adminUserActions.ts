@@ -89,7 +89,21 @@ export async function searchUsers(rawTerm: string): Promise<AdminUserSearchResul
     throw new Error("No se pudo buscar usuarios.");
   }
 
-  const rows = (data ?? []) as any[];
+  /* La consulta pide un embebido, `escuelas(nombre)`, y los tipos generados de Supabase lo
+     declaran como lista aunque PostgREST devuelva un objeto cuando la relacion es de uno a uno.
+     La forma real se nombra aqui, junto a donde se lee, en vez de apagar la comprobacion entera. */
+  type FilaDePerfil = {
+    id: string;
+    full_name: string | null;
+    email: string | null;
+    role: string;
+    school_level: string | null;
+    group_id: string | null;
+    escuela_id: string | null;
+    created_at: string;
+    escuelas: { nombre: string | null } | null;
+  };
+  const rows = (data ?? []) as unknown as FilaDePerfil[];
   if (rows.length === 0) return [];
 
   // group_id en profiles es texto libre (sin FK declarada), así que no se

@@ -57,6 +57,12 @@ export interface QuizActivityData extends BaseActivity {
   tipo: 'QUIZ';
   preguntas: QuizQuestion[];  // 5-8 preguntas
   aprobacion_minima: number;  // 0-1, ej. 0.8
+  /**
+   * Algunas actividades antiguas traen las preguntas bajo el nombre en ingles. El normalizador de
+   * ContentModal las copia a `preguntas`, pero el motor tambien se usa desde el previsualizador de
+   * motores, que carga el JSON crudo, asi que el alias se declara aqui en vez de castear al leerlo.
+   */
+  questions?: QuizQuestion[];
 }
 
 // ─── SIMULADOR ───────────────────────────────────────────────────────────────

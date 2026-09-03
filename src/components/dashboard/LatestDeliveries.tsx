@@ -56,7 +56,14 @@ export default function LatestDeliveries({
           .order(timestampCol, { ascending: false })
           .limit(5);
 
-        if (useNewSchema) query = (query as any).eq("status", "completed");
+        /* El nombre de la tabla se decide arriba en tiempo de ejecucion, asi que los tipos
+           generados de Supabase no saben que columnas tiene esta consulta. `status` solo existe en
+           `intentos`, que es exactamente la rama en la que entra este `if`. Se nombra el metodo que
+           falta en vez de apagar el tipo de la consulta entera. */
+        if (useNewSchema) {
+          query = (query as unknown as { eq(columna: string, valor: string): typeof query })
+            .eq("status", "completed");
+        }
 
         const { data: rows } = await query;
 

@@ -662,7 +662,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
 });
 SimulatorTab.displayName = 'SimulatorTab';
 
-const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: any; color?: string }) => {
+const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: ThemeType; color?: string }) => {
   const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);

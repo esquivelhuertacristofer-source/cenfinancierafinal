@@ -114,7 +114,7 @@ describe("imágenes de las actividades nuevas", () => {
     for (const grado of GRADOS) {
       for (const { f, data } of actividadesNuevas(grado)) {
         if (data.tipo !== "DECIDE") continue;
-        for (const [id, nodo] of Object.entries<any>(data.nodos ?? {})) {
+        for (const [id, nodo] of Object.entries(data.nodos ?? {})) {
           if (!nodo.imagen) sinImagen.push(`${grado}/${f}#${id}`);
         }
       }
