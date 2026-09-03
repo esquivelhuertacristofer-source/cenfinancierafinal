@@ -1,3 +1,14 @@
+/**
+ * Catalogo de videos de experto.
+ *
+ * OJO: hoy no lo lee nadie. ContentModal lo importaba y nunca lo usaba, asi que estos 17 videos de
+ * YouTube no se ven en ninguna pantalla de la plataforma, y ninguno de ellos esta tampoco en
+ * PILLAR_VIDEOS ni en UNIT_VIDEOS (`lib/hub.ts`), que son los que si se muestran.
+ *
+ * El archivo se conserva a proposito: es contenido, no codigo muerto. Cada entrada trae ya los
+ * codigos de unidad donde encaja (`suggestedUnitCodes`), asi que enchufarlo es cuestion de
+ * decidirlo, no de rehacerlo.
+ */
 export interface ExpertVideo {
   id: string;
   title: string;
