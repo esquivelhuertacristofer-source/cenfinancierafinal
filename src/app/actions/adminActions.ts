@@ -360,9 +360,12 @@ export async function getEscuelas(): Promise<EscuelaStats[]> {
     throw new Error("No se pudieron cargar las escuelas.");
   }
 
+  /* La consulta trae la escuela con sus grupos anidados; sólo se usan el id y el nombre. */
+  type FilaEscuela = { id: string; nombre: string; created_at: string; grupos?: { id: string }[] };
+
   const results: EscuelaStats[] = [];
-  for (const e of data as any[]) {
-    const grupoIds: string[] = (e.grupos ?? []).map((g: any) => g.id);
+  for (const e of data as FilaEscuela[]) {
+    const grupoIds: string[] = (e.grupos ?? []).map((g) => g.id);
     let alumnos_count = 0;
     if (grupoIds.length > 0) {
       let count;

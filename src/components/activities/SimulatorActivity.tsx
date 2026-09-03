@@ -98,7 +98,9 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
     });
   }, [inputs, ejeX, data.formula, result]);
 
-  const handleInputChange = (id: string, value: any) => {
+  /* Llega texto mientras el alumno escribe —un campo a medias, un signo menos suelto— y numero
+     en cuanto lo escrito se puede convertir. Las dos cosas se guardan tal cual. */
+  const handleInputChange = (id: string, value: string | number) => {
     setInputs(prev => ({ ...prev, [id]: value }));
   };
 

@@ -19,6 +19,7 @@ import {
   getCurrentProfile, 
   getPillarProgress 
 } from '../../../lib/hub';
+import type { PillarMeta } from '@/lib/hub';
 
 const MEDAL_VARIANTS = [
   { label: 'Novato', color: '#CD7F32', min: 0 },
@@ -30,7 +31,7 @@ const MEDAL_VARIANTS = [
 export default function AchievementsPage() {
   const router = useRouter();
   const [profile, setProfile] = useState<any>(null);
-  const [pillars, setPillars] = useState<any[]>([]);
+  const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
 
@@ -53,7 +54,7 @@ export default function AchievementsPage() {
 
   // Certificado imprimible del pilar completado. Abre una ventana con el
   // documento listo y lanza el dialogo de impresion (permite "Guardar como PDF").
-  const descargarCertificado = (pilar: any, medalla: { label: string; color: string }) => {
+  const descargarCertificado = (pilar: PillarMeta, medalla: { label: string; color: string }) => {
     const nombre = profile?.full_name || 'Estudiante CEN';
     const fecha = new Date().toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
     const html = `<!doctype html><html lang="es"><head><meta charset="utf-8">

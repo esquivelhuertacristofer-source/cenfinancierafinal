@@ -12,8 +12,17 @@ interface Item {
   pos: { x: number; y: number };
 }
 
+/** Lo que el radar necesita del JSON de la actividad. */
+interface ItemDeRadar {
+  id?: number;
+  label: string;
+  type: 'need' | 'want';
+  /** Clave dentro de `ICONS_MAP`; si no coincide se usa el icono de reserva. */
+  icon_key?: string;
+}
+
 interface Props {
-  data: any;
+  data: { items?: ItemDeRadar[]; [k: string]: unknown };
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }
@@ -35,7 +44,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [shake, setShake] = useState(false);
 
-  const totalNeeds = data.items?.filter((i: any) => i.type === 'need').length ?? 0;
+  const totalNeeds = data.items?.filter((i) => i.type === 'need').length ?? 0;
 
   const hasCompletedRef = useRef(false);
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -47,7 +56,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   }, []);
 
   useEffect(() => {
-    const rawItems: any[] = data.items || [];
+    const rawItems: ItemDeRadar[] = data.items || [];
     if (rawItems.length === 0) return;
     const interval = setInterval(() => {
       if (items.length < 5 && !isFinished) {
@@ -57,7 +66,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
           id: Math.random(),
           label: source.label,
           type: source.type,
-          icon: ICONS_MAP[source.icon_key] || Target,
+          icon: (source.icon_key ? ICONS_MAP[source.icon_key] : undefined) || Target,
           pos: {
             x: 10 + Math.random() * 80,
             y: 15 + Math.random() * 70

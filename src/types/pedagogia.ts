@@ -62,12 +62,15 @@ export interface EstrategiaDeUnidad {
 export interface TeoriaDeUnidad {
   introduction: string;
   sections: SeccionTeorica[];
-  /* Presentes sólo en parte de las unidades; el panel las pinta si están. */
-  concept?: string;
-  description?: string;
-  key_points?: string[];
-  glossary?: { term: string; definition: string }[];
 }
+
+/* NO HAY MAS CAMPOS, Y ESO SE COMPROBO.
+   El codigo de la biblioteca leia ademas `concept`, `description`, `key_points` y `glossary`, con
+   bloques enteros de interfaz colgando de ellos. Se recorrieron las 369 unidades de los nueve
+   grados: `theory` contiene `introduction` y `sections`, y nada mas, en las 360 que la tienen. Esos
+   bloques —"Puntos de Dominio" y "Glosario Tecnico"— nunca llegaron a pintarse una sola vez.
+   Se quitaron. Si algun dia el temario incluye esos campos, el codigo esta en el historial de git:
+   se recupera, no se reescribe. */
 
 export interface EvaluacionDeUnidad {
   exam_questions: PreguntaDeExamen[];

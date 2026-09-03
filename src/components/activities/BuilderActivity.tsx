@@ -40,7 +40,9 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
   const currentStep = data.pasos?.[currentStepIdx];
   const hasCompletedRef = useRef(false);
 
-  const handleFieldChange = (fieldId: string, value: any) => {
+  /* `undefined` es un valor legitimo: es lo que se guarda cuando el alumno borra un campo
+     numerico, y hay que distinguirlo del cero. */
+  const handleFieldChange = (fieldId: string, value: string | number | undefined) => {
     setFormData(prev => ({ ...prev, [fieldId]: value }));
   };
 

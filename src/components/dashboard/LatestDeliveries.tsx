@@ -62,7 +62,7 @@ export default function LatestDeliveries({
 
         if (!rows || rows.length === 0) { setDeliveries([]); setLoading(false); return; }
 
-        const idsNeeded = [...new Set(rows.map((d: any) => d.user_id))];
+        const idsNeeded = [...new Set(rows.map((d) => d.user_id))];
         const { data: students } = await supabase
           .from("profiles")
           .select("id, full_name")
@@ -72,8 +72,8 @@ export default function LatestDeliveries({
           ? ["bg-white/10", "bg-[#FF8C00]/20", "bg-[#42E8E0]/20", "bg-white/5", "bg-[#FF8C00]/10"]
           : ["bg-[#011C40]", "bg-[#FF8C00]", "bg-[#42E8E0]", "bg-[#011C40]/80", "bg-[#FF8C00]/80"];
 
-        const mapped: DeliveryReal[] = rows.map((d: any, i: number) => {
-          const student = students?.find((s: any) => s.id === d.user_id);
+        const mapped: DeliveryReal[] = rows.map((d, i: number) => {
+          const student = students?.find((s) => s.id === d.user_id);
           const name = student?.full_name || "Estudiante";
           const initials = name
             .split(" ")
@@ -81,7 +81,10 @@ export default function LatestDeliveries({
             .slice(0, 2)
             .join("")
             .toUpperCase();
-          const ts = d[timestampCol];
+          /* La consulta pide `created_at` o `completed_at` segun el esquema, asi que la fila
+             llega con una u otra. Se lee por indice sobre un registro para no tener que declarar
+             las dos variantes y elegir. */
+          const ts = (d as Record<string, string | null>)[timestampCol];
           const time = ts
             ? new Date(ts).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
             : "--:--";

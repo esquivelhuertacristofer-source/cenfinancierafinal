@@ -56,7 +56,7 @@ export default function TopAlumnos({
           : ["bg-[#011C40]", "bg-[#FF8C00]", "bg-[#42E8E0]", "bg-[#011C40]/90", "bg-[#FF8C00]/90"];
 
         const processed = profiles
-          .map((p: any) => {
+          .map((p) => {
             const stat = statsMap[p.id];
             // completed count * 10 + avg score bonus
             const totalXp = (stat?.completed_count ?? 0) * 10 + (stat?.avg_score ?? 0);

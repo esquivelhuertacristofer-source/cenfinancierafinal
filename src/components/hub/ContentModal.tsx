@@ -86,6 +86,7 @@ import { UNIT_VIDEOS, VIDEO_TITULOS, urlVideo } from '@/lib/videos-generados';
 import { EXPERT_VIDEOS } from '../../lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
+import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';
 
 interface ContentModalProps {
   unit: Unit;
@@ -265,8 +266,14 @@ FiscalSummaryCard.displayName = 'FiscalSummaryCard';
 
 const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; color: string; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
   const [readingFinished, setReadingFinished] = useState(isDone);
-  const sections = unit.theory?.sections || unit.strategy?.phases || [];
-  const intro = unit.theory?.introduction || unit.theory?.concept || unit.theory?.description || unit.strategy?.objective || unit.objective;
+  /* La ficha pinta el marco teorico si lo hay y, si no, las fases del plan de clase. Son dos
+     formas distintas del mismo hueco —una trae `subtitle`/`content` y la otra `title`/`description`—
+     y antes se leian con `a || b` sobre un `any`, que funciona por casualidad: si un dia una de las
+     dos cambia de nombre de campo, el hueco se queda en blanco y nadie se entera. Con la union
+     nombrada, cambiar un campo rompe la compilacion, que es justo lo que se quiere. */
+  const sections: (SeccionTeorica | FasePedagogica)[] =
+    unit.theory?.sections || unit.strategy?.phases || [];
+  const intro = unit.theory?.introduction || unit.strategy?.objective || unit.objective;
   const unitNumber = parseInt(unit.code.match(/\d+/)?.[0] || '1');
   
   const getThemeImage = (idx: number) => {
@@ -350,15 +357,15 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
       <FiscalSummaryCard unitCode={unit.code} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-        {sections.map((section: any, i: number) => (
+        {sections.map((section, i: number) => (
           <div key={i} className="group relative">
              <div className="h-full bg-white/[0.03] border border-white/5 p-6 md:p-12 rounded-[2rem] md:rounded-[4rem] backdrop-blur-3xl flex flex-col gap-5 md:gap-8 hover:bg-white/[0.06] hover:border-[#FF8C00]/30 transition-all duration-500">
                 <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-[#FF8C00] group-hover:scale-110 transition-transform">
                    {i % 2 === 0 ? <Zap size={28} /> : <Target size={28} />}
                 </div>
                 <div className="space-y-4">
-                   <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">{section.subtitle || section.title}</h3>
-                   <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">{section.content || section.description}</p>
+                   <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">{tituloDeSeccion(section)}</h3>
+                   <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">{cuerpoDeSeccion(section)}</p>
                 </div>
              </div>
           </div>
@@ -399,27 +406,56 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
 TheoryTab.displayName = 'TheoryTab';
 
 // Función de normalización universal para evitar errores de carga por inconsistencias en JSONs
-const normalizeActivityData = (data: any) => {
+/** Saca el encabezado de un hueco que puede ser seccion teorica o fase de clase. */
+const tituloDeSeccion = (s: SeccionTeorica | FasePedagogica) =>
+  'subtitle' in s ? s.subtitle : s.title;
+
+/** Y su cuerpo. */
+const cuerpoDeSeccion = (s: SeccionTeorica | FasePedagogica) =>
+  'content' in s ? s.content : s.description;
+
+/* El JSON de una actividad llega con la forma que le dio quien la escribio, y esta funcion existe
+   precisamente para uniformarla, asi que aqui `unknown` es el tipo honesto: lo que entra no se
+   conoce hasta que se mira. */
+/**
+ * El JSON de una actividad tal y como sale del archivo, antes de uniformarlo.
+ *
+ * `Record<string, unknown>` no es pereza: es el tipo honesto. Los 742 archivos de
+ * `public/data/actividades/` se escribieron a lo largo del tiempo y el mismo dato aparece con
+ * nombres distintos —`preguntas` o `questions` o `preguntas_quiz`, `respuesta` o `correcta` o
+ * `answer`—, que es justo la razon de ser de la funcion de abajo. Declarar aqui una forma concreta
+ * seria afirmar algo que los datos no cumplen. Los tipos buenos viven en `@/types/activities` y
+ * empiezan a aplicar despues de normalizar, cuando cada componente de actividad recibe el suyo.
+ */
+type ActividadCruda = Record<string, unknown>;
+
+/** Un elemento suelto dentro de una actividad: una pregunta, un hueco, un item. */
+type ElementoCrudo = Record<string, unknown>;
+
+/** El primer valor con contenido de una lista de alias. */
+const primero = (...valores: unknown[]) => valores.find((v) => v !== undefined && v !== null && v !== '');
+
+const normalizeActivityData = (data: ActividadCruda | null | undefined): ActividadCruda | null => {
   if (!data) return null;
-  const d = { ...data };
-  
+  const d: ActividadCruda = { ...data };
+
   // Normalizar Quizzes y Trivias
   if (!d.preguntas) {
     d.preguntas = d.questions || d.items || d.preguntas_quiz || [];
   }
   if (Array.isArray(d.preguntas)) {
-    d.preguntas = d.preguntas.map((q: any) => ({
+    d.preguntas = (d.preguntas as ElementoCrudo[]).map((q) => ({
       ...q,
-      texto: q.texto || q.pregunta || q.question || '',
-      opciones: q.opciones || q.choices || q.answers || [],
+      texto: primero(q.texto, q.pregunta, q.question) ?? '',
+      opciones: primero(q.opciones, q.choices, q.answers) ?? [],
       correcta: q.correcta !== undefined ? q.correcta : (q.correct_index !== undefined ? q.correct_index : 0),
-      explicacion: q.explicacion || q.explanation || q.feedback || ''
+      explicacion: primero(q.explicacion, q.explanation, q.feedback) ?? '',
     }));
   }
 
   // Normalizar Simuladores
   if (!d.inputs) d.inputs = d.controles || d.fields || [];
-  
+
   // Normalizar Drag & Drop
   if (!d.items) d.items = d.elementos || d.objetos || [];
   if (!d.categorias) d.categorias = d.groups || d.categories || [];
@@ -427,13 +463,13 @@ const normalizeActivityData = (data: any) => {
   // Normalizar Rellena Blancos
   if (!d.blanks) d.blanks = d.espacios || d.huecos || [];
   if (Array.isArray(d.blanks)) {
-    d.blanks = d.blanks.map((b: any) => ({
+    d.blanks = (d.blanks as ElementoCrudo[]).map((b) => ({
       ...b,
-      id: (b.id || '').toString(),
-      respuesta: b.respuesta || b.correcta || b.answer || ''
+      id: String(b.id ?? ''),
+      respuesta: primero(b.respuesta, b.correcta, b.answer) ?? '',
     }));
   }
-  
+
   // Normalizar Decisiones (Decide)
   if (!d.nodos) d.nodos = d.nodes || d.escenas || {};
 
@@ -442,7 +478,18 @@ const normalizeActivityData = (data: any) => {
 
 // ─── Portada y escena de la actividad (imagenes del flujo Krea2) ─────────────
 // Ambas son opcionales: si la actividad no las trae, no se renderiza nada.
-const PortadaActividad = memo(({ data }: { data: any }) => {
+/* Estas dos solo leen unos pocos campos de texto, asi que reciben esa forma y no `ActividadCruda`:
+   un `unknown` no se puede meter en JSX, y ensancharlo aqui obligaria a castear en cada hueco. */
+interface CamposDePortada {
+  portada?: string;
+  escena?: string;
+  titulo?: string;
+  complejidad?: string;
+  objetivo?: string;
+  descripcion?: string;
+}
+
+const PortadaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
   if (!data?.portada) return null;
   return (
     <div className="relative w-full h-[200px] md:h-[280px] rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl mb-10">
@@ -461,7 +508,7 @@ const PortadaActividad = memo(({ data }: { data: any }) => {
 });
 PortadaActividad.displayName = 'PortadaActividad';
 
-const EscenaActividad = memo(({ data }: { data: any }) => {
+const EscenaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
   if (!data?.escena) return null;
   return (
     <div className="hidden md:block relative w-full rounded-[32px] overflow-hidden border border-white/10 mb-10">

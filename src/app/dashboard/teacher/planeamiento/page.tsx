@@ -21,6 +21,7 @@ import {
   Sparkles,
   Info
 } from "lucide-react";
+import type { TemarioDeGrado, UnidadPedagogica } from '@/types/pedagogia';
 // Deep-link desde "Módulos CEN": ?grado=s1&unidad=S1-1-6&tab=teoria
 // Se lee de window.location en vez de useSearchParams para no forzar a esta
 // página a renderizado dinámico (hoy se prerenderiza como estática).
@@ -34,13 +35,35 @@ function paramsDeUrl() {
   };
 }
 
+/**
+ * Lo que ve el profesor cuando abre una unidad que no trae ese apartado.
+ *
+ * Las nueve unidades de reto supremo —una por grado— no tienen plan de clase, marco teorico ni
+ * examen: son un desafio de cierre, no una leccion. El codigo daba por hecho que toda unidad los
+ * tenia y escribia `activeUnit?.strategy.phases`, donde el `?.` protege `activeUnit` pero no
+ * `strategy`. Abrir un reto supremo y pulsar "Estrategia" tiraba la pagina entera con un
+ * "Cannot read properties of undefined". Ahora se dice lo que pasa, que ademas es informacion util.
+ */
+function SinPlanDeClase({ que }: { que: string }) {
+  return (
+    <div className="bento-card p-10 text-center">
+      <p className="text-lg font-black text-[#011C40]/70">
+        Esta unidad es un reto supremo y no tiene {que}.
+      </p>
+      <p className="text-sm text-slate-400 mt-2 font-medium">
+        Los retos supremos cierran el grado: el alumno aplica lo aprendido sin clase previa.
+      </p>
+    </div>
+  );
+}
+
 export default function PlaneamientoPage() {
   const [selectedGrade, setSelectedGrade] = useState<string>("p1");
   const [activeTab, setActiveTab] = useState<"estrategia" | "teoria" | "evaluacion">("estrategia");
   const [searchQuery, setSearchQuery] = useState("");
   const mounted = useHasMounted();
-  const [currentData, setCurrentData] = useState<any | null>(null);
-  const [activeUnit, setActiveUnit] = useState<any>(null);
+  const [currentData, setCurrentData] = useState<TemarioDeGrado | null>(null);
+  const [activeUnit, setActiveUnit] = useState<UnidadPedagogica | null>(null);
   // Unidad pedida por URL; se aplica cuando termina de cargar el grado.
   const [unidadPedida, setUnidadPedida] = useState<string>("");
 
@@ -69,7 +92,7 @@ export default function PlaneamientoPage() {
 
   if (!mounted || !currentData) return null;
 
-  const units = Object.values(currentData).map((u: any) => ({
+  const units = Object.values(currentData).map((u: UnidadPedagogica) => ({
     code: u.code,
     title: u.title,
     duration: u.duration,
@@ -168,7 +191,7 @@ export default function PlaneamientoPage() {
                 {bloque.units.map((u) => (
               <button
                 key={u.code}
-                onClick={() => setActiveUnit((currentData as any)[u.code])}
+                onClick={() => currentData && setActiveUnit(currentData[u.code])}
                 className={`w-full text-left p-5 rounded-[22px] transition-all relative overflow-hidden group ${
                   activeUnit?.code === u.code 
                   ? "bg-[#011C40] text-white shadow-[0_20px_40px_rgba(1,28,64,0.2)] scale-[1.02] -translate-y-1" 
@@ -334,7 +357,8 @@ export default function PlaneamientoPage() {
               <div className="col-span-12 lg:col-span-8 space-y-8">
                 {activeTab === "estrategia" && (
                   <div className="space-y-6">
-                    {activeUnit?.strategy.phases.map((phase: any, i: number) => (
+                    {!activeUnit?.strategy && <SinPlanDeClase que="plan de clase" />}
+                    {activeUnit?.strategy?.phases.map((phase, i: number) => (
                       <div key={i} className="group relative bento-card p-5 md:p-10 overflow-hidden">
                         <div className={`absolute top-0 left-0 w-2 h-full ${i === 0 ? "bg-[#FF8C00]" : i === 1 ? "bg-[#011C40]" : "bg-[#42E8E0]"}`} />
                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative z-10">
@@ -380,11 +404,12 @@ export default function PlaneamientoPage() {
                         Introducción al <span className="premium-gradient-text">Marco Teórico</span>
                       </h2>
                       <p className="text-2xl text-slate-500 font-medium leading-relaxed italic">
-                        &quot;{activeUnit?.theory.introduction}&quot;
+                        &quot;{activeUnit?.theory?.introduction}&quot;
                       </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
-                      {activeUnit?.theory.sections.map((section: any, i: number) => (
+                      {!activeUnit?.theory && <SinPlanDeClase que="marco teórico" />}
+                      {activeUnit?.theory?.sections.map((section, i: number) => (
                         <div key={i} className="space-y-4 group">
                           <div className="w-10 h-10 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-[#011C40] group-hover:text-white transition-all">
                             <span className="text-xs font-black">0{i+1}</span>
@@ -409,7 +434,8 @@ export default function PlaneamientoPage() {
                         </div>
                       </div>
                       <div className="space-y-6">
-                        {activeUnit?.evaluation.exam_questions.map((q: any, i: number) => (
+                        {!activeUnit?.evaluation && <SinPlanDeClase que="examen" />}
+                        {activeUnit?.evaluation?.exam_questions.map((q, i: number) => (
                           <div key={i} className="p-8 bg-slate-50 rounded-[32px] border border-slate-100/50 space-y-6 hover:border-[#FF8C00]/20 transition-all">
                             <p className="text-xl font-black text-[#011C40] flex gap-4">
                               <span className="text-[#FF8C00]">Q{i+1}.</span> {q.question}
@@ -444,7 +470,7 @@ export default function PlaneamientoPage() {
                           <h4 className="text-2xl font-black uppercase tracking-widest">Rúbrica de Éxito</h4>
                         </div>
                         <p className="text-2xl text-slate-300 leading-relaxed font-light">
-                          {activeUnit?.evaluation.rubric}
+                          {activeUnit?.evaluation?.rubric}
                         </p>
                       </div>
                     </div>
@@ -513,7 +539,7 @@ export default function PlaneamientoPage() {
                       <h3 className="font-black text-xs uppercase tracking-widest text-[#011C40]">Consejo de Expertos</h3>
                     </div>
                     <div className="space-y-4">
-                      {activeUnit?.teacher_tips.map((tip: string, i: number) => (
+                      {activeUnit?.teacher_tips?.map((tip: string, i: number) => (
                         <p key={i} className="text-sm font-bold text-[#011C40]/70 leading-relaxed italic">
                           &quot;{tip}&quot;
                         </p>

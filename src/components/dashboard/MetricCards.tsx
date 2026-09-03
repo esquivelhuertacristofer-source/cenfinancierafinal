@@ -80,7 +80,7 @@ export default function MetricCards({
               .from("profiles")
               .select("id")
               .eq("escuela_id", escuelaId);
-            rosterIds = students?.map((s: any) => s.id) ?? [];
+            rosterIds = students?.map((s) => s.id) ?? [];
           }
 
           let pCount = 0;

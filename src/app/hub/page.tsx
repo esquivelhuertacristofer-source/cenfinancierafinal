@@ -42,6 +42,7 @@ import ArenaMastery from '../../components/hub/ArenaMastery';
 import { useSFX } from '../../lib/hooks/useSFX';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
+import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -57,7 +58,7 @@ const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string 
 export default function StudentHubV19() {
   const router = useRouter();
   const [profile, setProfile] = useState<any>(null);
-  const [pillars, setPillars] = useState<any[]>([]);
+  const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [isSyncing, setIsSyncing] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -117,7 +118,7 @@ export default function StudentHubV19() {
             if (pillarMatch) {
               setActivePillar(pillarMatch);
               if (uId) {
-                const unitMatch = pillarMatch.units.find((un: any) => un.code === uId);
+                const unitMatch = pillarMatch.units.find((un) => un.code === uId);
                 if (unitMatch) {
                   setTimeout(() => {
                     setActiveUnit(unitMatch);
@@ -753,7 +754,7 @@ export default function StudentHubV19() {
                     <div className="p-badge">{p.units.length} Misiones</div>
                     <h3 className="p-title">{p.title}</h3>
                     <div className="flex gap-2">
-                       {p.units.map((_: any, idx: number) => (
+                       {p.units.map((_, idx: number) => (
                          <div key={idx} className="p-unit-dot" style={{ background: idx < done ? cfg.accent : 'var(--badge-bg)' }} />
                        ))}
                     </div>
@@ -929,7 +930,7 @@ export default function StudentHubV19() {
                 </h3>
                 
                 <div className="malla-grid">
-                  {pillars.flatMap(p => p.units).map((unit: any) => (
+                  {pillars.flatMap(p => p.units).map((unit) => (
                     <div 
                       key={unit.code} 
                       className="malla-unit-card cursor-pointer group"
@@ -1244,7 +1245,7 @@ export default function StudentHubV19() {
           unit={selectedUnitForFicha}
           onClose={() => setSelectedUnitForFicha(null)}
           onStart={() => {
-            const p = pillars.find((p: any) => p.units.some((u: any) => u.code === selectedUnitForFicha.code));
+            const p = pillars.find((p) => p.units.some((u) => u.code === selectedUnitForFicha.code));
             if (p) {
               setActiveUnit(selectedUnitForFicha);
               setActivePillar(p);

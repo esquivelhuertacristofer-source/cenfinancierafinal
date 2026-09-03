@@ -67,8 +67,8 @@ export default function TeacherDashboard() {
           .select("id, grado")
           .eq("id_profesor", user.id);
         if (grupos && grupos.length > 0) {
-          setTeacherGroupIds(grupos.map((g: any) => g.id));
-          if (grupos.some((g: any) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
+          setTeacherGroupIds(grupos.map((g) => g.id));
+          if (grupos.some((g) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
         }
       } catch {
         setError(true);
