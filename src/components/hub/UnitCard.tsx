@@ -13,6 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { Unit } from "../../lib/hub";
+import type { LucideIcon } from 'lucide-react';
 
 interface UnitCardProps {
   unit: Unit;
@@ -22,7 +23,7 @@ interface UnitCardProps {
   unitIndex: number; // Global index for image mapping
 }
 
-const ICON_MAP: Record<string, any> = {
+const ICON_MAP: Record<string, LucideIcon> = {
   video: PlayCircle,
   reading: BookOpen,
   simulator: Rocket,

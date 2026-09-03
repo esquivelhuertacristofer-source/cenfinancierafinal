@@ -42,7 +42,7 @@ import ArenaMastery from '../../components/hub/ArenaMastery';
 import { useSFX } from '../../lib/hooks/useSFX';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
-import type { PillarMeta } from '@/lib/hub';
+import type { GradeMeta, PillarMeta, Unit, UserProfile } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -57,17 +57,17 @@ const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string 
 
 export default function StudentHubV19() {
   const router = useRouter();
-  const [profile, setProfile] = useState<any>(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [isSyncing, setIsSyncing] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
-  const [activePillar, setActivePillar] = useState<any>(null);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
+  const [activePillar, setActivePillar] = useState<PillarMeta | null>(null);
   const [showCurriculum, setShowCurriculum] = useState(false);
-  const [selectedUnitForFicha, setSelectedUnitForFicha] = useState<any>(null);
+  const [selectedUnitForFicha, setSelectedUnitForFicha] = useState<Unit | null>(null);
   const [showContentModal, setShowContentModal] = useState(false);
-  const [activeUnit, setActiveUnit] = useState<any>(null);
+  const [activeUnit, setActiveUnit] = useState<Unit | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -922,7 +922,7 @@ export default function StudentHubV19() {
                    <h3 className="text-3xl font-black text-[#FF8C00] mb-8 flex items-center gap-4">
                      <Target size={32} /> Objetivo Central del Grado
                    </h3>
-                   <p className="text-2xl opacity-90 leading-relaxed font-medium">{gradeMeta.objective}</p>
+                   <p className="text-2xl opacity-90 leading-relaxed font-medium">{gradeMeta?.objective}</p>
                 </div>
 
                 <h3 className="text-3xl font-black text-[#FF8C00] mb-12 flex items-center gap-4">

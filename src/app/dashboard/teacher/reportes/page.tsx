@@ -20,9 +20,10 @@ import {
   Sun,
   Moon
 } from "lucide-react";
+import type { UserProfile } from '@/lib/hub';
 
 export default function ReportesPage() {
-  const [teacher, setTeacher] = useState<any>(null);
+  const [teacher, setTeacher] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const router = useRouter();

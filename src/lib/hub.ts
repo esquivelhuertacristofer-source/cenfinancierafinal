@@ -262,7 +262,26 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
   });
 }
 
-export const GRADE_INFO: Record<string, { title: string; objective: string; briefing: string; skills: string[]; accentColor: string; secondaryColor: string; coreImage: string; introVideo: string; arenaQuiz: QuizQuestion[] }> = {
+/**
+ * La portada de un grado: lo que ve el alumno al entrar a su mapa.
+ *
+ * Los tres ultimos campos son opcionales a proposito. `getGradeMetadata` devuelve un objeto de
+ * reserva cuando el grado no esta en `GRADE_INFO`, y ese objeto no trae imagen, ni video, ni quiz de
+ * arena. Declararlos obligatorios haria que el compilador prometiera algo que la funcion no cumple.
+ */
+export interface GradeMeta {
+  title: string;
+  objective: string;
+  briefing: string;
+  skills: string[];
+  accentColor: string;
+  secondaryColor: string;
+  coreImage?: string;
+  introVideo?: string;
+  arenaQuiz?: QuizQuestion[];
+}
+
+export const GRADE_INFO: Record<string, GradeMeta> = {
   'primary-1': {
     title: 'Mis Primeros Pesos',
     objective: 'Descubrir el valor del dinero y el esfuerzo personal.',
@@ -463,7 +482,7 @@ export const GRADE_INFO: Record<string, { title: string; objective: string; brie
   },
 };
 
-export function getGradeMetadata(grade: number, schoolLevel: string = 'primary') {
+export function getGradeMetadata(grade: number, schoolLevel: string = 'primary'): GradeMeta {
   const levelKey = schoolLevel.startsWith('secondary') ? 'secondary' : 'primary';
   const key = `${levelKey}-${grade}`;
   return GRADE_INFO[key] || { 

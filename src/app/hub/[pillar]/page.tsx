@@ -28,6 +28,7 @@ import {
 } from '../../../lib/hub';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
+import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -46,7 +47,7 @@ const SOUNDS = {
   complete: 'https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3',
 };
 
-export default function PillarPageV19({ params }: { params: any }) {
+export default function PillarPageV19({ params }: { params: Promise<{ pillar: string }> }) {
   const router = useRouter();
   
   // Safe param resolution for Next.js 15+ vs 14 compatibility
@@ -65,7 +66,7 @@ export default function PillarPageV19({ params }: { params: any }) {
   const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProject, setShowProject] = useState(false);
-  const [pillar, setPillar] = useState<any | null>(null);
+  const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 

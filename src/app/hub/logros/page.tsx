@@ -20,6 +20,7 @@ import {
   getPillarProgress 
 } from '../../../lib/hub';
 import type { PillarMeta } from '@/lib/hub';
+import type { UserProfile } from '@/lib/hub';
 
 const MEDAL_VARIANTS = [
   { label: 'Novato', color: '#CD7F32', min: 0 },
@@ -30,7 +31,7 @@ const MEDAL_VARIANTS = [
 
 export default function AchievementsPage() {
   const router = useRouter();
-  const [profile, setProfile] = useState<any>(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);

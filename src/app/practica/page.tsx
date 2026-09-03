@@ -12,6 +12,7 @@ import {
 } from '../../lib/hub';
 import type { PillarMeta } from '../../lib/hub';
 import UnitTimeline from '../../components/hub/UnitTimeline';
+import type { GradeMeta } from '@/lib/hub';
 
 const GUEST_PROFILE_KEY = 'cen_guest_profile';
 
@@ -42,7 +43,7 @@ function loadGuestChoice(): GuestProfileChoice {
 export default function PracticaPage() {
   const [choice, setChoice] = useState<GuestProfileChoice>({ nivel: 'Primaria', grado: 4 });
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [activePillar, setActivePillar] = useState<PillarMeta | null>(null);
   const [loading, setLoading] = useState(true);

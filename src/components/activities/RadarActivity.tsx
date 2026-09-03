@@ -3,12 +3,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, CheckCircle2, Zap, Heart, Star, Pizza, Briefcase, Plus, Sparkles, X } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface Item {
   id: number;
   label: string;
   type: 'need' | 'want';
-  icon: any;
+  icon: LucideIcon;
   pos: { x: number; y: number };
 }
 
@@ -27,7 +28,7 @@ interface Props {
   onClose?: () => void;
 }
 
-const ICONS_MAP: Record<string, any> = {
+const ICONS_MAP: Record<string, LucideIcon> = {
   comida: Pizza,
   escuela: Briefcase,
   salud: Plus,

@@ -87,6 +87,7 @@ import { EXPERT_VIDEOS } from '../../lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
 import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';
+import type { LucideIcon } from 'lucide-react';
 
 interface ContentModalProps {
   unit: Unit;
@@ -98,7 +99,7 @@ interface ContentModalProps {
   onNextUnit?: () => void;
 }
 
-const MODALITY_ICONS_MODERN: Record<string, any> = {
+const MODALITY_ICONS_MODERN: Record<string, LucideIcon> = {
   video: Play,
   reading: BookOpen,
   simulator: Gamepad2,

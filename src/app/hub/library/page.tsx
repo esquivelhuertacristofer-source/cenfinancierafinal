@@ -23,12 +23,13 @@ import {
 } from '../../../lib/hub';
 import DiamondConceptCarousel from '../../../components/hub/DiamondConceptCarousel';
 import type { PillarMeta } from '@/lib/hub';
+import type { GradeMeta, UserProfile } from '@/lib/hub';
 
 export default function LibraryPage() {
   const router = useRouter();
-  const [profile, setProfile] = useState<any>(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);

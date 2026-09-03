@@ -21,6 +21,7 @@ import {
   getPillarById,
   FALLBACK_PROFILE
 } from '../../../lib/hub';
+import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -37,7 +38,7 @@ export default function MissionPage() {
   const [pillarId, setPillarId] = useState<string | null>(null);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [userId, setUserId] = useState<string | null>(null);
-  const [pillar, setPillar] = useState<any | null>(null);
+  const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [showProject, setShowProject] = useState(false);
 

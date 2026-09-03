@@ -36,7 +36,8 @@ function isNavItemActive(pathname: string, href: string) {
 
 type SidebarProps = {
   teacherName?: string;
-  groupId?: string;
+  /** Un profesor sin grupo asignado lo trae a null en la base, no ausente. */
+  groupId?: string | null;
   currentLevel?: 'primaria' | 'secundaria';
   onLevelChange?: (level: 'primaria' | 'secundaria') => void;
 };
