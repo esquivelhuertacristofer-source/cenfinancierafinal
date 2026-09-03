@@ -3,26 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
-import { 
-  Book, 
-  Globe, 
-  ExternalLink, 
-  Library, 
-  Sparkles, 
-  Search,
-  ArrowUpRight,
-  ShieldCheck,
-  Bookmark,
-  GraduationCap,
-  Scale,
-  TrendingUp,
-  Wallet,
-  Shield,
-  HeartPulse,
-  Filter,
-  CheckCircle2,
-  Info
-} from "lucide-react";
+import { Book, Library, Search, ArrowUpRight, ShieldCheck, TrendingUp, Wallet, Shield, Filter, Info } from "lucide-react";
 
 interface Resource {
   id: string;

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { MatchingActivityData, MemoryPair } from '@/types/activities';
-import { ArrowLeft, CheckCircle2, Trophy, RefreshCw } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { MatchingActivityData } from '@/types/activities';
+import { ArrowLeft, Trophy, RefreshCw } from 'lucide-react';
 
 interface Card {
   id: string; // "pairId-type" (e.g., "p1-term" or "p1-def")

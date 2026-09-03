@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Droplets, Flame, AlertTriangle, ShieldCheck, Timer, Wallet, RefreshCw, PlayCircle } from 'lucide-react';
+import { Zap, Droplets, Flame, AlertTriangle, ShieldCheck, Wallet, RefreshCw, PlayCircle } from 'lucide-react';
 
 // ─── FORMA DE DATOS ESPERADA (data de la actividad, JSON en public/data/actividades) ──
 // Todos los campos son opcionales: si la actividad no los define, se usan los mismos

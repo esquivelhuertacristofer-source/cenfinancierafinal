@@ -2,19 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  ChevronLeft, 
-  BookOpen, 
-  Search,
-  Filter,
-  ArrowRight,
-  X,
-  Target,
-  CheckCircle2,
-  BookMarked,
-  Layout,
-  MessageSquareQuote
-} from 'lucide-react';
+import { ChevronLeft, BookOpen, Search, Filter, ArrowRight, X, Layout, MessageSquareQuote } from 'lucide-react';
 import { 
   getCurrentProfile, 
   getPillarsForGrade,

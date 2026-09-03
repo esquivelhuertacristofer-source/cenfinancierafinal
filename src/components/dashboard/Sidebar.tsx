@@ -1,22 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import {
-  LayoutDashboard,
-  Users,
-  BookOpen,
-  GraduationCap,
-  BarChart3,
-  LogOut,
-  ChevronRight,
-  Sparkles,
-  Zap,
-  ShieldCheck,
-  ChevronDown,
-  Library,
-  Menu,
-  X
-} from "lucide-react";
+import { LayoutDashboard, Users, BookOpen, GraduationCap, BarChart3, LogOut, ChevronRight, Sparkles, Zap, ChevronDown, Library, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { logoutAction } from "@/app/actions/authActions";

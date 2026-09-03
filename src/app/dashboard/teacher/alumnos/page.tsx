@@ -5,26 +5,7 @@ import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
-import {
-  Users,
-  Search,
-  Printer,
-  ArrowRight,
-  UserPlus,
-  GraduationCap,
-  Calendar,
-  Zap,
-  Star,
-  Award,
-  Clock,
-  History,
-  CheckCircle2,
-  AlertCircle,
-  X,
-  Loader2,
-  Download,
-  FileText,
-} from "lucide-react";
+import { Users, Search, ArrowRight, GraduationCap, Award, Clock, History, CheckCircle2, AlertCircle, X, Loader2, Download, FileText } from "lucide-react";
 import jsPDF from "jspdf";
 
 interface IntentoEntry {

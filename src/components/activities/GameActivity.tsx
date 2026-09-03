@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Trophy, Timer, Star, PlayCircle, Zap } from 'lucide-react';
+import { Heart, Trophy, PlayCircle, Zap } from 'lucide-react';
 import type { GameActivityData } from '@/types/activities';
 
 interface Props {

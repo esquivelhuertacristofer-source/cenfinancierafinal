@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Wallet, BookOpen, Gift, Rocket, ChevronRight, Zap, Target, X } from 'lucide-react';
+import { TrendingUp, BookOpen, Gift, Rocket, X } from 'lucide-react';
 import type { GrowthActivityData } from '@/types/activities';
 
 interface Props {

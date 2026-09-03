@@ -1,17 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Lock,
-  CheckCircle2,
-  ChevronRight,
-  PlayCircle,
-  BookOpen,
-  Rocket,
-  FileText,
-  HelpCircle,
-  Zap,
-} from "lucide-react";
+import { Lock, CheckCircle2, ChevronRight, PlayCircle, BookOpen, Rocket, FileText, HelpCircle } from "lucide-react";
 import type { Unit } from "../../lib/hub";
 import type { LucideIcon } from 'lucide-react';
 

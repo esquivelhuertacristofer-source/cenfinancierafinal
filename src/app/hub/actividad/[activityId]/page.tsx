@@ -6,8 +6,6 @@ import dynamic from 'next/dynamic';
 import { getActivityData, calculateXP, getAndUpdateRacha } from '@/lib/activities';
 import { getCurrentProfile, markActivityComplete } from '@/lib/hub';
 import { Loader2, ArrowLeft, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
-import type { ActividadCruda } from '@/types/activities';
 
 // Carga dinámica de componentes
 // ssr:false en Simulator (recharts) y Builder (mathjs): esas librerías están

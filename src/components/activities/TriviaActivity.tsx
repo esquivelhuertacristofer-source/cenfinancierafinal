@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TriviaActivityData } from '../../types/activities';
-import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame, X } from 'lucide-react';
+import { Timer, Zap, Star, Flame, X } from 'lucide-react';
 
 interface Props {
   data: TriviaActivityData;

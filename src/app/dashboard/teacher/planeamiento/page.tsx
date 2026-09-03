@@ -3,24 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
-import { 
-  Search, 
-  Clock, 
-  GraduationCap, 
-  BarChart, 
-  Zap, 
-  FileText, 
-  Target, 
-  Lightbulb, 
-  Download, 
-  Monitor,
-  CheckCircle2,
-  ListTodo,
-  BookOpen,
-  ArrowRight,
-  Sparkles,
-  Info
-} from "lucide-react";
+import { Search, Clock, BarChart, Zap, FileText, Target, Lightbulb, Download, Monitor, CheckCircle2, ListTodo, BookOpen, ArrowRight, Sparkles, Info } from "lucide-react";
 import type { TemarioDeGrado, UnidadPedagogica } from '@/types/pedagogia';
 // Deep-link desde "Módulos CEN": ?grado=s1&unidad=S1-1-6&tab=teoria
 // Se lee de window.location en vez de useSearchParams para no forzar a esta

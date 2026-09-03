@@ -3,18 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
-import { 
-  Sparkles, 
-  Activity, 
-  Zap, 
-  ShieldCheck, 
-  Clock, 
-  BarChart3,
-  Layout,
-  Sun,
-  Moon,
-  ChevronRight
-} from "lucide-react";
+import { Activity, Zap, ShieldCheck, Clock, BarChart3, Layout, Sun, Moon } from "lucide-react";
 
 import Sidebar from "../../../components/dashboard/Sidebar";
 import WelcomeBanner from "../../../components/dashboard/WelcomeBanner";

@@ -4,7 +4,7 @@ import React, { useState, useMemo, useRef } from 'react';
 import { evaluate } from 'mathjs';
 import { normalizeFormula } from '../../lib/math-engine';
 import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
-import { ArrowLeft, ChevronRight, ChevronLeft, ChevronDown, CheckCircle2, Calculator, Sparkles, Zap, FileText, X } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ChevronDown, CheckCircle2, Calculator, Sparkles, Zap, X } from 'lucide-react';
 
 interface Props {
   data: BuilderActivityData;

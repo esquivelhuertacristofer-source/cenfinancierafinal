@@ -1,41 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useRef, memo } from 'react';
-import { 
-  Play, 
-  BookOpen, 
-  Rocket, 
-  Printer, 
-  CheckCircle2, 
-  Clock, 
-  Zap, 
-  Award,
-  BookMarked,
-  Brain, 
-  Sparkles,
-  Trophy,
-  Lightbulb,
-  CheckCircle,
-  PlayCircle,
-  FileText,
-  HelpCircle,
-  Book,
-  ArrowLeft,
-  Map,
-  Target,
-  ShieldCheck,
-  Activity,
-  Cpu,
-  Star,
-  Gamepad2,
-  Compass,
-  Gift,
-  MousePointer2,
-  Telescope,
-  Coins,
-  ChevronRight,
-  X
-} from 'lucide-react';
+import { Play, BookOpen, Printer, CheckCircle2, Zap, Sparkles, Trophy, PlayCircle, FileText, ArrowLeft, Target, Activity, Gamepad2, Compass, Coins, ChevronRight, X } from 'lucide-react';
 import { markActivityComplete } from '../../lib/hub';
 import { getActivityData, calculateXP, getAndUpdateRacha } from '../../lib/activities';
 
@@ -83,7 +49,6 @@ const PortfolioBuilder = dynamic(() => import('./mechanics/PortfolioBuilder'), {
 
 import VideoFrame from './VideoFrame';
 import { UNIT_VIDEOS, VIDEO_TITULOS, urlVideo } from '@/lib/videos-generados';
-import { EXPERT_VIDEOS } from '../../lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
 import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';

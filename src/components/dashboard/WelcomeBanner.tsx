@@ -5,7 +5,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase-browser";
 import { useScopedStudentIds } from "@/lib/hooks/useScopedStudentIds";
 import { useHasMounted } from "@/lib/useHasMounted";
-import { Sparkles, ArrowRight, Zap, Target, Star, Shield } from "lucide-react";
+import { Sparkles, ArrowRight, Zap } from "lucide-react";
 
 export default function WelcomeBanner({
   teacherName,

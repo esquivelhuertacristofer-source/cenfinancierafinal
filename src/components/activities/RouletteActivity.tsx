@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { RouletteActivityData, RouletteScenario } from '@/types/activities';
-import { ArrowLeft, RefreshCw, Zap, Star, AlertTriangle, CheckCircle2, ChevronRight, Trophy } from 'lucide-react';
+import { ArrowLeft, RefreshCw, Zap, Star, ChevronRight, Trophy } from 'lucide-react';
 
 interface Props {
   data: RouletteActivityData;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Trophy, BookOpen, Clock, CheckCircle2, Star, Zap, ShieldCheck } from 'lucide-react';
+import { X, Trophy, Clock, CheckCircle2, Zap, ShieldCheck } from 'lucide-react';
 import { supabase } from '@/lib/supabase-browser';
 
 interface ProgressItem {

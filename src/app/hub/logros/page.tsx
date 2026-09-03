@@ -2,16 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  ChevronLeft, 
-  Award, 
-  Star, 
-  ShieldCheck, 
-  Sparkles,
-  Trophy,
-  Lock,
-  ArrowRight
-} from 'lucide-react';
+import { ChevronLeft, Star, Trophy, Lock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { 
   getPillarsForGrade, 

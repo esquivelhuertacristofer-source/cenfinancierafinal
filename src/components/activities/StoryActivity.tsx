@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import { StoryActivityData } from '../../types/activities';
-import { ChevronRight, Award, Sparkles, BookOpen, Star, ArrowLeft } from 'lucide-react';
+import { ChevronRight, Award, Sparkles, BookOpen, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {

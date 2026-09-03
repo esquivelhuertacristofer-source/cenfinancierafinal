@@ -2,10 +2,10 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import { SimulatorActivityData } from '../../types/activities';
-import { TrendingUp, Zap, Sparkles, CheckCircle2, AlertCircle, Info, Calculator, ArrowRight, BarChart3, X } from 'lucide-react';
+import { Zap, CheckCircle2, Info, ArrowRight, BarChart3, X } from 'lucide-react';
 import { solveFormula } from '../../lib/math-engine';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface Props {
   data: SimulatorActivityData;

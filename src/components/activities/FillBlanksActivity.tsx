@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { FillBlanksActivityData } from '@/types/activities';
-import { ArrowLeft, CheckCircle2, XCircle, Info, ChevronRight, BookOpen } from 'lucide-react';
+import { ArrowLeft, ChevronRight, BookOpen } from 'lucide-react';
 
 interface Props {
   data: FillBlanksActivityData;

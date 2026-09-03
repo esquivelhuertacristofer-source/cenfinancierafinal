@@ -1,31 +1,10 @@
 'use client';
 
-import { useState, useEffect, useCallback, use } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { 
-  ChevronLeft, 
-  Target, 
-  Lock, 
-  ArrowRight, 
-  Sparkles,
-  Award,
-  Activity,
-  X,
-  Sun,
-  Moon,
-  Medal,
-  PlayCircle
-} from 'lucide-react';
+import { ChevronLeft, Target, Lock, ArrowRight, Award, X, Sun, Moon, Medal, PlayCircle } from 'lucide-react';
 import UnitTimeline from '../../../components/hub/UnitTimeline';
-import {
-  getPillarsForGrade,
-  getCompletedActivities,
-  getCurrentProfile,
-  getPillarProgress,
-  getPillarById,
-  FALLBACK_PROFILE
-} from '../../../lib/hub';
+import { getCompletedActivities, getCurrentProfile, getPillarProgress, getPillarById, FALLBACK_PROFILE } from '../../../lib/hub';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
 import type { PillarMeta } from '@/lib/hub';

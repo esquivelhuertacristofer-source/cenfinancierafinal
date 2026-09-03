@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, LayoutGrid, TrendingUp, Loader2, Award, ArrowUpRight, AlertCircle } from "lucide-react";
+import { Users, LayoutGrid, Award, ArrowUpRight, AlertCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { notify } from "@/lib/toast";

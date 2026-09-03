@@ -6,24 +6,7 @@ import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
 import { getPillarsForGrade, PillarMeta, Unit } from "../../../../lib/hub";
-import { 
-  BookOpen, 
-  ChevronRight, 
-  Video, 
-  FileText, 
-  Printer, 
-  HelpCircle, 
-  Layers,
-  ArrowLeft,
-  Sparkles,
-  Search,
-  LayoutGrid,
-  Library,
-  ArrowRight,
-  Sun,
-  Moon,
-  Activity
-} from "lucide-react";
+import { BookOpen, ChevronRight, Video, FileText, Printer, HelpCircle, Layers, ArrowLeft, Sparkles, Search, Library, ArrowRight, Sun, Moon } from "lucide-react";
 
 interface TeacherProfile {
   full_name: string;

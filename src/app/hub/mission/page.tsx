@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, PlayCircle, X, Target } from 'lucide-react';
+import { ChevronLeft, PlayCircle, X } from 'lucide-react';
 import UnitTimeline from '../../../components/hub/UnitTimeline';
 import { getPillarById, FALLBACK_PROFILE } from '../../../lib/hub';
 import VideoFrame from '@/components/hub/VideoFrame';
