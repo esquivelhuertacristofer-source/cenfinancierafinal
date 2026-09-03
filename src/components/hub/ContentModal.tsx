@@ -88,6 +88,7 @@ import { EXPERT_VIDEOS } from '../../lib/expertVideos';
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
 import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';
 import type { LucideIcon } from 'lucide-react';
+import type { ActividadCruda as ActividadCrudaCompartida } from '@/types/activities';
 
 interface ContentModalProps {
   unit: Unit;
@@ -428,7 +429,7 @@ const cuerpoDeSeccion = (s: SeccionTeorica | FasePedagogica) =>
  * seria afirmar algo que los datos no cumplen. Los tipos buenos viven en `@/types/activities` y
  * empiezan a aplicar despues de normalizar, cuando cada componente de actividad recibe el suyo.
  */
-type ActividadCruda = Record<string, unknown>;
+type ActividadCruda = ActividadCrudaCompartida;
 
 /** Un elemento suelto dentro de una actividad: una pregunta, un hueco, un item. */
 type ElementoCrudo = Record<string, unknown>;
@@ -528,8 +529,8 @@ const EscenaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
 });
 EscenaActividad.displayName = 'EscenaActividad';
 
-const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: any; isSupremoUnit?: boolean }) => {
-  const [data, setData] = useState<any>(null);
+const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: ThemeType; isSupremoUnit?: boolean }) => {
+  const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
 
@@ -578,7 +579,12 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   );
 
   // Selector Universal de Motores de Actividades (A) con mapeo de sinónimos
-  const activityType = (data.tipo || '').toUpperCase().trim();
+  /* Reparto a los motores. `data.tipo` viene del JSON y puede faltar o no ser cadena, asi que
+     se normaliza aqui una vez; abajo, cada `data={data as never}` reconoce que quien decide el
+     motor es esta bandera y no el compilador: los catorce declaran formas de `data` distintas
+     y su interseccion es vacia. El hueco esta acotado al reparto en vez de dejar el tab entero
+     en `any`, que es como estaba. */
+  const activityType = String(data.tipo ?? '').toUpperCase().trim();
   
   // Mapeo de tipos (Máxima permisividad para evitar bloqueos)
   const isSimulator = ['SIMULADOR', 'SIMULATOR', 'CALCULADORA', 'CALCULA'].includes(activityType);
@@ -598,7 +604,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   const isQuizType = ['QUIZ', 'CUESTIONARIO', 'EXAMEN', 'EVALUACION'].includes(activityType);
 
   // ─── Mecánicas Supremo ────────────────────────────────────────────────────
-  const rawTipo = (data.tipo || data.type || '').toLowerCase().trim();
+  const rawTipo = String(data.tipo ?? data.type ?? '').toLowerCase().trim();
   const isCochintoVivo     = rawTipo === 'cochinito_vivo';
   const isSupermercadoCaos = rawTipo === 'supermercado_caos';
   const isFamiliaRamirez   = rawTipo === 'familia_ramirez';
@@ -617,32 +623,32 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
     <div className="animate-in fade-in duration-1000">
       <PortadaActividad data={data} />
       <EscenaActividad data={data} />
-      {isSimulator && <SimulatorActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBuilder && <BuilderActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isStory && <StoryActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isGame && <GameActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isDragDrop && <DragDropActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isMatching && <MatchingActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isFillBlanks && <FillBlanksActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isRoulette && <RouletteActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBalance && <BalanceActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isRadar && <RadarActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isGrowth && <GrowthActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isServiceControl && <ServiceControlActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isJornada && <JornadaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isTrivia && <TriviaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} onClose={() => {}} />}
-      {isQuizType && <QuizActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isSimulator && <SimulatorActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBuilder && <BuilderActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isStory && <StoryActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGame && <GameActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isDragDrop && <DragDropActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isMatching && <MatchingActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFillBlanks && <FillBlanksActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRoulette && <RouletteActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBalance && <BalanceActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRadar && <RadarActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGrowth && <GrowthActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isServiceControl && <ServiceControlActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isJornada && <JornadaActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isTrivia && <TriviaActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} onClose={() => {}} />}
+      {isQuizType && <QuizActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {/* ─── Mecánicas Supremo ─── */}
-      {isCochintoVivo     && <CochintoVivo     activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isSupermercadoCaos && <SupermercadoCaos activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isFamiliaRamirez   && <FamiliaRamirez   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBancoDelTiempo   && <BancoDelTiempo   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isInversorA10      && <InversorA10      activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isPrimerNegocio    && <PrimerNegocio    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isNegociaSueldo    && <NegociaSueldo    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isCrisisRoom       && <CrisisRoom       activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isPortfolioBuilder && <PortfolioBuilder activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isCochintoVivo     && <CochintoVivo     activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isSupermercadoCaos && <SupermercadoCaos activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFamiliaRamirez   && <FamiliaRamirez   activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBancoDelTiempo   && <BancoDelTiempo   activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isInversorA10      && <InversorA10      activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPrimerNegocio    && <PrimerNegocio    activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isNegociaSueldo    && <NegociaSueldo    activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isCrisisRoom       && <CrisisRoom       activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPortfolioBuilder && <PortfolioBuilder activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {!isKnown && (
         <div className="text-center p-8 md:p-20 border border-white/5 bg-white/5 rounded-[28px] md:rounded-[40px]">
@@ -657,7 +663,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
 SimulatorTab.displayName = 'SimulatorTab';
 
 const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: any; color?: string }) => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
   // Reintento de la evaluación. `intentoEval` remonta el motor desde cero;
@@ -708,7 +714,12 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
     </div>
   );
 
-  const activityType = (data.tipo || '').toUpperCase().trim();
+  /* Reparto a los motores. `data.tipo` viene del JSON y puede faltar o no ser cadena, asi que
+     se normaliza aqui una vez; abajo, cada `data={data as never}` reconoce que quien decide el
+     motor es esta bandera y no el compilador: los catorce declaran formas de `data` distintas
+     y su interseccion es vacia. El hueco esta acotado al reparto en vez de dejar el tab entero
+     en `any`, que es como estaba. */
+  const activityType = String(data.tipo ?? '').toUpperCase().trim();
   const isTrivia = ['TRIVIA', 'DESAFIO', 'RAPIDO', 'RETO'].includes(activityType);
   const isGame = ['GAME', 'JUEGO', 'DESAFIO', 'RETO', 'JUEGA'].includes(activityType);
   const isQuiz = ['QUIZ', 'CUESTIONARIO', 'EXAMEN', 'EVALUACION'].includes(activityType);
@@ -720,7 +731,7 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
   const isBuilder = ['CONSTRUCTOR', 'BUILDER', 'PLANIFICADOR', 'CONSTRUYE', 'PLANIFICA'].includes(activityType);
   const isSimulator = ['SIMULADOR', 'SIMULATOR', 'CALCULADORA', 'CALCULA'].includes(activityType);
 
-  const minimoAprobacion = Math.round((data.aprobacion_minima ?? 0.6) * 100);
+  const minimoAprobacion = Math.round((Number(data.aprobacion_minima) || 0.6) * 100);
   // Un puntaje bajo ya no se descarta: se le dice al alumno qué pasó y se le
   // ofrece repetir. Sin esto, la pestaña quedaba muerta tras el primer intento.
   const evaluar = (score: number) => {
@@ -739,64 +750,64 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
       <EscenaActividad data={data} />
       {isTrivia && (
         <TriviaActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
           onClose={() => {}}
         />
       )}
       {isGame && (
         <GameActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isQuiz && (
         <QuizActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isFillBlanks && (
         <FillBlanksActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isStory && (
         <StoryActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isDragDrop && (
         <DragDropActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />
       )}
       {isMatching && (
         <MatchingActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isRoulette && (
         <RouletteActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isBuilder && (
         <BuilderActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />
       )}
       {isSimulator && (
         <SimulatorActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />

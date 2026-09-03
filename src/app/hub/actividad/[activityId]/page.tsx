@@ -7,6 +7,7 @@ import { getActivityData, calculateXP, getAndUpdateRacha } from '@/lib/activitie
 import { getCurrentProfile, markActivityComplete } from '@/lib/hub';
 import { Loader2, ArrowLeft, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import type { ActividadCruda } from '@/types/activities';
 
 // Carga dinámica de componentes
 // ssr:false en Simulator (recharts) y Builder (mathjs): esas librerías están
@@ -72,7 +73,19 @@ function ActivityLoader() {
 
 export default function ActivityPage({ params }: { params: Promise<{ activityId: string }> }) {
   const { activityId } = React.use(params);
-  const [data, setData] = useState<any>(null);
+  /* Esta pantalla solo pinta la cabecera de la actividad y delega el cuerpo en su motor, asi que
+     declara los campos que pinta y no la forma completa. */
+  interface FichaDeActividad {
+    titulo?: string;
+    descripcion?: string;
+    objetivo?: string;
+    tipo?: string;
+    portada?: string;
+    escena?: string;
+    xp?: number;
+  }
+
+  const [data, setData] = useState<FichaDeActividad | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const startTimeRef = useRef<number>(Date.now());
@@ -121,7 +134,15 @@ export default function ActivityPage({ params }: { params: Promise<{ activityId:
   if (!data) return notFound();
 
   const renderActivity = () => {
-    const commonProps = { data, onClose: () => router.back(), onComplete: handleComplete };
+    /* Quien decide que motor recibe estos datos es el `switch` de abajo, sobre `data.tipo`. El
+       compilador no puede seguir ese razonamiento: cada motor declara su propia forma de `data` y
+       la interseccion de las catorce es vacia. Antes esto se resolvia dejando toda la pagina en
+       `any`; ahora el hueco es este, esta acotado a una linea y dice por que existe. */
+    const commonProps = {
+      data: data as never,
+      onClose: () => router.back(),
+      onComplete: handleComplete,
+    };
     
     switch (data.tipo?.toUpperCase()) {
       case 'SIMULADOR': return <SimulatorActivity {...commonProps} />;

@@ -3,6 +3,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { requireAdminSession, withServerTimeout } from "@/lib/supabase-server";
 import { mensajeDeError } from '@/lib/errores';
+import type { PostgrestError } from '@supabase/supabase-js';
 
 // Admin client con service_role — solo en Server Actions, nunca en el cliente
 function getAdminClient() {
@@ -426,7 +427,7 @@ export async function onboardEscuela(
   // un reintento tras un fallo parcial (p. ej. el navegador se cerró a medio
   // procesar el CSV) complete lo que faltó sin duplicar la escuela.
   let escuela: { id: string; nombre: string } | null | undefined;
-  let escuelaErr: any;
+  let escuelaErr: PostgrestError | null = null;
   try {
     ({ data: escuela, error: escuelaErr } = await withOpTimeout(
       admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),
@@ -445,7 +446,7 @@ export async function onboardEscuela(
     console.info(`[adminActions] onboardEscuela: se reutiliza la escuela existente '${escuela.nombre}' (id=${escuela.id}) — no se crea una fila duplicada.`);
   } else {
     let created: { id: string; nombre: string } | null | undefined;
-    let createErr: any;
+    let createErr: PostgrestError | null = null;
     try {
       ({ data: created, error: createErr } = await withOpTimeout(
         admin.from("escuelas").insert({ nombre: nombreTrim }).select("id, nombre").single(),
@@ -463,7 +464,7 @@ export async function onboardEscuela(
     if (createErr?.code === "23505") {
       console.info(`[adminActions] onboardEscuela: colisión de creación concurrente para '${nombreTrim}' — se reutiliza la escuela creada por la otra llamada.`);
       let raced: { id: string; nombre: string } | null | undefined;
-      let racedErr: any;
+      let racedErr: PostgrestError | null = null;
       try {
         ({ data: raced, error: racedErr } = await withOpTimeout(
           admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),

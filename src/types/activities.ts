@@ -15,6 +15,17 @@ export type ActivityType =
 
 export type Complexity = 'SIMPLE' | 'MEDIO' | 'COMPLEJO';
 
+/**
+ * Una actividad tal y como sale de su JSON y del normalizador, antes de saber cual de los catorce
+ * motores la va a recibir.
+ *
+ * `Record<string, unknown>` no es dejadez: los 742 archivos de `public/data/actividades/` se
+ * escribieron a lo largo del tiempo y el mismo dato aparece con nombres distintos, que es la razon
+ * de ser del normalizador. Los tipos concretos de este archivo empiezan a aplicar despues, cuando
+ * cada motor recibe el suyo.
+ */
+export type ActividadCruda = Record<string, unknown>;
+
 export interface BaseActivity {
   code: string;           // "ACT-P4-3-3-A"
   unit_code: string;      // "P4-3-3"

@@ -1,5 +1,6 @@
+import type { ActividadCruda } from '@/types/activities';
 // Caché en memoria para evitar peticiones redundantes
-const activityCache: Record<string, any> = {};
+const activityCache: Record<string, ActividadCruda> = {};
 
 /**
  * Obtiene los datos de una actividad desde la API route (sin pasar por webpack).

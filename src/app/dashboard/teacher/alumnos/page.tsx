@@ -140,7 +140,13 @@ export default function AlumnosPage() {
           const stats = statsRes.data ?? [];
 
           const statsMap: Record<string, { completed_count: number; avg_score: number; total_minutes: number }> = {};
-          for (const s of stats as any[]) {
+          type FilaEstadistica = {
+            user_id: string;
+            completed_count: number;
+            avg_score: number;
+            total_minutes: number;
+          };
+          for (const s of stats as FilaEstadistica[]) {
             statsMap[s.user_id] = {
               completed_count: s.completed_count,
               avg_score: s.avg_score,
@@ -173,7 +179,7 @@ export default function AlumnosPage() {
 
         const { data: progressData } = legacyStudentIds.length > 0
           ? await supabase.from("progress").select("user_id").in("user_id", legacyStudentIds)
-          : { data: [] as any[] };
+          : { data: [] as { user_id: string }[] };
 
         const countMap: Record<string, number> = {};
         (progressData ?? []).forEach((p) => { countMap[p.user_id] = (countMap[p.user_id] ?? 0) + 1; });

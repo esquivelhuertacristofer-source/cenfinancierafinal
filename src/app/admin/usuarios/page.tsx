@@ -419,7 +419,8 @@ export default function AdminUsuariosPage() {
     }
 
     // Footer
-    const pages = (doc.internal as any).getNumberOfPages();
+    /* Ver la nota de escuelas/page.tsx: el metodo existe, sus tipos no lo declaran. */
+    const pages = (doc.internal as unknown as { getNumberOfPages(): number }).getNumberOfPages();
     for (let p = 1; p <= pages; p++) {
       doc.setPage(p);
       doc.setFontSize(7);

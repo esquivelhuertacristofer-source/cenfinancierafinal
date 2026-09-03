@@ -47,7 +47,8 @@ export default function TopAlumnos({
         const stats = statsRes.data ?? [];
 
         const statsMap: Record<string, { completed_count: number; avg_score: number }> = {};
-        for (const s of stats as any[]) {
+        type FilaEstadistica = { user_id: string; completed_count: number; avg_score: number };
+    for (const s of stats as FilaEstadistica[]) {
           statsMap[s.user_id] = { completed_count: s.completed_count, avg_score: s.avg_score };
         }
 

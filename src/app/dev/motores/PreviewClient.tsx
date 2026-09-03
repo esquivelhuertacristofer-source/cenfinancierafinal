@@ -3,6 +3,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { mensajeDeError } from '@/lib/errores';
+import type { ActividadCruda } from '@/types/activities';
 
 export interface ItemActividad {
   archivo: string;
@@ -66,7 +67,7 @@ function motorPara(tipo: string): NombreMotor | null {
 export default function PreviewClient({ catalogo }: { catalogo: ItemActividad[] }) {
   const [filtro, setFiltro] = useState('');
   const [seleccion, setSeleccion] = useState<ItemActividad | null>(null);
-  const [datos, setDatos] = useState<any>(null);
+  const [datos, setDatos] = useState<ActividadCruda | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [resultado, setResultado] = useState<string | null>(null);
   const [montaje, setMontaje] = useState(0); // fuerza remontar al reiniciar
