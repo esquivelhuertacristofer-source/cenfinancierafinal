@@ -1,0 +1,2224 @@
+{
+ "grado": "p3",
+ "acentos": {
+  "p3-b1-u6": "#10B981",
+  "p3-b2-u6": "#42E8E0",
+  "p3-b3-u6": "#EF4444",
+  "p3-b4-u6": "#FF8C00",
+  "p3-supremo": "#FFD700"
+ },
+ "videos": [
+  {
+   "carpeta": "p3-b1-u6",
+   "titulo": "Quiero ahorrar no es una meta",
+   "tipo": "intermedio",
+   "pilar": "Mi Primer Presupuesto",
+   "ancla": "P3-1-6",
+   "imagenes": {
+    "deseo-vago": "A nine year old Mexican boy daydreaming at his desk with a vague dreamy expression, a blurry imagined bicycle floating above him, bedroom afternoon light",
+    "meta-escrita": "A handwritten note pinned above a study desk with a childs pencil writing on it, a small drawing of a bicycle beside it, neat and deliberate",
+    "calendario-fecha": "A wall calendar with one day circled in red marker and a childs finger touching it, other days crossed off, bedroom wall",
+    "cuota-semanal": "Twenty five small coin stacks arranged in a neat grid on a table, one stack per week, top down view, even light",
+    "semaforo-gasto": "A large friendly traffic light standing in a Mexican street with three glowing lights, a nine year old child looking up at it thoughtfully",
+    "verde-obligatorio": "A school bus fare, a lunch torta and a school notebook arranged together on a green surface, plain flat lay, unavoidable everyday items",
+    "amarillo-ajustable": "School supplies and a small wrapped gift arranged together on a yellow surface, plain flat lay, adjustable purchases",
+    "rojo-impulso": "Sweets, a small plastic toy and a fizzy drink arranged together on a red surface, plain flat lay, impulse purchases",
+    "hormigas-fila": "A long line of ants carrying tiny coins across a kitchen counter toward a hole, stylized and slightly humorous, warm light",
+    "jugo-diario": "A single small juice carton on a school desk, and behind it a long receding row of identical cartons stretching into the distance, perspective composition",
+    "sobre-sorpresa": "A nine year old Mexican girl opening an envelope with money inside, surprised and delighted, family living room",
+    "tres-partes": "A stack of banknotes divided into three uneven piles on a table, the largest on the left, top down view, clear separation between piles"
+   },
+   "laminas": [
+    "deseo-vago",
+    "meta-escrita",
+    "calendario-fecha",
+    "cuota-semanal",
+    "semaforo-gasto",
+    "verde-obligatorio",
+    "amarillo-ajustable",
+    "rojo-impulso",
+    "hormigas-fila",
+    "jugo-diario",
+    "sobre-sorpresa",
+    "tres-partes"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Quiero ahorrar.",
+     "fondo": "deseo-vago",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Suena bien, pero no es una meta.",
+     "fondo": "deseo-vago",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "No dice qué, ni cuánto, ni cuándo.",
+     "fondo": "deseo-vago",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Y algo que no se puede verificar tampoco se puede cumplir.",
+     "fondo": "deseo-vago",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Una meta de verdad responde cuatro preguntas.",
+     "fondo": "meta-escrita",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Qué quiero exactamente, con nombre. No algo para la escuela, sino una mochila azul.",
+     "fondo": "meta-escrita",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Cuánto cuesta. Investigado, no supuesto.",
+     "fondo": "meta-escrita",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Para cuándo lo quiero. Una fecha en el calendario.",
+     "fondo": "calendario-fecha",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Y cuánto tengo que guardar cada semana para llegar.",
+     "fondo": "cuota-semanal",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Mil quinientos pesos entre veinticinco semanas son sesenta a la semana.",
+     "fondo": "cuota-semanal",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "60",
+      "por semana"
+     ]
+    },
+    {
+     "id": "p7",
+     "narracion": "Y esa cuota te dice la verdad: si recibes sesenta, tendrías que guardar todo. Es posible, pero apretado.",
+     "fondo": "cuota-semanal",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Ahora, tus gastos no son todos iguales.",
+     "fondo": "semaforo-gasto",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Sepáralos en tres colores.",
+     "fondo": "semaforo-gasto",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.45,
+      0.55
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Verde: los que sí o sí. El pasaje, la comida, una cooperación obligatoria.",
+     "fondo": "verde-obligatorio",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08,
+     "rotulo": "Verde"
+    },
+    {
+     "id": "e4",
+     "narracion": "No se discuten, se pagan.",
+     "fondo": "verde-obligatorio",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "Amarillo: valen la pena, pero se pueden ajustar. Material escolar, un regalo.",
+     "fondo": "amarillo-ajustable",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "rotulo": "Amarillo"
+    },
+    {
+     "id": "e6",
+     "narracion": "Rojo: los de impulso. Y hay una señal que nunca falla.",
+     "fondo": "rojo-impulso",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03,
+     "rotulo": "Rojo"
+    },
+    {
+     "id": "e7",
+     "narracion": "Un gasto rojo es el que a los tres días ya ni recuerdas.",
+     "fondo": "rojo-impulso",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y hay gastos que no duelen porque son diminutos.",
+     "fondo": "hormigas-fila",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Una hormiga sola no carga nada. Un ejército se lleva la despensa entera.",
+     "fondo": "hormigas-fila",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.65
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i3",
+     "narracion": "Un jugo de quince pesos al día parece nada.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i4",
+     "narracion": "Multiplica. Setenta y cinco a la semana. Trescientos al mes.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "3600",
+      "al año"
+     ]
+    },
+    {
+     "id": "i5",
+     "narracion": "Tres mil seiscientos al año. Es el mismo gasto: lo único que cambió fue la escala.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i6",
+     "narracion": "Pero ojo, no hay que eliminarlos todos.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i7",
+     "narracion": "Si te da alegría de verdad todos los días y cabe en tu presupuesto, ese dinero está bien gastado.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i8",
+     "narracion": "Y lo que funciona no es prohibir, es sustituir. Llevar el jugo de casa en vez de comprarlo.",
+     "fondo": "jugo-diario",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Un día llega dinero que no esperabas.",
+     "fondo": "sobre-sorpresa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Y se gasta rapidísimo, porque se siente como si fuera gratis.",
+     "fondo": "sobre-sorpresa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Pero mil pesos de regalo compran exactamente lo mismo que mil pesos ganados.",
+     "fondo": "sobre-sorpresa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c4",
+     "narracion": "Se reparte con porcentajes.",
+     "fondo": "tres-partes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Cincuenta, treinta, veinte. La mitad a tu meta, treinta por ciento al ahorro, veinte para un gusto.",
+     "fondo": "tres-partes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.75
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Y se calcula sin calculadora. El cincuenta por ciento es partir a la mitad.",
+     "fondo": "tres-partes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "El diez por ciento es quitarle un cero. Con esos dos armas todo lo demás.",
+     "fondo": "tres-partes",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Todo esto cabe en un solo documento: tu presupuesto mensual.",
+     "fondo": "meta-escrita",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Lo que esperas recibir, lo que planeas gastar por color, y lo que apartas.",
+     "fondo": "meta-escrita",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Registrar es anotar lo que ya pasó. Presupuestar es decidir lo que va a pasar.",
+     "fondo": "meta-escrita",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "Y si no cuadra, se recorta desde el rojo.",
+     "fondo": "rojo-impulso",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c12",
+     "narracion": "Escribe tu meta con fecha. Pinta tus gastos de tres colores. Y ten la regla lista antes de que llegue el dinero.",
+     "fondo": "meta-escrita",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p3-b2-u6",
+   "titulo": "Las tres puertas del banco",
+   "tipo": "intermedio",
+   "pilar": "Bancos y Cuentas",
+   "ancla": "P3-2-6",
+   "imagenes": {
+    "tres-puertas": "A bank branch entrance, an outdoor ATM and a smartphone shown together in one composition as three doorways to the same place, stylized illustrative scene",
+    "sucursal-persona": "A friendly Mexican bank clerk attending a mother and her nine year old child across a desk inside a modern bank branch, paperwork on the desk",
+    "cajero-noche": "A lit ATM on a Mexican street at night with a person withdrawing cash, quiet empty street, cool light",
+    "app-celular": "A childs hands holding a smartphone showing a simple banking screen with blank rows, kitchen table, warm light",
+    "mismo-dinero": "One large stylized safe with three different paths drawn leading to it from three directions, clean illustrative diagram style",
+    "estado-cuenta": "A printed bank statement on a kitchen table covered in rows of numbers, a pencil and a childs notebook beside it, top down view",
+    "cinco-campos": "A close up of a bank statement with five areas circled in pencil, a childs finger pointing at one of them",
+    "cargo-raro": "A mother and child at the table both frowning slightly at one line of a bank statement, the child pointing at it, evening lamp light",
+    "comision-descuento": "A small pile of coins with a few being lifted away by an invisible force, illustrative representation of a fee being deducted, plain background",
+    "cajero-ajeno": "A person at an ATM that clearly belongs to a different bank than the card they are holding, street setting, neutral daylight",
+    "ipab-escudo": "A large protective shield standing over a modern bank building, stylized institutional illustration, calm confident mood",
+    "firmar-contrato": "A parent and a nine year old child reading a contract carefully together at a bank desk before signing, unhurried, the clerk waiting"
+   },
+   "laminas": [
+    "tres-puertas",
+    "sucursal-persona",
+    "cajero-noche",
+    "app-celular",
+    "mismo-dinero",
+    "estado-cuenta",
+    "cinco-campos",
+    "cargo-raro",
+    "comision-descuento",
+    "cajero-ajeno",
+    "ipab-escudo",
+    "firmar-contrato"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Un banco no es solo un edificio.",
+     "fondo": "tres-puertas",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Hoy tiene tres puertas.",
+     "fondo": "tres-puertas",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "La sucursal, el cajero y la aplicación del celular.",
+     "fondo": "tres-puertas",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Las tres llegan a tu mismo dinero, pero no sirven para lo mismo.",
+     "fondo": "tres-puertas",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "La sucursal es para lo que necesita una persona.",
+     "fondo": "sucursal-persona",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Abrir una cuenta, aclarar un cobro raro, reportar un problema.",
+     "fondo": "sucursal-persona",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "El cajero es para efectivo y consultas rápidas.",
+     "fondo": "cajero-noche",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Funciona casi siempre, casi a cualquier hora. Pero no aclara problemas.",
+     "fondo": "cajero-noche",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Y la aplicación es la más cómoda: ver el saldo, transferir, pagar servicios.",
+     "fondo": "app-celular",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Lo importante es esto: no son tres cuentas. Es la misma cuenta vista desde tres lugares.",
+     "fondo": "mismo-dinero",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Si sacas dinero en el cajero, el saldo baja en la app inmediatamente.",
+     "fondo": "mismo-dinero",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Cada mes el banco manda un papel lleno de números.",
+     "fondo": "estado-cuenta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "El estado de cuenta. Y muchísima gente ni lo abre.",
+     "fondo": "estado-cuenta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Ese es el error, porque es el único lugar donde te enteras de que te cobraron algo que no era.",
+     "fondo": "estado-cuenta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e4",
+     "narracion": "Aunque se vea lleno, solo importan cinco cosas.",
+     "fondo": "cinco-campos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "El periodo, el saldo inicial, los abonos, los cargos y el saldo final.",
+     "fondo": "cinco-campos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.65
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e6",
+     "narracion": "Y aquí sirve tu registro: comparas uno por uno.",
+     "fondo": "cargo-raro",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e7",
+     "narracion": "El que aparece en el banco y no en tu libreta es el que hay que investigar.",
+     "fondo": "cargo-raro",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "A veces hay menos dinero y no compraste nada.",
+     "fondo": "comision-descuento",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Casi siempre es una comisión: lo que el banco cobra por un servicio.",
+     "fondo": "comision-descuento",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06,
+     "rotulo": "Comisión"
+    },
+    {
+     "id": "i3",
+     "narracion": "No es un robo. Es el precio de algo, y casi siempre viene escrito en el contrato.",
+     "fondo": "comision-descuento",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i4",
+     "narracion": "Treinta pesos al mes parece poco. Por doce son trescientos sesenta al año.",
+     "fondo": "comision-descuento",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "360",
+      "al año"
+     ]
+    },
+    {
+     "id": "i5",
+     "narracion": "Y si además sacas dinero en cajeros de otro banco cuatro veces al mes.",
+     "fondo": "cajero-ajeno",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i6",
+     "narracion": "A treinta pesos cada retiro, son mil cuatrocientos cuarenta más.",
+     "fondo": "cajero-ajeno",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "cifra": [
+      "1440",
+      "al año"
+     ]
+    },
+    {
+     "id": "i7",
+     "narracion": "La buena noticia: casi todas se evitan con hábitos simples.",
+     "fondo": "cajero-ajeno",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i8",
+     "narracion": "Retirar en cajeros de tu propio banco y mantener el saldo mínimo.",
+     "fondo": "cajero-ajeno",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Mucha gente guarda el dinero en casa por miedo a que el banco quiebre.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "En México eso está resuelto desde hace décadas, y tiene nombre.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "El I P A B. El Instituto para la Protección al Ahorro Bancario.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "rotulo": "IPAB"
+    },
+    {
+     "id": "c4",
+     "narracion": "Si un banco quiebra, el I P A B devuelve el dinero de los ahorradores hasta cierto límite.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Un límite de varios millones de pesos por persona en cada banco.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Cubre cuentas de ahorro, de nómina y depósitos a plazo. No cubre tandas ni inversiones en la bolsa.",
+     "fondo": "ipab-escudo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "Y el dinero en casa no está protegido de nada. Ni de un robo, ni de un incendio, ni de la inflación.",
+     "fondo": "firmar-contrato",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Para abrir tu primera cuenta necesitas acta o C U R P, identificación de tu tutor y comprobante de domicilio.",
+     "fondo": "firmar-contrato",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Y cinco preguntas antes de firmar: comisión de manejo, saldo mínimo, qué otras comisiones, cuánto interés paga y qué pasa si cierras la cuenta.",
+     "fondo": "firmar-contrato",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Nunca se firma nada que no se haya leído. Nunca. Por más prisa que haya.",
+     "fondo": "firmar-contrato",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "Abre tu estado de cuenta. Retira en tu propio banco. Y lee antes de firmar.",
+     "fondo": "firmar-contrato",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p3-b3-u6",
+   "titulo": "La reputación de tu dinero",
+   "tipo": "intermedio",
+   "pilar": "Crédito y Deuda",
+   "ancla": "P3-3-6",
+   "imagenes": {
+    "lapiz-prestado": "One nine year old handing a pencil to a classmate in a Mexican classroom, the lender looking slightly hesitant, natural daylight",
+    "libreta-cumplidos": "An open notebook with a long column of neat tick marks and one cross near the bottom, pencil beside it, top down view",
+    "buro-archivo": "A large stylized filing cabinet with many drawers inside a bright office, one drawer open showing organised folders, clean institutional look",
+    "calendario-quince": "A calendar page with the fifteenth clearly marked and a phone reminder alarm going off beside it on a desk",
+    "un-dia-tarde": "Two identical envelopes on a counter, one being handed over on time and one arriving late, the late one clearly delayed, illustrative split composition",
+    "anuncio-mensualidad": "A shop window advertisement for a television with a large blank price banner and a small blank corner note, Mexican street shop front",
+    "multiplicar-meses": "Twenty four identical small banknote stacks arranged in a long grid on a table beside one much smaller pile, top down view, clear size contrast",
+    "volante-poste": "A handwritten loan flyer stapled to a wooden utility pole on a Mexican street, slightly weathered, a person reading it",
+    "cobro-diario": "A man on a motorcycle collecting a small daily payment at the door of a modest home, the resident handing over coins reluctantly, overcast light",
+    "tres-deudas": "Three stacks of paper of clearly different heights arranged smallest to largest on a table, top down view, plain background",
+    "bola-nieve": "A snowball rolling downhill and growing larger, stylized illustration on a clean white slope, dynamic motion",
+    "no-agregar": "A person putting a credit card away in a drawer and closing it firmly, decisive gesture, home desk"
+   },
+   "laminas": [
+    "lapiz-prestado",
+    "libreta-cumplidos",
+    "buro-archivo",
+    "calendario-quince",
+    "un-dia-tarde",
+    "anuncio-mensualidad",
+    "multiplicar-meses",
+    "volante-poste",
+    "cobro-diario",
+    "tres-deudas",
+    "bola-nieve",
+    "no-agregar"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Le prestas un lápiz a alguien y no te lo devuelve.",
+     "fondo": "lapiz-prestado",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "La próxima vez lo piensas dos veces.",
+     "fondo": "lapiz-prestado",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Los bancos hacen exactamente lo mismo.",
+     "fondo": "lapiz-prestado",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Pero con dinero, y con memoria escrita.",
+     "fondo": "lapiz-prestado",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Ese recuerdo se llama historial crediticio.",
+     "fondo": "libreta-cumplidos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Es el registro de si una persona cumplió con lo que se comprometió a pagar.",
+     "fondo": "libreta-cumplidos",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "Historial"
+    },
+    {
+     "id": "p3",
+     "narracion": "En México se llama Buró de Crédito, y hay una idea muy extendida y equivocada.",
+     "fondo": "buro-archivo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Que estar en el Buró es malo. No lo es. Todo el que ha tenido un crédito aparece ahí.",
+     "fondo": "buro-archivo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Lo que importa es qué dice de ti.",
+     "fondo": "buro-archivo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Y se construye con muchos pagos puntuales, uno tras otro, durante años.",
+     "fondo": "libreta-cumplidos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Pero se daña muchísimo más rápido de lo que se construyó.",
+     "fondo": "libreta-cumplidos",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Dos personas deben exactamente lo mismo.",
+     "fondo": "un-dia-tarde",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Una paga el quince y la otra el dieciséis.",
+     "fondo": "un-dia-tarde",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Un solo día, y la segunda va a pagar más y va a cargar una marca durante años.",
+     "fondo": "un-dia-tarde",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e4",
+     "narracion": "Atrasarse cuesta de tres formas. El recargo, el interés que se acumula cada día, y la marca.",
+     "fondo": "un-dia-tarde",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "Y aquí está la buena noticia.",
+     "fondo": "calendario-quince",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e6",
+     "narracion": "Una parte enorme de los atrasos pasa teniendo el dinero. Simplemente se olvidó la fecha.",
+     "fondo": "calendario-quince",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e7",
+     "narracion": "Eso se arregla con un recordatorio unos días antes. No el mismo día.",
+     "fondo": "calendario-quince",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Llévalo por solo ciento noventa y nueve al mes.",
+     "fondo": "anuncio-mensualidad",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Nunca te dicen la otra frase.",
+     "fondo": "anuncio-mensualidad",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i3",
+     "narracion": "Vas a pagar cuatro mil setecientos setenta y seis por algo que cuesta tres mil doscientos.",
+     "fondo": "anuncio-mensualidad",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "cifra": [
+      "1576",
+      "de más"
+     ]
+    },
+    {
+     "id": "i4",
+     "narracion": "La operación que la publicidad esconde es una multiplicación.",
+     "fondo": "multiplicar-meses",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i5",
+     "narracion": "La mensualidad por el número de meses. Eso es lo que vas a pagar en total.",
+     "fondo": "multiplicar-meses",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "rotulo": "Total real"
+    },
+    {
+     "id": "i6",
+     "narracion": "Y ojo: más meses bajan la mensualidad, pero suben el total.",
+     "fondo": "multiplicar-meses",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i7",
+     "narracion": "Sí existen los meses sin intereses de verdad, donde el total es idéntico al precio de contado.",
+     "fondo": "anuncio-mensualidad",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i8",
+     "narracion": "Ahí conviene. Pero se verifica, no se supone.",
+     "fondo": "anuncio-mensualidad",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Hay volantes que prometen dinero en diez minutos, sin papeles.",
+     "fondo": "volante-poste",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Suena a solución. Hagamos la cuenta que casi nadie hace.",
+     "fondo": "volante-poste",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Prestan mil pesos y se devuelven en veinticuatro pagos diarios de cincuenta.",
+     "fondo": "cobro-diario",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "cifra": [
+      "1200",
+      "a pagar"
+     ]
+    },
+    {
+     "id": "c4",
+     "narracion": "Parecen solo doscientos pesos. Pero son doscientos en menos de un mes.",
+     "fondo": "cobro-diario",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Llevado a un año, eso supera con mucho a cualquier crédito de banco.",
+     "fondo": "cobro-diario",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Las señales de alarma son claras: presionan para firmar rápido y no explican la tasa anual.",
+     "fondo": "volante-poste",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "Y si ya hay varias deudas, hay un método que funciona: la bola de nieve.",
+     "fondo": "tres-deudas",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Ordenas las deudas de la más chica a la más grande, sin importar el interés.",
+     "fondo": "tres-deudas",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Pagas el mínimo de todas y todo lo extra a la más pequeña, hasta liquidarla.",
+     "fondo": "bola-nieve",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Y cuando cae, ese pago no se gasta: se suma a la siguiente. Por eso la bola crece.",
+     "fondo": "bola-nieve",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "Pero nada funciona si mientras tanto sigues agregando deudas nuevas.",
+     "fondo": "no-agregar",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c12",
+     "narracion": "Pon el recordatorio antes. Multiplica antes de aceptar meses. Y deja de agregar.",
+     "fondo": "no-agregar",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p3-b4-u6",
+   "titulo": "La primera versión no es para vender",
+   "tipo": "intermedio",
+   "pilar": "¡Es Hora de Emprender!",
+   "ancla": "P3-4-6",
+   "imagenes": {
+    "idea-perfecta": "A nine year old imagining a perfect polished product floating above their head as a glowing shape, classroom desk, dreamy composition",
+    "prototipo-carton": "A rough cardboard and tape prototype of a small object sitting on a school desk, clearly handmade and imperfect, natural daylight",
+    "prototipo-falla": "A childs hands holding the cardboard prototype as one part sags and comes loose, the child noticing the problem, honest and unglamorous",
+    "version-dos": "Three versions of the same handmade object lined up left to right, each visibly better built than the previous, top down view",
+    "pregunta-mala": "A child eagerly showing their product to a classmate who is smiling politely but without real interest, schoolyard",
+    "pregunta-hechos": "Two children sitting face to face, one taking notes in a notebook while the other talks and gestures, focused interview atmosphere",
+    "anotar-crudo": "A notebook page with a childs handwriting recording quotes verbatim, some lines underlined, pencil resting on it, top down view",
+    "feria-puesto": "A busy school fair stall run by four children with a queue of classmates in front, colourful and lively, sunny schoolyard",
+    "dos-lotes": "A small tray of finished products on a table and beside it a stack of unused raw materials ready for a second batch, top down view",
+    "cuatro-roles": "Four children at a school stall each doing a distinct task, one greeting, one handling coins, one writing in a notebook, one restocking, clear separation",
+    "una-caja": "A single small cash box on a stall table with only one childs hands on it, other children working around but not touching it",
+    "cierre-numeros": "Four children after the fair sitting around a table with the cash box open, a notebook of numbers between them, end of day light"
+   },
+   "laminas": [
+    "idea-perfecta",
+    "prototipo-carton",
+    "prototipo-falla",
+    "version-dos",
+    "pregunta-mala",
+    "pregunta-hechos",
+    "anotar-crudo",
+    "feria-puesto",
+    "dos-lotes",
+    "cuatro-roles",
+    "una-caja",
+    "cierre-numeros"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Tener una idea es fácil.",
+     "fondo": "idea-perfecta",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Lo difícil es descubrir si funciona.",
+     "fondo": "idea-perfecta",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.45,
+      0.55
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Y en tu cabeza todas las ideas funcionan.",
+     "fondo": "idea-perfecta",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Porque las partes difíciles se saltan sin que te des cuenta.",
+     "fondo": "idea-perfecta",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Por eso existe el prototipo.",
+     "fondo": "prototipo-carton",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Una primera versión hecha con lo que hay a la mano.",
+     "fondo": "prototipo-carton",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "Prototipo"
+    },
+    {
+     "id": "p3",
+     "narracion": "No sirve para vender. Sirve para aprender.",
+     "fondo": "prototipo-carton",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Y tiene tres reglas: rápido, barato y desechable.",
+     "fondo": "prototipo-carton",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Desechable es la más importante. Si te encariñas, vas a defenderlo en lugar de mejorarlo.",
+     "fondo": "prototipo-carton",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Al construirlo aparecen las preguntas reales.",
+     "fondo": "prototipo-falla",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Dónde se sujeta. Cuánto pesa. Cómo se guarda.",
+     "fondo": "prototipo-falla",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e3",
+     "narracion": "Eso no es fracasar. Eso es exactamente para lo que sirve.",
+     "fondo": "prototipo-falla",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e4",
+     "narracion": "Nadie acierta a la primera, y nadie debería intentarlo.",
+     "fondo": "version-dos",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e5",
+     "narracion": "Construir, mostrar, escuchar lo que falla, y volver a construir.",
+     "fondo": "version-dos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.75
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e6",
+     "narracion": "Cada vuelta mejora el producto.",
+     "fondo": "version-dos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Ahora, la pregunta que casi todos hacen mal.",
+     "fondo": "pregunta-mala",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Te gusta mi idea. Casi siempre te van a decir que sí.",
+     "fondo": "pregunta-mala",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i3",
+     "narracion": "No porque les guste, sino porque no quieren lastimarte. Eso es amabilidad, no información.",
+     "fondo": "pregunta-mala",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i4",
+     "narracion": "Las preguntas útiles hablan del pasado y de hechos.",
+     "fondo": "pregunta-hechos",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i5",
+     "narracion": "Cuándo fue la última vez que compraste algo así. Cuánto pagaste. Qué te molestó.",
+     "fondo": "pregunta-hechos",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i6",
+     "narracion": "Nadie inventa un recuerdo para quedar bien.",
+     "fondo": "pregunta-hechos",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i7",
+     "narracion": "Y al anotar hay una tentación fuerte: suavizar lo negativo.",
+     "fondo": "anotar-crudo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i8",
+     "narracion": "Anota las palabras que dijeron, tal cual. Si escuchas cinco críticas y no cambias nada, la prueba fue teatro.",
+     "fondo": "anotar-crudo",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Llega la feria, y hay dos formas de equivocarse.",
+     "fondo": "feria-puesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Que se te acabe todo en media hora, o que te sobre la mitad.",
+     "fondo": "feria-puesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c3",
+     "narracion": "Las dos cuestan dinero.",
+     "fondo": "feria-puesto",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c4",
+     "narracion": "La estimación es una cadena de tres números.",
+     "fondo": "dos-lotes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c5",
+     "narracion": "Cuánta gente asiste, cuántos se acercan, y cuántos de esos compran.",
+     "fondo": "dos-lotes",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c6",
+     "narracion": "Y la estrategia que baja el riesgo: produce un primer lote más chico y ten material listo para otro.",
+     "fondo": "dos-lotes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.65
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c7",
+     "narracion": "En el puesto, cuatro roles.",
+     "fondo": "cuatro-roles",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c8",
+     "narracion": "Quien atiende, quien cobra, quien registra y quien repone.",
+     "fondo": "cuatro-roles",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.8
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c9",
+     "narracion": "Y una regla sobre todas: una sola persona toca la caja.",
+     "fondo": "una-caja",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c10",
+     "narracion": "Con varias manos en el dinero, al final nadie sabe si hubo error o falta.",
+     "fondo": "una-caja",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c11",
+     "narracion": "Al terminar, tres números. Ingresos, costos y utilidad.",
+     "fondo": "cierre-numeros",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c12",
+     "narracion": "Porque una feria con muchas ventas y muchos costos puede dejar muy poco.",
+     "fondo": "cierre-numeros",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c13",
+     "narracion": "Haz el prototipo feo. Pregunta por hechos. Y cierra con números, no con sensaciones.",
+     "fondo": "cierre-numeros",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p3-supremo",
+   "titulo": "La Familia Ramírez",
+   "tipo": "supremo",
+   "pilar": "Reto Supremo",
+   "ancla": "P3-SUPREMO-FAMILIA",
+   "imagenes": {
+    "familia-mesa": "A Mexican family of four sitting around the kitchen table with bills and a notebook spread out in front of them, serious but calm, evening light",
+    "sobre-mensual": "A single envelope of banknotes on a kitchen table, a hand resting beside it, the only money for the month, warm lamp light",
+    "cuatro-semanas": "Four small piles of banknotes arranged in a row on a table, one per week, top down view, plain background",
+    "gastos-fijos": "Rent, electricity, water and food bills laid out neatly side by side on a table, top down view, even light",
+    "emergencia": "A Mexican family looking at a broken refrigerator in their kitchen with worried faces, an unexpected problem, midday light",
+    "decision-final": "A parent and child crossing one item off a shopping list together at the kitchen table, calm and decided, warm light"
+   },
+   "laminas": [
+    "familia-mesa",
+    "sobre-mensual",
+    "cuatro-semanas",
+    "gastos-fijos",
+    "emergencia",
+    "decision-final"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Este es tu Reto Supremo.",
+     "fondo": "familia-mesa",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Vas a administrar el dinero de una familia entera durante un mes.",
+     "fondo": "familia-mesa",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Ocho mil quinientos pesos.",
+     "fondo": "familia-mesa",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "cifra": [
+      "8500",
+      "para el mes"
+     ],
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "No entra más dinero a mitad del mes.",
+     "fondo": "sobre-mensual",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Ese sobre es todo lo que hay.",
+     "fondo": "sobre-mensual",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p3",
+     "narracion": "Por eso lo primero no es gastar. Es repartir.",
+     "fondo": "sobre-mensual",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Hay gastos que no se discuten.",
+     "fondo": "gastos-fijos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "La renta, la luz, el agua y la comida van primero.",
+     "fondo": "gastos-fijos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e3",
+     "narracion": "Ese es tu verde. Lo demás se acomoda con lo que sobra.",
+     "fondo": "gastos-fijos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y en alguna semana va a llegar una emergencia.",
+     "fondo": "emergencia",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "No es mala suerte del juego. Así pasa en la vida real.",
+     "fondo": "emergencia",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i3",
+     "narracion": "Por eso las familias que apartan un poco desde la semana uno sobreviven el mes.",
+     "fondo": "emergencia",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Cuatro semanas, cuatro decisiones.",
+     "fondo": "cuatro-semanas",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Reparte primero. Aparta para el susto. Y recorta desde el rojo.",
+     "fondo": "decision-final",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c3",
+     "narracion": "Gana quien llega al día treinta con la familia entera de pie.",
+     "fondo": "decision-final",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "respiroS": 1.2
+    }
+   ]
+  }
+ ]
+}

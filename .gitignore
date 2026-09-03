@@ -74,3 +74,15 @@ process_images.py
 robust_engine.py
 strict_validate.py
 validate_json.py
+
+# Taller de video (Remotion + ComfyUI + XTTS). Los insumos pesados se regeneran
+# con los scripts de `video-explicativo/`; lo que se versiona son los guiones.
+video-explicativo/node_modules/
+video-explicativo/out/*
+# ...pero el manifiesto de lo subido a R2 SI se versiona. wrangler 4 no tiene
+# `r2 object list`, asi que este archivo es el unico inventario del bucket: si se
+# pierde, no hay forma de saber que hay arriba sin resubir los sesenta videos.
+!video-explicativo/out/.publicado.json
+video-explicativo/public/escenas/
+video-explicativo/public/audio/
+video-explicativo/src/Root.tsx

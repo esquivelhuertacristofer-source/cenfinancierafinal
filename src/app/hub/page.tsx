@@ -40,6 +40,8 @@ import ContentModal from '../../components/hub/ContentModal';
 import OnboardingTour from '../../components/hub/OnboardingTour';
 import ArenaMastery from '../../components/hub/ArenaMastery';
 import { useSFX } from '../../lib/hooks/useSFX';
+import VideoFrame from '@/components/hub/VideoFrame';
+import { tituloDeUrl } from '@/lib/videos-generados';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -1304,11 +1306,10 @@ export default function StudentHubV19() {
             <div className="absolute inset-0 pointer-events-none border-[20px] border-black/60 z-20" />
             <div className="absolute inset-0 pointer-events-none border border-white/10 z-30" />
             
-            <iframe
-              src={`${activeVideo}${activeVideo.includes('?') ? '&' : '?'}autoplay=1&rel=0&modestbranding=1`}
+            <VideoFrame
+              url={activeVideo}
+              title={tituloDeUrl(activeVideo) ?? 'Clase magistral'}
               className="w-full h-full relative z-10"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
             />
 
             {/* OVERLAY ESTÉTICO DE CINE */}

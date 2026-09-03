@@ -26,6 +26,8 @@ import {
   getPillarById,
   FALLBACK_PROFILE
 } from '../../../lib/hub';
+import VideoFrame from '@/components/hub/VideoFrame';
+import { tituloDeUrl } from '@/lib/videos-generados';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -372,11 +374,9 @@ export default function PillarPageV19({ params }: { params: any }) {
           </button>
           
           <div className="w-full max-w-6xl aspect-video rounded-[1.75rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.5)]" onClick={e => e.stopPropagation()}>
-            <iframe
-              src={`${activeVideo}?autoplay=1&rel=0&modestbranding=1`}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+            <VideoFrame
+              url={activeVideo}
+              title={tituloDeUrl(activeVideo) ?? 'Clase magistral'}
             />
           </div>
         </div>

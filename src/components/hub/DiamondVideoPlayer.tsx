@@ -2,24 +2,25 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, X, Sparkles } from 'lucide-react';
+import { X, Sparkles } from 'lucide-react';
+import VideoFrame from './VideoFrame';
 
 interface Props {
   url: string;
   title: string;
   onClose?: () => void;
   isModal?: boolean;
+  /** Miniatura del segundo 1, solo para los videos propios servidos desde R2. */
+  poster?: string;
 }
 
-export default function DiamondVideoPlayer({ url, title, onClose, isModal = false }: Props) {
-  // Convertir URL de YouTube a embed si es necesario
-  const getEmbedUrl = (videoUrl: string) => {
-    if (videoUrl.includes('embed')) return videoUrl;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = videoUrl.match(regExp);
-    const videoId = (match && match[2].length === 11) ? match[2] : null;
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-  };
+/* OJO: hoy ningun archivo importa este componente. Lo estuvo importando `ContentModal.tsx`, pero
+   sin renderizarlo nunca, asi que los arreglos que se le hacian no llegaban a ninguna pantalla. Se
+   deja porque su marco —el rotulo "Expert Class Diamond", el titulo sobreimpreso, el modal con
+   animacion— es diseno que puede querer reusarse, y ya delega la decision de <video> vs <iframe> en
+   VideoFrame, asi que no puede desincronizarse. Si se decide que no se va a usar, se borra entero:
+   no hay control de versiones en esta carpeta, asi que borrar es definitivo. */
+export default function DiamondVideoPlayer({ url, title, onClose, isModal = false, poster }: Props) {
 
   const content = (
     <div className={`relative w-full ${isModal ? 'max-w-5xl' : 'aspect-video'} bg-black rounded-[24px] md:rounded-[40px] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.6)] border border-white/10 group`}>
@@ -41,14 +42,7 @@ export default function DiamondVideoPlayer({ url, title, onClose, isModal = fals
         <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white drop-shadow-lg italic">Expert Class Diamond</span>
       </div>
 
-      <iframe 
-        src={getEmbedUrl(url)}
-        title={title}
-        className="w-full h-full aspect-video relative z-0"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
+      <VideoFrame url={url} title={title} poster={poster} className="w-full h-full aspect-video relative z-0" />
 
       <div className="absolute bottom-8 left-8 right-8 z-20 pointer-events-none">
         <h4 className="text-2xl font-black italic uppercase text-white tracking-tighter drop-shadow-2xl">{title}</h4>

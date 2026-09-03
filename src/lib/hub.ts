@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase-browser';
+import { PILLAR_VIDEOS_GENERADOS, urlVideo } from '@/lib/videos-generados';
 
 export { supabase };
 
@@ -227,7 +228,13 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
       id: pillarId,
       title: name,
       shortTitle: name.split(' ')[0],
-      videoUrl: PILLAR_VIDEOS[videoKey] || null,
+      /* Los videos de YouTube del autor mandan siempre. `PILLAR_VIDEOS_GENERADOS`
+         solo cubre los quince pilares que no tienen uno suyo: el catalogo de
+         `video-explicativo` los deduce de este mismo archivo, asi que las dos
+         listas no se pisan. */
+      videoUrl:
+        PILLAR_VIDEOS[videoKey] ||
+        (PILLAR_VIDEOS_GENERADOS[videoKey] ? urlVideo(PILLAR_VIDEOS_GENERADOS[videoKey]) : null),
       ...style,
       color: style.ring,
       units: units.sort((a, b) => a.order - b.order),

@@ -1,0 +1,3553 @@
+{
+ "grado": "p6",
+ "acentos": {
+  "p6-b1-general": "#10B981",
+  "p6-b1-u6": "#10B981",
+  "p6-b2-general": "#42E8E0",
+  "p6-b2-u6": "#42E8E0",
+  "p6-b3-general": "#0EA5E9",
+  "p6-b3-u6": "#0EA5E9",
+  "p6-b4-general": "#FF8C00",
+  "p6-b4-u6": "#FF8C00",
+  "p6-supremo": "#FFD700"
+ },
+ "videos": [
+  {
+   "carpeta": "p6-b1-general",
+   "titulo": "Todo el sistema, de una vez",
+   "tipo": "general",
+   "pilar": "Primeros Pasos Hacia el Ahorro",
+   "ancla": "primary-6-primeros_pasos_hacia_el_ahorro",
+   "imagenes": {
+    "mapa-sistema": "A clean illustrated map of a financial system with a central bank building, commercial banks, a family home and a small business all connected by paths, infographic style",
+    "etapas-vida": "Four figures of the same person at different ages walking left to right along a path, student, young worker, adult and older adult, stylized illustration",
+    "universidad-costo": "A Mexican university campus entrance with students walking in, bright morning light, hopeful atmosphere",
+    "fintech-celular": "A preteen holding a phone showing a modern financial app interface with blank fields, sitting on a bus, urban Mexican setting",
+    "cripto-grafica": "A screen showing a wildly jagged price line rising and crashing repeatedly, dark room, tense mood",
+    "letra-chiquita": "A magnifying glass over the dense bottom section of a financial contract, the text blank and smooth, desk lamp light",
+    "afore-tiempo": "Two savings jars side by side, one filled slowly over many marked years and much fuller, the other started late and emptier, illustrative timeline",
+    "identidad-papeles": "Three official looking Mexican documents laid out neatly on a table, all fields blank, top down view, even light",
+    "preteen-decide": "An eleven year old Mexican student at a desk with two options drawn on paper in front of them, weighing a decision, natural light",
+    "camino-pilar": "A winding path drawn across a landscape with ten marked stops along it, the last one on a hilltop, clean illustrative style"
+   },
+   "laminas": [
+    "mapa-sistema",
+    "etapas-vida",
+    "universidad-costo",
+    "fintech-celular",
+    "cripto-grafica",
+    "letra-chiquita",
+    "afore-tiempo",
+    "identidad-papeles",
+    "preteen-decide",
+    "camino-pilar"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Llevas cinco años aprendiendo piezas sueltas.",
+     "fondo": "mapa-sistema",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "El ahorro, el banco, el crédito, la inversión.",
+     "fondo": "mapa-sistema",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Este bloque es donde las piezas se juntan.",
+     "fondo": "mapa-sistema",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Y donde vas a ver el sistema financiero mexicano completo, de una vez.",
+     "fondo": "mapa-sistema",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Empieza con algo que casi nunca se dice.",
+     "fondo": "etapas-vida",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Tus finanzas cambian de forma según la etapa de tu vida.",
+     "fondo": "etapas-vida",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.65
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Lo que le conviene a un estudiante no es lo que le conviene a alguien de cuarenta.",
+     "fondo": "etapas-vida",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Y una de esas etapas está muy cerca de ti.",
+     "fondo": "universidad-costo",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "La universidad, que se puede ver como un gasto o como una inversión en ti mismo.",
+     "fondo": "universidad-costo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Después viene lo nuevo.",
+     "fondo": "fintech-celular",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Las fintech, los neobancos, las billeteras digitales.",
+     "fondo": "fintech-celular",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e3",
+     "narracion": "Y las criptomonedas, que vas a estudiar con nombre y apellido.",
+     "fondo": "cripto-grafica",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e4",
+     "narracion": "Sin entusiasmo y sin miedo. Qué son, cómo se mueven y qué riesgos reales tienen.",
+     "fondo": "cripto-grafica",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Vas a aprender a leer la letra chiquita.",
+     "fondo": "letra-chiquita",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Las seis cláusulas que cambian el costo total de cualquier producto financiero.",
+     "fondo": "letra-chiquita",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i3",
+     "narracion": "Y vas a hacer una cuenta que sorprende a todos.",
+     "fondo": "afore-tiempo",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i4",
+     "narracion": "Cuánto cambia empezar a ahorrar para el retiro a los veinte en vez de a los cuarenta.",
+     "fondo": "afore-tiempo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i5",
+     "narracion": "La respuesta no es el doble. Es mucho más que el doble.",
+     "fondo": "afore-tiempo",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Y cierra con tres claves que te van a pedir toda la vida.",
+     "fondo": "identidad-papeles",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "La C U R P, el R F C y el número de seguridad social.",
+     "fondo": "identidad-papeles",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Diez clases para pasar de saber ahorrar a entender el sistema entero.",
+     "fondo": "camino-pilar",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c4",
+     "narracion": "Empezamos.",
+     "fondo": "preteen-decide",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b1-u6",
+   "titulo": "Si esto desaparece, ¿quién responde?",
+   "tipo": "intermedio",
+   "pilar": "Primeros Pasos Hacia el Ahorro",
+   "ancla": "P6-1-6",
+   "imagenes": {
+    "app-nueva": "A preteen opening a brand new financial app on a phone, bright modern interface with blank fields, bedroom desk",
+    "sin-sucursal-neo": "A modern office building with no bank branch signage and no counter, only laptops and staff, contemporary workspace",
+    "quien-responde": "An empty customer service counter with the shutter half down and nobody behind it, unsettling quiet, plain interior",
+    "seis-filas": "A hand drawn comparison table on paper with two columns and six rows, all cells blank, pencil beside it, top down view",
+    "vigencia-promo": "A calendar showing twelve months with the first few marked differently from the rest, plain wall, clean composition",
+    "afore-estado": "A retirement account statement lying unopened on a table beside other post, slightly dusty, domestic setting",
+    "veinte-vs-cuarenta": "Two rising curves drawn on a whiteboard, one starting much earlier and ending far higher, clean chart with no labels",
+    "cripto-caida": "A phone screen showing a steep downward line, held by a shocked young adult, dim room, harsh screen light",
+    "llave-perdida": "A single small key lying at the bottom of a dark crevice, out of reach, symbolic composition, dramatic light",
+    "curp-rfc-nss": "Three official Mexican document forms laid out in a row on a desk, all fields blank, top down view",
+    "no-compartir": "A hand covering a document protectively while a stranger tries to photograph it with a phone, protective gesture",
+    "preteen-verifica": "An eleven year old checking an official registry on a laptop with a parent beside them, careful and unhurried"
+   },
+   "laminas": [
+    "app-nueva",
+    "sin-sucursal-neo",
+    "quien-responde",
+    "seis-filas",
+    "vigencia-promo",
+    "afore-estado",
+    "veinte-vs-cuarenta",
+    "cripto-caida",
+    "llave-perdida",
+    "curp-rfc-nss",
+    "no-compartir",
+    "preteen-verifica"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Bajas una app, te abre una cuenta en cinco minutos.",
+     "fondo": "app-nueva",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Sin sucursal, sin fila, sin comisiones.",
+     "fondo": "app-nueva",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Todo suena mejor que el banco de siempre.",
+     "fondo": "app-nueva",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Y hay una sola pregunta que decide si conviene o no.",
+     "fondo": "app-nueva",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Si esta empresa desapareciera mañana, quién responde por mi dinero y hasta cuánto.",
+     "fondo": "quien-responde",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Si la respuesta está clara y respaldada, adelante.",
+     "fondo": "quien-responde",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Si no la encuentras, ese es el riesgo, y no está en el precio.",
+     "fondo": "quien-responde",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Un banco tradicional tiene licencia bancaria y la supervisión más estricta.",
+     "fondo": "sin-sucursal-neo",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Un neobanco opera solo por aplicación, y la pregunta clave es su figura legal.",
+     "fondo": "sin-sucursal-neo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Algunos tienen licencia de banco. Otros operan bajo otra figura, con otra protección.",
+     "fondo": "sin-sucursal-neo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Y una billetera digital guarda saldo para pagar, pero no es un banco.",
+     "fondo": "app-nueva",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Que las condiciones importantes estén enterradas en un documento larguísimo no es un accidente.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Un contrato difícil de leer reduce la probabilidad de que alguien compare.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Y comparar es lo que baja el precio.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e4",
+     "narracion": "Son seis cosas las que hay que encontrar, siempre las mismas.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "Costo anual total, comisiones y cuándo aplican, saldo mínimo, cómo cancelar, penalizaciones y vigencia de la promoción.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e6",
+     "narracion": "La vigencia es la que más sorpresas causa.",
+     "fondo": "vigencia-promo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e7",
+     "narracion": "Sin anualidad el primer año. Tasa preferencial por seis meses. Todas terminan, y casi nadie recuerda cuándo.",
+     "fondo": "vigencia-promo",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e8",
+     "narracion": "Compara por tabla, no por publicidad. Seis filas iguales para los dos productos.",
+     "fondo": "seis-filas",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Ahora la cuenta que casi nadie hace a tiempo.",
+     "fondo": "veinte-vs-cuarenta",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "El AFORE administra tu cuenta individual de retiro.",
+     "fondo": "veinte-vs-cuarenta",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "rotulo": "AFORE"
+    },
+    {
+     "id": "i3",
+     "narracion": "Y aquí el tiempo pesa más que el monto.",
+     "fondo": "veinte-vs-cuarenta",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i4",
+     "narracion": "Quien aporta poco desde los veinte suele terminar con más que quien aporta el doble desde los cuarenta.",
+     "fondo": "veinte-vs-cuarenta",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i5",
+     "narracion": "Aunque el segundo haya puesto más dinero en total.",
+     "fondo": "veinte-vs-cuarenta",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i6",
+     "narracion": "Y hay una aportación voluntaria que cualquiera puede hacer, desde montos muy pequeños.",
+     "fondo": "afore-estado",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i7",
+     "narracion": "Ahí también hay comisiones. Y también hay un estado de cuenta que casi nadie abre.",
+     "fondo": "afore-estado",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Las criptomonedas, sin entusiasmo y sin miedo.",
+     "fondo": "cripto-caida",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Caídas de más de la mitad del valor en pocos meses no son la excepción: son el comportamiento normal.",
+     "fondo": "cripto-caida",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Y a diferencia de un depósito bancario, aquí no hay seguro que responda.",
+     "fondo": "cripto-caida",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c4",
+     "narracion": "Si la plataforma quiebra, no hay institución a la cual reclamar.",
+     "fondo": "cripto-caida",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Existe además un riesgo que no tiene equivalente en el sistema tradicional.",
+     "fondo": "llave-perdida",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Si se pierde la clave de acceso, el dinero se pierde de forma definitiva.",
+     "fondo": "llave-perdida",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "No hay ventanilla donde recuperar una contraseña.",
+     "fondo": "llave-perdida",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Y cierra con lo más tuyo: tres claves que te van a pedir toda la vida.",
+     "fondo": "curp-rfc-nss",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "La C U R P dice quién eres. El R F C es tu identidad ante la autoridad fiscal.",
+     "fondo": "curp-rfc-nss",
+     "paso": 4,
+     "recorte": [
+      0.35,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Y el número de seguridad social te vincula con los servicios médicos y con tu cuenta de retiro.",
+     "fondo": "curp-rfc-nss",
+     "paso": 4,
+     "recorte": [
+      0.7,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "Esos mismos datos sirven para contratar productos a nombre de otra persona.",
+     "fondo": "no-compartir",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c12",
+     "narracion": "No se publican en redes ni se comparten con desconocidos.",
+     "fondo": "no-compartir",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c13",
+     "narracion": "Pregunta quién responde. Compara por tabla. Y empieza temprano.",
+     "fondo": "preteen-verifica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b2-general",
+   "titulo": "Deber sin ahogarse",
+   "tipo": "general",
+   "pilar": "Construyendo Independencia",
+   "ancla": "primary-6-construyendo_independencia",
+   "imagenes": {
+    "tarjeta-tentacion": "A credit card lying on a table beside a shopping bag, warm light, everyday domestic setting",
+    "hablar-acreedor": "A young adult speaking calmly on the phone with a notebook of figures open in front of them, composed body language",
+    "ingreso-pasivo": "A person reading in a hammock while a small workshop operates in the background, stylized illustration of income without direct labour",
+    "contrato-credito": "A credit contract on a desk with a pen resting on it, someone reading it attentively before signing",
+    "ensenar-familia": "A preteen explaining something on paper to their parents and younger sibling at the kitchen table, everyone attentive",
+    "base-cero": "A budget sheet where every category starts at zero, a pencil adding entries one by one, top down view",
+    "deuda-buena-mala": "A balance scale with a set of tools on one side and a pile of disposable goods on the other, clean illustrative composition",
+    "buro-mitos": "A large question mark drawn on a whiteboard beside an organised filing cabinet, office setting, clean composition",
+    "estres-dinero": "A person sitting awake at night at the kitchen table with bills in front of them, tired and worried, single lamp",
+    "camino-independencia": "A path leading up a hill with markers along it toward a sunlit summit, clean illustrative landscape"
+   },
+   "laminas": [
+    "tarjeta-tentacion",
+    "hablar-acreedor",
+    "ingreso-pasivo",
+    "contrato-credito",
+    "ensenar-familia",
+    "base-cero",
+    "deuda-buena-mala",
+    "buro-mitos",
+    "estres-dinero",
+    "camino-independencia"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Este bloque va del tema que más gente hunde y que casi nadie explica bien.",
+     "fondo": "tarjeta-tentacion",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "La deuda.",
+     "fondo": "tarjeta-tentacion",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "No para decirte que nunca te endeudes.",
+     "fondo": "tarjeta-tentacion",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Sino para que sepas exactamente cuándo sí y cuándo no.",
+     "fondo": "tarjeta-tentacion",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Vas a aprender algo que casi nadie hace.",
+     "fondo": "hablar-acreedor",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Hablar con quien te prestó, antes de dejar de pagar.",
+     "fondo": "hablar-acreedor",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Y vas a conocer el concepto que le da nombre al bloque.",
+     "fondo": "ingreso-pasivo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Independencia financiera: llegar a vivir de lo que tu dinero genera, no solo de tu trabajo.",
+     "fondo": "ingreso-pasivo",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Y vas a leer un contrato de crédito de verdad, para saber qué firmas antes de firmarlo.",
+     "fondo": "contrato-credito",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Después viene un método distinto de presupuestar.",
+     "fondo": "base-cero",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Base cero: cada categoría empieza en cero y cada peso tiene que justificarse.",
+     "fondo": "base-cero",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e3",
+     "narracion": "No para gastar menos, sino para que nada siga ahí por inercia.",
+     "fondo": "base-cero",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y llega el criterio definitivo.",
+     "fondo": "deuda-buena-mala",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Tres preguntas que separan la deuda buena de la mala en cualquier situación.",
+     "fondo": "deuda-buena-mala",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i3",
+     "narracion": "Además vas a desarmar los mitos del Buró de Crédito.",
+     "fondo": "buro-mitos",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i4",
+     "narracion": "Que no es una lista negra, y que nadie puede borrarlo por dinero.",
+     "fondo": "buro-mitos",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Y cierra con algo que no aparece en ningún libro de finanzas.",
+     "fondo": "estres-dinero",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "El efecto del dinero en el sueño, el ánimo y la familia.",
+     "fondo": "estres-dinero",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c3",
+     "narracion": "Diez clases para deber sin ahogarse, y para construir el camino de salida.",
+     "fondo": "camino-independencia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c4",
+     "narracion": "Empezamos.",
+     "fondo": "ensenar-familia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b2-u6",
+   "titulo": "Las tres preguntas de la deuda",
+   "tipo": "intermedio",
+   "pilar": "Construyendo Independencia",
+   "ancla": "P6-2-6",
+   "imagenes": {
+    "presupuesto-heredado": "A budget spreadsheet printout where every line has the same number copied down from the month before, top down view",
+    "cada-linea-cero": "A blank budget sheet with all category rows starting empty and a pencil beginning to fill the first one, clean desk",
+    "liberado-destino": "An arrow drawn on paper leading from a freed budget line to a savings jar, simple hand drawn diagram",
+    "curso-herramienta": "A person in a workshop using a good quality tool they clearly invested in, competent and productive, warm workshop light",
+    "compra-desechable": "A pile of barely used impulse purchases gathering dust in a corner of a room, slightly sad composition",
+    "cabe-presupuesto": "A monthly payment amount weighed against essential household bills on a simple balance scale, illustrative",
+    "plan-hasta-ultima": "A payment schedule drawn on paper with every month marked to the final one, a pencil tracing the last row",
+    "negociar-numeros": "A young adult at a desk presenting a written proposal across a table to a bank representative, businesslike and calm",
+    "alargar-plazo": "Two payment timelines drawn one above the other, the lower one much longer with more markers, clean diagram",
+    "borrar-buro-fraude": "A suspicious flyer promising to erase a credit record, lying on a pavement, blank text, slightly grimy",
+    "dos-columnas-control": "A sheet of paper divided into two columns with short entries on each side, a pencil resting on it, top down view",
+    "hablarlo-familia": "A Mexican family talking around the kitchen table with a notebook between them, one person visibly relieved, evening light"
+   },
+   "laminas": [
+    "presupuesto-heredado",
+    "cada-linea-cero",
+    "liberado-destino",
+    "curso-herramienta",
+    "compra-desechable",
+    "cabe-presupuesto",
+    "plan-hasta-ultima",
+    "negociar-numeros",
+    "alargar-plazo",
+    "borrar-buro-fraude",
+    "dos-columnas-control",
+    "hablarlo-familia"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Casi todos los presupuestos se hacen copiando el del mes pasado.",
+     "fondo": "presupuesto-heredado",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Y cada categoría arrastra su monto sin que nadie vuelva a preguntar si sigue haciendo falta.",
+     "fondo": "presupuesto-heredado",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Suscripciones que ya no se usan. Rutinas que ya cambiaron.",
+     "fondo": "presupuesto-heredado",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "El presupuesto heredado conserva lo que ya no sirve, solo porque estaba ahí.",
+     "fondo": "presupuesto-heredado",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "El base cero le da la vuelta.",
+     "fondo": "cada-linea-cero",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Todas las categorías empiezan en cero, y cada gasto entra solo si se puede justificar.",
+     "fondo": "cada-linea-cero",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "Base cero"
+    },
+    {
+     "id": "p3",
+     "narracion": "La pregunta para cada línea es directa: qué pasaría si no hiciera este gasto.",
+     "fondo": "cada-linea-cero",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Y ojo, base cero no significa gastar lo mínimo posible.",
+     "fondo": "cada-linea-cero",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Un gasto grande perfectamente justificado se queda. Uno pequeño sin razón vigente se va.",
+     "fondo": "cada-linea-cero",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Y falta el paso que casi todos omiten.",
+     "fondo": "liberado-destino",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Decidir a dónde va el dinero que quedó libre.",
+     "fondo": "liberado-destino",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p8",
+     "narracion": "Sin destino explícito, en pocas semanas se reabsorbe en gastos pequeños y el ejercicio no sirvió de nada.",
+     "fondo": "liberado-destino",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Ahora la deuda, y las dos posturas extremas que fallan.",
+     "fondo": "curso-herramienta",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Nunca te endeudes cierra puertas que convienen.",
+     "fondo": "curso-herramienta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e3",
+     "narracion": "Y aprovecha el crédito lleva a gente muy trabajadora a la ruina.",
+     "fondo": "compra-desechable",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e4",
+     "narracion": "Hay tres preguntas, y las tres tienen que dar sí.",
+     "fondo": "curso-herramienta",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "rotulo": "Tres preguntas"
+    },
+    {
+     "id": "e5",
+     "narracion": "Uno: lo que financias produce o conserva más valor que el costo del crédito.",
+     "fondo": "curso-herramienta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e6",
+     "narracion": "Un curso que aumenta tus ingresos, una herramienta que te permite trabajar. Eso sí.",
+     "fondo": "curso-herramienta",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e7",
+     "narracion": "Dos: cabe en el presupuesto.",
+     "fondo": "cabe-presupuesto",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e8",
+     "narracion": "Si la mensualidad obliga a sacrificar comida, salud o el fondo de emergencia, la respuesta es no.",
+     "fondo": "cabe-presupuesto",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e9",
+     "narracion": "Tres, la más olvidada: hay un plan que llega hasta la última mensualidad.",
+     "fondo": "plan-hasta-ultima",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e10",
+     "narracion": "No basta con poder pagar la primera.",
+     "fondo": "plan-hasta-ultima",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y si la deuda ya no se puede pagar, hay algo que cambia todo.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Hablar antes de dejar de pagar.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i3",
+     "narracion": "Quien avisa antes del primer atraso conserva credibilidad y consigue mejores condiciones.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i4",
+     "narracion": "Quien desaparece llega a la mesa sin nada que ofrecer.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i5",
+     "narracion": "Reestructurar es acordar condiciones nuevas: alargar el plazo, bajar la tasa, unificar deudas.",
+     "fondo": "alargar-plazo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i6",
+     "narracion": "Pero no es gratis. Alargar el plazo baja la mensualidad y casi siempre sube el total.",
+     "fondo": "alargar-plazo",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i7",
+     "narracion": "Y se llega con números, no con explicaciones.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i8",
+     "narracion": "Puedo pagar tanto al mes, empezando en tal fecha, durante tantos meses.",
+     "fondo": "negociar-numeros",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Sobre el Buró circulan tres mentiras.",
+     "fondo": "borrar-buro-fraude",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Que es una lista negra. No lo es: es un registro de comportamiento de pago de todos.",
+     "fondo": "borrar-buro-fraude",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Que alguien puede borrarlo por dinero. Eso es un fraude.",
+     "fondo": "borrar-buro-fraude",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c4",
+     "narracion": "Y que lo mejor es no tener ningún crédito nunca.",
+     "fondo": "borrar-buro-fraude",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Quien no tiene historial es un desconocido para las instituciones, y eso también complica.",
+     "fondo": "borrar-buro-fraude",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Y falta lo que ningún estado de cuenta muestra.",
+     "fondo": "dos-columnas-control",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "El estrés financiero afecta el sueño, la concentración y las relaciones familiares.",
+     "fondo": "dos-columnas-control",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Y tiene un efecto circular: el estrés reduce la capacidad de tomar buenas decisiones.",
+     "fondo": "dos-columnas-control",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Dos columnas ayudan. Lo que puedo controlar y lo que no.",
+     "fondo": "dos-columnas-control",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.65
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Y nombrar el problema con números lo vuelve manejable.",
+     "fondo": "hablarlo-familia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "No es estamos ahogados. Es faltan dos mil trescientos pesos este mes.",
+     "fondo": "hablarlo-familia",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "cifra": [
+      "2300",
+      "este mes"
+     ]
+    },
+    {
+     "id": "c12",
+     "narracion": "Empieza en cero. Pasa las tres preguntas. Y habla antes de dejar de pagar.",
+     "fondo": "hablarlo-familia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b3-general",
+   "titulo": "El dinero a treinta años",
+   "tipo": "general",
+   "pilar": "Planificación y Crecimiento",
+   "ancla": "primary-6-planificacion_y_crecimiento",
+   "imagenes": {
+    "proyeccion-curva": "A long rising curve drawn across a whiteboard with markers at intervals, someone tracing it with a finger, clean chart",
+    "retiro-lejano": "An older Mexican couple walking calmly in a park, content and unhurried, golden afternoon light",
+    "comprar-rentar": "A house key and a rental contract lying side by side on a table, equally weighted, top down view",
+    "impuestos-comun": "A well maintained public street with a school, a clinic and a bus, ordinary Mexican neighbourhood working well, sunny day",
+    "perfil-inversor": "A person looking at their reflection in a window with an investment screen faintly visible, introspective composition",
+    "regla-cuatro": "A large pie divided into twenty five equal slices with one slice separated slightly, clean illustrative diagram",
+    "seguros-tres": "Three protective umbrellas of different sizes standing over a small house, a car and a person, clean symbolic illustration",
+    "inflacion-real": "Two shopping baskets side by side holding visibly different amounts of the same groceries, clear comparison",
+    "invertir-poco": "A small handful of coins beside a phone showing an investment app with blank fields, modest and hopeful",
+    "testamento-carpeta": "A neatly organised folder of documents on a shelf with a family photograph beside it, warm domestic light"
+   },
+   "laminas": [
+    "proyeccion-curva",
+    "retiro-lejano",
+    "comprar-rentar",
+    "impuestos-comun",
+    "perfil-inversor",
+    "regla-cuatro",
+    "seguros-tres",
+    "inflacion-real",
+    "invertir-poco",
+    "testamento-carpeta"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Este bloque tiene un tema raro para alguien de once años.",
+     "fondo": "proyeccion-curva",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "El futuro lejano.",
+     "fondo": "proyeccion-curva",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Treinta, cuarenta, cincuenta años adelante.",
+     "fondo": "proyeccion-curva",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Y hay una razón: es la única edad en que el tiempo todavía juega totalmente a tu favor.",
+     "fondo": "proyeccion-curva",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Vas a proyectar tu propio futuro con números.",
+     "fondo": "retiro-lejano",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Y a ver cómo funciona una AFORE y el interés compuesto a muy largo plazo.",
+     "fondo": "retiro-lejano",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Después viene el dilema que discute media familia mexicana.",
+     "fondo": "comprar-rentar",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Comprar casa o rentar. Sin respuesta única: con criterios para decidir.",
+     "fondo": "comprar-rentar",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Vas a entender para qué sirven los impuestos.",
+     "fondo": "impuestos-comun",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Y la diferencia entre lo que gana alguien y lo que recibe en la mano.",
+     "fondo": "impuestos-comun",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e3",
+     "narracion": "Y vas a descubrir tu propio perfil de inversor.",
+     "fondo": "perfil-inversor",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e4",
+     "narracion": "Porque la mejor inversión del mundo es mala si no te deja dormir.",
+     "fondo": "perfil-inversor",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "En la segunda mitad viene una de las cuentas más famosas que existen.",
+     "fondo": "regla-cuatro",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "La regla del cuatro por ciento: cuánto capital hace falta para vivir de los rendimientos.",
+     "fondo": "regla-cuatro",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i3",
+     "narracion": "Los seguros y por qué no son lo mismo que el fondo de emergencia.",
+     "fondo": "seguros-tres",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i4",
+     "narracion": "Y el interés real, que es el único que dice si de verdad ganaste.",
+     "fondo": "inflacion-real",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Y cierra con dos cosas que suenan de adultos y no lo son.",
+     "fondo": "invertir-poco",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Que se puede empezar a invertir con muy poco.",
+     "fondo": "invertir-poco",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c3",
+     "narracion": "Y un testamento, que sirve sobre todo para evitarle un conflicto a tu familia.",
+     "fondo": "testamento-carpeta",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c4",
+     "narracion": "Diez clases para pensar tu dinero a treinta años. Empezamos.",
+     "fondo": "proyeccion-curva",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b3-u6",
+   "titulo": "Veinticinco veces lo que gastas",
+   "tipo": "intermedio",
+   "pilar": "Planificación y Crecimiento",
+   "ancla": "P6-3-6",
+   "imagenes": {
+    "vivir-rendimientos": "A person having coffee on a sunny terrace on a weekday morning while others hurry to work below, calm and free",
+    "veinticinco-porciones": "Twenty five identical small stacks of coins arranged in a grid on a table, one slightly separated, top down view",
+    "bajar-gasto": "A hand crossing out one recurring expense line on a budget sheet, decisive pencil stroke, close up",
+    "seguro-vs-fondo": "A small jar of coins beside a large protective umbrella, both on the same table, clean illustrative comparison",
+    "deducible-poliza": "An insurance policy document open on a table with a section under a magnifying glass, the text blank",
+    "exclusiones": "The last page of a policy document sitting untouched at the bottom of a stack of papers, dust visible, desk setting",
+    "nominal-vs-real": "Two numbers drawn on a whiteboard with a subtraction sign between them and a smaller result below, clean chart, no labels",
+    "efectivo-pierde": "A stack of banknotes in a drawer with a calendar on the wall showing a year passing, quiet domestic setting",
+    "monto-minimo": "A very small amount of coins beside a phone showing an investment confirmation screen, modest beginning",
+    "constancia-veinte": "A long row of small monthly deposits drawn as marks across a timeline on paper, steady and unbroken",
+    "testamento-familia": "A family sitting together with a lawyer at a simple desk, calm and organised, institutional office",
+    "inventario-bienes": "A single sheet listing accounts and institutions with all fields blank, resting in an organised folder, top down view"
+   },
+   "laminas": [
+    "vivir-rendimientos",
+    "veinticinco-porciones",
+    "bajar-gasto",
+    "seguro-vs-fondo",
+    "deducible-poliza",
+    "exclusiones",
+    "nominal-vs-real",
+    "efectivo-pierde",
+    "monto-minimo",
+    "constancia-veinte",
+    "testamento-familia",
+    "inventario-bienes"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Vivir de lo que genera tu dinero, sin tener que trabajar por obligación.",
+     "fondo": "vivir-rendimientos",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Suena a fantasía, y en realidad es una división.",
+     "fondo": "vivir-rendimientos",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Existe una regla para estimar cuánto capital hace falta.",
+     "fondo": "vivir-rendimientos",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Y sale un número sorprendentemente concreto.",
+     "fondo": "vivir-rendimientos",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Se llama la regla del cuatro por ciento.",
+     "fondo": "veinticinco-porciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Si un capital está invertido, se puede retirar una parte cada año sin agotarlo rápido.",
+     "fondo": "veinticinco-porciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Retirar el cuatro por ciento al año es lo mismo que decir que el capital debe ser veinticinco veces el gasto anual.",
+     "fondo": "veinticinco-porciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04,
+     "rotulo": "× 25"
+    },
+    {
+     "id": "p4",
+     "narracion": "Porque cien entre cuatro da veinticinco.",
+     "fondo": "veinticinco-porciones",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Alguien que gasta ciento ochenta mil al año necesitaría alrededor de cuatro millones y medio.",
+     "fondo": "veinticinco-porciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "cifra": [
+      "4.5M",
+      "de capital"
+     ]
+    },
+    {
+     "id": "p6",
+     "narracion": "Y aquí viene la consecuencia que nadie espera.",
+     "fondo": "bajar-gasto",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Cada peso de gasto anual que eliminas baja la meta en veinticinco pesos.",
+     "fondo": "bajar-gasto",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p8",
+     "narracion": "Reducir mil pesos mensuales baja la meta en trescientos mil.",
+     "fondo": "bajar-gasto",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "cifra": [
+      "300000",
+      "menos"
+     ]
+    },
+    {
+     "id": "p9",
+     "narracion": "Por eso el gasto manda más que el ingreso.",
+     "fondo": "bajar-gasto",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Ahora, algo que la gente confunde todo el tiempo.",
+     "fondo": "seguro-vs-fondo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "El fondo de emergencia y un seguro no cubren lo mismo.",
+     "fondo": "seguro-vs-fondo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e3",
+     "narracion": "El fondo cubre eventos medianos y frecuentes, y se usa varias veces en la vida.",
+     "fondo": "seguro-vs-fondo",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e4",
+     "narracion": "El seguro cubre eventos poco probables pero de un tamaño que ningún ahorro razonable alcanzaría.",
+     "fondo": "seguro-vs-fondo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e5",
+     "narracion": "Y tiene tres palabras que hay que entender antes de firmar.",
+     "fondo": "deducible-poliza",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e6",
+     "narracion": "El deducible es lo que pagas tú antes de que la aseguradora empiece a pagar.",
+     "fondo": "deducible-poliza",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e7",
+     "narracion": "El coaseguro es el porcentaje que sigues pagando después. Y la suma asegurada es el máximo que cubre.",
+     "fondo": "deducible-poliza",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e8",
+     "narracion": "Pero lo que de verdad decide está en la sección que nadie lee.",
+     "fondo": "exclusiones",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e9",
+     "narracion": "Las exclusiones: lo que la póliza no cubre.",
+     "fondo": "exclusiones",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "rotulo": "Exclusiones"
+    },
+    {
+     "id": "e10",
+     "narracion": "Un seguro que no cubre lo que te pasó es un gasto, no una protección.",
+     "fondo": "exclusiones",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y llega el número que separa ganar de creer que ganaste.",
+     "fondo": "nominal-vs-real",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "El interés nominal es el que anuncia la institución.",
+     "fondo": "nominal-vs-real",
+     "paso": 3,
+     "recorte": [
+      0.4,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i3",
+     "narracion": "El real es lo que queda después de descontar la inflación.",
+     "fondo": "nominal-vs-real",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "Interés real"
+    },
+    {
+     "id": "i4",
+     "narracion": "Nueve por ciento nominal con cinco de inflación deja un real cercano al cuatro.",
+     "fondo": "nominal-vs-real",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i5",
+     "narracion": "Y el efectivo guardado en casa da cero nominal.",
+     "fondo": "efectivo-pierde",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i6",
+     "narracion": "Así que su interés real es exactamente la inflación en negativo.",
+     "fondo": "efectivo-pierde",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i7",
+     "narracion": "Con cinco por ciento, diez mil pesos guardados un año compran lo que antes compraban nueve mil quinientos.",
+     "fondo": "efectivo-pierde",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "9500",
+      "de poder"
+     ]
+    },
+    {
+     "id": "i8",
+     "narracion": "Y después de la inflación quedan dos restas más: comisiones e impuestos.",
+     "fondo": "nominal-vs-real",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Todo esto suena a que hace falta mucho dinero para empezar. No es así.",
+     "fondo": "monto-minimo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Hay plataformas donde se compra un instrumento gubernamental con montos muy bajos.",
+     "fondo": "monto-minimo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c3",
+     "narracion": "Se comparan tres cosas: el monto mínimo, la liquidez y el riesgo.",
+     "fondo": "monto-minimo",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c4",
+     "narracion": "Y la constancia importa más que el monto.",
+     "fondo": "constancia-veinte",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c5",
+     "narracion": "Trescientos pesos cada mes durante veinte años superan a mil pesos durante ocho.",
+     "fondo": "constancia-veinte",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c6",
+     "narracion": "El tiempo es el ingrediente que no se puede comprar después.",
+     "fondo": "constancia-veinte",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c7",
+     "narracion": "Y cierra un tema que parece lejanísimo y no lo es.",
+     "fondo": "testamento-familia",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c8",
+     "narracion": "Un testamento no reparte riqueza. Evita que la familia pase años en un proceso.",
+     "fondo": "testamento-familia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c9",
+     "narracion": "Y hay cosas que ni siquiera pasan por testamento: el AFORE y los seguros de vida van a quien esté designado como beneficiario.",
+     "fondo": "testamento-familia",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c10",
+     "narracion": "Existe una cantidad enorme de cuentas y saldos que nunca se reclaman porque nadie supo que existían.",
+     "fondo": "inventario-bienes",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c11",
+     "narracion": "Un inventario simple lo resuelve: qué hay, en qué institución y dónde están los papeles.",
+     "fondo": "inventario-bienes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c12",
+     "narracion": "Multiplica tu gasto por veinticinco. Lee las exclusiones. Y empieza con lo que tengas.",
+     "fondo": "inventario-bienes",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b4-general",
+   "titulo": "Sesenta segundos para convencer",
+   "tipo": "general",
+   "pilar": "¡Es Hora de Emprender!",
+   "ancla": "primary-6-es_hora_de_emprender",
+   "imagenes": {
+    "pitch-elevador": "A young person confidently explaining an idea to an adult inside a lift, brief and focused encounter, modern building",
+    "formalidad-rfc": "A small business owner receiving an official registration document at a government office counter, proud moment",
+    "ventas-escucha": "Two people at a market stall in conversation, the seller listening attentively rather than talking, warm daylight",
+    "financiamiento-fuentes": "Three different funding sources illustrated around a small workshop: family, a bank and an investor, clean composition",
+    "kpis-tablero": "A whiteboard in a small business back room with four simple gauges drawn on it, blank faces, organised",
+    "diez-clientes": "A young entrepreneur talking with a potential customer in a Mexican street, notebook in hand, genuine conversation",
+    "costos-ocultos": "A desk covered with permit forms, receipts and a clock, more paperwork than product, slightly overwhelming",
+    "precio-valor": "A beautifully presented handmade cake on a stand beside its plain ingredients, striking difference in perceived value",
+    "contrato-escrito": "Two people signing a simple written agreement across a table, both relaxed, small workshop background",
+    "cerrar-bien": "A shop owner shaking hands with a supplier while closing up the shop for the last time, dignified and calm"
+   },
+   "laminas": [
+    "pitch-elevador",
+    "formalidad-rfc",
+    "ventas-escucha",
+    "financiamiento-fuentes",
+    "kpis-tablero",
+    "diez-clientes",
+    "costos-ocultos",
+    "precio-valor",
+    "contrato-escrito",
+    "cerrar-bien"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Sesenta segundos.",
+     "fondo": "pitch-elevador",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Ese es todo el tiempo que vas a tener para convencer a alguien de tu idea.",
+     "fondo": "pitch-elevador",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Y este bloque empieza justo ahí.",
+     "fondo": "pitch-elevador",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Aprendiendo a decir en un minuto lo que otros no dicen en veinte.",
+     "fondo": "pitch-elevador",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Después viene la parte que casi nadie explica a esta edad.",
+     "fondo": "formalidad-rfc",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Qué significa formalizar un negocio, y la diferencia entre persona física y moral.",
+     "fondo": "formalidad-rfc",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Y las ventas, que no son hablar bonito.",
+     "fondo": "ventas-escucha",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Son escuchar bien.",
+     "fondo": "ventas-escucha",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Vas a conocer de dónde sale el dinero para arrancar.",
+     "fondo": "financiamiento-fuentes",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Y la diferencia entre pedir prestado y vender una parte de tu negocio.",
+     "fondo": "financiamiento-fuentes",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e3",
+     "narracion": "Y a medir, con cuatro indicadores que dicen la verdad.",
+     "fondo": "kpis-tablero",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "La segunda mitad es la más práctica de todo el año.",
+     "fondo": "diez-clientes",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "La prueba de los diez clientes, antes de gastar un peso.",
+     "fondo": "diez-clientes",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i3",
+     "narracion": "Los costos que nunca aparecen en el plan inicial.",
+     "fondo": "costos-ocultos",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i4",
+     "narracion": "Y cómo poner precio por el valor que percibe el cliente, no por lo que te costó.",
+     "fondo": "precio-valor",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Y cierra con dos cosas que nadie quiere pensar y todos necesitan.",
+     "fondo": "contrato-escrito",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Por qué todo se pone por escrito.",
+     "fondo": "contrato-escrito",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c3",
+     "narracion": "Y cómo cerrar bien un negocio que no funcionó.",
+     "fondo": "cerrar-bien",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c4",
+     "narracion": "Porque casi todos los que llegan lejos cerraron algo antes. Empezamos.",
+     "fondo": "cerrar-bien",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-b4-u6",
+   "titulo": "Diez conversaciones antes del primer peso",
+   "tipo": "intermedio",
+   "pilar": "¡Es Hora de Emprender!",
+   "ancla": "P6-4-6",
+   "imagenes": {
+    "enamorado-idea": "A young entrepreneur surrounded by boxes of unsold stock in a garage, the product clearly overproduced, disappointed",
+    "diez-conversaciones": "A young person talking with a stranger at a market, notebook open, genuine listening posture, sunny daylight",
+    "amigos-amables": "A group of friends nodding encouragingly at a product without much real interest, polite smiles, schoolyard",
+    "compromiso-vale": "A customer handing over a deposit and receiving a written note in return, market stall, the moment of real commitment",
+    "permisos-tramites": "A counter at a government office with stacks of forms and a queue, bureaucratic reality, institutional lighting",
+    "reloj-horas": "A wall clock beside a work table full of unfinished product late at night, exhausted workspace",
+    "desgaste-familia": "A person working late in a home workshop while family life continues in the next room without them, warm but distant",
+    "pastel-celebracion": "A birthday celebration in a Mexican home with a beautiful cake at the centre and happy people around it, warm evening light",
+    "tres-limites-precio": "Three horizontal lines drawn on a whiteboard at different heights with a marker resting between them, clean diagram",
+    "memoria-versiones": "Two people recalling an agreement differently, each gesturing their own version, mild disagreement, plain background",
+    "seis-elementos": "A simple one page written agreement on a desk with six short sections, all text areas blank, pen beside it",
+    "cerrar-cara": "A small business owner personally explaining the closure to a loyal customer at the counter, honest and respectful"
+   },
+   "laminas": [
+    "enamorado-idea",
+    "diez-conversaciones",
+    "amigos-amables",
+    "compromiso-vale",
+    "permisos-tramites",
+    "reloj-horas",
+    "desgaste-familia",
+    "pastel-celebracion",
+    "tres-limites-precio",
+    "memoria-versiones",
+    "seis-elementos",
+    "cerrar-cara"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "El patrón se repite y siempre termina igual.",
+     "fondo": "enamorado-idea",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Alguien tiene una idea, la desarrolla en su cabeza, invierte sus ahorros en producto, empaque e imagen.",
+     "fondo": "enamorado-idea",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Y hasta entonces sale a vender.",
+     "fondo": "enamorado-idea",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Si el mercado no la quería, el dinero ya se gastó.",
+     "fondo": "enamorado-idea",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "La prueba de los diez clientes le da la vuelta.",
+     "fondo": "diez-conversaciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Hablar con diez personas del público objetivo real antes de invertir un peso.",
+     "fondo": "diez-conversaciones",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "10 clientes"
+    },
+    {
+     "id": "p3",
+     "narracion": "No amigos ni familiares.",
+     "fondo": "amigos-amables",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Ellos van a decir que les gusta, porque te quieren, y eso no es información.",
+     "fondo": "amigos-amables",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Personas que efectivamente tienen el problema.",
+     "fondo": "diez-conversaciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Y se pregunta por lo que ya hacen, no por tu idea.",
+     "fondo": "diez-conversaciones",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Cómo resuelves esto hoy. Cuánto pagas. Qué te molesta de la solución actual.",
+     "fondo": "diez-conversaciones",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Y hay una escala de valor en las respuestas.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Qué buena idea no vale absolutamente nada.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Yo ya pago doscientos al mes por algo parecido vale muchísimo, porque describe un gasto real.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "200",
+      "al mes ya gasta"
+     ]
+    },
+    {
+     "id": "e4",
+     "narracion": "Y te lo compro ahora vale más que todo lo anterior junto.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "Solo el compromiso valida.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "rotulo": "Solo el compromiso valida"
+    },
+    {
+     "id": "e6",
+     "narracion": "Todo lo demás es cortesía.",
+     "fondo": "compromiso-vale",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Después están los costos que nunca aparecen en el plan inicial.",
+     "fondo": "permisos-tramites",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Registros, permisos según el giro, obligaciones fiscales, a veces apoyo contable.",
+     "fondo": "permisos-tramites",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i3",
+     "narracion": "Pero el más ignorado de todos es otro.",
+     "fondo": "reloj-horas",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i4",
+     "narracion": "Tu propio tiempo.",
+     "fondo": "reloj-horas",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "rotulo": "Tu tiempo cuesta"
+    },
+    {
+     "id": "i5",
+     "narracion": "Si dedicas veinte horas semanales al negocio, esas horas valen algo.",
+     "fondo": "reloj-horas",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i6",
+     "narracion": "Un negocio que deja cuatro mil al mes por ochenta horas de trabajo paga cincuenta pesos la hora.",
+     "fondo": "reloj-horas",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "cifra": [
+      "50",
+      "por hora"
+     ]
+    },
+    {
+     "id": "i7",
+     "narracion": "Y el desgaste también se paga, aunque no aparezca en ningún estado financiero.",
+     "fondo": "desgaste-familia",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i8",
+     "narracion": "Costear completo casi siempre revela que la utilidad real es menor de lo calculado.",
+     "fondo": "desgaste-familia",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i9",
+     "narracion": "La respuesta correcta casi nunca es abandonar. Es ajustar el precio o simplificar el modelo.",
+     "fondo": "desgaste-familia",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Y aquí está el cambio de mentalidad más grande del bloque.",
+     "fondo": "pastel-celebracion",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Nadie compra un pastel.",
+     "fondo": "pastel-celebracion",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "Compra una celebración que salga bien.",
+     "fondo": "pastel-celebracion",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c4",
+     "narracion": "Nadie compra una reparación: compra volver a usar su coche.",
+     "fondo": "pastel-celebracion",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "El costo solo marca el piso. El valor percibido marca el techo.",
+     "fondo": "tres-limites-precio",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Y la competencia define el rango en el que te mueves.",
+     "fondo": "tres-limites-precio",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "La rapidez, la garantía, la presentación y la atención suben el valor sin subir mucho el costo.",
+     "fondo": "pastel-celebracion",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Y todo acuerdo se pone por escrito, porque la memoria no es un contrato.",
+     "fondo": "memoria-versiones",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Cada parte guarda su versión, y las dos suelen ser sinceras.",
+     "fondo": "memoria-versiones",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Seis elementos mínimos, y dos que casi siempre se olvidan.",
+     "fondo": "seis-elementos",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c11",
+     "narracion": "Qué no incluye el trabajo, y qué pasa si algo falla.",
+     "fondo": "seis-elementos",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c12",
+     "narracion": "Y si al final no funcionó, cerrar bien es parte del oficio.",
+     "fondo": "cerrar-cara",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c13",
+     "narracion": "Quien cierra dando la cara conserva su reputación, que es el activo que se lleva al siguiente negocio.",
+     "fondo": "cerrar-cara",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c14",
+     "narracion": "Habla con diez. Costea tu tiempo. Y pon por escrito lo que no incluye.",
+     "fondo": "cerrar-cara",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p6-supremo",
+   "titulo": "Mi Primer Negocio",
+   "tipo": "supremo",
+   "pilar": "Reto Supremo",
+   "ancla": "P6-SUPREMO-NEGOCIO",
+   "imagenes": {
+    "quinientos-capital": "A small stack of banknotes on a kitchen table beside a blank notebook and a pencil, the starting capital, morning light",
+    "puesto-aguas": "A colourful street stall selling fresh fruit waters in Mexico with big glass jars, sunny and inviting",
+    "elegir-lugar": "Two possible stall locations shown in one composition, one on a busy corner and one on a quiet street, clear contrast",
+    "precio-inventario": "A young entrepreneur writing calculations in a notebook beside fruit and ice on a work table, planning",
+    "dia-venta": "A busy moment at the stall with a queue of customers and the young owner serving quickly, energetic midday",
+    "cierre-cuentas": "The same young entrepreneur counting the takings at the end of the day beside the notebook of numbers, satisfied and tired"
+   },
+   "laminas": [
+    "quinientos-capital",
+    "puesto-aguas",
+    "elegir-lugar",
+    "precio-inventario",
+    "dia-venta",
+    "cierre-cuentas"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Este es tu Reto Supremo.",
+     "fondo": "quinientos-capital",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Quinientos pesos de capital.",
+     "fondo": "quinientos-capital",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "500",
+      "de capital"
+     ]
+    },
+    {
+     "id": "g3",
+     "narracion": "Y un puesto de aguas frescas que existe sólo si tú lo planeas bien.",
+     "fondo": "puesto-aguas",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "g4",
+     "narracion": "Nadie te va a decir el precio ni cuántos vasos preparar. Eso lo decides tú.",
+     "fondo": "puesto-aguas",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Primera decisión: dónde te pones.",
+     "fondo": "elegir-lugar",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Una esquina con mucha gente y renta alta, o una calle tranquila y barata.",
+     "fondo": "elegir-lugar",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "No hay opción correcta. Hay una que cuadra con tu precio y tu inventario.",
+     "fondo": "elegir-lugar",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Segunda: cuánto cobras y cuánto produces.",
+     "fondo": "precio-inventario",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "El costo por vaso es el piso. Lo que la gente está dispuesta a pagar es el techo.",
+     "fondo": "precio-inventario",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e3",
+     "narracion": "Y si te sobra producto que se echa a perder, ese costo ya lo pagaste.",
+     "fondo": "precio-inventario",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Y llega el día.",
+     "fondo": "dia-venta",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Va a haber una hora en que se acaba todo y otra en que no llega nadie.",
+     "fondo": "dia-venta",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i3",
+     "narracion": "Las dos cosas son información para el siguiente día.",
+     "fondo": "dia-venta",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Gana quien cierra con la utilidad más alta.",
+     "fondo": "cierre-cuentas",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "No quien vendió más vasos.",
+     "fondo": "cierre-cuentas",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c3",
+     "narracion": "Cobrar no es ganar. Monta tu puesto.",
+     "fondo": "cierre-cuentas",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06,
+     "respiroS": 1.2
+    }
+   ]
+  }
+ ]
+}

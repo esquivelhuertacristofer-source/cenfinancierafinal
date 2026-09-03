@@ -81,7 +81,8 @@ const NegociaSueldo    = dynamic(() => import('./mechanics/NegociaSueldo'),    {
 const CrisisRoom       = dynamic(() => import('./mechanics/CrisisRoom'),       { ssr: false, loading: () => <SupremoLoading /> });
 const PortfolioBuilder = dynamic(() => import('./mechanics/PortfolioBuilder'), { ssr: false, loading: () => <SupremoLoading /> });
 
-import DiamondVideoPlayer from './DiamondVideoPlayer';
+import VideoFrame from './VideoFrame';
+import { UNIT_VIDEOS, VIDEO_TITULOS, urlVideo } from '@/lib/videos-generados';
 import { EXPERT_VIDEOS } from '../../lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
@@ -314,7 +315,7 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
                </div>
                
                {/* INTEGRACIÓN DE VIDEO OFICIAL */}
-               {unit.code.toLowerCase().includes('p1') && (
+               {UNIT_VIDEOS[unit.code] && (
                  <button 
                    onClick={() => onShowVideo(true)}
                    className="group flex items-center gap-6 p-2 pr-12 bg-white text-[#0A0118] rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)]"
@@ -803,6 +804,10 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const [showSuccess, setShowSuccess] = useState(false);
   const [rankUp, setRankUp] = useState<{ pillarTitle: string; rank: string; color: string } | null>(null);
   const [showUnitVideo, setShowUnitVideo] = useState(false);
+  /* Las unidades 6 (donde arranca la ampliacion del temario) y los retos supremos
+     tienen video propio producido para la plataforma. El resto sigue cayendo al
+     video general del autor, que no se toca. */
+  const videoUnidad = UNIT_VIDEOS[unit.code];
   const theme = useMemo(() => getUnitTheme(unit), [unit]);
   const tabStartRef = useRef<number>(Date.now());
 
@@ -1015,13 +1020,22 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
            </button>
            
            <div className="w-full max-w-6xl aspect-video bg-black rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_150px_rgba(255,140,0,0.3)] relative group">
-              <iframe 
-                src="https://www.youtube.com/embed/QOzt8F2nxm8?autoplay=1&rel=0"
-                className="w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              {videoUnidad ? (
+                <VideoFrame
+                  url={urlVideo(videoUnidad)}
+                  title={VIDEO_TITULOS[videoUnidad] || unit.title}
+                />
+              ) : (
+                /* Defensivo: el boton que abre esto solo aparece si la unidad tiene video. Antes
+                   aqui habia un embed fijo al video de demostracion de la portada, que se mostraba
+                   como "clase magistral" en unidades que no tenian ninguna. */
+                <div className="w-full h-full flex flex-col items-center justify-center gap-4 px-10 text-center">
+                  <PlayCircle size={56} className="text-white/20" />
+                  <p className="text-sm font-black uppercase tracking-[0.3em] text-white/40">
+                    Esta unidad todavia no tiene clase magistral
+                  </p>
+                </div>
+              )}
            </div>
         </div>
        )}

@@ -1,0 +1,2463 @@
+{
+ "grado": "p5",
+ "acentos": {
+  "p5-b1-u6": "#0EA5E9",
+  "p5-b2-u6": "#F59E0B",
+  "p5-b3-u6": "#8B5CF6",
+  "p5-b4-u6": "#FF8C00",
+  "p5-supremo": "#FFD700"
+ },
+ "videos": [
+  {
+   "carpeta": "p5-b1-u6",
+   "titulo": "Cuando el banco dice que no",
+   "tipo": "intermedio",
+   "pilar": "Sistema Financiero",
+   "ancla": "P5-1-6",
+   "imagenes": {
+    "banco-dice-no": "A bank clerk shaking their head across a counter at a woman holding a folder of documents, polite but firm refusal, modern branch interior",
+    "folio-reclamacion": "A hand holding a printed complaint receipt with a reference number area left blank, bank counter behind, close up",
+    "buro-entidades": "A laptop on a kitchen table showing a public comparison table with blank rows and columns, a preteen and a parent looking at it together",
+    "proporcion-datos": "Two bar charts of very different heights shown side by side on a screen, one tall and one short, clean data visualisation, no labels",
+    "spei-segundos": "A stylized map of Mexico with a bright line of light travelling instantly from one city to another, clean infographic style, dark background",
+    "clabe-dieciocho": "A close up of a phone transfer screen with a long empty number field and a keypad below, hands typing carefully",
+    "codi-qr": "A market vendor in Mexico holding up a QR code card while a customer scans it with their phone, sunny outdoor market stall",
+    "verificar-nombre": "A phone confirmation screen held in two hands with a blank name field highlighted, the person pausing before pressing confirm",
+    "banxico-tasa": "The facade of a large central bank building in Mexico City with a formal institutional feel, clear daylight",
+    "balanza-tasa": "A balance scale with a savings jar on one side and a credit card on the other, tilting, clean illustrative composition",
+    "evolucion-pagos": "A left to right progression on one surface: barter goods, coins, banknotes, a bank card and a smartphone, top down view, clean spacing",
+    "sin-sucursal": "A remote Mexican rural village street with no bank in sight, a woman walking with a bag, mountains in the background, warm afternoon light"
+   },
+   "laminas": [
+    "banco-dice-no",
+    "folio-reclamacion",
+    "buro-entidades",
+    "proporcion-datos",
+    "spei-segundos",
+    "clabe-dieciocho",
+    "codi-qr",
+    "verificar-nombre",
+    "banxico-tasa",
+    "balanza-tasa",
+    "evolucion-pagos",
+    "sin-sucursal"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "El banco te dice que no.",
+     "fondo": "banco-dice-no",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Y tú estás seguro de que tienes razón.",
+     "fondo": "banco-dice-no",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Mucha gente se queda ahí, porque cree que ahí se acabó.",
+     "fondo": "banco-dice-no",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "No se acabó. Existe una institución que te defiende, y una base de datos pública para revisarlos a ellos.",
+     "fondo": "banco-dice-no",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "La CONDUSEF atiende a quien tiene un problema con un banco, una aseguradora o una afore.",
+     "fondo": "folio-reclamacion",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Orienta, media entre las partes y en algunos casos puede resolver como árbitro.",
+     "fondo": "folio-reclamacion",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Pero el camino tiene un orden, y saltárselo te devuelve al principio.",
+     "fondo": "folio-reclamacion",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Primero se reclama ante la institución y se guarda el folio.",
+     "fondo": "folio-reclamacion",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06,
+     "rotulo": "Primero el folio"
+    },
+    {
+     "id": "p5",
+     "narracion": "Si no responden o la respuesta no satisface, entonces se acude a la CONDUSEF con ese folio en la mano.",
+     "fondo": "folio-reclamacion",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Y hay una herramienta que casi nadie usa.",
+     "fondo": "buro-entidades",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "El Buró de Entidades Financieras.",
+     "fondo": "buro-entidades",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "rotulo": "Buró de Entidades"
+    },
+    {
+     "id": "e3",
+     "narracion": "Una base pública que muestra cuántas reclamaciones recibe cada institución, cómo las resuelve y qué sanciones ha tenido.",
+     "fondo": "buro-entidades",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e4",
+     "narracion": "Pero hay que leerla con proporción.",
+     "fondo": "proporcion-datos",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e5",
+     "narracion": "Una institución con diez mil reclamaciones no es peor que una con cien.",
+     "fondo": "proporcion-datos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e6",
+     "narracion": "Puede tener cien veces más clientes. Lo que importa es la proporción, y cuántas se resuelven a favor del usuario.",
+     "fondo": "proporcion-datos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Mandas dinero desde tu celular y llega en segundos al otro lado del país.",
+     "fondo": "spei-segundos",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "No viajan billetes. Viaja información.",
+     "fondo": "spei-segundos",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i3",
+     "narracion": "Por un sistema del Banco de México que se llama S P E I.",
+     "fondo": "spei-segundos",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "rotulo": "SPEI"
+    },
+    {
+     "id": "i4",
+     "narracion": "Y para llegar a la cuenta correcta hace falta un número de dieciocho dígitos: la clabe.",
+     "fondo": "clabe-dieciocho",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i5",
+     "narracion": "Identifica de forma única una cuenta en todo el país.",
+     "fondo": "clabe-dieciocho",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i6",
+     "narracion": "CoDi resuelve el problema de teclear mal: quien cobra genera un código Q R que ya trae su cuenta y el monto exacto.",
+     "fondo": "codi-qr",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i7",
+     "narracion": "El que paga solo escanea y confirma.",
+     "fondo": "codi-qr",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i8",
+     "narracion": "Y hay un segundo que decide todo: antes de confirmar, la app muestra el nombre del titular.",
+     "fondo": "verificar-nombre",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i9",
+     "narracion": "Si el nombre no coincide, no confirmes. Una transferencia enviada no se cancela: hay que pedirle a esa persona que la devuelva.",
+     "fondo": "verificar-nombre",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Cada cierto tiempo sale la noticia: el Banco de México subió la tasa.",
+     "fondo": "banxico-tasa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Suena a cosa de economistas, y decide cuánto te cuesta un crédito y cuánto rinde tu ahorro.",
+     "fondo": "banxico-tasa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c3",
+     "narracion": "Es la tasa de referencia: la base de casi todas las demás tasas del país.",
+     "fondo": "banxico-tasa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04,
+     "rotulo": "Tasa de referencia"
+    },
+    {
+     "id": "c4",
+     "narracion": "Se sube para frenar la inflación.",
+     "fondo": "balanza-tasa",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c5",
+     "narracion": "Con tasas altas pedir prestado se encarece y ahorrar se vuelve atractivo, así que se gasta menos y los precios se calman.",
+     "fondo": "balanza-tasa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c6",
+     "narracion": "Se baja para reactivar. El crédito se abarata, las empresas invierten y las familias consumen.",
+     "fondo": "balanza-tasa",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c7",
+     "narracion": "Nada de esto es magia moderna: cada medio de pago resolvió una limitación del anterior.",
+     "fondo": "evolucion-pagos",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c8",
+     "narracion": "El trueque exigía coincidir. Las monedas resolvieron eso. Los billetes resolvieron cargar metal.",
+     "fondo": "evolucion-pagos",
+     "paso": 4,
+     "recorte": [
+      0.4,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c9",
+     "narracion": "Y la diferencia grande hoy no es la comodidad: es el rastro.",
+     "fondo": "evolucion-pagos",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c10",
+     "narracion": "El efectivo no deja registro. Eso da privacidad, pero si hay un desacuerdo no hay forma de probar nada.",
+     "fondo": "evolucion-pagos",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c11",
+     "narracion": "Y millones de personas en México siguen fuera de todo esto.",
+     "fondo": "sin-sucursal",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c12",
+     "narracion": "Hay municipios sin una sola sucursal, donde llegar al banco es un viaje de horas.",
+     "fondo": "sin-sucursal",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c13",
+     "narracion": "Quedarse fuera cuesta caro: el ahorro se expone al robo, no hay historial y el crédito formal queda cerrado.",
+     "fondo": "sin-sucursal",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c14",
+     "narracion": "Guarda tu folio. Verifica el nombre antes de confirmar. Y revisa el Buró antes de contratar.",
+     "fondo": "sin-sucursal",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p5-b2-u6",
+   "titulo": "El precio tachado",
+   "tipo": "intermedio",
+   "pilar": "Consumo Responsable",
+   "ancla": "P5-2-6",
+   "imagenes": {
+    "precio-tachado": "A shop price tag with a large crossed out number area and a smaller number below it, both blank, close up on a retail shelf",
+    "misma-tienda-otra": "The same product displayed in two different shops shown side by side in one composition, blank price cards under each",
+    "tres-niveles-deseo": "Three items arranged on a staircase of three steps: worn out shoes on the bottom, a musical instrument in the middle, a flashy gadget on top",
+    "prueba-tiempo": "A wall calendar with two weeks crossed off and a preteen looking at a product photo with visibly less interest than before",
+    "terminado-nueve": "A row of price tags on a shelf all ending with the same digit shape, the digits blank, retail aisle, shallow depth of field",
+    "opcion-senuelo": "Three subscription plan cards displayed side by side on a screen, the middle one clearly worse designed than the others, blank text areas",
+    "escasez-contador": "A phone screen showing a countdown and a nearly empty stock bar, urgent red glow, dark room",
+    "influencer-producto": "A young content creator filming themselves holding up a product in a bright bedroom studio with a ring light, enthusiastic",
+    "codigo-descuento": "A phone screen showing a personalised discount code area left blank on a colourful promotional post, held in one hand",
+    "ticket-guardado": "A shoebox full of neatly kept receipts on a shelf, one receipt being pulled out by a hand, domestic setting",
+    "producto-descompuesto": "A broken small appliance on a kitchen counter beside its box and a receipt, a person examining it with mild frustration",
+    "ventanilla-queja": "A person calmly presenting documents at a consumer protection office counter, an official reviewing them, institutional interior"
+   },
+   "laminas": [
+    "precio-tachado",
+    "misma-tienda-otra",
+    "tres-niveles-deseo",
+    "prueba-tiempo",
+    "terminado-nueve",
+    "opcion-senuelo",
+    "escasez-contador",
+    "influencer-producto",
+    "codigo-descuento",
+    "ticket-guardado",
+    "producto-descompuesto",
+    "ventanilla-queja"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Ves un precio tachado de mil doscientos y al lado setecientos noventa y nueve.",
+     "fondo": "precio-tachado",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Parece un ahorro de cuatrocientos un pesos.",
+     "fondo": "precio-tachado",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "401",
+      "de ahorro"
+     ]
+    },
+    {
+     "id": "g3",
+     "narracion": "Pero el producto nunca costó mil doscientos.",
+     "fondo": "misma-tienda-otra",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "g4",
+     "narracion": "Y en otra tienda está en setecientos cincuenta.",
+     "fondo": "misma-tienda-otra",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Antes de los precios, hay que separar tres cosas.",
+     "fondo": "tres-niveles-deseo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Una necesidad es lo que hace falta para funcionar. Comida, salud, zapatos cuando los que hay están rotos.",
+     "fondo": "tres-niveles-deseo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.62,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Un deseo mejora la vida de verdad y se puede planear. Una bicicleta mejor, un curso, un instrumento.",
+     "fondo": "tres-niveles-deseo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Y un capricho es un impulso activado por algo externo: un anuncio, una oferta, ver a alguien con el producto.",
+     "fondo": "tres-niveles-deseo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.38,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Distinguir deseo de capricho tiene una sola prueba, y es el tiempo.",
+     "fondo": "prueba-tiempo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Si a las dos semanas lo sigues queriendo igual, es un deseo y merece un plan de ahorro.",
+     "fondo": "prueba-tiempo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Si se te olvidó, acabas de ahorrarte el dinero y el arrepentimiento.",
+     "fondo": "prueba-tiempo",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Ese número tachado tiene nombre técnico.",
+     "fondo": "precio-tachado",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Precio ancla. Y una sola función: manipular lo que te parece caro.",
+     "fondo": "precio-tachado",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "rotulo": "Precio ancla"
+    },
+    {
+     "id": "e3",
+     "narracion": "Puede ser un precio tachado, un precio de lista que nadie paga, o un producto carísimo puesto al lado.",
+     "fondo": "precio-tachado",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e4",
+     "narracion": "Y el precio terminado en nueve funciona por cómo leemos.",
+     "fondo": "terminado-nueve",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e5",
+     "narracion": "Ciento noventa y nueve se siente cerca de cien, aunque esté a un peso de doscientos.",
+     "fondo": "terminado-nueve",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e6",
+     "narracion": "La defensa es redondear hacia arriba antes de decidir.",
+     "fondo": "terminado-nueve",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e7",
+     "narracion": "Cuando hay tres opciones y una está claramente peor, esa mala opción no está ahí para venderse.",
+     "fondo": "opcion-senuelo",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e8",
+     "narracion": "Está para hacer que otra parezca excelente. Se llama señuelo.",
+     "fondo": "opcion-senuelo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04,
+     "rotulo": "Señuelo"
+    },
+    {
+     "id": "e9",
+     "narracion": "Y últimas piezas, solo hoy, quedan tres: la urgencia impide comparar.",
+     "fondo": "escasez-contador",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e10",
+     "narracion": "Muchas veces ese contador se reinicia todos los días.",
+     "fondo": "escasez-contador",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Alguien que sigues recomienda un producto y suena honesto.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Si le pagaron y no lo dijo, eso es publicidad disfrazada de opinión.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i3",
+     "narracion": "Ojo con esto: que le paguen no significa que el producto sea malo.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i4",
+     "narracion": "Significa que hay un interés económico que hay que tomar en cuenta al ponderar lo que dice.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i5",
+     "narracion": "Las señales son bastante confiables.",
+     "fondo": "codigo-descuento",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i6",
+     "narracion": "Un código de descuento personalizado, porque implica una comisión por venta.",
+     "fondo": "codigo-descuento",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i7",
+     "narracion": "Elogios sin una sola crítica, porque ningún producto es perfecto.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i8",
+     "narracion": "Y tres preguntas resuelven casi todo. Quién le paga. Menciona alguna desventaja. Lo comparó con otras opciones.",
+     "fondo": "influencer-producto",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Compras algo, se descompone a las dos semanas.",
+     "fondo": "producto-descompuesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Y crees que ya no hay nada que hacer.",
+     "fondo": "producto-descompuesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c3",
+     "narracion": "Tienes derechos claros, pero solo sirven si guardaste el ticket.",
+     "fondo": "ticket-guardado",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c4",
+     "narracion": "La garantía responde ante defectos de fabricación durante un plazo.",
+     "fondo": "producto-descompuesto",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "rotulo": "Garantía"
+    },
+    {
+     "id": "c5",
+     "narracion": "La devolución es otra cosa: una política comercial de cada tienda, para devolver algo en buen estado.",
+     "fondo": "producto-descompuesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c6",
+     "narracion": "Confundirlas hace que la gente exija lo que no corresponde y no exija lo que sí.",
+     "fondo": "producto-descompuesto",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c7",
+     "narracion": "Una reclamación efectiva lleva tres cosas.",
+     "fondo": "ticket-guardado",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c8",
+     "narracion": "El comprobante, la descripción precisa del defecto y una petición concreta: reparación, cambio o devolución.",
+     "fondo": "ticket-guardado",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c9",
+     "narracion": "Y si en la tienda no te hacen caso, tampoco se acaba ahí.",
+     "fondo": "ventanilla-queja",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c10",
+     "narracion": "La autoridad del consumidor recibe quejas, cita a las partes a conciliar y puede sancionar.",
+     "fondo": "ventanilla-queja",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c11",
+     "narracion": "Pero primero se reclama con el proveedor y se documenta: fecha, con quién hablaste, qué respondieron.",
+     "fondo": "ventanilla-queja",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c12",
+     "narracion": "Redondea hacia arriba. Espera dos semanas. Y guarda el ticket.",
+     "fondo": "ventanilla-queja",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p5-b3-u6",
+   "titulo": "La regla que nunca falla",
+   "tipo": "intermedio",
+   "pilar": "Inversión y Patrimonio",
+   "ancla": "P5-3-6",
+   "imagenes": {
+    "promesa-imposible": "A glossy promotional flyer promising extraordinary returns lying on a table, blank text areas, a hand about to pick it up",
+    "balanza-riesgo": "A seesaw with a small pile of coins on one end and a larger unstable stack on the other, clean illustrative composition",
+    "escala-instrumentos": "Five steps of increasing height on a clean surface, each step holding a container with progressively more coins, side view",
+    "una-canasta": "A single basket full of eggs held in two hands, and beside it four smaller baskets each with a few eggs, one composition",
+    "sectores-distintos": "Four small business scenes arranged in a grid: a workshop, a farm, a shop and a tech desk, all thriving, clean spacing",
+    "fondo-colectivo": "Many small coin contributions from different hands flowing into one large shared container, illustrative, warm light",
+    "comision-erosiona": "Two rising line graphs on a screen, one clearly ending lower than the other, clean data visualisation, no labels",
+    "horizonte-fecha": "A calendar with a date circled far ahead and a savings container beside it, a preteen planning at a desk",
+    "vender-antes": "A falling line on a screen with a hand hovering over a sell button, tension and hesitation, dim room",
+    "piramide-crece": "A stylized pyramid diagram built of small figures, each layer far wider than the one above, clean infographic on plain background",
+    "testimonio-real": "Two neighbours talking enthusiastically over a fence, one showing the other a phone, genuine excitement, sunny Mexican street",
+    "cinco-banderas": "Five small red flags planted in a row on a plain surface, clean symbolic composition, even light"
+   },
+   "laminas": [
+    "promesa-imposible",
+    "balanza-riesgo",
+    "escala-instrumentos",
+    "una-canasta",
+    "sectores-distintos",
+    "fondo-colectivo",
+    "comision-erosiona",
+    "horizonte-fecha",
+    "vender-antes",
+    "piramide-crece",
+    "testimonio-real",
+    "cinco-banderas"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Existe una regla en las inversiones que nunca falla.",
+     "fondo": "promesa-imposible",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "A mayor rendimiento, mayor riesgo. Siempre. Sin excepciones.",
+     "fondo": "promesa-imposible",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Quien te ofrezca mucho rendimiento sin riesgo no descubrió un secreto.",
+     "fondo": "promesa-imposible",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Te está mintiendo.",
+     "fondo": "promesa-imposible",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Y la regla no tiene excepciones por una razón.",
+     "fondo": "balanza-riesgo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Si existiera una inversión que pagara mucho sin ningún riesgo, todo el mundo pondría ahí su dinero.",
+     "fondo": "balanza-riesgo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Con tanta demanda, ya no necesitaría pagar tanto para atraer inversionistas. Y el rendimiento bajaría solo.",
+     "fondo": "balanza-riesgo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Riesgo tampoco significa perderlo todo.",
+     "fondo": "balanza-riesgo",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Significa que el resultado puede variar y no se sabe de antemano cuál será.",
+     "fondo": "escala-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "De menor a mayor: una cuenta de ahorro, que casi no varía y casi no rinde.",
+     "fondo": "escala-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.25,
+      0.6,
+      0.5
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Instrumentos gubernamentales, muy seguros y con rendimiento moderado. Fondos diversificados. Y acciones, que pueden dar mucho o caer fuerte.",
+     "fondo": "escala-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p8",
+     "narracion": "Aceptar riesgo no es imprudente: es lo que permite que el dinero de largo plazo le gane a la inflación.",
+     "fondo": "escala-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Si pones todo en un solo lugar y ese lugar falla, lo pierdes todo.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Si lo repartes en cuatro, pierdes una parte.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.7,
+      0.5,
+      0.55
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e3",
+     "narracion": "Eso es diversificar, y no elimina el riesgo: lo reparte.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "rotulo": "Diversificar"
+    },
+    {
+     "id": "e4",
+     "narracion": "Es la única herramienta que baja el riesgo sin renunciar del todo al rendimiento.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e5",
+     "narracion": "Y se reparte de tres formas.",
+     "fondo": "sectores-distintos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e6",
+     "narracion": "Por instrumento, por sector y por plazo.",
+     "fondo": "sectores-distintos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.8
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e7",
+     "narracion": "Pero tiene un precio honesto: nunca vas a obtener el rendimiento máximo.",
+     "fondo": "sectores-distintos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e8",
+     "narracion": "A cambio tampoco vas a sufrir la pérdida máxima. Ese intercambio es la esencia de invertir bien.",
+     "fondo": "sectores-distintos",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e9",
+     "narracion": "Y dos límites. Repartir entre opciones que se mueven igual no diversifica nada.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e10",
+     "narracion": "Y ninguna diversificación te protege de un fraude, porque ahí el dinero nunca se invirtió.",
+     "fondo": "una-canasta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Diversificar suena bien hasta que ves que necesitas mucho dinero para comprar diez cosas distintas.",
+     "fondo": "fondo-colectivo",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Los fondos de inversión resuelven exactamente eso.",
+     "fondo": "fondo-colectivo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i3",
+     "narracion": "Juntan el dinero de muchas personas y compran entre todos lo que ninguno podría solo.",
+     "fondo": "fondo-colectivo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i4",
+     "narracion": "Cada persona es dueña de una fracción proporcional a lo que aportó.",
+     "fondo": "fondo-colectivo",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i5",
+     "narracion": "Y ahí aparece el número que casi nadie mira: la comisión anual.",
+     "fondo": "comision-erosiona",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i6",
+     "narracion": "Uno por ciento al año suena insignificante.",
+     "fondo": "comision-erosiona",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i7",
+     "narracion": "Pero se cobra cada año sobre todo el saldo, incluidos los rendimientos acumulados.",
+     "fondo": "comision-erosiona",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i8",
+     "narracion": "En horizontes largos, esa diferencia pequeña se vuelve enorme.",
+     "fondo": "comision-erosiona",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Puedes elegir la mejor inversión del mundo y aun así perder dinero.",
+     "fondo": "horizonte-fecha",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Si la eliges para un plazo que no corresponde.",
+     "fondo": "horizonte-fecha",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c3",
+     "narracion": "El horizonte no es cuánto tiempo quieres invertir. Es cuándo, concretamente, vas a usar el dinero.",
+     "fondo": "horizonte-fecha",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "rotulo": "Horizonte"
+    },
+    {
+     "id": "c4",
+     "narracion": "Y la regla es de coincidencia: el plazo del instrumento nunca debe ser mayor que el horizonte de la meta.",
+     "fondo": "horizonte-fecha",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c5",
+     "narracion": "Vender forzado tiene dos costos.",
+     "fondo": "vender-antes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c6",
+     "narracion": "Puedes vender en una caída y convertir en definitiva una pérdida que era temporal.",
+     "fondo": "vender-antes",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c7",
+     "narracion": "Y algunos instrumentos castigan el retiro anticipado.",
+     "fondo": "vender-antes",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c8",
+     "narracion": "Y falta el fraude más común de todos.",
+     "fondo": "piramide-crece",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c9",
+     "narracion": "Una pirámide no es un fraude que falla: funciona perfectamente hasta que se acaba la gente.",
+     "fondo": "piramide-crece",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c10",
+     "narracion": "Si cada participante recluta seis, el primer nivel necesita seis, el segundo treinta y seis, el tercero doscientos dieciséis.",
+     "fondo": "piramide-crece",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06,
+     "cifra": [
+      "216",
+      "en el nivel 3"
+     ]
+    },
+    {
+     "id": "c11",
+     "narracion": "En doce niveles se necesita más gente que la que hay en el planeta. El colapso no es mala suerte: es aritmética.",
+     "fondo": "piramide-crece",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c12",
+     "narracion": "Y la trampa más eficaz es que los primeros sí cobran, y lo cuentan de buena fe.",
+     "fondo": "testimonio-real",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c13",
+     "narracion": "No mienten ni son cómplices. Por eso el testimonio de un conocido no prueba nada.",
+     "fondo": "testimonio-real",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c14",
+     "narracion": "Cinco banderas rojas: rendimiento fuera de mercado, promesa de cero riesgo, ganar por reclutar, presión para decidir hoy, y no estar en ningún registro oficial.",
+     "fondo": "cinco-banderas",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c15",
+     "narracion": "Reparte. Iguala el plazo. Y desconfía de lo que no tiene riesgo.",
+     "fondo": "cinco-banderas",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p5-b4-u6",
+   "titulo": "Quién paga y por qué",
+   "tipo": "intermedio",
+   "pilar": "Emprendimiento y Liderazgo",
+   "ancla": "P5-4-6",
+   "imagenes": {
+    "app-gratis": "A person using a free app on a phone while an advertiser hands money to a company representative in the background, illustrative split scene",
+    "cinco-piezas": "Five blank cards arranged in a row on a desk with arrows drawn between them in pencil, planning layout, top down view",
+    "mismo-producto": "The same handheld product shown four times on one surface with a different price arrangement beside each, clean comparison layout",
+    "ingreso-mayor-costo": "A simple two pan balance with coins clearly heavier on one side, plain background, clean illustrative composition",
+    "pregunta-clave": "A single question written on a large blank sticky note on a wall, a preteen standing in front of it thinking, workshop room",
+    "dibujo-maqueta": "A rough pencil sketch and a small cardboard mockup side by side on a work table, clearly early stage, natural light",
+    "preventa-anticipo": "A customer handing over a small deposit to a young entrepreneur who is writing their name on a list, market setting",
+    "precio-por-capas": "Three stacked layers drawn on paper representing cost, margin and final price, a pencil resting on the diagram, top down view",
+    "descuento-miedo": "A shop owner hastily writing a large blank discount sign in an empty store with no customers, anxious body language",
+    "tablero-cuatro": "Four simple gauges or dials drawn on a whiteboard in a small business back room, blank faces, clean layout",
+    "clientes-vuelven": "A small shop where several familiar customers greet the owner by name, warm regular clientele atmosphere, Mexican neighbourhood store",
+    "letra-pequena-etica": "A contract on a desk with a magnifying glass over the bottom section, the text blank, formal office setting"
+   },
+   "laminas": [
+    "app-gratis",
+    "cinco-piezas",
+    "mismo-producto",
+    "ingreso-mayor-costo",
+    "pregunta-clave",
+    "dibujo-maqueta",
+    "preventa-anticipo",
+    "precio-por-capas",
+    "descuento-miedo",
+    "tablero-cuatro",
+    "clientes-vuelven",
+    "letra-pequena-etica"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Muchas ideas mueren sin que el producto tuviera nada de malo.",
+     "fondo": "app-gratis",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Mueren porque nadie definió quién iba a pagar, y por qué.",
+     "fondo": "app-gratis",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "g3",
+     "narracion": "Y hay algo que confunde a casi todos al empezar.",
+     "fondo": "app-gratis",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g4",
+     "narracion": "Quien usa el producto no siempre es quien paga.",
+     "fondo": "app-gratis",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Un modelo de negocio cabe en cinco preguntas.",
+     "fondo": "cinco-piezas",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Quién es el cliente. Qué problema le resuelvo. Cómo le entrego ese valor.",
+     "fondo": "cinco-piezas",
+     "paso": 1,
+     "recorte": [
+      0.4,
+      0.5,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p3",
+     "narracion": "Cuánto y de qué forma me paga. Y qué me cuesta entregarlo.",
+     "fondo": "cinco-piezas",
+     "paso": 1,
+     "recorte": [
+      0.65,
+      0.5,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p4",
+     "narracion": "Con esas cinco respuestas, una idea deja de ser una intención.",
+     "fondo": "mismo-producto",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "p5",
+     "narracion": "Y el mismo producto admite varios modelos: venderse una vez, cobrarse por suscripción, ser gratis con funciones de pago.",
+     "fondo": "mismo-producto",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p6",
+     "narracion": "Ninguno es correcto en abstracto. Depende del cliente y del costo.",
+     "fondo": "mismo-producto",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "p7",
+     "narracion": "Pero todos pasan una prueba elemental.",
+     "fondo": "ingreso-mayor-costo",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "p8",
+     "narracion": "Lo que recibes por cliente debe superar lo que te cuesta atenderlo.",
+     "fondo": "ingreso-mayor-costo",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "rotulo": "Ingreso > costo"
+    },
+    {
+     "id": "p9",
+     "narracion": "Si cada venta deja pérdida, vender más solo agranda el problema.",
+     "fondo": "ingreso-mayor-costo",
+     "paso": 1,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Prototipar no es hacer una versión chiquita del producto.",
+     "fondo": "pregunta-clave",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Es responder la pregunta más importante de tu idea con lo mínimo posible.",
+     "fondo": "pregunta-clave",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e3",
+     "narracion": "Y el error más común es empezar a construir sin saber qué se quiere averiguar.",
+     "fondo": "pregunta-clave",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e4",
+     "narracion": "Primero se escribe la pregunta clave: la que, si se responde que no, tumba la idea entera.",
+     "fondo": "pregunta-clave",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e5",
+     "narracion": "A veces se responde con un dibujo.",
+     "fondo": "dibujo-maqueta",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e6",
+     "narracion": "El dibujo responde si la gente entiende la idea. El servicio hecho a mano responde si sirve.",
+     "fondo": "dibujo-maqueta",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "e7",
+     "narracion": "Pero hay una prueba más honesta que todas.",
+     "fondo": "preventa-anticipo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e8",
+     "narracion": "Preguntar si alguien compraría produce respuestas amables. Pedir un anticipo produce respuestas verdaderas.",
+     "fondo": "preventa-anticipo",
+     "paso": 2,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "e9",
+     "narracion": "Y el criterio de éxito se escribe antes. Si tres de diez apartan, seguimos.",
+     "fondo": "preventa-anticipo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "e10",
+     "narracion": "Sin ese criterio de antemano, cualquier resultado se interpreta como bueno.",
+     "fondo": "preventa-anticipo",
+     "paso": 2,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Poner precio es de las decisiones más difíciles.",
+     "fondo": "precio-por-capas",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Muy alto y no vendes. Muy bajo y vendes perdiendo.",
+     "fondo": "precio-por-capas",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i3",
+     "narracion": "Se construye por capas. El costo por unidad es el piso absoluto.",
+     "fondo": "precio-por-capas",
+     "paso": 3,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "rotulo": "El costo es el piso"
+    },
+    {
+     "id": "i4",
+     "narracion": "Material más la parte proporcional de permisos, transporte y empaque.",
+     "fondo": "precio-por-capas",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i5",
+     "narracion": "Encima va el margen, y el resultado se compara con lo que cobra el mercado.",
+     "fondo": "precio-por-capas",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i6",
+     "narracion": "Hay tres descuentos que sirven.",
+     "fondo": "descuento-miedo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "i7",
+     "narracion": "Por volumen, de temporada, y para clientes frecuentes. Los tres tienen un propósito.",
+     "fondo": "descuento-miedo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "i8",
+     "narracion": "Y hay un cuarto que aparece solo: el descuento por miedo.",
+     "fondo": "descuento-miedo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i9",
+     "narracion": "El que se da cuando no se vende y se busca cualquier salida. Casi nunca funciona.",
+     "fondo": "descuento-miedo",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "i10",
+     "narracion": "Porque si nadie compra, el problema rara vez era el precio.",
+     "fondo": "descuento-miedo",
+     "paso": 3,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Si te preguntan cómo va tu negocio y respondes bien, no dijiste nada.",
+     "fondo": "tablero-cuatro",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "Un negocio se responde con cuatro números.",
+     "fondo": "tablero-cuatro",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c3",
+     "narracion": "Ventas: cuánto entró. Margen: cuánto quedó.",
+     "fondo": "tablero-cuatro",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c4",
+     "narracion": "Clientes: a cuántos llegué. Y recurrencia: cuántos volvieron.",
+     "fondo": "tablero-cuatro",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c5",
+     "narracion": "El último es el más ignorado y el más revelador.",
+     "fondo": "clientes-vuelven",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c6",
+     "narracion": "Si muchos prueban y ninguno regresa, el problema no es de publicidad. Es del producto.",
+     "fondo": "clientes-vuelven",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c7",
+     "narracion": "Y falta lo que ningún indicador mide.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c8",
+     "narracion": "Hay cosas perfectamente legales que están mal. La letra pequeña que esconde condiciones.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c9",
+     "narracion": "La ley es el piso, no la meta.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c10",
+     "narracion": "Tres pruebas. Estarías cómodo si todos tus clientes supieran exactamente lo que hiciste.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "c11",
+     "narracion": "Aceptarías que te lo hicieran a ti en la misma situación.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "c12",
+     "narracion": "Y qué pasaría si todos los negocios hicieran lo mismo.",
+     "fondo": "letra-pequena-etica",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "c13",
+     "narracion": "Define quién paga. Pide un anticipo. Y mide la recurrencia.",
+     "fondo": "clientes-vuelven",
+     "paso": 4,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 1.2
+    }
+   ]
+  },
+  {
+   "carpeta": "p5-supremo",
+   "titulo": "Inversor A-10",
+   "tipo": "supremo",
+   "pilar": "Reto Supremo",
+   "ancla": "P5-SUPREMO-INVERSOR",
+   "imagenes": {
+    "portafolio-inicio": "A clean desk with a laptop showing a blank portfolio dashboard, a notebook and a pen, morning light, focused workspace",
+    "tres-instrumentos": "Three distinct containers on a table, each holding a different amount, arranged left to right by size, clean illustrative composition",
+    "mes-malo": "A screen showing a sharply falling line, a preteen watching it with a tense expression, dim room",
+    "mes-bueno": "The same screen showing a recovering rising line, the same preteen visibly relieved, warm light returning",
+    "diez-meses": "Ten small markers arranged in a row along a drawn timeline on paper, a pencil marking one of them, top down view",
+    "cierre-portafolio": "A preteen closing a notebook beside a laptop with a completed dashboard, calm satisfaction, end of day light"
+   },
+   "laminas": [
+    "portafolio-inicio",
+    "tres-instrumentos",
+    "mes-malo",
+    "mes-bueno",
+    "diez-meses",
+    "cierre-portafolio"
+   ],
+   "conCifras": [],
+   "subtitulos": true,
+   "escenas": [
+    {
+     "id": "g1",
+     "narracion": "Este es tu Reto Supremo.",
+     "fondo": "portafolio-inicio",
+     "paso": 0,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": false
+    },
+    {
+     "id": "g2",
+     "narracion": "Cincuenta mil pesos. Diez meses.",
+     "fondo": "portafolio-inicio",
+     "paso": 0,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.08,
+     "cifra": [
+      "50000",
+      "de portafolio"
+     ]
+    },
+    {
+     "id": "g3",
+     "narracion": "Y ninguna forma de saber qué va a pasar el mes que viene.",
+     "fondo": "portafolio-inicio",
+     "paso": 0,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": 0.04,
+     "respiroS": 0.9
+    },
+    {
+     "id": "p1",
+     "narracion": "Tres instrumentos, tres perfiles distintos.",
+     "fondo": "tres-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": false
+    },
+    {
+     "id": "p2",
+     "narracion": "Cetes, que casi no varían. Acciones, que pueden dar mucho o caer fuerte. Y fibras, en medio.",
+     "fondo": "tres-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.5,
+      0.5,
+      0.8
+     ],
+     "empuje": 0.03
+    },
+    {
+     "id": "p3",
+     "narracion": "A mayor rendimiento, mayor riesgo. También aquí.",
+     "fondo": "tres-instrumentos",
+     "paso": 1,
+     "recorte": [
+      0.38,
+      0.46,
+      0.62
+     ],
+     "empuje": 0.08,
+     "respiroS": 0.9
+    },
+    {
+     "id": "e1",
+     "narracion": "Va a haber un mes malo. Siempre lo hay.",
+     "fondo": "mes-malo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": false
+    },
+    {
+     "id": "e2",
+     "narracion": "Y ahí es donde se pierde el juego: vendiendo con miedo.",
+     "fondo": "mes-malo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.5,
+      0.6
+     ],
+     "empuje": 0.06
+    },
+    {
+     "id": "e3",
+     "narracion": "Vender en la caída convierte una pérdida temporal en una definitiva.",
+     "fondo": "mes-malo",
+     "paso": 2,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.03,
+     "respiroS": 0.9
+    },
+    {
+     "id": "i1",
+     "narracion": "Diez meses es un horizonte corto.",
+     "fondo": "diez-meses",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": false
+    },
+    {
+     "id": "i2",
+     "narracion": "Por eso no puedes poner los cincuenta mil en lo más volátil.",
+     "fondo": "diez-meses",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.62
+     ],
+     "empuje": 0.04
+    },
+    {
+     "id": "i3",
+     "narracion": "El plazo del instrumento nunca debe pasar del horizonte de la meta.",
+     "fondo": "diez-meses",
+     "paso": 3,
+     "recorte": [
+      0.5,
+      0.5,
+      0.82
+     ],
+     "empuje": 0.06,
+     "respiroS": 0.9
+    },
+    {
+     "id": "c1",
+     "narracion": "Gana quien llega al mes diez con el portafolio de pie.",
+     "fondo": "cierre-portafolio",
+     "paso": 4,
+     "recorte": [
+      0.64,
+      0.54,
+      0.58
+     ],
+     "empuje": false
+    },
+    {
+     "id": "c2",
+     "narracion": "No quien acertó un mes espectacular.",
+     "fondo": "mes-bueno",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.42,
+      0.7
+     ],
+     "empuje": 0.08
+    },
+    {
+     "id": "c3",
+     "narracion": "Reparte. Aguanta. Y decide antes, no en el peor día.",
+     "fondo": "cierre-portafolio",
+     "paso": 4,
+     "recorte": [
+      0.5,
+      0.5,
+      1
+     ],
+     "empuje": 0.04,
+     "respiroS": 1.2
+    }
+   ]
+  }
+ ]
+}

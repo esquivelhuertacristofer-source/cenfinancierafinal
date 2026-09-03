@@ -29,6 +29,14 @@
   "kv_namespaces": [
     { "binding": "RATE_LIMIT_KV", "id": "8ede628e17004471b6301940af3f43b4" }
   ],
+  // Los 60 videos producidos en `video-explicativo/`. Se sirven desde el mismo
+  // origen por `src/app/videos/[archivo]/route.ts` para no abrir `media-src` en
+  // la CSP hacia otro dominio. Los objetos se suben a mano con
+  // `wrangler r2 object put` — son ~1.2 GB y no tienen por qué viajar en cada
+  // despliegue.
+  "r2_buckets": [
+    { "binding": "VIDEOS", "bucket_name": "cen-videos" }
+  ],
   // Caché ISR/data-cache de Next.js sobre R2 se puede activar después.
   // Para el primer deploy la caché en memoria del Worker es suficiente.
   "vars": {

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, PlayCircle, X, Target } from 'lucide-react';
 import UnitTimeline from '../../../components/hub/UnitTimeline';
 import { getPillarById, FALLBACK_PROFILE } from '../../../lib/hub';
+import VideoFrame from '@/components/hub/VideoFrame';
 
 export default function MissionPage() {
   const [pillarId, setPillarId] = useState<string | null>(null);
@@ -117,11 +118,9 @@ export default function MissionPage() {
           </button>
 
           <div className="relative w-full max-w-7xl aspect-video rounded-[32px] md:rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000">
-            <iframe 
-              src={`${pillar.videoUrl}${pillar.videoUrl.includes('?') ? '&' : '?'}autoplay=1&rel=0&modestbranding=1`}
-              className="w-full h-full"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
+            <VideoFrame
+              url={pillar.videoUrl}
+              title={pillar.title}
             />
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-transparent to-black/40" />
             <div className="absolute bottom-16 left-16 z-40 flex items-center gap-6">

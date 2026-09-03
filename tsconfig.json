@@ -39,6 +39,10 @@
   "exclude": [
     "node_modules",
     "jest.config.ts",
-    "jest.setup.ts"
+    "jest.setup.ts",
+    // `video-explicativo` es un proyecto Remotion aparte: su propio tsconfig, sus
+    // propias dependencias y un `src/Root.tsx` que se genera al final del pipeline.
+    // Compilarlo junto con la app rompe el typecheck mientras ese archivo no existe.
+    "video-explicativo"
   ]
 }
