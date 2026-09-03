@@ -85,13 +85,15 @@ export default function PillarPageV19({ params }: { params: Promise<{ pillar: st
 
     async function load() {
       // Emergency timeout to prevent infinite loading if DB hangs
+      /* Red de seguridad si la base tarda: a los 1.5 s se pinta el pilar de reserva.
+         El `if (loading)` que habia aqui leia el valor del render en el que se creo el efecto, o
+         sea siempre `true`, asi que no comprobaba nada; ademas sobra, porque el `finally` cancela
+         este temporizador en cuanto la carga real termina. */
       const timeout = setTimeout(async () => {
-        if (loading) {
-          const found = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
-          setUserId(FALLBACK_PROFILE.id);
-          setPillar(found);
-          setLoading(false);
-        }
+        const found = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
+        setUserId(FALLBACK_PROFILE.id);
+        setPillar(found);
+        setLoading(false);
       }, 1500);
 
       try {
@@ -116,7 +118,7 @@ export default function PillarPageV19({ params }: { params: Promise<{ pillar: st
       }
     }
     load();
-  }, [pillarId]);
+  }, [pillarId, router]);
 
   const handleComplete = useCallback((activityId: string) => {
     setCompleted(prev => new Set([...prev, activityId]));

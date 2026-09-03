@@ -98,7 +98,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     }
     if (hasCompletedRef.current) return;
     hasCompletedRef.current = true;
-    onComplete && onComplete(finalPercent);
+    onComplete?.(finalPercent);
   };
 
   if (isFinished) {
@@ -137,7 +137,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                  onClick={() => {
                    if (hasCompletedRef.current) return;
                    hasCompletedRef.current = true;
-                   onComplete && onComplete(finalPercent);
+                   onComplete?.(finalPercent);
                  }}
                  className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
                >

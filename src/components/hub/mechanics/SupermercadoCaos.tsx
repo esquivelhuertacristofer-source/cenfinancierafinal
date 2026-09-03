@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type { Activity } from '@/types/curriculum';
 
 // ─── Content shape ────────────────────────────────────────────────────────────
@@ -65,7 +65,7 @@ export default function SupermercadoCaos({
   const content = activity.content as unknown as SupermercadoContent;
   const budget = content?.budget ?? 150;
   const timeLimit = content?.time_limit ?? 90;
-  const sourceItems: ShopItem[] = content?.items ?? [];
+  const sourceItems: ShopItem[] = useMemo(() => content?.items ?? [], [content]);
 
   // ── Screens ──
   const [screen, setScreen] = useState<Screen>('start');
@@ -96,7 +96,12 @@ export default function SupermercadoCaos({
 
   const listItems = sourceItems.filter((i) => i.is_on_list);
   const cartListItems = cart.filter((e) => e.is_on_list);
-  const listItemsBought = new Set(cartListItems.map((e) => e.item_id));
+  /* Este conjunto decide si un articulo de la lista ya esta en el carrito, y es dependencia de dos
+     callbacks. Construirlo suelto en cada render hacia que esos callbacks se recrearan siempre. */
+  const listItemsBought = useMemo(
+    () => new Set(cart.filter((e) => e.is_on_list).map((e) => e.item_id)),
+    [cart],
+  );
 
   // ── Init shop ──
   const initShop = useCallback(() => {

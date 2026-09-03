@@ -347,7 +347,9 @@ export default function PortfolioBuilder({
   onComplete: (score: number) => void;
 }) {
   const content = activity.content as unknown as PortfolioContent;
-  const stages: Stage[] = content?.stages ?? [];
+  /* Dependencia de tres memos y de un callback: si es un array nuevo en cada render, ninguno
+     de los tres memoriza nada. */
+  const stages: Stage[] = useMemo(() => content?.stages ?? [], [content]);
 
   const [screen, setScreen] = useState<Screen>('start');
   const [currentStageIdx, setCurrentStageIdx] = useState(0);

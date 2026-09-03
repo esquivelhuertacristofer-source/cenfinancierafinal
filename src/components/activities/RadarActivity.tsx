@@ -51,8 +51,12 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    /* Se copia la lista al montar: la limpieza corre al desmontar y para entonces `ref.current`
+       podria apuntar a otro sitio. Hoy no lo hace (a la lista solo se le hace push), pero asi el
+       dia que alguien la reemplace la limpieza seguira cancelando los temporizadores correctos. */
+    const pendientes = timeoutsRef.current;
     return () => {
-      timeoutsRef.current.forEach(clearTimeout);
+      pendientes.forEach(clearTimeout);
     };
   }, []);
 

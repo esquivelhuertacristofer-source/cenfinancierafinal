@@ -172,7 +172,9 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
       }}
     />
     <div className="absolute inset-0 z-10 opacity-20">
+       {/* Adorno del fondo: no aporta informacion, asi que se marca como decorativa. */}
        <img 
+          alt=""
           src="/assets/png/coin-portal.png" 
           className="absolute -top-24 -left-24 w-[340px] h-[340px] md:-top-40 md:-left-40 md:w-[600px] md:h-[600px] animate-spin-slow mix-blend-screen grayscale brightness-150" 
           loading="lazy"
@@ -180,6 +182,7 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
           style={{ animationDuration: '60s' }}
        />
        <img 
+          alt=""
           src="/assets/png/coin-bill-friends.png" 
           className="absolute bottom-10 right-10 w-56 h-56 md:w-96 md:h-96 animate-float-slow opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
           loading="lazy"
@@ -211,7 +214,9 @@ const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
      <div className="absolute top-3 left-3 md:top-6 md:left-12 flex items-center gap-2 md:gap-4 group animate-in slide-in-from-left duration-1000">
         <div className="relative">
            <div className="absolute inset-0 bg-[#FF8C00] blur-xl opacity-40 group-hover:opacity-100 transition-opacity animate-pulse" />
+           {/* La mascota acompania al texto de al lado; nombrarla lo repetiria. */}
            <img 
+              alt=""
               src="/assets/png/ceny-guide.png" 
               className="w-10 h-10 md:w-16 md:h-16 relative z-10 drop-shadow-2xl animate-bounce-slow" 
               fetchPriority="high"
@@ -923,11 +928,18 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const isDone = (type: ContentType) => completed.has(getActivityId(unit.code, type));
 
   const progressPercent = useMemo(() => {
+    /* Se cuenta aqui en vez de llamar a `isDone`, que se recrea en cada render: asi las
+       dependencias son las de verdad, incluido `unit.code`, que faltaba y hacia que el porcentaje
+       se quedara con el de la unidad anterior al cambiar de unidad sin cerrar el modal. */
     const total = unit.contents.length;
-    const done = unit.contents.filter(c => isDone(c.type)).length;
+    const done = unit.contents.filter(c => completed.has(getActivityId(unit.code, c.type))).length;
     return (done / total) * 100;
-  }, [unit.contents, completed]);
+  }, [unit.contents, unit.code, completed]);
 
+  /* `showSuccess` no se lee dentro, y por eso la regla lo marca; esta a proposito. Es lo que hace
+     que el confeti caiga en sitios distintos cada vez que aparece la celebracion en lugar de repetir
+     siempre el mismo dibujo. */
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const confettiPositions = useMemo(() => generateConfettiPositions(20), [showSuccess]);
 
   // Flujo pedagógico: teoria → práctica → quiz (sin marcar completa hasta pasar el quiz)
@@ -946,7 +958,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
           <div className="relative z-10 w-full max-w-2xl bg-white/[0.03] border border-white/10 rounded-[36px] md:rounded-[60px] p-8 md:p-20 text-center shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-64 h-64">
                 <div className="absolute inset-0 bg-[#FF8C00] blur-3xl opacity-30 animate-pulse" />
-                <img src="/assets/png/coin-bill-friends.png" className="w-full h-full relative z-10 animate-bounce-slow" />
+                <img src="/assets/png/coin-bill-friends.png" alt="" className="w-full h-full relative z-10 animate-bounce-slow" />
              </div>
              
              <div className="mt-16 mb-12">

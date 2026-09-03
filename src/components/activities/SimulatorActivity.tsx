@@ -111,7 +111,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
     }
     if (hasCompletedRef.current) return;
     hasCompletedRef.current = true;
-    onComplete && onComplete(simulationScore);
+    onComplete?.(simulationScore);
   };
 
   return (
@@ -367,7 +367,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                   onClick={() => {
                     if (hasCompletedRef.current) return;
                     hasCompletedRef.current = true;
-                    onComplete && onComplete(simulationScore);
+                    onComplete?.(simulationScore);
                   }}
                   className="w-full py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 transition-all"
                 >

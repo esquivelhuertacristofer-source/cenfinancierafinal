@@ -304,7 +304,7 @@ export default function ModulosPage() {
                       }`}
                       style={{ animationDelay: `${i * 100}ms` }}
                     >
-                      <img src={grade.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                      <img src={grade.img} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                       <div className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-700 ${theme === 'dark' ? 'from-[#011C40] via-[#011C40]/80 to-transparent' : 'from-[#011C40] via-[#011C40]/60 to-transparent'}`} />
                       
                       <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between z-10 text-white">
@@ -349,7 +349,7 @@ export default function ModulosPage() {
                       }`}
                       style={{ animationDelay: `${(i+6) * 100}ms` }}
                     >
-                      <img src={grade.img} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                      <img src={grade.img} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                       <div className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-700 ${theme === 'dark' ? 'from-[#011C40] via-[#011C40]/80 to-transparent' : 'from-[#011C40] via-[#011C40]/60 to-transparent'}`} />
                       
                       <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between z-10 text-white">

@@ -57,6 +57,10 @@ export default function PracticaPage() {
     setCompleted(getGuestCompletedActivities());
   }, []);
 
+  /* `choice` no tiene mas que estos dos campos, asi que sacarlos aqui deja las dependencias del
+     efecto exactas: cambian cuando cambia el grado o el nivel, y no cuando el objeto es otro. */
+  const { nivel, grado } = choice;
+
   useEffect(() => {
     let cancelled = false;
     /* Marcar la carga antes de pedir los datos: el efecto se vuelve a lanzar cuando cambia el
@@ -64,23 +68,23 @@ export default function PracticaPage() {
        regla es Suspense, que aqui obligaria a mover la carga fuera del componente. */
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
-    const schoolLevel = `${choice.nivel} ${choice.grado}`;
+    const schoolLevel = `${nivel} ${grado}`;
 
     (async () => {
       const [gradePillars] = await Promise.all([
-        getPillarsForGrade(choice.grado, schoolLevel),
+        getPillarsForGrade(grado, schoolLevel),
       ]);
       if (cancelled) return;
       setPillars(gradePillars);
-      setGradeMeta(getGradeMetadata(choice.grado, schoolLevel));
+      setGradeMeta(getGradeMetadata(grado, schoolLevel));
       setLoading(false);
     })();
 
-    localStorage.setItem(GUEST_PROFILE_KEY, JSON.stringify(choice));
+    localStorage.setItem(GUEST_PROFILE_KEY, JSON.stringify({ nivel, grado }));
     return () => {
       cancelled = true;
     };
-  }, [choice.nivel, choice.grado]);
+  }, [nivel, grado]);
 
   const handleComplete = (activityId: string) => {
     markGuestActivityComplete(activityId);
