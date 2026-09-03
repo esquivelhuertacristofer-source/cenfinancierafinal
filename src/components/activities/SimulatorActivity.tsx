@@ -2,10 +2,10 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import { SimulatorActivityData } from '../../types/activities';
-import { TrendingUp, Zap, Sparkles, CheckCircle2, AlertCircle, Info, Calculator, ArrowRight, BarChart3, X } from 'lucide-react';
+import { Zap, CheckCircle2, Info, ArrowRight, BarChart3, X } from 'lucide-react';
 import { solveFormula } from '../../lib/math-engine';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface Props {
   data: SimulatorActivityData;
@@ -18,8 +18,8 @@ interface Props {
 
 export default function SimulatorActivity({ data, onComplete, onClose, accent }: Props) {
   const acento = accent || '#FF8C00';
-  const [inputs, setInputs] = useState<Record<string, any>>(() => {
-    const initial: Record<string, any> = {};
+  const [inputs, setInputs] = useState<Record<string, string | number>>(() => {
+    const initial: Record<string, string | number> = {};
     (data.inputs || []).forEach(input => {
       initial[input.id] = input.default;
     });
@@ -98,7 +98,9 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
     });
   }, [inputs, ejeX, data.formula, result]);
 
-  const handleInputChange = (id: string, value: any) => {
+  /* Llega texto mientras el alumno escribe —un campo a medias, un signo menos suelto— y numero
+     en cuanto lo escrito se puede convertir. Las dos cosas se guardan tal cual. */
+  const handleInputChange = (id: string, value: string | number) => {
     setInputs(prev => ({ ...prev, [id]: value }));
   };
 
@@ -109,7 +111,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
     }
     if (hasCompletedRef.current) return;
     hasCompletedRef.current = true;
-    onComplete && onComplete(simulationScore);
+    onComplete?.(simulationScore);
   };
 
   return (
@@ -181,7 +183,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                         <motion.div
                           style={{ background: `linear-gradient(to right, ${acento}, ${acento}cc)` }}
                           className="absolute top-1/2 -translate-y-1/2 left-0 h-2 rounded-full pointer-events-none"
-                          animate={{ width: `${((inputs[input.id] - (input.min ?? 0)) / ((input.max ?? 100) - (input.min ?? 0))) * 100}%` }}
+                          animate={{ width: `${((Number(inputs[input.id]) || 0) - (input.min ?? 0)) / ((input.max ?? 100) - (input.min ?? 0)) * 100}%` }}
                         />
                      </div>
                    )}
@@ -359,13 +361,13 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                 </motion.div>
                 <div className="space-y-4">
                    <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase">Simulación Validada</h2>
-                   <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">"{data.titulo}"</span></p>
+                   <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">&quot;{data.titulo}&quot;</span></p>
                 </div>
                 <button
                   onClick={() => {
                     if (hasCompletedRef.current) return;
                     hasCompletedRef.current = true;
-                    onComplete && onComplete(simulationScore);
+                    onComplete?.(simulationScore);
                   }}
                   className="w-full py-10 bg-white text-black rounded-[24px] md:rounded-[40px] font-black text-xs uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 transition-all"
                 >

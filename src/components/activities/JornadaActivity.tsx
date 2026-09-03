@@ -17,6 +17,7 @@ import {
   type EstadoJornada,
   type Oficio,
 } from '@/lib/activities/jornada-sim';
+import type { JornadaActivityData } from '@/types/activities';
 
 /**
  * JornadaActivity — "El Día de Trabajo de Ceny"
@@ -33,7 +34,7 @@ import {
 type Fase = 'briefing' | 'jugando' | 'cierre';
 
 interface Props {
-  data: any;
+  data: JornadaActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }

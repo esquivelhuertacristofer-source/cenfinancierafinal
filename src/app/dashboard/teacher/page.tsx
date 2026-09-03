@@ -3,18 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
-import { 
-  Sparkles, 
-  Activity, 
-  Zap, 
-  ShieldCheck, 
-  Clock, 
-  BarChart3,
-  Layout,
-  Sun,
-  Moon,
-  ChevronRight
-} from "lucide-react";
+import { Activity, Zap, ShieldCheck, Clock, BarChart3, Layout, Sun, Moon } from "lucide-react";
 
 import Sidebar from "../../../components/dashboard/Sidebar";
 import WelcomeBanner from "../../../components/dashboard/WelcomeBanner";
@@ -67,8 +56,8 @@ export default function TeacherDashboard() {
           .select("id, grado")
           .eq("id_profesor", user.id);
         if (grupos && grupos.length > 0) {
-          setTeacherGroupIds(grupos.map((g: any) => g.id));
-          if (grupos.some((g: any) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
+          setTeacherGroupIds(grupos.map((g) => g.id));
+          if (grupos.some((g) => g.grado?.startsWith('P'))) setSelectedLevel('primaria');
         }
       } catch {
         setError(true);

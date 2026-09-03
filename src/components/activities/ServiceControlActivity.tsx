@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Droplets, Flame, AlertTriangle, ShieldCheck, Timer, Wallet, RefreshCw, PlayCircle } from 'lucide-react';
+import { Zap, Droplets, Flame, AlertTriangle, ShieldCheck, Wallet, RefreshCw, PlayCircle } from 'lucide-react';
 
 // ─── FORMA DE DATOS ESPERADA (data de la actividad, JSON en public/data/actividades) ──
 // Todos los campos son opcionales: si la actividad no los define, se usan los mismos
@@ -116,8 +116,12 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    /* Se copia la lista al montar: la limpieza corre al desmontar y para entonces `ref.current`
+       podria apuntar a otro sitio. Hoy no lo hace (a la lista solo se le hace push), pero asi el
+       dia que alguien la reemplace la limpieza seguira cancelando los temporizadores correctos. */
+    const pendientes = timeoutsRef.current;
     return () => {
-      timeoutsRef.current.forEach(clearTimeout);
+      pendientes.forEach(clearTimeout);
     };
   }, []);
 
@@ -126,6 +130,17 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
     hasCompletedRef.current = true;
     onComplete?.(finalScore);
   };
+
+  /* La ultima version de la funcion, guardada en una ref.
+   *
+   * El bucle de abajo la llama desde dentro de un temporizador. Si entrara en las dependencias del
+   * efecto, cada render del padre recrearia el intervalo y el juego se reiniciaria solo. Guardarla
+   * en una ref es la forma que recomienda React para llamar a un "evento" desde un temporizador:
+   * el efecto no depende de ella y aun asi siempre llama a la version buena. */
+  const completarRef = useRef(completeOnce);
+  useEffect(() => {
+    completarRef.current = completeOnce;
+  });
 
   useEffect(() => {
     if (!gameStarted || isFinished || isLost) return;
@@ -153,7 +168,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
           budgetRef.current = Math.max(0, nextB);
           if (nextB <= 0) {
             setIsLost(true);
-            const lostTimeout = setTimeout(() => completeOnce(0), 4000);
+            const lostTimeout = setTimeout(() => completarRef.current(0), 4000);
             timeoutsRef.current.push(lostTimeout);
             return 0;
           }
@@ -167,7 +182,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
           setIsFinished(true);
           const finishTimeout = setTimeout(() => {
             const pctRestante = Math.round((budgetRef.current / presupuestoInicial) * 100);
-            completeOnce(Math.max(0, Math.min(100, pctRestante)));
+            completarRef.current(Math.max(0, Math.min(100, pctRestante)));
           }, 4000);
           timeoutsRef.current.push(finishTimeout);
           return 0;
@@ -250,7 +265,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
                     ) : (
                       <>
                          ¡Ceny dejó los servicios encendidos! <br />
-                         Haz clic en los botones de <span className="text-white font-bold">"OPTIMIZAR"</span> para bajar el consumo. <br />
+                         Haz clic en los botones de <span className="text-white font-bold">&quot;OPTIMIZAR&quot;</span> para bajar el consumo. <br />
                          <span className="text-rose-400 font-bold">¡Si las barras llegan al rojo, tu dinero desaparecerá!</span>
                       </>
                     )}

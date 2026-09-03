@@ -101,7 +101,7 @@ export default function LoginPage() {
             setLoading(false);
         }
         return;
-    }, [email, password, router]);
+    }, [email, password]);
 
     return (
         <div className="min-h-screen w-full flex flex-col bg-[#F8F9FB] font-epilogue">

@@ -1,41 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useRef, memo } from 'react';
-import { 
-  Play, 
-  BookOpen, 
-  Rocket, 
-  Printer, 
-  CheckCircle2, 
-  Clock, 
-  Zap, 
-  Award,
-  BookMarked,
-  Brain, 
-  Sparkles,
-  Trophy,
-  Lightbulb,
-  CheckCircle,
-  PlayCircle,
-  FileText,
-  HelpCircle,
-  Book,
-  ArrowLeft,
-  Map,
-  Target,
-  ShieldCheck,
-  Activity,
-  Cpu,
-  Star,
-  Gamepad2,
-  Compass,
-  Gift,
-  MousePointer2,
-  Telescope,
-  Coins,
-  ChevronRight,
-  X
-} from 'lucide-react';
+import { Play, BookOpen, Printer, CheckCircle2, Zap, Sparkles, Trophy, PlayCircle, FileText, ArrowLeft, Target, Activity, Gamepad2, Compass, Coins, ChevronRight, X } from 'lucide-react';
 import { markActivityComplete } from '../../lib/hub';
 import { getActivityData, calculateXP, getAndUpdateRacha } from '../../lib/activities';
 
@@ -83,9 +49,12 @@ const PortfolioBuilder = dynamic(() => import('./mechanics/PortfolioBuilder'), {
 
 import VideoFrame from './VideoFrame';
 import { UNIT_VIDEOS, VIDEO_TITULOS, urlVideo } from '@/lib/videos-generados';
-import { EXPERT_VIDEOS } from '../../lib/expertVideos';
+import { videosDeExperto } from '@/lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
+import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';
+import type { LucideIcon } from 'lucide-react';
+import type { ActividadCruda as ActividadCrudaCompartida } from '@/types/activities';
 
 interface ContentModalProps {
   unit: Unit;
@@ -94,10 +63,9 @@ interface ContentModalProps {
   userId: string | null;
   onComplete: (activityId: string) => void;
   onClose: () => void;
-  onNextUnit?: () => void;
 }
 
-const MODALITY_ICONS_MODERN: Record<string, any> = {
+const MODALITY_ICONS_MODERN: Record<string, LucideIcon> = {
   video: Play,
   reading: BookOpen,
   simulator: Gamepad2,
@@ -169,7 +137,9 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
       }}
     />
     <div className="absolute inset-0 z-10 opacity-20">
+       {/* Adorno del fondo: no aporta informacion, asi que se marca como decorativa. */}
        <img 
+          alt=""
           src="/assets/png/coin-portal.png" 
           className="absolute -top-24 -left-24 w-[340px] h-[340px] md:-top-40 md:-left-40 md:w-[600px] md:h-[600px] animate-spin-slow mix-blend-screen grayscale brightness-150" 
           loading="lazy"
@@ -177,6 +147,7 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
           style={{ animationDuration: '60s' }}
        />
        <img 
+          alt=""
           src="/assets/png/coin-bill-friends.png" 
           className="absolute bottom-10 right-10 w-56 h-56 md:w-96 md:h-96 animate-float-slow opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
           loading="lazy"
@@ -208,7 +179,9 @@ const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
      <div className="absolute top-3 left-3 md:top-6 md:left-12 flex items-center gap-2 md:gap-4 group animate-in slide-in-from-left duration-1000">
         <div className="relative">
            <div className="absolute inset-0 bg-[#FF8C00] blur-xl opacity-40 group-hover:opacity-100 transition-opacity animate-pulse" />
+           {/* La mascota acompania al texto de al lado; nombrarla lo repetiria. */}
            <img 
+              alt=""
               src="/assets/png/ceny-guide.png" 
               className="w-10 h-10 md:w-16 md:h-16 relative z-10 drop-shadow-2xl animate-bounce-slow" 
               fetchPriority="high"
@@ -263,10 +236,16 @@ FiscalSummaryCard.displayName = 'FiscalSummaryCard';
 
 // ─── Pestañas Optimizadas ─────────────────────────────────────────────────────
 
-const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; color: string; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
+const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; theme: ThemeType; onShowVideo: (video: { url: string; title: string }) => void; nextLabel?: string }) => {
   const [readingFinished, setReadingFinished] = useState(isDone);
-  const sections = unit.theory?.sections || unit.strategy?.phases || [];
-  const intro = unit.theory?.introduction || unit.theory?.concept || unit.theory?.description || unit.strategy?.objective || unit.objective;
+  /* La ficha pinta el marco teorico si lo hay y, si no, las fases del plan de clase. Son dos
+     formas distintas del mismo hueco —una trae `subtitle`/`content` y la otra `title`/`description`—
+     y antes se leian con `a || b` sobre un `any`, que funciona por casualidad: si un dia una de las
+     dos cambia de nombre de campo, el hueco se queda en blanco y nadie se entera. Con la union
+     nombrada, cambiar un campo rompe la compilacion, que es justo lo que se quiere. */
+  const sections: (SeccionTeorica | FasePedagogica)[] =
+    unit.theory?.sections || unit.strategy?.phases || [];
+  const intro = unit.theory?.introduction || unit.strategy?.objective || unit.objective;
   const unitNumber = parseInt(unit.code.match(/\d+/)?.[0] || '1');
   
   const getThemeImage = (idx: number) => {
@@ -302,7 +281,7 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-20 items-center">
             <div className="space-y-8 order-2 lg:order-1">
                <p className="text-xl md:text-3xl lg:text-4xl font-medium leading-snug text-white/80 tracking-tight italic">
-                  "{intro}"
+                  &quot;{intro}&quot;
                </p>
                
                <div className="flex flex-wrap gap-4">
@@ -314,10 +293,13 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
                   ))}
                </div>
                
-               {/* INTEGRACIÓN DE VIDEO OFICIAL */}
+               {/* CLASE MAGISTRAL: el video producido para esta unidad, si lo tiene. */}
                {UNIT_VIDEOS[unit.code] && (
-                 <button 
-                   onClick={() => onShowVideo(true)}
+                 <button
+                   onClick={() => onShowVideo({
+                     url: urlVideo(UNIT_VIDEOS[unit.code]),
+                     title: VIDEO_TITULOS[UNIT_VIDEOS[unit.code]] || unit.title,
+                   })}
                    className="group flex items-center gap-6 p-2 pr-12 bg-white text-[#0A0118] rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)]"
                  >
                    <div className="w-16 h-16 bg-[#FF8C00] rounded-full flex items-center justify-center text-white shadow-xl group-hover:rotate-12 transition-transform">
@@ -326,6 +308,27 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
                    <span className="text-xl font-black uppercase tracking-widest">Ver Clase Magistral</span>
                  </button>
                )}
+
+               {/* VIDEOS DE EXPERTO: los del autor en YouTube que traen asignada esta unidad.
+                   No sustituyen a la clase magistral; se ofrecen al lado. */}
+               {videosDeExperto(unit.code).map((video) => (
+                 <button
+                   key={video.id}
+                   onClick={() => onShowVideo({ url: video.url, title: video.title })}
+                   className="group flex w-full items-center gap-5 p-2 pr-8 bg-white/5 border border-white/10 text-white rounded-full transition-all hover:bg-white/10 hover:scale-[1.02] active:scale-95 text-left"
+                 >
+                   <div className="w-14 h-14 shrink-0 bg-[#42E8E0]/15 border border-[#42E8E0]/30 rounded-full flex items-center justify-center text-[#42E8E0] group-hover:rotate-12 transition-transform">
+                      <PlayCircle size={26} />
+                   </div>
+                   <span className="flex flex-col gap-0.5 min-w-0">
+                     <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#42E8E0]/70">
+                       Video del experto
+                     </span>
+                     <span className="text-base font-black tracking-tight leading-tight">{video.title}</span>
+                     <span className="text-xs font-medium text-white/40 leading-tight">{video.description}</span>
+                   </span>
+                 </button>
+               ))}
             </div>
 
             <div className="relative aspect-square order-1 lg:order-2 group/hero-img">
@@ -350,15 +353,15 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
       <FiscalSummaryCard unitCode={unit.code} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-        {sections.map((section: any, i: number) => (
+        {sections.map((section, i: number) => (
           <div key={i} className="group relative">
              <div className="h-full bg-white/[0.03] border border-white/5 p-6 md:p-12 rounded-[2rem] md:rounded-[4rem] backdrop-blur-3xl flex flex-col gap-5 md:gap-8 hover:bg-white/[0.06] hover:border-[#FF8C00]/30 transition-all duration-500">
                 <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-[#FF8C00] group-hover:scale-110 transition-transform">
                    {i % 2 === 0 ? <Zap size={28} /> : <Target size={28} />}
                 </div>
                 <div className="space-y-4">
-                   <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">{section.subtitle || section.title}</h3>
-                   <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">{section.content || section.description}</p>
+                   <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">{tituloDeSeccion(section)}</h3>
+                   <p className="text-base md:text-xl text-white/50 leading-relaxed font-medium">{cuerpoDeSeccion(section)}</p>
                 </div>
              </div>
           </div>
@@ -399,27 +402,56 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
 TheoryTab.displayName = 'TheoryTab';
 
 // Función de normalización universal para evitar errores de carga por inconsistencias en JSONs
-const normalizeActivityData = (data: any) => {
+/** Saca el encabezado de un hueco que puede ser seccion teorica o fase de clase. */
+const tituloDeSeccion = (s: SeccionTeorica | FasePedagogica) =>
+  'subtitle' in s ? s.subtitle : s.title;
+
+/** Y su cuerpo. */
+const cuerpoDeSeccion = (s: SeccionTeorica | FasePedagogica) =>
+  'content' in s ? s.content : s.description;
+
+/* El JSON de una actividad llega con la forma que le dio quien la escribio, y esta funcion existe
+   precisamente para uniformarla, asi que aqui `unknown` es el tipo honesto: lo que entra no se
+   conoce hasta que se mira. */
+/**
+ * El JSON de una actividad tal y como sale del archivo, antes de uniformarlo.
+ *
+ * `Record<string, unknown>` no es pereza: es el tipo honesto. Los 742 archivos de
+ * `public/data/actividades/` se escribieron a lo largo del tiempo y el mismo dato aparece con
+ * nombres distintos —`preguntas` o `questions` o `preguntas_quiz`, `respuesta` o `correcta` o
+ * `answer`—, que es justo la razon de ser de la funcion de abajo. Declarar aqui una forma concreta
+ * seria afirmar algo que los datos no cumplen. Los tipos buenos viven en `@/types/activities` y
+ * empiezan a aplicar despues de normalizar, cuando cada componente de actividad recibe el suyo.
+ */
+type ActividadCruda = ActividadCrudaCompartida;
+
+/** Un elemento suelto dentro de una actividad: una pregunta, un hueco, un item. */
+type ElementoCrudo = Record<string, unknown>;
+
+/** El primer valor con contenido de una lista de alias. */
+const primero = (...valores: unknown[]) => valores.find((v) => v !== undefined && v !== null && v !== '');
+
+const normalizeActivityData = (data: ActividadCruda | null | undefined): ActividadCruda | null => {
   if (!data) return null;
-  const d = { ...data };
-  
+  const d: ActividadCruda = { ...data };
+
   // Normalizar Quizzes y Trivias
   if (!d.preguntas) {
     d.preguntas = d.questions || d.items || d.preguntas_quiz || [];
   }
   if (Array.isArray(d.preguntas)) {
-    d.preguntas = d.preguntas.map((q: any) => ({
+    d.preguntas = (d.preguntas as ElementoCrudo[]).map((q) => ({
       ...q,
-      texto: q.texto || q.pregunta || q.question || '',
-      opciones: q.opciones || q.choices || q.answers || [],
+      texto: primero(q.texto, q.pregunta, q.question) ?? '',
+      opciones: primero(q.opciones, q.choices, q.answers) ?? [],
       correcta: q.correcta !== undefined ? q.correcta : (q.correct_index !== undefined ? q.correct_index : 0),
-      explicacion: q.explicacion || q.explanation || q.feedback || ''
+      explicacion: primero(q.explicacion, q.explanation, q.feedback) ?? '',
     }));
   }
 
   // Normalizar Simuladores
   if (!d.inputs) d.inputs = d.controles || d.fields || [];
-  
+
   // Normalizar Drag & Drop
   if (!d.items) d.items = d.elementos || d.objetos || [];
   if (!d.categorias) d.categorias = d.groups || d.categories || [];
@@ -427,13 +459,13 @@ const normalizeActivityData = (data: any) => {
   // Normalizar Rellena Blancos
   if (!d.blanks) d.blanks = d.espacios || d.huecos || [];
   if (Array.isArray(d.blanks)) {
-    d.blanks = d.blanks.map((b: any) => ({
+    d.blanks = (d.blanks as ElementoCrudo[]).map((b) => ({
       ...b,
-      id: (b.id || '').toString(),
-      respuesta: b.respuesta || b.correcta || b.answer || ''
+      id: String(b.id ?? ''),
+      respuesta: primero(b.respuesta, b.correcta, b.answer) ?? '',
     }));
   }
-  
+
   // Normalizar Decisiones (Decide)
   if (!d.nodos) d.nodos = d.nodes || d.escenas || {};
 
@@ -442,7 +474,18 @@ const normalizeActivityData = (data: any) => {
 
 // ─── Portada y escena de la actividad (imagenes del flujo Krea2) ─────────────
 // Ambas son opcionales: si la actividad no las trae, no se renderiza nada.
-const PortadaActividad = memo(({ data }: { data: any }) => {
+/* Estas dos solo leen unos pocos campos de texto, asi que reciben esa forma y no `ActividadCruda`:
+   un `unknown` no se puede meter en JSX, y ensancharlo aqui obligaria a castear en cada hueco. */
+interface CamposDePortada {
+  portada?: string;
+  escena?: string;
+  titulo?: string;
+  complejidad?: string;
+  objetivo?: string;
+  descripcion?: string;
+}
+
+const PortadaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
   if (!data?.portada) return null;
   return (
     <div className="relative w-full h-[200px] md:h-[280px] rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl mb-10">
@@ -461,7 +504,7 @@ const PortadaActividad = memo(({ data }: { data: any }) => {
 });
 PortadaActividad.displayName = 'PortadaActividad';
 
-const EscenaActividad = memo(({ data }: { data: any }) => {
+const EscenaActividad = memo(({ data }: { data: CamposDePortada | null }) => {
   if (!data?.escena) return null;
   return (
     <div className="hidden md:block relative w-full rounded-[32px] overflow-hidden border border-white/10 mb-10">
@@ -480,8 +523,8 @@ const EscenaActividad = memo(({ data }: { data: any }) => {
 });
 EscenaActividad.displayName = 'EscenaActividad';
 
-const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; theme: any; isSupremoUnit?: boolean }) => {
-  const [data, setData] = useState<any>(null);
+const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, isSupremoUnit = false }: { unitCode: string; onComplete: (score?: number) => void; isDone: boolean; color: string; isSupremoUnit?: boolean }) => {
+  const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
 
@@ -530,7 +573,12 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   );
 
   // Selector Universal de Motores de Actividades (A) con mapeo de sinónimos
-  const activityType = (data.tipo || '').toUpperCase().trim();
+  /* Reparto a los motores. `data.tipo` viene del JSON y puede faltar o no ser cadena, asi que
+     se normaliza aqui una vez; abajo, cada `data={data as never}` reconoce que quien decide el
+     motor es esta bandera y no el compilador: los catorce declaran formas de `data` distintas
+     y su interseccion es vacia. El hueco esta acotado al reparto en vez de dejar el tab entero
+     en `any`, que es como estaba. */
+  const activityType = String(data.tipo ?? '').toUpperCase().trim();
   
   // Mapeo de tipos (Máxima permisividad para evitar bloqueos)
   const isSimulator = ['SIMULADOR', 'SIMULATOR', 'CALCULADORA', 'CALCULA'].includes(activityType);
@@ -550,7 +598,7 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
   const isQuizType = ['QUIZ', 'CUESTIONARIO', 'EXAMEN', 'EVALUACION'].includes(activityType);
 
   // ─── Mecánicas Supremo ────────────────────────────────────────────────────
-  const rawTipo = (data.tipo || data.type || '').toLowerCase().trim();
+  const rawTipo = String(data.tipo ?? data.type ?? '').toLowerCase().trim();
   const isCochintoVivo     = rawTipo === 'cochinito_vivo';
   const isSupermercadoCaos = rawTipo === 'supermercado_caos';
   const isFamiliaRamirez   = rawTipo === 'familia_ramirez';
@@ -569,32 +617,32 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
     <div className="animate-in fade-in duration-1000">
       <PortadaActividad data={data} />
       <EscenaActividad data={data} />
-      {isSimulator && <SimulatorActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBuilder && <BuilderActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isStory && <StoryActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isGame && <GameActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isDragDrop && <DragDropActivity data={data} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isMatching && <MatchingActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isFillBlanks && <FillBlanksActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isRoulette && <RouletteActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBalance && <BalanceActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isRadar && <RadarActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isGrowth && <GrowthActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isServiceControl && <ServiceControlActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isJornada && <JornadaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isTrivia && <TriviaActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} onClose={() => {}} />}
-      {isQuizType && <QuizActivity data={data} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isSimulator && <SimulatorActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBuilder && <BuilderActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isStory && <StoryActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGame && <GameActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isDragDrop && <DragDropActivity data={data as never} accent={color} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isMatching && <MatchingActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFillBlanks && <FillBlanksActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRoulette && <RouletteActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBalance && <BalanceActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isRadar && <RadarActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isGrowth && <GrowthActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isServiceControl && <ServiceControlActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isJornada && <JornadaActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isTrivia && <TriviaActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} onClose={() => {}} />}
+      {isQuizType && <QuizActivity data={data as never} onComplete={(s: number) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {/* ─── Mecánicas Supremo ─── */}
-      {isCochintoVivo     && <CochintoVivo     activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isSupermercadoCaos && <SupermercadoCaos activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isFamiliaRamirez   && <FamiliaRamirez   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isBancoDelTiempo   && <BancoDelTiempo   activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isInversorA10      && <InversorA10      activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isPrimerNegocio    && <PrimerNegocio    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isNegociaSueldo    && <NegociaSueldo    activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isCrisisRoom       && <CrisisRoom       activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
-      {isPortfolioBuilder && <PortfolioBuilder activity={data} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isCochintoVivo     && <CochintoVivo     activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isSupermercadoCaos && <SupermercadoCaos activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isFamiliaRamirez   && <FamiliaRamirez   activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isBancoDelTiempo   && <BancoDelTiempo   activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isInversorA10      && <InversorA10      activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPrimerNegocio    && <PrimerNegocio    activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isNegociaSueldo    && <NegociaSueldo    activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isCrisisRoom       && <CrisisRoom       activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
+      {isPortfolioBuilder && <PortfolioBuilder activity={data as never} onComplete={(s) => { setIsFinishedLocal(true); onComplete(s); }} />}
 
       {!isKnown && (
         <div className="text-center p-8 md:p-20 border border-white/5 bg-white/5 rounded-[28px] md:rounded-[40px]">
@@ -608,8 +656,8 @@ const SimulatorTab = memo(({ unitCode, onComplete, isDone, color, theme, isSupre
 });
 SimulatorTab.displayName = 'SimulatorTab';
 
-const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; theme?: any; color?: string }) => {
-  const [data, setData] = useState<any>(null);
+const QuizTab = memo(({ unitCode, onComplete, isDone, color }: { unitCode: string; onComplete: (score: number) => void; isDone: boolean; color?: string }) => {
+  const [data, setData] = useState<ActividadCruda | null>(null);
   const [loading, setLoading] = useState(true);
   const [isFinishedLocal, setIsFinishedLocal] = useState(isDone);
   // Reintento de la evaluación. `intentoEval` remonta el motor desde cero;
@@ -660,7 +708,12 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
     </div>
   );
 
-  const activityType = (data.tipo || '').toUpperCase().trim();
+  /* Reparto a los motores. `data.tipo` viene del JSON y puede faltar o no ser cadena, asi que
+     se normaliza aqui una vez; abajo, cada `data={data as never}` reconoce que quien decide el
+     motor es esta bandera y no el compilador: los catorce declaran formas de `data` distintas
+     y su interseccion es vacia. El hueco esta acotado al reparto en vez de dejar el tab entero
+     en `any`, que es como estaba. */
+  const activityType = String(data.tipo ?? '').toUpperCase().trim();
   const isTrivia = ['TRIVIA', 'DESAFIO', 'RAPIDO', 'RETO'].includes(activityType);
   const isGame = ['GAME', 'JUEGO', 'DESAFIO', 'RETO', 'JUEGA'].includes(activityType);
   const isQuiz = ['QUIZ', 'CUESTIONARIO', 'EXAMEN', 'EVALUACION'].includes(activityType);
@@ -672,7 +725,7 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
   const isBuilder = ['CONSTRUCTOR', 'BUILDER', 'PLANIFICADOR', 'CONSTRUYE', 'PLANIFICA'].includes(activityType);
   const isSimulator = ['SIMULADOR', 'SIMULATOR', 'CALCULADORA', 'CALCULA'].includes(activityType);
 
-  const minimoAprobacion = Math.round((data.aprobacion_minima ?? 0.6) * 100);
+  const minimoAprobacion = Math.round((Number(data.aprobacion_minima) || 0.6) * 100);
   // Un puntaje bajo ya no se descarta: se le dice al alumno qué pasó y se le
   // ofrece repetir. Sin esto, la pestaña quedaba muerta tras el primer intento.
   const evaluar = (score: number) => {
@@ -691,64 +744,64 @@ const QuizTab = memo(({ unitCode, onComplete, isDone, theme, color }: { unitCode
       <EscenaActividad data={data} />
       {isTrivia && (
         <TriviaActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
           onClose={() => {}}
         />
       )}
       {isGame && (
         <GameActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isQuiz && (
         <QuizActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isFillBlanks && (
         <FillBlanksActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isStory && (
         <StoryActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isDragDrop && (
         <DragDropActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />
       )}
       {isMatching && (
         <MatchingActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isRoulette && (
         <RouletteActivity
-          data={data}
+          data={data as never}
           onComplete={evaluar}
         />
       )}
       {isBuilder && (
         <BuilderActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />
       )}
       {isSimulator && (
         <SimulatorActivity
-          data={data}
+          data={data as never}
           accent={color}
           onComplete={evaluar}
         />
@@ -799,15 +852,13 @@ QuizTab.displayName = 'QuizTab';
 
 // ─── Componente Principal de la Misión ────────────────────────────────────────
 
-export default function ContentModal({ unit, pillar, completed, userId, onComplete, onClose, onNextUnit }: ContentModalProps) {
+export default function ContentModal({ unit, pillar, completed, userId, onComplete, onClose }: ContentModalProps) {
   const [activeTab, setActiveTab] = useState<ContentType>(unit.contents[0].type);
   const [showSuccess, setShowSuccess] = useState(false);
   const [rankUp, setRankUp] = useState<{ pillarTitle: string; rank: string; color: string } | null>(null);
-  const [showUnitVideo, setShowUnitVideo] = useState(false);
-  /* Las unidades 6 (donde arranca la ampliacion del temario) y los retos supremos
-     tienen video propio producido para la plataforma. El resto sigue cayendo al
-     video general del autor, que no se toca. */
-  const videoUnidad = UNIT_VIDEOS[unit.code];
+  /* Que video esta abierto, no solo si hay uno abierto: la unidad puede ofrecer la clase
+     magistral producida para la plataforma y ademas uno o varios videos de experto. */
+  const [videoAbierto, setVideoAbierto] = useState<{ url: string; title: string } | null>(null);
   const theme = useMemo(() => getUnitTheme(unit), [unit]);
   const tabStartRef = useRef<number>(Date.now());
 
@@ -864,11 +915,18 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const isDone = (type: ContentType) => completed.has(getActivityId(unit.code, type));
 
   const progressPercent = useMemo(() => {
+    /* Se cuenta aqui en vez de llamar a `isDone`, que se recrea en cada render: asi las
+       dependencias son las de verdad, incluido `unit.code`, que faltaba y hacia que el porcentaje
+       se quedara con el de la unidad anterior al cambiar de unidad sin cerrar el modal. */
     const total = unit.contents.length;
-    const done = unit.contents.filter(c => isDone(c.type)).length;
+    const done = unit.contents.filter(c => completed.has(getActivityId(unit.code, c.type))).length;
     return (done / total) * 100;
-  }, [unit.contents, completed]);
+  }, [unit.contents, unit.code, completed]);
 
+  /* `showSuccess` no se lee dentro, y por eso la regla lo marca; esta a proposito. Es lo que hace
+     que el confeti caiga en sitios distintos cada vez que aparece la celebracion en lugar de repetir
+     siempre el mismo dibujo. */
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const confettiPositions = useMemo(() => generateConfettiPositions(20), [showSuccess]);
 
   // Flujo pedagógico: teoria → práctica → quiz (sin marcar completa hasta pasar el quiz)
@@ -887,7 +945,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
           <div className="relative z-10 w-full max-w-2xl bg-white/[0.03] border border-white/10 rounded-[36px] md:rounded-[60px] p-8 md:p-20 text-center shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-64 h-64">
                 <div className="absolute inset-0 bg-[#FF8C00] blur-3xl opacity-30 animate-pulse" />
-                <img src="/assets/png/coin-bill-friends.png" className="w-full h-full relative z-10 animate-bounce-slow" />
+                <img src="/assets/png/coin-bill-friends.png" alt="" className="w-full h-full relative z-10 animate-bounce-slow" />
              </div>
              
              <div className="mt-16 mb-12">
@@ -895,7 +953,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
                 <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">¡Felicidades, Estudiante!</h2>
                 <p className="text-base md:text-xl text-white/50 font-medium leading-relaxed">
                    Has completado con éxito la misión: <br/>
-                   <span className="text-white">"{unit.title}"</span>
+                   <span className="text-white">&quot;{unit.title}&quot;</span>
                 </p>
              </div>
 
@@ -982,9 +1040,8 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               isDone={isDone('theory')}
               onComplete={() => setActiveTab(nextAfterTheory?.type ?? 'quiz')}
               nextLabel={theoryNextLabel}
-              color={pillar.color}
               theme={theme}
-              onShowVideo={setShowUnitVideo}
+              onShowVideo={setVideoAbierto}
             />
           )}
           {activeTab === 'simulator' && (
@@ -993,7 +1050,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               isDone={isDone('simulator')}
               onComplete={(score) => { handleComplete('simulator', score); if (!unit.code.includes('SUPREMO')) setActiveTab('quiz'); }}
               color={pillar.color}
-              theme={theme}
               isSupremoUnit={unit.code.includes('SUPREMO')}
             />
           )}
@@ -1002,7 +1058,6 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               unitCode={unit.code}
               isDone={isDone('quiz')}
               onComplete={(score) => handleComplete('quiz', score)}
-              theme={theme}
               color={pillar.color}
             />
           )}
@@ -1010,32 +1065,20 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
       </main>
 
       {/* FICHA DE VIDEO PREMIUM (MODAL) */}
-      {showUnitVideo && (
+      {videoAbierto && (
         <div className="fixed inset-0 z-[10000] bg-black/95 backdrop-blur-3xl flex items-center justify-center p-6 md:p-20 animate-in fade-in zoom-in duration-500">
            <button 
-             onClick={() => setShowUnitVideo(false)}
+             onClick={() => setVideoAbierto(null)}
              className="absolute top-10 right-10 p-5 bg-white/5 rounded-full text-white hover:bg-red-500 transition-all z-[10100] border-none cursor-pointer"
            >
               <X size={40} />
            </button>
            
            <div className="w-full max-w-6xl aspect-video bg-black rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_150px_rgba(255,140,0,0.3)] relative group">
-              {videoUnidad ? (
-                <VideoFrame
-                  url={urlVideo(videoUnidad)}
-                  title={VIDEO_TITULOS[videoUnidad] || unit.title}
-                />
-              ) : (
-                /* Defensivo: el boton que abre esto solo aparece si la unidad tiene video. Antes
-                   aqui habia un embed fijo al video de demostracion de la portada, que se mostraba
-                   como "clase magistral" en unidades que no tenian ninguna. */
-                <div className="w-full h-full flex flex-col items-center justify-center gap-4 px-10 text-center">
-                  <PlayCircle size={56} className="text-white/20" />
-                  <p className="text-sm font-black uppercase tracking-[0.3em] text-white/40">
-                    Esta unidad todavia no tiene clase magistral
-                  </p>
-                </div>
-              )}
+              {/* El boton que abre esto ya trae la URL y el titulo: puede ser la clase magistral
+                  producida para la unidad o uno de los videos de experto del autor. VideoFrame
+                  decide solo si toca un mp4 nuestro o un embed de YouTube. */}
+              <VideoFrame url={videoAbierto.url} title={videoAbierto.title} />
            </div>
         </div>
        )}

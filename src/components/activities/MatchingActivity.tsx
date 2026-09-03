@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { MatchingActivityData, MemoryPair } from '@/types/activities';
-import { ArrowLeft, CheckCircle2, Trophy, RefreshCw } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { MatchingActivityData } from '@/types/activities';
+import { ArrowLeft, Trophy, RefreshCw } from 'lucide-react';
 
 interface Card {
   id: string; // "pairId-type" (e.g., "p1-term" or "p1-def")
@@ -19,6 +19,21 @@ interface Props {
   onClose?: () => void;
 }
 
+/**
+ * Convierte los pares de la actividad en cartas boca abajo y las reparte al azar.
+ *
+ * El mismo barajado hacia falta al montar y al reiniciar la partida, y estaba copiado en los dos
+ * sitios; cualquier arreglo en uno se olvidaba en el otro.
+ */
+function repartirCartas(pares: MatchingActivityData['pares']): Card[] {
+  const cartas: Card[] = [];
+  (pares || []).forEach((p) => {
+    cartas.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
+    cartas.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
+  });
+  return cartas.sort(() => Math.random() - 0.5);
+}
+
 export default function MatchingActivity({ data, onComplete, onClose }: Props) {
   const [cards, setCards] = useState<Card[]>([]);
   const [flippedCards, setFlippedCards] = useState<Card[]>([]);
@@ -28,12 +43,11 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
 
   // Inicializar cartas
   useEffect(() => {
-    const allCards: Card[] = [];
-    (data.pares || []).forEach(p => {
-      allCards.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
-      allCards.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
-    });
-    setCards(allCards.sort(() => Math.random() - 0.5));
+    /* El orden es aleatorio, asi que el servidor y el navegador nunca coincidirian. Barajar
+       despues de montar es justo lo que evita el fallo de hidratacion; hacerlo en el render
+       o en un useMemo lo provocaria. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCards(repartirCartas(data.pares));
   }, [data.pares]);
 
   // Limpieza de timeouts pendientes al desmontar (evita que un match/mismatch
@@ -49,12 +63,7 @@ export default function MatchingActivity({ data, onComplete, onClose }: Props) {
       clearTimeout(pendingTimeoutRef.current);
       pendingTimeoutRef.current = null;
     }
-    const allCards: Card[] = [];
-    (data.pares || []).forEach(p => {
-      allCards.push({ id: `${p.id}-term`, pairId: p.id, content: p.termino, type: 'term', isFlipped: false, isMatched: false });
-      allCards.push({ id: `${p.id}-def`, pairId: p.id, content: p.definicion, type: 'def', isFlipped: false, isMatched: false });
-    });
-    setCards(allCards.sort(() => Math.random() - 0.5));
+    setCards(repartirCartas(data.pares));
     setFlippedCards([]);
     setMoves(0);
     setIsFinished(false);

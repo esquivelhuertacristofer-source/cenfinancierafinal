@@ -42,6 +42,16 @@ import ArenaMastery from '../../components/hub/ArenaMastery';
 import { useSFX } from '../../lib/hooks/useSFX';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
+import type { GradeMeta, PillarMeta, Unit, UserProfile } from '@/lib/hub';
+
+/**
+ * Un objeto de estilo que ademas define variables CSS.
+ *
+ * `React.CSSProperties` no admite claves `--algo`, asi que un estilo que las trae hay que
+ * castearlo. Castear a `any` apaga de paso la comprobacion de las propiedades normales que van
+ * al lado; esto solo abre la puerta a las variables y deja el resto vigilado.
+ */
+type EstiloConVariables = React.CSSProperties & Record<`--${string}`, string | number>;
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -56,24 +66,23 @@ const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string 
 
 export default function StudentHubV19() {
   const router = useRouter();
-  const [profile, setProfile] = useState<any>(null);
-  const [pillars, setPillars] = useState<any[]>([]);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [pillars, setPillars] = useState<PillarMeta[]>([]);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [isSyncing, setIsSyncing] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
-  const [activePillar, setActivePillar] = useState<any>(null);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
+  const [activePillar, setActivePillar] = useState<PillarMeta | null>(null);
   const [showCurriculum, setShowCurriculum] = useState(false);
-  const [selectedUnitForFicha, setSelectedUnitForFicha] = useState<any>(null);
+  const [selectedUnitForFicha, setSelectedUnitForFicha] = useState<Unit | null>(null);
   const [showContentModal, setShowContentModal] = useState(false);
-  const [activeUnit, setActiveUnit] = useState<any>(null);
+  const [activeUnit, setActiveUnit] = useState<Unit | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [totalXP, setTotalXP] = useState(0);
   const [arenaQuiz, setArenaQuiz] = useState<QuizQuestion[]>([]);
   const [showArena, setShowArena] = useState(false);
-  const [score, setScore] = useState(0);
   const [showPresentation, setShowPresentation] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [showGame, setShowGame] = useState(false);
@@ -117,7 +126,7 @@ export default function StudentHubV19() {
             if (pillarMatch) {
               setActivePillar(pillarMatch);
               if (uId) {
-                const unitMatch = pillarMatch.units.find((un: any) => un.code === uId);
+                const unitMatch = pillarMatch.units.find((un) => un.code === uId);
                 if (unitMatch) {
                   setTimeout(() => {
                     setActiveUnit(unitMatch);
@@ -269,7 +278,7 @@ export default function StudentHubV19() {
          style={{ 
            '--grade-accent': gradeMeta?.accentColor || '#FF8C00',
            '--grade-secondary': gradeMeta?.secondaryColor || '#FFD700'
-         } as any}>
+         } as EstiloConVariables}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Epilogue:wght@400;500;700;800;900&display=swap');
 
@@ -578,7 +587,7 @@ export default function StudentHubV19() {
               playSFX('click');
               await logoutAction();
               window.location.href = '/log-in';
-            } catch(e){
+            } catch {
               window.location.href = '/log-in';
             }
           }}
@@ -730,7 +739,7 @@ export default function StudentHubV19() {
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    try { playSFX('click'); } catch(err){}
+                    try { playSFX('click'); } catch {}
                     setActivePillar(p);
                   }}
                   style={{ 
@@ -739,7 +748,7 @@ export default function StudentHubV19() {
                     cursor: 'pointer', 
                     zIndex: 10, 
                     position: 'relative' 
-                  } as any}
+                  } as EstiloConVariables}
                 >
                   <img src={cfg.image} className="p-image-v16" alt="" />
                   
@@ -753,7 +762,7 @@ export default function StudentHubV19() {
                     <div className="p-badge">{p.units.length} Misiones</div>
                     <h3 className="p-title">{p.title}</h3>
                     <div className="flex gap-2">
-                       {p.units.map((_: any, idx: number) => (
+                       {p.units.map((_, idx: number) => (
                          <div key={idx} className="p-unit-dot" style={{ background: idx < done ? cfg.accent : 'var(--badge-bg)' }} />
                        ))}
                     </div>
@@ -921,7 +930,7 @@ export default function StudentHubV19() {
                    <h3 className="text-3xl font-black text-[#FF8C00] mb-8 flex items-center gap-4">
                      <Target size={32} /> Objetivo Central del Grado
                    </h3>
-                   <p className="text-2xl opacity-90 leading-relaxed font-medium">{gradeMeta.objective}</p>
+                   <p className="text-2xl opacity-90 leading-relaxed font-medium">{gradeMeta?.objective}</p>
                 </div>
 
                 <h3 className="text-3xl font-black text-[#FF8C00] mb-12 flex items-center gap-4">
@@ -929,7 +938,7 @@ export default function StudentHubV19() {
                 </h3>
                 
                 <div className="malla-grid">
-                  {pillars.flatMap(p => p.units).map((unit: any) => (
+                  {pillars.flatMap(p => p.units).map((unit) => (
                     <div 
                       key={unit.code} 
                       className="malla-unit-card cursor-pointer group"
@@ -979,7 +988,7 @@ export default function StudentHubV19() {
               style={{ background: isDark ? 'rgba(1,17,38,0.9)' : 'rgba(244,241,234,0.9)', borderColor: 'var(--border)', backdropFilter: 'blur(20px)' }}>
               <button
                 className="flex items-center gap-3 text-xs font-black uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity"
-                onClick={() => { try { playSFX('click'); } catch(e){} setActivePillar(null); }}
+                onClick={() => { try { playSFX('click'); } catch {} setActivePillar(null); }}
               >
                 <ChevronLeft size={18} /> Volver al Hub
               </button>
@@ -1123,7 +1132,6 @@ export default function StudentHubV19() {
           isDark={isDark}
           onClose={() => setShowArena(false)}
           onComplete={async (finalScore) => {
-            setScore(finalScore);
             setShowArena(false);
             // Registrar éxito en la base de datos si es necesario
             if (profile?.id) {
@@ -1244,7 +1252,7 @@ export default function StudentHubV19() {
           unit={selectedUnitForFicha}
           onClose={() => setSelectedUnitForFicha(null)}
           onStart={() => {
-            const p = pillars.find((p: any) => p.units.some((u: any) => u.code === selectedUnitForFicha.code));
+            const p = pillars.find((p) => p.units.some((u) => u.code === selectedUnitForFicha.code));
             if (p) {
               setActiveUnit(selectedUnitForFicha);
               setActivePillar(p);

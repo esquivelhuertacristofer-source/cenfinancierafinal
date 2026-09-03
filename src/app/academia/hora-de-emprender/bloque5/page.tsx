@@ -125,7 +125,7 @@ export default function Segmento4Bloque5Page() {
                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:10px_10px] opacity-10"></div>
                <span className="relative z-10 text-white/50 font-black text-4xl tracking-tighter mb-4">PITCH</span>
                <div className="relative z-10 w-full h-32 bg-white/10 rounded-xl border border-white/20 p-4 text-white font-bold text-sm italic flex items-center justify-center">
-                  "Tu discurso aparecerá aquí..."
+                  &quot;Tu discurso aparecerá aquí...&quot;
                </div>
             </div>
          </div>

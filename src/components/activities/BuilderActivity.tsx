@@ -4,7 +4,7 @@ import React, { useState, useMemo, useRef } from 'react';
 import { evaluate } from 'mathjs';
 import { normalizeFormula } from '../../lib/math-engine';
 import { BuilderActivityData, BuilderField, CalcAutomatico } from '../../types/activities';
-import { ArrowLeft, ChevronRight, ChevronLeft, ChevronDown, CheckCircle2, Calculator, Sparkles, Zap, FileText, X } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ChevronDown, CheckCircle2, Calculator, Sparkles, Zap, X } from 'lucide-react';
 
 interface Props {
   data: BuilderActivityData;
@@ -20,8 +20,8 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
   // Sliders y selects arrancan con un valor: si no, sus fórmulas dependientes
   // evalúan con variables indefinidas y muestran 0 hasta que el alumno los toca.
-  const [formData, setFormData] = useState<Record<string, any>>(() => {
-    const inicial: Record<string, any> = {};
+  const [formData, setFormData] = useState<Record<string, string | number | undefined>>(() => {
+    const inicial: Record<string, string | number | undefined> = {};
     for (const paso of data.pasos || []) {
       for (const campo of paso.campos || []) {
         if (campo.type === 'slider') {
@@ -40,7 +40,9 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
   const currentStep = data.pasos?.[currentStepIdx];
   const hasCompletedRef = useRef(false);
 
-  const handleFieldChange = (fieldId: string, value: any) => {
+  /* `undefined` es un valor legitimo: es lo que se guarda cuando el alumno borra un campo
+     numerico, y hay que distinguirlo del cero. */
+  const handleFieldChange = (fieldId: string, value: string | number | undefined) => {
     setFormData(prev => ({ ...prev, [fieldId]: value }));
   };
 
@@ -148,7 +150,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
 
                <div className="space-y-4">
                   <h2 className="text-4xl md:text-7xl font-black tracking-tighter italic text-white uppercase">¡Estrategia Creada!</h2>
-                  <p className="text-white/40 text-2xl font-medium">Has completado tu plan de: <br/> <span className="text-white">"{data.titulo}"</span></p>
+                  <p className="text-white/40 text-2xl font-medium">Has completado tu plan de: <br/> <span className="text-white">&quot;{data.titulo}&quot;</span></p>
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">

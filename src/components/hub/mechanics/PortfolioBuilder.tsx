@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type { Activity } from '@/types/curriculum';
 
 // ─── CONTENT SHAPE ──────────────────────────────────────────────────────────
@@ -347,7 +347,9 @@ export default function PortfolioBuilder({
   onComplete: (score: number) => void;
 }) {
   const content = activity.content as unknown as PortfolioContent;
-  const stages: Stage[] = content?.stages ?? [];
+  /* Dependencia de tres memos y de un callback: si es un array nuevo en cada render, ninguno
+     de los tres memoriza nada. */
+  const stages: Stage[] = useMemo(() => content?.stages ?? [], [content]);
 
   const [screen, setScreen] = useState<Screen>('start');
   const [currentStageIdx, setCurrentStageIdx] = useState(0);
@@ -358,9 +360,6 @@ export default function PortfolioBuilder({
   const [choiceAnimKey, setChoiceAnimKey] = useState(0);
   const [showChoiceFeedback, setShowChoiceFeedback] = useState(false);
   const [feedbackChoice, setFeedbackChoice] = useState<StageChoice | null>(null);
-  const [netWorthPoints, setNetWorthPoints] = useState<NetWorthPoint[]>([{ age: 15, netWorth: 0 }]);
-  const [bestPoints, setBestPoints] = useState<NetWorthPoint[]>([]);
-  const [worstPoints, setWorstPoints] = useState<NetWorthPoint[]>([]);
   const [finalNetWorth, setFinalNetWorth] = useState(0);
   const [score, setScore] = useState(0);
 
@@ -379,23 +378,24 @@ export default function PortfolioBuilder({
   const currentStage = stages[currentStageIdx];
   const isLastStage = currentStageIdx === stages.length - 1;
 
-  // Pre-compute best/worst for the chart reference lines
-  useEffect(() => {
-    if (stages.length === 0) return;
-
-    // Fill best/worst full trajectories for reference
-    const bestChoicesFull = stages.map(pickBestChoice);
-    const worstChoicesFull = stages.map(pickWorstChoice);
-
-    setBestPoints(projectNetWorth(bestChoicesFull, stages, 80));
-    setWorstPoints(projectNetWorth(worstChoicesFull, stages, 10));
+  /* Las tres curvas de la grafica son funciones puras de las etapas, las elecciones y el deslizador
+     de ahorro: no hay nada que recordar entre renders, solo que recalcular. Estaban como estado
+     rellenado desde un efecto, y eso costaba un render de mas por cada movimiento del deslizador
+     —React pintaba con los puntos viejos y volvia a pintar cuando el efecto los actualizaba— ademas
+     de dejar un primer cuadro con las lineas de referencia vacias. Como useMemo se calculan antes de
+     pintar y la grafica nunca se dibuja desfasada. */
+  const [bestPoints, worstPoints] = useMemo(() => {
+    if (stages.length === 0) return [[], []] as [NetWorthPoint[], NetWorthPoint[]];
+    return [
+      projectNetWorth(stages.map(pickBestChoice), stages, 80),
+      projectNetWorth(stages.map(pickWorstChoice), stages, 10),
+    ];
   }, [stages]);
 
-  // Recompute net worth whenever choices or savings slider change
-  useEffect(() => {
-    const pts = projectNetWorth(selectedChoices, stages, savingsSlider);
-    setNetWorthPoints(pts);
-  }, [selectedChoices, stages, savingsSlider]);
+  const netWorthPoints = useMemo(
+    () => projectNetWorth(selectedChoices, stages, savingsSlider),
+    [selectedChoices, stages, savingsSlider],
+  );
 
   const handleChoiceSelect = useCallback(
     (choice: StageChoice) => {

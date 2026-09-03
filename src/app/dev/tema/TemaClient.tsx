@@ -28,6 +28,10 @@ export default function TemaClient() {
 
   useEffect(() => {
     let vivo = true;
+    /* Marcar la carga antes de pedir los datos: el efecto se vuelve a lanzar cuando cambia el
+       grado y la pantalla tiene que volver al estado de espera. La alternativa que pide la
+       regla es Suspense, que aqui obligaria a mover la carga fuera del componente. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCargando(true);
     getPillarsForGrade(grado.grade, grado.level)
       .then(p => { if (vivo) { setPilares(p); setCargando(false); } })

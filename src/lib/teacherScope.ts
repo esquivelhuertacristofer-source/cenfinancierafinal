@@ -21,7 +21,7 @@ export async function getScopedStudentIds(
       .from("alumnos_grupos")
       .select("id_alumno")
       .in("id_grupo", groups);
-    return memberships?.map((m: any) => m.id_alumno) ?? [];
+    return memberships?.map((m) => m.id_alumno) ?? [];
   }
 
   if (groups.length > 0) {
@@ -29,7 +29,7 @@ export async function getScopedStudentIds(
       .from("profiles")
       .select("id")
       .in("group_id", groups);
-    return studentsInGroup?.map((s: any) => s.id) ?? [];
+    return studentsInGroup?.map((s) => s.id) ?? [];
   }
 
   return [];

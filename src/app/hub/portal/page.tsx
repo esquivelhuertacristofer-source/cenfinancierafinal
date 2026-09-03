@@ -21,6 +21,7 @@ import {
   getPillarById,
   FALLBACK_PROFILE
 } from '../../../lib/hub';
+import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -37,7 +38,7 @@ export default function MissionPage() {
   const [pillarId, setPillarId] = useState<string | null>(null);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [userId, setUserId] = useState<string | null>(null);
-  const [pillar, setPillar] = useState<any | null>(null);
+  const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [showProject, setShowProject] = useState(false);
 
@@ -45,6 +46,10 @@ export default function MissionPage() {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
+      /* La URL solo existe en el navegador: en el servidor no hay `window`, asi que este dato
+         no puede salir del primer render sin romper la hidratacion. La regla querria que la
+         pagina se suspendiera, y eso es reescribir el enrutado entero. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPillarId(id || 'primeros_pasos_hacia_el_ahorro');
     }
   }, []);
@@ -66,7 +71,7 @@ export default function MissionPage() {
         setPillar(found);
         setUserId(effectiveProfile.id);
         setCompleted(progressData);
-      } catch (err) {
+      } catch {
         const errPillar = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
         setPillar(errPillar);
       }
@@ -90,7 +95,7 @@ export default function MissionPage() {
     );
   }
 
-  const { total, pct } = getPillarProgress(pillar, completed);
+  const { pct } = getPillarProgress(pillar, completed);
   const cfg = PILLAR_CONFIG[pillar.id] || PILLAR_CONFIG[Object.keys(PILLAR_CONFIG)[0]];
   const isCompleted = pct === 100;
 

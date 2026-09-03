@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TriviaActivityData } from '../../types/activities';
-import { Trophy, Timer, Zap, CheckCircle2, XCircle, Star, Sparkles, Flame, X } from 'lucide-react';
+import { Timer, Zap, Star, Flame, X } from 'lucide-react';
 
 interface Props {
   data: TriviaActivityData;
@@ -30,6 +30,10 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
 
   useEffect(() => {
     if (!currentQuestion) {
+      /* El orden es aleatorio, asi que el servidor y el navegador nunca coincidirian. Barajar
+         despues de montar es justo lo que evita el fallo de hidratacion; hacerlo en el render
+         o en un useMemo lo provocaria. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShuffledOptions([]);
       return;
     }
@@ -60,6 +64,10 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
   useEffect(() => {
     if (isFinished) return;
     if (timeLeft <= 0) {
+      /* Se acabo el tiempo de la pregunta. Esto no es estado derivado del render: es un suceso
+         del reloj que tiene que contestar por el alumno. La regla lo marca porque no distingue
+         entre ambas cosas. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       handleNext(false);
       return;
     }
@@ -90,7 +98,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
     }
     if (hasCompletedRef.current) return;
     hasCompletedRef.current = true;
-    onComplete && onComplete(finalPercent);
+    onComplete?.(finalPercent);
   };
 
   if (isFinished) {
@@ -129,7 +137,7 @@ export default function TriviaActivity({ data, onComplete, onClose }: Props) {
                  onClick={() => {
                    if (hasCompletedRef.current) return;
                    hasCompletedRef.current = true;
-                   onComplete && onComplete(finalPercent);
+                   onComplete?.(finalPercent);
                  }}
                  className="w-full py-10 bg-white text-black rounded-[45px] font-black text-sm uppercase tracking-[0.28em] md:tracking-[0.6em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)]"
                >

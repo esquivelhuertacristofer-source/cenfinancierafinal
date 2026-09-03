@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import { StoryActivityData } from '../../types/activities';
-import { ChevronRight, Award, Sparkles, BookOpen, Star, ArrowLeft } from 'lucide-react';
+import { ChevronRight, Award, Sparkles, BookOpen, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
@@ -11,7 +11,9 @@ interface Props {
   onClose?: () => void;
 }
 
-export default function StoryActivity({ data, onComplete, onClose }: Props) {
+/* `onClose` sigue en Props porque quien monta este motor lo pasa igual que a los demas; esta
+   pantalla no tiene boton de salir propio, asi que no lo usa. */
+export default function StoryActivity({ data, onComplete }: Props) {
   const [currentNodeId, setCurrentNodeId] = useState(data.nodo_inicial);
   const [totalBonus, setTotalBonus] = useState(0);
   const [lastConsequence, setLastConsequence] = useState<string | null>(null);
@@ -114,7 +116,7 @@ export default function StoryActivity({ data, onComplete, onClose }: Props) {
                       <div className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] md:tracking-[0.4em] mb-3 flex items-center gap-2">
                          <Award size={14} /> Impacto de Decisión
                       </div>
-                      <p className="text-lg md:text-xl text-white font-black italic leading-tight tracking-tight">"{lastConsequence}"</p>
+                      <p className="text-lg md:text-xl text-white font-black italic leading-tight tracking-tight">&quot;{lastConsequence}&quot;</p>
                    </motion.div>
                  )}
                </AnimatePresence>

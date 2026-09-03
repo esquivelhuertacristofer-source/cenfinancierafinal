@@ -28,7 +28,12 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
     };
   }, []);
 
-  const preguntas = data.preguntas || (data as any).questions || [];
+  /* Sin memorizar, esta lista era un array nuevo en cada render y el useMemo del puntaje se
+     recalculaba siempre, que es justo lo que el useMemo venia a evitar. */
+  const preguntas = useMemo(
+    () => data.preguntas || data.questions || [],
+    [data.preguntas, data.questions],
+  );
   const currentQuestion = preguntas[currentIdx];
 
   const score = useMemo(() => {
@@ -252,7 +257,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                           </div>
                           <div className="space-y-1">
                              <div className="text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em] text-[#FF8C00]">Fundamento Diamond</div>
-                             <p className="text-xl md:text-2xl font-black italic uppercase text-white/90">"{currentQuestion.explicacion}"</p>
+                             <p className="text-xl md:text-2xl font-black italic uppercase text-white/90">&quot;{currentQuestion.explicacion}&quot;</p>
                           </div>
                        </div>
 

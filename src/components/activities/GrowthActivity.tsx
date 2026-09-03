@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Wallet, BookOpen, Gift, Rocket, ChevronRight, Zap, Target, X } from 'lucide-react';
+import { TrendingUp, BookOpen, Gift, Rocket, X } from 'lucide-react';
+import type { GrowthActivityData } from '@/types/activities';
 
 interface Props {
-  data: any;
+  data: GrowthActivityData;
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }
@@ -36,6 +37,17 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
     onComplete?.(computeScore());
   };
 
+  /* La ultima version de la funcion, guardada en una ref.
+   *
+   * El bucle de abajo la llama desde dentro de un temporizador. Si entrara en las dependencias del
+   * efecto, cada render del padre recrearia el intervalo y el juego se reiniciaria solo. Guardarla
+   * en una ref es la forma que recomienda React para llamar a un "evento" desde un temporizador:
+   * el efecto no depende de ella y aun asi siempre llama a la version buena. */
+  const finalizarRef = useRef(finalizeCompletion);
+  useEffect(() => {
+    finalizarRef.current = finalizeCompletion;
+  });
+
   const completeNow = () => {
     if (completionTimeout.current) clearTimeout(completionTimeout.current);
     finalizeCompletion();
@@ -57,7 +69,7 @@ export default function GrowthActivity({ data, onComplete, onClose }: Props) {
         const next = prev + (1 * multiplier);
         if (next >= targetGoal) {
           setIsFinished(true);
-          completionTimeout.current = setTimeout(() => finalizeCompletion(), 4000);
+          completionTimeout.current = setTimeout(() => finalizarRef.current(), 4000);
           return targetGoal;
         }
         return next;

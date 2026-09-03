@@ -45,10 +45,10 @@ export default function DiamondConceptCarousel() {
         
         {/* Filter - Reposicionado con más aire */}
         <div className="flex gap-2 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-3xl mb-8 md:mb-16 animate-in slide-in-from-top duration-1000">
-          {['all', 'ahorro', 'inversion', 'gasto', 'banco', 'emprendimiento'].map((cat) => (
+          {(['all', 'ahorro', 'inversion', 'gasto', 'banco', 'emprendimiento'] as const).map((cat) => (
             <button
               key={cat}
-              onClick={() => { setFilter(cat as any); setCurrentIndex(0); }}
+              onClick={() => { setFilter(cat); setCurrentIndex(0); }}
               className={`px-8 py-3 rounded-full text-[9px] font-black uppercase tracking-[0.2em] transition-all
                 ${filter === cat ? 'bg-white text-black shadow-2xl' : 'text-white/30 hover:text-white/60 hover:bg-white/5'}
               `}
@@ -141,7 +141,7 @@ export default function DiamondConceptCarousel() {
                 {currentCard.title}
               </h3>
               <p className="text-xl text-white/40 font-medium leading-relaxed italic max-w-xl">
-                "{currentCard.description}"
+                &quot;{currentCard.description}&quot;
               </p>
               
               <div className="mt-12 flex items-center gap-4">

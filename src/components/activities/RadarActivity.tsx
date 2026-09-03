@@ -3,22 +3,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, CheckCircle2, Zap, Heart, Star, Pizza, Briefcase, Plus, Sparkles, X } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface Item {
   id: number;
   label: string;
   type: 'need' | 'want';
-  icon: any;
+  icon: LucideIcon;
   pos: { x: number; y: number };
 }
 
+/** Lo que el radar necesita del JSON de la actividad. */
+interface ItemDeRadar {
+  id?: number;
+  label: string;
+  type: 'need' | 'want';
+  /** Clave dentro de `ICONS_MAP`; si no coincide se usa el icono de reserva. */
+  icon_key?: string;
+}
+
 interface Props {
-  data: any;
+  data: { items?: ItemDeRadar[]; [k: string]: unknown };
   onComplete?: (score: number) => void;
   onClose?: () => void;
 }
 
-const ICONS_MAP: Record<string, any> = {
+const ICONS_MAP: Record<string, LucideIcon> = {
   comida: Pizza,
   escuela: Briefcase,
   salud: Plus,
@@ -35,19 +45,23 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
   const [isFinished, setIsFinished] = useState(false);
   const [shake, setShake] = useState(false);
 
-  const totalNeeds = data.items?.filter((i: any) => i.type === 'need').length ?? 0;
+  const totalNeeds = data.items?.filter((i) => i.type === 'need').length ?? 0;
 
   const hasCompletedRef = useRef(false);
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    /* Se copia la lista al montar: la limpieza corre al desmontar y para entonces `ref.current`
+       podria apuntar a otro sitio. Hoy no lo hace (a la lista solo se le hace push), pero asi el
+       dia que alguien la reemplace la limpieza seguira cancelando los temporizadores correctos. */
+    const pendientes = timeoutsRef.current;
     return () => {
-      timeoutsRef.current.forEach(clearTimeout);
+      pendientes.forEach(clearTimeout);
     };
   }, []);
 
   useEffect(() => {
-    const rawItems: any[] = data.items || [];
+    const rawItems: ItemDeRadar[] = data.items || [];
     if (rawItems.length === 0) return;
     const interval = setInterval(() => {
       if (items.length < 5 && !isFinished) {
@@ -57,7 +71,7 @@ export default function RadarActivity({ data, onComplete, onClose }: Props) {
           id: Math.random(),
           label: source.label,
           type: source.type,
-          icon: ICONS_MAP[source.icon_key] || Target,
+          icon: (source.icon_key ? ICONS_MAP[source.icon_key] : undefined) || Target,
           pos: {
             x: 10 + Math.random() * 80,
             y: 15 + Math.random() * 70

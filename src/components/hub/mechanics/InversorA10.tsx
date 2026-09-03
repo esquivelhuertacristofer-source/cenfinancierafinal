@@ -58,17 +58,6 @@ const RISK_BG: Record<string, string> = {
   high: 'bg-red-500/20 border-red-500/40',
 };
 
-const OPTION_COLORS: Record<string, string> = {
-  emerald: 'bg-emerald-500',
-  blue: 'bg-blue-500',
-  amber: 'bg-amber-500',
-  purple: 'bg-purple-500',
-  red: 'bg-red-500',
-  cyan: 'bg-cyan-500',
-  pink: 'bg-pink-500',
-  indigo: 'bg-indigo-500',
-};
-
 const OPTION_TEXT_COLORS: Record<string, string> = {
   emerald: 'text-emerald-300',
   blue: 'text-blue-300',
@@ -386,7 +375,6 @@ export default function InversorA10({
     // Check if this is month 3 and rebalance hasn't been done
     if (nextMonth === 3 && !hasRebalanced) {
       // Set up rebalance allocation from current portfolio
-      const totalCurrent = Object.values(portfolio).reduce((a, b) => a + b, 0);
       const rebalInit: Record<string, number> = {};
       options.forEach((o) => {
         rebalInit[o.id] = Math.round(portfolio[o.id] ?? 0);

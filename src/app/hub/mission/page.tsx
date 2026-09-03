@@ -1,20 +1,19 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, PlayCircle, X, Target } from 'lucide-react';
+import { ChevronLeft, PlayCircle, X } from 'lucide-react';
 import UnitTimeline from '../../../components/hub/UnitTimeline';
 import { getPillarById, FALLBACK_PROFILE } from '../../../lib/hub';
 import VideoFrame from '@/components/hub/VideoFrame';
+import type { PillarMeta } from '@/lib/hub';
 
 export default function MissionPage() {
-  const [pillarId, setPillarId] = useState<string | null>(null);
-  const [pillar, setPillar] = useState<any>(null);
+  const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [showExpertVideo, setShowExpertVideo] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-    setPillarId(id);
     getPillarById(id || 'p1', FALLBACK_PROFILE.grade, 'primary').then(setPillar);
   }, []);
 
@@ -64,7 +63,7 @@ export default function MissionPage() {
               ))}
             </div>
             
-            <p className="text-2xl text-white/40 mb-12 max-w-xl leading-relaxed italic">"Desarrolla las competencias necesarias para dominar el ecosistema financiero del siglo XXI."</p>
+            <p className="text-2xl text-white/40 mb-12 max-w-xl leading-relaxed italic">&quot;Desarrolla las competencias necesarias para dominar el ecosistema financiero del siglo XXI.&quot;</p>
             
             {pillar.videoUrl && (
               <button 
@@ -118,10 +117,9 @@ export default function MissionPage() {
           </button>
 
           <div className="relative w-full max-w-7xl aspect-video rounded-[32px] md:rounded-[60px] overflow-hidden border border-white/10 shadow-[0_0_120px_rgba(0,0,0,1)] animate-in zoom-in-90 slide-in-from-bottom-20 duration-1000">
-            <VideoFrame
-              url={pillar.videoUrl}
-              title={pillar.title}
-            />
+            {pillar.videoUrl && (
+              <VideoFrame url={pillar.videoUrl} title={pillar.title} />
+            )}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-transparent to-black/40" />
             <div className="absolute bottom-16 left-16 z-40 flex items-center gap-6">
               <div className="w-16 h-16 bg-[#FF8C00] rounded-[24px] flex items-center justify-center shadow-2xl shadow-[#FF8C00]/40">

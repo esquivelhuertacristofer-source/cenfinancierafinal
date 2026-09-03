@@ -5,26 +5,7 @@ import { supabase } from "@/lib/supabase-browser";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
-import {
-  Users,
-  Search,
-  Printer,
-  ArrowRight,
-  UserPlus,
-  GraduationCap,
-  Calendar,
-  Zap,
-  Star,
-  Award,
-  Clock,
-  History,
-  CheckCircle2,
-  AlertCircle,
-  X,
-  Loader2,
-  Download,
-  FileText,
-} from "lucide-react";
+import { Users, Search, ArrowRight, GraduationCap, Award, Clock, History, CheckCircle2, AlertCircle, X, Loader2, Download, FileText } from "lucide-react";
 import jsPDF from "jspdf";
 
 interface IntentoEntry {
@@ -116,9 +97,9 @@ export default function AlumnosPage() {
       let enriched: Student[] = [];
 
       if (grupos && grupos.length > 0) {
-        const grupoIds = grupos.map((g: any) => g.id);
+        const grupoIds = grupos.map((g) => g.id);
         const grupoMap: Record<string, string> = {};
-        grupos.forEach((g: any) => { grupoMap[g.id] = g.nombre; });
+        grupos.forEach((g) => { grupoMap[g.id] = g.nombre; });
 
         // Get all students in teacher's groups
         const { data: memberships } = await supabase
@@ -126,9 +107,9 @@ export default function AlumnosPage() {
           .select("id_alumno, id_grupo")
           .in("id_grupo", grupoIds);
 
-        const studentIds = [...new Set(memberships?.map((m: any) => m.id_alumno) ?? [])];
+        const studentIds = [...new Set(memberships?.map((m) => m.id_alumno) ?? [])];
         const membershipMap: Record<string, string> = {};
-        memberships?.forEach((m: any) => { membershipMap[m.id_alumno] = m.id_grupo; });
+        memberships?.forEach((m) => { membershipMap[m.id_alumno] = m.id_grupo; });
 
         if (studentIds.length > 0) {
           const [profilesRes, statsRes] = await Promise.all([
@@ -140,7 +121,13 @@ export default function AlumnosPage() {
           const stats = statsRes.data ?? [];
 
           const statsMap: Record<string, { completed_count: number; avg_score: number; total_minutes: number }> = {};
-          for (const s of stats as any[]) {
+          type FilaEstadistica = {
+            user_id: string;
+            completed_count: number;
+            avg_score: number;
+            total_minutes: number;
+          };
+          for (const s of stats as FilaEstadistica[]) {
             statsMap[s.user_id] = {
               completed_count: s.completed_count,
               avg_score: s.avg_score,
@@ -148,7 +135,7 @@ export default function AlumnosPage() {
             };
           }
 
-          enriched = profiles.map((p: any) => ({
+          enriched = profiles.map((p) => ({
             ...p,
             grupo_nombre: grupoMap[membershipMap[p.id]] ?? null,
             progress_count: statsMap[p.id]?.completed_count ?? 0,
@@ -169,16 +156,16 @@ export default function AlumnosPage() {
         if (groups.length > 0) q = q.in("group_id", groups);
         const { data: rawStudents } = await q;
 
-        const legacyStudentIds = (rawStudents ?? []).map((s: any) => s.id);
+        const legacyStudentIds = (rawStudents ?? []).map((s) => s.id);
 
         const { data: progressData } = legacyStudentIds.length > 0
           ? await supabase.from("progress").select("user_id").in("user_id", legacyStudentIds)
-          : { data: [] as any[] };
+          : { data: [] as { user_id: string }[] };
 
         const countMap: Record<string, number> = {};
-        (progressData ?? []).forEach((p: any) => { countMap[p.user_id] = (countMap[p.user_id] ?? 0) + 1; });
+        (progressData ?? []).forEach((p) => { countMap[p.user_id] = (countMap[p.user_id] ?? 0) + 1; });
 
-        enriched = (rawStudents ?? []).map((s: any) => ({
+        enriched = (rawStudents ?? []).map((s) => ({
           ...s,
           grupo_nombre: null,
           progress_count: countMap[s.id] ?? 0,
@@ -213,7 +200,7 @@ export default function AlumnosPage() {
             .limit(50);
 
           if (!error && data) {
-            const history = data.map((d: any) => ({
+            const history = data.map((d) => ({
               activity_id: d.activity_id,
               completed_at: d.completed_at,
               score: d.score,

@@ -2,6 +2,8 @@
 
 import React, { useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { mensajeDeError } from '@/lib/errores';
+import type { ActividadCruda } from '@/types/activities';
 
 export interface ItemActividad {
   archivo: string;
@@ -65,7 +67,7 @@ function motorPara(tipo: string): NombreMotor | null {
 export default function PreviewClient({ catalogo }: { catalogo: ItemActividad[] }) {
   const [filtro, setFiltro] = useState('');
   const [seleccion, setSeleccion] = useState<ItemActividad | null>(null);
-  const [datos, setDatos] = useState<any>(null);
+  const [datos, setDatos] = useState<ActividadCruda | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [resultado, setResultado] = useState<string | null>(null);
   const [montaje, setMontaje] = useState(0); // fuerza remontar al reiniciar
@@ -100,12 +102,23 @@ export default function PreviewClient({ catalogo }: { catalogo: ItemActividad[] 
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       setDatos(await r.json());
       setMontaje((n) => n + 1);
-    } catch (e: any) {
-      setError(e?.message || 'no se pudo cargar');
+    } catch (e: unknown) {
+      setError(mensajeDeError(e) || 'no se pudo cargar');
     }
   }, []);
 
-  const Motor = seleccion ? MOTORES[motorPara(seleccion.tipo) as NombreMotor] : null;
+  /* Cada motor declara su propio tipo de `data`, y la union de los catorce no tiene ningun campo en
+     comun: TypeScript la reduce a `never` y no deja montar ninguno. Esta pantalla existe justamente
+     para montar cualquiera de ellos con cualquier JSON —incluido uno mal formado, que es como se
+     comprueba que un motor aguanta datos raros—, asi que aqui se le dice al compilador que el
+     componente acepta lo que sea. Es la unica pantalla donde eso es correcto. */
+  type MotorGenerico = React.ComponentType<{
+    data: unknown;
+    onComplete?: (puntaje?: number) => void;
+    onClose?: () => void;
+  }>;
+
+  const Motor = (seleccion ? MOTORES[motorPara(seleccion.tipo) as NombreMotor] : null) as MotorGenerico | null;
 
   return (
     <div className="min-h-screen bg-[#0A0A0F] text-white flex flex-col lg:flex-row">

@@ -12,6 +12,7 @@ import {
 } from '../../lib/hub';
 import type { PillarMeta } from '../../lib/hub';
 import UnitTimeline from '../../components/hub/UnitTimeline';
+import type { GradeMeta } from '@/lib/hub';
 
 const GUEST_PROFILE_KEY = 'cen_guest_profile';
 
@@ -42,36 +43,48 @@ function loadGuestChoice(): GuestProfileChoice {
 export default function PracticaPage() {
   const [choice, setChoice] = useState<GuestProfileChoice>({ nivel: 'Primaria', grado: 4 });
   const [pillars, setPillars] = useState<PillarMeta[]>([]);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [activePillar, setActivePillar] = useState<PillarMeta | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    /* `localStorage` tampoco existe en el servidor. Leerlo en el render daria un HTML
+       distinto al del servidor y React descartaria la hidratacion; leerlo aqui es lo
+       correcto, no un descuido. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setChoice(loadGuestChoice());
     setCompleted(getGuestCompletedActivities());
   }, []);
 
+  /* `choice` no tiene mas que estos dos campos, asi que sacarlos aqui deja las dependencias del
+     efecto exactas: cambian cuando cambia el grado o el nivel, y no cuando el objeto es otro. */
+  const { nivel, grado } = choice;
+
   useEffect(() => {
     let cancelled = false;
+    /* Marcar la carga antes de pedir los datos: el efecto se vuelve a lanzar cuando cambia el
+       grado y la pantalla tiene que volver al estado de espera. La alternativa que pide la
+       regla es Suspense, que aqui obligaria a mover la carga fuera del componente. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
-    const schoolLevel = `${choice.nivel} ${choice.grado}`;
+    const schoolLevel = `${nivel} ${grado}`;
 
     (async () => {
       const [gradePillars] = await Promise.all([
-        getPillarsForGrade(choice.grado, schoolLevel),
+        getPillarsForGrade(grado, schoolLevel),
       ]);
       if (cancelled) return;
       setPillars(gradePillars);
-      setGradeMeta(getGradeMetadata(choice.grado, schoolLevel));
+      setGradeMeta(getGradeMetadata(grado, schoolLevel));
       setLoading(false);
     })();
 
-    localStorage.setItem(GUEST_PROFILE_KEY, JSON.stringify(choice));
+    localStorage.setItem(GUEST_PROFILE_KEY, JSON.stringify({ nivel, grado }));
     return () => {
       cancelled = true;
     };
-  }, [choice.nivel, choice.grado]);
+  }, [nivel, grado]);
 
   const handleComplete = (activityId: string) => {
     markGuestActivityComplete(activityId);
@@ -110,7 +123,7 @@ export default function PracticaPage() {
             {NIVELES.map((n) => (
               <button
                 key={n.value}
-                onClick={() => setChoice((c) => ({ nivel: n.value, grado: n.grados[0] }))}
+                onClick={() => setChoice({ nivel: n.value, grado: n.grados[0] })}
                 className={`px-4 py-2 rounded-xl text-sm font-bold transition-colors ${
                   choice.nivel === n.value ? 'bg-[#FF8C00] text-[#011C40]' : 'bg-white/5 text-white/60 hover:bg-white/10'
                 }`}

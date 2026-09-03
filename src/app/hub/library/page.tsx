@@ -2,19 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  ChevronLeft, 
-  BookOpen, 
-  Search,
-  Filter,
-  ArrowRight,
-  X,
-  Target,
-  CheckCircle2,
-  BookMarked,
-  Layout,
-  MessageSquareQuote
-} from 'lucide-react';
+import { ChevronLeft, BookOpen, Search, Filter, ArrowRight, X, Layout, MessageSquareQuote } from 'lucide-react';
 import { 
   getCurrentProfile, 
   getPillarsForGrade,
@@ -22,12 +10,13 @@ import {
   Unit
 } from '../../../lib/hub';
 import DiamondConceptCarousel from '../../../components/hub/DiamondConceptCarousel';
+import type { PillarMeta } from '@/lib/hub';
+import type { GradeMeta } from '@/lib/hub';
 
 export default function LibraryPage() {
   const router = useRouter();
-  const [profile, setProfile] = useState<any>(null);
-  const [pillars, setPillars] = useState<any[]>([]);
-  const [gradeMeta, setGradeMeta] = useState<any>(null);
+  const [pillars, setPillars] = useState<PillarMeta[]>([]);
+  const [gradeMeta, setGradeMeta] = useState<GradeMeta | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
@@ -37,8 +26,6 @@ export default function LibraryPage() {
       try {
         const p = await getCurrentProfile();
         if (!p) { router.replace('/log-in'); return; }
-        setProfile(p);
-
         const gradePillars = await getPillarsForGrade(p.grade, p.school_level ?? 'primary');
         setPillars(gradePillars);
         setGradeMeta(getGradeMetadata(p.grade, p.school_level ?? 'primary'));
@@ -57,7 +44,7 @@ export default function LibraryPage() {
     </div>
   );
 
-  const allUnits = pillars.flatMap(p => p.units.map((u: any) => ({ ...u, pillarName: p.title })));
+  const allUnits = pillars.flatMap(p => p.units.map((u) => ({ ...u, pillarName: p.title })));
   const filteredUnits = allUnits.filter(u => 
     u.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
     (u.pillarName?.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -184,13 +171,13 @@ export default function LibraryPage() {
 
       <main className="lib-grid">
         {filteredUnits.map((u) => (
-          <div key={u.code} className="resource-card" onClick={() => setSelectedUnit(u as any)}>
+          <div key={u.code} className="resource-card" onClick={() => setSelectedUnit(u)}>
             <div className="res-type">Unidad {u.code}</div>
             <h3 className="res-title">{u.title}</h3>
             <div className="res-pillar">{u.pillarName}</div>
             
             <p className="text-lg opacity-40 line-clamp-3 mb-10 leading-relaxed font-medium">
-              {u.theory?.introduction || u.theory?.description || u.theory?.concept || "Explora el marco teórico profundo de esta unidad estratégica."}
+              {u.theory?.introduction || "Explora el marco teórico profundo de esta unidad estratégica."}
             </p>
 
             <div className="btn-view">Explorar Conceptos <ArrowRight size={18} /></div>
@@ -209,11 +196,11 @@ export default function LibraryPage() {
               <div className="h-2 w-32 bg-[#FF8C00] rounded-full" />
             </div>
 
-            {(selectedUnit.theory?.introduction || selectedUnit.theory?.concept || selectedUnit.theory?.description) && (
+            {selectedUnit.theory?.introduction && (
               <div className="theory-block">
                 <div className="theory-label"><MessageSquareQuote size={20} /> Introducción al Concepto</div>
                 <div className="theory-text">
-                  {selectedUnit.theory?.introduction || selectedUnit.theory?.concept || selectedUnit.theory?.description}
+                  {selectedUnit.theory.introduction}
                 </div>
               </div>
             )}
@@ -222,41 +209,10 @@ export default function LibraryPage() {
               <div className="theory-block">
                 <div className="theory-label"><Layout size={20} /> Desarrollo Teórico</div>
                 <div className="grid grid-cols-1 gap-8">
-                  {selectedUnit.theory.sections.map((s: any, idx: number) => (
+                  {selectedUnit.theory.sections.map((s, idx: number) => (
                     <div key={idx} className="section-card">
-                      <h4>{s.subtitle || s.title}</h4>
-                      <p>{s.content || s.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {selectedUnit.theory?.key_points && (
-              <div className="theory-block">
-                <div className="theory-label"><Target size={20} /> Puntos de Dominio</div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {selectedUnit.theory.key_points.map((kp: any, idx: number) => (
-                    <div key={idx} className="bg-white/5 p-8 rounded-3xl border border-white/10 flex gap-6">
-                      <div className="text-[#FF8C00]"><CheckCircle2 size={24} /></div>
-                      <div>
-                        <div className="font-black text-lg mb-2">{kp.point || kp.title}</div>
-                        <div className="text-sm opacity-50 leading-relaxed">{kp.description || kp.content}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {selectedUnit.theory?.glossary && (
-              <div className="theory-block">
-                <div className="theory-label"><BookMarked size={20} /> Glosario Técnico</div>
-                <div className="bg-[#011126] border border-white/10 rounded-[24px] md:rounded-[40px] p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-                  {Object.entries(selectedUnit.theory.glossary).map(([term, def]: [string, any], idx: number) => (
-                    <div key={idx}>
-                      <div className="text-[#FF8C00] font-black text-xl mb-2">{term}</div>
-                      <div className="text-sm opacity-40 leading-relaxed font-medium">{def}</div>
+                      <h4>{s.subtitle}</h4>
+                      <p>{s.content}</p>
                     </div>
                   ))}
                 </div>

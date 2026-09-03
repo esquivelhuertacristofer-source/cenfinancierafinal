@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type { Activity } from '@/types/curriculum';
 
 // ─── CONTENT SHAPE ───────────────────────────────────────────────────────────
@@ -247,8 +247,12 @@ export default function CrisisRoom({ activity, onComplete }: { activity: Activit
   // fall back to safe defaults instead of crashing on `.length`/`.toFixed()`.
   const safeRounds: CrisisRound[] = content?.rounds ?? [];
   const safeStartingIndicators: Indicators = content?.starting_indicators ?? DEFAULT_INDICATORS;
-  const safeHistoricalOutcome: HistoricalOutcome =
-    content?.historical_outcome ?? { description: '', ...DEFAULT_INDICATORS };
+  /* Se memoriza porque es dependencia de `handleNext`: sin esto el objeto era nuevo en cada
+     render y la funcion se recreaba con el, arrastrando a todo lo que dependa de ella. */
+  const safeHistoricalOutcome: HistoricalOutcome = useMemo(
+    () => content?.historical_outcome ?? { description: '', ...DEFAULT_INDICATORS },
+    [content],
+  );
 
   const [phase, setPhase] = useState<GamePhase>('start');
   const [roundIndex, setRoundIndex] = useState(0);

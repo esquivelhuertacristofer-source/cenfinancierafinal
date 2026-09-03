@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Trophy, BookOpen, Clock, CheckCircle2, Star, Zap, ShieldCheck } from 'lucide-react';
+import { X, Trophy, Clock, CheckCircle2, Zap, ShieldCheck } from 'lucide-react';
 import { supabase } from '@/lib/supabase-browser';
 
 interface ProgressItem {
@@ -32,7 +32,7 @@ export default function StudentRecordModal({ studentId, studentName, onClose, is
           .limit(50);
 
         if (intentos && intentos.length > 0) {
-          setProgress(intentos.map((it: any) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
+          setProgress(intentos.map((it) => ({ id: it.id, activity_id: it.activity_id, created_at: it.completed_at, score: it.score })));
         } else {
           const { data } = await supabase
             .from('progress')

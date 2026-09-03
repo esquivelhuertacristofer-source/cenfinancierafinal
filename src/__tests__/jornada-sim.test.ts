@@ -24,6 +24,20 @@ const OFICIOS: Oficio[] = [
 ];
 const CFG = CONFIG_JORNADA_POR_DEFECTO;
 
+/**
+ * Elige un oficio dando por hecho que cabe en la jornada.
+ *
+ * `elegirOficio` devuelve una union: o el estado nuevo, o el motivo del rechazo. Los tests que
+ * preparan una situacion necesitan el estado, y antes lo sacaban con un casting que se tragaba el
+ * caso de rechazo. Asi, si un dia el oficio deja de caber, el test falla en la linea que lo eligio y
+ * dice por que, en vez de romperse tres lineas mas abajo con un `undefined`.
+ */
+function elegir(e: EstadoJornada, id: string): EstadoJornada {
+  const r = elegirOficio(e, OFICIOS, CFG, id);
+  if (!r.ok) throw new Error(`el oficio ${id} no se pudo elegir: ${r.motivo}`);
+  return r.estado;
+}
+
 /** Juega una jornada completa aplicando un criterio de elección. */
 function jugar(criterio: (disponibles: Oficio[]) => Oficio) {
   let e = estadoInicialJornada();
@@ -56,20 +70,20 @@ describe('JORNADA — el dinero sale del trabajo', () => {
 describe('JORNADA — el tiempo es limitado', () => {
   it('no deja elegir un oficio que no cabe en las horas restantes', () => {
     let e: EstadoJornada = estadoInicialJornada();
-    e = (elegirOficio(e, OFICIOS, CFG, 'cartel') as any).estado;      // 3h
-    e = (elegirOficio(e, OFICIOS, CFG, 'panaderia') as any).estado;   // 2h -> 5h
+    e = elegir(e, 'cartel');      // 3h
+    e = elegir(e, 'panaderia');   // 2h -> 5h
     const r = elegirOficio(e, OFICIOS, CFG, 'biblioteca');            // pide 2h, solo queda 1
     expect(r).toEqual({ ok: false, motivo: 'sin_tiempo' });
   });
 
   it('no permite repetir el mismo oficio (se busca variedad de oficios)', () => {
-    const e = (elegirOficio(estadoInicialJornada(), OFICIOS, CFG, 'perro') as any).estado;
+    const e = elegir(estadoInicialJornada(), 'perro');
     expect(elegirOficio(e, OFICIOS, CFG, 'perro')).toEqual({ ok: false, motivo: 'repetido' });
   });
 
   it('la jornada termina cuando ya nada cabe en el tiempo restante', () => {
     let e: EstadoJornada = estadoInicialJornada();
-    for (const id of ['cartel', 'panaderia', 'perro']) e = (elegirOficio(e, OFICIOS, CFG, id) as any).estado;
+    for (const id of ['cartel', 'panaderia', 'perro']) e = elegir(e, id);
     expect(bloquesRestantes(e, CFG)).toBe(0);
     expect(jornadaTerminada(OFICIOS, e, CFG)).toBe(true);
   });

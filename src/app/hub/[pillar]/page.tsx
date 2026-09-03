@@ -1,33 +1,13 @@
 'use client';
 
-import { useState, useEffect, useCallback, use } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { 
-  ChevronLeft, 
-  Target, 
-  Lock, 
-  ArrowRight, 
-  Sparkles,
-  Award,
-  Activity,
-  X,
-  Sun,
-  Moon,
-  Medal,
-  PlayCircle
-} from 'lucide-react';
+import { ChevronLeft, Target, Lock, ArrowRight, Award, X, Sun, Moon, Medal, PlayCircle } from 'lucide-react';
 import UnitTimeline from '../../../components/hub/UnitTimeline';
-import {
-  getPillarsForGrade,
-  getCompletedActivities,
-  getCurrentProfile,
-  getPillarProgress,
-  getPillarById,
-  FALLBACK_PROFILE
-} from '../../../lib/hub';
+import { getCompletedActivities, getCurrentProfile, getPillarProgress, getPillarById, FALLBACK_PROFILE } from '../../../lib/hub';
 import VideoFrame from '@/components/hub/VideoFrame';
 import { tituloDeUrl } from '@/lib/videos-generados';
+import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
   primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
@@ -46,7 +26,9 @@ const SOUNDS = {
   complete: 'https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3',
 };
 
-export default function PillarPageV19({ params }: { params: any }) {
+/* No recibe `params`: el id del pilar se saca de la ruta ya en el navegador (mas abajo), porque
+   esta pantalla es de cliente y se entra a ella tanto por enlace como por navegacion interna. */
+export default function PillarPageV19() {
   const router = useRouter();
   
   // Safe param resolution for Next.js 15+ vs 14 compatibility
@@ -65,7 +47,7 @@ export default function PillarPageV19({ params }: { params: any }) {
   const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProject, setShowProject] = useState(false);
-  const [pillar, setPillar] = useState<any | null>(null);
+  const [pillar, setPillar] = useState<PillarMeta | null>(null);
   const [isDark, setIsDark] = useState(true);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -84,13 +66,15 @@ export default function PillarPageV19({ params }: { params: any }) {
 
     async function load() {
       // Emergency timeout to prevent infinite loading if DB hangs
+      /* Red de seguridad si la base tarda: a los 1.5 s se pinta el pilar de reserva.
+         El `if (loading)` que habia aqui leia el valor del render en el que se creo el efecto, o
+         sea siempre `true`, asi que no comprobaba nada; ademas sobra, porque el `finally` cancela
+         este temporizador en cuanto la carga real termina. */
       const timeout = setTimeout(async () => {
-        if (loading) {
-          const found = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
-          setUserId(FALLBACK_PROFILE.id);
-          setPillar(found);
-          setLoading(false);
-        }
+        const found = await getPillarById(pillarId!, FALLBACK_PROFILE.grade, FALLBACK_PROFILE.school_level ?? 'primary');
+        setUserId(FALLBACK_PROFILE.id);
+        setPillar(found);
+        setLoading(false);
       }, 1500);
 
       try {
@@ -115,7 +99,7 @@ export default function PillarPageV19({ params }: { params: any }) {
       }
     }
     load();
-  }, [pillarId]);
+  }, [pillarId, router]);
 
   const handleComplete = useCallback((activityId: string) => {
     setCompleted(prev => new Set([...prev, activityId]));
@@ -141,7 +125,7 @@ export default function PillarPageV19({ params }: { params: any }) {
     </div>
   );
 
-  const { done, total, pct } = getPillarProgress(pillar, completed);
+  const { total, pct } = getPillarProgress(pillar, completed);
   const cfg = PILLAR_CONFIG[pillar.id] || PILLAR_CONFIG[Object.keys(PILLAR_CONFIG)[0]];
   const isCompleted = pct === 100;
 
@@ -237,7 +221,7 @@ export default function PillarPageV19({ params }: { params: any }) {
         <div 
           className="back-link cursor-pointer" 
           onMouseEnter={() => playSFX('hover')} 
-          onClick={() => { try { playSFX('click'); } catch(e){} window.location.assign('/hub'); }}
+          onClick={() => { try { playSFX('click'); } catch {} window.location.assign('/hub'); }}
         >
           <ChevronLeft size={18} /> Volver al Hub
         </div>

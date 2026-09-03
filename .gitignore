@@ -86,3 +86,6 @@ video-explicativo/out/*
 video-explicativo/public/escenas/
 video-explicativo/public/audio/
 video-explicativo/src/Root.tsx
+
+# Instancias de Epilogue que genera scripts/temario-pdf.py (se rehacen solas)
+scripts/.fuentes/

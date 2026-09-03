@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import type { Activity } from '@/types/curriculum';
 
 // ─── Content shape ────────────────────────────────────────────────────────────
@@ -65,7 +65,7 @@ export default function SupermercadoCaos({
   const content = activity.content as unknown as SupermercadoContent;
   const budget = content?.budget ?? 150;
   const timeLimit = content?.time_limit ?? 90;
-  const sourceItems: ShopItem[] = content?.items ?? [];
+  const sourceItems: ShopItem[] = useMemo(() => content?.items ?? [], [content]);
 
   // ── Screens ──
   const [screen, setScreen] = useState<Screen>('start');
@@ -95,8 +95,12 @@ export default function SupermercadoCaos({
   const isOverBudget = remaining < 0;
 
   const listItems = sourceItems.filter((i) => i.is_on_list);
-  const cartListItems = cart.filter((e) => e.is_on_list);
-  const listItemsBought = new Set(cartListItems.map((e) => e.item_id));
+  /* Este conjunto decide si un articulo de la lista ya esta en el carrito, y es dependencia de dos
+     callbacks. Construirlo suelto en cada render hacia que esos callbacks se recrearan siempre. */
+  const listItemsBought = useMemo(
+    () => new Set(cart.filter((e) => e.is_on_list).map((e) => e.item_id)),
+    [cart],
+  );
 
   // ── Init shop ──
   const initShop = useCallback(() => {
@@ -152,6 +156,10 @@ export default function SupermercadoCaos({
   useEffect(() => {
     if (screen !== 'game') return;
 
+    /* Los precios suben solos conforme corre el reloj de la partida. Es una consecuencia del
+       tiempo transcurrido, no del render, y modifica la lista sobre la que el alumno esta
+       comprando. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShopItems((prev) =>
       prev.map((item) => {
         if (item.price_spike && !item.spiked) {
@@ -346,7 +354,6 @@ export default function SupermercadoCaos({
     const totalListCount = listItems.length;
 
     const spentOnList = cart.filter((e) => e.is_on_list).reduce((s, e) => s + e.price_paid, 0);
-    const cheapestListCost = listItems.reduce((s, li) => s + li.base_price, 0);
     const expensiveListCost = listItems.reduce((s, li) => {
       const spikedPrice = li.price_spike ? li.price_spike.new_price : li.base_price;
       return s + spikedPrice;

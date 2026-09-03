@@ -3,26 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Sidebar from "../../../../components/dashboard/Sidebar";
 import { useHasMounted } from "../../../../lib/useHasMounted";
-import { 
-  Book, 
-  Globe, 
-  ExternalLink, 
-  Library, 
-  Sparkles, 
-  Search,
-  ArrowUpRight,
-  ShieldCheck,
-  Bookmark,
-  GraduationCap,
-  Scale,
-  TrendingUp,
-  Wallet,
-  Shield,
-  HeartPulse,
-  Filter,
-  CheckCircle2,
-  Info
-} from "lucide-react";
+import { Book, Library, Search, ArrowUpRight, ShieldCheck, TrendingUp, Wallet, Shield, Filter, Info } from "lucide-react";
 
 interface Resource {
   id: string;
@@ -142,7 +123,10 @@ export default function BibliografiaPage() {
   const filteredResources = useMemo(() => {
     return resources.filter(r => {
       const matchesCategory = activeCategory === "Todos" || r.category === activeCategory;
-      const matchesLevel = activeLevel === "Todos" || r.level.includes(activeLevel as any);
+      /* `activeLevel` es la cadena del filtro y `r.level` una lista de tres valores concretos.
+         `includes` sobre esa lista no acepta una cadena cualquiera, asi que se busca al reves,
+         que ademas es lo que de verdad se pregunta. */
+      const matchesLevel = activeLevel === "Todos" || r.level.some((l) => l === activeLevel);
       const matchesSearch = r.title.toLowerCase().includes(search.toLowerCase()) || 
                            r.description.toLowerCase().includes(search.toLowerCase()) ||
                            r.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
@@ -291,7 +275,7 @@ export default function BibliografiaPage() {
                       <Info className="w-3 h-3" /> Por qué lo recomendamos
                    </div>
                    <p className="text-[12px] font-bold text-[#011C40]/70 leading-relaxed italic">
-                     "{resource.longDescription}"
+                     &quot;{resource.longDescription}&quot;
                    </p>
                 </div>
               </div>

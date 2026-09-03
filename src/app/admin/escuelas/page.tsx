@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import Papa from "papaparse";
 import jsPDF from "jspdf";
+import { mensajeDeError } from '@/lib/errores';
 
 // ─── Tipos ────────────────────────────────────────────────────────────────────
 
@@ -161,7 +162,9 @@ function generarPDFCredenciales(
   }
 
   // Footer en todas las páginas
-  const pages = (doc as any).internal.getNumberOfPages();
+  /* `getNumberOfPages` existe en jsPDF desde siempre, pero sus .d.ts declaran `internal` como un
+     objeto opaco y no lo listan. Se nombra el metodo en vez de castear el documento entero. */
+  const pages = (doc.internal as unknown as { getNumberOfPages(): number }).getNumberOfPages();
   for (let i = 1; i <= pages; i++) {
     doc.setPage(i);
     doc.setFontSize(7);
@@ -324,8 +327,8 @@ export default function AdminEscuelasPage() {
       setDuplicateNames([]);
       setManualText("");
       if (fileRef.current) fileRef.current.value = "";
-    } catch (err: any) {
-      alert(`Error: ${err.message}`);
+    } catch (err: unknown) {
+      alert(`Error: ${mensajeDeError(err)}`);
     } finally {
       setProcessing(false);
     }

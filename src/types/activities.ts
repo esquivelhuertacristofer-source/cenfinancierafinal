@@ -15,6 +15,17 @@ export type ActivityType =
 
 export type Complexity = 'SIMPLE' | 'MEDIO' | 'COMPLEJO';
 
+/**
+ * Una actividad tal y como sale de su JSON y del normalizador, antes de saber cual de los catorce
+ * motores la va a recibir.
+ *
+ * `Record<string, unknown>` no es dejadez: los 742 archivos de `public/data/actividades/` se
+ * escribieron a lo largo del tiempo y el mismo dato aparece con nombres distintos, que es la razon
+ * de ser del normalizador. Los tipos concretos de este archivo empiezan a aplicar despues, cuando
+ * cada motor recibe el suyo.
+ */
+export type ActividadCruda = Record<string, unknown>;
+
 export interface BaseActivity {
   code: string;           // "ACT-P4-3-3-A"
   unit_code: string;      // "P4-3-3"
@@ -46,6 +57,12 @@ export interface QuizActivityData extends BaseActivity {
   tipo: 'QUIZ';
   preguntas: QuizQuestion[];  // 5-8 preguntas
   aprobacion_minima: number;  // 0-1, ej. 0.8
+  /**
+   * Algunas actividades antiguas traen las preguntas bajo el nombre en ingles. El normalizador de
+   * ContentModal las copia a `preguntas`, pero el motor tambien se usa desde el previsualizador de
+   * motores, que carga el JSON crudo, asi que el alias se declara aqui en vez de castear al leerlo.
+   */
+  questions?: QuizQuestion[];
 }
 
 // ─── SIMULADOR ───────────────────────────────────────────────────────────────
@@ -238,6 +255,51 @@ export interface GameActivityData extends BaseActivity {
   velocidad_inicial: 'lenta' | 'media' | 'rapida';
   velocidad_incremento: boolean;
   instruccion: string;
+}
+
+// ─── BALANCE ─────────────────────────────────────────────────────────────────
+/**
+ * Los tres motores de abajo no tenian tipo y usaban `data: any`.
+ *
+ * Lo que se declara aqui sale de lo que el componente lee de verdad, campo por campo, no de lo que
+ * el JSON podria traer. Por eso casi todo es opcional: estos motores nacieron leyendo con `?.` y
+ * cayendo a un valor por defecto, y varias actividades no traen `config` ni `metadata`.
+ */
+export interface BalanceActivityData extends Partial<BaseActivity> {
+  instruccion?: string;
+  imagenes?: Record<string, string>;
+  /* Ajustes finos del motor; lo que no venga sale del preset de su dificultad. */
+  config?: Record<string, number>;
+  /* Rotulos con los que cada actividad renombra los marcadores en pantalla. */
+  metadata?: {
+    target_label?: string;
+    knowledge_label?: string;
+    action_label?: string;
+  };
+  /* `resolverDificultad` mira estos tres, y ninguno es obligatorio. */
+  dificultad?: string;
+  complejidad?: Complexity;
+  edad?: string;
+}
+
+// ─── CRECIMIENTO ─────────────────────────────────────────────────────────────
+export interface GrowthActivityData extends Partial<BaseActivity> {
+  meta_objetivo?: number;
+}
+
+// ─── JORNADA ─────────────────────────────────────────────────────────────────
+
+export interface JornadaActivityData extends Partial<BaseActivity> {
+  instruccion?: string;
+  /* `Oficio` lo define el propio motor en `@/lib/activities/jornada-sim`; se referencia con una
+     importacion diferida para no atar este archivo de tipos a la implementacion. */
+  oficios?: import('@/lib/activities/jornada-sim').Oficio[];
+  config?: Record<string, number>;
+  metadata?: {
+    moneda_label?: string;
+    recurso_label?: string;
+    meta_label?: string;
+  };
 }
 
 // ─── RULETA ───────────────────────────────────────────────────────────────────

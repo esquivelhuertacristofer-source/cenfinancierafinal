@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import TopAlumnos from "@/components/dashboard/TopAlumnos";
 import { supabase } from "@/lib/supabase-browser";
 

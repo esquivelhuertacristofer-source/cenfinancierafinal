@@ -1,22 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import {
-  LayoutDashboard,
-  Users,
-  BookOpen,
-  GraduationCap,
-  BarChart3,
-  LogOut,
-  ChevronRight,
-  Sparkles,
-  Zap,
-  ShieldCheck,
-  ChevronDown,
-  Library,
-  Menu,
-  X
-} from "lucide-react";
+import { LayoutDashboard, Users, BookOpen, GraduationCap, BarChart3, LogOut, ChevronRight, Sparkles, Zap, ChevronDown, Library, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { logoutAction } from "@/app/actions/authActions";
@@ -36,7 +21,8 @@ function isNavItemActive(pathname: string, href: string) {
 
 type SidebarProps = {
   teacherName?: string;
-  groupId?: string;
+  /** Un profesor sin grupo asignado lo trae a null en la base, no ausente. */
+  groupId?: string | null;
   currentLevel?: 'primaria' | 'secundaria';
   onLevelChange?: (level: 'primaria' | 'secundaria') => void;
 };
@@ -54,6 +40,10 @@ export default function Sidebar({
 
   // Cierra el drawer automáticamente al cambiar de ruta
   useEffect(() => {
+    /* Cerrar el menu lateral al cambiar de ruta. El cambio de ruta viene de fuera del
+       componente (un enlace, el boton de atras del navegador o una redireccion), asi que no
+       hay un unico manejador donde ponerlo. */
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileOpen(false);
   }, [pathname]);
 
@@ -128,10 +118,10 @@ export default function Sidebar({
         {/* LEVEL SELECTOR (NEW) */}
         <div className="relative z-10 px-6 mb-8">
            <div className="bg-white/5 p-1.5 rounded-2xl border border-white/10 flex gap-1">
-              {['primaria', 'secundaria'].map((lvl) => (
+              {(['primaria', 'secundaria'] as const).map((lvl) => (
                 <button
                   key={lvl}
-                  onClick={() => onLevelChange?.(lvl as any)}
+                  onClick={() => onLevelChange?.(lvl)}
                   className={`flex-1 py-2.5 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all duration-500 ${
                     currentLevel === lvl
                     ? 'bg-white text-[#011C40] shadow-xl translate-y-[-1px]'
@@ -266,10 +256,10 @@ export default function Sidebar({
             {/* LEVEL SELECTOR */}
             <div className="relative z-10 px-6 mb-6">
                <div className="bg-white/5 p-1.5 rounded-2xl border border-white/10 flex gap-1">
-                  {['primaria', 'secundaria'].map((lvl) => (
+                  {(['primaria', 'secundaria'] as const).map((lvl) => (
                     <button
                       key={lvl}
-                      onClick={() => onLevelChange?.(lvl as any)}
+                      onClick={() => onLevelChange?.(lvl)}
                       className={`flex-1 py-2.5 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all duration-500 ${
                         currentLevel === lvl
                         ? 'bg-white text-[#011C40] shadow-xl translate-y-[-1px]'

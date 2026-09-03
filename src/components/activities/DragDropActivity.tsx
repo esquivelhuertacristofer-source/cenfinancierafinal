@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { DragDropActivityData } from '../../types/activities';
-import { Trophy, Star, Sparkles, CheckCircle2, Zap, Flame, ChevronRight, MousePointer2, X } from 'lucide-react';
+import { Trophy, Sparkles, CheckCircle2, Zap, Flame, ChevronRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
@@ -227,7 +227,7 @@ export default function DragDropActivity({ data, onComplete, onClose, accent }: 
             </div>
             <div className="grid grid-cols-1 gap-6">
                <AnimatePresence mode="popLayout">
-                  {pendingItems.map((item, idx) => (
+                  {pendingItems.map((item) => (
                     <motion.div 
                       key={item.id}
                       layout

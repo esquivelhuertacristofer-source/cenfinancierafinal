@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Trophy, 
@@ -65,6 +65,10 @@ export default function ArenaMastery({
       const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
       return () => clearInterval(timer);
     } else if (timeLeft === 0 && !isAnswered) {
+      /* Se acabo el tiempo de la pregunta. Esto no es estado derivado del render: es un suceso
+         del reloj que tiene que contestar por el alumno. La regla lo marca porque no distingue
+         entre ambas cosas. */
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       handleAnswer(-1); // Timeout as wrong answer
     }
   }, [step, isAnswered, timeLeft, handleAnswer]);

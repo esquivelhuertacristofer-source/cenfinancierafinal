@@ -47,7 +47,8 @@ export default function TopAlumnos({
         const stats = statsRes.data ?? [];
 
         const statsMap: Record<string, { completed_count: number; avg_score: number }> = {};
-        for (const s of stats as any[]) {
+        type FilaEstadistica = { user_id: string; completed_count: number; avg_score: number };
+    for (const s of stats as FilaEstadistica[]) {
           statsMap[s.user_id] = { completed_count: s.completed_count, avg_score: s.avg_score };
         }
 
@@ -56,7 +57,7 @@ export default function TopAlumnos({
           : ["bg-[#011C40]", "bg-[#FF8C00]", "bg-[#42E8E0]", "bg-[#011C40]/90", "bg-[#FF8C00]/90"];
 
         const processed = profiles
-          .map((p: any) => {
+          .map((p) => {
             const stat = statsMap[p.id];
             // completed count * 10 + avg score bonus
             const totalXp = (stat?.completed_count ?? 0) * 10 + (stat?.avg_score ?? 0);

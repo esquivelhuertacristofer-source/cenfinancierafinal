@@ -72,7 +72,7 @@ function PhaseIndicator({ phase }: { phase: Phase }) {
   return (
     <div className="flex gap-2 justify-center mb-4">
       {(['plan_inventory', 'plan_price', 'plan_location', 'operation', 'results'] as Phase[]).map(
-        (p, i) => {
+        (p) => {
           const isDone =
             (p === 'plan_inventory' &&
               ['plan_price', 'plan_location', 'operation', 'results'].includes(phase)) ||
@@ -139,7 +139,6 @@ export default function PrimerNegocio({
   const [dayResults, setDayResults] = useState<DayResult[]>([]);
   const [unitsRemaining, setUnitsRemaining] = useState(0);
   const [totalRevenue, setTotalRevenue] = useState(0);
-  const [showingDayAnim, setShowingDayAnim] = useState(false);
   const [dayAnimStep, setDayAnimStep] = useState<'event' | 'selling' | 'summary'>('event');
   const [pendingDay, setPendingDay] = useState<DayResult | null>(null);
 
@@ -220,7 +219,6 @@ export default function PrimerNegocio({
     const event = pickRandom(content.daily_events);
     setCurrentEvent(event);
     setDayAnimStep('event');
-    setShowingDayAnim(false);
   }, [plan, content.daily_events]);
 
   // ─── Advance day animation ────────────────────────────────────────────────
@@ -278,13 +276,6 @@ export default function PrimerNegocio({
   const totalUnitsSold = dayResults.reduce((s, d) => s + d.unitsSold, 0);
   const inventoryCost = plan.inventory?.cost ?? 0;
   const profit = totalRevenue - inventoryCost;
-
-  // ─── Progress bar width ───────────────────────────────────────────────────
-
-  const progressPct =
-    plan.inventory
-      ? Math.round(((plan.inventory.units - unitsRemaining) / plan.inventory.units) * 100)
-      : 0;
 
   // ─── START SCREEN ─────────────────────────────────────────────────────────
 

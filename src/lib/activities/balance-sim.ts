@@ -82,7 +82,14 @@ export function estadoInicial(): EstadoBalance {
  * "MAESTRÍA") y tomarla como dificultad real le pondría a un alumno de primero
  * de primaria el nivel experto.
  */
-export function resolverDificultad(data: any): Dificultad {
+/** Lo unico que esta funcion mira del JSON de la actividad. */
+export interface PistasDeDificultad {
+  dificultad?: unknown;
+  edad?: unknown;
+  complejidad?: unknown;
+}
+
+export function resolverDificultad(data: PistasDeDificultad | null | undefined): Dificultad {
   const explicita = String(data?.dificultad || '').toUpperCase().trim();
   if (explicita === 'FACIL' || explicita === 'MEDIO' || explicita === 'ALTA') return explicita;
 
