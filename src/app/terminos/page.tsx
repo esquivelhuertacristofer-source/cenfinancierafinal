@@ -29,7 +29,7 @@ export default function TerminosPage() {
           <section className="space-y-4 text-[#334155] leading-relaxed">
             <h2 className="text-xl font-black text-[#011C40]">1. Aceptación de los términos</h2>
             <p>
-              Al acceder y utilizar la plataforma CEN (en adelante "la Plataforma"), usted acepta quedar vinculado por los presentes Términos de Uso. Si no está de acuerdo con alguno de estos términos, le pedimos que se abstenga de utilizar la Plataforma.
+              Al acceder y utilizar la plataforma CEN (en adelante &quot;la Plataforma&quot;), usted acepta quedar vinculado por los presentes Términos de Uso. Si no está de acuerdo con alguno de estos términos, le pedimos que se abstenga de utilizar la Plataforma.
             </p>
           </section>
 
@@ -61,7 +61,7 @@ export default function TerminosPage() {
           <section className="space-y-4 text-[#334155] leading-relaxed">
             <h2 className="text-xl font-black text-[#011C40]">5. Limitación de responsabilidad</h2>
             <p>
-              CEN provee la Plataforma "tal como está" y no garantiza que estará libre de interrupciones o errores. En ningún caso CEN será responsable por daños indirectos, incidentales o consecuentes derivados del uso o imposibilidad de uso de la Plataforma.
+              CEN provee la Plataforma &quot;tal como está&quot; y no garantiza que estará libre de interrupciones o errores. En ningún caso CEN será responsable por daños indirectos, incidentales o consecuentes derivados del uso o imposibilidad de uso de la Plataforma.
             </p>
           </section>
 

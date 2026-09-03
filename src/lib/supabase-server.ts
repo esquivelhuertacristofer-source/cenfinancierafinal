@@ -1,5 +1,6 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { mensajeDeError } from '@/lib/errores'
 
 export async function createSupabaseServerClient() {
   const cookieStore = await cookies()
@@ -59,8 +60,10 @@ export async function requireAdminSession() {
       10000,
       'SUPABASE_UNAVAILABLE: tiempo de espera agotado al verificar la sesión'
     )
-  } catch (err: any) {
-    if (err?.message?.startsWith('SUPABASE_UNAVAILABLE')) throw err
+  } catch (err: unknown) {
+    /* Se deja pasar tal cual el error que ya trae el prefijo: lo puso `withServerTimeout` y
+       aguas arriba se distingue por el. Cualquier otro se envuelve con un mensaje propio. */
+    if (mensajeDeError(err).startsWith('SUPABASE_UNAVAILABLE')) throw err
     throw new Error('SUPABASE_UNAVAILABLE: no se pudo verificar la sesión')
   }
   const { data: { user }, error: userError } = userResult
@@ -76,8 +79,10 @@ export async function requireAdminSession() {
       10000,
       'SUPABASE_UNAVAILABLE: tiempo de espera agotado al verificar el perfil'
     )
-  } catch (err: any) {
-    if (err?.message?.startsWith('SUPABASE_UNAVAILABLE')) throw err
+  } catch (err: unknown) {
+    /* Se deja pasar tal cual el error que ya trae el prefijo: lo puso `withServerTimeout` y
+       aguas arriba se distingue por el. Cualquier otro se envuelve con un mensaje propio. */
+    if (mensajeDeError(err).startsWith('SUPABASE_UNAVAILABLE')) throw err
     throw new Error('SUPABASE_UNAVAILABLE: no se pudo verificar el perfil')
   }
   const { data: profile, error: profileError } = profileResult

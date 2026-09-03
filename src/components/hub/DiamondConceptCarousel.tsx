@@ -141,7 +141,7 @@ export default function DiamondConceptCarousel() {
                 {currentCard.title}
               </h3>
               <p className="text-xl text-white/40 font-medium leading-relaxed italic max-w-xl">
-                "{currentCard.description}"
+                &quot;{currentCard.description}&quot;
               </p>
               
               <div className="mt-12 flex items-center gap-4">

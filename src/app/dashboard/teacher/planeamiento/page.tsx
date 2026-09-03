@@ -380,7 +380,7 @@ export default function PlaneamientoPage() {
                         Introducción al <span className="premium-gradient-text">Marco Teórico</span>
                       </h2>
                       <p className="text-2xl text-slate-500 font-medium leading-relaxed italic">
-                        "{activeUnit?.theory.introduction}"
+                        &quot;{activeUnit?.theory.introduction}&quot;
                       </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
@@ -515,7 +515,7 @@ export default function PlaneamientoPage() {
                     <div className="space-y-4">
                       {activeUnit?.teacher_tips.map((tip: string, i: number) => (
                         <p key={i} className="text-sm font-bold text-[#011C40]/70 leading-relaxed italic">
-                          "{tip}"
+                          &quot;{tip}&quot;
                         </p>
                       ))}
                     </div>

@@ -28,6 +28,7 @@ import {
 import { logoutAction } from "../../actions/authActions";
 import jsPDF from "jspdf";
 import Papa from "papaparse";
+import { mensajeDeError } from '@/lib/errores';
 
 interface Grupo { id: string; nombre: string; grado: string }
 interface ImportRow {
@@ -155,8 +156,8 @@ export default function AdminUsuariosPage() {
       await createGrupo(newGroupName.trim(), grado, null);
       setNewGroupName("");
       await refreshGrupos();
-    } catch (e: any) {
-      alert(`Error creando grupo: ${e.message}`);
+    } catch (e: unknown) {
+      alert(`Error creando grupo: ${mensajeDeError(e)}`);
     } finally {
       setCreatingGroup(false);
     }
@@ -177,9 +178,9 @@ export default function AdminUsuariosPage() {
       const res = await searchUsers(term);
       setSearchResults(res);
       if (res.length === 0) setSearchError("No se encontraron usuarios con ese criterio.");
-    } catch (e: any) {
+    } catch (e: unknown) {
       setSearchResults([]);
-      setSearchError(e.message);
+      setSearchError(mensajeDeError(e));
     } finally {
       setSearching(false);
     }
@@ -230,8 +231,8 @@ export default function AdminUsuariosPage() {
           : "Perfil actualizado correctamente.",
       });
       await refreshSelectedUserFromSearch();
-    } catch (e: any) {
-      setRepairMessage({ type: "error", text: e.message });
+    } catch (e: unknown) {
+      setRepairMessage({ type: "error", text: mensajeDeError(e) });
     } finally {
       setRepairSaving(false);
     }
@@ -259,8 +260,8 @@ export default function AdminUsuariosPage() {
       await resetUserPassword(selectedUser.id, newPasswordValue.trim());
       setResetMessage({ type: "success", text: "Contraseña restablecida correctamente." });
       setNewPasswordValue("");
-    } catch (e: any) {
-      setResetMessage({ type: "error", text: e.message });
+    } catch (e: unknown) {
+      setResetMessage({ type: "error", text: mensajeDeError(e) });
     } finally {
       setResettingPassword(false);
     }
@@ -346,8 +347,8 @@ export default function AdminUsuariosPage() {
     try {
       const res = await onboardInstitutionalUsers(names, selectedGroup || null, role, grado, password);
       setResults(res);
-    } catch (err: any) {
-      alert(`Error: ${err.message}`);
+    } catch (err: unknown) {
+      alert(`Error: ${mensajeDeError(err)}`);
     } finally {
       setProcessing(false);
     }

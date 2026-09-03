@@ -148,7 +148,7 @@ export default function BuilderActivity({ data, onComplete, onClose, accent }: P
 
                <div className="space-y-4">
                   <h2 className="text-4xl md:text-7xl font-black tracking-tighter italic text-white uppercase">¡Estrategia Creada!</h2>
-                  <p className="text-white/40 text-2xl font-medium">Has completado tu plan de: <br/> <span className="text-white">"{data.titulo}"</span></p>
+                  <p className="text-white/40 text-2xl font-medium">Has completado tu plan de: <br/> <span className="text-white">&quot;{data.titulo}&quot;</span></p>
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">

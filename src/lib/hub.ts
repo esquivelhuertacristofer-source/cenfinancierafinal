@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase-browser';
 import { PILLAR_VIDEOS_GENERADOS, urlVideo } from '@/lib/videos-generados';
+import { mensajeDeError } from '@/lib/errores';
 
 export { supabase };
 
@@ -516,8 +517,8 @@ export async function markActivityComplete(
     addToSyncQueue(userId, activityId, { score: opts.score, tiempoSegundos: opts.tiempo_segundos, lastStep: opts.last_step });
     return false;
 
-  } catch (e: any) {
-    console.error(`[markActivityComplete] ❌ Excepción inesperada — ${e?.message ?? e}`);
+  } catch (e: unknown) {
+    console.error(`[markActivityComplete] ❌ Excepción inesperada — ${mensajeDeError(e)}`);
     addToSyncQueue(userId, activityId, { score: opts.score, tiempoSegundos: opts.tiempo_segundos, lastStep: opts.last_step });
     return false;
   }

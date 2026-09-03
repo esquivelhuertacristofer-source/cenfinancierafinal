@@ -291,7 +291,7 @@ export default function BibliografiaPage() {
                       <Info className="w-3 h-3" /> Por qué lo recomendamos
                    </div>
                    <p className="text-[12px] font-bold text-[#011C40]/70 leading-relaxed italic">
-                     "{resource.longDescription}"
+                     &quot;{resource.longDescription}&quot;
                    </p>
                 </div>
               </div>

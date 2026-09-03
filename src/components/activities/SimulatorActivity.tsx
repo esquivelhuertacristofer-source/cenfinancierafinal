@@ -359,7 +359,7 @@ export default function SimulatorActivity({ data, onComplete, onClose, accent }:
                 </motion.div>
                 <div className="space-y-4">
                    <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase">Simulación Validada</h2>
-                   <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">"{data.titulo}"</span></p>
+                   <p className="text-white/40 text-xl font-medium leading-relaxed">Has superado los desafíos técnicos de <br/> <span className="text-white">&quot;{data.titulo}&quot;</span></p>
                 </div>
                 <button
                   onClick={() => {

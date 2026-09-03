@@ -34,6 +34,11 @@ export default function HubError({
             <RefreshCw size={16} />
             Reintentar
           </button>
+          {/* Recarga completa a proposito, no <Link>. Esto es una frontera de error: el arbol de
+              React acaba de romperse, y navegar en cliente lo mantiene vivo con el estado corrupto
+              que causo el fallo. Un <a> tira la pagina entera y arranca limpio, que es lo unico
+              fiable cuando ya no se puede confiar en lo que hay en memoria. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/"
             className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/10 text-white font-bold hover:bg-white/15 transition-all"

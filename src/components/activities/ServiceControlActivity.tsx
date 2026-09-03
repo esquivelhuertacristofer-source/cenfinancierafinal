@@ -250,7 +250,7 @@ export default function ServiceControlActivity({ data, onComplete, onClose }: Pr
                     ) : (
                       <>
                          ¡Ceny dejó los servicios encendidos! <br />
-                         Haz clic en los botones de <span className="text-white font-bold">"OPTIMIZAR"</span> para bajar el consumo. <br />
+                         Haz clic en los botones de <span className="text-white font-bold">&quot;OPTIMIZAR&quot;</span> para bajar el consumo. <br />
                          <span className="text-rose-400 font-bold">¡Si las barras llegan al rojo, tu dinero desaparecerá!</span>
                       </>
                     )}

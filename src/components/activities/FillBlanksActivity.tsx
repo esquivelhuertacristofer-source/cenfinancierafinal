@@ -94,7 +94,7 @@ export default function FillBlanksActivity({ data, onComplete, onClose }: Props)
          <div className="space-y-12 relative z-10">
             <header className="space-y-4">
                <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">{data.titulo}</h1>
-               <p className="text-white/40 font-medium italic">"{data.contexto}"</p>
+               <p className="text-white/40 font-medium italic">&quot;{data.contexto}&quot;</p>
             </header>
 
             <div className="text-xl md:text-3xl font-medium leading-[1.8] text-white/80">

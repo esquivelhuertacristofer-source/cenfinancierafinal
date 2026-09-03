@@ -64,7 +64,7 @@ export default function MissionPage() {
               ))}
             </div>
             
-            <p className="text-2xl text-white/40 mb-12 max-w-xl leading-relaxed italic">"Desarrolla las competencias necesarias para dominar el ecosistema financiero del siglo XXI."</p>
+            <p className="text-2xl text-white/40 mb-12 max-w-xl leading-relaxed italic">&quot;Desarrolla las competencias necesarias para dominar el ecosistema financiero del siglo XXI.&quot;</p>
             
             {pillar.videoUrl && (
               <button 

@@ -2,6 +2,7 @@
 
 import { createClient } from "@supabase/supabase-js";
 import { requireAdminSession, withServerTimeout } from "@/lib/supabase-server";
+import { mensajeDeError } from '@/lib/errores';
 
 // Admin client con service_role — solo en Server Actions, nunca en el cliente
 function getAdminClient() {
@@ -250,8 +251,8 @@ export async function onboardInstitutionalUsers(
       }
 
       results.success.push({ name, email });
-    } catch (err: any) {
-      results.errors.push({ name, message: err?.message ?? "Error desconocido" });
+    } catch (err: unknown) {
+      results.errors.push({ name, message: mensajeDeError(err) });
     }
   }
 
@@ -290,8 +291,8 @@ export async function createGrupo(
       admin.from("grupos").insert({ nombre, grado, id_profesor: idProfesor ?? null, escuela_id: escuelaId }).select("id, nombre").single(),
       "crear grupo"
     ));
-  } catch (err: any) {
-    console.error('[adminActions] createGrupo timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminActions] createGrupo timeout/conexión:', mensajeDeError(err));
     throw new Error("No se pudo crear el grupo: falla de conexión con la base de datos. Intente de nuevo.");
   }
 
@@ -322,8 +323,8 @@ export async function getGrupos(): Promise<{ id: string; nombre: string; grado: 
       query.order("nombre"),
       "cargar grupos"
     ));
-  } catch (err: any) {
-    console.error('[adminActions] getGrupos timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminActions] getGrupos timeout/conexión:', mensajeDeError(err));
     throw new Error("No se pudieron cargar los grupos: falla de conexión con la base de datos.");
   }
   if (error) {
@@ -350,8 +351,8 @@ export async function getEscuelas(): Promise<EscuelaStats[]> {
       query.order("created_at", { ascending: false }),
       "cargar escuelas"
     ));
-  } catch (err: any) {
-    console.error('[adminActions] getEscuelas timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminActions] getEscuelas timeout/conexión:', mensajeDeError(err));
     throw new Error("No se pudieron cargar las escuelas: falla de conexión con la base de datos.");
   }
   if (error || !data) {
@@ -370,8 +371,8 @@ export async function getEscuelas(): Promise<EscuelaStats[]> {
           admin.from("alumnos_grupos").select("*", { count: "exact", head: true }).in("id_grupo", grupoIds),
           `conteo de alumnos de ${e.nombre}`
         ));
-      } catch (err: any) {
-        console.error('[adminActions] getEscuelas conteo timeout/conexión:', err?.message);
+      } catch (err: unknown) {
+        console.error('[adminActions] getEscuelas conteo timeout/conexión:', mensajeDeError(err));
         throw new Error(`No se pudo cargar el conteo de alumnos de '${e.nombre}': falla de conexión con la base de datos.`);
       }
       alumnos_count = count ?? 0;
@@ -428,9 +429,9 @@ export async function onboardEscuela(
       admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),
       "buscar escuela existente"
     ));
-  } catch (err: any) {
-    console.error(`[adminActions] onboardEscuela: falla de conexión al buscar escuela existente '${nombreTrim}':`, err?.message);
-    throw new Error(`No se pudo verificar si la escuela ya existe: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+  } catch (err: unknown) {
+    console.error(`[adminActions] onboardEscuela: falla de conexión al buscar escuela existente '${nombreTrim}':`, mensajeDeError(err));
+    throw new Error(`No se pudo verificar si la escuela ya existe: falla de conexión con la base de datos (${mensajeDeError(err)}).`);
   }
   if (escuelaErr) {
     console.error(`[adminActions] onboardEscuela: error al buscar escuela existente '${nombreTrim}':`, escuelaErr.message);
@@ -447,9 +448,9 @@ export async function onboardEscuela(
         admin.from("escuelas").insert({ nombre: nombreTrim }).select("id, nombre").single(),
         "crear escuela"
       ));
-    } catch (err: any) {
-      console.error(`[adminActions] onboardEscuela: falla de conexión al crear escuela '${nombreTrim}':`, err?.message);
-      throw new Error(`No se pudo crear la escuela: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+    } catch (err: unknown) {
+      console.error(`[adminActions] onboardEscuela: falla de conexión al crear escuela '${nombreTrim}':`, mensajeDeError(err));
+      throw new Error(`No se pudo crear la escuela: falla de conexión con la base de datos (${mensajeDeError(err)}).`);
     }
 
     // 23505 = unique_violation: otra llamada concurrente ganó la carrera y ya
@@ -465,8 +466,8 @@ export async function onboardEscuela(
           admin.from("escuelas").select("id, nombre").eq("nombre", nombreTrim).maybeSingle(),
           "recuperar escuela tras colisión de creación"
         ));
-      } catch (err: any) {
-        throw new Error(`No se pudo recuperar la escuela tras una colisión de creación concurrente: falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).`);
+      } catch (err: unknown) {
+        throw new Error(`No se pudo recuperar la escuela tras una colisión de creación concurrente: falla de conexión con la base de datos (${mensajeDeError(err)}).`);
       }
       if (racedErr || !raced) {
         throw new Error(`No se pudo recuperar la escuela tras una colisión de creación concurrente: ${racedErr?.message ?? "no se encontró la fila"}.`);
@@ -506,10 +507,10 @@ export async function onboardEscuela(
         admin.from("grupos").select("id").eq("nombre", grupoNombre).eq("escuela_id", escuela.id).maybeSingle(),
         `buscar grupo existente ${grupoNombre}`
       ));
-    } catch (err: any) {
-      console.error(`[adminActions] onboardEscuela: falla de conexión al buscar grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, err?.message);
+    } catch (err: unknown) {
+      console.error(`[adminActions] onboardEscuela: falla de conexión al buscar grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, mensajeDeError(err));
       for (const m of members) {
-        result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).` });
+        result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${mensajeDeError(err)}).` });
       }
       continue;
     }
@@ -528,10 +529,10 @@ export async function onboardEscuela(
           admin.from("grupos").insert({ nombre: grupoNombre, grado, escuela_id: escuela.id }).select("id").single(),
           `crear grupo ${grupoNombre}`
         ));
-      } catch (err: any) {
-        console.error(`[adminActions] onboardEscuela: falla de conexión al crear grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, err?.message);
+      } catch (err: unknown) {
+        console.error(`[adminActions] onboardEscuela: falla de conexión al crear grupo '${grupoNombre}' (escuela='${escuela.nombre}'):`, mensajeDeError(err));
         for (const m of members) {
-          result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${err?.message ?? "sin detalle"}).` });
+          result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': falla de conexión con la base de datos (${mensajeDeError(err)}).` });
         }
         continue;
       }
@@ -548,9 +549,9 @@ export async function onboardEscuela(
             admin.from("grupos").select("id").eq("nombre", grupoNombre).eq("escuela_id", escuela.id).maybeSingle(),
             `recuperar grupo tras colisión ${grupoNombre}`
           ));
-        } catch (err: any) {
+        } catch (err: unknown) {
           for (const m of members) {
-            result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': no se pudo recuperar tras una colisión de creación concurrente (${err?.message ?? "sin detalle"}).` });
+            result.errors.push({ name: m.nombre, mensaje: `Grupo '${grupoNombre}': no se pudo recuperar tras una colisión de creación concurrente (${mensajeDeError(err)}).` });
           }
           continue;
         }
@@ -610,9 +611,9 @@ export async function onboardEscuela(
           return { ok: false, name, mensaje: authErr?.message ?? "Error al crear cuenta" };
         }
         return { ok: true, name, email, userId: authData.user.id };
-      } catch (err: any) {
-        console.error(`[adminActions] onboardEscuela: excepción al crear cuenta de profesor '${name}' (grupo='${grupoNombre}'):`, err?.message);
-        return { ok: false, name, mensaje: err?.message ?? "Error desconocido" };
+      } catch (err: unknown) {
+        console.error(`[adminActions] onboardEscuela: excepción al crear cuenta de profesor '${name}' (grupo='${grupoNombre}'):`, mensajeDeError(err));
+        return { ok: false, name, mensaje: mensajeDeError(err) };
       }
     });
 
@@ -634,9 +635,9 @@ export async function onboardEscuela(
         );
         if (assignErr) throw assignErr;
         result.results.push({ name, email, grupo: grupoNombre, grado, rol: "teacher" });
-      } catch (err: any) {
-        console.error(`[adminActions] onboardEscuela: error al vincular profesor '${name}' al grupo '${grupoNombre}':`, err?.message);
-        result.errors.push({ name, mensaje: err?.message ?? "Error desconocido" });
+      } catch (err: unknown) {
+        console.error(`[adminActions] onboardEscuela: error al vincular profesor '${name}' al grupo '${grupoNombre}':`, mensajeDeError(err));
+        result.errors.push({ name, mensaje: mensajeDeError(err) });
       }
     }
 
@@ -683,9 +684,9 @@ export async function onboardEscuela(
           return { ok: false, name, mensaje: linkErr.message };
         }
         return { ok: true, name, email };
-      } catch (err: any) {
-        console.error(`[adminActions] onboardEscuela: excepción al procesar alumno '${name}' (grupo='${grupoNombre}'):`, err?.message);
-        return { ok: false, name, mensaje: err?.message ?? "Error desconocido" };
+      } catch (err: unknown) {
+        console.error(`[adminActions] onboardEscuela: excepción al procesar alumno '${name}' (grupo='${grupoNombre}'):`, mensajeDeError(err));
+        return { ok: false, name, mensaje: mensajeDeError(err) };
       }
     });
 

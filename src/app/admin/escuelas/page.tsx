@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import Papa from "papaparse";
 import jsPDF from "jspdf";
+import { mensajeDeError } from '@/lib/errores';
 
 // ─── Tipos ────────────────────────────────────────────────────────────────────
 
@@ -324,8 +325,8 @@ export default function AdminEscuelasPage() {
       setDuplicateNames([]);
       setManualText("");
       if (fileRef.current) fileRef.current.value = "";
-    } catch (err: any) {
-      alert(`Error: ${err.message}`);
+    } catch (err: unknown) {
+      alert(`Error: ${mensajeDeError(err)}`);
     } finally {
       setProcessing(false);
     }

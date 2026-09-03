@@ -252,7 +252,7 @@ export default function QuizActivity({ data, onComplete, onClose }: Props) {
                           </div>
                           <div className="space-y-1">
                              <div className="text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.5em] text-[#FF8C00]">Fundamento Diamond</div>
-                             <p className="text-xl md:text-2xl font-black italic uppercase text-white/90">"{currentQuestion.explicacion}"</p>
+                             <p className="text-xl md:text-2xl font-black italic uppercase text-white/90">&quot;{currentQuestion.explicacion}&quot;</p>
                           </div>
                        </div>
 

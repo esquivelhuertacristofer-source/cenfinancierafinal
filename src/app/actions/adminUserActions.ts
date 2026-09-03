@@ -2,6 +2,7 @@
 
 import { createClient } from "@supabase/supabase-js";
 import { requireAdminSession, withServerTimeout } from "@/lib/supabase-server";
+import { mensajeDeError } from '@/lib/errores';
 
 // Admin client con service_role — solo en Server Actions, nunca en el cliente.
 // (Mismo patrón que src/app/actions/adminActions.ts — no se comparte instancia
@@ -79,8 +80,8 @@ export async function searchUsers(rawTerm: string): Promise<AdminUserSearchResul
       query.order("full_name").limit(MAX_SEARCH_RESULTS),
       "buscar usuarios"
     ));
-  } catch (err: any) {
-    console.error('[adminUserActions] searchUsers timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminUserActions] searchUsers timeout/conexión:', mensajeDeError(err));
     throw new Error("No se pudo buscar usuarios: falla de conexión con la base de datos.");
   }
   if (error) {
@@ -167,8 +168,8 @@ export async function resetUserPassword(userId: string, newPassword: string): Pr
         admin.from("profiles").select("role, escuela_id").eq("id", userId).single(),
         "verificar perfil objetivo"
       ));
-    } catch (err: any) {
-      console.error('[adminUserActions] resetUserPassword target lookup timeout/conexión:', err?.message);
+    } catch (err: unknown) {
+      console.error('[adminUserActions] resetUserPassword target lookup timeout/conexión:', mensajeDeError(err));
       throw new Error("No se pudo restablecer la contraseña: falla de conexión con la base de datos.");
     }
     if (targetErr || !targetProfile) {
@@ -188,8 +189,8 @@ export async function resetUserPassword(userId: string, newPassword: string): Pr
       admin.auth.admin.updateUserById(userId, { password: pw }),
       "restablecer contraseña"
     ));
-  } catch (err: any) {
-    console.error('[adminUserActions] resetUserPassword timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminUserActions] resetUserPassword timeout/conexión:', mensajeDeError(err));
     throw new Error("No se pudo restablecer la contraseña: falla de conexión con la base de datos.");
   }
   if (error) {
@@ -248,8 +249,8 @@ export async function repairUserProfile(
         admin.from("profiles").select("escuela_id").eq("id", userId).single(),
         "verificar escuela del perfil objetivo"
       ));
-    } catch (err: any) {
-      console.error('[adminUserActions] repairUserProfile target lookup timeout/conexión:', err?.message);
+    } catch (err: unknown) {
+      console.error('[adminUserActions] repairUserProfile target lookup timeout/conexión:', mensajeDeError(err));
       throw new Error("No se pudo actualizar el perfil: falla de conexión con la base de datos.");
     }
     if (targetErr || !targetProfile) {
@@ -315,8 +316,8 @@ export async function repairUserProfile(
         admin.from("profiles").update(updatePayload).eq("id", userId),
         "actualizar perfil"
       ));
-    } catch (err: any) {
-      console.error('[adminUserActions] repairUserProfile update timeout/conexión:', err?.message);
+    } catch (err: unknown) {
+      console.error('[adminUserActions] repairUserProfile update timeout/conexión:', mensajeDeError(err));
       throw new Error("No se pudo actualizar el perfil: falla de conexión con la base de datos.");
     }
     if (error) {
@@ -334,8 +335,8 @@ export async function repairUserProfile(
       admin.from("profiles").select("role, group_id").eq("id", userId).single(),
       "verificar perfil actualizado"
     ));
-  } catch (err: any) {
-    console.error('[adminUserActions] repairUserProfile reread timeout/conexión:', err?.message);
+  } catch (err: unknown) {
+    console.error('[adminUserActions] repairUserProfile reread timeout/conexión:', mensajeDeError(err));
     throw new Error("El perfil se actualizó, pero no se pudo verificar el vínculo de grupo: falla de conexión con la base de datos.");
   }
   if (profileErr || !profile) {
@@ -356,8 +357,8 @@ export async function repairUserProfile(
           .maybeSingle(),
         "verificar vínculo alumno-grupo"
       ));
-    } catch (err: any) {
-      console.error('[adminUserActions] repairUserProfile check link timeout/conexión:', err?.message);
+    } catch (err: unknown) {
+      console.error('[adminUserActions] repairUserProfile check link timeout/conexión:', mensajeDeError(err));
       throw new Error("El perfil se actualizó, pero no se pudo verificar alumnos_grupos: falla de conexión con la base de datos.");
     }
     if (existingErr) {

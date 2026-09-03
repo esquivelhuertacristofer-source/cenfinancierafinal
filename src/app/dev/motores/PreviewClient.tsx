@@ -2,6 +2,7 @@
 
 import React, { useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { mensajeDeError } from '@/lib/errores';
 
 export interface ItemActividad {
   archivo: string;
@@ -100,8 +101,8 @@ export default function PreviewClient({ catalogo }: { catalogo: ItemActividad[] 
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       setDatos(await r.json());
       setMontaje((n) => n + 1);
-    } catch (e: any) {
-      setError(e?.message || 'no se pudo cargar');
+    } catch (e: unknown) {
+      setError(mensajeDeError(e) || 'no se pudo cargar');
     }
   }, []);
 

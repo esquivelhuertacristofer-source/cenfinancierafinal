@@ -302,7 +302,7 @@ const TheoryTab = memo(({ unit, onComplete, isDone, color, theme, onShowVideo, n
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-20 items-center">
             <div className="space-y-8 order-2 lg:order-1">
                <p className="text-xl md:text-3xl lg:text-4xl font-medium leading-snug text-white/80 tracking-tight italic">
-                  "{intro}"
+                  &quot;{intro}&quot;
                </p>
                
                <div className="flex flex-wrap gap-4">
@@ -895,7 +895,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
                 <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">¡Felicidades, Estudiante!</h2>
                 <p className="text-base md:text-xl text-white/50 font-medium leading-relaxed">
                    Has completado con éxito la misión: <br/>
-                   <span className="text-white">"{unit.title}"</span>
+                   <span className="text-white">&quot;{unit.title}&quot;</span>
                 </p>
              </div>
 
