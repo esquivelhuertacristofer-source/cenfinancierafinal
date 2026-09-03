@@ -77,7 +77,7 @@ export default function MissionPage() {
           <div className="hidden lg:flex justify-end animate-in fade-in zoom-in duration-1000">
             <div className="relative">
                <div className="absolute inset-0 bg-[#FF8C00]/20 blur-[120px] rounded-full animate-pulse" />
-               <img src="/assets/landing-v3/Secundaria1.png" className="w-[500px] h-[500px] object-contain relative z-10" alt="" />
+               <img src="/assets/landing-v3/Secundaria1.webp" className="w-[500px] h-[500px] object-contain relative z-10" alt="" />
             </div>
           </div>
         </div>

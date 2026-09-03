@@ -77,6 +77,18 @@ const MODALITY_ICONS_MODERN: Record<string, LucideIcon> = {
 
 type ThemeType = 'general' | 'emprendimiento' | 'deuda' | 'fuga-dinero' | 'imprevistos' | 'banco' | 'deseo' | 'planeacion-financiera' | 'guia-financiera' | 'ahorro';
 
+/** Temas que tienen carpeta propia de portadas en `public/assets/temas/`. */
+const TEMAS_CON_PORTADA: string[] = ['emprendimiento', 'deuda', 'fuga-dinero', 'imprevistos',
+  'banco', 'deseo', 'planeacion-financiera', 'guia-financiera', 'ahorro'];
+
+/**
+ * Cuantas portadas hay en cada carpeta de tema.
+ *
+ * Solo se anotan las que no tienen seis; el resto cae al valor por defecto. Un test comprueba que
+ * este mapa coincide con lo que hay en disco, para que aniadir o quitar una imagen no deje huecos.
+ */
+const PORTADAS_POR_TEMA: Record<string, number> = { 'planeacion-financiera': 5 };
+
 function getUnitTheme(unit: Unit): ThemeType {
   const text = (unit.title + ' ' + (unit.objective || '')).toLowerCase();
   if (text.includes('emprend') || text.includes('negocio') || text.includes('idea') || text.includes('vender') || text.includes('empresa')) return 'emprendimiento';
@@ -140,7 +152,7 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
        {/* Adorno del fondo: no aporta informacion, asi que se marca como decorativa. */}
        <img 
           alt=""
-          src="/assets/png/coin-portal.png" 
+          src="/assets/png/coin-portal.webp" 
           className="absolute -top-24 -left-24 w-[340px] h-[340px] md:-top-40 md:-left-40 md:w-[600px] md:h-[600px] animate-spin-slow mix-blend-screen grayscale brightness-150" 
           loading="lazy"
           decoding="async"
@@ -148,7 +160,7 @@ const AdventureBackground = memo(({ color, theme }: { color: string, theme: Them
        />
        <img 
           alt=""
-          src="/assets/png/coin-bill-friends.png" 
+          src="/assets/png/coin-bill-friends.webp" 
           className="absolute bottom-10 right-10 w-56 h-56 md:w-96 md:h-96 animate-float-slow opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" 
           loading="lazy"
           decoding="async"
@@ -182,7 +194,7 @@ const ProgressEnergyBar = memo(({ progress }: { progress: number }) => (
            {/* La mascota acompania al texto de al lado; nombrarla lo repetiria. */}
            <img 
               alt=""
-              src="/assets/png/ceny-guide.png" 
+              src="/assets/png/ceny-guide.webp" 
               className="w-10 h-10 md:w-16 md:h-16 relative z-10 drop-shadow-2xl animate-bounce-slow" 
               fetchPriority="high"
            />
@@ -249,14 +261,13 @@ const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabe
   const unitNumber = parseInt(unit.code.match(/\d+/)?.[0] || '1');
   
   const getThemeImage = (idx: number) => {
-    if (theme === 'general') return `/assets/extra/${(unitNumber + idx) % 18 || 1}.png`;
-    const themeFolderMap: Record<string, string> = {
-      'emprendimiento': 'emprendimiento', 'deuda': 'deuda', 'fuga-dinero': 'fuga-dinero',
-      'imprevistos': 'imprevistos', 'banco': 'banco', 'deseo': 'deseo',
-      'planeacion-financiera': 'planeacion-financiera', 'guia-financiera': 'guia-financiera', 'ahorro': 'ahorro'
-    };
-    const folder = themeFolderMap[theme] || 'extra';
-    return `/assets/temas/${folder}/${(idx % 6) || 1}.png`;
+    if (theme === 'general') return `/assets/extra/${(unitNumber + idx) % 18 || 1}.webp`;
+    const folder = TEMAS_CON_PORTADA.includes(theme) ? theme : 'extra';
+    /* Cuantas portadas hay de verdad en esa carpeta. Casi todas tienen seis, pero
+       `planeacion-financiera` solo tiene cinco, y pedir la sexta dejaba un hueco en la ficha de
+       todas sus unidades: una imagen que no carga no da error, solo no aparece. */
+    const cuantas = PORTADAS_POR_TEMA[folder] ?? 6;
+    return `/assets/temas/${folder}/${(idx % cuantas) || 1}.webp`;
   };
 
   return (
@@ -945,7 +956,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
           <div className="relative z-10 w-full max-w-2xl bg-white/[0.03] border border-white/10 rounded-[36px] md:rounded-[60px] p-8 md:p-20 text-center shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-64 h-64">
                 <div className="absolute inset-0 bg-[#FF8C00] blur-3xl opacity-30 animate-pulse" />
-                <img src="/assets/png/coin-bill-friends.png" alt="" className="w-full h-full relative z-10 animate-bounce-slow" />
+                <img src="/assets/png/coin-bill-friends.webp" alt="" className="w-full h-full relative z-10 animate-bounce-slow" />
              </div>
              
              <div className="mt-16 mb-12">

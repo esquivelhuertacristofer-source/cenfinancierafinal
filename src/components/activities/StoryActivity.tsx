@@ -63,7 +63,7 @@ export default function StoryActivity({ data, onComplete }: Props) {
   };
 
   // Fallback de imagen para asegurar que NADA se vea roto
-  const characterImage = "/assets/png/ceny-guide.png";
+  const characterImage = "/assets/png/ceny-guide.webp";
 
   if (!currentNode) {
     return (

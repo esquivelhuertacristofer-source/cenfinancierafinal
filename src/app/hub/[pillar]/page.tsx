@@ -10,14 +10,14 @@ import { tituloDeUrl } from '@/lib/videos-generados';
 import type { PillarMeta } from '@/lib/hub';
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
-  primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
-  construyendo_independencia: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
-  planificacion_y_crecimiento: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
-  planificacion_y_metas: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
-  emprendimiento: { image: '/assets/landing-v3/4.png', accent: '#C084FC', bg: 'rgba(192, 132, 252, 0.05)' },
-  ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
-  consumo_inteligente: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
-  inversion: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.webp', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
+  construyendo_independencia: { image: '/assets/landing-v3/2.webp', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
+  planificacion_y_crecimiento: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  planificacion_y_metas: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  emprendimiento: { image: '/assets/landing-v3/4.webp', accent: '#C084FC', bg: 'rgba(192, 132, 252, 0.05)' },
+  ahorro: { image: '/assets/landing-v3/1.webp', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
+  consumo_inteligente: { image: '/assets/landing-v3/2.webp', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
+  inversion: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
 };
 
 const SOUNDS = {

@@ -6,7 +6,7 @@ export const TIERS = [
     tags: ["Ahorro", "Deseos vs Necesidades"],
     blurb: "Primeros pasos en el mundo del dinero a través de juegos y aventuras mágicas.",
     color: "orange",
-    photo: "/assets/landing-v3/1.png",
+    photo: "/assets/landing-v3/1.webp",
     accent: "navy"
   },
   {
@@ -16,7 +16,7 @@ export const TIERS = [
     tags: ["Presupuesto", "Metas"],
     blurb: "Domina el arte de planear y descubre cómo tus decisiones crean tu futuro.",
     color: "cream",
-    photo: "/assets/landing-v3/2.png",
+    photo: "/assets/landing-v3/2.webp",
     accent: "orange"
   },
   {
@@ -26,7 +26,7 @@ export const TIERS = [
     tags: ["Inversión", "Emprendimiento"],
     blurb: "Entiende el mercado y empieza a construir tus propios proyectos reales.",
     color: "cyan",
-    photo: "/assets/landing-v3/3.png",
+    photo: "/assets/landing-v3/3.webp",
     accent: "navy"
   },
   {
@@ -36,7 +36,7 @@ export const TIERS = [
     tags: ["Crédito", "Libertad Financiera"],
     blurb: "Prepárate para el mundo real con herramientas avanzadas de gestión.",
     color: "navy",
-    photo: "/assets/landing-v3/4.png",
+    photo: "/assets/landing-v3/4.webp",
     accent: "cyan"
   }
 ];

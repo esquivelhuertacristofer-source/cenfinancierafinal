@@ -54,14 +54,14 @@ import type { GradeMeta, PillarMeta, Unit, UserProfile } from '@/lib/hub';
 type EstiloConVariables = React.CSSProperties & Record<`--${string}`, string | number>;
 
 const PILLAR_CONFIG: Record<string, { image: string; accent: string; bg: string }> = {
-  primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
-  construyendo_independencia: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
-  planificacion_y_crecimiento: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
-  planificacion_y_metas: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
-  emprendimiento: { image: '/assets/landing-v3/4.png', accent: '#C084FC', bg: 'rgba(192, 132, 252, 0.05)' },
-  ahorro: { image: '/assets/landing-v3/1.png', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
-  consumo_inteligente: { image: '/assets/landing-v3/2.png', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
-  inversion: { image: '/assets/landing-v3/3.png', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  primeros_pasos_hacia_el_ahorro: { image: '/assets/landing-v3/1.webp', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
+  construyendo_independencia: { image: '/assets/landing-v3/2.webp', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
+  planificacion_y_crecimiento: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  planificacion_y_metas: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
+  emprendimiento: { image: '/assets/landing-v3/4.webp', accent: '#C084FC', bg: 'rgba(192, 132, 252, 0.05)' },
+  ahorro: { image: '/assets/landing-v3/1.webp', accent: '#FF8C00', bg: 'rgba(255, 140, 0, 0.05)' },
+  consumo_inteligente: { image: '/assets/landing-v3/2.webp', accent: '#4ADE80', bg: 'rgba(74, 222, 128, 0.05)' },
+  inversion: { image: '/assets/landing-v3/3.webp', accent: '#42E8E0', bg: 'rgba(66, 232, 224, 0.05)' },
 };
 
 export default function StudentHubV19() {
@@ -539,19 +539,19 @@ export default function StudentHubV19() {
 
       {/* BACKGROUND ORNAMENTS (DIAMOND 3D ATMOSPHERE) */}
       <div className="bg-ornament" style={{ top: '5%', left: '2%', width: '180px', animation: 'float-ornament 18s infinite ease-in-out', opacity: isDark ? 0.06 : 0.1, filter: 'blur(1px)' }}>
-        <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto rotate-[15deg]" />
+        <img src="/assets/landing-v3/money.webp" alt="" className="w-full h-auto rotate-[15deg]" />
       </div>
       <div className="bg-ornament" style={{ top: '40%', right: '8%', width: '120px', animation: 'float-ornament-alt 12s infinite ease-in-out', opacity: isDark ? 0.04 : 0.08, filter: 'blur(3px)' }}>
-        <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto rotate-[110deg]" />
+        <img src="/assets/landing-v3/money.webp" alt="" className="w-full h-auto rotate-[110deg]" />
       </div>
       <div className="bg-ornament" style={{ bottom: '5%', left: '10%', width: '250px', animation: 'float-ornament 25s infinite ease-in-out', opacity: isDark ? 0.05 : 0.09, filter: 'blur(2px)' }}>
-        <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto -rotate-[45deg]" />
+        <img src="/assets/landing-v3/money.webp" alt="" className="w-full h-auto -rotate-[45deg]" />
       </div>
       <div className="bg-ornament" style={{ bottom: '15%', right: '2%', width: '300px', animation: 'float-ornament-alt 20s infinite ease-in-out', opacity: isDark ? 0.03 : 0.07, filter: 'blur(5px)' }}>
-        <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto rotate-[160deg]" />
+        <img src="/assets/landing-v3/money.webp" alt="" className="w-full h-auto rotate-[160deg]" />
       </div>
       <div className="bg-ornament" style={{ top: '20%', left: '50%', width: '60px', animation: 'float-ornament 10s infinite ease-in-out', opacity: isDark ? 0.1 : 0.15 }}>
-        <img src="/assets/landing-v3/money.png" alt="" className="w-full h-auto rotate-[80deg]" />
+        <img src="/assets/landing-v3/money.webp" alt="" className="w-full h-auto rotate-[80deg]" />
       </div>
 
       {/* MOBILE HAMBURGER */}
@@ -623,7 +623,7 @@ export default function StudentHubV19() {
                    {/* OBJETO 3D / PORTAL DEL GRADO */}
                    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.3)] bg-[#011126]">
                       <img
-                        src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"}
+                        src={gradeMeta?.coreImage || "/assets/png/coin-portal.webp"}
                         alt={gradeMeta?.title ? `Portal del grado: ${gradeMeta.title}` : 'Portal del grado actual'}
                         className="w-full h-full object-cover scale-110"
                         style={{
@@ -1005,10 +1005,10 @@ export default function StudentHubV19() {
             <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-12 lg:gap-24 px-5 md:px-10 lg:px-20 py-32 relative overflow-hidden bg-[#011226] border-b border-white/5 min-h-[650px] w-full mx-auto">
               {/* Elementos Decorativos (Lluvia de Billetes y Objetos) */}
               <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-                <img src="/assets/landing-v3/money.png" alt="" className="absolute -top-10 left-10 w-40 rotate-12 blur-[1px] animate-bounce-slow" />
-                <img src="/assets/landing-v3/money.png" alt="" className="absolute top-1/4 right-10 w-32 -rotate-12 blur-[2px] animate-pulse" />
-                <img src="/assets/landing-v3/money.png" alt="" className="absolute top-1/2 right-1/4 w-36 rotate-45 blur-[1px]" />
-                <img src="/assets/landing-v3/crate.png" alt="" className="absolute bottom-20 left-20 w-32 rotate-12 opacity-40 blur-[2px]" />
+                <img src="/assets/landing-v3/money.webp" alt="" className="absolute -top-10 left-10 w-40 rotate-12 blur-[1px] animate-bounce-slow" />
+                <img src="/assets/landing-v3/money.webp" alt="" className="absolute top-1/4 right-10 w-32 -rotate-12 blur-[2px] animate-pulse" />
+                <img src="/assets/landing-v3/money.webp" alt="" className="absolute top-1/2 right-1/4 w-36 rotate-45 blur-[1px]" />
+                <img src="/assets/landing-v3/crate.webp" alt="" className="absolute bottom-20 left-20 w-32 rotate-12 opacity-40 blur-[2px]" />
               </div>
 
               {/* Portal Circular Integrado */}
@@ -1183,7 +1183,7 @@ export default function StudentHubV19() {
                      <>
                        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
                        <img
-                         src={gradeMeta?.coreImage || "/assets/png/coin-portal.png"}
+                         src={gradeMeta?.coreImage || "/assets/png/coin-portal.webp"}
                          className="w-full h-full object-cover opacity-60"
                          alt="Presentación"
                        />

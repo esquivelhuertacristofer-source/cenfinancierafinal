@@ -77,7 +77,7 @@ export default function LandingPageV3() {
         <main className="main-scroll">
           <nav className="nav">
             <div className="brand">
-              <img src="/assets/landing-v3/LOGOCEN.png" alt="CEN Logo" style={{ height: '64px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+              <img src="/assets/landing-v3/LOGOCEN.webp" alt="CEN Logo" style={{ height: '64px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
             </div>
             <div className="nav-links">
               <a href="#inicio" className="active">Inicio</a>
@@ -120,25 +120,25 @@ export default function LandingPageV3() {
 
                 <div className="hero-right">
                   <div className="hero-circle"></div>
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b1" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b2" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b3" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b4" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b5" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b6" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b7" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b8" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b1" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b2" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b3" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b4" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b5" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b6" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b7" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b8" alt="Decoración" loading="lazy" />
                   {/* New bills on the left */}
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b9" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b10" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b11" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b12" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b13" alt="Decoración" loading="lazy" />
-                  <img src="/assets/landing-v3/money.png" className="deco-img bill b14" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b9" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b10" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b11" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b12" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b13" alt="Decoración" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="deco-img bill b14" alt="Decoración" loading="lazy" />
                   
                   <div className="hero-portrait">
                   <img 
-                    src="/assets/landing-v3/landing.png" 
+                    src="/assets/landing-v3/landing.webp" 
                     alt="CEN Academy Hero Illustration" 
                     style={{ 
                       width: '165%', 
@@ -157,7 +157,7 @@ export default function LandingPageV3() {
                 </div>
                 
                 <div className="floater f1">
-                  <img src="/assets/landing-v3/money.png" className="ic-img" alt="Dinero" loading="lazy" />
+                  <img src="/assets/landing-v3/money.webp" className="ic-img" alt="Dinero" loading="lazy" />
                   <div>
                     <div className="lbl">Mi Primer Ahorro</div>
                     <div className="val">+ 50 Monedas</div>
@@ -165,7 +165,7 @@ export default function LandingPageV3() {
                 </div>
 
                 <div className="floater f2">
-                  <img src="/assets/landing-v3/player.png" className="ic-img" alt="Estudiante" loading="lazy" />
+                  <img src="/assets/landing-v3/player.webp" className="ic-img" alt="Estudiante" loading="lazy" />
                   <div>
                     <div className="lbl">Meta Alcanzada</div>
                     <div className="val">Bici Nueva</div>
@@ -173,7 +173,7 @@ export default function LandingPageV3() {
                 </div>
 
                 <div className="floater f3">
-                  <img src="/assets/landing-v3/helper.png" className="ic-img" alt="Asesor" loading="lazy" />
+                  <img src="/assets/landing-v3/helper.webp" className="ic-img" alt="Asesor" loading="lazy" />
                   <div>
                     <div className="lbl">Rango Actual</div>
                     <div className="val">Ahorrador Jr.</div>
@@ -181,12 +181,12 @@ export default function LandingPageV3() {
                 </div>
 
                 {/* DECORATIVE PNGs FOR DEPTH */}
-                <img src="/assets/landing-v3/client.png" className="deco-img client" alt="Decoración" loading="lazy" />
-                <img src="/assets/landing-v3/crate.png" className="deco-img crate" alt="Decoración" loading="lazy" />
-                <img src="/assets/landing-v3/helper.png" className="deco-img helper-float" alt="Decoración" loading="lazy" />
-                <img src="/assets/landing-v3/money.png" className="deco-img money-float" alt="Decoración" loading="lazy" />
-                <img src="/assets/landing-v3/player.png" className="deco-img player-float" alt="Decoración" loading="lazy" />
-                <img src="/assets/landing-v3/stand.png" className="deco-img stand" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/client.webp" className="deco-img client" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/crate.webp" className="deco-img crate" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/helper.webp" className="deco-img helper-float" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/money.webp" className="deco-img money-float" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/player.webp" className="deco-img player-float" alt="Decoración" loading="lazy" />
+                <img src="/assets/landing-v3/stand.webp" className="deco-img stand" alt="Decoración" loading="lazy" />
               </div>
             </header>
           </div>
@@ -273,7 +273,7 @@ export default function LandingPageV3() {
                   href="/log-in"
                   className="pcard navy"
                   style={{
-                    backgroundImage: `linear-gradient(to right, var(--cen-blue) 0%, rgba(1, 28, 64, 0.9) 35%, transparent 80%), url('/assets/landing-v3/Primaria${item.n}.png')`,
+                    backgroundImage: `linear-gradient(to right, var(--cen-blue) 0%, rgba(1, 28, 64, 0.9) 35%, transparent 80%), url('/assets/landing-v3/Primaria${item.n}.webp')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     border: 'none',
@@ -331,7 +331,7 @@ export default function LandingPageV3() {
                   href="/log-in"
                   className="pcard navy"
                   style={{
-                    backgroundImage: `linear-gradient(to right, var(--cen-blue) 0%, rgba(1, 28, 64, 0.9) 35%, transparent 80%), url('/assets/landing-v3/Secundaria${item.n}.png')`,
+                    backgroundImage: `linear-gradient(to right, var(--cen-blue) 0%, rgba(1, 28, 64, 0.9) 35%, transparent 80%), url('/assets/landing-v3/Secundaria${item.n}.webp')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     border: 'none',
@@ -400,7 +400,7 @@ export default function LandingPageV3() {
             </div>
             
             <div className="mexico-map">
-              <img src="/assets/landing-v3/mapa-mexico.png" alt="Mapa de México" style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" />
+              <img src="/assets/landing-v3/mapa-mexico.webp" alt="Mapa de México" style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" />
             </div>
           </section>
 
@@ -415,7 +415,7 @@ export default function LandingPageV3() {
             </div>
             <div className="right-art" style={{ position: 'relative', height: '100%', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
               <img 
-                src="/assets/landing-v3/helper.png" 
+                src="/assets/landing-v3/helper.webp" 
                 alt="CEN Helper" 
                 style={{ 
                   height: '420px', 
@@ -434,7 +434,7 @@ export default function LandingPageV3() {
           {/* FOOTER */}
           <footer className="footer">
             <div className="footer-brand">
-              <img src="/assets/landing-v3/LOGOCEN.png" alt="CEN Logo" style={{ height: '48px', width: 'auto', objectFit: 'contain', marginBottom: '24px' }} loading="lazy" />
+              <img src="/assets/landing-v3/LOGOCEN.webp" alt="CEN Logo" style={{ height: '48px', width: 'auto', objectFit: 'contain', marginBottom: '24px' }} loading="lazy" />
               <h4>Campaña de<br />Educación Nacional</h4>
               <div className="fc-block" style={{marginTop: '32px'}}>
                 <div className="fc-label">Correo electrónico</div>

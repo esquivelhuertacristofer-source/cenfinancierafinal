@@ -128,7 +128,7 @@ export default function LoginPage() {
                 <div className="relative z-10 w-full max-w-lg mx-auto mt-12">
                     <div className="relative w-full h-[380px] mb-8 animate-[float_6s_ease-in-out_infinite]">
                         <Image 
-                            src="/assets/landing-v3/helper.png" 
+                            src="/assets/landing-v3/helper.webp" 
                             alt="CEN Helper" 
                             fill 
                             className="object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.5)]" 

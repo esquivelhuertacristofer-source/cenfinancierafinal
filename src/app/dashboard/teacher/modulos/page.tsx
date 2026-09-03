@@ -22,7 +22,7 @@ const PREMIUM_GRADES = [
     label: "1° Primaria",
     title: "Conociendo el Dinero", 
     desc: "Identifica billetes y monedas, comprendiendo de dónde viene el dinero y su función básica.", 
-    img: "/assets/landing-v3/Primaria1.png" 
+    img: "/assets/landing-v3/Primaria1.webp" 
   },
   { 
     key: "primary-2", 
@@ -31,7 +31,7 @@ const PREMIUM_GRADES = [
     label: "2° Primaria",
     title: "El Valor de las Cosas", 
     desc: "Diferencia entre deseos y necesidades, y aprende cómo el ahorro constante ayuda a alcanzar metas.", 
-    img: "/assets/landing-v3/Primaria2.png" 
+    img: "/assets/landing-v3/Primaria2.webp" 
   },
   { 
     key: "primary-3", 
@@ -40,7 +40,7 @@ const PREMIUM_GRADES = [
     label: "3° Primaria",
     title: "Mi Primer Presupuesto", 
     desc: "Introducción a ingresos y egresos. Aprende a crear un presupuesto sencillo para administrar tus domingos.", 
-    img: "/assets/landing-v3/Primaria3.png" 
+    img: "/assets/landing-v3/Primaria3.webp" 
   },
   { 
     key: "primary-4", 
@@ -49,7 +49,7 @@ const PREMIUM_GRADES = [
     label: "4° Primaria",
     title: "El Mundo de los Bancos", 
     desc: "Descubre qué es un banco, para qué sirven las cuentas de ahorro, el uso de cajeros y la inflación.", 
-    img: "/assets/landing-v3/Primaria4.png" 
+    img: "/assets/landing-v3/Primaria4.webp" 
   },
   { 
     key: "primary-5", 
@@ -58,7 +58,7 @@ const PREMIUM_GRADES = [
     label: "5° Primaria",
     title: "Finanzas Cotidianas", 
     desc: "Entiende los créditos, la diferencia entre tarjetas de débito y crédito, y el impacto real de los intereses.", 
-    img: "/assets/landing-v3/Primaria5.png" 
+    img: "/assets/landing-v3/Primaria5.webp" 
   },
   { 
     key: "primary-6", 
@@ -67,7 +67,7 @@ const PREMIUM_GRADES = [
     label: "6° Primaria",
     title: "Mi Futuro Financiero", 
     desc: "Conceptos avanzados explicados simple: qué es una AFORE, cómo funcionan las inversiones y las cripto.", 
-    img: "/assets/landing-v3/Primaria6.png" 
+    img: "/assets/landing-v3/Primaria6.webp" 
   },
   // SECUNDARIA
   { 
@@ -77,7 +77,7 @@ const PREMIUM_GRADES = [
     label: "1° Secundaria",
     title: "Dinero Real", 
     desc: "Banca digital, pagos en línea y tu primer presupuesto personal con visión de futuro.", 
-    img: "/assets/landing-v3/Secundaria1.png" 
+    img: "/assets/landing-v3/Secundaria1.webp" 
   },
   { 
     key: "secondary-2", 
@@ -86,7 +86,7 @@ const PREMIUM_GRADES = [
     label: "2° Secundaria",
     title: "Inversión Joven", 
     desc: "CETES, fondos de inversión y cómo tu dinero puede trabajar para ti desde hoy.", 
-    img: "/assets/landing-v3/Secundaria2.png" 
+    img: "/assets/landing-v3/Secundaria2.webp" 
   },
   { 
     key: "secondary-3", 
@@ -95,7 +95,7 @@ const PREMIUM_GRADES = [
     label: "3° Secundaria",
     title: "Emprendedor Pro", 
     desc: "Plan de negocio, financiamiento y escalabilidad. El último nivel para la libertad financiera.", 
-    img: "/assets/landing-v3/Secundaria3.png" 
+    img: "/assets/landing-v3/Secundaria3.webp" 
   },
 ];
 
