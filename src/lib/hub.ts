@@ -1,6 +1,15 @@
 import { supabase } from '@/lib/supabase-browser';
 import { PILLAR_VIDEOS_GENERADOS, urlVideo } from '@/lib/videos-generados';
 import { mensajeDeError } from '@/lib/errores';
+import type {
+  EstrategiaDeUnidad,
+  EvaluacionDeUnidad,
+  MetadatosDeUnidad,
+  PreguntaDeExamen,
+  TemarioDeGrado,
+  TeoriaDeUnidad,
+  UnidadPedagogica,
+} from '@/types/pedagogia';
 
 export { supabase };
 
@@ -24,10 +33,10 @@ export interface Unit {
   priority: 'essential' | 'optional';
   objective: string;
   contents: UnitContent[];
-  metadata?: any;
-  strategy?: any;
-  theory?: any;
-  evaluation?: any;
+  metadata?: MetadatosDeUnidad;
+  strategy?: EstrategiaDeUnidad;
+  theory?: TeoriaDeUnidad;
+  evaluation?: EvaluacionDeUnidad;
 }
 
 export interface PillarMeta {
@@ -73,16 +82,16 @@ export const FALLBACK_PROFILE: UserProfile = {
 
 // ─── Data Access ──────────────────────────────────────────────────────────────
 
-const curriculumCache: Record<string, any> = {};
+const curriculumCache: Record<string, TemarioDeGrado> = {};
 
-async function getCurriculumData(grade: number, schoolLevel: string): Promise<any> {
+async function getCurriculumData(grade: number, schoolLevel: string): Promise<TemarioDeGrado | null> {
   const levelKey = (schoolLevel || 'primary').toLowerCase().includes('secundar') ? 'secondary' : 'primary';
   const key = `${levelKey}-${grade}`;
   if (curriculumCache[key]) return curriculumCache[key];
   try {
     const response = await fetch(`/api/curriculum/${key}`);
     if (!response.ok) return null;
-    const data = await response.json();
+    const data = (await response.json()) as TemarioDeGrado;
     curriculumCache[key] = data;
     return data;
   } catch {
@@ -90,7 +99,14 @@ async function getCurriculumData(grade: number, schoolLevel: string): Promise<an
   }
 }
 
-const CATEGORY_STYLES: Record<string, any> = {
+/** Lo que define el aspecto de un pilar en la rejilla del hub. */
+interface EstiloDeCategoria {
+  gradient: string;
+  ring: string;
+  icon: string;
+}
+
+const CATEGORY_STYLES: Record<string, EstiloDeCategoria> = {
   // P1, P2, P4, P5
   'Primeros Pasos Hacia el Ahorro': { gradient: 'from-orange-500 to-amber-600', ring: '#F97316', icon: '💰' },
   'Consumo Inteligente': { gradient: 'from-emerald-500 to-teal-600', ring: '#10B981', icon: '⚖️' },
@@ -174,7 +190,7 @@ function slugify(text: string) {
     .replace(/--+/g, '_');
 }
 
-function deriveModality(unitRaw: any): Modality {
+function deriveModality(unitRaw: UnidadPedagogica): Modality {
   const title = (unitRaw.title || "").toLowerCase();
   if (title.includes('simulador') || title.includes('juego')) return 'simulator';
   if (title.includes('video')) return 'video';
@@ -203,7 +219,10 @@ export async function getPillarsForGrade(grade: number, schoolLevel: string = 'p
       order: parseInt(unitRaw.code.split('-')[2]) || parseInt(unitRaw.code.split('-')[1]) || 0,
       modality: deriveModality(unitRaw),
       priority: 'essential',
-      objective: unitRaw.metadata?.objective || unitRaw.objective || '',
+      /* El objetivo vive en `metadata` en las 369 unidades del temario. Aqui habia ademas un
+         `|| unitRaw.objective` de reserva que no se disparo nunca: ninguna unidad lo trae en la
+         raiz. Se quita porque sugeria una segunda forma valida del dato que no existe. */
+      objective: unitRaw.metadata?.objective || '',
       contents: isSupremoUnit
         ? [{ type: 'simulator' as ContentType, label: '⚡ Reto Supremo', url: null, required: true }]
         : [
@@ -571,7 +590,42 @@ const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12
 
 const SYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
 
-function getSyncQueue(): { userId: string, activityId: string, attempts?: number, timestamp?: number, score?: number, tiempoSegundos?: number, lastStep?: number }[] {
+/**
+ * Un intento de guardar progreso que no llego al servidor y espera en localStorage.
+ *
+ * Se comprueba campo a campo al leerlo, y no por desconfianza teorica: la cola sobrevive a los
+ * despliegues, asi que puede contener entradas escritas por una version anterior de la app que no
+ * tenia `score`, `tiempoSegundos` ni `lastStep`. Por eso esos tres son opcionales y por eso el
+ * guardian de abajo solo rechaza cuando el tipo es equivocado, no cuando el campo falta.
+ */
+export interface ItemDeCola {
+  userId: string;
+  activityId: string;
+  attempts?: number;
+  timestamp?: number;
+  score?: number;
+  tiempoSegundos?: number;
+  lastStep?: number;
+}
+
+/** Lo que sale de `JSON.parse` es `unknown`; esto decide si merece entrar en la cola. */
+function esItemDeCola(item: unknown, ahora: number): item is ItemDeCola {
+  if (!item || typeof item !== 'object') return false;
+  const it = item as Record<string, unknown>;
+  if (typeof it.userId !== 'string' || !UUID_REGEX.test(it.userId)) return false;
+  if (typeof it.activityId !== 'string' || !it.activityId) return false;
+  for (const campo of ['score', 'tiempoSegundos', 'lastStep'] as const) {
+    const v = it[campo];
+    if (v !== undefined && v !== null && typeof v !== 'number') return false;
+  }
+  if (typeof it.timestamp === 'number' && (ahora - it.timestamp) > SYNC_MAX_AGE_MS) {
+    console.warn(`[SyncEngine] Descartando item expirado (>7 dias): ${it.activityId}`);
+    return false;
+  }
+  return true;
+}
+
+function getSyncQueue(): ItemDeCola[] {
   if (typeof window === 'undefined') return [];
   const saved = localStorage.getItem('cen_sync_queue');
   if (!saved) return [];
@@ -582,22 +636,7 @@ function getSyncQueue(): { userId: string, activityId: string, attempts?: number
       return [];
     }
     const now = Date.now();
-    const valid = queue.filter((item: any) => {
-      if (!item || typeof item !== 'object') return false;
-      if (!item.userId || !UUID_REGEX.test(item.userId)) return false;
-      if (!item.activityId || typeof item.activityId !== 'string') return false;
-      // Campos opcionales de score/tiempo/último paso: pueden faltar en items antiguos
-      // de la cola (encolados antes de este fix); solo se rechazan si vienen con un tipo inválido.
-      if (item.score !== undefined && item.score !== null && typeof item.score !== 'number') return false;
-      if (item.tiempoSegundos !== undefined && item.tiempoSegundos !== null && typeof item.tiempoSegundos !== 'number') return false;
-      if (item.lastStep !== undefined && item.lastStep !== null && typeof item.lastStep !== 'number') return false;
-      // Descartar items más viejos de 7 días
-      if (item.timestamp && (now - item.timestamp) > SYNC_MAX_AGE_MS) {
-        console.warn(`[SyncEngine] Descartando item expirado (>7 días): ${item.activityId}`);
-        return false;
-      }
-      return true;
-    });
+    const valid = (queue as unknown[]).filter((item) => esItemDeCola(item, now));
     if (valid.length !== queue.length) {
       console.warn(`[SyncEngine] Limpiados ${queue.length - valid.length} items (inválidos o expirados) al cargar`);
       localStorage.setItem('cen_sync_queue', JSON.stringify(valid));
@@ -702,7 +741,13 @@ export async function processSyncQueue(): Promise<SyncQueueResult> {
 
 export async function getCurrentProfile(): Promise<UserProfile | null> {
   try {
-    const { data: { session } } = await withTimeout(supabase.auth.getSession(), 5000, { data: { session: null }, error: null }) as any;
+    /* `withTimeout` devuelve la union de lo que resuelve la promesa y del valor de reserva, y
+       ambos traen `data.session`. Basta con nombrar esa forma para leerla sin castear a `any`. */
+    const { data: { session } } = await withTimeout(
+      supabase.auth.getSession(),
+      5000,
+      { data: { session: null }, error: null },
+    ) as { data: { session: { user: { id: string } } | null } };
     if (!session) return null;
     const { data, error } = await supabase.from('profiles').select('*').eq('id', session.user.id).single();
     if (error || !data) return null;
@@ -725,7 +770,7 @@ export async function getQuizForUnit(unitCode: string): Promise<QuizQuestion[]> 
   const source = await getCurriculumData(grade, schoolLevel);
   if (source && source[unitCode]) {
     const questions = source[unitCode].evaluation?.exam_questions || [];
-    return questions.map((q: any) => ({
+    return questions.map((q: PreguntaDeExamen) => ({
       q: q.question,
       options: q.options,
       correct: q.options.indexOf(q.correct) !== -1 ? q.options.indexOf(q.correct) : 0
@@ -746,7 +791,7 @@ export async function getArenaQuiz(grade: number, schoolLevel: string): Promise<
   const questions: QuizQuestion[] = [];
   pillars.flatMap((p: PillarMeta) => p.units).forEach((u: Unit) => {
     if (u.evaluation?.exam_questions) {
-      u.evaluation.exam_questions.forEach((q: any) => {
+      u.evaluation.exam_questions.forEach((q: PreguntaDeExamen) => {
         questions.push({ q: q.question, options: q.options, correct: q.options.indexOf(q.correct) !== -1 ? q.options.indexOf(q.correct) : 0, explanation: u.title });
       });
     }
