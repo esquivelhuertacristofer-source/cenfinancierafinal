@@ -49,6 +49,7 @@ const PortfolioBuilder = dynamic(() => import('./mechanics/PortfolioBuilder'), {
 
 import VideoFrame from './VideoFrame';
 import { UNIT_VIDEOS, VIDEO_TITULOS, urlVideo } from '@/lib/videos-generados';
+import { videosDeExperto } from '@/lib/expertVideos';
 
 import type { Unit, PillarMeta, ContentType } from '../../lib/hub';
 import type { FasePedagogica, SeccionTeorica } from '@/types/pedagogia';
@@ -235,7 +236,7 @@ FiscalSummaryCard.displayName = 'FiscalSummaryCard';
 
 // ─── Pestañas Optimizadas ─────────────────────────────────────────────────────
 
-const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; theme: ThemeType; onShowVideo: (show: boolean) => void; nextLabel?: string }) => {
+const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabel }: { unit: Unit; onComplete: () => void; isDone: boolean; theme: ThemeType; onShowVideo: (video: { url: string; title: string }) => void; nextLabel?: string }) => {
   const [readingFinished, setReadingFinished] = useState(isDone);
   /* La ficha pinta el marco teorico si lo hay y, si no, las fases del plan de clase. Son dos
      formas distintas del mismo hueco —una trae `subtitle`/`content` y la otra `title`/`description`—
@@ -292,10 +293,13 @@ const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabe
                   ))}
                </div>
                
-               {/* INTEGRACIÓN DE VIDEO OFICIAL */}
+               {/* CLASE MAGISTRAL: el video producido para esta unidad, si lo tiene. */}
                {UNIT_VIDEOS[unit.code] && (
-                 <button 
-                   onClick={() => onShowVideo(true)}
+                 <button
+                   onClick={() => onShowVideo({
+                     url: urlVideo(UNIT_VIDEOS[unit.code]),
+                     title: VIDEO_TITULOS[UNIT_VIDEOS[unit.code]] || unit.title,
+                   })}
                    className="group flex items-center gap-6 p-2 pr-12 bg-white text-[#0A0118] rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_30px_60px_rgba(255,255,255,0.1)]"
                  >
                    <div className="w-16 h-16 bg-[#FF8C00] rounded-full flex items-center justify-center text-white shadow-xl group-hover:rotate-12 transition-transform">
@@ -304,6 +308,27 @@ const TheoryTab = memo(({ unit, onComplete, isDone, theme, onShowVideo, nextLabe
                    <span className="text-xl font-black uppercase tracking-widest">Ver Clase Magistral</span>
                  </button>
                )}
+
+               {/* VIDEOS DE EXPERTO: los del autor en YouTube que traen asignada esta unidad.
+                   No sustituyen a la clase magistral; se ofrecen al lado. */}
+               {videosDeExperto(unit.code).map((video) => (
+                 <button
+                   key={video.id}
+                   onClick={() => onShowVideo({ url: video.url, title: video.title })}
+                   className="group flex w-full items-center gap-5 p-2 pr-8 bg-white/5 border border-white/10 text-white rounded-full transition-all hover:bg-white/10 hover:scale-[1.02] active:scale-95 text-left"
+                 >
+                   <div className="w-14 h-14 shrink-0 bg-[#42E8E0]/15 border border-[#42E8E0]/30 rounded-full flex items-center justify-center text-[#42E8E0] group-hover:rotate-12 transition-transform">
+                      <PlayCircle size={26} />
+                   </div>
+                   <span className="flex flex-col gap-0.5 min-w-0">
+                     <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#42E8E0]/70">
+                       Video del experto
+                     </span>
+                     <span className="text-base font-black tracking-tight leading-tight">{video.title}</span>
+                     <span className="text-xs font-medium text-white/40 leading-tight">{video.description}</span>
+                   </span>
+                 </button>
+               ))}
             </div>
 
             <div className="relative aspect-square order-1 lg:order-2 group/hero-img">
@@ -831,11 +856,9 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
   const [activeTab, setActiveTab] = useState<ContentType>(unit.contents[0].type);
   const [showSuccess, setShowSuccess] = useState(false);
   const [rankUp, setRankUp] = useState<{ pillarTitle: string; rank: string; color: string } | null>(null);
-  const [showUnitVideo, setShowUnitVideo] = useState(false);
-  /* Las unidades 6 (donde arranca la ampliacion del temario) y los retos supremos
-     tienen video propio producido para la plataforma. El resto sigue cayendo al
-     video general del autor, que no se toca. */
-  const videoUnidad = UNIT_VIDEOS[unit.code];
+  /* Que video esta abierto, no solo si hay uno abierto: la unidad puede ofrecer la clase
+     magistral producida para la plataforma y ademas uno o varios videos de experto. */
+  const [videoAbierto, setVideoAbierto] = useState<{ url: string; title: string } | null>(null);
   const theme = useMemo(() => getUnitTheme(unit), [unit]);
   const tabStartRef = useRef<number>(Date.now());
 
@@ -1018,7 +1041,7 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
               onComplete={() => setActiveTab(nextAfterTheory?.type ?? 'quiz')}
               nextLabel={theoryNextLabel}
               theme={theme}
-              onShowVideo={setShowUnitVideo}
+              onShowVideo={setVideoAbierto}
             />
           )}
           {activeTab === 'simulator' && (
@@ -1042,32 +1065,20 @@ export default function ContentModal({ unit, pillar, completed, userId, onComple
       </main>
 
       {/* FICHA DE VIDEO PREMIUM (MODAL) */}
-      {showUnitVideo && (
+      {videoAbierto && (
         <div className="fixed inset-0 z-[10000] bg-black/95 backdrop-blur-3xl flex items-center justify-center p-6 md:p-20 animate-in fade-in zoom-in duration-500">
            <button 
-             onClick={() => setShowUnitVideo(false)}
+             onClick={() => setVideoAbierto(null)}
              className="absolute top-10 right-10 p-5 bg-white/5 rounded-full text-white hover:bg-red-500 transition-all z-[10100] border-none cursor-pointer"
            >
               <X size={40} />
            </button>
            
            <div className="w-full max-w-6xl aspect-video bg-black rounded-[24px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_150px_rgba(255,140,0,0.3)] relative group">
-              {videoUnidad ? (
-                <VideoFrame
-                  url={urlVideo(videoUnidad)}
-                  title={VIDEO_TITULOS[videoUnidad] || unit.title}
-                />
-              ) : (
-                /* Defensivo: el boton que abre esto solo aparece si la unidad tiene video. Antes
-                   aqui habia un embed fijo al video de demostracion de la portada, que se mostraba
-                   como "clase magistral" en unidades que no tenian ninguna. */
-                <div className="w-full h-full flex flex-col items-center justify-center gap-4 px-10 text-center">
-                  <PlayCircle size={56} className="text-white/20" />
-                  <p className="text-sm font-black uppercase tracking-[0.3em] text-white/40">
-                    Esta unidad todavia no tiene clase magistral
-                  </p>
-                </div>
-              )}
+              {/* El boton que abre esto ya trae la URL y el titulo: puede ser la clase magistral
+                  producida para la unidad o uno de los videos de experto del autor. VideoFrame
+                  decide solo si toca un mp4 nuestro o un embed de YouTube. */}
+              <VideoFrame url={videoAbierto.url} title={videoAbierto.title} />
            </div>
         </div>
        )}

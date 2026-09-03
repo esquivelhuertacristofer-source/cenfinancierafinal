@@ -1,13 +1,11 @@
 /**
- * Catalogo de videos de experto.
+ * Catalogo de videos de experto: diecisiete videos del autor, en YouTube.
  *
- * OJO: hoy no lo lee nadie. ContentModal lo importaba y nunca lo usaba, asi que estos 17 videos de
- * YouTube no se ven en ninguna pantalla de la plataforma, y ninguno de ellos esta tampoco en
- * PILLAR_VIDEOS ni en UNIT_VIDEOS (`lib/hub.ts`), que son los que si se muestran.
+ * Cada uno declara en que unidades encaja (`suggestedUnitCodes`), y de ahi sale el indice de abajo.
+ * ContentModal lo consulta al abrir una unidad y ofrece los que le correspondan, junto a la clase
+ * magistral producida para la plataforma si la unidad tambien tiene una: no se pisan, se suman.
  *
- * El archivo se conserva a proposito: es contenido, no codigo muerto. Cada entrada trae ya los
- * codigos de unidad donde encaja (`suggestedUnitCodes`), asi que enchufarlo es cuestion de
- * decidirlo, no de rehacerlo.
+ * Estos videos son del autor y tienen prioridad, igual que PILLAR_VIDEOS y UNIT_VIDEOS.
  */
 export interface ExpertVideo {
   id: string;
@@ -138,3 +136,28 @@ export const EXPERT_VIDEOS: ExpertVideo[] = [
     suggestedUnitCodes: ["S1-1-1", "S2-1-2", "S3-1-2"]
   }
 ];
+
+
+/**
+ * Indice de consulta: codigo de unidad -> videos que le tocan.
+ *
+ * Se arma una sola vez al cargar el modulo. Un video puede aparecer en varias unidades y una unidad
+ * puede tener varios videos, asi que el mapa es de uno a muchos en los dos sentidos.
+ */
+const POR_UNIDAD: Record<string, ExpertVideo[]> = (() => {
+  const mapa: Record<string, ExpertVideo[]> = {};
+  for (const video of EXPERT_VIDEOS) {
+    for (const code of video.suggestedUnitCodes) {
+      (mapa[code] ??= []).push(video);
+    }
+  }
+  return mapa;
+})();
+
+/** Los videos de experto asignados a una unidad. Lista vacia si no tiene ninguno. */
+export function videosDeExperto(unitCode: string): ExpertVideo[] {
+  return POR_UNIDAD[unitCode] ?? [];
+}
+
+/** Cuantas unidades del temario tienen al menos un video de experto. */
+export const UNIDADES_CON_EXPERTO = Object.keys(POR_UNIDAD).length;
